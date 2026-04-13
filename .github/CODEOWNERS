@@ -1,0 +1,5 @@
+# CODEOWNERS file for Braze Release Notes
+# For details, see: https://help.github.com/articles/about-codeowners/
+
+* @braze-inc/docs-team
+/.github/workflows/ @braze-inc/security @braze-inc/docs-team
