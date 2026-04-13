@@ -1,0 +1,74 @@
+name: Sync release notes from braze-docs
+
+on:
+  schedule:
+    # Runs once per month (1st day at 15:00 UTC)
+    - cron: "0 15 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-release-notes
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    env:
+      SOURCE_REPO: braze-inc/braze-docs
+      SOURCE_REF: develop
+      SOURCE_RELEASE_PATH: docs/releases
+      DEST_RELEASE_PATH: releases
+
+    steps:
+      - name: Checkout destination repo
+        uses: actions/checkout@v4
+
+      - name: Checkout source repo
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.SOURCE_REPO }}
+          ref: ${{ env.SOURCE_REF }}
+          # When braze-docs is public, github.token can work.
+          # When braze-docs is private, use BRAZE_DOCS_READ_TOKEN secret.
+          token: ${{ secrets.BRAZE_DOCS_READ_TOKEN || github.token }}
+          path: source
+          sparse-checkout: |
+            docs/releases
+          sparse-checkout-cone-mode: false
+
+      - name: Verify source path exists
+        run: |
+          if [ ! -d "source/${SOURCE_RELEASE_PATH}" ]; then
+            echo "Expected source path not found: source/${SOURCE_RELEASE_PATH}"
+            echo "Update SOURCE_RELEASE_PATH in workflow if the path is different."
+            exit 1
+          fi
+
+      - name: Sync markdown files only
+        run: |
+          mkdir -p "${DEST_RELEASE_PATH}"
+
+          rsync -av --delete --prune-empty-dirs \
+            --include "*/" \
+            --include "*.md" \
+            --exclude "*" \
+            "source/${SOURCE_RELEASE_PATH}/" \
+            "${DEST_RELEASE_PATH}/"
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet -- "${DEST_RELEASE_PATH}"; then
+            echo "No release note changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add "${DEST_RELEASE_PATH}"
+          git commit -m "Sync release notes from braze-docs"
+          git push
