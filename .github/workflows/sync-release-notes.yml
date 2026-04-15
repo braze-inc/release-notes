@@ -24,16 +24,25 @@ jobs:
       DEST_RELEASE_PATH: releases
 
     steps:
+      - name: Validate required secret
+        if: ${{ secrets.BRAZE_DOCS_READ_TOKEN == '' }}
+        run: |
+          echo "Missing required secret: BRAZE_DOCS_READ_TOKEN"
+          exit 1
+
       - name: Checkout destination repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Checkout source repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ env.SOURCE_REPO }}
           ref: ${{ env.SOURCE_REF }}
           token: ${{ secrets.BRAZE_DOCS_READ_TOKEN }}
           path: source
+          persist-credentials: false
           sparse-checkout: |
             _docs/_releases
           sparse-checkout-cone-mode: false
@@ -57,6 +66,8 @@ jobs:
             "${DEST_RELEASE_PATH}/"
 
       - name: Commit and push if changed
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           if git diff --quiet -- "${DEST_RELEASE_PATH}"; then
             echo "No release note changes."
@@ -68,4 +79,4 @@ jobs:
 
           git add "${DEST_RELEASE_PATH}"
           git commit -m "Sync release notes from braze-docs"
-          git push
+          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:${GITHUB_REF_NAME}"
