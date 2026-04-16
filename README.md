@@ -4,11 +4,7 @@ This is a public-facing repository for Braze release notes. It highlights what i
 
 ## Source and publishing flow
 
-Release note content is synced from [`braze-inc/braze-docs`](https://github.com/braze-inc/braze-docs) on the `develop` branch from `_docs/_releases` into this repository’s `releases/` directory.
-
-- Sync cadence: once per month (automated)
-- Ad-hoc releases: manual trigger available in GitHub Actions
-- Content scope: Markdown files only (`.md`)
+Release note content is updated once every four weeks, unless there are additional releases in that period. If there are additional releases, those are updated here as well.
 
 ## How to subscribe to updates
 
