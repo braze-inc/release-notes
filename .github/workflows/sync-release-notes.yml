@@ -1,82 +1,77 @@
-name: Sync release notes from braze-docs
+name: Mirror public docs markdown from braze-docs
 
 on:
   schedule:
-    # 1x per month: 1st day of month at 15:00 UTC
-    - cron: "0 15 1 * *"
+    - cron: "0 6 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: sync-release-notes
-  cancel-in-progress: false
+  group: mirror-public-docs-markdown
+  cancel-in-progress: true
 
 jobs:
   sync:
     runs-on: ubuntu-latest
 
-    env:
-      SOURCE_REPO: braze-inc/braze-docs
-      SOURCE_REF: develop
-      SOURCE_RELEASE_PATH: _docs/_releases
-      DEST_RELEASE_PATH: releases
-
     steps:
-      - name: Validate required secret
-        if: ${{ secrets.BRAZE_DOCS_READ_TOKEN == '' }}
-        run: |
-          echo "Missing required secret: BRAZE_DOCS_READ_TOKEN"
-          exit 1
-
-      - name: Checkout destination repo
+      - name: Checkout destination repo on develop
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
+          ref: develop
 
-      - name: Checkout source repo
-        uses: actions/checkout@v5
-        with:
-          repository: ${{ env.SOURCE_REPO }}
-          ref: ${{ env.SOURCE_REF }}
-          token: ${{ secrets.BRAZE_DOCS_READ_TOKEN }}
-          path: source
-          persist-credentials: false
-          sparse-checkout: |
-            _docs/_releases
-          sparse-checkout-cone-mode: false
-
-      - name: Verify source path exists
+      - name: Build sitemap-driven markdown mirror from public docs
         run: |
-          if [ ! -d "source/${SOURCE_RELEASE_PATH}" ]; then
-            echo "Expected source path not found: source/${SOURCE_RELEASE_PATH}"
-            exit 1
+          set -euo pipefail
+          python3 scripts/sync_public_docs_markdown.py
+
+          for section in "User Guide" "Developer Guide" "API" "Technology Partners" "What's New"; do
+            mkdir -p "$section"
+            rsync -av --delete "sync-staging/${section}/" "${section}/"
+          done
+
+      - name: Write daily changes report
+        run: |
+          set -euo pipefail
+          CHANGES="$(git diff --name-status -- "User Guide" "Developer Guide" "API" "Technology Partners" "What's New")"
+          if [ -z "$CHANGES" ]; then
+            echo "No markdown changes detected."
+            exit 0
           fi
 
-      - name: Sync markdown files only
-        run: |
-          mkdir -p "${DEST_RELEASE_PATH}"
+          TODAY="$(date -u +%Y-%m-%d)"
+          LOG_FILE="changes/${TODAY}.md"
+          mkdir -p changes
+          COUNT="$(printf "%s\n" "$CHANGES" | sed '/^$/d' | wc -l | tr -d ' ')"
 
-          rsync -av --delete --prune-empty-dirs \
-            --include "*/" \
-            --include "*.md" \
-            --exclude "*" \
-            "source/${SOURCE_RELEASE_PATH}/" \
-            "${DEST_RELEASE_PATH}/"
+          {
+            echo "# Daily docs markdown sync - ${TODAY}"
+            echo
+            echo "## Summary"
+            echo "- Source: https://www.braze.com/docs/sitemap.xml"
+            echo "- Changed files: ${COUNT}"
+            echo
+            echo "## Changes"
+            printf "%s\n" "$CHANGES" | sed '/^$/d' | while IFS=$'\t' read -r status path; do
+              echo "- ${status} \`${path}\`"
+            done
+          } > "$LOG_FILE"
 
-      - name: Commit and push if changed
+      - name: Commit and push direct to develop if changed
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet -- "${DEST_RELEASE_PATH}"; then
-            echo "No release note changes."
+          if git diff --quiet -- "User Guide" "Developer Guide" "API" "Technology Partners" "What's New" changes; then
+            echo "No public markdown changes."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add "${DEST_RELEASE_PATH}"
-          git commit -m "Sync release notes from braze-docs"
-          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:${GITHUB_REF_NAME}"
+          git add "User Guide" "Developer Guide" "API" "Technology Partners" "What's New" changes
+          git commit -m "Mirror public docs markdown from braze.com/docs"
+          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:develop"
