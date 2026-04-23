@@ -105,4 +105,7 @@ jobs:
             gh pr edit "${PR_NUMBER}" --title "${PR_TITLE}" --body "${PR_BODY}"
           fi
 
-          gh pr merge "${PR_NUMBER}" --auto --merge --delete-branch=false
+          if ! gh pr merge "${PR_NUMBER}" --auto --merge --delete-branch=false 2>auto_merge.err; then
+            cat auto_merge.err
+            echo "::warning::Auto-merge could not be enabled for PR #${PR_NUMBER}. Approve and merge it manually, or enable 'Settings -> General -> Pull Requests -> Allow auto-merge' in the repository to make future runs fully hands-off."
+          fi
