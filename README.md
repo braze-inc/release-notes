@@ -4,7 +4,13 @@ This is a public-facing repository for Braze release notes. It highlights what i
 
 ## Source and publishing flow
 
-Release note content is updated once every four weeks, unless there are additional releases in that period. If there are additional releases, those are updated here as well.
+Public markdown documentation is mirrored from [`www.braze.com/docs`](https://www.braze.com/docs/) using each page's rendered `index.md` endpoint.
+
+- Sync cadence: daily (automated)
+- Manual sync: workflow dispatch available in GitHub Actions
+- Branch behavior: workflow runs on `main` and commits mirrored content to `main`
+- Destination structure: `docs/User Guide`, `docs/Developer Guide`, `docs/API`, `docs/Technology Partners`, and `docs/What's New`
+- Change reports: daily change log written to `changes/YYYY-MM-DD.md`
 
 ## How to subscribe to updates
 
