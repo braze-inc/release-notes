@@ -1,0 +1,153 @@
+# JustAI Integration Guide
+
+> [JustAI](https://www.getjust.ai/) hyper-personalizes messaging at scale on lifecycle marketing channels, empowering you to dynamically test hundreds of variations and auto-refresh underperforming content.
+
+When you use JustAI with Braze [Connected Content](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/) to personalize your existing Braze campaigns and Canvases, JustAI will use Braze Currents to optimize the content dynamically—so you don’t have to.
+
+## What are the benefits?
+
+After your integration is complete, you can leverage the JustAI platform to:
+
+- See real-time experiment results
+- Dynamically edit copy
+- View performance insights
+
+**Note:**
+
+
+Questions? Contact JustAI on their [booking page](https://www.getjust.ai/book-demo) or through the shared Slack channel.
+
+
+
+## Prerequisites
+
+| Requirement | Description |
+|---|---|
+| JustAI Account | A [JustAI](https://www.getjust.ai/) account is required to take advantage of this partnership. If you don’t have a JustAI account, [schedule a 30-minute onboarding call](https://www.getjust.ai/book-demo). |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+## Integrating JustAI with Braze
+
+### Step 1: Create a JustAI template
+
+1. Go to your JustAI console and [create a new template](https://console.getjust.ai/new).
+2. Choose an easy-to-remember ID that uses letters, numbers, and underscores only.
+3. Fill out basic campaign details.
+4. Use AI to generate personalized variations.
+
+![The JustAI template creation platform.](https://www.braze.com/docs/assets/img/just_words/creation_interface.png?76c67d01ebd3bb93eaf69136425c236a){: style="max-width:80%;"}
+
+### Step 2: Create a JustAI API key
+
+1. Go to **Org Settings** > **API Keys** > **Generate API Key**.
+2. Copy and save the API key in a secure location.
+
+![The JustAI API key form.](https://www.braze.com/docs/assets/img/just_words/api_key_form.png?765ac95ebaa7fabc24338a3901833e7e){: style="max-width:80%;"}
+
+### Step 3: Use JustAI in your Braze content
+
+JustAI works with Canvases and campaigns by using Connected Content. If you're creating a Canvas, each email step should correspond to a unique JustAI template.
+
+#### Step 3.1: Set up your A/B test
+
+
+
+
+1. In a Canvas, select **Add Variant** > **Add Variant** until you have your desired number of variants, and add steps to each variant (like an email Message step).
+2. Split the audience traffic as desired. For example, if you have two variants, you might give each one 50%. Or, you could have two variants with 40% each and a control group with 20%. For more information about A/B tests for Canvases, refer to [Creating a Canvas](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+3. In the composers for the Message steps that you want to use with Connected Content, paste in the Connected Content snippet from JustAI Console, such as the following snippet.
+
+
+```liquid
+{% connected_content https://worker.getjust.ai/api/generate/just-words?template_id=<test_id>&user_id={{${user_id}}}
+  :save jw
+  :headers {
+    "x-api-key": <jw_api_key>,
+    "Content-Type": "application/json"
+  }
+%}
+
+{{jw.copy.vars.cta}}
+{% message_extras :key copy_id :value {{jw.copy.id }} %}
+```
+
+
+![Braze A/B test Canvas setup.](https://www.braze.com/docs/assets/img/just_words/braze_canvas.png?1920ea24ff0fef64351db2bd28cafe47){: style="max-width:70%;"}
+
+
+
+
+1. In the **Compose Messages** step of your campaign, create two variants.
+2. In the **Target Audience** step, go to the **A/B Testing** section and modify the percentages of users who will receive each of your variants (and your optional control group). You can further customize your test by selecting an optimization option. For more information about A/B tests for campaigns, refer to [Creating multivariate and A/B tests](https://www.braze.com/docs/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/).
+3. In the message composer, paste in the Connected Content snippet from JustAI Console. The following Liquid snippet shows an example of this.
+
+
+```liquid
+{% connected_content https://worker.getjust.ai/api/generate/just-words?template_id=<test_id>&user_id={{${user_id}}}
+  :save jw
+  :headers {
+    "x-api-key": <jw_api_key>,
+    "Content-Type": "application/json"
+  }
+%}
+
+{{jw.copy.vars.cta}}
+{% message_extras :key copy_id :value {{jw.copy.id }} %}
+```
+
+
+
+
+
+#### Step 3.2: Add personalization with custom attributes (optional)
+
+To personalize your messages with custom attributes (such as `industry`), use the following Liquid format:
+
+
+```liquid
+{% connected_content https://worker.getjust.ai/api/generate/just-words?template_id=<test_id>&user_id={{${user_id}}}&attrs.industry={{ custom_attribute.industry }}
+  :save jw
+  :headers {
+    "x-api-key": <jw_api_key>,
+    "Content-Type": "application/json"
+  }
+%}
+
+{{jw.copy.vars.cta}}
+{% message_extras :key copy_id :value {{jw.copy.id }} %}
+```
+
+
+Note that the custom attribute of `industry` is indicated by ```&attrs.industry={{ custom_attribute.industry }}```. 
+
+![Braze Liquid logic in an HTML message composer.](https://www.braze.com/docs/assets/img/just_words/just_words_personalization.png?c1da7e39b5834e3faae849e5ad91b7b2){: style="max-width:80%;"}
+
+### Step 4: Preview the email
+
+Make sure to preview the email in Braze to confirm that the personalized content correctly renders.
+
+![Braze message preview for a JustAI email.](https://www.braze.com/docs/assets/img/just_words/just_words_preview.png?1fdf753e1bea7965f2012f2fcde9c62b){: style="max-width:80%;"}
+
+### Step 5: Set up Braze Currents
+
+Braze Currents enables performance tracking and optimization over time.
+
+1. In Braze, go to **Partner Integrations** > **Data Export**.
+2. Select **Create New Test Current** and then select **Test Amazon S3 Data Export**.
+
+!["Create New Test Current" dropdown with the option of "Test Amazon S3 Data Export".](https://www.braze.com/docs/assets/img/just_words/test_amazon_s3.png?e74eed2d94ed084490c5d5989ac864e5){: style="max-width:80%;"}
+
+{: start="3" }
+3. Enter the S3 Access ID, AWS Secret Access Key, Bucket name, and folder that were provided by JustAI during onboarding.
+
+!["Credentials" section for the AWS secret access key.](https://www.braze.com/docs/assets/img/just_words/aws_secret_access_key.png?5de1962cba88cac974928219239e5275){: style="max-width:80%;"}
+
+{: start="4" }
+4. Select the events to track, such as sends, opens, clicks, unsubscribes, conversions, and others.
+
+!["Message Engagement Events" section with events to select.](https://www.braze.com/docs/assets/img/just_words/message_engagement_events.png?026ae0bbf71d7dc4cd95b4b97ba2f94f){: style="max-width:80%;"}
+
+{: start="5" }
+5. Launch the Braze Current.
+
+You're all set! Now you can use JustAI with Braze Connected Content.
