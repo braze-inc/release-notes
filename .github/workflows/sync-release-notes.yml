@@ -2,7 +2,7 @@ name: Mirror public docs markdown from braze-docs
 
 on:
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "0 6 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -38,13 +38,11 @@ jobs:
             rsync -av --delete "sync-staging/${section}/" "docs/${section}/"
           done
 
-          rm -rf docs/releases
-
       - name: Stage mirror output and detect changes
         id: diff
         run: |
           set -euo pipefail
-          git add -A -- "docs/User Guide" "docs/Developer Guide" "docs/API" "docs/Technology Partners" "docs/What's New" docs/releases
+          git add -A -- "docs/User Guide" "docs/Developer Guide" "docs/API" "docs/Technology Partners" "docs/What's New"
 
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
@@ -61,7 +59,7 @@ jobs:
           LOG_FILE="changes/${TODAY}.md"
           mkdir -p changes
 
-          CHANGES="$(git diff --cached --name-status -- "docs/User Guide" "docs/Developer Guide" "docs/API" "docs/Technology Partners" "docs/What's New" docs/releases)"
+          CHANGES="$(git diff --cached --name-status -- "docs/User Guide" "docs/Developer Guide" "docs/API" "docs/Technology Partners" "docs/What's New")"
           COUNT="$(printf "%s\n" "$CHANGES" | sed '/^$/d' | wc -l | tr -d ' ')"
 
           {
@@ -79,7 +77,7 @@ jobs:
 
           git add "$LOG_FILE"
 
-      - name: Commit and push to mirror branch, open/update PR, and enable auto-merge
+      - name: Commit and push to mirror branch, then open or update the mirror PR
         if: steps.diff.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}

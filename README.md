@@ -6,7 +6,7 @@ This is a public-facing repository for Braze release notes. It highlights what i
 
 Public markdown documentation is mirrored from [`www.braze.com/docs`](https://www.braze.com/docs/) using each page's rendered `index.md` endpoint.
 
-- Sync cadence: daily (automated)
+- Sync cadence: weekdays (Monday through Friday, automated; Saturday and Sunday changes roll into Monday's pull request)
 - Manual sync: workflow dispatch available in GitHub Actions
 - Branch behavior: workflow commits mirrored content to the `docs-sync/public-docs-mirror` branch and opens (or updates) a pull request to `main`; a Docs team reviewer approves and merges the PR to update `main`
 - Destination structure: `docs/User Guide`, `docs/Developer Guide`, `docs/API`, `docs/Technology Partners`, and `docs/What's New`
