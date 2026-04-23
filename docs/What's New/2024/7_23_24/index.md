@@ -1,0 +1,110 @@
+# July 23, 2024 release
+
+## Braze Docs updates
+
+### Diátaxis and Braze Docs
+
+We're in the process of standardizing our documentation using a framework called [Diátaxis](https://diataxis.fr/). This helps us organize content by purpose—tutorials, how-to guides, reference, and explanation—so you can find the right kind of information faster.
+
+## Data flexibility
+
+### Export custom events and attributes
+
+
+
+You can now export custom event and custom attributes using the [`/custom_attributes`](https://www.braze.com/docs/api/endpoints/export/custom_attributes/get_custom_attributes) and [`/events`](https://www.braze.com/docs/api/endpoints/export/custom_events/get_custom_events_data) endpoints.
+
+### New Currents permissions for users
+
+There are two new permission settings for users: **View Currents Integrations** and **Edit Currents Integrations**. Learn more about [user permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/). 
+
+### Update to Snowflake data retention policy
+ 
+Beginning August 27, 2024, personally identifiable information (PII) will be removed from all Snowflake Secure Data Sharing events data that is older than two years old. If you use Snowflake, you may choose to retain the full events data in your environment by storing a copy in your Snowflake account before the retention policy is applied. Learn more about [Snowflake data retention](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/data_retention/).
+ 
+## Unlocking creativity
+
+### Multi-page in-app messages
+
+
+
+Adding pages to your in-app message lets you guide users through a sequential flow, like an onboarding flow or welcome journey. To learn more, see [Creating an in-app message with drag-and-drop](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page).
+
+### Link shortening with Liquid
+
+
+
+Use [Liquid to personalize URLs](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/campaign/link_shortening/#enabling-link-shortening) to automatically shorten URLs contained in SMS messages and collect click-through-rate analytics. To try it out, see [Link shortening](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening/).
+
+### API examples for catalogs
+
+We've added examples for the `/catalogs` endpoint using array fields. To see the examples, check out the following:
+
+- [Edit multiple catalog items](https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk)
+- [Create multiple catalog items](https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk)
+- [Update catalog items](https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items)
+- [Edit catalog item](https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item)
+- [Create catalog item](https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item)
+- [Update catalog item](https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item)
+- [Create catalog](https://www.braze.com/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog)
+ 
+## Robust channels
+
+## Multiple WhatsApp Business accounts
+
+
+
+You can now add multiple WhatsApp Business accounts and subscription groups (and phone numbers) to each workspace. For details, see [Multiple WhatsApp Business accounts](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/multiple_business_accounts/). 
+
+### SMS Geographic Permissions
+
+SMS Geographic Permissions enhance security and protect against fraudulent SMS traffic by enforcing controls on the countries to which you can send SMS messages. To learn how to specify an allowlist of countries so you can make sure SMS messages are only sent to approved regions, see [Configuring your SMS country allowlist](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/sms_geographic_permissions/#configuring-your-sms-country-allowlist).
+
+### LINE and Braze
+
+
+
+[LINE](https://www.lycbiz.com/sites/default/files/media/jp/download/LINE%20Business%20Guide_202310-202403.pdf) is the most popular messaging app in Japan, with over 95 million monthly active users. You can integrate your LINE accounts with Braze to leverage your zero- and first-party customer data to send compelling LINE messages to the right customers based on their preferences, behaviors, and cross-channel interactions. To get started, see [LINE](https://www.braze.com/docs/line).
+
+### Shopify: Price drops and back-in-stock
+
+
+
+Now with Shopify, you can create custom notifications for [price drops](https://www.braze.com/docs/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications/) and [back-in-stock items](https://www.braze.com/docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications/).
+ 
+## AI and ML automation
+ 
+### Rules-based merging for duplicate users
+
+Previously, you could find and merge duplicate users in Braze individually or in bulk. Now you can create rules to control how duplicates are resolved, so the most relevant user is kept. To learn more, see [Rules-based merging](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#rules-based-merging).
+
+### AI Liquid assistant
+
+
+
+The AI Liquid Assistant is a chat assistant powered by BrazeAI<sup>TM</sup> that helps generate the Liquid you need to personalize message content. You can generate Liquid from templates, receive personalized Liquid suggestions, and optimize existing Liquid with the support of BrazeAI<sup>TM</sup>. The AI Liquid Assistant also provides annotations explaining the Liquid used, so you can increase your understanding of Liquid and learn to write your own.
+
+To get started, see [AI Liquid assistant](https://www.braze.com/docs/user_guide/brazeai/generative_ai/liquid/).
+ 
+## SDK
+ 
+### Android SDK logs
+
+We overhauled the [logging docs for the Braze Android SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/additional_customization_and_configuration/#logging), so it's easier to read and use in your app. We also added descriptions for each log level.
+
+### iOS SDK foreground push notifications
+
+The `subscribeToUpdates` method in the Braze iOS SDK can now detect if a foreground push notification is received. To learn more, see [iOS push notification integration](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift).
+ 
+### Updating the Xamarin docs
+ 
+Since [version 4.0.0](https://github.com/braze-inc/braze-xamarin-sdk/releases/tag/4.0.0), the Braze Xamarin SDK uses the Swift SDK binding, so we updated the code snippets and reference material. We also restructured the section to make it easier to read and understand. To check it out, see [the Xamarin docs](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=.net%20maui%20(xamarin)).
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+ 
+- [Swift SDK 9.3.1](https://github.com/braze-inc/braze-swift-sdk/releases/tag/9.3.1)
+- [Web SDK 5.3.2](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#532)
+    - Fixed a regression introduced in 5.2.0 that could cause HTML In-App Messages to render incorrectly when an external script is loaded synchronously.
+- [Web SDK 5.4.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#540)
