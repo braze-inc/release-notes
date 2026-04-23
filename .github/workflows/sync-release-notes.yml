@@ -101,8 +101,8 @@ jobs:
           if [ -z "${PR_NUMBER}" ]; then
             gh pr create --base main --head "${SYNC_BRANCH}" --title "${PR_TITLE}" --body "${PR_BODY}"
             PR_NUMBER="$(gh pr list --state open --base main --head "${SYNC_BRANCH}" --json number --jq '.[0].number')"
+            echo "Opened mirror PR #${PR_NUMBER}. A Docs team reviewer must approve and merge it to update main."
           else
             gh pr edit "${PR_NUMBER}" --title "${PR_TITLE}" --body "${PR_BODY}"
+            echo "Updated existing mirror PR #${PR_NUMBER}. A Docs team reviewer must approve and merge it to update main."
           fi
-
-          gh pr merge "${PR_NUMBER}" --auto --merge --delete-branch=false
