@@ -7,10 +7,14 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: mirror-public-docs-markdown
   cancel-in-progress: true
+
+env:
+  SYNC_BRANCH: docs-sync/public-docs-mirror
 
 jobs:
   sync:
@@ -34,22 +38,30 @@ jobs:
             rsync -av --delete "sync-staging/${section}/" "docs/${section}/"
           done
 
-          # Remove legacy path from the previous release-notes import model.
           rm -rf docs/releases
 
-      - name: Write daily changes report
+      - name: Stage mirror output and detect changes
+        id: diff
         run: |
           set -euo pipefail
           git add -A -- "docs/User Guide" "docs/Developer Guide" "docs/API" "docs/Technology Partners" "docs/What's New" docs/releases
-          CHANGES="$(git diff --cached --name-status -- "docs/User Guide" "docs/Developer Guide" "docs/API" "docs/Technology Partners" "docs/What's New" docs/releases)"
-          if [ -z "$CHANGES" ]; then
+
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No markdown changes detected."
-            exit 0
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Write daily changes report
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
           TODAY="$(date -u +%Y-%m-%d)"
           LOG_FILE="changes/${TODAY}.md"
           mkdir -p changes
+
+          CHANGES="$(git diff --cached --name-status -- "docs/User Guide" "docs/Developer Guide" "docs/API" "docs/Technology Partners" "docs/What's New" docs/releases)"
           COUNT="$(printf "%s\n" "$CHANGES" | sed '/^$/d' | wc -l | tr -d ' ')"
 
           {
@@ -67,17 +79,30 @@ jobs:
 
           git add "$LOG_FILE"
 
-      - name: Commit and push direct to main if changed
+      - name: Commit and push to mirror branch, open/update PR, and enable auto-merge
+        if: steps.diff.outputs.changed == 'true'
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet --cached; then
-            echo "No public markdown changes."
-            exit 0
-          fi
+          set -euo pipefail
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git commit -m "Mirror public docs markdown from braze.com/docs"
-          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:main"
+          TODAY="$(date -u +%Y-%m-%d)"
+          git commit -m "Mirror public docs markdown from braze.com/docs (${TODAY})"
+
+          git push --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:${SYNC_BRANCH}"
+
+          PR_NUMBER="$(gh pr list --state open --base main --head "${SYNC_BRANCH}" --json number --jq '.[0].number // empty')"
+          PR_TITLE="Mirror public docs markdown from braze.com/docs (${TODAY})"
+          PR_BODY="Automated daily sync of public-facing markdown from https://www.braze.com/docs into docs/User Guide, docs/Developer Guide, docs/API, docs/Technology Partners, and docs/What's New."
+
+          if [ -z "${PR_NUMBER}" ]; then
+            gh pr create --base main --head "${SYNC_BRANCH}" --title "${PR_TITLE}" --body "${PR_BODY}"
+            PR_NUMBER="$(gh pr list --state open --base main --head "${SYNC_BRANCH}" --json number --jq '.[0].number')"
+          else
+            gh pr edit "${PR_NUMBER}" --title "${PR_TITLE}" --body "${PR_BODY}"
+          fi
+
+          gh pr merge "${PR_NUMBER}" --auto --merge --delete-branch=false

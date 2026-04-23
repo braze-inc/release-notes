@@ -8,7 +8,7 @@ Public markdown documentation is mirrored from [`www.braze.com/docs`](https://ww
 
 - Sync cadence: daily (automated)
 - Manual sync: workflow dispatch available in GitHub Actions
-- Branch behavior: workflow runs on `main` and commits mirrored content to `main`
+- Branch behavior: workflow commits mirrored content to the `docs-sync/public-docs-mirror` branch, opens (or updates) a pull request to `main`, and enables auto-merge so `main` stays current as soon as approvals and code-owner review requirements are satisfied
 - Destination structure: `docs/User Guide`, `docs/Developer Guide`, `docs/API`, `docs/Technology Partners`, and `docs/What's New`
 - Change reports: daily change log written to `changes/YYYY-MM-DD.md`
 
