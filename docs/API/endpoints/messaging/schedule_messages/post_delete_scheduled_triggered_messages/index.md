@@ -1,4 +1,4 @@
-<div id='api_ilftzwtnfzqi' class='api_div'>
+<div id='api_yqregntpwdvp' class='api_div'>
 <h1 id="delete-scheduled-api-triggered-campaigns">Delete scheduled API-triggered campaigns</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/schedule/delete</p>

@@ -1,4 +1,4 @@
-<div id='api_xgiexwqavdit' class='api_div'>
+<div id='api_ugulvqbplist' class='api_div'>
 <h1 id="list-sdk-authentication-keys">List SDK Authentication keys</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/app_group/sdk_authentication/keys</p>

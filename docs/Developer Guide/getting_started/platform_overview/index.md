@@ -84,7 +84,7 @@ After you have defined a segment, Braze messaging tools allow you to engage with
 
 ### Customizable components
 
-<div class='swiper swiper-container' id='gallery_uibbollcqtev'><div class='swiper-wrapper'>
+<div class='swiper swiper-container' id='gallery_ilnmqqmiljut'><div class='swiper-wrapper'>
 <div class='swiper-slide'><img class='swiper-image swiper-popover' src='/docs/assets/img/getting-started/crawl-example.png'/>
 <div class='swiper-description'><p><br /> All Braze components are crafted to be accessible, adaptive, and customizable. You can start with Braze by using the default <code class="language-plaintext highlighter-rouge">BrazeUI</code> components and customizing them to suit your brand needs and use case.</p>
 </div></div>
@@ -95,7 +95,7 @@ After you have defined a segment, Braze messaging tools allow you to engage with
 <div class='swiper-description'><p><br /> You can also create completely custom components to control what your messaging looks like, how it behaves, and how they interact with other messaging channels (for example, triggering a Content Card based on a push notification). Braze provides SDK methods to allow you to log metrics like impressions, clicks, and dismissals in the Braze dashboard. Each messaging channel has an analytics article to help facilitate this.</p>
 </div></div>
 </div><div class='swiper-pagination'></div><div class='swiper-button-next'></div><div class='swiper-button-prev'></div></div>
-<script type='text/javascript'>let swiper = new Swiper('#gallery_uibbollcqtev', {slidesPerView: 'auto',spaceBetween: 30,loop: false, pagination: { el: '.swiper-pagination', clickable: true }, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'}});</script>
+<script type='text/javascript'>let swiper = new Swiper('#gallery_ilnmqqmiljut', {slidesPerView: 'auto',spaceBetween: 30,loop: false, pagination: { el: '.swiper-pagination', clickable: true }, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'}});</script>
 
 <br>
 <br>

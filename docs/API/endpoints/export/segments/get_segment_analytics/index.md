@@ -1,4 +1,4 @@
-<div id='api_xpfjvpdetwbf' class='api_div'>
+<div id='api_poxgbgseaxkp' class='api_div'>
 <h1 id="export-segment-analytics">Export segment analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/segments/data_series</p>
