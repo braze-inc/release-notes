@@ -12,6 +12,8 @@ Public markdown documentation is mirrored from [`www.braze.com/docs`](https://ww
 - Destination structure: `docs/User Guide`, `docs/Developer Guide`, `docs/API`, `docs/Technology Partners`, and `docs/What's New`
 - Change reports: daily change log written to `changes/YYYY-MM-DD.md`
 
+For a full technical reference, including a line-by-line walkthrough of the workflow and sync script, see [ARCHITECTURE.md](ARCHITECTURE.md).
+
 ## How to subscribe to updates
 
 You can subscribe to repository updates from the **Watch** menu on GitHub.
