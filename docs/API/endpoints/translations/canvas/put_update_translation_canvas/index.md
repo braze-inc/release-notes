@@ -1,4 +1,4 @@
-<div id='api_ddmbfqjuoqpa' class='api_div'>
+<div id='api_wybsiglesqse' class='api_div'>
 <h1 id="update-translation-in-a-canvas">Update translation in a Canvas</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/canvas/translations</p>

@@ -1,4 +1,4 @@
-<div id='api_kaogtmbdmnxp' class='api_div'>
+<div id='api_waraiwbmahmz' class='api_div'>
 <h1 id="view-details-for-preference-center">View details for preference center</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/preference_center/v1/{preferenceCenterExternalID}</p>

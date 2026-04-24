@@ -45,6 +45,13 @@ If all of the messages in your campaign are going to be similar or have the same
 
 
 
+**Tip:**
+
+
+If you plan to build custom HTML and need backgrounds to stay consistent in the Gmail mobile app with device dark mode on, see [Gmail mobile app and Dark Mode background colors](#gmail-dark-mode).
+
+
+
 
 
 ## Step 2: Select your editing experience {#step-2-choose-your-template-and-compose-your-email}
@@ -53,7 +60,9 @@ Braze offers two editing experiences when creating an email campaign: our [drag-
 
 ![Choosing between the drag-and-drop editor, HTML editor, or templates for your email editing experience.](https://www.braze.com/docs/assets/img_archive/choose_email_creation.png?aca7b8d0e033a4a868923644f3297a4b){: style="max-width:75%" }
 
-Then, you can either select an existing [email template](https://www.braze.com/docs/user_guide/channels/email/html_editor#creating-an-email-template), [upload a template](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/html_email_template/) from a file (HTML editor only), or use a blank template. 
+Then, you can either select an existing [email template](https://www.braze.com/docs/user_guide/channels/email/html_editor#creating-an-email-template), [upload a template](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/html_email_template/) from a file (HTML editor only), or use a blank template.
+
+If you use the HTML editor and need background colors to stay consistent in the Gmail mobile app when the device is in dark mode, see [Gmail mobile app and Dark Mode background colors](#gmail-dark-mode).
 
 **Tip:**
 
@@ -96,6 +105,29 @@ Need help creating awesome copy? Try using the [AI copywriting assistant](https:
 
 
 Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages/) for best practices.
+
+### Gmail mobile app and dark mode {#gmail-dark-mode}
+
+The Gmail mobile app (Android and iOS) can invert background colors when the device is in dark mode. That can break layouts where the email background should match an image edge or a specific brand color.
+
+To avoid this, in the table cell that needs a stable background, use a single-color CSS `linear-gradient` instead of `background-color`. Gmail is less likely to invert that treatment than a flat background color.
+
+For example, to keep a white background on a cell, use this:
+
+```html
+<td style="background-image: linear-gradient(#ffffff, #ffffff);">
+```
+
+Replace `#ffffff` with your intended color.
+
+**Note:**
+
+
+This approach does not apply reliably to `<table>` elements alone, so set the gradient on the cell instead of only on the table.
+
+
+
+For more information about gradient syntax, see [CSS gradients on W3Schools](https://www.w3schools.com/css/css3_gradients.asp).
 
 ### Step 3.1: Add your sending information
 
@@ -204,7 +236,7 @@ You can also switch between desktop, mobile, and plaintext views to get a sense 
 **Tip:**
 
 
-Curious about what your email looks like for dark mode users? Select the **Dark Mode Preview** toggle located in the **Preview and Test** section (drag-and-drop editor only).
+Curious about what your email looks like for dark mode users? Select the **Dark Mode Preview** toggle located in the **Preview and Test** section (drag-and-drop editor only). If you use the HTML editor, you can still address Gmail mobile dark mode rendering with [Gmail mobile app and Dark Mode](#gmail-dark-mode).
 
 
 

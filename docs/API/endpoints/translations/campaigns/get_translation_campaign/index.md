@@ -1,4 +1,4 @@
-<div id='api_ikypdoogqisr' class='api_div'>
+<div id='api_sehdoniiazti' class='api_div'>
 <h1 id="view-all-translations-for-a-campaign">View all translations for a campaign</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/campaigns/translations</p>
