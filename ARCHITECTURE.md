@@ -183,8 +183,6 @@ permissions:
 - `contents: write` lets the job push to the dedicated mirror branch.
 - `pull-requests: write` lets the job call `gh pr create` and `gh pr edit` to manage the mirror PR.
 
-The job uses the built-in `GITHUB_TOKEN` only. There are no long-lived secrets, no PATs, and no cross-repo tokens.
-
 ### Concurrency
 
 ```yaml
@@ -351,9 +349,9 @@ A single job on a stock Ubuntu runner. No matrix, no cache, no extra services.
 
 The repo's `main` is protected. The ruleset on `main` requires:
 
-- changes made via pull request,
-- one approving review, and
-- a code-owner review.
+- Changes made through a pull request
+- One approving review
+- A code-owner review
 
 The workflow respects this by never pushing to `main`. Instead:
 
