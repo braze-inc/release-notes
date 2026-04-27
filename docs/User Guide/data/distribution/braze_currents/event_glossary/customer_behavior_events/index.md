@@ -45,7 +45,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 
 
-<div id='api_xpeintbjluec' class='api_div'>
+<div id='api_icgsaglkkrgt' class='api_div'>
 <h2 id="random-bucket-number-update-events">Random Bucket Number Update events</h2>
 
 <div class="api_tags" data-tags="Random Bucket Number" data-tags-lower="random bucket number"></div>
@@ -83,7 +83,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 </div>
 
-<div id='api_sqwedvhdflae' class='api_div'>
+<div id='api_nbefpkhnccih' class='api_div'>
 <h2 id="custom-events">Custom events</h2>
 
 <div class="api_tags" data-tags="Custom Events" data-tags-lower="custom events"></div>
@@ -285,7 +285,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 </ul>
 </div>
 
-<div id='api_ffdtvdfcyrao' class='api_div'>
+<div id='api_zsdgvncjvsub' class='api_div'>
 <h2 id="install-attribution-events">Install Attribution events</h2>
 
 <div class="api_tags" data-tags="Attribution" data-tags-lower="attribution"></div>
@@ -418,7 +418,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 </div>
 
-<div id='api_uakhlyojqkvo' class='api_div'>
+<div id='api_lsjfvwxzvdqf' class='api_div'>
 <h2 id="location-events">Location events</h2>
 
 <div class="api_tags" data-tags="Locations" data-tags-lower="locations"></div>
@@ -651,7 +651,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 </ul>
 </div>
 
-<div id='api_lsdyzmhnmxaw' class='api_div'>
+<div id='api_ufzmrgxkojyh' class='api_div'>
 <h2 id="purchase-events">Purchase events</h2>
 
 <div class="api_tags" data-tags="Purchases" data-tags-lower="purchases"></div>
@@ -875,7 +875,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 </ul>
 </div>
 
-<div id='api_gxekzgugdfgg' class='api_div'>
+<div id='api_rcwaugeustxq' class='api_div'>
 <h2 id="first-session-events">First Session events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1056,7 +1056,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 </div>
 
-<div id='api_nncigpkzgawi' class='api_div'>
+<div id='api_bhkcsjsgsbbh' class='api_div'>
 <h2 id="session-end-events">Session End events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1231,7 +1231,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 </div>
 
-<div id='api_prutyxynwpbm' class='api_div'>
+<div id='api_lafhwvreapkd' class='api_div'>
 <h2 id="session-start-events">Session Start events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1402,7 +1402,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 </div>
 
-<div id='api_tkidpfzazrqn' class='api_div'>
+<div id='api_rxrixcwscbbq' class='api_div'>
 <h2 id="live-activity-push-to-start-token-change-events">Live Activity Push To Start Token Change events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Push To Start Token" data-tags-lower="live activity, push to start token"></div>
@@ -1571,7 +1571,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 </div>
 
-<div id='api_rcoeeiyaclit' class='api_div'>
+<div id='api_iqdcuehducii' class='api_div'>
 <h2 id="live-activity-update-token-change-events">Live Activity Update Token Change events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Update Token" data-tags-lower="live activity, update token"></div>
@@ -1740,7 +1740,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 </div>
 
-<div id='api_sczwzmmkgshn' class='api_div'>
+<div id='api_qpdxhltpjhdu' class='api_div'>
 <h2 id="push-notification-token-state-change-events">Push Notification Token State Change events</h2>
 
 <div class="api_tags" data-tags="Push, Token State Change" data-tags-lower="push, token state change"></div>

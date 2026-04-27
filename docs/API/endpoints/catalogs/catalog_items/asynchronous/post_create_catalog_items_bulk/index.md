@@ -1,4 +1,4 @@
-<div id='api_iqpcavsbvtjo' class='api_div'>
+<div id='api_uyshddglrtph' class='api_div'>
 <h1 id="create-multiple-catalog-items">Create multiple catalog items</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/catalogs/{catalog_name}/items</p>

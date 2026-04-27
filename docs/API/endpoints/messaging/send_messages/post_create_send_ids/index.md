@@ -1,4 +1,4 @@
-<div id='api_tbiitahmpcvs' class='api_div'>
+<div id='api_yexzjxlrkdlk' class='api_div'>
 <h1 id="create-send-ids">Create send IDs</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/sends/id/create</p>

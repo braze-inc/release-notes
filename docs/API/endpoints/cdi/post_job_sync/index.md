@@ -1,4 +1,4 @@
-<div id='api_ikederxvskow' class='api_div'>
+<div id='api_vulpsgytwopd' class='api_div'>
 <h1 id="trigger-a-sync">Trigger a sync</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/cdi/integrations/{integration_id}/sync</p>
