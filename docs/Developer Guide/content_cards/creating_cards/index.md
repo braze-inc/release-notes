@@ -1,4 +1,4 @@
-# Create content cards
+# Create Content Cards
 
 > This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases. It assumes you've already read the other articles in the Content Card customization guide to understand what can be done by default and what requires custom code. It's especially helpful to understand how to [log analytics](https://www.braze.com/docs/developer_guide/content_cards/logging_analytics/) for your custom Content Cards. 
 

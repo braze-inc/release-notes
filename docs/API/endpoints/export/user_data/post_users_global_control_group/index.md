@@ -1,4 +1,4 @@
-<div id='api_wduvnhwrjuyv' class='api_div'>
+<div id='api_xyowqgqaxrto' class='api_div'>
 <h1 id="export-user-profile-by-global-control-group">Export user profile by Global Control Group</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/export/global_control_group</p>

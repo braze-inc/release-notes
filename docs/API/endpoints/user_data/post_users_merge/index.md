@@ -1,4 +1,4 @@
-<div id='api_xsksahqxcnnh' class='api_div'>
+<div id='api_sibjqvybzaug' class='api_div'>
 <h1 id="merge-users">Merge users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/merge</p>

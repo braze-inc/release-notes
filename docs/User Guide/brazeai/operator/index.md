@@ -71,7 +71,7 @@ When you open Operator, suggested prompts appear based on common tasks and your 
 
 Operator shows its reasoning steps in collapsible sections labeled **Reasoned**. Select the dropdown to expand these sections and see how Operator determined an answer. This is helpful when you want to understand the logic behind a suggestion or verify the approach.
 
-![The collapsed "Reasoned" dropdown in an Operator response.](https://www.braze.com/docs/assets/img/operator/operator_reasoning_collapsed.png?ed822e9bdef8bf0a5ca51d88c887f4dd){:style="max-width:40%"}
+![The collapsed "Reasoned" dropdown in an Operator response.](https://www.braze.com/docs/assets/img/operator/operator_reasoning_collapsed.png?88420c1d5e162c67cd2e9ef8b75d3d6f){:style="max-width:40%"}
 
 ### Take action with Operator
 

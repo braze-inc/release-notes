@@ -1,4 +1,4 @@
-<div id='api_ntegrpitqerz' class='api_div'>
+<div id='api_oaxsmxyaxtov' class='api_div'>
 <h1 id="edit-catalog-item">Edit catalog item</h1>
 <div class="api_type"><div class="method patch ">patch</div>
 <p>/catalogs/{catalog_name}/items/{item_id}</p>
