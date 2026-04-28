@@ -1,4 +1,4 @@
-<div id='api_fguxgxwdykoh' class='api_div'>
+<div id='api_ycyuvancdsup' class='api_div'>
 <h1 id="delete-scheduled-messages">Delete scheduled messages</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/schedule/delete</p>

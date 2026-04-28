@@ -1,4 +1,4 @@
-<div id='api_ctftygfpkzam' class='api_div'>
+<div id='api_klxjlwbregrv' class='api_div'>
 <h1 id="list-upcoming-scheduled-campaigns-and-canvases">List upcoming scheduled campaigns and Canvases</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/messages/scheduled_broadcasts</p>

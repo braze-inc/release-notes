@@ -1,4 +1,4 @@
-<div id='api_wlbgkxzmsntl' class='api_div'>
+<div id='api_ifirfsnylydu' class='api_div'>
 <h1 id="export-revenue-data-by-time">Export revenue data by time</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/purchases/revenue_series</p>

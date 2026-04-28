@@ -1,4 +1,4 @@
-<div id='api_trhrvsqpnicj' class='api_div'>
+<div id='api_tmgurumujcah' class='api_div'>
 <h1 id="export-daily-active-users-by-date">Export daily active users by date</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/kpi/dau/data_series</p>

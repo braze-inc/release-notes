@@ -1,10 +1,10 @@
 # Set up IPs and domains
 
+> This article guides you through the requirements and steps needed to set up your IP addresses and pools, as well as domains and subdomains needed before you can begin sending emails with Braze.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
 
 
-
-> This article walks you through the requirements and steps needed to set up your IP addresses and pools, as well as domains and subdomains needed before you can begin sending emails with Braze. <br><br>Though most of the setup process is done by Braze, we have outlined the requirements and materials for this setup.
 
 <br>
 

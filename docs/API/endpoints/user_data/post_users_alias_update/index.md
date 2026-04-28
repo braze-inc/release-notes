@@ -1,4 +1,4 @@
-<div id='api_yvieivbnnwib' class='api_div'>
+<div id='api_tsehbwlnoaeh' class='api_div'>
 <h1 id="update-user-alias">Update user alias</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/alias/update</p>

@@ -1,4 +1,4 @@
-<div id='api_pgfvizphbkyl' class='api_div'>
+<div id='api_qabkyrjlwuyr' class='api_div'>
 <h1 id="query-list-of-unsubscribed-email-addresses">Query list of unsubscribed email addresses</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/email/unsubscribes</p>
