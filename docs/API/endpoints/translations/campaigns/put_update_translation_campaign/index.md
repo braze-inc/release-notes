@@ -1,4 +1,4 @@
-<div id='api_ievbcnvyakhr' class='api_div'>
+<div id='api_pgdzeqpuyblb' class='api_div'>
 <h1 id="update-translation-in-a-campaign">Update translation in a campaign</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/campaigns/translations</p>

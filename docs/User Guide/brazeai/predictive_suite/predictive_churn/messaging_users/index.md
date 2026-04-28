@@ -1,5 +1,7 @@
 # Messaging users {#what-do-next}
 
+> This reference article covers next steps after you create a churn prediction, including how to target users with filters and strategic considerations for messaging.
+
 **Note:**
 
 

@@ -1,8 +1,8 @@
 # Fuzzy opt-out
 
-![iOS message chat that shows outbound opt-out messages in response to the inbound fuzzy opt-out "Please stopppp".](https://www.braze.com/docs/assets/img/sms/fuzzy1.jpg?07695e2227980555a87321f4d04589da){: style="float:right;max-width:30%;margin-left:15px;"}
-
 > Users that send SMS, MMS, and RCS with Braze must adhere to the applicable laws, regulations, and industry standards that are defined. For opt-out, the laws dictate that when a user texts "STOP" that all subsequent messaging related to that messaging program will be stopped. Braze automatically processes these messages and unsubscribes the user.<br><br>Fuzzy opt-out attempts to recognize when an inbound message does not match an [opt-out keyword](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/optin_optout/), but indicates opt-out intent. If fuzzy opt-out is enabled and an inbound keyword response is deemed "fuzzy," you can configure Braze to either automatically unsubscribe the user or respond with a message that instructs them how to opt out manually.
+
+![iOS message chat that shows outbound opt-out messages in response to the inbound fuzzy opt-out "Please stopppp".](https://www.braze.com/docs/assets/img/sms/fuzzy1.jpg?07695e2227980555a87321f4d04589da){: style="float:right;max-width:30%;margin-left:15px;"}
 
 Currently, only opt-out keywords created using English as the [local language](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/keyword_handling/#multi-language-support) are supported.
 

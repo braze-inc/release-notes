@@ -1,10 +1,10 @@
 # [![Braze Learning course](https://www.braze.com/docs/assets/img/bl_icon3.png?5f6465f63e399dec15d7020b6f4d2452)](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Regular expressions
 
+> Regular expression, known commonly as a regex, is a sequence of characters that defines a search pattern. Regular expressions let you validate text groupings and perform find and replace actions. At Braze, we leverage regular expressions to give you a more flexible string matching solution in your segmentation and campaign filtering for your target audience.<br><br>This page covers regular expressions (regex), how to use them, frequently asked questions, and provides a regex debugger to test regular expressions.
+
 <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
 
 -->
-
-> Regular expression, known commonly as a regex, is a sequence of characters that defines a search pattern. Regular expressions let you validate text groupings and perform find and replace actions. At Braze, we leverage regular expressions to give you a more flexible string matching solution in your segmentation and campaign filtering for your target audience.<br><br>This page covers regular expressions (regex), how to use them, frequently asked questions, and provides a regex debugger to test regular expressions.
 
 In the linked Braze Learning course, we show you how regular expressions can be used and tested on [Regex101](https://regex101.com/). We also offer an [in-house regex tester](#regex-debugger), a helpful reference page, sample data referenced in the regex Braze Learning video, as well as some frequently asked questions.
 

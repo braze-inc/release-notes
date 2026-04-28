@@ -1,6 +1,6 @@
 # Get started: Braze overview
 
-Welcome to Braze! This collection of articles will help you get started with our platform and introduce you to the key terms, features, and functionalities of Braze. This page introduces the core concepts you'll need to know when working in Braze.
+> Welcome to Braze! This collection of articles helps you get started with our platform and introduces the key terms, features, and functionalities of Braze. This page introduces the core concepts you need when working in Braze.
 
 **Tip:**
 

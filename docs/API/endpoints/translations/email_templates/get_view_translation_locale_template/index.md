@@ -1,4 +1,4 @@
-<div id='api_fyidyumovjno' class='api_div'>
+<div id='api_zmfrahpqdczv' class='api_div'>
 <h1 id="view-a-specific-translation-and-locale-for-email-template-endpoint">View a specific translation and locale for email template endpoint</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/translations/email</p>

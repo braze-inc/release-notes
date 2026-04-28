@@ -1,5 +1,7 @@
 # BrazeAI Decisioning Studio™ Go
 
+> Learn how to set up and integrate BrazeAI Decisioning Studio™ Go into Braze.
+
 **Important:**
 
 

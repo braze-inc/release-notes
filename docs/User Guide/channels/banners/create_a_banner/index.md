@@ -197,13 +197,6 @@ Your message will only be sent to users who already match the conditions you set
 {:start="2"}
 2. In **Assign Conversions**, track how often users perform specific actions after receiving a campaign by defining conversion events with up to a 30-day window to count the action as a conversion.
 
-**Important:**
-
-
-Your message will only be sent to users who already match the conditions you set in the **Target Audience** step. After that, they still need to meet the trigger you define in the **Schedule Delivery** step. Think of the target audience as a waiting room—only people already inside can move forward when the next action happens. 
-
-
-
 #### Choose conversion events
 
 Braze allows you to track [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events/), how often users perform specific actions, after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion is counted if the user takes the specified action.

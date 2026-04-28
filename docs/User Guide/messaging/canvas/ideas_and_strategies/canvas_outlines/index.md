@@ -1,8 +1,8 @@
 # Canvas outlines
 
-[![Braze Learning course](https://www.braze.com/docs/assets/img/bl_icon3.png?5f6465f63e399dec15d7020b6f4d2452)](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
-
 > This article highlights several examples that demonstrate how you can use Canvas to accomplish targeted, personalized messaging using a combination of [Delay](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/delay_step/) and [Message](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step/) steps.
+
+[![Braze Learning course](https://www.braze.com/docs/assets/img/bl_icon3.png?5f6465f63e399dec15d7020b6f4d2452)](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
 Braze Learning also offers several dedicated Canvas courses that go over common Canvas outlines. Check them out for valuable insights into technical terms and concepts explained through a mix of videos, lessons, and interactive exercises.
 

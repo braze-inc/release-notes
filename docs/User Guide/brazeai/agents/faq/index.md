@@ -1,5 +1,7 @@
 # Agents frequently asked questions
 
+> This article answers frequently asked questions about Braze Agents.
+
 ## General
 
 ### What is the difference between Canvas agents and catalog agents?

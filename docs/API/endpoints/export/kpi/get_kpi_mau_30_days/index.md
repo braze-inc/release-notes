@@ -1,4 +1,4 @@
-<div id='api_vddjvxmtggav' class='api_div'>
+<div id='api_abztatjnyemz' class='api_div'>
 <h1 id="export-monthly-active-users-for-last-30-days">Export monthly active users for last 30 days</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/kpi/mau/data_series</p>
