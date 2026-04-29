@@ -146,3 +146,11 @@ You can share a dashboard link to the report by selecting **Share** and one of t
 3. Select whether you want to create a new dashboard or add to an existing dashboard.<br><br>![Window with options to select if you want to add the report to a new or existing dashboard.](https://www.braze.com/docs/assets/img/report_builder_2/add_to_dashboard.png?3c232fc0d40d1c600da9018bb71df7e3){: style="width:90%;"}<br><br>
 4. Follow the steps in [Dashboard Builder](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/) to learn more about building a dashboard.
 
+## Troubleshooting
+
+### Report shows no sends for a campaign or Canvas
+
+A campaign or Canvas appears in the report when its **Last sent** date falls in the **Last sent** window you configured. **Sends** and other metrics only populate for activity inside the **Show data for** date range. If the message didn't send during **Show data for**, the row can still list the campaign or Canvas with zero sends.
+
+For example, suppose **Last sent** is January 1, 2025–April 14, 2025, so a campaign is included, but **Show data for** is December 1, 2024–January 14, 2025. If that campaign had no sends in December or January, it still appears in the table with no send metrics.
+

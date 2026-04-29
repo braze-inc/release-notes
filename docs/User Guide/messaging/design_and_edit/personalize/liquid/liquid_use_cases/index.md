@@ -1,4 +1,4 @@
-<div id='api_urjvlliaxrll' class='api_div'>
+<div id='api_mslirnebtiow' class='api_div'>
 <h2 id="anniversaries-and-holidays">Anniversaries and holidays</h2>
 
 <div class="api_tags" data-tags="Anniversaries and holidays" data-tags-lower="anniversaries and holidays"></div>
@@ -164,7 +164,7 @@ Message if today isn't one of the provided holidays.
 
 </div>
 
-<div id='api_mufttzmvcqua' class='api_div'>
+<div id='api_ewiyvhpptvat' class='api_div'>
 <h2 id="app-usage">App usage</h2>
 
 <div class="api_tags" data-tags="App usage" data-tags-lower="app usage"></div>
@@ -269,7 +269,7 @@ Message for a less active user
 
 </div>
 
-<div id='api_xoxwzfwouhmf' class='api_div'>
+<div id='api_jztzxnnxnrjj' class='api_div'>
 <h2 id="countdowns">Countdowns</h2>
 
 <div class="api_tags" data-tags="Countdowns" data-tags-lower="countdowns"></div>
@@ -721,7 +721,7 @@ Hi, the offer is only valid today.
 
 </div>
 
-<div id='api_doqntypxzsnk' class='api_div'>
+<div id='api_oqlhufpwtxxz' class='api_div'>
 <h2 id="custom-attribute">Custom attribute</h2>
 
 <div class="api_tags" data-tags="Custom attribute" data-tags-lower="custom attribute"></div>
@@ -790,7 +790,7 @@ Hi <span class="cp">{{</span><span class="nv">name</span><span class="p">[</span
 
 </div>
 
-<div id='api_lvcsgkxnfxmv' class='api_div'>
+<div id='api_vrpsvaazifie' class='api_div'>
 <h2 id="custom-event">Custom event</h2>
 
 <div class="api_tags" data-tags="Custom event" data-tags-lower="custom event"></div>
@@ -966,7 +966,7 @@ Did you forget something in your shopping cart?
 
 </div>
 
-<div id='api_qchmmyfdeenv' class='api_div'>
+<div id='api_yzepuhsokfhd' class='api_div'>
 <h2 id="language">Language</h2>
 
 <div class="api_tags" data-tags="Language" data-tags-lower="language"></div>
@@ -1143,7 +1143,7 @@ tuesday default
 
 </div>
 
-<div id='api_ygmkvgwzpcez' class='api_div'>
+<div id='api_qijuezbibkqw' class='api_div'>
 <h2 id="miscellaneous">Miscellaneous</h2>
 
 <div class="api_tags" data-tags="Miscellaneous" data-tags-lower="miscellaneous"></div>
@@ -1680,7 +1680,7 @@ All episodes of <span class="cp">{{</span><span class="nv">new_shows_clean</span
 
 </div>
 
-<div id='api_ahpjvhwumlxx' class='api_div'>
+<div id='api_bmytcsdppamq' class='api_div'>
 <h2 id="platform-targeting">Platform targeting</h2>
 
 <div class="api_tags" data-tags="Platform targeting" data-tags-lower="platform targeting"></div>
@@ -1831,7 +1831,7 @@ This is a message for Verizon users!
 
 </div>
 
-<div id='api_ywuahvfpkcya' class='api_div'>
+<div id='api_dvvsliwhpvbj' class='api_div'>
 <h2 id="sms">SMS</h2>
 
 <div class="api_tags" data-tags="SMS" data-tags-lower="sms"></div>
@@ -1870,7 +1870,7 @@ Thanks for joining our SMS program!
 
 </div>
 
-<div id='api_lmkxakraedyh' class='api_div'>
+<div id='api_slceaygnwnyc' class='api_div'>
 <h2 id="time-zones">Time zones</h2>
 
 <div class="api_tags" data-tags="Time zones" data-tags-lower="time zones"></div>
@@ -2056,7 +2056,7 @@ Check out this new bar after work today. HH specials!
 
 </div>
 
-<div id='api_jbaluydkpoxq' class='api_div'>
+<div id='api_fhmpxxwqfjdn' class='api_div'>
 <h2 id="weekdaymonth">Week/Day/Month</h2>
 
 <div class="api_tags" data-tags="Week/Day/Month" data-tags-lower="week/day/month"></div>

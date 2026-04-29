@@ -18,7 +18,7 @@ The number of updates to the Canvas from other members of your team is tracked b
 
 ## Performance visualization
 
-As you move down the **Canvas Details** page, you can see the performance for each component such as how many users entered, proceeded to the next step, or exited the Canvas. 
+As you move down the **Canvas Details** page, you can see performance for each component—such as how many users entered, proceeded to the next step, or exited the Canvas. Select a specific Canvas step or component to focus the panel on that part of the journey and review its metrics in more detail.
 
 **Note:**
 
@@ -53,7 +53,7 @@ Basic metrics include the following:
 - **Total Entries:** The total number of users that have entered the Canvas variant.
 - **Total Sends:** The total number of messages sent in the Canvas variant.
 - **Total Steps:** The total number of steps in the Canvas variant.
-- **Total Revenue:** The total revenue in dollars from Canvas recipients within the set primary conversion window.
+- **Total Revenue:** The total revenue in dollars from Canvas recipients within the set primary conversion window. _Total Revenue_ is the sum of purchases attributed to users who received that variant during that window. Purchases still count toward _Total Revenue_ even when the user does not perform the configured primary conversion event, as long as the purchase falls within the attribution rules for the window.
 
 **Note:**
 

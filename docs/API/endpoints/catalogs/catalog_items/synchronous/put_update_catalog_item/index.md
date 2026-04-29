@@ -1,4 +1,4 @@
-<div id='api_hhobmyqchzvh' class='api_div'>
+<div id='api_mzehbidhwnzz' class='api_div'>
 <h1 id="replace-catalog-item">Replace catalog item</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/catalogs/{catalog_name}/items/{item_id}</p>

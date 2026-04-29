@@ -1,4 +1,4 @@
-<div id='api_fvkxsejeetoi' class='api_div'>
+<div id='api_anuvdugovrhv' class='api_div'>
 <h1 id="generate-preference-center-url">Generate preference center URL</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/preference_center/v1/{preferenceCenterExternalID}/url/{userID}</p>
