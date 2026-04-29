@@ -1,4 +1,4 @@
-<div id='api_xymidteabjko' class='api_div'>
+<div id='api_tupjpxbymxpy' class='api_div'>
 <h1 id="list-available-content-blocks">List available Content Blocks</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/content_blocks/list</p>

@@ -1,4 +1,4 @@
-<div id='api_eetpptoobqfv' class='api_div'>
+<div id='api_bueuvwaqapzh' class='api_div'>
 <h1 id="list-users-subscription-groups">List user’s subscription groups</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/subscription/user/status</p>
