@@ -339,7 +339,7 @@ As mentioned in [Shopify overview](https://www.braze.com/docs/shopify_overview/)
 
 You can sync all products from your Shopify store to a Braze catalog for deeper messaging personalization. Automatic updates occur in near real-time so your catalog reflects up-to-date product details. To learn more, check out [Shopify product sync](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_catalogs/).
 
-![Step 4 of the set up process with "Shopify Variant ID" as the "Catalog product identifier".](https://www.braze.com/docs/assets/img/Shopify/sync_products_step1.png?5ace9a6e3dfb6a3617ff6b1143c03446){: style="max-width:80%;"}
+![Step 4 of the set up process with "Shopify Variant ID" as the "Catalog product identifier".](https://www.braze.com/docs/assets/img/Shopify/sync_products_step1.png?b7e59cf2922bf8724553ee0f1a4d668d){: style="max-width:80%;"}
 
 ## Step 6: Activate Channels (optional)
 

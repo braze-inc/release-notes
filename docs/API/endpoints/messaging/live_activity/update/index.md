@@ -1,4 +1,4 @@
-<div id='api_wzwufcskioym' class='api_div'>
+<div id='api_bactheyrfcvs' class='api_div'>
 <h1 id="update-live-activity">Update Live Activity</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/live_activity/update</p>

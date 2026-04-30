@@ -1,4 +1,4 @@
-<div id='api_vapzqqkapago' class='api_div'>
+<div id='api_jqpqalvweenw' class='api_div'>
 <h1 id="view-the-source-translations-for-an-email-template">View the source translations for an email template</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/translations/source</p>

@@ -7,7 +7,7 @@ The WhatsApp embedded signup workflow is accessed when you first [integrate What
 **Note:**
 
 
-You can add [multiple WhatsApp Business Accounts]((/docs/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups/)) to a Braze workspace. However, each specific WhatsApp Business Account can be added to only one Braze workspace.
+You can add [multiple WhatsApp Business Accounts](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups/) to a Braze workspace. However, each specific WhatsApp Business Account can be added to only one Braze workspace.
 
 
 
