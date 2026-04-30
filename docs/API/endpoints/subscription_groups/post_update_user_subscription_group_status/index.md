@@ -1,4 +1,4 @@
-<div id='api_boiehsfspxrv' class='api_div'>
+<div id='api_ozhpnjliohuj' class='api_div'>
 <h1 id="update-users-subscription-group-status">Update user’s subscription group status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/subscription/status/set</p>
