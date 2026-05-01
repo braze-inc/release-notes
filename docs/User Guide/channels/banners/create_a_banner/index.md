@@ -108,8 +108,6 @@ You can drag and drop blocks and rows into the canvas area to start building you
 
 
 
-
-
 To customize your message's background properties, border settings, and more, select **Styles**. If you only want to customize the style for a specific block or row, select it to make changes.
 
 ![Style panel of the Banner composer.](https://www.braze.com/docs/assets/img/banners/banner_card_styles.png?e616f6e22dd189004c9c10f134f5142d)

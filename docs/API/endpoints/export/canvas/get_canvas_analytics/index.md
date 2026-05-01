@@ -1,4 +1,4 @@
-<div id='api_okeqssbgjvmk' class='api_div'>
+<div id='api_hkqdhsrorxrw' class='api_div'>
 <h1 id="export-canvas-data-series-analytics">Export Canvas data series analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/data_series</p>
@@ -7,6 +7,10 @@
 <blockquote>
   <p>Use this endpoint to export time series data for a Canvas.</p>
 </blockquote>
+
+<p><strong>Note:</strong></p>
+
+<p>Counts from this endpoint won’t always exactly match  or aggregates you build from <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a>. Dashboard metrics and API time series use different aggregation windows and definitions than raw Currents events.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0fd61e93-7edf-4d87-a8dc-052420aefb73" class="seeme">See me in Postman</a></div>
 

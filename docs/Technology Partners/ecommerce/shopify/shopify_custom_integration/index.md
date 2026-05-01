@@ -435,8 +435,6 @@ async function loadCriticalData({context, params, request}) {
 
 
 
-
-
 1. Define functions for tracking the `cart_updated` event and setting the cart token:
 
 ```java

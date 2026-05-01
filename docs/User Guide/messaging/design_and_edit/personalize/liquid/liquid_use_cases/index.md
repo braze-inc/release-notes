@@ -1,4 +1,4 @@
-<div id='api_iaqzstfmhxdw' class='api_div'>
+<div id='api_kcqtloppemjr' class='api_div'>
 <h2 id="anniversaries-and-holidays">Anniversaries and holidays</h2>
 
 <div class="api_tags" data-tags="Anniversaries and holidays" data-tags-lower="anniversaries and holidays"></div>
@@ -164,13 +164,13 @@ Message if today isn't one of the provided holidays.
 
 </div>
 
-<div id='api_kviplmbrlmnb' class='api_div'>
+<div id='api_bfzpkpfvvwoi' class='api_div'>
 <h2 id="app-usage">App usage</h2>
 
 <div class="api_tags" data-tags="App usage" data-tags-lower="app usage"></div>
 
 <ul>
-  <li><a href="#app-session-language">Send messages in a user’s language if they’ve logged a session</a></li>
+  <li><a href="#app-session-language">Send messages in a user’s language if they haven’t logged a session</a></li>
   <li><a href="#app-last-opened">Personalize messages based on when a user last opened the app</a></li>
   <li><a href="#app-last-opened-less-than">Show a different message if a user last used the app less than three days ago</a></li>
 </ul>
@@ -269,7 +269,7 @@ Message for a less active user
 
 </div>
 
-<div id='api_obookwkcqfeq' class='api_div'>
+<div id='api_ccqlzzgnfilw' class='api_div'>
 <h2 id="countdowns">Countdowns</h2>
 
 <div class="api_tags" data-tags="Countdowns" data-tags-lower="countdowns"></div>
@@ -721,7 +721,7 @@ Hi, the offer is only valid today.
 
 </div>
 
-<div id='api_nqcofpmdbokm' class='api_div'>
+<div id='api_gbrbzeriuyua' class='api_div'>
 <h2 id="custom-attribute">Custom attribute</h2>
 
 <div class="api_tags" data-tags="Custom attribute" data-tags-lower="custom attribute"></div>
@@ -790,7 +790,7 @@ Hi <span class="cp">{{</span><span class="nv">name</span><span class="p">[</span
 
 </div>
 
-<div id='api_bbhgurnsokdm' class='api_div'>
+<div id='api_prwmbnlehqfv' class='api_div'>
 <h2 id="custom-event">Custom event</h2>
 
 <div class="api_tags" data-tags="Custom event" data-tags-lower="custom event"></div>
@@ -966,7 +966,7 @@ Did you forget something in your shopping cart?
 
 </div>
 
-<div id='api_fokzhyokrwuf' class='api_div'>
+<div id='api_turdxhgmvdeq' class='api_div'>
 <h2 id="language">Language</h2>
 
 <div class="api_tags" data-tags="Language" data-tags-lower="language"></div>
@@ -1143,7 +1143,7 @@ tuesday default
 
 </div>
 
-<div id='api_ctaujzwvnlmt' class='api_div'>
+<div id='api_bhrlqdpdgfyw' class='api_div'>
 <h2 id="miscellaneous">Miscellaneous</h2>
 
 <div class="api_tags" data-tags="Miscellaneous" data-tags-lower="miscellaneous"></div>
@@ -1680,7 +1680,7 @@ All episodes of <span class="cp">{{</span><span class="nv">new_shows_clean</span
 
 </div>
 
-<div id='api_dufmtoqlgqti' class='api_div'>
+<div id='api_bfszkqucukjt' class='api_div'>
 <h2 id="platform-targeting">Platform targeting</h2>
 
 <div class="api_tags" data-tags="Platform targeting" data-tags-lower="platform targeting"></div>
@@ -1831,7 +1831,7 @@ This is a message for Verizon users!
 
 </div>
 
-<div id='api_kmbfjixoqzuo' class='api_div'>
+<div id='api_xiixkmbqpnzi' class='api_div'>
 <h2 id="sms">SMS</h2>
 
 <div class="api_tags" data-tags="SMS" data-tags-lower="sms"></div>
@@ -1870,7 +1870,7 @@ Thanks for joining our SMS program!
 
 </div>
 
-<div id='api_ntimczxmzduu' class='api_div'>
+<div id='api_jbgzqdrjwesw' class='api_div'>
 <h2 id="time-zones">Time zones</h2>
 
 <div class="api_tags" data-tags="Time zones" data-tags-lower="time zones"></div>
@@ -1884,6 +1884,8 @@ Thanks for joining our SMS program!
   <li><a href="#time-reocurring-iam-window">Send a reoccurring in-app message campaign between a window of time in a user’s local time zone</a></li>
   <li><a href="#time-weekdays-vs-weekends">Send different messages on weekdays versus weekends in a user’s local time zone</a></li>
   <li><a href="#time-of-day">Send different messages based on time of day in a user’s local time zone</a></li>
+  <li><a href="#abort-send-time-hour-range">Abort a message outside an hour range at send time</a></li>
+  <li><a href="#abort-fixed-timezone-window">Abort a message outside a time window in a fixed time zone</a></li>
 </ul>
 
 <h3 id="users-time-zone">Template in the user’s time zone</h3>
@@ -2054,9 +2056,53 @@ Check out this new bar after work today. HH specials!
 
 <p>This is the opposite of <a href="/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/#time-based-options">Quiet Hours</a>.</p>
 
+<h3 id="abort-send-time-hour-range">Abort a message outside an hour range at send time</h3>
+
+<p>This use case aborts the message when the current hour falls outside a defined range. It uses the time at which the message is rendered, which is UTC by default unless you apply the <code class="language-plaintext highlighter-rouge">time_zone</code> filter, not the user’s local time zone. To send messages based on a user’s local time zone, <a href="#time-of-day">Send different messages based on time of day in a user’s local time zone</a>.</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="cp">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'now'</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">hour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">date</span><span class="p">:</span><span class="w"> </span><span class="s1">'%H'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">plus</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">hour</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nv">hour</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">abort_message</span>("Outside<span class="w"> </span><span class="nv">hour</span><span class="w"> </span><span class="nv">range</span>")<span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
+
+Check out this new bar after work today. HH specials!
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="abort-fixed-timezone-window">Abort a message outside a time window in a fixed time zone</h3>
+
+<p>This use case aborts the message when the current time falls outside a defined window in a specific time zone (Singapore time in this example). You can use this pattern when you need a Quiet Hours-inspired rule that is tied to one region instead of each user’s <code class="language-plaintext highlighter-rouge">time_zone</code> attribute.</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="cp">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'now'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">time_zone</span><span class="p">:</span><span class="w"> </span><span class="s1">'Asia/Singapore'</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">hour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">date</span><span class="p">:</span><span class="w"> </span><span class="s1">'%H'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">plus</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">minute</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">date</span><span class="p">:</span><span class="w"> </span><span class="s1">'%M'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">plus</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="cp">%}</span>
+
+<span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">hour</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nv">hour</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">21</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span>(hour<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">21</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">minute</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">45</span>)<span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">abort_message</span>("Not<span class="w"> </span><span class="nv">within</span><span class="w"> </span><span class="nv">eligible</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="nv">pm</span>–9:45<span class="w"> </span><span class="nv">pm</span><span class="w"> </span><span class="nv">SGT</span>")<span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
+
+Sign up for our exclusive time-limited offer now!
+</pre></td></tr></tbody></table></code></pre></div></div>
+
 </div>
 
-<div id='api_wcfbixbmurda' class='api_div'>
+<div id='api_gptgyhhymzjc' class='api_div'>
 <h2 id="weekdaymonth">Week/Day/Month</h2>
 
 <div class="api_tags" data-tags="Week/Day/Month" data-tags-lower="week/day/month"></div>
@@ -2067,6 +2113,8 @@ Check out this new bar after work today. HH specials!
   <li><a href="#day-of-month-last">Send a campaign on the last (weekday) of the month</a></li>
   <li><a href="#day-of-month">Send a different message each day of the month</a></li>
   <li><a href="#day-of-week">Send a different message each day of the week</a></li>
+  <li><a href="#abort-specific-calendar-date">Abort a message on a specific calendar date</a></li>
+  <li><a href="#abort-specific-weekday">Abort a message on a specific day of the week</a></li>
 </ul>
 
 <h3 id="month-name">Pull the previous month’s name into a message</h3>
@@ -2382,5 +2430,33 @@ Default copy
 <p><strong>Note:</strong></p>
 
 <p>You can replace the line “default copy” with <code class="language-plaintext highlighter-rouge">{% abort_message() %}</code> to prevent the message from sending if the day of the week is unknown.</p>
+
+<h3 id="abort-specific-calendar-date">Abort a message on a specific calendar date</h3>
+
+<p>This use case aborts the message on a chosen month and day every year (May 5 in the example). It compares the current date to an unambiguous month-day string built with the <code class="language-plaintext highlighter-rouge">date</code> filter.</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="cp">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'now'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">date</span><span class="p">:</span><span class="w"> </span><span class="s1">'%d/%m'</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">date</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'05/05'</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">abort_message</span>('No<span class="w"> </span><span class="nv">message</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="mi">5</span><span class="nv">th</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">May</span>')<span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="abort-specific-weekday">Abort a message on a specific day of the week</h3>
+
+<p>This use case aborts the message when Liquid runs on a given weekday (<code class="language-plaintext highlighter-rouge">Wednesday</code> in the example). The <code class="language-plaintext highlighter-rouge">%A</code> filter returns the full English weekday name.</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="cp">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">weekday</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'now'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">date</span><span class="p">:</span><span class="w"> </span><span class="s1">'%A'</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">weekday</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'Wednesday'</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">abort_message</span>("No<span class="w"> </span><span class="nv">message</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">Wednesdays</span>")<span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 </div>

@@ -16,7 +16,11 @@ See this article's [Consumption count](#consumption-count) section to understand
 
 To view your data point usage, go to **Settings** > **Billing** and select the **Total Data Points Usage** tab.
 
-For more information on the data point dashboard components, refer to [Billing](https://www.braze.com/docs/user_guide/administer/global/billing/).
+### Data point refresh schedule
+
+Data point usage is cached (not real-time) every 24 hours. Until the cache refreshes, different dashboard users may see the same totals even if they open the tab at different times on the same day. For the same caching behavior on other billing views, see [Total data points dashboard](https://www.braze.com/docs/user_guide/administer/global/billing/#total-data-points-dashboard).
+
+For more information on the data point dashboard components, see [Billing](https://www.braze.com/docs/user_guide/administer/global/billing/).
 
 **Tip:**
 

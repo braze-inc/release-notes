@@ -153,7 +153,7 @@ if (base === 'docs'){
 
 
 <link type="text/css" rel="stylesheet" href="/docs/assets/css/swiper.css" />
-<link type="text/css" rel="stylesheet" href="/docs/assets/css/algolia_theme.css"  /><link href='/docs/assets/global-c9753e97ecb23a41390dcd30c5c60604.css' rel='stylesheet' type='text/css' /><script type="text/javascript">
+<link type="text/css" rel="stylesheet" href="/docs/assets/css/algolia_theme.css"  /><link href='/docs/assets/global-50b59a8e630331130d1d241d605171e2.css' rel='stylesheet' type='text/css' /><script type="text/javascript">
   const page_collection = 'docs_pages';
   const page_collection_title = 'Braze';
   const page_collection_default_path = '';
@@ -177,7 +177,7 @@ if (base === 'docs'){
 
 <script type='text/javascript' src='/docs/assets/js/swiper.js' ></script>
 
-<script type='text/javascript' src='/docs/assets/js/algolia_search.js?1777475854' ></script>
+<script type='text/javascript' src='/docs/assets/js/algolia_search.js?1777579586' ></script>
 
 <script src="/docs/assets/js/mermaid.js"></script>
 
@@ -355,7 +355,7 @@ function OptanonWrapper() { }
     </div>
     </div>
     <div id="navbar-search">
-       <script src="/docs/assets/js/su_header_search.js?1777475854" ></script>
+       <script src="/docs/assets/js/su_header_search.js?1777579586" ></script>
 <script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/an.js"></script>
 <script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/searchbox.js"></script>
 <link rel="stylesheet" href="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/searchbox.css">
@@ -378,7 +378,7 @@ function OptanonWrapper() { }
 
 <div class="container-fluid" >
   <div class="row flex-xl-nowrap d-print-block ">
-    <script type="text/javascript" src="/docs/assets/js/broken_redirect_list.js?1777475854" ></script>
+    <script type="text/javascript" src="/docs/assets/js/broken_redirect_list.js?1777579586" ></script>
 <script type="text/javascript">
 
   function removeleadingslash(str){
@@ -5131,6 +5131,9 @@ if (site_language && (site_language != 'en')){
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/releases/2026/4_2_26/");
+    validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
+    
+    siteurl = removeleadingslash("/releases/2026/4_30_26/");
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/releases/deprecations/");

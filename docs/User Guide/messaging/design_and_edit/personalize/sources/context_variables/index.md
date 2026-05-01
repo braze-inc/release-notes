@@ -235,8 +235,6 @@ Use the same data type for your context variable and comparison. For example, if
 
 
 
-
-
 Here is an example of a context variable filter comparing the context variable `product_name` to the regex `/braze/`.
 
 ![A filter setup for the context variable "product_name" to match the regex "/braze/".](https://www.braze.com/docs/assets/img/context_variable_filter1.png?b3ce74477d77ff73dacab0b44eeab023){: style="max-width:90%;"}

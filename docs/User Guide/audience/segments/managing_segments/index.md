@@ -61,6 +61,13 @@ To manage a specific segment, hover over it and select the menu icon at the end 
  
 You can also perform bulk actions–specifically, bulk archiving and bulk tagging–by checking the boxes next to multiple segment names.
 
+**Tip:**
+
+
+If you need a machine-readable export of the existing segments in the workspace (not only the current table view), use the [Export segment list endpoint](https://www.braze.com/docs/api/endpoints/export/segments/get_segment/) and paginate through the results. To audit archived segments, review them separately in the **Segments** dashboard using the status filter.
+
+
+
 ![Multiple segments selected with "CRM" selected in the "Tag As" dropdown field.](https://www.braze.com/docs/assets/img/segment/segments_bulk_action.png?5217160b682a29f816ecd7bd863187fb){: style="max-width:45%;"}
 
 ### Changes Since Last Viewed

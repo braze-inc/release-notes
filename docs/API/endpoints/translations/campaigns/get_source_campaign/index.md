@@ -1,4 +1,4 @@
-<div id='api_jyfrrxzwelgc' class='api_div'>
+<div id='api_kwuhfeoajsnp' class='api_div'>
 <h1 id="view-default-source-values-for-a-campaigns-translation-tags">View default source values for a campaign’s translation tags</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/campaigns/translations/source</p>

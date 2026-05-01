@@ -1,4 +1,4 @@
-<div id='api_dltepiqmjsug' class='api_div'>
+<div id='api_exhbvnghxfmi' class='api_div'>
 <h1 id="create-and-update-users-synchronous">Create and update users (synchronous)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track/sync</p>
@@ -29,6 +29,10 @@
 <p>Customers using the API for server-to-server calls may need to allowlist <code class="language-plaintext highlighter-rouge">rest.iad-01.braze.com</code> if they’re behind a firewall.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
+
+<p><strong>Note:</strong></p>
+
+<p>Each custom attribute sent in a request to <code class="language-plaintext highlighter-rouge">/users/track</code> consumes a data point. For more information, see <a href="/docs/user_guide/data/infrastructure/data_points/">Data points</a>.</p>
 
 <p>We apply a base speed limit of 500 requests per minute to this endpoint for all customers. Each <code class="language-plaintext highlighter-rouge">/users/track/sync</code> request can contain up to one event object, one attribute object, or one purchase object. Each object (event, attribute, and purchase arrays) can update one user each.</p>
 

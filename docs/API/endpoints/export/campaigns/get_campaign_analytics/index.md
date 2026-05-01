@@ -1,4 +1,4 @@
-<div id='api_gtsdoogjtcte' class='api_div'>
+<div id='api_jtkngutrgeha' class='api_div'>
 <h1 id="export-campaign-analytics">Export campaign analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/campaigns/data_series</p>
@@ -9,6 +9,10 @@
 </blockquote>
 
 <p>Data returned includes how many messages were sent, opened, clicked, or converted by messaging channel.</p>
+
+<p><strong>Note:</strong></p>
+
+<p>Counts from this endpoint won’t always exactly match  or aggregates you build from <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a>. Dashboard metrics and API time series use different aggregation windows and definitions than raw Currents events.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1" class="seeme">See me in Postman</a></div>
 

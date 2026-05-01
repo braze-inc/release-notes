@@ -2,6 +2,13 @@
 
 > This page covers how to request a CSV export of user data from a segment, and the data included in the export.
 
+**Note:**
+
+
+CSV export options appear in the **User Data** dropdown only for company users who have the ["Export User Data" permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/) for that workspace.
+
+
+
 To export segment data to a CSV, select the **User Data** dropdown while editing a segment and select to export either the user data or email addresses for the segment.
 
 ![Segment Details section with User Data dropdown showing export options.](https://www.braze.com/docs/assets/img_archive/csvexport.png?8e3236e89b3026481e94265efbbcf74d)
@@ -27,8 +34,6 @@ Due to file size restrictions, your export may fail if the estimated size of you
 
 
 If you've linked your [Amazon S3 credentials](https://www.braze.com/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration) to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. You must be logged into the dashboard to access the download link emailed to you.
-
-
 
 
 
@@ -117,6 +122,13 @@ The following is included in your export depending on your selection.
 | Custom events               | Based on selection at export                             |
 | Custom attributes           | Based on selection at export                             |
 {: .reset-td-br-1 .reset-td-br-2 }
+
+**Note:**
+
+
+When you export user data from a Canvas step, the CSV includes all users who have been in that step over the lifetime of the Canvas step. You can't limit the export to a date range or other time window. For how to run these exports, see [Export Canvas data](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_canvas_data/).
+
+
 
 ### CSV Export Email Addresses
 

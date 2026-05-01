@@ -229,8 +229,6 @@ Depending on your message type, you can **Upload Image**, **Pick a Badge**, or u
 
 
 
-
-
 ### Header and body
 
 Write anything you want! Include completely custom copy (often with custom HTML capabilities) with the options to include [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid/) and other types of personalization. The faster you can get your message across and get your customer clicking—the better! We recommend clear and concise headers and message content.
@@ -360,8 +358,8 @@ Note that if you intend to trigger your in-app message based off a custom event,
 
 In-app message delivery is entirely based on the following action triggers:
 
-- Making a purchase
-- Opening the app/webpage
+- Placing an order
+- Opening the app or webpage
 - Performing a custom event (only works with events sent using the SDK)
 - Opening a specific push message
 - Automatically schedule campaigns to send at a certain time with respect to the local time of each of your users.

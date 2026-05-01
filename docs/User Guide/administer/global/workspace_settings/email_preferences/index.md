@@ -108,8 +108,6 @@ BCC addresses are available for Amazon SES, SendGrid, and SparkPost. As an alter
 
 
 
-
-
 ![BCC Address section of the Email Settings tab.](https://www.braze.com/docs/assets/img/email_settings/bcc_address.png?c630792dd91ddc92d78d780178081c44){: style="max-width:75%;" }
 
 After you add an address, the address will be made available to select when composing an email in either campaigns or Canvas steps. Select **Make Default** next to an address to set this address to be selected by default when launching a new email campaign or Canvas component. To override this at the message level, you can select **No BCC** when setting up your message.

@@ -2,9 +2,16 @@
 
 > Regulations require that there are responses to all opt-in, opt-out, and help/info keyword responses. Braze automatically processes the following _exact, single-word, case-insensitive_ messages, automatically updating the [subscription group state](https://www.braze.com/docs/sms_rcs_subscription_groups/) for the user and their associated phone number on all inbound requests.
 
-## Keyword overview
+## Default keywords
 
-Braze will process the following keywords automatically and update the subscription group state for the phone number on all inbound requests. Note that these default keywords and responses may also be customized. 
+Braze processes the following keywords automatically and updates the subscription group state for the phone number on all inbound requests. Note that these default keywords and responses may also be customized, and you can add [custom keywords](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/keyword_handling/).
+
+**Tip:**
+
+
+Interested in expanding your opt-out processing? Try [fuzzy opt-out](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/fuzzy_opt_out/), a feature that attempts to recognize when an inbound message does not match an opt-out keyword, but indicates opt-out intent.
+
+
 
 | Type | Keyword | Change |
 |-|-------|---|
@@ -24,3 +31,6 @@ Interested in expanding your opt-out processing? Try [fuzzy opt-out](https://www
 
 
 
+## Handle natural language opt-outs
+
+You can create a [Braze Agent](https://www.braze.com/docs/user_guide/brazeai/agents/) that uses sentiment analysis to help capture opt-out intent that falls outside of standard or custom keywords (such as “Please don’t text me”). See [Handle natural language opt-outs in the Agent Console](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups/#handle-natural-language-opt-outs-in-the-agent-console) for steps.

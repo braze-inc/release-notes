@@ -146,8 +146,6 @@ When launching the preference center, you will be prompted to confirm the name, 
 
 
 
-
-
 To place a link to the preference center in your emails, copy the Liquid tag of the desired preference center by selecting the **Copy Liquid** icon.
 
 ![The Copy Liquid option in the row of a preference center.](https://www.braze.com/docs/assets/img/preference_center/preference_center10.png?93fe48f596806cd71e7b8d3b58af7556){: style="max-width:75%;"}

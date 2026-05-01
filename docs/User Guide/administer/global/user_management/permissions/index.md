@@ -259,8 +259,6 @@ To download a list of your users and their permissions, go to **Settings** > **C
 
 
 
-
-
 ## Creating a permission set
 
 Use permission sets to bundle permissions related to specific subject areas or actions. You can apply permissions sets to dashboard users who need the same access across different workspaces. To create a permission set, go to **Settings** > **Permission Settings**, then select **Create permission set**. For a description of each permission, see [List of permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/#granularpermissions_list-of-permissions).
@@ -482,9 +480,9 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Canvas Templates | Archive Canvas Templates | Move Canvas templates to archive |
 | Canvas Templates | Create and Edit Canvas Templates | Create and update Canvas templates |
 | Content Blocks | View Content Blocks | View Content Blocks |
-| Content Blocks | Launch Content Blocks | Launch Content Blocks |
+| Content Blocks | Launch Content Blocks | Publish draft Content Blocks, and edit, archive, and unarchive launched Content Blocks |
 | Content Blocks | Archive Content Blocks | Move Content Blocks to archive |
-| Content Blocks | Edit Content Blocks | Create and update Content Blocks |
+| Content Blocks | Edit Content Blocks | Create Content Blocks and edit draft Content Blocks |
 | Email Link Templates | View Email Link Templates | View link templates without making changes |
 | Email Link Templates | Edit Email Link Templates | Create and update link templates |
 | Email Templates | View Email Templates | View email templates |

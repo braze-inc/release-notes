@@ -131,8 +131,6 @@ Enter your message body, then upload a PNG, JPEG, or GIF image from the [media l
 
 
 
-
-
 ![The compose tab for writing an MMS message.](https://www.braze.com/docs/assets/img/sms/mms_composer.png?4eb5a03ecb4813e71e07b53d96f769bf){: style="max-width:80%;"}
 
 ### Image specifications
@@ -192,8 +190,6 @@ RCS text messages focus on text as a medium. If your message is up to 160 charac
 
 
 RCS media messages allow you to use engaging media formats that aren't possible with SMS, including image, video, and document files.
-
-
 
 
 

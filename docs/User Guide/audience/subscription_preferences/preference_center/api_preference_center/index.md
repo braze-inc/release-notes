@@ -84,8 +84,6 @@ Braze renders `confirmation_page_html` in an iframe that uses a `data:` URL. Bro
 
 
 
-
-
 To place a link to the preference center in your emails, use the following Liquid tag in the desired place in your email, similar to the way you would insert unsubscribe URLs.
 
 

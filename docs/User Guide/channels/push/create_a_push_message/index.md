@@ -196,8 +196,6 @@ For additional guidance on using images in your push notifications, refer to the
 
 
 
-
-
 #### On-click behavior
 
 Specify what happens when a user selects the body of a push notification with **On-Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a [deep link](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls/).

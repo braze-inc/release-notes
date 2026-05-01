@@ -56,6 +56,12 @@ For more information, check out [Multi-criteria segmentation](https://www.braze.
 You can access properties of API triggered events with the `api_triggered_property` tag: `{{api_trigger_properties.${attribute_key}}}`.  
 
 
+### Why is my API-triggered Liquid failing in Braze?
+
+
+An extra pair of curly braces is a common cause. For example, `{{{api_trigger_properties.${attribute_key}}}}` is not valid Braze personalization syntax. Use exactly two opening braces and two closing braces: `{{api_trigger_properties.${attribute_key}}}`.
+
+
 ### What is abort logic, and how can I use it?
 
 Abort logic allows you to stop a message from being sent if the conditions are met. This is especially helpful in preventing incomplete messages from being sent to your users. For examples of abort logic in your marketing campaigns, read more at [Aborting messages](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages/).

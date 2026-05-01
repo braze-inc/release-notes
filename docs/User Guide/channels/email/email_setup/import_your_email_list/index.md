@@ -44,8 +44,6 @@
 
 
 
-
-
 ### Validate your email lists
 
 Before importing your email list into Braze, validate that your list includes only genuine email addresses. A high bounce rate can damage your email sender reputation. 

@@ -53,6 +53,8 @@ Data points information is cached every 24 hours.
 
 
 
+If you're an admin and cannot view the **Total Data Points Usage** tab, make sure your browser allows third-party cookies for your Braze dashboard domain and is not in incognito mode.
+
 ![Filtering Data Point Usage by weeks](https://www.braze.com/docs/assets/img/subscription_and_billing2.png?bc82f5845d3e799230fcd9b0d6df68bc)
 
 ### Contract details

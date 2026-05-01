@@ -151,8 +151,6 @@ Call-to-action URLs may contain variables, though Meta requires them to be at th
 
 
 
-
-
 You can use response messages to reply to inbound messages from your users. These messages are built in-app on Braze during your composition experience and can be edited at any time. You can use Liquid to match the response message language to the appropriate users.
 
 There are five response message layouts you can use:
@@ -250,8 +248,6 @@ The following features are supported for outbound WhatsApp messages you send thr
 | Videos | Videos can be embedded within body text. Files must be hosted through URL or in the [Braze media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/). | < 16 MB | `.3gp`, `.mp4` |
 | Audio | Audio is only supported through response messaging. Files must be hosted through URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
-
-
 
 
 

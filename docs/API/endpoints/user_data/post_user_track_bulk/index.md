@@ -1,4 +1,4 @@
-<div id='api_yffptvavbayc' class='api_div'>
+<div id='api_eoazwqbxpomz' class='api_div'>
 <h1 id="create-and-update-users-bulk">Create and update users (bulk)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track/bulk</p>
@@ -32,6 +32,10 @@
 <p>If you’re making server-to-server calls behind a firewall, you may need to allowlist your Braze REST endpoint (for example, <code class="language-plaintext highlighter-rouge">rest.iad-01.braze.com</code>). For more information, see <a href="/docs/api/basics/#api-definitions">API endpoints</a>.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
+
+<p><strong>Note:</strong></p>
+
+<p>Each custom attribute sent in a request to <code class="language-plaintext highlighter-rouge">/users/track</code> consumes a data point. For more information, see <a href="/docs/user_guide/data/infrastructure/data_points/">Data points</a>.</p>
 
 <p>For most customers, this endpoint has a base speed limit of 50 requests per second.</p>
 

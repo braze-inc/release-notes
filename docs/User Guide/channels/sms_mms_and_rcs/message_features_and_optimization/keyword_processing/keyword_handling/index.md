@@ -10,6 +10,13 @@ Two-way messaging allows you to send messages and process the responses to those
 
 SMS, MMS, and RCS with Braze gives you the option to create keyword triggers, custom responses, define keyword sets for multiple languages, and establish custom keyword categories. 
 
+**Note:**
+
+
+Braze uses your full set of opt-out keywords ([default keywords](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/optin_optout/) and [custom keywords](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/keyword_handling/)) for exact opt-out handling and [fuzzy opt-out](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/fuzzy_opt_out/).
+
+
+
 
 
 

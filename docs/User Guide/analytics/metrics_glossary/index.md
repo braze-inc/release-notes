@@ -1,11 +1,11 @@
 <style>
   .calculation-line {
-    color: #76848C;
+    color: #5B6B75;
     font-size: 14px;
   }
 </style>
 
-<div id='api_hwghatvuwupa' class='api_div'>
+<div id='api_qufbcdupzaxu' class='api_div'>
 <h3 id="amp-clicks">AMP Clicks</h3>
 
 <div class="api_tags" data-tags="Email" data-tags-lower="email"></div>
@@ -14,7 +14,7 @@
 
 </div>
 
-<div id='api_yytubdizyebw' class='api_div'>
+<div id='api_zsrhbzwizevi' class='api_div'>
 <h3 id="amp-opens">AMP Opens</h3>
 
 <div class="api_tags" data-tags="Email" data-tags-lower="email"></div>
@@ -23,7 +23,7 @@
 
 </div>
 
-<div id='api_hunqdsxuwwmy' class='api_div'>
+<div id='api_slsnwpmakfkd' class='api_div'>
 <h3 id="audience">Audience</h3>
 
 <div class="api_tags" data-tags="All" data-tags-lower="all"></div>
@@ -34,7 +34,7 @@
 
 </div>
 
-<div id='api_uvyttgwvnmoj' class='api_div'>
+<div id='api_nzxppjdjoxhj' class='api_div'>
 <h3 id="bounces">Bounces</h3>
 
 <div class="api_tags" data-tags="Email, Web Push, iOS Push" data-tags-lower="email, web push, ios push"></div>
@@ -72,7 +72,7 @@
 
 </div>
 
-<div id='api_okuxvmriytni' class='api_div'>
+<div id='api_wxhcgvrufoen' class='api_div'>
 <h3 id="body-click">Body Click</h3>
 
 <div class="api_tags" data-tags="iOS Push, Android Push" data-tags-lower="ios push, android push"></div>
@@ -83,7 +83,7 @@
 
 </div>
 
-<div id='api_gawxgrmffkrp' class='api_div'>
+<div id='api_lbxjzrkyoipm' class='api_div'>
 <h3 id="body-clicks">Body Clicks</h3>
 
 <div class="api_tags" data-tags="In-App Message" data-tags-lower="in-app message"></div>
@@ -94,7 +94,7 @@
 
 </div>
 
-<div id='api_dnpcexvnsjlc' class='api_div'>
+<div id='api_udzqqpybommv' class='api_div'>
 <h3 id="button-1-clicks">Button 1 Clicks</h3>
 
 <div class="api_tags" data-tags="In-App Message" data-tags-lower="in-app message"></div>
@@ -107,7 +107,7 @@
 
 </div>
 
-<div id='api_rjspwjhybplt' class='api_div'>
+<div id='api_oqaajpmuloum' class='api_div'>
 <h3 id="button-2-clicks">Button 2 Clicks</h3>
 
 <div class="api_tags" data-tags="In-App Message" data-tags-lower="in-app message"></div>
@@ -120,7 +120,7 @@
 
 </div>
 
-<div id='api_ucjfybgnmzig' class='api_div'>
+<div id='api_xkjzgkhmjzem' class='api_div'>
 <h3 id="campaign-analytics">Campaign analytics</h3>
 
 <div class="api_tags" data-tags="Feature Flags" data-tags-lower="feature flags"></div>
@@ -129,7 +129,7 @@
 
 </div>
 
-<div id='api_yzoujyyderyk' class='api_div'>
+<div id='api_nqnyfcueuzvo' class='api_div'>
 <h3 id="choices-submitted">Choices Submitted</h3>
 
 <div class="api_tags" data-tags="In-App Message" data-tags-lower="in-app message"></div>
@@ -138,7 +138,7 @@
 
 </div>
 
-<div id='api_ztgiwasjphyr' class='api_div'>
+<div id='api_kcqfjzpmilec' class='api_div'>
 <h3 id="click-to-open-rate">Click-to-Open Rate</h3>
 
 <div class="api_tags" data-tags="Email" data-tags-lower="email"></div>
@@ -149,7 +149,7 @@
 
 </div>
 
-<div id='api_mjncgblianvk' class='api_div'>
+<div id='api_quvrfzqbckzm' class='api_div'>
 <h3 id="rcs-confirmed-deliveries-or-sms-confirmed-deliveries">RCS Confirmed Deliveries or SMS Confirmed Deliveries</h3>
 
 <div class="api_tags" data-tags="SMS/MMS, RCS" data-tags-lower="sms/mms, rcs"></div>
@@ -168,7 +168,7 @@
 
 </div>
 
-<div id='api_mueqahwrdvsm' class='api_div'>
+<div id='api_bjqwvaldxkub' class='api_div'>
 <h3 id="confidence">Confidence</h3>
 
 <div class="api_tags" data-tags="Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp" data-tags-lower="content cards, email, in-app message, web push, ios push, android push, webhook, sms/mms, whatsapp"></div>
@@ -177,7 +177,7 @@
 
 </div>
 
-<div id='api_vzyxeedsxsae' class='api_div'>
+<div id='api_nsajimccasme' class='api_div'>
 <h3 id="confirmation-page-button">Confirmation Page Button</h3>
 
 <div class="api_tags" data-tags="In-App Message" data-tags-lower="in-app message"></div>
@@ -186,7 +186,7 @@
 
 </div>
 
-<div id='api_trptpwruyffp' class='api_div'>
+<div id='api_vrwjcolzlrnf' class='api_div'>
 <h3 id="confirmation-page-dismissals">Confirmation Page Dismissals</h3>
 
 <div class="api_tags" data-tags="In-App Message" data-tags-lower="in-app message"></div>
@@ -195,7 +195,7 @@
 
 </div>
 
-<div id='api_kmopgcjnyqqu' class='api_div'>
+<div id='api_jyxnxvvftqqg' class='api_div'>
 <h3 id="conversions-b-c-d">Conversions (B, C, D)</h3>
 
 <div class="api_tags" data-tags="Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS" data-tags-lower="content cards, email, in-app message, web push, ios push, android push, webhook, sms/mms"></div>
@@ -229,7 +229,7 @@
 
 </div>
 
-<div id='api_lpphmmarhyth' class='api_div'>
+<div id='api_njfwbwgjubmt' class='api_div'>
 <h3 id="total-conversions">Total Conversions</h3>
 
 <div class="api_tags" data-tags="In-App Message" data-tags-lower="in-app message"></div>
@@ -242,7 +242,7 @@
 
 </div>
 
-<div id='api_uyfavuupiace' class='api_div'>
+<div id='api_uaaqdcmlqeun' class='api_div'>
 <h3 id="close-message">Close Message</h3>
 
 <div class="api_tags" data-tags="In-App Message" data-tags-lower="in-app message"></div>
@@ -251,7 +251,7 @@
 
 </div>
 
-<div id='api_jvpujrgbsxnm' class='api_div'>
+<div id='api_jlresqzdeepp' class='api_div'>
 <h3 id="conversion-rate">Conversion Rate</h3>
 
 <div class="api_tags" data-tags="Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS" data-tags-lower="content cards, email, in-app message, web push, ios push, android push, webhook, sms/mms"></div>
@@ -283,7 +283,7 @@
 
 </div>
 
-<div id='api_uhzlarnhfwtd' class='api_div'>
+<div id='api_dbfomfxjgdqr' class='api_div'>
 <h3 id="conversion-window">Conversion Window</h3>
 
 <div class="api_tags" data-tags="All" data-tags-lower="all"></div>
@@ -292,7 +292,7 @@
 
 </div>
 
-<div id='api_lcqzopxoxeqo' class='api_div'>
+<div id='api_gllxkbahhgsp' class='api_div'>
 <h3 id="deliveries">Deliveries</h3>
 
 <div class="api_tags" data-tags="Email, Web Push, iOS Push, Android Push, WhatsApp" data-tags-lower="email, web push, ios push, android push, whatsapp"></div>
@@ -324,7 +324,7 @@
 
 </div>
 
-<div id='api_xnsfsopenrkd' class='api_div'>
+<div id='api_bqxdtjusgzep' class='api_div'>
 <h3 id="rcs-delivery-failures-or-sms-delivery-failures">RCS Delivery Failures or SMS Delivery Failures</h3>
 
 <div class="api_tags" data-tags="SMS/MMS" data-tags-lower="sms/mms"></div>
@@ -337,7 +337,7 @@
 
 </div>
 
-<div id='api_nspjzsbavkbn' class='api_div'>
+<div id='api_jrdiorekglyh' class='api_div'>
 <h3 id="delivery-failures">Delivery Failures</h3>
 
 <div class="api_tags" data-tags="RCS" data-tags-lower="rcs"></div>
@@ -350,7 +350,7 @@
 
 </div>
 
-<div id='api_ruybnpkipnjf' class='api_div'>
+<div id='api_kfjdkglowdlf' class='api_div'>
 <h3 id="failed-delivery-rate">Failed Delivery Rate</h3>
 
 <div class="api_tags" data-tags="SMS/MMS" data-tags-lower="sms/mms"></div>
@@ -363,7 +363,7 @@
 
 </div>
 
-<div id='api_vqguvcyxgyzq' class='api_div'>
+<div id='api_ycsrtzwupiiz' class='api_div'>
 <h3 id="direct-opens">Direct Opens</h3>
 
 <div class="api_tags" data-tags="iOS Push" data-tags-lower="ios push"></div>
@@ -374,7 +374,7 @@
 
 </div>
 
-<div id='api_nakqhlwgjdxi' class='api_div'>
+<div id='api_ljyjmljmgvdq' class='api_div'>
 <h3 id="emailable">Emailable</h3>
 
 <div class="api_tags" data-tags="Email" data-tags-lower="email"></div>
@@ -385,7 +385,7 @@
 
 </div>
 
-<div id='api_eotebuceeuya' class='api_div'>
+<div id='api_ilxjmtdhapak' class='api_div'>
 <h3 id="errors">Errors</h3>
 
 <div class="api_tags" data-tags="Webhook" data-tags-lower="webhook"></div>
@@ -396,7 +396,7 @@
 
 </div>
 
-<div id='api_lbxxzdbtuund' class='api_div'>
+<div id='api_dgutsiseetzy' class='api_div'>
 <h3 id="estimated-real-opens">Estimated Real Opens</h3>
 
 <div class="api_tags" data-tags="Email" data-tags-lower="email"></div>
@@ -405,7 +405,7 @@
 
 </div>
 
-<div id='api_dskinziphxne' class='api_div'>
+<div id='api_cftalzvximzh' class='api_div'>
 <h3 id="failures">Failures</h3>
 
 <div class="api_tags" data-tags="WhatsApp" data-tags-lower="whatsapp"></div>
@@ -418,7 +418,7 @@
 
 </div>
 
-<div id='api_ufufwqzvjxrw' class='api_div'>
+<div id='api_iykzasyfceyg' class='api_div'>
 <h3 id="feature-flag-experiment-performance">Feature flag experiment performance</h3>
 
 <div class="api_tags" data-tags="Feature Flags" data-tags-lower="feature flags"></div>
@@ -427,7 +427,7 @@
 
 </div>
 
-<div id='api_kjiyivjotwvh' class='api_div'>
+<div id='api_zymdanbgwsnj' class='api_div'>
 <h3 id="hard-bounce">Hard Bounce</h3>
 
 <div class="api_tags" data-tags="Email" data-tags-lower="email"></div>
@@ -438,7 +438,7 @@
 
 </div>
 
-<div id='api_qrwalcyblfry' class='api_div'>
+<div id='api_wmxhlduizqgj' class='api_div'>
 <h3 id="help">Help</h3>
 
 <div class="api_tags" data-tags="SMS/MMS, RCS" data-tags-lower="sms/mms, rcs"></div>
@@ -449,7 +449,7 @@
 
 </div>
 
-<div id='api_xtdgopbprzud' class='api_div'>
+<div id='api_unpgeqvuqazo' class='api_div'>
 <h3 id="influenced-opens">Influenced Opens</h3>
 
 <div class="api_tags" data-tags="iOS Push, Android Push" data-tags-lower="ios push, android push"></div>
@@ -460,7 +460,7 @@
 
 </div>
 
-<div id='api_kiovgcqehgts' class='api_div'>
+<div id='api_vxdrxohmheya' class='api_div'>
 <h3 id="lifetime-revenue">Lifetime Revenue</h3>
 
 <div class="api_tags" data-tags="Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE" data-tags-lower="content cards, email, in-app message, web push, ios push, android push, webhook, sms/mms, line"></div>
@@ -469,7 +469,7 @@
 
 </div>
 
-<div id='api_vgxdukybqojf' class='api_div'>
+<div id='api_cvjegrqpbwai' class='api_div'>
 <h3 id="lifetime-value-per-user">Lifetime Value Per User</h3>
 
 <div class="api_tags" data-tags="Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE" data-tags-lower="content cards, email, in-app message, web push, ios push, android push, webhook, sms/mms, line"></div>
@@ -478,7 +478,7 @@
 
 </div>
 
-<div id='api_bbpilqswyuee' class='api_div'>
+<div id='api_uawwqinzvqgg' class='api_div'>
 <h3 id="average-daily-revenue">Average Daily Revenue</h3>
 
 <div class="api_tags" data-tags="Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE" data-tags-lower="content cards, email, in-app message, web push, ios push, android push, webhook, sms/mms, line"></div>
@@ -487,7 +487,7 @@
 
 </div>
 
-<div id='api_epxdyvopiadf' class='api_div'>
+<div id='api_csbezdymgrzq' class='api_div'>
 <h3 id="daily-purchases">Daily Purchases</h3>
 
 <div class="api_tags" data-tags="Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE" data-tags-lower="content cards, email, in-app message, web push, ios push, android push, webhook, sms/mms, line"></div>
@@ -496,7 +496,7 @@
 
 </div>
 
-<div id='api_rlnburdwhake' class='api_div'>
+<div id='api_dkgychqzygqp' class='api_div'>
 <h3 id="daily-revenue-per-user">Daily Revenue Per User</h3>
 
 <div class="api_tags" data-tags="Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE" data-tags-lower="content cards, email, in-app message, web push, ios push, android push, webhook, sms/mms, line"></div>
@@ -505,7 +505,7 @@
 
 </div>
 
-<div id='api_rcfbwdxlqark' class='api_div'>
+<div id='api_fadcerwptems' class='api_div'>
 <h3 id="machine-opens">Machine Opens</h3>
 
 <div class="api_tags" data-tags="Email" data-tags-lower="email"></div>
@@ -516,7 +516,7 @@
 
 </div>
 
-<div id='api_qbmdqqqxsziw' class='api_div'>
+<div id='api_bwxkccjprszw' class='api_div'>
 <h3 id="opens">Opens</h3>
 
 <div class="api_tags" data-tags="Web Push, iOS Push, Android Push" data-tags-lower="web push, ios push, android push"></div>
@@ -525,7 +525,7 @@
 
 </div>
 
-<div id='api_uypwhnfnlqnp' class='api_div'>
+<div id='api_exhztmpsldgf' class='api_div'>
 <h3 id="opt-out">Opt-Out</h3>
 
 <div class="api_tags" data-tags="SMS/MMS, RCS" data-tags-lower="sms/mms, rcs"></div>
@@ -536,7 +536,7 @@
 
 </div>
 
-<div id='api_vtlspwhomcki' class='api_div'>
+<div id='api_xzikqvzzwkbo' class='api_div'>
 <h3 id="other-opens">Other Opens</h3>
 
 <div class="api_tags" data-tags="Email" data-tags-lower="email"></div>
@@ -547,7 +547,7 @@
 
 </div>
 
-<div id='api_nrjzixwbfmqr' class='api_div'>
+<div id='api_cdbgqjavarfk' class='api_div'>
 <h3 id="pending-retry">Pending Retry</h3>
 
 <div class="api_tags" data-tags="Email" data-tags-lower="email"></div>
@@ -556,7 +556,7 @@
 
 </div>
 
-<div id='api_mbwyavsnrszw' class='api_div'>
+<div id='api_cfallgzyvmzo' class='api_div'>
 <h3 id="primary-conversions-a-or-primary-conversion-event">Primary Conversions (A) or Primary Conversion Event</h3>
 
 <div class="api_tags" data-tags="Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp" data-tags-lower="content cards, email, in-app message, web push, ios push, android push, webhook, sms/mms, whatsapp"></div>
@@ -592,7 +592,7 @@
 
 </div>
 
-<div id='api_zsjsoovssqiz' class='api_div'>
+<div id='api_ucycjyitffum' class='api_div'>
 <h3 id="reads">Reads</h3>
 
 <div class="api_tags" data-tags="WhatsApp" data-tags-lower="whatsapp"></div>
@@ -601,7 +601,7 @@
 
 </div>
 
-<div id='api_einhhgkpuova' class='api_div'>
+<div id='api_bfdeynsyfupi' class='api_div'>
 <h3 id="read-rate">Read Rate</h3>
 
 <div class="api_tags" data-tags="WhatsApp" data-tags-lower="whatsapp"></div>
@@ -612,7 +612,7 @@
 
 </div>
 
-<div id='api_hvwnknkanrkc' class='api_div'>
+<div id='api_yzbtszfxgfjk' class='api_div'>
 <h3 id="received">Received</h3>
 
 <div class="api_tags" data-tags="Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS/MMS, WhatsApp" data-tags-lower="email, content cards, in-app message, web push, ios push, android push, sms/mms, whatsapp"></div>
@@ -656,7 +656,7 @@
 
 </div>
 
-<div id='api_vkihiootncei' class='api_div'>
+<div id='api_mhvplbtxqdhz' class='api_div'>
 <h3 id="rcs-rejections-or-sms-rejections">RCS Rejections or SMS Rejections</h3>
 
 <div class="api_tags" data-tags="SMS/MMS, RCS" data-tags-lower="sms/mms, rcs"></div>
@@ -675,7 +675,7 @@
 
 </div>
 
-<div id='api_zovzrknbakuo' class='api_div'>
+<div id='api_gloondsmtcpu' class='api_div'>
 <h3 id="revenue">Revenue</h3>
 
 <div class="api_tags" data-tags="Email" data-tags-lower="email"></div>
@@ -684,7 +684,7 @@
 
 </div>
 
-<div id='api_qfeenosiguuf' class='api_div'>
+<div id='api_erwtbckwpizg' class='api_div'>
 <h3 id="sent">Sent</h3>
 
 <div class="api_tags" data-tags="SMS/MMS" data-tags-lower="sms/mms"></div>
@@ -695,7 +695,7 @@
 
 </div>
 
-<div id='api_tkelzxcoyimg' class='api_div'>
+<div id='api_ykbemwusfgvc' class='api_div'>
 <h3 id="sends">Sends</h3>
 
 <div class="api_tags" data-tags="Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, RCS, WhatsApp, LINE" data-tags-lower="content cards, email, in-app message, web push, ios push, android push, webhook, sms/mms, rcs, whatsapp, line"></div>
@@ -717,7 +717,7 @@
 
 </div>
 
-<div id='api_kkblzdpyoajq' class='api_div'>
+<div id='api_rhwpizwtxtyy' class='api_div'>
 <h3 id="messages-sent">Messages Sent</h3>
 
 <div class="api_tags" data-tags="Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp, LINE" data-tags-lower="content cards, email, in-app message, web push, ios push, android push, webhook, sms/mms, whatsapp, line"></div>
@@ -739,7 +739,7 @@
 
 </div>
 
-<div id='api_xwlrbtrioabw' class='api_div'>
+<div id='api_ttwdffnvtzlj' class='api_div'>
 <h3 id="sends-to-carrier">Sends to Carrier</h3>
 
 <div class="api_tags" data-tags="SMS/MMS" data-tags-lower="sms/mms"></div>
@@ -756,7 +756,7 @@
 
 </div>
 
-<div id='api_peenfulddqdz' class='api_div'>
+<div id='api_rmtiwkdliwaa' class='api_div'>
 <h3 id="soft-bounce">Soft Bounce</h3>
 
 <div class="api_tags" data-tags="Email" data-tags-lower="email"></div>
@@ -771,7 +771,7 @@
 
 </div>
 
-<div id='api_hjjajvneakjy' class='api_div'>
+<div id='api_parawthadrjr' class='api_div'>
 <h3 id="spam">Spam</h3>
 
 <div class="api_tags" data-tags="Email" data-tags-lower="email"></div>
@@ -792,7 +792,7 @@
 
 </div>
 
-<div id='api_qgtjmspcscez' class='api_div'>
+<div id='api_qlaxwdchgmha' class='api_div'>
 <h3 id="survey-page-dismissals">Survey Page Dismissals</h3>
 
 <div class="api_tags" data-tags="In-App Message" data-tags-lower="in-app message"></div>
@@ -801,7 +801,7 @@
 
 </div>
 
-<div id='api_jkzkknqjttzi' class='api_div'>
+<div id='api_mtlytcomzbyh' class='api_div'>
 <h3 id="survey-submissions">Survey Submissions</h3>
 
 <div class="api_tags" data-tags="In-App Message" data-tags-lower="in-app message"></div>
@@ -810,7 +810,7 @@
 
 </div>
 
-<div id='api_treulwgywtdr' class='api_div'>
+<div id='api_dgwuofclobbs' class='api_div'>
 <h3 id="total-clicks">Total Clicks</h3>
 
 <div class="api_tags" data-tags="Email, Content Cards, SMS/MMS, LINE" data-tags-lower="email, content cards, sms/mms, line"></div>
@@ -847,7 +847,7 @@
 
 </div>
 
-<div id='api_ysyvdmtqkaqx' class='api_div'>
+<div id='api_nemzxrxcpict' class='api_div'>
 <h3 id="total-dismissals">Total Dismissals</h3>
 
 <div class="api_tags" data-tags="Content Cards" data-tags-lower="content cards"></div>
@@ -866,7 +866,7 @@
 
 </div>
 
-<div id='api_vnahbbvclmal' class='api_div'>
+<div id='api_oddcofvslbkt' class='api_div'>
 <h3 id="total-impressions">Total Impressions</h3>
 
 <div class="api_tags" data-tags="In-App Message, Content Cards" data-tags-lower="in-app message, content cards"></div>
@@ -898,7 +898,7 @@
 
 </div>
 
-<div id='api_eshldxtzioxa' class='api_div'>
+<div id='api_ozoyivlcuumu' class='api_div'>
 <h3 id="total-opens">Total Opens</h3>
 
 <div class="api_tags" data-tags="Email, iOS Push, Android Push, Web Push, LINE" data-tags-lower="email, ios push, android push, web push, line"></div>
@@ -938,7 +938,7 @@
 
 </div>
 
-<div id='api_qxicxzffekmm' class='api_div'>
+<div id='api_cbqjytflfiqi' class='api_div'>
 <h3 id="total-revenue">Total Revenue</h3>
 
 <div class="api_tags" data-tags="Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp" data-tags-lower="content cards, email, in-app message, web push, ios push, android push, webhook, sms/mms, whatsapp"></div>
@@ -949,7 +949,7 @@
 
 </div>
 
-<div id='api_yqpgfaspvejw' class='api_div'>
+<div id='api_dalajdonesjo' class='api_div'>
 <h3 id="unique-clicks">Unique Clicks</h3>
 
 <div class="api_tags" data-tags="Email, Content Cards, LINE" data-tags-lower="email, content cards, line"></div>
@@ -988,7 +988,7 @@
 
 </div>
 
-<div id='api_fnbuflshcosf' class='api_div'>
+<div id='api_wofpshzfdkvx' class='api_div'>
 <h3 id="unique-dismissals">Unique Dismissals</h3>
 
 <div class="api_tags" data-tags="Content Cards" data-tags-lower="content cards"></div>
@@ -999,7 +999,7 @@
 
 </div>
 
-<div id='api_agwvftsgnpbr' class='api_div'>
+<div id='api_bncxgbcbnkxo' class='api_div'>
 <h3 id="unique-impressions">Unique Impressions</h3>
 
 <div class="api_tags" data-tags="In-App Message, Content Cards" data-tags-lower="in-app message, content cards"></div>
@@ -1029,7 +1029,7 @@
 
 </div>
 
-<div id='api_odocwqsstzxe' class='api_div'>
+<div id='api_lpkzyanootxm' class='api_div'>
 <h3 id="unique-opens">Unique Opens</h3>
 
 <div class="api_tags" data-tags="Email, LINE" data-tags-lower="email, line"></div>
@@ -1065,7 +1065,7 @@
 
 </div>
 
-<div id='api_upffbritatam' class='api_div'>
+<div id='api_oodbecbiomiw' class='api_div'>
 <h3 id="unique-recipients">Unique Recipients</h3>
 
 <div class="api_tags" data-tags="All" data-tags-lower="all"></div>
@@ -1078,7 +1078,7 @@
 
 </div>
 
-<div id='api_paavbuebpnbi' class='api_div'>
+<div id='api_kzjgtcrypugv' class='api_div'>
 <h3 id="unsubscribers-or-unsub">Unsubscribers or Unsub</h3>
 
 <div class="api_tags" data-tags="Email" data-tags-lower="email"></div>
@@ -1095,7 +1095,7 @@
 
 </div>
 
-<div id='api_iqmukufapdxq' class='api_div'>
+<div id='api_eyzquugjwxgw' class='api_div'>
 <h3 id="unsubscribes">Unsubscribes</h3>
 
 <div class="api_tags" data-tags="Email" data-tags-lower="email"></div>
@@ -1106,7 +1106,7 @@
 
 </div>
 
-<div id='api_inygfprhsvln' class='api_div'>
+<div id='api_inbsubisdayk' class='api_div'>
 <h3 id="variation">Variation</h3>
 
 <div class="api_tags" data-tags="Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp" data-tags-lower="content cards, email, in-app message, web push, ios push, android push, webhook, sms/mms, whatsapp"></div>
