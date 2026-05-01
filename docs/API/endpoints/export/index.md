@@ -1,6 +1,6 @@
 # Export endpoints
 
-With the export endpoints, you can access and export various details on your KPIs, app sessions, users, segments, campaigns, and Canvases. Make sure you know your [Braze instance](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints/), [API key](https://www.braze.com/docs/api/api_key/), and [API identifier](https://www.braze.com/docs/api/identifier_types/) when building your parameters and request bodies.
+With this collection of endpoints, you can access and export various levels of details on your KPIs, app sessions, users, segments, campaigns, and Canvases. Make sure you know your [Braze instance](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints/), [API key](https://www.braze.com/docs/api/api_key/), and [API identifier](https://www.braze.com/docs/api/identifier_types/) when building your parameters and request bodies.
 
 ## Prerequisites
 

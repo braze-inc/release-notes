@@ -169,8 +169,6 @@ Refer to the following table for details on the `Image` editor block. For dynami
 
 
 
-
-
 | Properties | Description |
 |---|---|
 |Auto Width| Modifies the width of the image in pixels. |
@@ -353,8 +351,6 @@ Details for each editor block's properties are provided in the following tables.
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Image
-
-
 
 
 

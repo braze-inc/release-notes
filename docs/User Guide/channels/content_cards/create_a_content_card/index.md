@@ -119,8 +119,6 @@ Each message type and platform may have its own suggested proportions and requir
 
 
 
-
-
 #### Pin to top
 
 Braze displays a pinned card at the top of a user's feed and the user can't dismiss it. If a user's feed has multiple pinned cards, Braze orders them chronologically. After you send a card, you can't retroactively update its pinned option. Changing this option after you send a campaign only affects future sends.

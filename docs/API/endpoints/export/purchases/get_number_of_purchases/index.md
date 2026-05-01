@@ -1,4 +1,4 @@
-<div id='api_eiqtjqikuxbb' class='api_div'>
+<div id='api_tujykmwbuobb' class='api_div'>
 <h1 id="export-number-of-purchases">Export number of purchases</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/purchases/quantity_series</p>

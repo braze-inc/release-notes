@@ -4,6 +4,13 @@
 
 Referencing your Canvas version history can be especially helpful to maintain a record of the evolution of a Canvas. For example, if you make a large-scale change, you can reference previous Canvas versions to better understand how your workflows have progressed.
 
+**Tip:**
+
+
+For a full list of Canvases in your workspace (for example, for an audit), use the [Export Canvas list endpoint](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvases/) and paginate through the results.
+
+
+
 ## Managing versions
 
 ![](https://www.braze.com/docs/assets/img_archive/canvas_version_history.png?fa1f6cbc19dbec1183cb586dccc33006){: style="float:right;max-width:35%;margin-left:15px;"}

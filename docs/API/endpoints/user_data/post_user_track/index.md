@@ -1,4 +1,4 @@
-<div id='api_fthnzswlojgr' class='api_div'>
+<div id='api_uqumqvqqzczr' class='api_div'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
@@ -10,7 +10,9 @@
 
 <p><strong>Note:</strong></p>
 
-<p>Braze processes the data passed through the API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point logging. To read more, refer to <a href="/docs/user_guide/data/infrastructure/data_points/">Data points</a>.</p>
+<p>Each custom attribute sent in a request to <code class="language-plaintext highlighter-rouge">/users/track</code> consumes a data point. For more information, see <a href="/docs/user_guide/data/infrastructure/data_points/">Data points</a>.</p>
+
+<p>Braze processes the data passed through the API at face value, and you should only pass deltas (changing data) to minimize unnecessary data point logging.</p>
 
 <h2 id="need-to-update-users-in-bulk">Need to update users in bulk?</h2>
 

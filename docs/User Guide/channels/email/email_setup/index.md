@@ -67,6 +67,4 @@ After you're done warming up your IP, you can [start creating and sending emails
 
 
 
-
-
 <br><br>

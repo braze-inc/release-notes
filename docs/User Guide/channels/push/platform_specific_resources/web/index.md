@@ -87,8 +87,6 @@ The following browsers support web push notifications.
 
 
 
-
-
 - Chrome (and Chrome for Android mobile)
 - Safari (version 16 or newer)
 - Firefox (and Firefox for Android mobile)

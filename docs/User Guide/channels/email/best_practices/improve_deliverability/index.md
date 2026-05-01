@@ -54,8 +54,6 @@ Sending patterns influence domain reputation. When they misalign with the follow
 
 
 
-
-
 ## Message content
 
 Content filters help MBPs protect their users from phishing, malware, and unwanted mail. Your creativity may look benign, but still resemble patterns filters watch for.

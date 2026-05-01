@@ -1,4 +1,4 @@
-<div id='api_uopfwxkrlryv' class='api_div'>
+<div id='api_vobkjaebsila' class='api_div'>
 <h1 id="upload-an-asset-to-the-media-library">Upload an asset to the media library</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/media_library/create</p>

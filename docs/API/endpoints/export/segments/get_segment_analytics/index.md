@@ -1,11 +1,11 @@
-<div id='api_axiuhtudvtmk' class='api_div'>
+<div id='api_jjhgyeirefxq' class='api_div'>
 <h1 id="export-segment-analytics">Export segment analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/segments/data_series</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to retrieve a daily series of the estimated size of a segment over time.</p>
+  <p>Use this endpoint to retrieve a daily series of the estimated size of a segment over time. <br /><br />If you need the exact size of a segment, export its users with the <a href="/docs/api/endpoints/export/user_data/post_users_segment/"><code class="language-plaintext highlighter-rouge">/users/export/segment</code> endpoint</a> and count the exported profiles.</p>
 </blockquote>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#62d9d142-cdec-4aea-a287-c13efea7415e" class="seeme">See me in Postman</a></div>

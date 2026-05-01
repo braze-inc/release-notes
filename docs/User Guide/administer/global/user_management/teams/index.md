@@ -85,8 +85,6 @@ The following are all available permissions you can assign at the Team level. An
 
 
 
-
-
 - View Campaigns
 - Edit Campaigns
 - Archive Campaigns

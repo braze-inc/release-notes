@@ -1,4 +1,4 @@
-<div id='api_wyzsnhkberkp' class='api_div'>
+<div id='api_xqtwthhoxxoi' class='api_div'>
 <h1 id="send-messages-immediately-using-the-api-only">Send messages immediately using the API only</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/send</p>

@@ -2,48 +2,6 @@
 
 > The multi-language feature allows you to use [translation tags](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/) to target users in different languages and locations all within a single message.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Prerequisites
 
 

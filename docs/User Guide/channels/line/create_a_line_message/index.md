@@ -102,8 +102,6 @@ If you plan to use Liquid, be sure to include a default value for your personali
 
 
 
-
-
 #### Creating right-to-left messages
 
 The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages/).

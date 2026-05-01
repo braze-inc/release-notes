@@ -427,8 +427,6 @@ For a list of eCommerce filters and their definitions, refer to [Segment filters
 
 
 
-
-
 ## Nested event properties
 
 To segment by nested event properties, you can leverage [Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension#why-use-segment-extensions). For example, you can use Segment Extensions to find who has bought the product “SKU-123” in the last 90 days.

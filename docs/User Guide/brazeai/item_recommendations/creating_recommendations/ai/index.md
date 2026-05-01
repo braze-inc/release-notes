@@ -23,7 +23,7 @@ Use AI item recommendations to calculate the most popular products or create per
 Before you start, you must have the following:
 
 - At least one [catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs/) to use any of the recommendation types described below.
-- Purchase or event data on Braze (custom events or the purchase object) that includes a reference to the item and must match the catalog item IDs.
+- Purchase or event data on Braze (custom events, the order placed event, or the purchase object) that includes a reference to the item and must match the catalog item IDs.
 
 ### Step 1: Create a new recommendation
 
@@ -48,7 +48,7 @@ Give your recommendation a name and optional description.
 
 ### Step 3: Define your recommendation {#recommendation-type}
 
-Select a recommendation type. Each type uses the last six months of item interaction data, such as a purchase or custom event data. For more detailed information and uses cases for each, see [Types and Uses Cases](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/).
+Select a recommendation type. Each type uses the last six months of item interaction data, such as a purchase, an order placed, or custom event data. For more detailed information and uses cases for each, see [Types and Uses Cases](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/).
 
 **Tip:**
 
@@ -93,10 +93,11 @@ You can optimize for:
 - Purchase events with the [Purchase Object](https://www.braze.com/docs/api/objects_filters/purchase_object/)
 - Custom events that represent a purchase
 - Custom events that represent any other item interaction (such as product views, clicks, or media plays)
+- Orders placed with the [order placed event](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/?tab=ecommerce.order_placed)
 
 If you choose **Custom Event**, select your event from the list.
 
-![The "Completed Purchase" custom event selected as how events are currently tracked.](https://www.braze.com/docs/assets/img/item_recs_3.png?3ab4e9e0a9d0c425114ee96293691fe5)
+![The "purchase" custom event selected as how events are currently tracked.](https://www.braze.com/docs/assets/img/item_recs_3.png?252b236e88c197cb3ecb20be42f815d5)
 
 **Note:**
 
@@ -107,7 +108,7 @@ Custom events must have sufficient data before they appear in the event list. If
 
 ### Step 5: Choose the corresponding property name {#property-name}
 
-To create a recommendation, you need to tell Braze which field of your interaction event (purchase object or custom event) has the unique identifier that matches an item's `id` field in the catalog. Not sure? [View requirements](#requirements).
+To create a recommendation, you need to tell Braze which field of your interaction event (order placed event, purchase object, or custom event) has the unique identifier that matches an item's `id` field in the catalog. Not sure? [View requirements](#requirements).
 
 Select this field for the **Property Name**.
 
@@ -120,11 +121,11 @@ The **Property Name** field will pre-populate with a list of fields sent through
 There are some requirements for selecting your property:
 
 - Must map to the `id` field of your selected catalog.
+- **If you selected Order Placed Event or are using [eCommerce events](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/) to train item recommendations:** Enter `products.product_id` for the product ID.
+  - The field can be inside an array of products, or end with an array of IDs. In either case, each product ID will be treated as a separate, sequential event with the same timestamp.
 - **If you selected Purchase Object:** Must be the `product_id` or a field of your interaction event's `properties`.
 - **If you selected Custom Event:** Must be a field of your custom event's `properties`.
 - Nested fields must be typed into the **Property Name** dropdown in dot notation with the format of `event_property.nested_property`. For example, if selecting the nested property `district_name` within the event property `location`, you would enter `location.district_name`.
-- **If using [eCommerce events](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/) to train item recommendations:** Add `products.product_id` to access the product ID from events.
-- The field can be inside an array of products, or end with an array of IDs. In either case, each product ID will be treated as a separate, sequential event with the same timestamp.
 
 #### Example mappings
 
@@ -298,6 +299,32 @@ This event has a property of `"sku": "ADI-RD-8"`, which maps to the second item 
       }
     }
   ]
+}
+```
+
+
+
+
+##### Example order placed object mapped to product ID
+
+```json
+{
+  "name": "ecommerce.order_placed",
+  "properties": {
+    "order_id": "order_123",
+    "total_value": 200.0,
+    "currency": "USD",
+    "products": [
+      {
+        "product_id": "ADI-BL-7",
+        "product_name": "Adidas Black Size 7",
+        "variant_id": "ADI-BL-7-default",
+        "quantity": 1,
+        "price": 100.0
+      }
+    ],
+    "source": "storefront"
+  }
 }
 ```
 

@@ -38,9 +38,9 @@ After a Content Card expires, it will automatically be removed from the user's f
 
 ## Content Card removal {#removal}
 
-Content Cards can be removed when users complete a purchase or perform a custom event. You can select one of the following as the removal event: **Perform Custom Event** and **Make Purchase**. Then, select **Add Event**.
+Content Cards can be removed when users complete a purchase or perform a custom event. You can select one of the following as the removal event: **Perform Custom Event** and **Place Order**. Then, select **Add Trigger**.
 
-!["Remove cards when users complete a purchase or perform a custom event." selected with the trigger to remove cards for users who make a specific purchase for "Bracelet".](https://www.braze.com/docs/assets/img_archive/content-cards-in-canvas-removal-event.png?e59694c58ecd8f12ddf46262ab528fb1)
+!["Remove cards when users complete a purchase or perform a custom event." selected with the trigger to remove cards for users who place a specific order.](https://www.braze.com/docs/assets/img_archive/content-cards-in-canvas-removal-event.png?53f146e9d5efad17e17ca8b00a16bc74)
 
 ## Reporting and analytics
 

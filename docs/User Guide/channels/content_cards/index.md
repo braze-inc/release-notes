@@ -58,8 +58,6 @@ Here are some benefits of using Content Cards versus having your developers buil
 
 
 
-
-
 ## Content Cards by the numbers
 
 When you build Content Cards in Braze, you can update messaging and measure impact without overhauling your app or website. Highlights from Braze research include:

@@ -2,48 +2,6 @@
 
 > After adding locales to your workspace, you can target users in different languages all within a single push, email, banner, in-app message, or Content Block.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Prerequisites
 
 Watch the following video for an optional overview of setting up and using multi-language messages.
