@@ -34,6 +34,8 @@ Due to iOS's handling of buttons, you need to perform additional integration ste
 
 
 
+Preset pairs such as **Yes** / **No** map the second button to a dismissive (**CLOSE**) action by default, so it doesn't open the app the same way as the first button. **_Direct Opens_** doesn't include that kind of tap, but **Push Notification Open** data in Currents or Snowflake may still log it with `button_action_type` and `button_string`. For more information, see [Push action buttons and reporting](https://www.braze.com/docs/user_guide/channels/push/reporting/#push-action-buttons-and-reporting).
+
 
 ### Android {#android}
 

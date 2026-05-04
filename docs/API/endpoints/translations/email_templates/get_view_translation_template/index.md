@@ -1,4 +1,4 @@
-<div id='api_mulkfnofgtie' class='api_div'>
+<div id='api_beqzlcywhllv' class='api_div'>
 <h1 id="view-all-translations-and-locales-for-an-email-template">View all translations and locales for an email template</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/translations/</p>

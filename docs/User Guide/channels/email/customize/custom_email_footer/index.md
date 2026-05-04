@@ -11,7 +11,7 @@ It is your responsibility to make sure that your custom footer meets the aforeme
 
 
 
-## Creating your custom footer
+## Create your custom footer
 
 To create or edit your custom footer, do the following:
 
@@ -88,3 +88,6 @@ If you don't include a plaintext footer, Braze will automatically build one from
 
 ![Email with Set Custom Plaintext Footer option selected.](https://www.braze.com/docs/assets/img_archive/custom_footer_save_changes.png?7c6ce03544076b2a8f99c20c39b60700){: style="max-width:70%" }
 
+## Considerations
+
+If you're using [BrazeAI Decisioning Studio™](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio), note that `{{${email_footer}}}` is not a standard Liquid tag. It's pre-processed before Liquid runs, so using `{{${email_footer}}}` as a context variable value and calling the `:rerender` flag silently fails. Instead, use a [Content Block](https://www.braze.com/docs/user_guide/messaging/design_and_edit/content_blocks/#email-footers) for an email footer.
