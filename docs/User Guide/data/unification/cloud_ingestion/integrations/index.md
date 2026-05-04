@@ -57,6 +57,8 @@ There may be two to five minutes of warm-up time when Braze connects to Classic 
 
 ### Step 1: Set up tables or views
 
+Before you start, review [Table setup for Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup/) to understand source table requirements compared to `PAYLOAD` formatting requirements.
+
 **Note:**
 
 

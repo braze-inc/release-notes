@@ -58,6 +58,15 @@ The **Add Stats** step shows you statistics for the types of campaigns or Canvas
 
 ![engagement_report_add_stats](https://www.braze.com/docs/assets/img_archive/engagement_report_add_stats.png?2f325f6a3f52d8213585246152eb7b87)
 
+Engagement reports aggregate data per campaign or Canvas, not at the workspace level. To monitor total send or impression volume across all active campaigns and Canvases, such as per-channel sends and impressions across an entire workspace, use [Report Builder](https://www.braze.com/docs/report_builder/).
+
+**Note:**
+
+
+*Sends to Carrier* is deprecated, but will continue to be supported for users who already have it.
+
+
+
 | Channel | Available statistics |
 | ------| --------------|
 | Email | Sends, Opens, Unique Opens, Clicks, Unique Clicks, Click to Open, Unsubscribes, Bounces, Delivered, Reported Spam |
@@ -67,13 +76,6 @@ The **Add Stats** step shows you statistics for the types of campaigns or Canvas
 | Webhook  |  Sends, Errors |
 | SMS | Sends, Sends to Carrier, Confirmed Deliveries, Delivery Failures, Rejections |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-**Note:**
-
-
-*Sends to Carrier* is deprecated, but will continue to be supported for users that already have it.
-
-
 
 ### Step 4: Complete report setup
 

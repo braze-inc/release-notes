@@ -1,4 +1,4 @@
-<div id='api_xripoqskboee' class='api_div'>
+<div id='api_ppyegikumwtp' class='api_div'>
 <h1 id="export-product-ids">Export product IDs</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/purchases/product_list</p>

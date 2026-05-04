@@ -5,7 +5,7 @@
 **Important:**
 
 
-Persistent entry properties are an artifact of the original Canvas editor, so there are deprecated references to terms like Canvas entry properties that remain for historical reference. For the current updated Canvas editor, refer to [Context and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/).
+Persistent entry properties are an artifact of the original Canvas editor, so there are deprecated references to terms like Canvas entry properties that remain for historical reference. For the current Canvas editor, refer to [Context and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/).<br><br>To use persistent entry properties in the current Canvas editor, you must either create a new Canvas or [clone](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases) an existing one to the current editor.
 
 
 

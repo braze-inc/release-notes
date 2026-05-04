@@ -1,4 +1,4 @@
-<div id='api_qwrukwwxyxnz' class='api_div'>
+<div id='api_omnrnbofbpuu' class='api_div'>
 <h1 id="delete-sdk-authentication-key">Delete SDK Authentication key</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/app_group/sdk_authentication/delete</p>
