@@ -1,4 +1,4 @@
-<div id='api_xihphcazjsye' class='api_div'>
+<div id='api_zmhqkwrqaeqj' class='api_div'>
 <h1 id="update-scheduled-api-triggered-campaigns">Update scheduled API-triggered campaigns</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/schedule/update</p>

@@ -1,4 +1,4 @@
-<div id='api_hsptxbdhchze' class='api_div'>
+<div id='api_ovlqqljrvonh' class='api_div'>
 <h1 id="create-catalog-fields">Create catalog fields</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/catalogs/{catalog_name}/fields</p>

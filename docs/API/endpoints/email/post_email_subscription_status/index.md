@@ -1,4 +1,4 @@
-<div id='api_mfrzbgrdfllq' class='api_div'>
+<div id='api_xsyojmuyrotk' class='api_div'>
 <h1 id="change-email-subscription-status">Change email subscription status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/status</p>

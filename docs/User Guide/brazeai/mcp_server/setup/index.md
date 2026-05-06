@@ -5,7 +5,8 @@
 **Important:**
 
 
-Braze MCP Server is in beta. If you want to help us make it better, send us feedback at [mcp-product@braze.com](mailto:mcp-product@braze.com).
+Braze MCP server is in beta. You don't need to request access to use it. Follow the setup instructions to get started. By using the Braze MCP server, you agree to the [Braze Beta Terms](https://www.braze.com/company/legal/beta-terms). To help us make it better, send your feedback to [mcp-product@braze.com](mailto:mcp-product@braze.com).
+
 
 
 
@@ -72,9 +73,22 @@ everything's installed!
 
 ### Step 2: Create an API key {#create-api-key}
 
-Braze MCP server supports 38 read-only endpoints that do not return data from Braze user profiles. Go to **Settings** > **APIs and Identifiers** > **API Keys** and create a new key with some or all the following permissions.
+The Braze MCP server supports 39 endpoints that don't return data from Braze user profiles.
 
-**List of read-only, non-PII permissions**
+To create your API key:
+
+1. Go to **Settings** > **APIs and Identifiers** > **API Keys**.
+2. Create a new key.
+3. Assign some or all of the following permissions to your key.
+
+**Important:**
+
+
+Only assign the permissions you want your agent to use. To prevent your agent from making changes in Braze, leave the `media_library.create` permission off.
+
+
+
+**List of supported permissions**
 
 
 #### Campaigns
@@ -146,6 +160,15 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 | [`/kpi/dau/data_series`](https://www.braze.com/docs/api/endpoints/export/kpi/get_kpi_dau_date) | `kpi.dau.data_series` |
 | [`/kpi/mau/data_series`](https://www.braze.com/docs/api/endpoints/export/kpi/get_kpi_mau_30_days) | `kpi.mau.data_series` |
 | [`/kpi/uninstalls/data_series`](https://www.braze.com/docs/api/endpoints/export/kpi/get_kpi_uninstalls_date) | `kpi.uninstalls.data_series` |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+#### Media Library
+
+This endpoint is a write endpoint supported by the Braze MCP server. Add this permission only if you want your agent to upload assets to your media library.
+
+| Endpoint | Required permission |
+|----------|---------------------|
+| [`/media_library/create`](https://www.braze.com/docs/api/endpoints/media_library/manage_assets/create) | `media_library.create` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 #### Messages
@@ -223,7 +246,7 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 **Warning:**
 
 
-Do not reuse an existing API key&#8212;create one specifically for your MCP client. Additionally, only assign read-only, non-PII permissions, as agents may try to write or delete data in Braze.
+Don't reuse an existing API key. Create one specifically for your MCP client. Assign only the permissions your agent needs. Agents may try to use any permission you grant, so leave write permissions like `media_library.create` off if you don't want your agent to make changes in Braze.
 
 
 

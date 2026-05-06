@@ -1,4 +1,4 @@
-<div id='api_vwusneqjoslo' class='api_div'>
+<div id='api_rldgwzmamyam' class='api_div'>
 <h1 id="query-hard-bounced-emails">Query hard bounced emails</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/email/hard_bounces</p>

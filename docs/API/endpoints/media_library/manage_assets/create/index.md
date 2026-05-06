@@ -1,4 +1,4 @@
-<div id='api_vittpkaxjtha' class='api_div'>
+<div id='api_cdnmusqjnodf' class='api_div'>
 <h1 id="upload-an-asset-to-the-media-library">Upload an asset to the media library</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/media_library/create</p>
@@ -7,6 +7,10 @@
 <blockquote>
   <p>Use this endpoint to add an asset to the <a href="https://www.braze.com/docs/user_guide/engagement_tools/templates_and_media/media_library">Braze media library</a> using either an externally hosted URL (<code class="language-plaintext highlighter-rouge">asset_url</code>) or binary file data sent in the request body (<code class="language-plaintext highlighter-rouge">asset_file</code>). This endpoint supports images and ZIP files that contain images.</p>
 </blockquote>
+
+<p><strong>Tip:</strong></p>
+
+<p>You can also call this endpoint through the <a href="/docs/user_guide/brazeai/mcp_server/">Braze MCP server</a> using the <a href="/docs/user_guide/brazeai/mcp_server/available_api_functions/#media-library"><code class="language-plaintext highlighter-rouge">create_media_library_asset</code></a> function. This lets AI tools like Claude and Cursor upload assets to your media library through natural language prompts.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

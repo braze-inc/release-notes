@@ -1,4 +1,4 @@
-<div id='api_nlbteaqsissl' class='api_div'>
+<div id='api_wmbdlxneyzph' class='api_div'>
 <h1 id="send-campaign-messages-using-api-triggered-delivery">Send campaign messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/send</p>

@@ -96,7 +96,13 @@ When referencing context variables, always use the format `{{context.${variable_
 
 ### Context variable filters
 
-You can create filters using context variables in [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths/) and [Decision Split](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/decision_split/) steps. For filter setup, comparison logic, and advanced examples, see [Context variables reference](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables/#context-variable-filters).
+You can create filters using context variables in [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths/) and [Decision Split](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/decision_split/) steps.
+
+To route users based on an [Agent step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/agent_step/) response, add the Agent step before your Audience Paths or Decision Split step. The Agent step stores its output in Canvas context, which you can evaluate with context variable filters in those branching steps.
+
+If the agent returns an object and you want to filter on a nested property, enter the path in the **Context variable name** field using dot notation instead of only the top-level variable name (for example, `intent_agent.persona` when `persona` is nested under `intent_agent`).
+
+For filter setup, comparison logic, and advanced examples, see [Context variables reference](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables/#context-variable-filters).
 
 
 

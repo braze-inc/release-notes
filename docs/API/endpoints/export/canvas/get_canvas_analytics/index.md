@@ -1,4 +1,4 @@
-<div id='api_arhrqjjorasv' class='api_div'>
+<div id='api_vwrnegggmjfp' class='api_div'>
 <h1 id="export-canvas-data-series-analytics">Export Canvas data series analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/data_series</p>

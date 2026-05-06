@@ -1,4 +1,4 @@
-<div id='api_hjnwttqyakrp' class='api_div'>
+<div id='api_ozjtqxvsirej' class='api_div'>
 <h2 id="select-users-by-how-many-times-an-event-has-occurred">Select users by how many times an event has occurred</h2>
 <div class="api_tags" data-tags="Event" data-tags-lower="event"></div>
 
@@ -17,7 +17,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_cxldmtxgcviv' class='api_div'>
+<div id='api_jxtyjgidkyok' class='api_div'>
 <h2 id="select-users-that-performed-an-action-and-sum-up-a-property-value">Select users that performed an action and sum up a property value</h2>
 <div class="api_tags" data-tags="Property" data-tags-lower="property"></div>
 
@@ -32,7 +32,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_bifdvfxwqzja' class='api_div'>
+<div id='api_zefgfkvepywg' class='api_div'>
 <h2 id="select-users-based-on-how-many-times-an-event-occurred-in-a-time-range">Select users based on how many times an event occurred in a time range</h2>
 <div class="api_tags" data-tags="Event, Time range" data-tags-lower="event, time range"></div>
 
@@ -53,7 +53,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_zdneudumjduc' class='api_div'>
+<div id='api_izfxtqysafit' class='api_div'>
 <h2 id="select-users-that-recorded-at-least-one-event-across-multiple-time-ranges">Select users that recorded at least one event across multiple time ranges</h2>
 <div class="api_tags" data-tags="Event, Time range" data-tags-lower="event, time range"></div>
 
@@ -92,7 +92,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_czyfefoacwmd' class='api_div'>
+<div id='api_civqsgcbqwfv' class='api_div'>
 <h2 id="select-any-purchase-with-certain-properties">Select any purchase with certain properties</h2>
 <div class="api_tags" data-tags="Purchase, Property" data-tags-lower="purchase, property"></div>
 
@@ -135,7 +135,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_xwgsqhmacmdx' class='api_div'>
+<div id='api_pvnieztxqcfk' class='api_div'>
 <h2 id="select-users-that-were-sent-a-message-that-wasnt-delivered">Select users that were sent a message that wasn’t delivered</h2>
 <div class="api_tags" data-tags="Message, Delivery" data-tags-lower="message, delivery"></div>
 
@@ -162,7 +162,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_mrhhbujgapiy' class='api_div'>
+<div id='api_oqdsbaxlkzjd' class='api_div'>
 <h2 id="find-all-sms-messages-that-were-sent-but-didnt-reach-the-carrier-because-of-queue-overflow">Find all SMS messages that were sent but didn’t reach the carrier because of queue overflow</h2>
 <div class="api_tags" data-tags="Message, Carrier" data-tags-lower="message, carrier"></div>
 
@@ -190,7 +190,7 @@
 <p><code class="language-plaintext highlighter-rouge">CANVAS_ID</code> is the number after <code class="language-plaintext highlighter-rouge">/canvas/</code> in your Canvas URL.</p>
 </div>
 
-<div id='api_opupciuezlnf' class='api_div'>
+<div id='api_uvughwxneobd' class='api_div'>
 <h2 id="select-users-that-made-any-purchase-with-a-property-array-containing-a-specific-value">Select users that made any purchase with a property array containing a specific value</h2>
 <div class="api_tags" data-tags="Purchase, Property" data-tags-lower="purchase, property"></div>
 
@@ -205,7 +205,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_gnvlyuukygvx' class='api_div'>
+<div id='api_ywwflzvcchpf' class='api_div'>
 <h2 id="find-all-users-that-had-multiple-30003-errors-and-0-deliveries">Find all users that had multiple 30003 errors and 0 deliveries</h2>
 <div class="api_tags" data-tags="Error, Delivery" data-tags-lower="error, delivery"></div>
 
@@ -236,7 +236,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_iesfsexxiflj' class='api_div'>
+<div id='api_uyjdykewwpmw' class='api_div'>
 <h2 id="find-users-with-specific-event-properties-and-event-counts-in-a-time-range">Find users with specific event properties and event counts in a time range</h2>
 <div class="api_tags" data-tags="Event, Property, Time range" data-tags-lower="event, property, time range"></div>
 
@@ -277,7 +277,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_nzisyefzmvie' class='api_div'>
+<div id='api_jrwwabkdhkte' class='api_div'>
 <h2 id="select-users-whose-most-recent-session-was-on-a-specific-device-model">Select users whose most recent session was on a specific device model</h2>
 <div class="api_tags" data-tags="Session, Device" data-tags-lower="session, device"></div>
 
@@ -296,7 +296,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_luxafnhcqgaw' class='api_div'>
+<div id='api_ykokjvwfibzu' class='api_div'>
 <h2 id="find-users-that-selected-the-second-button-of-an-in-app-message-in-a-specific-time-range">Find users that selected the second button of an in-app message in a specific time range</h2>
 <div class="api_tags" data-tags="Time range" data-tags-lower="time range"></div>
 
@@ -315,7 +315,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_yjxocusdtlme' class='api_div'>
+<div id='api_uvszxrnszzxc' class='api_div'>
 <h2 id="find-users-that-purchased-in-each-of-the-last-three-calendar-months">Find users that purchased in each of the last three calendar months</h2>
 <div class="api_tags" data-tags="Purchase, Time range" data-tags-lower="purchase, time range"></div>
 
@@ -350,7 +350,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_eccebrvyjoez' class='api_div'>
+<div id='api_npwgrfgsmepr' class='api_div'>
 <h2 id="select-users-that-completed-a-custom-event-with-a-specific-property-when-property-is-an-integer">Select users that completed a custom event with a specific property when property is an integer</h2>
 <div class="api_tags" data-tags="Event, Property" data-tags-lower="event, property"></div>
 
@@ -385,7 +385,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_ayilyjhnuvsg' class='api_div'>
+<div id='api_oltfkczmsjhd' class='api_div'>
 <h2 id="find-the-average-number-of-emails-a-user-receives-daily">Find the average number of emails a user receives daily</h2>
 <div class="api_tags" data-tags="Message" data-tags-lower="message"></div>
 
@@ -449,7 +449,7 @@
 
 </div>
 
-<div id='api_jxkavdkzlqaw' class='api_div'>
+<div id='api_awzijjhqtvmf' class='api_div'>
 <h2 id="find-the-average-number-of-emails-a-user-receives-weekly">Find the average number of emails a user receives weekly</h2>
 <div class="api_tags" data-tags="Message" data-tags-lower="message"></div>
 
