@@ -158,6 +158,8 @@ Depending on the configuration of your Snowflake account, you may need to allow 
 
 
 
+
+
 <!--The following section is the list of IPs for IP allowlisting-->
 
 
@@ -188,6 +190,8 @@ If you have a firewall or other network policies, you must give Braze network ac
 You may also need to change your security groups to allow Braze access to your data in Redshift. Make sure to explicitly allow inbound traffic on the IPs below and on the port used to query your Redshift cluster (default is 5439). You should explicitly allow Redshift TCP connectivity on this port even if the inbound rules are set to "allow all". In addition, it is important that the endpoint for the Redshift cluster be publicly accessible in order for Braze to connect to your cluster.
 
 If you don't want your Redshift cluster to be publicly accessible, you can set up a VPC and EC2 instance to use an ssh tunnel to access the Redshift data. For more information, refer to [AWS: How do I access a private Amazon Redshift cluster from my local machine?](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine)
+
+
 
 
 
@@ -243,6 +247,8 @@ If you have network policies in place, you must give Braze network access to you
 
 
 
+
+
 <!--The following section is the list of IPs for IP allowlisting-->
 
 
@@ -273,6 +279,8 @@ Keep the token in a safe place until you need to enter it on the Braze dashboard
 #### Step 2.2: Allow access to Braze IPs    
 
 If you have network policies in place, you must give Braze network access to your Databricks instance. Allow access from the below IPs corresponding to your Braze dashboard's region.  
+
+
 
 
 
@@ -330,6 +338,8 @@ You will need the SQL endpoint for your warehouse in order for Braze to connect.
 #### Step 2.4: Allow Braze IPs in Firewall (Optional)
 
 Depending on the configuration of your Microsoft Fabric account, you may need to allow the following IP addresses in your firewall to allow traffic from Braze. For more information on enabling this, see the relevant documentation on [Entra Conditional Access](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access).
+
+
 
 
 

@@ -1,4 +1,4 @@
-<div id='api_objdpumwovsz' class='api_div'>
+<div id='api_lghwkoioanbo' class='api_div'>
 <h1 id="update-existing-email-templates">Update existing email templates</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/templates/email/update</p>

@@ -41,7 +41,7 @@ In the **Target Audiences** step of your campaign composer, you can also limit t
 
 ![Audience Summary with a selected checkbox for limiting the number of people who receive the campaign.](https://www.braze.com/docs/assets/img_archive/total_limit.png?a3c421dd7b3b820575e2efced037a1a1){: style="max-width:50%;"} 
 
-By selecting the maximum user limit, you can limit the volume of messages sent on a per-channel basis or globally across all message types.
+By selecting the maximum user limit, you can limit the volume of messages sent on a per-channel basis or globally across all message types. Braze does not dispatch messages to users assigned to control groups, so they do not count toward the limit.
 
 **Note:**
 

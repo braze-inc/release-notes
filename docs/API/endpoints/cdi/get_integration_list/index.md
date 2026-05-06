@@ -1,4 +1,4 @@
-<div id='api_rhjzsajuaoug' class='api_div'>
+<div id='api_ofehnulycrht' class='api_div'>
 <h1 id="list-integrations">List integrations</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/cdi/integrations</p>

@@ -1,4 +1,4 @@
-<div id='api_aqwbxjuzelgu' class='api_div'>
+<div id='api_mhqyummxmkkk' class='api_div'>
 <h1 id="export-user-profile-by-segment">Export user profile by segment</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/export/segment</p>
@@ -396,6 +396,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   <li>Both <code class="language-plaintext highlighter-rouge">custom_events</code> and <code class="language-plaintext highlighter-rouge">purchases</code> contain fields for <code class="language-plaintext highlighter-rouge">first</code> and <code class="language-plaintext highlighter-rouge">count</code>. Both of these fields reflect information from all time, and are not limited to data from the last 90 days. For example, if a particular user first did the event 90 days ago, this is accurately reflected in the <code class="language-plaintext highlighter-rouge">first</code> field, and the <code class="language-plaintext highlighter-rouge">count</code> field takes into account events that occurred prior to the last 90 days as well.</li>
   <li>The number of concurrent segment exports a company can run at the endpoint level is capped at 100. Attempts that surpass this limit result in an error.</li>
   <li>Attempting to export a segment a second time while the first export job is still running results in a 429 error.</li>
+  <li>A <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/?sdktab=cloud%20storage%20connected#segment-export-api-downloads"><code class="language-plaintext highlighter-rouge">403 Forbidden</code> response</a> often means the export file isn’t ready yet.</li>
 </ul>
 
 <h2 id="response">Response</h2>
@@ -412,7 +413,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<p>After the URL is made available, it is only valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.</p>
+<h3 id="null-url"><code class="language-plaintext highlighter-rouge">null</code> URL</h3>
+
+<p>If the response includes <code class="language-plaintext highlighter-rouge">"url": null</code> (or omits a download URL) and you have configured a <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/">cloud storage integration</a> such as an Amazon S3 bucket or Azure Blob Storage container, Braze writes the export to your connected bucket or container instead of returning a temporary download URL in the API response. Retrieve the files from your connected cloud storage bucket or container.</p>
+
+<p>If a download URL is returned, it is valid for only a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.</p>
 
 <p>If you see <code class="language-plaintext highlighter-rouge">object_prefix</code> in your API response and no URL to download the data, this means you have an Amazon S3 bucket already set up for this endpoint. Any data exported using this endpoint goes directly to your S3 bucket.</p>
 

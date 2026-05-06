@@ -26,12 +26,16 @@ Let's say you have a mobile app that sends push notifications to users. If a use
 
 
 
+
+
 <!--The following section is the list of IPs for IP allowlisting-->
 
 
 
 
 ### European Union
+
+
 
 
 
@@ -64,6 +68,8 @@ Let's say you have a mobile app that sends push notifications to users. If a use
 
 
 
+
+
 <!--The following section is the list of IPs for IP allowlisting-->
 
 
@@ -83,12 +89,37 @@ Let's say you have a mobile app that sends push notifications to users. If a use
 
 
 
+
+
+<!--The following section is the list of IPs for IP allowlisting-->
+
+
+
+
+### South Korea
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--The following section is the list of IPs for IP allowlisting-->
 
 
 
 
 ### United States
+
+
 
 
 

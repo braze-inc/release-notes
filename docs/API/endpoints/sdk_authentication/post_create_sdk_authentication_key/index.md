@@ -1,4 +1,4 @@
-<div id='api_byfsxmfxfkjn' class='api_div'>
+<div id='api_rblidcyzyozy' class='api_div'>
 <h1 id="create-sdk-authentication-key">Create SDK Authentication key</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/app_group/sdk_authentication/create</p>

@@ -161,6 +161,8 @@ Depending on the configuration of your Snowflake account, you may need to allow 
 
 
 
+
+
 <!--The following section is the list of IPs for IP allowlisting-->
 
 
@@ -226,6 +228,8 @@ Some important things to know:
      - If you don't want your Redshift cluster to be publicly accessible, you can set up a VPC and EC2 instance to use an SSH tunnel to access the Redshift data. For more information, see the [AWS Knowledge Center post](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine).
  
 Allow access from the following IPs corresponding to your Braze dashboard’s region.
+
+
 
 
 
@@ -339,6 +343,8 @@ If you have network policies in place, you must give Braze network access to you
 
 
 
+
+
 <!--The following section is the list of IPs for IP allowlisting-->
 
 
@@ -414,6 +420,8 @@ Keep the token in a safe place until you need to enter it on the Braze dashboard
 #### Step 1.3: Allow access to Braze IPs    
 
 If you have network policies in place, you must give Braze network access to your Databricks instance. Allow access from the following IPs corresponding to your Braze dashboard's region.  
+
+
 
 
 
@@ -521,6 +529,8 @@ To retrieve the SQL endpoint for your warehouse, go to the **workspace** in Fabr
 #### Step 1.6: Allow Braze IPs in Firewall (Optional)
 
 Depending on the configuration of your Microsoft Fabric account, you may need to allow the following IP addresses in your firewall to allow traffic from Braze. For more information on enabling this, see the relevant documentation on [Entra Conditional Access](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access).
+
+
 
 
 

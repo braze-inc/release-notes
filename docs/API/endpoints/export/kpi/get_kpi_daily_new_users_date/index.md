@@ -1,4 +1,4 @@
-<div id='api_itzlnxaeojow' class='api_div'>
+<div id='api_ejxtjcukhfxz' class='api_div'>
 <h1 id="export-daily-new-users-by-date">Export daily new users by date</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/kpi/new_users/data_series</p>
