@@ -152,7 +152,7 @@ if (base === 'docs'){
 
 
 <link type="text/css" rel="stylesheet" href="/docs/assets/css/swiper.css" />
-<link type="text/css" rel="stylesheet" href="/docs/assets/css/algolia_theme.css"  /><link href='/docs/assets/global-978c67fe8bac352f21a9784edd37269d.css' rel='stylesheet' type='text/css' /><script type="text/javascript">
+<link type="text/css" rel="stylesheet" href="/docs/assets/css/algolia_theme.css"  /><link href='/docs/assets/global-a7d5c6866dffda279dd1558364323e17.css' rel='stylesheet' type='text/css' /><script type="text/javascript">
   const page_collection = 'docs_pages';
   const page_collection_title = 'Braze';
   const page_collection_default_path = '';
@@ -166,17 +166,30 @@ if (base === 'docs'){
   site_i18n['braze_status'] = 'BRAZE SYSTEM STATUS';
   site_i18n['braze_status_check'] = 'Checking Braze Status';
   site_i18n['page_nav_title'] = 'On this page';
-  site_i18n['helpful'] = 'HOW HELPFUL WAS THIS PAGE?';</script>
+  site_i18n['helpful'] = 'HOW HELPFUL WAS THIS PAGE?';
+  site_i18n['collapse_navigation'] = 'Collapse navigation';
+  site_i18n['expand_navigation'] = 'Expand navigation';
+  site_i18n['expand_section'] = 'Expand section';
+  site_i18n['collapse_section'] = 'Collapse section';
+  site_i18n['minimize_menu'] = 'Minimize menu';
+  site_i18n['expand_menu'] = 'Expand menu';
+  site_i18n['filter_navigation_topics'] = 'Filter navigation topics';
+  site_i18n['clear_filter'] = 'Clear filter';
+  site_i18n['documentation_nav'] = 'Documentation';
+  site_i18n['sidebar_home'] = 'Home';
+  site_i18n['nav_flyout_esc_hint_before'] = 'Press ';
+  site_i18n['nav_flyout_esc_hint_after'] = ' to close the menu';
+  site_i18n['nav_flyout_shortcut_hint'] = 'Press Arrow down to open the documentation menu without expanding the sidebar.';</script>
 
 
 <script type="text/javascript" src="/docs/assets/js/clipboard.js"></script>
 <script type='text/javascript' src='/docs/assets/js/jquery.mark.js' ></script>
 
-<script src='/docs/assets/global-f9c38c40ad1b6006d6aa8a29a0b2ccc0.js' type='text/javascript'></script>
+<script src='/docs/assets/global-a3764d50b0629eccf603b9fcc5efdc92.js' type='text/javascript'></script>
 
 <script type='text/javascript' src='/docs/assets/js/swiper.js' ></script>
 
-<script type='text/javascript' src='/docs/assets/js/algolia_search.js?1777991741' ></script>
+<script type='text/javascript' src='/docs/assets/js/algolia_search.js?1778167962' ></script>
 
 <script src="/docs/assets/js/mermaid.js"></script>
 
@@ -285,7 +298,7 @@ function OptanonWrapper() { }
 
 <header id="header_nav" >
 
-  <nav class="navbar navbar-expand-md  flex-column-md flex-md-row navbar-dark" aria-label="Header Navigation" title="Header Navigation">
+  <nav class="navbar navbar-expand-md  flex-column-md flex-md-row navbar-dark" aria-label="Header Navigation">
     <div id="header_wrapper">
       <div id="nav_logo">
            <a id="logo" href="/docs/"><img src="/docs/assets/img/logos/braze-logo-white.svg" alt="Braze"></a>
@@ -354,7 +367,7 @@ function OptanonWrapper() { }
     </div>
     </div>
     <div id="navbar-search">
-       <script src="/docs/assets/js/su_header_search.js?1777991741" ></script>
+       <script src="/docs/assets/js/su_header_search.js?1778167962" ></script>
 <script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/an.js"></script>
 <script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/searchbox.js"></script>
 <link rel="stylesheet" href="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/searchbox.css">
@@ -377,7 +390,7 @@ function OptanonWrapper() { }
 
 <div class="container-fluid" >
   <div class="row flex-xl-nowrap d-print-block ">
-    <script type="text/javascript" src="/docs/assets/js/broken_redirect_list.js?1777991741" ></script>
+    <script type="text/javascript" src="/docs/assets/js/broken_redirect_list.js?1778167962" ></script>
 <script type="text/javascript">
 
   function removeleadingslash(str){
@@ -1167,9 +1180,6 @@ if (site_language && (site_language != 'en')){
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/user_guide/channels/in_app_messages/customize/");
-    validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
-    
-    siteurl = removeleadingslash("/user_guide/channels/in_app_messages/customize/color_profiles_and_css_templates/");
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/user_guide/channels/in_app_messages/customize/dark_mode_themes/");
@@ -2403,6 +2413,9 @@ if (site_language && (site_language != 'en')){
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/user_guide/messaging/templates/in_app_message_templates/email_offer/");
+    validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
+    
+    siteurl = removeleadingslash("/user_guide/messaging/templates/in_app_message_templates/in_app_message_template/");
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/user_guide/messaging/templates/in_app_message_templates/onboarding/");
@@ -5320,6 +5333,19 @@ $(document).ready(function(k){
 </div>
 
 </div>
+<div class="d-none d-lg-block col-lg-2 d-print-none" id="toc_col">
+  <div class="gitedit_div" style="margin-top: 30px;padding-left: 5px;" aria-hidden="true"></div><script type="text/javascript">
+    var su_feedback_site = '/docs/api/404.html';
+    var su_feedback_article_title = '';
+    var su_feedback_nav_title = '';
+</script>
+<script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/an.js"></script>
+<script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/feedback.js"></script>
+<link rel="stylesheet" href="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/feedback.css">
+<div id="suPageRateApp">
+    <su-app></su-app>
+</div>
+  </div>
 
   </div>
 </div>

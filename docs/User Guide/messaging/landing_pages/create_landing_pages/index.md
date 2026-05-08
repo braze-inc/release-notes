@@ -42,7 +42,7 @@ If you haven't already, select **Save as draft**. To start customizing your page
 
 ![An example landing page being created in the drag-and-drop editor.](https://www.braze.com/docs/assets/img/landing_pages/template.png?2e3c8b82789890d483ed19f22b4c9d30)
 
-The editor uses two types of components for landing page composition: basic blocks and form blocks. All blocks must be placed in a row.
+The editor uses two types of components for landing page composition: basic blocks and form blocks. All blocks must be placed in a row. For a dedicated reference of each block and properties, see [Editor blocks (landing pages)](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks/?sdktab=landing%20pages).
 
 ![The 'Build' section containing 'Rows' and 'Form Blocks'.](https://www.braze.com/docs/assets/img/landing_pages/dnd.png?616d6745467a4ea38667439c2ff61642){: style="max-width:35%;"}
 

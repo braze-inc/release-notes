@@ -1,4 +1,4 @@
-<div id='api_pwjadnlfxvmv' class='api_div'>
+<div id='api_zvihjpbqfbeu' class='api_div'>
 <h1 id="view-translation-for-a-canvas">View translation for a Canvas</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/translations</p>

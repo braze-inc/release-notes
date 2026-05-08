@@ -45,7 +45,15 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 
 
-<div id='api_plxxcviaycac' class='api_div'>
+**Note:**
+
+
+Many of the events in this glossary are SDK-initiated. Some events, such as `token_state_change`, can be initiated by either the SDK or the backend (for example, in response to a push bounce). The `sdk_version`, `gender`, `language`, and `country` fields are only set for SDK-initiated events; for backend-initiated events, or when that information is not available or not set for the user, these fields may be `null`.
+
+
+
+
+<div id='api_zexwvjzvtqfd' class='api_div'>
 <h2 id="random-bucket-number-update-events">Random Bucket Number Update events</h2>
 
 <div class="api_tags" data-tags="Random Bucket Number" data-tags-lower="random bucket number"></div>
@@ -83,7 +91,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 </div>
 
-<div id='api_yqbwdoboding' class='api_div'>
+<div id='api_nbuexawxtsox' class='api_div'>
 <h2 id="custom-events">Custom events</h2>
 
 <div class="api_tags" data-tags="Custom Events" data-tags-lower="custom events"></div>
@@ -283,9 +291,10 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
   <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a>, <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
   <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager or account manager to enable the feature flipper for sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
+
 </div>
 
-<div id='api_praqqluwyhpy' class='api_div'>
+<div id='api_hiqmssfopfbq' class='api_div'>
 <h2 id="install-attribution-events">Install Attribution events</h2>
 
 <div class="api_tags" data-tags="Attribution" data-tags-lower="attribution"></div>
@@ -418,7 +427,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 </div>
 
-<div id='api_tlfaxdjarqgs' class='api_div'>
+<div id='api_sqkxdyomxral' class='api_div'>
 <h2 id="location-events">Location events</h2>
 
 <div class="api_tags" data-tags="Locations" data-tags-lower="locations"></div>
@@ -649,9 +658,10 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
   <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a>, <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
   <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager or account manager to enable the feature flipper for sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
+
 </div>
 
-<div id='api_szqthsaqvuoe' class='api_div'>
+<div id='api_komnfhkvxyry' class='api_div'>
 <h2 id="purchase-events">Purchase events</h2>
 
 <div class="api_tags" data-tags="Purchases" data-tags-lower="purchases"></div>
@@ -873,9 +883,10 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
   <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a>, <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
   <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager or account manager to enable the feature flipper for sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
+
 </div>
 
-<div id='api_wkreniyicgsc' class='api_div'>
+<div id='api_ypftoumvgdsa' class='api_div'>
 <h2 id="first-session-events">First Session events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1056,7 +1067,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 </div>
 
-<div id='api_rveqshuuyilw' class='api_div'>
+<div id='api_ycirgmkajfrz' class='api_div'>
 <h2 id="session-end-events">Session End events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1231,7 +1242,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 </div>
 
-<div id='api_qbunuvazdrbx' class='api_div'>
+<div id='api_gnrzvmzqofzm' class='api_div'>
 <h2 id="session-start-events">Session Start events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1402,7 +1413,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 </div>
 
-<div id='api_wxzjuprciccc' class='api_div'>
+<div id='api_imfkcezjjexr' class='api_div'>
 <h2 id="live-activity-push-to-start-token-change-events">Live Activity Push To Start Token Change events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Push To Start Token" data-tags-lower="live activity, push to start token"></div>
@@ -1571,7 +1582,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 </div>
 
-<div id='api_slpmyqgpeujg' class='api_div'>
+<div id='api_uldruegebnfk' class='api_div'>
 <h2 id="live-activity-update-token-change-events">Live Activity Update Token Change events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Update Token" data-tags-lower="live activity, update token"></div>
@@ -1740,7 +1751,7 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 
 </div>
 
-<div id='api_ofmoqysmnsnx' class='api_div'>
+<div id='api_xtdebwbjaacw' class='api_div'>
 <h2 id="push-notification-token-state-change-events">Push Notification Token State Change events</h2>
 
 <div class="api_tags" data-tags="Push, Token State Change" data-tags-lower="push, token state change"></div>

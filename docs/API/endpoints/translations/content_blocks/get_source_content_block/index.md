@@ -1,4 +1,4 @@
-<div id='api_bhzuxqgwwgxy' class='api_div'>
+<div id='api_dwprjeofsqgt' class='api_div'>
 <h1 id="view-default-source-values-for-a-content-blocks-translation-tags">View default source values for a Content Block’s translation tags</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/content_blocks/translations/source</p>

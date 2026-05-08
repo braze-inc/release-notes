@@ -8,6 +8,8 @@
 
 Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=web).
 
+If you're integrating Braze through mParticle's embedded kit on the web, see [Step 3 in mParticle's Braze Web event integration](https://docs.mparticle.com/integrations/braze/event/#web) for instructions to implement soft push prompts.
+
 ## About soft push prompts
 
 It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again.

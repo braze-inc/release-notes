@@ -12,7 +12,7 @@ You can customize your email messaging in a variety of ways, including:
 
 - [Braze email templates](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/email_template/)
 - [Custom HTML templates](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/html_email_template/)
-- [Blocks for drag-and-drop editor](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/dnd_editor_blocks/)
+- [Editor blocks (email)](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks/?sdktab=email)
 - [User subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions/)
 
 ## Use cases

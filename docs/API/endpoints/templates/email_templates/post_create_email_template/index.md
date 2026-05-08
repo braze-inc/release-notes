@@ -1,4 +1,4 @@
-<div id='api_fsmggtmcokvr' class='api_div'>
+<div id='api_uzgrachiumzi' class='api_div'>
 <h1 id="create-email-template">Create email template</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/templates/email/create</p>

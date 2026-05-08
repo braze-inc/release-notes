@@ -145,11 +145,13 @@ For campaigns with a custom fallback time specified, if you launch the campaign 
 
 ### Step 5: Preview delivery times
 
-To see an estimate of how many users will receive the message in each hour of the day, use the preview chart.
+To see an estimate of how many users receive the message in each hour of the day, use the preview chart:
 
 1. Add segments or filters in the **Target Audiences** step.
 2. In the section **Preview Delivery Times for** (which appears in both the **Target Audiences** and **Schedule Delivery** steps), select your channel.
 3. Select **Refresh Data**.
+
+The preview chart shows each hour of the day using your local time. The labels aren’t set to one global time zone.
 
 ![Example preview of delivery times for Android Push.](https://www.braze.com/docs/assets/img/intel-timing-preview.png?51ee4d83ec571b41eedfd0d6a026112e)
 

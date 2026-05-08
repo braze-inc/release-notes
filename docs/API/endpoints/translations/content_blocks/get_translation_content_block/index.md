@@ -1,4 +1,4 @@
-<div id='api_ttlgpgirxlts' class='api_div'>
+<div id='api_ileylslopkgj' class='api_div'>
 <h1 id="view-all-translations-for-a-content-block">View all translations for a Content Block</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/content_blocks/translations</p>

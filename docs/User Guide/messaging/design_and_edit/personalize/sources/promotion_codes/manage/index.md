@@ -48,6 +48,8 @@ Test sends and seed group email sends use up promotion codes unless requested ot
 
 
 
+
+
 ## Saving promotion codes to user profiles {#save-to-profile}
 
 To reference the same promotion code in subsequent messages, the code must be saved to the user profile as a custom attribute. This can be done through a [User Update step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update/) that assigns the discount code to a custom attribute, like “Promo Code”, directly before a Message step.
