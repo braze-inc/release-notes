@@ -259,6 +259,10 @@ To download a list of your users and their permissions, go to **Settings** > **C
 
 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
+
+
+
 ## Creating a permission set
 
 Use permission sets to bundle permissions related to specific subject areas or actions. You can apply permissions sets to dashboard users who need the same access across different workspaces. To create a permission set, go to **Settings** > **Permission Settings**, then select **Create permission set**. For a description of each permission, see [List of permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/#granularpermissions_list-of-permissions).

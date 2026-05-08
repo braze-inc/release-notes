@@ -36,6 +36,8 @@ Choose the option that best fits your needs:
 
 
 
+
+
 To view each store integration and configure advanced settings, select a store in the dropdown menu.
 
 !["Integration settings" with a dropdown menu to select a Shopify store.](https://www.braze.com/docs/assets/img/Shopify/store_dropdown_menu.png?e4bcd10a7387d649cbfd3f12ae885c1d)

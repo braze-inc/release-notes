@@ -1,4 +1,4 @@
-<div id='api_bojrritxtoha' class='api_div'>
+<div id='api_utlxfohbjwkc' class='api_div'>
 <h1 id="delete-catalog-field">Delete catalog field</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/catalogs/{catalog_name}/fields/{field_name}</p>

@@ -1,4 +1,4 @@
-<div id='api_eesuykhtarhj' class='api_div'>
+<div id='api_ywwymagqyowz' class='api_div'>
 <h1 id="export-campaign-details">Export campaign details</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/campaigns/details</p>

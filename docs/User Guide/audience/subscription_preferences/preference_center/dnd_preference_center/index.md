@@ -83,7 +83,7 @@ Blocks represent different types of content you can use in your message. Drag on
 
 ![Option to select blocks, including title, paragraph, button, image, and spacer.](https://www.braze.com/docs/assets/img/preference_center/preference_center8.png?e9ead692c9b0ad51e793c186894068e3){: style="max-width:45%;"}
 
-Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a styling panel for the selected content element. For more information, see [Editor block properties](https://www.braze.com/docs/dnd/editor_blocks/).
+Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a styling panel for the selected content element. For more information, see [Editor blocks (preference center)](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks/?sdktab=preference%20center).
 
 If you're using the Custom Code block in your preference center, inline frames may not generate in the custom code when delivered to your users.
 

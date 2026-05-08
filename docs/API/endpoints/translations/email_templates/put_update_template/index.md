@@ -1,4 +1,4 @@
-<div id='api_ncodmrtspxqj' class='api_div'>
+<div id='api_ttuojxjqnauq' class='api_div'>
 <h1 id="update-translations-for-an-email-template">Update translations for an email template</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/templates/email/translations/</p>

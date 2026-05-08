@@ -81,8 +81,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 
 
-
-<div id='api_ygjsqobzcwpp' class='api_div'>
+<div id='api_uunpvhqjbjco' class='api_div'>
 <h2 id="agent-executed-events">Agent executed events</h2>
 
 <div class="api_tags" data-tags="Agent" data-tags-lower="agent"></div>
@@ -161,7 +160,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_dwqrclsrwiuq' class='api_div'>
+<div id='api_lcdnaqegivwe' class='api_div'>
 <h2 id="tool-invocation-events">Tool invocation events</h2>
 
 <div class="api_tags" data-tags="Agent" data-tags-lower="agent"></div>
@@ -202,7 +201,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jxvjztukbgmh' class='api_div'>
+<div id='api_lebccahfhkbb' class='api_div'>
 <h2 id="uninstall-events">Uninstall events</h2>
 
 <div class="api_tags" data-tags="Uninstall" data-tags-lower="uninstall"></div>
@@ -399,7 +398,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_kkxefsyvcvnk' class='api_div'>
+<div id='api_dwswzygrighx' class='api_div'>
 <h2 id="global-subscription-state-change-events">Global Subscription State Change events</h2>
 
 <div class="api_tags" data-tags="Subscription" data-tags-lower="subscription"></div>
@@ -815,7 +814,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_nmtfcroolndn' class='api_div'>
+<div id='api_buhptmfnbocg' class='api_div'>
 <h2 id="subscription-group-state-change-events">Subscription Group State Change events</h2>
 
 <div class="api_tags" data-tags="Subscription" data-tags-lower="subscription"></div>
@@ -1225,7 +1224,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_imeqeeylfqjp' class='api_div'>
+<div id='api_zbxesscsdqqh' class='api_div'>
 <h2 id="campaign-conversion-events">Campaign Conversion events</h2>
 
 <div class="api_tags" data-tags="Campaign, Conversion" data-tags-lower="campaign, conversion"></div>
@@ -1502,7 +1501,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_oylpxudoyyrb' class='api_div'>
+<div id='api_kyvvurawoptc' class='api_div'>
 <h2 id="campaign-control-group-enrollment-events">Campaign Control Group Enrollment events</h2>
 
 <div class="api_tags" data-tags="Campaign, Entry" data-tags-lower="campaign, entry"></div>
@@ -1755,7 +1754,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ygtujjhipltv' class='api_div'>
+<div id='api_abugvjcxqjus' class='api_div'>
 <h2 id="canvas-conversion-events">Canvas Conversion events</h2>
 
 <div class="api_tags" data-tags="Canvas, Conversion" data-tags-lower="canvas, conversion"></div>
@@ -2034,7 +2033,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_gujzoicpzzuw' class='api_div'>
+<div id='api_zobmfinrkkrb' class='api_div'>
 <h2 id="canvas-entry-events">Canvas Entry events</h2>
 
 <div class="api_tags" data-tags="Canvas, Entry" data-tags-lower="canvas, entry"></div>
@@ -2291,7 +2290,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_hjjmlaxzzane' class='api_div'>
+<div id='api_xphsqsaurhir' class='api_div'>
 <h2 id="exit-match-audience-events">Exit Match Audience events</h2>
 
 <div class="api_tags" data-tags="Exit, Canvas" data-tags-lower="exit, canvas"></div>
@@ -2532,7 +2531,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_hfngqaqgrtjj' class='api_div'>
+<div id='api_boikpbdfnzkp' class='api_div'>
 <h2 id="exit-perform-event-events">Exit Perform Event events</h2>
 
 <div class="api_tags" data-tags="Exit, Canvas" data-tags-lower="exit, canvas"></div>
@@ -2773,7 +2772,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_kiwhavolrebx' class='api_div'>
+<div id='api_mgdorvdjhqeu' class='api_div'>
 <h2 id="experiment-step-conversion-events">Experiment Step Conversion events</h2>
 
 <div class="api_tags" data-tags="Canvas" data-tags-lower="canvas"></div>
@@ -3054,7 +3053,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_vjltcsxhnufq' class='api_div'>
+<div id='api_qhngtqjijfnl' class='api_div'>
 <h2 id="experiment-split-entry-events">Experiment Split Entry events</h2>
 
 <div class="api_tags" data-tags="Canvas" data-tags-lower="canvas"></div>
@@ -3317,7 +3316,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_arqfkwkilntl' class='api_div'>
+<div id='api_opstcqqkdvqd' class='api_div'>
 <h2 id="canvas-step-progression-events">Canvas Step Progression events</h2>
 
 <div class="api_tags" data-tags="Canvas, Progression" data-tags-lower="canvas, progression"></div>
@@ -3614,7 +3613,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_usqfhfimblno' class='api_div'>
+<div id='api_lhwkuxxpcwvs' class='api_div'>
 <h2 id="banner-abort-events">Banner Abort events</h2>
 
 <div class="api_tags" data-tags="Banner, Abort" data-tags-lower="banner, abort"></div>
@@ -4049,7 +4048,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ppqcmpxssjkq' class='api_div'>
+<div id='api_llgihbzshqse' class='api_div'>
 <h2 id="banner-click-events">Banner Click events</h2>
 
 <div class="api_tags" data-tags="Banner, Clicks" data-tags-lower="banner, clicks"></div>
@@ -4466,7 +4465,488 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_sxbetnudbced' class='api_div'>
+<div id='api_dqjjyujczeue' class='api_div'>
+<h2 id="banner-dismissal-events">Banner Dismissal events</h2>
+
+<p>This event occurs when a user dismisses a banner.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.banner.Dismiss</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"banner_placement_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Customer specified banner placement ID"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"browser"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device browser - extracted from user_agent - on which the open occurred"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"button_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the button clicked, if this click represents a click on a button"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canvas_step_message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step message variation this user received"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"carrier"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Carrier of the device"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"country"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Country of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"language"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Language of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"resolution"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Resolution of the device"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"sdk_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the Braze SDK in use during the event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Banner</span><span class="w"> </span><span class="err">Dismissal</span><span class="w"> </span><span class="err">(users.messages.banner.Dismiss)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"adid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"banner_placement_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Customer specified banner placement ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"braze_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"browser"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device browser - extracted from user_agent - on which the open occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"button_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the button clicked, if this click represents a click on a button"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_message_variation_api_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"carrier"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Carrier of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"country"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Country of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"language"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Language of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"resolution"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Resolution of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sdk_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the Braze SDK in use during the event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Amplitude"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"idfa"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Banner</span><span class="w"> </span><span class="err">Dismissal</span><span class="w"> </span><span class="err">(users.messages.banner.Dismiss)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Mixpanel"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"$partner_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"braze"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"banner_placement_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Customer specified banner placement ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"browser"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device browser - extracted from user_agent - on which the open occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"button_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the button clicked, if this click represents a click on a button"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_message_variation_api_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"carrier"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Carrier of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"country"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Country of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"$device"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"distinct_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"$insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"language"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Language of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"$os"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"resolution"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Resolution of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sdk_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the Braze SDK in use during the event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Mixpanel API token"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Banner</span><span class="w"> </span><span class="err">Dismissals</span><span class="w"> </span><span class="err">(users.messages.banner.Dismiss)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"device_info"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"android_advertising_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ios_advertising_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ios_idfv"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"limit_ad_tracking"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"microsoft_advertising_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"roku_advertising_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"environment"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The mParticle environment (either 'development' or 'production')"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"events"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"custom_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"banner_placement_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Customer specified banner placement ID"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"browser"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device browser - extracted from user_agent - on which the open occurred"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"button_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the button clicked, if this click represents a click on a button"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"canvas_step_message_variation_api_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step message variation this user received"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"carrier"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Carrier of the device"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"country"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Country of the user"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"language"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Language of the user"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"resolution"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Resolution of the device"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"sdk_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the Braze SDK in use during the event"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"source_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"custom_event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"event_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to mParticle"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"source_message_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"timestamp_unixtime_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) mParticle event type (either 'uninstall' or 'custom_event')"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"schema_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"user_identities"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"customerid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] External ID of the user"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Banner</span><span class="w"> </span><span class="err">Dismissed</span><span class="w"> </span><span class="err">(users.messages.banner.Dismiss)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"anonymousId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"context"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"traits"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"event"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Segment"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"messageId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"banner_placement_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Customer specified banner placement ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"browser"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device browser - extracted from user_agent - on which the open occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"button_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the button clicked, if this click represents a click on a button"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_message_variation_api_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"carrier"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Carrier of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"country"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Country of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"language"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Language of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"resolution"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Resolution of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sdk_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the Braze SDK in use during the event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"timestamp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"track"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"userId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+</div>
+
+<div id='api_zfdxnwaoocbs' class='api_div'>
 <h2 id="banner-impression-events">Banner Impression events</h2>
 
 <div class="api_tags" data-tags="Banner, Impressions" data-tags-lower="banner, impressions"></div>
@@ -4873,7 +5353,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_thfayhipjbnh' class='api_div'>
+<div id='api_ldaqcizfppba' class='api_div'>
 <h2 id="content-card-abort-events">Content Card Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Content Cards" data-tags-lower="abort, content cards"></div>
@@ -5213,7 +5693,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_kajphzofzsgf' class='api_div'>
+<div id='api_nehldzsuqqye' class='api_div'>
 <h2 id="content-card-click-events">Content Card Click events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Clicks" data-tags-lower="content cards, clicks"></div>
@@ -5610,9 +6090,10 @@ If complete consistency is required, we recommend waiting an hour from the last 
   <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
   <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
+
 </div>
 
-<div id='api_ljnidmzwyjkz' class='api_div'>
+<div id='api_rzelxlrrnxoe' class='api_div'>
 <h2 id="content-card-dismiss-events">Content Card Dismiss events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Dismissal" data-tags-lower="content cards, dismissal"></div>
@@ -6009,9 +6490,10 @@ If complete consistency is required, we recommend waiting an hour from the last 
   <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
   <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
+
 </div>
 
-<div id='api_qtllngdjqaax' class='api_div'>
+<div id='api_jqsjctfwpobo' class='api_div'>
 <h2 id="content-card-impression-events">Content Card Impression events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Impressions" data-tags-lower="content cards, impressions"></div>
@@ -6408,9 +6890,10 @@ If complete consistency is required, we recommend waiting an hour from the last 
   <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
   <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
+
 </div>
 
-<div id='api_sabkcytewvkz' class='api_div'>
+<div id='api_zvsbamdgxrce' class='api_div'>
 <h2 id="content-card-send-events">Content Card Send events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Sends" data-tags-lower="content cards, sends"></div>
@@ -6743,7 +7226,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_pdioygqbszfv' class='api_div'>
+<div id='api_dzgxijvdpova' class='api_div'>
 <h2 id="email-abort-events">Email Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Email" data-tags-lower="abort, email"></div>
@@ -7105,7 +7588,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ltoinwqarhka' class='api_div'>
+<div id='api_xtfvzffodvhi' class='api_div'>
 <h2 id="email-bounce-events">Email Bounce events</h2>
 
 <div class="api_tags" data-tags="Email, Bounce" data-tags-lower="email, bounce"></div>
@@ -7486,7 +7969,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_bbvxvfeynuzp' class='api_div'>
+<div id='api_ykeytzbgoztt' class='api_div'>
 <h2 id="email-click-events">Email Click events</h2>
 
 <div class="api_tags" data-tags="Email, Clicks" data-tags-lower="email, clicks"></div>
@@ -7953,6 +8436,38 @@ If complete consistency is required, we recommend waiting an hour from the last 
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Click</span><span class="w"> </span><span class="err">(users.messages.email.Click)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"asset_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify asset identifier; mapped from dispatch_id (email), send_id (sms.Send), or short_url (sms.ShortLinkClick)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"asset_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify asset type (email or sms)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"click_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Unique ID for the link which was clicked, as created by Braze"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email_sha256"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) SHA-256 hash of the normalized email address; only present for email events"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify event type name (e.g. email_sent, sms_sent)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
 <h4 id="property-details">Property details</h4>
 
 <ul>
@@ -7965,7 +8480,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_cmibtdkkgbku' class='api_div'>
+<div id='api_xsvslklwsgad' class='api_div'>
 <h2 id="email-deferral-events">Email Deferral events</h2>
 
 <div class="api_tags" data-tags="Email, Deferral" data-tags-lower="email, deferral"></div>
@@ -8348,7 +8863,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_nhuqcxcnxcql' class='api_div'>
+<div id='api_cgoikupaxvbu' class='api_div'>
 <h2 id="email-delivery-events">Email Delivery events</h2>
 
 <div class="api_tags" data-tags="Email, Delivery" data-tags-lower="email, delivery"></div>
@@ -8709,7 +9224,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_akghldzzghxg' class='api_div'>
+<div id='api_owvkfjffvqqg' class='api_div'>
 <h2 id="email-mark-as-spam-events">Email Mark As Spam events</h2>
 
 <div class="api_tags" data-tags="Email, Spam" data-tags-lower="email, spam"></div>
@@ -9078,7 +9593,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_cetvyxuqfyjr' class='api_div'>
+<div id='api_dxeyfdijqhcm' class='api_div'>
 <h2 id="email-open-events">Email Open events</h2>
 
 <div class="api_tags" data-tags="Email, Opens" data-tags-lower="email, opens"></div>
@@ -9511,6 +10026,36 @@ If complete consistency is required, we recommend waiting an hour from the last 
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Open</span><span class="w"> </span><span class="err">(users.messages.email.Open)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"asset_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify asset identifier; mapped from dispatch_id (email), send_id (sms.Send), or short_url (sms.ShortLinkClick)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"asset_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify asset type (email or sms)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email_sha256"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) SHA-256 hash of the normalized email address; only present for email events"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify event type name (e.g. email_sent, sms_sent)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
 <h4 id="property-details">Property details</h4>
 
 <ul>
@@ -9523,7 +10068,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ompsttmsdoah' class='api_div'>
+<div id='api_jecrlexeynqk' class='api_div'>
 <h2 id="email-retry-events">Email Retry events</h2>
 
 <div class="api_tags" data-tags="Email, Retry" data-tags-lower="email, retry"></div>
@@ -9884,7 +10429,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_fuckoqutsrpx' class='api_div'>
+<div id='api_npgwrvifrpvh' class='api_div'>
 <h2 id="email-send-events">Email Send events</h2>
 
 <div class="api_tags" data-tags="Email, Sends" data-tags-lower="email, sends"></div>
@@ -10229,6 +10774,36 @@ If complete consistency is required, we recommend waiting an hour from the last 
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Send</span><span class="w"> </span><span class="err">(users.messages.email.Send)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"asset_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify asset identifier; mapped from dispatch_id (email), send_id (sms.Send), or short_url (sms.ShortLinkClick)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"asset_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify asset type (email or sms)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email_sha256"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) SHA-256 hash of the normalized email address; only present for email events"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify event type name (e.g. email_sent, sms_sent)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
 <h4 id="property-details">Property details</h4>
 
 <ul>
@@ -10242,7 +10817,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_htxlvdfneboq' class='api_div'>
+<div id='api_ablwjgsrxhph' class='api_div'>
 <h2 id="email-soft-bounce-events">Email Soft Bounce events</h2>
 
 <div class="api_tags" data-tags="Email, Bounce" data-tags-lower="email, bounce"></div>
@@ -10613,7 +11188,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_cmrsliavtrsf' class='api_div'>
+<div id='api_azbetpeanccx' class='api_div'>
 <h2 id="email-unsubscribe-events">Email Unsubscribe events</h2>
 
 <div class="api_tags" data-tags="Email, Subscription" data-tags-lower="email, subscription"></div>
@@ -10956,7 +11531,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_avxgpjgzmxbo' class='api_div'>
+<div id='api_ohnrfhfemwsx' class='api_div'>
 <h2 id="feature-flag-experiment-impression-events">Feature Flag Experiment Impression events</h2>
 
 <div class="api_tags" data-tags="Feature Flags, Impressions" data-tags-lower="feature flags, impressions"></div>
@@ -11321,7 +11896,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_hfhiqvjyxseb' class='api_div'>
+<div id='api_bndccgwcwxpb' class='api_div'>
 <h2 id="in-app-message-abort-events">In-App Message Abort events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Abort" data-tags-lower="in-app messages, abort"></div>
@@ -11750,7 +12325,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_bswaegkfkxgg' class='api_div'>
+<div id='api_jjawwkvqdalu' class='api_div'>
 <h2 id="in-app-message-click-events">In-App Message Click events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Clicks" data-tags-lower="in-app messages, clicks"></div>
@@ -12161,9 +12736,10 @@ If complete consistency is required, we recommend waiting an hour from the last 
   <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
   <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
+
 </div>
 
-<div id='api_oexhomaqkbsf' class='api_div'>
+<div id='api_nuhjfmgmhsxe' class='api_div'>
 <h2 id="in-app-message-impression-events">In-App Message Impression events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Impressions" data-tags-lower="in-app messages, impressions"></div>
@@ -12584,9 +13160,10 @@ If complete consistency is required, we recommend waiting an hour from the last 
   <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
   <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
+
 </div>
 
-<div id='api_lzprnlnnurao' class='api_div'>
+<div id='api_prsijbggnbpm' class='api_div'>
 <h2 id="line-abort-events">LINE Abort events</h2>
 
 <div class="api_tags" data-tags="LINE, Abort" data-tags-lower="line, abort"></div>
@@ -12938,7 +13515,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_dwdqhancjnyk' class='api_div'>
+<div id='api_xddxstkkggsj' class='api_div'>
 <h2 id="line-click-events">LINE Click events</h2>
 
 <div class="api_tags" data-tags="LINE, Clicks" data-tags-lower="line, clicks"></div>
@@ -13305,7 +13882,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_enpajrewjimf' class='api_div'>
+<div id='api_lwicrrsmmcur' class='api_div'>
 <h2 id="line-inbound-receive-events">LINE Inbound Receive events</h2>
 
 <div class="api_tags" data-tags="LINE, Inbound Received" data-tags-lower="line, inbound received"></div>
@@ -13654,7 +14231,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_hlphutwxkrlm' class='api_div'>
+<div id='api_vqufwjthrylc' class='api_div'>
 <h2 id="line-retry-events">LINE Retry events</h2>
 
 <div class="api_tags" data-tags="LINE, Retry" data-tags-lower="line, retry"></div>
@@ -13997,7 +14574,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_dnpnjtblglcy' class='api_div'>
+<div id='api_ecvaxkonfgfg' class='api_div'>
 <h2 id="line-send-events">LINE Send events</h2>
 
 <div class="api_tags" data-tags="LINE, Sends" data-tags-lower="line, sends"></div>
@@ -14336,7 +14913,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jadwwzkcxtbu' class='api_div'>
+<div id='api_zxtpgjylcwoh' class='api_div'>
 <h2 id="live-activity-outcome-events">Live Activity Outcome events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Outcome" data-tags-lower="live activity, outcome"></div>
@@ -14579,7 +15156,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_mkzqfnbfoyvb' class='api_div'>
+<div id='api_hzjridcrofph' class='api_div'>
 <h2 id="live-activity-send-events">Live Activity Send events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Sends" data-tags-lower="live activity, sends"></div>
@@ -14812,7 +15389,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_xjchvivypjtk' class='api_div'>
+<div id='api_iqapmovlxkir' class='api_div'>
 <h2 id="push-notification-abort-events">Push Notification Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Push" data-tags-lower="abort, push"></div>
@@ -15172,7 +15749,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_bfwuguzrlksj' class='api_div'>
+<div id='api_xrqyqlhpjszo' class='api_div'>
 <h2 id="push-notification-bounce-events">Push Notification Bounce events</h2>
 
 <div class="api_tags" data-tags="Push, Sends, Bounce" data-tags-lower="push, sends, bounce"></div>
@@ -15556,7 +16133,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_cyxjvjmbxshu' class='api_div'>
+<div id='api_eigwjcoabiou' class='api_div'>
 <h2 id="push-notification-ios-foreground-open-events">Push Notification iOS Foreground Open events</h2>
 
 <div class="api_tags" data-tags="Push, iOS, Sends" data-tags-lower="push, ios, sends"></div>
@@ -15845,7 +16422,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_wxhwxrwzkgge' class='api_div'>
+<div id='api_qdqjmlrcbbng' class='api_div'>
 <h2 id="push-notification-open-events">Push Notification Open events</h2>
 
 <div class="api_tags" data-tags="Push, Opens" data-tags-lower="push, opens"></div>
@@ -16252,7 +16829,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_spdsgcvyqjtt' class='api_div'>
+<div id='api_vbwzpghenqdb' class='api_div'>
 <h2 id="push-notification-retry-events">Push Notification Retry events</h2>
 
 <div class="api_tags" data-tags="Push, Retry" data-tags-lower="push, retry"></div>
@@ -16609,7 +17186,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_vldmdwdedmsk' class='api_div'>
+<div id='api_uddjcwdikuvc' class='api_div'>
 <h2 id="push-notification-send-events">Push Notification Send events</h2>
 
 <div class="api_tags" data-tags="Push, Sends" data-tags-lower="push, sends"></div>
@@ -17015,7 +17592,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_swqgnpgggalp' class='api_div'>
+<div id='api_swzlsxchhknw' class='api_div'>
 <h2 id="rcs-abort-events">RCS Abort events</h2>
 
 <div class="api_tags" data-tags="RCS, Abort" data-tags-lower="rcs, abort"></div>
@@ -17318,7 +17895,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_mwsypcasnmve' class='api_div'>
+<div id='api_iwaqifdxjbph' class='api_div'>
 <h2 id="rcs-click-events">RCS Click events</h2>
 
 <div class="api_tags" data-tags="RCS, Clicks" data-tags-lower="rcs, clicks"></div>
@@ -17707,7 +18284,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_vwpdbzxrtcpl' class='api_div'>
+<div id='api_dwizkkpwmcgh' class='api_div'>
 <h2 id="rcs-delivery-events">RCS Delivery events</h2>
 
 <div class="api_tags" data-tags="RCS, Delivery" data-tags-lower="rcs, delivery"></div>
@@ -18046,7 +18623,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_wqubcjnxevgd' class='api_div'>
+<div id='api_dlpoqnugsdzq' class='api_div'>
 <h2 id="rcs-inbound-received-events">RCS Inbound Received events</h2>
 
 <div class="api_tags" data-tags="RCS, Inbound Received" data-tags-lower="rcs, inbound received"></div>
@@ -18383,7 +18960,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_bmgmqrgsplle' class='api_div'>
+<div id='api_uzbkknjfwsmy' class='api_div'>
 <h2 id="rcs-read-events">RCS Read events</h2>
 
 <div class="api_tags" data-tags="RCS, Read" data-tags-lower="rcs, read"></div>
@@ -18662,7 +19239,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_wuowhupmikdl' class='api_div'>
+<div id='api_juuxcfkpkxcx' class='api_div'>
 <h2 id="rcs-rejection-events">RCS Rejection events</h2>
 
 <div class="api_tags" data-tags="RCS, Rejection" data-tags-lower="rcs, rejection"></div>
@@ -19025,7 +19602,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ebitqyaiqcbw' class='api_div'>
+<div id='api_udewgjvfpokz' class='api_div'>
 <h2 id="rcs-send-events">RCS Send events</h2>
 
 <div class="api_tags" data-tags="RCS, Sends" data-tags-lower="rcs, sends"></div>
@@ -19384,7 +19961,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jxrydzcuxtpy' class='api_div'>
+<div id='api_arlroikzinzq' class='api_div'>
 <h2 id="sms-abort-events">SMS Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, SMS" data-tags-lower="abort, sms"></div>
@@ -19697,7 +20274,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ajliiicgwxrd' class='api_div'>
+<div id='api_qtnelenjlzvi' class='api_div'>
 <h2 id="sms-carrier-send-events">SMS Carrier Send events</h2>
 
 <div class="api_tags" data-tags="SMS, Sends" data-tags-lower="sms, sends"></div>
@@ -20048,7 +20625,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_bjcdkdocvkxz' class='api_div'>
+<div id='api_leycmpcioufz' class='api_div'>
 <h2 id="sms-delivery-events">SMS Delivery events</h2>
 
 <div class="api_tags" data-tags="SMS, Delivery" data-tags-lower="sms, delivery"></div>
@@ -20405,7 +20982,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_mzjxlzivycqc' class='api_div'>
+<div id='api_nlxfofkuunzw' class='api_div'>
 <h2 id="sms-delivery-failure-events">SMS Delivery Failure events</h2>
 
 <div class="api_tags" data-tags="SMS, Delivery" data-tags-lower="sms, delivery"></div>
@@ -20772,24 +21349,16 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_vdvhkfjpzvco' class='api_div'>
+<div id='api_mlqgcqrqphxn' class='api_div'>
 <h2 id="sms-inbound-received-events">SMS Inbound Received events</h2>
 
 <div class="api_tags" data-tags="SMS, Inbound Received" data-tags-lower="sms, inbound received"></div>
 
 <p>This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups.</p>
 
-<p>Braze attributes each inbound SMS to any user that shares that phone number. As a result, you may receive multiple events per inbound message if multiple users in your Braze instance share the same phone number. If you require attribution of specific user IDs based on previous messages sent to that user, you can use the SMS Delivered event to attribute Inbound Received events to the user ID who most recently received a message from your Braze number.</p>
+<p>When Braze receives an inbound SMS, we attribute that inbound message to any user that shares that phone number. As a result, you may receive multiple events per inbound message if multiple users in your Braze instance share the same phone number. If you require attribution of specific user IDs based on previous messages sent to that user, you can use the SMS Delivered event to attribute Inbound Received events to the user ID who most recently received a message from your Braze number.</p>
 
-<p>If Braze detects that this inbound message is a reply to an outbound Campaign or Canvas component, Braze also includes the Campaign or Canvas metadata with the event. Braze uses a last-touch attribution model: when an inbound SMS is received, Braze looks for the most recent outbound message sent to that phone number within a 4-hour window and attributes the inbound message to that Campaign or Canvas. The list of Campaigns that sent outbound messages during the attribution window is cached for one minute per messaging service, so a newly launched Campaign may take up to one minute to appear in attribution results.</p>
-
-<p>The <code class="language-plaintext highlighter-rouge">campaign_id</code>, <code class="language-plaintext highlighter-rouge">canvas_id</code>, and related properties are blank when no outbound message can be attributed. Common scenarios include:</p>
-
-<ul>
-  <li>The user initiated the conversation organically (for example, texting a keyword promoted on a website or billboard).</li>
-  <li>The user replied or sent a keyword outside the 4-hour attribution window.</li>
-  <li>No prior outbound message exists for that phone number.</li>
-</ul>
+<p>If Braze detects that this inbound message is a reply to an outbound campaign or Canvas component sent from Braze, Braze also includes the campaign or Canvas metadata with the event. Braze defines a reply as an inbound message coming within four hours of an outbound message. However, there is a one-minute cache for the attributed campaign information of the last outbound SMS message sent from your Braze number.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -21119,7 +21688,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_nbsfnzsguell' class='api_div'>
+<div id='api_xiwfgtrewype' class='api_div'>
 <h2 id="sms-rejection-events">SMS Rejection events</h2>
 
 <div class="api_tags" data-tags="SMS, Rejection" data-tags-lower="sms, rejection"></div>
@@ -21496,7 +22065,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_xewwaillkoer' class='api_div'>
+<div id='api_xdjujahqqnvd' class='api_div'>
 <h2 id="sms-retry-events">SMS Retry events</h2>
 
 <div class="api_tags" data-tags="SMS, Retry" data-tags-lower="sms, retry"></div>
@@ -21801,7 +22370,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_fdmhgtdirxbr' class='api_div'>
+<div id='api_exyaobpbfuaz' class='api_div'>
 <h2 id="sms-send-events">SMS Send events</h2>
 
 <div class="api_tags" data-tags="SMS, Sends" data-tags-lower="sms, sends"></div>
@@ -22150,6 +22719,36 @@ If complete consistency is required, we recommend waiting an hour from the last 
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">SMS</span><span class="w"> </span><span class="err">Send</span><span class="w"> </span><span class="err">(users.messages.sms.Send)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"asset_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify asset identifier; mapped from dispatch_id (email), send_id (sms.Send), or short_url (sms.ShortLinkClick)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"asset_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify asset type (email or sms)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify event type name (e.g. email_sent, sms_sent)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"phone_sha256"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) SHA-256 hash of the E.164 normalized phone number; only present for SMS events"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
 <h4 id="property-details">Property details</h4>
 
 <ul>
@@ -22159,7 +22758,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_cnnqvgootsme' class='api_div'>
+<div id='api_iamrvzuzzfyc' class='api_div'>
 <h2 id="sms-short-link-click-events">SMS Short Link Click events</h2>
 
 <div class="api_tags" data-tags="SMS, Clicks" data-tags-lower="sms, clicks"></div>
@@ -22506,9 +23105,39 @@ If complete consistency is required, we recommend waiting an hour from the last 
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">SMS</span><span class="w"> </span><span class="err">Short</span><span class="w"> </span><span class="err">Link</span><span class="w"> </span><span class="err">Click</span><span class="w"> </span><span class="err">(users.messages.sms.ShortLinkClick)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"asset_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify asset identifier; mapped from dispatch_id (email), send_id (sms.Send), or short_url (sms.ShortLinkClick)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"asset_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify asset type (email or sms)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify event type name (e.g. email_sent, sms_sent)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The user's phone number from which the message was received"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"phone_sha256"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) SHA-256 hash of the E.164 normalized phone number; only present for SMS events"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
 </div>
 
-<div id='api_vuqepvoajvxh' class='api_div'>
+<div id='api_ubzavpvmvpjb' class='api_div'>
 <h2 id="webhook-abort-events">Webhook Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Webhooks" data-tags-lower="abort, webhooks"></div>
@@ -22848,7 +23477,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_zowqqzohhjkp' class='api_div'>
+<div id='api_cviimhpzcnei' class='api_div'>
 <h2 id="webhook-failure-events">Webhook Failure events</h2>
 
 <div class="api_tags" data-tags="Failure, Webhooks" data-tags-lower="failure, webhooks"></div>
@@ -23249,7 +23878,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_lpcrjpehfovs' class='api_div'>
+<div id='api_vstljnnuahho' class='api_div'>
 <h2 id="webhook-retry-events">Webhook Retry events</h2>
 
 <div class="api_tags" data-tags="Webhooks, Retry" data-tags-lower="webhooks, retry"></div>
@@ -23588,7 +24217,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_hlxrmnlawohi' class='api_div'>
+<div id='api_zmofwhfljewq' class='api_div'>
 <h2 id="webhook-send-events">Webhook Send events</h2>
 
 <div class="api_tags" data-tags="Webhooks, Sends" data-tags-lower="webhooks, sends"></div>
@@ -23912,7 +24541,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_xdslnkugqdke' class='api_div'>
+<div id='api_tqlmgabdxfgx' class='api_div'>
 <h2 id="whatsapp-abort-events">WhatsApp Abort events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Abort" data-tags-lower="whatsapp, abort"></div>
@@ -23946,12 +24575,14 @@ If complete consistency is required, we recommend waiting an hour from the last 
 25
 26
 27
+28
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -24003,6 +24634,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 26
 27
 28
+29
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Abort</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -24011,6 +24643,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
     </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -24062,6 +24695,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 27
 28
 29
+30
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Abort</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -24071,6 +24705,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
     </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -24138,6 +24773,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 43
 44
 45
+46
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Aborts</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -24152,6 +24788,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
           </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -24219,6 +24856,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 32
 33
 34
+35
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Aborted</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -24235,6 +24873,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
     </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -24266,7 +24905,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_nsyvibrkvfes' class='api_div'>
+<div id='api_dnoivphwcwus' class='api_div'>
 <h2 id="whatsapp-tracked-link-click-events">WhatsApp Tracked Link Click events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Clicks" data-tags-lower="whatsapp, clicks"></div>
@@ -24601,7 +25240,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jaabkkdotnsh' class='api_div'>
+<div id='api_ippgvdsekdyv' class='api_div'>
 <h2 id="whatsapp-delivery-events">WhatsApp Delivery events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Delivery" data-tags-lower="whatsapp, delivery"></div>
@@ -24638,10 +25277,12 @@ If complete consistency is required, we recommend waiting an hour from the last 
 28
 29
 30
+31
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Delivery</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -24701,12 +25342,14 @@ If complete consistency is required, we recommend waiting an hour from the last 
 29
 30
 31
+32
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Delivery</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Delivery)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"event_properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -24766,6 +25409,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 30
 31
 32
+33
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Delivery</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Delivery)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -24773,6 +25417,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"$partner_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"braze"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -24848,6 +25493,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 46
 47
 48
+49
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Deliveries</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Delivery)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -24860,6 +25506,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
       </span><span class="nl">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"custom_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -24935,6 +25582,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 35
 36
 37
+38
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Delivered</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Delivery)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -24949,6 +25597,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"messageId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -24982,7 +25631,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_inocdhxzjjsn' class='api_div'>
+<div id='api_naioliotjsqn' class='api_div'>
 <h2 id="whatsapp-failure-events">WhatsApp Failure events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Failure" data-tags-lower="whatsapp, failure"></div>
@@ -25021,10 +25670,12 @@ If complete consistency is required, we recommend waiting an hour from the last 
 30
 31
 32
+33
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Failure</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -25088,12 +25739,14 @@ If complete consistency is required, we recommend waiting an hour from the last 
 31
 32
 33
+34
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Failure</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Failure)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"event_properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -25157,6 +25810,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 32
 33
 34
+35
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Failure</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Failure)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -25164,6 +25818,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"$partner_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"braze"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -25243,6 +25898,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 48
 49
 50
+51
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Failures</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Failure)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -25255,6 +25911,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
       </span><span class="nl">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"custom_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -25334,6 +25991,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 37
 38
 39
+40
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Failed</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Failure)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -25348,6 +26006,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"messageId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -25383,7 +26042,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_zuodryjgaknn' class='api_div'>
+<div id='api_rzobhmnqgkuh' class='api_div'>
 <h2 id="whatsapp-inbound-received-events">WhatsApp Inbound Received events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Inbound Received" data-tags-lower="whatsapp, inbound received"></div>
@@ -25425,11 +26084,13 @@ If complete consistency is required, we recommend waiting an hour from the last 
 33
 34
 35
+36
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.InboundReceive</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"action"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Action taken in response to this message. (for example Subscribed, Unsubscribed or None)."</span><span class="p">,</span><span class="w">
   </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the user from which the message was received."</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -25458,7 +26119,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Braze user ID of the user who performed this event"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"user_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's phone number from which the message was received"</span><span class="w">
+  </span><span class="nl">"user_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The user's phone number from which the message was received"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -25498,6 +26159,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 34
 35
 36
+37
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Inbound</span><span class="w"> </span><span class="err">Received</span><span class="w"> </span><span class="err">(users.messages.whatsapp.InboundReceive)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -25505,6 +26167,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"event_properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"action"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Action taken in response to this message. (for example Subscribed, Unsubscribed or None)."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the user from which the message was received."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -25525,7 +26188,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"quick_reply_text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Text of button pressed by the user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"user_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's phone number from which the message was received"</span><span class="w">
+    </span><span class="nl">"user_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The user's phone number from which the message was received"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Amplitude"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
@@ -25573,6 +26236,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 35
 36
 37
+38
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Inbound</span><span class="w"> </span><span class="err">Received</span><span class="w"> </span><span class="err">(users.messages.whatsapp.InboundReceive)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -25581,6 +26245,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
     </span><span class="nl">"$partner_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"braze"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"action"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Action taken in response to this message. (for example Subscribed, Unsubscribed or None)."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the user from which the message was received."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -25607,7 +26272,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
     </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Mixpanel API token"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"user_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's phone number from which the message was received"</span><span class="w">
+    </span><span class="nl">"user_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The user's phone number from which the message was received"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
@@ -25664,6 +26329,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 50
 51
 52
+53
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Inbound</span><span class="w"> </span><span class="err">Received</span><span class="w"> </span><span class="err">(users.messages.whatsapp.InboundReceive)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -25677,6 +26343,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
         </span><span class="nl">"custom_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nl">"action"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Action taken in response to this message. (for example Subscribed, Unsubscribed or None)."</span><span class="p">,</span><span class="w">
           </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the user from which the message was received."</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -25760,6 +26427,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 40
 41
 42
+43
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Inbound</span><span class="w"> </span><span class="err">Received</span><span class="w"> </span><span class="err">(users.messages.whatsapp.InboundReceive)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -25767,7 +26435,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"context"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"device"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">},</span><span class="w">
     </span><span class="nl">"traits"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's phone number from which the message was received"</span><span class="w">
+      </span><span class="nl">"phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The user's phone number from which the message was received"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"event"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Segment"</span><span class="p">,</span><span class="w">
@@ -25775,6 +26443,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"action"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Action taken in response to this message. (for example Subscribed, Unsubscribed or None)."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the user from which the message was received."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -25806,7 +26475,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_qokebctwithm' class='api_div'>
+<div id='api_uxiyqoqwkdff' class='api_div'>
 <h2 id="whatsapp-read-events">WhatsApp Read events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Read" data-tags-lower="whatsapp, read"></div>
@@ -25843,10 +26512,12 @@ If complete consistency is required, we recommend waiting an hour from the last 
 28
 29
 30
+31
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Read</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -25906,12 +26577,14 @@ If complete consistency is required, we recommend waiting an hour from the last 
 29
 30
 31
+32
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Read</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Read)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"event_properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -25971,6 +26644,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 30
 31
 32
+33
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Read</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Read)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -25978,6 +26652,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"$partner_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"braze"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -26053,6 +26728,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 46
 47
 48
+49
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Reads</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Read)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -26065,6 +26741,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
       </span><span class="nl">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"custom_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -26140,6 +26817,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 35
 36
 37
+38
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Read</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Read)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -26154,6 +26832,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"messageId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -26187,7 +26866,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_yprqnepaayej' class='api_div'>
+<div id='api_bqshksdhbulr' class='api_div'>
 <h2 id="whatsapp-retry-events">WhatsApp Retry events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Retry" data-tags-lower="whatsapp, retry"></div>
@@ -26221,10 +26900,12 @@ If complete consistency is required, we recommend waiting an hour from the last 
 25
 26
 27
+28
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Retry</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -26279,12 +26960,14 @@ If complete consistency is required, we recommend waiting an hour from the last 
 27
 28
 29
+30
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Retry</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Retry)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"event_properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -26339,6 +27022,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 27
 28
 29
+30
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Retry</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Retry)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -26346,6 +27030,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"$partner_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"braze"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -26415,6 +27100,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 43
 44
 45
+46
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Retries</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Retry)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -26427,6 +27113,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
       </span><span class="nl">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"custom_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -26496,6 +27183,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 32
 33
 34
+35
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Retried</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Retry)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -26510,6 +27198,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"messageId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -26534,7 +27223,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jclywomxxknd' class='api_div'>
+<div id='api_rcfctujzsbgb' class='api_div'>
 <h2 id="whatsapp-send-events">WhatsApp Send events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Sends" data-tags-lower="whatsapp, sends"></div>
@@ -26571,10 +27260,12 @@ If complete consistency is required, we recommend waiting an hour from the last 
 28
 29
 30
+31
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Send</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -26635,12 +27326,14 @@ If complete consistency is required, we recommend waiting an hour from the last 
 30
 31
 32
+33
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Send</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Send)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"event_properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -26702,6 +27395,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 31
 32
 33
+34
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Send</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Send)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -26709,6 +27403,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"$partner_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"braze"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -26786,6 +27481,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 47
 48
 49
+50
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Sends</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Send)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -26798,6 +27494,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
       </span><span class="nl">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"custom_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -26875,6 +27572,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 36
 37
 38
+39
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Sent</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Send)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -26889,6 +27587,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"messageId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
