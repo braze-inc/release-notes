@@ -75,6 +75,7 @@ Here's an example table in Treasure Data:
 | `TDCohort2`	| `TDCohort2@gmail.com`	| `4d5f6g` |
 | `TDCohort3`	| `TDCohort3@gmail.com`	| `7h8j9k` |
 | `TDCohort4`	| `TDCohort4@gmail.com`	| `1ab2cd` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Use case: Syncing cohorts by identifier" }
 
 **Warning:**
 
@@ -109,6 +110,7 @@ Here's an example table in Treasure Data:
 | `TDCohort2`	| `TDCohort2@gmail.com`	| `4d5f6g` |
 | `TDCohort3`	| `TDCohort3@gmail.com`	| `7h8j9k` |
 | `TDCohort4`	| `TDCohort4@gmail.com`	| `1ab2cd` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Use case: Syncing cohorts by identifier" }
 
 To sync cohorts using the user alias, run the following query:
 
@@ -136,6 +138,7 @@ Here's an example table in Treasure Data:
 | `TDCohort2`	| `TDCohort2@gmail.com`	| `4d5f6g` |
 | `TDCohort3`	| `TDCohort3@gmail.com`	| `7h8j9k` |
 | `TDCohort4`	| `TDCohort4@gmail.com`	| `1ab2cd` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Use case: Syncing cohorts by identifier" }
 
 **Warning:**
 
@@ -176,6 +179,7 @@ Once the query has been built, select **Export Results**. You can select an exis
 | Operation	| Used to determine whether the query should add or remove profiles from the cohort in Braze.	| 
 | Aliases (Optional) | When defined, the name of the corresponding column within your query will be sent as the `alias_label`, and the values of each row in the column will be sent as the `alias_name`.	| 
 | Thread Count | Number of concurrent API calls. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 3.2: Specify the result export target" }
 
 Follow [Treasure Data's steps](https://docs.treasuredata.com/articles/#!int/braze-cohort-export-integration/a/ExportIntegrationTemplate-SpecifytheResultExportTarget) for configuring your export to meet your use case.
 
@@ -203,6 +207,7 @@ Create a new segment or choose an existing segment to sync to Braze as a cohort.
 | Operation	| Used to determine whether the query should add or remove profiles from the cohort in Braze.	| 
 | Aliases (Optional) | When defined, the name of the corresponding column within your query will be sent as the `alias_label`, and the values of each row in the column will be sent as the `alias_name`.	| 
 | Thread Count | Number of concurrent API calls. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 3.2: Fill out your activation details" }
 
 #### Step 3.3: Set up output mapping
 
@@ -212,6 +217,7 @@ Create a new segment or choose an existing segment to sync to Braze as a cohort.
 | ----------- | ----------- |
 | Attribute Columns	| Determine the columns from your segment database that will be mapped as identifiers when syncing profiles to a Braze cohort.	|
 | String Builder| The string builder is not necessary for the Braze integration.	|
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 3.3: Set up output mapping" }
 
 **Important:**
 

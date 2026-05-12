@@ -348,6 +348,7 @@ Each row in the file must identify exactly one user using one of:
 | `EXTERNAL_ID` | Matches the `external_id` used in Braze. |
 | `ALIAS_NAME` and `ALIAS_LABEL` | Both columns together identify the user by alias. |
 | `BRAZE_ID` | Braze-generated user ID (existing users only). |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Deleting users" }
 
 **Important:**
 

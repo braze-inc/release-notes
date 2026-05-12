@@ -176,7 +176,7 @@ To update the lead record in Salesforce with the lead status from Braze, we reco
 | --- | --- |
 | Authorization | `Bearer {{result.access_token}}`<br><br>To retrieve a token, [configure a connected app](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) for the OAuth 2.0 client credentials flow and then use Connected Content to retrieve the bearer from Salesforce: <br><br><code>{% connected_content https://[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]&client_secret=[client_secret]&grant_type=client_credentials <br>:save result %} <br> Bearer {{result.access_token}}</code> |
 | Content-Type | application/json |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 2a: Compose webhook" }
 
 ![Webhook being composed with a Salesforce webhook URL, PATCH HTTP method, raw text request body, and request headers.](https://www.braze.com/docs/assets/img/b2b/webhook.png?20c6eb12ea3d63a15cbe3f2f85d90bff){: style="max-width:80%;"}
 

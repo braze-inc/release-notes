@@ -1,4 +1,4 @@
-<div id='api_eyppyepddqix' class='api_div'>
+<div id='api_mzijplaaxvyh' class='api_div'>
 <h1 id="send-campaign-messages-using-api-triggered-delivery">Send campaign messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/send</p>
@@ -165,6 +165,9 @@ Authorization: Bearer YOUR-REST-API-KEY
   <li>The <code class="language-plaintext highlighter-rouge">recipients</code> array may contain up to 50 objects, with each object containing a single <code class="language-plaintext highlighter-rouge">external_user_id</code> string and a <code class="language-plaintext highlighter-rouge">trigger_properties</code> object.</li>
   <li>When <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> is <code class="language-plaintext highlighter-rouge">true</code> (the default), Braze sends the message only to existing users.</li>
   <li>When <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> is <code class="language-plaintext highlighter-rouge">false</code> and an <code class="language-plaintext highlighter-rouge">attributes</code> object is provided, Braze creates a new user if one doesn’t exist.</li>
+  <li><strong>Net-new profiles need <code class="language-plaintext highlighter-rouge">attributes</code> with <code class="language-plaintext highlighter-rouge">send_to_existing_only: false</code>.</strong> Braze runs the pre-send create or update from the <code class="language-plaintext highlighter-rouge">attributes</code> object in the same recipient. If you set <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> to <code class="language-plaintext highlighter-rouge">false</code> but omit <code class="language-plaintext highlighter-rouge">attributes</code> (or send an empty object), Braze does not hydrate profile data the same way, so you do not get the combined “create or update user, then send” behavior this pattern is meant for.</li>
+  <li><strong>Email and SMS addressing.</strong> For most Email or SMS API-triggered sends to someone who is not already in Braze, include the delivery fields you need inside <code class="language-plaintext highlighter-rouge">attributes</code> (for example <code class="language-plaintext highlighter-rouge">email</code>, or the phone attributes your workspace uses for SMS). You can also set subscription group membership or subscription status there when opt-in state must change in the same call.</li>
+  <li><strong>Campaign eligibility.</strong> After the profile exists or updates, that user must still match the campaign’s dashboard target audience and channel send rules (for example opted in for email) or Braze does not send the message.</li>
   <li>Setting <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> to <code class="language-plaintext highlighter-rouge">false</code> is not supported for user aliases. New alias-only users can’t be created through this endpoint. To send to an alias-only user, that user must already exist in Braze.</li>
 </ul>
 

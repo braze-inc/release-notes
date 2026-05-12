@@ -1,4 +1,4 @@
-<div id='api_zrhaqgwyumtu' class='api_div'>
+<div id='api_zdpztfpylzsk' class='api_div'>
 <h1 id="update-scheduled-messages">Update scheduled messages</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/schedule/update</p>

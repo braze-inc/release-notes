@@ -1,4 +1,4 @@
-<div id='api_iegehypikmgq' class='api_div'>
+<div id='api_mzvlrldvyjzg' class='api_div'>
 <h1 id="duplicate-campaigns-using-the-api">Duplicate campaigns using the API</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/duplicate</p>
@@ -29,10 +29,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 3
 4
 5
+6
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"campaign_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">campaign</span><span class="w"> </span><span class="err">identifier</span><span class="p">,</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">name</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">resulting</span><span class="w"> </span><span class="err">campaign</span><span class="p">,</span><span class="w">
   </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">description</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">resulting</span><span class="w"> </span><span class="err">campaign</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"tag_names"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">tags</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">resulting</span><span class="w"> </span><span class="err">campaign</span><span class="p">,</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -65,6 +67,12 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td>Optional</td>
       <td>String</td>
       <td>The description field for the resulting campaign.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tag_names</code></td>
+      <td>Optional</td>
+      <td>String</td>
+      <td>The tags for the resulting campaign. These must be existing tags. If you add new tags in the request, they overwrite any tags that were on the original campaign.</td>
     </tr>
   </tbody>
 </table>

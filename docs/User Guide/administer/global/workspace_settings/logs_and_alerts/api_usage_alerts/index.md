@@ -27,6 +27,7 @@ To create an API usage alert:
 When you define your alert criteria you can adjust the following thresholds:
 
 <table>
+  <caption>Alert thresholds</caption>
   <thead>
     <tr>
       <th>Field</th>

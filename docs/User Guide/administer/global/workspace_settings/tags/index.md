@@ -30,6 +30,7 @@ table td {
 
 
 <table>
+  <caption>Best practices</caption>
 <thead>
   <tr>
     <th>Funnel</th>

@@ -132,7 +132,7 @@ The following is included in your export depending on your selection.
 | windows_ad_ids              | Windows advertising IDs                       |
 | Custom events               | Based on selection at export                             |
 | Custom attributes           | Based on selection at export                             |
-{: .reset-td-br-1 .reset-td-br-2 }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="CSV export user data" }
 
 **Note:**
 

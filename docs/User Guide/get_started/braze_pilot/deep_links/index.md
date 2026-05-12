@@ -69,6 +69,7 @@ th:nth-child(6), td:nth-child(6) {
 </style>
 
 <table>
+  <caption>Accepted parameters</caption>
     <thead>
         <tr>
             <th>Parameter</th>
@@ -252,6 +253,7 @@ th:nth-child(6), td:nth-child(6) {
 </style>
 
 <table>
+  <caption>Accepted parameters</caption>
     <thead>
         <tr>
             <th>Parameter</th>

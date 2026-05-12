@@ -11,6 +11,7 @@ The Braze and Segment integration allows you to use [Engage](https://segment.com
 | Segment account | A [Segment account](https://app.segment.com/login) is required to take advantage of this partnership. |
 | Braze Cloud destination | You must have already [set up Braze as a destination](https://www.braze.com/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) in your Segment integration.<br><br>This includes providing the correct Braze data center and REST API key in your [connection settings](https://www.braze.com/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
 | Braze data import key | To sync Engage audiences to Braze as cohorts, you must generate a Data Import key.<br><br>Cohort import is in early access, contact your Braze customer success manager to get access to this feature. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -64,6 +65,7 @@ For example, if you have an Engage computed trait for "Last Product Viewed Item,
 | Computed Trait | Audiences |
 | -------------- | --------- |
 | ![The custom attribute section within a user profile lists "last_product_viewed_item" as "Sweater".](https://www.braze.com/docs/assets/img/segment/last_viewed-id-braze.png?e9bbe1a8865430d428edd4d6a55dba43) | ![The custom attribute section within a user profile lists "dormant_shopper" as "true".](https://www.braze.com/docs/assets/img/segment/dormant-identify-braze.png?12d8bec7ef7006edad4ef4392e17eadc) |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Computed traits and audiences" }
 
 
 
@@ -75,6 +77,7 @@ Continuing the previous example, if a user has a computed trait for "Last Produc
 | Computed Trait | Audiences |
 | -------------- | --------- |
 | ![The custom event section within a user profile lists "Trait Computed" "1" time, with the last time being "20 hours ago".](https://www.braze.com/docs/assets/img/segment/last_viewed-track-braze.png?17e2cbbcc791f5afea1bbe7be515ef0f) | ![The custom attribute section within a user profile lists "Audience Entered" "1" time, with the last time being "March 9 at 1:45 am".](https://www.braze.com/docs/assets/img/segment/dormant-track-braze.png?719f0cf58ff2575d52d92a57d9ac5613) |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Computed traits and audiences" }
 
 
 

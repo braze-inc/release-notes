@@ -20,7 +20,7 @@ This table lists the operators that are supported. Note that parentheses are inv
 **Note:**
 
 
-Operators can be used in conditional statements (`if`, `elsif`, `unless`) but not in `assign` statements, `for` loops, `case`/`when` statements, or array access brackets. For a full breakdown, see [Where to use operators and filters](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid#where-to-use-operators-and-filters).
+Operators can be used in conditional statements (`if`, `elsif`, `unless`) but not in `assign` statements, `for` loops, or array access brackets. In `case` and `when` tags, each branch compares the `case` expression to a `when` value using equality instead of arbitrary operator expressions. For examples, see [Conditional messaging logic](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/conditional_logic/#case-and-when-tags). For a full breakdown, see [Where to use operators and filters](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid#where-to-use-operators-and-filters).
 
 
 

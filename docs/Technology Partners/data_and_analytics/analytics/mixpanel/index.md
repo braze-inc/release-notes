@@ -2,7 +2,9 @@
 
 > [Mixpanel](https://mixpanel.com/) is a business analytics platform that allows you to export events from Mixpanel into other platforms to perform deeper analysis. The data collected can then be used to build custom reports and measure user engagement and retention.
 
-The Braze and Mixpanel integration allows you to [import Mixpanel Cohorts into Braze](https://www.braze.com/docs/partners/data_and_analytics/analytics/mixpanel/mixpanel_cohort_import/) to create Braze segments that can target users in future Braze campaigns or Canvases. You can also use Braze Currents to [export your Braze events to Mixpanel](#data-export-integration) to drive deeper analytics into conversions, retention, and product usage.
+The Braze and Mixpanel integration allows you to [import Mixpanel Cohorts into Braze](https://www.braze.com/docs/partners/data_and_analytics/analytics/mixpanel/mixpanel_cohort_import/) to create Braze segments that can target users in future Braze campaigns or Canvases. Cohort sync updates cohort membership in Braze and does not import Mixpanel events or user properties. For details, see [Mixpanel cohort import](https://www.braze.com/docs/partners/data_and_analytics/analytics/mixpanel/mixpanel_cohort_import/#data-import-integration).
+
+You can also use Braze Currents to [export your Braze events to Mixpanel](#data-export-integration) to drive deeper analytics into conversions, retention, and product usage.
 
 ## Prerequisites
 

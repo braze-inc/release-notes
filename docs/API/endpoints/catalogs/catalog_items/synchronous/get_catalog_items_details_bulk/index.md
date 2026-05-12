@@ -1,4 +1,4 @@
-<div id='api_cnmgdelupdlf' class='api_div'>
+<div id='api_nnarvbmflhvs' class='api_div'>
 <h1 id="list-multiple-catalog-item-details">List multiple catalog item details</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/catalogs/{catalog_name}/items</p>
