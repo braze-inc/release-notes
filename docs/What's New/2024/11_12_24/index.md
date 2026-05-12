@@ -42,6 +42,7 @@ We're in the process of making major improvements to the [Braze Developer Guide]
 |Before|After|
 |------|-----|
 |!["The old navigation for the Braze Developer Guide."](https://www.braze.com/docs/assets/img/release_notes/developer_guide_improvements/old_navigation.png?f5b618cf308132401f7d8ba69c96b055)|!["The new navigation for the Braze Developer Guide."](https://www.braze.com/docs/assets/img/release_notes/developer_guide_improvements/new_navigation.png?814af51ddb6336e5c479f6b5f7f25dba)|
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Improving the developer guide" }
 
 ## New Braze partnerships
  

@@ -152,7 +152,7 @@ if (base === 'docs'){
 
 
 <link type="text/css" rel="stylesheet" href="/docs/assets/css/swiper.css" />
-<link type="text/css" rel="stylesheet" href="/docs/assets/css/algolia_theme.css"  /><link href='/docs/assets/global-a7d5c6866dffda279dd1558364323e17.css' rel='stylesheet' type='text/css' /><script type="text/javascript">
+<link type="text/css" rel="stylesheet" href="/docs/assets/css/algolia_theme.css"  /><link href='/docs/assets/global-62bfae6a3678931b4f3dcf38cd540f22.css' rel='stylesheet' type='text/css' /><script type="text/javascript">
   const page_collection = 'docs_pages';
   const page_collection_title = 'Braze';
   const page_collection_default_path = '';
@@ -185,11 +185,11 @@ if (base === 'docs'){
 <script type="text/javascript" src="/docs/assets/js/clipboard.js"></script>
 <script type='text/javascript' src='/docs/assets/js/jquery.mark.js' ></script>
 
-<script src='/docs/assets/global-a3764d50b0629eccf603b9fcc5efdc92.js' type='text/javascript'></script>
+<script src='/docs/assets/global-6c5bb131cfca25f30b4fe7ef80773aa4.js' type='text/javascript'></script>
 
 <script type='text/javascript' src='/docs/assets/js/swiper.js' ></script>
 
-<script type='text/javascript' src='/docs/assets/js/algolia_search.js?1778167962' ></script>
+<script type='text/javascript' src='/docs/assets/js/algolia_search.js?1778513698' ></script>
 
 <script src="/docs/assets/js/mermaid.js"></script>
 
@@ -367,7 +367,7 @@ function OptanonWrapper() { }
     </div>
     </div>
     <div id="navbar-search">
-       <script src="/docs/assets/js/su_header_search.js?1778167962" ></script>
+       <script src="/docs/assets/js/su_header_search.js?1778513698" ></script>
 <script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/an.js"></script>
 <script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/searchbox.js"></script>
 <link rel="stylesheet" href="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/searchbox.css">
@@ -390,7 +390,7 @@ function OptanonWrapper() { }
 
 <div class="container-fluid" >
   <div class="row flex-xl-nowrap d-print-block ">
-    <script type="text/javascript" src="/docs/assets/js/broken_redirect_list.js?1778167962" ></script>
+    <script type="text/javascript" src="/docs/assets/js/broken_redirect_list.js?1778513698" ></script>
 <script type="text/javascript">
 
   function removeleadingslash(str){
@@ -3046,6 +3046,9 @@ if (site_language && (site_language != 'en')){
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/api/data_retention/");
+    validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
+    
+    siteurl = removeleadingslash("/api/data_retention/messaging_interaction_data/");
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/api/endpoints/");

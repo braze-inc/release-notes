@@ -36,6 +36,7 @@ The Future Anthem Customer Success team helps you set up your integration. Conta
 | Example attributes in Future Anthem | Example attributes in Braze |
 | ----------------------------------- | --------------------------- |
 | ![Future Anthem dashboard showing profile attributes for a player.](https://www.braze.com/docs/assets/img/future_anthem/future_anthem_example_attributes.png?279cc8008aaa38b5d0108bc16007f7ad) | ![Braze user profile showing custom object attributes synced from Future Anthem.](https://www.braze.com/docs/assets/img/future_anthem/braze_example_attributes.png?5634ce701ffbad08ca1a8619a4fc21d2) |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Integration" }
 
 ## Braze custom attributes
 

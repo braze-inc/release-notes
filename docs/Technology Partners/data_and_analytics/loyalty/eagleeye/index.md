@@ -31,6 +31,7 @@ The following tables outline the two types of integrations supported between Bra
 
 
 <table>
+  <caption>Outbound vs. inbound</caption>
   <thead>
     <tr>
       <th>Direction</th>
@@ -66,6 +67,7 @@ The following tables outline the two types of integrations supported between Bra
 
 
 <table>
+  <caption>Outbound vs. inbound</caption>
   <thead>
     <tr>
       <th>Direction</th>

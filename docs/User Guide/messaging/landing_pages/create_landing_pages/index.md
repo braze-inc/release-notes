@@ -149,13 +149,6 @@ If your confirmation page opens in a new tab, a user who returns to the original
 
 
 
-**Important:**
-
-
-If you configure a button with **Submit form when button is clicked** enabled and use **On-click Behavior** to open a web URL in a new tab, iOS Safari's built-in pop-up blocker may prevent the navigation from working. This occurs because form submission followed by opening a new tab is treated as a pop-up.<br><br>To avoid this issue, configure buttons with form submission to open the resulting URL in the same tab (not a new tab). Buttons without form submission can open URLs in new tabs without issues.
-
-
-
 ### Step 5: Preview the page
 
 You can preview your landing page in the editor's **Preview** tab. After saving your landing page as a draft, you can visit the URL by going to **Landing Pages** and selecting **Copy URL** next to your landing page. You can also share the URL with collaborators.
@@ -169,6 +162,13 @@ Before you publish, make sure:
 - All required page fields (like URL path and title) are complete
 
 When you're ready, select **Publish Landing Page**.
+
+**Note:**
+
+
+Aggressive pop-up blockers and ad blockers on iOS and in Safari (including Safari's built-in controls and third-party extensions) can negatively impact how landing pages behave when a form **Submit** button also opens another URL, whether that URL opens in the same tab or a new tab.
+
+
 
 ## Using templates
 

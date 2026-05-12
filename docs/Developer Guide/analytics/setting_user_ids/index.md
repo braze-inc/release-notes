@@ -219,7 +219,7 @@ While it's essential that you correctly name your user IDs from the start, you c
 | User's visible profile ID or username | JonDoe829525552 |
 | Email Address | Anna@email.com |
 | Auto-incrementing user ID | 123 |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="ID Naming best practices" }
 
 **Warning:**
 

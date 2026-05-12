@@ -1,4 +1,4 @@
-<div id='api_uapmsqadmqbb' class='api_div'>
+<div id='api_smicleaxoxwp' class='api_div'>
 <h1 id="view-default-source-values-for-a-canvass-translation-tags">View default source values for a canvas’s translation tags</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/translations/source</p>

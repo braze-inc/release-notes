@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android). Additionally, you'll need to [set up silent push notifications](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=android).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android).
 
 ## Setting up geofences {#setting-up-geofences}
 
@@ -314,12 +314,6 @@ Geofences can only be requested once per session, either automatically by the SD
 
 
 
-### Enabling push-to-sync
-
-Note that Braze syncs geofences to devices using background push. In most cases, this will involve no code changes, as this feature requires no further integration on the part of the app.
-
-However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom `Application.onCreate()` implementation, you should defer automatic server calls and any other actions you would not want to be triggered by background push.
-
 
 
 
@@ -551,17 +545,6 @@ CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 
 
 
-### Step 5: Verify background push
-
-Braze syncs geofences to devices using background push notifications. Follow these instructions to [set up silent push notifications](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=swift) so that geofence updates from the server are properly handled.
-
-**Note:**
-
-
-To ensure that your application does not take any unwanted actions upon receiving Braze geofence sync notifications, follow the [ignoring silent push](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=swift#swift_ignoring-internal-push-notifications) article.
-
-
-
 ## Manually request geofences {#manually-request-geofences}
 
 When the Braze SDK requests geofences from the backend, it reports the user's current location and receives geofences that are determined to be optimally relevant based on the location reported.
@@ -660,7 +643,7 @@ Without `Always` authorization, Apple restricts location services from running w
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the .NET MAUI Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=.net%20maui%20(xamarin)). Additionally, you'll need to [set up silent push notifications](https://www.braze.com/docs/developer_guide/push_notifications/silent).
+Before you can use this feature, you'll need to [integrate the .NET MAUI Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=.net%20maui%20(xamarin)).
 
 ## Prerequisites
 
@@ -877,7 +860,7 @@ Geofences are supported on **both iOS and Android** in the React Native SDK. The
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native). On Android, you'll need to [set up silent push notifications](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=android) for geofence sync.
+Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native).
 
 ## Setting up geofences {#setting-up-geofences}
 

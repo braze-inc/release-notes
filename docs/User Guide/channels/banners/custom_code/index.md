@@ -18,7 +18,7 @@ For the full JavaScript bridge reference, including all available methods and cl
 
 Custom HTML in-app messages and Banners support a JavaScript "bridge" to interface with the Braze SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `brazeBridge` or `appboyBridge` variable.
 
-<div class='alert alert-important' role='alert'><div class='alert-msg'><b>important</b><br />
+<div class='alert alert-important' role='alert'><img src='/docs/assets/img/message-important.png' alt='' class='alert-icon'><div class='alert-msg'><b>important</b><br />
 <p>Braze recommends that you use the global <code class="language-plaintext highlighter-rouge">brazeBridge</code> variable. The global <code class="language-plaintext highlighter-rouge">appboyBridge</code> variable is deprecated but will continue to function for existing users. If you are using <code class="language-plaintext highlighter-rouge">appboyBridge</code>, we suggest you migrate to <code class="language-plaintext highlighter-rouge">brazeBridge</code>. <br /><br /> <code class="language-plaintext highlighter-rouge">appboyBridge</code> was deprecated in the following SDK versions:<br /><br /></p>
 <ul>
   <li>Web: <a href="/docs/developer_guide/platform_integration_guides/web/changelog/#330">3.3.0+</a></li>
@@ -70,7 +70,7 @@ The following JavaScript methods are supported within custom HTML for in-app mes
 }
 </style>
 
-<div class='alert alert-note' role='alert'><div class='alert-msg'><b>note</b><br />
+<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><b>note</b><br />
 <p>You cannot reference Liquid to insert <code>customAttributes</code> into JavaScript Bridge methods.</p>
 </div></div>
 
@@ -111,7 +111,7 @@ The following JavaScript methods are supported within custom HTML for in-app mes
 
 Use the `brazeBridge.logClick(button_id)` method to track clicks in your custom HTML.
 
-<div class='alert alert-note' role='alert'><div class='alert-msg'><b>note</b><br />
+<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><b>note</b><br />
 <p><strong>Banners:</strong> Only <code class="language-plaintext highlighter-rouge">brazeBridge.logClick()</code> (without arguments) is supported. Button IDs and custom button tracking are supported for in-app messages only.</p>
 </div></div>
 
@@ -133,7 +133,7 @@ For in-app messages, you can track multiple button click events per impression. 
 
 You can also track new custom button names—up to 100 unique names per campaign. For example, `brazeBridge.logClick('blue button')` or `brazeBridge.logClick('viewed carousel page 3')`.
 
-<div class='alert alert-tip' role='alert'><div class='alert-msg'><b>tip</b><br />
+<div class='alert alert-tip' role='alert'><img src='/docs/assets/img/message-tip.png' alt='' class='alert-icon'><div class='alert-msg'><b>tip</b><br />
 <p>When using JavaScript methods inside an <code class="language-plaintext highlighter-rouge">onclick</code> attribute, wrap string values in single quotes to avoid conflicts with the double-quoted HTML attribute.</p>
 </div></div>
 

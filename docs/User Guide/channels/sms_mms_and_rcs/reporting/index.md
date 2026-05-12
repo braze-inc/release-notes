@@ -311,3 +311,7 @@ This table reflects Braze billing, not your provider's billing. Outcomes that ar
 
  | Charges may apply based on individual message sending outcomes |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+## Reconcile *Rejections* with Snowflake or Currents
+
+The *Rejections* metric in the dashboard is an aggregate workspace count. It isn't a row-level export, so you can't always match each rejection to a single row in Snowflake or a single `users.messages.sms.Rejection` event in Currents. For example, if the user profile was deleted before Braze finished processing the rejection for warehouse export, that rejection doesn't appear in your `USERS_MESSAGES_SMS_REJECTION_SHARED` table or Currents payload, while aggregate SMS reporting can still reflect the outcome. For more information, see the [SQL table reference](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/#sms-message-events-and-deleted-user-profiles) and [SMS Rejection events](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-rejection-events) in the Currents event glossary.

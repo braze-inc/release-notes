@@ -1,4 +1,4 @@
-<div id='api_ployjduvumks' class='api_div'>
+<div id='api_lwjpmwnzfdat' class='api_div'>
 <h1 id="merge-users">Merge users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/merge</p>
@@ -137,6 +137,10 @@ Authorization: Bearer YOUR_REST_API_KEY
   <li><code class="language-plaintext highlighter-rouge">identified</code> refers to prioritizing a user with an <code class="language-plaintext highlighter-rouge">external_id</code></li>
   <li><code class="language-plaintext highlighter-rouge">unidentified</code> refers to prioritizing a user without an <code class="language-plaintext highlighter-rouge">external_id</code></li>
 </ul>
+
+<p><strong>Important:</strong></p>
+
+<p>If both profiles have invalid phone numbers, Braze does not merge them. Invalid numbers are not stored in E.164 format, and the merge job does not combine those profiles. The endpoint still returns <code class="language-plaintext highlighter-rouge">202 Accepted</code> with a success message, so the HTTP response does not indicate that the merge was skipped. Correct the phone numbers on one or both profiles before merging.</p>
 
 <h2 id="example-requests">Example requests</h2>
 

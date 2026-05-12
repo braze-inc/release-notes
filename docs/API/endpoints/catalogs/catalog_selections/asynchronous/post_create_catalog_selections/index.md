@@ -1,4 +1,4 @@
-<div id='api_zjqufrpbmtrx' class='api_div'>
+<div id='api_wrzgrjwdabzl' class='api_div'>
 <h1 id="create-catalog-selection">Create catalog selection</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/catalogs/{catalog_name}/selections</p>

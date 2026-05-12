@@ -29,6 +29,7 @@ Using an email address or a hashed email address as your Braze external ID can s
 Added three [Liquid tutorials](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/operators/#tutorials) about how to use operators in the following scenarios.
 
 <table border="1">
+  <caption>Liquid tutorials</caption>
   <tr>
     <td>Choosing a message with an integer custom attribute.</td>
     <td><img src="/docs/assets/img/release_notes/2025_05_04/integer.png?a665f7f225a08d835a8f2640737fba2d" alt="The compose step in Braze showing a message with an integer custom attribute." /></td>

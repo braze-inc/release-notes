@@ -1,4 +1,4 @@
-<div id='api_wimyioplspmy' class='api_div'>
+<div id='api_uhofqbrbieca' class='api_div'>
 <h1 id="set-primary-sdk-authentication-key">Set primary SDK Authentication key</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/app_group/sdk_authentication/primary</p>

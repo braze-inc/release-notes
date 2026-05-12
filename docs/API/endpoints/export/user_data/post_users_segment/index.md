@@ -1,4 +1,4 @@
-<div id='api_kwpvsrbayrov' class='api_div'>
+<div id='api_bhtrgnumwmcj' class='api_div'>
 <h1 id="export-user-profile-by-segment">Export user profile by segment</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/export/segment</p>
