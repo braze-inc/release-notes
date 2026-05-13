@@ -29,7 +29,7 @@ Note the naming conventions for user IDs.
 | ----------- | ----------- | ----------- |
 | `braze_id` | `"USER_ID"` | The unique identifier that is automatically assigned by Braze. |
 | `external_id` | `"EXTERNAL_USER_ID"` | The unique identifier of a user's profile that is set by the customer. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="User ID schema" }
 
 ### Platform values
 
@@ -45,7 +45,7 @@ Certain events return a `platform` value that specifies the platform of the user
 | Web | `web` |
 | tvOS | `tvos` |
 | Roku | `roku` |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Platform values" }
 
 
 
@@ -81,7 +81,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 
 
-<div id='api_cdboostfoidh' class='api_div'>
+<div id='api_coqadhrpgasw' class='api_div'>
 <h2 id="agent-executed-events">Agent executed events</h2>
 
 <div class="api_tags" data-tags="Agent" data-tags-lower="agent"></div>
@@ -160,7 +160,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_pmcswrrixdjg' class='api_div'>
+<div id='api_nibagyqokrsv' class='api_div'>
 <h2 id="tool-invocation-events">Tool invocation events</h2>
 
 <div class="api_tags" data-tags="Agent" data-tags-lower="agent"></div>
@@ -201,7 +201,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_wtpxigjuedpc' class='api_div'>
+<div id='api_ysumxndkcbbj' class='api_div'>
 <h2 id="uninstall-events">Uninstall events</h2>
 
 <div class="api_tags" data-tags="Uninstall" data-tags-lower="uninstall"></div>
@@ -398,7 +398,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_gzrdsdyjxaxj' class='api_div'>
+<div id='api_qpjkwnmryzxd' class='api_div'>
 <h2 id="global-subscription-state-change-events">Global Subscription State Change events</h2>
 
 <div class="api_tags" data-tags="Subscription" data-tags-lower="subscription"></div>
@@ -749,7 +749,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
   <li><code class="language-plaintext highlighter-rouge">state_change_source</code> will return a string of the full source name. For example, the source CSV import will return the string <code class="language-plaintext highlighter-rouge">CSV Import</code>. Available sources are listed below:</li>
 </ul>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Property details">
   <thead>
     <tr>
       <th>Source</th>
@@ -814,7 +814,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_nksoqrhoxpwj' class='api_div'>
+<div id='api_ltufdquhcegh' class='api_div'>
 <h2 id="subscription-group-state-change-events">Subscription Group State Change events</h2>
 
 <div class="api_tags" data-tags="Subscription" data-tags-lower="subscription"></div>
@@ -1224,7 +1224,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jovmzhtnxoyb' class='api_div'>
+<div id='api_mzmctcxrmnha' class='api_div'>
 <h2 id="campaign-conversion-events">Campaign Conversion events</h2>
 
 <div class="api_tags" data-tags="Campaign, Conversion" data-tags-lower="campaign, conversion"></div>
@@ -1501,7 +1501,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_vsahmrsmeplg' class='api_div'>
+<div id='api_wufmusligxmp' class='api_div'>
 <h2 id="campaign-control-group-enrollment-events">Campaign Control Group Enrollment events</h2>
 
 <div class="api_tags" data-tags="Campaign, Entry" data-tags-lower="campaign, entry"></div>
@@ -1754,7 +1754,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_gfbxehxlhuvk' class='api_div'>
+<div id='api_mgfrxgixszug' class='api_div'>
 <h2 id="canvas-conversion-events">Canvas Conversion events</h2>
 
 <div class="api_tags" data-tags="Canvas, Conversion" data-tags-lower="canvas, conversion"></div>
@@ -2033,7 +2033,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_elkzloqzztah' class='api_div'>
+<div id='api_fqahrxnmlaxv' class='api_div'>
 <h2 id="canvas-entry-events">Canvas Entry events</h2>
 
 <div class="api_tags" data-tags="Canvas, Entry" data-tags-lower="canvas, entry"></div>
@@ -2290,7 +2290,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_qzmqanrjxfyw' class='api_div'>
+<div id='api_sydpcquaxgdc' class='api_div'>
 <h2 id="exit-match-audience-events">Exit Match Audience events</h2>
 
 <div class="api_tags" data-tags="Exit, Canvas" data-tags-lower="exit, canvas"></div>
@@ -2531,7 +2531,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_pctpjjtytjoe' class='api_div'>
+<div id='api_svzrhrlqzzmt' class='api_div'>
 <h2 id="exit-perform-event-events">Exit Perform Event events</h2>
 
 <div class="api_tags" data-tags="Exit, Canvas" data-tags-lower="exit, canvas"></div>
@@ -2772,7 +2772,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_znlrypnagjmv' class='api_div'>
+<div id='api_qplgynloywzu' class='api_div'>
 <h2 id="experiment-step-conversion-events">Experiment Step Conversion events</h2>
 
 <div class="api_tags" data-tags="Canvas" data-tags-lower="canvas"></div>
@@ -3053,7 +3053,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_yjirolwvsotp' class='api_div'>
+<div id='api_sfylryhsijii' class='api_div'>
 <h2 id="experiment-split-entry-events">Experiment Split Entry events</h2>
 
 <div class="api_tags" data-tags="Canvas" data-tags-lower="canvas"></div>
@@ -3316,7 +3316,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_gpkvanodatyd' class='api_div'>
+<div id='api_ewmwobeahtvr' class='api_div'>
 <h2 id="canvas-step-progression-events">Canvas Step Progression events</h2>
 
 <div class="api_tags" data-tags="Canvas, Progression" data-tags-lower="canvas, progression"></div>
@@ -3613,7 +3613,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_hyjrluzexasa' class='api_div'>
+<div id='api_jxcmsqotubgb' class='api_div'>
 <h2 id="banner-abort-events">Banner Abort events</h2>
 
 <div class="api_tags" data-tags="Banner, Abort" data-tags-lower="banner, abort"></div>
@@ -4048,7 +4048,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_pfqxykawerkf' class='api_div'>
+<div id='api_lbmdtkxctgcc' class='api_div'>
 <h2 id="banner-click-events">Banner Click events</h2>
 
 <div class="api_tags" data-tags="Banner, Clicks" data-tags-lower="banner, clicks"></div>
@@ -4465,7 +4465,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_aqzyiimawrtx' class='api_div'>
+<div id='api_yupbrdspvxiy' class='api_div'>
 <h2 id="banner-dismissal-events">Banner Dismissal events</h2>
 
 <p>This event occurs when a user dismisses a banner.</p>
@@ -4946,7 +4946,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_czyagmlplxxj' class='api_div'>
+<div id='api_epkydwusfehf' class='api_div'>
 <h2 id="banner-impression-events">Banner Impression events</h2>
 
 <div class="api_tags" data-tags="Banner, Impressions" data-tags-lower="banner, impressions"></div>
@@ -5353,7 +5353,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ddoxopecyunp' class='api_div'>
+<div id='api_dxjombyicqwt' class='api_div'>
 <h2 id="content-card-abort-events">Content Card Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Content Cards" data-tags-lower="abort, content cards"></div>
@@ -5693,7 +5693,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_wvfhhbnlatqe' class='api_div'>
+<div id='api_lbbortcydswx' class='api_div'>
 <h2 id="content-card-click-events">Content Card Click events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Clicks" data-tags-lower="content cards, clicks"></div>
@@ -6093,7 +6093,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_cjauhldjvqzn' class='api_div'>
+<div id='api_jlugjofygvta' class='api_div'>
 <h2 id="content-card-dismiss-events">Content Card Dismiss events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Dismissal" data-tags-lower="content cards, dismissal"></div>
@@ -6493,7 +6493,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_zlbutssksvlp' class='api_div'>
+<div id='api_lvpfkumwpwra' class='api_div'>
 <h2 id="content-card-impression-events">Content Card Impression events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Impressions" data-tags-lower="content cards, impressions"></div>
@@ -6893,7 +6893,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_mkjsdbanfazf' class='api_div'>
+<div id='api_mpfrnaxotrnl' class='api_div'>
 <h2 id="content-card-send-events">Content Card Send events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Sends" data-tags-lower="content cards, sends"></div>
@@ -7226,7 +7226,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_zhdriqpjyngi' class='api_div'>
+<div id='api_piyzraynrybl' class='api_div'>
 <h2 id="email-abort-events">Email Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Email" data-tags-lower="abort, email"></div>
@@ -7588,7 +7588,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_bmptzqxruvsu' class='api_div'>
+<div id='api_gdhqauhkcump' class='api_div'>
 <h2 id="email-bounce-events">Email Bounce events</h2>
 
 <div class="api_tags" data-tags="Email, Bounce" data-tags-lower="email, bounce"></div>
@@ -7969,7 +7969,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_qlqnzqmjmqfm' class='api_div'>
+<div id='api_exnezvbubysd' class='api_div'>
 <h2 id="email-click-events">Email Click events</h2>
 
 <div class="api_tags" data-tags="Email, Clicks" data-tags-lower="email, clicks"></div>
@@ -8480,7 +8480,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_lzxoktxsfsfg' class='api_div'>
+<div id='api_tszhqhsxikio' class='api_div'>
 <h2 id="email-deferral-events">Email Deferral events</h2>
 
 <div class="api_tags" data-tags="Email, Deferral" data-tags-lower="email, deferral"></div>
@@ -8863,7 +8863,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_mtysmhcklqba' class='api_div'>
+<div id='api_tsyklsfyzsbu' class='api_div'>
 <h2 id="email-delivery-events">Email Delivery events</h2>
 
 <div class="api_tags" data-tags="Email, Delivery" data-tags-lower="email, delivery"></div>
@@ -9224,7 +9224,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_uxpcyvmqzhag' class='api_div'>
+<div id='api_bncchdtucuig' class='api_div'>
 <h2 id="email-mark-as-spam-events">Email Mark As Spam events</h2>
 
 <div class="api_tags" data-tags="Email, Spam" data-tags-lower="email, spam"></div>
@@ -9593,7 +9593,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_yombdaxuzjmk' class='api_div'>
+<div id='api_jjdclpghkbbo' class='api_div'>
 <h2 id="email-open-events">Email Open events</h2>
 
 <div class="api_tags" data-tags="Email, Opens" data-tags-lower="email, opens"></div>
@@ -10068,7 +10068,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_wvxrjotkbhpi' class='api_div'>
+<div id='api_yuuwcharomld' class='api_div'>
 <h2 id="email-retry-events">Email Retry events</h2>
 
 <div class="api_tags" data-tags="Email, Retry" data-tags-lower="email, retry"></div>
@@ -10429,7 +10429,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_qxotmgqdfict' class='api_div'>
+<div id='api_lmwzhraiccrl' class='api_div'>
 <h2 id="email-send-events">Email Send events</h2>
 
 <div class="api_tags" data-tags="Email, Sends" data-tags-lower="email, sends"></div>
@@ -10817,7 +10817,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_gmqcuurwnnag' class='api_div'>
+<div id='api_lsqdnbkathta' class='api_div'>
 <h2 id="email-soft-bounce-events">Email Soft Bounce events</h2>
 
 <div class="api_tags" data-tags="Email, Bounce" data-tags-lower="email, bounce"></div>
@@ -11188,7 +11188,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_lboeylpauury' class='api_div'>
+<div id='api_jthnsnseobjv' class='api_div'>
 <h2 id="email-unsubscribe-events">Email Unsubscribe events</h2>
 
 <div class="api_tags" data-tags="Email, Subscription" data-tags-lower="email, subscription"></div>
@@ -11531,7 +11531,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jcobadsdhigm' class='api_div'>
+<div id='api_jvhfuvqakikw' class='api_div'>
 <h2 id="feature-flag-experiment-impression-events">Feature Flag Experiment Impression events</h2>
 
 <div class="api_tags" data-tags="Feature Flags, Impressions" data-tags-lower="feature flags, impressions"></div>
@@ -11896,7 +11896,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_xjadmazwjola' class='api_div'>
+<div id='api_ewdhuzrzxqph' class='api_div'>
 <h2 id="in-app-message-abort-events">In-App Message Abort events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Abort" data-tags-lower="in-app messages, abort"></div>
@@ -12325,7 +12325,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_uxpedhjnhmgz' class='api_div'>
+<div id='api_touafxrlywsi' class='api_div'>
 <h2 id="in-app-message-click-events">In-App Message Click events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Clicks" data-tags-lower="in-app messages, clicks"></div>
@@ -12739,7 +12739,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_hiwmpoznaxqd' class='api_div'>
+<div id='api_eokivyiomvzs' class='api_div'>
 <h2 id="in-app-message-impression-events">In-App Message Impression events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Impressions" data-tags-lower="in-app messages, impressions"></div>
@@ -13163,7 +13163,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_oflryhonevuf' class='api_div'>
+<div id='api_jgizhkreyarc' class='api_div'>
 <h2 id="line-abort-events">LINE Abort events</h2>
 
 <div class="api_tags" data-tags="LINE, Abort" data-tags-lower="line, abort"></div>
@@ -13515,7 +13515,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_joiveveiovrt' class='api_div'>
+<div id='api_pnnysxnvdcdt' class='api_div'>
 <h2 id="line-click-events">LINE Click events</h2>
 
 <div class="api_tags" data-tags="LINE, Clicks" data-tags-lower="line, clicks"></div>
@@ -13882,7 +13882,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_tthlmuwcpkmj' class='api_div'>
+<div id='api_wzbihjwrvwca' class='api_div'>
 <h2 id="line-inbound-receive-events">LINE Inbound Receive events</h2>
 
 <div class="api_tags" data-tags="LINE, Inbound Received" data-tags-lower="line, inbound received"></div>
@@ -14231,7 +14231,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_abpbqhpgfqvw' class='api_div'>
+<div id='api_sbzfjvzddidz' class='api_div'>
 <h2 id="line-retry-events">LINE Retry events</h2>
 
 <div class="api_tags" data-tags="LINE, Retry" data-tags-lower="line, retry"></div>
@@ -14574,7 +14574,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_tjoedhtgpesx' class='api_div'>
+<div id='api_ldowphxitpqz' class='api_div'>
 <h2 id="line-send-events">LINE Send events</h2>
 
 <div class="api_tags" data-tags="LINE, Sends" data-tags-lower="line, sends"></div>
@@ -14913,7 +14913,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_vbuczravctvx' class='api_div'>
+<div id='api_xhfwcfivyedy' class='api_div'>
 <h2 id="live-activity-outcome-events">Live Activity Outcome events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Outcome" data-tags-lower="live activity, outcome"></div>
@@ -15156,7 +15156,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_vuuoqwbzlueb' class='api_div'>
+<div id='api_pzdxosuhoylw' class='api_div'>
 <h2 id="live-activity-send-events">Live Activity Send events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Sends" data-tags-lower="live activity, sends"></div>
@@ -15389,7 +15389,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_gvhufnqufbsx' class='api_div'>
+<div id='api_jaroxlgzyxcw' class='api_div'>
 <h2 id="push-notification-abort-events">Push Notification Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Push" data-tags-lower="abort, push"></div>
@@ -15749,7 +15749,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_kziovgcdfahq' class='api_div'>
+<div id='api_rujwuejpyfea' class='api_div'>
 <h2 id="push-notification-bounce-events">Push Notification Bounce events</h2>
 
 <div class="api_tags" data-tags="Push, Sends, Bounce" data-tags-lower="push, sends, bounce"></div>
@@ -16133,7 +16133,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_cycyyhfhcbwp' class='api_div'>
+<div id='api_pkmwcvlqohxi' class='api_div'>
 <h2 id="push-notification-ios-foreground-open-events">Push Notification iOS Foreground Open events</h2>
 
 <div class="api_tags" data-tags="Push, iOS, Sends" data-tags-lower="push, ios, sends"></div>
@@ -16422,7 +16422,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_cqlrdiyrvzju' class='api_div'>
+<div id='api_rfykeqdarpfc' class='api_div'>
 <h2 id="push-notification-open-events">Push Notification Open events</h2>
 
 <div class="api_tags" data-tags="Push, Opens" data-tags-lower="push, opens"></div>
@@ -16829,7 +16829,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_itbyahcdxyrt' class='api_div'>
+<div id='api_hagiqikkvsyz' class='api_div'>
 <h2 id="push-notification-retry-events">Push Notification Retry events</h2>
 
 <div class="api_tags" data-tags="Push, Retry" data-tags-lower="push, retry"></div>
@@ -17186,7 +17186,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_nmpyuuzrixqa' class='api_div'>
+<div id='api_swqvkfekmvwm' class='api_div'>
 <h2 id="push-notification-send-events">Push Notification Send events</h2>
 
 <div class="api_tags" data-tags="Push, Sends" data-tags-lower="push, sends"></div>
@@ -17592,7 +17592,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_wslrtksxalbh' class='api_div'>
+<div id='api_cbbiclozwgfu' class='api_div'>
 <h2 id="rcs-abort-events">RCS Abort events</h2>
 
 <div class="api_tags" data-tags="RCS, Abort" data-tags-lower="rcs, abort"></div>
@@ -17895,7 +17895,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_eazonswlliqu' class='api_div'>
+<div id='api_gqbutrnbtoxv' class='api_div'>
 <h2 id="rcs-click-events">RCS Click events</h2>
 
 <div class="api_tags" data-tags="RCS, Clicks" data-tags-lower="rcs, clicks"></div>
@@ -18284,7 +18284,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_cfjdjosanofk' class='api_div'>
+<div id='api_uxcipxhidosv' class='api_div'>
 <h2 id="rcs-delivery-events">RCS Delivery events</h2>
 
 <div class="api_tags" data-tags="RCS, Delivery" data-tags-lower="rcs, delivery"></div>
@@ -18623,7 +18623,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jwpkuuvetzcz' class='api_div'>
+<div id='api_fuqpiaujdwmo' class='api_div'>
 <h2 id="rcs-inbound-received-events">RCS Inbound Received events</h2>
 
 <div class="api_tags" data-tags="RCS, Inbound Received" data-tags-lower="rcs, inbound received"></div>
@@ -18960,7 +18960,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_grglpjyecnad' class='api_div'>
+<div id='api_lvdlslzsrkkt' class='api_div'>
 <h2 id="rcs-read-events">RCS Read events</h2>
 
 <div class="api_tags" data-tags="RCS, Read" data-tags-lower="rcs, read"></div>
@@ -19239,7 +19239,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_awzfvpkyipjo' class='api_div'>
+<div id='api_uoajtqjiprse' class='api_div'>
 <h2 id="rcs-rejection-events">RCS Rejection events</h2>
 
 <div class="api_tags" data-tags="RCS, Rejection" data-tags-lower="rcs, rejection"></div>
@@ -19602,7 +19602,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_yvzgiugaeubq' class='api_div'>
+<div id='api_gxhjejpjzhio' class='api_div'>
 <h2 id="rcs-send-events">RCS Send events</h2>
 
 <div class="api_tags" data-tags="RCS, Sends" data-tags-lower="rcs, sends"></div>
@@ -19961,7 +19961,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_mszlsuqardfc' class='api_div'>
+<div id='api_gvwduquokaoh' class='api_div'>
 <h2 id="sms-abort-events">SMS Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, SMS" data-tags-lower="abort, sms"></div>
@@ -20274,7 +20274,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ogkfnearxvmt' class='api_div'>
+<div id='api_bltzekpdxpqb' class='api_div'>
 <h2 id="sms-carrier-send-events">SMS Carrier Send events</h2>
 
 <div class="api_tags" data-tags="SMS, Sends" data-tags-lower="sms, sends"></div>
@@ -20625,7 +20625,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_pwyforoirjru' class='api_div'>
+<div id='api_tbuccesgbamx' class='api_div'>
 <h2 id="sms-delivery-events">SMS Delivery events</h2>
 
 <div class="api_tags" data-tags="SMS, Delivery" data-tags-lower="sms, delivery"></div>
@@ -20982,7 +20982,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_fmmntovfbhix' class='api_div'>
+<div id='api_oeemypwxicsf' class='api_div'>
 <h2 id="sms-delivery-failure-events">SMS Delivery Failure events</h2>
 
 <div class="api_tags" data-tags="SMS, Delivery" data-tags-lower="sms, delivery"></div>
@@ -21349,7 +21349,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_kpgzcddbcwlu' class='api_div'>
+<div id='api_nspldwtkemhn' class='api_div'>
 <h2 id="sms-inbound-received-events">SMS Inbound Received events</h2>
 
 <div class="api_tags" data-tags="SMS, Inbound Received" data-tags-lower="sms, inbound received"></div>
@@ -21688,7 +21688,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_qneqijpwcvnt' class='api_div'>
+<div id='api_apcvnscnyvwo' class='api_div'>
 <h2 id="sms-rejection-events">SMS Rejection events</h2>
 
 <div class="api_tags" data-tags="SMS, Rejection" data-tags-lower="sms, rejection"></div>
@@ -22069,7 +22069,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_fzwqrmdmwhzg' class='api_div'>
+<div id='api_ynddvsqnowan' class='api_div'>
 <h2 id="sms-retry-events">SMS Retry events</h2>
 
 <div class="api_tags" data-tags="SMS, Retry" data-tags-lower="sms, retry"></div>
@@ -22374,7 +22374,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_mxuqulayvkkz' class='api_div'>
+<div id='api_xhtgzcwurspd' class='api_div'>
 <h2 id="sms-send-events">SMS Send events</h2>
 
 <div class="api_tags" data-tags="SMS, Sends" data-tags-lower="sms, sends"></div>
@@ -22762,7 +22762,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_agajwkejlikz' class='api_div'>
+<div id='api_ydgbsccifmmo' class='api_div'>
 <h2 id="sms-short-link-click-events">SMS Short Link Click events</h2>
 
 <div class="api_tags" data-tags="SMS, Clicks" data-tags-lower="sms, clicks"></div>
@@ -23141,7 +23141,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_wyvmebjwaskh' class='api_div'>
+<div id='api_stlkjeakzaml' class='api_div'>
 <h2 id="webhook-abort-events">Webhook Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Webhooks" data-tags-lower="abort, webhooks"></div>
@@ -23481,7 +23481,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_vufavrdsomwr' class='api_div'>
+<div id='api_ssmtlezcgarn' class='api_div'>
 <h2 id="webhook-failure-events">Webhook Failure events</h2>
 
 <div class="api_tags" data-tags="Failure, Webhooks" data-tags-lower="failure, webhooks"></div>
@@ -23882,7 +23882,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_yrqdmdtjyyxk' class='api_div'>
+<div id='api_tfuaaqikxoun' class='api_div'>
 <h2 id="webhook-retry-events">Webhook Retry events</h2>
 
 <div class="api_tags" data-tags="Webhooks, Retry" data-tags-lower="webhooks, retry"></div>
@@ -24221,7 +24221,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_wifurcnrjcea' class='api_div'>
+<div id='api_ngchyytddjvm' class='api_div'>
 <h2 id="webhook-send-events">Webhook Send events</h2>
 
 <div class="api_tags" data-tags="Webhooks, Sends" data-tags-lower="webhooks, sends"></div>
@@ -24545,7 +24545,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_wjcmcdnwbtbg' class='api_div'>
+<div id='api_xvbvvvxhpsof' class='api_div'>
 <h2 id="whatsapp-abort-events">WhatsApp Abort events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Abort" data-tags-lower="whatsapp, abort"></div>
@@ -24909,7 +24909,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_kvbevwbhsyki' class='api_div'>
+<div id='api_zrpgdukfuruz' class='api_div'>
 <h2 id="whatsapp-tracked-link-click-events">WhatsApp Tracked Link Click events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Clicks" data-tags-lower="whatsapp, clicks"></div>
@@ -25244,7 +25244,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ylyuqerjwsjm' class='api_div'>
+<div id='api_yqdvfugjujjw' class='api_div'>
 <h2 id="whatsapp-delivery-events">WhatsApp Delivery events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Delivery" data-tags-lower="whatsapp, delivery"></div>
@@ -25635,7 +25635,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_pbsjsdxyqigz' class='api_div'>
+<div id='api_bystcblulixx' class='api_div'>
 <h2 id="whatsapp-failure-events">WhatsApp Failure events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Failure" data-tags-lower="whatsapp, failure"></div>
@@ -26046,7 +26046,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_fkelfndvfgcy' class='api_div'>
+<div id='api_vtyvhxenwmwi' class='api_div'>
 <h2 id="whatsapp-inbound-received-events">WhatsApp Inbound Received events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Inbound Received" data-tags-lower="whatsapp, inbound received"></div>
@@ -26479,7 +26479,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_bekomdvaoqxt' class='api_div'>
+<div id='api_tnurzbmqfayh' class='api_div'>
 <h2 id="whatsapp-read-events">WhatsApp Read events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Read" data-tags-lower="whatsapp, read"></div>
@@ -26870,7 +26870,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_qezanupntxus' class='api_div'>
+<div id='api_vcwosrqdwixj' class='api_div'>
 <h2 id="whatsapp-retry-events">WhatsApp Retry events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Retry" data-tags-lower="whatsapp, retry"></div>
@@ -27227,7 +27227,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_lhynzycxywpc' class='api_div'>
+<div id='api_pmpcapqmrfvl' class='api_div'>
 <h2 id="whatsapp-send-events">WhatsApp Send events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Sends" data-tags-lower="whatsapp, sends"></div>

@@ -24,7 +24,7 @@ Using various [tag](https://experienceleague.adobe.com/docs/experience-platform/
 | API | Rate Limits |
 | --- | --- |
 | User Track | 50,000 requests per minute.<br><br>Refer to the [User Track API documentation](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#rate-limit) for details.
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Rate limits" }
 
 ## Integration
 
@@ -36,7 +36,7 @@ To connect the Edge Network to Braze, the following are required:
 | --- | --- |
 | Braze instance | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the [API overview page](https://www.braze.com/docs/api/basics/#endpoints). |
 | Braze REST API key | A Braze REST API key with all permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Step 1: Gather required configuration details" }
 
 ### Step 2: Create a secret
 
@@ -62,7 +62,7 @@ After installing the extension, create a new event forwarding [rule](https://exp
 | External user ID | A long, random, and well-distributed UUID or GUID. If you choose a different method to name your user IDs, they must also be long, random, and well-distributed. Learn more about [suggested user ID naming convention](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
 | Braze user ID | Braze user identifier. |
 | User alias | An alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID.<br><br>The user alias object consists of two parts: an `alias_name` for the identifier itself and an `alias_label` indicating the type of alias. Users can have multiple aliases with different labels but only one `alias_name` per `alias_label`. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 4: Create a send event rule" }
 
 **Note:**
 
@@ -80,7 +80,7 @@ To tie the event to a user, you must fill in either the `External User ID` field
 | Event time | Date-time as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | Yes |
 | App identifier | The app identifier or `app_id` is a parameter associating activity with a specific app in your workspace. It designates which app within the workspace you are interacting with. | No |
 | Event Properties | A JSON object containing custom properties of the event. | No |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 4: Create a send event rule" }
 
 **Note:**
 
@@ -108,7 +108,7 @@ User attributes can be a JSON object containing fields that will create or updat
 | Time Zone | Time zone name from [IANA Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) database (for example, ’America/New_York’ or ’Eastern Time (US & Canada)’). |
 | Facebook | A hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
 | Twitter | Hash containing any of id (integer), `screen_name` (string, X (formerly Twitter) handle), `followers_count` (integer), `friends_count` (integer), `statuses_count`(integer). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 4: Create a send event rule" }
 
 **Note:**
 
@@ -134,7 +134,7 @@ After installing the extension, create a new event forwarding [rule](https://exp
 | External user ID | A long, random, and well-distributed UUID or GUID. If you choose a different method to name your user IDs, they must also be long, random, and well-distributed. Learn more about [suggested user ID naming convention](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
 | Braze user ID | Braze user identifier. |
 | User alias | An alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID.<br><br>The user alias object consists of two parts: an `alias_name` for the identifier itself and an `alias_label` indicating the type of alias. Users can have multiple aliases with different labels but only one `alias_name` per `alias_label`. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 5: Create a send purchase event rule" }
 
 **Note:**
 
@@ -155,7 +155,7 @@ To link the event to a user, you must complete either the `External User ID` fie
 | Quantity | The quantity purchased. If not provided, the default value will be 1. The maximum value must be lower than 100. | No |
 | App identifier | The app identifier or `app_id` is a parameter associating activity with a specific app in your workspace. It designates which app within the workspace you are interacting with. | No |
 | Purchase properties | A JSON object containing custom properties of the purchase. | No |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Step 5: Create a send purchase event rule" }
 
 **Note:**
 
@@ -185,7 +185,7 @@ User attributes can be a JSON object containing fields that will create or updat
 | Time zone | Time zone name from [IANA Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) database (for example, ’America/New_York’ or ’Eastern Time (US & Canada)’). |
 | Facebook | A hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
 | Twitter | Hash containing any of id (integer), `screen_name` (string, X (formerly Twitter) handle), `followers_count` (integer), `friends_count` (integer), `statuses_count`(integer). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 5: Create a send purchase event rule" }
 
 **Note:**
 

@@ -15,7 +15,7 @@ How you add a template depends on your goal:
 | Save a drag-and-drop layout for reuse | In the [drag-and-drop in-app message composer](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop/), select **Save as template** after you exit the editor (you must first launch the campaign OR save it as a draft). The template appears on **Templates** > **In-App Message Templates** for your next message. |
 | Create a color profile or CSS template (traditional editor) | On the **In-App Message Templates** page, select **+ Create**, then choose **Color Profile** or **CSS Template**. For details, see [Color profiles and CSS templates](#reusable-color-profiles). |
 | Customize a Braze template | [Create an in-app message](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop/) in the drag-and-drop editor, pick a Braze template, make your customizations, and select **Save as template**. For descriptions of each Braze template, see [In-app message templates](https://www.braze.com/docs/user_guide/messaging/templates/in_app_message_templates/). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 2: Choose how to create a template" }
 
 **Note:**
 

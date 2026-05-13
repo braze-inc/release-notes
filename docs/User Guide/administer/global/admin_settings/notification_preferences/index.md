@@ -45,7 +45,7 @@ If you delete the default **Recipients** value of **All Dashboard Users** and wa
 | Weekly Analytics Report | Sends a summary of the past week's workspace activity to recipients every Monday. Recipients receive a summary for each workspace that they belong to. | Email |
 | Daily Canvas/Campaign Entry Volume Limits | Sends notifications each time a send limit is reached. | Email |
 | Agents Console Error | Notifies recipients when an [Agent Console agent](https://www.braze.com/docs/user_guide/brazeai/agents) has met its execution limit with the current functionality or when an agent uses models that have become unavailable. | Email |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Available notifications" }
 
 **Note:**
 

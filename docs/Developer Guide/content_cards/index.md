@@ -73,7 +73,7 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 |---|---|
 |`parentNode` | The HTML node to render the Content Cards into. If the parent node already has a Braze Content Cards view as a direct descendant, the existing Content Cards will be replaced. For example, you should pass in `document.querySelector(".my-container")`.|
 |`filterFunction` | A filter or sort function for cards displayed in this view. Invoked with the array of `Card` objects, sorted by `{pinned, date}`. Expected to return an array of sorted `Card` objects to render for this user. If omitted, all cards will be displayed. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Standard feed UI" }
 
 [See the SDK reference docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards) for more information on Content Card toggling.
 
@@ -112,7 +112,7 @@ All Content Cards have these shared properties:
 | `updated` | The UNIX timestamp of when this card was last modified. |
 | `viewed` | This property reflects whether the user viewed the card or not.|
 | `isControl` | This property is `true` when a card is a "control" group within an A/B test.|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Base card model" }
 
 ### Image only
 
@@ -129,7 +129,7 @@ All Content Cards have these shared properties:
 | `imageUrl` | The URL of the card's image.|
 | `linkText` | The display text for the URL. |
 | `url` | The URL that will be opened after the card is clicked on. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Image only" }
 
 ### Captioned image
 
@@ -147,7 +147,7 @@ All Content Cards have these shared properties:
 | `linkText` | The display text for the URL. |
 | `title` | The title text for this card. |
 | `url` | The URL that will be opened after the card is clicked on. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Captioned image" }
 
 ### Classic
 
@@ -166,7 +166,7 @@ The [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.clas
 | `linkText` | The display text for the URL. |
 | `title` | The title text for this card. |
 | `url` | The URL that will be opened after the card is clicked on. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Classic" }
 
 ## Control group
 
@@ -187,7 +187,7 @@ Use these methods when displaying Content Cards using the Braze default feed UI:
 |[`showContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)| Displays the default Content Cards feed. Renders cards into a provided `parentNode` HTML element, or as a fixed-position sidebar on the right side of the page if no element is given. Accepts an optional `filterFunction` to sort or filter cards before display. |
 |[`hideContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#hidecontentcards)| Hides the default Content Cards feed if it is currently showing. |
 |[`toggleContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards)| Shows the default Content Cards feed if it is hidden, or hides it if it is visible. If you need to display multiple Content Card feeds simultaneously, use `showContentCards` and `hideContentCards` instead. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Default feed methods" }
 
 ### Custom feed methods
 
@@ -202,7 +202,7 @@ Use these methods when building your own Content Card UI:
 |[`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick)| Logs a click event for a single card. Call this when a user interacts with a card in your custom UI. Required for accurate campaign reporting, as clicks are not tracked automatically outside the default feed. |
 |[`handleBrazeAction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#handlebrazeaction)| Processes a card's URL and executes the configured on-click action, including Braze actions (`brazeActions://` URLs) and standard URL navigation. Call this in your card click handler to ensure on-click behaviors configured in the Braze dashboard are executed. |
 |[`dismissCard`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html#dismisscard)| Programmatically dismisses a card, removing it from the user's feed. Use this to allow users to dismiss cards in your custom UI. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Custom feed methods" }
 
 For more details, refer to the [SDK reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html).
 
@@ -427,7 +427,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 |`isClicked()` | Returns a boolean that reflects the clicked state of this card.|
 |`isDismissed` | Returns a boolean that reflects whether the card has been dismissed. Set to `true` to mark the card as dismissed. If a card is already marked as dismissed, it cannot be marked as dismissed again.|
 |`isControl()` | Returns a boolean if this card is a control card and should not be rendered.|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Base card model #base-card-for-android" }
 
 ### Image only {#banner-image-card-for-android}
 
@@ -438,7 +438,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 |`getImageUrl()` | Returns the URL of the card's image.|
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL.|
 |`getDomain()` | Returns link text for the property URL.|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Image only #banner-image-card-for-android" }
 
 ### Captioned image {#captioned-image-card-for-android}
 
@@ -451,7 +451,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 |`getDescription()` | Returns the body text for the card.|
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL.|
 |`getDomain()` | Returns the link text for the property URL. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Captioned image #captioned-image-card-for-android" }
 
 ### Classic {#text-Announcement-card-for-android}
 
@@ -465,7 +465,7 @@ A classic card without an image included will result in a [text announcement car
 |`getDomain()` | Returns the link text for the property URL. |
 |`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short News Card. |
 |`isDismissed` | Returns a boolean that reflects whether the card has been dismissed. Set to `true` to mark the card as dismissed. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Classic #text-Announcement-card-for-android" }
 
 ## Card methods
 
@@ -475,7 +475,7 @@ All [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sd
 |---|---|
 |`logImpression()` | Manually log an impression to Braze for a particular card. |
 |`logClick()` | Manually log a click to Braze for a particular card. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Card methods" }
 
 
 
@@ -601,7 +601,7 @@ Each card is initialized with a `Context` object, which contains various methods
 | `card.context?.logDismissed()`       | Log the content card dismissed event.                                                                                                    |
 | `card.context?.logError()`           | Log an error related to the content card.                                                                                                |
 | `card.context?.loadImage()`          | Load a given content card image from a URL. This method can be nil when the content card does not have an image.                         |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Card methods" }
 
 For more details, refer to the [`Context` class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw/context-swift.class)
 
@@ -628,7 +628,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 |`logContentCardClicked(cardId)`|Logs a click for the given Content Card ID.|
 |`logContentCardImpression(cardId)`|Logs an impression for the given Content Card ID.|
 |`logContentCardDismissed(cardId)`|Logs a dismissal for the given Content Card ID.|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Content Cards" }
 
 
 
@@ -651,7 +651,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 | `braze.logContentCardClicked(contentCard)`    | Logs a click for the given Content Card object.                                                            |
 | `braze.logContentCardImpression(contentCard)` | Logs an impression for the given Content Card object.                                                      |
 | `braze.logContentCardDismissed(contentCard)`  | Logs a dismissal for the given Content Card object.                                                        |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Card methods" }
 
 ## Receiving Content Card data
 
@@ -749,7 +749,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 | `logContentCardImpression(cardId)`       | Logs an impression for the given Content Card ID.                                                      |
 | `logContentCardDismissed(cardId)`        | Logs a dismissal for the given Content Card ID.                                                        |
 | `processContentCardClickAction(cardId)`  | Perform the action of a particular card.                                                               |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Cards methods" }
 
 ## Card types and properties
 
@@ -780,7 +780,7 @@ The base card model provides foundational behavior for all cards.
 |`openURLInWebView` | Whether URLs for this card should be opened in the Braze WebView or not.                                            |
 |`isControl`   | Whether this card is a control card. Control cards should not be displayed to the user.                                |
 |`extras`      | The map of key-value extras for this card.                                                                             |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Base card model" }
 
 For a full reference of the base card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct) documentation.
 
@@ -793,7 +793,7 @@ Image only cards are clickable, full-sized images.
 |`type`             | The Content Card type, `IMAGE_ONLY`.                                                                              |
 |`image`            | The URL of the card's image.                                                                                      |
 |`imageAspectRatio` | The aspect ratio of the card's image. It is meant to serve as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Image only" }
 
 For a full reference of the image only card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/imageonly-swift.struct) documentation.
 
@@ -809,7 +809,7 @@ Captioned image cards are clickable, full-sized images with accompanying descrip
 |`title`            | The title text for the card.                                                                                      |
 |`cardDescription`  | The description text for the card.                                                                                |
 |`domain`           | (Optional) The link text for the property URL, for example, `"braze.com/resources/"`. It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Captioned image" }
 
 For a full reference of the captioned image card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/captionedimage-swift.struct) documentation.
 
@@ -824,7 +824,7 @@ Classic cards have a title, description, and an optional image on the left of th
 |`title`            | The title text for the card.                                                                                      |
 |`cardDescription`  | The description text for the card.                                                                                |
 |`domain`           | (Optional) The link text for the property URL, for example, `"braze.com/resources/"`. It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Classic" }
 
 For a full reference of the classic (text announcement) Content Card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct) documentation. For the classic image (short news) card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct) documentation.
 
@@ -992,7 +992,7 @@ The Braze .NET MAUI SDK has three unique Content Cards card types that share a b
 |`isControlCard`    | Whether this card is a control card. Control cards should not be displayed to the user.                                |
 |`extras`           | The map of key-value extras for this card.                                                                             |
 |`isTest`           | Whether this card is a test card.                                                                                      |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Base card model" }
 
 For a full reference of the base card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct) documentation.
 
@@ -1004,7 +1004,7 @@ Banner cards are clickable, full-sized images.
 |-------------------|-------------------------------------------------------------------------------------------------------------------|
 |`image`            | The URL of the card's image.                                                                                      |
 |`imageAspectRatio` | The aspect ratio of the card's image. It is meant to serve as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Banner" }
 
 For a full reference of the banner card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/imageonly-swift.struct) documentation (now renamed to image only).
 
@@ -1019,7 +1019,7 @@ Captioned image cards are clickable, full-sized images with accompanying descrip
 |`title`            | The title text for the card.                                                                                      |
 |`cardDescription`  | The description text for the card.                                                                                |
 |`domain`           | (Optional) The link text for the property URL, for example, `"braze.com/resources/"`. It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Captioned image" }
 
 For a full reference of the captioned image card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/captionedimage-swift.struct) documentation.
 
@@ -1033,7 +1033,7 @@ Classic cards have a title, description, and an optional image on the left of th
 |`title`            | The title text for the card.                                                                                      |
 |`cardDescription`  | The description text for the card.                                                                                |
 |`domain`           | (Optional) The link text for the property URL, for example, `"braze.com/resources/"`. It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Classic" }
 
 For a full reference of the classic (text announcement) Content Card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct) documentation. For a full reference of the classic image (short news) card, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct) documentation.
 
@@ -1048,6 +1048,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 | `logContentCardClicked(cardId)`          | Logs a click for the given Content Card ID. This method is used only for analytics.                    |
 | `logContentCardImpression(cardId)`       | Logs an impression for the given Content Card ID.                                                      |
 | `logContentCardDismissed(cardId)`        | Logs a dismissal for the given Content Card ID.                                                        |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Card methods" }
 
 
 

@@ -1,4 +1,4 @@
-<div id='api_qxvlfmeuzzeb' class='api_div'>
+<div id='api_lxqxqnbnldlh' class='api_div'>
 <h1 id="delete-users">Delete users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/delete</p>
@@ -57,7 +57,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 <h3 id="request-parameters">Request parameters</h3>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>

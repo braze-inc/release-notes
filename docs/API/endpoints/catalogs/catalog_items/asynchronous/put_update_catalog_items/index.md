@@ -1,4 +1,4 @@
-<div id='api_lwxmjoewhoxd' class='api_div'>
+<div id='api_glrtgyvditaf' class='api_div'>
 <h1 id="replace-catalog-items">Replace catalog items</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/catalogs/{catalog_name}/items</p>
@@ -28,7 +28,7 @@
 
 <h2 id="path-parameters">Path parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Path parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -49,7 +49,7 @@
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -136,6 +136,10 @@
 
 <p>There are three status code responses for this endpoint: <code class="language-plaintext highlighter-rouge">202</code>, <code class="language-plaintext highlighter-rouge">400</code>, and <code class="language-plaintext highlighter-rouge">404</code>.</p>
 
+<p><strong>Note:</strong></p>
+
+<p>The system can also return a <code class="language-plaintext highlighter-rouge">400</code> response if your company has reached its catalog storage limit. The free version of catalogs is capped at 100 MB. For more information about storage tiers and how to upgrade, see <a href="/docs/user_guide/data/activation/catalogs#data-storage-limitations">Data storage limitations</a>.</p>
+
 <h3 id="example-success-response">Example success response</h3>
 
 <p>The status code <code class="language-plaintext highlighter-rouge">202</code> could return the following response body.</p>
@@ -188,7 +192,7 @@
 
 <p>The following table lists possible returned errors and their associated troubleshooting steps.</p>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Troubleshooting">
   <thead>
     <tr>
       <th>Error</th>
@@ -199,6 +203,14 @@
     <tr>
       <td><code class="language-plaintext highlighter-rouge">catalog-not-found</code></td>
       <td>Check that the catalog name is valid.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">company-size-limit-already-reached</code></td>
+      <td>The catalog storage size limit is reached. To learn about storage tiers, see <a href="/docs/user_guide/data/activation/catalogs#data-storage-limitations">Data storage limitations</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">company-size-limit-surge</code></td>
+      <td>The request exceeds your company’s remaining catalog storage. Try again with a smaller update. To learn about storage tiers, see <a href="/docs/user_guide/data/activation/catalogs#data-storage-limitations">Data storage limitations</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">ids-not-string</code></td>

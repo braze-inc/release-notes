@@ -116,7 +116,7 @@ The following tables are intended to be illustrative. For exact naming conventio
 | Twitter | Following |
 | Twitter | Number of tweets |
 | Facebook | Likes |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Non-billable data points (default)" }
 
 
 
@@ -173,7 +173,7 @@ table td {
 | Appsflyer cohort assignment | All assignments | |
 | Most recent location | All most recent locations | Entering or exiting geofences doesn't log data points because geofence data is not stored against the user profile. Geofences are monitored by Apple and Google location services; Braze only gets notified upon a user triggering a geofence. |
 | Twitter | Username | |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Billable data points" }
 
 
 

@@ -1,4 +1,4 @@
-<div id='api_ypfoqdubkrjh' class='api_div'>
+<div id='api_atqwmucxualx' class='api_div'>
 <h1 id="create-sdk-authentication-key">Create SDK Authentication key</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/app_group/sdk_authentication/create</p>
@@ -44,7 +44,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -114,7 +114,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="response-parameters">Response parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" aria-label="Response parameters">
   <thead>
     <tr>
       <th>Parameter</th>

@@ -15,7 +15,7 @@ Additionally, check punctuation and emojis to determine if your message is rende
 |------------------|------------------------|
 | Displays the exclamation point and emoji at the **end** of the sentences. | Displays the exclamation point and emoji at the **beginning** of the sentence. |
 | ![An example of a standard right-to-left messages.](https://www.braze.com/docs/assets/img/right-to-left/standard.png?421528a89a23c3493021714deb0f9ea6) | ![An example of a left-to-right messages.](https://www.braze.com/docs/assets/img/right-to-left/right-to-left.png?139bc385cd8ab3db45670155c9fdfe96) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Message appearance" }
 
 ## Creating a right-to-left message
 

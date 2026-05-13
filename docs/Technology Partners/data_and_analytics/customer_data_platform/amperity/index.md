@@ -4,7 +4,7 @@
 
 _This integration is maintained by Amperity._
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
 
 
 
@@ -24,7 +24,7 @@ The Braze and Amperity integration offers a unified view of your customers acros
 | Braze instance | Your Braze instance can be obtained from your Braze onboarding manager or be found on the [API overview page](https://www.braze.com/docs/api/basics#endpoints). |
 | Braze REST endpoint | Your Braze endpoint URL. Your endpoint will depend on your Braze instance. |
 | Currents connector (optional) | The S3 Currents connector. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Data mapping
 

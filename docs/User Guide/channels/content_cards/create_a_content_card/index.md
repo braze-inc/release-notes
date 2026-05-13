@@ -49,7 +49,7 @@ To learn more about the expected behavior and look of each type, refer to [Creat
 |[Classic](https://www.braze.com/docs/user_guide/channels/content_cards/creative_details/#classic)| ![A Classic Content Card with a small icon and text to encourage booking a workout class.](https://www.braze.com/docs/assets/img_archive/cc_steppington_classic.png?9ffb8f0de2d2dcb83eb0124cdc23b7db) |The Classic Card has a straightforward layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It's best to use a square image or icon with the Classic Card. |
 |[Captioned Image](https://www.braze.com/docs/user_guide/channels/content_cards/creative_details/#captioned-image)| ![A Captioned Content Card with a image of a weightlifter and text to encourage booking a workout class.](https://www.braze.com/docs/assets/img_archive/cc_steppington_captioned.png?d2b08a241ce25cbba7e9ea0fa922a559) | The Captioned Image Card showcases your content with copy and an attention-grabbing image. |
 |[Image Only](https://www.braze.com/docs/user_guide/channels/content_cards/creative_details/#banner)| ![An Image Only Content Card with text only.](https://www.braze.com/docs/assets/img_archive/cc_steppington_banner.png?050e2684aa0891ba1c88d26f27c58a1e) | The Image Only Card commands attention with space for images, GIFs, and other creative non-text content. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Step 2: Specify your message types" }
 
 ## Step 3: Compose a Content Card
 
@@ -137,7 +137,7 @@ The following actions are available for Content Card links:
 | [Deep Link into App](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls/#deep-link-to-in-app-content) | Deep link into an existing screen in your app. |
 | Log Custom Event | Choose a [custom event](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/) to trigger. Can be used to display another Content Card or trigger additional messaging. |
 | Log Custom Attribute | Choose a [custom attribute](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes/) to set for the current user. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="On-click behavior" }
 
 The **Log Custom Event** and **Log Custom Attribute** options require the following SDK version compatibility:
 

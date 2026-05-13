@@ -244,7 +244,7 @@ To set up a subscription for your users (either email or push), call the functio
 | `braze.User.NotificationSubscriptionTypes.OPTED_IN` | Subscribed, and explicitly opted in |
 | `braze.User.NotificationSubscriptionTypes.SUBSCRIBED` | Subscribed, but not explicitly opted in |
 | `braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED` | Unsubscribed and/or explicitly opted out |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Setting user subscriptions" }
 
 When a user is registered for push, the browser forces them to choose to allow or block notifications, and if they choose to allow push, they are set `OPTED_IN` by default. 
 
@@ -681,7 +681,7 @@ To set up a subscription for your users (either email or push), call the functio
 | `OPTED_IN` | Subscribed, and explicitly opted in |
 | `SUBSCRIBED` | Subscribed, but not explicitly opted in |
 | `UNSUBSCRIBED` | Unsubscribed and/or explicitly opted out |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Setting user subscriptions" }
 
 **Important:**
 
@@ -1030,7 +1030,7 @@ To set up a subscription for your users (either email or push), call the functio
 | `optedIn` | Subscribed, and explicitly opted in |
 | `subscribed` | Subscribed, but not explicitly opted in |
 | `unsubscribed` | Unsubscribed and/or explicitly opted out |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Setting user subscriptions" }
 
 Users who grant permission for an app to send them push notifications default to the status of `optedIn` as iOS requires an explicit opt-in.
 
@@ -1364,7 +1364,7 @@ You can set the following email subscription statuses for your users programmati
 | `OptedIn` | Subscribed, and explicitly opted in |
 | `Subscribed` | Subscribed, but not explicitly opted in |
 | `UnSubscribed` | Unsubscribed and/or explicitly opted out |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Setting email subscriptions" }
 
 **Note:**
 
@@ -1580,7 +1580,7 @@ Both functions take `Appboy.Models.AppboyNotificationSubscriptionType` as argume
 | `OPTED_IN` | Subscribed, and explicitly opted in |
 | `SUBSCRIBED` | Subscribed, but not explicitly opted in |
 | `UNSUBSCRIBED` | Unsubscribed and/or explicitly opted out |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Setting user subscriptions" }
 
 **Note:**
 
@@ -1593,7 +1593,7 @@ No explicit opt-in is required by Windows to send users push notifications. When
 |------------------------------------------|-------------|
 | `EmailNotificationSubscriptionType`      | Users will be set to `SUBSCRIBED` automatically upon receipt of a valid email address. However, we suggest that you establish an explicit opt-in process and set this value to `OPTED_IN` upon receipt of explicit consent from your user. Visit our [Changing User Subscriptions](https://www.braze.com/docs/user_guide/administrative/manage_your_users/managing_user_subscriptions/#changing-subscriptions) doc for more details. |
 | `PushNotificationSubscriptionType`       | Users will be set to `SUBSCRIBED` automatically upon valid push registration. However, we suggest that you establish an explicit opt-in process and set this value to `OPTED_IN` upon receipt of explicit consent from your user. Visit our [Changing User Subscriptions](https://www.braze.com/docs/user_guide/administrative/manage_your_users/managing_user_subscriptions/#changing-subscriptions) doc for more details. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Setting user subscriptions" }
 
 **Note:**
 

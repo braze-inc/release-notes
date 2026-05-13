@@ -1,4 +1,4 @@
-<div id='api_usrycnardsoa' class='api_div'>
+<div id='api_hlkfpqfggvht' class='api_div'>
 <h1 id="list-available-content-blocks">List available Content Blocks</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/content_blocks/list</p>
@@ -25,7 +25,7 @@
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -107,7 +107,7 @@
 
 <p>The following table lists possible returned errors and their associated troubleshooting steps.</p>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Troubleshooting">
   <thead>
     <tr>
       <th>Error</th>

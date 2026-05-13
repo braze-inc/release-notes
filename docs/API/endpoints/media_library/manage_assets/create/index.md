@@ -1,4 +1,4 @@
-<div id='api_vvbbngoixkoo' class='api_div'>
+<div id='api_dzpvjhkbrndz' class='api_div'>
 <h1 id="upload-an-asset-to-the-media-library">Upload an asset to the media library</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/media_library/create</p>
@@ -56,7 +56,7 @@
 
 <p>The request body includes the following parameters:</p>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request body">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -97,7 +97,7 @@
 
 <h4 id="single-file-uploads">Single file uploads</h4>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation" style="table-layout: fixed; width: 100%;">
+<table class="reset-td-br-1 reset-td-br-2" style="table-layout: fixed; width: 100%;" aria-label="Single file uploads">
   <thead>
     <tr>
       <th>Scenario</th>
@@ -118,7 +118,7 @@
 
 <h4 id="zip-file-uploads">ZIP file uploads</h4>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation" style="table-layout: fixed; width: 100%;">
+<table class="reset-td-br-1 reset-td-br-2" style="table-layout: fixed; width: 100%;" aria-label="ZIP file uploads">
   <thead>
     <tr>
       <th>Scenario</th>
@@ -183,7 +183,7 @@
 
 <p>This table lists possible validation errors.</p>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" aria-label="Validation errors">
   <thead>
     <tr>
       <th>HTTP Status</th>
@@ -228,7 +228,7 @@
 
 <p>This table lists possible processing errors.</p>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" aria-label="Processing errors">
   <thead>
     <tr>
       <th>Error Code</th>

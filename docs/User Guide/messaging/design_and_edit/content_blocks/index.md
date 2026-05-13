@@ -35,7 +35,7 @@ Each drag-and-drop Content Block is limited to one row. However, you can use dra
 | Content Size | Maximum of 50 KB. |
 | Placement | Content Blocks cannot be used within an email footer, but you can [create a Content Block that includes a footer](#email-footers) for use in your emails. |
 | Creation | HTML editor or drag-and-drop editor. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Content Block specifications" }
 
 **Tip:**
 

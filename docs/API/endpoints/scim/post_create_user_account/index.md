@@ -1,4 +1,4 @@
-<div id='api_fzjjjqjoycfx' class='api_div'>
+<div id='api_edduwtcoupoa' class='api_div'>
 <h1 id="create-new-dashboard-user-account">Create new dashboard user account</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/scim/v2/Users</p>
@@ -116,7 +116,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -385,7 +385,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 
 <h2 id="response-parameters">Response parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" aria-label="Response parameters">
   <thead>
     <tr>
       <th>Parameter</th>

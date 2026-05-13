@@ -19,7 +19,7 @@ Decisioning Studio supports multiple integration patterns for connecting custome
 | **Braze Cloud Data Ingestion (CDI)** | Connecting external data warehouses | Medium |
 | **Cloud Storage (GCS, AWS, Azure)** | Direct data exports from other platforms | Medium |
 | **CEP integrations** | SFMC, Klaviyo data extensions | Medium |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Supported integration patterns" }
 
 ## Customer data types
 
@@ -31,7 +31,7 @@ The following customer data assets help agents personalize more effectively:
 | **Customer behavior** | Activity and engagement patterns | Account logins, device type, customer service interactions, product usage |
 | **Transaction history** | Purchase and conversion data | Products purchased, transaction amounts, payment methods, purchase channels |
 | **Marketing engagement** | Responses to communications | Email opens/clicks, SMS engagement, web and mobile activity, survey responses |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Customer data types" }
 
 **Tip:**
 

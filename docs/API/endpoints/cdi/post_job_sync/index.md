@@ -1,4 +1,4 @@
-<div id='api_loxxizcebdqc' class='api_div'>
+<div id='api_tlgdosmofvki' class='api_div'>
 <h1 id="trigger-a-sync">Trigger a sync</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/cdi/integrations/{integration_id}/sync</p>
@@ -24,7 +24,7 @@
 
 <h2 id="path-parameters">Path parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Path parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -71,7 +71,7 @@
 
 <p>The following table lists possible returned errors and their associated troubleshooting steps.</p>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Troubleshooting">
   <thead>
     <tr>
       <th>Error</th>

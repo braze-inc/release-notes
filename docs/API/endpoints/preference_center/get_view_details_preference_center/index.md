@@ -1,4 +1,4 @@
-<div id='api_iuxuudkpenvg' class='api_div'>
+<div id='api_pgwrsyvuamfe' class='api_div'>
 <h1 id="view-details-for-preference-center">View details for preference center</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/preference_center/v1/{preferenceCenterExternalID}</p>
@@ -26,7 +26,7 @@
 
 <h2 id="path-parameters">Path parameters</h2>
 
-<table role="presentation">
+<table aria-label="Path parameters">
   <thead>
     <tr>
       <th>Parameter</th>

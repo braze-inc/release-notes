@@ -1,6 +1,6 @@
 # AppsFlyer
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
 
 
 
@@ -19,7 +19,7 @@ You can also pass your AppsFlyer audiences (cohorts) directly to Braze with the 
 | AppsFlyer SDK | In addition to the required Braze SDK, you must install the [AppsFlyer SDK](https://dev.appsflyer.com/hc/docs/getting-started).
 | Email domain setup complete | You must have completed the [IP and domain setup step](https://www.braze.com/docs/user_guide/channels/email/email_setup/setting_up_ips_and_domains/) of setting up your email during Braze onboarding. |
 | SSL certificate | Your [SSL certificate](https://www.braze.com/docs/user_guide/message_building_by_channel/email/email_setup/ssl#acquiring-an-ssl-certificate) must be configured. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Integration
 
@@ -123,7 +123,7 @@ If your integration was successful, Braze maps all non-organic install data to s
 | `campaign` | Attributed Campaign |
 | `af_adset` | Attributed Adgroup |
 | `af_ad` | Attributed Ad |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Available data fields" }
 
 You can segment your user base by attribution data in the Braze dashboard using the Install Attribution filters.
 

@@ -1,4 +1,4 @@
-<div id='api_kwmrywkgqlcw' class='api_div'>
+<div id='api_qgtocqqtlitf' class='api_div'>
 <h1 id="update-live-activity">Update Live Activity</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/live_activity/update</p>
@@ -61,7 +61,7 @@
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>

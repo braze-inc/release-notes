@@ -51,7 +51,7 @@ After validating your experiment design, gather the following details to set up 
 |-----|---------------|
 | **Braze** | Campaigns and Canvases |
 | **Salesforce Marketing Cloud** | Journeys only |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Required information" }
 
 **Audience ID from your CEP:**
 
@@ -59,7 +59,7 @@ After validating your experiment design, gather the following details to set up 
 |-----|---------------|
 | **Braze** | Segments only |
 | **Salesforce Marketing Cloud** | Data Extensions only |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Required information" }
 
 If you don't have an existing audience that tracks your BAU audience, you must create one.
 

@@ -28,7 +28,7 @@ Scan a QR code that includes all details required to initialize the SDK, create 
 | Pilot for Android | Pilot for iOS |
 | --- | --- |
 | ![QR code for Android.](https://www.braze.com/docs/assets/img/braze_pilot/android_qr_code.png?5178cdbfb13ace7b6f74d54020e24d0d){:style="max-width:60%"} | ![QR code for iOS.](https://www.braze.com/docs/assets/img/braze_pilot/ios_qr_code.png?cfc5f120c94f648ccfd9eceb919a6e93){:style="max-width:60%"} |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Method 1: Demo QR codes" }
 
 
 

@@ -187,7 +187,7 @@ Enter the minimum required information:
 | **API Key**   | Your [Braze API Key](https://www.braze.com/docs/api/basics/#about-rest-api-keys), found in the Braze dashboard under **Settings** > **App Settings**. |
 | **API Endpoint** | Your REST endpoint URL. Your endpoint will depend on the Braze URL for [your instance](https://www.braze.com/docs/api/basics/#endpoints). |
 | **SDK Version**  | The most recent `MAJOR.MINOR` version of the Web Braze SDK listed in the [changelog](https://www.braze.com/docs/developer_guide/changelogs/?sdktab=web). For example, if the latest version is `4.1.2`, enter `4.1`. For more information, see [About SDK version management](https://www.braze.com/docs/developer_guide/sdk_integration/version_management/). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 3: Configure the tag" }
 
 For additional initialization settings, select **Braze Initialization Options** and choose any options you need.
 
@@ -213,6 +213,7 @@ The Braze Initialization Tag exposes the following options. Most of these map di
 | **Open Cards in New Tab** | `openCardsInNewTab` | Opens Content Card links in a new tab when using the default Feed UI. |
 | **Service Worker Location** | `serviceWorkerLocation` | Custom path for the service worker file (default: `/service-worker.js`). |
 | **Session Timeout (seconds)** | `sessionTimeoutInSeconds` | Session timeout in seconds (default: 1800). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Step 4: Choose initialization options" }
 
 **Note:**
 
@@ -1208,7 +1209,7 @@ Replace `MIN_LOG_LEVEL` with the **Constant** of the log level you'd like to set
 | `WARN`      | 5              | Logs warning messages for identifying potentially harmful situations.     |
 | `ERROR`     | 6              | Logs error messages for indicating application failure or serious issues. |
 | `ASSERT`    | 7              | Logs assertion messages when conditions are false during development.     |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Enabling logs" }
 
 For example, the following code will forward log levels `2`, `3`, `4`, `5`, `6`, and `7` to the `Log` method.
 
@@ -1244,7 +1245,7 @@ Replace `MIN_LOG_LEVEL` with the **Value** of the log level you'd like to set as
 | `WARN`      | 5              | Logs warning messages for identifying potentially harmful situations.     |
 | `ERROR`     | 6              | Logs error messages for indicating application failure or serious issues. |
 | `ASSERT`    | 7              | Logs assertion messages when conditions are false during development.     |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Enabling logs" }
 
 For example, the following code will forward log levels `2`, `3`, `4`, `5`, `6`, and `7` to the `Log` method.
 
@@ -1386,6 +1387,7 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 | `BrazeKit`      | Main SDK library providing support for analytics and push notifications.                                                                                        |
 | `BrazeLocation` | Location library providing support for location analytics and geofence monitoring.                                                                              |
 | `BrazeUI`       | Braze-provided user interface library for in-app messages, Content Cards, and Banners. Import this library if you intend to use the default UI components. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 1.2: Select your packages" }
 
 {: .ws-td-nw-1}
 
@@ -1402,6 +1404,7 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 | -------------------------- | ------------------------------------------------------------------------------------- |
 | `BrazeNotificationService` | Notification service extension library providing support for rich push notifications. |
 | `BrazePushStory`           | Notification content extension library providing support for Push Stories.            |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="About Extension libraries" }
 
 {: .ws-td-nw-1}
 
@@ -1452,6 +1455,7 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `pod 'BrazeLocation'` | Location library providing support for location analytics and geofence monitoring.                                                                              |
 | `pod 'BrazeUI'`       | Braze-provided user interface library for in-app messages, Content Cards, and Banners. Import this library if you intend to use the default UI components. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="About additional libraries" }
 
 {: .ws-td-nw-1}
 
@@ -1463,6 +1467,7 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 | -------------------------------- | ------------------------------------------------------------------------------------- |
 | `pod 'BrazeNotificationService'` | Notification service extension library providing support for rich push notifications. |
 | `pod 'BrazePushStory'`           | Notification content extension library providing support for Push Stories.            |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Extension libraries" }
 
 {: .ws-td-nw-1}
 
@@ -1507,8 +1512,9 @@ The Braze Swift SDK contains a variety of standalone XCFrameworks, which gives y
 | `BrazeKitCompat`           | No        | Compatibility library containing all the `Appboy` and `ABK*` classes and methods that were available in the `Appboy-iOS-SDK` version 4.X.X. For usage details, refer to the minimal migration scenario in the [migration guide](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/).            |
 | `BrazeUICompat`            | No        | Compatibility library containing all the `ABK*` classes and methods that were available in the `AppboyUI` library from `Appboy-iOS-SDK` version 4.X.X. For usage details, refer to the minimal migration scenario in the [migration guide](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/). |
 | `SDWebImage`               | No        | Dependency used only by `BrazeUICompat` in the minimal migration scenario.                                                                                                                                                                                                                                                           |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Step 1.2: Choose your frameworks" }
 
-{: .ws-td-nw-1 .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .ws-td-nw-1 .reset-td-br-1 .reset-td-br-2 aria-label="Step 1.2: Choose your frameworks" }
 
 #### Step 1.3: Prepare your files
 
@@ -1854,8 +1860,9 @@ The default log level for the Braze Swift SDK is `.error`&#8212;it's also the mi
 | `.info`     | `BRZLoggerLevelInfo`     | Log general SDK information (user changes, etc.) + `.error`. |
 | `.error`    | `BRZLoggerLevelError`    | Log errors.                                                  |
 | `.disabled` | `BRZLoggerLevelDisabled` | No logging occurs.                                           |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Log levels" }
 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Log levels" }
 
 #### Setting the log level
 
@@ -1959,7 +1966,7 @@ Replace the following:
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | `BRAZE_API_KEY`       | Your [Braze REST API key](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys).              |
 | `CUSTOM_API_ENDPOINT` | A custom API endpoint. This endpoint is used to route your Braze instance data to the correct App Group in your Braze dashboard. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 2: Configure your project" }
 
 The `platform` element in your `config.xml` file should be similar to the following:
 
@@ -2066,7 +2073,7 @@ You can add any of the following preferences to the `platform` element in your p
 | `ios_flush_interval_seconds`                      | Sets the interval in seconds between automatic data flushes. Defaults to 10 seconds.                                                                                                                                                                  |
 | `ios_use_automatic_request_policy`                | Sets whether the request policy for `Braze.Configuration.Api` should be automatic or manual.                                                                                                                                                          |
 | `should_opt_in_when_push_authorized`              | Sets if a user’s notification subscription state should automatically be set to `optedIn` when push permissions are authorized.                                                                                                                       |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Optional configurations #optional" }
 
 **Tip:**
 
@@ -2105,7 +2112,7 @@ For more detailed information, see [GitHub: Braze iOS Cordova plugin](https://gi
 | `is_push_deep_link_back_stack_activity_enabled`                   | Sets whether Braze will add an activity to the back stack when automatically following deep links for push.                                                                                   |
 | `push_deep_link_back_stack_activity_class_name`                   | Sets the activity that Braze will add to the back stack when automatically following deep links for push.                                                                                     |
 | `should_opt_in_when_push_authorized`                              | Sets if Braze should automatically opt-in the user when push is authorized.                                                                                                                   |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Optional configurations #optional" }
 
 **Tip:**
 
@@ -2205,7 +2212,7 @@ Before you integrate the Braze Flutter SDK, you'll need to complete the followin
 | Braze API app identifier | To locate your app's identifier, go to **Settings** > **APIs and Identifiers** > **App Identifiers**. For more information see, [API Identifier Types](https://www.braze.com/docs/api/identifier_types/#app-identifier).|
 | Braze SDK endpoint | Your SDK endpoint URL (for example, `sdk.<cluster>.braze.com`). Your endpoint will depend on the [Braze URL for your instance](https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints).|
 | Flutter SDK | Install the official [Flutter SDK](https://docs.flutter.dev/get-started/install) and ensure it meets the Braze Flutter SDK's [minimum supported version](https://github.com/braze-inc/braze-flutter-sdk#requirements). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ### Step 1: Integrate the Braze library
 
@@ -2642,7 +2649,7 @@ In your `app.json`, add the Braze Expo plugin. The API key and endpoint are no l
 | `iosPushStoryAppGroup`                        | string  | iOS only. The app group used for iOS Push Stories.                                                                                                       |
 | `iosUseUUIDAsDeviceId`                        | boolean | iOS only. Whether the device ID uses a randomly generated UUID.                                                                                       |
 | `iosForwardUniversalLinks`                    | boolean | iOS only. Specifies if the SDK should automatically recognize and forward universal links to the system methods (default: `false`). |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="2.2 Add the plugin to your app.json" }
 
 The following code snippet shows an example `app.json` configuration:
 
@@ -3013,7 +3020,7 @@ In your `app.json`, add the Braze Expo plugin. You can provide the following con
 | `iosPushStoryAppGroup`                        | string  | iOS only. The app group used for iOS Push Stories.                                                                                                       |
 | `iosUseUUIDAsDeviceId`                        | boolean | iOS only. Whether the device ID will use a randomly generated UUID.                                                                                       |
 | `iosForwardUniversalLinks`                    | boolean | iOS only. Specifies if the SDK should automatically recognize and forward universal links to the system methods (default: `false`). When enabled, the SDK will automatically forward universal links to the system methods defined in [Supporting universal links in your app](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/forwarduniversallinks/). Introduced in React Native SDK v11.1.0 and Expo Plugin v3.2.0. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Step 2.2: Add the plugin to your app.json" }
 
 The following code snippet shows an example `app.json` configuration:
 

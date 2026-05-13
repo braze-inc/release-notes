@@ -263,7 +263,7 @@ Braze.configure(this, brazeConfig)
 
 Currently, Google doesn't list their supported HTML tags for Android directly in their documentation&#8212;this information can only be found in their [Git repository's `Html.java` file](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/text/Html.java). Keep this in mind when referencing the following table, as this information was pulled from this file, and their supported HTML tags could be subject to change.
 
-<table>
+<table aria-label="Supported HTML tags">
   <thead>
     <tr>
       <th>Category</th>
@@ -352,7 +352,7 @@ Currently, Google doesn't list their supported HTML tags for Android directly in
     </tr>
   </tbody>
 </table>
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Supported HTML tags" }
 
 ## Rendering inline images
 
@@ -439,7 +439,7 @@ The priority levels that you can set on Android or Fire OS push notifications ar
 | Default  | Most notifications - use if your message doesn't explicitly fall under any of the other priority types | `0` |
 | Low      | Information that you want users to know about but does not require immediate action | `-1` |
 | Min      | Contextual or background information. | `-2` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Notification display priority #notification-priority" }
 
 For more information, refer to Google's [Android notification](http://developer.android.com/design/patterns/notifications.html) documentation.
 
@@ -819,7 +819,7 @@ The priority levels that you can set on Fire OS push notifications are:
 | Default  | Most notifications - use if your message doesn't explicitly fall under any of the other priority types | `0` |
 | Low      | Information that you want users to know about but does not require immediate action | `-1` |
 | Min      | Contextual or background information. | `-2` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Notification display priority" }
 
 For more information, refer to Google's [Android notification](http://developer.android.com/design/patterns/notifications.html) documentation.
 
@@ -855,7 +855,7 @@ The following table shows which features require native configuration:
 | Custom notification factory | N/A | Configure in native Java/Kotlin |
 | Badge customization | Configure in native Swift/Objective-C | N/A |
 | Custom sounds | Configure in native Swift/Objective-C | Configure in native Java/Kotlin |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Push customization in React Native" }
 
 ### iOS customization
 

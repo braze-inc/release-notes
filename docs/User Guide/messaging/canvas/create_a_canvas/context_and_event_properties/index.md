@@ -51,7 +51,7 @@ Refer to the following table for a summary of differences between context and ev
 | **Liquid** | `context` | `event_properties` |
 | **Persistence** | Can be referenced by all [Message](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step/) steps for the duration of a Canvas built using Canvas. | - Can only be referenced once. <br> - Cannot be referenced by any subsequent Message steps. |
 | **Canvas behavior** | Can reference `context` in any step of a Canvas. For post-launch behavior, refer to [Editing Canvases after launch](https://www.braze.com/docs/post-launch_edits#canvas-entry-properties). | - Can reference `event_properties` in the first Message step **after** an [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths/) step where the action taken is a custom event or purchase event. <br> - Cannot be after the Everyone Else path of the Action Paths step. <br> - Can have other non-Message components in between the Action Paths and Message steps. If one of these non-Message components is an Action Paths step, the user can go through that action path's Everyone Else path. | 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Context and event properties" }
 
 **Original Canvas editor details**
 

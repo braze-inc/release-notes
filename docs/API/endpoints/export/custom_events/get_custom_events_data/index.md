@@ -1,4 +1,4 @@
-<div id='api_nnofinndusel' class='api_div'>
+<div id='api_zwreyhwyjloo' class='api_div'>
 <h1 id="export-custom-events">Export custom events</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/events</p>
@@ -26,7 +26,7 @@
 
 <p>Note that each call to this endpoint will return 50 events. For more than 50 events, use the <code class="language-plaintext highlighter-rouge">Link</code> header to retrieve the data on the next page as shown in the following example response.</p>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Query parameters">
   <thead>
     <tr>
       <th>Parameter</th>

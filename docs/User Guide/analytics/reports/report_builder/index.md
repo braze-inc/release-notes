@@ -4,7 +4,7 @@
 
 The following video provides an overview of how to create and customize reports in Report Builder.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
 
 
 
@@ -95,7 +95,7 @@ If you want to report on Canvas variants or steps, select **Canvases** for rows 
 | Total Revenue | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. Unavailable with **Channels** drilldown. |
 | Unique Impressions | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. |
 | Unique Recipients | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. Unavailable with **Channels** drilldown. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Metrics availability" }
 
 ### Deleted message variants
 

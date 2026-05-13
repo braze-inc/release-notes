@@ -51,7 +51,7 @@ A KakaoTalk text message is the simplest form of communication: a standard text 
 | Content | Text content, including emojis and Liquid personalization |
 | Text capacity | Up to 1,000 characters |
 | Buttons | Up to 5 optional buttons. Currently, this can only be used to open a URL on click. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Specifications" }
 
 ![A KakaoTalk text message in the composer.](https://www.braze.com/docs/assets/img/kakaotalk/kakaotalk_text.png?d74ff0ac221b68e3225abc887003ac6d)
 
@@ -69,7 +69,7 @@ An image is a message that combines a visual element with supporting text. Braze
 | Recommended width | 500px |
 | File size | Up to 500kb |
 | Aspect ratio | Must be between 2:1 (wide) and 3:4 (tall) |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="General specifications" }
 
 Narrow and wide image messages each have different character count and button considerations.
 
@@ -89,7 +89,7 @@ A narrow image message features a slightly taller, narrow image and more extensi
 | Buttons | Up to 5 optional buttons |
 | Image source | Images can be added using the Braze media library or a direct URL |
 | Customization | You can specify the on-click behavior for the image |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Specifications" }
 
 ![A KakaoTalk narrow message.](https://www.braze.com/docs/assets/img/kakaotalk/narrow_image.png?05996289532b2f862bcb138bd5349697)
 
@@ -109,7 +109,7 @@ A wide image message features a prominent wide image suitable for high-impact vi
 | Buttons | Up to 2 optional buttons |
 | Image source | Images can be added using the Braze media library or a direct URL |
 | Customization | You can specify the on-click behavior of the image |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Specifications" }
 
 ![A KakaoTalk wide message.](https://www.braze.com/docs/assets/img/kakaotalk/wide_image.png?cc34a0abe27faa0167d07982b3019022)
 
@@ -141,7 +141,7 @@ List item messages consist of a header, an item list section, and an optional bu
 | Header | Up to 250 characters |
 | Item title | Up to 25 characters |
 | Website URL (per item)| Up to 250 characters |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Specifications" }
 
 ![A KakaoTalk list item message.](https://www.braze.com/docs/assets/img/kakaotalk/item_list.png?0b33c78fb988fdca71c1151aaa799c8d)
 

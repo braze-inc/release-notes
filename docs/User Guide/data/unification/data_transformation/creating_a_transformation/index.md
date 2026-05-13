@@ -8,7 +8,7 @@
 | --- | --- |
 | Two-factor authentication or SSO | You must have [two-factor authentication](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings/#two-factor-authentication) (2FA) or [single sign-on](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings/#single-sign-on-sso-authentication) (SSO) enabled for your account. |
 | Correct permissions | You must be either an account admin or a workspace admin, or have "Manage Transformations" user permissions. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Prerequisites" }
 
 ## Step 1: Identify a source platform
 

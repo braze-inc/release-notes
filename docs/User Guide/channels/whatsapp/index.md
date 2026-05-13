@@ -22,7 +22,7 @@ For a full walkthrough, refer to [WhatsApp setup](https://www.braze.com/docs/use
 | Appointment reminders | Reduce no-shows with timely appointment reminders and allow customers to confirm or reschedule. |
 | Promotional campaigns | Reach customers with targeted promotions, product launches, and personalized offers through rich media messages. |
 | Two-way conversations | Build deeper relationships with interactive messaging that lets customers respond, ask questions, and provide feedback. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Use cases" }
 
 ## Next steps
 

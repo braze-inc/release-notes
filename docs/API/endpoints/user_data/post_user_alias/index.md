@@ -1,4 +1,4 @@
-<div id='api_knnkuhhzhgbn' class='api_div'>
+<div id='api_vqvefulookhm' class='api_div'>
 <h1 id="create-new-user-alias">Create new user alias</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/alias/new</p>
@@ -54,7 +54,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <h3 id="request-parameters">Request parameters</h3>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>

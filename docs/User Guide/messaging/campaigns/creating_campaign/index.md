@@ -87,7 +87,7 @@ Use the following fields to record metadata that helps your team find and manage
 | Team | Optional. Assign [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams/) so the right groups can edit or report on this send. |
 | Tags | Optional. Add [tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags/) to filter in lists and tools such as [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder/). |
 | Campaign ID | Where shown in the composer or summary, copy this identifier for API calls, reporting, and integrations that reference a specific campaign. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Campaign details" }
 
 ### Channels and editors
 
@@ -113,7 +113,7 @@ Choose when users become eligible to receive the campaign:
 | [Scheduled delivery](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/scheduled_delivery/) | Send at a specified time or cadence. |
 | [Action-based delivery](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/) | Send when users perform behaviors or meet conditions you define. |
 | [API-triggered delivery](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery/) | Send when your systems call Braze to trigger the campaign for eligible users. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 2: Schedule delivery #step-2-schedule-delivery" }
 
 For scheduling concepts across Braze, see [Schedule your campaign](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/).
 

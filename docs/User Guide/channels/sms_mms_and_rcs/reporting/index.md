@@ -41,7 +41,7 @@ The following table summarizes what each label means.
 | --- | --- |
 | **Estimated Audience** | Braze does not run a full-database count by default. Audience size is estimated from a sample and extrapolated, similar to the **Reachable users** range in the segment builder. Margins of error are expected, especially for large workspaces or small segments as a share of the workspace. |
 | **Current Audience** | Braze can compute the default statistic with a full scan of workspace profiles, so the displayed audience size is a current, unsampled count (still subject to channel reachability, subscription rules, and other targeting options). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Estimated Audience and Current Audience" }
 
 For details on sampling behavior, **Calculate exact statistics**, and segmenting **Reachable users**, see [Measure segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size/).
 
@@ -117,7 +117,7 @@ You can track SMS opt-ins and opt-outs with the following methods:
 | Segmenter | The segmenter displays the number of users in a specific [Subscription Group](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters/#subscription-group). It does not deduplicate by phone number—if multiple users share the same phone number, each instance is counted separately. |
 | Subscription group timeseries | Provides a daily snapshot of subscriptions for email and phone numbers. The timeseries counts subscriptions, unsubscribes, and resubscribes. For example, if a user subscribes, unsubscribes, and then resubscribes, they are counted as one subscribed user. |
 | Currents | Use Currents to export [subscription and engagement events](https://www.braze.com/docs/message_events_glossary/) for your own reporting. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Track SMS opt-ins and opt-outs" }
 
 **Note:**
 
@@ -310,7 +310,7 @@ This table reflects Braze billing, not your provider's billing. Outcomes that ar
 
 
  | Charges may apply based on individual message sending outcomes |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Charges applied to SMS sending outcomes" }
 
 ## Reconcile *Rejections* with Snowflake or Currents
 

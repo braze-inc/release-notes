@@ -24,7 +24,7 @@ The following use cases showcase a few ways to leverage custom agents.
 | Customer feedback handling | Pass user feedback to an agent to analyze sentiment and generate empathetic follow-up messages. For high-value users, the agent might escalate the response or include perks. |
 | Localize content | Translate catalog text into another language for global campaigns, or adjust tone and length for region-specific channels. For example, translate “Classic Clubmaster Sunglasses” into Spanish as “Gafas de sol Classic Clubmaster,” or shorten descriptions for SMS campaigns. |
 | Summarize reviews or feedback | Summarize sentiment or feedback into a new field, such as assigning sentiment scores like Positive, Neutral, or Negative, or creating a short text summary like “Most customers mention great fit, but note slow shipping.” |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="How it works" }
 
 ## Create an agent
 
@@ -61,18 +61,15 @@ For Canvas agents, you can use Liquid in your instructions to reference user att
 
 
 
-#### Step 3.1: Add resources {#add-resources}
+#### Add context {#add-resources}
 
-Select **Add resources** to choose what your agent can reference. This includes:
+Select **+ Agent context** to choose what your agent can reference. This includes:
 
 - [Catalog fields](https://www.braze.com/docs/user_guide/brazeai/agents/reference/#catalogs-and-fields): Give the agent access to your catalog data for more accurate responses.
 - [Segment membership](https://www.braze.com/docs/user_guide/brazeai/agents/reference/#segment-membership-context): Let the agent personalize responses based on which segments a user belongs to. You can select up to five segments.
 - [Brand guidelines](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/brand_guidelines/): Reference the brand voice and style guidelines for the agent to follow. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
 - [All Canvas Context](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables): Analyze all Canvas context data for a user when this agent is invoked, including any variables that are not referenced in the **Instructions** section.
-
-#### Step 3.2: Add optional settings
-
-In the **Optional settings**, you can adjust the [temperature](https://www.braze.com/docs/user_guide/brazeai/agents/reference/#temperature) of the agent-generated copy. A higher temperature allows the agent to use the information provided to be more creative.
+- [User interaction data](https://www.braze.com/docs/user_guide/brazeai/agents/reference/#user-history): Provide the agent with each user's recent campaign and Canvas opens, clicks, and conversion data.
 
 ### Step 4: Select the output {#select-output}
 

@@ -1,4 +1,4 @@
-<div id='api_oliggziwimyt' class='api_div'>
+<div id='api_oljfqlpumdfl' class='api_div'>
 <h1 id="create-preference-center">Create preference center</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/preference_center/v1</p>
@@ -74,7 +74,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -133,7 +133,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h4 id="user-subscription-state">User subscription state</h4>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2" aria-label="User subscription state">
   <thead>
     <tr>
       <th>Liquid</th>
@@ -154,7 +154,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h4 id="form-inputs-and-action">Form inputs and action</h4>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Form inputs and action">
   <thead>
     <tr>
       <th>Liquid</th>

@@ -27,7 +27,7 @@ eCommerce recommended events do not populate within the **Purchase history** sec
 | Total Revenue | sum (`order_placed.total_value`) − sum (`order_refunded.total_value`) |
 | Total Orders | count (distinct `order_placed`) − count (distinct `order_cancelled`) |
 | Total Refund Value | sum (`order_refunded.total_value`) |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Transactions tab" }
 
 ![Order Activity section with Total Revenue, Total Orders, and Total Refund Value.](https://www.braze.com/docs/assets/img/recommended_events/order_activity.png?d06fa82f17f837f6edb9bfcab903589e){: style="max-width:60%"}
 
@@ -78,7 +78,7 @@ Use this template when you want to bring browsers back to consider products they
 | Entry event | `ecommerce.product_viewed` |
 | Exit events | `ecommerce.product_viewed`, `ecommerce.cart_updated`, `ecommerce.checkout_started`, Placed Order |
 | Conversion event | Placed Order |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="eCommerce Canvas templates" }
 
 
 
@@ -92,7 +92,7 @@ Use this template when you want to remind users about items in their cart and dr
 | Entry event | `ecommerce.cart_updated` |
 | Exit events | `ecommerce.cart_updated`, `ecommerce.checkout_started`, Placed Order |
 | Conversion event | Placed Order |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="eCommerce Canvas templates" }
 
 **Tip:**
 
@@ -113,7 +113,7 @@ Use this template when you want to recover purchases at the highest-intent stage
 | Entry event | `ecommerce.checkout_started` |
 | Exit event | Placed Order |
 | Conversion event | Placed Order |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="eCommerce Canvas templates" }
 
 
 
@@ -126,7 +126,7 @@ Use this template when you want to streamline post-purchase communication and ga
 | --- | --- |
 | Entry event | `ecommerce.order_placed` |
 | Conversion event | Start Session or `ecommerce.product_viewed` |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="eCommerce Canvas templates" }
 
 
 
@@ -155,7 +155,7 @@ eCommerce recommended events power the same revenue surfaces customers already u
 | Segment Insights                            | Revenue comparisons across segments in the segment insights dashboard.                                                               |
 | Report Builder                              | Revenue metrics in custom reports built in Report Builder.                                                                                  |
 | Dashboard Builder                           | Revenue metrics in custom dashboards built in Dashboard Builder.                                                                                  |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="eCommerce reporting" }
 
 For non-user calculated fields (for example, campaign or Canvas revenue), revenue is calculated the same way across all reports: `price` multiplied by `quantity` per product in the order, summed across the products in each `order_placed` event.
 
@@ -181,7 +181,7 @@ Braze offers several ways to export eCommerce event data for use in your data wa
 | [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/data_sharing)               | eCommerce events are shared as custom events; search the `ecommerce.*` namespace to find them. Products from each order are available in the purchases table.                                   |
 | [Export segment data to CSV](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/segment_data_to_csv)           | CSV export of segment members. To include eCommerce events, select them by name from the custom events dropdown.                                                                                |
 | [Export user profile by Segment (API)](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment/#prerequisites) | User profile data for segment members, returned via API. eCommerce events are included as custom events.                                                                                        |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Export data" }
 ### How do I segment users by a specific product?
 
 The segmenter allows you to filter by the number of times a user performed an eCommerce event. To filter by specific product properties (such as `product_id` or `product_name`), use [Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/), which support nested event property filtering. For example, you can find all users who purchased product "SKU-123" in the last 90 days.
