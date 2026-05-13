@@ -12,4 +12,4 @@
 | [Funnel reports](https://www.braze.com/docs/user_guide/analytics/reports/funnel_reports/) | Conversion funnel analysis | Analyze the journeys your customers take after receiving a campaign or Canvas, including drop-off points. |
 | [Retention reports](https://www.braze.com/docs/user_guide/analytics/reports/retention_reports/) | Long-term retention impact | Measure how effectively a campaign or Canvas re-engages users over time (up to 30 days). |
 | [Configure reporting](https://www.braze.com/docs/user_guide/analytics/reports/configure_reporting/) | Weekly email digest | Subscribe to a weekly analytics email and choose which custom events to include. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Choosing a report" }

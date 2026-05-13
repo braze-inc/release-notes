@@ -46,7 +46,7 @@ When generating the JWT, the following fields are expected:
 | `typ` | Yes  | The type should equal `JWT`.        |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Step 1.2: Create a JSON Web Token for the current user" }
 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Step 1.2: Create a JSON Web Token for the current user #create-jwt" }
 
 **JWT Payload**
 
@@ -56,7 +56,7 @@ When generating the JWT, the following fields are expected:
 | `exp` | Yes | The "expiration" of when you want this token to expire.                                |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Step 1.2: Create a JSON Web Token for the current user" }
 
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Step 1.2: Create a JSON Web Token for the current user #create-jwt" }
 
 **Tip:**
 
@@ -731,7 +731,7 @@ In the dashboard **Manage Settings** page, each app has three SDK Authentication
 | **Disabled** | Braze will not verify the JWT supplied for a user. (Default Setting)|
 | **Optional** | Braze will verify requests for logged-in users, but will not reject invalid requests. |
 | **Required** | Braze will verify requests for logged-in users and will reject invalid JWTs.|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Enforcement options #enforcement-options" }
 
 ![](https://www.braze.com/docs/assets/img/sdk-auth-settings.png?57ca6f4602ca213f2fc891c8c459c6f2)
 
@@ -788,7 +788,7 @@ Data is available in real-time, and you can hover over points in the chart to se
 | 26 | `MISSING_TOKEN` | No token was provided in the request.| Make sure you are passing a token when calling `changeUser(id, token)` and that your token is not blank.|
 | 27 | `NO_MATCHING_PUBLIC_KEYS` | No public keys matched the provided token.| The private key used in the JWT does not match any public keys configured for your app. Confirm that you added the public keys to the correct app in your workspace that matches this API Key.|
 | 28 | `PAYLOAD_USER_ID_MISMATCH` | Not all user IDs in the request payload match as is required.| This is unexpected and can result in a malformed payload. Open a support ticket for assistance. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Error codes #error-codes" }
 
 ## Frequently Asked Questions (FAQ) {#faq}
 

@@ -24,7 +24,7 @@ Maximize to expand the panel for easier reading, or minimize to keep Operator av
 
 Watch this video to see one example of what Operator can do.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
 
 
 

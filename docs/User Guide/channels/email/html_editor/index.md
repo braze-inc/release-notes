@@ -123,7 +123,7 @@ Replace `#ffffff` with your intended color.
 **Note:**
 
 
-This approach does not apply reliably to `<table>` elements alone, so set the gradient on the cell instead of only on the table.
+This approach does not apply reliably to `<table aria-label="Gmail mobile app and dark mode #gmail-dark-mode">` elements alone, so set the gradient on the cell instead of only on the table.
   <caption>Gmail mobile app and dark mode</caption>
 
 
@@ -172,7 +172,7 @@ Avoid using the following keys:
 }
 </style>
 
-<table id="reserved-fields">
+<table aria-label="Email headers" id="reserved-fields">
   <caption>Email headers</caption>
 <thead>
   <tr>

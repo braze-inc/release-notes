@@ -486,7 +486,7 @@ These are the feature flag limitations for free and paid plans.
 | [Active feature flags](#active-feature-flags)                                                                     | 10 per workspace | 110 per workspace |
 | [Active campaign experiments](https://www.braze.com/docs/developer_guide/feature_flags/experiments/)          | 1 per workspace  | 100 per workspace |
 | [Feature Flag Canvas steps](https://www.braze.com/docs/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Unlimited        | Unlimited         |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Plan limitations" }
 
 A feature flag is considered active and will count toward your limit if any of the following apply:
 

@@ -269,7 +269,7 @@ The `InAppMessageOperation()` return value can control when the message should b
 | `DISPLAY_LATER` | The message will be returned to the stack and displayed at the next available opportunity |
 | `DISCARD` | The message will be discarded |
 | `null` | The message will be ignored. This method should **NOT** return `null` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Altering in-app messages before display" }
 
 See [`InAppMessageOperation`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/index.html) for more details.
 
@@ -867,7 +867,7 @@ The `clickAction` property on your `Braze.InAppMessage` defaults to `.none` but 
 | -------------------------- | -------- |
 | `.url(URL, useWebView: Bool)` | Opens the given URL in an external browser. If `useWebView` is set to `true`, it will open in a web view. |
 | `.none` | The message will be dismissed when clicked. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Click action types" }
 
 **Important:**
 
@@ -1042,7 +1042,7 @@ The default value is `false`. This determines if the modal in-app message will b
 |----------|-------------|
 | `true`         | Modal in-app messages will be dismissed on outside tap.     |
 | `false`        | Default, modal in-app messages will not be dismissed on outside tap. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Customizing modal dismissals" }
 
 For more details on in-app message customization, refer to this [article](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/in-app-message-customization).
 
@@ -1162,7 +1162,7 @@ Configure `BrazeInAppMessageUI.DisplayChoice` to return one of the following val
 | `.reenqueue`                        | The message will be not be displayed and will be placed back on the top of the stack.                                       |
 | `.later`                            | The message will be not be displayed and will be placed back on the top of the stack. (Deprecated, please use `.reenqueue`) |
 | `.discard`                          | The message will be discarded and will not be displayed.                                                                    |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Customizing display timing" }
 
 **Tip:**
 
@@ -1180,7 +1180,7 @@ For `Full`, `FullImage` and `HTML` in-app messages, the SDK will hide the status
 | `.auto`                             | The message view decides the status bar hidden state.                                 |
 | `.hidden`                           | Always hide the status bar.                                                           |
 | `.visible`                          | Always display the status bar.                                                        |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Hiding the status bar" }
 
 ## Disabling dark mode
 
@@ -1413,7 +1413,7 @@ You can use these methods by passing your `BrazeInAppMessage` instance to log an
 | `hideCurrentInAppMessage()`                               | Dismisses the currently displayed in-app message.                                     |
 | `performInAppMessageAction(inAppMessage)`                 | Performs the action for an in-app message.                                            |
 | `performInAppMessageButtonAction(inAppMessage, buttonId)` | Performs the action for an in-app message button.                                     |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Methods for logging" }
 
 ## Handling message data
 

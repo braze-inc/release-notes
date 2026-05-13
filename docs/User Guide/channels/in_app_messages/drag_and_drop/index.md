@@ -3,7 +3,7 @@
 > With the drag-and-drop editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag-and-drop editing experience. For more on the building blocks available in the editor, refer to [Editor blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks/?sdktab=in-app%20messages).
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
 
 
 
@@ -18,7 +18,7 @@ Not sure whether your in-app message should be sent using a campaign or a [Canva
 | Minimum SDK version                                                          | Recommended SDK version                                                       |
 | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | {::nomarkdown}<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#500' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 5.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#250' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 2.5.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#800' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 8.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>{:/} | {::nomarkdown}<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#650' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 6.5.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#481' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 4.8.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#2600' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 26.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>{:/} |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="SDK requirements" }
 
 **More information on minimum SDKs**
 
@@ -36,7 +36,7 @@ The following outlines the individual minimum SDK requirements for these feature
 | Text links*                                                         | Request push primer                                                           |
 | ------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | {::nomarkdown}<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#620' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 6.2.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#2600' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 26.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>{:/} | {::nomarkdown}<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#650' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 6.5.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#481' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 4.8.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#2600' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 26.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>{:/} |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="SDK requirements" }
 
 *If you include a link in your in-app message that redirects to a URL and the end user is not on the minimum SDK versions specified, selecting the link will close the message and the user will not be able to return to the message to submit the form.
 

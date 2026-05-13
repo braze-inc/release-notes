@@ -1,4 +1,4 @@
-<div id='api_hxpdubsymlot' class='api_div'>
+<div id='api_dxmwmeigrbnd' class='api_div'>
 <h1 id="send-transactional-emails-using-api-triggered-delivery">Send transactional emails using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/transactional/v1/campaigns/{campaign_id}/send</p>
@@ -34,7 +34,7 @@
 
 <h2 id="path-parameters">Path parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Path parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -87,7 +87,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -172,7 +172,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <p>The endpoint may also return an error code and a human-readable message in some cases, most of which are validation errors. Here are some common errors you may get when making invalid requests.</p>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Troubleshooting">
   <thead>
     <tr>
       <th>Error</th>
@@ -288,7 +288,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h4 id="message-status">Message status</h4>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Message status">
   <thead>
     <tr>
       <th>Status</th>

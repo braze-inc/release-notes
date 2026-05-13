@@ -86,7 +86,7 @@ Array filters are used to change the output of arrays.
 | [sort_natural](https://shopify.dev/api/liquid/sort_natural) | Sorts the items in an array in case-insensitive alphabetical order.                                                | ✅  Yes   |
 | [uniq](https://shopify.dev/api/liquid/filters/uniq)         | Removes any duplicate instances of elements in an array.                                                           | ✅  Yes   |
 | [where](https://shopify.dev/api/liquid/where)        | Filters an array to only include items with a specific property value.                                             | ✅  Yes   |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Array filters" }
 
 ## Color filters
 
@@ -113,7 +113,7 @@ Math filters allow you to perform mathematical operations. If you use multiple f
 | [round](https://shopify.dev/api/liquid/filters/round)      | Rounds the output to the nearest integer or specified number of decimals.  | ✅  Yes   |
 | [times](https://shopify.dev/api/liquid/filters/times)     | Multiplies an output by a number.       | ✅  Yes   |
 | [modulo](https://shopify.dev/api/liquid/filters/modulo)    | Divides an output by a number and returns the remainder.   | ✅  Yes   |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Math filters" }
 
 **Tip:**
 
@@ -180,7 +180,7 @@ If you're updating a user on their purchase, an account balance, or anything reg
 | [money](https://shopify.dev/api/liquid/filters/money)      | Formats numbers to ensure that decimals are in the proper place, and zeros are not dropped off the end of any numbers.   | ✅  Yes   |
 | [money_with_currency](https://shopify.dev/api/liquid/filters/money_with_currency)    | Formats numbers with the currency symbol.     | ⛔  No    |
 | [money_without_currency](https://shopify.dev/api/liquid/filters/money_without_currency)     | Formats numbers without the currency symbol.      | ⛔  No    |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Money filters" }
 
 **Important:**
 
@@ -216,7 +216,7 @@ ${{custom_attribute.${account_balance} | money}}
 | :------------------------------------------ | :------------------------------------------ |
 | ![With money filter](https://www.braze.com/docs/assets/img/with_money_filter.png?dc6e8816c05e5921a1b83a883a6fa074)                     | ![Without money filter](https://www.braze.com/docs/assets/img/without_money_filter.png?d9db1b92d254289d4dbd1618bf9335db)                  |
 | Where `account_balance` is input at `17.8`. | Where `account_balance` is input at `17.8`. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Shopify money filter versus Braze money filter" }
 
 The `money` filter in Braze differs from Shopify because it doesn't automatically apply decimal points according to a preset setting. For example, take the following scenario where `rewards_redeemed` contains a value of `145`:
 
@@ -297,7 +297,7 @@ Straight quotes are different from curly quotes in Liquid. Be careful when copyi
 | [truncate](https://shopify.dev/api/liquid/filters/truncate)    | Truncates a string down to the number of characters passed as the first parameter. An ellipsis (...) is appended to the truncated string and is included in the character count.    | ✅  Yes   |
 | [truncatewords](https://shopify.dev/api/liquid/filters/truncatewords)   | Truncates a string down to the number of words passed as the first parameter. An ellipsis (...) is appended to the truncated string.    | ✅  Yes   |
 | [upcase](https://shopify.dev/api/liquid/filters/upcase)   | Converts a string into uppercase.      | ✅  Yes   |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="String filters" }
 
 ## Additional filters
 
@@ -309,7 +309,7 @@ The following general filters serve many purposes, including formatting or conve
 | [default](https://shopify.dev/api/liquid/filters/default)        | Sets a default value for any variable with no assigned value. Can be used with strings, arrays, and hashes.      | ✅  Yes   |
 | [format_address](https://shopify.dev/api/liquid/filters/format_address) | Formats an address to print the elements of the address in order according to their locale.        | ⛔  No    |
 | [highlight](https://shopify.dev/api/liquid/filters/highlight)      | Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search terms. | ⛔  No    |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Additional filters" }
 
 You can find more supported filters, such as encoding and URL filters, on our [Advanced Filters](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/advanced_filters/) page.
 

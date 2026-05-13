@@ -18,7 +18,7 @@ Hightouch's Personalization API provides a REST endpoint to use within your Braz
 | Defined use cases | Before setting up the API, you must determine your use case for this integration. Reference the following list for common use cases. |
 | Data stored in a cloud data warehouse or other source | Hightouch integrates with [over 25+ data sources](https://hightouch.com/integrations) |
 | Hightouch API key | This can be created within **Hightouch > Settings > API keys > Add API key**. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 
 
@@ -162,7 +162,7 @@ The following Liquid references would return this example data:
 | `{{artists.recommendations.concerts[0].artist}}`| Aphex Twin |
 | `{{artists.recommendations.concerts[0].location}}`| San Francisco, CA |
 | `{{artists.recommendations.upcoming_album_release.title}}`| Universal Language |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 4: Call personalization API through Braze Connected Content" }
 
 ## Troubleshooting
 

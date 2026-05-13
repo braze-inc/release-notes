@@ -158,7 +158,7 @@ You can find this data on the [Revenue Report](https://www.braze.com/docs/user_g
     }
 </style>
 
-<table>
+<table aria-label="Revenue calculations">
   <caption>Revenue calculations</caption>
     <thead>
         <tr>

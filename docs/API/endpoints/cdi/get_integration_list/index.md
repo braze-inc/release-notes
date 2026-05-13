@@ -1,4 +1,4 @@
-<div id='api_jwmfoqjuhdcx' class='api_div'>
+<div id='api_psbofidpcveo' class='api_div'>
 <h1 id="list-integrations">List integrations</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/cdi/integrations</p>
@@ -26,7 +26,7 @@
 
 <p>Each call to this endpoint will return 10 items. For a list with more than 10 integrations, use the <code class="language-plaintext highlighter-rouge">Link</code> header to retrieve the data on the next page as shown in the example response.</p>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Query parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -123,7 +123,7 @@
 
 <p>The following table lists possible returned errors and their associated troubleshooting steps.</p>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Troubleshooting">
   <thead>
     <tr>
       <th>Error</th>

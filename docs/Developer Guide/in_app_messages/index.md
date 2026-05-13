@@ -953,7 +953,7 @@ The in-app message model provides the base for all in-app messages.
 |`extras`          | The message extras dictionary. Default value: `[:]`.                                                                   |
 |`buttons`         | The list of buttons on the in-app message.                                                                             |
 |`toString()`      | The message as a String representation.                                                                                |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Messages" }
 
 For a full reference of the in-app message model, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage) documentation.
 
@@ -969,7 +969,7 @@ Buttons can be added to in-app messages to perform actions and log analytics. Th
 |`clickAction`     | The type of click action processed when the user clicks on the button. The types are: `URI`, and `NONE`. |
 |`id`              | The button ID on the message.                                                                                               |
 |`toString()`      | The button as a String representation.                                                                                      |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Buttons" }
 
 For a full reference of button model, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/button) documentation.
 
@@ -1162,7 +1162,7 @@ The following lists the fields you will need to handle your in-app messages:
 | `image_url` | In-app message image URL. |
 | `message` | Message body text. |
 | `uri` | Your URI users will be sent to based on your `click_action`. This field must be included when `click_action` is `"URI"`. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Handling" }
 
 **Important:**
 
@@ -1183,7 +1183,7 @@ There are also various styling fields that you could choose to use from the dash
 | `header_text_color` | Header text color. |
 | `message_text_color` | Message text color. |
 | `text_align` | "START", "CENTER", or "END". Your selected text alignment. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Styling" }
 
 Alternatively, you could implement the in-app message and style it within your Roku application using a standard palette:
 
@@ -1195,7 +1195,7 @@ Alternatively, you could implement the in-app message and style it within your R
 | `id` | The ID value of the button itself. |
 | `text` | The text to display on the button. |
 | `uri` | Your URI users will be sent to based on your `click_action`. This field must be included when `click_action` is `"URI"`. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Buttons" }
 
 
 

@@ -15,7 +15,7 @@ While campaigns can be built uniquely depending on the channel, there are four m
 | A/B testing          | For campaigns targeting a single channel, you can send more than one version of the same campaign and see which one comes out on top. You can test copy, personalization, and more for up to eight different versions with a [multivariate campaign](https://www.braze.com/docs/user_guide/messaging/ab_testing/). |
 | API                  | [API campaigns](https://www.braze.com/docs/api/api_campaigns/) let you send timely messages as quickly as possible. Unlike other campaign types, you don't specify the message, recipients, or schedule in the Braze dashboard. Instead, you pass these identifiers into your API calls. These are typically used for real-time transactional messaging or breaking news.  |
 | Transactional Emails | Braze [Transactional Emails](https://www.braze.com/docs/user_guide/channels/email/) are purpose-built for sending automated, non-promotional email messages to facilitate an agreed-upon transaction between you and your customers. They send business-critical notifications to a single user where speed is of the utmost importance. *Available for select packages.* |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Campaigns" }
 
 **Note:**
 
@@ -71,7 +71,7 @@ The following table outlines our supported channels.
 | [Connected TV](https://www.braze.com/docs/developer_guide/platforms/tv_and_ott/)                           | Engage with users on connected television platforms.                                                                                                   |
 | [Webhooks](https://www.braze.com/docs/user_guide/channels/webhooks/) | Enable real-time communication and integration with external systems through custom HTTP callbacks.                                                    |
 | [LINE](https://www.braze.com/docs/user_guide/channels/line/) | Engage with users on LINE, the most popular messaging app in Japan.                                                    |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Messaging channels" }
 
 <sup>**Available as an add-on feature.*</sup>
 

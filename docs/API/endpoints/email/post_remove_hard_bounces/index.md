@@ -1,4 +1,4 @@
-<div id='api_zdjdhetmcvlc' class='api_div'>
+<div id='api_kcozjnodvpym' class='api_div'>
 <h1 id="remove-hard-bounced-emails">Remove hard bounced emails</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/bounce/remove</p>
@@ -42,7 +42,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>

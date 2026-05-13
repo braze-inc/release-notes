@@ -29,7 +29,7 @@ As a best practice, Braze recommends keeping each line of text for both the opti
 
 Your users may view push notifications in a variety of different situations, and could see different lengths of text as follows.
 
-<table>
+<table aria-label="Notification states">
   <caption>Notification states</caption>
 <thead>
   <tr>
@@ -46,7 +46,7 @@ Your users may view push notifications in a variety of different situations, and
   </tr>
 </tbody>
 </table>
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Notification states" }
 
 ![Example push notifications for push displayed on the lock screen, when expanded, and when device is active.](https://www.braze.com/docs/assets/img_archive/push_ios_notification_states.png?efc3ab06ac0e0f204653e3dfa6d5e651)
 

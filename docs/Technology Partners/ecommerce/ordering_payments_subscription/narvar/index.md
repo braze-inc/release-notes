@@ -9,7 +9,7 @@
 | Narvar Account        | A Narvar account is required to take advantage of this partnership.                           |
 | Braze REST API key    | A Braze REST API key with `messages.send` permission. This can be created in the Braze dashboard from **Settings** > **API Keys**.                                            |
 | Braze REST endpoint   | [Your REST endpoint URL](https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints), which depends on the URL for your Braze instance.         |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Supported features
 
@@ -17,7 +17,7 @@
 |-------|----------|
 | Notifications | - Delivery Anticipation<br>- Carrier Delay<br>- Delivered Standard |
 | Channels | Push Notifications |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Supported features" }
 
 **Note:**
 

@@ -56,7 +56,7 @@ For every funnel report, the first event is when the user receives your message.
 
 | Campaign | Started Session, Made Purchase, Performed Custom Event, Message Engagement Event |
 | Canvas | Started Session, Made Purchase, Performed Custom Event, Received Canvas Step, Interacted with Step |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Available funnel report events" }
 
 **Note:**
 

@@ -1,4 +1,4 @@
-<div id='api_bszacmnayhrv' class='api_div'>
+<div id='api_svuosmofpnoj' class='api_div'>
 <h1 id="view-all-translations-for-a-content-block">View all translations for a Content Block</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/content_blocks/translations</p>
@@ -28,7 +28,7 @@
 
 <h2 id="query-parameters">Query parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Query parameters">
   <thead>
     <tr>
       <th>Parameter</th>

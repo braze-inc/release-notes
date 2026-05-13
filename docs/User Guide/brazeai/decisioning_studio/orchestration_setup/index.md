@@ -22,7 +22,7 @@ The first step is to choose which CEP to use with Decisioning Studio. Your choic
 | **Braze** | Native API integration (recommended) | Low |
 | **Salesforce Marketing Cloud** | API events + Journey Builder | Medium |
 | **Other CEPs** | Custom (recommendation file) | High |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Supported CEPs" }
 
 **Tip:**
 
@@ -46,7 +46,7 @@ Before setting up orchestration, gather the following items based on your chosen
 | **Email display name and address** | The sender information to use for your campaigns (found in **Settings** > **Email Preferences**). |
 | **Base templates** | The message templates your agent will use for orchestration. You'll create API-triggered campaigns for each template. |
 | **Test user ID** | A user ID for testing the integration before launch. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 
 
@@ -58,7 +58,7 @@ Before setting up orchestration, gather the following items based on your chosen
 | **Data extensions** | You'll need data extensions for subscriber data, engagement data, and recommendations. |
 | **Email templates** | The templates you want Decisioning Studio to use, with template IDs for each. |
 | **Journey Builder access** | Access to create and activate multi-step journeys with API event entry sources. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 
 
@@ -70,7 +70,7 @@ If you're using a CEP other than Braze or Salesforce Marketing Cloud, Decisionin
 | **Data ingestion capability** | Your CEP must be able to ingest recommendation files (typically CSV or JSON) containing personalized decisions for each customer. |
 | **Dynamic content support** | Your campaigns must support populating fields dynamically based on recommendation data. |
 | **Custom engineering resources** | Your team will need to build the integration to read recommendation files and trigger communications. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 
 
@@ -111,7 +111,7 @@ For Braze integrations, plan which dimensions your agent will optimize. These be
 | Call to action | `{{api_trigger_properties.${cta_message}}}` |
 | Offer | `{{api_trigger_properties.${offer_id}}}` |
 | Discount amount | `{{api_trigger_properties.${discount}}}` |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="API trigger properties" }
 
 ## Integration setup
 
@@ -149,7 +149,8 @@ Go to **Settings** > **API Keys**, then create a new key with the following perm
 | [`/templates/email/update`](https://www.braze.com/docs/api/endpoints/templates/email_templates/post_update_email_template) | Pushes updates to Decisioning Studio-created template copies when experimentation criteria change, such as call-to-actions. | &#10003; |
 | [`/templates/email/info`](https://www.braze.com/docs/api/endpoints/templates/email_templates/get_see_email_template_information/#prerequisites) | Retrieves information about Decisioning Studio-created templates in your Braze instance. | &#10003; |
 | [`/templates/email/list`](https://www.braze.com/docs/api/endpoints/templates/email_templates/get_list_email_templates) | Validates that templates were successfully copied over to your Braze instance. | &#10003; |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Table" }
+
 
 ### Step 2: Set up API-triggered campaigns
 

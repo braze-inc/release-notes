@@ -10,7 +10,7 @@ The Braze and Canva integration supports two export paths:
 | --- | --- |
 | **Image or design to Media Library** | Sends your design as an asset to the Braze media library. |
 | **Email design to Braze** | Publishes a Canva **Email** document as a Braze email template, including subject line metadata. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="About the integration" }
 
 ## Integrate Braze with Canva
 
@@ -38,12 +38,12 @@ The following videos show how to send designs from Canva to your Braze media lib
 
 Video: Open the Braze app in Canva and start a media library export.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
 
 
 
 Video: Choose a Braze workspace and complete the export to the media library.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
 
 
 

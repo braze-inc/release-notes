@@ -36,7 +36,7 @@ th:nth-child(5), td:nth-child(5) {
 }
 </style>
 
-<table>
+<table aria-label="List of logged events and attributes">
   <caption>List of logged events and attributes</caption>
     <thead>
         <tr>

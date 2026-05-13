@@ -1,4 +1,4 @@
-<div id='api_smicleaxoxwp' class='api_div'>
+<div id='api_gqctamsbqwjo' class='api_div'>
 <h1 id="view-default-source-values-for-a-canvass-translation-tags">View default source values for a canvas’s translation tags</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/translations/source</p>
@@ -28,7 +28,7 @@
 
 <h2 id="query-parameters">Query parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Query parameters">
   <thead>
     <tr>
       <th>Parameter</th>

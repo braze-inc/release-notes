@@ -1,4 +1,4 @@
-<div id='api_jbztdvapvqdz' class='api_div'>
+<div id='api_izogeewupqct' class='api_div'>
 <h1 id="identify-users">Identify users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/identify</p>
@@ -121,7 +121,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <p>One of the following is required: <code class="language-plaintext highlighter-rouge">aliases_to_identify</code>, <code class="language-plaintext highlighter-rouge">emails_to_identify</code>, or <code class="language-plaintext highlighter-rouge">phone_numbers_to_identify</code> per request. For example, you can use this endpoint to identify users by email by using <code class="language-plaintext highlighter-rouge">emails_to_identify</code> in your request.</p>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>

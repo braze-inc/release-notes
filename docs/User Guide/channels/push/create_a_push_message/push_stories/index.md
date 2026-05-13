@@ -5,7 +5,7 @@
 | Android Example (Expanded) | IOS Example (Expanded) |
 | :-----: | :----------: |
 | ![](https://www.braze.com/docs/assets/img_archive/pushstories_android_preview.png?b9ff1b03bc3189d44ee98d330662fe90) | ![](https://www.braze.com/docs/assets/img_archive/pushstories_ios_preview.png?d0485e7305a238015d4420b956e0b375) |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Push Stories" }
 
 **Note:**
 

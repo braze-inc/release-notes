@@ -2,7 +2,7 @@
 
 > This article guides you through the requirements and steps needed to set up your IP addresses and pools, as well as domains and subdomains needed before you can begin sending emails with Braze.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
 
 
 
@@ -44,7 +44,8 @@ The following table contains resources for creating and managing DNS records wit
 | Squarespace | [Adding custom DNS settings](https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain) |
 | Amazon Route 53 | [Creating records by using the Amazon Route 53 console](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-creating.html) |
 | Google Cloud DNS | [Quickstart: Set up DNS records for a domain name with Cloud DNS](https://docs.cloud.google.com/dns/docs/set-up-dns-records-domain-name) |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
+
 
 After Braze provides your DNS records, add them as soon as your DNS or IT team is able. Domain verification is time-bound, and if records are added too late, verification may fail even if the DNS records later resolve correctly. If your DNS records appear correct but verification fails, contact the Braze Onboarding or Support team to reinitiate verification.
 

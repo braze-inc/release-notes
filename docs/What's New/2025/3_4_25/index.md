@@ -28,7 +28,7 @@ Using an email address or a hashed email address as your Braze external ID can s
 
 Added three [Liquid tutorials](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/operators/#tutorials) about how to use operators in the following scenarios.
 
-<table border="1">
+<table aria-label="Liquid tutorials" border="1">
   <caption>Liquid tutorials</caption>
   <tr>
     <td>Choosing a message with an integer custom attribute.</td>
@@ -43,7 +43,7 @@ Added three [Liquid tutorials](https://www.braze.com/docs/user_guide/personaliza
     <td><img src="/docs/assets/img/release_notes/2025_05_04/location.png?aae4896632584e63923d63256796db6f" alt="The compose step in Braze showing a message being aborted based on location." /></td>
   </tr>
 </table>
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Liquid tutorials" }
 
 ### Context steps for Canvas
  

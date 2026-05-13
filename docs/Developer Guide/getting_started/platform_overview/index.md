@@ -78,13 +78,13 @@ After you have defined a segment, Braze messaging tools allow you to engage with
 | [Web push](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/web/) | Send web browser notifications, even if your users aren't currently active on your site. |
 | [Webhooks](https://www.braze.com/docs/about_webhooks/) | Use webhooks to trigger non-app actions, providing other systems and applications with real-time data. |
 | [WhatsApp](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/)* | Directly connect with your users and customers by leveraging the popular peer-to-peer messaging platform: WhatsApp. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Multichannel messaging" }
 
 <sup>**Available as an add-on feature.*</sup>
 
 ### Customizable components
 
-<div class='swiper swiper-container' id='gallery_adkskhcujmvm'><div class='swiper-wrapper'>
+<div class='swiper swiper-container' id='gallery_pmxussouifyg'><div class='swiper-wrapper'>
 <div class='swiper-slide'><img class='swiper-image swiper-popover' src='/docs/assets/img/getting-started/crawl-example.png'/>
 <div class='swiper-description'><p><br /> All Braze components are crafted to be accessible, adaptive, and customizable. You can start with Braze by using the default <code class="language-plaintext highlighter-rouge">BrazeUI</code> components and customizing them to suit your brand needs and use case.</p>
 </div></div>
@@ -95,7 +95,7 @@ After you have defined a segment, Braze messaging tools allow you to engage with
 <div class='swiper-description'><p><br /> You can also create completely custom components to control what your messaging looks like, how it behaves, and how they interact with other messaging channels (for example, triggering a Content Card based on a push notification). Braze provides SDK methods to allow you to log metrics like impressions, clicks, and dismissals in the Braze dashboard. Each messaging channel has an analytics article to help facilitate this.</p>
 </div></div>
 </div><div class='swiper-pagination'></div><div class='swiper-button-next'></div><div class='swiper-button-prev'></div></div>
-<script type='text/javascript'>let swiper = new Swiper('#gallery_adkskhcujmvm', {slidesPerView: 'auto',spaceBetween: 30,loop: false, pagination: { el: '.swiper-pagination', clickable: true }, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'}});</script>
+<script type='text/javascript'>let swiper = new Swiper('#gallery_pmxussouifyg', {slidesPerView: 'auto',spaceBetween: 30,loop: false, pagination: { el: '.swiper-pagination', clickable: true }, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'}});</script>
 
 <br>
 <br>
@@ -121,5 +121,5 @@ As a technical resource, you'll be involved in a lot of the nuts and bolts of Br
 | [SDK Changelogs](https://www.braze.com/docs/developer_guide/changelogs) | Braze has predictable monthly releases, in addition to releases for any critical issues and major OS updates. |
 | [Braze API Postman Collection](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest) | Download our Postman collection here.  |
 | [Braze System Status Monitor](https://braze.statuspage.io/) | Our status page is updated whenever there are incidents or outages. Go to this page to subscribe to alerts. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Resources to bookmark" }
 

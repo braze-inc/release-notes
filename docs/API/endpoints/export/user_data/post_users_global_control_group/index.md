@@ -1,4 +1,4 @@
-<div id='api_twsstzhgihev' class='api_div'>
+<div id='api_jwcmgqbzzchc' class='api_div'>
 <h1 id="export-user-profile-by-global-control-group">Export user profile by Global Control Group</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/export/global_control_group</p>
@@ -42,7 +42,7 @@
 <p><strong>Example ZIP:</strong>
 <code class="language-plaintext highlighter-rouge">braze.docs.bucket/segment-export/abc56c0c-rd4a-pb0a-870pdf4db07q/2019-04-25/d9696570-dfb7-45ae-baa2-25e302r2da27-1556044807/114f0226319130e1a4770f2602b5639a.zip</code></p>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" aria-label="Credentials-based response details">
   <thead>
     <tr>
       <th>Property</th>
@@ -127,7 +127,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -181,7 +181,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <p>The following is a list of valid <code class="language-plaintext highlighter-rouge">fields_to_export</code>. Using <code class="language-plaintext highlighter-rouge">fields_to_export</code> to minimize the data returned can improve response time of this API endpoint:</p>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" aria-label="Fields to export">
   <thead>
     <tr>
       <th>Field to export</th>

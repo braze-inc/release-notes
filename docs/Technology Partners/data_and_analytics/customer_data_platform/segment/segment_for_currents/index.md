@@ -11,7 +11,7 @@ The Braze and Segment integration allows you to leverage Braze Currents to expor
 | Segment account | A [Segment account](https://app.segment.com/login) is required to take advantage of this partnership. |
 | Braze destination | You must have already [set up Braze as a destination](https://www.braze.com/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) in your Segment integration.<br><br>This includes providing the correct Braze data center and REST API key in your [connection settings](https://www.braze.com/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
 | Currents | In order to export data back into Segment, you need to have [Braze Currents](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Integration
 

@@ -22,7 +22,7 @@ Before you start, you need the following:
 | A Braze Connected Content Authorization Token enabled | See the note below on Early Access. |
 | A Braze Canvas Context step | See the note below on Early Access. |
 | Enabled Braze AI Agent step | See the note below on Early Access. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 **Important:**
 

@@ -62,7 +62,7 @@ The following table summarizes what each label means.
 | --- | --- |
 | **Estimated Audience** | Braze does not run a full-database count by default. Audience size is estimated from a sample and extrapolated, similar to the **Reachable users** range in the segment builder. Margins of error are expected, especially for large workspaces or small segments as a share of the workspace. |
 | **Current Audience** | Braze can compute the default statistic with a full scan of workspace profiles, so the displayed audience size is a current, unsampled count (still subject to channel reachability, subscription rules, and other targeting options). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Estimated Audience and Current Audience" }
 
 For details on sampling behavior, **Calculate exact statistics**, and segmenting **Reachable users**, see [Measure segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size/).
 

@@ -399,7 +399,7 @@ function onCardClick(card) {
 |---|---|
 | `url` | A valid URL, or a valid Braze action URL with the scheme `brazeActions://`. |
 | `openLinkInNewTab` | (Optional) Whether the URL should open in a new tab. Defaults to `false`. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Handling on-click behavior" }
 
 **Important:**
 

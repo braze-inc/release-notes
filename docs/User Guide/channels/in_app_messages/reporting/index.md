@@ -41,7 +41,7 @@ The following table summarizes what each label means.
 | --- | --- |
 | **Estimated Audience** | Braze does not run a full-database count by default. Audience size is estimated from a sample and extrapolated, similar to the **Reachable users** range in the segment builder. Margins of error are expected, especially for large workspaces or small segments as a share of the workspace. |
 | **Current Audience** | Braze can compute the default statistic with a full scan of workspace profiles, so the displayed audience size is a current, unsampled count (still subject to channel reachability, subscription rules, and other targeting options). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Estimated Audience and Current Audience" }
 
 For details on sampling behavior, **Calculate exact statistics**, and segmenting **Reachable users**, see [Measure segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size/).
 
@@ -126,7 +126,7 @@ For in-app messages, this page defines unique impressions using a calendar-day b
 | Conversions | Conversion tracking starts after a user logs an impression of an in-app message. A conversion is counted if the user has received and viewed the in-app message campaign and subsequently performs the specific conversion event within the defined conversion window, regardless of whether they clicked on the message or not. <br><br> Conversions are attributed to the most recently received message. If re-eligibility is enabled, the conversion is assigned to the latest in-app message received, provided it occurs within the defined conversion window. However, if the in-app message has already been assigned a conversion, a new conversion cannot be logged for that specific message. This ensures that each in-app message delivery is associated with only one conversion. |
 | Total conversions | When a user views an in-app message campaign only once, only one conversion is counted, even if they perform the conversion event multiple times later on. However, if re-eligibility is turned on and the user sees the in-app message campaign multiple times, *Total Conversions* can increase once for each time the user logs an impression for a new instance of the in-app message campaign. <br><br> For example, if a user triggers an in-app message twice and converts after each impression (resulting in two conversions), *Total Conversions* increases by two. However, if there was only one impression followed by two conversion events, only one conversion is logged and *Total Conversions* increases by one. |
 | Conversion rate | The metric of total daily unique impressions (*Unique Impressions*) is used to calculate the conversion rate. <br><br> Conversion Rate = (Primary Conversions) / (Unique Impressions) <br><br> For in-app messages, *Unique Impressions* can be counted only once per calendar day in your workspace's time zone. The number of times a user completes a desired action (a "conversion") can increase within that same calendar day. Therefore, if a user completes a conversion multiple times within a day, the *Conversion Rate* can increase accordingly, but *Unique Impressions* are counted only once for that calendar day. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="In-app message metrics" }
 
 ## How do conversions increment with re-eligibility?
 

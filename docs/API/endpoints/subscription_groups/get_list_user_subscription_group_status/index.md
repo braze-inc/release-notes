@@ -1,4 +1,4 @@
-<div id='api_cijbnmfqdwpg' class='api_div'>
+<div id='api_vwosfgxqfhdx' class='api_div'>
 <h1 id="list-users-subscription-group-status">List user’s subscription group status</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/subscription/status/get</p>
@@ -75,7 +75,7 @@
   </tbody>
 </table>
 
-<p class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">*One of <code class="language-plaintext highlighter-rouge">external_id</code> or <code class="language-plaintext highlighter-rouge">email</code> or <code class="language-plaintext highlighter-rouge">phone</code> is required for each user.</p>
+<p>*One of <code class="language-plaintext highlighter-rouge">external_id</code> or <code class="language-plaintext highlighter-rouge">email</code> or <code class="language-plaintext highlighter-rouge">phone</code> is required for each user.</p>
 
 <ul>
   <li>For SMS and WhatsApp subscription groups, either <code class="language-plaintext highlighter-rouge">external_id</code> or <code class="language-plaintext highlighter-rouge">phone</code> is required.  When both are submitted, only the <code class="language-plaintext highlighter-rouge">external_id</code> is used for querying and the phone number is applied to that user.</li>

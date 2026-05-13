@@ -114,7 +114,7 @@ The following JavaScript methods are supported within custom HTML for in-app mes
 | `brazeBridge.web.registerAppboyPushMessages(successCallback, deniedCallback)`              | Register for web push (web only). This method is a no-op when called in a non-web environment. [JS Docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission)                                        |
 | `brazeBridge.requestPushPermission(successCallback, deniedCallback)` | Register for push across Web, iOS, and Android. Note: the method's callbacks are only supported on web. This method was introduced as of Web SDK v4.0.0, Android SDK v21.0.0, and Swift SDK v5.4.0. [JS Docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) |
 | `brazeBridge.changeUser(id, sdkAuthSignature?)`                                            | Identify user with a unique ID. [JS Docs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)<br><br>This method was introduced in Web SDK v4.3.0. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Button click tracking
@@ -133,7 +133,7 @@ For in-app messages, you can programmatically track "Button 1", "Button 2", and 
 | Button 1   | `brazeBridge.logClick('0')` | In-app messages only |
 | Button 2   | `brazeBridge.logClick('1')` | In-app messages only |
 | Custom button tracking |`brazeBridge.logClick('your custom name here')`| In-app messages only |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Button click tracking" }
 
 For in-app messages, you can track multiple button click events per impression. For example, to close a message and log a Button 2 click:
 
@@ -248,7 +248,7 @@ The following file types are supported for upload:
 | SVG Images       | `.svg`                            |
 | JavaScript Files | `.js`                             |
 | CSS Files        | `.css`                            |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Asset files" }
 
 Braze recommends uploading assets to the media library for two reasons:
 
@@ -288,7 +288,7 @@ You can track performance within your custom code in-app message using the [`bra
 | Button 2   | `brazeBridge.logClick('1')` |
 | Body click | `brazeBridge.logClick()`    |
 | Custom button tracking |`brazeBridge.logClick('your custom name here')`|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Button tracking #button-tracking-improvements" }
 
 **Note:**
 
@@ -309,4 +309,5 @@ This method of button tracking replaces the prior automatic click tracking metho
    |<code>&lt;a href="braze://close?abButtonId=0"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
    |<code>&lt;a href="app://deeplink?abButtonId=0">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="app://deeplink" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
    |<code>&lt;script&gt;<br>location.href = "braze://close?abButtonId=1"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Backward incompatible changes #backward-incompatible-changes" }
 

@@ -216,7 +216,7 @@ The following features are built into the Braze Android SDK. To use any other pu
 |-------|-----------|
 |Push Stories|Android Push Stories are built into the Braze Android SDK by default. To learn more, see [Push Stories](https://www.braze.com/docs/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/).|
 |Push Primers|Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer](https://www.braze.com/docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Built-in features" }
 
 ## About the push notification lifecycle {#push-notification-lifecycle}
 
@@ -1666,7 +1666,7 @@ For a full list of push notification fields, refer to the table below:
 | `brazeProperties` | Object    | Represents Braze properties associated with the campaign (key-value pairs). |
 | `ios`              | Object    | Represents iOS-specific fields. |
 | `android`          | Object    | Represents Android-specific fields. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Push notification event fields" }
 
 ### Step 3: Test displaying push notifications
 
@@ -1958,7 +1958,7 @@ For a full list of push notification fields, refer to the table below:
 | `braze_properties` | Object    | Represents Braze properties associated with the campaign (key-value pairs). |
 | `ios`              | Object    | Represents iOS-specific fields. |
 | `android`          | Object    | Represents Android-specific fields. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Push notification event fields" }
 
 ### Step 3: Enable deep linking (optional)
 
@@ -2540,7 +2540,7 @@ The Braze SDK can automatically handle push registration with the Firebase Cloud
 | Firebase Cloud Messaging Sender ID     | The Sender ID from your Firebase console.                                                                                                                |
 | Handle Push Deeplinks Automatically    | Whether the SDK should handle opening deep links or opening the app when push notifications are clicked.                                                  |
 | Small Notification Icon Drawable       | The drawable should be displayed as the small icon whenever a push notification is received. The notification will use the application icon as the small icon if no icon is provided. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 2.1: Configure push settings" }
 
 
 

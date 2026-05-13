@@ -1,4 +1,4 @@
-<div id='api_pokpsdznwmbj' class='api_div'>
+<div id='api_vnqfneejsmvh' class='api_div'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
@@ -62,7 +62,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <p>For each request component listed in the following table, you must include one of <code class="language-plaintext highlighter-rouge">external_id</code>, <code class="language-plaintext highlighter-rouge">user_alias</code>, <code class="language-plaintext highlighter-rouge">braze_id</code>, <code class="language-plaintext highlighter-rouge">email</code>, or <code class="language-plaintext highlighter-rouge">phone</code>.</p>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -97,7 +97,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <p>Each request object must include at least one identifier. The following table describes how Braze determines which identifier to use for user profile lookup.</p>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" aria-label="Identifier resolution">
   <thead>
     <tr>
       <th>Identifier type</th>
@@ -493,7 +493,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <p>The following errors are specific to the <code class="language-plaintext highlighter-rouge">/users/track</code> endpoint and are returned in the <code class="language-plaintext highlighter-rouge">errors</code> array of the response. Use these to troubleshoot issues with individual objects in a request.</p>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Endpoint-specific errors">
   <thead>
     <tr>
       <th>Error</th>
@@ -617,7 +617,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <p>All non-rate-limited (such as non-<code class="language-plaintext highlighter-rouge">429</code>) responses contain the following HTTP response headers that indicate the state of the hourly rate limit window to the client. Use these headers to manage your request rate:</p>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Rate limit headers for Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU">
   <thead>
     <tr>
       <th>Header name</th>

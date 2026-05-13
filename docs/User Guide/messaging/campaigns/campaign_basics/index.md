@@ -40,7 +40,7 @@ You can use pre-defined [segments](https://www.braze.com/docs/user_guide/audienc
 | Marketing Activity | Segment customers based on universal behaviors like last engagement or received campaigns. |
 | User Attributes | Segment customers by their constant attributes and characteristics. |
 | Install Attribution | Segment customers by their first source, ad group, campaign, or ad. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="The "who": Select an entry audience" }
 
 ### The "why": Identify conversion events
 

@@ -1,6 +1,6 @@
 # Branch for deep linking {#branch}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
 
 
 
@@ -138,6 +138,6 @@ Open the Branch link from the Notes app on a physical iOS device. If it doesn't 
 | Link works from push but not email | Click-tracking domain missing AASA | Host AASA on your ESP's click-tracking domain; see [Email setup](#deep-linking-in-email) |
 | `shouldOpenURL` never fires for Branch links | `forwardUniversalLinks` not enabled | Set `configuration.forwardUniversalLinks = true` |
 | Branch link works from Notes but not Braze | `BrazeDelegate` returning `true` for Branch URLs | Verify domain check in `shouldOpenURL` matches your Branch domain |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Common issues" }
 
 For more deep linking troubleshooting scenarios, see [Deep linking troubleshooting](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking_troubleshooting).

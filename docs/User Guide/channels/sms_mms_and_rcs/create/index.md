@@ -49,7 +49,7 @@ The subscription group you select determines which message types are available i
 | SMS-only | SMS |
 | SMS with MMS-enabled numbers | SMS and MMS |
 | RCS-enabled (with RCS-verified sender) | SMS, MMS (if enabled), and RCS |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 2: Select a subscription group" }
 
 **Tip:**
 
@@ -139,7 +139,7 @@ Enter your message body, then upload a PNG, JPEG, or GIF image from the [media l
 | --- | --- |
 | Size | Up to 600&nbsp;KB |
 | File types | PNG, JPEG, GIF |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Image specifications" }
 
 ### Contact cards
 
@@ -158,7 +158,7 @@ When a customer sends an inbound message that includes media, Braze exposes the 
 
 Watch this quick walkthrough to see how to create an RCS text or media message.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
 
 
 
@@ -248,7 +248,7 @@ RCS media messages allow you to use engaging media formats that aren't possible 
 | Image | Supported formats: JPG, JPEG, GIF |
 | Video | Supported formats: H263, M4V, MP4, MPEG-4, MPEG, WEBM |
 | Document | Supported format: PDF |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Inbound MMS and personalization" }
 
 **Considerations:**
 

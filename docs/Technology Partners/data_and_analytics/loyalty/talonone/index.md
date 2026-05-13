@@ -15,7 +15,7 @@ The Braze and Talon.One integration can help take your loyalty or coupon program
 | ----------- | ----------- |
 |Talon.One account | A Talon.One account is required to take advantage of this partnership. |
 |Talon.One API key | In Talon.One, under **Settings** > **Developer Settings**, create a Braze 3rd party API key for the integration. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 **Warning:**
 

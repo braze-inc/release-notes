@@ -16,7 +16,7 @@ Decisioning Studio Go is a self-service platform with streamlined capabilities c
 | **Customer data** | Engagement only | All 1P Data |
 | **Setup** | Self-service | AI Decisioning Services support |
 | **Experiment groups** | Go + Random Control + optional BAU | Fully customizable |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Go versus Pro capabilities" }
 
 ## Design your Go agent
 
@@ -81,7 +81,7 @@ Decisioning Studio Go automatically creates experiment groups to measure perform
 | **Decisioning Studio Go** | Customers who receive AI-optimized recommendations |
 | **Random Control** | Customers who receive randomly selected options (baseline comparison) |
 | **Business as Usual (optional)** | Customers who receive your existing campaign (if comparing against current performance) |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Step 4: Set up experiment groups" }
 
 **Important:**
 

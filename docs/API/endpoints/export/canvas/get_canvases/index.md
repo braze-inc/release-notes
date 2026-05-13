@@ -1,4 +1,4 @@
-<div id='api_rhnpnwclhzbd' class='api_div'>
+<div id='api_ykapzarhfqrd' class='api_div'>
 <h1 id="export-canvas-list">Export Canvas list</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/list</p>
@@ -30,7 +30,7 @@
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>

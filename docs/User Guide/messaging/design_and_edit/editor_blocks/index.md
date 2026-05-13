@@ -36,7 +36,7 @@ Adds text for headers within the email.
 | Line height | Modifies the distance between lines of text. |
 | Letter spacing | Modifies the distance in between each character. |
 | Text direction | Default left-to-right, but can be edited to be [right-to-left](https://www.braze.com/docs/right_to_left_messages/). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Title" }
 
 ### Paragraph
 
@@ -54,7 +54,7 @@ Enters text into the message. A toolbar helps with font and text editing functio
 | Line height | Modifies the distance between lines of text. |
 | Letter spacing | Modifies the distance in between each character. |
 | Text direction | Default left-to-right, but can be edited to be [right-to-left](https://www.braze.com/docs/right_to_left_messages/). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Paragraph" }
 
 ### List
 
@@ -76,7 +76,7 @@ Adds a bulleted list.
 | Line height | Modifies the distance between lines of text. |
 | Letter spacing | Modifies the distance in between each character. |
 | Text direction | Default left-to-right, but can be edited to be [right-to-left](https://www.braze.com/docs/right_to_left_messages/). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="List" }
 
 ### Button
 
@@ -86,7 +86,7 @@ Adds a standard button. Properties allow for editing styling and setting link be
 |---|---|
 | Button options | Sets various button options, such as font, size, width, color, and padding. |
 | Button hover | The style of the button when a user hovers over it using a mouse or trackpad. Includes the button's background color, font color, and border styles. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Button" }
 
 #### On-click behavior
 
@@ -97,7 +97,7 @@ Adds a standard button. Properties allow for editing styling and setting link be
 | Mail to, subject, and body | For the **Send email** link type, sets the recipient email address, subject, and content that will populate in a draft email when the user selects the button. |
 | Tel | For the **Make call** and **Send SMS** link type, sets the phone number the user will call or text when selecting the button. |
 | Message | For the **Send SMS** link type, sets the content that will populate in a draft SMS message when the user selects the button. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="On-click behavior" }
 
 ### Divider
 
@@ -109,7 +109,7 @@ Inserts a solid, dotted, or dashed line to help with spacing.
 | Line | The different line formats, whether dotted, dashed, or solid. You can also modify the thickness and color of the divider line. |
 | Width | Adjusts the spread of the divider in increments of 5. |
 | Align | Moves the line to be either left, center, or right-oriented. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Divider" }
 
 ### Spacer
 
@@ -118,7 +118,7 @@ Adds space or padding between other blocks.
 | Property | Description |
 |---|---|
 | Height | Adjusts the height of the spacer block. The default is 60px. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Spacer" }
 
 ### Image
 
@@ -174,7 +174,7 @@ Inserts an image from the [media library](https://www.braze.com/docs/user_guide/
 | Image with rounded corners | Renders the image with rounded corners. By default, images are rendered with squared corners. |
 | Action | Triggers an action when the user clicks the image. |
 | Block options | Sets padding around the image block. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Image" }
 
 **Tip:**
 
@@ -196,7 +196,7 @@ Creates a link to video content. Only YouTube and Vimeo are supported.
 | Play icon style | Includes different options for the play button located at the top of a video image. |
 | Play icon color | Option to select either **Light** or **Dark** for the play button. |
 | Play icon size | Choose the pixel size for the play button. Predefined range from 50&nbsp;px to 80&nbsp;px (incremented by 5&nbsp;px). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Video" }
 
 **Tip:**
 
@@ -215,7 +215,7 @@ Inserts social media platform icons. You can upload custom images for brand-spec
 | Configure icon collection | Sets the URL for each social icon. Includes the **More options** toggle to edit the title and alternative text. |
 | Align | Moves the social icon to be left, center, or right-oriented. |
 | Icon spacing | Determines the spacing between each social icon. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Social" }
 
 ### Icons
 
@@ -233,7 +233,7 @@ Inserts an icon. You can upload custom images. Braze uses an oversized placehold
 | Icon size | Determines the size of your icon. |
 | Icon spacing | Modifies the space of the icon. |
 | Icon padding | Modifies the padding of the icon. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Icons" }
 
 ### HTML
 
@@ -242,7 +242,7 @@ Inserts raw HTML. Recommended for [Liquid](https://www.braze.com/docs/liquid/), 
 | Property | Description |
 |---|---|
 | HTML | Add or edit raw HTML, including [Liquid](https://www.braze.com/docs/liquid/) for personalization or conditional logic. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="HTML" }
 
 ### Menu
 
@@ -262,7 +262,7 @@ Creates a flexible menu for the message you're designing.
 | Mobile menu | Includes options to modify the icon size, color, and icon type when shown on a mobile device. |
 | Item padding | Modifies the padding by using either the **+** or **-** button, or by entering a specific number. |
 | All sides | Sets a consistent padding number if item padding is disabled. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Menu" }
 
 ### Product
 
@@ -284,7 +284,7 @@ Renders product rows from a [Product Catalog](https://www.braze.com/docs/user_gu
 | Max products per row | Sets how many products appear per row: **1**, **2**, or **3** (**3** is only available when orientation is **Image center**). |
 | Product spacing | Sets spacing between products: **Auto** or **Custom**. |
 | Custom spacing | *(When **Custom** is selected)* Sets the gap in pixels between products. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Product" }
 
 ## Personalization
 
@@ -315,7 +315,7 @@ Adds title or paragraph text to the message.
 | Letter spacing | Modifies the distance in between each character. |
 | Text alignment | Moves the text to be aligned left, center, right, or justified. |
 | Text color | Modifies the color of the text. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Button
@@ -334,7 +334,7 @@ Adds a standard button with configurable styling, links, and analytics.
 | Background color | Modifies the color of the button's background. |
 | Border style | Determines the style of the button's border. |
 | Border radius | Determines how round the corners are. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 #### On-click behavior
@@ -345,7 +345,7 @@ Adds a standard button with configurable styling, links, and analytics.
 | Set separate behaviors for each platform | Customizes the behavior of the button for each platform separately. |
 | On-click behavior | Determines the action when the user clicks the button, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/). |
 | Log custom attributes or events | Determines whether clicking the button updates the user's profile with custom data. You can also select the identifier for reporting. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Radio button
@@ -365,7 +365,7 @@ Adds a list of options from which users can select one. When submitted, the user
 | Align | Horizontal alignment of the choices within the block. |
 | Accent color | Color used for the radio button controls (such as the selected state indicator). |
 | Padding | Spacing around the block. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Image
@@ -419,7 +419,7 @@ Inserts an image from the [media library](https://www.braze.com/docs/user_guide/
 | Background color | Modifies the color of the image's background. |
 | Border style | Determines the style of the image's border. |
 | Border radius | Determines how round the corners of the image are. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 For image specifications, refer to our [in-app message image specifications](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/image_specifications/#in-app-messages).
@@ -433,7 +433,7 @@ For image specifications, refer to our [in-app message image specifications](htt
 | Set separate behaviors for each platform | Customizes the behavior of the image for each platform separately. |
 | On-click behavior | Determines the action when the user clicks the image, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/). |
 | Log custom attributes or events | Determines whether clicking the image updates the user's profile with custom data. You can also select the identifier for reporting. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Link
@@ -446,7 +446,7 @@ Inserts a hyperlink that users can click to navigate to a specified URL. Can be 
 | Font weight | Determines the thickness of the text. |
 | Letter spacing | Modifies the distance in between each character. |
 | Text color | Modifies the color of the text. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 #### On-click behavior
@@ -455,7 +455,7 @@ Inserts a hyperlink that users can click to navigate to a specified URL. Can be 
 | --- | --- |
 | URL | The hyperlink to navigate to. |
 | Identifier for Reporting | Determines the identifier for reporting. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Spacer
@@ -466,7 +466,7 @@ Adds space or padding between other blocks.
 | --- | --- |
 | Background color | Modifies the background color of the spacer. |
 | Height | Modifies the height of the spacer. You can also modify this by using the resize handles on the spacer. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Custom code
@@ -476,7 +476,7 @@ Inserts custom HTML, CSS, or JavaScript for advanced customization.
 | Property | Description |
 | --- | --- |
 | Custom code | Allows you to add, edit, or delete HTML, CSS, and JavaScript for an in-app message. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Custom code" }
 
 ### Phone capture
 
@@ -487,7 +487,7 @@ Inserts a form field for phone numbers. When submitted, the user is subscribed t
 | Subscription group | The [SMS](https://www.braze.com/docs/sms_rcs_subscription_groups/) or [WhatsApp](https://www.braze.com/docs/whatsapp_subscription_groups/) subscription group the user is subscribed to on submit. Includes an option to collect phone numbers from all countries. |
 | Text alignment | Moves the text to be aligned left, center, right, or justified. |
 | Placeholder text | A placeholder phone number to display. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Email capture
@@ -504,7 +504,7 @@ Inserts a form field for email addresses. When submitted, the email address is a
 | Letter spacing | Modifies the distance in between each character. |
 | Text alignment | Moves the text to be aligned left, center, right, or justified. |
 | Placeholder text | A placeholder email address to display. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Short text
@@ -526,7 +526,7 @@ Inserts a form field that supports standard attributes (such as first and last n
 | Color | Color of the text typed in the field. |
 | Text alignment | Horizontal alignment of the input text within the field. |
 | Padding | Spacing around the block. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Dropdown
@@ -547,7 +547,7 @@ Inserts a dropdown with a predefined list of items from which users can select o
 | Letter spacing | Horizontal spacing between characters. |
 | Align | Horizontal alignment of the dropdown (left or center). |
 | Padding | Spacing around the block. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Checkbox
@@ -560,7 +560,7 @@ Inserts a checkbox. If the user checks the box, the block's [boolean custom attr
 | Custom attribute name | Selects which boolean custom attribute receives `true` when checked or `false` when unchecked. |
 | Accent color | Color used for the checkbox control styling. |
 | Padding | Spacing around the block. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Checkbox group
@@ -584,7 +584,7 @@ Users can select from multiple choices. Values are set or added to a defined [ar
 | Align | Horizontal alignment of the group (start or center). |
 | Accent color | Color of the checkbox controls. |
 | Padding | Spacing around the block. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Long text
@@ -605,7 +605,7 @@ Multi-line text field for survey-style flows. If you don't see this block, conta
 | Line height | Vertical spacing between lines of text. |
 | Text color | Color of the text. |
 | Letter spacing | Horizontal spacing between characters. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 <!-- Saved row is not yet released. Uncomment when available.
@@ -640,7 +640,7 @@ Adds heading or body text. Useful for structuring sections and improving readabi
 | Letter spacing | Modifies the distance in between each character. |
 | Text alignment | Moves the text to be aligned left, center, right, or justified. |
 | Text color | Modifies the color of the text. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Button
@@ -659,7 +659,7 @@ Adds a clickable element for actions such as opening a link or submitting a form
 | Background color | Modifies the color of the button's background. |
 | Border style | Determines the style of the button's border. |
 | Border radius | Determines how round the corners are. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 #### On-click behavior
@@ -670,7 +670,7 @@ Adds a clickable element for actions such as opening a link or submitting a form
 | Set separate behaviors for each platform | Customizes the behavior of the button for each platform separately. |
 | On-click behavior | Determines the action when the user clicks the button, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/). |
 | Log custom attributes or events | Determines whether clicking the button updates the user's profile with custom data. You can also select the identifier for reporting. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 **Important:**
@@ -697,7 +697,7 @@ Adds a list of options from which users can select one. Use the properties panel
 | Align | Horizontal alignment of the choices within the block. |
 | Accent color | Color used for the radio button controls (such as the selected state indicator). |
 | Padding | Spacing around the block. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Image
@@ -751,7 +751,7 @@ Displays an image from an upload or external URL.
 | Background color | Modifies the color of the image's background. |
 | Border style | Determines the style of the image's border. |
 | Border radius | Determines how round the corners of the image are. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 #### On-click behavior
@@ -763,7 +763,7 @@ Displays an image from an upload or external URL.
 | Set separate behaviors for each platform | Customizes the behavior of the image for each platform separately. |
 | On-click behavior | Determines the action when the user clicks the image, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/). |
 | Log custom attributes or events | Determines whether clicking the image updates the user's profile with custom data. You can also select the identifier for reporting. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Link
@@ -776,7 +776,7 @@ Adds a hyperlink users can select to go to a URL. Can sit in text or stand alone
 | Font weight | Determines the thickness of the text. |
 | Letter spacing | Modifies the distance in between each character. |
 | Text color | Modifies the color of the text. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 #### On-click behavior
@@ -785,7 +785,7 @@ Adds a hyperlink users can select to go to a URL. Can sit in text or stand alone
 | --- | --- |
 | URL | The hyperlink to navigate to. |
 | Identifier for Reporting | Determines the identifier for reporting. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Spacer
@@ -796,7 +796,7 @@ Adds vertical spacing between elements.
 | --- | --- |
 | Background color | Modifies the background color of the spacer. |
 | Height | Modifies the height of the spacer. You can also modify this by using the resize handles on the spacer. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Custom code
@@ -806,7 +806,7 @@ Inserts custom HTML, CSS, or JavaScript for advanced customization, such as [Goo
 | Property | Description |
 | --- | --- |
 | Custom code | Allows you to add, edit, or delete HTML, CSS, and JavaScript. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Custom code" }
 
 <!-- Countdown timer is not yet released. Uncomment when available.
 ### Countdown timer
@@ -830,7 +830,7 @@ Adds a form field for email addresses. On submit, the address is saved to the us
 | Letter spacing | Modifies the distance in between each character. |
 | Text alignment | Moves the text to be aligned left, center, right, or justified. |
 | Placeholder text | A placeholder email address to display. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Phone capture
@@ -842,7 +842,7 @@ Adds a form field for phone numbers. On submit, subscribes the user to your sele
 | Subscription group | The [SMS](https://www.braze.com/docs/sms_rcs_subscription_groups/) or [WhatsApp](https://www.braze.com/docs/whatsapp_subscription_groups/) subscription group the user is subscribed to on submit. Includes an option to collect phone numbers from all countries. |
 | Text alignment | Moves the text to be aligned left, center, right, or justified. |
 | Placeholder text | A placeholder phone number to display. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Input field
@@ -864,7 +864,7 @@ Adds a form field for standard attributes (for example, first or last name) or a
 | Color | Color of the text typed in the field. |
 | Text alignment | Horizontal alignment of the input text within the field. |
 | Padding | Spacing around the block. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Dropdown
@@ -885,7 +885,7 @@ A predefined list of items; users pick one. You can map values to custom attribu
 | Letter spacing | Horizontal spacing between characters. |
 | Align | Horizontal alignment of the dropdown (left or center). |
 | Padding | Spacing around the block. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Checkbox
@@ -898,7 +898,7 @@ When checked, sets the block's [boolean custom attribute](https://www.braze.com/
 | Custom attribute name | Selects which boolean custom attribute receives `true` when checked or `false` when unchecked. |
 | Accent color | Color used for the checkbox control styling. |
 | Padding | Spacing around the block. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Checkbox group
@@ -922,7 +922,7 @@ Users pick multiple options; values set or append to a defined [array custom att
 | Align | Horizontal alignment of the group (start or center). |
 | Accent color | Color of the checkbox controls. |
 | Padding | Spacing around the block. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Long text
@@ -943,7 +943,7 @@ Multi-line text field for survey-style flows. If you don't see this block, conta
 | Line height | Vertical spacing between lines of text. |
 | Text color | Color of the text. |
 | Letter spacing | Horizontal spacing between characters. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 <!-- Saved row is not yet released. Uncomment when available.
@@ -980,7 +980,7 @@ Adds heading or body text with rich text options.
 | Letter spacing | Modifies the distance in between each character. |
 | Text alignment | Moves the text to be aligned left, center, right, or justified. |
 | Text color | Modifies the color of the text. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Button
@@ -999,7 +999,7 @@ Adds a clickable button. You can set links and analytics options in the properti
 | Background color | Modifies the color of the button's background. |
 | Border style | Determines the style of the button's border. |
 | Border radius | Determines how round the corners are. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 #### On-click behavior
@@ -1010,7 +1010,7 @@ Adds a clickable button. You can set links and analytics options in the properti
 | Set separate behaviors for each platform | Customizes the behavior of the button for each platform separately. |
 | On-click behavior | Determines the action when the user clicks the button, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/). |
 | Log custom attributes or events | Determines whether clicking the button updates the user's profile with custom data. You can also select the identifier for reporting. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 For more information, see [Define on-click behavior](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner/#step-32-define-on-click-behavior-optional) in the Banner article.
@@ -1066,7 +1066,7 @@ Displays an image from a hosted URL. Configure display options in the properties
 | Background color | Modifies the color of the image's background. |
 | Border style | Determines the style of the image's border. |
 | Border radius | Determines how round the corners of the image are. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 #### On-click behavior
@@ -1078,7 +1078,7 @@ Displays an image from a hosted URL. Configure display options in the properties
 | Set separate behaviors for each platform | Customizes the behavior of the image for each platform separately. |
 | On-click behavior | Determines the action when the user clicks the image, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/). |
 | Log custom attributes or events | Determines whether clicking the image updates the user's profile with custom data. You can also select the identifier for reporting. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Link
@@ -1091,7 +1091,7 @@ Inserts a hyperlink users can select.
 | Font weight | Determines the thickness of the text. |
 | Letter spacing | Modifies the distance in between each character. |
 | Text color | Modifies the color of the text. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 #### On-click behavior
@@ -1100,7 +1100,7 @@ Inserts a hyperlink users can select.
 | --- | --- |
 | URL | The hyperlink to navigate to. |
 | Identifier for Reporting | Determines the identifier for reporting. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Spacer
@@ -1111,7 +1111,7 @@ Adds vertical spacing between blocks.
 | --- | --- |
 | Background color | Modifies the background color of the spacer. |
 | Height | Modifies the height of the spacer. You can also modify this by using the resize handles on the spacer. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Custom code
@@ -1121,7 +1121,7 @@ Inserts custom HTML for advanced layouts or embedded content (for example video)
 | Property | Description |
 | --- | --- |
 | Custom code | Add or edit HTML (and related assets) for the Banner. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Custom code" }
 
 ### Phone capture
 
@@ -1132,7 +1132,7 @@ Collects a phone number. On submit, subscribes the user to your selected [SMS](h
 | Subscription group | The [SMS](https://www.braze.com/docs/sms_rcs_subscription_groups/) or [WhatsApp](https://www.braze.com/docs/whatsapp_subscription_groups/) subscription group the user is subscribed to on submit. Includes an option to collect phone numbers from all countries. |
 | Text alignment | Moves the text to be aligned left, center, right, or justified. |
 | Placeholder text | A placeholder phone number to display. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Email capture
@@ -1149,7 +1149,7 @@ Collects an email address and adds it to the user's Braze profile on submit. Onl
 | Letter spacing | Modifies the distance in between each character. |
 | Text alignment | Moves the text to be aligned left, center, right, or justified. |
 | Placeholder text | A placeholder email address to display. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Long text
@@ -1170,7 +1170,7 @@ Multi-line text field for survey-style flows. If you don't see this block, conta
 | Line height | Vertical spacing between lines of text. |
 | Text color | Color of the text. |
 | Letter spacing | Horizontal spacing between characters. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 <!-- Saved row is not yet released. Uncomment when available.
@@ -1206,7 +1206,7 @@ Adds heading or body copy with rich text options.
 | Letter spacing | Modifies the distance in between each character. |
 | Text alignment | Moves the text to be aligned left, center, right, or justified. |
 | Text color | Modifies the color of the text. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Button
@@ -1225,7 +1225,7 @@ Adds a clickable button (for example **Save** or navigation).
 | Background color | Modifies the color of the button's background. |
 | Border style | Determines the style of the button's border. |
 | Border radius | Determines how round the corners are. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Image
@@ -1279,7 +1279,7 @@ Displays an image from the [media library](https://www.braze.com/docs/user_guide
 | Background color | Modifies the color of the image's background. |
 | Border style | Determines the style of the image's border. |
 | Border radius | Determines how round the corners of the image are. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Spacer
@@ -1290,7 +1290,7 @@ Adds vertical spacing between blocks.
 | --- | --- |
 | Background color | Modifies the background color of the spacer. |
 | Height | Modifies the height of the spacer. You can also modify this by using the resize handles on the spacer. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
 ### Subscription groups (smart block)

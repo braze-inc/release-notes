@@ -14,7 +14,7 @@ A snapshot is static and aggregated. It reflects the cumulative result of all ch
 |-------|---------|
 | Customer identifier | Who this record describes |
 | Snapshot date | When this snapshot was taken |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Required fields" }
 
 ### How snapshots should be updated
 
@@ -45,7 +45,7 @@ An event stream records discrete actions as they happen. It answers the question
 | Event timestamp | When the event actually occurred |
 | Creation timestamp | When this record was created in your system (see note below) |
 | Event properties | Additional metadata about the event; the richer this is, the better Decisioning Studio can link events across the customer journey |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Required fields" }
 
 **Important:**
 

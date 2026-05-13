@@ -99,7 +99,7 @@ If you need all existing user data to match the new type, you must re-send the a
 | Boolean | Inputs of `1`, `true`, `t` (not case sensitive) are stored as `true` |
 | Boolean | Inputs of `0`, `false`, `f` (not case sensitive) are stored as `false` |
 | Number | Integers or Floats (such as `1`, `1.5`) are stored as numbers |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Data type coercion" }
 
 For more information on specific filter options exposed by different data type comparisons, check out [Configuring reporting](https://www.braze.com/docs/user_guide/analytics/reports/configure_reporting/). For more information on the different available data types, refer to [Data types](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types/#custom-attribute-data-types).
 

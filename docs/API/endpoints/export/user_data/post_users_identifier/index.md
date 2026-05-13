@@ -1,4 +1,4 @@
-<div id='api_gjxuahdquauy' class='api_div'>
+<div id='api_uvlmaybochbf' class='api_div'>
 <h1 id="export-user-profile-by-identifier">Export user profile by identifier</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/export/ids</p>
@@ -60,7 +60,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -158,7 +158,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <p>The following is a list of valid <code class="language-plaintext highlighter-rouge">fields_to_export</code>. Using <code class="language-plaintext highlighter-rouge">fields_to_export</code> to minimize the data returned can improve response time of this API endpoint:</p>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" aria-label="Fields to export">
   <thead>
     <tr>
       <th>Field to export</th>

@@ -1,4 +1,4 @@
-<div id='api_gkxzoeluhtln' class='api_div'>
+<div id='api_jkoazzmodsmc' class='api_div'>
 <h1 id="create-content-block">Create Content Block</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/content_blocks/create</p>
@@ -49,7 +49,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -135,7 +135,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <p>The following table lists possible returned errors and their associated troubleshooting steps.</p>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Troubleshooting">
   <thead>
     <tr>
       <th>Error</th>

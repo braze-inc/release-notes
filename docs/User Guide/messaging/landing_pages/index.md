@@ -11,7 +11,7 @@ Landing page and custom domain availability depends on your Braze package. Conta
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
 
 
 
@@ -33,7 +33,7 @@ The number of published landing pages and custom domains you can use depends on 
 | :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
 | Published landing pages                                                                 | Five per company | 20 additional |
 | Custom domains          | One per company | Five additional |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Plan tiers" }
 
 ## Adding Google Tag Manager to a landing page
 

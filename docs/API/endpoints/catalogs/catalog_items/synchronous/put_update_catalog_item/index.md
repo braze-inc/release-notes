@@ -1,4 +1,4 @@
-<div id='api_fbddgzhcwacf' class='api_div'>
+<div id='api_buoulnocewzh' class='api_div'>
 <h1 id="replace-catalog-item">Replace catalog item</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/catalogs/{catalog_name}/items/{item_id}</p>
@@ -28,7 +28,7 @@
 
 <h2 id="path-parameters">Path parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Path parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -55,7 +55,7 @@
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -174,7 +174,7 @@
 
 <p>The following table lists possible returned errors and their associated troubleshooting steps.</p>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Troubleshooting">
   <thead>
     <tr>
       <th>Error</th>

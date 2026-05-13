@@ -1,4 +1,4 @@
-<div id='api_lwjpmwnzfdat' class='api_div'>
+<div id='api_kujmxbfydlsx' class='api_div'>
 <h1 id="merge-users">Merge users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/merge</p>
@@ -44,7 +44,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -386,7 +386,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <p>The following table lists possible error messages that may occur.</p>
 
-<table class="reset-td-br-1 reset-td-br-2" role="presentation">
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Troubleshooting">
   <thead>
     <tr>
       <th>Error</th>

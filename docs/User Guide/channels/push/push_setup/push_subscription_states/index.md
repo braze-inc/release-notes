@@ -22,7 +22,7 @@ By default, for your user to receive your messages through push, their push subs
 |`Subscribed`| Default push subscription state when a user profile is created in Braze. |
 |`Opted-In`| A user has explicitly expressed a preference to receive push notifications. Braze automatically moves a user's opt-in state to `Opted-In` if the user accepts an OS-level push prompt.<br><br>This does not apply to Android 12 or below users.|
 |`Unsubscribed`| A user explicitly unsubscribed from push through your application or other methods your brand provides. By default, Braze push campaigns target only users that are `Subscribed` or `Opted-in` for push.|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Push subscription states #push-sub-states" }
 
 **Important:**
 
@@ -89,7 +89,7 @@ The following table shows how different user actions affect iOS push enablement,
 | User enables push from device settings and logs a session | `true` | `true` | Foreground | `Opted-In`** |
 | User disables push from device settings and logs a session | `false` | `false` | Background | Not updated |
 | User deletes the app | Not updated | Updated when push token is retired | Updated when push token is retired | Not updated |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 aria-label="iOS user actions and push status #ios-user-actions-push-status" }
 
 <sup>* If the app does not use provisional push, `Foreground Push Enabled` is `false` until the user allows push notifications. If the app uses provisional push, `Foreground Push Enabled` is `true` at the start of the first session. For more information, see [Provisional authorization and quiet push](#provisional-push).</sup>
 
@@ -108,7 +108,7 @@ Because a user's decision is final and you can't ask again after they decline, u
 |iOS| ![An iOS native push prompt asking "My App would like to send you notifications" with two buttons, "Don't Allow" and "Allow" at the bottom of the message.](https://www.braze.com/docs/assets/img/push_implementation_guide/ios-push-prompt.png?794f14d51ab2ee27281fb484f2bb3d5e){: style="max-width:410px;"} | This does not apply when requesting [provisional push](#provisional-push) permission.|
 |Android| ![An Android push message asking "Allow Kitchenerie to send you notifications?" with two buttons, "Allow" and "Don't allow" at the bottom of the message.](https://www.braze.com/docs/assets/img/push_implementation_guide/android-push-prompt.png?aa824eb39eb4947698a29f41affb97dc){: style="max-width:410px;"} | This push permission was introduced in Android 13. Before Android 13, permission was not required to send push.|
 |Web| ![A web browser's native push prompt asking "Braze.com wants to show notification" with two buttons, "Block" and "Allow" at the bottom of the message.](https://www.braze.com/docs/assets/img/push_implementation_guide/web-push-prompt.png?25a4b7286a56766f1fe53034d53cd719){: style="max-width:410px;"} | |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Push permission" }
 
 ### Android
 
