@@ -40,6 +40,8 @@ After [setting up the Braze MCP server], you can interact with Braze through nat
 
 
 
+For more information on the `list_functions` function, see [Available API functions].
+
 ### Get details about a Canvas ID
 
 
@@ -52,6 +54,8 @@ After [setting up the Braze MCP server], you can interact with Braze through nat
 
 
 
+For more information on the `get_canvas_details` function, see [Available API functions].
+
 ### Show me my recent Canvases
 
 
@@ -63,6 +67,36 @@ After [setting up the Braze MCP server], you can interact with Braze through nat
 !['Show my recent canvases' being asked and answered in Cursor.](https://www.braze.com/docs/assets/img/mcp_server/cursor/show_me_my_recent_canvases.png?ce37e194fed83980ba444c978ccf0d0d)
 
 
+
+For more information on the `get_canvas_list` function, see [Available API functions].
+
+### Create an email template
+
+
+
+!['Create an email template' being asked and answered in Claude.](https://www.braze.com/docs/assets/img/mcp_server/claude/create_an_email_template.png){: style="max-width:85%;"}
+
+
+
+!['Create an email template' being asked and answered in Cursor.](https://www.braze.com/docs/assets/img/mcp_server/cursor/create_an_email_template.png)
+
+
+
+For more information on the `create_email_template` function, see [Available API functions].
+
+### Update a content block
+
+
+
+!['Update a content block' being asked and answered in Claude.](https://www.braze.com/docs/assets/img/mcp_server/claude/update_a_content_block.png){: style="max-width:85%;"}
+
+
+
+!['Update a content block' being asked and answered in Cursor.](https://www.braze.com/docs/assets/img/mcp_server/cursor/update_a_content_block.png)
+
+
+
+For more information on the `update_content_block` function, see [Available API functions].
 
 ## Disclaimer
 <!-- Braze Legal must approve any changes to this content. -->

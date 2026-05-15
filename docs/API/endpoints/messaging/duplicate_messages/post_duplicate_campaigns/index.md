@@ -1,4 +1,4 @@
-<div id='api_nwfxrrkyrunr' class='api_div'>
+<div id='api_gargkcuypdfm' class='api_div'>
 <h1 id="duplicate-campaigns-using-the-api">Duplicate campaigns using the API</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/duplicate</p>

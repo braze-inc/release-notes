@@ -82,7 +82,7 @@ Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 
 For a full list of available tables and columns, refer to the [SQL table reference](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/). Snowflake Data Sharing includes all tables in that reference, plus additional Snowflake-exclusive tables for snapshots, campaign and Canvas changelogs, agent console events, and message retry events.
 
-You can also [download the raw table schemas](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt?f000883ca4607ce040f87f286540106f) as a text file.
+You can also [download the raw table schemas](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt?b977a6b381783c53864c49d0b20815ca) as a text file.
 
 ### User ID schema
 

@@ -152,7 +152,7 @@ if (base === 'docs'){
 
 
 <link type="text/css" rel="stylesheet" href="/docs/assets/css/swiper.css" />
-<link type="text/css" rel="stylesheet" href="/docs/assets/css/algolia_theme.css"  /><link href='/docs/assets/global-62bfae6a3678931b4f3dcf38cd540f22.css' rel='stylesheet' type='text/css' /><script type="text/javascript">
+<link type="text/css" rel="stylesheet" href="/docs/assets/css/algolia_theme.css"  /><link href='/docs/assets/global-7a180f4e8649417a0da149512527b7b7.css' rel='stylesheet' type='text/css' /><script type="text/javascript">
   const page_collection = 'docs_pages';
   const page_collection_title = 'Braze';
   const page_collection_default_path = '';
@@ -189,7 +189,7 @@ if (base === 'docs'){
 
 <script type='text/javascript' src='/docs/assets/js/swiper.js' ></script>
 
-<script type='text/javascript' src='/docs/assets/js/algolia_search.js?1778599865' ></script>
+<script type='text/javascript' src='/docs/assets/js/algolia_search.js?1778779739' ></script>
 
 <script src="/docs/assets/js/mermaid.js"></script>
 
@@ -367,7 +367,7 @@ function OptanonWrapper() { }
     </div>
     </div>
     <div id="navbar-search">
-       <script src="/docs/assets/js/su_header_search.js?1778599865" ></script>
+       <script src="/docs/assets/js/su_header_search.js?1778779739" ></script>
 <script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/an.js"></script>
 <script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/searchbox.js"></script>
 <link rel="stylesheet" href="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/searchbox.css">
@@ -390,7 +390,7 @@ function OptanonWrapper() { }
 
 <div class="container-fluid" >
   <div class="row flex-xl-nowrap d-print-block ">
-    <script type="text/javascript" src="/docs/assets/js/broken_redirect_list.js?1778599865" ></script>
+    <script type="text/javascript" src="/docs/assets/js/broken_redirect_list.js?1778779739" ></script>
 <script type="text/javascript">
 
   function removeleadingslash(str){
@@ -706,6 +706,9 @@ if (site_language && (site_language != 'en')){
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/user_guide/audience/manage_audience/merge_duplicate_users/");
+    validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
+    
+    siteurl = removeleadingslash("/user_guide/audience/manage_audience/merge_duplicate_users/merge_behavior/");
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/user_guide/audience/manage_audience/user_profiles/");
@@ -1684,6 +1687,9 @@ if (site_language && (site_language != 'en')){
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/user_guide/data/distribution/braze_currents/setting_up_currents/available_partners/");
+    validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
+    
+    siteurl = removeleadingslash("/user_guide/data/distribution/braze_currents/setting_up_currents/custom_http_connector/");
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/user_guide/data/distribution/braze_currents/setting_up_currents/event_delivery_semantics/");

@@ -1,4 +1,4 @@
-<div id='api_pbmtzzgtwxtt' class='api_div'>
+<div id='api_mozweresaiak' class='api_div'>
 <h1 id="blacklist-emails">Blacklist emails</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/blacklist</p>

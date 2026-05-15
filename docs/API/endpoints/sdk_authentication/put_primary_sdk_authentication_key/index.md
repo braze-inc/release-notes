@@ -1,4 +1,4 @@
-<div id='api_gskuihcybvwe' class='api_div'>
+<div id='api_ltmzdmavrwvg' class='api_div'>
 <h1 id="set-primary-sdk-authentication-key">Set primary SDK Authentication key</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/app_group/sdk_authentication/primary</p>

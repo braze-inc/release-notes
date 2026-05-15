@@ -5,7 +5,7 @@
 **Note:**
 
 
-Sending a contact card is charged as an MMS. Review your expected MMS volume and message credit usage when you create contact cards, and confirm costs in your Braze [Billing page](https://www.braze.com/docs/user_guide/administer/global/billing/).
+Sending a contact card is charged as an MMS. Review your expected MMS volume and Message or Action Credits usage when you create contact cards, and confirm costs in your Braze [Billing page](https://www.braze.com/docs/user_guide/administer/global/billing/).
 
 
 

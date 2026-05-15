@@ -53,7 +53,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 
 
-<div id='api_kjhmutgvuyam' class='api_div'>
+<div id='api_nmvciikqrktm' class='api_div'>
 <h2 id="random-bucket-number-update-events">Random Bucket Number Update events</h2>
 
 <div class="api_tags" data-tags="Random Bucket Number" data-tags-lower="random bucket number"></div>
@@ -91,7 +91,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_ucxwgddxobtx' class='api_div'>
+<div id='api_yeukbmjwfeph' class='api_div'>
 <h2 id="custom-events">Custom events</h2>
 
 <div class="api_tags" data-tags="Custom Events" data-tags-lower="custom events"></div>
@@ -207,6 +207,56 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 19
 20
 21
+22
+23
+24
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.CustomEvent</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the custom event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="p">[</span><span class="err">Braze</span><span class="w"> </span><span class="err">Custom</span><span class="w"> </span><span class="err">Event</span><span class="p">]</span><span class="w"> </span><span class="err">(users.behaviors.CustomEvent)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -294,7 +344,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_dacqvywhltey' class='api_div'>
+<div id='api_jwahgbrggprr' class='api_div'>
 <h2 id="install-attribution-events">Install Attribution events</h2>
 
 <div class="api_tags" data-tags="Attribution" data-tags-lower="attribution"></div>
@@ -350,6 +400,40 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.InstallAttribution</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"source"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The source of the attribution"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -427,7 +511,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_ubgdiqmledye' class='api_div'>
+<div id='api_yvdcmgzpvpdz' class='api_div'>
 <h2 id="location-events">Location events</h2>
 
 <div class="api_tags" data-tags="Locations" data-tags-lower="locations"></div>
@@ -562,6 +646,62 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 24
 25
 26
+27
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.Location</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"alt_accuracy"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, float) Altitude accuracy of recorded location"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"altitude"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, float) [PII] Altitude of recorded location"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"latitude"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, float) [PII] Latitude of recorded location"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ll_accuracy"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, float) Accuracy of the latitude and longitude of recorded location"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"longitude"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, float) [PII] Longitude of recorded location"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Location</span><span class="w"> </span><span class="err">(users.behaviors.Location)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -661,7 +801,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_zgngmnyanryt' class='api_div'>
+<div id='api_gszbnmczlhip' class='api_div'>
 <h2 id="purchase-events">Purchase events</h2>
 
 <div class="api_tags" data-tags="Purchases" data-tags-lower="purchases"></div>
@@ -792,6 +932,58 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 22
 23
 24
+25
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.Purchase</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Currency of the purchase"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, float) Price of the purchase"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"product_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) ID of the product purchased"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Purchase</span><span class="w"> </span><span class="err">(users.behaviors.Purchase)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -886,7 +1078,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_utevgchfedun' class='api_div'>
+<div id='api_iktttqymqqjb' class='api_div'>
 <h2 id="first-session-events">First Session events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -996,6 +1188,50 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 17
 18
 19
+20
+21
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.app.FirstSession</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"session_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) UUID of the session"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">First</span><span class="w"> </span><span class="err">Session</span><span class="w"> </span><span class="err">(users.behaviors.app.FirstSession)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -1067,7 +1303,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_gkpzrmogsvap' class='api_div'>
+<div id='api_vpnfoblrxzbk' class='api_div'>
 <h2 id="session-end-events">Session End events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1168,6 +1404,50 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 18
 19
 20
+21
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.app.SessionEnd</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"duration"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, float) Duration of the session in seconds"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"session_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) UUID of the session"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Session</span><span class="w"> </span><span class="err">End</span><span class="w"> </span><span class="err">(users.behaviors.app.SessionEnd)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -1242,7 +1522,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_pimihoslybcj' class='api_div'>
+<div id='api_eutihhvhlfns' class='api_div'>
 <h2 id="session-start-events">Session Start events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1342,6 +1622,48 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 17
 18
 19
+20
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.app.SessionStart</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"session_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) UUID of the session"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Session</span><span class="w"> </span><span class="err">Start</span><span class="w"> </span><span class="err">(users.behaviors.app.SessionStart)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -1413,7 +1735,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_tngrpqayqlpi' class='api_div'>
+<div id='api_nlgkxmjysqrv' class='api_div'>
 <h2 id="live-activity-push-to-start-token-change-events">Live Activity Push To Start Token Change events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Push To Start Token" data-tags-lower="live activity, push to start token"></div>
@@ -1511,6 +1833,48 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 17
 18
 19
+20
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.liveactivity.PushToStartTokenChange</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"activity_attributes_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Live Activity attribute type"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ios_push_token_apns_gateway"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"push_to_start_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Live Activity push to start token"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"push_token_state_change_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) A description of the push token state change type"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Live</span><span class="w"> </span><span class="err">Activity</span><span class="w"> </span><span class="err">Push</span><span class="w"> </span><span class="err">To</span><span class="w"> </span><span class="err">Start</span><span class="w"> </span><span class="err">Token</span><span class="w"> </span><span class="err">Change</span><span class="w"> </span><span class="err">(users.behaviors.liveactivity.PushToStartTokenChange)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -1582,7 +1946,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_eriiyygjryzh' class='api_div'>
+<div id='api_lkzrpekqvemp' class='api_div'>
 <h2 id="live-activity-update-token-change-events">Live Activity Update Token Change events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Update Token" data-tags-lower="live activity, update token"></div>
@@ -1680,6 +2044,48 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 17
 18
 19
+20
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.liveactivity.UpdateTokenChange</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"activity_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Live Activity identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ios_push_token_apns_gateway"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"push_token_state_change_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) A description of the push token state change type"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"update_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Live Activity update token"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Live</span><span class="w"> </span><span class="err">Activity</span><span class="w"> </span><span class="err">Update</span><span class="w"> </span><span class="err">Token</span><span class="w"> </span><span class="err">Change</span><span class="w"> </span><span class="err">(users.behaviors.liveactivity.UpdateTokenChange)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -1751,7 +2157,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_urknuomlwnta' class='api_div'>
+<div id='api_wiqlivrgjxde' class='api_div'>
 <h2 id="push-notification-token-state-change-events">Push Notification Token State Change events</h2>
 
 <div class="api_tags" data-tags="Push, Token State Change" data-tags-lower="push, token state change"></div>
@@ -1859,6 +2265,64 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.pushnotification.TokenStateChange</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ios_push_token_apns_gateway"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"push_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Push token of the event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"push_token_created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the push token was created"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"push_token_device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device id of the push token"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"push_token_foreground_push_disabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Foreground push disabled flag of the push token"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"push_token_provisionally_opted_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Provisionally opted in flag of the push token"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"push_token_state_change_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) A description of the push token state change type"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"push_token_updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the push token was last updated"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"time_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) Time in millisecond when the event happened"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"web_push_token_public_key"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Public key of the push token, only applies to web push tokens"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"web_push_token_user_auth"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User auth of the push token, only applies to web push tokens"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"web_push_token_vapid_public_key"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) VAPID public key of the push token, only applies to web push tokens"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 

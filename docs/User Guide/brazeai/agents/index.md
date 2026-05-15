@@ -5,7 +5,7 @@
 **Important:**
 
 
-Message Credits are required to access and use Braze Agents. If you don't currently have message credits and want to use Braze Agents, contact your account manager for next steps.
+Message or Action Credits are required to access and use Braze Agents. If you don't currently have Action Credits and want to use Braze Agents, contact your account manager for next steps.
 
 
 

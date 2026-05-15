@@ -1,4 +1,4 @@
-<div id='api_wkjvaeqqzwdu' class='api_div'>
+<div id='api_nufisxbxgplf' class='api_div'>
 <h1 id="update-existing-email-templates">Update existing email templates</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/templates/email/update</p>
@@ -11,6 +11,10 @@
 <p>You can access an email template’s <code class="language-plaintext highlighter-rouge">email_template_id</code> by navigating to it on the <strong>Templates &amp; Media</strong> page. The <a href="/docs/api/endpoints/templates/email_templates/post_create_email_template/">Create email template endpoint</a> will also return an <code class="language-plaintext highlighter-rouge">email_template_id</code> reference.</p>
 
 <p>All fields other than the <code class="language-plaintext highlighter-rouge">email_template_id</code> are optional, but you must specify at least one field to update.</p>
+
+<p><strong>Tip:</strong></p>
+
+<p>You can also call this endpoint through the <a href="/docs/user_guide/brazeai/mcp_server/">Braze MCP server</a> using the <a href="/docs/user_guide/brazeai/mcp_server/available_api_functions/#templates"><code class="language-plaintext highlighter-rouge">update_email_template</code></a> function. This lets AI tools like Claude and Cursor update email templates through natural language prompts.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#afb25494-3350-458d-932d-5bf4220049fa" class="seeme">See me in Postman</a></div>
 
