@@ -19,6 +19,13 @@ As of January 2020, iOS rich push notifications can handle images 1038x1038 that
 
 
 
+**Important:**
+
+
+Push notification images may not show as expected if the file size for the image is too big, the aspect ratio is incorrect, the text exceeds the maximum message length, or the title text exceeds the maximum title length.
+
+
+
 ### Character count
 
 While we can't provide a hard and fast rule for the precise number of characters to include in a push, we [provide some guidelines](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats/) to consider while designing iOS messages. There may be some variance depending on the presence of an image, the notification state and display setting of the user's device, and the size of the device. When in doubt, keep it short and sweet.

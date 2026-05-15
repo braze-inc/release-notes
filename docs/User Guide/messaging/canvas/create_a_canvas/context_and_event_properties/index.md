@@ -109,11 +109,6 @@ Given this behavior, Braze strongly recommends you use a Liquid timezone filter 
 ```
 
 
-#### Exceptions
-
-- Timestamps are not normalized to UTC in the first step of a Canvas if that step is a Message step.
-- Timestamps are not normalized to UTC in any Message step using the in-app message channel, regardless of its order in the Canvas.
-
 ## Use case
 
 ![An Action Path step followed by a Delay step and Message step for users who have added an item to their wishlist, and a path for everyone else.](https://www.braze.com/docs/assets/img_archive/canvas_entry_properties1.png?06859d03288a62a8303471c084e9082c){: style="float:right;max-width:30%;margin-left:15px;"}

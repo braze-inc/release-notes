@@ -1,4 +1,4 @@
-<div id='api_jkoazzmodsmc' class='api_div'>
+<div id='api_hvakpflxcgbq' class='api_div'>
 <h1 id="create-content-block">Create Content Block</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/content_blocks/create</p>
@@ -7,6 +7,10 @@
 <blockquote>
   <p>Use this endpoint to create a <a href="/docs/user_guide/messaging/design_and_edit/content_blocks/">Content Block</a>.</p>
 </blockquote>
+
+<p><strong>Tip:</strong></p>
+
+<p>You can also call this endpoint through the <a href="/docs/user_guide/brazeai/mcp_server/">Braze MCP server</a> using the <a href="/docs/user_guide/brazeai/mcp_server/available_api_functions/#content-blocks"><code class="language-plaintext highlighter-rouge">create_content_block</code></a> function. This lets AI tools like Claude and Cursor create content blocks through natural language prompts.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5" class="seeme">See me in Postman</a></div>
 

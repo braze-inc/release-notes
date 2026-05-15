@@ -1,4 +1,4 @@
-<div id='api_icrgzredgnnc' class='api_div'>
+<div id='api_crhgdefaohfp' class='api_div'>
 <h1 id="create-email-template">Create email template</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/templates/email/create</p>
@@ -9,6 +9,10 @@
 </blockquote>
 
 <p>These templates will be available on the <strong>Templates &amp; Media</strong> page. The response from this endpoint includes a field for <code class="language-plaintext highlighter-rouge">email_template_id</code>, which can be used to update the template in subsequent API calls.</p>
+
+<p><strong>Tip:</strong></p>
+
+<p>You can also call this endpoint through the <a href="/docs/user_guide/brazeai/mcp_server/">Braze MCP server</a> using the <a href="/docs/user_guide/brazeai/mcp_server/available_api_functions/#templates"><code class="language-plaintext highlighter-rouge">create_email_template</code></a> function. This lets AI tools like Claude and Cursor create email templates through natural language prompts.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b" class="seeme">See me in Postman</a></div>
 

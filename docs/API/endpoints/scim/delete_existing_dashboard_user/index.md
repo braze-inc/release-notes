@@ -1,4 +1,4 @@
-<div id='api_qokgpuueddmu' class='api_div'>
+<div id='api_zlxkvjcmlytb' class='api_div'>
 <h1 id="remove-dashboard-user-account">Remove dashboard user account</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/scim/v2/Users/{id}</p>

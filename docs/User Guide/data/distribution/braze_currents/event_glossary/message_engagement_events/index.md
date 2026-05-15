@@ -81,7 +81,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 
 
-<div id='api_coqadhrpgasw' class='api_div'>
+<div id='api_jkclatxvzhhk' class='api_div'>
 <h2 id="agent-executed-events">Agent executed events</h2>
 
 <div class="api_tags" data-tags="Agent" data-tags-lower="agent"></div>
@@ -158,9 +158,89 @@ If complete consistency is required, we recommend waiting an hour from the last 
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">agentconsole.AgentExecuted</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"agent_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) BSON id of the CustomerDefinedAgent"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"agent_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the CustomerDefinedAgent"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cache_hit"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, boolean) whether or not this request hit the cache to return the response"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cache_tokens"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) how many cached tokens this request used"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"completion_tokens"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) how many completion tokens this request used"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"duration"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) how long the invocation took in milliseconds"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"error"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Description of error"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"input"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] input to the LLM"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"invocation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) globally unique id for this message"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"invocation_source"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) which ruby object invoked the LLM request"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_error"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, boolean) whether or not this request errored out"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"llm_owned_by_customer"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, boolean) if the LLM call was the customer's; if true, we used customer's API key, if false, we use Braze's"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"model_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the LLM model used in this request"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"model_provider"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the LLM model provider"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"output"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] response from the LLM"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"prompt_tokens"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) how many prompt tokens this request used"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"provider_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) any request ID given to us by the model provider for the api call"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"reasoning_tokens"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) how many reasoning tokens this request used"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) unique id for this overall LLM request and complete execution"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"total_tokens"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) how many total tokens this request used"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) unix timestamp at which this event is logged"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
 </div>
 
-<div id='api_nibagyqokrsv' class='api_div'>
+<div id='api_nuzomjbyrjth' class='api_div'>
 <h2 id="tool-invocation-events">Tool invocation events</h2>
 
 <div class="api_tags" data-tags="Agent" data-tags-lower="agent"></div>
@@ -199,9 +279,49 @@ If complete consistency is required, we recommend waiting an hour from the last 
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">agentconsole.ToolInvocation</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"agent_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) BSON id of the CustomerDefinedAgent"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"agent_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the CustomerDefinedAgent"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"duration"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) How long the tool invocation took in milliseconds"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"invocation_source"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) which ruby object invoked the LLM request"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_error"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, boolean) whether or not this request errored out"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) unique id for this overall LLM request and complete execution"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"tool_arguments"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) JSON of the tool arguments"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"tool_call_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) globally unique id for this tool call"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"tool_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the Tool"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) unix timestamp at which this event is logged"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
 </div>
 
-<div id='api_ysumxndkcbbj' class='api_div'>
+<div id='api_cztmupnwnlop' class='api_div'>
 <h2 id="uninstall-events">Uninstall events</h2>
 
 <div class="api_tags" data-tags="Uninstall" data-tags-lower="uninstall"></div>
@@ -263,6 +383,40 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.Uninstall</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -398,7 +552,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_qpjkwnmryzxd' class='api_div'>
+<div id='api_puooyvbirlpu' class='api_div'>
 <h2 id="global-subscription-state-change-events">Global Subscription State Change events</h2>
 
 <div class="api_tags" data-tags="Subscription" data-tags-lower="subscription"></div>
@@ -518,6 +672,72 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.subscription.GlobalStateChange</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"channel"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Channel this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"channel_identifier"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The user's identifier on the channel the event is for."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"state_change_source"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Subscription status: 'Subscribed', 'Unsubscribed' or 'Opted In'"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -814,7 +1034,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ltufdquhcegh' class='api_div'>
+<div id='api_aijyqrenpdyf' class='api_div'>
 <h2 id="subscription-group-state-change-events">Subscription Group State Change events</h2>
 
 <div class="api_tags" data-tags="Subscription" data-tags-lower="subscription"></div>
@@ -952,6 +1172,80 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.subscriptiongroup.StateChange</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"channel"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Channel this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"channel_identifier"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The user's identifier on the channel the event is for."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Phone number of the user in e.164 format (for example +14155552671)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"state_change_source"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -1224,7 +1518,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_mzmctcxrmnha' class='api_div'>
+<div id='api_xqjxxackdemv' class='api_div'>
 <h2 id="campaign-conversion-events">Campaign Conversion events</h2>
 
 <div class="api_tags" data-tags="Campaign, Conversion" data-tags-lower="campaign, conversion"></div>
@@ -1316,6 +1610,58 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.campaigns.Conversion</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conversion_behavior"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON-encoded string describing the conversion behavior"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conversion_behavior_index"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Index of the conversion behavior"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -1501,7 +1847,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_wufmusligxmp' class='api_div'>
+<div id='api_uqsflkznhjhf' class='api_div'>
 <h2 id="campaign-control-group-enrollment-events">Campaign Control Group Enrollment events</h2>
 
 <div class="api_tags" data-tags="Campaign, Entry" data-tags-lower="campaign, entry"></div>
@@ -1581,6 +1927,54 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.campaigns.EnrollInControl</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -1754,7 +2148,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_mgfrxgixszug' class='api_div'>
+<div id='api_oclthhwmqgzp' class='api_div'>
 <h2 id="canvas-conversion-events">Canvas Conversion events</h2>
 
 <div class="api_tags" data-tags="Canvas, Conversion" data-tags-lower="canvas, conversion"></div>
@@ -1848,6 +2242,58 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.canvas.Conversion</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conversion_behavior"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON-encoded string describing the conversion behavior"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conversion_behavior_index"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Index of the conversion behavior"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -2033,7 +2479,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_fqahrxnmlaxv' class='api_div'>
+<div id='api_yppatapgshhe' class='api_div'>
 <h2 id="canvas-entry-events">Canvas Entry events</h2>
 
 <div class="api_tags" data-tags="Canvas, Entry" data-tags-lower="canvas, entry"></div>
@@ -2115,6 +2561,54 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.canvas.Entry</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"in_control_group"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, boolean) Whether the user was enrolled in the control group"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -2290,7 +2784,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_sydpcquaxgdc' class='api_div'>
+<div id='api_gzkpsituwvch' class='api_div'>
 <h2 id="exit-match-audience-events">Exit Match Audience events</h2>
 
 <div class="api_tags" data-tags="Exit, Canvas" data-tags-lower="exit, canvas"></div>
@@ -2372,6 +2866,48 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.canvas.exit.MatchedAudience</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -2531,7 +3067,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_svzrhrlqzzmt' class='api_div'>
+<div id='api_znjkqksrawfi' class='api_div'>
 <h2 id="exit-perform-event-events">Exit Perform Event events</h2>
 
 <div class="api_tags" data-tags="Exit, Canvas" data-tags-lower="exit, canvas"></div>
@@ -2613,6 +3149,48 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.canvas.exit.PerformedEvent</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -2772,7 +3350,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_qplgynloywzu' class='api_div'>
+<div id='api_rgeeveaowaqg' class='api_div'>
 <h2 id="experiment-step-conversion-events">Experiment Step Conversion events</h2>
 
 <div class="api_tags" data-tags="Canvas" data-tags-lower="canvas"></div>
@@ -2866,6 +3444,58 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.canvas.experimentstep.Conversion</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conversion_behavior"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON-encoded string describing the conversion behavior"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"conversion_behavior_index"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Index of the conversion behavior"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"experiment_split_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the experiment split the user enrolled in"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"experiment_split_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the experiment split"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"experiment_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the experiment step this event belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -3053,7 +3683,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_sfylryhsijii' class='api_div'>
+<div id='api_owlayshauyvz' class='api_div'>
 <h2 id="experiment-split-entry-events">Experiment Split Entry events</h2>
 
 <div class="api_tags" data-tags="Canvas" data-tags-lower="canvas"></div>
@@ -3139,6 +3769,54 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.canvas.experimentstep.SplitEntry</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"experiment_split_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the experiment split the user enrolled in"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"experiment_split_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the experiment split"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"experiment_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the experiment step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"in_control_group"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, boolean) Whether the user was enrolled in the control group"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -3316,7 +3994,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ewmwobeahtvr' class='api_div'>
+<div id='api_vjaksujkmbhq' class='api_div'>
 <h2 id="canvas-step-progression-events">Canvas Step Progression events</h2>
 
 <div class="api_tags" data-tags="Canvas, Progression" data-tags-lower="canvas, progression"></div>
@@ -3414,6 +4092,60 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.canvasstep.Progression</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_entry_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Unique identifier for this instance of a user in a canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"exit_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) If this is an exit, the reason a user exited the canvas during the step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_canvas_entry"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether this is entry into a first step in a canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"next_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the next step in the canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"progression_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) What type of step progression event this is"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -3613,7 +4345,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jxcmsqotubgb' class='api_div'>
+<div id='api_abmqsylrjdwu' class='api_div'>
 <h2 id="banner-abort-events">Banner Abort events</h2>
 
 <div class="api_tags" data-tags="Banner, Abort" data-tags-lower="banner, abort"></div>
@@ -3775,6 +4507,84 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.banner.Abort</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"banner_placement_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Customer specified banner placement ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"browser"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device browser - extracted from user_agent - on which the open occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_message_variation_api_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -4048,7 +4858,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_lbmdtkxctgcc' class='api_div'>
+<div id='api_xjntagjmbpnk' class='api_div'>
 <h2 id="banner-click-events">Banner Click events</h2>
 
 <div class="api_tags" data-tags="Banner, Clicks" data-tags-lower="banner, clicks"></div>
@@ -4206,6 +5016,82 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.banner.Click</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"banner_placement_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Customer specified banner placement ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"browser"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device browser - extracted from user_agent - on which the open occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"button_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the button clicked, if this click represents a click on a button"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_message_variation_api_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -4465,7 +5351,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_yupbrdspvxiy' class='api_div'>
+<div id='api_jhsytltrwolm' class='api_div'>
 <h2 id="banner-dismissal-events">Banner Dismissal events</h2>
 
 <p>This event occurs when a user dismisses a banner.</p>
@@ -4635,6 +5521,94 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.banner.Dismiss</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"banner_placement_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Customer specified banner placement ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"browser"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device browser - extracted from user_agent - on which the open occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"button_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the button clicked, if this click represents a click on a button"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_message_variation_api_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"carrier"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Carrier of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"country"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Country of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"language"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Language of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"resolution"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Resolution of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sdk_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the Braze SDK in use during the event"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -4946,7 +5920,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_epkydwusfehf' class='api_div'>
+<div id='api_mrdjsfqiwgry' class='api_div'>
 <h2 id="banner-impression-events">Banner Impression events</h2>
 
 <div class="api_tags" data-tags="Banner, Impressions" data-tags-lower="banner, impressions"></div>
@@ -5100,6 +6074,80 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.banner.Impression</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"banner_placement_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Customer specified banner placement ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"browser"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device browser - extracted from user_agent - on which the open occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_message_variation_api_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -5353,7 +6401,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_dxjombyicqwt' class='api_div'>
+<div id='api_dzzbfubuhncl' class='api_div'>
 <h2 id="content-card-abort-events">Content Card Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Content Cards" data-tags-lower="abort, content cards"></div>
@@ -5467,6 +6515,68 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.contentcard.Abort</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -5693,7 +6803,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_lbbortcydswx' class='api_div'>
+<div id='api_boetwksmfurw' class='api_div'>
 <h2 id="content-card-click-events">Content Card Click events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Clicks" data-tags-lower="content cards, clicks"></div>
@@ -5831,6 +6941,80 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.contentcard.Click</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"content_card_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) ID of the card that generated this event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -6093,7 +7277,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jlugjofygvta' class='api_div'>
+<div id='api_doigqrfcwsmk' class='api_div'>
 <h2 id="content-card-dismiss-events">Content Card Dismiss events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Dismissal" data-tags-lower="content cards, dismissal"></div>
@@ -6231,6 +7415,80 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.contentcard.Dismiss</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"content_card_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) ID of the card that generated this event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -6493,7 +7751,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_lvpfkumwpwra' class='api_div'>
+<div id='api_bxjueqpmddgh' class='api_div'>
 <h2 id="content-card-impression-events">Content Card Impression events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Impressions" data-tags-lower="content cards, impressions"></div>
@@ -6631,6 +7889,80 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.contentcard.Impression</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"content_card_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) ID of the card that generated this event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -6893,7 +8225,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_mpfrnaxotrnl' class='api_div'>
+<div id='api_qmhhgrlumakj' class='api_div'>
 <h2 id="content-card-send-events">Content Card Send events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Sends" data-tags-lower="content cards, sends"></div>
@@ -7003,6 +8335,68 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.contentcard.Send</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"content_card_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) ID of the card that generated this event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -7226,7 +8620,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_piyzraynrybl' class='api_div'>
+<div id='api_cjlozkyraztk' class='api_div'>
 <h2 id="email-abort-events">Email Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Email" data-tags-lower="abort, email"></div>
@@ -7348,6 +8742,72 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Abort</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -7588,7 +9048,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_gdhqauhkcump' class='api_div'>
+<div id='api_mwsgdcikxjdg' class='api_div'>
 <h2 id="email-bounce-events">Email Bounce events</h2>
 
 <div class="api_tags" data-tags="Email, Bounce" data-tags-lower="email, bounce"></div>
@@ -7716,6 +9176,78 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Bounce</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bounce_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_drop"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this event counts as a drop event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sending_ip"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP address from which the email send was made"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -7969,7 +9501,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_exnezvbubysd' class='api_div'>
+<div id='api_svojgavhyxkf' class='api_div'>
 <h2 id="email-click-events">Email Click events</h2>
 
 <div class="api_tags" data-tags="Email, Clicks" data-tags-lower="email, clicks"></div>
@@ -8135,6 +9667,96 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Click</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"browser"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device browser - extracted from user_agent - on which the open occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_class"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device class extracted from user_agent (mobile, desktop, tablet, etc...)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_os"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device operating system extracted from user_agent"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_amp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is an AMP event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_suspected_bot_click"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is a suspected bot click. Will only populate when Bot Filtering setting is enabled"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"link_alias"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Alias associated with this link ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"link_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Unique ID for the link which was clicked, as created by Braze"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"mailbox_provider"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Mailbox provider value returned by the esp for this event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"suspected_bot_click_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) URL that the user clicked on"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the click occurred"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -8480,7 +10102,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_tszhqhsxikio' class='api_div'>
+<div id='api_odxagcnmapoz' class='api_div'>
 <h2 id="email-deferral-events">Email Deferral events</h2>
 
 <div class="api_tags" data-tags="Email, Deferral" data-tags-lower="email, deferral"></div>
@@ -8614,6 +10236,78 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Deferral</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"attempt_count"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Number of attempts made to send the message"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deferral_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The SMTP reason code and user friendly message received for this deferral event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"recipient_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Recipient's email domain"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sending_ip"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP address from which the email send was made"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -8863,7 +10557,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_tsyklsfyzsbu' class='api_div'>
+<div id='api_edjtpjdclnkd' class='api_div'>
 <h2 id="email-delivery-events">Email Delivery events</h2>
 
 <div class="api_tags" data-tags="Email, Delivery" data-tags-lower="email, delivery"></div>
@@ -8983,6 +10677,74 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Delivery</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sending_ip"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP address from which the email send was made"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -9224,7 +10986,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_bncchdtucuig' class='api_div'>
+<div id='api_yatojieiypqx' class='api_div'>
 <h2 id="email-mark-as-spam-events">Email Mark As Spam events</h2>
 
 <div class="api_tags" data-tags="Email, Spam" data-tags-lower="email, spam"></div>
@@ -9346,6 +11108,74 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.MarkAsSpam</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the spam report occurred"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -9593,7 +11423,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jjdclpghkbbo' class='api_div'>
+<div id='api_rwyzwbeflfdc' class='api_div'>
 <h2 id="email-open-events">Email Open events</h2>
 
 <div class="api_tags" data-tags="Email, Opens" data-tags-lower="email, opens"></div>
@@ -9747,6 +11577,88 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Open</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"browser"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device browser - extracted from user_agent - on which the open occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_class"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device class extracted from user_agent (mobile, desktop, tablet, etc...)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_os"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device operating system extracted from user_agent"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_amp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is an AMP event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"machine_open"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Populated to 'true' if the open event is triggered without user engagement, for example by an Apple device with Mail Privacy Protection enabled. Value may change over time to provide more granularity."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"mailbox_provider"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Mailbox provider value returned by the esp for this event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the open occurred"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -10068,7 +11980,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_yuuwcharomld' class='api_div'>
+<div id='api_ymyktybkvztc' class='api_div'>
 <h2 id="email-retry-events">Email Retry events</h2>
 
 <div class="api_tags" data-tags="Email, Retry" data-tags-lower="email, retry"></div>
@@ -10198,6 +12110,72 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Retry</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"retry_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Log message describing retry details"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"retry_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of retry"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -10429,7 +12407,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_lmwzhraiccrl' class='api_div'>
+<div id='api_egzmaiybjufw' class='api_div'>
 <h2 id="email-send-events">Email Send events</h2>
 
 <div class="api_tags" data-tags="Email, Sends" data-tags-lower="email, sends"></div>
@@ -10543,6 +12521,70 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Send</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -10817,7 +12859,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_lsqdnbkathta' class='api_div'>
+<div id='api_vngflvruorke' class='api_div'>
 <h2 id="email-soft-bounce-events">Email Soft Bounce events</h2>
 
 <div class="api_tags" data-tags="Email, Bounce" data-tags-lower="email, bounce"></div>
@@ -10941,6 +12983,76 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.SoftBounce</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bounce_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sending_ip"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP address from which the email send was made"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -11188,7 +13300,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jthnsnseobjv' class='api_div'>
+<div id='api_ivcplygifurw' class='api_div'>
 <h2 id="email-unsubscribe-events">Email Unsubscribe events</h2>
 
 <div class="api_tags" data-tags="Email, Subscription" data-tags-lower="email, subscription"></div>
@@ -11302,6 +13414,68 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Unsubscribe</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -11531,7 +13705,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jvhfuvqakikw' class='api_div'>
+<div id='api_pmxncwhplynp' class='api_div'>
 <h2 id="feature-flag-experiment-impression-events">Feature Flag Experiment Impression events</h2>
 
 <div class="api_tags" data-tags="Feature Flags, Impressions" data-tags-lower="feature flags, impressions"></div>
@@ -11669,6 +13843,72 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.featureflag.Impression</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"browser"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Device browser - extracted from user_agent - on which the open occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"feature_flag_id_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The Feature Flag Rollout identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -11896,7 +14136,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ewdhuzrzxqph' class='api_div'>
+<div id='api_pxyzvbwfnkkz' class='api_div'>
 <h2 id="in-app-message-abort-events">In-App Message Abort events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Abort" data-tags-lower="in-app messages, abort"></div>
@@ -12052,6 +14292,84 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.inappmessage.Abort</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"card_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the card"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -12325,7 +14643,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_touafxrlywsi' class='api_div'>
+<div id='api_tkqdemlygeeh' class='api_div'>
 <h2 id="in-app-message-click-events">In-App Message Click events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Clicks" data-tags-lower="in-app messages, clicks"></div>
@@ -12471,6 +14789,82 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.inappmessage.Click</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"button_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the button clicked, if this click represents a click on a button"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"card_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the card"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -12739,7 +15133,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_eokivyiomvzs' class='api_div'>
+<div id='api_vkbnzhslkioe' class='api_div'>
 <h2 id="in-app-message-impression-events">In-App Message Impression events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Impressions" data-tags-lower="in-app messages, impressions"></div>
@@ -12889,6 +15283,84 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.inappmessage.Impression</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"card_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the card"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"locale_key"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The key corresponding to the translations (for example 'en-us') used to compose this message (null for default)."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -13163,7 +15635,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jgizhkreyarc' class='api_div'>
+<div id='api_gvvgkdkobtss' class='api_div'>
 <h2 id="line-abort-events">LINE Abort events</h2>
 
 <div class="api_tags" data-tags="LINE, Abort" data-tags-lower="line, abort"></div>
@@ -13283,6 +15755,70 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.line.Abort</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"line_channel_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel ID the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"line_channel_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel Name the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"native_line_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's Line ID from which the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -13515,7 +16051,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_pnnysxnvdcdt' class='api_div'>
+<div id='api_owekdefshxmh' class='api_div'>
 <h2 id="line-click-events">LINE Click events</h2>
 
 <div class="api_tags" data-tags="LINE, Clicks" data-tags-lower="line, clicks"></div>
@@ -13643,6 +16179,74 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.line.Click</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_suspected_bot_click"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether this event was processed as a bot event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"line_channel_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel ID the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"line_channel_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel Name the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"native_line_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's Line ID from which the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"short_url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Shortened url that was clicked"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) URL that the user clicked on"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the click occurred"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -13882,7 +16486,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_wzbihjwrvwca' class='api_div'>
+<div id='api_uelfzczohmok' class='api_div'>
 <h2 id="line-inbound-receive-events">LINE Inbound Receive events</h2>
 
 <div class="api_tags" data-tags="LINE, Inbound Received" data-tags-lower="line, inbound received"></div>
@@ -14002,6 +16606,70 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.line.InboundReceive</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"line_channel_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel ID the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"line_channel_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel Name the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"media_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The LINE-generated ID which can be used to retrieve inbound media from LINE"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_body"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Typed response from the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"native_line_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's Line ID from which the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -14231,7 +16899,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_sbzfjvzddidz' class='api_div'>
+<div id='api_zefrxnmnssem' class='api_div'>
 <h2 id="line-retry-events">LINE Retry events</h2>
 
 <div class="api_tags" data-tags="LINE, Retry" data-tags-lower="line, retry"></div>
@@ -14351,6 +17019,70 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.line.Retry</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"line_channel_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The LINE Channel ID the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"line_channel_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The LINE Channel Name the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"native_line_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The user's Line ID from which the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"retry_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Log message describing retry details"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"retry_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of retry"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -14574,7 +17306,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ldowphxitpqz' class='api_div'>
+<div id='api_qwmakjxlfpys' class='api_div'>
 <h2 id="line-send-events">LINE Send events</h2>
 
 <div class="api_tags" data-tags="LINE, Sends" data-tags-lower="line, sends"></div>
@@ -14690,6 +17422,68 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.line.Send</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"line_channel_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel ID the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"line_channel_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel Name the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"native_line_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's Line ID from which the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -14913,7 +17707,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_xhfwcfivyedy' class='api_div'>
+<div id='api_wczxcpobbdgd' class='api_div'>
 <h2 id="live-activity-outcome-events">Live Activity Outcome events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Outcome" data-tags-lower="live activity, outcome"></div>
@@ -14991,6 +17785,50 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.liveactivity.Outcome</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"activity_attributes_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Live Activity attribute type"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"activity_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Live Activity identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"live_activity_event_outcome"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Outcome of Live Activity event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"live_activity_event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Event type of Live Activity. One of ['start', 'update', 'end']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"push_to_start_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Live Activity push to start token"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"update_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Live Activity update token"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -15156,7 +17994,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_pzdxosuhoylw' class='api_div'>
+<div id='api_ulfsscfgvzck' class='api_div'>
 <h2 id="live-activity-send-events">Live Activity Send events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Sends" data-tags-lower="live activity, sends"></div>
@@ -15230,6 +18068,48 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.liveactivity.Send</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"activity_attributes_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Live Activity attribute type"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"activity_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Live Activity identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"live_activity_event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Event type of Live Activity. One of ['start', 'update', 'end']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"push_to_start_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Live Activity push to start token"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"update_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Live Activity update token"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -15389,7 +18269,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_jaroxlgzyxcw' class='api_div'>
+<div id='api_dczixwbzabkg' class='api_div'>
 <h2 id="push-notification-abort-events">Push Notification Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Push" data-tags-lower="abort, push"></div>
@@ -15511,6 +18391,72 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.pushnotification.Abort</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -15749,7 +18695,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_rujwuejpyfea' class='api_div'>
+<div id='api_hjssemexbydc' class='api_div'>
 <h2 id="push-notification-bounce-events">Push Notification Bounce events</h2>
 
 <div class="api_tags" data-tags="Push, Sends, Bounce" data-tags-lower="push, sends, bounce"></div>
@@ -15881,6 +18827,76 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.pushnotification.Bounce</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"push_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Push token of the event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -16133,7 +19149,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_pkmwcvlqohxi' class='api_div'>
+<div id='api_cvxzwxtftsyz' class='api_div'>
 <h2 id="push-notification-ios-foreground-open-events">Push Notification iOS Foreground Open events</h2>
 
 <div class="api_tags" data-tags="Push, iOS, Sends" data-tags-lower="push, ios, sends"></div>
@@ -16301,6 +19317,78 @@ If complete consistency is required, we recommend waiting an hour from the last 
 31
 32
 33
+34
+35
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.pushnotification.IosForeground</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Push</span><span class="w"> </span><span class="err">Notification</span><span class="w"> </span><span class="err">iOS</span><span class="w"> </span><span class="err">Foreground</span><span class="w"> </span><span class="err">Open</span><span class="w"> </span><span class="err">(users.messages.pushnotification.IosForeground)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -16422,7 +19510,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_rfykeqdarpfc' class='api_div'>
+<div id='api_xcdfguprwolc' class='api_div'>
 <h2 id="push-notification-open-events">Push Notification Open events</h2>
 
 <div class="api_tags" data-tags="Push, Opens" data-tags-lower="push, opens"></div>
@@ -16572,6 +19660,82 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.pushnotification.Open</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"button_action_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Action type of the push notification button, null if not from a button click. One of ['uri', 'deep_link', 'none', 'close']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"button_string"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Identifier (button_string) of the push notification button clicked. null if not from a button click"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -16829,7 +19993,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_hagiqikkvsyz' class='api_div'>
+<div id='api_sttdmjzmhpji' class='api_div'>
 <h2 id="push-notification-retry-events">Push Notification Retry events</h2>
 
 <div class="api_tags" data-tags="Push, Retry" data-tags-lower="push, retry"></div>
@@ -16959,6 +20123,72 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.pushnotification.Retry</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"retry_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Log message describing retry details"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"retry_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of retry"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -17186,7 +20416,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_swqvkfekmvwm' class='api_div'>
+<div id='api_fxaftcyltahl' class='api_div'>
 <h2 id="push-notification-send-events">Push Notification Send events</h2>
 
 <div class="api_tags" data-tags="Push, Sends" data-tags-lower="push, sends"></div>
@@ -17326,6 +20556,80 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.pushnotification.Send</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether advertising tracking is enabled for the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"locale_key"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The key corresponding to the translations (for example 'en-us') used to compose this message (null for default)."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"push_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Push token of the event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -17592,7 +20896,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_cbbiclozwgfu' class='api_div'>
+<div id='api_ezzioiotbvzz' class='api_div'>
 <h2 id="rcs-abort-events">RCS Abort events</h2>
 
 <div class="api_tags" data-tags="RCS, Abort" data-tags-lower="rcs, abort"></div>
@@ -17692,6 +20996,60 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.rcs.Abort</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The type of abort"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -17895,7 +21253,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_gqbutrnbtoxv' class='api_div'>
+<div id='api_koijjcfdbqcw' class='api_div'>
 <h2 id="rcs-click-events">RCS Click events</h2>
 
 <div class="api_tags" data-tags="RCS, Clicks" data-tags-lower="rcs, clicks"></div>
@@ -18031,6 +21389,78 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.rcs.Click</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"element_label"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Optional details about the clicked element, such as the text of a suggested reply or button. </span><span class="se">\n</span><span class="s2">Example: Button or chip text (will be reply message body for reply chips and buttons)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"element_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Specifies if an interaction_type that is common across suggestions and buttons came from a suggestion or button. Examples: Suggestion, Button"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"interaction_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The type of interaction that generated the click. Example string values: Text URL, Reply, OpenURL"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_suspected_bot_click"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether this event was processed as a bot event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"short_url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The shortened URL that a user clicks on"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"suspected_bot_click_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, array of string) Reasons why this event was classified as a bot"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The full URL that the user clicked on"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the click occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The user's phone number from which the message was received"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -18284,7 +21714,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_uxcipxhidosv' class='api_div'>
+<div id='api_tmhohrlqmlqa' class='api_div'>
 <h2 id="rcs-delivery-events">RCS Delivery events</h2>
 
 <div class="api_tags" data-tags="RCS, Delivery" data-tags-lower="rcs, delivery"></div>
@@ -18396,6 +21826,66 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.rcs.Delivery</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_rcs_sender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The RCS sender ID or agent name used to send the message"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -18623,7 +22113,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_fuqpiaujdwmo' class='api_div'>
+<div id='api_zvffdlapnwju' class='api_div'>
 <h2 id="rcs-inbound-received-events">RCS Inbound Received events</h2>
 
 <div class="api_tags" data-tags="RCS, Inbound Received" data-tags-lower="rcs, inbound received"></div>
@@ -18739,6 +22229,68 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.rcs.InboundReceive</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"action"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Action taken in response to this message. (for example Subscribed, Unsubscribed or None)."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"media_urls"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, array of string) Media URLs from the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_body"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Typed response from the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_rcs_sender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The inbound RCS sender that the message was sent to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's phone number from which the message was received"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -18960,7 +22512,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_lvdlslzsrkkt' class='api_div'>
+<div id='api_iwkalgafzkzu' class='api_div'>
 <h2 id="rcs-read-events">RCS Read events</h2>
 
 <div class="api_tags" data-tags="RCS, Read" data-tags-lower="rcs, read"></div>
@@ -19052,6 +22604,56 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.rcs.Read</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -19239,7 +22841,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_uoajtqjiprse' class='api_div'>
+<div id='api_rhhmihandahq' class='api_div'>
 <h2 id="rcs-rejection-events">RCS Rejection events</h2>
 
 <div class="api_tags" data-tags="RCS, Rejection" data-tags-lower="rcs, rejection"></div>
@@ -19363,6 +22965,72 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.rcs.Rejection</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"error"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Error name"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_rcs_sender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The RCS sender ID or agent name used to send the message"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_sms_fallback"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that a SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"provider_error_code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The error code from the provider"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -19602,7 +23270,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_gxhjejpjzhio' class='api_div'>
+<div id='api_rdeohuuyflyk' class='api_div'>
 <h2 id="rcs-send-events">RCS Send events</h2>
 
 <div class="api_tags" data-tags="RCS, Sends" data-tags-lower="rcs, sends"></div>
@@ -19722,6 +23390,70 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.rcs.Send</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"category"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Keyword category name, only populated for auto-reply messages: 'opt-in', 'opt-out', 'help', or custom value"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_rcs_sender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The RCS sender ID or agent name used to send the message"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -19961,7 +23693,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_gvwduquokaoh' class='api_div'>
+<div id='api_tqfrkqmwosmu' class='api_div'>
 <h2 id="sms-abort-events">SMS Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, SMS" data-tags-lower="abort, sms"></div>
@@ -20065,6 +23797,62 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.sms.Abort</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -20274,7 +24062,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_bltzekpdxpqb' class='api_div'>
+<div id='api_pmowsrudwsom' class='api_div'>
 <h2 id="sms-carrier-send-events">SMS Carrier Send events</h2>
 
 <div class="api_tags" data-tags="SMS, Sends" data-tags-lower="sms, sends"></div>
@@ -20392,6 +24180,70 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.sms.CarrierSend</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Phone number used to send in e.164 format (for example +14155552671)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -20625,7 +24477,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_tbuccesgbamx' class='api_div'>
+<div id='api_sybhjtnfpelh' class='api_div'>
 <h2 id="sms-delivery-events">SMS Delivery events</h2>
 
 <div class="api_tags" data-tags="SMS, Delivery" data-tags-lower="sms, delivery"></div>
@@ -20743,6 +24595,72 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.sms.Delivery</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Phone number used to send in e.164 format (for example +14155552671)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_sms_fallback"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -20982,7 +24900,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_oeemypwxicsf' class='api_div'>
+<div id='api_seeswdakehdu' class='api_div'>
 <h2 id="sms-delivery-failure-events">SMS Delivery Failure events</h2>
 
 <div class="api_tags" data-tags="SMS, Delivery" data-tags-lower="sms, delivery"></div>
@@ -21104,6 +25022,74 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.sms.DeliveryFailure</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"error"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Error name"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_sms_fallback"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"provider_error_code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Error code from the SMS provider"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -21349,7 +25335,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_nspldwtkemhn' class='api_div'>
+<div id='api_axeawhyfcumd' class='api_div'>
 <h2 id="sms-inbound-received-events">SMS Inbound Received events</h2>
 
 <div class="api_tags" data-tags="SMS, Inbound Received" data-tags-lower="sms, inbound received"></div>
@@ -21467,6 +25453,68 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.sms.InboundReceive</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"action"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Action taken in response to this message. (for example Subscribed, Unsubscribed or None)."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"inbound_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The inbound number that the message was sent to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"media_urls"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, array of string) Media URLs from the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_body"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Typed response from the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's phone number from which the message was received"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -21688,7 +25736,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_apcvnscnyvwo' class='api_div'>
+<div id='api_grcxgnklsang' class='api_div'>
 <h2 id="sms-rejection-events">SMS Rejection events</h2>
 
 <div class="api_tags" data-tags="SMS, Rejection" data-tags-lower="sms, rejection"></div>
@@ -21818,6 +25866,76 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.sms.Rejection</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"error"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Error name"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Phone number used to send in e.164 format (for example +14155552671)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_sms_fallback"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that an SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"provider_error_code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Error code from the SMS provider"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -22069,7 +26187,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ynddvsqnowan' class='api_div'>
+<div id='api_lpqsciylmnsl' class='api_div'>
 <h2 id="sms-retry-events">SMS Retry events</h2>
 
 <div class="api_tags" data-tags="SMS, Retry" data-tags-lower="sms, retry"></div>
@@ -22173,6 +26291,62 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.sms.Retry</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"retry_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Log message describing retry details"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"retry_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of retry"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -22374,7 +26548,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_xhtgzcwurspd' class='api_div'>
+<div id='api_rapdcnonllml' class='api_div'>
 <h2 id="sms-send-events">SMS Send events</h2>
 
 <div class="api_tags" data-tags="SMS, Sends" data-tags-lower="sms, sends"></div>
@@ -22492,6 +26666,72 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.sms.Send</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"category"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Keyword category name, only populated for auto-reply messages: 'opt-in', 'opt-out', 'help', or custom value"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -22762,7 +27002,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ydgbsccifmmo' class='api_div'>
+<div id='api_fgwxcsscvedq' class='api_div'>
 <h2 id="sms-short-link-click-events">SMS Short Link Click events</h2>
 
 <div class="api_tags" data-tags="SMS, Clicks" data-tags-lower="sms, clicks"></div>
@@ -22880,6 +27120,72 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.sms.ShortLinkClick</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_suspected_bot_click"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether this event was processed as a bot event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"short_url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Shortened url that was clicked"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"suspected_bot_click_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, array of string) Why this event was classified as a bot"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) URL that the user clicked on"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the click occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The user's phone number from which the message was received"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -23141,7 +27447,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_stlkjeakzaml' class='api_div'>
+<div id='api_uqiccernpgek' class='api_div'>
 <h2 id="webhook-abort-events">Webhook Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Webhooks" data-tags-lower="abort, webhooks"></div>
@@ -23255,6 +27561,68 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.webhook.Abort</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -23481,7 +27849,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ssmtlezcgarn' class='api_div'>
+<div id='api_kauowuuqwwlv' class='api_div'>
 <h2 id="webhook-failure-events">Webhook Failure events</h2>
 
 <div class="api_tags" data-tags="Failure, Webhooks" data-tags-lower="failure, webhooks"></div>
@@ -23621,6 +27989,80 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.webhook.Failure</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"content_length"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Content length of the response"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"endpoint_url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The endpoint URL of the failed webhook"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"host"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The host of the webhook URL that returned a failure response"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"http_status_code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) HTTP status code of the response"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_terminal"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether this event was the terminal attempt in a send"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"raw_response"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Truncated raw response from endpoint"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"retry_count"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Number of webhook sends attempted before giving up"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url_path"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The path of the webhook URL that returned a failure response"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"webhook_duration"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Total duration of this request in milliseconds"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"webhook_failure_source"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) To tell whether an error was created by Braze or by the endpoint itself. The source field could be External Endpoint, Treat no status code to host unreachable"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -23882,7 +28324,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_tfuaaqikxoun' class='api_div'>
+<div id='api_temadbmexnbs' class='api_div'>
 <h2 id="webhook-retry-events">Webhook Retry events</h2>
 
 <div class="api_tags" data-tags="Webhooks, Retry" data-tags-lower="webhooks, retry"></div>
@@ -24004,6 +28446,68 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.webhook.Retry</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"retry_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Log message describing retry details"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"retry_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of retry"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -24221,7 +28725,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_ngchyytddjvm' class='api_div'>
+<div id='api_iibmrgtwxtha' class='api_div'>
 <h2 id="webhook-send-events">Webhook Send events</h2>
 
 <div class="api_tags" data-tags="Webhooks, Sends" data-tags-lower="webhooks, sends"></div>
@@ -24327,6 +28831,66 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.webhook.Send</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -24545,7 +29109,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_xvbvvvxhpsof' class='api_div'>
+<div id='api_yzmbsfutogns' class='api_div'>
 <h2 id="whatsapp-abort-events">WhatsApp Abort events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Abort" data-tags-lower="whatsapp, abort"></div>
@@ -24667,6 +29231,72 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Abort</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -24909,7 +29539,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_zrpgdukfuruz' class='api_div'>
+<div id='api_khrxawhezvkh' class='api_div'>
 <h2 id="whatsapp-tracked-link-click-events">WhatsApp Tracked Link Click events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Clicks" data-tags-lower="whatsapp, clicks"></div>
@@ -25025,6 +29655,68 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Click</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"short_url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Shortened url that was clicked"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) URL that the user clicked on"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the click occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The user's phone number from which the message was received"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -25244,7 +29936,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_yqdvfugjujjw' class='api_div'>
+<div id='api_hkdiqigjngdo' class='api_div'>
 <h2 id="whatsapp-delivery-events">WhatsApp Delivery events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Delivery" data-tags-lower="whatsapp, delivery"></div>
@@ -25378,6 +30070,78 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Delivery</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"flow_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The unique ID of the Flow in the WhatsApp Manager. Present if the message includes a CTA to respond to a WhatsApp Flow"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Phone number used to send in e.164 format (for example +14155552671)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The unique ID generated by Meta for this message"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"template_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Name of the template in the WhatsApp manager. Present if sending a Template Message"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -25635,7 +30399,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_bystcblulixx' class='api_div'>
+<div id='api_beeecpneyfmn' class='api_div'>
 <h2 id="whatsapp-failure-events">WhatsApp Failure events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Failure" data-tags-lower="whatsapp, failure"></div>
@@ -25777,6 +30541,82 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Failure</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"flow_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The unique ID of the Flow in the WhatsApp Manager. Present if the message includes a CTA to respond to a WhatsApp Flow"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Phone number used to send in e.164 format (for example +14155552671)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The unique ID generated by Meta for this message"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"provider_error_code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Error code from WhatsApp"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"provider_error_title"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Description of error from WhatsApp"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"template_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Name of the template in the WhatsApp manager. Present if sending a Template Message"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -26046,7 +30886,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_vtyvhxenwmwi' class='api_div'>
+<div id='api_qmkkyhzqhxtd' class='api_div'>
 <h2 id="whatsapp-inbound-received-events">WhatsApp Inbound Received events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Inbound Received" data-tags-lower="whatsapp, inbound received"></div>
@@ -26200,6 +31040,88 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"productId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Product SKU if a product is referenced in the inbound message. Otherwise, empty."</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.InboundReceive</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"action"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Action taken in response to this message. (for example Subscribed, Unsubscribed or None)."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the user from which the message was received."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"catalog_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Catalog ID of a product if a product is referenced in the inbound message. Otherwise, empty."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"flow_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The unique ID of the Flow in the WhatsApp Manager. Present if the user is responding to a WhatsApp Flow."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"flow_response_json"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The form values the user responded with. Present if the user is responding to a WhatsApp Flow."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"in_reply_to"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The message_id of the message this message was replying to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"inbound_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The inbound number that the message was sent to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"media_urls"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, array of string) Media URLs from the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_body"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Typed response from the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The unique ID generated by Meta for this message"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"product_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Product SKU if a product is referenced in the inbound message. Otherwise, empty."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"quick_reply_text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Text of button pressed by the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The user's phone number from which the message was received"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -26479,7 +31401,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_tnurzbmqfayh' class='api_div'>
+<div id='api_uyxuxfxyvwlr' class='api_div'>
 <h2 id="whatsapp-read-events">WhatsApp Read events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Read" data-tags-lower="whatsapp, read"></div>
@@ -26613,6 +31535,78 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Read</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"flow_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The unique ID of the Flow in the WhatsApp Manager. Present if the message includes a CTA to respond to a WhatsApp Flow"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Phone number used to send in e.164 format (for example +14155552671)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The unique ID generated by Meta for this message"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"template_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Name of the template in the WhatsApp manager. Present if sending a Template Message"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -26870,7 +31864,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_vcwosrqdwixj' class='api_div'>
+<div id='api_asapqoeqzugh' class='api_div'>
 <h2 id="whatsapp-retry-events">WhatsApp Retry events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Retry" data-tags-lower="whatsapp, retry"></div>
@@ -26994,6 +31988,72 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Retry</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"retry_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Log message describing retry details"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"retry_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of retry"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -27227,7 +32287,7 @@ If complete consistency is required, we recommend waiting an hour from the last 
 
 </div>
 
-<div id='api_pmpcapqmrfvl' class='api_div'>
+<div id='api_cmgfptnyeptb' class='api_div'>
 <h2 id="whatsapp-send-events">WhatsApp Send events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Sends" data-tags-lower="whatsapp, sends"></div>
@@ -27363,6 +32423,80 @@ If complete consistency is required, we recommend waiting an hour from the last 
   </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Send</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bsuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The WhatsApp Business-Scoped User ID of the recipient associated with this event."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"flow_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The unique ID of the Flow in the WhatsApp Manager. Present if the message includes a CTA to respond to a WhatsApp Flow"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Phone number used to send in e.164 format (for example +14155552671)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The unique ID generated by Meta for this message"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"template_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Name of the template in the WhatsApp Manager. Present if sending a Template Message"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -27623,5 +32757,64 @@ If complete consistency is required, we recommend waiting an hour from the last 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
 </ul>
+
+</div>
+
+<div id='api_idkhpreghzsh' class='api_div'>
+<h2 id="user-profile-update-events">User Profile Update events</h2>
+
+<div class="api_tags" data-tags="Profile" data-tags-lower="profile"></div>
+
+<p>This represents the profile updates for a user.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.profile.Update</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"archived"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) When set to True, indicates that this user was archived within Braze"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"country"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Country of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"custom_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Valid JSON string of the updated custom attributes"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dob"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Date of birth of the user in ISO-8601 format"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"first_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] First name of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"home_city"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Home city of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"language"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Language of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"last_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Last name of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"phone_number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Phone number of the user in e.164 format"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) Time in milliseconds when the update happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"update_source"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The source of this update"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 </div>

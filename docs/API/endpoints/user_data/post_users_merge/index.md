@@ -1,4 +1,4 @@
-<div id='api_kujmxbfydlsx' class='api_div'>
+<div id='api_eobujrmfvjtu' class='api_div'>
 <h1 id="merge-users">Merge users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/merge</p>
@@ -114,6 +114,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <p>When merging users, using the <code class="language-plaintext highlighter-rouge">/users/merge</code> endpoint works the same way as using the <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser"><code class="language-plaintext highlighter-rouge">changeUser()</code> method</a>.</p>
 
+<p>Braze handles three user types differently when merging: users marked for deletion, test users, and Global Control Group users. For details, see <a href="/docs/user_guide/audience/manage_audience/merge_duplicate_users/merge_behavior/">User merge behavior</a>.</p>
+
 <h4 id="custom-event-date-and-purchase-event-date-behavior">Custom event date and purchase event date behavior</h4>
 
 <p>These merged fields update “for X events in Y days” filters. For purchase events, these filters include “number of purchases in Y days” and “money spent in last Y days”.</p>
@@ -187,12 +189,10 @@ Authorization: Bearer YOUR_REST_API_KEY
 37
 38
 39
-40
 </pre></td><td class="rouge-code"><pre>curl <span class="nt">--location</span> <span class="nt">--request</span> POST <span class="s1">'https://rest.iad-01.braze.com/users/merge'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Authorization: Bearer YOUR_REST_API_KEY'</span> <span class="se">\</span>
 <span class="nt">--data-raw</span> <span class="s1">'{
-{
   "merge_updates": [
     {
       "identifier_to_merge": {
@@ -250,12 +250,10 @@ Authorization: Bearer YOUR_REST_API_KEY
 14
 15
 16
-17
 </pre></td><td class="rouge-code"><pre>curl <span class="nt">--location</span> <span class="nt">--request</span> POST <span class="s1">'https://rest.iad-01.braze.com/users/merge'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Authorization: Bearer YOUR_REST_API_KEY'</span> <span class="se">\</span>
 <span class="nt">--data-raw</span> <span class="s1">'{
-{
   "merge_updates": [
     {
       "identifier_to_merge": {
@@ -293,12 +291,10 @@ Authorization: Bearer YOUR_REST_API_KEY
 15
 16
 17
-18
 </pre></td><td class="rouge-code"><pre>curl <span class="nt">--location</span> <span class="nt">--request</span> POST <span class="s1">'https://rest.iad-01.braze.com/users/merge'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Authorization: Bearer YOUR_REST_API_KEY'</span> <span class="se">\</span>
 <span class="nt">--data-raw</span> <span class="s1">'{
-{
   "merge_updates": [
     {
       "identifier_to_merge": {
@@ -334,12 +330,10 @@ Authorization: Bearer YOUR_REST_API_KEY
 14
 15
 16
-17
 </pre></td><td class="rouge-code"><pre>curl <span class="nt">--location</span> <span class="nt">--request</span> POST <span class="s1">'https://rest.iad-01.braze.com/users/merge'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Authorization: Bearer YOUR_REST_API_KEY'</span> <span class="se">\</span>
 <span class="nt">--data-raw</span> <span class="s1">'{
-{
   "merge_updates": [
     {
       "identifier_to_merge": {

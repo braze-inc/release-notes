@@ -31,6 +31,18 @@ Braze does not automatically change a user's push subscription state to `Unsubsc
 
 
 
+### Push registration and reachable users
+
+Push subscription state reflects a user's preference, but whether they count as **reachable** for push in the dashboard also depends on [push registration](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_token_lifecycle/)—that is, a valid foreground push token on their profile. For how Braze calculates channel-level counts, see [Measure segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size/).
+
+- **Push campaigns and Canvases:** Users who aren't push registered aren't included in **Reachable users** for Android Push or iOS Push in audience statistics, even when their push subscription state is `Subscribed` or `Opted-In`.
+- **Other channels:** The same users can still count as reachable for other channels they qualify for (for example, email or in-app messages).
+- **Segments:** Segment membership follows your filters. Users without push registration remain in the segment unless a filter excludes them (for example, **Foreground Push Enabled**). Total segment membership can be higher than the sum of users shown in push-specific **Reachable users** rows.
+
+A user profile can show push subscription state `Subscribed` while no push token is assigned. Those users still don't count toward **Reachable users** for Android Push or iOS Push until Braze records a valid token.
+
+For filter definitions, see [Segmentation filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters/).
+
 ### Updating push subscription states {#update-push-subscription-state}
 
 Review the following ways to update a user's push subscription state:
@@ -67,6 +79,14 @@ You can update a user's subscription state with the Braze SDK using the `setPush
 #### REST API
 
 You can update a user's subscription state with the Braze REST API using the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) to update their [`push_subscribe`](https://www.braze.com/docs/api/objects_filters/user_attributes_object) attribute.
+
+### Differences between push enablement and push subscription status
+
+Push enablement refers to whether a user has granted OS- or browser-level permission to receive notifications on a specific device. Push subscription state is a Braze-level setting that represents a user's global preference for receiving push across their profile.
+
+When automatic opt-in is enabled (the default), Braze updates a user's push subscription state to `Opted-In` when they authorize push notifications for your app or re-enable permissions in their system settings (for example, on iOS, Android 13+, and supported web browsers). Otherwise, the user's push subscription state remains `Subscribed` until you explicitly change it using an SDK method or REST API call.
+
+Braze does not automatically change a user's push subscription state to `Unsubscribed` when they opt out of notifications at the OS, browser, or app level. To update a user's push subscription state, you must update it in Braze. For example, if a user disables push from an in-app preference center, update the push subscription state to `Unsubscribed` in Braze. Braze does not update user profiles based on your preference center. To align subscription states with a user's in-app preferences, call the appropriate methods using the [SDK](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states/#sdk-integration) (iOS or Android) or [REST API](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states/#rest-api).
 
 ### Checking push subscription state
 
@@ -191,6 +211,26 @@ For information on how to check push registration state, visit [push registratio
 
 
 
+## Finding push registration and changelog information
+
+In the dashboard, you can find information about push registration and push changelogs in:
+
+- **Segmentation** – Filter for users' subscription states, enabled state, and foreground and background enabled state.
+- **Campaign Analytics** – View push statistics and feedback for a single campaign or Canvas.
+- **User Profile (Engagement tab)** – View **Contact Settings** and the push changelog for a specific user.
+
+When reviewing the push-enabled state, **Push Registered for** indicates which platforms Braze can send foreground push to for that user. On iOS and Android, if a user has moved from foreground push enabled to background push enabled (`remote_notification_enabled`), this will be documented in the push changelog as "Push token was updated from foreground push enabled to foreground push disabled."
+
+If the user is added as a test user, in **Developer Console** > **User Event Log**, the user profile will show an SDK request with `remote_notification_enabled` as `true` or `false`. You may need to refresh the user profile to view the updates, since there's a short delay for SDK updates to reach the user profile.
+
+**Segmentation filters for iOS push state:**
+
+- **iOS foreground and background push disabled:** The user hasn't been served a push prompt yet.
+- **iOS background enabled:** The user has been served the push prompt and said no, or said yes and later turned off push notifications in their device settings (reflected after the user has a session).
+- **iOS foreground enabled:** The user has been served the push prompt and is eligible to receive foreground push.
+
+Campaign analytics will reflect the push statistics inline with the above details. You can also download the user profiles who entered the campaign or Canvas to cross-reference user profiles.
+
 ## Other platform-specific scenarios
 
 
@@ -201,6 +241,12 @@ When a user accepts the native push permission prompt, their subscription status
 To manage subscriptions, you can use the user method [`setPushNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype) to create a preference settings page on your site, after which you can filter users by opt-out status on the dashboard.
 
 If a user disables notifications within their browser, the next push notification sent to that user will bounce, and Braze will update the user's push token accordingly. This is used to manage eligibility for the push-enabled filters (`Background or Foreground Push Enabled`, `Foreground Push Enabled` and `Foreground Push Enabled for App`). The subscription status set on the user's profile is a user-level setting and doesn't change when a push bounces.
+
+### 410 Web Push token errors
+
+If you receive a `410: Gone` error, this can occur when a user disables web push notifications from the browser in their OS settings, or if they're logging in as a different user on the same device, or if the user hasn't visited the website in some time.
+
+If you receive a `410: Endpoint Not Valid` error, this can mean the web push token (essentially the URL) has expired. This can occur if the user never visits the site again or the browser invalidates the token. It can also occur periodically (often every few months), depending on the browser. When the user visits the site again, if they still have their browser set to "Allow," Braze will automatically collect a fresh token for the device. This assumes the [`disablePushTokenMaintenance` initialization option](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#initializationoptions) is not being used during SDK initialization.
 
 **Note:**
 

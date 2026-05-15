@@ -1,4 +1,4 @@
-<div id='api_dxmwmeigrbnd' class='api_div'>
+<div id='api_cnkygelotecn' class='api_div'>
 <h1 id="send-transactional-emails-using-api-triggered-delivery">Send transactional emails using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/transactional/v1/campaigns/{campaign_id}/send</p>

@@ -1,4 +1,4 @@
-<div id='api_xiavxrtiipdd' class='api_div'>
+<div id='api_cainesquvfkr' class='api_div'>
 <h1 id="list-available-email-templates">List available email templates</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/list</p>
