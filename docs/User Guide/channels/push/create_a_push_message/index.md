@@ -316,3 +316,19 @@ After you've finished building the last of your campaign or Canvas, review its d
 
 Next, check out [Push reporting](https://www.braze.com/docs/user_guide/channels/push/reporting/) to learn how you can access the results of your push campaign. For push notifications, you'll be able to view statistics for the number of messages sent, delivered, bounced, opened, and directly opened.
 
+### Troubleshooting
+
+#### On-click behavior
+
+If you're using the default on-click behavior for your SDK version and selecting a push notification with a web URL opens in the app instead of in a web browser, check the following integration guides to determine push notification handling:
+
+- [Swift](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift#swift_step-2-enable-push-capabilities)
+- [Android](https://www.braze.com/docs/developer_guide/push_notifications#android_step-1-register-braze-firebase-messaging-service)
+
+**Important:**
+
+
+You must assign your delegate object using `center.delegate = self` synchronously before your app finishes launching, preferably in `application:didFinishLaunchingWithOptions:`. Otherwise, this can cause your app to miss incoming push notifications. Refer to [Apple's `UNUserNotificationCenterDelegate` documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) to learn more.
+
+
+

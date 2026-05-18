@@ -38,5 +38,11 @@ These partners specialize in product analytics and business intelligence and can
 * [Mixpanel](https://www.braze.com/docs/partners/data_and_analytics/analytics/mixpanel/)
 * [Heap](https://www.braze.com/docs/partners/data_and_analytics/analytics/heap/heap_cohort_import/)
 
+## Data tools
+
+Build your own custom integration by streaming Currents event data directly to an HTTP endpoint you own and operate.
+
+* [Custom HTTP Connector](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/custom_http_connector/)
+
 
 

@@ -5,7 +5,7 @@
   }
 </style>
 
-<div id='api_hznmjwnwecrv' class='api_div'>
+<div id='api_sgxteoalpfjb' class='api_div'>
 <h3 id="variation">Variation</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -16,7 +16,7 @@
 
 </div>
 
-<div id='api_udlpemphmsnj' class='api_div'>
+<div id='api_knmuyshfveum' class='api_div'>
 <h3 id="emailable">Emailable</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -27,7 +27,7 @@
 
 </div>
 
-<div id='api_fzrbmyhenccd' class='api_div'>
+<div id='api_uivpyxegwmck' class='api_div'>
 <h3 id="audience-">Audience %</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -38,7 +38,7 @@
 
 </div>
 
-<div id='api_nlzegwzfptww' class='api_div'>
+<div id='api_nbmnhlgybqhm' class='api_div'>
 <h3 id="unique-recipients">Unique Recipients</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -51,7 +51,7 @@
 
 </div>
 
-<div id='api_zcqjhsxcoovt' class='api_div'>
+<div id='api_xvsfwjjwhnaj' class='api_div'>
 <h3 id="sends">Sends</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -64,7 +64,7 @@
 
 </div>
 
-<div id='api_gvnsihlhbowk' class='api_div'>
+<div id='api_xrdupznijqcl' class='api_div'>
 <h3 id="messages-sent">Messages Sent</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -77,7 +77,7 @@
 
 </div>
 
-<div id='api_cdbdbyufyfdc' class='api_div'>
+<div id='api_eztvhhvyosau' class='api_div'>
 <h3 id="deliveries">Deliveries</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -90,7 +90,7 @@
 
 </div>
 
-<div id='api_xfbkjuufleit' class='api_div'>
+<div id='api_mbtcpprrgkwx' class='api_div'>
 <h3 id="deliveries-">Deliveries %</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -101,7 +101,7 @@
 
 </div>
 
-<div id='api_mxdegickadrj' class='api_div'>
+<div id='api_stvausnlracz' class='api_div'>
 <h3 id="bounces">Bounces</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -122,7 +122,7 @@
 
 </div>
 
-<div id='api_urspaqlvgilg' class='api_div'>
+<div id='api_iswxwhimjrss' class='api_div'>
 <h3 id="hard-bounce">Hard Bounce</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -135,7 +135,7 @@
 
 </div>
 
-<div id='api_tqqihweonfzl' class='api_div'>
+<div id='api_rudckiiwajrd' class='api_div'>
 <h3 id="soft-bounce">Soft Bounce</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -150,7 +150,7 @@
 
 </div>
 
-<div id='api_gwxkwugeyvjm' class='api_div'>
+<div id='api_ichlwryxaspe' class='api_div'>
 <h3 id="spam">Spam</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -167,7 +167,7 @@
 
 </div>
 
-<div id='api_skdgutmykloh' class='api_div'>
+<div id='api_iqwjtnvsrmxi' class='api_div'>
 <h3 id="unique-opens">Unique Opens</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -186,7 +186,7 @@
 
 </div>
 
-<div id='api_pyvvffwehdmr' class='api_div'>
+<div id='api_odbneysodkka' class='api_div'>
 <h3 id="unique-clicks">Unique Clicks</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -205,7 +205,7 @@
 
 </div>
 
-<div id='api_lgudgerxifgk' class='api_div'>
+<div id='api_jrpzzzxjgvqm' class='api_div'>
 <h3 id="unsubscribers-or-unsub">Unsubscribers or Unsub</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -222,9 +222,20 @@
     </ul>
 </span>
 
+<h4 id="why-unsubscribes-and-unsubscribe-link-clicks-can-differ">Why <em>Unsubscribes</em> and unsubscribe-link clicks can differ</h4>
+
+<p>On the <strong>Analytics</strong> page for an email campaign or Canvas, compare the <em>Unsubscribes</em> count to clicks on the Braze unsubscribe URL in the per-link breakdown when you expand <strong>Total Clicks</strong> or <strong>Unique Clicks</strong>. The two often match but can differ:</p>
+
+<ul>
+  <li><strong>More <em>Unsubscribes</em> than clicks on the body unsubscribe URL:</strong> <a href="/docs/user_guide/administer/global/workspace_settings/email_preferences/#list-unsubscribe">List-unsubscribe</a> is an additional unsubscribe path in the email header (not the link in your message body). When a user unsubscribes that way, it counts toward <em>Unsubscribes</em> but does not count as a click on the tracked unsubscribe URL in the body.</li>
+  <li><strong>More clicks on the body unsubscribe URL than <em>Unsubscribes</em>:</strong> A user may select that link more than once. If they unsubscribe, resubscribe, and unsubscribe again, email analytics can record multiple clicks (for example, two) in the click breakdown.</li>
+</ul>
+
+<p>For more information, see <a href="/docs/user_guide/channels/email/faq/#why-am-i-seeing-a-different-number-of-unsubscribes-than-clicks-on-my-unsubscribe-link">Why am I seeing a different number of unsubscribes than clicks on my unsubscribe link?</a>.</p>
+
 </div>
 
-<div id='api_povnenhelhep' class='api_div'>
+<div id='api_onyxkaiinmxu' class='api_div'>
 <h3 id="revenue">Revenue</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -235,7 +246,7 @@
 
 </div>
 
-<div id='api_mfpkhioacvrz' class='api_div'>
+<div id='api_msxywpauybvm' class='api_div'>
 <h3 id="primary-conversions-a-or-primary-conversion-event">Primary Conversions (A) or Primary Conversion Event</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -254,7 +265,7 @@
 
 </div>
 
-<div id='api_pbcqtwxkwhao' class='api_div'>
+<div id='api_gwdipnmfrgkr' class='api_div'>
 <h3 id="confidence">Confidence</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -263,7 +274,7 @@
 
 </div>
 
-<div id='api_bhfdvumfrraa' class='api_div'>
+<div id='api_kdccorxwrsdl' class='api_div'>
 <h3 id="machine-opens">Machine Opens</h3>
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
@@ -274,7 +285,7 @@
 
 </div>
 
-<div id='api_jcotdtbrfkdp' class='api_div'>
+<div id='api_ulivtmabptoh' class='api_div'>
 <h3 id="other-opens">Other Opens</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -287,7 +298,7 @@
 
 </div>
 
-<div id='api_noplqbhxntyt' class='api_div'>
+<div id='api_cxoxbfmmjzwh' class='api_div'>
 <h3 id="click-to-open-rate">Click-to-Open Rate</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>

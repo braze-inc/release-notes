@@ -152,34 +152,13 @@ if (base === 'docs'){
 
 
 <link type="text/css" rel="stylesheet" href="/docs/assets/css/swiper.css" />
-<link type="text/css" rel="stylesheet" href="/docs/assets/css/algolia_theme.css"  /><link href='/docs/assets/global-62bfae6a3678931b4f3dcf38cd540f22.css' rel='stylesheet' type='text/css' /><script type="text/javascript">
+<link type="text/css" rel="stylesheet" href="/docs/assets/css/algolia_theme.css"  /><link href='/docs/assets/global-7a180f4e8649417a0da149512527b7b7.css' rel='stylesheet' type='text/css' /><script type="text/javascript">
   const page_collection = 'docs_pages';
   const page_collection_title = 'Braze';
   const page_collection_default_path = '';
   const site_language = 'en';
-  const site_i18n = {};
-  
-  site_i18n['next'] = 'NEXT';
-  site_i18n['previous'] = 'PREVIOUS';
-  site_i18n['popular_topic'] = 'Popular topics';
-  site_i18n['helpful_resources'] = 'Helpful resources';
-  site_i18n['braze_status'] = 'BRAZE SYSTEM STATUS';
-  site_i18n['braze_status_check'] = 'Checking Braze Status';
-  site_i18n['page_nav_title'] = 'On this page';
-  site_i18n['helpful'] = 'HOW HELPFUL WAS THIS PAGE?';
-  site_i18n['collapse_navigation'] = 'Collapse navigation';
-  site_i18n['expand_navigation'] = 'Expand navigation';
-  site_i18n['expand_section'] = 'Expand section';
-  site_i18n['collapse_section'] = 'Collapse section';
-  site_i18n['minimize_menu'] = 'Minimize menu';
-  site_i18n['expand_menu'] = 'Expand menu';
-  site_i18n['filter_navigation_topics'] = 'Filter navigation topics';
-  site_i18n['clear_filter'] = 'Clear filter';
-  site_i18n['documentation_nav'] = 'Documentation';
-  site_i18n['sidebar_home'] = 'Home';
-  site_i18n['nav_flyout_esc_hint_before'] = 'Press ';
-  site_i18n['nav_flyout_esc_hint_after'] = ' to close the menu';
-  site_i18n['nav_flyout_shortcut_hint'] = 'Press Arrow down to open the documentation menu without expanding the sidebar.';</script>
+  const site_i18n = {"next":"NEXT","previous":"PREVIOUS","popular_topic":"Popular topics","helpful_resources":"Helpful resources","braze_status":"BRAZE SYSTEM STATUS","braze_status_check":"Checking Braze Status","page_nav_title":"On this page","helpful":"HOW HELPFUL WAS THIS PAGE?","collapse_navigation":"Collapse navigation","expand_navigation":"Expand navigation","expand_section":"Expand section","collapse_section":"Collapse section","minimize_menu":"Minimize menu","expand_menu":"Expand menu","filter_navigation_topics":"Filter navigation topics","clear_filter":"Clear filter","documentation_nav":"Documentation","sidebar_home":"Home","nav_flyout_esc_hint_before":"Press ","nav_flyout_esc_hint_after":" to close the menu","nav_flyout_shortcut_hint":"Press Arrow down to open the documentation menu without expanding the sidebar.","report_metrics_intro":"These are terms you'll find in your reports in your Braze account. Search for the metrics you need or filter by channel. This glossary does not necessarily include metrics you might see in Currents or other downloaded reports outside of your Braze account.","report_metrics_search_placeholder":"Search","report_metrics_search_aria":"Search glossary","report_metrics_search_hint":"Results update automatically as you type.","report_metrics_filter_legend":"Filter by channel","report_metrics_no_results":"No metrics matching these filters","report_metrics_showing":"Showing __COUNT__ of __TOTAL__ metrics","email_report_metrics_intro":"These are terms you'll find in the analytics section of your email campaign or Canvas, post-launch. You can search for the metrics you need or filter by the type of metric. This glossary does not necessarily include metrics you might see in Currents or in other downloaded reports outside of your Braze account.","email_report_metrics_search_placeholder":"Search","email_report_metrics_search_aria":"Search glossary","email_report_metrics_no_results":"No metrics matching these filters","report_metrics_channel_tag_labels":{"all":"All","email":"Email","web push":"Web Push","ios push":"iOS Push","android push":"Android Push","in-app message":"In-App Message","content cards":"Content Cards","sms/mms":"SMS/MMS","rcs":"RCS","line":"LINE","whatsapp":"WhatsApp","webhook":"Webhook","feature flags":"Feature Flags"},"email_report_metrics_tag_labels":{"count":"Count","percentage":"Percentage"},"glossary_currents_events_search_placeholder":"Search","glossary_currents_events_search_aria":"Search events","glossary_currents_events_search_hint":"Results update automatically as you type.","glossary_currents_events_no_results":"No events matching these filters","glossary_currents_events_showing":"Showing __COUNT__ of __TOTAL__ events","glossary_sql_use_cases_search_placeholder":"Search","glossary_sql_use_cases_search_aria":"Search use cases","glossary_sql_use_cases_search_hint":"Results update automatically as you type.","glossary_sql_use_cases_no_results":"No use cases matching these filters","glossary_liquid_use_cases_search_placeholder":"Search","glossary_liquid_use_cases_search_aria":"Search use cases","glossary_liquid_use_cases_search_hint":"Results update automatically as you type.","glossary_liquid_use_cases_no_results":"No use cases matching these filters","glossary_liquid_use_cases_showing":"Showing __COUNT__ of __TOTAL__ use cases","currents_customer_behavior_tag_labels":{"attribution":"Attribution","custom events":"Custom Events","live activity":"Live Activity","locations":"Locations","purchases":"Purchases","push":"Push","push to start token":"Push To Start Token","random bucket number":"Random Bucket Number","sessions":"Sessions","token state change":"Token State Change","update token":"Update Token"},"currents_message_engagement_tag_labels":{"abort":"Abort","agent":"Agent","banner":"Banner","bounce":"Bounce","campaign":"Campaign","canvas":"Canvas","clicks":"Clicks","content cards":"Content Cards","conversion":"Conversion","deferral":"Deferral","delivery":"Delivery","dismissal":"Dismissal","email":"Email","entry":"Entry","exit":"Exit","failure":"Failure","feature flags":"Feature Flags","impressions":"Impressions","in-app messages":"In-App Messages","inbound received":"Inbound Received","ios":"iOS","line":"LINE","live activity":"Live Activity","opens":"Opens","outcome":"Outcome","profile":"Profile","progression":"Progression","push":"Push","rcs":"RCS","read":"Read","rejection":"Rejection","retry":"Retry","sends":"Sends","sms":"SMS","spam":"Spam","subscription":"Subscription","uninstall":"Uninstall","webhooks":"Webhooks","whatsapp":"WhatsApp"},"sql_segment_use_cases_tag_labels":{"carrier":"Carrier","delivery":"Delivery","device":"Device","error":"Error","event":"Event","message":"Message","property":"Property","purchase":"Purchase","session":"Session","time range":"Time range"},"liquid_use_case_tag_labels":{"anniversaries and holidays":"Anniversaries and holidays","app usage":"App usage","countdowns":"Countdowns","custom attribute":"Custom attribute","custom event":"Custom event","language":"Language","miscellaneous":"Miscellaneous","platform targeting":"Platform targeting","sms":"SMS","time zones":"Time zones","week/day/month":"Week/Day/Month"}};
+</script>
 
 
 <script type="text/javascript" src="/docs/assets/js/clipboard.js"></script>
@@ -189,7 +168,7 @@ if (base === 'docs'){
 
 <script type='text/javascript' src='/docs/assets/js/swiper.js' ></script>
 
-<script type='text/javascript' src='/docs/assets/js/algolia_search.js?1778599865' ></script>
+<script type='text/javascript' src='/docs/assets/js/algolia_search.js?1778859978' ></script>
 
 <script src="/docs/assets/js/mermaid.js"></script>
 
@@ -367,7 +346,7 @@ function OptanonWrapper() { }
     </div>
     </div>
     <div id="navbar-search">
-       <script src="/docs/assets/js/su_header_search.js?1778599865" ></script>
+       <script src="/docs/assets/js/su_header_search.js?1778859978" ></script>
 <script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/an.js"></script>
 <script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/searchbox.js"></script>
 <link rel="stylesheet" href="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/searchbox.css">
@@ -390,7 +369,7 @@ function OptanonWrapper() { }
 
 <div class="container-fluid" >
   <div class="row flex-xl-nowrap d-print-block ">
-    <script type="text/javascript" src="/docs/assets/js/broken_redirect_list.js?1778599865" ></script>
+    <script type="text/javascript" src="/docs/assets/js/broken_redirect_list.js?1778859978" ></script>
 <script type="text/javascript">
 
   function removeleadingslash(str){
@@ -706,6 +685,9 @@ if (site_language && (site_language != 'en')){
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/user_guide/audience/manage_audience/merge_duplicate_users/");
+    validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
+    
+    siteurl = removeleadingslash("/user_guide/audience/manage_audience/merge_duplicate_users/merge_behavior/");
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/user_guide/audience/manage_audience/user_profiles/");
@@ -1684,6 +1666,9 @@ if (site_language && (site_language != 'en')){
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/user_guide/data/distribution/braze_currents/setting_up_currents/available_partners/");
+    validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
+    
+    siteurl = removeleadingslash("/user_guide/data/distribution/braze_currents/setting_up_currents/custom_http_connector/");
     validurls['/docs' + siteurl.toLowerCase()] = '/docs' + siteurl + '/';
     
     siteurl = removeleadingslash("/user_guide/data/distribution/braze_currents/setting_up_currents/event_delivery_semantics/");

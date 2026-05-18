@@ -7839,6 +7839,13 @@ You can also find a copy of the [Cordova Braze SDK changelog on GitHub](https://
 
 
 
+<h2 id="1601">16.0.1</h2>
+
+<h5 id="fixed">Fixed</h5>
+<ul>
+  <li>Fixed iOS initialization when using cordova-ios 8 with the Swift <code class="language-plaintext highlighter-rouge">AppDelegate</code> template, where plugins can load after <code class="language-plaintext highlighter-rouge">UIApplicationDidFinishLaunchingNotification</code> and Braze would never start.</li>
+</ul>
+
 <h2 id="1600">16.0.0</h2>
 
 <h5 id="breaking">Breaking</h5>
@@ -7854,7 +7861,7 @@ You can also find a copy of the [Cordova Braze SDK changelog on GitHub](https://
   <li>Updated the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/13.2.0...14.0.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 13.2.0 to 14.0.1</a>.</li>
 </ul>
 
-<h5 id="fixed">Fixed</h5>
+<h5 id="fixed-1">Fixed</h5>
 <ul>
   <li>Fixed <code class="language-plaintext highlighter-rouge">subscribeToInAppMessage</code> on both iOS and Android to properly invoke the success callback with in-app message data and correctly respect the <code class="language-plaintext highlighter-rouge">useBrazeUI</code> parameter. <a href="https://github.com/braze-inc/braze-cordova-sdk/issues/103">#103</a></li>
 </ul>
@@ -7910,7 +7917,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>Updated the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/11.6.1...12.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 11.6.1 to 12.0.0</a>.</li>
 </ul>
 
-<h5 id="fixed-1">Fixed</h5>
+<h5 id="fixed-2">Fixed</h5>
 <ul>
   <li>Updated the internal iOS implementation of <code class="language-plaintext highlighter-rouge">getUserId</code> to <code class="language-plaintext highlighter-rouge">braze.user.identifier</code> instead of <code class="language-plaintext highlighter-rouge">[braze.user idWithCompletion:]</code>, which was deprecated in Swift SDK <a href="https://github.com/braze-inc/braze-swift-sdk/releases/tag/11.5.0">11.5.0</a>. This deprecation does not have any impact to functionality.</li>
 </ul>
@@ -7932,7 +7939,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>Updated the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/10.1.0...11.6.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 10.1.0 to 11.6.1</a>.</li>
 </ul>
 
-<h5 id="fixed-2">Fixed</h5>
+<h5 id="fixed-3">Fixed</h5>
 <ul>
   <li>Updated automatic push integration on iOS to be fully compatible with Swift-based projects (e.g. Capacitor applications).
     <ul>
@@ -7965,7 +7972,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>Updated the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/9.2.0...10.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 9.2.0 to 10.1.0</a>.</li>
 </ul>
 
-<h5 id="fixed-3">Fixed</h5>
+<h5 id="fixed-4">Fixed</h5>
 <ul>
   <li>Fixed the native-to-JavaScript translation of in-app message strings, where nested escape characters were previously being removed.</li>
   <li>Fixed the <code class="language-plaintext highlighter-rouge">subscribeToInAppMessage</code> method on iOS to respect the <code class="language-plaintext highlighter-rouge">useBrazeUI</code> setting.
@@ -8142,7 +8149,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>Updated the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v30.0.0...v30.1.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 30.0.0 to 30.1.1</a>.</li>
 </ul>
 
-<h5 id="fixed-4">Fixed</h5>
+<h5 id="fixed-5">Fixed</h5>
 <ul>
   <li>Fixed the <code class="language-plaintext highlighter-rouge">getDeviceId</code> method to return the value as a success instead of an error on iOS.</li>
 </ul>
@@ -8210,7 +8217,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="601">6.0.1</h2>
 
-<h5 id="fixed-5">Fixed</h5>
+<h5 id="fixed-6">Fixed</h5>
 <ul>
   <li>Updated the native Android version <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2632">from Braze Android SDK 26.3.1 to 26.3.2</a>.</li>
 </ul>
@@ -8374,7 +8381,7 @@ YourApp.openUrl(contentCard[“url”]);
   </li>
 </ul>
 
-<h5 id="fixed-6">Fixed</h5>
+<h5 id="fixed-7">Fixed</h5>
 <ul>
   <li>Fixed a bug where a Content Card without a key-value pair could cause a crash.</li>
 </ul>
@@ -8406,7 +8413,7 @@ YourApp.openUrl(contentCard[“url”]);
   <li>Updated to <a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v18.0.1">Braze Android SDK 18.0.1</a>.</li>
 </ul>
 
-<h5 id="fixed-7">Fixed</h5>
+<h5 id="fixed-8">Fixed</h5>
 <ul>
   <li>Fixed an error around locating certain iOS resources when integrating the SDK.</li>
 </ul>
@@ -8431,7 +8438,7 @@ YourApp.openUrl(contentCard[“url”]);
   <li>Updated to <a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v16.0.0">Braze Android SDK 16.0.0</a>.</li>
 </ul>
 
-<h5 id="fixed-8">Fixed</h5>
+<h5 id="fixed-9">Fixed</h5>
 <ul>
   <li>Fixed an issue in pre Android P WebViews where the system WebView would not properly handle view focus being returned to it.
     <ul>
@@ -8502,7 +8509,7 @@ YourApp.openUrl(contentCard[“url”]);
   <li>Updated to <a href="https://github.com/braze-inc/braze-ios-sdk/blob/master/CHANGELOG.md#3311">Braze iOS SDK 3.31.1</a>.</li>
 </ul>
 
-<h5 id="fixed-9">Fixed</h5>
+<h5 id="fixed-10">Fixed</h5>
 <ul>
   <li>Fixed an issue on iOS where the plugin was incompatible with other Cordova plugins that have the <code class="language-plaintext highlighter-rouge">use_frameworks</code> Cocoapods setting in their <code class="language-plaintext highlighter-rouge">Podfile</code>.</li>
 </ul>
@@ -8527,7 +8534,7 @@ YourApp.openUrl(contentCard[“url”]);
   <li>Updated to <a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v11.0.0">Braze Android SDK 11.0.0</a>.</li>
 </ul>
 
-<h5 id="fixed-10">Fixed</h5>
+<h5 id="fixed-11">Fixed</h5>
 <ul>
   <li>Fixed an issue where the plugin would automatically add the In-app Purchase capability to XCode projects.</li>
 </ul>
@@ -8660,7 +8667,7 @@ YourApp.openUrl(contentCard[“url”]);
 
 <h2 id="2101">2.10.1</h2>
 
-<h5 id="fixed-11">Fixed</h5>
+<h5 id="fixed-12">Fixed</h5>
 <ul>
   <li>Fixed an issue in the iOS plugin where custom endpoints were not correctly getting substituted for the actual server endpoints.</li>
 </ul>
@@ -8689,7 +8696,7 @@ YourApp.openUrl(contentCard[“url”]);
   </li>
 </ul>
 
-<h5 id="fixed-12">Fixed</h5>
+<h5 id="fixed-13">Fixed</h5>
 <ul>
   <li>Fixed an issue in the Android plugin where the Braze SDK could be invoked before <code class="language-plaintext highlighter-rouge">pluginInitialize</code> was called by Cordova. The plugin now explicitly initializes the SDK before any SDK or Android lifecycle methods are called.
     <ul>
@@ -8712,7 +8719,7 @@ YourApp.openUrl(contentCard[“url”]);
   <li>Improved the look and feel of in-app messages to adhere to the latest UX and UI best practices. Changes affect font sizes, padding, and responsiveness across all message types. Now supports button border styling.</li>
 </ul>
 
-<h5 id="fixed-13">Fixed</h5>
+<h5 id="fixed-14">Fixed</h5>
 <ul>
   <li>Fixed the Android plugin not respecting decimal purchase prices.
     <ul>
@@ -8855,9 +8862,69 @@ You can also find a copy of the [Flutter Braze SDK changelog on GitHub](https://
 
 
 
-<h2 id="1801">18.0.1</h2>
+<h2 id="1900">19.0.0</h2>
+
+<h5 id="breaking">Breaking</h5>
+<ul>
+  <li>The minimum supported Dart version is <code class="language-plaintext highlighter-rouge">2.17.0</code>.</li>
+  <li>SDK logging is now controlled on the Dart layer.</li>
+  <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v41.1.1...v42.2.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 41.1.1 to 42.2.0</a>.</li>
+</ul>
 
 <h5 id="fixed">Fixed</h5>
+<ul>
+  <li>Fixes a crash on Android where <code class="language-plaintext highlighter-rouge">setBrazePluginIsReady</code> could throw a <code class="language-plaintext highlighter-rouge">NullPointerException</code> when replaying pending push events containing null entries.
+    <ul>
+      <li>See <a href="https://github.com/braze-inc/braze-flutter-sdk/issues/129">#129</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="added">Added</h5>
+<ul>
+  <li>Flutter-specific and native platform logs now print to the DevTools logging view.
+    <ul>
+      <li>Logs use <code class="language-plaintext highlighter-rouge">dart:developer</code>’s <code class="language-plaintext highlighter-rouge">log()</code> function under the name <code class="language-plaintext highlighter-rouge">BrazeFlutterSDK</code>, making them visible in the Flutter DevTools <strong>Logging</strong> tab.</li>
+      <li>Adds <code class="language-plaintext highlighter-rouge">BrazeLogLevel</code> with three levels:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">BrazeLogLevel.debug</code></li>
+          <li><code class="language-plaintext highlighter-rouge">BrazeLogLevel.info</code></li>
+          <li><code class="language-plaintext highlighter-rouge">BrazeLogLevel.error</code></li>
+        </ul>
+      </li>
+      <li>Adds <code class="language-plaintext highlighter-rouge">BrazePlugin.logLevel</code> to filter out logs below a given level.
+        <ul>
+          <li>Accepts a <code class="language-plaintext highlighter-rouge">BrazeLogLevel</code> or a raw <code class="language-plaintext highlighter-rouge">dart:developer</code> integer.</li>
+          <li>Defaults to <code class="language-plaintext highlighter-rouge">BrazeLogLevel.info</code>, which suppresses debug logs.</li>
+        </ul>
+      </li>
+      <li>Adds <code class="language-plaintext highlighter-rouge">BrazePlugin.logger</code>, an optional callback.
+        <ul>
+          <li>When set, it replaces the default <code class="language-plaintext highlighter-rouge">dart:developer</code> output so you can route logs to your own logging infrastructure.</li>
+        </ul>
+      </li>
+      <li>On Android:
+        <ul>
+          <li>The plugin now configures the native <code class="language-plaintext highlighter-rouge">BrazeLogger</code> when the Flutter engine attaches.</li>
+          <li>Any log level or log callback set in your <code class="language-plaintext highlighter-rouge">Application.onCreate</code> will be overwritten.</li>
+          <li>Use <code class="language-plaintext highlighter-rouge">BrazePlugin.logLevel</code> from Dart to control the log level instead.</li>
+        </ul>
+      </li>
+      <li>On iOS:
+        <ul>
+          <li>If your <code class="language-plaintext highlighter-rouge">AppDelegate</code> already sets a custom <code class="language-plaintext highlighter-rouge">configuration.logger.print</code> closure, the plugin will not forward native logs to Dart and <code class="language-plaintext highlighter-rouge">BrazePlugin.logLevel</code> will only filter Dart-side logs.</li>
+          <li>Otherwise, any log level set in <code class="language-plaintext highlighter-rouge">configuration.logger.level</code> will be overriden.</li>
+          <li><code class="language-plaintext highlighter-rouge">BrazePlugin.logLevel</code> will only take effect after <code class="language-plaintext highlighter-rouge">BrazePlugin.initialize(apiKey, endpoint)</code> is called and a new Braze instance is created.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/14.0.4...14.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 14.0.4 to 14.1.0</a>.</li>
+</ul>
+
+<h2 id="1801">18.0.1</h2>
+
+<h5 id="fixed-1">Fixed</h5>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">Braze.registerPushToken()</code> now explicitly enforces that the device token is a hex-encoded string for the iOS implementation.
     <ul>
@@ -8868,7 +8935,7 @@ You can also find a copy of the [Flutter Braze SDK changelog on GitHub](https://
 
 <h2 id="1800">18.0.0</h2>
 
-<h4 id="breaking">Breaking</h4>
+<h5 id="breaking-1">Breaking</h5>
 <ul>
   <li>Streamlines the iOS integration process to not require writing native code to forward content cards, banners, feature flags, in-app messages, or push notification updates from the native SDK.
     <ul>
@@ -8880,7 +8947,7 @@ You can also find a copy of the [Flutter Braze SDK changelog on GitHub](https://
   </li>
 </ul>
 
-<h5 id="added">Added</h5>
+<h5 id="added-1">Added</h5>
 <ul>
   <li>Adds support for delayed SDK initialization. See full setup guide <a href="https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=flutter">here</a>.
     <ul>
@@ -8895,14 +8962,14 @@ You can also find a copy of the [Flutter Braze SDK changelog on GitHub](https://
   </li>
 </ul>
 
-<h5 id="fixed-1">Fixed</h5>
+<h5 id="fixed-2">Fixed</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/14.0.1...14.0.4#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 14.0.1 to 14.0.4</a>.</li>
 </ul>
 
 <h2 id="1710">17.1.0</h2>
 
-<h5 id="added-1">Added</h5>
+<h5 id="added-2">Added</h5>
 <ul>
   <li>Adds support to import the Flutter iOS package via Swift Package Manager (SPM).
     <ul>
@@ -8921,13 +8988,13 @@ You can also find a copy of the [Flutter Braze SDK changelog on GitHub](https://
 
 <h2 id="1700">17.0.0</h2>
 
-<h5 id="breaking-1">Breaking</h5>
+<h5 id="breaking-2">Breaking</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/13.3.0...14.0.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 13.3.0 to 14.0.1</a>.</li>
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v40.0.0...v41.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 40.0.0 to 41.0.0</a>.</li>
 </ul>
 
-<h5 id="added-2">Added</h5>
+<h5 id="added-3">Added</h5>
 <ul>
   <li>Adds support for logging banner analytics to Braze using <code class="language-plaintext highlighter-rouge">BrazeBanner</code> instances.
     <ul>
@@ -8938,12 +9005,12 @@ You can also find a copy of the [Flutter Braze SDK changelog on GitHub](https://
 
 <h2 id="1600">16.0.0</h2>
 
-<h5 id="breaking-2">Breaking</h5>
+<h5 id="breaking-3">Breaking</h5>
 <ul>
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v39.0.0...v40.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 39.0.0 to 40.0.0</a>.</li>
 </ul>
 
-<h5 id="fixed-2">Fixed</h5>
+<h5 id="fixed-3">Fixed</h5>
 <ul>
   <li>Banner views will no longer call <code class="language-plaintext highlighter-rouge">setState</code> extraneously if the view component is not mounted.
     <ul>
@@ -8953,14 +9020,14 @@ You can also find a copy of the [Flutter Braze SDK changelog on GitHub](https://
   <li>Fixes UI flickering and display issues with <code class="language-plaintext highlighter-rouge">BrazeBannerView</code> when navigating between screens on Android</li>
 </ul>
 
-<h5 id="added-3">Added</h5>
+<h5 id="added-4">Added</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/13.2.0...13.3.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 13.2.0 to 13.3.0</a>.</li>
 </ul>
 
 <h2 id="1510">15.1.0</h2>
 
-<h5 id="added-4">Added</h5>
+<h5 id="added-5">Added</h5>
 <ul>
   <li>Adds support for Banner properties via new public methods for <code class="language-plaintext highlighter-rouge">BrazeBanner</code>.
     <ul>
@@ -8976,7 +9043,7 @@ You can also find a copy of the [Flutter Braze SDK changelog on GitHub](https://
 
 <h2 id="1500">15.0.0</h2>
 
-<h5 id="breaking-3">Breaking</h5>
+<h5 id="breaking-4">Breaking</h5>
 <ul>
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v36.0.0...v39.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 36.0.0 to 39.0.0</a>.</li>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/12.0.0...13.2.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 12.0.0 to 13.2.0</a>.
@@ -8986,7 +9053,7 @@ You can also find a copy of the [Flutter Braze SDK changelog on GitHub](https://
   </li>
 </ul>
 
-<h5 id="added-5">Added</h5>
+<h5 id="added-6">Added</h5>
 <ul>
   <li>Adds the ability to unset the following user attributes by setting these values to <code class="language-plaintext highlighter-rouge">null</code>:
     <ul>
@@ -9004,7 +9071,7 @@ You can also find a copy of the [Flutter Braze SDK changelog on GitHub](https://
 
 <h2 id="1403">14.0.3</h2>
 
-<h5 id="fixed-3">Fixed</h5>
+<h5 id="fixed-4">Fixed</h5>
 <ul>
   <li>Fixes missing <code class="language-plaintext highlighter-rouge">Braze</code> symbol error in <code class="language-plaintext highlighter-rouge">BrazeBannerViewFactory</code> when using dynamically-linked frameworks.</li>
 </ul>
@@ -9016,7 +9083,7 @@ You can also find a copy of the [Flutter Braze SDK changelog on GitHub](https://
 This release reverts the increase to the minimum Android SDK version of the Braze Android SDK from API 21 to API 25 introduced in 34.0.0. This allows the SDK to once again be compiled into apps supporting as early as API 21. However, we are not reintroducing formal support for &lt; API 25. Read more <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#3600">here</a>.</p>
 </blockquote>
 
-<h5 id="fixed-4">Fixed</h5>
+<h5 id="fixed-5">Fixed</h5>
 <ul>
   <li>Fixes a display issue introduced in <code class="language-plaintext highlighter-rouge">14.0.1</code> when changing a Banner dynamically.</li>
   <li>The <code class="language-plaintext highlighter-rouge">minSdk</code> enforced by the Flutter Android layer is now downgraded from <code class="language-plaintext highlighter-rouge">25</code> to <code class="language-plaintext highlighter-rouge">21</code>, matching the <code class="language-plaintext highlighter-rouge">minSdk</code> in the Android native layer.</li>
@@ -9024,7 +9091,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="1401">14.0.1</h2>
 
-<h5 id="fixed-5">Fixed</h5>
+<h5 id="fixed-6">Fixed</h5>
 <ul>
   <li>Fixes a crash on iOS when the app is force-closed while a Banner is visible on the screen.
     <ul>
@@ -9037,13 +9104,13 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p>⚠️ <strong>Important:</strong> This version has a known issue related to Banners. Upgrade to version <code class="language-plaintext highlighter-rouge">14.0.2</code> instead.</p>
 
-<h5 id="breaking-4">Breaking</h5>
+<h5 id="breaking-5">Breaking</h5>
 <ul>
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v35.0.0...v36.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 35.0.0 to 36.0.0</a>.</li>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/11.9.0...12.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 11.9.0 to 12.0.0</a>.</li>
 </ul>
 
-<h5 id="fixed-6">Fixed</h5>
+<h5 id="fixed-7">Fixed</h5>
 <ul>
   <li>Fixes an issue on iOS where <code class="language-plaintext highlighter-rouge">getUserId()</code> would not return any value if the user was anonymous.
     <ul>
@@ -9067,7 +9134,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p>⚠️ <strong>Important:</strong> This version has a known issue related to Banners. Upgrade to version <code class="language-plaintext highlighter-rouge">14.0.2</code> instead.</p>
 
-<h5 id="breaking-5">Breaking</h5>
+<h5 id="breaking-6">Breaking</h5>
 <ul>
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v33.0.0...v35.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 33.0.0 to 35.0.0</a>.
     <ul>
@@ -9076,7 +9143,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   </li>
 </ul>
 
-<h5 id="added-6">Added</h5>
+<h5 id="added-7">Added</h5>
 <ul>
   <li>Adds the <code class="language-plaintext highlighter-rouge">BrazeBannerView</code> widget to display a Banner Card directly in Dart.
     <ul>
@@ -9096,21 +9163,21 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="1211">12.1.1</h2>
 
-<h5 id="added-7">Added</h5>
+<h5 id="added-8">Added</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/11.6.0...11.6.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 11.6.0 to 11.6.1</a>.</li>
 </ul>
 
 <h2 id="1210">12.1.0</h2>
 
-<h5 id="added-8">Added</h5>
+<h5 id="added-9">Added</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/11.3.0...11.6.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 11.3.0 to 11.6.0</a>.</li>
 </ul>
 
 <h2 id="1200">12.0.0</h2>
 
-<h5 id="breaking-6">Breaking</h5>
+<h5 id="breaking-7">Breaking</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/10.3.1...11.3.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 10.3.1 to 11.3.0</a>.</li>
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v32.1.0...v33.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 32.1.0 to 33.1.0</a>.</li>
@@ -9118,14 +9185,14 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="1110">11.1.0</h2>
 
-<h5 id="added-9">Added</h5>
+<h5 id="added-10">Added</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/10.2.0...10.3.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 10.2.0 to 10.3.1</a>.</li>
 </ul>
 
 <h2 id="1100">11.0.0</h2>
 
-<h5 id="breaking-7">Breaking</h5>
+<h5 id="breaking-8">Breaking</h5>
 <ul>
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v30.4.0...v32.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 30.4.0 to 32.1.0</a>.
     <ul>
@@ -9135,7 +9202,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/9.0.0...10.2.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 9.0.0 to 10.2.0</a>.</li>
 </ul>
 
-<h5 id="added-10">Added</h5>
+<h5 id="added-11">Added</h5>
 <ul>
   <li>Adds support for 3 new Feature Flag property types:
     <ul>
@@ -9148,7 +9215,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>Adds the <code class="language-plaintext highlighter-rouge">hideCurrentInAppMessage()</code> method, which dismisses the currently displayed in-app message.</li>
 </ul>
 
-<h5 id="fixed-7">Fixed</h5>
+<h5 id="fixed-8">Fixed</h5>
 <ul>
   <li>Fixes an issue on Android where push notification stream subscriptions were not receiving events after clicking on a push notification when the app was in a terminated state.
     <ul>
@@ -9159,7 +9226,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="1010">10.1.0</h2>
 
-<h5 id="added-11">Added</h5>
+<h5 id="added-12">Added</h5>
 <ul>
   <li>Updated the Android Gradle plugin from <code class="language-plaintext highlighter-rouge">8.0.2</code> to <code class="language-plaintext highlighter-rouge">8.1.1</code>.</li>
   <li>Updated the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v30.3.0...v30.4.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 30.3.0 to 30.4.0</a>.</li>
@@ -9168,17 +9235,17 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="1000">10.0.0</h2>
 
-<h5 id="breaking-8">Breaking</h5>
+<h5 id="breaking-9">Breaking</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/8.4.0...9.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 8.4.0 to 9.0.0</a>.</li>
 </ul>
 
-<h5 id="added-12">Added</h5>
+<h5 id="added-13">Added</h5>
 <ul>
   <li>Adds the <code class="language-plaintext highlighter-rouge">getDeviceId</code> method to replace <code class="language-plaintext highlighter-rouge">getInstallTrackingId</code>, which is now deprecated.</li>
 </ul>
 
-<h5 id="fixed-8">Fixed</h5>
+<h5 id="fixed-9">Fixed</h5>
 <ul>
   <li>Fixes an issue where StrictMode DiskReadViolation was triggered on Android.
     <ul>
@@ -9189,7 +9256,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="900">9.0.0</h2>
 
-<h5 id="breaking-9">Breaking</h5>
+<h5 id="breaking-10">Breaking</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/7.7.0...8.4.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 7.7.0 to 8.4.0</a>.
     <ul>
@@ -9202,7 +9269,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>The minimum supported Swift Language Version is Swift 5.</li>
 </ul>
 
-<h5 id="added-13">Added</h5>
+<h5 id="added-14">Added</h5>
 <ul>
   <li>Push notification payloads are now accessible in the Dart layer by calling <code class="language-plaintext highlighter-rouge">subscribeToPushNotificationEvents(void Function(BrazePushEvent) onEvent)</code>. This allows you to run custom Dart code after a push is received or when a push is clicked.
     <ul>
@@ -9223,13 +9290,13 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="820">8.2.0</h2>
 
-<h5 id="added-14">Added</h5>
+<h5 id="added-15">Added</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/7.3.0...7.7.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 7.3.0 to 7.7.0</a>.</li>
   <li>Adds example integrations for <a href="https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications">Braze Rich Push Notifications</a> and <a href="https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories">Braze Push Stories</a> to the iOS sample app.</li>
 </ul>
 
-<h5 id="fixed-9">Fixed</h5>
+<h5 id="fixed-10">Fixed</h5>
 <ul>
   <li>Removes the automatic assignment of <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/delegate"><code class="language-plaintext highlighter-rouge">BrazeDelegate</code></a> in the iOS native layer, allowing for custom implementations to be assigned to the <code class="language-plaintext highlighter-rouge">braze</code> instance.
     <ul>
@@ -9240,14 +9307,14 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="810">8.1.0</h2>
 
-<h5 id="added-15">Added</h5>
+<h5 id="added-16">Added</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/7.2.0...7.3.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 7.2.0 to 7.3.0</a>.</li>
 </ul>
 
 <h2 id="800">8.0.0</h2>
 
-<h5 id="breaking-10">Breaking</h5>
+<h5 id="breaking-11">Breaking</h5>
 <ul>
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v27.0.0...v29.0.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 27.0.1 to 29.0.1</a>.</li>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/6.6.1...7.2.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 6.6.1 to 7.2.0</a>.</li>
@@ -9265,20 +9332,20 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>The minimum supported Android SDK version is 21.</li>
 </ul>
 
-<h5 id="fixed-10">Fixed</h5>
+<h5 id="fixed-11">Fixed</h5>
 <ul>
   <li>Moved the <code class="language-plaintext highlighter-rouge">compileSDKVersion</code> for Android down to 33 to match Flutter’s versioning.</li>
 </ul>
 
 <h2 id="700">7.0.0</h2>
 
-<h5 id="breaking-11">Breaking</h5>
+<h5 id="breaking-12">Breaking</h5>
 <ul>
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2701">from Braze Android SDK 26.1.1 to 27.0.1</a>.</li>
   <li>Adds support for Gradle 8.</li>
 </ul>
 
-<h5 id="added-16">Added</h5>
+<h5 id="added-17">Added</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/6.3.0...6.6.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 6.3.0 to 6.6.1</a>.</li>
   <li>Adds <code class="language-plaintext highlighter-rouge">BrazePlugin.logFeatureFlagImpression(String id)</code> to log a Feature Flag impression.</li>
@@ -9306,19 +9373,19 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="601">6.0.1</h2>
 
-<h5 id="fixed-11">Fixed</h5>
+<h5 id="fixed-12">Fixed</h5>
 <ul>
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2611">from Braze Android SDK 26.1.0 to 26.1.1</a>.</li>
 </ul>
 
 <h2 id="600">6.0.0</h2>
 
-<h5 id="breaking-12">Breaking</h5>
+<h5 id="breaking-13">Breaking</h5>
 <ul>
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v25.0.0...v26.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 25.0.0 to 26.1.0</a>.</li>
 </ul>
 
-<h5 id="fixed-12">Fixed</h5>
+<h5 id="fixed-13">Fixed</h5>
 <ul>
   <li>Fixes an issue where <code class="language-plaintext highlighter-rouge">BrazeContentCard.imageAspectRatio</code> would always return <code class="language-plaintext highlighter-rouge">1</code> for whole-number <code class="language-plaintext highlighter-rouge">int</code> values.
     <ul>
@@ -9327,7 +9394,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   </li>
 </ul>
 
-<h5 id="added-17">Added</h5>
+<h5 id="added-18">Added</h5>
 <ul>
   <li>Added support for Braze Feature Flags.
     <ul>
@@ -9349,7 +9416,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="500">5.0.0</h2>
 
-<h5 id="breaking-13">Breaking</h5>
+<h5 id="breaking-14">Breaking</h5>
 <ul>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2500">Braze Android SDK 25.0.0</a>.</li>
   <li>The native iOS bridge uses <a href="https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#600">Braze iOS SDK 6.0.0</a>.
@@ -9362,7 +9429,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="410">4.1.0</h2>
 
-<h5 id="fixed-13">Fixed</h5>
+<h5 id="fixed-14">Fixed</h5>
 <ul>
   <li>Fixes an issue in <code class="language-plaintext highlighter-rouge">4.0.0</code> where the version in <code class="language-plaintext highlighter-rouge">braze_plugin.podspec</code> was not incremented correctly.</li>
 </ul>
@@ -9378,7 +9445,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <p>Starting with this release, this SDK will use <a href="https://semver.org/">Semantic Versioning</a>.</p>
 </blockquote>
 
-<h5 id="breaking-14">Breaking</h5>
+<h5 id="breaking-15">Breaking</h5>
 <ul>
   <li>Fixes the behavior in the iOS bridge introduced in version <code class="language-plaintext highlighter-rouge">3.0.0</code> when logging clicks for in-app messages and content cards. Calling <code class="language-plaintext highlighter-rouge">logClick</code> now only sends a click event for metrics, instead of both sending a click event as well as redirecting to the associated <code class="language-plaintext highlighter-rouge">url</code> field.
     <ul>
@@ -9410,7 +9477,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="310">3.1.0</h2>
 
-<h5 id="breaking-15">Breaking</h5>
+<h5 id="breaking-16">Breaking</h5>
 <ul>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2420">Braze Android SDK 24.2.0</a>.</li>
   <li>The native iOS bridge uses <a href="https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#590">Braze iOS SDK 5.9.0</a>.</li>
@@ -9419,7 +9486,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="301">3.0.1</h2>
 
-<h5 id="fixed-14">Fixed</h5>
+<h5 id="fixed-15">Fixed</h5>
 <ul>
   <li>Updates the <code class="language-plaintext highlighter-rouge">braze_plugin.podspec</code> file to statically link the iOS framework by default. This prevents the need to do a manual step when migrating to <code class="language-plaintext highlighter-rouge">3.x.x</code>.</li>
   <li>Fixes an issue introduced in version <code class="language-plaintext highlighter-rouge">2.2.0</code> where the content cards callback was not being called when receiving an empty list of content cards.</li>
@@ -9427,7 +9494,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="300">3.0.0</h2>
 
-<h5 id="breaking-16">Breaking</h5>
+<h5 id="breaking-17">Breaking</h5>
 <ul>
   <li>The native iOS bridge now uses the <a href="https://github.com/braze-inc/braze-swift-sdk">new Braze Swift SDK</a>, <a href="https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#564">version 5.6.4</a>.
     <ul>
@@ -9455,7 +9522,7 @@ Linking.openUrl(contentCard.url);
   </li>
 </ul>
 
-<h5 id="added-18">Added</h5>
+<h5 id="added-19">Added</h5>
 <ul>
   <li>Adds the <code class="language-plaintext highlighter-rouge">isControl</code> field to <code class="language-plaintext highlighter-rouge">BrazeContentCard</code>.</li>
 </ul>
@@ -9467,7 +9534,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="261">2.6.1</h2>
 
-<h5 id="added-19">Added</h5>
+<h5 id="added-20">Added</h5>
 <ul>
   <li>Adds support to replay the <code class="language-plaintext highlighter-rouge">onEvent</code> method for queued in-app messages and content cards when subscribing via streams.
     <ul>
@@ -9484,14 +9551,14 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="260">2.6.0</h2>
 
-<h5 id="breaking-17">Breaking</h5>
+<h5 id="breaking-18">Breaking</h5>
 <ul>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2320">Braze Android SDK 23.2.0</a>.</li>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#451">Braze iOS SDK 4.5.1</a>.</li>
   <li><code class="language-plaintext highlighter-rouge">process(inAppMessage)</code> is renamed to <code class="language-plaintext highlighter-rouge">processInAppMessage(inAppMessage)</code> in the iOS layer.</li>
 </ul>
 
-<h5 id="added-20">Added</h5>
+<h5 id="added-21">Added</h5>
 <ul>
   <li>Adds the ability to subscribe to data for in-app messages and content cards via streams.
     <ul>
@@ -9508,13 +9575,13 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="250">2.5.0</h2>
 
-<h5 id="breaking-18">Breaking</h5>
+<h5 id="breaking-19">Breaking</h5>
 <ul>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2100">Braze Android SDK 21.0.0</a>.</li>
   <li>Removes <code class="language-plaintext highlighter-rouge">logContentCardsDisplayed()</code>. This method was not part of the recommended Content Cards integration and can be safely removed.</li>
 </ul>
 
-<h5 id="added-21">Added</h5>
+<h5 id="added-22">Added</h5>
 <ul>
   <li>Adds support for the <a href="https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication/">SDK Authentication</a> feature.
     <ul>
@@ -9527,7 +9594,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="240">2.4.0</h2>
 
-<h5 id="breaking-19">Breaking</h5>
+<h5 id="breaking-20">Breaking</h5>
 <ul>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2000">Braze Android SDK 20.0.0</a>.</li>
   <li>Removes <code class="language-plaintext highlighter-rouge">setAvatarImageUrl()</code>.</li>
@@ -9540,14 +9607,14 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="230">2.3.0</h2>
 
-<h5 id="breaking-20">Breaking</h5>
+<h5 id="breaking-21">Breaking</h5>
 <ul>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1700">Braze Android SDK 17.0.0</a>.</li>
   <li>The minimum supported Android SDK version is 19.</li>
   <li>Removes support for Android V1 Embedding APIs. Please reference <a href="https://flutter.dev/docs/development/packages-and-plugins/plugin-api-migration">the Flutter migration guide</a> to update to the V2 APIs.</li>
 </ul>
 
-<h5 id="added-22">Added</h5>
+<h5 id="added-23">Added</h5>
 <ul>
   <li>Custom events and purchases now support nested properties.
     <ul>
@@ -9574,7 +9641,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="220">2.2.0</h2>
 
-<h5 id="breaking-21">Breaking</h5>
+<h5 id="breaking-22">Breaking</h5>
 <ul>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1600">Braze Android SDK 16.0.0</a>.</li>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#440">Braze iOS SDK 4.4.0</a>.</li>
@@ -9586,7 +9653,7 @@ Linking.openUrl(contentCard.url);
   </li>
 </ul>
 
-<h5 id="added-23">Added</h5>
+<h5 id="added-24">Added</h5>
 <ul>
   <li>Adds the ability to set the in-app message callback and content cards callback in the constructor of <code class="language-plaintext highlighter-rouge">BrazePlugin</code>.</li>
   <li>Adds the option to store any in-app messages or content cards received before their callback is available and replay them once the corresponding callback is set.
@@ -9602,27 +9669,27 @@ Linking.openUrl(contentCard.url);
   <li>Adds <code class="language-plaintext highlighter-rouge">BrazePlugin.addToSubscriptionGroup()</code> and <code class="language-plaintext highlighter-rouge">BrazePlugin.removeFromSubscriptionGroup()</code> to manage SMS/Email Subscription Groups.</li>
 </ul>
 
-<h5 id="fixed-15">Fixed</h5>
+<h5 id="fixed-16">Fixed</h5>
 <ul>
   <li>Fixes an issue in the iOS bridge where custom events without any properties would not be logged correctly.</li>
 </ul>
 
 <h2 id="210">2.1.0</h2>
 
-<h5 id="breaking-22">Breaking</h5>
+<h5 id="breaking-23">Breaking</h5>
 <ul>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#432">Braze iOS SDK 4.3.2</a>.</li>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1500">Braze Android SDK 15.0.0</a>.</li>
 </ul>
 
-<h5 id="added-24">Added</h5>
+<h5 id="added-25">Added</h5>
 <ul>
   <li>Adds <code class="language-plaintext highlighter-rouge">logContentCardsDisplayed()</code> to manually log an impression when displaying Content Cards in a custom UI.</li>
 </ul>
 
 <h2 id="200">2.0.0</h2>
 
-<h5 id="breaking-23">Breaking</h5>
+<h5 id="breaking-24">Breaking</h5>
 <ul>
   <li>Migrates the plugin to support null safety. All non-optional function parameters have been updated to be non-nullable unless otherwise specified. <a href="https://dart.dev/null-safety">Read here</a> for more information about null safety.
     <ul>
@@ -9648,14 +9715,14 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="150">1.5.0</h2>
 
-<h5 id="breaking-24">Breaking</h5>
+<h5 id="breaking-25">Breaking</h5>
 <ul>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#402">Braze iOS SDK 4.0.2</a>.</li>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1312">Braze Android SDK 13.1.2</a>.</li>
   <li>The minimum supported Flutter version is 1.10.0.</li>
 </ul>
 
-<h5 id="added-25">Added</h5>
+<h5 id="added-26">Added</h5>
 <ul>
   <li>Adds a public repository for the Braze Flutter SDK here: https://github.com/braze-inc/braze-flutter-sdk.
     <ul>
@@ -9666,31 +9733,31 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="140">1.4.0</h2>
 
-<h5 id="breaking-25">Breaking</h5>
+<h5 id="breaking-26">Breaking</h5>
 <ul>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1300">Braze Android SDK 13.0.0</a>.</li>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3340">Braze iOS SDK 3.34.0</a>.</li>
 </ul>
 
-<h5 id="added-26">Added</h5>
+<h5 id="added-27">Added</h5>
 <ul>
   <li>Adds <code class="language-plaintext highlighter-rouge">BrazePlugin.setGoogleAdvertisingId()</code> to set the Google Advertising ID and the associated Ad-Tracking Enabled field for Android. This is a no-op on iOS.</li>
 </ul>
 
-<h5 id="fixed-16">Fixed</h5>
+<h5 id="fixed-17">Fixed</h5>
 <ul>
   <li>Fixes an issue where the Braze Android SDK’s <code class="language-plaintext highlighter-rouge">Appboy.setLogLevel()</code> method wasn’t respected.</li>
 </ul>
 
 <h2 id="130">1.3.0</h2>
 
-<h5 id="breaking-26">Breaking</h5>
+<h5 id="breaking-27">Breaking</h5>
 <ul>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1200">Braze Android SDK 12.0.0</a>.</li>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3310">Braze iOS SDK 3.31.0</a>.</li>
 </ul>
 
-<h5 id="added-27">Added</h5>
+<h5 id="added-28">Added</h5>
 <ul>
   <li>Adds support for the Braze plugin to be used with Android V2 Embedding APIs. Integrations using V1 Embedding will also continue to work.</li>
   <li>Allows the Android Braze plugin to be used with multiple Flutter engines.</li>
@@ -9698,19 +9765,19 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="120">1.2.0</h2>
 
-<h5 id="breaking-27">Breaking</h5>
+<h5 id="breaking-28">Breaking</h5>
 <ul>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3300">Braze iOS SDK 3.30.0</a>.</li>
 </ul>
 
-<h5 id="added-28">Added</h5>
+<h5 id="added-29">Added</h5>
 <ul>
   <li>Allows the iOS Braze plugin to be used with multiple Flutter engines.</li>
 </ul>
 
 <h2 id="110">1.1.0</h2>
 
-<h5 id="breaking-28">Breaking</h5>
+<h5 id="breaking-29">Breaking</h5>
 <ul>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1100">Braze Android SDK 11.0.0</a>.</li>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3291">Braze iOS SDK 3.29.1</a>.</li>
@@ -9718,7 +9785,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="100">1.0.0</h2>
 
-<h5 id="breaking-29">Breaking</h5>
+<h5 id="breaking-30">Breaking</h5>
 <ul>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3270">Braze iOS SDK 3.27.0</a>. This release adds support for iOS 14 and requires XCode 12. Please read the Braze iOS SDK changelog for details.</li>
 </ul>
@@ -9732,20 +9799,20 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="0100">0.10.0</h2>
 
-<h5 id="breaking-30">Breaking</h5>
+<h5 id="breaking-31">Breaking</h5>
 <ul>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#810">Braze Android SDK 8.1.0</a>.</li>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3260">Braze iOS SDK 3.26.0</a>.</li>
 </ul>
 
-<h5 id="fixed-17">Fixed</h5>
+<h5 id="fixed-18">Fixed</h5>
 <ul>
   <li>Fixed an issue where <code class="language-plaintext highlighter-rouge">setBoolCustomUserAttribute</code> always set the attribute to <code class="language-plaintext highlighter-rouge">true</code> on iOS.</li>
 </ul>
 
 <h2 id="090">0.9.0</h2>
 
-<h5 id="breaking-31">Breaking</h5>
+<h5 id="breaking-32">Breaking</h5>
 <ul>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#700">Braze Android SDK 7.0.0</a>.</li>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3220">Braze iOS SDK 3.22.0</a>.</li>
@@ -9753,7 +9820,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="080">0.8.0</h2>
 
-<h5 id="breaking-32">Breaking</h5>
+<h5 id="breaking-33">Breaking</h5>
 <ul>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3213">Braze iOS SDK 3.21.3</a>.</li>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#402">Braze Android SDK 4.0.2</a>.
@@ -9765,7 +9832,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="070">0.7.0</h2>
 
-<h5 id="added-29">Added</h5>
+<h5 id="added-30">Added</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">BrazePlugin.launchContentCards()</code> and <code class="language-plaintext highlighter-rouge">BrazePlugin.refreshContentCards()</code> to natively display and refresh Content Cards.</li>
   <li>Adds a Dart callback for receiving Braze Content Card data in the Flutter host app.
@@ -9793,7 +9860,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="061">0.6.1</h2>
 
-<h5 id="fixed-18">Fixed</h5>
+<h5 id="fixed-19">Fixed</h5>
 <ul>
   <li>Fixed an issue where the Braze Kotlin plugin file’s directory structure did not match its package structure.</li>
 </ul>
@@ -9828,7 +9895,7 @@ Linking.openUrl(contentCard.url);
 
 <p><strong>Important</strong> This release has known issues displaying HTML in-app messages. Do not upgrade to this version and upgrade to 0.5.2 and above instead. If you are using this version, you are strongly encouraged to upgrade to 0.5.2 or above if you make use of HTML in-app messages.</p>
 
-<h5 id="breaking-33">Breaking</h5>
+<h5 id="breaking-34">Breaking</h5>
 <ul>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3200">Braze iOS SDK 3.20.0</a>.</li>
   <li><strong>Important:</strong> Braze iOS SDK 3.20.0 contains updated push token registration methods. We recommend upgrading to these methods as soon as possible to ensure a smooth transition as devices upgrade to iOS 13. In <code class="language-plaintext highlighter-rouge">application:didRegisterForRemoteNotificationsWithDeviceToken:</code>, replace
@@ -9847,13 +9914,13 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="040">0.4.0</h2>
 
-<h5 id="breaking-34">Breaking</h5>
+<h5 id="breaking-35">Breaking</h5>
 <ul>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3180">Braze iOS SDK 3.18.0</a>.</li>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#360">Braze Android SDK 3.6.0</a>.</li>
 </ul>
 
-<h5 id="added-30">Added</h5>
+<h5 id="added-31">Added</h5>
 <ul>
   <li>Added the following new field to <code class="language-plaintext highlighter-rouge">BrazeInAppMessage</code>: <code class="language-plaintext highlighter-rouge">zippedAssetsUrl</code>.
     <ul>
@@ -9864,7 +9931,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="030">0.3.0</h2>
 
-<h5 id="breaking-35">Breaking</h5>
+<h5 id="breaking-36">Breaking</h5>
 <ul>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3150">Braze iOS SDK 3.15.0</a>.</li>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#350">Braze Android SDK 3.5.0</a>.</li>
@@ -9883,14 +9950,14 @@ Linking.openUrl(contentCard.url);
   </li>
 </ul>
 
-<h5 id="added-31">Added</h5>
+<h5 id="added-32">Added</h5>
 <ul>
   <li>Added support for logging in-app message analytics to Braze using <code class="language-plaintext highlighter-rouge">BrazeInAppMessage</code> instances. See <code class="language-plaintext highlighter-rouge">logInAppMessageClicked</code>, <code class="language-plaintext highlighter-rouge">logInAppMessageImpression</code>, and <code class="language-plaintext highlighter-rouge">logInAppMessageButtonClicked</code> on the <code class="language-plaintext highlighter-rouge">BrazePlugin</code> interface.</li>
 </ul>
 
 <h2 id="021">0.2.1</h2>
 
-<h5 id="added-32">Added</h5>
+<h5 id="added-33">Added</h5>
 <ul>
   <li>Added the following new fields to <code class="language-plaintext highlighter-rouge">BrazeInAppMessage</code>: <code class="language-plaintext highlighter-rouge">imageUrl</code>, <code class="language-plaintext highlighter-rouge">useWebView</code>, <code class="language-plaintext highlighter-rouge">duration</code>, <code class="language-plaintext highlighter-rouge">clickAction</code>, <code class="language-plaintext highlighter-rouge">dismissType</code>, <code class="language-plaintext highlighter-rouge">messageType</code></li>
   <li>Added the following new fields to <code class="language-plaintext highlighter-rouge">BrazeButton</code>: <code class="language-plaintext highlighter-rouge">useWebView</code>, <code class="language-plaintext highlighter-rouge">clickAction</code>.</li>
@@ -9898,13 +9965,13 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="020">0.2.0</h2>
 
-<h5 id="breaking-36">Breaking</h5>
+<h5 id="breaking-37">Breaking</h5>
 <ul>
   <li>The native iOS bridge uses <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3140">Braze iOS SDK 3.14.0</a>.</li>
   <li>The native Android bridge uses <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#321">Braze Android SDK 3.2.1</a>.</li>
 </ul>
 
-<h5 id="added-33">Added</h5>
+<h5 id="added-34">Added</h5>
 <ul>
   <li>Adds <code class="language-plaintext highlighter-rouge">addAlias()</code> to the public API interface.</li>
   <li>Adds <code class="language-plaintext highlighter-rouge">requestLocationInitialization()</code> to the public API interface.</li>
@@ -11965,11 +12032,32 @@ You can also find a copy of the [Unity Braze SDK changelog on GitHub](https://gi
 
 
 
-<p>⚠️ In version 4.0.0, we changed the iOS bridge from AppboyKit, which is written in Objective-C, to the new <a href="https://github.com/braze-inc/braze-swift-sdk">Swift SDK</a>. If you are upgrading from a version below 4.0.0 to a version above 4.0.0, please read <a href="https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md#400">the instructions</a> to ensure a smooth transition and backward compatibility.</p>
+<h2 id="1100">11.0.0</h2>
+
+<h4 id="breaking">Breaking</h4>
+<ul>
+  <li>Updated the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/13.2.0...14.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 13.2.0 to 14.1.0</a>.</li>
+  <li>Updated the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v36.0.0...v42.2.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 36.0.0 to 42.2.0</a>.
+    <ul>
+      <li>The minimum required Android SDK version is 23. See more details <a href="https://github.com/braze-inc/braze-android-sdk?tab=readme-ov-file#version-information">here</a>.</li>
+    </ul>
+  </li>
+  <li>Updated the minimum required Unity version to Unity 6 (<a href="https://unity.com/releases/editor/whats-new/6000.0.66f2">6000.0.66f2</a> or later).</li>
+  <li>Removed News Feed.
+    <ul>
+      <li>Removed <code class="language-plaintext highlighter-rouge">RequestFeedRefresh()</code>, <code class="language-plaintext highlighter-rouge">RequestFeedRefreshFromCache()</code>, <code class="language-plaintext highlighter-rouge">LogFeedDisplayed()</code>, <code class="language-plaintext highlighter-rouge">LogCardImpression(string)</code>, <code class="language-plaintext highlighter-rouge">LogCardClicked(string)</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="fixed">Fixed</h4>
+<ul>
+  <li>Fixed <code class="language-plaintext highlighter-rouge">AppboyBinding.RegisterAppboyPushMessages(string)</code> throwing <code class="language-plaintext highlighter-rouge">NoSuchMethodError</code> on Android. See <a href="https://github.com/braze-inc/braze-unity-sdk/issues/109">#109</a>.</li>
+</ul>
 
 <h2 id="1000">10.0.0</h2>
 
-<h4 id="breaking">Breaking</h4>
+<h4 id="breaking-1">Breaking</h4>
 <ul>
   <li>Updated the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/12.0.0...13.2.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 12.0.0 to 13.2.0</a>.
     <ul>
@@ -11980,7 +12068,7 @@ You can also find a copy of the [Unity Braze SDK changelog on GitHub](https://gi
 
 <h2 id="900">9.0.0</h2>
 
-<h4 id="breaking-1">Breaking</h4>
+<h4 id="breaking-2">Breaking</h4>
 <ul>
   <li>Updated the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v35.0.0...v36.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 35.0.0 to 36.0.0</a>.</li>
   <li>Updated the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/11.9.0...12.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 11.9.0 to 12.0.0</a>.</li>
@@ -11988,7 +12076,7 @@ You can also find a copy of the [Unity Braze SDK changelog on GitHub](https://gi
 
 <h2 id="800">8.0.0</h2>
 
-<h5 id="breaking-2">Breaking</h5>
+<h5 id="breaking-3">Breaking</h5>
 <ul>
   <li>Updated the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/10.3.0...11.9.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 10.3.0 to 11.9.0</a>.</li>
   <li>Updated the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v32.1.0...v35.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 32.1.0 to 35.0.0</a>.
@@ -11998,7 +12086,7 @@ You can also find a copy of the [Unity Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed">Fixed</h5>
+<h5 id="fixed-1">Fixed</h5>
 <ul>
   <li>Fixed a crash on iOS due to the completion handler for silent / background push notification being executed multiple times when Unity was configured to process remote notifications in addition to the Braze plugin (<code class="language-plaintext highlighter-rouge">UNITY_USES_REMOTE_NOTIFICATIONS = 1</code>).</li>
   <li>Fixed the <em>Push Received Listener</em> getting mistakenly called when a push was opened on iOS. The <em>Push Opened Listener</em> is now properly called instead.</li>
@@ -12018,13 +12106,13 @@ You can also find a copy of the [Unity Braze SDK changelog on GitHub](https://gi
 
 <h2 id="700">7.0.0</h2>
 
-<h5 id="breaking-3">Breaking</h5>
+<h5 id="breaking-4">Breaking</h5>
 <ul>
   <li>Updated the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v30.3.0...v32.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 30.3.0 to 32.1.0</a>.</li>
   <li>Updated the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/9.0.0...10.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 9.0.0 to 10.1.0</a>.</li>
 </ul>
 
-<h5 id="fixed-1">Fixed</h5>
+<h5 id="fixed-2">Fixed</h5>
 <ul>
   <li>Fixed an issue on Android where the <code class="language-plaintext highlighter-rouge">AndroidPushReceivedTimestamp</code> of a <code class="language-plaintext highlighter-rouge">PushNotification</code> was incorrectly translated from a <code class="language-plaintext highlighter-rouge">long</code> to an <code class="language-plaintext highlighter-rouge">int</code>. The value received by the C# layer is now the same as the value sent in the JSON.</li>
 </ul>
@@ -12062,7 +12150,7 @@ You can also find a copy of the [Unity Braze SDK changelog on GitHub](https://gi
 
 <h2 id="600">6.0.0</h2>
 
-<h5 id="breaking-4">Breaking</h5>
+<h5 id="breaking-5">Breaking</h5>
 <ul>
   <li>Updated the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/7.7.0...9.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 7.7.0 to 9.0.0</a>.</li>
   <li>Updated the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v29.0.1...v30.3.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 29.0.1 to 30.3.0</a>.</li>
@@ -12085,7 +12173,7 @@ You can also find a copy of the [Unity Braze SDK changelog on GitHub](https://gi
 
 <h2 id="521">5.2.1</h2>
 
-<h5 id="fixed-2">Fixed</h5>
+<h5 id="fixed-3">Fixed</h5>
 <ul>
   <li>Fixed an issue with calling <code class="language-plaintext highlighter-rouge">LogInAppMessageClicked()</code>, <code class="language-plaintext highlighter-rouge">LogInAppMessageImpression()</code>, <code class="language-plaintext highlighter-rouge">LogInAppMessageButtonClicked</code>, and <code class="language-plaintext highlighter-rouge">LogContentCardDismissed(card)</code> on Android.</li>
 </ul>
@@ -12123,7 +12211,7 @@ You can also find a copy of the [Unity Braze SDK changelog on GitHub](https://gi
 
 <h2 id="500">5.0.0</h2>
 
-<h4 id="breaking-5">Breaking</h4>
+<h4 id="breaking-6">Breaking</h4>
 <ul>
   <li>Updated the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/6.1.0...7.4.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 6.1.0 to 7.4.0</a>.
     <ul>
@@ -12135,7 +12223,7 @@ You can also find a copy of the [Unity Braze SDK changelog on GitHub](https://gi
   <li><code class="language-plaintext highlighter-rouge">FEATURE_FLAGS_UPDATED</code> will only trigger when a refresh request completes with success or failure, and upon initial subscription if there was previously cached data from the current session.</li>
 </ul>
 
-<h5 id="fixed-3">Fixed</h5>
+<h5 id="fixed-4">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in <code class="language-plaintext highlighter-rouge">4.0.0</code> which prevented compilation on Xcode 14.3+.
     <ul>
@@ -12159,19 +12247,19 @@ You can also find a copy of the [Unity Braze SDK changelog on GitHub](https://gi
 
 <h2 id="420">4.2.0</h2>
 
-<h4 id="breaking-6">Breaking</h4>
+<h4 id="breaking-7">Breaking</h4>
 <ul>
   <li>Updated the Android plugin to use <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2620">Braze Android SDK 26.2.0</a>.</li>
 </ul>
 
-<h5 id="fixed-4">Fixed</h5>
+<h5 id="fixed-5">Fixed</h5>
 <ul>
   <li>Fixed an issue on Android where In-App Message events would not properly get forwarded to the Unity layer.</li>
 </ul>
 
 <h2 id="411">4.1.1</h2>
 
-<h5 id="fixed-5">Fixed</h5>
+<h5 id="fixed-6">Fixed</h5>
 <ul>
   <li>Fixed the Braze iOS Push settings not being applied in the sample app code.</li>
 </ul>
@@ -12205,7 +12293,7 @@ You can also find a copy of the [Unity Braze SDK changelog on GitHub](https://gi
 
 <h2 id="400">4.0.0</h2>
 
-<h4 id="breaking-7">Breaking</h4>
+<h4 id="breaking-8">Breaking</h4>
 <ul>
   <li>Updated the Android plugin to use <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2500">Braze Android SDK 25.0.0</a>
     <ul>
@@ -12256,7 +12344,7 @@ Braze *braze = [AppboyUnityManager initBraze:config];
 
 <h2 id="3110">3.11.0</h2>
 
-<h5 id="breaking-8">Breaking</h5>
+<h5 id="breaking-9">Breaking</h5>
 <ul>
   <li>Updated the Android plugin to use Braze Android SDK 23.3.0.</li>
   <li>Streamlined the integration required for handling push notifications on Android.
@@ -12269,14 +12357,14 @@ Braze *braze = [AppboyUnityManager initBraze:config];
 
 <h2 id="3100">3.10.0</h2>
 
-<h5 id="fixed-6">Fixed</h5>
+<h5 id="fixed-7">Fixed</h5>
 <ul>
   <li>Removed <code class="language-plaintext highlighter-rouge">AppboyBinding.LogContentCardsDisplayed()</code>.</li>
 </ul>
 
 <h2 id="390">3.9.0</h2>
 
-<h5 id="breaking-9">Breaking</h5>
+<h5 id="breaking-10">Breaking</h5>
 <ul>
   <li>Updated the Android plugin to use Braze Android SDK 23.1.0.</li>
   <li>Added the ability to request push notification permissions on Android 13+ devices via <code class="language-plaintext highlighter-rouge">Appboy.AppboyBinding.PromptUserForPushPermissions(false)</code>.
@@ -12286,7 +12374,7 @@ Braze *braze = [AppboyUnityManager initBraze:config];
   </li>
 </ul>
 
-<h5 id="fixed-7">Fixed</h5>
+<h5 id="fixed-8">Fixed</h5>
 <ul>
   <li>Fixed an issue where <code class="language-plaintext highlighter-rouge">AppboyBinding.logPurchase()</code> calls could fail on Android based on the device locale.</li>
 </ul>
@@ -12305,7 +12393,7 @@ Braze *braze = [AppboyUnityManager initBraze:config];
 
 <h2 id="380">3.8.0</h2>
 
-<h5 id="breaking-10">Breaking</h5>
+<h5 id="breaking-11">Breaking</h5>
 <ul>
   <li>Removed <code class="language-plaintext highlighter-rouge">AppboyBinding.SetUserAvatarImageURL()</code> from the binding.</li>
   <li><code class="language-plaintext highlighter-rouge">Utilities/MiniJson.cs</code> now uses <code class="language-plaintext highlighter-rouge">InvariantCulture</code> during serialization.</li>
@@ -12347,7 +12435,7 @@ Braze *braze = [AppboyUnityManager initBraze:config];
 
 <h2 id="370">3.7.0</h2>
 
-<h5 id="breaking-11">Breaking</h5>
+<h5 id="breaking-12">Breaking</h5>
 <ul>
   <li>Updated the Android plugin to use Braze Android SDK 18.0.0.
     <ul>
@@ -12356,14 +12444,14 @@ Braze *braze = [AppboyUnityManager initBraze:config];
   </li>
 </ul>
 
-<h5 id="fixed-8">Fixed</h5>
+<h5 id="fixed-9">Fixed</h5>
 <ul>
   <li>Fixed an issue where <code class="language-plaintext highlighter-rouge">AppboyUnityPlayerActivity</code> could not be extended on Android.</li>
 </ul>
 
 <h2 id="360">3.6.0</h2>
 
-<h5 id="breaking-12">Breaking</h5>
+<h5 id="breaking-13">Breaking</h5>
 <ul>
   <li>Updated the Android plugin to use Braze Android SDK 16.0.0.
     <ul>
@@ -12388,14 +12476,14 @@ Braze *braze = [AppboyUnityManager initBraze:config];
 
 <h2 id="351">3.5.1</h2>
 
-<h5 id="fixed-9">Fixed</h5>
+<h5 id="fixed-10">Fixed</h5>
 <ul>
   <li>Fixed an issue where simulator architectures were included in the iOS framework.</li>
 </ul>
 
 <h2 id="350">3.5.0</h2>
 
-<h5 id="breaking-13">Breaking</h5>
+<h5 id="breaking-14">Breaking</h5>
 <ul>
   <li>Updated the Android plugin to use Braze Android SDK 15.0.0.</li>
 </ul>
@@ -12429,7 +12517,7 @@ implementation "androidx.recyclerview:recyclerview:+"
 
 <h2 id="330">3.3.0</h2>
 
-<h5 id="breaking-14">Breaking</h5>
+<h5 id="breaking-15">Breaking</h5>
 <ul>
   <li>Updated the Android plugin to use Braze Android SDK 14.0.0.</li>
 </ul>
@@ -12457,12 +12545,12 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="320">3.2.0</h2>
 
-<h5 id="breaking-15">Breaking</h5>
+<h5 id="breaking-16">Breaking</h5>
 <ul>
   <li>Updated the Android plugin to use Braze Android SDK 14.0.0.1.</li>
 </ul>
 
-<h5 id="fixed-10">Fixed</h5>
+<h5 id="fixed-11">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in 3.1.0 on Android where push opens could fail to launch the application on certain devices.</li>
   <li>Fixed an issue introduced in 3.0.0 in the iOS binding where <code class="language-plaintext highlighter-rouge">enableSDK()</code> and <code class="language-plaintext highlighter-rouge">disableSDK()</code> had swapped behaviors.</li>
@@ -12484,7 +12572,7 @@ binding.FlushAndroidPendingPushIntents();
   <li>This release contains several minor changes to our iOS push code. Most integrations will be unaffected, however, we recommend additional testing.</li>
 </ul>
 
-<h5 id="breaking-16">Breaking</h5>
+<h5 id="breaking-17">Breaking</h5>
 <ul>
   <li>Updated the Android plugin to use <a href="https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1300">Braze Android SDK 13.0.0</a>.</li>
   <li>If automatic iOS push integration is enabled, Braze will now automatically add the Xcode Push Capability in <code class="language-plaintext highlighter-rouge">OnPostprocessBuild()</code>.
@@ -12530,7 +12618,7 @@ binding.FlushAndroidPendingPushIntents();
   <li>Added <code class="language-plaintext highlighter-rouge">AppboyBinding.SetPushTokenReceivedFromSystemDelegate()</code> to receive push tokens Braze receives from the OS (iOS only).</li>
 </ul>
 
-<h5 id="fixed-11">Fixed</h5>
+<h5 id="fixed-12">Fixed</h5>
 <ul>
   <li>Braze push delegates are no longer called automatically in fully manual integrations.
     <ul>
@@ -12541,7 +12629,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="280">2.8.0</h2>
 
-<h5 id="breaking-17">Breaking</h5>
+<h5 id="breaking-18">Breaking</h5>
 <ul>
   <li>Updated the Android plugin to use <a href="https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1200">Braze Android SDK 12.0.0</a>.</li>
   <li>Updated the native iOS bridge to <a href="https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.31.2">Braze iOS SDK 3.31.2</a>.</li>
@@ -12554,7 +12642,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="271">2.7.1</h2>
 
-<h5 id="fixed-12">Fixed</h5>
+<h5 id="fixed-13">Fixed</h5>
 <ul>
   <li>Fixed an issue where the return type for the Android implementation of <code class="language-plaintext highlighter-rouge">setIsDismissed</code> in <code class="language-plaintext highlighter-rouge">AppboyBinding</code> was incorrectly set to <code class="language-plaintext highlighter-rouge">bool</code>.</li>
   <li>Removed a deprecated usage of <code class="language-plaintext highlighter-rouge">PBXProject.GetUnityTargetName()</code>.</li>
@@ -12562,20 +12650,20 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="270">2.7.0</h2>
 
-<h5 id="breaking-18">Breaking</h5>
+<h5 id="breaking-19">Breaking</h5>
 <ul>
   <li>Updated the native iOS bridge to <a href="https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.29.1">Braze iOS SDK 3.29.1</a>.</li>
   <li>Updated the Android plugin to use <a href="https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1100">Braze Android SDK 11.0.0</a>.</li>
 </ul>
 
-<h5 id="fixed-13">Fixed</h5>
+<h5 id="fixed-14">Fixed</h5>
 <ul>
   <li>Fixed a metadata issue for Android artifacts.</li>
 </ul>
 
 <h2 id="260">2.6.0</h2>
 
-<h5 id="breaking-19">Breaking</h5>
+<h5 id="breaking-20">Breaking</h5>
 <ul>
   <li>Updated the Android plugin to use <a href="https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1000">Braze Android SDK 10.0.0</a>.
     <ul>
@@ -12596,7 +12684,7 @@ binding.FlushAndroidPendingPushIntents();
   <li>Added Braze configuration option for Android to toggle automatically displaying In-App Messages.</li>
 </ul>
 
-<h5 id="fixed-14">Fixed</h5>
+<h5 id="fixed-15">Fixed</h5>
 <ul>
   <li>Fixed push notification parsing for Android in <code class="language-plaintext highlighter-rouge">PushNotification.cs</code>.</li>
   <li>Fixed use of outdated <code class="language-plaintext highlighter-rouge">UNITY_IPHONE</code> directive in <code class="language-plaintext highlighter-rouge">Card.cs</code>.</li>
@@ -12604,7 +12692,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="250">2.5.0</h2>
 
-<h5 id="breaking-20">Breaking</h5>
+<h5 id="breaking-21">Breaking</h5>
 <ul>
   <li>Updated the native iOS bridge to <a href="https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3270">Braze iOS SDK 3.27.0</a>. This release adds support for iOS 14 and requires XCode 12. Please read the Braze iOS SDK changelog for details.</li>
 </ul>
@@ -12617,7 +12705,7 @@ binding.FlushAndroidPendingPushIntents();
   <li>Updated the native iOS bridge to <a href="https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.26.1">Braze iOS SDK 3.26.1</a>.</li>
 </ul>
 
-<h5 id="fixed-15">Fixed</h5>
+<h5 id="fixed-16">Fixed</h5>
 <ul>
   <li>Fixed return type of <code class="language-plaintext highlighter-rouge">AppboyBinding.RegisterAppboyPushMessages()</code> for iOS to be <code class="language-plaintext highlighter-rouge">void</code>.</li>
   <li>Fixed the automatic config for Android push icons to correctly used <code class="language-plaintext highlighter-rouge">drawable</code> instead of <code class="language-plaintext highlighter-rouge">string</code>.</li>
@@ -12648,7 +12736,7 @@ binding.FlushAndroidPendingPushIntents();
   </li>
 </ul>
 
-<h5 id="fixed-16">Fixed</h5>
+<h5 id="fixed-17">Fixed</h5>
 <ul>
   <li>Fixed an issue which caused the extras dictionary to not be populated in JSON push payloads sent by the SDK to Unity listeners.</li>
 </ul>
@@ -12756,7 +12844,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <p><strong>Important:</strong> This release has known issues displaying HTML in-app messages. Do not upgrade to this version and upgrade to 1.21.2 and above instead. If you are using this version, you are strongly encouraged to upgrade to 1.21.2 or above if you make use of HTML in-app messages.</p>
 
-<h5 id="breaking-21">Breaking</h5>
+<h5 id="breaking-22">Breaking</h5>
 <ul>
   <li>Updated the iOS plugin to use <a href="https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.20.0">Braze iOS SDK 3.20.0</a>.</li>
   <li><strong>Important:</strong> Braze iOS SDK 3.20.0 contains updated push token registration methods. We recommend upgrading to these methods as soon as possible to ensure a smooth transition as devices upgrade to iOS 13. In <code class="language-plaintext highlighter-rouge">application:didRegisterForRemoteNotificationsWithDeviceToken:</code>, replace
@@ -12777,7 +12865,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="1200">1.20.0</h2>
 
-<h5 id="breaking-22">Breaking</h5>
+<h5 id="breaking-23">Breaking</h5>
 <ul>
   <li>Updated the iOS plugin to use <a href="https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.18.0">Braze iOS SDK 3.18.0</a>.</li>
   <li>Note: This Braze Unity SDK release updates to a Braze iOS SDK dependency which no longer enables automatic Braze location collection by default. Please consult the changelogs for information on how to continue to enable automatic Braze location collection, as well as further information on breaking changes.</li>
@@ -12790,21 +12878,21 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="1190">1.19.0</h2>
 
-<h5 id="breaking-23">Breaking</h5>
+<h5 id="breaking-24">Breaking</h5>
 <ul>
   <li>Updated the iOS plugin to use <a href="https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.16.0">Braze iOS SDK 3.16.0</a>.</li>
 </ul>
 
 <h2 id="1180">1.18.0</h2>
 
-<h5 id="breaking-24">Breaking</h5>
+<h5 id="breaking-25">Breaking</h5>
 <ul>
   <li>Updated the iOS plugin to use <a href="https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.14.0">Braze iOS SDK 3.14.0</a>.</li>
 </ul>
 
 <h2 id="1170">1.17.0</h2>
 
-<h5 id="breaking-25">Breaking</h5>
+<h5 id="breaking-26">Breaking</h5>
 <ul>
   <li>Updated the Android plugin to use <a href="https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#321">Braze Android SDK 3.2.1</a>.
     <ul>
@@ -12830,13 +12918,13 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="1160">1.16.0</h2>
 
-<h5 id="breaking-26">Breaking</h5>
+<h5 id="breaking-27">Breaking</h5>
 <ul>
   <li>Updated the iOS plugin to use <a href="https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.11.0">Braze iOS SDK 3.11.0</a>.</li>
   <li>Updated the Android plugin to use <a href="https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#310">Braze Android SDK 3.1.0</a>.</li>
 </ul>
 
-<h5 id="fixed-17">Fixed</h5>
+<h5 id="fixed-18">Fixed</h5>
 <ul>
   <li>Fixed an issue where the binding would cache the Appboy singleton instance.</li>
   <li>Fixed <code class="language-plaintext highlighter-rouge">Card.cs</code> to always return <code class="language-plaintext highlighter-rouge">CardCategory.NO_CATEGORY</code> in all cases where no valid categories are found.
@@ -12854,7 +12942,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="1150">1.15.0</h2>
 
-<h5 id="breaking-27">Breaking</h5>
+<h5 id="breaking-28">Breaking</h5>
 <ul>
   <li>Updated the Android plugin to use <a href="https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#270">Braze Android SDK 2.7.0</a>.
     <ul>
@@ -12870,7 +12958,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="1140">1.14.0</h2>
 
-<h5 id="breaking-28">Breaking</h5>
+<h5 id="breaking-29">Breaking</h5>
 <ul>
   <li>Updated the iOS plugin to use Braze iOS SDK 3.7.1.
     <ul>
@@ -12882,7 +12970,7 @@ binding.FlushAndroidPendingPushIntents();
   <li>Removes Android Support Library artifacts from the Braze Unity Plugin. This is to avoid duplicating the Android Support Library artifacts that are automatically included as part of the Firebase Unity SDK, our recommended push integration. Integrators not using Firebase or importing Android Support Library artifacts through another SDK must include the Android Support Library manually (v4 only).</li>
 </ul>
 
-<h5 id="fixed-18">Fixed</h5>
+<h5 id="fixed-19">Fixed</h5>
 <ul>
   <li>Fixed an issue that required manual import of non-xib Braze iOS SDK resources into Unity-generated Xcode projects.</li>
 </ul>
@@ -12909,7 +12997,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="1130">1.13.0</h2>
 
-<h5 id="breaking-29">Breaking</h5>
+<h5 id="breaking-30">Breaking</h5>
 <ul>
   <li>Updates the iOS plugin to use Braze iOS SDK 3.4.0.</li>
   <li>Updates the Android plugin to use Braze Android SDK 2.3.0.</li>
@@ -12944,7 +13032,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="1120">1.12.0</h2>
 
-<h5 id="breaking-30">Breaking</h5>
+<h5 id="breaking-31">Breaking</h5>
 <ul>
   <li>Updates the iOS plugin to use Braze iOS SDK 3.3.1.</li>
   <li>Updates the Android plugin to use Braze Android SDK 2.2.2.</li>
@@ -12953,16 +13041,16 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="1110">1.11.0</h2>
 
-<h5 id="breaking-31">Breaking</h5>
+<h5 id="breaking-32">Breaking</h5>
 <ul>
   <li>Updates the iOS plugin to use Braze iOS SDK 2.29.0, which drops support for iOS 7.</li>
   <li>Updates the Android plugin to use Braze Android SDK 2.0.0.</li>
   <li>Removes methods <code class="language-plaintext highlighter-rouge">SetUserIsSubscribedToEmails</code> and <code class="language-plaintext highlighter-rouge">SetUserBio</code> as they are removed in the Braze native SDKs.</li>
 </ul>
 
-<h2 id="1100">1.10.0</h2>
+<h2 id="1100-1">1.10.0</h2>
 
-<h5 id="breaking-32">Breaking</h5>
+<h5 id="breaking-33">Breaking</h5>
 <ul>
   <li>Updates the Android plugin to use Braze Android SDK 1.18.0.</li>
   <li>Updates the iOS plugin to use Braze iOS SDK 2.25.0.</li>
@@ -12980,7 +13068,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="190">1.9.0</h2>
 
-<h5 id="breaking-33">Breaking</h5>
+<h5 id="breaking-34">Breaking</h5>
 <ul>
   <li>Updates the SDK to require XCode 8.</li>
   <li>Updates the iOS plugin to use Braze iOS SDK 2.24.0, which supports iOS 10 and has the new in-app message V2 feature. The new in-app message V2 feature includes new in-app message UI change, event property trigger and templated in-app message.</li>
@@ -12996,14 +13084,14 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="181">1.8.1</h2>
 
-<h5 id="fixed-19">Fixed</h5>
+<h5 id="fixed-20">Fixed</h5>
 <ul>
   <li>Updates SDK to modify delegate usage to fix an issue with push-click handling introduced in iOS 10 - see https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md for details.</li>
 </ul>
 
 <h2 id="180">1.8.0</h2>
 
-<h5 id="breaking-34">Breaking</h5>
+<h5 id="breaking-35">Breaking</h5>
 <ul>
   <li>Updates the iOS plugin to use Braze iOS SDK 2.21.0, which drops support for iOS 6.</li>
   <li>Updates the Android plugin to use Braze Android SDK 1.13.5.</li>
@@ -13022,7 +13110,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="170">1.7.0</h2>
 
-<h5 id="breaking-35">Breaking</h5>
+<h5 id="breaking-36">Breaking</h5>
 <ul>
   <li>Updates the Android plugin to use Braze Android SDK 1.13.2.</li>
   <li>Updates the iOS plugin to use Braze iOS SDK 2.19.1.</li>
@@ -13037,7 +13125,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="160">1.6.0</h2>
 
-<h5 id="breaking-36">Breaking</h5>
+<h5 id="breaking-37">Breaking</h5>
 <ul>
   <li>Updates the Android plugin to use Braze Android SDK 1.11.0.</li>
   <li>Updates the iOS plugin to use Braze iOS SDK 2.17.0.</li>
@@ -13045,7 +13133,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="150">1.5.0</h2>
 
-<h5 id="breaking-37">Breaking</h5>
+<h5 id="breaking-38">Breaking</h5>
 <ul>
   <li>Removes Unity 4 support. Unity 5 or higher is required to use this and future versions of the Braze Unity SDK. Unity 4 users may integrate Braze Unity SDK release 1.4.0, which includes analytics and push functionality but does not include native in-app messages on Android; however, upgrading to Unity 5 and using the latest Braze Unity SDK is recommended.</li>
   <li>Removes Froyo support, which was dropped in Unity 4.3. See https://unity3d.com/unity/whats-new/unity-4.3.</li>
@@ -13060,7 +13148,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="140">1.4.0</h2>
 
-<h5 id="breaking-38">Breaking</h5>
+<h5 id="breaking-39">Breaking</h5>
 <ul>
   <li>Updates the iOS plugin to use Braze iOS SDK 2.11.2.</li>
   <li>Updates the Android plugin to use Braze Android SDK 1.7.2.</li>
@@ -13074,14 +13162,14 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="131">1.3.1</h2>
 
-<h5 id="breaking-39">Breaking</h5>
+<h5 id="breaking-40">Breaking</h5>
 <ul>
   <li>Updates the Android plugin to use Braze Android SDK 1.6.1.</li>
 </ul>
 
 <h2 id="130">1.3.0</h2>
 
-<h5 id="breaking-40">Breaking</h5>
+<h5 id="breaking-41">Breaking</h5>
 <ul>
   <li>Updates the Android plugin to use Braze Android SDK 1.6.0.</li>
   <li>Updates the iOS plugin to use Braze iOS SDK 2.9.3.</li>
@@ -13092,14 +13180,14 @@ binding.FlushAndroidPendingPushIntents();
   <li>Adds plugins for Windows Phone 8 and Windows Universal apps.</li>
 </ul>
 
-<h5 id="fixed-20">Fixed</h5>
+<h5 id="fixed-21">Fixed</h5>
 <ul>
   <li>Fixes the corrupted support-v4 jar in the Android plugin.</li>
 </ul>
 
 <h2 id="122">1.2.2</h2>
 
-<h5 id="breaking-41">Breaking</h5>
+<h5 id="breaking-42">Breaking</h5>
 <ul>
   <li>Updates the Android plugin to use Braze Android SDK 1.5.2.</li>
 </ul>
@@ -13111,7 +13199,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="121">1.2.1</h2>
 
-<h5 id="breaking-42">Breaking</h5>
+<h5 id="breaking-43">Breaking</h5>
 <ul>
   <li>Updates the plugin libraries to Braze Android SDK 1.5.1 and Braze iOS SDK 2.9.1 (without Facebook iOS SDK Support).</li>
 </ul>
@@ -13124,7 +13212,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="12">1.2</h2>
 
-<h5 id="breaking-43">Breaking</h5>
+<h5 id="breaking-44">Breaking</h5>
 <ul>
   <li>Updates the plugin libraries to Braze Android SDK 1.4.3 and Braze iOS SDK 2.8 (without Facebook iOS SDK Support).</li>
 </ul>
@@ -13142,7 +13230,7 @@ binding.FlushAndroidPendingPushIntents();
 
 <h2 id="11">1.1</h2>
 
-<h5 id="breaking-44">Breaking</h5>
+<h5 id="breaking-45">Breaking</h5>
 <ul>
   <li>Updates the plugin libraries to Braze Android SDK 1.2.1 and Braze iOS SDK 2.3.1 (without Facebook iOS SDK Support).</li>
 </ul>

@@ -12,7 +12,7 @@ You'll need the following to integrate LINE with Braze:
 - [LINE developers account](https://developers.line.biz/en/docs/line-developers-console/login-account/)
 - [LINE messaging API channel](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-Sending LINE messages from Braze draws from your account's Message Credits.
+Sending LINE messages from Braze draws from your account's Message or Action Credits.
 
 **Note:**
 
