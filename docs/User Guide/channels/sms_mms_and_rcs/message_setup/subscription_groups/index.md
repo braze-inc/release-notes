@@ -115,7 +115,7 @@ Use [Operator](https://www.braze.com/docs/user_guide/brazeai/agents/reference/#c
 **Note:**
 
 
-Using the Agent Console consumes Message Credits.
+Using the Agent Console consumes Message or Action Credits.
 
 
 

@@ -2,12 +2,18 @@
 
 > Learn how to find and merge duplicate users, so you can maximize the effectiveness of your campaigns and Canvases.
 
-**Tip:**
+## REST API: Identify and merge users
 
+The tools on this page merge duplicate profiles in the dashboard. You can also combine or re-point profiles through Braze's [User Data endpoints](https://www.braze.com/docs/api/endpoints/user_data/):
 
-To merge duplicate users using the Braze REST API, see [POST: Merge Users](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge/).
+- [POST: Identify users](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify/) (`/users/identify`): Combines an alias-only, email-only, or phone number-only profile with a profile that has an `external_id`.
+- [POST: Merge users](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge/) (`/users/merge`): Merges one user profile into another, including when both profiles already have an `external_id`. Review [Prerequisites](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge/#prerequisites) and [Merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge/#merge-behavior) before you call this endpoint.
 
+When an anonymous profile is matched to an existing identified profile (for example through an SDK `changeUser()` call or `/users/identify`), Braze orphans the anonymous profile and copies only certain fields onto the identified profile. For more information, see [What happens when you identify anonymous users](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle/#what-happens-when-you-identify-anonymous-users).
 
+User merges are difficult to undo. If you're planning a complex merge across multiple `external_id` values or large profile migrations, contact your Braze customer success manager for guidance before you rely on `/users/merge`.
+
+Braze handles three user types differently when merging: users marked for deletion, test users, and Global Control Group users. For details, see [User merge behavior](https://www.braze.com/docs/user_guide/audience/manage_audience/merge_duplicate_users/merge_behavior/).
 
 ## Individual merging
 
@@ -135,3 +141,9 @@ After the feature is turned on, Braze will automatically assign a timeslot to pe
 Duplicate user profiles cannot be recovered after merging.
 
 
+
+## Related articles
+
+- [User merge behavior](https://www.braze.com/docs/user_guide/audience/manage_audience/merge_duplicate_users/merge_behavior/)
+- [POST: Merge users](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge/)
+- [Delete users](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles/delete_users/)

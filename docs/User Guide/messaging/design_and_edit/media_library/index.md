@@ -45,7 +45,7 @@ GIFs with very elongated shapes (for example, 3000 x 2 pixels) or 300 or more fr
 
 ## Generating images with BrazeAI<sup>TM</sup> {#generate-ai}
 
-You can generate images for your own media library using [DALL·E 3](https://openai.com/index/dall-e-3/), an AI system from OpenAI and a Braze third-party provider. This let's you create realistic images and art from a description in natural language. Each request generates four variations of your prompt, and your company can generate images 10 times per day. This total applies to all users in your company.
+You can generate images for your own media library using [GPT Image 2.0](https://openai.com/index/introducing-chatgpt-images-2-0/), an AI system from OpenAI and a Braze third-party provider. This let's you create realistic images and art from a description in natural language. Each request generates four variations of your prompt, and your company can generate images 10 times per day. This total applies to all users in your company.
 
 **Important:**
 

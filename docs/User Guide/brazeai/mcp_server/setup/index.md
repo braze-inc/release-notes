@@ -73,7 +73,7 @@ everything's installed!
 
 ### Step 2: Create an API key {#create-api-key}
 
-The Braze MCP server supports 39 endpoints that don't return data from Braze user profiles.
+The Braze MCP server includes both read-only and write endpoints. They don't return data from Braze user profiles. Write endpoints let agents create or update content in your workspace.
 
 To create your API key:
 
@@ -84,7 +84,7 @@ To create your API key:
 **Important:**
 
 
-Only assign the permissions you want your agent to use. To prevent your agent from making changes in Braze, leave the `media_library.create` permission off.
+Only assign the permissions you want your agent to use. To prevent your agent from making changes in Braze, leave any write permissions off when you create your API key.
 
 
 
@@ -130,10 +130,14 @@ Only assign the permissions you want your agent to use. To prevent your agent fr
 
 #### Content Blocks
 
+The `content_blocks.create` and `content_blocks.update` permissions are write permissions. Add them only if you want your agent to create or update content blocks in your workspace.
+
 | Endpoint | Required permission |
 |----------|---------------------|
 | [`/content_blocks/list`](https://www.braze.com/docs/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks) | `content_blocks.list` |
 | [`/content_blocks/info`](https://www.braze.com/docs/api/endpoints/templates/content_blocks_templates/get_see_email_content_blocks_information) | `content_blocks.info` |
+| [`/content_blocks/create`](https://www.braze.com/docs/api/endpoints/templates/content_blocks_templates/post_create_email_content_block) | `content_blocks.create` |
+| [`/content_blocks/update`](https://www.braze.com/docs/api/endpoints/templates/content_blocks_templates/post_update_content_block) | `content_blocks.update` |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Content Blocks" }
 
 #### Custom Attributes
@@ -164,7 +168,7 @@ Only assign the permissions you want your agent to use. To prevent your agent fr
 
 #### Media Library
 
-This endpoint is a write endpoint supported by the Braze MCP server. Add this permission only if you want your agent to upload assets to your media library.
+The `media_library.create` permission is a write permission. Add it only if you want your agent to upload assets to your media library.
 
 | Endpoint | Required permission |
 |----------|---------------------|
@@ -235,10 +239,14 @@ This endpoint is a write endpoint supported by the Braze MCP server. Add this pe
 
 #### Templates
 
+The `templates.email.create` and `templates.email.update` permissions are write permissions. Add them only if you want your agent to create or update email templates in your workspace.
+
 | Endpoint | Required permission |
 |----------|---------------------|
 | [`/templates/email/list`](https://www.braze.com/docs/api/endpoints/templates/email_templates/get_list_email_templates) | `templates.email.list` |
 | [`/templates/email/info`](https://www.braze.com/docs/api/endpoints/templates/email_templates/get_see_email_template_information) | `templates.email.info` |
+| [`/templates/email/create`](https://www.braze.com/docs/api/endpoints/templates/email_templates/post_create_email_template) | `templates.email.create` |
+| [`/templates/email/update`](https://www.braze.com/docs/api/endpoints/templates/email_templates/post_update_email_template) | `templates.email.update` |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Templates" }
 
 
@@ -246,7 +254,7 @@ This endpoint is a write endpoint supported by the Braze MCP server. Add this pe
 **Warning:**
 
 
-Don't reuse an existing API key. Create one specifically for your MCP client. Assign only the permissions your agent needs. Agents may try to use any permission you grant, so leave write permissions like `media_library.create` off if you don't want your agent to make changes in Braze.
+Don't reuse an existing API key. Create one specifically for your MCP client. Assign only the permissions your agent needs. Agents may try to use any permission you grant, so leave any write permissions off if you don't want your agent to make changes in Braze.
 
 
 

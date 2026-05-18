@@ -5,7 +5,7 @@
 **Note:**
 
 
-eCommerce recommended events are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. <br><br>If you're using the new [Shopify connector](https://www.braze.com/docs/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), these recommended events will be automatically available through the integration. Otherwise, these events must be implemented before data appears in this dashboard.
+If you're using the new [Shopify connector](https://www.braze.com/docs/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), eCommerce recommended events are automatically available through the integration. Otherwise, these events must be implemented before data appears in this dashboard.
 
 
 

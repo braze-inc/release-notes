@@ -314,14 +314,14 @@ Conversational message workflows let you respond dynamically to users, creating 
 
 Braze always recommends previewing and testing your message before sending. Switch to the **Test** tab to send a test SMS, MMS, or RCS message to [content test groups](https://www.braze.com/docs/user_guide/administer/global/user_management/internal_groups/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
 
-![Previewing SMS copy from the Test tab of the composer. In the profile section, the First Name field is set to "James". In the preview section, the SMS now reads "Hi James, we appreciate your support!"](https://www.braze.com/docs/assets/img/sms_campaign_test.png?d011f361e30b9af969dd0f8f40e0b680)
-
 **Tip:**
 
 
 If you'd like to test how many segments your SMS may be split into, test your copy length with the [SMS segment calculator](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator/#segment-calculator).
 
 
+
+![Previewing SMS copy from the Test tab of the composer. In the profile section, the First Name field is set to "James". In the preview section, the SMS now reads "Hi James, we appreciate your support!"](https://www.braze.com/docs/assets/img/sms_campaign_test.png?d011f361e30b9af969dd0f8f40e0b680)
 
 **Note:**
 
@@ -333,7 +333,7 @@ For MMS, the ordering of assets (image and message body) cannot be customized. T
 **Note:**
 
 
-Because RCS rendering is controlled by the user's operating system, device manufacturer, carrier, and messaging app (for example, Google Messages vs. Apple Messages), message appearance can vary. The preview shown in Braze may not exactly match what an end user receives. Validate the final rendering on real devices whenever possible.
+Because RCS rendering is controlled by the user's operating system, device manufacturer, carrier, and messaging app (for example, Google Messages vs. Apple Messages), message appearance can vary. The preview shown in Braze may not exactly match what an end user receives. Validate the final rendering on real devices whenever possible. For details about RCS rendering on iOS devices, see [Why doesn't my RCS message render accurately on iOS devices?](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/faqs/#why-doesnt-my-rcs-message-render-accurately-on-ios-devices).
 
 
 
