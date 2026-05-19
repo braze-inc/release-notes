@@ -53,7 +53,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 
 
-<div id='api_pjkyqvesjgjr' class='api_div'>
+<div id='api_gvehngykicwb' class='api_div'>
 <h2 id="random-bucket-number-update-events">Random Bucket Number Update events</h2>
 
 <div class="api_tags" data-tags="Random Bucket Number" data-tags-lower="random bucket number"></div>
@@ -91,7 +91,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_nylfcudnkssb' class='api_div'>
+<div id='api_etvpcowipnco' class='api_div'>
 <h2 id="custom-events">Custom events</h2>
 
 <div class="api_tags" data-tags="Custom Events" data-tags-lower="custom events"></div>
@@ -344,7 +344,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_hdamdhvcwyso' class='api_div'>
+<div id='api_hejrkwpriota' class='api_div'>
 <h2 id="install-attribution-events">Install Attribution events</h2>
 
 <div class="api_tags" data-tags="Attribution" data-tags-lower="attribution"></div>
@@ -511,7 +511,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_akgqecgbmnzp' class='api_div'>
+<div id='api_wwfqwyawoltj' class='api_div'>
 <h2 id="location-events">Location events</h2>
 
 <div class="api_tags" data-tags="Locations" data-tags-lower="locations"></div>
@@ -801,7 +801,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_uarejsbtwbvo' class='api_div'>
+<div id='api_kmpfiqfmvwoo' class='api_div'>
 <h2 id="purchase-events">Purchase events</h2>
 
 <div class="api_tags" data-tags="Purchases" data-tags-lower="purchases"></div>
@@ -1078,7 +1078,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_orymucxmwwxh' class='api_div'>
+<div id='api_rvfhficatxfh' class='api_div'>
 <h2 id="first-session-events">First Session events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1303,7 +1303,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_aswcdyqwnvrs' class='api_div'>
+<div id='api_jvklifmpdlnk' class='api_div'>
 <h2 id="session-end-events">Session End events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1522,7 +1522,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_djdxtxhyaxgg' class='api_div'>
+<div id='api_jonvkcbuvula' class='api_div'>
 <h2 id="session-start-events">Session Start events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1735,7 +1735,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_thhogibogalv' class='api_div'>
+<div id='api_tycbzqgmadkt' class='api_div'>
 <h2 id="live-activity-push-to-start-token-change-events">Live Activity Push To Start Token Change events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Push To Start Token" data-tags-lower="live activity, push to start token"></div>
@@ -1946,7 +1946,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_glfnsyqbgyhi' class='api_div'>
+<div id='api_zcemihzzalpa' class='api_div'>
 <h2 id="live-activity-update-token-change-events">Live Activity Update Token Change events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Update Token" data-tags-lower="live activity, update token"></div>
@@ -2157,7 +2157,7 @@ Many of the events in this glossary are SDK-initiated. Some events, such as `tok
 
 </div>
 
-<div id='api_hlfpkcopakqd' class='api_div'>
+<div id='api_bclumaqzvgol' class='api_div'>
 <h2 id="push-notification-token-state-change-events">Push Notification Token State Change events</h2>
 
 <div class="api_tags" data-tags="Push, Token State Change" data-tags-lower="push, token state change"></div>

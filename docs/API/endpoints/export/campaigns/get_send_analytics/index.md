@@ -1,4 +1,4 @@
-<div id='api_uwkgmmpcusbu' class='api_div'>
+<div id='api_wnxrpfvsvpxg' class='api_div'>
 <h1 id="export-send-analytics">Export send analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/sends/data_series</p>

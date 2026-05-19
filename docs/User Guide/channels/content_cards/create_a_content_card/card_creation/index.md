@@ -59,6 +59,13 @@ In the **Expiration (Time in Feed)** settings, you can select **Personalize dura
 
 ![Expiration settings showing Personalize duration configured with a context variable for Content Card expiration.](https://www.braze.com/docs/assets/img/content_card_personalize_duration.png?3a142872b49e03a3eef02280ba5e04b5)
 
+**Important:**
+
+
+Content Cards have a maximum expiration of 30 days, even when using personalized duration with context variables. Any value set beyond 30 days is capped at 30 days. For more details, refer to [Card expiration](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card/#card-expiration).
+
+
+
 
 
 
