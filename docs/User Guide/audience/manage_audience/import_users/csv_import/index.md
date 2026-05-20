@@ -162,6 +162,13 @@ When importing default attributes, the column headers you use must exactly match
 
 
 
+**Tip:**
+
+
+For the complete list of standard attributes Braze recognizes (across SDK, API, CSV, and Cloud Data Ingestion), see [Standard attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/standard_attributes/). The following table covers only the subset that can be set through CSV import.
+
+
+
 The following default attributes are available for user import.
 
 | User Profile Field | Data Type | Description | Required? |

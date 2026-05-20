@@ -11,7 +11,7 @@ For deeper investigation, you can also [enable verbose logging](https://www.braz
 
 ## Prerequisites
 
-To use the Braze SDK debugger, you'll need the "View PII" and "View User Profiles (PII Redacted)" granular permissions (or "View User Profiles PII Compliant" legacy permissions). To download your debugging session logs, you'll also need the "Export User Data" permission. Additionally, your Braze SDK needs to meet or point to the following minimum versions: 
+To use the Braze SDK debugger, you'll need the "View PII" and "View User Profiles (PII Redacted)" permissions. To download your debugging session logs, you'll also need the "Export User Data" permission. Additionally, your Braze SDK needs to meet or point to the following minimum versions: 
 
 <div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1020' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 10.2.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#3210' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 32.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 

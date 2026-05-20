@@ -108,6 +108,7 @@ For more information, refer to [Funnel reports](https://www.braze.com/docs/user_
 
 
 
+
 ## Track SMS opt-ins and opt-outs
 
 You can track SMS opt-ins and opt-outs with the following methods:

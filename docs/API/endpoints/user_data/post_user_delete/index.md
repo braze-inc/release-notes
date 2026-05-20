@@ -1,4 +1,4 @@
-<div id='api_jwbjmhsfhqoy' class='api_div'>
+<div id='api_strxfcrusftu' class='api_div'>
 <h1 id="delete-users">Delete users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/delete</p>

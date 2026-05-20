@@ -1,4 +1,4 @@
-<div id='api_bkcjphcyceaf' class='api_div'>
+<div id='api_chjnpugvplog' class='api_div'>
 <h1 id="create-catalog">Create catalog</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/catalogs</p>
@@ -128,6 +128,10 @@
 47
 48
 49
+50
+51
+52
+53
 </pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -163,6 +167,10 @@
         },
         {
           "name": "Location",
+          "type": "geo"
+        },
+        {
+          "name": "Preferences",
           "type": "object"
         },
         {
@@ -178,6 +186,10 @@
   ]
 }'
 </pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Note:</strong></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">geo</code> data type stores a geographic coordinate as an array formatted as <code class="language-plaintext highlighter-rouge">[longitude, latitude]</code>.</p>
 
 <h2 id="response">Response</h2>
 
@@ -236,6 +248,10 @@
 47
 48
 49
+50
+51
+52
+53
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"catalogs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -267,6 +283,10 @@
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
           </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geo"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Preferences"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">

@@ -74,11 +74,7 @@ For more information on the `get_canvas_list` function, see [Available API funct
 
 
 
-!['Create an email template' being asked and answered in Claude.](https://www.braze.com/docs/assets/img/mcp_server/claude/create_an_email_template.png){: style="max-width:85%;"}
-
-
-
-!['Create an email template' being asked and answered in Cursor.](https://www.braze.com/docs/assets/img/mcp_server/cursor/create_an_email_template.png)
+!['Create an email template' being asked and answered in Cursor.](https://www.braze.com/docs/assets/img/mcp_server/cursor/create_an_email_template.png?7eaf95b3ae3a2b7631c48b7721b87330)
 
 
 
@@ -88,11 +84,7 @@ For more information on the `create_email_template` function, see [Available API
 
 
 
-!['Update a content block' being asked and answered in Claude.](https://www.braze.com/docs/assets/img/mcp_server/claude/update_a_content_block.png){: style="max-width:85%;"}
-
-
-
-!['Update a content block' being asked and answered in Cursor.](https://www.braze.com/docs/assets/img/mcp_server/cursor/update_a_content_block.png)
+!['Update a content block' being asked and answered in Cursor.](https://www.braze.com/docs/assets/img/mcp_server/cursor/update_a_content_block.png?ef5ddb03443eb53df82b6b10bf9460e3)
 
 
 

@@ -4,18 +4,9 @@
 
 Email deliverability is the core of campaign success. Using the Deliverability Center in the Braze dashboard, you can view your domains by **IP Reputation** or **Delivery Errors** to discover and troubleshoot any potential issues with email deliverability. 
 
-To access the Deliverability Center, you need the "Access Campaigns, Canvases, Cards, Segments, Media Library" and "View Usage Data" [legacy user permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/?sdktab=legacy%20permissions) or the [granular permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/?sdktab=granular%20permissions) in the following dropdown for your workspace.
+To access the Deliverability Center, you need the [user permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/) in the following dropdown for your workspace.
 
 **User permissions for the Deliverability Center**
-
-
-
-**Important:**
-
-
-
-Braze is transitioning to granular user permissions. If you are using the legacy permissions, refer to the definitions in [List of permissions](https://www.braze.com/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions). Early access to the granular permissions is available for select customers. **All customers will be migrated to the new permissions in March 2026.**
-
 
 
 

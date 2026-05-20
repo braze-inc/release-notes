@@ -1,4 +1,4 @@
-<div id='api_yjyfhypcvauw' class='api_div'>
+<div id='api_gzuqykpfkmqt' class='api_div'>
 <h1 id="edit-multiple-catalog-items">Edit multiple catalog items</h1>
 <div class="api_type"><div class="method patch ">patch</div>
 <p>/catalogs/{catalog_name}/items</p>
@@ -105,6 +105,7 @@
 33
 34
 35
+36
 </pre></td><td class="rouge-code"><pre>curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -114,9 +115,10 @@
       "id": "restaurant1",
       "Name": "Restaurant",
       "Loyalty_Program": false,
-      "Location": {
-        "Latitude": 33.6112,
-        "Longitude": -117.8711
+      "Location": [-73.988103, 40.779109],
+      "Preferences": {
+        "favorite_brand": "Nike",
+        "shirt_size": "L"
       },
       "Top_Dishes": {
         "$add": [
@@ -144,7 +146,10 @@
 
 <p><strong>Note:</strong></p>
 
-<p>The <code class="language-plaintext highlighter-rouge">$add</code> and <code class="language-plaintext highlighter-rouge">$remove</code> operators are only applicable to array type fields, and are only supported by PATCH endpoints.</p>
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">Location</code> field uses the <code class="language-plaintext highlighter-rouge">geo</code> data type, which expects an array formatted as <code class="language-plaintext highlighter-rouge">[longitude, latitude]</code>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">$add</code> and <code class="language-plaintext highlighter-rouge">$remove</code> operators are only applicable to array type fields, and are only supported by PATCH endpoints.</li>
+</ul>
 
 <h2 id="response">Response</h2>
 
