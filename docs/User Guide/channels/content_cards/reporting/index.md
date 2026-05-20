@@ -128,3 +128,4 @@ Funnel reporting offers a visual report that allows you to analyze the journeys 
 For more information, refer to [Funnel reports](https://www.braze.com/docs/user_guide/analytics/reporting/funnel_reports/).
 
 
+

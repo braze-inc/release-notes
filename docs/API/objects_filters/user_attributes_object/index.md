@@ -152,6 +152,13 @@ The following user profile fields are case sensitive, so be sure to reference th
 
 
 
+**Tip:**
+
+
+For a customer-facing reference of standard attributes that's organized by category and includes guidance for SDK, API, CSV, and Cloud Data Ingestion, see [Standard attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/standard_attributes/).
+
+
+
 | User Profile Field | Data Type Specification |
 | ---| --- |
 | alias_name | (string) |

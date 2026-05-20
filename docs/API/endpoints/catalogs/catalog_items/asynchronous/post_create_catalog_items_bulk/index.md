@@ -1,4 +1,4 @@
-<div id='api_qcyymlnpecgb' class='api_div'>
+<div id='api_arlhwwgmlyqj' class='api_div'>
 <h1 id="create-multiple-catalog-items">Create multiple catalog items</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/catalogs/{catalog_name}/items</p>
@@ -128,6 +128,9 @@
 56
 57
 58
+59
+60
+61
 </pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -140,9 +143,10 @@
       "Cuisine": "American",
       "Rating": 5,
       "Loyalty_Program": true,
-      "Location": {
-        "Latitude": 33.6112,
-        "Longitude": -117.8711
+      "Location": [-73.988103, 40.779109],
+      "Preferences": {
+        "favorite_brand": "Nike",
+        "shirt_size": "L"
       },
       "Top_Dishes": [
         "Hamburger",
@@ -157,9 +161,10 @@
       "Cuisine": "American",
       "Rating": 10,
       "Loyalty_Program": true,
-      "Location": {
-        "Latitude": 40.7413,
-        "Longitude": -73.9764
+      "Location": [-73.988103, 40.779109],
+      "Preferences": {
+        "favorite_brand": "Nike",
+        "shirt_size": "L"
       },
       "Top_Dishes": [
         "Hot Dog",
@@ -174,9 +179,10 @@
       "Cuisine": "American",
       "Rating": 3,
       "Loyalty_Program": false,
-      "Location": {
-        "Latitude": 40.7489,
-        "Longitude": -73.9972
+      "Location": [-73.988103, 40.779109],
+      "Preferences": {
+        "favorite_brand": "Nike",
+        "shirt_size": "L"
       },
       "Top_Dishes": [
         "Buffalo Wings",
@@ -187,6 +193,10 @@
   ]
 }'
 </pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Note:</strong></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Location</code> field uses the <code class="language-plaintext highlighter-rouge">geo</code> data type, which expects an array formatted as <code class="language-plaintext highlighter-rouge">[longitude, latitude]</code>.</p>
 
 <h2 id="response">Response</h2>
 

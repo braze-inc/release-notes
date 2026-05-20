@@ -154,15 +154,6 @@ Before you can edit or create catalogs in the browser, you need the following [u
 - Export Catalogs
 - Delete Catalogs
 
-**Important:**
-
-
-
-Braze is transitioning to granular user permissions. If you are using the legacy permissions, refer to the definitions in [List of permissions](https://www.braze.com/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions). Early access to the granular permissions is available for select customers. **All customers will be migrated to the new permissions in March 2026.**
-
-
-
-
 ### Step 1: Enter catalog details
 
 Enter a name and optional description for your catalog. Keep the following requirements in mind when naming your catalog:

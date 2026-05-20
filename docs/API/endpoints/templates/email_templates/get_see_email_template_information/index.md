@@ -1,4 +1,4 @@
-<div id='api_yodcmcetcuve' class='api_div'>
+<div id='api_ivuibbdpfyfu' class='api_div'>
 <h1 id="see-email-template-information">See email template information</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/info</p>
