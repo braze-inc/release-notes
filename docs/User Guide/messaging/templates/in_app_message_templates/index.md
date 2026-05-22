@@ -1,1 +1,0 @@
-For steps to save templates from the composer, create color profiles or CSS templates, and manage your library, see [Create an in-app message template](https://www.braze.com/docs/user_guide/messaging/templates/in_app_message_templates/in_app_message_template/).
