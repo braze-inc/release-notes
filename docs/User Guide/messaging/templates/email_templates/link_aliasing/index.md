@@ -212,7 +212,7 @@ If you export your engagement data with Currents, an email click event will be s
 **Update:**
 
 
-The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [`dispatch_id` behavior](https://www.braze.com/docs/help/help_articles/data/dispatch_id/) in Canvas and campaigns.
+The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [`dispatch_id` behavior](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/) in Canvas and campaigns.
 
 _Update noted in August 2019._
 

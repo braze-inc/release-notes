@@ -1,4 +1,4 @@
-<div id='api_ijyrhtaclohu' class='api_div' data-search-keywords='prerequisites external_ids user_aliases braze_ids email_addresses phone_numbers deleted'>
+<div id='api_rqyftvlszmtf' class='api_div' data-search-keywords='prerequisites external_ids user_aliases braze_ids email_addresses phone_numbers deleted'>
 <h1 id="delete-users">Delete users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/delete</p>
@@ -14,13 +14,13 @@
 
 <p><strong>Warning:</strong></p>
 
-<p>Deleting user profiles cannot be undone. It will permanently remove users which may cause discrepancies in your data. Learn more about what happens when you <a href="/docs/help/help_articles/api/delete_user/">delete a user profile using the API</a> in our Help documentation.</p>
+<p>Deleting user profiles cannot be undone. The delete action permanently removes users, which may cause discrepancies in your data. For details, see <a href="#effects-of-deleting-user-profiles">Effects of deleting user profiles</a>.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">users.delete</code> permission.</p>
+<p>To use this endpoint, you need an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">users.delete</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -102,7 +102,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <h3 id="deleting-users-by-email-addresses-and-phone-numbers">Deleting users by email addresses and phone numbers</h3>
 
-<p>If an email address or phone number is specified as an identifier, an additional <code class="language-plaintext highlighter-rouge">prioritization</code> value is required in the identifier. <code class="language-plaintext highlighter-rouge">prioritization</code> must be an ordered array and should specify which user to delete if there are multiple users. This means deleting users will not occur if more than one user matches a prioritization.</p>
+<p>If an email address or phone number is specified as an identifier, an additional <code class="language-plaintext highlighter-rouge">prioritization</code> value is required in the identifier. <code class="language-plaintext highlighter-rouge">prioritization</code> must be an ordered array and should specify which user to delete if there are multiple users. This means deleting users does not occur if more than one user matches a prioritization.</p>
 
 <p>The allowed values for the array are:</p>
 
@@ -174,6 +174,20 @@ Authorization: Bearer YOUR_REST_API_KEY
   </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">integer)</span><span class="w"> </span><span class="err">number</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">IDs</span><span class="w"> </span><span class="err">queued</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">deletion</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="effects-of-deleting-user-profiles">Effects of deleting user profiles</h2>
+
+<p>When you remove a user with this endpoint, the following occurs:</p>
+
+<ul>
+  <li>The user profile is deleted (nulled).</li>
+  <li>Workspace user counts (such as total users on the <a href="/docs/user_guide/analytics/dashboards/home/">analytics home</a>) update to account for the removed users.</li>
+  <li>The removed user still counts toward the aggregated conversion percentage. Custom event counts and purchase counts are not updated for removed users.</li>
+</ul>
+
+<h3 id="multiple-profiles-with-a-shared-email-address">Multiple profiles with a shared email address</h3>
+
+<p>To merge user profiles that share the same email address, call the <a href="/docs/api/endpoints/user_data/post_users_merge/"><code class="language-plaintext highlighter-rouge">/users/merge</code> endpoint</a>.</p>
 
 <h2 id="troubleshooting">Troubleshooting</h2>
 

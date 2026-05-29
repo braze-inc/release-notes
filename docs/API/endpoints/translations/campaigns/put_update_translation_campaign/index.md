@@ -1,4 +1,4 @@
-<div id='api_aahepykeqtsx' class='api_div' data-search-keywords='prerequisites campaign_id message_variation_id locale_id translation_map id_3 message errors'>
+<div id='api_gevzkiknpczd' class='api_div' data-search-keywords='prerequisites campaign_id message_variation_id locale_id translation_map id_3 message errors'>
 <h1 id="update-translation-in-a-campaign">Update translation in a campaign</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/campaigns/translations</p>
@@ -9,10 +9,6 @@
 </blockquote>
 
 <p>If you want to update translations after a campaign has been launched, you’ll need to <a href="/docs/user_guide/messaging/campaigns/manage_campaigns/change_your_campaign_after_launch/">save your message as a draft</a> first.</p>
-
-<p><strong>Important:</strong></p>
-
-<p>is currently in early access. Contact your Braze account manager if you’re interested in participating in the early access.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

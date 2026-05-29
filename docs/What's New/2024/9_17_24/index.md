@@ -61,7 +61,7 @@ You can view the number of updates to your [Canvases](https://www.braze.com/docs
 
 ### Troubleshooting webhook and Connected Content requests 
 
-[This article](https://www.braze.com/docs/help/help_articles/api/webhook_connected_content_errors) covers how to troubleshoot webhook and Connected Content error codes, including what the errors are and steps to resolve them.
+[Troubleshoot webhook and Connected Content requests](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/troubleshooting_webhooks_and_connected_content/) covers how to troubleshoot webhook and Connected Content error codes, including what the errors are and steps to resolve them.
 
 ## New Braze partnerships
 
