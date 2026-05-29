@@ -1,4 +1,4 @@
-<div id='api_kzovknwpqpyr' class='api_div' data-search-keywords='prerequisites canvas_id context broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes'>
+<div id='api_iilqmpizdlux' class='api_div' data-search-keywords='prerequisites canvas_id context broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes'>
 <h1 id="send-canvas-messages-using-api-triggered-delivery">Send Canvas messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/trigger/send</p>
@@ -262,7 +262,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="response-details">Response details</h2>
 
-<p>Message-sending endpoint responses include the message’s <code class="language-plaintext highlighter-rouge">dispatch_id</code> for reference back to the dispatch of the message. The <code class="language-plaintext highlighter-rouge">dispatch_id</code> is the ID of the message dispatch (unique ID for each “transmission” sent from the Braze platform). Check out <a href="/docs/help/help_articles/data/dispatch_id/">Dispatch ID behavior</a> for more information.</p>
+<p>Message-sending endpoint responses include the message’s <code class="language-plaintext highlighter-rouge">dispatch_id</code> for reference back to the dispatch of the message. The <code class="language-plaintext highlighter-rouge">dispatch_id</code> is the ID of the message dispatch (unique ID for each “transmission” sent from the Braze platform). Check out <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">Dispatch ID behavior</a> for more information.</p>
 
 <h3 id="example-success-response">Example success response</h3>
 

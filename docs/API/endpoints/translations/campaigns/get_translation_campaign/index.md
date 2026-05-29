@@ -1,4 +1,4 @@
-<div id='api_tlrexromxxfz' class='api_div' data-search-keywords='prerequisites translations translation_map id_0 id_1 id_2 locale uuid name country language locale_key errors message'>
+<div id='api_igsplxickxww' class='api_div' data-search-keywords='prerequisites translations translation_map id_0 id_1 id_2 locale uuid name country language locale_key errors message'>
 <h1 id="view-all-translations-for-a-campaign">View all translations for a campaign</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/campaigns/translations</p>
@@ -7,10 +7,6 @@
 <blockquote>
   <p>Use this endpoint to view all the translations for each message variant in a campaign. See <a href="/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/">Locales in messages</a> for more information about translation features.</p>
 </blockquote>
-
-<p><strong>Important:</strong></p>
-
-<p>is currently in early access. Contact your Braze account manager if you’re interested in participating in the early access.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

@@ -1,4 +1,4 @@
-<div id='api_etoopgaedrfl' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
+<div id='api_mguyloxtqgcr' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
 <h1 id="send-campaign-messages-using-api-triggered-delivery">Send campaign messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/send</p>
@@ -352,7 +352,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="response-details">Response details</h2>
 
-<p>Message-sending endpoint responses include the message’s <code class="language-plaintext highlighter-rouge">dispatch_id</code> for reference back to the dispatch of the message. The <code class="language-plaintext highlighter-rouge">dispatch_id</code> is the ID of the message dispatch, a unique ID for each transmission sent from Braze. When using this endpoint, you receive a single <code class="language-plaintext highlighter-rouge">dispatch_id</code> for an entire batched set of users. For more information on <code class="language-plaintext highlighter-rouge">dispatch_id</code> check out our documentation on <a href="/docs/help/help_articles/data/dispatch_id/">Dispatch ID behavior</a>.</p>
+<p>Message-sending endpoint responses include the message’s <code class="language-plaintext highlighter-rouge">dispatch_id</code> for reference back to the dispatch of the message. The <code class="language-plaintext highlighter-rouge">dispatch_id</code> is the ID of the message dispatch, a unique ID for each transmission sent from Braze. When using this endpoint, you receive a single <code class="language-plaintext highlighter-rouge">dispatch_id</code> for an entire batched set of users. For more information on <code class="language-plaintext highlighter-rouge">dispatch_id</code> check out our documentation on <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">Dispatch ID behavior</a>.</p>
 
 <p>If your request encounters a fatal error, refer to <a href="/docs/api/errors/#fatal-errors">Errors and responses</a> for the error code and description.</p>
 

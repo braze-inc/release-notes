@@ -1,4 +1,4 @@
-<div id='api_egvtuxkizqgt' class='api_div' data-search-keywords='prerequisites translations locale uuid name country language locale_key translation_map id_0 id_1 id_2 errors message'>
+<div id='api_lohrzojwinoc' class='api_div' data-search-keywords='prerequisites translations locale uuid name country language locale_key translation_map id_0 id_1 id_2 errors message'>
 <h1 id="view-all-translations-and-locales-for-an-email-template">View all translations and locales for an email template</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/translations/</p>
@@ -7,10 +7,6 @@
 <blockquote>
   <p>Use this endpoint to view all translations and locales for an <a href="/docs/user_guide/messaging/templates/email_templates/">email template</a>. See <a href="/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/">Locales in messages</a> for more information about translation features.</p>
 </blockquote>
-
-<p><strong>Important:</strong></p>
-
-<p>is currently in early access. Contact your Braze account manager if you’re interested in participating in the early access.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

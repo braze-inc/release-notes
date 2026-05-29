@@ -1,4 +1,4 @@
-<div id='api_cscrjhvezkyr' class='api_div' data-search-keywords='prerequisites broadcast external_user_ids user_aliases segment_id audience campaign_id send_id override_frequency_capping recipient_subscription_state messages android_push apple_push content_card email kindle_push web_push webhook whats_app sms'>
+<div id='api_ckqjlobmkvqh' class='api_div' data-search-keywords='prerequisites broadcast external_user_ids user_aliases segment_id audience campaign_id send_id override_frequency_capping recipient_subscription_state messages android_push apple_push content_card email kindle_push web_push webhook whats_app sms'>
 <h1 id="send-messages-immediately-using-the-api-only">Send messages immediately using the API only</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/send</p>
@@ -8,7 +8,7 @@
   <p>Use this endpoint to send immediate messages to designated users using the Braze API.</p>
 </blockquote>
 
-<p>If you are targeting a segment, a record of your request will be stored in the <a href="https://dashboard.braze.com/app_settings/developer_console/activitylog/">Developer Console</a>.</p>
+<p>If you are targeting a segment, a record of your request is stored in the <a href="https://dashboard.braze.com/app_settings/developer_console/activitylog/">Developer Console</a>.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24" class="seeme">See me in Postman</a></div>
 
@@ -330,6 +330,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="response-details">Response details</h2>
 
-<p>Message sending endpoint responses will include the message’s <code class="language-plaintext highlighter-rouge">dispatch_id</code> for reference back to the dispatch of the message. The <code class="language-plaintext highlighter-rouge">dispatch_id</code> is the ID of the message dispatch, meaning the unique ID for each “transmission” sent from Braze. For more information, refer to <a href="/docs/help/help_articles/data/dispatch_id/">Dispatch ID behavior</a>.</p>
+<p>Message sending endpoint responses include the message’s <code class="language-plaintext highlighter-rouge">dispatch_id</code> for reference back to the dispatch of the message. The <code class="language-plaintext highlighter-rouge">dispatch_id</code> is the ID of the message dispatch, meaning the unique ID for each “transmission” sent from Braze. For more information, refer to <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">Dispatch ID behavior</a>.</p>
 
 </div>

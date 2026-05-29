@@ -1,4 +1,4 @@
-<div id='api_afehkurwijhx' class='api_div' data-search-keywords='prerequisites content_block_id locale_id translation_map id_3 message errors'>
+<div id='api_lqaeilzqordr' class='api_div' data-search-keywords='prerequisites content_block_id locale_id translation_map id_3 message errors'>
 <h1 id="update-translation-in-a-content-block">Update translation in a Content Block</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/content_blocks/translations</p>
@@ -7,10 +7,6 @@
 <blockquote>
   <p>Use this endpoint to update multiple translations for a <a href="/docs/user_guide/messaging/design_and_edit/content_blocks/">Content Block</a>. See <a href="/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/">Locales in messages</a> for more information about translation features.</p>
 </blockquote>
-
-<p><strong>Important:</strong></p>
-
-<p>This endpoint is currently in early access. Contact your Braze account manager if you’re interested in participating in the early access.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

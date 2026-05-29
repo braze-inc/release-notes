@@ -3485,13 +3485,14 @@ These abort types can occur on any messaging channel.
 
 ### Content and rendering
 
+
+
 | `abort_type` value | Description |
 | --- | --- |
 | `exhausted_cc_retries` | Connected Content failed after the maximum number of retries, so the message was aborted. |
 | `connected_content_not_supported` | [Connected Content](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/) is not supported in this context, so the message was aborted. |
 | `promo_codes_not_supported` | Promotion codes are not supported in this context, so the message was aborted. |
 | `catalog_items_rerender_not_supported` | Catalog item re-rendering is not supported in this context, so the message was aborted. |
-{: .reset-td-br-1 .reset-td-br-2 aria-label="Content and rendering" }
 | `blacklisted_media_url` | The media URL is blocklisted and cannot be used in messages. |
 | `blocked_media_url` | The media URL was blocked by security policies. |
 | `invalid_media_url` | The media URL is not valid or could not be resolved. |
@@ -3500,6 +3501,16 @@ These abort types can occur on any messaging channel.
 | `http_timeout` | An HTTP request timed out before receiving a response. |
 | `missing_hostname` | The request URL is missing a hostname. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Content and rendering" }
+
+
+
+
+
+
+
+
+
+
 
 
 
