@@ -1,4 +1,4 @@
-<div id='api_cmspmocpjksd' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
+<div id='api_rxqzifyuewwm' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
 <h1 id="replace-catalog-item">Replace catalog item</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/catalogs/{catalog_name}/items/{item_id}</p>

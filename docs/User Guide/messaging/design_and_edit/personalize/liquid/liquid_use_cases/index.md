@@ -1,4 +1,4 @@
-<div id='api_rqiqjibztpzj' class='api_div' data-search-keywords='anniversaries and holidays anniversaries and holidays'>
+<div id='api_xgusatjskajr' class='api_div' data-search-keywords='anniversaries and holidays anniversaries and holidays'>
 <h2 id="anniversaries-and-holidays">Anniversaries and holidays</h2>
 
 <div class="api_tags" data-tags="Anniversaries and holidays" data-tags-lower="anniversaries and holidays"></div>
@@ -164,7 +164,7 @@ Message if today isn't one of the provided holidays.
 
 </div>
 
-<div id='api_eycvmzcnsxpq' class='api_div' data-search-keywords='app usage app usage'>
+<div id='api_epwyrdnfmpvn' class='api_div' data-search-keywords='app usage app usage'>
 <h2 id="app-usage">App usage</h2>
 
 <div class="api_tags" data-tags="App usage" data-tags-lower="app usage"></div>
@@ -269,7 +269,7 @@ Message for a less active user
 
 </div>
 
-<div id='api_gkxryphdzjaz' class='api_div' data-search-keywords='countdowns countdowns'>
+<div id='api_rrfemcycwnxb' class='api_div' data-search-keywords='countdowns countdowns'>
 <h2 id="countdowns">Countdowns</h2>
 
 <div class="api_tags" data-tags="Countdowns" data-tags-lower="countdowns"></div>
@@ -721,7 +721,7 @@ Hi, the offer is only valid today.
 
 </div>
 
-<div id='api_amhyutnenbcz' class='api_div' data-search-keywords='custom attribute custom attribute'>
+<div id='api_gdfumxyhnsqq' class='api_div' data-search-keywords='custom attribute custom attribute'>
 <h2 id="custom-attribute">Custom attribute</h2>
 
 <div class="api_tags" data-tags="Custom attribute" data-tags-lower="custom attribute"></div>
@@ -790,7 +790,7 @@ Hi <span class="cp">{{</span><span class="nv">name</span><span class="p">[</span
 
 </div>
 
-<div id='api_peuelwbknrzk' class='api_div' data-search-keywords='custom event custom event attributes external_id'>
+<div id='api_ihypsvymuhbc' class='api_div' data-search-keywords='custom event custom event attributes external_id'>
 <h2 id="custom-event">Custom event</h2>
 
 <div class="api_tags" data-tags="Custom event" data-tags-lower="custom event"></div>
@@ -966,7 +966,7 @@ Did you forget something in your shopping cart?
 
 </div>
 
-<div id='api_qzhfwzxnzvop' class='api_div' data-search-keywords='language language'>
+<div id='api_hbrmyuyzgkqn' class='api_div' data-search-keywords='language language'>
 <h2 id="language">Language</h2>
 
 <div class="api_tags" data-tags="Language" data-tags-lower="language"></div>
@@ -1143,7 +1143,7 @@ tuesday default
 
 </div>
 
-<div id='api_seofbtjlgmpi' class='api_div' data-search-keywords='miscellaneous miscellaneous'>
+<div id='api_xogopujjpqkp' class='api_div' data-search-keywords='miscellaneous miscellaneous'>
 <h2 id="miscellaneous">Miscellaneous</h2>
 
 <div class="api_tags" data-tags="Miscellaneous" data-tags-lower="miscellaneous"></div>
@@ -1680,7 +1680,7 @@ All episodes of <span class="cp">{{</span><span class="nv">new_shows_clean</span
 
 </div>
 
-<div id='api_eehapdbnzots' class='api_div' data-search-keywords='platform targeting platform targeting'>
+<div id='api_khgnsxmhnxth' class='api_div' data-search-keywords='platform targeting platform targeting'>
 <h2 id="platform-targeting">Platform targeting</h2>
 
 <div class="api_tags" data-tags="Platform targeting" data-tags-lower="platform targeting"></div>
@@ -1831,7 +1831,7 @@ This is a message for Verizon users!
 
 </div>
 
-<div id='api_gyjpgumhddzq' class='api_div' data-search-keywords='sms sms'>
+<div id='api_cjhggnblxlfo' class='api_div' data-search-keywords='sms sms'>
 <h2 id="sms">SMS</h2>
 
 <div class="api_tags" data-tags="SMS" data-tags-lower="sms"></div>
@@ -1870,7 +1870,7 @@ Thanks for joining our SMS program!
 
 </div>
 
-<div id='api_lrqbhmwpitqs' class='api_div' data-search-keywords='time zones time zones'>
+<div id='api_ynpewurzcuqq' class='api_div' data-search-keywords='time zones time zones'>
 <h2 id="time-zones">Time zones</h2>
 
 <div class="api_tags" data-tags="Time zones" data-tags-lower="time zones"></div>
@@ -1887,6 +1887,10 @@ Thanks for joining our SMS program!
   <li><a href="#abort-send-time-hour-range">Abort a message outside an hour range at send time</a></li>
   <li><a href="#abort-fixed-timezone-window">Abort a message outside a time window in a fixed time zone</a></li>
 </ul>
+
+<p><strong>Note:</strong></p>
+
+<p>If a user receives a message at an unexpected local time, their device or profile time zone may have changed (for example, after traveling). Local-time delivery uses the time zone on the profile at send time; users may need a new session in their usual region before values such as <code class="language-plaintext highlighter-rouge">{{${time_zone}}}</code> reflect what you expect. However, you can <a href="#users-time-zone">template in the user’s time zone</a>.</p>
 
 <h3 id="users-time-zone">Template in the user’s time zone</h3>
 
@@ -2102,7 +2106,7 @@ Sign up for our exclusive time-limited offer now!
 
 </div>
 
-<div id='api_zilyfkeipxvm' class='api_div' data-search-keywords='week/day/month week/day/month'>
+<div id='api_bnytpdvmogrc' class='api_div' data-search-keywords='week/day/month week/day/month'>
 <h2 id="weekdaymonth">Week/Day/Month</h2>
 
 <div class="api_tags" data-tags="Week/Day/Month" data-tags-lower="week/day/month"></div>

@@ -251,6 +251,10 @@ You can also [abort messages](https://www.braze.com/docs/user_guide/messaging/de
 
 ## Troubleshooting
 
+### Test send doesn't arrive when using `abort_message`
+
+If you use [`abort_message`](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages/) and a test send never arrives, the preview user may be missing attributes your Liquid expects. Abort logic runs during rendering; when it fires, Braze does not send the message. Preview with a user who has the required profile data, or use **Preview as user** to test recipient fields that supply the same values your production audience would have.
+
 ### Preview may incorrectly coerce property types 
 
 When previewing a message in the dashboard, most variables (such as custom attributes) are coerced to the correct type. However, some variables don't have a defined type that the preview can look up:
