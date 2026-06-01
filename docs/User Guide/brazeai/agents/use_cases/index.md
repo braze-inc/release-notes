@@ -1,4 +1,4 @@
-<div id='api_vipefidtjjay' class='api_div' data-search-keywords='write personalized messaging based on a user’s context canvas agent'>
+<div id='api_xzqusdbvhlux' class='api_div' data-search-keywords='write personalized messaging based on a user’s context canvas agent'>
 <h2 id="write-personalized-messaging-based-on-a-users-context">Write personalized messaging based on a user’s context</h2>
 
 <div class="api_tags" data-tags="Canvas agent" data-tags-lower="canvas agent"></div>
@@ -118,7 +118,7 @@ The user IS in the segment: “Logged multiple searches in the past 30D”.
 
 </div>
 
-<div id='api_axaxfnnhxsdp' class='api_div' data-search-keywords='analyze user feedback to determine next steps canvas agent'>
+<div id='api_lzjvkqrkpgsz' class='api_div' data-search-keywords='analyze user feedback to determine next steps canvas agent'>
 <h2 id="analyze-user-feedback-to-determine-next-steps">Analyze user feedback to determine next steps</h2>
 
 <div class="api_tags" data-tags="Canvas agent" data-tags-lower="canvas agent"></div>
@@ -216,137 +216,7 @@ Input &amp; Output Example:
 
 </div>
 
-<div id='api_wyojwkxuprcx' class='api_div' data-search-keywords='determine conversion likelihood based on engagement surveys canvas agent'>
-<h2 id="determine-conversion-likelihood-based-on-engagement-surveys">Determine conversion likelihood based on engagement surveys</h2>
-
-<div class="api_tags" data-tags="Canvas agent" data-tags-lower="canvas agent"></div>
-
-<p>This use case describes how a Canvas agent can help determine the conversion rate for free subscribers in an app. The agent can analyze user behavior and assign them to a segment for subscribers likely to convert. The goal is to return recommendations for different retention strategies to convert free subscribers to paid subscribers.</p>
-
-<h3 id="prerequisites">Prerequisites</h3>
-
-<p>These instructions assume the following information is available:</p>
-
-<ul>
-  <li>Custom attributes:
-    <ul>
-      <li>Number of days since the free trial started</li>
-      <li>Number of flights and hotel searches during the free trial</li>
-      <li>Count of premium features used during the free trial</li>
-    </ul>
-  </li>
-  <li>Context variable for the day the app was last opened</li>
-  <li><strong>Agent context</strong>
-    <ul>
-      <li><strong>All Canvas context:</strong> Passes any additional context variables to the agent that you didn’t already define in your agent instructions, in case they are helpful or relevant</li>
-      <li><strong>Segment membership:</strong> To check whether the user is in the segment “Has Valid Payment Method on File”</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="instructions">Instructions</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-</pre></td><td class="rouge-code"><pre>Role:
-You are an expert Retention and Conversion Analyst for UponVoyage Premium. Your role is to evaluate users currently in their 30-day free trial to determine their likelihood to convert to a paid subscription, based on the quality and depth of their engagement, not just their frequency.
-
-Inputs &amp; Goals:
-The user is currently in the "UponVoyage Premium" free trial. Your goal is to analyze their behavioral signals to assign them to a Conversion Segment and recommend a Retention Strategy.
-
-You will get the following user-specific inputs:
-{{custom_attribute.${days_since_trial_start}}} - number of days since they started the trial
-{{custom_attribute.${searches_count}}} - total number of flight/hotel searches during trial
-{{custom_attribute.${premium_features_used}}} - count of Premium-only features used (e.g., Lounge Access, Price Protection)
-{{custom_attribute.${most_searched_category}}} - e.g., "Luxury Hotels", "Budget Hostels", "Family Resorts", "Business Travel"
-{{context.${last_app_session}}} - date of last app open
-
-User membership in segment: "Has Valid Payment Method on File" (True/False)
-
-Rules:
-- Analyze Engagement Depth: High search volume alone does not equal high conversion. Look for use of Premium Features (the core value driver).
-- Determine Segment Label:
-High: Frequent activity AND usage of at least one Premium feature. User clearly sees value.
-Medium: Frequent activity (searches) but LOW/NO usage of Premium features. User is engaged with the app but not yet hooked on the subscription.
-Low: Minimal activity (&lt; 3 searches) regardless of features.
-Cold: No activity in the last 7 days.
-- Identify Primary Barrier: Based on the data, what is stopping them? (e.g., "Price Sensitivity" if they search Budget options; "Feature Unawareness" if they search Luxury but don't use Premium perks).
-- Assign Retention Strategy:
-High: "Push Annual Plan Upgrade"
-Medium: "Educate on Premium Benefits" (Show them what they are missing)
-Low/Cold: "Re-engagement Offer" (Deep discount or extension)
-- Data Safety: Do not generate numerical probability scores (e.g., "85%"). Stick to the defined labels.
-
-Final Output Specification:
-You must return an object containing exactly four keys: "segment_label", "primary_barrier", "retention_strategy", and "explanation".
-- segment_label: String (High, Medium, Low, Cold)
-- primary_barrier: String (Price_Sensitivity, Feature_Unawareness, Low_Intent, None)
-- retention_strategy: String (Push_Annual_Plan, Educate_Benefits, Re_engagement_Offer)
-- explanation: String. Brief rationale tying engagement signals to segment, barrier, and strategy (for review or debugging).
-
-Input &amp; Output Example:
-&lt;input_example&gt;
-{{custom_attribute.${days_since_trial_start}}}: 20 
-{{custom_attribute.${searches_count}}}: 15
-{{custom_attribute.${premium_features_used}}}: 0 
-{{custom_attribute.${most_searched_category}}}: "Budget Hostels"
-{{context.${last_app_session}}}: Yesterday
-The user IS in the segment: "Has Valid Payment Method on File".
-&lt;/input_example&gt;
-&lt;output_example&gt;
-{"segment_label": "Medium", "primary_barrier": "Feature_Unawareness", "retention_strategy": "Educate_Benefits", "explanation": "High search volume (15) but zero Premium feature use—they are engaged but not seeing subscription value. Budget Hostels suggests price sensitivity context; barrier Feature_Unawareness; Educate_Benefits fits the Medium segment."}
-&lt;/output_example&gt;
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-</div>
-
-<div id='api_lynhafafqeoy' class='api_div' data-search-keywords='classify inbound messages for opt-out intent canvas agent'>
+<div id='api_qkznsyahpolz' class='api_div' data-search-keywords='classify inbound messages for opt-out intent canvas agent'>
 <h2 id="classify-inbound-messages-for-opt-out-intent">Classify inbound messages for opt-out intent</h2>
 
 <div class="api_tags" data-tags="Canvas agent" data-tags-lower="canvas agent"></div>
@@ -466,7 +336,7 @@ Input: “This sucks—what’s the promo code?” → false
 
 </div>
 
-<div id='api_bqyipddspttk' class='api_div' data-search-keywords='write high-converting descriptions that align with brand guidelines catalog agent'>
+<div id='api_bvvdlsqafvjh' class='api_div' data-search-keywords='write high-converting descriptions that align with brand guidelines catalog agent'>
 <h2 id="write-high-converting-descriptions-that-align-with-brand-guidelines">Write high-converting descriptions that align with brand guidelines</h2>
 
 <div class="api_tags" data-tags="Catalog agent" data-tags-lower="catalog agent"></div>
@@ -571,7 +441,7 @@ Price Tier: $$$
 
 </div>
 
-<div id='api_qqalbchpfbbz' class='api_div' data-search-keywords='provide translations based on language used by region catalog agent'>
+<div id='api_pzlyvihclmrw' class='api_div' data-search-keywords='provide translations based on language used by region catalog agent'>
 <h2 id="provide-translations-based-on-language-used-by-region">Provide translations based on language used by region</h2>
 
 <div class="api_tags" data-tags="Catalog agent" data-tags-lower="catalog agent"></div>
