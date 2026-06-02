@@ -1,4 +1,4 @@
-<div id='api_clumkwykqicx' class='api_div' data-search-keywords='prerequisites subscription_group_id subscription_state external_id phone use_double_opt_in_logic email message'>
+<div id='api_sqckpoykjqat' class='api_div' data-search-keywords='prerequisites subscription_group_id subscription_state external_id phone use_double_opt_in_logic email message'>
 <h1 id="update-users-subscription-group-status">Update user’s subscription group status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/subscription/status/set</p>
@@ -222,6 +222,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 <p><strong>Important:</strong></p>
 
 <p>The endpoint accepts only the <code class="language-plaintext highlighter-rouge">email</code> or <code class="language-plaintext highlighter-rouge">phone</code> value, not both. If you provide both, you receive this response: <code class="language-plaintext highlighter-rouge">{"message":"Either an email address or a phone number should be provided, but not both."}</code></p>
+
+<p>For your subscription update to apply to phone numbers, confirm you sent E.164-formatted phone numbers (for example, <code class="language-plaintext highlighter-rouge">+15555550123</code>), used the correct <code class="language-plaintext highlighter-rouge">subscription_group_id</code>, and passed <code class="language-plaintext highlighter-rouge">phone</code> (not both <code class="language-plaintext highlighter-rouge">phone</code> and <code class="language-plaintext highlighter-rouge">email</code>) in the same request body. For multi-number updates, use the <code class="language-plaintext highlighter-rouge">phone</code> array format shown in <a href="#sms-and-rcs">SMS and RCS</a>.</p>
 
 </div>
 

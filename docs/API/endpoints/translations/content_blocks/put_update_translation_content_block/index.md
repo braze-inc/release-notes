@@ -1,4 +1,4 @@
-<div id='api_wdnahiwylnmk' class='api_div' data-search-keywords='prerequisites content_block_id locale_id translation_map id_3 message errors'>
+<div id='api_rygojjasxzmt' class='api_div' data-search-keywords='prerequisites content_block_id locale_id translation_map id_3 message errors'>
 <h1 id="update-translation-in-a-content-block">Update translation in a Content Block</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/content_blocks/translations</p>
