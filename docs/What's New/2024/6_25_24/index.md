@@ -60,7 +60,7 @@ We improved the [color-coding that Liquid uses](https://www.braze.com/docs/user_
 
 
 
-SMS geographic permissions enhance security and protect against fraudulent SMS traffic by enforcing controls on the countries to which you can send SMS messages. Admins can now specify an allowlist of countries to make sure that SMS messages are only sent to approved regions. For more information, see [SMS Geographic Permissions](https://www.braze.com/docs/sms_geographic_permissions). 
+SMS geographic permissions enhance security and protect against fraudulent SMS traffic by enforcing controls on the countries to which you can send SMS messages. Admins can now specify an allowlist of countries to make sure that SMS messages are only sent to approved regions. For more information, see [SMS Geographic Permissions](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups/geographic_permissions/). 
 
 ![The "Country allowlist" dropdown with the most common countries displaying at the top.](https://www.braze.com/docs/assets/img/sms/allowlist_dropdown.png?fdf84b8364c3970633cdaaf14b8a6deb){: style="max-width:80%;"}
 

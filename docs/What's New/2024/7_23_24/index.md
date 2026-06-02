@@ -58,7 +58,7 @@ You can now add multiple WhatsApp Business accounts and subscription groups (and
 
 ### SMS Geographic Permissions
 
-SMS Geographic Permissions enhance security and protect against fraudulent SMS traffic by enforcing controls on the countries to which you can send SMS messages. To learn how to specify an allowlist of countries so you can make sure SMS messages are only sent to approved regions, see [Configuring your SMS country allowlist](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/sms_geographic_permissions/#configuring-your-sms-country-allowlist).
+SMS Geographic Permissions enhance security and protect against fraudulent SMS traffic by enforcing controls on the countries to which you can send SMS messages. To learn how to specify an allowlist of countries so you can make sure SMS messages are only sent to approved regions, see [Configuring your SMS country allowlist](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups/geographic_permissions/#selecting-countries).
 
 ### LINE and Braze
 

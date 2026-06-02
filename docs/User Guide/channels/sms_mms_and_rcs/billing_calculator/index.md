@@ -143,8 +143,8 @@ Rich media messages include a media file (image, video) or a Rich Card and are b
 
 
 
-### Message composer and Message Usage dashboard
+### Message composer and Credits Usage dashboard
 
 As you create your message, the message composer will display the billing type in real-time through a label (Basic RCS, Single RCS, Rich, or Rich Media), helping you track costs before you send.
 
-Your [Message Usage dashboard](https://www.braze.com/docs/message_usage_dashboard/) will reflect these billing types and will provide the number of segments used for US messages, providing a transparent view of your Message or Action Credits consumption.
+Your [Credits Usage dashboard](https://www.braze.com/docs/credits_usage_dashboard/) will reflect these billing types and will provide the number of segments used for US messages, providing a transparent view of your message credit consumption.

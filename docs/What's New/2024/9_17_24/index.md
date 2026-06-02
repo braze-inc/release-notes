@@ -95,7 +95,7 @@ We added a complete list of the [security events](https://www.braze.com/docs/use
 
 
 
-The [message usage dashboard](https://www.braze.com/docs/user_guide/administer/global/billing/message_usage_dashboard/) provides self-service insights into your SMS and WhatsApp credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
+The [Credits Usage dashboard](https://www.braze.com/docs/credits_usage_dashboard/) provides self-service insights into your credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
 
 ## SDK
 
