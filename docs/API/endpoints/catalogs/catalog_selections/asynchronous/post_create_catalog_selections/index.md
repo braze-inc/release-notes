@@ -1,4 +1,4 @@
-<div id='api_lkrzpbesvpro' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
+<div id='api_rdnswfdqcmyo' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
 <h1 id="create-catalog-selection">Create catalog selection</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/catalogs/{catalog_name}/selections</p>
