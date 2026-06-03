@@ -1,4 +1,4 @@
-<div id='api_iznsfctywiji' class='api_div' data-search-keywords='prerequisites canvas_id schedule_id'>
+<div id='api_srfapvlporxp' class='api_div' data-search-keywords='prerequisites canvas_id schedule_id'>
 <h1 id="delete-scheduled-api-triggered-canvases">Delete scheduled API-triggered Canvases</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/trigger/schedule/delete</p>

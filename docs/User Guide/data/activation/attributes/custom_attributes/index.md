@@ -4,6 +4,13 @@
 
 When stored in Braze, custom attributes can be used to build out audience segments and personalize messaging using Liquid. Keep in mind that Braze doesn't store time-series information for custom attributes, so you can't get any graphs based on them like you can for custom events.
 
+**Important:**
+
+
+**Names are exact matches.** Custom attribute keys are **case-sensitive**—for example, `Home_City` and `home_city` are two different attributes. When you send data through the [REST API](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) or an SDK, Braze **strips leading and trailing spaces** from attribute names, so `greeting` and ` greeting ` resolve to the same key. Use the same spelling and casing everywhere you reference an attribute—in **Data Settings** > **Custom Attributes**, API and SDK payloads, and CSV imports. For how Braze coerces incoming values when you [force a data type](https://www.braze.com/docs/user_guide/data/activation/custom_data/managing_custom_data/#data-type-coercion), see [Managing custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/managing_custom_data/).
+
+
+
 ## Use cases
 
 Some common custom attribute use cases include:

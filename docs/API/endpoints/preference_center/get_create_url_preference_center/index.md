@@ -1,4 +1,4 @@
-<div id='api_uxeaagazcsgy' class='api_div' data-search-keywords='prerequisites preference_center_url'>
+<div id='api_dprxejkuuerp' class='api_div' data-search-keywords='prerequisites preference_center_url'>
 <h1 id="generate-preference-center-url">Generate preference center URL</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/preference_center/v1/{preferenceCenterExternalID}/url/{userID}</p>
