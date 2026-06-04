@@ -2,17 +2,6 @@
 
 > Learn how to integrate a custom Currents connector, so you can get event data from Braze in real time, enabling more customized analytics, reporting, and automation.
 
-
-
-**Important:**
-
-
- is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-
-
-
-
-
 ## Prerequisites
 
 To integrate a custom Currents connector in Braze, you'll need to provide an endpoint URL and an [optional authentication token](#authentication).

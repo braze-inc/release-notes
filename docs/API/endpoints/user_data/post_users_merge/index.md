@@ -1,4 +1,4 @@
-<div id='api_gwdxsqhtvuqv' class='api_div' data-search-keywords='prerequisites merge_updates message'>
+<div id='api_zgxdembbjius' class='api_div' data-search-keywords='prerequisites merge_updates message'>
 <h1 id="merge-users">Merge users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/merge</p>

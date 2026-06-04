@@ -1,4 +1,4 @@
-<div id='api_yfkjvzguwiir' class='api_div' data-search-keywords='prerequisites schedule_id schedule messages'>
+<div id='api_izsmuabbfymf' class='api_div' data-search-keywords='prerequisites schedule_id schedule messages'>
 <h1 id="update-scheduled-messages">Update scheduled messages</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/schedule/update</p>
