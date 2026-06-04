@@ -1,4 +1,4 @@
-<div id='api_crzcscwfxbef' class='api_div' data-search-keywords='prerequisites message data time new_users'>
+<div id='api_rljccfyvvjqb' class='api_div' data-search-keywords='prerequisites message data time new_users'>
 <h1 id="export-daily-new-users-by-date">Export daily new users by date</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/kpi/new_users/data_series</p>
