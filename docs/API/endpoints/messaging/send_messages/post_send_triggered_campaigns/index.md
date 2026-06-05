@@ -1,4 +1,4 @@
-<div id='api_jflawtdkxown' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
+<div id='api_qpbnotkscpre' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
 <h1 id="send-campaign-messages-using-api-triggered-delivery">Send campaign messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/send</p>
