@@ -70,10 +70,6 @@ The following JavaScript methods are supported within custom HTML for in-app mes
 }
 </style>
 
-<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><b>note</b><br />
-<p>You cannot reference Liquid to insert <code>customAttributes</code> into JavaScript Bridge methods.</p>
-</div></div>
-
 | Method Name    | Description      |
 | :------- | :------------------ |
 | `brazeBridge.closeMessage()`                                                               | Close the current message. Behavior differs by channel: <br><br> **In-app messages:** closes the UI only. No dismissal is logged and no server-side suppression occurs. <br><br> **Banners:** equivalent to calling `logBannerDismissal`. This logs a Banner dismissal, removes the Banner from the UI, and suppresses the Banner for the user. Also re-triggers any active `subscribeToBannersUpdates` subscribers. Do not call this method if the message is already in the process of closing or will automatically close due to processing a deep-link.                          |

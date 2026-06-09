@@ -1,4 +1,4 @@
-<div id='api_hyrdyvozrmix' class='api_div' data-search-keywords='prerequisites message created_at updated_at name description text_description tags teams'>
+<div id='api_mcabaagdpskv' class='api_div' data-search-keywords='prerequisites message created_at updated_at name description text_description tags teams'>
 <h1 id="export-segment-details">Export segment details</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/segments/details</p>
