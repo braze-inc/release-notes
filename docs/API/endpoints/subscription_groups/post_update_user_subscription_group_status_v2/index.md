@@ -1,4 +1,4 @@
-<div id='api_cjuazrhjdrlm' class='api_div' data-search-keywords='prerequisites subscription_groups subscription_group_id subscription_state external_ids emails phones use_double_opt_in_logic'>
+<div id='api_aqthqvaekate' class='api_div' data-search-keywords='prerequisites subscription_groups subscription_group_id subscription_state external_ids emails phones use_double_opt_in_logic'>
 <h1 id="update-users-subscription-group-status-v2">Update user’s subscription group status (V2)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/v2/subscription/status/set</p>
@@ -28,7 +28,7 @@
 
 <p><strong>Note:</strong></p>
 
-<p>If you’re interested in using this endpoint with <a href="/docs/user_guide/channels/line/message_users/subscription_groups/">LINE subscription groups</a>, contact your customer success manager.</p>
+<p>If you’re interested in using this endpoint with <a href="/docs/user_guide/channels/line/message_users/subscription_groups/">LINE subscription groups</a>, contact your customer success manager. <br /><br />For LINE subscription groups, we recommend using a custom attribute to track website or app consent separately, and then targeting campaigns using that custom attribute in combination with the LINE subscription state. This approach ensures your subscription state accurately reflects users who have actually subscribed in the LINE app. Manually adding users to LINE subscription groups using the API may lead to out-of-sync states and failed sends since Braze cannot re-subscribe users in the LINE app or send messages to users who have blocked an account in LINE.</p>
 
 <h2 id="differences-from-v1">Differences from V1</h2>
 

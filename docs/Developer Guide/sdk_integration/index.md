@@ -2,6 +2,8 @@
 
 > Learn how to integrate the Braze SDK. Each SDK is hosted in its own public GitHub repository, which includes fully-buildable sample apps you can use to test Braze features or implement alongside your own applications. To learn more, see [References, Repositories, and Sample Apps](https://www.braze.com/docs/developer_guide/references/). For more general information about the SDK, see [Getting started: Integration overview](https://www.braze.com/docs/developer_guide/getting_started/integration_overview/).
 
+For mirrored SDK README content in docs, see [Repository guides](https://www.braze.com/docs/developer_guide/sdk_repository_guides/).
+
 **Tip:**
 
 
@@ -3588,7 +3590,9 @@ There are several Braze Unity packages available for download on the [Braze Unit
 **Note:**
 
 
-As of Unity 2.6.0, the bundled Braze Android SDK artifact requires  [AndroidX](https://developer.android.com/jetpack/androidx) dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage`.
+As of Unity 2.6.0, the bundled Braze Android SDK artifact requires [AndroidX](https://developer.android.com/jetpack/androidx) dependencies. If you were previously using a `jetified` unitypackage, you can safely transition to the corresponding `unitypackage`.
+
+If Android builds fail with "This project uses AndroidX dependencies, but the 'android.useAndroidX' property is not enabled", enable [Custom Gradle Properties Template](https://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html#Publishing) in your Unity Publishing Settings. Then open `Assets/Plugins/Android/gradleTemplate.properties` and set `android.useAndroidX=true`. For a working template, see the [Braze Unity sample app](https://github.com/braze-inc/braze-unity-sdk/tree/master/unity-samples) and its [`gradleTemplate.properties`](https://github.com/braze-inc/braze-unity-sdk/blob/master/unity-samples/Assets/Plugins/Android/gradleTemplate.properties) file.
 
 
 

@@ -5,7 +5,7 @@
   }
 </style>
 
-<div id='api_ryprtvlcipof' class='api_div' data-search-keywords='count'>
+<div id='api_qlrtdctbsqza' class='api_div' data-search-keywords='count'>
 <h3 id="variation">Variation</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -16,7 +16,7 @@
 
 </div>
 
-<div id='api_nrijtdaxhbpk' class='api_div' data-search-keywords='count'>
+<div id='api_niugfphevhax' class='api_div' data-search-keywords='count'>
 <h3 id="emailable">Emailable</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -27,7 +27,7 @@
 
 </div>
 
-<div id='api_jezyxnzrrgnm' class='api_div' data-search-keywords='percentage'>
+<div id='api_edefgpbtwrqa' class='api_div' data-search-keywords='percentage'>
 <h3 id="audience-">Audience %</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -38,7 +38,7 @@
 
 </div>
 
-<div id='api_kddnqeipwdrg' class='api_div' data-search-keywords='count'>
+<div id='api_tgymhgjxnlvf' class='api_div' data-search-keywords='count'>
 <h3 id="unique-recipients">Unique Recipients</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -51,7 +51,7 @@
 
 </div>
 
-<div id='api_knxoyrfkfdpd' class='api_div' data-search-keywords='count'>
+<div id='api_oigswygksnei' class='api_div' data-search-keywords='count'>
 <h3 id="sends">Sends</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -64,7 +64,7 @@
 
 </div>
 
-<div id='api_phlgxlnouylg' class='api_div' data-search-keywords='count'>
+<div id='api_kxraqisvzedj' class='api_div' data-search-keywords='count'>
 <h3 id="messages-sent">Messages Sent</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -77,7 +77,7 @@
 
 </div>
 
-<div id='api_tksxltvelqgw' class='api_div' data-search-keywords='count'>
+<div id='api_ywowbrveeaex' class='api_div' data-search-keywords='count'>
 <h3 id="deliveries">Deliveries</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -90,7 +90,7 @@
 
 </div>
 
-<div id='api_nkvsrqxqlhme' class='api_div' data-search-keywords='percentage'>
+<div id='api_eaeooajoglem' class='api_div' data-search-keywords='percentage'>
 <h3 id="deliveries-">Deliveries %</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -101,7 +101,7 @@
 
 </div>
 
-<div id='api_rxrhepnretoh' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_axbklibrxefu' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="bounces">Bounces</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -122,7 +122,7 @@
 
 </div>
 
-<div id='api_fhmwgbvnoyjm' class='api_div' data-search-keywords='count'>
+<div id='api_agsofpvamvqp' class='api_div' data-search-keywords='count'>
 <h3 id="hard-bounce">Hard Bounce</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -135,7 +135,7 @@
 
 </div>
 
-<div id='api_boehidjgcjnf' class='api_div' data-search-keywords='count'>
+<div id='api_kycgwdbaufqf' class='api_div' data-search-keywords='count'>
 <h3 id="soft-bounce">Soft Bounce</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -150,7 +150,7 @@
 
 </div>
 
-<div id='api_tuzraowzjavo' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_hhmxrxbdymje' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="spam">Spam</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -167,7 +167,7 @@
 
 </div>
 
-<div id='api_eygufhavfbsx' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_luucgkslhwxb' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="unique-opens">Unique Opens</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -186,7 +186,7 @@
 
 </div>
 
-<div id='api_ijpgczpijgyp' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_sfkjsrysjofq' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="unique-clicks">Unique Clicks</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -205,7 +205,7 @@
 
 </div>
 
-<div id='api_kyddbqlfdjmi' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_wwnjisrdahpz' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="unsubscribers-or-unsub">Unsubscribers or Unsub</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -235,7 +235,7 @@
 
 </div>
 
-<div id='api_xwunifnvemjj' class='api_div' data-search-keywords='count'>
+<div id='api_sthagiuvrpvg' class='api_div' data-search-keywords='count'>
 <h3 id="revenue">Revenue</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -246,7 +246,7 @@
 
 </div>
 
-<div id='api_mhjmkeactoao' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_dgqqtatgythz' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="primary-conversions-a-or-primary-conversion-event">Primary Conversions (A) or Primary Conversion Event</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -265,7 +265,7 @@
 
 </div>
 
-<div id='api_uzhpyanxhvub' class='api_div' data-search-keywords='count'>
+<div id='api_fjrxakpbizkm' class='api_div' data-search-keywords='count'>
 <h3 id="confidence">Confidence</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -274,7 +274,7 @@
 
 </div>
 
-<div id='api_nulsrxppktnz' class='api_div' data-search-keywords=''>
+<div id='api_badbdckrwocr' class='api_div' data-search-keywords=''>
 <h3 id="machine-opens">Machine Opens</h3>
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
@@ -285,7 +285,7 @@
 
 </div>
 
-<div id='api_vdkmegnkpueb' class='api_div' data-search-keywords='count'>
+<div id='api_ofuvcplpvpzk' class='api_div' data-search-keywords='count'>
 <h3 id="other-opens">Other Opens</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -298,7 +298,7 @@
 
 </div>
 
-<div id='api_usjssarcohzb' class='api_div' data-search-keywords='percentage'>
+<div id='api_ocmrkazpxeps' class='api_div' data-search-keywords='percentage'>
 <h3 id="click-to-open-rate">Click-to-Open Rate</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -308,3 +308,43 @@
 <p><span class="calculation-line">Calculation: (Unique Clicks) / (Unique Opens) (for Email)</span></p>
 
 </div>
+
+## Email reporting troubleshooting and FAQs
+
+### Unsubscribe links and Unique Clicks
+
+When a recipient clicks an unsubscribe link, Braze counts it as a click because the action uses a URL. This applies to Braze-provided unsubscribe links and custom unsubscribe links in your message body. Those clicks contribute to *Unique Clicks* and *Total Clicks* alongside other link clicks. For metric definitions, see [Unique Clicks](#unique-clicks) above and [Why am I seeing a different number of unsubscribes than clicks on my unsubscribe link?](https://www.braze.com/docs/user_guide/channels/email/faq/#why-am-i-seeing-a-different-number-of-unsubscribes-than-clicks-on-my-unsubscribe-link).
+
+### View in browser
+
+Braze does not include a built-in "View this email in a browser" feature. Host the email content on an external landing page (such as your website) and add a link from the message using the email editor **Link** tool. For more information, see [Can I add a "view this email in a browser" link to my emails?](https://www.braze.com/docs/user_guide/channels/email/faq/#can-i-add-a-view-this-email-in-a-browser-link-to-my-emails).
+
+### Over-quota and full mailbox bounces
+
+An over-quota or mailbox-full bounce means the recipient's mailbox cannot accept new mail. You may see these addresses among new sign-ups with invalid or risky addresses, or among long-inactive profiles whose inboxes filled while they were dormant.
+
+Review bounce rates by segment and source, remove or sunset addresses that repeatedly hard-bounce, and use confirmed or double opt-in for new subscribers. For list hygiene practices, see [Deliverability pitfalls and spam traps](https://www.braze.com/docs/user_guide/channels/email/email_setup/deliverability_pitfalls_and_spam_traps/) and [Email reporting](https://www.braze.com/docs/user_guide/channels/email/reporting/#troubleshooting).
+
+### 550 5.7.1 unsolicited mail
+
+A `550 5.7.1` response such as "Our system has detected that this message is likely unsolicited mail" often comes from strict mailbox providers (for example, Gmail) when reputation or engagement signals look poor. Common contributors include spam complaints, low engagement, purchased or rented lists, and sudden volume spikes.
+
+Focus on consent-based list growth, sunset inactive subscribers, and monitor complaint and bounce rates. For more information, see [Deliverability pitfalls and spam traps](https://www.braze.com/docs/user_guide/channels/email/email_setup/deliverability_pitfalls_and_spam_traps/).
+
+### Good email deliverability rates
+
+**Delivery** is whether the receiving server accepts your message; you can measure it with metrics such as *Deliveries* and bounce rate. **Deliverability** (inbox placement) depends on provider filtering and isn't shown as a single Braze metric.
+
+As a general guide, aim for delivery near 99% with hard bounces under about 1%, and watch opens and clicks for engagement trends. Exact targets vary by industry and sending pattern. For practices that support reputation, see [Improve email deliverability](https://www.braze.com/docs/user_guide/channels/email/best_practices/improve_deliverability/) and [Deliverability pitfalls and spam traps](https://www.braze.com/docs/user_guide/channels/email/email_setup/deliverability_pitfalls_and_spam_traps/).
+
+### "Campaign is already in delay window, so not enqueueing another"
+
+In message activity or diagnostic logs for [action-based campaigns](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/), this processing outcome means Braze blocked a duplicate send while an earlier trigger for the same user is still within the campaign's delivery window. A debounce lock prevents multiple enqueues for the same trigger burst.
+
+You can see this outcome even when the campaign shows **Send immediately** if any of the following apply:
+
+- The campaign uses an [exception event](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/exit_criteria/#exception-events) or a send-time delay that affects timing.
+- Users have a [re-eligibility](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/re_eligibility/) period, so they can't receive the message again until that window passes.
+- Another campaign or Canvas message step with higher priority consumed the send slot when triggers overlap.
+
+If a user should have received the message but did not, check earlier outcomes for the same trigger (for example, email bounce or not enabled for the channel). Another message in the same workflow may have prevented this send.
