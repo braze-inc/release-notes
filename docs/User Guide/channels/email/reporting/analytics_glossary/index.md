@@ -5,7 +5,7 @@
   }
 </style>
 
-<div id='api_qlrtdctbsqza' class='api_div' data-search-keywords='count'>
+<div id='api_hmoorqjalgdf' class='api_div' data-search-keywords='count'>
 <h3 id="variation">Variation</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -16,7 +16,7 @@
 
 </div>
 
-<div id='api_niugfphevhax' class='api_div' data-search-keywords='count'>
+<div id='api_ykvkzckrlbho' class='api_div' data-search-keywords='count'>
 <h3 id="emailable">Emailable</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -27,7 +27,7 @@
 
 </div>
 
-<div id='api_edefgpbtwrqa' class='api_div' data-search-keywords='percentage'>
+<div id='api_meriyuhvtsin' class='api_div' data-search-keywords='percentage'>
 <h3 id="audience-">Audience %</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -38,7 +38,7 @@
 
 </div>
 
-<div id='api_tgymhgjxnlvf' class='api_div' data-search-keywords='count'>
+<div id='api_eoomdfayujrk' class='api_div' data-search-keywords='count'>
 <h3 id="unique-recipients">Unique Recipients</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -51,7 +51,7 @@
 
 </div>
 
-<div id='api_oigswygksnei' class='api_div' data-search-keywords='count'>
+<div id='api_xzldhyzucyhu' class='api_div' data-search-keywords='count'>
 <h3 id="sends">Sends</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -64,7 +64,7 @@
 
 </div>
 
-<div id='api_kxraqisvzedj' class='api_div' data-search-keywords='count'>
+<div id='api_rtokakfpitgb' class='api_div' data-search-keywords='count'>
 <h3 id="messages-sent">Messages Sent</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -77,7 +77,7 @@
 
 </div>
 
-<div id='api_ywowbrveeaex' class='api_div' data-search-keywords='count'>
+<div id='api_jamoarkrtfli' class='api_div' data-search-keywords='count'>
 <h3 id="deliveries">Deliveries</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -88,9 +88,13 @@
 
 <p><span class="calculation-line">Calculation: (Sends) - (Bounces) </span></p>
 
+<p><strong>Note:</strong></p>
+
+<p>For user-level <strong>received</strong> state and related logic (such as frequency capping), Braze generally marks a user when the send is processed and handed off for delivery—not when the email service provider (ESP) confirms final delivery to the inbox. That avoids timing gaps between ESP confirmation and in-product rules. It may differ from ESP- or third-party delivery reports.</p>
+
 </div>
 
-<div id='api_eaeooajoglem' class='api_div' data-search-keywords='percentage'>
+<div id='api_bagpahgngfqq' class='api_div' data-search-keywords='percentage'>
 <h3 id="deliveries-">Deliveries %</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -101,7 +105,7 @@
 
 </div>
 
-<div id='api_axbklibrxefu' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_wwzuxyfsaqyz' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="bounces">Bounces</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -111,6 +115,10 @@
 <p>For email, <em>Bounce %</em> or <em>Bounce Rate</em> is the percentage of messages that were unsuccessfully sent or designated as “returned” or “not received” from send services used or not received by the intended emailable users.</p>
 
 <p>An email bounce for customers using SendGrid consists of hard bounces, spam (<code class="language-plaintext highlighter-rouge">spam_report_drops</code>), and emails sent to invalid addresses (<code class="language-plaintext highlighter-rouge">invalid_emails</code>).</p>
+
+<p><strong>Note:</strong></p>
+
+<p>In <a href="/docs/user_guide/data/distribution/braze_currents/">Braze Currents</a>, temporary ESP deferrals are often represented as soft bounces. Deliverability tools (for example, native SendGrid reporting or Looker models) may use deferrals for the same situation. Deferrals are usually temporary, and mail is often delivered after retries. After extended retries (up to roughly 72 hours for soft bounces in campaign analytics), a message may be treated as undeliverable depending on your ESP. Currents email events are append-only—a logged soft bounce is not removed later if the message eventually delivers.</p>
 
 <span class="calculation-line">
     Calculation:
@@ -122,20 +130,20 @@
 
 </div>
 
-<div id='api_agsofpvamvqp' class='api_div' data-search-keywords='count'>
+<div id='api_sgblooxfrmrv' class='api_div' data-search-keywords='count'>
 <h3 id="hard-bounce">Hard Bounce</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
-<p>When an email hard bounces or is marked as spam, Braze marks the email address as invalid but does not update the user’s <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/">subscription status</a>. Braze stops any future sends to that email address. To remove an email address from your hard bounce list, use the <a href="/docs/api/endpoints/email/post_remove_hard_bounces">Remove hard bounced emails endpoint</a>.</p>
+<p>When an email hard bounces or is marked as spam, Braze marks the email address as invalid but does not update the user’s <a href="/docs/user_guide/channels/email/subscriptions/">subscription status</a>. Braze stops any future sends to that email address. To remove an email address from your hard bounce list, use the <a href="/docs/api/endpoints/email/post_remove_hard_bounces">Remove hard bounced emails endpoint</a>.</p>
 
 <p><span class="calculation-line">Calculation: Count </span></p>
 
 </div>
 
-<div id='api_kycgwdbaufqf' class='api_div' data-search-keywords='count'>
+<div id='api_huzhskpryojf' class='api_div' data-search-keywords='count'>
 <h3 id="soft-bounce">Soft Bounce</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -150,7 +158,7 @@
 
 </div>
 
-<div id='api_hhmxrxbdymje' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_shypemoljgoy' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="spam">Spam</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -167,7 +175,7 @@
 
 </div>
 
-<div id='api_luucgkslhwxb' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_xurzwepqbuej' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="unique-opens">Unique Opens</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -186,14 +194,14 @@
 
 </div>
 
-<div id='api_sfkjsrysjofq' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_cfqgjibchpjl' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="unique-clicks">Unique Clicks</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
-<p>This is tracked over a seven-day period for email and measured by <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">dispatch_id</a>. This includes clicks on Braze-provided unsubscribe links. After seven days, another unique click can count for the same user if they click again. To match dashboard counts from Currents, filter for events where <code class="language-plaintext highlighter-rouge">is_unique</code> is <code class="language-plaintext highlighter-rouge">true</code>.</p>
+<p>This is tracked over a seven-day period for email and measured per <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">dispatch_id</a> (a single send attempt). This includes clicks on Braze-provided unsubscribe links. After seven days, another unique click can count for the same user if they click again. Dashboard email engagement metrics, including <em>Unique Clicks</em>, are calculated in Braze and are not reconciled from ESP aggregate reports. To match dashboard counts from Currents, filter for events where <code class="language-plaintext highlighter-rouge">is_unique</code> is <code class="language-plaintext highlighter-rouge">true</code>.</p>
 
 <span class="calculation-line">
     Calculation:
@@ -205,7 +213,7 @@
 
 </div>
 
-<div id='api_wwnjisrdahpz' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_cyreiwwvrltm' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="unsubscribers-or-unsub">Unsubscribers or Unsub</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -235,7 +243,7 @@
 
 </div>
 
-<div id='api_sthagiuvrpvg' class='api_div' data-search-keywords='count'>
+<div id='api_yxjvifuzbvvg' class='api_div' data-search-keywords='count'>
 <h3 id="revenue">Revenue</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -246,7 +254,7 @@
 
 </div>
 
-<div id='api_dgqqtatgythz' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_qkhpovxetaoz' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="primary-conversions-a-or-primary-conversion-event">Primary Conversions (A) or Primary Conversion Event</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -265,7 +273,7 @@
 
 </div>
 
-<div id='api_fjrxakpbizkm' class='api_div' data-search-keywords='count'>
+<div id='api_odsfbwqsapee' class='api_div' data-search-keywords='count'>
 <h3 id="confidence">Confidence</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -274,7 +282,7 @@
 
 </div>
 
-<div id='api_badbdckrwocr' class='api_div' data-search-keywords=''>
+<div id='api_bbtrznsxiumi' class='api_div' data-search-keywords=''>
 <h3 id="machine-opens">Machine Opens</h3>
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
@@ -285,7 +293,7 @@
 
 </div>
 
-<div id='api_ofuvcplpvpzk' class='api_div' data-search-keywords='count'>
+<div id='api_ibtiscyjdxzu' class='api_div' data-search-keywords='count'>
 <h3 id="other-opens">Other Opens</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -298,7 +306,7 @@
 
 </div>
 
-<div id='api_ocmrkazpxeps' class='api_div' data-search-keywords='percentage'>
+<div id='api_yizexebklvum' class='api_div' data-search-keywords='percentage'>
 <h3 id="click-to-open-rate">Click-to-Open Rate</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>

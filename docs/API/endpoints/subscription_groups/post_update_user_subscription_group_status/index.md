@@ -1,4 +1,4 @@
-<div id='api_tqrtnfdqdzpi' class='api_div' data-search-keywords='prerequisites subscription_group_id subscription_state external_id phone use_double_opt_in_logic email message'>
+<div id='api_gkbtkcgfioog' class='api_div' data-search-keywords='prerequisites subscription_group_id subscription_state external_id phone use_double_opt_in_logic email message'>
 <h1 id="update-users-subscription-group-status">Update user’s subscription group status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/subscription/status/set</p>
@@ -32,8 +32,12 @@
 
 <ul>
   <li>If a user is deleted and is the only user associated with a given phone number or email address, the subscription state for that phone number or email address is deleted immediately.</li>
-  <li>If you call <code class="language-plaintext highlighter-rouge">/subscription/status/set</code> or <code class="language-plaintext highlighter-rouge">/v2/subscription/status/set</code> with a phone number or email address that is not currently associated with any user profile, Braze stores that subscription state for up to 30 days, after which it is automatically deleted.</li>
-  <li>If a new user profile is created with a phone number or email address that has an orphaned subscription state stored for it, that user inherits the stored subscription state but only within the 30-day window. This 30-day grace period is intentional and exists to handle race conditions when creating a user and setting its channel identifier’s subscription state happen in separate API calls. An example of this race condition is when a <code class="language-plaintext highlighter-rouge">/subscription/status/set</code> request is processed for a phone number before the <code class="language-plaintext highlighter-rouge">/users/track</code> request creating the corresponding user profile is processed</li>
+  <li>If you call <code class="language-plaintext highlighter-rouge">/subscription/status/set</code> or <code class="language-plaintext highlighter-rouge">/v2/subscription/status/set</code> with a phone number or email address that is not currently associated with any user profile, Braze stores that subscription state for up to 30 days, after which it is automatically deleted.
+    <ul>
+      <li>If <code class="language-plaintext highlighter-rouge">use_double_opt_in_logic</code> is set to <code class="language-plaintext highlighter-rouge">true</code> and no user profile is associated with the provided phone number, the subscription state is not updated; a user must exist to enter the double opt-in workflow.</li>
+    </ul>
+  </li>
+  <li>If a new user profile is created with a phone number or email address that has an orphaned subscription state stored for it, that user inherits the stored subscription state but only within the 30-day window. This 30-day grace period is intentional and exists to handle race conditions when creating a user and setting its channel identifier’s subscription state happen in separate API calls. An example of this race condition is when a <code class="language-plaintext highlighter-rouge">/subscription/status/set</code> request is processed for a phone number before the <code class="language-plaintext highlighter-rouge">/users/track</code> request creating the corresponding user profile is processed.</li>
 </ul>
 
 <h2 id="rate-limit">Rate limit</h2>
@@ -218,6 +222,10 @@ Authorization: Bearer YOUR-REST-API-KEY
     </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="troubleshooting-intermittent-update-failures">Troubleshooting intermittent update failures</h2>
+
+<p>If subscription group updates intermittently fail or appear out of sync, wait several minutes between update requests or call <a href="/docs/api/endpoints/subscription_groups/get_list_user_subscription_group_status/"><code class="language-plaintext highlighter-rouge">/subscription/user/status</code></a> to confirm the user’s state before sending another update.</p>
 
 <p><strong>Important:</strong></p>
 
