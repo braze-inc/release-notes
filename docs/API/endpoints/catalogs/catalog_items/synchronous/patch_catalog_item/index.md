@@ -1,4 +1,4 @@
-<div id='api_xqxxycvmkdmd' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
+<div id='api_ennidcmkiusi' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
 <h1 id="edit-catalog-item">Edit catalog item</h1>
 <div class="api_type"><div class="method patch ">patch</div>
 <p>/catalogs/{catalog_name}/items/{item_id}</p>

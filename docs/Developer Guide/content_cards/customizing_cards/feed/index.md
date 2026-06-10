@@ -66,6 +66,8 @@ function refresh() {
 }
 ```
 
+To open Content Card links in a new browser tab instead of the same tab, set `openCardsInNewTab: true` in your Web SDK initialization options. For more information about initialization options, see [Web SDK repository guide](https://www.braze.com/docs/developer_guide/sdk_repository_guides/web/).
+
 
 
 

@@ -271,6 +271,8 @@ When you combine automated testing with thoughtful manual review, you’ll catch
 
 ![Test push](https://www.braze.com/docs/assets/img_archive/testpush.png?fe898d4940bf8067e8e0bf74d99e5ad8)
 
+If you see an error that none of the selected users have matching push tokens, the test user does not have a valid push token for the selected platform. The user must have started a session in the app and enabled push for that device. For more information, see [Push enablement and push subscription](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states).
+
 #### Web push
 
 1. Create your web push.
