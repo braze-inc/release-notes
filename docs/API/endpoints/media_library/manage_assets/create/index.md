@@ -1,4 +1,4 @@
-<div id='api_yjkepwglmzmt' class='api_div' data-search-keywords='prerequisites asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
+<div id='api_rbnmchwdjgfo' class='api_div' data-search-keywords='prerequisites asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
 <h1 id="upload-an-asset-to-the-media-library">Upload an asset to the media library</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/media_library/create</p>

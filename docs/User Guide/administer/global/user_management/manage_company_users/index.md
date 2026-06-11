@@ -31,9 +31,11 @@ Every email address used in an [instance](https://www.braze.com/docs/user_guide/
 
 If your team uses Gmail and you're experiencing issues adding an email address, you can create an alias by adding a plus sign (+) like "+1" or "+test" to the email address. For example, `contractor@braze.com` can have an alias of `contractor+1@braze.com`. Emails to `contractor+1@braze.com` will still be delivered to `contractor@braze.com`, but the alias will be recognized as a unique email address.
 
+To use one account across multiple companies without aliases, see [Use multi-company developers](https://www.braze.com/docs/user_guide/administer/personal/accessing_your_account/#use-multi-company-developers). If you use SSO, review [Considerations for Single Sign-On (SSO)](https://www.braze.com/docs/user_guide/administer/personal/accessing_your_account/#considerations-for-single-sign-on-sso) before registering with multiple email addresses.
+
 ### Can I change my Braze account's email address?
 
-For security reasons, users cannot change the email address associated with their Braze account. If a user wants to update their email address, an administrator should [create a new account](#adding-braze-users) for them with their preferred email address.
+For security reasons, users cannot change the email address associated with their Braze account. If a user wants to update their email address, an administrator should [create a new account](#adding-company-users) for them with their preferred email address.
 
 ## Assigning user access and responsibilities
 
