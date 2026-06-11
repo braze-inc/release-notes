@@ -30,7 +30,7 @@ Features for Banners include:
 
 - **Easy content building:** Create and preview your Banner using a visual, drag-and-drop editor with support for images, text, buttons, email capture forms, custom code, and more.
 - **Flexible placements:** Define multiple locations within your application or website where Banners can appear, enabling precise targeting to specific contexts or user experiences.
-- **Dynamic personalization:** Banners can be refreshed either during an active session when your app explicitly calls `requestBannersRefresh()`, or automatically at the start of a new session when `subscribeToBannersUpdates()` has been implemented and `requestBannersRefresh()` has previously been called at least once for the relevant placement IDs.
+- **Dynamic personalization:** Banners can only be refreshed at the start of a new session or mid-session if you explicitly request the refresh. Banners don't update automatically on a new session. If you don't request the refresh, the Banner won't update.
 - **Native prioritization:** Set the display priority for when multiple Banners target the same placement, ensuring the right message reaches users at the right time.
 - **Custom Code editor block:** Use the Custom Code editor block to add custom HTML for advanced customization or seamless integration with your existing web styles.
 
@@ -76,7 +76,7 @@ If you're on newer minimum SDK versions (Swift 13.1.0+, Android 38.0.0+, Web 6.1
 - Each user session begins with five refresh tokens.
 - Tokens refill at a rate of one token every 180 seconds (3 minutes).
 
-Each call to `requestBannersRefresh` consumes one token. If you attempt a refresh when no tokens are available, the SDK doesn't make the request and logs an error until a token refills. This is important for mid-session and event-triggered updates. To implement dynamic updates (for example, after a user completes an action on the same page), call the refresh method after the custom event is logged, but note the necessary delay for Braze to ingest and process the event before the user qualifies for a different Banner campaign.
+Each explicit call to `requestBannersRefresh` consumes one token. The automatic refresh that occurs at the start of a new session or when `changeUser` is called does not consume a token, as this refresh is a publishing of the last cached Banner for that user. If you attempt a refresh when no tokens are available, the SDK doesn't make the request and logs an error until a token refills. This is important for mid-session and event-triggered updates. To implement dynamic updates (for example, after a user completes an action on the same page), call the refresh method after the custom event is logged, but note the necessary delay for Braze to ingest and process the event before the user qualifies for a different Banner campaign.
 
 
 ### Message delivery

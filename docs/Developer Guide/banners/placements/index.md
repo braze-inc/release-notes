@@ -21,7 +21,7 @@ If you're on newer minimum SDK versions (Swift 13.1.0+, Android 38.0.0+, Web 6.1
 - Each user session begins with five refresh tokens.
 - Tokens refill at a rate of one token every 180 seconds (3 minutes).
 
-Each call to `requestBannersRefresh` consumes one token. If you attempt a refresh when no tokens are available, the SDK doesn't make the request and logs an error until a token refills. This is important for mid-session and event-triggered updates. To implement dynamic updates (for example, after a user completes an action on the same page), call the refresh method after the custom event is logged, but note the necessary delay for Braze to ingest and process the event before the user qualifies for a different Banner campaign.
+Each explicit call to `requestBannersRefresh` consumes one token. The automatic refresh that occurs at the start of a new session or when `changeUser` is called does not consume a token, as this refresh is a publishing of the last cached Banner for that user. If you attempt a refresh when no tokens are available, the SDK doesn't make the request and logs an error until a token refills. This is important for mid-session and event-triggered updates. To implement dynamic updates (for example, after a user completes an action on the same page), call the refresh method after the custom event is logged, but note the necessary delay for Braze to ingest and process the event before the user qualifies for a different Banner campaign.
 
 
 ## Create a placement
@@ -47,7 +47,7 @@ Give your placement a name and assign a **Placement ID**. Be sure you consult ot
 
 ### Step 2: Refresh placements in your app {#requestBannersRefresh}
 
-Placements can be refreshed by calling the refresh methods described below. These placements will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method.
+Placements can be refreshed by calling the refresh methods described below. If `subscribeToBannersUpdates` is active, the SDK automatically re-publishes your cached placement IDs at the start of each new session and when you call `changeUser`. This automatic refresh does not consume a rate limiting token.
 
 **Tip:**
 

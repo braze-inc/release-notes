@@ -1,8 +1,10 @@
-# Product portal ![Resources menu in the Braze dashboard](https://www.braze.com/docs/assets/img/portal.png?e20768be5f2c7ec2cdd97e49796d9b5f){: style="float:right;max-width:33%;margin-left:15px;margin-top:15px;"}
+# Product portal
 
-> With the product portal, you can access the Braze product roadmap and submit ideas. This provides you with insight into what we've recently released, new features that we're working on, and ideas we're considering building. In the portal, you can vote for the features you want by ranking a feature's importance to you and leave a comment with feedback or a request. 
+> With the product portal, you can access the Braze product roadmap and submit ideas. This provides you with insight into what we've recently released, new features that we're working on, and ideas we're considering building. In the portal, you can vote for the features you want by ranking a feature's importance to you and leave a comment with feedback or a request.
 
-The product portal can be found at **Community** > **Product Roadmap**.
+The product portal can be found at **Community** > **Product roadmap**.
+
+![Resources menu in the Braze dashboard](https://www.braze.com/docs/assets/img/portal.png?a1c06a62fd76e009305caba67bd3c6f5){: style="max-width:40%;"}
 
 ## What's in the portal
 
