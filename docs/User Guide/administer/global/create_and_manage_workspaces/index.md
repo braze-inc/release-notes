@@ -18,7 +18,7 @@ Before you begin, make sure you've worked with your team and your Braze onboardi
 
 You can create new workspaces or switch between existing workspaces from the workspace dropdown in the global header.
 
-1. Select the workspace dropdown, then select <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Create workspace**.
+1. Select the workspace dropdown, then select <i class="fa-solid fa-square-plus" style="color: #0b8294;" aria-hidden="true"></i> **Create workspace**.
 
 ![The workspace dropdown with the "Create workspace" button.](https://www.braze.com/docs/assets/img/workspaces/workspace_create.png?66547b3dd6b2de885772333b2ea81d69){: style="max-width:60%;"}
 
@@ -107,8 +107,8 @@ There's no limit to the number of workspaces you can favorite, but we recommend 
 To rename your workspace:
 
 1. Go to **Settings** > **App Settings**.
-2. Hover over your workspace’s name and select <i class="fa-solid fa-pencil" style="color: #0b8294;"></i>.
-3. Give your workspace a new name, then select <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Save**.
+2. Hover over your workspace’s name and select <i class="fa-solid fa-pencil" style="color: #0b8294;" aria-hidden="true"></i> **Edit**.
+3. Give your workspace a new name, then select <i class="fa-solid fa-square-check" style="color: #0b8294;" aria-hidden="true"></i> **Save**.
 
 ![The pencil icon appearing next to the workspace name.](https://www.braze.com/docs/assets/img/workspaces/workspace_rename.gif?c8a8602ae51694e76c4606494496041d){: style="max-width:50%;"}
 

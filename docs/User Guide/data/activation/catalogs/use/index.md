@@ -12,7 +12,7 @@ The following video walks through how to use catalogs in a message.
 
 ### Step 1: Add personalization type {#step-one-personalization}
 
-In the message composer of your choice, select the <i class="fas fa-plus-circle"></i> plus icon to open the **Add Personalization** modal and select **Catalog Items** for the **Personalization type**. Then, select your catalog name. Using our previous example, we'll select the "Games" catalog.
+In the message composer of your choice, select <i class="fas fa-plus-circle"></i> **Add Personalization** and select **Catalog Items** for the **Personalization type**. Then, select your catalog name. Using our previous example, we'll select the "Games" catalog.
 
 ![](https://www.braze.com/docs/assets/img_archive/use_catalog_personalization.png?362644459eb9e05831c96632c4c703fb)
 

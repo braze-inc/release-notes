@@ -126,7 +126,7 @@ Next, take your generated Liquid snippet and insert it into your message. After 
 
 ### Using the AI copywriter
 
-When a text block is selected in your in-app message, click <i class="fa-solid fa-wand-magic-sparkles" title="AI copywriter"></i> in the block toolbar to launch the [AI-powered copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/generative_ai/copywriting/). The AI copywriting assistant passes a brief product name or description to OpenAI’s GPT3 copy generation tool to generate human-like marketing copy for your messaging.
+When a text block is selected in your in-app message, select <i class="fa-solid fa-wand-magic-sparkles" title="AI copywriter"></i> **AI copywriter** in the block toolbar to launch the [AI-powered copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/generative_ai/copywriting/). The AI copywriting assistant passes a brief product name or description to OpenAI's GPT3 copy generation tool to generate human-like marketing copy for your messaging.
 
 **Tip:**
 
@@ -151,9 +151,9 @@ After making changes to the styling of an element, you can copy and paste those 
 
 ![Dropdown menu with option to copy styles.](https://www.braze.com/docs/assets/img_archive/dnd_iam_copypaste_styles.png?239f1c3b4aefa41ab9537749db93b7cd){: style="float:right;margin-left:15px;max-width:35%"}
 
-1. With the element selected, select <i class="fas fa-paintbrush" title="Copy or paste styles"></i> next to the properties panel name (For example, if you have a button selected, next to "Button properties").
+1. With the element selected, select <i class="fas fa-paintbrush" title="Copy or paste styles"></i> **Copy or paste styles** next to the properties panel name (For example, if you have a button selected, next to "Button properties").
 2. Click **Copy styles** and select the element where you would like to apply the copied style.
-3. Select <i class="fas fa-paintbrush" title="Copy or paste styles"></i> again and choose **Paste styles**.
+3. Select <i class="fas fa-paintbrush" title="Copy or paste styles"></i> **Copy or paste styles** again and choose **Paste styles**.
 
 #### Keyboard shortcuts
 

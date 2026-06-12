@@ -799,7 +799,7 @@ Refer to the **Product Breakdown** table for a list of the products purchased du
 
 ## Exporting revenue data
 
-To export your revenue data, select <i class="fas fa-bars" title="Chart context menu"></i> in the **Performance Over Time** graph and select your export option.
+To export your revenue data, select <i class="fas fa-bars" title="Chart context menu"></i> **Chart context menu** in the **Performance Over Time** graph and select your export option.
 
 **Tip:**
 

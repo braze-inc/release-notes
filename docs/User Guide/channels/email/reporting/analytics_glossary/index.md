@@ -5,7 +5,7 @@
   }
 </style>
 
-<div id='api_iktpxbhbckqd' class='api_div' data-search-keywords='count'>
+<div id='api_cqkkpopcrmti' class='api_div' data-search-keywords='count'>
 <h3 id="variation">Variation</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -16,7 +16,7 @@
 
 </div>
 
-<div id='api_czndkzrvbtmw' class='api_div' data-search-keywords='count'>
+<div id='api_agqiedcolewr' class='api_div' data-search-keywords='count'>
 <h3 id="emailable">Emailable</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -27,7 +27,7 @@
 
 </div>
 
-<div id='api_owqrukidyoui' class='api_div' data-search-keywords='percentage'>
+<div id='api_ezpupfrieneu' class='api_div' data-search-keywords='percentage'>
 <h3 id="audience-">Audience %</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -38,7 +38,7 @@
 
 </div>
 
-<div id='api_brijrulxicwz' class='api_div' data-search-keywords='count'>
+<div id='api_ldvmzdmuifaa' class='api_div' data-search-keywords='count'>
 <h3 id="unique-recipients">Unique Recipients</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -51,7 +51,7 @@
 
 </div>
 
-<div id='api_ebuupomisovc' class='api_div' data-search-keywords='count'>
+<div id='api_jnbwnkanaqfi' class='api_div' data-search-keywords='count'>
 <h3 id="sends">Sends</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -64,7 +64,7 @@
 
 </div>
 
-<div id='api_hnzcwzbikshy' class='api_div' data-search-keywords='count'>
+<div id='api_vczznpbuiyeh' class='api_div' data-search-keywords='count'>
 <h3 id="messages-sent">Messages Sent</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -77,7 +77,7 @@
 
 </div>
 
-<div id='api_ygwykemiiedm' class='api_div' data-search-keywords='count'>
+<div id='api_djpfwgiczjgw' class='api_div' data-search-keywords='count'>
 <h3 id="deliveries">Deliveries</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -94,7 +94,7 @@
 
 </div>
 
-<div id='api_tzvnjsmvowgh' class='api_div' data-search-keywords='percentage'>
+<div id='api_mmlugntmxvtw' class='api_div' data-search-keywords='percentage'>
 <h3 id="deliveries-">Deliveries %</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -105,7 +105,7 @@
 
 </div>
 
-<div id='api_lqojovrsaige' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_qlqtfdnevars' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="bounces">Bounces</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -130,7 +130,7 @@
 
 </div>
 
-<div id='api_kgdkgdvihsxy' class='api_div' data-search-keywords='count'>
+<div id='api_jmgmvmvinwfd' class='api_div' data-search-keywords='count'>
 <h3 id="hard-bounce">Hard Bounce</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -143,7 +143,7 @@
 
 </div>
 
-<div id='api_tdheiddpldds' class='api_div' data-search-keywords='count'>
+<div id='api_obhmezydxzxl' class='api_div' data-search-keywords='count'>
 <h3 id="soft-bounce">Soft Bounce</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -158,7 +158,7 @@
 
 </div>
 
-<div id='api_thzftcgulvje' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_wcvfjtdfdlhw' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="spam">Spam</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -175,7 +175,7 @@
 
 </div>
 
-<div id='api_adzldlfjpymk' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_pymeqzbfjkle' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="unique-opens">Unique Opens</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -194,7 +194,7 @@
 
 </div>
 
-<div id='api_coqrodehxrjs' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_rhbmylnwlbvq' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="unique-clicks">Unique Clicks</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -213,7 +213,7 @@
 
 </div>
 
-<div id='api_tyrcxddtnzbc' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_tebyetcadhzr' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="unsubscribers-or-unsub">Unsubscribers or Unsub</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -243,7 +243,7 @@
 
 </div>
 
-<div id='api_tqwzzjmithno' class='api_div' data-search-keywords='count'>
+<div id='api_tbvhbcxkbmsh' class='api_div' data-search-keywords='count'>
 <h3 id="revenue">Revenue</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -254,7 +254,7 @@
 
 </div>
 
-<div id='api_juehrrnewblc' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_wwpbbscslgmz' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="primary-conversions-a-or-primary-conversion-event">Primary Conversions (A) or Primary Conversion Event</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -273,7 +273,7 @@
 
 </div>
 
-<div id='api_ccdrlfywstic' class='api_div' data-search-keywords='count'>
+<div id='api_diwjnuectaqb' class='api_div' data-search-keywords='count'>
 <h3 id="confidence">Confidence</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -282,7 +282,7 @@
 
 </div>
 
-<div id='api_kenxdwoxgyhh' class='api_div' data-search-keywords=''>
+<div id='api_ksbecgjshteu' class='api_div' data-search-keywords=''>
 <h3 id="machine-opens">Machine Opens</h3>
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
@@ -293,7 +293,7 @@
 
 </div>
 
-<div id='api_qfyflzqoyavm' class='api_div' data-search-keywords='count'>
+<div id='api_ikrypdlnvoxv' class='api_div' data-search-keywords='count'>
 <h3 id="other-opens">Other Opens</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -306,7 +306,7 @@
 
 </div>
 
-<div id='api_icvaartzmunv' class='api_div' data-search-keywords='percentage'>
+<div id='api_yzkkxyszwgrj' class='api_div' data-search-keywords='percentage'>
 <h3 id="click-to-open-rate">Click-to-Open Rate</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>

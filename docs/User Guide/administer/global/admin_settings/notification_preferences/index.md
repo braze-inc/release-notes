@@ -22,7 +22,7 @@ The following table describes available notifications and which channels are use
 **Note:**
 
 
-If you delete the default **Recipients** value of **All Dashboard Users** and want to add it back, you can manually enter it into the dropdown field.
+Depending on the notification type, **All Dashboard Users** and **All Admins** might not appear in the recipients dropdown. You can manually type them; recipient values are case-sensitive and must match exactly. For dashboards localized outside English, use the exact recipient tag Braze shows when suggestions are available for that notification, rather than translating the phrase yourself.
 
 
 
