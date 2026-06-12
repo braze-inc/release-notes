@@ -8,10 +8,13 @@ The drag-and-drop editor uses [Content](#content) and [Rows](#rows) as the two k
 
 <table aria-label="About the editor" style="width: 100%; table-layout: fixed;">
     <caption>Content and Rows editor components</caption>
+    <thead>
     <tr>
         <th style="width: 50%;">Content</th>
         <th style="width: 50%;">Rows</th>
     </tr>
+    </thead>
+    <tbody>
     <tr>
         <td style="text-align: center;">
             <img src="/docs/assets/img/dnd/dnd_content.png?557d74c6adc8de2439cf4b3f6d2344a4" alt="The 'Rows' tab that includes different structural combinations for your email layout." style="max-width: 100%; height: auto;">
@@ -20,6 +23,7 @@ The drag-and-drop editor uses [Content](#content) and [Rows](#rows) as the two k
             <img src="/docs/assets/img/dnd/dnd_rows.png?a892620d38906a59b2edc988e49b5d95" alt="The 'Content' tab that includes basic blocks, media, and advanced" style="max-width: 100%; height: auto;">
         </td>
     </tr>
+    </tbody>
 </table>
 {: .reset-td-br-1 aria-label="About the editor" }
 

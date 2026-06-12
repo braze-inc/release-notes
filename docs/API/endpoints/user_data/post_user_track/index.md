@@ -1,4 +1,4 @@
-<div id='api_kbvgnafkgqwk' class='api_div' data-search-keywords='need to update users in bulk? attributes events purchases message attributes_processed events_processed purchases_processed errors'>
+<div id='api_mywcebxxqjhb' class='api_div' data-search-keywords='need to update users in bulk? attributes events purchases message attributes_processed events_processed purchases_processed errors'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
@@ -396,12 +396,10 @@ Authorization: Bearer YOUR_REST_API_KEY
 13
 14
 15
-16
 </pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
-{
     "attributes": [
         {
             "_update_existing_only": false,
@@ -599,6 +597,18 @@ Authorization: Bearer YOUR_REST_API_KEY
 <h3 id="how-does-userstrack-handle-invalid-nested-custom-attributes">How does <code class="language-plaintext highlighter-rouge">/users/track</code> handle invalid nested custom attributes?</h3>
 
 <p>When a nested custom attribute contains any invalid values (such as invalid time formats or null values), Braze drops all nested custom attribute updates in the request from processing. This applies to all nested structures within that specific attribute. To help ensure successful processing, verify that all values within nested custom attributes are valid before sending.</p>
+
+<h3 id="why-is-my-userstrack-response-slower-than-i-expect">Why is my <code class="language-plaintext highlighter-rouge">/users/track</code> response slower than I expect?</h3>
+
+<p>Successful <code class="language-plaintext highlighter-rouge">/users/track</code> calls are usually accepted quickly, but Braze still processes attribute, event, and purchase updates asynchronously. Perceived latency can increase when payloads are large or when network routing to your <a href="/docs/api/basics/#endpoints">REST endpoint</a> is slow. If you need a synchronous acknowledgment per user or stricter ordering between calls, see <a href="/docs/api/endpoints/user_data/post_user_track_synchronous/"><code class="language-plaintext highlighter-rouge">/users/track/sync</code></a> (<strong>limited beta</strong>).</p>
+
+<h3 id="how-do-rate-limits-affect-userstrack">How do rate limits affect <code class="language-plaintext highlighter-rouge">/users/track</code>?</h3>
+
+<p>When you approach your <a href="#rate-limit">rate limit</a>, you receive <code class="language-plaintext highlighter-rouge">429</code> responses. For non-<code class="language-plaintext highlighter-rouge">429</code> responses on supported contracts, you can use the <code class="language-plaintext highlighter-rouge">X-RateLimit-*</code> response headers described in <a href="#rate-limit-headers-for-monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau">Rate limit headers for Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU</a> to see how much of your current window remains.</p>
+
+<h3 id="why-do-i-get-400-bad-request-with-a-bad-syntax-or-parse-error">Why do I get <code class="language-plaintext highlighter-rouge">400 Bad Request</code> with a bad syntax or parse error?</h3>
+
+<p>An HTTP <code class="language-plaintext highlighter-rouge">400</code> with a syntax or parse error typically means the request body is not valid JSON. Common causes include trailing commas, comments inside JSON, single-quoted strings, an extra opening <code class="language-plaintext highlighter-rouge">{</code> before the payload, or sending a non-JSON body while the <code class="language-plaintext highlighter-rouge">Content-Type</code> header is <code class="language-plaintext highlighter-rouge">application/json</code>. Validate payloads with a JSON linter before sending, confirm your HTTP client JSON-encodes objects (rather than concatenating raw strings), and confirm the body is UTF-8 encoded. For other <code class="language-plaintext highlighter-rouge">400</code> responses (for example, payload size and per-request object limits), refer to <a href="/docs/api/errors/#fatal-errors">Fatal errors &amp; responses</a> and the <a href="#endpoint-specific-errors">Endpoint-specific errors</a> table on this page.</p>
 
 <h2 id="monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau">Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU</h2>
 

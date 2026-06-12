@@ -29,7 +29,7 @@ In Microsoft Azure, navigate to **Storage Accounts** in the sidebar and click **
 
 Even if you already have a storage account, we recommend creating a new one specifically for your Braze data.
 
-![](https://www.braze.com/docs/assets/img/azure-currents-step-1.png?df914fa80c45aeb1c6b8528284c1378b)
+![The Microsoft Azure Create storage account page on the Basics tab, with the Storage account name field highlighted.](https://www.braze.com/docs/assets/img/azure-currents-step-1.png?df914fa80c45aeb1c6b8528284c1378b)
 
 ### Step 2: Get the connection string
 
@@ -44,7 +44,7 @@ Braze uses the connection string from this menu, not the key.
 
 
 
-![](https://www.braze.com/docs/assets/img/azure-currents-step-2.png?c3c417971c43870ca2d0fe4015bf803e)
+![The Access keys page for an Azure storage account, with the connection string field under key1 highlighted.](https://www.braze.com/docs/assets/img/azure-currents-step-2.png?c3c417971c43870ca2d0fe4015bf803e)
 
 ### Step 3: Create a blob service container
 
@@ -52,7 +52,7 @@ Navigate to the **Blobs** menu under the **Blob Service** section of your storag
 
 Provide a name for your Blob Service Container. Other default settings will not need to be updated.
 
-![](https://www.braze.com/docs/assets/img/azure-currents-step-3.png?588ea86809268e06cb06d7d5cce0f060)
+![The Blobs page for an Azure storage account under Blob Service, with the option to add a container.](https://www.braze.com/docs/assets/img/azure-currents-step-3.png?588ea86809268e06cb06d7d5cce0f060)
 
 ### Step 4: Set up Currents
 
@@ -94,9 +94,7 @@ Users that have integrated a cloud data storage solution, and are trying to expo
 **Important:**
 
 
-**JSON format requirement**: For JSON exports, Braze uses JSONL (newline-delimited JSON) format, where each line contains a separate JSON object. This format differs from standard JSON, which is a single JSON array or object. Each line in the exported file is a valid JSON object, but the file as a whole is not a single valid JSON document. When processing these files, parse each line individually as a separate JSON object rather than attempting to parse the entire file as a single JSON document.
-
-Currents exports use Apache Avro format (`.avro` files), not JSON. This JSON format requirement applies to dashboard data exports and API exports that use JSON format.
+**JSON format requirement**: For JSON exports, Braze uses [JSONL](https://jsonlines.org/) (newline-delimited JSON) format, where each line contains a separate JSON object. This format differs from standard JSON, which is a single JSON array or object. Each line in the exported file is a valid JSON object, but the file as a whole is not a single valid JSON document. When processing these files, parse each line individually as a separate JSON object rather than attempting to parse the entire file as a single JSON document. <br><br> Currents exports use [Apache Avro](https://avro.apache.org/) format (`.avro` files), not JSON. This JSON format requirement applies to dashboard data exports and API exports that use JSON format.
 
 
 

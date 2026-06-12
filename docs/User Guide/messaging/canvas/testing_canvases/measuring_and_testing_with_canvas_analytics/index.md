@@ -10,7 +10,11 @@ The top of the **Canvas Details** page contains top-line Canvas statistics. Thes
 
 This is a great place to get a high-level overview to check how your Canvas is performing against your goal.
 
-![](https://www.braze.com/docs/assets/img_archive/Journey_5.png?bac8aa2dd1321b465cb524c570ebf35e)
+### Reachable users and exact statistics {#reachable-users-and-exact-statistics}
+
+When **[Calculate exact statistics](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/#single-user-segments)** is running for audiences tied to your Canvas, Braze may briefly show a rounded estimate in the **Reachable users** area. The exact total replaces the estimate when the calculation finishes. Select **Show Additional Stats** for a full per-channel breakdown. The Canvas builder documents the same flow under **Target Population**; see [Calculating target population](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/#calculating-target-population).
+
+![The Canvas Details page showing top-line statistics including messages sent, conversion rate, total entries, total revenue, total exits, and estimated audience, with channel and statistics filters.](https://www.braze.com/docs/assets/img_archive/Journey_5.png?bac8aa2dd1321b465cb524c570ebf35e)
 
 ### Changes Since Last Viewed
 
@@ -45,7 +49,7 @@ In the **Analyze Variants** tab, you can see a breakdown of performance by varia
 
 You can quickly infer effective variants and identify the right cadences, content, triggers, timing, and more.
 
-![](https://www.braze.com/docs/assets/img_archive/analyze_variants.png?307dac489bcbb50e1db10d8df50f45ad)
+![The Analyze Canvas modal with the Analyze Variants tab selected, showing a comparison table for Path 1 and Path 2 with entries, sends, revenue, conversion rates, percent change, and confidence metrics.](https://www.braze.com/docs/assets/img_archive/analyze_variants.png?307dac489bcbb50e1db10d8df50f45ad)
 
 Basic metrics include the following:  
 
