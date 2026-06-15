@@ -10,7 +10,7 @@ User profile events are in beta. Contact your customer success manager or accoun
 **Tip:**
 
 
-These events are also available as SQL tables in the [Query Builder](https://www.braze.com/docs/user_guide/analytics/query_builder/), [SQL Segment Extensions](https://www.braze.com/docs/user_guide/engagement_tools/segments/sql_segments/), and [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/). For SQL table schemas and column details, refer to the [SQL table reference](https://www.braze.com/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables/).
+These events are also available as SQL tables in the [Query Builder](https://www.braze.com/docs/user_guide/analytics/query_builder/), [SQL Segment Extensions](https://www.braze.com/docs/user_guide/engagement_tools/segments/sql_segments/), and [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/). For SQL table schemas and column details, refer to the [SQL table reference](https://www.braze.com/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables/). For Snowflake Data Sharing schemas for user profile attribute views, refer to [User profile attributes](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/user_attributes/).
 
 
 
@@ -40,7 +40,7 @@ Currents drops events with payloads larger than 900 KB.
 
 <!--overview-end-->
 
-<div id='api_vvvyrmqcvogn' class='api_div' data-search-keywords='user profile update events profile app_group_id app_id archived country custom_attributes dob email_address external_user_id first_name gender home_city id language last_name phone_number time time_ms timezone update_source user_id'>
+<div id='api_tmzuybrzxbud' class='api_div' data-search-keywords='user profile update events profile app_group_id app_id archived country custom_attributes dob email_address external_user_id first_name gender home_city id language last_name phone_number time time_ms timezone update_source user_id'>
 <h2 id="user-profile-update-events">User Profile Update events</h2>
 
 <div class="api_tags" data-tags="Profile" data-tags-lower="profile"></div>
