@@ -1,3 +1,5 @@
+> This glossary defines metrics on the **Analytics** tab for email campaigns and Canvases. Braze doesn't offer a hosted "view this email in a browser" page—see [Can I add a "view this email in a browser" link to my emails?](https://www.braze.com/docs/user_guide/channels/email/faq/#can-i-add-a-view-this-email-in-a-browser-link-to-my-emails) for a workaround. For other troubleshooting that spans multiple metrics, see [Email FAQ](https://www.braze.com/docs/user_guide/channels/email/faq/).
+
 <style>
   .calculation-line {
     color: #76848C;
@@ -5,7 +7,7 @@
   }
 </style>
 
-<div id='api_cqkkpopcrmti' class='api_div' data-search-keywords='count'>
+<div id='api_wrrroyhtkvjv' class='api_div' data-search-keywords='count'>
 <h3 id="variation">Variation</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -16,7 +18,7 @@
 
 </div>
 
-<div id='api_agqiedcolewr' class='api_div' data-search-keywords='count'>
+<div id='api_lbbxkrwqwtpb' class='api_div' data-search-keywords='count'>
 <h3 id="emailable">Emailable</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -27,7 +29,7 @@
 
 </div>
 
-<div id='api_ezpupfrieneu' class='api_div' data-search-keywords='percentage'>
+<div id='api_gzhdacsstatr' class='api_div' data-search-keywords='percentage'>
 <h3 id="audience-">Audience %</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -38,7 +40,7 @@
 
 </div>
 
-<div id='api_ldvmzdmuifaa' class='api_div' data-search-keywords='count'>
+<div id='api_wmnwemmanufb' class='api_div' data-search-keywords='count'>
 <h3 id="unique-recipients">Unique Recipients</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -51,7 +53,7 @@
 
 </div>
 
-<div id='api_jnbwnkanaqfi' class='api_div' data-search-keywords='count'>
+<div id='api_inhvwshiljcj' class='api_div' data-search-keywords='count'>
 <h3 id="sends">Sends</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -64,7 +66,7 @@
 
 </div>
 
-<div id='api_vczznpbuiyeh' class='api_div' data-search-keywords='count'>
+<div id='api_tgyqfzulkkbw' class='api_div' data-search-keywords='count'>
 <h3 id="messages-sent">Messages Sent</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -77,7 +79,7 @@
 
 </div>
 
-<div id='api_djpfwgiczjgw' class='api_div' data-search-keywords='count'>
+<div id='api_ndwgznlqfgir' class='api_div' data-search-keywords='count'>
 <h3 id="deliveries">Deliveries</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -94,7 +96,7 @@
 
 </div>
 
-<div id='api_mmlugntmxvtw' class='api_div' data-search-keywords='percentage'>
+<div id='api_yuxehzldmsth' class='api_div' data-search-keywords='percentage'>
 <h3 id="deliveries-">Deliveries %</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -105,7 +107,7 @@
 
 </div>
 
-<div id='api_qlqtfdnevars' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_tzmsocquhgbi' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="bounces">Bounces</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -130,7 +132,7 @@
 
 </div>
 
-<div id='api_jmgmvmvinwfd' class='api_div' data-search-keywords='count'>
+<div id='api_nsbgyjmteoif' class='api_div' data-search-keywords='count'>
 <h3 id="hard-bounce">Hard Bounce</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -143,7 +145,7 @@
 
 </div>
 
-<div id='api_obhmezydxzxl' class='api_div' data-search-keywords='count'>
+<div id='api_qhnmupnbsgyh' class='api_div' data-search-keywords='count'>
 <h3 id="soft-bounce">Soft Bounce</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -158,7 +160,7 @@
 
 </div>
 
-<div id='api_wcvfjtdfdlhw' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_jvsroaqptiys' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="spam">Spam</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -175,7 +177,7 @@
 
 </div>
 
-<div id='api_pymeqzbfjkle' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_znwemkpbzkjy' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="unique-opens">Unique Opens</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -194,14 +196,14 @@
 
 </div>
 
-<div id='api_rhbmylnwlbvq' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_owosjsoljjzb' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="unique-clicks">Unique Clicks</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
-<p>This is tracked over a seven-day period for email and measured per <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">dispatch_id</a> (a single send attempt). This includes clicks on Braze-provided unsubscribe links. After seven days, another unique click can count for the same user if they click again. Dashboard email engagement metrics, including <em>Unique Clicks</em>, are calculated in Braze and are not reconciled from ESP aggregate reports. To match dashboard counts from Currents, filter for events where <code class="language-plaintext highlighter-rouge">is_unique</code> is <code class="language-plaintext highlighter-rouge">true</code>.</p>
+<p>This is tracked over a seven-day period for email and measured per <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">dispatch_id</a> (a single send attempt). This includes clicks on Braze-provided unsubscribe links. Tracked custom unsubscribe URLs also count toward <em>Unique Clicks</em> when a user selects the link. After seven days, another unique click counts for the same user if they click again. Dashboard email engagement metrics, including <em>Unique Clicks</em>, are calculated in Braze and are not reconciled from ESP aggregate reports. To match dashboard counts from Currents, filter for events where <code class="language-plaintext highlighter-rouge">is_unique</code> is <code class="language-plaintext highlighter-rouge">true</code>.</p>
 
 <span class="calculation-line">
     Calculation:
@@ -211,9 +213,24 @@
     </ul>
 </span>
 
+<h4 id="unexpected-links-on-the-email-heatmap">Unexpected links on the email heatmap</h4>
+
+<p>When the <a href="/docs/user_guide/channels/email/reporting/">email heatmap</a> shows links you do not expect, inspect the message HTML for <a href="/docs/user_guide/channels/email/drag_and_drop/dnd_editor_blocks/">content blocks</a> or spacing between words that create tracked URLs. Use the <strong>Link Table by Total Clicks</strong> on the heatmap view to identify URLs that do not match visible copy.</p>
+
 </div>
 
-<div id='api_tebyetcadhzr' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_qtcvkviboftn' class='api_div' data-search-keywords='count, percentage'>
+<h3 id="total-clicks">Total Clicks</h3>
+
+<div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
+
+<p><i>Total Clicks</i> is the total number of times users clicked links in the delivered email, including multiple clicks by the same user. This includes clicks on Braze unsubscribe links and tracked custom unsubscribe URLs.</p>
+
+<p>When <em>Total Clicks</em> is much higher than <em>Unique Clicks</em>, security tools or mailbox providers scan links without users opening the message. Compare <em>Unique Clicks</em> when you evaluate engagement internally.</p>
+
+</div>
+
+<div id='api_zzohfkusbnff' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="unsubscribers-or-unsub">Unsubscribers or Unsub</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -243,7 +260,7 @@
 
 </div>
 
-<div id='api_tbvhbcxkbmsh' class='api_div' data-search-keywords='count'>
+<div id='api_qwgvajorrbja' class='api_div' data-search-keywords='count'>
 <h3 id="revenue">Revenue</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -254,7 +271,7 @@
 
 </div>
 
-<div id='api_wwpbbscslgmz' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_lsnvoblnnaqn' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="primary-conversions-a-or-primary-conversion-event">Primary Conversions (A) or Primary Conversion Event</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -273,7 +290,7 @@
 
 </div>
 
-<div id='api_diwjnuectaqb' class='api_div' data-search-keywords='count'>
+<div id='api_piwmyvtppqan' class='api_div' data-search-keywords='count'>
 <h3 id="confidence">Confidence</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -282,7 +299,7 @@
 
 </div>
 
-<div id='api_ksbecgjshteu' class='api_div' data-search-keywords=''>
+<div id='api_abalwfsndxdt' class='api_div' data-search-keywords=''>
 <h3 id="machine-opens">Machine Opens</h3>
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
@@ -293,7 +310,7 @@
 
 </div>
 
-<div id='api_ikrypdlnvoxv' class='api_div' data-search-keywords='count'>
+<div id='api_mulmkeajuqch' class='api_div' data-search-keywords='count'>
 <h3 id="other-opens">Other Opens</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -306,7 +323,18 @@
 
 </div>
 
-<div id='api_yzkkxyszwgrj' class='api_div' data-search-keywords='percentage'>
+<div id='api_pjrxlgwodrxt' class='api_div' data-search-keywords='count, percentage'>
+<h3 id="estimated-real-opens">Estimated Real Opens</h3>
+
+<div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
+
+<!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
+
+<p>Braze recalculates this estimate as new open and click data arrives. The value typically stabilizes a few days after send but continues to update when new qualifying events occur.</p>
+
+</div>
+
+<div id='api_duadqpewmwvy' class='api_div' data-search-keywords='percentage'>
 <h3 id="click-to-open-rate">Click-to-Open Rate</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -314,6 +342,10 @@
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 <p><span class="calculation-line">Calculation: (Unique Clicks) / (Unique Opens) (for Email)</span></p>
+
+<h4 id="message-open-likelihood-scores-segmentation">Message Open Likelihood scores (segmentation)</h4>
+
+<p>The <a href="/docs/user_guide/audience/segments/segmentation_filters#message-open-likelihood"><code class="language-plaintext highlighter-rouge">Message Open Likelihood</code></a> segment filter scores how likely a user is to open email on a scale of 0–100%. Users without enough send or open history for the channel appear as blank. For email, machine opens are excluded from the calculation, which uses recent message history on that channel (see <a href="/docs/user_guide/brazeai/intelligence_suite/intelligent_channel/#individual-channels">Message Open Likelihood filter for individual channels</a>).</p>
 
 </div>
 
@@ -326,6 +358,10 @@ When a recipient clicks an unsubscribe link, Braze counts it as a click because 
 ### View in browser
 
 Braze does not include a built-in "View this email in a browser" feature. Host the email content on an external landing page (such as your website) and add a link from the message using the email editor **Link** tool. For more information, see [Can I add a "view this email in a browser" link to my emails?](https://www.braze.com/docs/user_guide/channels/email/faq/#can-i-add-a-view-this-email-in-a-browser-link-to-my-emails).
+
+### Custom unsubscribe page updates
+
+Changes to your [custom unsubscribe page](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/email_preferences/) appear within a few minutes. Live sends use a short-lived cache of the page that's refreshed when you save changes.
 
 ### Over-quota and full mailbox bounces
 

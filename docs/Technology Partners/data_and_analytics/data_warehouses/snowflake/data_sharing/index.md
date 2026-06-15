@@ -73,7 +73,7 @@ Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 - Map raw event or user data to a CRM (like Salesforce)
 - And more
 
-[Download the raw table schemas here.](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt?b977a6b381783c53864c49d0b20815ca)
+[Download the raw table schemas here.](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt?e999a4bada9baac69e2b8e7332e7e8e5)
 
 ### User ID schema
 

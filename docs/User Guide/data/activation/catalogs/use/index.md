@@ -14,7 +14,7 @@ The following video walks through how to use catalogs in a message.
 
 In the message composer of your choice, select <i class="fas fa-plus-circle"></i> **Add Personalization** and select **Catalog Items** for the **Personalization type**. Then, select your catalog name. Using our previous example, we'll select the "Games" catalog.
 
-![](https://www.braze.com/docs/assets/img_archive/use_catalog_personalization.png?362644459eb9e05831c96632c4c703fb)
+![Add Personalization modal with Catalog Items selected, Games catalog chosen, and a Liquid preview showing the catalog_items tag.](https://www.braze.com/docs/assets/img_archive/use_catalog_personalization.png?362644459eb9e05831c96632c4c703fb)
 
 We can immediately see the following Liquid preview:
 
@@ -59,7 +59,7 @@ You aren't limited to one item in a message. Use the **Add Personalization** mod
 
 Check out this example where we add the `id` of three games, Tales, Teslagrad, and Acaratus, for **Catalog Items** and select `title` for **Information to Display**.
 
-![](https://www.braze.com/docs/assets/img_archive/catalog_multiple_items.png?fc8380c2670e9d911306fcbdf7429824){: style="max-width:70%" }
+![Add Personalization modal showing three catalog item IDs selected and title chosen for Information to Display, with a Liquid preview listing each item title.](https://www.braze.com/docs/assets/img_archive/catalog_multiple_items.png?fc8380c2670e9d911306fcbdf7429824){: style="max-width:70%" }
 
 We can further personalize our message by adding some text around our Liquid:
 
@@ -116,6 +116,14 @@ Message if the venue name's size is 10 characters or fewer.
 
 
 In this example, different messages display based on whether the `venue_name` field has more or fewer than 10 characters. If `venue_name` is blank, the message is aborted.
+
+To output how many items a selection returns, use the Liquid `size` filter on the `items` array after the tag, not on a single field:
+
+
+```liquid
+{% catalog_selection_items item-list selections %}{{ items | size }}
+```
+
 
 **Tip:**
 
@@ -214,7 +222,7 @@ If a catalog item contains user profile fields (within a Liquid personalization 
 
 For example, if a catalog named "Messages" has an item with this Liquid:
 
-![](https://www.braze.com/docs/assets/img_archive/catalog_liquid_templating.png?ebfa424c2ffa9b438966e3656737ba8f){: style="max-width:80%;"}
+![Catalog table row with id greet_msg and Welcome_Message column containing Welcome to our store with a first name Liquid variable.](https://www.braze.com/docs/assets/img_archive/catalog_liquid_templating.png?ebfa424c2ffa9b438966e3656737ba8f){: style="max-width:80%;"}
 
 To render the following Liquid content:
 
@@ -243,6 +251,20 @@ Welcome to our store, Peter!
 Catalog Liquid tags can't be used recursively inside catalogs.
 
 
+
+## Troubleshooting catalog personalization
+
+If catalog or selection Liquid doesn't display as you expect in a message or Canvas step, check the following:
+
+| Symptom | What to check |
+| --- | --- |
+| Preview shows items but live sends are empty | Confirm catalog **item IDs** exist at send time. If the ID in your Liquid doesn't match a row, Braze returns an empty items array—see [Using Liquid](#using-liquid). Check for typos and for ID sources (such as event properties) that are missing on the trigger or user profile. |
+| Composer preview works in a campaign but not in Canvas | Confirm you're using the right Liquid context—**Canvas context properties** versus **event properties**—and that those fields exist on the trigger. See [Context and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/). |
+| A selection returns no items | Review [selection filters](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections/) and limits; confirm that the catalog data is synced and that the column names match your filters. |
+| `:rerender` or templated delivery looks wrong | For nested Liquid inside catalog fields, you need `:rerender` and correct ordering of variables—see [Templating catalog items including Liquid](#templating-catalog-items-including-liquid). Templated in-app messages resolve at trigger time; see [What are templated in-app messages?](https://www.braze.com/docs/user_guide/channels/in_app_messages/faq/#what-are-templated-in-app-messages). Some channels restrict catalog tags (for example, certain **:rerender** uses with Banners)—see [Are all Liquid tags supported?](https://www.braze.com/docs/user_guide/channels/banners/faq/#are-all-liquid-tags-supported) in the Banners FAQ. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Troubleshooting catalog personalization" }
+
+For general Liquid behavior, see [Liquid use cases](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/liquid_use_cases/) and [Using Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid/).
 
 ## Structuring your catalog data
 
