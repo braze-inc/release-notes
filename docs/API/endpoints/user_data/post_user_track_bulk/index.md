@@ -1,4 +1,4 @@
-<div id='api_ppdzdqxhkxut' class='api_div' data-search-keywords='when to use this endpoint attributes events purchases message attributes_processed events_processed purchases_processed errors'>
+<div id='api_zaddckltjtzi' class='api_div' data-search-keywords='when to use this endpoint attributes events purchases message attributes_processed events_processed purchases_processed errors'>
 <h1 id="create-and-update-users-bulk">Create and update users (bulk)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track/bulk</p>
