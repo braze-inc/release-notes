@@ -15,6 +15,8 @@ To use the Braze SDK debugger, you'll need the "View PII" and "View User Profile
 
 <div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1020' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 10.2.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#3210' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 32.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
+To collect debugger logs when `Braze.configuration.logger.level` is `.disabled`, use Swift SDK 11.9.0 or later. For more information, see [Swift changelogs](https://www.braze.com/docs/developer_guide/changelogs/#swift_fixed-12).
+
 ## Debugging the Braze SDK
 
 **Tip:**

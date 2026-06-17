@@ -312,11 +312,7 @@ In this example:
 
 To upload your file, select **Attributes** or **Events**, click **Browse Files**, and upload your CSV. Braze displays a preview of the first few rows and a summary of the detected fields.
 
-![The file preview page showing a preview of the file after upload.](https://www.braze.com/docs/assets/img/csv_import/upload_completed_file_preview.png?3311d0a03a3bbce7bc5c6fd8f21b1c21)
-
 For large files (up to 500 MB for default attributes and custom attributes, or 50 MB for custom events), the dashboard may appear temporarily unresponsive while the file uploads and Braze calculates the import. These uploads and calculations can take longer to complete than they do for smaller files. Let this step complete. For more context on file limits and timing, see [Constructing your CSV](https://www.braze.com/docs/user_guide/data/user_data_collection/user_import/#constructing-your-csv).
-
-![The upload completed modal showing a file preview, import name field, targeting preferences, and file validation checkbox.](https://www.braze.com/docs/assets/img/csv_import/upload_completed.png?fd39783e8579d67cabdf0f25b6edb964)
 
 In the **Import name** field, you can rename your import. By default, the file name is used.
 

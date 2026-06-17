@@ -1,4 +1,4 @@
-<div id='api_xojshoqcxlbn' class='api_div' data-search-keywords='need to update users in bulk? attributes events purchases message attributes_processed events_processed purchases_processed errors'>
+<div id='api_kapukweqdaah' class='api_div' data-search-keywords='need to update users in bulk? attributes events purchases message attributes_processed events_processed purchases_processed errors'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
@@ -597,6 +597,22 @@ Authorization: Bearer YOUR_REST_API_KEY
 <h3 id="how-does-userstrack-handle-invalid-nested-custom-attributes">How does <code class="language-plaintext highlighter-rouge">/users/track</code> handle invalid nested custom attributes?</h3>
 
 <p>When a nested custom attribute contains any invalid values (such as invalid time formats or null values), Braze drops all nested custom attribute updates in the request from processing. This applies to all nested structures within that specific attribute. To help ensure successful processing, verify that all values within nested custom attributes are valid before sending.</p>
+
+<h3 id="are-requests-to-userstrack-guaranteed-to-be-processed-in-order">Are requests to <code class="language-plaintext highlighter-rouge">/users/track</code> guaranteed to be processed in order?</h3>
+
+<p>When you make multiple separate API calls to <code class="language-plaintext highlighter-rouge">/users/track</code> in rapid succession, Braze cannot guarantee that requests are processed in the exact order they are sent or received. This is because Braze uses asynchronous processing to maximize speed and flexibility.</p>
+
+<p>For example, if you send multiple update requests for the same user within seconds of each other—some with null attribute values and others with valid values—the requests containing null values may be processed after requests with valid values, even if sent earlier. This can result in attribute values appearing to revert or not reflect the most recently sent update.</p>
+
+<p>To avoid race conditions when updating user data:</p>
+
+<ul>
+  <li><strong>Batch updates in a single request:</strong> Include all attribute updates for a user in one API call rather than making separate consecutive calls.</li>
+  <li><strong>Add delays between requests:</strong> If you must make separate calls for the same user, add a delay (a few seconds) between requests to allow the first request to complete processing before the next one is sent.</li>
+  <li><strong>Avoid overlapping updates for the same field:</strong> If two requests update the same attribute with different values, send those updates in one request or separate them with a delay to reduce the chance of out-of-order results.</li>
+</ul>
+
+<p>For more information about race conditions and best practices, see <a href="/docs/user_guide/messaging/ab_testing/concepts/race_conditions">Race conditions</a>.</p>
 
 <h3 id="why-is-my-userstrack-response-slower-than-i-expect">Why is my <code class="language-plaintext highlighter-rouge">/users/track</code> response slower than I expect?</h3>
 

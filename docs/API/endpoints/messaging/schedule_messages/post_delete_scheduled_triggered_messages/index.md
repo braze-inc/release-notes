@@ -1,4 +1,4 @@
-<div id='api_hrfppukyznfl' class='api_div' data-search-keywords='prerequisites campaign_id schedule_id'>
+<div id='api_lrfbjidmslmz' class='api_div' data-search-keywords='prerequisites campaign_id schedule_id'>
 <h1 id="delete-scheduled-api-triggered-campaigns">Delete scheduled API-triggered campaigns</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/schedule/delete</p>

@@ -1,4 +1,4 @@
-<div id='api_vluhkvzkbhdc' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
+<div id='api_mawkpaopfwyi' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
 <h1 id="create-catalog-item">Create catalog item</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/catalogs/{catalog_name}/items/{item_id}</p>
