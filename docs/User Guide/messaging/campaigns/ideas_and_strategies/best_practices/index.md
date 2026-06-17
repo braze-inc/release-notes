@@ -68,6 +68,8 @@ When editing campaign schedules or audiences, note the following best practices:
 - **Local send time campaigns:** Don't make edits 24 hours before the scheduled send time.
 - **Optimal send time campaigns:** Don't make edits 24 hours before midnight of the day the campaign is scheduled to be sent on.
 
+For Canvas scheduling nuances (drafts, stops, and evaluation near send time), see [Canvas best practices](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/best_practices/#scheduling-your-canvases).
+
 **Note:**
 
 

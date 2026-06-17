@@ -1,4 +1,4 @@
-<div id='api_dpdwfcldhqdd' class='api_div' data-search-keywords='prerequisites count templates email_template_id template_name created_at updated_at tags'>
+<div id='api_lkixsaadnfyo' class='api_div' data-search-keywords='prerequisites count templates email_template_id template_name created_at updated_at tags'>
 <h1 id="list-available-email-templates">List available email templates</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/list</p>

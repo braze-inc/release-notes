@@ -66,11 +66,13 @@ These views provide periodic snapshots of user profile attributes. The data is d
 * Faster query execution, particularly when filtering on attributes other than `USER_ID`.
 * **Limitation:** Data is not up to date in real time.
 
-**Note:**
-
-
-The `TIME` field represents the time in seconds of the user profile update; the `TIME_MS` field indicates this in millisecond precision. For backfilled data, the `TIME` and `TIME_MS` values are the time of the backfill.
-
+<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><b>note</b><br />
+<p><strong>Understanding date fields:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">TIME</code> and <code class="language-plaintext highlighter-rouge">TIME_MS</code>: Represent the time the user profile update occurred in Braze (in seconds and milliseconds, respectively). For backfilled data, these values are the time of the backfill.</li>
+  <li><code class="language-plaintext highlighter-rouge">SF_UPDATED_AT</code>: Represents the time the data was last persisted in Snowflake. This field is most useful for determining data freshness—the time the row was most recently synced to your data warehouse.</li>
+</ul>
+</div></div>
 
 
 ### `USER_DEFAULT_ATTRIBUTES_VIEW_SHARED` schema
@@ -131,11 +133,13 @@ These views provide near real-time updates on user profile attributes, with data
     * Queries without USER_ID filters require aggregation across all users, leading to significantly longer execution times.
     * Queries on a large dataset (such as over 100 million users) may take many minutes.
 
-**Note:**
-
-
-The `TIME` field represents the time in seconds of the user profile update; the `TIME_MS` field indicates this in millisecond precision. For backfilled data, the `TIME` and `TIME_MS` values are the time of the backfill.
-
+<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><b>note</b><br />
+<p><strong>Understanding date fields:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">TIME</code> and <code class="language-plaintext highlighter-rouge">TIME_MS</code>: Represent the time the user profile update occurred in Braze (in seconds and milliseconds, respectively). For backfilled data, these values are the time of the backfill.</li>
+  <li><code class="language-plaintext highlighter-rouge">SF_UPDATED_AT</code>: Represents the time the data was last persisted in Snowflake. This field is most useful for determining data freshness—the time the row was most recently synced to your data warehouse.</li>
+</ul>
+</div></div>
 
 
 ### `USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED` schema
@@ -192,11 +196,13 @@ These views store historical change logs of user attributes, capturing changes w
 * Data is snapshotted every 12 hours, meaning multiple updates in this window are combined into a single record. Individual changes within this period are not separately retained.
 * `EFF_DT` and `END_DT` mark the start and end of a user’s attribute state.
 
-**Note:**
-
-
-The `TIME` field represents the time in seconds of the user profile update; the `TIME_MS` field indicates this in millisecond precision. For backfilled data, the `TIME` and `TIME_MS` values are the time of the backfill.
-
+<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><b>note</b><br />
+<p><strong>Understanding date fields:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">TIME</code> and <code class="language-plaintext highlighter-rouge">TIME_MS</code>: Represent the time the user profile update occurred in Braze (in seconds and milliseconds, respectively). For backfilled data, these values are the time of the backfill.</li>
+  <li><code class="language-plaintext highlighter-rouge">SF_UPDATED_AT</code>: Represents the time the data was last persisted in Snowflake. This field is most useful for determining data freshness—the time the row was most recently synced to your data warehouse.</li>
+</ul>
+</div></div>
 
 
 ### `USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED` schema

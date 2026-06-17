@@ -1,6 +1,13 @@
-# Custom HTTP connector
+# Custom Currents Export
 
 > Learn how to integrate a custom Currents connector, so you can get event data from Braze in real time, enabling more customized analytics, reporting, and automation.
+
+**Note:**
+
+
+This feature is also referred to as the Custom HTTP Connector in technical documentation and API references.
+
+
 
 ## Prerequisites
 

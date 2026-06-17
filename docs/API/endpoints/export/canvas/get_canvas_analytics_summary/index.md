@@ -1,4 +1,4 @@
-<div id='api_qnbobxmhrxen' class='api_div' data-search-keywords='prerequisites data name total_stats revenue conversions conversions_by_entry_time entries variant_stats step_stats messages android_push sent opens influenced_opens bounces message'>
+<div id='api_ascstlodfjdi' class='api_div' data-search-keywords='prerequisites data name total_stats revenue conversions conversions_by_entry_time entries variant_stats step_stats messages android_push sent opens influenced_opens bounces message'>
 <h1 id="export-canvas-data-summary-analytics">Export Canvas data summary analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/data_summary</p>
@@ -83,7 +83,7 @@
 
 <p><strong>Important:</strong></p>
 
-<p><strong>Time zone alignment:</strong> Braze Dashboard analytics are aggregated daily in your company’s configured time zone in the dashboard. Make sure your timestamps align with your company’s time zone so that your stats match the dashboard. For example, if your company time is UTC+2, then the timestamp should be 12AM UTC+2.</p>
+<p>Canvas analytics are aggregated by day in your company’s configured time zone in Braze (the same time zone the dashboard uses). The API normalizes <code class="language-plaintext highlighter-rouge">starting_at</code> and <code class="language-plaintext highlighter-rouge">ending_at</code> to midnight in that time zone.</p>
 
 <h2 id="example-request">Example request</h2>
 
@@ -94,6 +94,10 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 
 <h2 id="response">Response</h2>
+
+<p><strong>Note:</strong></p>
+
+<p>In <code class="language-plaintext highlighter-rouge">total_stats</code>, <code class="language-plaintext highlighter-rouge">variant_stats</code>, and <code class="language-plaintext highlighter-rouge">step_stats</code>, <code class="language-plaintext highlighter-rouge">conversions</code> is the count for the <a href="/docs/user_guide/messaging/messaging_fundamentals/conversion_events/">primary conversion event</a> of the Canvas. When you configure additional conversion events, the payload can also include <code class="language-plaintext highlighter-rouge">conversions1</code>, <code class="language-plaintext highlighter-rouge">conversions2</code>, and higher-indexed fields for the second, third, and further events. This is similar to the <a href="/docs/api/endpoints/export/campaigns/get_campaign_analytics/#multivariate-response">multivariate response</a> for the ` /campaigns/data_series<code class="language-plaintext highlighter-rouge"> endpoint. Where present, fields ending in </code>_by_entry_time` attribute those conversions by Canvas entry time.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -183,10 +187,12 @@
 
 <p><strong>Important:</strong></p>
 
-<p><strong><code class="language-plaintext highlighter-rouge">influenced_opens</code> field:</strong> In the API response, the <code class="language-plaintext highlighter-rouge">influenced_opens</code> field represents the total number of opens (both direct and influenced opens combined). In the Braze dashboard, ‘influenced opens’ refers only to influenced opens, excluding direct opens. This is due to a legacy naming convention in the API.</p>
+<p>In the API response, the <code class="language-plaintext highlighter-rouge">influenced_opens</code> field represents the total number of opens (both direct and influenced opens combined). In the Braze dashboard, “influenced opens” refers only to influenced opens, excluding direct opens. This is due to a legacy naming convention in the API.</p>
 
-<p><strong>Tip:</strong></p>
+<h2 id="related-articles">Related articles</h2>
 
-<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/">Export troubleshooting</a>.</p>
+<ul>
+  <li><a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/">Export troubleshooting</a></li>
+</ul>
 
 </div>

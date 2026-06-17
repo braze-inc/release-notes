@@ -1,4 +1,4 @@
-<div id='api_nvolssqiqyvm' class='api_div' data-search-keywords='prerequisites message data time mau'>
+<div id='api_dtzeonzfpwkk' class='api_div' data-search-keywords='prerequisites message data time mau'>
 <h1 id="export-monthly-active-users-for-last-30-days">Export monthly active users for last 30 days</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/kpi/mau/data_series</p>
