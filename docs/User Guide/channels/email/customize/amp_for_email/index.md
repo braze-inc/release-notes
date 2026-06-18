@@ -359,6 +359,8 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
 
 
 
+
+
  For AMP emails, this is the total opens for the HTML and plaintext versions.</td>
         </tr>
         <tr>
@@ -494,6 +496,8 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
 
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
+
+
 
 
 
@@ -653,6 +657,8 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
 
 
 
+
+
 </td>
         </tr>
         <tr>
@@ -788,6 +794,8 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
 
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
+
+
 
 
 

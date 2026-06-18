@@ -458,6 +458,8 @@ Now, 50% of users will see the old experience, while the other 50% will see the 
 
 
 
+
+
 ![A feature flag experiment splitting traffic into two 50 percent groups.](https://www.braze.com/docs/assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png?e8202a94961d079e7676f6d8345ab8cc)
 
 Once we determine our winner, we can stop this campaign and increase the rollout percentage on the feature flag to 100% for all users while our engineering team hard-codes this into our next app release.

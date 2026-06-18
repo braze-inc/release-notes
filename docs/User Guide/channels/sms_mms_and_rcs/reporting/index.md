@@ -317,6 +317,8 @@ This table reflects Braze billing, not your provider's billing. Outcomes that ar
 
 
 
+
+
  | Charges may apply based on individual message sending outcomes |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Charges applied to SMS sending outcomes" }
 

@@ -312,6 +312,8 @@ You can find this data on the [Revenue Report](https://www.braze.com/docs/user_g
 
 
 
+
+
 </td>
         </tr>
         <tr>
@@ -447,6 +449,8 @@ You can find this data on the [Revenue Report](https://www.braze.com/docs/user_g
 
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
+
+
 
 
 
@@ -606,6 +610,8 @@ You can find this data on the [Revenue Report](https://www.braze.com/docs/user_g
 
 
 
+
+
 </td>
         </tr>
         <tr>
@@ -753,6 +759,8 @@ You can find this data on the [Revenue Report](https://www.braze.com/docs/user_g
 
 
 
+
+
 </td>
         </tr>
         <tr>
@@ -888,6 +896,8 @@ You can find this data on the [Revenue Report](https://www.braze.com/docs/user_g
 
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
+
+
 
 
 
