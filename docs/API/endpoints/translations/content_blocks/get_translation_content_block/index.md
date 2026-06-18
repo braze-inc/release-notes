@@ -1,4 +1,4 @@
-<div id='api_ohiwzfcgjscy' class='api_div' data-search-keywords='prerequisites translations translation_map id_0 id_1 id_2 locale uuid name country language locale_key errors message'>
+<div id='api_xortubnomtqw' class='api_div' data-search-keywords='prerequisites translations translation_map id_0 id_1 id_2 locale uuid name country language locale_key errors message'>
 <h1 id="view-all-translations-for-a-content-block">View all translations for a Content Block</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/content_blocks/translations</p>

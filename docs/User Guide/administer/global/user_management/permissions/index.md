@@ -8,7 +8,7 @@
 
 ## Create a permission set
 
-Use permission sets to bundle permissions related to specific subject areas or actions. You can apply permission sets to dashboard users who need the same access across different workspaces. To create a permission set, go to **Settings** > **Permission Settings**, then select **Create permission set**. For a description of each permission, see [List of permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/#list-of-permissions).
+Use permission sets to bundle permissions related to specific subject areas or actions. You can apply permission sets to dashboard users who need the same access across different workspaces. To create a permission set, go to **Settings** > **User Management** > **Permission Sets**, then select **Create permission set**. For a description of each permission, see [List of permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/#list-of-permissions).
 
 
 
@@ -23,7 +23,7 @@ Use permission sets to bundle permissions related to specific subject areas or a
 
 ## Creating a role
 
-Roles allow for more structure by bundling together your individual custom permissions with workspace access controls. This is especially useful if you have many brands or regional workspaces in one dashboard. With roles, you can add dashboard users to the right workspaces and directly grant them the associated permissions. For a description of each permission, see [List of permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/#list-of-permissions).
+Roles allow for more structure by bundling together your individual custom permissions with workspace access controls. This is especially useful if you have many brands or regional workspaces in one dashboard. With roles, you can add dashboard users to the right workspaces and directly grant them the associated permissions. To create a role, go to **Settings** > **User Management** > **Roles**, then select **Create role**. For a description of each permission, see [List of permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/#list-of-permissions).
 
 
 
@@ -90,7 +90,7 @@ Keep the following behaviors in mind when you assign dashboard access:
 
 ## Edit a user's permissions
 
-To edit a user's current admin, company, or workspace permissions, go to **Settings** > **Company Users**, then select their name.
+To edit a user's current admin, company, or workspace permissions, go to **Settings** > **User Management** > **Company Users**, then select their name.
 
 ![The "Company Users" page in Braze showing a table of dashboard users.](https://www.braze.com/docs/assets/img/braze_permissions/selecting_a_user.png?d28314848ed4e956dece842568f78574)
 
@@ -170,7 +170,7 @@ When you're finished, select **Update user**.
 
 ## Exporting user permissions
 
-To download a list of your users and their permissions, go to **Settings** > **Company Users**, then select **Export Users**. A CSV file will be sent to your email address shortly.
+To download a list of your users and their permissions, go to **Settings** > **User Management** > **Company Users**, then select **Export Users**. A CSV file will be sent to your email address shortly.
 
 ![The "Company Users" page in Braze with the "Export Users" option in focus.](https://www.braze.com/docs/assets/img/braze_permissions/exporting_user_permissions.png?64292c338e1614a7215faa059b9277e4)
 

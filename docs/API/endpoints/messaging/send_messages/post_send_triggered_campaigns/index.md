@@ -1,4 +1,4 @@
-<div id='api_qlyctftweval' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
+<div id='api_tkafuqfuqylh' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
 <h1 id="send-campaign-messages-using-api-triggered-delivery">Send campaign messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/send</p>
@@ -190,6 +190,8 @@ Authorization: Bearer YOUR-REST-API-KEY
   <li>When <code class="language-plaintext highlighter-rouge">prioritization</code> does not return exactly one user profile, Braze retries resolution up to 40 times. This retry behavior is expected.</li>
   <li>The <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> setting does not change <code class="language-plaintext highlighter-rouge">prioritization</code> tie behavior. The same tie and retry behavior applies whether this setting is <code class="language-plaintext highlighter-rouge">true</code> or <code class="language-plaintext highlighter-rouge">false</code>.</li>
 </ul>
+
+<p>If you trigger an email-only campaign for a recipient identified by <code class="language-plaintext highlighter-rouge">external_user_id</code> or <code class="language-plaintext highlighter-rouge">user_alias</code>, and that user profile has no email address at the time of the call, Braze retries the send for up to approximately 2 hours. This covers the common pattern of creating a user and setting their email address in close succession. To send without delay, include the <code class="language-plaintext highlighter-rouge">email</code> attribute inside <code class="language-plaintext highlighter-rouge">recipients[].attributes</code> so the address is set in the same call as the trigger.</p>
 
 <p><strong>Note:</strong></p>
 

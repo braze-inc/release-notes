@@ -1,4 +1,4 @@
-<div id='api_usdtybbpoiac' class='api_div' data-search-keywords='prerequisites name preference_center_api_id created_at updated_at preference_center_title preference_center_page_html confirmation_page_html redirect_page_html preference_center_options state'>
+<div id='api_pyithxlcrueu' class='api_div' data-search-keywords='prerequisites name preference_center_api_id created_at updated_at preference_center_title preference_center_page_html confirmation_page_html redirect_page_html preference_center_options state'>
 <h1 id="view-details-for-preference-center">View details for preference center</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/preference_center/v1/{preferenceCenterExternalID}</p>

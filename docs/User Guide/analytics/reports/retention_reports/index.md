@@ -275,6 +275,8 @@ Some use cases for showing performance by variant:
 
 
 
+
+
  Braze compares each variant's conversion rate against the control's conversion rate with a statistical procedure called a Z Test to calculate a [confidence](https://www.braze.com/docs/user_guide/messaging/ab_testing#understanding-confidence) percentage.
 - **Units**: You can adjust the units between the percentage of users and the number of users in the upper right-hand corner of the chart, specific units may prove to be more significant when judging the impact of a campaign or Canvas.
 - **Variant Graph**: This graph summarizes the results by variant for the selected date range.
