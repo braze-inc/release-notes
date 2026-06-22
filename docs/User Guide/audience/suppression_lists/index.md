@@ -35,8 +35,8 @@ All users can view suppression lists, but only users with [admin permissions](ht
 
 
 
-1. Go to **Audience** > **Suppression Lists**.<br><br>![The "Suppression Lists" page with a list of three suppression lists.](https://www.braze.com/docs/assets/img/suppression_lists_home.png?37e5029204d021a5a95d1d42cc54aee9)<br><br>
-2. Select **Create Suppression List** and add a name.<br><br>![A window called "Create a Suppression List" with a field to enter a name.](https://www.braze.com/docs/assets/img/create_suppression_list.png?470fa68a3e5a0aa1c97c0bdbe3165f71){: style="max-width:80%;"}<br><br>
+1. Go to **Audience** > **Suppression Lists**.
+2. Select **Create Suppression List** and add a name.
 3. Use segment filters to identify the users in your suppression lists. You must select at least one.
 
 **Important:**

@@ -5,8 +5,23 @@
 **Important:**
 
 
-Braze MCP server is in beta. You don't need to request access to use it. Follow the setup instructions to get started. By using the Braze MCP server, you agree to the [Braze Beta Terms](https://www.braze.com/company/legal/beta-terms). To help us make it better, send your feedback to [mcp-product@braze.com](mailto:mcp-product@braze.com).
+The locally hosted Braze MCP server (beta) is sunsetting this summer. It will continue to work, but we're no longer adding endpoints or supporting the beta. A remote, Braze-hosted MCP server is coming to Early Access this summer.
 
+
+
+
+**Important:**
+
+
+## Sunsetting the locally hosted Braze MCP server
+
+This summer, Braze is launching a remote, Braze-hosted MCP server in Early Access. It replaces the locally hosted beta server (`braze-mcp-server` on [PyPI](https://pypi.org/project/braze-mcp-server/) and the Claude Desktop extension directory).
+
+**What this means for you:**
+
+- The locally hosted server will continue to work, but it is no longer supported. We won't be adding new endpoints or fixing issues in the beta.
+- When the remote server is available in Early Access, you'll need to switch to it. The remote server requires no local installation, uses OAuth instead of static API keys, and works with MCP clients like Claude, Copilot, Gemini CLI, Codex, and Cursor.
+- Watch this page for Early Access availability, or contact your Braze account team to express interest.
 
 
 
@@ -40,11 +55,13 @@ You can interact with Braze through natural language using tools like Claude or 
 
 
 
-!['What are my available Braze functions?' being asked and answered in Claude.](https://www.braze.com/docs/assets/img/mcp_server/claude/what_are_my_available_braze_functions.png?3c01fb7977ba5f52c0f9ca3db3b28ec6){: style="max-width:85%;"}
+**Example prompt:** `What are my available Braze functions?`  
+**Example response:** Used `list_functions` and returned the available Braze MCP function categories.
 
 
 
-!['What are my available Braze functions' being asked and answered in Cursor.](https://www.braze.com/docs/assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png?a7bb97c2f1daab42ce7a140e4f769816)
+**Example prompt:** `What are my available Braze functions?`  
+**Example response:** Queried `list_functions` and listed functions such as `get_canvas_list`.
 
 
 
@@ -76,7 +93,7 @@ No. You'll need to create a new API key for your MCP client. Remember to only gi
 
 ### Is the Braze MCP server hosted locally or remotely?
 
-The Braze MCP server is hosted locally.
+The currently available Braze MCP server is hosted locally. A remote, Braze-hosted MCP server is coming to Early Access this summer and will replace the locally hosted beta server.
 
 ### Why is Cursor only listing functions?
 

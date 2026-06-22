@@ -9,7 +9,6 @@ Before you create a rich push notification for iOS, note the following details:
 - To ensure your app can send rich notifications, follow the [iOS push integration](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications) instructions, as your developer will need to add a service extension to your app.
 - File types that we currently support for direct uploading within our dashboard include JPEG, PNG, or GIF. These files can also be entered into the templatable URL field along with these additional file types: AIF, M4A, MP3, MP4, or WAV.
 - Reference [Apple's documentation](https://developer.apple.com/reference/usernotifications/unnotificationattachment) for media limitations and specs.
-- iOS rich notifications aren't available when creating a quick push campaign.
 - iOS will scale images to fit in the screen and will scale rich images for the active or locked view.
 
 **Note:**
@@ -124,13 +123,13 @@ Follow the [campaign steps](https://www.braze.com/docs/user_guide/channels/push/
 
 ### Step 2: Add media
 
-Add your image, GIF, audio, or video file in the **Rich Notification Media** field in the composer of the message. Refer to the [requirements](#requirements) on how to add your content files.
+Add your image, GIF, audio, or video file in the **iOS Notification Image** field in the composer of the message. Refer to the [requirements](#requirements) on how to add your content files.
 
-![An example of summary text for a push notification.](https://www.braze.com/docs/assets/img_archive/rich_notification_add_image.png?eeaf5cf5635a3868655fab7833363425){: style="max-width:70%;" }
+![An example of summary text for a push notification.](https://www.braze.com/docs/assets/img_archive/rich_notification_add_image.png?1f76474b4f2613e45497d80032ddb959){: style="max-width:70%;" }
 
 You can also limit this message to only send to users who have a device that runs on iOS 10. For users who have not upgraded to iOS 10, it will appear as text-only notifications without the rich content if you leave the **Only send to devices with Rich Notification support** unchecked.
 
-![The Expanded notification image section where you can add an image or enter an image URL.](https://www.braze.com/docs/assets/img_archive/rich_notification_ios10_select.png?dd0d19fe611df5c3baa22848f688c3d4){: style="max-width:70%;" }
+![The Expanded notification image section where you can add an image or enter an image URL.](https://www.braze.com/docs/assets/img_archive/rich_notification_ios10_select.png?234924e57e33c99e8a67f8e28c37e9df){: style="max-width:70%;" }
 
 ### Step 3: Continue creating your campaign
 
@@ -139,4 +138,3 @@ Once your rich notification content is uploaded to the dashboard, you can contin
 When a user receives the push notification, they can hard press on the push message to expand the image.
 
 ![A user receives a push notification and hard presses the message to show an expanded image that says "Hello!".](https://www.braze.com/docs/assets/img_archive/rich_notification_ios.gif?cb819222667996b65305451447075026){: style="max-width:50%;" }
-

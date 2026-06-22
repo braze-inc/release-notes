@@ -58,49 +58,26 @@ This connection status represents the experience of a guest of your app or websi
 
 ### Identified
 
-This connection status means Braze recognizes your user profile through a unique identifier assigned to you, known as an external identifier. You can search for this external identifier in the **User Search** page of your dashboard to locate your user profile, which will store all user attributes and events logged from Pilot based on your activity in the app.
-
-![An example of a Braze user profile for user "torchie-208117".](https://www.braze.com/docs/assets/img/braze_pilot/user_profile.png?cdf40642f449c80d2ce11b0e3bcc8d16)
+This connection status means Braze recognizes your user profile through a unique identifier assigned to you, known as an external identifier. You can search for this external identifier in the **User Search** page of your dashboard to locate your user profile, which stores all user attributes and events logged from Pilot based on your activity in the app. In the Braze dashboard, go to **Audience** > **User Search**, enter your Pilot **external ID**, and open the profile to inspect attributes and events.
 
 ### Connection type
 
-To check what type of connection you have, you can check the connection status at the top right of your screen.
+To check what type of connection you have, check the connection status indicator at the top right of the Pilot app.
 
 
 
 
-**Anonymous** indicates you're logging data as an anonymous user.
-
-<style>
-  .imgDiv {
-      text-align: center;
-    }
-</style>
-
-<div class="imgDiv">
-<img src="/docs/assets/img/braze_pilot/status_anonymous.png?c476b3e540462b7aefff917910d832aa" style="max-width:40%">
-</div>
-<br>
+**Anonymous** indicates you're logging data as an anonymous user. The status area shows an **Anonymous** label (for example, a mask or incognito-style badge).
 
 
 
 
-If you're logging data as an identified user, a user icon will display next to your external ID.
-
-<div class="imgDiv">
-<img src="/docs/assets/img/braze_pilot/status_identified_user.png?22a9e4f1877198e954fe67a3fb3ba07b" style="max-width:40%">
-</div>
-<br>
+If you're logging data as an identified user, the status area shows **Identified user** and your external ID.
 
 
 
 
-**Not connected** indicates you haven't yet initialized the Braze SDK connection with Pilot.
-
-<div class="imgDiv">
-<img src="/docs/assets/img/braze_pilot/status_not_connected.png?66333d9d62c5b016db45fd0b8ca5524a" style="max-width:40%">
-</div>
-<br>
+**Not connected** indicates you haven't yet initialized the Braze SDK connection with Pilot. The status area calls out that Pilot is not connected to your Braze workspace yet.
 
 
 

@@ -32,7 +32,7 @@ Cloud Data Ingestion (CDI) has a new design that separates sources and syncs, so
 
 After adding locales to your workspace, use [multi-language translations](https://www.braze.com/docs/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) to target users in different languages all within a single push, email, Banner, in-app message, or Content Block.
 
-![Locale previews](https://www.braze.com/docs/assets/img/multi-language_support/multi_language_user_preview.png?f55b1a40baaba6ede110adbbda7cbf8e){: style="max-width:70%;"}
+![Locale previews](https://www.braze.com/docs/assets/img/multi-language_support/multi_language_user_preview.png?9e121697c3c1da2d351296be4d572a57){: style="max-width:70%;"}
 
 ### Canvas Context enhancements
 

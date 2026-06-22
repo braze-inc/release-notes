@@ -32,7 +32,7 @@ _Example of a simple, click-not-code lead scoring model in SalesWings_
 
 SalesWings allows marketing teams to track, qualify and hand off marketing-qualified leads to your sales teams. All SalesWings data is natively pushed to Salesforce, and can be leveraged to fine-tune any existing process, or create new processes via lists, reports, flows, and more.
 
-![Example of how SalesWings lead scoring prioritizes a list of leads or contacts natively inside Salesforce](https://www.braze.com/docs/assets/img/saleswings/prioritized_lead_or_contact_list_braze_lead_scoring.png?81d9f4c6990054163a57f2c9302869ab)
+![Example of how SalesWings lead scoring prioritizes a list of leads or contacts natively inside Salesforce](https://www.braze.com/docs/assets/img/saleswings/prioritized_lead_or_contact_list_braze_lead_scoring.png?33d2d4c3e2f2d50bbc4574539480d698)
 
 _Example of how SalesWings lead scoring prioritizes a list of leads or contacts natively inside Salesforce_
 
@@ -46,7 +46,7 @@ SalesWings allows Braze customers to qualify leads and accounts based on profile
 
 SalesWings enables you to show your sales reps sales insights about their leads, contacts, and accounts (Marketo Sales Insights alternative). Essentially, you can surface any Braze and web engagement data to your sales team. The insights are natively embedded into Salesforce CRM and can be pushed to other CRMs or systems or via a Braze email as a “sales alert”.
 
-![Example of sales insights view for sales reps inside Salesforce (also available for other CRM systems)](https://www.braze.com/docs/assets/img/saleswings/marketo_sales_insights_alternative_for_braze.png?eb2974b71641f626f6830e44dd49782c)
+![Example of sales insights view for sales reps inside Salesforce (also available for other CRM systems)](https://www.braze.com/docs/assets/img/saleswings/marketo_sales_insights_alternative_for_braze.png?6d57535cbb9426430caaae92ae79e567)
 
 _Example of sales insights view for sales reps inside Salesforce (also available for other CRM systems)_
 

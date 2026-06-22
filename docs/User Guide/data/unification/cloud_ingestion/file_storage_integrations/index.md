@@ -200,8 +200,6 @@ Give the role a name and a description, and select **Create Role**.
 {: start="4"}
 4. Next, create a new sync. Go to **Data Settings** > **Cloud Data Ingestion** > **Syncs** and select **Create data sync**.
 
-![The "Create New Sync" page showing the sync name and data source configuration.](https://www.braze.com/docs/assets/img/cloud_ingestion/s3_ingestion_3.png?71e957fedfd1a98a9f798c777cc48e90)
-
 {: start="5"}
 5. Choose a name for your sync. Then, select any active S3 source and input your source table for the sync. Select a data type and select **Test Connection**.
 

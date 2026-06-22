@@ -203,7 +203,7 @@ When using the translation API with Canvas steps that were created after the Can
 
 To preview your message, select the **Multi-Language User** option from the **Preview as User** dropdown. This lets you switch between different locale definitions to preview all translations of your message.
 
-![Locale previews](https://www.braze.com/docs/assets/img/multi-language_support/multi_language_user_preview.png?f55b1a40baaba6ede110adbbda7cbf8e){: style="max-width:70%;"}
+![Locale previews](https://www.braze.com/docs/assets/img/multi-language_support/multi_language_user_preview.png?9e121697c3c1da2d351296be4d572a57){: style="max-width:70%;"}
 
 ## Manage translations
 

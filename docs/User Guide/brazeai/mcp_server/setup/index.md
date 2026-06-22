@@ -5,7 +5,7 @@
 **Important:**
 
 
-Braze MCP server is in beta. You don't need to request access to use it. Follow the setup instructions to get started. By using the Braze MCP server, you agree to the [Braze Beta Terms](https://www.braze.com/company/legal/beta-terms). To help us make it better, send your feedback to [mcp-product@braze.com](mailto:mcp-product@braze.com).
+The locally hosted Braze MCP server (beta) is sunsetting this summer. It will continue to work, but we're no longer adding endpoints or supporting the beta. A remote, Braze-hosted MCP server is coming to Early Access this summer.
 
 
 
@@ -362,15 +362,18 @@ After you set up the Braze MCP server, try sending a test prompt to your MCP cli
 
 
 
-!['What are my available Braze functions?' being asked and answered in Claude.](https://www.braze.com/docs/assets/img/mcp_server/claude/what_are_my_available_braze_functions.png?3c01fb7977ba5f52c0f9ca3db3b28ec6){: style="max-width:85%;"}
+**Example prompt:** `What are my available Braze functions?`  
+**Example response:** Used `list_functions` and returned the available Braze MCP function categories.
 
 
 
-!['What are my available Braze functions' being asked and answered in Cursor.](https://www.braze.com/docs/assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png?a7bb97c2f1daab42ce7a140e4f769816)
+**Example prompt:** `What are my available Braze functions?`  
+**Example response:** Queried `list_functions` and listed functions such as `get_canvas_list`.
 
 
 
-![What are my available Braze functions? being asked and answered in Gemini CLI.](https://www.braze.com/docs/assets/img/mcp_server/gemini_cli/what_are_my_available_braze_functions.png?31a24038fcd7ba20fbd70e3bd80297e7)
+**Example prompt:** `What are my available Braze functions?`  
+**Example response:** Queried `list_functions` in Gemini CLI and returned available Braze MCP function categories and sample functions.
 
 
 

@@ -151,7 +151,7 @@ When using Braze Connected Content, you may find that certain APIs require a tok
 
 To add a credential that holds token values, select **Add credential** > **Token authentication**. Then, add the key-value pairs for your API call headers and the allowed domain.
 
-![An example token "token_credential_abc" with token authentication details.](https://www.braze.com/docs/assets/img/connected_content/token_auth.png?1f31bc593b3c5063a2584c92049e6a68){: style="max-width:60%"}
+![An example token "token_credential_abc" with token authentication details.](https://www.braze.com/docs/assets/img/connected_content/token_auth.png?4ec320d4c59fc12e0189ffcc042b93ba){: style="max-width:60%"}
 
 You can then use this credential in your API calls by referencing the credential name:
 
@@ -217,7 +217,6 @@ You can edit the credential name for authentication types.
 - For basic authentication, you can update the username and password. Note that the previously entered password will not be visible.
 - For token authentication, you can update the header key-value pairs and the allowed domain. Note that the previously set header values will not be visible.
 
-![The option to edit credentials.](https://www.braze.com/docs/assets/img/connected_content/edit_credentials.png?73a412dc3dbe30e86cd7073355bb8252){: style="max-width:60%"}
 
 ## Connected Content IP allowlisting
 

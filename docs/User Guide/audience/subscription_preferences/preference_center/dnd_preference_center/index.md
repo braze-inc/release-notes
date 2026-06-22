@@ -15,7 +15,6 @@ Create a preference center by navigating to **Audience** > **Email Preference Ce
 
 Here, a list of custom preference centers will be displayed. Select **Create New** to create a new preference center, or select the name of an existing one to make changes.
 
-![A list of custom preference centers with the name, description, type, status, last edited date, and created by user.](https://www.braze.com/docs/assets/img/preference_center/preference_center1.png?f2feb46964002c018380bc00afcfe653)
 
 ## Step 2: Name the email preference center
 
@@ -23,7 +22,6 @@ Preference center names can only contain alphanumeric characters, dashes, or und
 
 This Liquid tag can be included in any outbound email campaigns or Canvas steps and will direct users to the preference center.
 
-![An example of Liquid for a preference center.](https://www.braze.com/docs/assets/img/preference_center/preference_center2.png?43e904e55b13f2dff2cf548de884d44c)
 
 ## Step 3: Add subscription groups to the preference center
 
@@ -40,7 +38,6 @@ You can further configure the selected subscription groups by selecting the smar
 - Add or remove a **Subscribe to all** checkbox which will subscribe the user to all subscription groups shown in this block
 - Add or remove an **Unsubscribe from all** checkbox which will unsubscribe the user from all subscription groups shown in this block
 
-![An example of a preference center with the options to subscribe to all messages, marketing, newsletter, and weekly emails, or to unsubscribe from all.](https://www.braze.com/docs/assets/img/preference_center/preference_center3.png?8eabfa22b76bc6b515b953a90ab6bce6){: style="max-width:38%;"} ![](https://www.braze.com/docs/assets/img/preference_center/preference_center4.png?af8aa1f9f38ad3f44c1a85f09c79cc0e){: style="max-width:45%;"}
 
 The **Unsubscribe from all** button at the bottom of the template is non-removable and will [globally unsubscribe](https://www.braze.com/docs/user_guide/channels/email/subscriptions#subscription-states) the user from receiving any email messages.
 

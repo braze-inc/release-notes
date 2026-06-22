@@ -59,7 +59,7 @@ Each device platform handles push token registration differently. Refer to the f
 
 
 
-You must request explicit opt-in from users via the native browser permission dialog. Will receive a token after users opt-ed in. Unlike iOS and Android, which let your app show the permission prompt at any time, some modern browsers will only show the prompt if triggered by a "user gesture" (mouse click or keystroke). If your site tries to request push notification permission on page load, it will likely be ignored or silenced by the browser.
+You must request explicit opt-in from users through the native browser permission dialog. Will receive a token after users opt-ed in. Unlike iOS and Android, which let your app show the permission prompt at any time, some modern browsers will only show the prompt if triggered by a "user gesture" (mouse click or keystroke). If your site tries to request push notification permission on page load, it will likely be ignored or silenced by the browser.
 
 
 
@@ -89,7 +89,7 @@ iOS does not automatically generate push tokens for an app when it's installed. 
 
 There are two ways you can check a user's push subscription state with Braze:
 
-- **User Profile**: You can access individual user profiles through the Braze dashboard on the [User Search](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles/) page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state.
+- **User Profile**: You can access individual user profiles through the Braze dashboard on the [User Search](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles/) page. After finding a user's profile (by email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state.
 - **Rest API Export**: You can export individual user profiles in JSON format using the export [Users by segment](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment/) or [Users by identifier](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/) endpoints. Braze will return a push tokens object that contains push enablement information per device.
 
 ### Checking push registration status

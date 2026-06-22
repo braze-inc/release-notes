@@ -34,7 +34,7 @@ Within that time, you can change and update the expiration date repeatedly. This
 
 You also have the option to set up optional and customized threshold alerts. If set up, these alerts email the designated recipient either when the list is running low on available promotion codes in this list or when your promotion code list is close to expiration. The recipient is notified once a day.
 
-![An example of a threshold alert to notify "marketing@abc.com" when the promotion code list expires in 5 days.](https://www.braze.com/docs/assets/img/promocodes/promocode5.png?0b27b136521b61289482372976aeaed8){: style="max-width:80%"}
+![An example of a threshold alert to notify "marketing@abc.com" when the promotion code list expires in 5 days.](https://www.braze.com/docs/assets/img/promocodes/promocode5.png?7821b86f312c9a906613cbb518b63d4f){: style="max-width:80%"}
 
 ### Step 4: Upload promotion codes
 

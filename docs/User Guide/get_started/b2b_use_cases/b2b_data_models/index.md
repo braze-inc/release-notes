@@ -94,10 +94,6 @@ In this use case, Salesforce is the example CRM system. You can map over any fie
   </tbody>
 </table>
 
-##### Example table of mapped account fields
-
-![Table of Salesforce accounts with respective information, such as billing address and account owner.](https://www.braze.com/docs/assets/img/b2b/sf_accounts.png?78661a0b5458a8203ea0f738c3d91355)
-
 
 
 
@@ -137,10 +133,6 @@ In this use case, Salesforce is the example CRM system. You can map over any fie
   </tr>
   </tbody>
 </table>
-
-##### Example table of mapped opportunity fields
-
-![Table of Salesforce opportunities with respective information, such as billing address and account owner.](https://www.braze.com/docs/assets/img/b2b/sf_opportunities.png?0ab6551bf94c8dd2060524bc047e97c5)
 
 
 

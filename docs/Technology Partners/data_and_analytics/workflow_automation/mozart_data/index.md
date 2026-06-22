@@ -42,16 +42,16 @@ The integration is supported for both syncing data from [Braze to Mozart Data](#
 
 #### Step 1: Set up Braze connector
 
-1. In Mozart Data, go to **Connectors** and click **Add Connector**.
+1. In Mozart Data, go to **Connectors** and select **Add Connector**.
 2. Search for "Braze" and select the connector card.
 3. Enter a destination schema name where all of the synced data from Braze will be stored. We recommend using the default schema name `braze`.
-4. Click **Add Connector**.
+4. Select **Add Connector**.
 
 #### Step 2: Fill out the Fivetran connector form
 
-You will be redirected to the Fivetran connector page. On this page, fill out the given fields. Next, click **Continue** > **Save & Test** to complete the Fivetran connector.
+The Fivetran connector page opens after you finish step 1. Fill out the given fields, then select **Continue** > **Save & Test** to complete the Fivetran connector.
 
-Fivetran will begin syncing data from your Braze account to your Snowflake data warehouse. You can access query data from Mozart Data after the connector has finished syncing. 
+Fivetran begins syncing data from your Braze account to your Snowflake data warehouse. You can access query data from Mozart Data after the connector finishes syncing.
 
 ### Syncing data from Mozart Data to Braze
 
@@ -61,20 +61,18 @@ Follow the [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and
 
 #### Step 2: Set up your Snowflake integration in Braze
 
-After setting up your Snowflake warehouse, in Mozart Data, go to the **Integration** page and select **Braze**. Here, you will find the credentials you will need to provide Braze.
+After setting up your Snowflake warehouse, in Mozart Data, go to the **Integration** page and select **Braze**. The **Braze** integration view lists the credentials to copy into Braze.
 
-![](https://www.braze.com/docs/assets/img/mozartdata/mozartdata-braze-integrationpage.png?63bc4e765c48fe5a2398a88716a3f9e4){: style="max-width:80%;"}
+![Mozart Data Integration page with Braze selected and Snowflake connection credentials for use in Braze.](https://www.braze.com/docs/assets/img/mozartdata/mozartdata-braze-integrationpage.png?63bc4e765c48fe5a2398a88716a3f9e4){: style="max-width:80%;"}
 
-Next, while signed into Braze, go to **Integrations > Technology Partners > Snowflake** to begin the integration process. Copy the credentials from Mozart Data and add them to the Snowflake Data import page. Click **Set up sync details** and input your Snowflake account and source table information. 
+Next, while signed into Braze, go to **Integrations > Technology Partners > Snowflake** to begin the integration process. Copy the credentials from Mozart Data and add them to the Snowflake Data import page. Select **Set up sync details** and input your Snowflake account and source table information. 
 
-![](https://www.braze.com/docs/assets/img/mozartdata/mozartdata-braze-snowflakecredentials.png?2881a09ae27981f96edf2e416f8c5501){: style="max-width:80%;"}
+![Braze Snowflake partner integration form with account, warehouse, database, and schema fields populated from Mozart Data credentials.](https://www.braze.com/docs/assets/img/mozartdata/mozartdata-braze-snowflakecredentials.png?2881a09ae27981f96edf2e416f8c5501){: style="max-width:80%;"}
 
-Next, choose a name for your sync, provide contact emails, and select a data type and a sync frequency. 
-
-![](https://www.braze.com/docs/assets/img/mozartdata/mozartdata-braze-importsync.png?7363dca55cf73bf9714d305a8c477f80){: style="max-width:80%;"}
+Next, choose a name for your sync, provide contact emails, and select a data type and a sync frequency on the Braze Snowflake import configuration screen.
 
 #### Step 3: Add a public key to the Braze user
-At this point, you will need to go back to Snowflake to complete the setup. Add the public key displayed on the Braze dashboard to the user you created for Braze to connect to Snowflake.
+At this point, go back to Snowflake to complete the setup. Add the public key displayed on the Braze dashboard to the user you created for Braze to connect to Snowflake.
 
 For additional information on how to do this, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). If you want to rotate the keys at any point, Mozart Data can generate a new key pair and provide you with the new public key.
 
@@ -84,9 +82,9 @@ ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 
 #### Step 4: Test connection
 
-Once the user is updated with the public key, return to the Braze dashboard and click **Test connection**. If successful, you'll see a preview of the data. If, for some reason, the connection is unsuccessful, an error message will display to help troubleshoot the issue.
+Once the user is updated with the public key, return to the Braze dashboard and select **Test connection**. If successful, you'll see a preview of the data. If, for some reason, the connection is unsuccessful, an error message will display to help troubleshoot the issue.
 
-![](https://www.braze.com/docs/assets/img/mozartdata/mozartdata-braze-testsyncpublickey.png?04d68153ef80ff4d8e7bb4e1bdb6161b){: style="max-width:80%;"}
+![Braze Snowflake integration test connection result showing a successful preview after the public key is applied.](https://www.braze.com/docs/assets/img/mozartdata/mozartdata-braze-testsyncpublickey.png?04d68153ef80ff4d8e7bb4e1bdb6161b){: style="max-width:80%;"}
 
 **Note:**
 

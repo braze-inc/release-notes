@@ -14,7 +14,7 @@ Not sure whether to use a campaign or a Canvas? Campaigns are better for single,
 
 
 1. Go to **Messaging** > **Campaigns**, then select **Create campaign**.
-2. For campaigns targeting multiple channels, select **Multichannel**. Otherwise, select **Push notification**. If you're still not sure, refer to **Deciding between regular or multichannel push campaign** below.
+2. For campaigns targeting multiple channels, select **Multichannel**. Otherwise, select **Push notification**.
 3. Name your campaign something clear and meaningful.
 4. Add [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams/) and [Tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags/) as needed. 
 
@@ -27,29 +27,6 @@ Tags make your campaigns easier to find and build reports out of. For example, w
 
 {: start="5"}
 5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing](https://www.braze.com/docs/user_guide/messaging/ab_testing/).
-
-**Deciding between regular or multichannel push campaign**
-
-
-
-If you intend to target multiple devices and platforms, such as any combination of mobile, web, Kindle, iOS, and Android, your selection at this step can impact the availability of some features and settings later on.
-
-Refer to the following decision chart before creating a multichannel or push notification campaign:
-
-!["Flowchart for selecting campaign type. Starts by deciding if you're targeting multiple devices and platforms. If no, it leads to 'Select Push Notification.' If yes, it asks 'What type of push message?' and options are 'Standard push' leading to a decision point 'Do you need to use device-specific settings?' If no, it leads to 'Select Push Notification and use quick push.' If yes, it goes to 'Select Multichannel.' Back to 'What type of push message?', if the answer is 'Push Stories or Inline image,' it directs to 'Select Multichannel."](https://www.braze.com/docs/assets/img_archive/flowchart_quickpush.png?61c3316e26643c1bbd0fa76ad5269098)
-
-If you select **Push Notification** and choose to target multiple devices and platforms, you’re automatically creating a quick push campaign. With quick push, certain device-specific settings are not available:
-
-- Push action buttons
-- Notification channels and groups
-- Push time-to-live (TTL)
-- Display priority
-- Sounds
-
-Before continuing, refer to [Quick push campaigns](https://www.braze.com/docs/quick_push) to understand what's different for this editing experience.
-
-
-
 
 **Tip:**
 
@@ -78,21 +55,21 @@ There are a few different ways to do this depending on your previous selections:
 
 | Previous selection | Options |
 | --- | --- | 
-| Push notification campaign | Select one or more platforms and devices. If you choose to target multiple devices and platforms, you’re automatically creating a quick push campaign. This provides an editing experience optimized for crafting one message for all selected platforms in a single editor. See [Quick push campaigns](https://www.braze.com/docs/quick_push) to understand what's different in this editing experience. |
+| Push notification campaign | Select one or more platforms and devices. If you choose to target multiple devices and platforms your editing experience is optimized for crafting one message for all selected platforms. See [Multiple platform push](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/multiple_platform_push) to understand what's different in this editing experience. |
 | Multichannel campaign | Select **Add Messaging Channel** to add additional push platforms. Because platform selections are specific to each variant, you can try testing message engagement per platform.
 | Canvas | In your Message step, select **+ Add more** to add additional push platforms. Similar to multichannel campaigns, platform selections are specific to each variant. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Step 2: Select push platforms" }
 
 ## Step 3: Select notification type (iOS and Android)
 
-If you're creating a quick push campaign, the notification type is automatically set to **Standard push** and cannot be changed.
+If you're creating a multiple platform push campaign and you select Web and/or Kindle the notification type is automatically set to **Standard push** and cannot be changed. 
 
 ![Notification Type with Standard Push selected as an example.](https://www.braze.com/docs/assets/img_archive/push_2.png?3beb19158de1b8628cbd45a712378f47){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Otherwise, for iOS and Android, select your notification type:
 
 - Standard push
-- [Push stories](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/push_stories/)
+- [Push stories](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/push_stories/) (supported on Android + iOS)
 - Inline image (Android only)
 
 If you want to include images in your push campaign, refer to the following guides on creating a rich notification for [iOS](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/rich_notifications/) or [Android](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/rich_notifications/).
@@ -101,21 +78,21 @@ If you want to include images in your push campaign, refer to the following guid
 
 Now it's time to write your push message! The **Compose** tab allows you to edit all aspects of your message's content and behavior.
 
-![Compose tab of creating a push notification.](https://www.braze.com/docs/assets/img_archive/push_compose.png?6aafdba24363504b89eb944eed63441b)
+![Compose tab of creating a push notification.](https://www.braze.com/docs/assets/img_archive/push_multiple_platform_message_composer.png?d37c66da8eef016623b67c6e2632d41f)
 
 The content of the **Compose** tab varies based on your chosen notification type in the previous step, but may include any of the following options:
 
-#### Notification channel or group (iOS and Android)
+### Notification channel or group (iOS and Android)
 
 For more information on platform-specific notification options, see [iOS Notification Options](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/notification_options/) or [Android Notification Options](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/notification_options/).
 
-#### Language
+### Language
 
 Add copy in multiple languages using the **Add Languages** button. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages/).
 
-#### Title and body
+### Title and body
 
 
 
@@ -147,7 +124,7 @@ Need help creating awesome copy? Try using the [AI copywriting assistant](https:
 
 
 
-#### Image
+### Image
 
 Where supported, your app icon is automatically added as the image for your push notification. You also have the option to send rich notifications, which allow for more customization in your push notifications by adding additional content beyond copy.
 
@@ -196,7 +173,7 @@ For additional guidance on using images in your push notifications, refer to the
 
 
 
-#### On-click behavior
+### On-click behavior
 
 Specify what happens when a user selects the body of a push notification with **On-Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a [deep link](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls/).
 
@@ -207,7 +184,7 @@ Here, you can also set up button prompts within your push notification, such as:
 - Confirm/Cancel
 - More 
 
-#### Sending options
+### Sending options
 
 If a user has your app installed on multiple devices, by default, your push message is sent to all devices with a valid push token assigned. If desired, you can select **Most recently used device**.
 
@@ -219,7 +196,7 @@ By default, Braze sends messages to every device a user owns that has a valid pu
 
 If desired, you can set the push destination to **Most recently used device**.
 
-##### Most recently used device
+#### Most recently used device
 
 "Most recently used" is a technical status, not a behavioral one. Because Braze defaults to all devices, switching to this setting significantly narrows your reach and relies entirely on the status of the single device with the newest token.
 
@@ -329,6 +306,5 @@ If you're using the default on-click behavior for your SDK version and selecting
 
 
 You must assign your delegate object using `center.delegate = self` synchronously before your app finishes launching, preferably in `application:didFinishLaunchingWithOptions:`. Otherwise, this can cause your app to miss incoming push notifications. Refer to [Apple's `UNUserNotificationCenterDelegate` documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) to learn more.
-
 
 

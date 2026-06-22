@@ -1,4 +1,4 @@
-<div id='api_ekeqqkwstczl' class='api_div' data-search-keywords='prerequisites scheduled_broadcasts name id type tags next_send_time schedule_type'>
+<div id='api_ukturtcmqeqa' class='api_div' data-search-keywords='prerequisites scheduled_broadcasts name id type tags next_send_time schedule_type'>
 <h1 id="list-upcoming-scheduled-campaigns-and-canvases">List upcoming scheduled campaigns and Canvases</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/messages/scheduled_broadcasts</p>

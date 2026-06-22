@@ -110,6 +110,6 @@ If you're not seeing VWO data in Braze:
 5. Go to the **Request Payload** section in the **Payload** tab, where you can find events: that has name: **ce**, indicating Custom Event.
 6. Expand 0: and data: to see n: “VWO” (name of the Custom Event) and p: {vwo_campaign_name: “<your vwo campaign name>”, vwo_variation_name: “<variation name>”}. These indicate that the values are being pushed by VWO to Braze.
 
- ![Braze Troubleshooting](https://www.braze.com/docs/assets/img/vwo/vwo5_troubleshooting.png?c536f04416f97a83e4c9060e9aac3276)
+ ![Braze Troubleshooting](https://www.braze.com/docs/assets/img/vwo/vwo5_troubleshooting.png?2c2214fe077f646fcc414aba95b756e3)
 
 For additional support, contact your VWO customer success manager.

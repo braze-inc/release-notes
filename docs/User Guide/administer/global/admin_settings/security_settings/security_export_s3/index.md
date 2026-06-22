@@ -70,17 +70,16 @@ Now, you’re ready to link your AWS credentials to your Braze account!
 1. In Braze, go to **Settings** > **Company Settings** > **Admin Settings** > **Security Settings** and scroll to the **Security Event Download** section.
 2. Toggle on **Export to AWS S3** under **Export to cloud storage** and select **AWS secret access key**, which enables the S3 export. 
 3. Input the following:
+
 - AWS access key ID
-- AWS secret access key
-    - When inputting this key, first select **Test Credentials** to confirm your credentials work.
 - AWS bucket name 
+- AWS secret access key 
+    - When inputting this key, first select **Test Credentials** to confirm your credentials work.
 
 ![The "Security Event Download" page with populated Braze account and Braze external IDs.](https://www.braze.com/docs/assets/img/security_export/security_event_download1.png?6efde7724578e65aa575dc88d7a61aa8)
 
 {: start="4"}
 4. Select **Save Changes**. 
-
-!["Save changes" button.](https://www.braze.com/docs/assets/img/security_export/save_changes_button.png?307f43dc48263342c1bedd7b9e1e7eee){: style="max-width:50%;"}
 
 You’ve integrated AWS S3 into your Braze account!
 
@@ -93,7 +92,7 @@ The AWS role ARN method generates a role Amazon Resource Name (ARN) that allows 
 1. Sign in to the AWS management console as an account administrator. 
 2. In the AWS console, go to the **IAM** (Identity and Access Management) section > **Policies**, and then select **Create Policy**.
 
-![A page with a list of policies and button to "Create policy".](https://www.braze.com/docs/assets/img/security_export/policies.png?6d86fe2247881ab8c83386db6d403ab9)
+![A page with a list of policies and button to "Create policy".](https://www.braze.com/docs/assets/img/security_export/policies.png?fbee7f9c445e84fff9e0ab18b01a29f3)
 
 {: start="3"}
 3. Open the **JSON** tab and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name. 
@@ -119,7 +118,7 @@ The AWS role ARN method generates a role Amazon Resource Name (ARN) that allows 
 {: start="4"}
 4. Select **Next** after reviewing the policy.
 
-![A page that allows you to review your policy and optionally add permissions.](https://www.braze.com/docs/assets/img/security_export/specify_permissions.png?28a6689cbed4a351e2c62d5f305aef1d)
+![A page that allows you to review your policy and optionally add permissions.](https://www.braze.com/docs/assets/img/security_export/specify_permissions.png?904867ef2cceb9537c27cba61c4e0d6b)
 
 {: start="5"}
 5. Give the policy a name and description, and then select **Create Policy**.
@@ -139,7 +138,7 @@ The AWS role ARN method generates a role Amazon Resource Name (ARN) that allows 
 6. Provide your Braze account ID, check the **Require external ID** box, and then enter your Braze external ID. 
 7. Select **Next** when complete.
 
-![A page with options to select a trusted entity type and provide information about your AWS account.](https://www.braze.com/docs/assets/img/security_export/select_trusted_entity.png?238089f9607786a2b82bcd649083bbc5)
+![A page with options to select a trusted entity type and provide information about your AWS account.](https://www.braze.com/docs/assets/img/security_export/select_trusted_entity.png?b2e98455dc208fbb49397e75a0196e84)
 
 ### Step 3: Attach policy
 
@@ -170,7 +169,5 @@ Your newly created role will appear in the list!
 3. Make sure **AWS role ARN** is selected, then input your role ARN and AWS S3 bucket name in the designated fields. 
 4. Select **Test Credentials** to confirm your credentials work properly.
 5. Select **Save Changes**. 
-
-!["Save changes" button.](https://www.braze.com/docs/assets/img/security_export/save_changes_button.png?307f43dc48263342c1bedd7b9e1e7eee){: style="max-width:40%;"}
 
 You’ve integrated AWS S3 into your Braze account!

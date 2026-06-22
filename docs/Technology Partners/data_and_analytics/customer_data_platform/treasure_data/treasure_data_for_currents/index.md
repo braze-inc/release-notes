@@ -85,4 +85,4 @@ Braze supports exporting all data listed in the [Currents event glossaries](http
 The payload structure for exported data is the same as the payload structure for custom HTTP connectors, which can be viewed in the [examples repository for custom HTTP connectors](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors).
 
 
-[4]: /docs/assets/img/treasure_data/treasure_data_ingested_view.png?652c016b734242b4e38308b38ae24029
+[4]: /docs/assets/img/treasure_data/treasure_data_ingested_view.png?3e335fe7a76bc6a66bdd3971bfe2202c

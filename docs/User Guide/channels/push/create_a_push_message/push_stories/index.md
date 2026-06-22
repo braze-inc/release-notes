@@ -4,7 +4,7 @@
 
 | Android Example (Expanded) | IOS Example (Expanded) |
 | :-----: | :----------: |
-| ![](https://www.braze.com/docs/assets/img_archive/pushstories_android_preview.png?b9ff1b03bc3189d44ee98d330662fe90) | ![](https://www.braze.com/docs/assets/img_archive/pushstories_ios_preview.png?d0485e7305a238015d4420b956e0b375) |
+| ![Push stories Android preview.](https://www.braze.com/docs/assets/img_archive/pushstories_android_preview.png?b9ff1b03bc3189d44ee98d330662fe90) | ![Push stories iOS preview](https://www.braze.com/docs/assets/img_archive/pushstories_ios_preview.png?d0485e7305a238015d4420b956e0b375) |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Push Stories" }
 
 **Note:**
@@ -23,7 +23,7 @@ The following SDK versions are required to receive Push Stories:
 
 ## How to use Push Stories
 
-![](https://www.braze.com/docs/assets/img_archive/pushstories_composer_dropdown2.png?31b30518ce8f475f2862e736c1449257){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![Push stories composer dropdown](https://www.braze.com/docs/assets/img_archive/pushstories_composer_dropdown2.png?cce582ac02d1d37c341583e8ff49f21c){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 To use Push Stories, do the following:
 
@@ -35,14 +35,13 @@ To use Push Stories, do the following:
 
 To create a page, perform the following steps:
 
-1. Click **Manage Pages** from the main composer.
-    <br><br>![](https://www.braze.com/docs/assets/img_archive/pushstories_add_pages.png?a52df8edf8deafe070b67635a59f99ee){: style="max-width:70%"}<br><br>
+1. Select **Add new page** from the main composer.
 2. Insert an image for each page, along with the click behavior for that image.
 3. If desired, add a **Title** and **Description** for each page. If you use a title and description for one page, they must be inserted for all pages.
 
 The previews will be reflected and are interactive.
 
-![](https://www.braze.com/docs/assets/img_archive/pushstories_composer.png?f7843e6059b52206a7b1f18fdcad0e9e){: style="max-width:60%"}
+![Push stories composer](https://www.braze.com/docs/assets/img_archive/pushstories_composer.png?5f4952ce9162c69f655aa46948e1ce7a){: style="max-width:60%"}
 
 **Important:**
 
@@ -107,5 +106,4 @@ In certain situations where all the pages do not load, for example, due to a los
 
 #### Push Story doesn't dismiss after clicking the image 
 
-By default, Push Stories are not dismissed on Android after a user clicks on the image. If you'd like to dismiss the notification, call [`cancelNotification`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/index.html#-1466259649%2FFunctions%2F-1725759721).  
-
+By default, Push Stories are not dismissed on Android after a user clicks on the image. If you'd like to dismiss the notification, call [`cancelNotification`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/index.html#-1466259649%2FFunctions%2F-1725759721).

@@ -60,7 +60,7 @@ Some brands may wish to send to a group of users that have phone numbers from di
 
 To overcome this limitation, during the subscription groups [setup process](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups/), groups can be set up to hold long and short codes from multiple different countries. When completed, sending phone numbers with the same country code as the target user's phone number will automatically be used when launching a campaign. You will not have to create separate campaigns for users with phone numbers with different country codes, allowing you to launch one campaign or use one Canvas component to target relevant users.
 
-![SMS payloads are sent using the same country code as the target user's phone number.](https://www.braze.com/docs/assets/img/sms/multi_country_subgroups.png?8efb15b75bf9c788d6d5651880fb1097)
+![SMS payloads are sent using the same country code as the target user's phone number.](https://www.braze.com/docs/assets/img/sms/multi_country_subgroups.png?3ec2053263d96c3d56d7e42047e6da2d)
 
 ### General sending best practices
 
