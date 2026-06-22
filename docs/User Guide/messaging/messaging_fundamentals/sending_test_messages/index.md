@@ -300,9 +300,7 @@ After creating your SMS, MMS, or RCS message, you can send a test message to you
 
 
 
-After creating your webhook, you can do a test send to check the webhook response. Select the **Test** tab and select **Send Test** to send a test send to the supplied webhook URL. You can also select an individual user to preview the response as a specific user. 
-
-![Test Content Card](https://www.braze.com/docs/assets/img/webhook_test.png?c0207171222bea4694d67c34bff9ad04)
+After creating your webhook, you can do a test send to check the webhook response. Select the **Test** tab and select **Send Test** to send a test send to the supplied webhook URL. You can also select an individual user to preview the response as a specific user.
 
 
 

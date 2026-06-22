@@ -134,4 +134,4 @@ The tracker stays on the homepage for 90 days after the plan ends. After 90 days
 
 If a day includes multiple campaigns used to meet volume requirements, these are aggregated in the daily view.
 
-![IP warming tracker with send volume for the week of January 16.](https://www.braze.com/docs/assets/img/automated_ip_warming_example.png?699f89ead50a19eb2be292883b5873bd)
+![IP warming tracker with send volume for the week of January 16.](https://www.braze.com/docs/assets/img/automated_ip_warming_example.png?c3d8d3dd518197dcfc53c0bbf8f1c19e)

@@ -107,8 +107,6 @@ Admins have access to all features and the ability to modify any company setting
 
 To grant or remove admin privileges, select **This user is an admin**, then select **Update user**.
 
-![The details of the selected user with the admin checkbox in focus.](https://www.braze.com/docs/assets/img/braze_permissions/admin_level_permissions.png?14c300edaa5008e6ee9aa6eba1dda237){: style="max-width:70%;"}
-
 **Warning:**
 
 

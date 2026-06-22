@@ -9,7 +9,7 @@
 Each interactive button can link to a web page or a deep link or open the app. 
 
 - For standard push campaigns, you can specify your push action buttons in the **On-Click Behavior** section of the push message composer in the dashboard.
-- For [quick push campaigns](https://www.braze.com/docs/quick_push), action buttons can be configured separately for each platform under the **Settings** tab.
+- For [multiple platform push campaigns](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/multiple_platform_push), action buttons can be configured separately for each platform under the **Settings** tab.
 
 
 
@@ -17,7 +17,7 @@ Each interactive button can link to a web page or a deep link or open the app.
 
 To use action buttons in your iOS push messages, do the following:
 
-1. Turn on action buttons in the **Compose** tab for a standard campaign or in the **Settings** tab for quick push.
+1. Turn on action buttons in the **Compose** tab
 2. Select your **iOS Notification Category** from the following available button combinations:
  - Accept / Decline
  - Yes / No
@@ -25,7 +25,7 @@ To use action buttons in your iOS push messages, do the following:
  - More
  - Pre-registered custom iOS Category
 
-![iOS Notification Category dropdown menu.](https://www.braze.com/docs/assets/img_archive/push_action_buttons_ios.png?c19647015689cc31b41375ea41cf12b6){: style="max-width:70%"}
+![iOS Notification Category dropdown menu.](https://www.braze.com/docs/assets/img_archive/push_action_buttons_ios.png?2d698253c188ebd79fd2d767e111cb02){: style="max-width:70%"}
 
 **Note:**
 
@@ -41,13 +41,13 @@ Preset pairs such as **Yes** / **No** map the second button to a dismissive (**C
 
 To use action buttons in your Android push messages, do the following:
 
-1. Turn on action buttons in the **Compose** tab for a standard campaign or in the **Settings** tab for quick push.
+1. Turn on action buttons in the **Compose** tab
 2. Select <i class="fas fa-plus-circle"></i> **Add Button** and specify your button text and **On-Click Behavior**. You can select from the following available actions:
   - Open App
   - Redirect to Web URL
   - [Deep Link](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls/) Into Application
 
-![Selecting "Open App" as the on-click behavior for a notification button.](https://www.braze.com/docs/assets/img_archive/push_action_buttons_android.png?e63f3cffbc54e45883072b4af3899376){: style="max-width:70%"}
+![Selecting "Open App" as the on-click behavior for a notification button.](https://www.braze.com/docs/assets/img_archive/push_action_buttons_android.png?009aaceaa94acd5969a484914c903967){: style="max-width:70%"}
 
 You can add up to three buttons in your push.
 
@@ -65,6 +65,5 @@ The following table outlines how many characters you can add before your button 
 | 2 | 20 characters |
 | 3 | 11 characters |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Android character limits" }
-
 
 

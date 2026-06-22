@@ -42,11 +42,11 @@ On the **Test API** page, enter some test values for the API parameters in your 
 
 If your credentials and API definitions are correct, Braze will return a success response.
 
-![Testing an External API configuration with a sample payload and success response](https://www.braze.com/docs/assets/img/lemnisk/test_ext_api.png?2aa26f30ac533958cbdbd2813de8a4e0)
+![Testing an External API configuration with a sample payload and success response](https://www.braze.com/docs/assets/img/lemnisk/test_ext_api.png?c2ae308b56194af0ba708f174776c668)
 
 Next, you'll verify that your events are being sent to Braze successfully. In the Braze dashboard, go to **Audience** > **Search Users**, then enter one of the identifiers from your External API configuration (such as a user email address). If everything is working correctly, the profile that received your test API trigger will be listed.
 
-![Viewing a user's profile and activity overview in Braze](https://www.braze.com/docs/assets/img/lemnisk/braze_cov.png?456f3e93fb07387eb0ea5cacb792aaf0)
+![Viewing a user's profile and activity overview in Braze](https://www.braze.com/docs/assets/img/lemnisk/braze_cov.png?8d99eaa1dddf5e17099488a8ba7b9b7e)
 
 ### Step 3: Trigger user events in Braze
 

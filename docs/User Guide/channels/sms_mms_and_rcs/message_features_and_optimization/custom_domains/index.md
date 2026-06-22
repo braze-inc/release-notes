@@ -62,9 +62,7 @@ After they're configured, custom domains can be assigned to one or multiple SMS,
 
 1. Go to **Audience** > **Subscription Group Management**.
 2. Find and select your subscription group in the list.
-3. Under **Subscription Group Details**, select your custom domain as the **Link Shortening Domain**.
-
-![Subscription groups settings that allow you to select a link-shortening domain.](https://www.braze.com/docs/assets/img/custom_domain.png?0243cdff6927ed5e2bc90ab78991c586)
+3. Under **Subscription Group Details**, select your custom domain in the **Link Shortening Domain** dropdown.
 
 Campaigns sent with link shortening turned on will use the assigned domain associated with your SMS, RCS, or WhatsApp subscription group.
 

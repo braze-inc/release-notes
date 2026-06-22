@@ -25,7 +25,7 @@ The following Currents integration is supported for both [Amazon S3](#setting-up
 
 In the [Fivetran Dashboard](https://fivetran.com/dashboard), select **+ Connector**, and then select the **Braze** connector to launch the setup form. Next, select **Amazon S3**. Note the external ID provided here; you will need it to allow Fivetran to access your S3 bucket. 
 
-![The Fivetran set up Braze connector form. The external ID field needed for this step is located in the middle of the page in a light gray box.](https://www.braze.com/docs/assets/img/fivetran_braze_setupform_as3.png?951c5ef6aef31f0a64aea2988342b5e2)
+![The Fivetran set up Braze connector form. The external ID field needed for this step is located in the middle of the page in a light gray box.](https://www.braze.com/docs/assets/img/fivetran_braze_setupform_as3.png?43ac3c9d54e291ffee8ea6c77a52f285)
 
 #### Step 2: Give Fivetran access to a specified S3 bucket
 
@@ -75,7 +75,7 @@ In AWS, navigate to **Roles**, then select **Create New Role**.
 
 Select **Another AWS Account** and provide the Fivetran account ID `834469178297`. Make sure to check the **Require external ID** checkbox. Here, you will provide the external ID found in step 1.
 
-![The field to input your "Account ID", a checkbox to require the external ID, and a blank textbox to input your "External ID".](https://www.braze.com/docs/assets/img/fivetran_another_aws_account.png?8a8801a1c92baf38b75891eb4abbb784)
+![The field to input your "Account ID", a checkbox to require the external ID, and a blank textbox to input your "External ID".](https://www.braze.com/docs/assets/img/fivetran_another_aws_account.png?bef1e6a078aaf6dfa26b93dffa2d2a11)
 
 Next, select **Next: Permissions** to select the policy you just created.
 
@@ -127,7 +127,7 @@ Navigate to your [Google Storage Console](https://console.cloud.google.com/stora
 
 Next, grant `Storage Object Viewer` access to the email from [step 1](#step-one2) by adding the email as a member. Make a note of the bucket name; you will need it in the next step to configure Fivetran.
 
-![Bucket with permissions.](https://www.braze.com/docs/assets/img/fivetran_add_members_gcs.png?f7b02ad77eaaeef7993fb02c82534d31)
+![Bucket with permissions.](https://www.braze.com/docs/assets/img/fivetran_add_members_gcs.png?74c73eddb375858f98c52ac5302eb26f)
 
 #### Step 3: Complete the Fivetran connector
 

@@ -63,9 +63,7 @@ First, you'll create a new data transformation in Braze. The following steps are
     ```
     
 
-    Your transformation should be similar to the following:
-
-    ![An example data transformation.](https://www.braze.com/docs/assets/img/front/data_transformation.png?dd395d2c90b86dd7754fe93cec71055f)
+    Your transformation should mirror the JavaScript example above, adjusting property names and paths to match your Front webhook payload.
 
 **Tip:**
 

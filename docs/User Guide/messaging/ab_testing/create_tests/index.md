@@ -1,6 +1,6 @@
 # Create multivariate and A/B tests {#creating-tests}
 
-> You can create a multivariate or A/B test for any campaign that targets a single channel and single device. For example, if you want to use multivariate or A/B testing for a push campaign, you can target only iOS devices or only Android devices—not both device types in the same campaign.
+> You can create a multivariate or A/B test for any campaign that targets a single channel. For example, if you want to use multivariate or A/B testing for a push campaign, you can target iOS and Android devices in the same campaign.
 
 ![The dropdown from selecting the "Create campaign" button to choose either multichannel or single channel.](https://www.braze.com/docs/assets/img/ab_create_1.png?e6116a780867aeb9b7a146ef11808a73){: style="max-width:25%;float:right;margin-left:15px;" }
 

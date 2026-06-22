@@ -19,7 +19,7 @@ Provide the Braze data import key and Braze REST endpoint to your Kubit support 
 ### Step 3: Import Cohorts to Braze
 
 #### Create a cohort in Kubit
-[Create a cohort](https://www.kubit.ai/doc/fundamentals#cohort) in Kubit and define the criteria of your target users.<br><br>![](https://www.braze.com/docs/assets/img/kubit/create_cohort.png?86de9672a40933cd06885b145a01ce53){: style="max-width:80%;"}
+[Create a cohort](https://www.kubit.ai/doc/fundamentals#cohort) in Kubit and define the criteria of your target users.<br><br>![](https://www.braze.com/docs/assets/img/kubit/create_cohort.png?d8de6e13cc41b592909eea835c3a606b){: style="max-width:80%;"}
 
 #### Import users to Braze
 Once you have saved your cohort, you can import them to Braze to be used in Braze segments. These segments can then be used to create targeted email or push campaigns and Canvases.

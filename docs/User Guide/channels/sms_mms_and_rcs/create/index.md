@@ -346,7 +346,7 @@ For more information, see [Send test messages](https://www.braze.com/docs/user_g
 
 Next, build the remainder of your campaign. Refer to the following sections for further details on how to best use our tools to build your message.
 
-#### Choose delivery schedule or trigger
+### Choose delivery schedule or trigger
 
 Messages can be delivered based on a scheduled time, an action, or an API trigger. For more, refer to [Scheduling your campaign](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/).
 
@@ -354,7 +354,7 @@ For action-based delivery, you can also set the campaign's duration and [Quiet h
 
 This step is also where you can specify delivery controls, such as allowing users to become [re-eligible](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/re_eligibility/#campaigns) to receive the campaign, or enabling [frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping/#frequency-capping) rules.
 
-#### Choose users to target
+### Choose users to target
 
 Next, [target users](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/target_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you.
 
@@ -374,7 +374,7 @@ Interested in retargeting? Refer to [User retargeting](https://www.braze.com/doc
 
 
 
-#### Choose conversion events
+### Choose conversion events
 
 Braze allows you to track how often users perform specific actions, [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 

@@ -27,11 +27,9 @@ Sync logs also provide the following details for each sync:
 * **Run start time:** When the sync job began.  
 * **Run duration:** The total time the sync job took to complete.
 
-![Details for a sync log.](https://www.braze.com/docs/assets/img/cloud_ingestion/sync_logs3.png?f540525984bd26c08e224e314bcc4da2){: style="max-width:80%"}
-
 ### Data retention
 
-Sync log data, including all row-level payloads and error details, is retained for up to **30 days**. Logs older than 30 days will be automatically purged.
+Sync log data, including all row-level payloads and error details, is retained for up to **30 days**. Logs older than 30 days are automatically purged.
 
 Sync run metadata such as the number of rows processed is retained for at least 12 months.
 
@@ -64,8 +62,6 @@ This table provides row-level visibility into the data processed during the sync
 #### Viewing payloads
 
 To see the exact data sent to Braze for a specific row, select **View payload** in the **Source** payload column. This displays the raw JSON payload that was processed for that user.
-
-![Payload example for a specific row in a sync log.](https://www.braze.com/docs/assets/img/cloud_ingestion/sync_logs2.png?8df9845c8b2bc6c16d85cbb9e358e9e6){: style="max-width:80%"}
 
 #### Exporting sync logs
 

@@ -103,7 +103,7 @@ Once you have configured your TikTok Audience component, simply launch the Canva
 
 You can view the audience in TikTok by entering your **Ads Manager Account** and selecting **Audiences** from the **Assets** dropdown. From the **Audience** page, you can see the size of each audience after it reaches &#126;1,000.
 
-![TikTok page listing the following metrics for the given audience.](https://www.braze.com/docs/assets/img/tiktok/tiktok5.png?cda499b26898ab1deb81795e9254edad)
+![TikTok page listing the following metrics for the given audience.](https://www.braze.com/docs/assets/img/tiktok/tiktok5.png?ef57e91fa09f54f32022f05648b4b887)
 
 ## User syncing and rate limit considerations
 

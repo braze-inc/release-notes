@@ -337,7 +337,7 @@ Now, you can check to make sure the automation is running successfully. Contact 
 1. Drag an **Email** node into each path of the **Decision Split**.
 2. Select **Email**, then select the appropriate template that should go in each Path (meaning the template with the ID value should match the logic in your Decision Split).
 
-![An Email node added to the Journey.](https://www.braze.com/docs/assets/img/decisioning_studio_go/journey9.png?aecf1f542d0e23aeb14e579136d01b34)
+![An Email node added to the Journey.](https://www.braze.com/docs/assets/img/decisioning_studio_go/journey9.png?dbbdc5a9dfa15f620759414763fe9b9b)
 
 #### Step 3: Activate the Journey
 

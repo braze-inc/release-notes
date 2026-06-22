@@ -169,7 +169,7 @@ There are five response message layouts you can use:
 
 Braze always recommends previewing and testing your message before sending it. Switch to the **Test** tab to send a test WhatsApp message to [content test groups](https://www.braze.com/docs/user_guide/administer/global/user_management/internal_groups/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
 
-![A preview message for a custom user named Max.](https://www.braze.com/docs/assets/img/whatsapp/whatsapp8.png?ab83ea6e2908c90ce7864716ec9dd169){: style="max-width:80%;"}
+![A preview message for a custom user named Max.](https://www.braze.com/docs/assets/img/whatsapp/whatsapp8.png?f542ad287c77aaf2731372d8fa5835f8){: style="max-width:80%;"}
 
 **Note:**
 

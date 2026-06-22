@@ -134,8 +134,6 @@ Go to your Infobip dashboard and gather the following information.
 
 User profiles must have phone numbers in E.164 format to message them through KakaoTalk. Phone numbers are shown on the user profile. KakaoTalk requires phone numbers to be in E.164 format (for example, `+821025749774`). This differs from some other messaging channels that may accept phone numbers in multiple formats.
 
-![User profile for a test user with a phone number in E.164 format.](https://www.braze.com/docs/assets/img/kakaotalk/standard_phone_number.png?9c4078a79193c66f6aba02be394034e4){: style="max-width:50%;"}
-
 ### Import phone numbers
 
 Import phone numbers by [uploading a CSV or using the API](https://www.braze.com/docs/user_guide/data/unification/user_data/import_users/) to create a user. Ensure phone numbers are in E.164 format before importing.

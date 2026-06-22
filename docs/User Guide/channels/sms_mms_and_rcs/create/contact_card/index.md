@@ -29,7 +29,7 @@ Note that alphanumeric codes are not compatible with two-way messaging and are n
 
 ### Step 3: Optional fields
 
-![Optional fields for the contact card generator.](https://www.braze.com/docs/assets/img/sms/contact_card2.png?6ab54f4ce11cda9cd83a9832e638e735){: style="float:right;max-width:35%;margin-left:15px;"}
+![Optional fields for the contact card generator.](https://www.braze.com/docs/assets/img/sms/contact_card2.png?6b8e07199202054a2d0abf9339e55624){: style="float:right;max-width:35%;margin-left:15px;"}
 
 #### Upload contact card contact photo
 

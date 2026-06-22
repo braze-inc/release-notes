@@ -1,4 +1,4 @@
-<div id='api_izlwqkklkbws' class='api_div' data-search-keywords='prerequisites email_template_id template_name subject body plaintext_body preheader tags should_inline_css'>
+<div id='api_sqrfupbuircd' class='api_div' data-search-keywords='prerequisites email_template_id template_name subject body plaintext_body preheader tags should_inline_css'>
 <h1 id="update-existing-email-templates">Update existing email templates</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/templates/email/update</p>

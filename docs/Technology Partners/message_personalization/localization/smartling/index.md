@@ -113,7 +113,7 @@ Smartling provides advanced features to search and select content by:
 
 In Braze, preview your campaign as a multi-language user to confirm that the translations are applied correctly.
 
-![Multi-language user preview.](https://www.braze.com/docs/assets/img/smartling/image11_preview.png?a5022b20dc9b4c6cd8dae4a22a3fade9)
+![Multi-language user preview.](https://www.braze.com/docs/assets/img/smartling/image11_preview.png?762768fe4f656e462c28950af628aae0)
 
 ## Frequently asked questions
 

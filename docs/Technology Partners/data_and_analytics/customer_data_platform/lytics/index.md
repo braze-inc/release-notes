@@ -38,38 +38,36 @@ In Lytics, navigate to the **Authorization** dashboard within the **Data** conso
 
 In the **Configure Authorization** prompt that appears, provide a label and a description and input your REST API key and Braze instance. Select **Complete** when finished.
 
-![](https://www.braze.com/docs/assets/img/lytics/braze_authorization.png?5264b2c414e41139fa114ee44e92ac83){: style="max-width:80%;"}
+![Lytics Configure Authorization prompt for Braze with fields for label, description, REST API key, and Braze instance.](https://www.braze.com/docs/assets/img/lytics/braze_authorization.png?5264b2c414e41139fa114ee44e92ac83){: style="max-width:80%;"}
 
 ### Step 2: Create a new job
 
 In Lytics, navigate to the **Jobs** dashboard within the **Data** console in the navigation bar. Select **Create New Job** and search for and select **Braze**.  In the **Select Job Type** prompt that appears, select **Export Audience**.
 
-![](https://www.braze.com/docs/assets/img/lytics/braze_jobtype.png?28461577445b0280aef4a9ade1a3ee10){: style="max-width:80%;"}
+![Lytics Select Job Type prompt for a new Braze job with Export Audience selected.](https://www.braze.com/docs/assets/img/lytics/braze_jobtype.png?28461577445b0280aef4a9ade1a3ee10){: style="max-width:80%;"}
 
 Next, choose an authorization within the **Select Authorization** options.
 
-![](https://www.braze.com/docs/assets/img/lytics/braze_jobauth.png?73e343707ba752feb5b34bb86d5013b9){: style="max-width:80%;"}
+![Lytics Select Authorization step showing the Braze authorization to use for the export job.](https://www.braze.com/docs/assets/img/lytics/braze_jobauth.png?73e343707ba752feb5b34bb86d5013b9){: style="max-width:80%;"}
 
 ### Step 3: Configure the job
 
-Within the **Configure Job** prompt, provide a label and an optional description. Next, From the **Braze External User ID Field** input, select the field in Lytics that contains the Braze external user ID (`braze_id`). The next step is the most important—select the audiences to export to Braze.
+Within the **Configure Job** prompt, provide a label and an optional description. Next, from the **Braze External User ID Field** input, select the field in Lytics that contains the Braze external user ID (`braze_id`). The next step is the most important—select the audiences to export to Braze using the audience picker in the same prompt.
 
-![](https://www.braze.com/docs/assets/img/lytics/braze_job.png?3d9475808f4b2e70666ad4a7e080ff10){: style="max-width:80%;"}
-
-Finally, choose the preferable option for the **Existing Users** checkbox. Leaving this box checked will add users who already exist in the selected Lytics audience. If unchecked, users will only be exported to Braze when entering or exiting the audience after the workflow begins.
+Finally, choose the preferable option for the **Existing Users** checkbox. Leaving this box checked adds users who already exist in the selected Lytics audience. If unchecked, users are only exported to Braze when entering or exiting the audience after the workflow begins.
 
 **Note:**
 
 
-By checking this box, all existing users in the selected audience will be pushed into Braze. If your Braze pricing includes data points, monitor data point usage accordingly.
+By checking this box, all existing users in the selected audience are sent to Braze. If your Braze pricing includes data points, monitor data point usage accordingly.
 
 
 
-Click **Complete** when finished to initiate the export and save.
+Select **Complete** when finished to initiate the export and save.
 
-![](https://www.braze.com/docs/assets/img/lytics/braze_backfill.png?407bf6c6ea598cae36043369fc628b60){: style="max-width:80%;"}
+![Lytics export job summary showing Complete control and options to save or run the Braze audience export.](https://www.braze.com/docs/assets/img/lytics/braze_backfill.png?407bf6c6ea598cae36043369fc628b60){: style="max-width:80%;"}
 
-After the export job is configured, Lytics will send the selected audiences to Braze through the native integration. The following is a sample audience showing the JSON structure of the audience sent to Braze.
+After the export job is configured, Lytics sends the selected audiences to Braze through the native integration. The following is a sample audience showing the JSON structure of the audience sent to Braze.
 
 ```json
 {
@@ -112,11 +110,11 @@ You can import audience data from Braze to Lytics using the following methods:
 
 Navigate to the Lytics Account Menu in the bottom left corner by selecting your account name, and select **Access Tokens** from the dropdown menu. Next, select **Create API Token**
 
-![](https://www.braze.com/docs/assets/img/lytics/create_token.png?6ab29104b8ca4bc9b19473b1e1b0e653){: style="max-width:80%;"}
+![Lytics Access Tokens screen with Create API Token selected from the account menu.](https://www.braze.com/docs/assets/img/lytics/create_token.png?6ab29104b8ca4bc9b19473b1e1b0e653){: style="max-width:80%;"}
 
-Input a name, an optional description, and a token expiration period. Next, toggle the **Data Manager** scope for API Permissions and click on **Generate Token**. Copy the token and store it in a secure place.
+Input a name, an optional description, and a token expiration period. Next, toggle the **Data Manager** scope for API Permissions and select **Generate Token**. Copy the token and store it in a secure place.
 
-![](https://www.braze.com/docs/assets/img/lytics/data_manager.png?513b773b06979417a87a1f66dea922ff){: style="max-width:80%;"}
+![Lytics API token permissions with the Data Manager scope enabled before generating the token.](https://www.braze.com/docs/assets/img/lytics/data_manager.png?513b773b06979417a87a1f66dea922ff){: style="max-width:80%;"}
 
 #### Step 2: Configure the Lytics webhook URL
 
@@ -172,9 +170,9 @@ Select the preferred type of SFTP authorization based on your business and secur
 
 Public key SFTP authorizations are for SFTP export only.
 
-![](https://www.braze.com/docs/assets/img/lytics/authorization_method.png?569e0a53bb4f8f4aba5c214c9aad1c20){: style="max-width:80%;"}
+![Lytics SFTP authorization method options for Custom Integrations import, including client and Lytics-managed server choices.](https://www.braze.com/docs/assets/img/lytics/authorization_method.png?569e0a53bb4f8f4aba5c214c9aad1c20){: style="max-width:80%;"}
 
-In the **Configure Authorization** prompt that appears, provide a label and a description and complete the rest of the configuration requirements. Click **Complete** when finished.
+In the **Configure Authorization** prompt that appears, provide a label and a description and complete the rest of the configuration requirements. Select **Complete** when finished.
 
 #### Step 2: Export your segment data to CSV
 
@@ -186,9 +184,9 @@ In Lytics, navigate to the **Jobs** dashboard within the **Data** console in the
 
 Next, select the job type. To import Braze CSV files into Lytics, select **Import CSV** as the job type.
 
-![](https://www.braze.com/docs/assets/img/lytics/configure_job.png?5bfbffb26419da1b125d624c1e10baf0){: style="max-width:80%;"}
+![Lytics Custom Integrations job setup with Import CSV selected as the job type.](https://www.braze.com/docs/assets/img/lytics/configure_job.png?5bfbffb26419da1b125d624c1e10baf0){: style="max-width:80%;"}
 
-Finally, input a label and optional description for the job and configure any other required details. Click **Complete** to initiate and save the job.
+Finally, input a label and optional description for the job and configure any other required details. Select **Complete** to initiate and save the job.
 
 
 

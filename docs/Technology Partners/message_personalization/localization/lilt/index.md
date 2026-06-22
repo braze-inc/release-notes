@@ -76,7 +76,7 @@ Use LILT's AI for immediate, on-brand translations for time-sensitive communicat
 - `LILT: Needs Attention`
 - `LILT: Instant`
 
-![Set up LILT tags in Braze.](https://www.braze.com/docs/assets/img/lilt/image_5_lilt_tags.png?9be5ac07063d0bd4960c8ebbe40c8f29)	
+![Set up LILT tags in Braze.](https://www.braze.com/docs/assets/img/lilt/image_5_lilt_tags.png?44a006f16a9067203ce9f5a351e900a3)	
 
 {: start="3"}
 ### Step 3: Send content to LILT for translation 

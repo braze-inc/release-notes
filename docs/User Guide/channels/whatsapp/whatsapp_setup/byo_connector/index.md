@@ -29,7 +29,7 @@ Before setting up the BYO WhatsApp connector, confirm that your WhatsApp Busines
 1. In Infobip, identify the account that you want to use with your WhatsApp Business Account. 
 2. Go to **Developer Tools** > **API Keys** and select **Create API Key**.
 
-!["Create API key" page with a creation date of "16/12/2025" and expiration date of "16/12/36".](https://www.braze.com/docs/assets/img/whatsapp/byo_connector/create_api_key.png?637aa61de060d3a9f94d5abddce61bfa)
+!["Create API key" page with a creation date of "16/12/2025" and expiration date of "16/12/36".](https://www.braze.com/docs/assets/img/whatsapp/byo_connector/create_api_key.png?c7f891eac13ad2ba2a56728049c8d6fb)
 
 {: start="3"}
 3. Give the key a meaningful name, such as “Braze - My Workspace Name - My WABA Name”.
@@ -74,7 +74,7 @@ To receive the verification code, go to your Infobip dashboard > **Analyze** > *
 
 
 
-![Message logs showing an inbound SMS message with the verification code.](https://www.braze.com/docs/assets/img/whatsapp/byo_connector/verification_code.png?77584cfc5e1dd3bb3f8939bc1ccb7bc6)
+![Message logs showing an inbound SMS message with the verification code.](https://www.braze.com/docs/assets/img/whatsapp/byo_connector/verification_code.png?f8073e4509b1446ac5f859b139734d46)
 
 After completing setup, your phone number is listed as a subscription group under your WhatsApp Business Group. The WhatsApp Business Group contains the Infobip account name and API base URL it’s connected to. Accounts connected through the native integration do not have an Infobip account name.
 
