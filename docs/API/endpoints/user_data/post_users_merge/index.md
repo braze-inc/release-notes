@@ -1,4 +1,4 @@
-<div id='api_itdvyqiknnwi' class='api_div' data-search-keywords='prerequisites merge_updates message'>
+<div id='api_llyarunfqhas' class='api_div' data-search-keywords='prerequisites merge_updates message'>
 <h1 id="merge-users">Merge users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/merge</p>
@@ -377,6 +377,14 @@ Authorization: Bearer YOUR_REST_API_KEY
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h2 id="troubleshooting">Troubleshooting</h2>
+
+<h3 id="a-success-response-was-returned-but-the-merged-user-is-still-searchable">A success response was returned but the merged user is still searchable</h3>
+
+<p>A successful response confirms the request was accepted, but the merge operation involves two steps: merging the profiles and then removing the source profile. Because of this, the <code class="language-plaintext highlighter-rouge">identifier_to_merge</code> profile may remain searchable in the dashboard for a short period after a successful response. This is expected behavior—wait a few minutes and then verify the merge is complete.</p>
+
+<p>If the merged user still exists after several minutes, verify that the identifiers in your request are correct and belong to users in the same workspace as the API key used for the request.</p>
+
+<h3 id="error-reference">Error reference</h3>
 
 <p>The following table lists possible error messages that may occur.</p>
 

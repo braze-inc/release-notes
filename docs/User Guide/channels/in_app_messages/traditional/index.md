@@ -241,7 +241,7 @@ Some message types do not need and therefore do not ask for headers.
 
 ##### Generating AI copy
 
-Need help creating awesome copy? Try using the [AI copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/generative_ai/copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating awesome copy? Try using the [AI copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#generate-copy). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Launch AI Copywriter button, located in the Message field of the in-app message composer.](https://www.braze.com/docs/assets/img/ai_copywriter/ai_copywriter_iam.png?ee0903850c68f4837acd2eed22be5db5){: style="max-width:60%"}
 
@@ -345,7 +345,7 @@ You can add [key-value pairs](https://www.braze.com/docs/user_guide/messaging/de
 
 Build the remainder of your campaign; see the following sections for further guidance on how to best use our tools to build in-app messages.
 
-#### Choose a trigger
+### Choose a trigger
 
 Select the action you'd like to trigger your message off of, as well as the start and end times for your campaign or Canvas.
 
@@ -371,7 +371,7 @@ A start date and time must be selected; however, an end date is optional. An end
 
 Refer to our developer documentation for [server-side event triggering](https://www.braze.com/docs/developer_guide/in_app_messages/triggering_messages/?tab=web) and [local in-app message delivery](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
 
-##### Online versus offline triggering
+#### Online versus offline triggering
 
 In-app messages work by sending the message and triggers to the user's device. After the in-app messages are on a device, it waits to display until the trigger condition is met. If the in-app messages are already cached on the user's device, you can even trigger in-app messages offline with no connection to Braze (for example, in Airplane mode).
 
@@ -382,7 +382,7 @@ Once an in-app message has been stopped, there may be some users that continue t
 
 
 
-#### Choose a priority
+### Choose a priority
 
 Finally, after you've selected the action the in-app message will be triggered off of, you should also set a priority. If two messages are triggered off of the same action, high priority messages will be scheduled to appear on users' devices before messages with lower priorities. 
 
@@ -401,7 +401,7 @@ To set priorities within these buckets, click **Set Exact Priority**, and you ca
 
 ![An example of how priority is set for an in-app message campaign and Canvas.](https://www.braze.com/docs/assets/img_archive/bucket_prioritization.png?4c1e084584d0ee31d8e143b9f3fed9f0){: style="max-width:70%"}
 
-#### Choose users to target
+### Choose users to target
 
 Next, you must [target users](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/target_users/) by choosing segments or filters to narrow your audience. You automatically receive a snapshot of what that approximate segment population looks like. Keep in mind that exact segment membership is always calculated before the message is sent.
 
@@ -412,7 +412,7 @@ If there's a delay on the in-app message step, segment membership will be evalua
 
 
 
-##### Re-evaluate campaign eligibility and Liquid
+#### Re-evaluate campaign eligibility and Liquid
 
 In some scenarios, you may want to re-evaluate a user's eligibility as they trigger an in-app message to display. Examples include campaigns that target a custom attribute that frequently changes or messages that should reflect any last-minute profile changes.
 
@@ -431,13 +431,13 @@ Do not use this option for messages that can be triggered while a user is offlin
 
 
 
-##### Use data added by REST API in a message
+#### Use data added by REST API in a message
 
 User data that the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) adds in the same session can sometimes be used in that user's in-app message. For example, if a user is in the audience for an in-app message that is waiting on a trigger, starts a session, and in that same session the REST API updates their profile, that new data can appear in the in-app message when **Re-evaluate campaign eligibility before displaying** is selected. Braze won't template the in-app message until it's time to render.
 
 If one trigger both sends data to Braze and fires the in-app message, the message can't use that newly updated profile data, even with a scheduled delay. Use two separate triggers instead: one to send the data, and one to trigger the in-app message.
 
-#### Choose conversion events
+### Choose conversion events
 
 Braze allows you to track how often users perform specific actions, [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 

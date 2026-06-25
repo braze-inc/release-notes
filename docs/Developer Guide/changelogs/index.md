@@ -5933,9 +5933,25 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 
 
-<h2 id="1510">15.1.0</h2>
+<h2 id="1520">15.2.0</h2>
 
 <h5 id="added">Added</h5>
+<ul>
+  <li>Adds optional <code class="language-plaintext highlighter-rouge">subtotalValue</code>, <code class="language-plaintext highlighter-rouge">tax</code>, and <code class="language-plaintext highlighter-rouge">shipping</code> fields to <code class="language-plaintext highlighter-rouge">Braze.Ecommerce.OrderPlacedEvent</code>, all <code class="language-plaintext highlighter-rouge">Braze.Ecommerce.CartUpdated</code> variants (Replace / Add / Remove), and <code class="language-plaintext highlighter-rouge">Braze.Ecommerce.CheckoutStartedEvent</code>.
+    <ul>
+      <li>Available in Objective-C on <code class="language-plaintext highlighter-rouge">BRZEcommerceOrderPlacedEvent</code>, <code class="language-plaintext highlighter-rouge">BRZEcommerceCartUpdatedEvent</code>, and <code class="language-plaintext highlighter-rouge">BRZEcommerceCheckoutStartedEvent</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="fixed">Fixed</h5>
+<ul>
+  <li>Fixes a video player configuration error for embedded YouTube videos in HTML in-app messages.</li>
+</ul>
+
+<h2 id="1510">15.1.0</h2>
+
+<h5 id="added-1">Added</h5>
 <ul>
   <li>Adds <code class="language-plaintext highlighter-rouge">dismiss()</code> to <code class="language-plaintext highlighter-rouge">Braze.Banner.Context</code> and <code class="language-plaintext highlighter-rouge">dismiss(using:)</code> to <code class="language-plaintext highlighter-rouge">Braze.Banner</code> to dismiss a banner when using a custom UI.
     <ul>
@@ -5962,7 +5978,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed">Fixed</h5>
+<h5 id="fixed-1">Fixed</h5>
 <ul>
   <li>Fixes a bug in the default Content Cards UI that would prevent image loading if multiple cards contained the same remote image URL. (<a href="https://github.com/braze-inc/braze-swift-sdk/issues/176">#176</a>)
     <ul>
@@ -5973,7 +5989,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1501">15.0.1</h2>
 
-<h5 id="fixed-1">Fixed</h5>
+<h5 id="fixed-2">Fixed</h5>
 <ul>
   <li>Improves the stability of the SDK’s internal state management, resolving a crash that would occur under low memory conditions.</li>
   <li><a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/banners-swift.class/getbanner(for:_:)"><code class="language-plaintext highlighter-rouge">getBanner</code></a> now returns the cached banner immediately even when the SDK is rate limited.</li>
@@ -5999,7 +6015,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Updates the <code class="language-plaintext highlighter-rouge">Braze.WebViewBridge.ScriptMessageHandler</code> and <code class="language-plaintext highlighter-rouge">Braze.WebViewBridge.SchemeHandler</code> init to have non-optional <code class="language-plaintext highlighter-rouge">channel</code> parameter.</li>
 </ul>
 
-<h5 id="added-1">Added</h5>
+<h5 id="added-2">Added</h5>
 <ul>
   <li>Logs configuration validation messages when <code class="language-plaintext highlighter-rouge">Braze.Configuration.devicePropertyAllowList</code> omits <code class="language-plaintext highlighter-rouge">pushEnabled</code> or <code class="language-plaintext highlighter-rouge">pushAuthStatus</code>.
     <ul>
@@ -6031,14 +6047,14 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed-2">Fixed</h5>
+<h5 id="fixed-3">Fixed</h5>
 <ul>
   <li>Fixes a rare race condition where the app would become unresponsive when calling <code class="language-plaintext highlighter-rouge">changeUser</code> or <code class="language-plaintext highlighter-rouge">wipeData</code> while an HTML in-app message or banner was in the middle of displaying.</li>
 </ul>
 
 <h2 id="1421">14.2.1</h2>
 
-<h5 id="fixed-3">Fixed</h5>
+<h5 id="fixed-4">Fixed</h5>
 <ul>
   <li>Improves the reliability of resuming the SDK’s tracking of Live Activities when there are multiple active activity types.
     <ul>
@@ -6050,7 +6066,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1420">14.2.0</h2>
 
-<h5 id="added-2">Added</h5>
+<h5 id="added-3">Added</h5>
 <ul>
   <li>Adds methods to observe all key events and errors in the ActivityKit API, enabling observation of real-time state and error events from the SDK’s Live Activity lifecycle.
     <ul>
@@ -6062,7 +6078,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed-4">Fixed</h5>
+<h5 id="fixed-5">Fixed</h5>
 <ul>
   <li>Improves reliability of Live Activity push token updates during app background and foreground transitions, including cold start scenarios where push-to-start activities may not have received token updates.</li>
   <li>Content cards now filter out invalid cards so users can still view remaining valid cards.
@@ -6075,7 +6091,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1410">14.1.0</h2>
 
-<h5 id="added-3">Added</h5>
+<h5 id="added-4">Added</h5>
 <ul>
   <li>Adds support for Banner dismissal events.
     <ul>
@@ -6094,7 +6110,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Adds error logging for Banners operations, providing actionable diagnostics for persistence failures and invalid banner states.</li>
 </ul>
 
-<h5 id="fixed-5">Fixed</h5>
+<h5 id="fixed-6">Fixed</h5>
 <ul>
   <li>Improves robustness around push notification and deep link handling during delayed SDK initialization.</li>
   <li>Fixes an issue where <code class="language-plaintext highlighter-rouge">Braze.FeatureFlags.subscribeToUpdates</code> would not trigger the update closure upon all refresh completions.
@@ -6107,21 +6123,21 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1404">14.0.4</h2>
 
-<h5 id="fixed-6">Fixed</h5>
+<h5 id="fixed-7">Fixed</h5>
 <ul>
   <li>Fixes an issue where the configuration of push notification automation would be dropped upon every other re-initialization of the Braze instance.</li>
 </ul>
 
 <h2 id="1403">14.0.3</h2>
 
-<h5 id="fixed-7">Fixed</h5>
+<h5 id="fixed-8">Fixed</h5>
 <ul>
   <li>Push Stories now filter out invalid pages so users can still navigate through remaining valid pages.</li>
 </ul>
 
 <h2 id="1402">14.0.2</h2>
 
-<h5 id="fixed-8">Fixed</h5>
+<h5 id="fixed-9">Fixed</h5>
 <ul>
   <li>Fixes the SwiftUI implementation of <code class="language-plaintext highlighter-rouge">BannerView</code> to update Banner contents in-place whenever a refresh has succeeded.</li>
   <li>Re-exposes the public initializer of <code class="language-plaintext highlighter-rouge">BrazeInAppMessageUI.HtmlView</code> as a designated <code class="language-plaintext highlighter-rouge">init</code> instead of a <code class="language-plaintext highlighter-rouge">convenience init</code>, which was introduced in version <code class="language-plaintext highlighter-rouge">14.0.0</code>
@@ -6134,7 +6150,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1401">14.0.1</h2>
 
-<h5 id="fixed-9">Fixed</h5>
+<h5 id="fixed-10">Fixed</h5>
 <ul>
   <li>Resolves an issue where the handling of universal links defaulted to the <code class="language-plaintext highlighter-rouge">UIApplicationDelegate</code> implementation instead of the <code class="language-plaintext highlighter-rouge">UISceneDelegate</code> implementation when the app was not in foreground.
     <ul>
@@ -6160,12 +6176,12 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="added-4">Added</h5>
+<h5 id="added-5">Added</h5>
 <ul>
   <li>Remote configuration now automatically refetches after SDK upgrades, keeping server defaults in sync and improving reliability after version changes.</li>
 </ul>
 
-<h5 id="fixed-10">Fixed</h5>
+<h5 id="fixed-11">Fixed</h5>
 <ul>
   <li>Resolves an issue where long text in in-app message buttons would wrap to multiple lines.
     <ul>
@@ -6190,7 +6206,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1330">13.3.0</h2>
 
-<h5 id="added-5">Added</h5>
+<h5 id="added-6">Added</h5>
 <ul>
   <li>Improves reliability when sending the push token and push authorization status to the backend.
     <ul>
@@ -6201,7 +6217,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1321">13.2.1</h2>
 
-<h5 id="fixed-11">Fixed</h5>
+<h5 id="fixed-12">Fixed</h5>
 <ul>
   <li>Resolves an issue where an accumulation of Banners pending requests could cause the host application to hang at app startup.
     <ul>
@@ -6212,14 +6228,14 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1320">13.2.0</h2>
 
-<h5 id="added-6">Added</h5>
+<h5 id="added-7">Added</h5>
 <ul>
   <li>Adds support for compilation with Xcode 26.0 and its corresponding operating system runtimes on all platforms supported by the Braze Swift SDK.</li>
 </ul>
 
 <h2 id="1310">13.1.0</h2>
 
-<h5 id="added-7">Added</h5>
+<h5 id="added-8">Added</h5>
 <ul>
   <li>Adds support for Banner properties via new public methods on <code class="language-plaintext highlighter-rouge">Braze.Banner</code> instances.
     <ul>
@@ -6235,7 +6251,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>The default client-side rate limiting values for Banners refresh has been increased. For more information on SDK rate limiting, please refer to the <a href="https://www.braze.com/docs/developer_guide/sdk_integration/rate_limits#braze-sdk-rate-limits">Braze Developer Guide</a></li>
 </ul>
 
-<h5 id="fixed-12">Fixed</h5>
+<h5 id="fixed-13">Fixed</h5>
 <ul>
   <li>Improves the behavior of VoiceOver for assets that are missing an <code class="language-plaintext highlighter-rouge">imageAltText</code> for Content Card and In-App Message campaigns created via the Traditional editor.
     <ul>
@@ -6270,14 +6286,14 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="added-8">Added</h5>
+<h5 id="added-9">Added</h5>
 <ul>
   <li>Adds the boolean field <code class="language-plaintext highlighter-rouge">optional</code> to <code class="language-plaintext highlighter-rouge">BrazeSDKAuthError</code> to indicate if it is an optional authentication error.</li>
 </ul>
 
 <h2 id="1210">12.1.0</h2>
 
-<h5 id="added-9">Added</h5>
+<h5 id="added-10">Added</h5>
 <ul>
   <li>Adds optional <code class="language-plaintext highlighter-rouge">imageAltText</code> and <code class="language-plaintext highlighter-rouge">language</code> fields to UI classes and structs associated with Content Card and In-App Message campaigns for improved accessibility.
     <ul>
@@ -6310,7 +6326,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1203">12.0.3</h2>
 
-<h5 id="fixed-13">Fixed</h5>
+<h5 id="fixed-14">Fixed</h5>
 <ul>
   <li>Fixes the Banner rendering incompatibility with iOS 18.5+ while maintaining the correct URL redirect behavior.
     <ul>
@@ -6324,7 +6340,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <p>⚠️ Important: This version has a known issue preventing Banners from rendering on iOS 18.5+.</p>
 
-<h5 id="fixed-14">Fixed</h5>
+<h5 id="fixed-15">Fixed</h5>
 <ul>
   <li>Reverts Banners to the behavior found in versions <code class="language-plaintext highlighter-rouge">12.0.0</code> and prior.
     <ul>
@@ -6337,7 +6353,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <p>⚠️ Important: This version has a known issue in Drag-and-Drop in-app messages and Banners, preventing certain URLs from redirecting properly. Update to a newer version if you are using this feature.</p>
 
-<h5 id="fixed-15">Fixed</h5>
+<h5 id="fixed-16">Fixed</h5>
 <ul>
   <li>Fixes an issue where setting <code class="language-plaintext highlighter-rouge">configuration.forwardUniversalLinks = true</code> would not properly forward universal links to the system APIs in some cases.
     <ul>
@@ -6371,7 +6387,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed-16">Fixed</h5>
+<h5 id="fixed-17">Fixed</h5>
 <ul>
   <li>Fixes an App Store validation issue where Braze’s libraries privacy manifests would fail to be detected when integrating the SDK as static XCFrameworks.</li>
   <li>Fixes <code class="language-plaintext highlighter-rouge">BrazeKitCompat</code> <code class="language-plaintext highlighter-rouge">ABKContentCard.expiresAt</code> to return the correct expiration date.
@@ -6404,7 +6420,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="added-10">Added</h5>
+<h5 id="added-11">Added</h5>
 <ul>
   <li>Adds the <code class="language-plaintext highlighter-rouge">BrazeInAppMessagePresenter.dismiss(reason:)</code> optional protocol method.
     <ul>
@@ -6417,7 +6433,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1190">11.9.0</h2>
 
-<h5 id="added-11">Added</h5>
+<h5 id="added-12">Added</h5>
 <ul>
   <li>Adds <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/pushtostarttokenupdatesstream"><code class="language-plaintext highlighter-rouge">Braze.LiveActivities.pushToStartTokenUpdatesStream: AsyncStream&lt;Braze.LiveActivities.PushToStartTokenUpdate&gt;</code></a>, an asynchronous stream which publishes updates pertaining to the Live Activities push-to-start token lifecycle.
     <ul>
@@ -6431,7 +6447,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed-17">Fixed</h5>
+<h5 id="fixed-18">Fixed</h5>
 <ul>
   <li>The SDK Debugger tool will now capture logs even when <code class="language-plaintext highlighter-rouge">Braze.configuration.logger.level</code> is <code class="language-plaintext highlighter-rouge">.disabled</code> and no SDK logging occurs locally.
     <ul>
@@ -6444,7 +6460,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1180">11.8.0</h2>
 
-<h5 id="added-12">Added</h5>
+<h5 id="added-13">Added</h5>
 <ul>
   <li>Network requests made by the SDK to the Braze Live Activities <code class="language-plaintext highlighter-rouge">/push_token_tag</code> endpoint will now be retried in the case of a request failure.</li>
   <li>Expands customizability options of custom endpoints passed when initializing a <code class="language-plaintext highlighter-rouge">Braze</code> instance.
@@ -6455,7 +6471,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed-18">Fixed</h5>
+<h5 id="fixed-19">Fixed</h5>
 <ul>
   <li>Fixes an issue where in-app messages would not always be triggered when sending Braze requests to the tracking endpoint. This occurred when both of the following conditions are true:
     <ul>
@@ -6470,14 +6486,14 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1170">11.7.0</h2>
 
-<h5 id="added-13">Added</h5>
+<h5 id="added-14">Added</h5>
 <ul>
   <li>Adds the ability for a banner container to resize when the banner content changes height.</li>
 </ul>
 
 <h2 id="1161">11.6.1</h2>
 
-<h5 id="fixed-19">Fixed</h5>
+<h5 id="fixed-20">Fixed</h5>
 <ul>
   <li>Improves the reliability of collecting Live Activity push-to-start tokens on calling <code class="language-plaintext highlighter-rouge">registerPushToStart</code>:
     <ul>
@@ -6496,7 +6512,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1160">11.6.0</h2>
 
-<h5 id="fixed-20">Fixed</h5>
+<h5 id="fixed-21">Fixed</h5>
 <ul>
   <li>Fixes the behavior in the Braze-provided UI for Banner Cards where content would not automatically be cleared from the UI when changing to a user that was not eligible for that campaign.</li>
   <li>Changes the behavior of <code class="language-plaintext highlighter-rouge">Braze.Banners.subscribeToUpdates(_:)</code> to match behavior of the corresponding API on the Braze Android SDK.
@@ -6526,7 +6542,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="added-14">Added</h5>
+<h5 id="added-15">Added</h5>
 <ul>
   <li>Adds an optional method <code class="language-plaintext highlighter-rouge">removeBannerContent</code> to the <code class="language-plaintext highlighter-rouge">BrazeBannerPlacement</code> protocol.</li>
   <li>Locally persisted Braze SDK data will no longer transfer during OS backups. This resolves an issue introduced in <code class="language-plaintext highlighter-rouge">6.2.0</code>.</li>
@@ -6534,7 +6550,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1150">11.5.0</h2>
 
-<h5 id="fixed-21">Fixed</h5>
+<h5 id="fixed-22">Fixed</h5>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">Braze.banners.getBanner(for:_:)</code> now successfully returns a cached <code class="language-plaintext highlighter-rouge">Banner</code> object for the requested placement ID as long as a Banner Cards sync has ever succeeded for the current user.
     <ul>
@@ -6550,7 +6566,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="added-15">Added</h5>
+<h5 id="added-16">Added</h5>
 <ul>
   <li>Adds <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user/id"><code class="language-plaintext highlighter-rouge">Braze.User.id</code></a> to access the current user identifier synchronously.
     <ul>
@@ -6571,14 +6587,14 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1140">11.4.0</h2>
 
-<h5 id="fixed-22">Fixed</h5>
+<h5 id="fixed-23">Fixed</h5>
 <ul>
   <li>Fixes an issue where the SDK could hang during initialization if previous sessions generated a large number of geofence refreshes. This hang could sometimes lead to a crash by blocking the main thread for an extended period.</li>
   <li>Fixes an issue where the triggering of in-app messages could be delayed in cases where requests for updated in-app message triggers are also delayed due to rate limiting.</li>
   <li>Adds additional safeguards to ensure that ongoing network requests are dropped when changing users mid-flight.</li>
 </ul>
 
-<h5 id="added-16">Added</h5>
+<h5 id="added-17">Added</h5>
 <ul>
   <li>When Content Cards, Feature Flags, or Banner Cards go from enabled to disabled, the stored data is removed from cache.</li>
   <li>Adds <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/banner/trackingid"><code class="language-plaintext highlighter-rouge">banner.trackingId</code></a> to distinguish between banner objects.
@@ -6590,7 +6606,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1130">11.3.0</h2>
 
-<h5 id="fixed-23">Fixed</h5>
+<h5 id="fixed-24">Fixed</h5>
 <ul>
   <li>Fixes a behavior where calling the <code class="language-plaintext highlighter-rouge">logClick</code> bridge method in HTML in-app messages with <code class="language-plaintext highlighter-rouge">""</code> as the button ID would log an error.
     <ul>
@@ -6599,7 +6615,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="added-17">Added</h5>
+<h5 id="added-18">Added</h5>
 <ul>
   <li>Adds support for the Braze Banner Cards product.
     <ul>
@@ -6610,12 +6626,12 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1120">11.2.0</h2>
 
-<h5 id="fixed-24">Fixed</h5>
+<h5 id="fixed-25">Fixed</h5>
 <ul>
   <li>Fixes the Objective-C <code class="language-plaintext highlighter-rouge">Braze.delegate</code> declaration to be <code class="language-plaintext highlighter-rouge">weak</code> like the Swift variant.</li>
 </ul>
 
-<h5 id="added-18">Added</h5>
+<h5 id="added-19">Added</h5>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">Braze.prepareForDelayedInitialization</code> now takes an optional parameter <code class="language-plaintext highlighter-rouge">analyticsBehavior: PushEnqueueBehavior</code>.
     <ul>
@@ -6630,7 +6646,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1111">11.1.1</h2>
 
-<h5 id="fixed-25">Fixed</h5>
+<h5 id="fixed-26">Fixed</h5>
 <ul>
   <li>Fixes an issue introduced in <code class="language-plaintext highlighter-rouge">11.0.0</code> where the push subscription status would be sent to the backend with an inaccurate value at startup, causing an unexpected subscription state. The SDK now sends up the accurate subscription status at each startup.</li>
 </ul>
@@ -6639,21 +6655,21 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <p>⚠️ <strong>Important:</strong> This version has a known issue related to push subscription status. Upgrade to version <code class="language-plaintext highlighter-rouge">11.1.1</code> instead.</p>
 
-<h5 id="fixed-26">Fixed</h5>
+<h5 id="fixed-27">Fixed</h5>
 <ul>
   <li>Fixes an issue introduced in <code class="language-plaintext highlighter-rouge">11.0.0</code> where the push token status would not always be reported in all circumstances.</li>
   <li>Fixes a display bug where an in-app message would appear truncated after certain keyboard dismissal scenarios.</li>
   <li>Fixes a reference cycle in <code class="language-plaintext highlighter-rouge">Braze.NewsFeedCard.Context</code> that could prevent the card from being deallocated.</li>
 </ul>
 
-<h5 id="added-19">Added</h5>
+<h5 id="added-20">Added</h5>
 <ul>
   <li>Adds a public initializer for <code class="language-plaintext highlighter-rouge">Braze.Notifications.Payload</code>.</li>
 </ul>
 
 <h2 id="1101">11.0.1</h2>
 
-<h5 id="fixed-27">Fixed</h5>
+<h5 id="fixed-28">Fixed</h5>
 <ul>
   <li>Fixes an issue introduced in <code class="language-plaintext highlighter-rouge">11.0.0</code> where the push subscription status would be sent to the backend with an inaccurate value at startup, causing an unexpected subscription state. The SDK now sends up the accurate subscription status at each startup.</li>
 </ul>
@@ -6688,21 +6704,21 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Updates the <code class="language-plaintext highlighter-rouge">SDWebImage</code> dependency in <code class="language-plaintext highlighter-rouge">BrazeUICompat</code> and sample apps to <code class="language-plaintext highlighter-rouge">5.19.7+</code> to support Swift 6 strict concurrency checking.</li>
 </ul>
 
-<h4 id="fixed-28">Fixed</h4>
+<h4 id="fixed-29">Fixed</h4>
 <ul>
   <li>Fixes the push authorization status reporting to display the proper push token status on the Dashboard when a user has not explicitly accepted or declined push permissions.</li>
 </ul>
 
 <h2 id="1031">10.3.1</h2>
 
-<h5 id="fixed-29">Fixed</h5>
+<h5 id="fixed-30">Fixed</h5>
 <ul>
   <li>Improves the reliability of sending updates to Live Activities that were launched via a push-to-start notification to an app in the terminated state.</li>
 </ul>
 
 <h2 id="1030">10.3.0</h2>
 
-<h5 id="fixed-30">Fixed</h5>
+<h5 id="fixed-31">Fixed</h5>
 <ul>
   <li>Fixes the in-app message orientation validation logic, which prevented certain device classes from displaying messages under certain orientation configurations.</li>
   <li>Fixes the default behavior on full-screen in-app messages to display as modals only on tablet screen sizes.
@@ -6715,7 +6731,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Updates custom attribute value, custom event, and purchase string validation to use a 255 character maximum instead of a 255 byte maximum.</li>
 </ul>
 
-<h5 id="added-20">Added</h5>
+<h5 id="added-21">Added</h5>
 <ul>
   <li>The <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)"><code class="language-plaintext highlighter-rouge">Braze.set(identifierForAdvertiser:)</code></a> and <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforvendor:)"><code class="language-plaintext highlighter-rouge">Braze.set(identifierForVendor:)</code></a> methods now accept a <code class="language-plaintext highlighter-rouge">nil</code> parameter value to remove the identifiers from the user profile.</li>
   <li>Adds additional safeguards to <code class="language-plaintext highlighter-rouge">Braze.Notifications.subscribeToUpdates</code> to ensure the same Push notification can’t trigger the update closure multiple times.</li>
@@ -6723,19 +6739,19 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="1020">10.2.0</h2>
 
-<h5 id="fixed-31">Fixed</h5>
+<h5 id="fixed-32">Fixed</h5>
 <ul>
   <li>Updates the content card image background color to be clear.</li>
 </ul>
 
-<h5 id="added-21">Added</h5>
+<h5 id="added-22">Added</h5>
 <ul>
   <li>Adds support for an upcoming Braze SDK Debugging tool.</li>
 </ul>
 
 <h2 id="1010">10.1.0</h2>
 
-<h5 id="fixed-32">Fixed</h5>
+<h5 id="fixed-33">Fixed</h5>
 <ul>
   <li>Fixes an issue affecting the Objective-C variants of <code class="language-plaintext highlighter-rouge">BrazeDelegate</code>, <code class="language-plaintext highlighter-rouge">BrazeContentCardUIViewControllerDelegate</code> and <code class="language-plaintext highlighter-rouge">BrazeInAppMessageUIDelegate</code>.
     <ul>
@@ -6745,7 +6761,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="added-22">Added</h5>
+<h5 id="added-23">Added</h5>
 <ul>
   <li>Adds support for delayed SDK initialization, allowing you to create the Braze instance outside of <code class="language-plaintext highlighter-rouge">application(_:didFinishLaunchingWithOptions:)</code>.
     <ul>
@@ -6811,12 +6827,12 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Removes the deprecated <code class="language-plaintext highlighter-rouge">BrazeLocation</code> class in favor of <code class="language-plaintext highlighter-rouge">BrazeLocationProvider</code>.</li>
 </ul>
 
-<h5 id="fixed-33">Fixed</h5>
+<h5 id="fixed-34">Fixed</h5>
 <ul>
   <li>Fixes a crash when handling a scheme-based deep link containing a registered <code class="language-plaintext highlighter-rouge">applink</code> domain (e.g. <code class="language-plaintext highlighter-rouge">applinks:example.com</code> with a deep link to <code class="language-plaintext highlighter-rouge">app://example.com/path</code>).</li>
 </ul>
 
-<h5 id="added-23">Added</h5>
+<h5 id="added-24">Added</h5>
 <ul>
   <li>Adds support to subscribe to “Push Received” events via <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(payloadtypes:_:)"><code class="language-plaintext highlighter-rouge">Braze.Notifications.subscribeToUpdates(payloadTypes:_:)</code></a>.
     <ul>
@@ -6842,7 +6858,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="931">9.3.1</h2>
 
-<h5 id="fixed-34">Fixed</h5>
+<h5 id="fixed-35">Fixed</h5>
 <ul>
   <li>Fixes an issue where the <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/featureflags-swift.class/subscribetoupdates(_:)"><code class="language-plaintext highlighter-rouge">Braze.FeatureFlag.subscribeToUpdates(_:)</code></a> callback was not triggered at app launch when the cached feature flags matched the remote feature flags.</li>
   <li>Fixes an issue in Objective-C projects where the return value of <code class="language-plaintext highlighter-rouge">Braze.FeatureFlag.jsonProperty(key:)</code> would incorrectly encode any entry value equal to <code class="language-plaintext highlighter-rouge">null</code> under certain conditions.
@@ -6855,7 +6871,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="930">9.3.0</h2>
 
-<h5 id="added-24">Added</h5>
+<h5 id="added-25">Added</h5>
 <ul>
   <li>Adds Objective-C support for the <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog"><code class="language-plaintext highlighter-rouge">BrazeInAppMessageUIDelegate.inAppMessage(_:prepareWith:)</code></a> method.
     <ul>
@@ -6871,14 +6887,14 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed-35">Fixed</h5>
+<h5 id="fixed-36">Fixed</h5>
 <ul>
   <li>Fixes an issue where the <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/presentationcontext/preferredorientation"><code class="language-plaintext highlighter-rouge">preferredOrientation</code></a> on the presentation context of an in-app message would not be respected.</li>
 </ul>
 
 <h2 id="920">9.2.0</h2>
 
-<h5 id="added-25">Added</h5>
+<h5 id="added-26">Added</h5>
 <ul>
   <li>Adds the <code class="language-plaintext highlighter-rouge">openNewWindowLinksInBrowser</code> configuration (default: <code class="language-plaintext highlighter-rouge">false</code>) to <code class="language-plaintext highlighter-rouge">Braze.ModalContext</code>.
     <ul>
@@ -6887,7 +6903,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed-36">Fixed</h5>
+<h5 id="fixed-37">Fixed</h5>
 <ul>
   <li>Fixes an issue with the automatic push integration feature that could cause the SDK not to send the device token to Braze.</li>
   <li>Fixes an issue that prevented external links, which open in a new tab, from being activated in presented web views.</li>
@@ -6895,7 +6911,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="910">9.1.0</h2>
 
-<h5 id="added-26">Added</h5>
+<h5 id="added-27">Added</h5>
 <ul>
   <li>Adds support for 3 new Feature Flag property types and various APIs for accessing them:
     <ul>
@@ -6908,7 +6924,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Adds safeguards when reading the device model.</li>
 </ul>
 
-<h5 id="fixed-37">Fixed</h5>
+<h5 id="fixed-38">Fixed</h5>
 <ul>
   <li>Fixes the duplicate symbols compilation errors and runtime warnings that may occur under specific conditions when integrating <code class="language-plaintext highlighter-rouge">BrazeKit</code> and either <code class="language-plaintext highlighter-rouge">BrazeNotificationService</code> or <code class="language-plaintext highlighter-rouge">BrazePushStory</code> via CocoaPods.</li>
 </ul>
@@ -6931,14 +6947,14 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed-38">Fixed</h5>
+<h5 id="fixed-39">Fixed</h5>
 <ul>
   <li>Adds the missing <code class="language-plaintext highlighter-rouge">NSPrivacyCollectedDataTypes</code> key to the <code class="language-plaintext highlighter-rouge">BrazePushStory</code> privacy manifest.</li>
 </ul>
 
 <h2 id="840">8.4.0</h2>
 
-<h5 id="added-27">Added</h5>
+<h5 id="added-28">Added</h5>
 <ul>
   <li>Expands Geofences behavior in the background while “When In Use” authorization is selected:
     <ul>
@@ -6955,7 +6971,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="830">8.3.0</h2>
 
-<h5 id="added-28">Added</h5>
+<h5 id="added-29">Added</h5>
 <ul>
   <li>Adds early access for a third alternative repository which provides all Braze modules as mergeable XCFrameworks. For instructions on how to leverage it, refer to the repository README:
     <ul>
@@ -6964,7 +6980,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed-39">Fixed</h5>
+<h5 id="fixed-40">Fixed</h5>
 <ul>
   <li>Adds a missing privacy manifest for <code class="language-plaintext highlighter-rouge">BrazePushStory</code>.</li>
   <li>Fixes an invalid privacy manifest warning in <code class="language-plaintext highlighter-rouge">BrazeLocation</code> when submitting to the App Store as a dynamic XCFramework.</li>
@@ -6980,14 +6996,14 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="821">8.2.1</h2>
 
-<h5 id="fixed-40">Fixed</h5>
+<h5 id="fixed-41">Fixed</h5>
 <ul>
   <li>Fixes App Store validation issues when archiving with Xcode 15.3.</li>
 </ul>
 
 <h2 id="820">8.2.0</h2>
 
-<h5 id="added-29">Added</h5>
+<h5 id="added-30">Added</h5>
 <ul>
   <li>Adds support for remotely starting Live Activities via push notifications.
     <ul>
@@ -7011,7 +7027,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="810">8.1.0</h2>
 
-<h5 id="added-30">Added</h5>
+<h5 id="added-31">Added</h5>
 <ul>
   <li>Adds the <code class="language-plaintext highlighter-rouge">is_test_send</code> boolean value in the in-app message JSON representation.</li>
   <li>Adds the <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/subscribetosessionupdates(_:)"><code class="language-plaintext highlighter-rouge">Braze.subscribeToSessionUpdates(_:)</code></a> method and <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/sessionupdatesstream"><code class="language-plaintext highlighter-rouge">Braze.sessionUpdatesStream</code></a> property to subscribe to the session updates events generated by the SDK.</li>
@@ -7027,7 +7043,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Updated SDWebImage dependency in <code class="language-plaintext highlighter-rouge">BrazeUICompat</code> to <code class="language-plaintext highlighter-rouge">5.19.0+</code>.</li>
 </ul>
 
-<h5 id="fixed-41">Fixed</h5>
+<h5 id="fixed-42">Fixed</h5>
 <ul>
   <li>Fixes multiple issues on visionOS:
     <ul>
@@ -7044,7 +7060,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="801">8.0.1</h2>
 
-<h5 id="fixed-42">Fixed</h5>
+<h5 id="fixed-43">Fixed</h5>
 <ul>
   <li>Fixes the reported SDK version, see <a href="#800">8.0.0</a>.</li>
   <li>Removes crash data from the <code class="language-plaintext highlighter-rouge">BrazeKit</code> privacy manifest. This data type is not collected by Braze.</li>
@@ -7067,7 +7083,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>The <code class="language-plaintext highlighter-rouge">BrazeLocation</code> class is now marked as unavailable. It was previously deprecated in favor of <code class="language-plaintext highlighter-rouge">BrazeLocationProvider</code> in 5.8.1.</li>
 </ul>
 
-<h5 id="added-31">Added</h5>
+<h5 id="added-32">Added</h5>
 <ul>
   <li>Adds support for visionOS 1.0.
     <ul>
@@ -7079,7 +7095,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="770">7.7.0</h2>
 
-<h5 id="added-32">Added</h5>
+<h5 id="added-33">Added</h5>
 <ul>
   <li>Updates the prebuilt release assets to include the privacy manifest for manual integrations of SDWebImage.
     <ul>
@@ -7094,7 +7110,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed-43">Fixed</h5>
+<h5 id="fixed-44">Fixed</h5>
 <ul>
   <li>Fixes the default button placement for full in-app message views.</li>
   <li>Fixes an issue where setting <code class="language-plaintext highlighter-rouge">Braze.Configuration.Api.endpoint</code> to a URL with invalid characters could cause a crash.
@@ -7107,7 +7123,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="760">7.6.0</h2>
 
-<h5 id="added-33">Added</h5>
+<h5 id="added-34">Added</h5>
 <ul>
   <li>Adds the <code class="language-plaintext highlighter-rouge">Braze.InAppMessage.Data.isTestSend</code> property, which indicates whether an in-app message was triggered as part of a test send.</li>
   <li>Adds logic to separate Braze data into tracking and non-tracking requests.
@@ -7123,7 +7139,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed-44">Fixed</h5>
+<h5 id="fixed-45">Fixed</h5>
 <ul>
   <li>Adds safeguards to prevent a rare race condition occuring in the SDK network layer.</li>
   <li>Prevents in-app message test sends from attempting re-display after being discarded by a custom in-app message UI delegate.</li>
@@ -7137,7 +7153,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="750">7.5.0</h2>
 
-<h5 id="added-34">Added</h5>
+<h5 id="added-35">Added</h5>
 <ul>
   <li>Adds privacy manifests for <code class="language-plaintext highlighter-rouge">BrazeKit</code> and <code class="language-plaintext highlighter-rouge">BrazeLocation</code> to describe Braze’s data collection policies. For more details, refer to <a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests">Apple’s documentation</a> on privacy manifests.
     <ul>
@@ -7148,7 +7164,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>The WebKit Inspector developer tool is now enabled by default for all instances of <code class="language-plaintext highlighter-rouge">BrazeInAppMessagesUI.HtmlView</code>. It can be disabled by setting <code class="language-plaintext highlighter-rouge">BrazeInAppMessagesUI.HtmlView.Attributes.allowInspector</code> to <code class="language-plaintext highlighter-rouge">false</code>.</li>
 </ul>
 
-<h5 id="fixed-45">Fixed</h5>
+<h5 id="fixed-46">Fixed</h5>
 <ul>
   <li>Fixes an issue with the code signatures of XCFrameworks introduced in <code class="language-plaintext highlighter-rouge">7.1.0</code>.</li>
   <li>Fixes a crash on tvOS devices running versions below 16.0, caused by the absence of the <code class="language-plaintext highlighter-rouge">UIApplication.openNotificationSettingsURLString</code> symbol in those OS versions.</li>
@@ -7162,7 +7178,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="740">7.4.0</h2>
 
-<h5 id="added-35">Added</h5>
+<h5 id="added-36">Added</h5>
 <ul>
   <li>Adds two alternative repositories to support specialized integration options. For instructions on how to leverage them, refer to their respective READMEs:
     <ul>
@@ -7177,7 +7193,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed-46">Fixed</h5>
+<h5 id="fixed-47">Fixed</h5>
 <ul>
   <li>Fixes XCFrameworks headers to use the <code class="language-plaintext highlighter-rouge">#import</code> syntax instead of <code class="language-plaintext highlighter-rouge">@import</code> for compatibility with Objective-C++ contexts.</li>
   <li>Fixes the push token tag validation during Live Activity registration, accepting strings up to 256 bytes instead of 255 bytes.</li>
@@ -7187,12 +7203,12 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="730">7.3.0</h2>
 
-<h5 id="added-36">Added</h5>
+<h5 id="added-37">Added</h5>
 <ul>
   <li>Adds support for Expo Notifications <a href="https://docs.expo.dev/versions/latest/sdk/notifications/#notification-events-listeners">event listeners</a> when using the automatic push integration.</li>
 </ul>
 
-<h5 id="fixed-47">Fixed</h5>
+<h5 id="fixed-48">Fixed</h5>
 <ul>
   <li>Fixes a rare concurrency issue that might result in duplicated events when logging large amount of events.</li>
   <li>Fixes an issue where <code class="language-plaintext highlighter-rouge">user.set(dateOfBirth:)</code> was not setting the date of birth accurately due to variations in the device’s timezone.</li>
@@ -7200,12 +7216,12 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="720">7.2.0</h2>
 
-<h5 id="added-37">Added</h5>
+<h5 id="added-38">Added</h5>
 <ul>
   <li>Exposes the <code class="language-plaintext highlighter-rouge">BrazePushStory.NotificationViewController.didReceive</code> methods for custom handling of push story notification events.</li>
 </ul>
 
-<h5 id="fixed-48">Fixed</h5>
+<h5 id="fixed-49">Fixed</h5>
 <ul>
   <li>Resolves an issue for in-app messages with buttons where tapping on the body would incorrectly execute the button’s click action.
     <ul>
@@ -7229,7 +7245,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="710">7.1.0</h2>
 
-<h5 id="fixed-49">Fixed</h5>
+<h5 id="fixed-50">Fixed</h5>
 <ul>
   <li>Resolves an issue preventing templated in-app messages from triggering if a previous attempt to display the message failed within the same session.</li>
   <li>Fixes an issue that prevented custom events and nested custom attributes from logging if had a property with a value that was prefixed with a <code class="language-plaintext highlighter-rouge">$</code>.</li>
@@ -7237,7 +7253,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Adds additional safeguards when reading the device model.</li>
 </ul>
 
-<h5 id="added-38">Added</h5>
+<h5 id="added-39">Added</h5>
 <ul>
   <li>Adds a code signature to all XCFrameworks in the Braze Swift SDK, signed by <code class="language-plaintext highlighter-rouge">Braze, Inc.</code>.</li>
   <li><code class="language-plaintext highlighter-rouge">BrazeInAppMessageUI.DisplayChoice.later</code> has been deprecated in favor of <code class="language-plaintext highlighter-rouge">BrazeInAppMessageUI.DisplayChoice.reenqueue</code>.</li>
@@ -7271,7 +7287,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="fixed-50">Fixed</h5>
+<h5 id="fixed-51">Fixed</h5>
 <ul>
   <li>Fixes compiler warnings about Swift 6 when compiling <code class="language-plaintext highlighter-rouge">BrazeUI</code> while using Xcode 15.</li>
   <li>Exposes public imports for <code class="language-plaintext highlighter-rouge">ABKClassicImageContentCardCell.h</code> and <code class="language-plaintext highlighter-rouge">ABKControlTableViewCell.h</code> for use in the BrazeUICompat layer.</li>
@@ -7279,7 +7295,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Resolves a Content Cards feed UI issue displaying a placeholder image in Classic cards without an attached image.</li>
 </ul>
 
-<h5 id="added-39">Added</h5>
+<h5 id="added-40">Added</h5>
 <ul>
   <li>Adds the <code class="language-plaintext highlighter-rouge">enableDarkTheme</code> property to <code class="language-plaintext highlighter-rouge">BrazeContentCardUI.ViewController.Attributes</code>.
     <ul>
@@ -7291,7 +7307,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="662">6.6.2</h2>
 
-<h5 id="fixed-51">Fixed</h5>
+<h5 id="fixed-52">Fixed</h5>
 <ul>
   <li>Fixes an issue preventing purchase events from being logged when the product identifier has a leading dollar sign ($).</li>
   <li>Fixes an issue preventing custom attributes from being logged when the attribute key has a leading dollar sign ($).</li>
@@ -7299,7 +7315,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="661">6.6.1</h2>
 
-<h5 id="fixed-52">Fixed</h5>
+<h5 id="fixed-53">Fixed</h5>
 <ul>
   <li>Fixes a crash in the geofences feature that could occur when the number of monitored regions exceeded the maximum count.</li>
   <li>Fixes an issue introduced in <code class="language-plaintext highlighter-rouge">6.3.1</code> that would always update a user’s push subscription status to <code class="language-plaintext highlighter-rouge">optedIn</code> on app launch if push permissions were authorized on the device settings.
@@ -7316,7 +7332,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="660">6.6.0</h2>
 
-<h5 id="fixed-53">Fixed</h5>
+<h5 id="fixed-54">Fixed</h5>
 <ul>
   <li>Fixes an issue in HTML in-app messages where custom event and purchase properties would always convert values for <code class="language-plaintext highlighter-rouge">1</code> and <code class="language-plaintext highlighter-rouge">0</code> to become <code class="language-plaintext highlighter-rouge">true</code> and <code class="language-plaintext highlighter-rouge">false</code>, respectively.
     <ul>
@@ -7326,7 +7342,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Prevents the default Braze UI from displaying in-app messages underneath the keyboard when Stage Manager is in use.</li>
 </ul>
 
-<h5 id="added-40">Added</h5>
+<h5 id="added-41">Added</h5>
 <ul>
   <li>Adds the <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/featureflags-swift.class/logfeatureflagimpression(id:)"><code class="language-plaintext highlighter-rouge">Braze.FeatureFlags.logFeatureFlagImpression(id: String)</code></a> method.</li>
   <li>Adds the optional <code class="language-plaintext highlighter-rouge">merge</code> parameter to the Objective-C representation of the <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/setcustomattribute(key:dictionary:merge:fileid:line:)"><code class="language-plaintext highlighter-rouge">setCustomAttribute(key:dictionary:merge:)</code></a> method.</li>
@@ -7334,7 +7350,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="650">6.5.0</h2>
 
-<h5 id="fixed-54">Fixed</h5>
+<h5 id="fixed-55">Fixed</h5>
 <ul>
   <li>Content card impressions can now be logged any number of times on a single card, bringing parity with Android and Web.
     <ul>
@@ -7344,7 +7360,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="added-41">Added</h5>
+<h5 id="added-42">Added</h5>
 <ul>
   <li>Adds a simplified method for integrating push notification support into your application:
     <ul>
@@ -7376,7 +7392,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="640">6.4.0</h2>
 
-<h5 id="fixed-55">Fixed</h5>
+<h5 id="fixed-56">Fixed</h5>
 <ul>
   <li>Fixes an issue preventing text fields from being selected in HTML IAMs for iOS 15.</li>
   <li>Fixes an issue where the device model was inaccurately reported as iPad on macOS (<em>Mac Catalyst</em> and <em>Designed for iPad</em> configurations).</li>
@@ -7385,14 +7401,14 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Fixes an issue introduced in 6.0.0 where images in in-app messages would appear smaller than expected when using the compatibility UI (<code class="language-plaintext highlighter-rouge">BrazeUICompat</code>).</li>
 </ul>
 
-<h5 id="added-42">Added</h5>
+<h5 id="added-43">Added</h5>
 <ul>
   <li>Adds the <code class="language-plaintext highlighter-rouge">unviewedCards</code> convenience property to the <code class="language-plaintext highlighter-rouge">Braze.ContentCards</code> class to get the unviewed content cards for the current user.</li>
 </ul>
 
 <h2 id="631">6.3.1</h2>
 
-<h5 id="fixed-56">Fixed</h5>
+<h5 id="fixed-57">Fixed</h5>
 <ul>
   <li>Fixes an issue where the previous user’s data would not be flushed after calling <code class="language-plaintext highlighter-rouge">changeUser(userId:sdkAuthSignature:)</code> when the SDK authentication feature is enabled.</li>
   <li>A content card impression can now be logged once per session. Previously, the Braze-provided Content Cards UI would limit to a single impression per card at maximum, irrespective of sessions.</li>
@@ -7402,19 +7418,19 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Fixes a rare crash occurring when deinitializing the Braze instance.</li>
 </ul>
 
-<h5 id="added-43">Added</h5>
+<h5 id="added-44">Added</h5>
 <ul>
   <li>Adds additional logging for network-related decoding errors.</li>
 </ul>
 
 <h2 id="630">6.3.0</h2>
 
-<h5 id="fixed-57">Fixed</h5>
+<h5 id="fixed-58">Fixed</h5>
 <ul>
   <li>“Confirm” and “Cancel” notification categories now show the correct titles on the action buttons.</li>
 </ul>
 
-<h5 id="added-44">Added</h5>
+<h5 id="added-45">Added</h5>
 <ul>
   <li>Adds a new <code class="language-plaintext highlighter-rouge">SDKMetadata</code> option <code class="language-plaintext highlighter-rouge">.reactnativenewarch</code> for the React Native New Architecture.</li>
   <li>Adds public initializers for <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/urlcontext/"><code class="language-plaintext highlighter-rouge">Braze.URLContext</code></a> and <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/modalcontext/"><code class="language-plaintext highlighter-rouge">Braze.ModalContext</code></a>.</li>
@@ -7422,13 +7438,13 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="620">6.2.0</h2>
 
-<h5 id="fixed-58">Fixed</h5>
+<h5 id="fixed-59">Fixed</h5>
 <ul>
   <li>Fixes a crash introduced in 6.0.0 when displaying an HTML in-app message using the <code class="language-plaintext highlighter-rouge">BrazeUICompat</code> module.</li>
   <li>Removed a system call that is known to be slow on older versions of macOS. This resolves the SDK hanging during initialization on Mac Catalyst when running on affected macOS versions.</li>
 </ul>
 
-<h5 id="added-45">Added</h5>
+<h5 id="added-46">Added</h5>
 <ul>
   <li>Adds support for <code class="language-plaintext highlighter-rouge">target</code> attributes on anchor tags in HTML in-app messages (e.g. <code class="language-plaintext highlighter-rouge">&lt;a href="..." target="_blank"&gt;&lt;/a&gt;</code>).
     <ul>
@@ -7441,7 +7457,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="610">6.1.0</h2>
 
-<h5 id="fixed-59">Fixed</h5>
+<h5 id="fixed-60">Fixed</h5>
 <ul>
   <li>Fixes an issue that led to disproportionately large close buttons on in-app messages when the user has set a large font size in the device settings.</li>
   <li>Fixes an issue that would lock the screen in a specific orientation after the dismissal of an in-app message customized to be presented in that orientation.
@@ -7451,7 +7467,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="added-46">Added</h5>
+<h5 id="added-47">Added</h5>
 <ul>
   <li>Adds new versions of <code class="language-plaintext highlighter-rouge">setCustomAttribute</code> to the User object to support <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support">nested custom attributes</a>.
     <ul>
@@ -7477,7 +7493,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="added-47">Added</h5>
+<h5 id="added-48">Added</h5>
 <ul>
   <li>The in-app message context now provides two additional methods:
     <ul>
@@ -7489,7 +7505,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="5140">5.14.0</h2>
 
-<h5 id="fixed-60">Fixed</h5>
+<h5 id="fixed-61">Fixed</h5>
 <ul>
   <li>VoiceOver now correctly focuses on in-app message views when they are presented.</li>
   <li>Fixes an issue causing in-app messages with re-eligibility disabled to display multiple times under certain conditions.</li>
@@ -7497,7 +7513,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>The dynamic variant of <code class="language-plaintext highlighter-rouge">BrazeUI.framework</code> in the release artifact <code class="language-plaintext highlighter-rouge">braze-swift-sdk-prebuilt.zip</code> is now an actual dynamic framework. Previously, this specific framework was mistakenly distributed as a static framework.</li>
 </ul>
 
-<h5 id="added-48">Added</h5>
+<h5 id="added-49">Added</h5>
 <ul>
   <li>Adds the <code class="language-plaintext highlighter-rouge">BrazeSDKAuthDelegate</code> protocol as a separate protocol from <code class="language-plaintext highlighter-rouge">BrazeDelegate</code>, allowing for more flexible integrations.
     <ul>
@@ -7508,12 +7524,12 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="5130">5.13.0</h2>
 
-<h5 id="fixed-61">Fixed</h5>
+<h5 id="fixed-62">Fixed</h5>
 <ul>
   <li>Fixes an issue where the SDK would automatically track body clicks on non-legacy HTML in-app messages.</li>
 </ul>
 
-<h5 id="added-49">Added</h5>
+<h5 id="added-50">Added</h5>
 <ul>
   <li>Adds the synchronous <code class="language-plaintext highlighter-rouge">deviceId</code> property on the Braze instance.
     <ul>
@@ -7535,21 +7551,21 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <p>Starting with this release, this SDK will use <a href="https://semver.org/">Semantic Versioning</a>.</p>
 </blockquote>
 
-<h5 id="added-50">Added</h5>
+<h5 id="added-51">Added</h5>
 <ul>
   <li>Adds <code class="language-plaintext highlighter-rouge">json()</code> and <code class="language-plaintext highlighter-rouge">decoding(json:)</code> public methods to the Feature Flag model object for JSON encoding/decoding.</li>
 </ul>
 
 <h2 id="5112">5.11.2</h2>
 
-<h5 id="fixed-62">Fixed</h5>
+<h5 id="fixed-63">Fixed</h5>
 <ul>
   <li>Fixes a crash occurring when the SDK is configured with a flush interval of <code class="language-plaintext highlighter-rouge">0</code> and network connectivity is poor.</li>
 </ul>
 
 <h2 id="5111">5.11.1</h2>
 
-<h5 id="fixed-63">Fixed</h5>
+<h5 id="fixed-64">Fixed</h5>
 <ul>
   <li>Fixes an issue preventing the correct calculation of the delay when retrying failed requests. This led to a more aggressive retry schedule than intended.</li>
   <li>Improves the performance of Live Activity tracking by de-duping push token tag requests.</li>
@@ -7561,7 +7577,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="added-51">Added</h5>
+<h5 id="added-52">Added</h5>
 <ul>
   <li>Adds <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/overrideresourcebundle"><code class="language-plaintext highlighter-rouge">BrazeKit.overrideResourceBundle</code></a> and <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/overrideresourcebundle/"><code class="language-plaintext highlighter-rouge">BrazeUI.overrideResourceBundle</code></a> to allow for custom resource bundles to be used by the SDK.
     <ul>
@@ -7572,7 +7588,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="5110">5.11.0</h2>
 
-<h5 id="added-52">Added</h5>
+<h5 id="added-53">Added</h5>
 <ul>
   <li>Adds support for <a href="https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities">Live Activities</a> via the <code class="language-plaintext highlighter-rouge">liveActivities</code> module on the Braze instance.
     <ul>
@@ -7599,7 +7615,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="5100">5.10.0</h2>
 
-<h5 id="fixed-64">Fixed</h5>
+<h5 id="fixed-65">Fixed</h5>
 <ul>
   <li>Fixes an issue where test content cards were removed before their expiration date.</li>
   <li>Fixes an issue in <code class="language-plaintext highlighter-rouge">BrazeUICompat</code> where the status bar appearance wasn’t restored to its original state after dismissing a full in-app message.</li>
@@ -7613,13 +7629,13 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="591">5.9.1</h2>
 
-<h5 id="fixed-65">Fixed</h5>
+<h5 id="fixed-66">Fixed</h5>
 <ul>
   <li>Fixes an issue preventing local expired content cards from being removed.</li>
   <li>Fixes a behavior that could lead to background tasks extending beyond the expected time limit with inconsistent network connectivity.</li>
 </ul>
 
-<h5 id="added-53">Added</h5>
+<h5 id="added-54">Added</h5>
 <ul>
   <li>Adds <code class="language-plaintext highlighter-rouge">logImpression(using:)</code> and <code class="language-plaintext highlighter-rouge">logClick(buttonId:using:)</code> to news feed cards.</li>
 </ul>
@@ -7632,7 +7648,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Raises the Xcode version to 14.1 (14B47b).</li>
 </ul>
 
-<h5 id="fixed-66">Fixed</h5>
+<h5 id="fixed-67">Fixed</h5>
 <ul>
   <li>Fixes an issue where the post-click webview would close automatically in some cases.</li>
   <li>Fixes a behavior where the current user messaging data would not be directly available after initializing the SDK or calling <code class="language-plaintext highlighter-rouge">changeUser(userId:)</code>.</li>
@@ -7645,7 +7661,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>SwiftPM and CocoaPods now use the same release assets.</li>
 </ul>
 
-<h5 id="added-54">Added</h5>
+<h5 id="added-55">Added</h5>
 <ul>
   <li>Adds support for the upcoming Braze Feature Flags product.</li>
   <li>Adds the <code class="language-plaintext highlighter-rouge">braze-swift-sdk-prebuilt.zip</code> archive to the release assets.
@@ -7661,7 +7677,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="581">5.8.1</h2>
 
-<h5 id="fixed-67">Fixed</h5>
+<h5 id="fixed-68">Fixed</h5>
 <ul>
   <li>Fixes a conflict with the shared instance of <a href="https://developer.apple.com/documentation/foundation/processinfo"><code class="language-plaintext highlighter-rouge">ProcessInfo</code></a>, allowing low power mode notifications to trigger correctly.</li>
 </ul>
@@ -7679,7 +7695,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Includes instructions for a minimal migration scenario via our compatibility libraries.</li>
 </ul>
 
-<h5 id="added-55">Added</h5>
+<h5 id="added-56">Added</h5>
 <ul>
   <li>Adds compatibility libraries <code class="language-plaintext highlighter-rouge">BrazeKitCompat</code> and <code class="language-plaintext highlighter-rouge">BrazeUICompat</code>:
     <ul>
@@ -7696,7 +7712,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="570">5.7.0</h2>
 
-<h5 id="fixed-68">Fixed</h5>
+<h5 id="fixed-69">Fixed</h5>
 <ul>
   <li>Fixes an issue where modal image in-app messages would not respect the aspect ratio of the image when the height of the image is larger than its width.</li>
 </ul>
@@ -7710,7 +7726,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   </li>
 </ul>
 
-<h5 id="added-56">Added</h5>
+<h5 id="added-57">Added</h5>
 <ul>
   <li>Adds a configuration to use a randomly generated UUID instead of IDFV as the device ID: <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/useuuidasdeviceid"><code class="language-plaintext highlighter-rouge">useUUIDAsDeviceId</code></a>.
     <ul>
@@ -7722,13 +7738,13 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="564">5.6.4</h2>
 
-<h5 id="fixed-69">Fixed</h5>
+<h5 id="fixed-70">Fixed</h5>
 <ul>
   <li>Fixes an issue preventing the execution of <code class="language-plaintext highlighter-rouge">BrazeDelegate</code> methods when setting the delegate using Objective-C.</li>
   <li>Fixes an issue where triggering an in-app message twice with the same event did not place the message on the in-app message stack under certain conditions.</li>
 </ul>
 
-<h5 id="added-57">Added</h5>
+<h5 id="added-58">Added</h5>
 <ul>
   <li>Adds the public <code class="language-plaintext highlighter-rouge">id</code> field to <code class="language-plaintext highlighter-rouge">Braze.InAppMessage.Data</code>.</li>
   <li>Adds <code class="language-plaintext highlighter-rouge">logImpression(using:)</code> and <code class="language-plaintext highlighter-rouge">logClick(buttonId:using:)</code> to both in-app messages and content cards, and adds <code class="language-plaintext highlighter-rouge">logDismissed(using:)</code> to content cards.
@@ -7748,7 +7764,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="563">5.6.3</h2>
 
-<h5 id="fixed-70">Fixed</h5>
+<h5 id="fixed-71">Fixed</h5>
 <ul>
   <li>Fixes the <code class="language-plaintext highlighter-rouge">InAppMessageRaw</code> to <code class="language-plaintext highlighter-rouge">InAppMessage</code> conversion to properly take into account the <code class="language-plaintext highlighter-rouge">extras</code> dictionary and the <code class="language-plaintext highlighter-rouge">duration</code>.</li>
   <li>Fixes an issue preventing the execution of the <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:sdkauthenticationfailedwitherror:)-505pz"><code class="language-plaintext highlighter-rouge">braze(_:sdkAuthenticationFailedWithError:)</code></a> delegate method in case of an authentication error.</li>
@@ -7768,20 +7784,20 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="561">5.6.1</h2>
 
-<h5 id="added-58">Added</h5>
+<h5 id="added-59">Added</h5>
 <ul>
   <li>Adds the public initializers <code class="language-plaintext highlighter-rouge">Braze.ContentCard.Context(card:using:)</code> and <code class="language-plaintext highlighter-rouge">Braze.InAppMessage.Context(message:using:)</code>.</li>
 </ul>
 
 <h2 id="560">5.6.0</h2>
 
-<h5 id="fixed-71">Fixed</h5>
+<h5 id="fixed-72">Fixed</h5>
 <ul>
   <li>The modal webview controller presented after a click now correctly handles non-HTTP(S) URLs (e.g. App Store URLs).</li>
   <li>Fixes an issue preventing some test HTML in-app messages from displaying images.</li>
 </ul>
 
-<h5 id="added-59">Added</h5>
+<h5 id="added-60">Added</h5>
 <ul>
   <li>Learn how to easily customize <code class="language-plaintext highlighter-rouge">BrazeUI</code> in-app message and content cards UI components with the following documentation and example code:
     <ul>
@@ -7818,14 +7834,14 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="551">5.5.1</h2>
 
-<h5 id="fixed-72">Fixed</h5>
+<h5 id="fixed-73">Fixed</h5>
 <ul>
   <li>Fixes an issue where content cards would not be properly removed when stopping a content card campaign on the dashboard and selecting the option <em>Remove card after the next sync (e.g. session start)</em>.</li>
 </ul>
 
 <h2 id="550">5.5.0</h2>
 
-<h5 id="added-60">Added</h5>
+<h5 id="added-61">Added</h5>
 <ul>
   <li>Adds support for host apps written in Objective-C.
     <ul>
@@ -7861,19 +7877,19 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="540">5.4.0</h2>
 
-<h5 id="fixed-73">Fixed</h5>
+<h5 id="fixed-74">Fixed</h5>
 <ul>
   <li>Fixes an issue where <code class="language-plaintext highlighter-rouge">brazeBridge.logClick(button_id)</code> would incorrectly accept invalid <code class="language-plaintext highlighter-rouge">button_id</code> values like <code class="language-plaintext highlighter-rouge">""</code>, <code class="language-plaintext highlighter-rouge">[]</code>, or <code class="language-plaintext highlighter-rouge">{}</code>.</li>
 </ul>
 
-<h5 id="added-61">Added</h5>
+<h5 id="added-62">Added</h5>
 <ul>
   <li>Adds support for Braze Action Deeplink Click Actions.</li>
 </ul>
 
 <h2 id="532">5.3.2</h2>
 
-<h5 id="fixed-74">Fixed</h5>
+<h5 id="fixed-75">Fixed</h5>
 <ul>
   <li>Fixes an issue preventing compilation when importing <code class="language-plaintext highlighter-rouge">BrazeUI</code> via SwiftPM in specific cases.</li>
   <li>Lowers <code class="language-plaintext highlighter-rouge">BrazeUI</code> minimum deployment target to iOS 10.0.</li>
@@ -7881,14 +7897,14 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="531">5.3.1</h2>
 
-<h5 id="fixed-75">Fixed</h5>
+<h5 id="fixed-76">Fixed</h5>
 <ul>
   <li>Fixes an HTML in-app message issue where clicking a link in an iFrame would launch a separate webview and close the message, instead of redirecting within the iFrame.</li>
   <li>Fixes the rounding of In-App Message modal view top corners.</li>
   <li>Fixes the display of modals and full screen in-app messages on iPads in landscape mode.</li>
 </ul>
 
-<h5 id="added-62">Added</h5>
+<h5 id="added-63">Added</h5>
 <ul>
   <li>Adds two Example schemes:
     <ul>
@@ -7913,7 +7929,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="530">5.3.0</h2>
 
-<h5 id="added-63">Added</h5>
+<h5 id="added-64">Added</h5>
 <ul>
   <li>Adds support for tvOS.
     <ul>
@@ -7924,7 +7940,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="520">5.2.0</h2>
 
-<h5 id="added-64">Added</h5>
+<h5 id="added-65">Added</h5>
 <ul>
   <li>Adds <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/content_cards">Content Cards</a> support.
     <ul>
@@ -7940,7 +7956,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="510">5.1.0</h2>
 
-<h5 id="fixed-76">Fixed</h5>
+<h5 id="fixed-77">Fixed</h5>
 <ul>
   <li>Fixes an issue where the SDK would be unable to present a webview when the application was already presenting a modal view controller.</li>
   <li>Fixes an issue preventing a full device data update after changing the identified user.</li>
@@ -7948,7 +7964,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
   <li>Fixes an issue delaying updates to push notifications settings.</li>
 </ul>
 
-<h5 id="added-65">Added</h5>
+<h5 id="added-66">Added</h5>
 <ul>
   <li>Adds CocoaPods support.
     <ul>
@@ -7969,7 +7985,7 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 
 <h2 id="501">5.0.1</h2>
 
-<h5 id="fixed-77">Fixed</h5>
+<h5 id="fixed-78">Fixed</h5>
 <ul>
   <li>Fixes a race condition when retrieving the user’s notification settings.</li>
   <li>Fixes an issue where duplicate data could be recorded after force quitting the application.</li>
@@ -10208,6 +10224,18 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
 
 
 
+<h2 id="2110">21.1.0</h2>
+
+<h5 id="added">Added</h5>
+<ul>
+  <li>Updates the native Swift SDK version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/15.0.1...15.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 15.0.1 to 15.1.0</a>.</li>
+</ul>
+
+<h5 id="fixed">Fixed</h5>
+<ul>
+  <li>Fixes an Android issue where <code class="language-plaintext highlighter-rouge">Braze.getInitialPushPayload()</code> returned <code class="language-plaintext highlighter-rouge">null</code> on cold start when <code class="language-plaintext highlighter-rouge">androidHandlePushDeepLinksAutomatically</code> was enabled, due to a <code class="language-plaintext highlighter-rouge">ClassCastException</code> when reading the <code class="language-plaintext highlighter-rouge">ab_use_webview</code> notification extra as a <code class="language-plaintext highlighter-rouge">String</code> instead of a <code class="language-plaintext highlighter-rouge">Boolean</code>.</li>
+</ul>
+
 <h2 id="2100">21.0.0</h2>
 
 <h5 id="breaking">Breaking</h5>
@@ -10219,12 +10247,12 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   </li>
 </ul>
 
-<h5 id="added">Added</h5>
+<h5 id="added-1">Added</h5>
 <ul>
   <li>Updates the Braze sample app to use React Native version <a href="https://reactnative.dev/blog/2026/04/07/react-native-0.85"><code class="language-plaintext highlighter-rouge">0.85.3</code></a>. This change validates SDK compatibility with the latest version of React Native.</li>
 </ul>
 
-<h5 id="fixed">Fixed</h5>
+<h5 id="fixed-1">Fixed</h5>
 <ul>
   <li>Updates the native Android SDK version bindings <a href="https://github.com/braze-inc/braze-android-sdk/compare/v42.3.0...v42.3.1">from Braze Android SDK 42.3.0 to 42.3.1</a>.</li>
   <li>Corrects misleading JSDoc on <code class="language-plaintext highlighter-rouge">logContentCardClicked</code>. The method forwards the click and its validation to the native iOS and Android SDKs.</li>
@@ -10233,12 +10261,12 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
 
 <h2 id="2010">20.1.0</h2>
 
-<h5 id="added-1">Added</h5>
+<h5 id="added-2">Added</h5>
 <ul>
   <li>Updates the native Android SDK version bindings <a href="https://github.com/braze-inc/braze-android-sdk/compare/v42.0.0...v42.2.0">from Braze Android SDK 42.0.0 to 42.2.0</a>.</li>
 </ul>
 
-<h5 id="fixed-1">Fixed</h5>
+<h5 id="fixed-2">Fixed</h5>
 <ul>
   <li>Fixes an Android issue introduced in version <code class="language-plaintext highlighter-rouge">19.1.0</code> where a push notification containing a deep link would not navigate to the intended screen when the app was launched from a terminated state.</li>
 </ul>
@@ -10250,14 +10278,14 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   <li>Updates the native Android SDK version bindings <a href="https://github.com/braze-inc/braze-android-sdk/compare/v41.1.1...v42.0.0">from Braze Android SDK 41.1.1 to 42.0.0</a>.</li>
 </ul>
 
-<h5 id="fixed-2">Fixed</h5>
+<h5 id="fixed-3">Fixed</h5>
 <ul>
   <li>Fixes an Android <a href="https://github.com/braze-inc/braze-react-native-sdk/pull/320">issue</a> where <code class="language-plaintext highlighter-rouge">getContentCards()</code> could crash natively if its <code class="language-plaintext highlighter-rouge">Promise</code> was settled more than once. Also, the promise may now be rejected with <code class="language-plaintext highlighter-rouge">no_active_react_instance</code> when React is inactive.</li>
 </ul>
 
 <h2 id="1920">19.2.0</h2>
 
-<h5 id="added-2">Added</h5>
+<h5 id="added-3">Added</h5>
 <ul>
   <li>Adds support for delayed SDK initialization via <code class="language-plaintext highlighter-rouge">Braze.initialize(apiKey, endpoint)</code> in JavaScript.
     <ul>
@@ -10269,19 +10297,19 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   <li>Adds <code class="language-plaintext highlighter-rouge">BrazeReactInitializer</code>, a Swift-first helper class for configuring delayed initialization on iOS. This resolves a Swift type-resolution issue where <code class="language-plaintext highlighter-rouge">Braze.Configuration</code> was not directly usable from Swift in the Objective-C bridge.</li>
 </ul>
 
-<h5 id="fixed-3">Fixed</h5>
+<h5 id="fixed-4">Fixed</h5>
 <ul>
   <li>Updates the native Swift SDK version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/14.0.1...14.0.4#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 14.0.1 to 14.0.4</a>.</li>
 </ul>
 
 <h2 id="1910">19.1.0</h2>
 
-<h5 id="added-3">Added</h5>
+<h5 id="added-4">Added</h5>
 <ul>
   <li>Updates the native Android SDK version bindings <a href="https://github.com/braze-inc/braze-android-sdk/compare/v41.0.0...v41.1.1">from Braze Android SDK 41.0.0 to 41.1.1</a>.</li>
 </ul>
 
-<h5 id="fixed-4">Fixed</h5>
+<h5 id="fixed-5">Fixed</h5>
 <ul>
   <li>Fixes an Android <a href="https://github.com/braze-inc/braze-react-native-sdk/issues/301">issue</a> where <code class="language-plaintext highlighter-rouge">getInitialPushPayload()</code> would not return the push payload when the app was cold-started via a deep link routed through <code class="language-plaintext highlighter-rouge">ACTION_VIEW</code> instead of the direct Braze push intent.</li>
 </ul>
@@ -10294,7 +10322,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   <li>Updates the native Android SDK version bindings <a href="https://github.com/braze-inc/braze-android-sdk/compare/v40.0.2...v41.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 40.0.2 to 41.0.0</a>.</li>
 </ul>
 
-<h5 id="added-4">Added</h5>
+<h5 id="added-5">Added</h5>
 <ul>
   <li>Adds Android support for <code class="language-plaintext highlighter-rouge">Braze.getInitialPushPayload()</code> to handle push notification deep links when the app is launched from a terminated state.
     <ul>
@@ -10348,7 +10376,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   <li>Updates the native Android SDK version bindings <a href="https://github.com/braze-inc/braze-android-sdk/compare/v39.0.0...v40.0.2#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 39.0.0 to 40.0.2</a>.</li>
 </ul>
 
-<h5 id="added-5">Added</h5>
+<h5 id="added-6">Added</h5>
 <ul>
   <li>Adds <code class="language-plaintext highlighter-rouge">imageAltText</code> and <code class="language-plaintext highlighter-rouge">language</code> fields to <code class="language-plaintext highlighter-rouge">BrazeInAppMessage</code> for accessibility features.</li>
   <li>Updates the native Swift SDK version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/13.2.0...13.3.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 13.2.0 to 13.3.0</a>.</li>
@@ -10356,7 +10384,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
 
 <h2 id="1701">17.0.1</h2>
 
-<h5 id="fixed-5">Fixed</h5>
+<h5 id="fixed-6">Fixed</h5>
 <ul>
   <li>Fixes an iOS issue where existing Banner views would fail to re-display after navigating away and returning.</li>
   <li>Fixes an incompatibility with React Native <code class="language-plaintext highlighter-rouge">0.80+</code> where iOS Banner views would not be generated as Fabric components but as legacy <code class="language-plaintext highlighter-rouge">RCTView</code>s.
@@ -10386,7 +10414,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   </li>
 </ul>
 
-<h5 id="fixed-6">Fixed</h5>
+<h5 id="fixed-7">Fixed</h5>
 <ul>
   <li>Fixes an issue where <code class="language-plaintext highlighter-rouge">getDeviceID()</code> did not return when an error occurred.</li>
   <li>Fixes the Android implementation of the <code class="language-plaintext highlighter-rouge">FeatureFlag</code> object to return the correct values for timestamp, image, and JSON objects. Prior to this change, the following APIs would return <code class="language-plaintext highlighter-rouge">undefined</code> on Android:
@@ -10400,7 +10428,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   <li>Fixes an issue where passing a null value for <code class="language-plaintext highlighter-rouge">googleAdvertisingId</code> to <code class="language-plaintext highlighter-rouge">setAdTrackingEnabled()</code> could cause a crash on Android.</li>
 </ul>
 
-<h5 id="added-6">Added</h5>
+<h5 id="added-7">Added</h5>
 <ul>
   <li>Adds support for Banner properties via new public methods for <code class="language-plaintext highlighter-rouge">Banner</code>:
     <ul>
@@ -10426,7 +10454,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
 
 <h2 id="1610">16.1.0</h2>
 
-<h5 id="fixed-7">Fixed</h5>
+<h5 id="fixed-8">Fixed</h5>
 <ul>
   <li>Fixes a missing symbol error when compiling for Android on the React Native legacy bridge architecture on <code class="language-plaintext highlighter-rouge">0.81</code>.
     <ul>
@@ -10435,7 +10463,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   </li>
 </ul>
 
-<h5 id="added-7">Added</h5>
+<h5 id="added-8">Added</h5>
 <ul>
   <li>Updates the native Swift SDK version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/13.0.0...13.2.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 13.0.0 to 13.2.0</a>.
     <ul>
@@ -10456,7 +10484,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   </li>
 </ul>
 
-<h5 id="fixed-8">Fixed</h5>
+<h5 id="fixed-9">Fixed</h5>
 <ul>
   <li>Fixes the iOS implementation of <code class="language-plaintext highlighter-rouge">setDateOfBirth</code> to correctly report dates using the Gregorian calendar instead of the user’s device calendar.
     <ul>
@@ -10465,7 +10493,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   </li>
 </ul>
 
-<h5 id="added-8">Added</h5>
+<h5 id="added-9">Added</h5>
 <ul>
   <li>Updates the Braze sample app to use React Native version <a href="https://reactnative.dev/blog/2025/06/12/react-native-0.80"><code class="language-plaintext highlighter-rouge">0.80.0</code></a>. This change validates SDK compatibility with the latest version of React Native.</li>
   <li>Adds ability to unset user first name, last name, phone number, email, gender, language, home city, and country by setting these values to <code class="language-plaintext highlighter-rouge">null</code>.</li>
@@ -10473,7 +10501,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
 
 <h2 id="1501">15.0.1</h2>
 
-<h5 id="fixed-9">Fixed</h5>
+<h5 id="fixed-10">Fixed</h5>
 <ul>
   <li>Improves the TypeScript declarations in the following areas:
     <ul>
@@ -10503,7 +10531,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="1410">14.1.0</h2>
 
-<h5 id="fixed-10">Fixed</h5>
+<h5 id="fixed-11">Fixed</h5>
 <ul>
   <li>Updates the internal implementations of the following methods to use non-deprecated methods from the native Swift SDK:
     <ul>
@@ -10517,7 +10545,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>Resolves a build failure in the <code class="language-plaintext highlighter-rouge">BrazeBannerView</code> class introduced in <code class="language-plaintext highlighter-rouge">14.0.0</code>, which would occur under certain iOS project configurations.</li>
 </ul>
 
-<h5 id="added-9">Added</h5>
+<h5 id="added-10">Added</h5>
 <ul>
   <li>Updates the native iOS version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/11.7.0...11.9.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 11.7.0 to 11.9.0</a>.</li>
 </ul>
@@ -10545,7 +10573,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   </li>
 </ul>
 
-<h5 id="added-10">Added</h5>
+<h5 id="added-11">Added</h5>
 <ul>
   <li>Updates the native iOS version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/11.2.0...11.7.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 11.2.0 to 11.7.0</a>.</li>
   <li>Adds support for the Braze Banner Cards product and APIs to utilize them.
@@ -10564,7 +10592,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="1320">13.2.0</h2>
 
-<h5 id="added-11">Added</h5>
+<h5 id="added-12">Added</h5>
 <ul>
   <li>Updates the native iOS version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/11.1.1...11.2.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 11.1.1 to 11.2.0</a>.</li>
   <li>Updates the Android bridge to add compatibility with React Native version 0.77.0.
@@ -10577,19 +10605,19 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="1311">13.1.1</h2>
 
-<h5 id="fixed-11">Fixed</h5>
+<h5 id="fixed-12">Fixed</h5>
 <ul>
   <li>Resolves an iOS issue that would deallocate existing references of <code class="language-plaintext highlighter-rouge">braze.delegate</code> when performing a hot reload of the app.</li>
 </ul>
 
 <h2 id="1310">13.1.0</h2>
 
-<h5 id="fixed-12">Fixed</h5>
+<h5 id="fixed-13">Fixed</h5>
 <ul>
   <li>Updates the iOS sample app to properly retain the <code class="language-plaintext highlighter-rouge">BrazeReactDelegate</code> instance. Internally, the Braze SDK uses a weak reference to the delegate, which could be deallocated if not retained by the app. This change ensures the delegate is retained for the lifecycle of the app.</li>
 </ul>
 
-<h5 id="added-12">Added</h5>
+<h5 id="added-13">Added</h5>
 <ul>
   <li>Updates the native iOS version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/11.0.0...11.1.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 11.0.0 to 11.1.1</a>.</li>
   <li>Adds the method <code class="language-plaintext highlighter-rouge">Braze.getInitialPushPayload()</code> to get the push notification payload when opening the app via notification click while the application was in a terminated state.
@@ -10617,7 +10645,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="1220">12.2.0</h2>
 
-<h5 id="added-13">Added</h5>
+<h5 id="added-14">Added</h5>
 <ul>
   <li>Updates the native iOS version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/10.1.0...10.3.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 10.1.0 to 10.3.0</a>.</li>
   <li>Updates the Braze sample app to use React Native version 0.75.2.</li>
@@ -10627,7 +10655,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="1210">12.1.0</h2>
 
-<h5 id="added-14">Added</h5>
+<h5 id="added-15">Added</h5>
 <ul>
   <li>Updates the native iOS version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/10.0.0...10.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 10.0.0 to 10.1.0</a>.</li>
 </ul>
@@ -10643,7 +10671,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   </li>
 </ul>
 
-<h5 id="added-15">Added</h5>
+<h5 id="added-16">Added</h5>
 <ul>
   <li>Updates the Braze sample app to use React Native version 0.74.1.</li>
   <li>Adds support for 3 new Feature Flag property types and various APIs for accessing them:
@@ -10662,7 +10690,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>Updates the native Android version bindings <a href="https://github.com/braze-inc/braze-android-sdk/compare/v30.4.0...v31.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 30.4.0 to 31.1.0</a>.</li>
 </ul>
 
-<h5 id="fixed-13">Fixed</h5>
+<h5 id="fixed-14">Fixed</h5>
 <ul>
   <li>Fixes an issue on Android where the <code class="language-plaintext highlighter-rouge">timestamp</code> of a <code class="language-plaintext highlighter-rouge">PushNotificationEvent</code> was incorrectly translated from a <code class="language-plaintext highlighter-rouge">long</code> to a <code class="language-plaintext highlighter-rouge">int</code>. The value received by the JavaScript layer is now the same as the value sent from the Android code.</li>
 </ul>
@@ -10674,14 +10702,14 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>Updates the native iOS version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/8.4.0...9.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 8.4.0 to 9.0.0</a>.</li>
 </ul>
 
-<h5 id="added-16">Added</h5>
+<h5 id="added-17">Added</h5>
 <ul>
   <li>Updates the native Android version bindings <a href="https://github.com/braze-inc/braze-android-sdk/compare/v30.3.0...v30.4.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 30.3.0 to 30.4.0</a>.</li>
 </ul>
 
 <h2 id="920">9.2.0</h2>
 
-<h5 id="fixed-14">Fixed</h5>
+<h5 id="fixed-15">Fixed</h5>
 <ul>
   <li>Fixes the Android implementation of <code class="language-plaintext highlighter-rouge">Braze.setCustomUserAttribute()</code> to correctly handle null values.
     <ul>
@@ -10690,19 +10718,19 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   </li>
 </ul>
 
-<h5 id="added-17">Added</h5>
+<h5 id="added-18">Added</h5>
 <ul>
   <li>Updates the native iOS version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/8.2.1...8.4.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 8.2.1 to 8.4.0</a>.</li>
 </ul>
 
 <h2 id="910">9.1.0</h2>
 
-<h5 id="fixed-15">Fixed</h5>
+<h5 id="fixed-16">Fixed</h5>
 <ul>
   <li>Fixes the iOS implementation of <code class="language-plaintext highlighter-rouge">Braze.registerPushToken()</code> to correctly pass the device token to the native SDK.</li>
 </ul>
 
-<h5 id="added-18">Added</h5>
+<h5 id="added-19">Added</h5>
 <ul>
   <li>Adds the <code class="language-plaintext highlighter-rouge">BrazeInAppMessage.isTestSend</code> property, which indicates whether an in-app message was triggered as part of a test send.</li>
   <li>Updates the native iOS version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/8.1.0...8.2.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 8.1.0 to 8.2.1</a>.</li>
@@ -10725,13 +10753,13 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="840">8.4.0</h2>
 
-<h5 id="fixed-16">Fixed</h5>
+<h5 id="fixed-17">Fixed</h5>
 <ul>
   <li>Fixes the <code class="language-plaintext highlighter-rouge">hasListeners</code> property in the iOS native layer to prevent duplicate symbol errors with other libraries.</li>
   <li>Addresses redefinition build errors when using the iOS Turbo Module with statically linked frameworks.</li>
 </ul>
 
-<h5 id="added-19">Added</h5>
+<h5 id="added-20">Added</h5>
 <ul>
   <li>Adds support to modify the allow list for Braze tracking properties via the following TypeScript properties and methods:
     <ul>
@@ -10752,7 +10780,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="830">8.3.0</h2>
 
-<h5 id="added-20">Added</h5>
+<h5 id="added-21">Added</h5>
 <ul>
   <li>Adds example integrations for <a href="https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications">Braze Rich Push Notifications</a> and <a href="https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories">Braze Push Stories</a> to the iOS sample app.</li>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/7.3.0...7.5.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 7.3.0 to 7.5.0</a>.</li>
@@ -10766,12 +10794,12 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="820">8.2.0</h2>
 
-<h5 id="fixed-17">Fixed</h5>
+<h5 id="fixed-18">Fixed</h5>
 <ul>
   <li>Adds a missing update <a href="https://github.com/braze-inc/braze-android-sdk/compare/v29.0.0...v29.0.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 29.0.0 to 29.0.1</a> in the <code class="language-plaintext highlighter-rouge">8.1.0</code> release.</li>
 </ul>
 
-<h5 id="added-21">Added</h5>
+<h5 id="added-22">Added</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/7.1.0...7.3.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 7.1.0 to 7.3.0</a>.
     <ul>
@@ -10782,7 +10810,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="810">8.1.0</h2>
 
-<h5 id="fixed-18">Fixed</h5>
+<h5 id="fixed-19">Fixed</h5>
 <ul>
   <li>Fixes the <code class="language-plaintext highlighter-rouge">setLastKnownLocation</code> method to sanitize null inputs before calling the native layer.
     <ul>
@@ -10792,7 +10820,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v29.0.0...v29.0.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 29.0.0 to 29.0.1</a>.</li>
 </ul>
 
-<h5 id="added-22">Added</h5>
+<h5 id="added-23">Added</h5>
 <ul>
   <li>Push notification objects are now accessible in the JavaScript layer via new fields on the <code class="language-plaintext highlighter-rouge">PushNotificationEvent</code> interface.
     <ul>
@@ -10840,7 +10868,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li><code class="language-plaintext highlighter-rouge">Braze.Events.FEATURE_FLAGS_UPDATED</code> will only trigger when a refresh request completes with success or failure, and upon initial subscription if there was previously cached data from the current session.</li>
 </ul>
 
-<h5 id="added-23">Added</h5>
+<h5 id="added-24">Added</h5>
 <ul>
   <li>Adds <code class="language-plaintext highlighter-rouge">Braze.getUserId()</code> to get the ID of the current user.</li>
 </ul>
@@ -10852,13 +10880,13 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2701">from Braze Android SDK 26.3.2 to 27.0.1</a>.</li>
 </ul>
 
-<h5 id="fixed-19">Fixed</h5>
+<h5 id="fixed-20">Fixed</h5>
 <ul>
   <li>Fixes the Android layer to record date custom user attributes as ISO strings instead of integers.</li>
   <li>Fixes a bug introduced in <code class="language-plaintext highlighter-rouge">6.0.0</code> where <code class="language-plaintext highlighter-rouge">Braze.getInitialUrl()</code> may not trigger the callback on Android.</li>
 </ul>
 
-<h5 id="added-24">Added</h5>
+<h5 id="added-25">Added</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/6.4.0...6.6.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 6.4.0 to 6.6.0</a>.</li>
   <li>Adds support for nested custom user attributes.
@@ -10880,14 +10908,14 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="602">6.0.2</h2>
 
-<h5 id="fixed-20">Fixed</h5>
+<h5 id="fixed-21">Fixed</h5>
 <ul>
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2632">from Braze Android SDK 26.3.1 to 26.3.2</a>.</li>
 </ul>
 
 <h2 id="601">6.0.1</h2>
 
-<h5 id="fixed-21">Fixed</h5>
+<h5 id="fixed-22">Fixed</h5>
 <ul>
   <li>Adds <code class="language-plaintext highlighter-rouge">'DEFINES_MODULE' =&gt; 'YES'</code> to the iOS Podspec when compiling the Turbo Module to prevent the need for static framework linkage when using the Braze Expo plugin.</li>
 </ul>
@@ -10921,7 +10949,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   </li>
 </ul>
 
-<h5 id="added-25">Added</h5>
+<h5 id="added-26">Added</h5>
 <ul>
   <li>Migrates the Braze bridge to a backwards-compatible <a href="https://reactnative.dev/docs/next/the-new-architecture/pillars-turbomodules">New Architecture Turbo Module</a>.
     <ul>
@@ -10940,21 +10968,21 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="520">5.2.0</h2>
 
-<h5 id="fixed-22">Fixed</h5>
+<h5 id="fixed-23">Fixed</h5>
 <ul>
   <li>Fixes an issue on Android where push notifications wouldn’t be forwarded after the app was closed.</li>
   <li>Fixes an issue on iOS preventing in-app message subscription events from being sent if <code class="language-plaintext highlighter-rouge">subscribeToInAppMessage</code> is called prior to any <code class="language-plaintext highlighter-rouge">Braze.addListener</code> calls.</li>
   <li>Changed the Java compatibility version for the Android plugin to Java 11.</li>
 </ul>
 
-<h5 id="added-26">Added</h5>
+<h5 id="added-27">Added</h5>
 <ul>
   <li>Updates the native iOS bridge <a href="https://github.com/braze-inc/braze-swift-sdk/compare/6.2.0...6.3.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 6.2.0 to 6.3.1</a>.</li>
 </ul>
 
 <h2 id="510">5.1.0</h2>
 
-<h5 id="fixed-23">Fixed</h5>
+<h5 id="fixed-24">Fixed</h5>
 <ul>
   <li>Fixes an issue that occured whenever a custom event is logged with dictionary properties using a key named “type”.</li>
   <li>Removes the automatic assignment of <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/delegate"><code class="language-plaintext highlighter-rouge">BrazeDelegate</code></a> in the iOS bridge, allowing for custom implementations to be assigned to the <code class="language-plaintext highlighter-rouge">braze</code> instance.</li>
@@ -10973,24 +11001,24 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   </li>
 </ul>
 
-<h5 id="fixed-24">Fixed</h5>
+<h5 id="fixed-25">Fixed</h5>
 <ul>
   <li>Fixes an issue on Android with <code class="language-plaintext highlighter-rouge">getNewsFeedCards()</code> and <code class="language-plaintext highlighter-rouge">getContentCards()</code> where promises could be invoked more than once.</li>
 </ul>
 
-<h5 id="added-27">Added</h5>
+<h5 id="added-28">Added</h5>
 <ul>
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/compare/v24.3.0...v25.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 24.3.0 to 25.0.0</a>.</li>
 </ul>
 
 <h2 id="410">4.1.0</h2>
 
-<h5 id="fixed-25">Fixed</h5>
+<h5 id="fixed-26">Fixed</h5>
 <ul>
   <li>Fixes an issue in the <code class="language-plaintext highlighter-rouge">PushNotificationEvent</code> object introduced in <code class="language-plaintext highlighter-rouge">2.0.1</code> where a field was named <code class="language-plaintext highlighter-rouge">context_text</code> instead of the correct value of <code class="language-plaintext highlighter-rouge">content_text</code>.</li>
 </ul>
 
-<h5 id="added-28">Added</h5>
+<h5 id="added-29">Added</h5>
 <ul>
   <li>Adds support for the upcoming Braze Feature Flags product with the following methods:
     <ul>
@@ -11022,13 +11050,13 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   </li>
 </ul>
 
-<h5 id="fixed-26">Fixed</h5>
+<h5 id="fixed-27">Fixed</h5>
 <ul>
   <li>Fixes an issue in the iOS bridge where <code class="language-plaintext highlighter-rouge">getContentCards()</code> and <code class="language-plaintext highlighter-rouge">getNewsFeedCards()</code> returned data in a different format than the Android bridge.</li>
   <li>Fixes the behavior when using the recommended iOS integration where the React Bridge delegate had conflicts with other dependencies. The updated sample app code can be found <a href="https://github.com/braze-inc/braze-react-native-sdk/blob/master/BrazeProject/ios/BrazeProject/AppDelegate.mm">here</a>.</li>
 </ul>
 
-<h5 id="added-29">Added</h5>
+<h5 id="added-30">Added</h5>
 <ul>
   <li>Updates the native iOS bridge to <a href="https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#5130">Braze Swift SDK 5.13.0</a>.</li>
   <li>Improves typescript definitions for <code class="language-plaintext highlighter-rouge">addListener</code> event types.</li>
@@ -11058,7 +11086,7 @@ Linking.openUrl(contentCard.url);
   </li>
 </ul>
 
-<h5 id="fixed-27">Fixed</h5>
+<h5 id="fixed-28">Fixed</h5>
 <ul>
   <li>Fixes an issue in the iOS bridge introduced in <code class="language-plaintext highlighter-rouge">2.0.0</code> where <code class="language-plaintext highlighter-rouge">getContentCards()</code> and <code class="language-plaintext highlighter-rouge">getNewsFeedCards()</code> would return an array of cards with the <code class="language-plaintext highlighter-rouge">url</code> and <code class="language-plaintext highlighter-rouge">image</code> fields as <code class="language-plaintext highlighter-rouge">null</code>.</li>
 </ul>
@@ -11072,14 +11100,14 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="210">2.1.0</h2>
 
-<h5 id="added-30">Added</h5>
+<h5 id="added-31">Added</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">'DEFINES_MODULE' =&gt; 'YES'</code> to the Cocoapod’s xcconfig to remove the need for static framework linkage on iOS when using the Braze Expo plugin.</li>
 </ul>
 
 <h2 id="202">2.0.2</h2>
 
-<h5 id="fixed-28">Fixed</h5>
+<h5 id="fixed-29">Fixed</h5>
 <ul>
   <li>Removes the usage of Objective-C modules when importing the Braze Swift SDK for improved compatibility with Objective-C++.
     <ul>
@@ -11095,7 +11123,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="201">2.0.1</h2>
 
-<h5 id="fixed-29">Fixed</h5>
+<h5 id="fixed-30">Fixed</h5>
 <ul>
   <li>Fixes compatibility issues with newer versions of React Native introduced in 2.0.0.</li>
   <li>Fixes an issue where callbacks were not being executed for some user attribute methods.</li>
@@ -11140,7 +11168,7 @@ Linking.openUrl(contentCard.url);
   <li>Updates the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2420">Braze Android SDK 24.2.0</a>.</li>
 </ul>
 
-<h5 id="added-31">Added</h5>
+<h5 id="added-32">Added</h5>
 <ul>
   <li>Adds the following APIs to more easily interface with the News Feed product. Thanks @swissmanu for your contribution!
     <ul>
@@ -11187,14 +11215,14 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2320">Braze Android SDK 23.2.0</a>.</li>
 </ul>
 
-<h5 id="fixed-30">Fixed</h5>
+<h5 id="fixed-31">Fixed</h5>
 <ul>
   <li>Fixed an issue that caused a NativeEventEmitter warning message to appear.</li>
 </ul>
 
 <h2 id="1381">1.38.1</h2>
 
-<h5 id="fixed-31">Fixed</h5>
+<h5 id="fixed-32">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in 1.38.0 where <code class="language-plaintext highlighter-rouge">setEmail</code> did not work as expected on Android.</li>
 </ul>
@@ -11224,7 +11252,7 @@ Linking.openUrl(contentCard.url);
   </li>
 </ul>
 
-<h5 id="added-32">Added</h5>
+<h5 id="added-33">Added</h5>
 <ul>
   <li>Introduced <code class="language-plaintext highlighter-rouge">Braze.Events.PUSH_NOTIFICATION_EVENT</code> which can be used to listen for Braze Push Notification events on Android. See example below:
     <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -11249,7 +11277,7 @@ Linking.openUrl(contentCard.url);
   <li>The Braze React Native SDK now exports its default object as an ES Module. If you currently import the SDK using <code class="language-plaintext highlighter-rouge">require()</code>, you will need to now import it as a standard ES Module (e.g. <code class="language-plaintext highlighter-rouge">import Braze from "react-native-appboy-sdk"</code>).</li>
 </ul>
 
-<h5 id="added-33">Added</h5>
+<h5 id="added-34">Added</h5>
 <ul>
   <li>Introduced <code class="language-plaintext highlighter-rouge">Braze.subscribeToInAppMessage()</code> which publishes an event to the Javascript layer when an in-app message is triggered and allows you to choose whether or not to use the default Braze UI to display in-app messages.</li>
 </ul>
@@ -11266,7 +11294,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="1351">1.35.1</h2>
 
-<h5 id="fixed-32">Fixed</h5>
+<h5 id="fixed-33">Fixed</h5>
 <ul>
   <li>Fixed an issue where <code class="language-plaintext highlighter-rouge">setMetadata</code> did not have a method implementation for Android.</li>
 </ul>
@@ -11281,7 +11309,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="1341">1.34.1</h2>
 
-<h5 id="fixed-33">Fixed</h5>
+<h5 id="fixed-34">Fixed</h5>
 <ul>
   <li>Fixed an issue where <code class="language-plaintext highlighter-rouge">getInitialUrl</code> would not resolve when there is no initial URL.</li>
 </ul>
@@ -11293,7 +11321,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1801">Braze Android SDK 18.0.1</a>.</li>
 </ul>
 
-<h5 id="fixed-34">Fixed</h5>
+<h5 id="fixed-35">Fixed</h5>
 <ul>
   <li>Fixed an issue with Content Card types. Thanks @jtparret!</li>
 </ul>
@@ -11305,7 +11333,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="1331">1.33.1</h2>
 
-<h5 id="fixed-35">Fixed</h5>
+<h5 id="fixed-36">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in 1.33.0 that caused a build error on iOS.</li>
 </ul>
@@ -11318,7 +11346,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native iOS bridge to <a href="https://github.com/braze-inc/braze-ios-sdk/blob/master/CHANGELOG.md#434">Braze iOS SDK 4.3.4</a>.</li>
 </ul>
 
-<h5 id="added-34">Added</h5>
+<h5 id="added-35">Added</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">ReactAppboy.addToSubscriptionGroup()</code> and <code class="language-plaintext highlighter-rouge">ReactAppboy.removeFromSubscriptionGroup()</code> to manage SMS/Email Subscription Groups.</li>
   <li>Custom events and purchases now support nested properties. In addition to integers, floats, booleans, dates, or strings, a JSON object can be provided containing dictionaries of arrays or nested dictionaries. All properties combined can be up to 50 KB in total length.</li>
@@ -11339,7 +11367,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native iOS bridge to <a href="https://github.com/braze-inc/braze-ios-sdk/blob/master/CHANGELOG.md#431">Braze iOS SDK 4.3.1</a>.</li>
 </ul>
 
-<h5 id="added-35">Added</h5>
+<h5 id="added-36">Added</h5>
 <ul>
   <li>Added support for new SDK Authentication feature to the Javascript layer. See <code class="language-plaintext highlighter-rouge">setSdkAuthenticationSignature</code> on the <code class="language-plaintext highlighter-rouge">Appboy</code> interface, as well as the optional <code class="language-plaintext highlighter-rouge">signature</code> parameter on <code class="language-plaintext highlighter-rouge">ReactAppboy.changeUser</code>.</li>
 </ul>
@@ -11359,7 +11387,7 @@ Linking.openUrl(contentCard.url);
   <li>This release contains a known issue with the Content Cards default UI on iOS, where showing a “Classic” type card with an image causes a crash. If you are using the default Content Cards UI, do not upgrade to this version.</li>
 </ul>
 
-<h5 id="fixed-36">Fixed</h5>
+<h5 id="fixed-37">Fixed</h5>
 <ul>
   <li>Fixed issue introduced in 1.29.0 where calling <code class="language-plaintext highlighter-rouge">ReactAppboy.changeUser</code> would cause an error on Android.</li>
 </ul>
@@ -11385,12 +11413,12 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1312">Braze Android SDK 13.1.2</a>, which contains support for Android 12.</li>
 </ul>
 
-<h5 id="fixed-37">Fixed</h5>
+<h5 id="fixed-38">Fixed</h5>
 <ul>
   <li>Fixed an issue where calling <code class="language-plaintext highlighter-rouge">getInstallTrackingId()</code> while the SDK was disabled would cause a crash on iOS.</li>
 </ul>
 
-<h5 id="added-36">Added</h5>
+<h5 id="added-37">Added</h5>
 <ul>
   <li>Added support for <code class="language-plaintext highlighter-rouge">ReactAppboy.setGoogleAdvertisingId()</code> to set the Google Advertising ID and associated ad-tracking enabled field for Android devices. This is a no-op on iOS.</li>
 </ul>
@@ -11403,7 +11431,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1300">Braze Android SDK 13.0.0</a>.</li>
 </ul>
 
-<h5 id="added-37">Added</h5>
+<h5 id="added-38">Added</h5>
 <ul>
   <li>Added support for receiving iOS push action button deep links in <code class="language-plaintext highlighter-rouge">ReactAppboy.getInitialURL()</code>. If you are using <code class="language-plaintext highlighter-rouge">ReactAppboy.getInitialURL()</code> and implement iOS push action button categories, add the following code to the beginning of your <code class="language-plaintext highlighter-rouge">userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:</code>:
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -11459,7 +11487,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native iOS bridge to <a href="https://github.com/braze-inc/braze-ios-sdk/blob/master/CHANGELOG.md#3260">Braze iOS SDK 3.26.0</a>.</li>
 </ul>
 
-<h5 id="added-38">Added</h5>
+<h5 id="added-39">Added</h5>
 <ul>
   <li>Added support for working with in-app messages in the JavaScript layer. In-App Messages can be instantiated using the <code class="language-plaintext highlighter-rouge">BrazeInAppMessage</code> class. The resulting object can be passed into the analytics methods: <code class="language-plaintext highlighter-rouge">logInAppMessageClicked</code>, <code class="language-plaintext highlighter-rouge">logInAppMessageImpression</code>, and <code class="language-plaintext highlighter-rouge">logInAppMessageButtonClicked</code> (along with the button index). See the README for additional implementation details or the <code class="language-plaintext highlighter-rouge">AppboyProject</code> sample app for an integration example.</li>
 </ul>
@@ -11473,7 +11501,7 @@ Linking.openUrl(contentCard.url);
   </li>
 </ul>
 
-<h5 id="fixed-38">Fixed</h5>
+<h5 id="fixed-39">Fixed</h5>
 <ul>
   <li>Fixed incorrect TypeScript definition for <code class="language-plaintext highlighter-rouge">ContentCard</code>.
     <ul>
@@ -11489,7 +11517,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#700">Braze Android SDK 7.0.0</a>.</li>
 </ul>
 
-<h5 id="added-39">Added</h5>
+<h5 id="added-40">Added</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">ReactAppboy.requestGeofences()</code> to request a Braze Geofences update for a manually provided GPS coordinate. Automatic Braze Geofence requests must be disabled to properly use this method.</li>
 </ul>
@@ -11509,7 +11537,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#380">Braze Android SDK 3.8.0</a>.</li>
 </ul>
 
-<h5 id="fixed-39">Fixed</h5>
+<h5 id="fixed-40">Fixed</h5>
 <ul>
   <li>Fixed an issue where <code class="language-plaintext highlighter-rouge">ReactContext.getJSModule()</code> could be called before the native module was initialized.
     <ul>
@@ -11525,14 +11553,14 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="1174">1.17.4</h2>
 
-<h5 id="fixed-40">Fixed</h5>
+<h5 id="fixed-41">Fixed</h5>
 <ul>
   <li>Removed a support library reference in <code class="language-plaintext highlighter-rouge">AppboyReactBridge.java</code> that caused Androidx compatibility issues.</li>
 </ul>
 
 <h2 id="1173">1.17.3</h2>
 
-<h5 id="fixed-41">Fixed</h5>
+<h5 id="fixed-42">Fixed</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">SDWebImage</code> and <code class="language-plaintext highlighter-rouge">Headers</code> pod directories to the <code class="language-plaintext highlighter-rouge">AppboyReactBridge</code> project’s Header Search Paths. Thanks @tomauty and @mlazari for your contributions! See https://github.com/braze-inc/braze-react-native-sdk/pull/70 and https://github.com/braze-inc/braze-react-native-sdk/pull/69.</li>
 </ul>
@@ -11597,7 +11625,7 @@ Linking.openUrl(contentCard.url);
   </li>
 </ul>
 
-<h5 id="added-40">Added</h5>
+<h5 id="added-41">Added</h5>
 <ul>
   <li>Added the ability to more easily create custom UIs for Content Cards from within the React Native layer by providing access to card data and analytics methods in Javascript.
     <ul>
@@ -11646,12 +11674,12 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#350">Braze Android SDK 3.5.0</a>.</li>
 </ul>
 
-<h5 id="fixed-42">Fixed</h5>
+<h5 id="fixed-43">Fixed</h5>
 <ul>
   <li>Fixed an issue where logging custom events or purchases without event properties would cause crashes on Android, for example <code class="language-plaintext highlighter-rouge">logCustomEvent("event")</code>.</li>
 </ul>
 
-<h5 id="added-41">Added</h5>
+<h5 id="added-42">Added</h5>
 <ul>
   <li>Added additional TypeScript definitions.</li>
 </ul>
@@ -11675,14 +11703,14 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#330">Braze Android SDK 3.3.0</a>.</li>
 </ul>
 
-<h5 id="added-42">Added</h5>
+<h5 id="added-43">Added</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">ReactAppboy.launchContentCards()</code> for launching the content cards UI.</li>
 </ul>
 
 <h2 id="1111">1.11.1</h2>
 
-<h5 id="added-43">Added</h5>
+<h5 id="added-44">Added</h5>
 <ul>
   <li>Added Typescript definitions for the <code class="language-plaintext highlighter-rouge">Appboy</code> interface.
     <ul>
@@ -11723,7 +11751,7 @@ Linking.openUrl(contentCard.url);
   </li>
 </ul>
 
-<h5 id="added-44">Added</h5>
+<h5 id="added-45">Added</h5>
 <ul>
   <li>Added support for sending JavaScript <code class="language-plaintext highlighter-rouge">Date()</code> type custom event and purchase properties through the <code class="language-plaintext highlighter-rouge">Appboy</code> interface.</li>
 </ul>
@@ -11735,7 +11763,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#310">Braze Android SDK 3.1.0</a>.</li>
 </ul>
 
-<h5 id="added-45">Added</h5>
+<h5 id="added-46">Added</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">addAlias(aliasName, aliasLabel)</code> to the <code class="language-plaintext highlighter-rouge">Appboy</code> interface to allow aliasing users.
     <ul>
@@ -11758,12 +11786,12 @@ Linking.openUrl(contentCard.url);
   <li>Updated the Android wrapper to use <code class="language-plaintext highlighter-rouge">api</code> and <code class="language-plaintext highlighter-rouge">implementation</code> syntax in it’s <code class="language-plaintext highlighter-rouge">build.gradle</code> instead of <code class="language-plaintext highlighter-rouge">compile</code>. As part of this work, the Android Gradle plugin version was updated to <code class="language-plaintext highlighter-rouge">3.2.1</code>.</li>
 </ul>
 
-<h5 id="fixed-43">Fixed</h5>
+<h5 id="fixed-44">Fixed</h5>
 <ul>
   <li>Fixed an issue where the Android wrapper would include an older version of React Native in test APK builds.</li>
 </ul>
 
-<h5 id="added-46">Added</h5>
+<h5 id="added-47">Added</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">setUserAttributionData()</code> to the <code class="language-plaintext highlighter-rouge">Appboy</code> interface to allow setting the attribution data for the current user.</li>
   <li>Added <code class="language-plaintext highlighter-rouge">getInstallTrackingId()</code> to the <code class="language-plaintext highlighter-rouge">Appboy</code> interface to allow getting the install tracking id. This method is equivalent to calling <code class="language-plaintext highlighter-rouge">Appboy.getInstallTrackingId()</code> on Android and returns the IDFV on iOS.</li>
@@ -11795,28 +11823,28 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native iOS bridge to <a href="https://github.com/braze-inc/braze-ios-sdk/blob/master/CHANGELOG.md#383">Braze iOS SDK 3.8.3</a>.</li>
 </ul>
 
-<h5 id="added-47">Added</h5>
+<h5 id="added-48">Added</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">setLocationCustomAttribute()</code> to the <code class="language-plaintext highlighter-rouge">Appboy</code> interface to allow setting of custom location attributes.</li>
 </ul>
 
 <h2 id="173">1.7.3</h2>
 
-<h5 id="added-48">Added</h5>
+<h5 id="added-49">Added</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">requestLocationInitialization()</code> to the <code class="language-plaintext highlighter-rouge">Appboy</code> interface. Calling this method is the equivalent of calling <code class="language-plaintext highlighter-rouge">AppboyLocationService.requestInitialization()</code> on the native Braze Android SDK. The method is a no-op on iOS.</li>
 </ul>
 
 <h2 id="172">1.7.2</h2>
 
-<h5 id="fixed-44">Fixed</h5>
+<h5 id="fixed-45">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in <code class="language-plaintext highlighter-rouge">1.7.0</code> where calling <code class="language-plaintext highlighter-rouge">launchNewsFeed()</code> would cause crashes in the Android bridge.</li>
 </ul>
 
 <h2 id="171">1.7.1</h2>
 
-<h5 id="fixed-45">Fixed</h5>
+<h5 id="fixed-46">Fixed</h5>
 <ul>
   <li>Updated the podspec to point to Braze iOS SDK version 3.5.1.</li>
 </ul>
@@ -11829,7 +11857,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#240">Appboy Android SDK 2.4.0</a>.</li>
 </ul>
 
-<h5 id="added-49">Added</h5>
+<h5 id="added-50">Added</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">Other</code>, <code class="language-plaintext highlighter-rouge">Unknown</code>, <code class="language-plaintext highlighter-rouge">Not Applicable</code>, and <code class="language-plaintext highlighter-rouge">Prefer not to Say</code> options for user gender.</li>
   <li>Updated the <code class="language-plaintext highlighter-rouge">AppboyProject</code> sample app to use FCM instead of GCM.</li>
@@ -11854,7 +11882,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#225">Braze Android SDK 2.2.5</a>.</li>
 </ul>
 
-<h5 id="added-50">Added</h5>
+<h5 id="added-51">Added</h5>
 <ul>
   <li>Added support for wiping all customer data created by the Braze SDK via <code class="language-plaintext highlighter-rouge">Appboy.wipeData()</code>.
     <ul>
@@ -11880,14 +11908,14 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="152">1.5.2</h2>
 
-<h5 id="fixed-46">Fixed</h5>
+<h5 id="fixed-47">Fixed</h5>
 <ul>
   <li>Fixed a race condition between SDK flavor reporting and sharedInstance initialization on iOS.</li>
 </ul>
 
 <h2 id="151">1.5.1</h2>
 
-<h5 id="fixed-47">Fixed</h5>
+<h5 id="fixed-48">Fixed</h5>
 <ul>
   <li>Fixed a bug that caused opted-in subscription states to not be reflected on the user profile.</li>
 </ul>
@@ -11903,7 +11931,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="141">1.4.1</h2>
 
-<h5 id="added-51">Added</h5>
+<h5 id="added-52">Added</h5>
 <ul>
   <li>Added support for apps that use use_frameworks in Podfile.
     <ul>
@@ -11920,7 +11948,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#214">Braze Android SDK 2.1.4</a>.</li>
 </ul>
 
-<h5 id="added-52">Added</h5>
+<h5 id="added-53">Added</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">ReactAppboy.registerPushToken()</code> for registering push tokens with Braze.
     <ul>
@@ -11942,7 +11970,7 @@ Linking.openUrl(contentCard.url);
   <li>Updates the native Android bridge to use <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#200">Braze Android SDK 2.0.0</a>.</li>
 </ul>
 
-<h5 id="added-53">Added</h5>
+<h5 id="added-54">Added</h5>
 <ul>
   <li>Adds <code class="language-plaintext highlighter-rouge">ReactAppboy.requestImmediateDataFlush()</code> for requesting an immediate flush of any data waiting to be sent to Braze’s servers.</li>
   <li>Adds <code class="language-plaintext highlighter-rouge">ReactAppboy.requestFeedRefresh()</code> for requesting a refresh of the News Feed.
@@ -11989,7 +12017,7 @@ Linking.openUrl(contentCard.url);
   <li><strong>Update Required</strong> — Updates iOS push handling in the AppboyProject sample project to be compatible with iOS 10. For more information, refer to the CHANGELOG for <a href="https://github.com/braze-inc/braze-ios-sdk/blob/master/CHANGELOG.md#2240">Braze iOS SDK v2.24.0</a>.</li>
 </ul>
 
-<h5 id="added-54">Added</h5>
+<h5 id="added-55">Added</h5>
 <ul>
   <li>Adds callbacks to the native bindings to provide function call results to React Native.</li>
   <li>Exposes <code class="language-plaintext highlighter-rouge">ReactAppboy.getCardCountForCategories()</code> and <code class="language-plaintext highlighter-rouge">ReactAppboy.getUnreadCardCountForCategories()</code> for retrieving News Feed card counts.

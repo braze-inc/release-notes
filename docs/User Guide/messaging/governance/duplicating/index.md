@@ -9,7 +9,7 @@ After you duplicate a campaign or Canvas, the new message will be automatically 
 **Tip:**
 
 
-You can also [copy your campaign](https://www.braze.com/docs/user_guide/messaging/governance/copy_across_workspaces/) across workspaces. The copy will remain as a draft until you edit and launch.
+You can also [copy campaigns, Canvases, and landing pages](https://www.braze.com/docs/user_guide/messaging/governance/copy_across_workspaces/) across workspaces. The copy remains as a draft until you edit it and launch the campaign or Canvas, or publish the landing page.
 
 
 

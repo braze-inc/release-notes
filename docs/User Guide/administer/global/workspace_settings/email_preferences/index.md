@@ -1,4 +1,4 @@
-# Email Preferences
+# Email preferences
 
 > Email Preferences is where you can set specific outbound email settings like custom footers, custom opt-in and opt-out pages, and more. Including these options in your outbound emails makes for a fluid and cohesive experience for your users.
 
@@ -45,6 +45,13 @@ Default to English Display Name
 Adding an email address in this section allows you to select it as a reply-to address for your email campaign. You can also make an email address the default one by selecting **Make Default**. These email addresses will be available in the **Sending Info** options as you compose your email campaign.
 
 !["Reply-To Address" section with fields to enter multiple reply-to addresses.](https://www.braze.com/docs/assets/img/email_settings/reply_to_address.png?4bd2fbf9de8420c55e83bceec0cbde25){: style="max-width:75%;" }
+
+**Note:**
+
+
+Braze sending domains don't accept inbound email. If a recipient replies to an email sent from a Braze-configured sending domain, their reply bounces with a `550 5.7.1 relaying denied` error. The reply-to address doesn't need to share the same domain as the from address. If you need to receive replies—for example, to collect calendar invite confirmations—use a subdomain that is not configured for sending and that has an inbox set up to accept mail.
+
+
 
 #### Personalize with Liquid
 
@@ -178,7 +185,7 @@ Using a list-unsubscribe header allows your recipients to unsubscribe easily fro
 
 Test sends typically **do not** include list-unsubscribe headers. Whether the live header appears is up to the mailbox provider and is reputation-based—stronger sender reputation usually improves visibility.
 
-![](https://www.braze.com/docs/assets/img_archive/list_unsub_img1.png?29f75f3af0dcf74113993afa4fb36d72){: style="float:right;max-width:60%;margin-left:15px;"}
+![Email client mailbox UI with an Unsubscribe option next to the message, where list-unsubscribe appears outside the message body.](https://www.braze.com/docs/assets/img_archive/list_unsub_img1.png?29f75f3af0dcf74113993afa4fb36d72){: style="float:right;max-width:60%;margin-left:15px;"}
 
 When a recipient selects **Unsubscribe**, the mailbox provider sends the unsubscribe request to the destination defined in the email header.
 
@@ -225,7 +232,7 @@ When using the "workspace default," Braze doesn't add the one-click unsubscribe 
 **Important:**
 
 
-Gmail intends for senders to implement the one-click unsubscribe for all their outgoing commercial, promotional messages as of June 1, 2024. For more information see [Gmail’s sender guidelines](https://support.google.com/mail/answer/81126?hl=en#subscriptions&zippy=%2Crequirements-for-sending-or-more-messages-per-day:~:text=Make%20it%20easy%20to%20unsubscribe) and [Gmail’s Email Sender Guidelines FAQ](https://support.google.com/a/answer/14229414#zippy=%2Cwhat-time-range-or-duration-is-used-when-calculating-spam-rate%2Cif-the-list-header-is-missing-is-the-message-body-checked-for-a-one-click-unsubscribe-link%2Cif-unsubscribe-links-are-temporarily-unavailable-due-to-maintenance-or-other-reasons-are-messages-flagged-as-spam%2Ccan-a-one-click-unsubscribe-link-to-a-landing-or-preferences-page%2Cwhat-is-a-bulk-sender%2Chow-can-bulk-senders-make-sure-theyre-meeting-the-sender-guidelines%2Cdo-the-sender-guidelines-apply-to-messages-sent-to-google-workspace-accounts%2Cdo-the-sender-guidelines-apply-to-messages-sent-from-google-workspace-accounts%2Cwhat-happens-if-senders-dont-meet-the-requirements-in-the-sender-guidelines%2Cif-messages-are-rejected-because-they-dont-meet-the-sender-guidelines-do-you-send-an-error-message-or-other-alert%2Cwhat-happens-when-sender-spam-rate-exceeds-the-maximum-spam-rate-allowed-by-the-guidelines%2Cwhat-is-the-dmarc-alignment-requirement-for-bulk-senders%2Cif-messages-fail-dmarc-authentication-can-they-be-delivered-using-ip-allow-lists-or-spam-bypass-lists-or-will-these-messages-be-quarantined%2Ccan-bulk-senders-get-technical-support-for-email-delivery-issues%2Cdo-all-messages-require-one-click-unsubscribe:~:text=for%20mitigations.-,Unsubscribe%20links,-Do%20all%20messages). Yahoo announced an early 2024 timeline for the updating requirements. For more information, refer to [More Secure, Less Spam: Enforcing Email Standards for a Better Experience](https://blog.postmaster.yahooinc.com/).
+Gmail intends for senders to implement the one-click unsubscribe for all their outgoing commercial, promotional messages as of June 1, 2024. For more information, see [Gmail’s sender guidelines](https://support.google.com/mail/answer/81126?hl=en#subscriptions&zippy=%2Crequirements-for-sending-or-more-messages-per-day:~:text=Make%20it%20easy%20to%20unsubscribe) and [Gmail’s Email Sender Guidelines FAQ](https://support.google.com/a/answer/14229414#zippy=%2Cwhat-time-range-or-duration-is-used-when-calculating-spam-rate%2Cif-the-list-header-is-missing-is-the-message-body-checked-for-a-one-click-unsubscribe-link%2Cif-unsubscribe-links-are-temporarily-unavailable-due-to-maintenance-or-other-reasons-are-messages-flagged-as-spam%2Ccan-a-one-click-unsubscribe-link-to-a-landing-or-preferences-page%2Cwhat-is-a-bulk-sender%2Chow-can-bulk-senders-make-sure-theyre-meeting-the-sender-guidelines%2Cdo-the-sender-guidelines-apply-to-messages-sent-to-google-workspace-accounts%2Cdo-the-sender-guidelines-apply-to-messages-sent-from-google-workspace-accounts%2Cwhat-happens-if-senders-dont-meet-the-requirements-in-the-sender-guidelines%2Cif-messages-are-rejected-because-they-dont-meet-the-sender-guidelines-do-you-send-an-error-message-or-other-alert%2Cwhat-happens-when-sender-spam-rate-exceeds-the-maximum-spam-rate-allowed-by-the-guidelines%2Cwhat-is-the-dmarc-alignment-requirement-for-bulk-senders%2Cif-messages-fail-dmarc-authentication-can-they-be-delivered-using-ip-allow-lists-or-spam-bypass-lists-or-will-these-messages-be-quarantined%2Ccan-bulk-senders-get-technical-support-for-email-delivery-issues%2Cdo-all-messages-require-one-click-unsubscribe:~:text=for%20mitigations.-,Unsubscribe%20links,-Do%20all%20messages). Yahoo announced an early 2024 timeline for the updating requirements. For more information, refer to [More Secure, Less Spam: Enforcing Email Standards for a Better Experience](https://blog.postmaster.yahooinc.com/).
 
 
 
@@ -290,7 +297,7 @@ Excluding one-click unsubscribe or any unsubscribe mechanism should only be done
 
 Adjusting this setting overrides the default behavior for one-click list unsubscribe in this email.
 
-![](https://www.braze.com/docs/assets/img/email_settings/one_click_list_unsubscribe_message_level.png?78491c83de430c3d39a395fac6637f12){: style="max-width:70%;"}
+![Sending Settings in the email editor with message-level one-click list-unsubscribe options, including workspace default and custom URL.](https://www.braze.com/docs/assets/img/email_settings/one_click_list_unsubscribe_message_level.png?78491c83de430c3d39a395fac6637f12){: style="max-width:70%;"}
 
 #### Requirements
 
@@ -303,13 +310,13 @@ If you're sending emails using your own custom unsubscribe functionality, you mu
 
 Select **Custom list-unsubscribe header** to add your own configured one-click unsubscribe endpoint, and an optional "mailto:". Braze requires an input for URL to support a custom list-unsubscribe header because the one-click unsubscribe HTTP is a requirement from Yahoo and Gmail for bulk senders.
 
-![](https://www.braze.com/docs/assets/img/email_settings/email_unsubscribe_header_custom.png?6f31f63ff7847cf75b2fa8acbed94a7a){: style="max-width:80%;"}
+![Email preferences with custom list-unsubscribe header fields for a one-click unsubscribe URL and optional mailto.](https://www.braze.com/docs/assets/img/email_settings/email_unsubscribe_header_custom.png?6f31f63ff7847cf75b2fa8acbed94a7a){: style="max-width:80%;"}
 
 ## Append email subject lines
 
 Use the toggle to include "[TEST]" and "[SEED]" in your test and seed email subject lines. This can help identify any email campaigns sent as tests.
 
-![](https://www.braze.com/docs/assets/img/email_settings/test_and_seed_email_subject_line.png?d3076d67bc3eb59877b3c1eff2159529){: style="max-width:70%;"}
+![Workspace email preference toggle that adds TEST and SEED prefixes to test and seed email subject lines.](https://www.braze.com/docs/assets/img/email_settings/test_and_seed_email_subject_line.png?d3076d67bc3eb59877b3c1eff2159529){: style="max-width:70%;"}
 
 ## Inline CSS on new emails by default
 
@@ -321,7 +328,7 @@ Changing this setting does not affect any of your existing email messages or tem
 
 You may automatically resubscribe users when they change their email address. For example, if a previously unsubscribed workspace user changes their email address to one that is not on the unsubscribe list for Braze, they automatically become resubscribed.
 
-![](https://www.braze.com/docs/assets/img/email_settings/resubscribe_users.png?866852bee82c1127d8a91ac42f5145f9){: style="max-width:90%;" }
+![Workspace setting that automatically resubscribes users when their email address changes.](https://www.braze.com/docs/assets/img/email_settings/resubscribe_users.png?866852bee82c1127d8a91ac42f5145f9){: style="max-width:90%;" }
 
 ## Subscription pages and footers
 
@@ -334,27 +341,27 @@ Note the following requirements when creating a custom footer for your email mes
 - Must include an unsubscribe URL and physical mailing address.
 - Should be less than 100 KB.
 
-![](https://www.braze.com/docs/assets/img/email_settings/custom_footer.png?d6ef8e3b9a94ef9fbc5422c15d44c640)
+![Custom email footer editor with unsubscribe link and mailing address fields for CAN-SPAM compliance.](https://www.braze.com/docs/assets/img/email_settings/custom_footer.png?d6ef8e3b9a94ef9fbc5422c15d44c640)
 
-To learn more about custom footer Liquid templating, check out our documentation on [Custom footers](https://www.braze.com/docs/user_guide/channels/email/subscriptions#changing-email-subscriptions).
+For custom footer Liquid templating, see [Custom footers](https://www.braze.com/docs/user_guide/channels/email/subscriptions#changing-email-subscriptions).
 
 
 
 
 Braze lets you set a **Custom Unsubscribe Page** with your own HTML. This page appears after a user has selected to unsubscribe from the bottom of an email. Note that this page should be less than 750 KB. 
 
-![](https://www.braze.com/docs/assets/img/email_settings/custom_unsubscribe.png?84484d87c3101bdd7d62628878db6caf)
+![Custom unsubscribe page HTML editor and preview for the page shown after a user unsubscribes from email.](https://www.braze.com/docs/assets/img/email_settings/custom_unsubscribe.png?84484d87c3101bdd7d62628878db6caf)
 
-Learn more about best practices for email list management in [Managing email subscriptions](https://www.braze.com/docs/user_guide/channels/email/faq#unsubscribed-email-addresses).
+For email list management best practices, see [Managing email subscriptions](https://www.braze.com/docs/user_guide/channels/email/faq#unsubscribed-email-addresses).
 
 
 
 
 You can create a custom opt-in page using your own HTML. Including this in your email can be especially beneficial if you want your branding and message to remain consistent throughout your user lifecycle. Note that this page should be less than 750 KB. 
 
-![](https://www.braze.com/docs/assets/img/email_settings/custom_opt_in.png?3b73dc55346060c4c5e3a2a64dffa74e)
+![Custom opt-in page HTML editor and preview for branded email subscription confirmation.](https://www.braze.com/docs/assets/img/email_settings/custom_opt_in.png?3b73dc55346060c4c5e3a2a64dffa74e)
 
-Learn more about best practices for email list management in [Managing email subscriptions](https://www.braze.com/docs/user_guide/channels/email/faq#unsubscribed-email-addresses).
+For email list management best practices, see [Managing email subscriptions](https://www.braze.com/docs/user_guide/channels/email/faq#unsubscribed-email-addresses).
 
 
 

@@ -44,7 +44,7 @@ With BrazeAI<sup>TM</sup>, you can now calculate the most popular products or cr
 
 
 
-Previously, you could perform quality assurance on your SMS and push notification content using BrazeAI<sup>TM</sup> in the Braze dashboard. Now, you can [QA in-app message content](https://www.braze.com/docs/user_guide/brazeai/generative_ai/content_qa/) too.
+Previously, you could perform quality assurance on your SMS and push notification content using BrazeAI<sup>TM</sup> in the Braze dashboard. Now, you can [QA in-app message content](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#review-content-quality) too.
 
 ## New Braze partnerships
 
