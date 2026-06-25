@@ -124,7 +124,7 @@ As you build your email, you can toggle between a desktop and mobile view to pre
 **Tip:**
 
 
-Need help creating awesome copy? Try using the [AI copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/generative_ai/copywriting/). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating awesome copy? Try using the [AI copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#generate-copy). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Copywriter button, located in the Content panel next to Style Settings in the drag-and-drop editor.](https://www.braze.com/docs/assets/img/ai_copywriter/ai_copywriter_dnd.png?64a3974e5f4f563d832108315f669da0)
 

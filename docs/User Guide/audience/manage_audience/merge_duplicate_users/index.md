@@ -37,7 +37,6 @@ To begin the merge process, select **Merge duplicates**.
 
 Choose which user profile to keep and which to merge, then select **Merge profiles**. Repeat this process until you've merged all duplicate profiles.
 
-![The individual merge page for a duplicate profile.](https://www.braze.com/docs/assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png?914b50715b37cf5db5e7032395b8b4e1){: style="max-width:80%;"}
 
 **Warning:**
 
@@ -62,11 +61,10 @@ To preview your results before merging your duplicates, select **Generate list o
 
 ![The "Manage Audience" page with "Generate list of duplicates" highlighted.](https://www.braze.com/docs/assets/img/audience_management/duplicate_users/bulk_merging/select_generate_list.png?63527bde979b93206b5aab40ecfb708b)
 
-Braze will generate your preview and send it to your email address as a CSV file.
+Braze generates your preview and sends it to your email address as a CSV file.
 
-![An email from Braze with a link to the generated CSV file.](https://www.braze.com/docs/assets/img/audience_management/duplicate_users/bulk_merging/example_email.png?d766e7c828a8f77a4f9242ee31c47331){: style="max-width:60%;"}
 
-In the following example, Braze uses the user's external ID to flag duplicate profiles and identify which one to keep. If these profiles are bulk merged, Braze will use the profile with an external ID as the user's new primary profile.
+In the following example, Braze uses the user's external ID to flag duplicate profiles and identify which one to keep. If these profiles are bulk merged, Braze uses the profile with an external ID as the user's new primary profile.
 
 
 
@@ -94,7 +92,6 @@ Duplicate user profiles cannot be recovered after merging.
 
 
 
-![The "Manage Audience" page with "Merge all duplicates" highlighted.](https://www.braze.com/docs/assets/img/audience_management/duplicate_users/bulk_merging/select_merge_profiles.png?e82ea58dc1ecbd5eb45a9731b863f459){: style="max-width:70%;"}
 
 ## Rules-based merging
 

@@ -15,7 +15,7 @@ Android supports localization for channel names, so in the code of your applicat
 
 Once these channels are created, your engineers will need to pass on the associated channel IDs to your marketing team. Your team should enter your channel names and channel IDs into the Braze dashboard for use in your campaigns and Canvases.
 
-To add a channel to the Braze dashboard, navigate to the Android push composer, select the notification channels field and then select "manage channels."
+To add a channel to the Braze dashboard, go to the Android push composer, select the notification channels field, then select **Manage channels**.
 **Important:**
 
 
@@ -67,13 +67,13 @@ To better understand the expected behavior for channels, refer to the following 
 
 When you apply a notification channel to a specific campaign or Canvas step, your **Reachable Users** tally (located in the Target Audience step) for Android Push will not appear to change. However, only users subscribed to the selected notification channel will see the message, and your campaign analytics (like clicks) will be measured based on this audience.
 
-![](https://www.braze.com/docs/assets/img_archive/push_notification_channels.png?8145156f4955ca3bdf9988e75ab87cfd)
+![Android push composer with Manage Notification Channels and a list of configured channels.](https://www.braze.com/docs/assets/img_archive/push_notification_channels.png?8145156f4955ca3bdf9988e75ab87cfd)
 
 {:start="4"}
-4. Click **Add Notification Channel**.
-5. Enter the name and ID of the notification channel you want to add.<br><br>![](https://www.braze.com/docs/assets/img_archive/push_notifications_channels_manage.png?e0e6f5d9b88b5151be50868e6bf40ade)<br><br>
+4. Select **Add Notification Channel**.
+5. Enter the name and ID of the notification channel you want to add.<br><br>![Add Notification Channel dialog with fields for channel name and channel ID.](https://www.braze.com/docs/assets/img_archive/push_notifications_channels_manage.png?e0e6f5d9b88b5151be50868e6bf40ade)<br><br>
 6. Repeat steps 4 and 5 for each notification channel that you'd like to add.
-7. Press **Save** to save your changes.
+7. Select **Save** to save your changes.
 
 ## Specifying your fallback channel
 

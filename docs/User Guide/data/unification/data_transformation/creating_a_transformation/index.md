@@ -16,7 +16,7 @@ Identify an external platform you want to connect to Braze and check that the pl
 
 The following is an example [Typeform webhook](https://www.typeform.com/help/a/webhooks-360029573471/), which is configurable by logging into their platform:
 
-![](https://www.braze.com/docs/assets/img/data_transformation/data_transformation8.png?3b2c93df44905da3092320dd0615c403)
+![An example Typeform webhook payload in the Typeform platform settings.](https://www.braze.com/docs/assets/img/data_transformation/data_transformation8.png?3b2c93df44905da3092320dd0615c403)
 
 ## Step 2: Create a transformation
 
@@ -86,9 +86,9 @@ If you're a developer or have significant experience with JavaScript code, follo
 **Tip:**
 
 
-Braze Data Transformation has an AI copilot that asks ChatGPT to help you write your code. To access the AI copilot, select <i class="fa-solid fa-wand-magic-sparkles"></i> **Generate transformation code**. To use this, a webhook must be sent to your transformation. You can also access the template library by selecting **Insert code** > **Insert template**.
+To generate transformation code with AI, choose **Code with Operator** above the transformation code editor. To use this, a webhook must be sent to your transformation. To start from a pre-built template instead, choose **Insert Template**. For example prompts, see [Generate data transformation code](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#generate-data-transformation-code).
 
-![](https://www.braze.com/docs/assets/img/data_transformation/data_transformation3.png?7650bd6fcd7df416978c82fec44c6239)
+**Code with Operator** is only available if Operator is enabled for your account. If you don't see it, contact your account manager.
 
 
 

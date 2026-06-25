@@ -143,14 +143,6 @@ Additionally, Banner messages do not support the following features:
 - Connected Content
 - Promotional codes
 - `catalog_items` using the [`:rerender` tag](https://www.braze.com/docs/user_guide/data/activation/catalogs/using_catalogs/#using-liquid)
-- User-controlled dismissals (early access only)
-
-**Important:**
-
-
-Allowing users to manually dismiss a Banner is in early access. See [Configure dismissal behavior](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner/#dismiss-behavior) for more details. If you're interested in participating in the early access, contact your customer success manager.
-
-
 
 ## Next steps
 

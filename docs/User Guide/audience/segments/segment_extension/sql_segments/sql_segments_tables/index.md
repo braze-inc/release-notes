@@ -1434,6 +1434,13 @@ Field | Type | Description
 `sf_created_at` | `timestamp`,&nbsp;`null` | when this event was picked up by the Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="USERSMESSAGESEMAILBOUNCESHARED #USERSMESSAGESEMAILBOUNCESHARED" }
 
+**Note:**
+
+
+You may see multiple rows for the same user around a single hard bounce. That can happen when events are processed asynchronously or when related sends have different `dispatch_id` values. When deduplicating or analyzing exports, consider `dispatch_id`, `time`, and `id` together.
+
+
+
 ### USERS_MESSAGES_EMAIL_CLICK_SHARED {#USERS_MESSAGES_EMAIL_CLICK_SHARED}
 
 Field | Type | Description

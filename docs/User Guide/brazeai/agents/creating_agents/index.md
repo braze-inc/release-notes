@@ -39,8 +39,8 @@ To create an agent, first choose your agent type:
 
 Select **Create agent**, then choose one of the following options:
 
-a. **Custom agent** to build an agent from a blank slate
-b. An option in **Create an agent with Operator** to use [BrazeAI Operator](https://www.braze.com/docs/user_guide/brazeai/operator/) to apply a [starting template](#agent-templates-built-with-operator)
+- **Custom agent** to build an agent from a blank slate
+- An option in **Create an agent with Operator** to use [BrazeAI Operator](https://www.braze.com/docs/user_guide/brazeai/operator/) to apply a [starting template](#agent-templates-built-with-operator)
 
 If you use Operator, review and approve its changes in chat before continuing to the next step.
 
@@ -94,7 +94,30 @@ When you use an [advanced output schema](https://www.braze.com/docs/user_guide/b
 
 
 
-### Step 6: Test and create the agent
+#### Configure fallback values {#configure-fallback-values}
+
+Fallback values are available for **Canvas step agents** only. In the **Output** section for a Canvas agent, you can define values that Braze uses when an agent invocation fails—for example, when the LLM times out or returns an invalid API key error. Fallback values work like personalization defaults. You might set a static subject line or short message that still gives users useful output when the agent cannot run.
+
+**Catalog agents** do not support configuring fallback values in Agent Console.
+
+![Agent Console Output configuration showing the Fallback output field for a Number schema.](https://www.braze.com/docs/assets/img/ai_agent/fallback_output.png?bac608914c057f670abbc1ea52192e34){: style="max-width:75%;"}
+
+For Canvas agents, fallback values support [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/) templating so you can reference user attributes or context variables in the fallback text.
+
+The fallback fields adapt to your Canvas agent's output format:
+
+| Output format | Fallback configuration |
+| --- | --- |
+| String, number, or boolean | Enter a single fallback value (Liquid supported). |
+| Fields (advanced schema) | Enter a fallback value for each field defined in the agent's output. |
+| JSON schema (advanced schema) | Braze reads your JSON schema and generates an input field for each property so you can define a fallback value per key. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Configure fallback values" }
+
+When a Canvas agent with fallback values runs in an [Agent step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/agent_step/), Braze renders the fallback per user and stores it in the output variable instead of `null`. If you do not configure fallback values, failed invocations leave the Canvas output unset (`null`).
+
+For runtime behavior, see [Error handling and fallback behavior](https://www.braze.com/docs/user_guide/brazeai/agents/deploying_agents/#fallback-behavior).
+
+### Step 6: Test the agent
 
 The **Preview** pane is an instance of the agent that shows up as a side-by-side panel within the configuration experience. You can use this section to test the agent while you're creating or making updates to it to experience it in a similar way to end users. This step helps you confirm that it’s behaving the way you expect, and gives you a chance to fine-tune before it goes live.
 

@@ -1,4 +1,4 @@
-<div id='api_vdwbzkjnpqjw' class='api_div' data-search-keywords='write personalized messaging based on a user’s context canvas agent'>
+<div id='api_ovfdhelvubhl' class='api_div' data-search-keywords='write personalized messaging based on a user’s context canvas agent'>
 <h2 id="write-personalized-messaging-based-on-a-users-context">Write personalized messaging based on a user’s context</h2>
 
 <div class="api_tags" data-tags="Canvas agent" data-tags-lower="canvas agent"></div>
@@ -118,7 +118,7 @@ The user IS in the segment: “Logged multiple searches in the past 30D”.
 
 </div>
 
-<div id='api_owbypcfmwstb' class='api_div' data-search-keywords='analyze user feedback to determine next steps canvas agent'>
+<div id='api_evewakvdkwia' class='api_div' data-search-keywords='analyze user feedback to determine next steps canvas agent'>
 <h2 id="analyze-user-feedback-to-determine-next-steps">Analyze user feedback to determine next steps</h2>
 
 <div class="api_tags" data-tags="Canvas agent" data-tags-lower="canvas agent"></div>
@@ -216,7 +216,7 @@ Input &amp; Output Example:
 
 </div>
 
-<div id='api_yvytzrexxgcw' class='api_div' data-search-keywords='classify inbound messages for opt-out intent canvas agent'>
+<div id='api_iuoljqulakty' class='api_div' data-search-keywords='classify inbound messages for opt-out intent canvas agent'>
 <h2 id="classify-inbound-messages-for-opt-out-intent">Classify inbound messages for opt-out intent</h2>
 
 <div class="api_tags" data-tags="Canvas agent" data-tags-lower="canvas agent"></div>
@@ -336,7 +336,7 @@ Input: “This sucks—what’s the promo code?” → false
 
 </div>
 
-<div id='api_tyzuhmcxxxlv' class='api_div' data-search-keywords='write high-converting descriptions that align with brand guidelines catalog agent'>
+<div id='api_ohlrpfuatfdg' class='api_div' data-search-keywords='write high-converting descriptions that align with brand guidelines catalog agent'>
 <h2 id="write-high-converting-descriptions-that-align-with-brand-guidelines">Write high-converting descriptions that align with brand guidelines</h2>
 
 <div class="api_tags" data-tags="Catalog agent" data-tags-lower="catalog agent"></div>
@@ -399,7 +399,6 @@ Input: “This sucks—what’s the promo code?” → false
 34
 35
 36
-37
 </pre></td><td class="rouge-code"><pre>Role:
 You are an expert Travel Copywriter for StyleRyde. Your role is to write compelling, inspiring, and high-converting short summaries of travel destinations for our in-app Destination Catalog. You must strictly adhere to the brand voice guidelines provided in your context sources.
 
@@ -420,7 +419,6 @@ Rules:
 - Ensure you understand the voice and tone, forbidden words, and formatting rules outlined in the included brand guidelines.
 - Avoid spammy phrasing (ALL CAPS, excessive punctuation) and emojis.
 - Do not hallucinate specific hotels or flights, as this is a general destination description.
-- If any input fields are missing, write the best description possible with the available data
 - Include "explanation": a short string that states how you applied the rules (for review or QA).
 
 Final Output Specification:
@@ -441,7 +439,7 @@ Price Tier: $$$
 
 </div>
 
-<div id='api_isdnoxwdidlj' class='api_div' data-search-keywords='provide translations based on language used by region catalog agent'>
+<div id='api_uiknbwwurxir' class='api_div' data-search-keywords='provide translations based on language used by region catalog agent'>
 <h2 id="provide-translations-based-on-language-used-by-region">Provide translations based on language used by region</h2>
 
 <div class="api_tags" data-tags="Catalog agent" data-tags-lower="catalog agent"></div>

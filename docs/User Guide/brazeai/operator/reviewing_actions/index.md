@@ -46,3 +46,5 @@ The **Auto-approve actions** toggle is located in the Operator chat panel.
 ![The auto-approve toggle and confirmation modal in the Operator chat panel.](https://www.braze.com/docs/assets/img/operator/auto-approval_toggle.png?66696888f29b30899d6e5422aad43c4d){: style="max-width:50%;"}
 
 Auto-approve resets when you refresh the page, open a new tab, or log out and back in. Moving between pages in the dashboard does not reset it. Auto-approve can be turned off at any time.
+
+For information about restricting Operator access and auditing team usage, see [Data privacy and security](https://www.braze.com/docs/user_guide/brazeai/operator/data_privacy_security/).

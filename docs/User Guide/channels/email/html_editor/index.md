@@ -97,7 +97,7 @@ Braze automatically removes HTML event handlers referenced as attributes. This m
 **Tip:**
 
 
-Need help creating awesome copy? Try using the [AI copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/generative_ai/copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating awesome copy? Try using the [AI copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#generate-copy). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Launch AI Copywriter button, located in the Body tab of the email composer.](https://www.braze.com/docs/assets/img/ai_copywriter/ai_copywriter_email.png?8949399245b427145be8856bd77ec753){: style="max-width:80%"}
 

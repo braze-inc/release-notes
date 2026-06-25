@@ -279,7 +279,7 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 
 #### Generating AI copy
 
-Try using the [AI copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/generative_ai/copywriting/). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
+Try using the [AI copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#generate-copy). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Launch AI Copywriter button, located in the Message field of the SMS composer.](https://www.braze.com/docs/assets/img/ai_copywriter/ai_copywriter_sms.png?5763629ff88d7db7c7bc7faa7c16f6a1){: style="max-width:60%"}
 
