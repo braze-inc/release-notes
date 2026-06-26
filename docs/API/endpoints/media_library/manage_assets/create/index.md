@@ -1,11 +1,11 @@
-<div id='api_xqprhjwzlnqc' class='api_div' data-search-keywords='prerequisites asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
+<div id='api_mxednvivjcgq' class='api_div' data-search-keywords='prerequisites asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
 <h1 id="upload-an-asset-to-the-media-library">Upload an asset to the media library</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/media_library/create</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to add an asset to the <a href="https://www.braze.com/docs/user_guide/engagement_tools/templates_and_media/media_library">Braze media library</a> using either an externally hosted URL (<code class="language-plaintext highlighter-rouge">asset_url</code>) or binary file data sent in the request body (<code class="language-plaintext highlighter-rouge">asset_file</code>). This endpoint supports images and ZIP files that contain images.</p>
+  <p>Use this endpoint to add an asset to the <a href="/docs/user_guide/engagement_tools/templates_and_media/media_library">Braze media library</a> using either an externally hosted URL (<code class="language-plaintext highlighter-rouge">asset_url</code>) or binary file data sent in the request body (<code class="language-plaintext highlighter-rouge">asset_file</code>). This endpoint supports images and ZIP files that contain images.</p>
 </blockquote>
 
 <p><strong>Tip:</strong></p>

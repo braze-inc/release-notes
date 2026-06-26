@@ -1,8 +1,8 @@
-<div id='api_qlcdqgmgyduk' class='api_div' data-search-keywords='synchronous and asynchronous api calls attributes events purchases users custom_attributes custom_events purchase_events message errors'>
+<div id='api_regmxzkzaenr' class='api_div' data-search-keywords='synchronous and asynchronous api calls attributes events purchases users custom_attributes custom_events purchase_events message errors'>
 <h1 id="create-and-update-users-synchronous">Create and update users (synchronous)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track/sync</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to record custom events and purchases and update user profile attributes synchronously. This endpoint functions similarly to the <a href="/docs/api/endpoints/user_data/post_user_track"><code class="language-plaintext highlighter-rouge">/users/track</code> endpoint</a>, which updates user profiles asynchronously.</p>

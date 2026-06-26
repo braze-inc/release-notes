@@ -106,9 +106,8 @@ Braze prioritizes one calculation at a time per workspace, so running multiple c
 
 ![A calculation queue with one calculation.](https://www.braze.com/docs/assets/img_archive/calculation_queue.png?1a4a3425ea695bdb625431076753e7fe)
 
-You can cancel an exact statistics calculation by selecting **Cancel**. This can be beneficial if there are multiple calculations in the queue and you want to prioritize another calculation first. 
+You can cancel an exact statistics calculation by selecting **Cancel**. This can be beneficial if there are multiple calculations in the queue and you want to prioritize another calculation first.
 
-![An active calculation with the option to cancel](https://www.braze.com/docs/assets/img_archive/cancel_calculation.png?cdda43f6d4f98037406058e7b5bfc2b6){: style="max-width:35%"}
 
 ## Viewing historical segment membership size
 

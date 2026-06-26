@@ -1,8 +1,8 @@
-<div id='api_sjvkfriuvunm' class='api_div' data-search-keywords='prerequisites campaign_id name description tag_names'>
+<div id='api_kbbofoxatdym' class='api_div' data-search-keywords='prerequisites campaign_id name description tag_names'>
 <h1 id="duplicate-campaigns-using-the-api">Duplicate campaigns using the API</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/duplicate</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to duplicate campaigns. This API endpoint is similar to <a href="/docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns#duplicating-segments-campaigns-and-canvases">duplicating campaigns in the Braze dashboard</a>.</p>

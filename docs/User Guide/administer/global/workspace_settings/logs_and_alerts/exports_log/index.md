@@ -10,7 +10,6 @@ You can find the exports log by going to **Settings** > **Exports Log**. Here, y
 
 You can cancel pending exports directly from the **Exports Log** page by selecting the <i class="fas fa-ellipsis-vertical"></i> menu and then selecting **Cancel Export**, or selecting the **Export ID** and then selecting **Cancel Export** on the export's page.
 
-![The exports log showing a pending export and the option to "Cancel Export".](https://www.braze.com/docs/assets/img/export_logs_cancel.png?cfcb1a0458818f05ad5b8d66fb11db01)
 
 ## Sharing a specific export log
 

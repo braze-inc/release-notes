@@ -1,8 +1,8 @@
-<div id='api_chswqiwegmlz' class='api_div' data-search-keywords='prerequisites canvas_id recipients audience broadcast context schedule time in_local_time at_optimal_time'>
+<div id='api_twszcxjdkboe' class='api_div' data-search-keywords='prerequisites canvas_id recipients audience broadcast context schedule time in_local_time at_optimal_time'>
 <h1 id="schedule-api-triggered-canvases">Schedule API-triggered Canvases</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/trigger/schedule/create</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to schedule Canvas messages via API-triggered delivery, allowing you to decide what action should trigger the message to be sent.</p>

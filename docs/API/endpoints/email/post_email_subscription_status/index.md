@@ -1,8 +1,8 @@
-<div id='api_jzpjosesuuhs' class='api_div' data-search-keywords='prerequisites email subscription_state'>
+<div id='api_rlpqjbtuplms' class='api_div' data-search-keywords='prerequisites email subscription_state'>
 <h1 id="change-email-subscription-status">Change email subscription status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/status</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to set the email subscription state for your users.</p>

@@ -1,8 +1,8 @@
-<div id='api_zkwsbbfmiurg' class='api_div' data-search-keywords='prerequisites campaign_id schedule_id schedule'>
+<div id='api_mpvjniybuggy' class='api_div' data-search-keywords='prerequisites campaign_id schedule_id schedule'>
 <h1 id="update-scheduled-api-triggered-campaigns">Update scheduled API-triggered campaigns</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/schedule/update</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to update scheduled API-triggered campaigns created in the dashboard, allowing you to decide what action should trigger the message to be sent.</p>

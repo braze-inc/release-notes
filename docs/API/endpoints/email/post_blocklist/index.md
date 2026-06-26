@@ -1,8 +1,8 @@
-<div id='api_lndghbbylkzl' class='api_div' data-search-keywords='prerequisites email'>
+<div id='api_iqcclmirnlih' class='api_div' data-search-keywords='prerequisites email'>
 <h1 id="blocklist-emails">Blocklist emails</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/blocklist</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to unsubscribe a user from email and mark them as hard bounced.</p>

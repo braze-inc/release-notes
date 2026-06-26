@@ -1,4 +1,4 @@
-<div id='api_zcshuqruhggl' class='api_div' data-search-keywords='rate limit results job_status sync_start_time sync_finish_time last_timestamp_synced rows_synced rows_failed_with_errors message'>
+<div id='api_xptxwtzsmfut' class='api_div' data-search-keywords='rate limit results job_status sync_start_time sync_finish_time last_timestamp_synced rows_synced rows_failed_with_errors message'>
 <h1 id="list-job-sync-status">List job sync status</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/cdi/integrations/{integration_id}/job_sync_status</p>

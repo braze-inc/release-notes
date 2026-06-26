@@ -1,8 +1,8 @@
-<div id='api_zyjbfskiroye' class='api_div' data-search-keywords='prerequisites broadcast external_user_ids user_aliases audience campaign_id send_id override_messaging_limits recipient_subscription_state schedule time in_local_time at_optimal_time messages apple_push android_push kindle_push web_push email webhook content_card sms dispatch_id schedule_id message'>
+<div id='api_sembbxjbfwyo' class='api_div' data-search-keywords='prerequisites broadcast external_user_ids user_aliases audience campaign_id send_id override_messaging_limits recipient_subscription_state schedule time in_local_time at_optimal_time messages apple_push android_push kindle_push web_push email webhook content_card sms dispatch_id schedule_id message'>
 <h1 id="create-scheduled-messages">Create scheduled messages</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/schedule/create</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to schedule a campaign, Canvas, or other message to be sent at a designated time and provides you with an identifier to reference that message for updates.</p>

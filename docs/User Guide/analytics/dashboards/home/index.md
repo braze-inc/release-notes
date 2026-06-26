@@ -6,7 +6,6 @@ The **Home** page has two main sections:
 - [Pick up where you left off](#pick-up-where-you-left-off)
 - [Performance overview](#performance-overview)
 
-![Home dashboard in Braze.](https://www.braze.com/docs/assets/img_archive/home_dashboard.png?c8f7e1bf186fca0675a21927328b5b65)
 
 ## Pick up where you left off
 
@@ -27,8 +26,6 @@ The **Pick up where you left off** section appears after you have edited or crea
 
 By default, the **Performance overview** section shows the last 30 days of data for all apps and sites. Your metrics are all calculated based on the selected date range.
 
-![Date range and app fields on the Home dashboard.](https://www.braze.com/docs/assets/img_archive/home_dashboard_select_date.png?7a8989748387be2d0ff60887858a6657){: style="max-width:60%;"}
-
 Percentages are calculated based on the current date range as compared to the previous date range, with the exception of *Monthly Active Users* (MAU), which uses the last day of the prior period instead of a range. 
 
 For example, if you set your date range to **Last 7 Days** and your *Daily Active Users* shows a percent increase of 1.8%, that means you had 1.8% more daily active users this week compared to last week.
@@ -38,8 +35,6 @@ For example, if you set your date range to **Last 7 Days** and your *Daily Activ
 ### Show breakdown
 
 Select **Show Breakdown** for each row of the performance overview statistics to view each statistic's value per day for the date range specified.
-
-![Expand](https://www.braze.com/docs/assets/img_archive/home_dashboard_breakdown.png?26679d35e63f45441405b6e04ad06048)
 
 ### Performance over time
 

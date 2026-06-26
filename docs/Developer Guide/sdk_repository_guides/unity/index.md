@@ -24,7 +24,7 @@ Before you can start using Braze in Unity scripts, you'll need to import the plu
 To integrate Braze into your Unity application, complete our instructions for [Integrating the Braze Unity SDK][2].
 
 [1]: https://github.com/braze-inc/braze-unity-sdk/releases
-[2]: https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=unity
+[2]: /docs/developer_guide/sdk_integration?sdktab=unity
 
 ## Contact
 
