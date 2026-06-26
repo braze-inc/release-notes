@@ -1,8 +1,8 @@
-<div id='api_ifmknivziind' class='api_div' data-search-keywords='prerequisites email'>
+<div id='api_lmhlnvivdfqf' class='api_div' data-search-keywords='prerequisites email'>
 <h1 id="blacklist-emails">Blacklist emails</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/blacklist</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <p><strong>Important:</strong></p>
 

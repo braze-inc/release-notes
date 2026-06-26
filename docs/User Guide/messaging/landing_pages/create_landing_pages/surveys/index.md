@@ -98,8 +98,6 @@ After launch, review results in:
 - The landing page analytics view for landing page surveys
 
 
-![Landing page analytics tab.](https://www.braze.com/docs/assets/img/surveys/survey-analytics-1.png?c74df670cb15e1fd920839103fffa994)
-
 Top-level analytics include:
 
 - **All responses:** Total complete and incomplete responses

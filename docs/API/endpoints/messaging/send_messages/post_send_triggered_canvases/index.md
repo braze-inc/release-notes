@@ -1,8 +1,8 @@
-<div id='api_aduqcvjmanoz' class='api_div' data-search-keywords='prerequisites canvas_id context broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes'>
+<div id='api_kbocseljuxrp' class='api_div' data-search-keywords='prerequisites canvas_id context broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes'>
 <h1 id="send-canvas-messages-using-api-triggered-delivery">Send Canvas messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/trigger/send</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to send Canvas messages with API-triggered delivery.</p>

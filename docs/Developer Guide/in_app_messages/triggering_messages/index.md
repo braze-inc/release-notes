@@ -319,7 +319,7 @@ Braze.getInstance(applicationContext).subscribeToPushNotificationEvents { event 
 
 Create a [silent push campaign](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=android) triggered via the server sent event.
 
-![](https://www.braze.com/docs/assets/img_archive/serverSentPush.png?ba3ed6cdbb6033f36d1e824f9ac5c350)
+![Delivery step of a silent push campaign configured for action-based delivery with a server_event custom event trigger.](https://www.braze.com/docs/assets/img_archive/serverSentPush.png?ba3ed6cdbb6033f36d1e824f9ac5c350)
 
 The push campaign must include key-value pair extras that indicate that this push campaign is sent to log an SDK custom event. This event will be used to trigger the in-app message.
 

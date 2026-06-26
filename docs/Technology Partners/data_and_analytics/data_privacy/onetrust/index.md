@@ -39,16 +39,16 @@ Follow the prompts in the **Enter Credential Details** screen and provide the fo
 
 
 
-1. In the OneTrust integrations menu, navigate to **Gallery** > **Braze** > **Add** to create a new workflow.![](https://www.braze.com/docs/assets/img/onetrust/onetrust.png?d5234b0c5f449c698a89802486754fa1)<br><br>
+1. In the OneTrust integrations menu, navigate to **Gallery** > **Braze** > **Add** to create a new workflow.![OneTrust Gallery showing the Braze integration with an Add button.](https://www.braze.com/docs/assets/img/onetrust/onetrust.png?d5234b0c5f449c698a89802486754fa1)<br><br>
 2. Provide a name and notification email in the workflow modal. Click the **Create** button. On creation, you will be taken to the Workflow Builder. Your Braze workflow will be seeded with API calls and actions that can be used to process deletion requests. <br><br>
-3. In the Workflow Builder, choose the action you want to trigger in the workflow.<br>![](https://www.braze.com/docs/assets/img/onetrust/onetrust2.png?b4d126caea8f2d1ea845cfe4fcefe732)
+3. In the Workflow Builder, choose the action you want to trigger in the workflow.<br>![OneTrust workflow builder for a data subject consent updated event.](https://www.braze.com/docs/assets/img/onetrust/onetrust2.png?b4d126caea8f2d1ea845cfe4fcefe732)
 
 
 
 
-1. In the OneTrust integrations menu, navigate to **Gallery** > **Braze** > **Add** to create a new workflow.![](https://www.braze.com/docs/assets/img/onetrust/onetrust.png?d5234b0c5f449c698a89802486754fa1)<br><br>
+1. In the OneTrust integrations menu, navigate to **Gallery** > **Braze** > **Add** to create a new workflow.![OneTrust Gallery showing the Braze integration with an Add button.](https://www.braze.com/docs/assets/img/onetrust/onetrust.png?d5234b0c5f449c698a89802486754fa1)<br><br>
 2. Provide a name and notification email in the workflow modal. Click the **Create** button. On creation, you will be taken to the Workflow Builder. Your Braze workflow will be seeded with API calls and actions that can be used to process deletion requests. <br><br>
-3. In the Workflow Builder, choose the action you want to trigger in the workflow.<br>![](https://www.braze.com/docs/assets/img/onetrust/onetrust8.png?477b85b120d4bf1e2332c08aae2fdfe8)
+3. In the Workflow Builder, choose the action you want to trigger in the workflow.<br>![OneTrust workflow builder for a data subject deletion event.](https://www.braze.com/docs/assets/img/onetrust/onetrust8.png?477b85b120d4bf1e2332c08aae2fdfe8)
 
 
 
@@ -58,16 +58,16 @@ Follow the prompts in the **Enter Credential Details** screen and provide the fo
 
 1. When complete, click **Done** and choose **Add Action**. Note that the action you choose will depend on what type of preference is being updated and your preferred endpoint.
 - To update a user’s global subscription preferences, choose the **POST User track - attributes** action.
-- To update a user’s subscription group preferences, choose the **POST User Track - Attributes** action or the **POST Set Users Subscription Group Status** action.<br>![](https://www.braze.com/docs/assets/img/onetrust/onetrust4.png?98fc1d0a4af38c7b030131b51944e005)<br><br>
-2. Choose your desired Action, select your previously created Braze credentials, and click **Next**.<br>![](https://www.braze.com/docs/assets/img/onetrust/onetrust5.png?05e2b5d9c6bf6a2b0d6e99f95d1af769)
+- To update a user’s subscription group preferences, choose the **POST User Track - Attributes** action or the **POST Set Users Subscription Group Status** action.<br>![OneTrust Add Action menu showing POST User track - attributes.](https://www.braze.com/docs/assets/img/onetrust/onetrust4.png?98fc1d0a4af38c7b030131b51944e005)<br><br>
+2. Choose your desired Action, select your previously created Braze credentials, and click **Next**.<br>![OneTrust credential selection for a POST User track - attributes action.](https://www.braze.com/docs/assets/img/onetrust/onetrust5.png?05e2b5d9c6bf6a2b0d6e99f95d1af769)
 
 
 
 
 1. When complete, click **Done** and choose **Add Action**.
 - To delete a user from Braze, choose the **POST User Delete Action** action.
-<br>![](https://www.braze.com/docs/assets/img/onetrust/onetrust9.png?4390a68ff02f43c68d0ce2e3b2ae9235)<br><br>
-2. Choose your desired Action, select your previously created Braze credentials, and click **Next**.<br>![](https://www.braze.com/docs/assets/img/onetrust/onetrust5.png?05e2b5d9c6bf6a2b0d6e99f95d1af769)
+<br>![OneTrust Add Action menu showing POST User Delete.](https://www.braze.com/docs/assets/img/onetrust/onetrust9.png?4390a68ff02f43c68d0ce2e3b2ae9235)<br><br>
+2. Choose your desired Action, select your previously created Braze credentials, and click **Next**.<br>![OneTrust credential selection for a POST User Delete action.](https://www.braze.com/docs/assets/img/onetrust/onetrust5.png?05e2b5d9c6bf6a2b0d6e99f95d1af769)
 
 
 
@@ -86,7 +86,7 @@ When using the OneTrust workflows to update subscription group preferences in Br
 
 
 
-![](https://www.braze.com/docs/assets/img/onetrust/onetrust6.png?77cedb37c75687f9c3c3ddb4b3e6d989)
+![OneTrust request body for POST User track - attributes with subscription group fields.](https://www.braze.com/docs/assets/img/onetrust/onetrust6.png?77cedb37c75687f9c3c3ddb4b3e6d989)
 
 
 
@@ -94,7 +94,7 @@ When using the OneTrust workflows to update subscription group preferences in Br
 1. Update the body to include any necessary dynamic values. Make sure the body of the action matches the [`/users/delete` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/).
 2. When finished editing, select **Finish** then **Activate** to enable the workflow.
 
-![](https://www.braze.com/docs/assets/img/onetrust/onetrust10.png?d2b419b2e3295883530631578c53c3f9)
+![OneTrust request body for POST User Delete with an external_id field.](https://www.braze.com/docs/assets/img/onetrust/onetrust10.png?d2b419b2e3295883530631578c53c3f9)
 
 #### Update the data subject request workflow
 1. On the **Privacy Rights Automation** menu, select **Workflows**. 
@@ -115,6 +115,6 @@ To see a full list of supported actions:
 2. Choose the **Braze** system.
 3. Navigate to the **Actions** tab.
 
-![](https://www.braze.com/docs/assets/img/onetrust/onetrust7.png?c5cdcee13ca886f67963146129733ace)
+![OneTrust Braze system Actions tab listing supported API actions.](https://www.braze.com/docs/assets/img/onetrust/onetrust7.png?c5cdcee13ca886f67963146129733ace)
 
 

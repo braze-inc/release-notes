@@ -1,8 +1,8 @@
-<div id='api_ilsvwdwnqjcw' class='api_div' data-search-keywords='need to update users in bulk? attributes events purchases message attributes_processed events_processed purchases_processed errors'>
+<div id='api_jgwibutzpskz' class='api_div' data-search-keywords='need to update users in bulk? attributes events purchases message attributes_processed events_processed purchases_processed errors'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to record custom events and purchases and update user profile attributes.</p>

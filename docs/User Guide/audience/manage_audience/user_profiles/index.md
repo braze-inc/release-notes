@@ -41,12 +41,16 @@ You can use the [Engagement tab](#engagement-tab) to verify whether a certain us
 
 ## Elements of user profile
 
-There are four main sections of a user's profile.
+There are five main sections of a user's profile.
 
 - **Overview:** Basic information about the user, session data, custom attributes, custom events, purchases, and the most recent device that the user logged into.
 - **Engagement:** Information about the user's contact settings, campaigns received, segments, communication stats, install attribution, and random bucket number.
+- **Event History:** Custom events and purchases from the past 30 days, with full event properties shown as JSON.
 - **Messaging History:** Recent messaging-related events for this user from the past 30 days.
 - **Feature Flags Eligibility:** Validate which feature flags a user is currently eligible for across rollouts, canvas steps, and experiments. 
+
+
+
 
 ### Overview tab {#overview-tab}
 
@@ -64,9 +68,11 @@ The **Overview** tab contains basic information about a user and their interacti
 
 For more information on this data, see [SDK data collection](https://www.braze.com/docs/user_guide/data/unification/user_data/sdk_data_collection/).
 
-![The Overview tab of a user profile.](https://www.braze.com/docs/assets/img_archive/user_profile2.png?148abecbaafc1146a297ca95ab42d5b8)
 
-### Engagement tab {#engagement-tab}
+<a id="engagement-tab"></a>
+
+
+### Engagement tab
 
 The **Engagement** tab contains information about a user's interactions with the messages you sent them using Braze.
 
@@ -81,6 +87,33 @@ The **Engagement** tab contains information about a user's interactions with the
 | Canvas messages received | Canvas messages this user has received and when. Send timing follows the same channel rules as **Campaigns received**; see [When campaigns appear in Campaigns received](#when-campaigns-appear-in-campaigns-received).<br><br> When a message is received, opened, or clicked, Braze updates data for all profiles that share the same channel identifier as the profile that logged the interaction (for example, the same email address for email, or the same phone number for SMS or WhatsApp). Users who share an identifier with someone who received, opened, or clicked the message can match this filter even if they were not originally in the campaign or were not directly sent the message.<br><br> Select a message from the list to view it. |
 | Predictions | [Churn prediction](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_churn/) and [event prediction](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_events/) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Engagement tab" }
+
+
+<a id="event-history-tab"></a>
+
+
+### Event History tab
+
+**Note:**
+
+
+To view the **Event History** tab, you need the **Search Users** and **View PII** [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/), because event properties can contain personal data.
+
+
+
+The **Event History** tab shows the custom events and purchases a user has logged. Use it to verify event data is arriving correctly and troubleshoot user-level issues directly in the dashboard—no data exports or external tooling required.
+
+| Event History category | Contains |
+| --- | --- |
+| Event list | Custom events and purchases from the past 30 days (up to 100 most recent), ordered newest first. |
+| Event type | Whether the row is a **Custom Event** or **Purchase**. |
+| Timestamp | When the event was logged. |
+| Event name | The name of the custom event or purchase. |
+| Event properties | Full event properties for the event, shown as JSON. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Event History tab" }
+
+
+
 
 ### When campaigns appear in Campaigns received {#when-campaigns-appear-in-campaigns-received}
 

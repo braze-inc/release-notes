@@ -1,8 +1,8 @@
-<div id='api_iuobvfrlvyit' class='api_div' data-search-keywords='prerequisites canvas_id name description tag_names'>
+<div id='api_fsstpdnlzfqo' class='api_div' data-search-keywords='prerequisites canvas_id name description tag_names'>
 <h1 id="duplicate-canvases-using-the-api">Duplicate Canvases using the API</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/duplicate</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to duplicate Canvases. This API endpoint is similar to <a href="/docs/user_guide/engagement_tools/messaging_fundamentals/duplicating">duplicating Canvases in the Braze dashboard</a>.</p>
@@ -54,7 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">canvas_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="https://www.braze.com/docs/api/identifier_types/">Canvas identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types/">Canvas identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">name</code></td>
@@ -79,6 +79,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="response">Response</h2>
 
-<p>This endpoint will return a <code class="language-plaintext highlighter-rouge">202</code> status code, and the Canvas creation will occur asynchronously. You can use the <a href="/docs/user_guide/administrative/app_settings/company_settings/security_settings">Security event download</a> to see records of when Canvases were duplicated and by which API key.</p>
+<p>This endpoint returns a <code class="language-plaintext highlighter-rouge">202</code> status code, and the Canvas creation occurs asynchronously. You can use the <a href="/docs/user_guide/administrative/app_settings/company_settings/security_settings">Security event download</a> to see records of when Canvases were duplicated and by which API key.</p>
 
 </div>

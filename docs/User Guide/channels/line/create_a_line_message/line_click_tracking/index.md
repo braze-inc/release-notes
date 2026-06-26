@@ -21,7 +21,7 @@ To set up click tracking for a text message:
 
 1. Drag a **Text** message into the composer and add a URL to the text field.
 
-![LINE message composer with a Text message containing a long URL: https://braze.com/docs/user_guide/channels/line/create/](https://www.braze.com/docs/assets/img/line/click_tracking_text_message.png?2770f3982736e640f3cce26dfb185be7)
+![LINE message composer with a Text message containing a long URL: /docs/user_guide/channels/line/create/](https://www.braze.com/docs/assets/img/line/click_tracking_text_message.png?2770f3982736e640f3cce26dfb185be7)
 
 {: start="2"}
 2. Go to the **Settings** tab and confirm **Click Tracking** is turned on. Click tracking is turned on by default for all new messages.

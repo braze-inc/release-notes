@@ -12,8 +12,6 @@ To access the landing page builder, you need [certain permissions](https://www.b
 
 Go to **Messaging** > **Landing Pages**, then select **Create landing page**. You can also select the name of an existing landing page to duplicate or make changes to it.
 
-![The landing pages section in the Braze dashboard.](https://www.braze.com/docs/assets/img/landing_pages/landing-pages-homepage.png?20df7a74990cb66ffb722c308ff590da)
-
 ### Step 2: Enter the page details
 
 Add internal and public-facing details that help you organize, brand, and share your landing page.
@@ -63,7 +61,7 @@ You can use these blocks to add content and customize the layout of your landing
 | Custom Code | A block that allows you to insert and run custom HTML, CSS, or JavaScript for advanced customization. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Step 3: Customize the page" }
 
-##### Span text
+#### Span text
 
 To apply specific styling to text blocks without custom code, highlight the text you want to style and then select **Wrap with span for style**. 
 

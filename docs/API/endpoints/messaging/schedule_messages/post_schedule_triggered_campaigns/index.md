@@ -1,8 +1,8 @@
-<div id='api_levkxkeptsgg' class='api_div' data-search-keywords='prerequisites campaign_id send_id recipients audience broadcast trigger_properties schedule time in_local_time at_optimal_time dispatch_id schedule_id message'>
+<div id='api_hdapdcyxzgsk' class='api_div' data-search-keywords='prerequisites campaign_id send_id recipients audience broadcast trigger_properties schedule time in_local_time at_optimal_time dispatch_id schedule_id message'>
 <h1 id="schedule-api-triggered-campaigns">Schedule API-triggered campaigns</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/schedule/create</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to send dashboard created campaign messages via API-triggered delivery, allowing you to decide what action should trigger the message to be sent.</p>

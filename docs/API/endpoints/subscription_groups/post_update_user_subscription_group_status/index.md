@@ -1,8 +1,8 @@
-<div id='api_tifvmlekqazw' class='api_div' data-search-keywords='prerequisites subscription_group_id subscription_state external_id phone use_double_opt_in_logic email message'>
+<div id='api_aawsqaiwpgfh' class='api_div' data-search-keywords='prerequisites subscription_group_id subscription_state external_id phone use_double_opt_in_logic email message'>
 <h1 id="update-users-subscription-group-status">Update user’s subscription group status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/subscription/status/set</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard.</p>

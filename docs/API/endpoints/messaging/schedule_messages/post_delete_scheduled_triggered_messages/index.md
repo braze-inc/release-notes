@@ -1,8 +1,8 @@
-<div id='api_edcaddvbhwcg' class='api_div' data-search-keywords='prerequisites campaign_id schedule_id'>
+<div id='api_scwhbpyzkbrx' class='api_div' data-search-keywords='prerequisites campaign_id schedule_id'>
 <h1 id="delete-scheduled-api-triggered-campaigns">Delete scheduled API-triggered campaigns</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/schedule/delete</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to cancel a Canvas message that you previously scheduled via API-triggered before it has been sent.</p>

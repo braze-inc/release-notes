@@ -1,8 +1,8 @@
-<div id='api_tiachbpxkdsp' class='api_div' data-search-keywords='prerequisites external_ids user_aliases braze_ids email_addresses phone_numbers deleted'>
+<div id='api_czmbflieggby' class='api_div' data-search-keywords='prerequisites external_ids user_aliases braze_ids email_addresses phone_numbers deleted'>
 <h1 id="delete-users">Delete users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/delete</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to delete any user profile by specifying a known user identifier.</p>

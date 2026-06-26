@@ -20,13 +20,13 @@ Braze uses your full set of opt-out keywords ([default keywords](https://www.bra
 
 
 
-#### Add keyword triggers
+### Add keyword triggers
 
 In addition to the default opt-in and opt-out keywords, you may also define your own keywords to trigger Opt-In, Opt-Out, and Help responses.
 
 To define your own keywords, do the following:
 
-1. In the Braze dashboard, go to **Audience** > **Subscription Group Management** and select an **SMS/MMS/RCS** subscription group.<br><br>
+1. In the Braze dashboard, go to **Audience** > **Subscription Group Management** and select an **SMS/MMS/RCS** subscription group.
 2. Under **Global Keywords**, select the pencil icon next to the keyword category you want to add a keyword to. ![Opt-in keywords with the pencil icon displaying.](https://www.braze.com/docs/assets/img/sms/sms_keywords.png?9a58afab3c3c146f8190a82ef858cfd1)<br><br>
 3. In the tab that opens, add a keyword you want to trigger this keyword category. Note that keywords are case insensitive, and universal keywords like `START`, `YES`, and `UNSTOP` cannot be changed. ![Editing keywords for "Opt-In" category. Added keywords are "START", "UNSTOP", and "YES". The reply message field reads "You have been unsubscribed to messages from this number. Reply HELP for help. Reply STOP to unsubscribe. Message and data rates may apply."](https://www.braze.com/docs/assets/img/sms/keyword_edit2.png?c2bf2d0da77bcf835e91deb4f3a18949)
 
@@ -47,16 +47,16 @@ Interested in seeing how these keywords can be used in your campaigns and Canvas
 
 
 
-#### Manage responses
+### Manage responses
 
 You can manage your own responses that are sent to users after they text in a keyword to a specific keyword category.
 
 1. In the Braze dashboard, go to **Audience** > **Subscription Group Management** and select an **SMS/MMS/RCS** subscription group. <br><br>
 2. Under **Global Keywords**, select a keyword category to edit a response for by selecting the pencil icon. ![Opt-in keywords with the pencil icon displaying.](https://www.braze.com/docs/assets/img/sms/sms_keywords.png?9a58afab3c3c146f8190a82ef858cfd1)<br><br> 
-3. In the tab that opens, edit your response. Be mindful of our [six rules to get compliance right](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response, and read the following rules that apply to keywords and keyword responses. ![Responses](https://www.braze.com/docs/assets/img/sms/keyword_home.png?d62e1e08719f2210ea407dd392be9664){: style="max-width:70%;"}<br><br>
+3. In the tab that opens, edit your response. Be mindful of our [six rules to get compliance right](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response, and read the following rules that apply to keywords and keyword responses.<br><br>
 4. To automatically shorten static URLs in your response, select the **Link Shortening** toggle. The character counter will update to show the expected length of the shortened URL. ![A GIF showing the character counter updating when the "Link Shortening" toggle is on.](https://www.braze.com/docs/assets/img/sms/link_shortening.gif?18623dce0cd6a779cdd2b605c73ee454){: style="max-width:60%;"}
 
-##### Considerations
+#### Considerations
 
 | Keywords | Keyword responses |
 | -------- | ----------------- |

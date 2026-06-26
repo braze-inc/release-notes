@@ -1,8 +1,8 @@
-<div id='api_uetkgguvsphx' class='api_div' data-search-keywords='prerequisites schedule_id schedule messages'>
+<div id='api_gogjempytyxp' class='api_div' data-search-keywords='prerequisites schedule_id schedule messages'>
 <h1 id="update-scheduled-messages">Update scheduled messages</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/schedule/update</p>
-<div class="coreclass core_endpoint "><a href="https://www.braze.com/docs/core_endpoints">core endpoint</a></div></div>
+<div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
   <p>Use this endpoint to update scheduled messages.</p>
