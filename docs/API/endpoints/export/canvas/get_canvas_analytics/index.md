@@ -1,4 +1,4 @@
-<div id='api_yrmmjikvkolv' class='api_div' data-search-keywords='prerequisites data name stats time total_stats revenue conversions conversions_by_entry_time entries variant_stats step_stats messages email sent opens unique_opens clicks sms sent_to_carrier delivered rejected delivery_failed opt_out help message'>
+<div id='api_rpcnrjflzxbh' class='api_div' data-search-keywords='prerequisites data name stats time total_stats revenue conversions conversions_by_entry_time entries variant_stats step_stats messages email sent opens unique_opens clicks sms sent_to_carrier delivered rejected delivery_failed opt_out help message'>
 <h1 id="export-canvas-data-series-analytics">Export Canvas data series analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/data_series</p>

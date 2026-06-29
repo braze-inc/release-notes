@@ -1,4 +1,4 @@
-<div id='api_hhjbhvhfghxa' class='api_div' data-search-keywords='prerequisites translations locale uuid name country language locale_key translation_map id_0 id_1 id_2 errors message'>
+<div id='api_fcdjoofksxfe' class='api_div' data-search-keywords='prerequisites translations locale uuid name country language locale_key translation_map id_0 id_1 id_2 errors message'>
 <h1 id="view-a-specific-translation-and-locale-for-email-template-endpoint">View a specific translation and locale for email template endpoint</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/translations/email</p>

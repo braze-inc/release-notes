@@ -149,6 +149,13 @@ You can also include a [contact card](https://www.braze.com/docs/user_guide/chan
 
 MMS messages are billed at a different rate than text-only SMS. Not all carriers can accept MMS. In these cases, the MMS is automatically converted to an image link the user can select.
 
+**Note:**
+
+
+Avoid sending MMS to Google Voice numbers. Google Voice has limited MMS support, which causes unreliable message delivery.
+
+
+
 ### Inbound MMS and personalization
 
 When a customer sends an inbound message that includes media, Braze exposes the media in [Currents SMS inbound events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events) and in Liquid as `{{sms.${inbound_media_urls}}}` (for example in retargeting or follow-up messages). For more on using inbound SMS properties in Canvas, see [Message step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step/).

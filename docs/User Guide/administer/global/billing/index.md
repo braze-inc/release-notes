@@ -68,8 +68,6 @@ The fields in this section are defined as follows:
 - **Allotted Data Points:** The amount of data points allotted in the contract per billing term.
 - **Contract Data Point Usage:** A cumulative total of all data points logged over the contract's lifetime, and does not reset in the next billing term.
 
-![Contract Details section of Total Data Point Usage tab](https://www.braze.com/docs/assets/img/contract_details.png?c49741f643d4bfcfdf5a8879c411b60c)
-
 ### Company billing data
 
 #### App level total data point usage

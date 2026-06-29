@@ -15,10 +15,6 @@
 
 1. Go to **Settings** > **Localization Settings**.
 2. Select **Add locale**, and then select **Default locale** or **Custom Attributes**.
-
-![The "Add locale" dropdown with options to select the default locale or custom attributes.](https://www.braze.com/docs/assets/img/multi-language_support/add_locale_options.png?25c81396184d2ab99aea743658400e13){: style="max-width:40%;"}
-
-{: start="3"}
 3. Enter a name for the locale.
 4. [Select a language for accessibility](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/#language-settings-and-accessibility). This setting allows assistive technologies like screen readers to correctly pronounce text.
 5. Select the respective user attributes for your chosen locale option. When setting up a locale, you can either select languages from the default user attributes or custom attributes. You can't select from both.
@@ -60,14 +56,14 @@ For steps to use these locales in your messages, refer to [Using locales](https:
 
 ## Frequently asked questions
 
-#### How many locales can I add?
+### How many locales can I add?
 
 You can add up to 200 locales.
 
-#### Where are the translation files stored in Braze?
+### Where are the translation files stored in Braze?
 
 Translation files are stored at a campaign level, meaning each message variant must have uploaded translations. Translations can also be stored in Content Blocks. When the block is added to a message, its translations are automatically included.
 
-#### Does the locale name have to follow a specific pattern or format?
+### Does the locale name have to follow a specific pattern or format?
 
 No. You can use your preferred naming convention. The locale name is used when selecting the locale in the editor and will be in the headings of the file you download with translation IDs.

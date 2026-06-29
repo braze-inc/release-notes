@@ -108,8 +108,6 @@ Elevated Access adds an extra layer of security for sensitive actions in your Br
 
 If a user can’t re-verify, they’ll be redirected to where they left off and won’t be able to continue with the sensitive action. After they successfully re-verify, they won’t need to do so again for the next hour—unless they log out first.
 
-![Elevated Access toggle.](https://www.braze.com/docs/assets/img/elevated_access.png?8d4703063efc932f1da2b41e8694aba7)
-
 ## Downloading a security event report {#security-event-report}
 
 The Security Event report is a CSV report of security events such as account invitations, account removals, failed and successful login attempts, and other activities. You can use it to perform internal audits.

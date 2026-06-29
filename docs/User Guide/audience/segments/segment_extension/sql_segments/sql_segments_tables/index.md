@@ -259,7 +259,7 @@ Field | Type | Description
 `gender` | `string` | [PII] Gender
 `phone_number` | `string` | [PII] Phone number
 `dob` | `string` | [PII] Date of birth
-`timezone` | `string` | [PII] Time zone
+`TIME_ZONE` | `string` | [PII] Time zone
 `home_city` | `string` | [PII] Home city
 `country` | `string` | [PII] Country
 `language` | `string` | [PII] Language
@@ -283,7 +283,7 @@ Field | Type | Description
 `gender` | `string` | [PII] Gender
 `phone_number` | `string` | [PII] Phone number
 `dob` | `string` | [PII] Date of birth
-`timezone` | `string` | [PII] Time zone
+`TIME_ZONE` | `string` | [PII] Time zone
 `home_city` | `string` | [PII] Home city
 `country` | `string` | [PII] Country
 `language` | `string` | [PII] Language
@@ -312,7 +312,7 @@ Field | Type | Description
 `home_city` | `string` | [PII] Home city
 `country` | `string` | [PII] Country
 `language` | `string` | [PII] Language
-`timezone` | `string` | [PII] Time zone
+`TIME_ZONE` | `string` | [PII] Time zone
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="USERLATESTSTATEDEFAULTATTRIBUTESVIEWSHARED #USERLATESTSTATEDEFAULTATTRIBUTESVIEWSHARED" }
 
 ## Catalogs

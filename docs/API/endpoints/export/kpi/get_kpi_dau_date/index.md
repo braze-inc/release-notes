@@ -1,4 +1,4 @@
-<div id='api_toitfmdzyqyp' class='api_div' data-search-keywords='prerequisites message data time dau'>
+<div id='api_iaiannhnkzgl' class='api_div' data-search-keywords='prerequisites message data time dau'>
 <h1 id="export-daily-active-users-by-date">Export daily active users by date</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/kpi/dau/data_series</p>
