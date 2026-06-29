@@ -1,4 +1,4 @@
-<div id='api_bcpmwywkgnhe' class='api_div' data-search-keywords='prerequisites campaign_id message_variation_id locale_id translation_map id_3 message errors'>
+<div id='api_eypstdnnximt' class='api_div' data-search-keywords='prerequisites campaign_id message_variation_id locale_id translation_map id_3 message errors'>
 <h1 id="update-translation-in-a-campaign">Update translation in a campaign</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/campaigns/translations</p>

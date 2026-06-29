@@ -21,8 +21,6 @@ Designated support contacts can access all support cases for your company, regar
 3. In the menu, select **Edit** to be redirected to the **Edit user** page.
 4. Check the checkbox for **Set this user as a Designated Support Contact for Braze Support Portal**.
 
-![The checkbox for setting a user as a designated support contact.](https://www.braze.com/docs/assets/img_archive/designated_support_contact.png?10b8f12100a26c617b7ea7c1f3ecaa4e){: style="max-width:70%;"}
-
 ### Gaining access
 
 After a user is designated as a support contact, the Braze Support Portal sends that user a welcome email with instructions to set up their access.

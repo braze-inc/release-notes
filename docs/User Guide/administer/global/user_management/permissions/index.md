@@ -170,8 +170,6 @@ When you're finished, select **Update user**.
 
 To download a list of your users and their permissions, go to **Settings** > **User Management** > **Company Users**, then select **Export Users**. A CSV file will be sent to your email address shortly.
 
-![The "Company Users" page in Braze with the "Export Users" option in focus.](https://www.braze.com/docs/assets/img/braze_permissions/exporting_user_permissions.png?64292c338e1614a7215faa059b9277e4)
-
 ## List of permissions
 
 ### Messaging
