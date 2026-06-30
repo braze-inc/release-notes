@@ -4,12 +4,12 @@
 
 ## About rules-based item recommendations
 
-A rules-based recommendation engine uses user data and product information to suggest relevant items to users within messages. It uses [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/) and either Braze [catalogs](https://www.braze.com/docs/user_guide/data/activation/catalogs/) or [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/) to dynamically personalize content based on user behavior and attributes.
+A rules-based recommendation engine uses user data and product information to suggest relevant items to users within messages. It uses [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) and either Braze [catalogs](https://www.braze.com/docs/user_guide/data/activation/catalogs) or [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content) to dynamically personalize content based on user behavior and attributes.
 
 **Important:**
 
 
-Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's purchase history and tastes unless you update the logic.<br><br>To create personalized AI recommendations that automatically adjust to a user’s history, check out [AI item recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
+Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's purchase history and tastes unless you update the logic.<br><br>To create personalized AI recommendations that automatically adjust to a user’s history, check out [AI item recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai).
 
 
 
@@ -79,7 +79,7 @@ Create your recommendation engine using either a catalog or Connected Content:
 
 To create your recommendation engine using a catalog:
 
-1. [Create a catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs/create/) of products.
+1. [Create a catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs/create) of products.
 2. For each product, add a list of recommended products as a string separated by a delimiter (like a pipe `|`) in a column named “product_recommendations”.
 3. Pass the product ID that you want to find recommendations for to the catalog.
 4. Get the `product_recommendations` value for that catalog item and split it by the delimiter with a Liquid split filter.
@@ -100,7 +100,7 @@ Let’s say you have a health food app and want to create a Content Card campaig
 
 After the catalog is uploaded to Braze, confirm the information imported accurately by selecting your catalog from the Catalogs page and opening the **Preview** tab. A select number of items appears in the preview, and may be randomized, but this doesn't affect the output of the recommendation engine.
 
-With the catalog in place, [create a Content Card campaign](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card/). In the composer, enter Liquid logic to determine which users should receive the campaign, and which recipe and image should display. In this use case, Braze pulls the user's `start_date` (or sign-up date) and compares it to the current date. The difference in days determines which Content Card is sent.
+With the catalog in place, [create a Content Card campaign](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card). In the composer, enter Liquid logic to determine which users should receive the campaign, and which recipe and image should display. In this use case, Braze pulls the user's `start_date` (or sign-up date) and compares it to the current date. The difference in days determines which Content Card is sent.
 
 
 
@@ -180,7 +180,7 @@ To create your recommendation engine using Connected Content, first create a new
 |------|-----------|
 |**Convert a spreadsheet**|Convert a spreadsheet into a JSON API endpoint by using a service like SheetDP, and take note of the API URL this generates.|
 |**Create a custom endpoint**|Build, host, and maintain a custom-built in-house endpoint.|
-|**Use a third-party engine** |Use a third-party recommendation engine, such as one of our [Alloy partners](https://www.braze.com/docs/partners/message_personalization/), including [Amazon Personalise](https://www.braze.com/docs/partners/amazon_personalize/), [Certona](https://www.braze.com/docs/partners/message_personalization/dynamic_content/personalized_recommendations/certona/), [Dynamic Yield](https://www.braze.com/docs/partners/dynamic_yield/), and others.|
+|**Use a third-party engine** |Use a third-party recommendation engine, such as one of our [Alloy partners](https://www.braze.com/docs/partners/message_personalization), including [Amazon Personalise](https://www.braze.com/docs/partners/amazon_personalize), [Certona](https://www.braze.com/docs/partners/message_personalization/dynamic_content/personalized_recommendations/certona), [Dynamic Yield](https://www.braze.com/docs/partners/dynamic_yield), and others.|
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Example" }
 
 Next, use Liquid in your message that calls your endpoint to match a custom attribute value with a user’s profile and pull the corresponding recommendation.
@@ -210,7 +210,7 @@ Replace the following:
 **Note:**
 
 
-This is a basic example and you might need to modify it further based on your specific needs and data structure. For more detailed guidance, refer to the [Liquid documentation](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/) or consult with a developer.
+This is a basic example and you might need to modify it further based on your specific needs and data structure. For more detailed guidance, refer to the [Liquid documentation](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) or consult with a developer.
 
 
 

@@ -48,8 +48,6 @@ The Shopify integration uses [eCommerce recommended events](https://www.braze.co
 
 
 
-
-
 ```json
 {
     "name": "ecommerce.product_viewed",

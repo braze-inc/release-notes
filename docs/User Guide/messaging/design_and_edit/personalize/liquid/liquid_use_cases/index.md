@@ -1,4 +1,4 @@
-<div id='api_lkfqpahlypau' class='api_div' data-search-keywords='anniversaries and holidays anniversaries and holidays'>
+<div id='api_ldtlglgwnrdr' class='api_div' data-search-keywords='anniversaries and holidays anniversaries and holidays'>
 <h2 id="anniversaries-and-holidays">Anniversaries and holidays</h2>
 
 <div class="api_tags" data-tags="Anniversaries and holidays" data-tags-lower="anniversaries and holidays"></div>
@@ -164,7 +164,7 @@ Message if today isn't one of the provided holidays.
 
 </div>
 
-<div id='api_esfotkiwluih' class='api_div' data-search-keywords='app usage app usage'>
+<div id='api_vyrjpxwgwxea' class='api_div' data-search-keywords='app usage app usage'>
 <h2 id="app-usage">App usage</h2>
 
 <div class="api_tags" data-tags="App usage" data-tags-lower="app usage"></div>
@@ -269,7 +269,7 @@ Message for a less active user
 
 </div>
 
-<div id='api_uzjupebasuhm' class='api_div' data-search-keywords='countdowns countdowns'>
+<div id='api_ndquiixjcywl' class='api_div' data-search-keywords='countdowns countdowns'>
 <h2 id="countdowns">Countdowns</h2>
 
 <div class="api_tags" data-tags="Countdowns" data-tags-lower="countdowns"></div>
@@ -721,7 +721,7 @@ Hi, the offer is only valid today.
 
 </div>
 
-<div id='api_xdqwsewilupg' class='api_div' data-search-keywords='custom attribute custom attribute'>
+<div id='api_pktdkqrhagar' class='api_div' data-search-keywords='custom attribute custom attribute'>
 <h2 id="custom-attribute">Custom attribute</h2>
 
 <div class="api_tags" data-tags="Custom attribute" data-tags-lower="custom attribute"></div>
@@ -763,7 +763,7 @@ There is a shovel here.
 
 <h3 id="european-currency-format">Format currency for European number conventions</h3>
 
-<p>For locales that use a comma as the decimal separator and a period as the thousands separator (for example, Germany or Italy), use the <a href="/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters/#money-filter"><code class="language-plaintext highlighter-rouge">money</code></a> and <a href="/docs/user_guide/messaging/design_and_edit/personalize/liquid/advanced_filters/#number-formatting-filters"><code class="language-plaintext highlighter-rouge">number_with_delimiter</code></a> filters with <code class="language-plaintext highlighter-rouge">replace</code> to swap separators. Use <code class="language-plaintext highlighter-rouge">#</code> as a temporary placeholder so periods and commas aren’t swapped in the same pass.</p>
+<p>For locales that use a comma as the decimal separator and a period as the thousands separator (for example, Germany or Italy), use the <a href="/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters#money-filter"><code class="language-plaintext highlighter-rouge">money</code></a> and <a href="/docs/user_guide/messaging/design_and_edit/personalize/liquid/advanced_filters#number-formatting-filters"><code class="language-plaintext highlighter-rouge">number_with_delimiter</code></a> filters with <code class="language-plaintext highlighter-rouge">replace</code> to swap separators. Use <code class="language-plaintext highlighter-rouge">#</code> as a temporary placeholder so periods and commas aren’t swapped in the same pass.</p>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre><span class="cp">{{</span><span class="w"> </span><span class="mf">1234567.89</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">money</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">number_with_delimiter</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'.'</span><span class="p">,</span><span class="w"> </span><span class="s1">'#'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">','</span><span class="p">,</span><span class="w"> </span><span class="s1">'.'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'#'</span><span class="p">,</span><span class="w"> </span><span class="s1">','</span><span class="w"> </span><span class="cp">}}</span>
@@ -803,7 +803,7 @@ Hi <span class="cp">{{</span><span class="nv">name</span><span class="p">[</span
 
 </div>
 
-<div id='api_ntzayevfedlf' class='api_div' data-search-keywords='custom event custom event attributes external_id'>
+<div id='api_mutliylegzwr' class='api_div' data-search-keywords='custom event custom event attributes external_id'>
 <h2 id="custom-event">Custom event</h2>
 
 <div class="api_tags" data-tags="Custom event" data-tags-lower="custom event"></div>
@@ -979,7 +979,7 @@ Did you forget something in your shopping cart?
 
 </div>
 
-<div id='api_tgkevunpyqmh' class='api_div' data-search-keywords='language language'>
+<div id='api_iblumoxnudal' class='api_div' data-search-keywords='language language'>
 <h2 id="language">Language</h2>
 
 <div class="api_tags" data-tags="Language" data-tags-lower="language"></div>
@@ -1156,7 +1156,7 @@ tuesday default
 
 </div>
 
-<div id='api_vyvcohjdmhjb' class='api_div' data-search-keywords='miscellaneous miscellaneous'>
+<div id='api_jrhwhluawybd' class='api_div' data-search-keywords='miscellaneous miscellaneous'>
 <h2 id="miscellaneous">Miscellaneous</h2>
 
 <div class="api_tags" data-tags="Miscellaneous" data-tags-lower="miscellaneous"></div>
@@ -1273,7 +1273,7 @@ Today's offer from <span class="cp">{{</span><span class="nv">store</span><span 
 
 <p>This use case allows users to set up upcoming reminders based on custom events. The example scenario allows a user to set a reminder for a policy renewal date that is 26 or more days away, where reminders are sent 26, 13, 7, or 2 days before the policy renewal date.</p>
 
-<p>With this use case, the following should go in the body of a <a href="/docs/user_guide/channels/webhooks/create_a_webhook/">webhook campaign</a> or Canvas step.</p>
+<p>With this use case, the following should go in the body of a <a href="/docs/user_guide/channels/webhooks/create_a_webhook">webhook campaign</a> or Canvas step.</p>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -1693,7 +1693,7 @@ All episodes of <span class="cp">{{</span><span class="nv">new_shows_clean</span
 
 </div>
 
-<div id='api_jgnayqlwhxxv' class='api_div' data-search-keywords='platform targeting platform targeting'>
+<div id='api_qrshbxseixhw' class='api_div' data-search-keywords='platform targeting platform targeting'>
 <h2 id="platform-targeting">Platform targeting</h2>
 
 <div class="api_tags" data-tags="Platform targeting" data-tags-lower="platform targeting"></div>
@@ -1844,7 +1844,7 @@ This is a message for Verizon users!
 
 </div>
 
-<div id='api_leyajnsnwahj' class='api_div' data-search-keywords='sms sms'>
+<div id='api_qxikjaqfwybe' class='api_div' data-search-keywords='sms sms'>
 <h2 id="sms">SMS</h2>
 
 <div class="api_tags" data-tags="SMS" data-tags-lower="sms"></div>
@@ -1883,7 +1883,7 @@ Thanks for joining our SMS program!
 
 </div>
 
-<div id='api_nfhjrnqcdmmz' class='api_div' data-search-keywords='time zones time zones'>
+<div id='api_kfvscgtztrcj' class='api_div' data-search-keywords='time zones time zones'>
 <h2 id="time-zones">Time zones</h2>
 
 <div class="api_tags" data-tags="Time zones" data-tags-lower="time zones"></div>
@@ -2071,7 +2071,7 @@ Check out this new bar after work today. HH specials!
 
 <p><strong>Note:</strong></p>
 
-<p>This is the opposite of <a href="/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/#time-based-options">Quiet Hours</a>.</p>
+<p>This is the opposite of <a href="/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types#time-based-options">Quiet Hours</a>.</p>
 
 <h3 id="abort-send-time-hour-range">Abort a message outside an hour range at send time</h3>
 
@@ -2119,7 +2119,7 @@ Sign up for our exclusive time-limited offer now!
 
 </div>
 
-<div id='api_esftzgubfnxx' class='api_div' data-search-keywords='week/day/month week/day/month'>
+<div id='api_aklpupxzbssh' class='api_div' data-search-keywords='week/day/month week/day/month'>
 <h2 id="weekdaymonth">Week/Day/Month</h2>
 
 <div class="api_tags" data-tags="Week/Day/Month" data-tags-lower="week/day/month"></div>
@@ -2478,4 +2478,4 @@ Default copy
 
 </div>
 
-Many examples in this library use the `abort_message` tag to skip a send when conditions aren't met. For a full reference on aborting sends with Liquid, including date- and time-based patterns, see [Abort Liquid Messages](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages/).
+Many examples in this library use the `abort_message` tag to skip a send when conditions aren't met. For a full reference on aborting sends with Liquid, including date- and time-based patterns, see [Abort Liquid Messages](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages).

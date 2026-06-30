@@ -51,7 +51,7 @@ You can edit brand guidelines by selecting them on the **Brand Guidelines** page
 
 ## Using brand guidelines
 
-When composing a message, open Operator to [generate copy](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#generate-copy) and select your brand guideline in the **Apply brand guideline** dropdown. If you designate a specific brand guideline as the default, Braze automatically selects it in the dropdown, but you can choose a different guideline.
+When composing a message, open Operator to [generate copy](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#generate-copy) and select your brand guideline in the **Apply brand guideline** dropdown. If you designate a specific brand guideline as the default, Braze automatically selects it in the dropdown, but you can choose a different guideline.
 
 !["Operator with "Important Alerts!!" selected as the brand guideline.](https://www.braze.com/docs/assets/img/guidelines_ai_assistant.png?7ebf178e679c7f40f544b50c31fde2d3)
 

@@ -40,8 +40,6 @@
 
 
 
-
-
 _This integration is maintained by OpenAI._
 
 ## About the integration

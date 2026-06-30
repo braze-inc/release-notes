@@ -1,18 +1,18 @@
-<div id='api_wamtxeuhuonx' class='api_div' data-search-keywords='prerequisites message data time size'>
+<div id='api_wzdkbfkvvdox' class='api_div' data-search-keywords='prerequisites message data time size'>
 <h1 id="export-segment-analytics">Export segment analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/segments/data_series</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to retrieve a daily series of the estimated size of a segment over time. <br /><br />If you need the exact size of a segment, export its users with the <a href="/docs/api/endpoints/export/user_data/post_users_segment/"><code class="language-plaintext highlighter-rouge">/users/export/segment</code> endpoint</a> and count the exported profiles.</p>
+  <p>Use this endpoint to retrieve a daily series of the estimated size of a segment over time. <br /><br />If you need the exact size of a segment, export its users with the <a href="/docs/api/endpoints/export/user_data/post_users_segment"><code class="language-plaintext highlighter-rouge">/users/export/segment</code> endpoint</a> and count the exported profiles.</p>
 </blockquote>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#62d9d142-cdec-4aea-a287-c13efea7415e" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">segments.data_series</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">segments.data_series</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -40,7 +40,7 @@
       <td><code class="language-plaintext highlighter-rouge">segment_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">Segment API identifier</a>.<br /><br /> The <code class="language-plaintext highlighter-rouge">segment_id</code> for a given segment can be found on the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers/">API Keys</a> page within your Braze account or you can use the <a href="/docs/api/endpoints/export/segments/get_segment/">Export segment list endpoint</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">Segment API identifier</a>.<br /><br /> The <code class="language-plaintext highlighter-rouge">segment_id</code> for a given segment can be found on the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers">API Keys</a> page within your Braze account or you can use the <a href="/docs/api/endpoints/export/segments/get_segment">Export segment list endpoint</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">length</code></td>
@@ -91,6 +91,6 @@
 
 <p><strong>Tip:</strong></p>
 
-<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/">Export troubleshooting</a>.</p>
+<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting">Export troubleshooting</a>.</p>
 
 </div>

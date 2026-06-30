@@ -36,7 +36,7 @@ If a retried attempt is successful, the message is sent and no further retries a
 
 If the API call fails and this is enabled, Braze will retry the call while respecting the [rate limit](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#delivery-speed-rate-limiting) you set for each resend. Braze will move any failed messages to the back of the queue and add additional minutes, if necessary, to the total minutes it would take to send your message.
 
-If the Connected Content call errors out over five times, the message is aborted, similar to how an [abort message tag](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/aborting_connected_content/) is triggered.
+If the Connected Content call errors out over five times, the message is aborted, similar to how an [abort message tag](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/aborting_connected_content) is triggered.
 
 ## Connected Content calls with abort and retry logic
 

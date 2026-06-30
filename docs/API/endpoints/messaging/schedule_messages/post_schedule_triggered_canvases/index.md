@@ -1,4 +1,4 @@
-<div id='api_ecnzlwpabgdx' class='api_div' data-search-keywords='prerequisites canvas_id recipients audience broadcast context schedule time in_local_time at_optimal_time'>
+<div id='api_faginmgbkibp' class='api_div' data-search-keywords='prerequisites canvas_id recipients audience broadcast context schedule time in_local_time at_optimal_time'>
 <h1 id="schedule-api-triggered-canvases">Schedule API-triggered Canvases</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/trigger/schedule/create</p>
@@ -10,13 +10,13 @@
 
 <p>You can pass in <code class="language-plaintext highlighter-rouge">context</code> that will be templated into the messages sent by the first steps of the Canvas.</p>
 
-<p>Note that to send messages with this endpoint, you must have a <a href="/docs/api/identifier_types/#canvas-api-identifier">Canvas ID</a>, created when you build a Canvas.</p>
+<p>Note that to send messages with this endpoint, you must have a <a href="/docs/api/identifier_types#canvas-api-identifier">Canvas ID</a>, created when you build a Canvas.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4bc75890-b807-405d-b226-5aca284e6b7d" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.trigger.schedule.create</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.trigger.schedule.create</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -90,19 +90,19 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">canvas_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">Canvas identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">Canvas identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">recipients</code></td>
       <td>Optional</td>
       <td>Array of recipients objects</td>
-      <td>See <a href="/docs/api/objects_filters/recipient_object/">recipients object</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/recipient_object">recipients object</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">audience</code></td>
       <td>Optional</td>
       <td>Connected audience object</td>
-      <td>See <a href="/docs/api/objects_filters/connected_audience/">connected audience</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/connected_audience">connected audience</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">broadcast</code></td>
@@ -114,13 +114,13 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">context</code></td>
       <td>Optional</td>
       <td>Object</td>
-      <td>Personalization key-value pairs for all users in this send. See <a href="/docs/user_guide/messaging/canvas/canvas_components/context/">Canvas context object</a>.</td>
+      <td>Personalization key-value pairs for all users in this send. See <a href="/docs/user_guide/messaging/canvas/canvas_components/context">Canvas context object</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">schedule</code></td>
       <td>Required</td>
       <td>Schedule object</td>
-      <td>See <a href="/docs/api/objects_filters/schedule_object/">schedule object</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/schedule_object">schedule object</a>.</td>
     </tr>
   </tbody>
 </table>

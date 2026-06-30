@@ -2,7 +2,7 @@
 
 > With global style settings, you can personalize the look of your email campaigns and Canvases. You can add and customize a default theme for your drag-and-drop editor. This includes editing your styles for email titles, text, buttons, and more. Using a combination of these settings can help create a consistent look across your email messaging.
 
-To edit your global style settings, go to **Settings** > **Email Preferences** > **Drag-and-Drop Email Preferences**. After editing the styles in the drag-and-drop email editor, select **Save**. To further customize your email campaigns and Canvases, check out how you can incorporate [Editor blocks (email)](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks/?sdktab=email).
+To edit your global style settings, go to **Settings** > **Email Preferences** > **Drag-and-Drop Email Preferences**. After editing the styles in the drag-and-drop email editor, select **Save**. To further customize your email campaigns and Canvases, check out how you can incorporate [Editor blocks (email)](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks?sdktab=email).
 
 ![Email Global Style Settings section in the Drag-And-Drop Email Editor Settings tab.](https://www.braze.com/docs/assets/img_archive/dnd_global_style_settings.png?b90ab9594ef58f19728971cf2de52bc1)
 
@@ -51,7 +51,7 @@ Gmail does not support custom fonts, so your custom font may display as a defaul
 
 
 
-To use other custom fonts in your email campaigns, you can create an [email template](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/email_template/) or [Content Blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/content_blocks/) that includes the custom font. For example, you can create a specific email template designed with festive custom fonts tailored to your sale theme. Be sure to check that your font choice is still web-safe and supported on your email platforms.
+To use other custom fonts in your email campaigns, you can create an [email template](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/email_template) or [Content Blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/content_blocks) that includes the custom font. For example, you can create a specific email template designed with festive custom fonts tailored to your sale theme. Be sure to check that your font choice is still web-safe and supported on your email platforms.
 
 ### Fallback font
 

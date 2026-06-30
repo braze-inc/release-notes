@@ -42,7 +42,7 @@ Tags are visible in the list of campaigns, Canvases, or segments, along with add
 
 ## Custom data tags
 
-Tags may also be added to custom data when managing [custom attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes/#managing-custom-attributes) and [custom events](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/#adding-tags).
+Tags may also be added to custom data when managing [custom attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes#managing-custom-attributes) and [custom events](https://www.braze.com/docs/user_guide/data/activation/events/custom_events#adding-tags).
 
 **Important:**
 
@@ -51,4 +51,4 @@ This feature is currently in early access. Contact your customer success manager
 
 
 
-For information on renaming, removing, or nesting tags across your dashboard, see [Managing tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags/#managing-tags).
+For information on renaming, removing, or nesting tags across your dashboard, see [Managing tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags#managing-tags).

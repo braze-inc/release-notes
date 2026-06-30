@@ -1,4 +1,4 @@
-<div id='api_mwffygrwgeuj' class='api_div' data-search-keywords='prerequisites message events'>
+<div id='api_oiphfrrptnci' class='api_div' data-search-keywords='prerequisites message events'>
 <h1 id="export-custom-events-list">Export custom events list</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/events/list</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">events.list</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">events.list</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -76,10 +76,10 @@
 
 <h3 id="fatal-export">Fatal error response codes</h3>
 
-<p>For status codes and associated error messages that will be returned if your request encounters a fatal error, reference <a href="/docs/api/errors/#fatal-errors">Fatal errors &amp; responses</a>.</p>
+<p>For status codes and associated error messages that will be returned if your request encounters a fatal error, reference <a href="/docs/api/errors#fatal-errors">Fatal errors &amp; responses</a>.</p>
 
 <p><strong>Tip:</strong></p>
 
-<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/">Export troubleshooting</a>.</p>
+<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting">Export troubleshooting</a>.</p>
 
 </div>

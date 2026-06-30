@@ -1,4 +1,4 @@
-<div id='api_enwcwfmbvant' class='api_div' data-search-keywords='prerequisites external_ids user_aliases braze_ids email_addresses phone_numbers deleted'>
+<div id='api_drjegeiysoxa' class='api_div' data-search-keywords='prerequisites external_ids user_aliases braze_ids email_addresses phone_numbers deleted'>
 <h1 id="delete-users">Delete users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/delete</p>
@@ -10,7 +10,7 @@
 
 <p>Up to 50 <code class="language-plaintext highlighter-rouge">external_ids</code>, <code class="language-plaintext highlighter-rouge">user_aliases</code>, <code class="language-plaintext highlighter-rouge">braze_ids</code>, <code class="language-plaintext highlighter-rouge">email_addresses</code>, or <code class="language-plaintext highlighter-rouge">phone_numbers</code> can be included in a single request. Only one of <code class="language-plaintext highlighter-rouge">external_ids</code>, <code class="language-plaintext highlighter-rouge">user_aliases</code>, <code class="language-plaintext highlighter-rouge">braze_ids</code>, <code class="language-plaintext highlighter-rouge">email_addresses</code>, or <code class="language-plaintext highlighter-rouge">phone_numbers</code> can be included in a single request.</p>
 
-<p>If you have a use case that can’t be solved with bulk user deletion through the API, contact the <a href="/docs/user_guide/administer/personal/braze_support/">Braze Support team</a> for assistance.</p>
+<p>If you have a use case that can’t be solved with bulk user deletion through the API, contact the <a href="/docs/user_guide/administer/personal/braze_support">Braze Support team</a> for assistance.</p>
 
 <p><strong>Warning:</strong></p>
 
@@ -20,7 +20,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you need an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">users.delete</code> permission.</p>
+<p>To use this endpoint, you need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.delete</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -77,7 +77,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       <td><code class="language-plaintext highlighter-rouge">user_aliases</code></td>
       <td>Optional</td>
       <td>Array of user alias object</td>
-      <td><a href="/docs/api/objects_filters/user_alias_object/">User aliases</a> to be deleted.</td>
+      <td><a href="/docs/api/objects_filters/user_alias_object">User aliases</a> to be deleted.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">braze_ids</code></td>
@@ -158,7 +158,7 @@ Authorization: Bearer YOUR_REST_API_KEY
   ],
   "email_addresses": [
     {
-      "email": "john.smith@braze.com",
+      "email": "john.smith@example.com",
       "prioritization": ["unidentified", "most_recently_updated"]
     }
   ]
@@ -181,13 +181,13 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <ul>
   <li>The user profile is deleted (nulled).</li>
-  <li>Workspace user counts (such as total users on the <a href="/docs/user_guide/analytics/dashboards/home/">analytics home</a>) update to account for the removed users.</li>
+  <li>Workspace user counts (such as total users on the <a href="/docs/user_guide/analytics/dashboards/home">analytics home</a>) update to account for the removed users.</li>
   <li>The removed user still counts toward the aggregated conversion percentage. Custom event counts and purchase counts are not updated for removed users.</li>
 </ul>
 
 <h3 id="multiple-profiles-with-a-shared-email-address">Multiple profiles with a shared email address</h3>
 
-<p>To merge user profiles that share the same email address, call the <a href="/docs/api/endpoints/user_data/post_users_merge/"><code class="language-plaintext highlighter-rouge">/users/merge</code> endpoint</a>.</p>
+<p>To merge user profiles that share the same email address, call the <a href="/docs/api/endpoints/user_data/post_users_merge"><code class="language-plaintext highlighter-rouge">/users/merge</code> endpoint</a>.</p>
 
 <h2 id="troubleshooting">Troubleshooting</h2>
 
@@ -199,10 +199,10 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">external_ids</code> array:</strong> Confirm each value matches a user’s external ID exactly.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">braze_id</code>:</strong> You can find a user’s <code class="language-plaintext highlighter-rouge">braze_id</code> by exporting their data with the <a href="/docs/api/endpoints/export/user_data/post_users_identifier/"><code class="language-plaintext highlighter-rouge">/users/export/ids</code> endpoint</a> or by exporting a segment to CSV (where the <code class="language-plaintext highlighter-rouge">braze_id</code> appears as “Appboy ID”).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">braze_id</code>:</strong> You can find a user’s <code class="language-plaintext highlighter-rouge">braze_id</code> by exporting their data with the <a href="/docs/api/endpoints/export/user_data/post_users_identifier"><code class="language-plaintext highlighter-rouge">/users/export/ids</code> endpoint</a> or by exporting a segment to CSV (where the <code class="language-plaintext highlighter-rouge">braze_id</code> appears as “Appboy ID”).</li>
   <li><strong>Alias-only or email-only profiles:</strong> If the profile has no <code class="language-plaintext highlighter-rouge">external_id</code>, create a segment filtering for <strong>External User ID is blank</strong> combined with the known email or phone number, then export to CSV to retrieve the <code class="language-plaintext highlighter-rouge">braze_id</code>.</li>
 </ul>
 
-<p>To confirm whether a user has been deleted, call the <a href="/docs/api/endpoints/export/user_data/post_users_identifier/"><code class="language-plaintext highlighter-rouge">/users/export/ids</code> endpoint</a> using the same identifier type you used in the delete request (for example, including the value in <code class="language-plaintext highlighter-rouge">external_ids</code>, <code class="language-plaintext highlighter-rouge">braze_id</code>, or <code class="language-plaintext highlighter-rouge">user_aliases</code>). If the user no longer exists, the response contains <code class="language-plaintext highlighter-rouge">"users": []</code> and may include <code class="language-plaintext highlighter-rouge">"invalid_user_ids"</code> listing that identifier.</p>
+<p>To confirm whether a user has been deleted, call the <a href="/docs/api/endpoints/export/user_data/post_users_identifier"><code class="language-plaintext highlighter-rouge">/users/export/ids</code> endpoint</a> using the same identifier type you used in the delete request (for example, including the value in <code class="language-plaintext highlighter-rouge">external_ids</code>, <code class="language-plaintext highlighter-rouge">braze_id</code>, or <code class="language-plaintext highlighter-rouge">user_aliases</code>). If the user no longer exists, the response contains <code class="language-plaintext highlighter-rouge">"users": []</code> and may include <code class="language-plaintext highlighter-rouge">"invalid_user_ids"</code> listing that identifier.</p>
 
 </div>

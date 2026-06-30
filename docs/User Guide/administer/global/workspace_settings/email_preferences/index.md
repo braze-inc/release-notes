@@ -21,7 +21,7 @@ In this section, you can add the names and email addresses you can use when Braz
 
 #### Personalize with Liquid
 
-You can also use [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/) in the **From Display Name**, **Local Part**, and **Domain** fields to dynamically template the sender name and email address based on custom attributes. Note that to use Liquid in the **Domain** field, you must go to an email campaign's **Sending Info** options and select the **Customize from display name + address** checkbox.
+You can also use [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) in the **From Display Name**, **Local Part**, and **Domain** fields to dynamically template the sender name and email address based on custom attributes. Note that to use Liquid in the **Domain** field, you must go to an email campaign's **Sending Info** options and select the **Customize from display name + address** checkbox.
 
 ![Sending settings with fields for customizing the from display name, address, and domain.](https://www.braze.com/docs/assets/img/email_settings/email_campaign_domain.png?be2533bf9ae540ad4c3a082d6653bcca)
 
@@ -55,16 +55,16 @@ Braze sending domains don't accept inbound email. If a recipient replies to an e
 
 #### Personalize with Liquid
 
-You can also use [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/) in the **Reply-To Address** field to dynamically template the reply-to address based on custom attributes. For example, you can use conditional logic to send replies to different regions or departments:
+You can also use [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) in the **Reply-To Address** field to dynamically template the reply-to address based on custom attributes. For example, you can use conditional logic to send replies to different regions or departments:
 
 
 ```liquid
 {% if {{custom_attribute.${region}}} == 'US' %}
-{% assign address = "us-support@company.com" %}
+{% assign address = "us-support@example.com" %}
 {% elsif {{custom_attribute.${region}}} == 'EU' %}
-{% assign address = "eu-support@company.com" %}
+{% assign address = "eu-support@example.com" %}
 {% else %}
-{% assign address = "global-support@company.com" %}{% endif %}{{address}}
+{% assign address = "global-support@example.com" %}{% endif %}{{address}}
 ```
 
 
@@ -73,9 +73,7 @@ You can also use [Liquid](https://www.braze.com/docs/user_guide/messaging/design
 
 This section allows you to manage BCC addresses you can append to outbound email messages sent from Braze. Appending a BCC address to an email message sends an identical copy of the message that your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent to your users for compliance requirements or customer support issues. BCC emails are not included in email reporting and analytics.
 
-BCC addresses are available for Amazon SES, SendGrid, and SparkPost. As an alternative to BCC addresses, we recommend using [messaging archiving](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/message_archiving/) to save a copy of messages sent to users for archival or compliance purposes.
-
-
+BCC addresses are available for Amazon SES, SendGrid, and SparkPost. As an alternative to BCC addresses, we recommend using [messaging archiving](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/message_archiving) to save a copy of messages sent to users for archival or compliance purposes.
 
 
 
@@ -142,7 +140,7 @@ The default behavior in Braze is to append the tracking pixel to the bottom of y
 
 While the pixel is already styled to cause as few visual changes as possible, any unintentional visual changes would be the least visible at the bottom of an email. This is also the default for email providers such as SendGrid and SparkPost.
 
-To reduce unexpected behavior, keep Liquid inside `<html>` tags. Nested or duplicate document-level tags can change how the email is parsed and where the pixel lands, which can affect open tracking and layout. For more information, see [Using Liquid](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/using_liquid/).
+To reduce unexpected behavior, keep Liquid inside `<html>` tags. Nested or duplicate document-level tags can change how the email is parsed and where the pixel lands, which can affect open tracking and layout. For more information, see [Using Liquid](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/using_liquid).
 
 ### Update the placement
 
@@ -281,7 +279,7 @@ In your email editor, go to **Sending Settings** > **Sending Info**. Select from
 **Important:**
 
 
-The **Unsubscribe from specific subscription group** setting only applies to the one-click list-unsubscribe header. The mailto list-unsubscribe header is not affected when selecting this option. This means a recipient who unsubscribes using this method logs a global unsubscribe, not an unsubscribe from the specific subscription group. To exclude the mailto list-unsubscribe header from globally unsubscribing users, when selecting this setting, contact [Support](https://www.braze.com/docs/support_contact/).
+The **Unsubscribe from specific subscription group** setting only applies to the one-click list-unsubscribe header. The mailto list-unsubscribe header is not affected when selecting this option. This means a recipient who unsubscribes using this method logs a global unsubscribe, not an unsubscribe from the specific subscription group. To exclude the mailto list-unsubscribe header from globally unsubscribing users, when selecting this setting, contact [Support](https://www.braze.com/docs/support_contact).
 
 
 
@@ -322,7 +320,7 @@ Use the toggle to include "[TEST]" and "[SEED]" in your test and seed email subj
 
 CSS inlining is a technique that automatically inlines CSS styles for your emails and new emails. For some email clients, this can improve the way that your emails render.
 
-Changing this setting does not affect any of your existing email messages or templates. You can override this default at any time while composing messages or templates. For more information, refer to [CSS inlining](https://www.braze.com/docs/user_guide/channels/email/html_editor/css_inline/).
+Changing this setting does not affect any of your existing email messages or templates. You can override this default at any time while composing messages or templates. For more information, refer to [CSS inlining](https://www.braze.com/docs/user_guide/channels/email/html_editor/css_inline).
 
 ## Resubscribe users when their email changes
 
@@ -452,7 +450,7 @@ If a subscription group referenced in **Sending Info** for one-click is archived
 **Is the one-click unsubscribe setting available for email templates?**
 
 
-No, we currently do not have plans to add this for email templates, as these templates aren't assigned to a sending domain. If you're interested in this feature for email templates, submit [product feedback](https://www.braze.com/docs/user_guide/administer/personal/product_portal/).
+No, we currently do not have plans to add this for email templates, as these templates aren't assigned to a sending domain. If you're interested in this feature for email templates, submit [product feedback](https://www.braze.com/docs/user_guide/administer/personal/product_portal).
 
 
 

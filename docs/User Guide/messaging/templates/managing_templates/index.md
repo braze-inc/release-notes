@@ -15,7 +15,7 @@ To duplicate an individual template, select <i class="fas fa-ellipsis-v"></i> **
 **Note:**
 
 
-For [Content Block](https://www.braze.com/docs/user_guide/messaging/design_and_edit/content_blocks/) templates, a draft copy is created. For all other templates a new duplicate copy is automatically created.
+For [Content Block](https://www.braze.com/docs/user_guide/messaging/design_and_edit/content_blocks) templates, a draft copy is created. For all other templates a new duplicate copy is automatically created.
 
 
 
@@ -52,7 +52,7 @@ To archive multiple templates, select the checkbox next to each template that yo
 **Important:**
 
 
-Archiving is not currently available for [link templates](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing/#link-templates).
+Archiving is not currently available for [link templates](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing#link-templates).
 
 
 

@@ -1,18 +1,18 @@
-<div id='api_ckyxthdmxjrv' class='api_div' data-search-keywords='prerequisites workflow_id step_id message_variation_id locale_id translation_map id_3 message errors'>
+<div id='api_aptixgfaxcys' class='api_div' data-search-keywords='prerequisites workflow_id step_id message_variation_id locale_id translation_map id_3 message errors'>
 <h1 id="update-translation-in-a-canvas">Update translation in a Canvas</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/canvas/translations</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to update multiple translations for a Canvas. See <a href="/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/">Locales in messages</a> for more information about translation features.</p>
+  <p>Use this endpoint to update multiple translations for a Canvas. See <a href="/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages">Locales in messages</a> for more information about translation features.</p>
 </blockquote>
 
-<p>If you want to update translations after a Canvas has been launched, you’ll need to <a href="/docs/post-launch_edits/">save your message as a draft</a> first.</p>
+<p>If you want to update translations after a Canvas has been launched, you’ll need to <a href="/docs/post-launch_edits">save your message as a draft</a> first.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.translations.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.translations.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

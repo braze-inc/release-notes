@@ -10,11 +10,11 @@ User profile events are in beta. Contact your customer success manager or accoun
 **Tip:**
 
 
-These events are also available as SQL tables in the [Query Builder](https://www.braze.com/docs/user_guide/analytics/query_builder/), [SQL Segment Extensions](https://www.braze.com/docs/user_guide/engagement_tools/segments/sql_segments/), and [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/). For SQL table schemas and column details, refer to the [SQL table reference](https://www.braze.com/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables/). For Snowflake Data Sharing schemas for user profile attribute views, refer to [User profile attributes](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/user_attributes/).
+These events are also available as SQL tables in the [Query Builder](https://www.braze.com/docs/user_guide/analytics/query_builder), [SQL Segment Extensions](https://www.braze.com/docs/user_guide/engagement_tools/segments/sql_segments), and [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). For SQL table schemas and column details, refer to the [SQL table reference](https://www.braze.com/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables). For Snowflake Data Sharing schemas for user profile attribute views, refer to [User profile attributes](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/user_attributes).
 
 
 
-Contact your Braze representative or open a [support ticket](https://www.braze.com/docs/braze_support/) if you need access to additional event entitlements. If you can't find what you need on this page, see the [Customer Behavior Events Library](https://www.braze.com/docs/user_guide/data/braze_currents/event_glossary/customer_behavior_events/), [Message Engagement Events Library](https://www.braze.com/docs/user_guide/data/braze_currents/event_glossary/message_engagement_events/), or [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
+Contact your Braze representative or open a [support ticket](https://www.braze.com/docs/braze_support) if you need access to additional event entitlements. If you can't find what you need on this page, see the [Customer Behavior Events Library](https://www.braze.com/docs/user_guide/data/braze_currents/event_glossary/customer_behavior_events), [Message Engagement Events Library](https://www.braze.com/docs/user_guide/data/braze_currents/event_glossary/message_engagement_events), or [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 **Explanation of user profile update event structure**
 
@@ -27,7 +27,7 @@ This customer behavior and user events breakdown shows what type of information 
 **Important:**
 
 
-Storage schemas apply to flat file event data sent to data warehouse storage partners, such as Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage. Some event and destination combinations listed here are not yet generally available. For information about supported events by partner, see [available partners](https://www.braze.com/docs/user_guide/data/braze_currents/available_partners/) and the related partner pages.
+Storage schemas apply to flat file event data sent to data warehouse storage partners, such as Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage. Some event and destination combinations listed here are not yet generally available. For information about supported events by partner, see [available partners](https://www.braze.com/docs/user_guide/data/braze_currents/available_partners) and the related partner pages.
 
 Currents drops events with payloads larger than 900 KB.
 
@@ -40,7 +40,7 @@ Currents drops events with payloads larger than 900 KB.
 
 <!--overview-end-->
 
-<div id='api_wfpjiwiuzgrz' class='api_div' data-search-keywords='user profile update events profile app_group_id app_id archived country custom_attributes dob email_address external_user_id first_name gender home_city id language last_name phone_number time time_ms timezone update_source user_id'>
+<div id='api_rysqosssbokr' class='api_div' data-search-keywords='user profile update events profile app_group_id app_id archived country custom_attributes dob email_address external_user_id first_name gender home_city id language last_name phone_number time time_ms timezone update_source user_id'>
 <h2 id="user-profile-update-events">User Profile Update events</h2>
 
 <div class="api_tags" data-tags="Profile" data-tags-lower="profile"></div>

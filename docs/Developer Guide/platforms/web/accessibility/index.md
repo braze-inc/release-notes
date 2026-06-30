@@ -33,7 +33,7 @@ We support these features for content cards and in-app messages:
 
 ## Accessibility guidelines for SDK integrations
 
-Refer to [Building accessible messages in Braze](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/accessibility/) for general accessibility guidelines. This guide provides tips and best practices for maximum accessibility when integrating the Braze Web SDK into your web application.
+Refer to [Building accessible messages in Braze](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/accessibility) for general accessibility guidelines. This guide provides tips and best practices for maximum accessibility when integrating the Braze Web SDK into your web application.
 
 ### Content Cards
 

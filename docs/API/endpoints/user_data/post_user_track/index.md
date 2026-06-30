@@ -1,4 +1,4 @@
-<div id='api_ryvcamsdyxgy' class='api_div' data-search-keywords='need to update users in bulk? attributes events purchases message attributes_processed events_processed purchases_processed errors'>
+<div id='api_znzvreuvcgfj' class='api_div' data-search-keywords='need to update users in bulk? attributes events purchases message attributes_processed events_processed purchases_processed errors'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
@@ -16,13 +16,13 @@
 
 <h2 id="need-to-update-users-in-bulk">Need to update users in bulk?</h2>
 
-<p>Use the <a href="/docs/api/endpoints/user_data/post_user_track_bulk/"><code class="language-plaintext highlighter-rouge">/users/track/bulk</code> endpoint</a> to send larger batches and reduce request volume.</p>
+<p>Use the <a href="/docs/api/endpoints/user_data/post_user_track_bulk"><code class="language-plaintext highlighter-rouge">/users/track/bulk</code> endpoint</a> to send larger batches and reduce request volume.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">users.track</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.track</code> permission.</p>
 
 <p>Customers using the API for server-to-server calls may need to allowlist <code class="language-plaintext highlighter-rouge">rest.iad-01.braze.com</code> if they’re behind a firewall.</p>
 
@@ -76,19 +76,19 @@ Authorization: Bearer YOUR_REST_API_KEY
       <td><code class="language-plaintext highlighter-rouge">attributes</code></td>
       <td>Optional</td>
       <td>Array of attributes objects</td>
-      <td>See <a href="/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens">user attributes object</a></td>
+      <td>See <a href="/docs/api/objects_filters/user_attributes_object#migrating-push-tokens">user attributes object</a></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">events</code></td>
       <td>Optional</td>
       <td>Array of event objects</td>
-      <td>See <a href="/docs/api/objects_filters/event_object/">events object</a></td>
+      <td>See <a href="/docs/api/objects_filters/event_object">events object</a></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">purchases</code></td>
       <td>Optional</td>
       <td>Array of purchase objects</td>
-      <td>See <a href="/docs/api/objects_filters/purchase_object/">purchases object</a></td>
+      <td>See <a href="/docs/api/objects_filters/purchase_object">purchases object</a></td>
     </tr>
   </tbody>
 </table>
@@ -208,7 +208,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 --data-raw '{
     "attributes": [
         {
-            "email": "test@braze.com",
+            "email": "test@example.com",
             "string_attribute": "fruit",
             "boolean_attribute_1": true,
             "integer_attribute": 26,
@@ -220,7 +220,7 @@ Authorization: Bearer YOUR_REST_API_KEY
     ],
     "events": [
         {
-            "email": "test@braze.com",
+            "email": "test@example.com",
             "app_id": "your_app_identifier",
             "name": "rented_movie",
             "time": "2022-12-06T19:20:45+01:00",
@@ -251,7 +251,7 @@ Authorization: Bearer YOUR_REST_API_KEY
     ],
     "purchases": [
         {
-            "email": "test@braze.com",
+            "email": "test@example.com",
             "app_id": "your_app_identifier",
             "product_id": "product_name",
             "currency": "USD",
@@ -352,7 +352,7 @@ Authorization: Bearer YOUR_REST_API_KEY
   "attributes": [
   {
     "external_id": "user_identifier",
-    "email": "example@email.com",
+    "email": "example@example.com",
     "email_subscribe": "subscribed",
     "subscription_groups": [{
       "subscription_group_id": "subscription_group_identifier_1",
@@ -375,7 +375,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <p><strong>Note:</strong></p>
 
-<p>For SMS subscription groups, when you set a group’s <code class="language-plaintext highlighter-rouge">subscription_state</code> to <code class="language-plaintext highlighter-rouge">subscribed</code>, you can include the optional <code class="language-plaintext highlighter-rouge">use_double_opt_in_logic</code> parameter set to <code class="language-plaintext highlighter-rouge">true</code> within that subscription group object to enter the user into the <a href="/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in/">SMS double opt-in</a> workflow. If this parameter is omitted or set to <code class="language-plaintext highlighter-rouge">false</code> when <code class="language-plaintext highlighter-rouge">subscription_state</code> is <code class="language-plaintext highlighter-rouge">subscribed</code>, the user is subscribed without entering the double opt-in workflow. This parameter is not applied when <code class="language-plaintext highlighter-rouge">subscription_state</code> is set to other values, such as <code class="language-plaintext highlighter-rouge">unsubscribed</code>.</p>
+<p>For SMS subscription groups, when you set a group’s <code class="language-plaintext highlighter-rouge">subscription_state</code> to <code class="language-plaintext highlighter-rouge">subscribed</code>, you can include the optional <code class="language-plaintext highlighter-rouge">use_double_opt_in_logic</code> parameter set to <code class="language-plaintext highlighter-rouge">true</code> within that subscription group object to enter the user into the <a href="/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in">SMS double opt-in</a> workflow. If this parameter is omitted or set to <code class="language-plaintext highlighter-rouge">false</code> when <code class="language-plaintext highlighter-rouge">subscription_state</code> is <code class="language-plaintext highlighter-rouge">subscribed</code>, the user is subscribed without entering the double opt-in workflow. This parameter is not applied when <code class="language-plaintext highlighter-rouge">subscription_state</code> is set to other values, such as <code class="language-plaintext highlighter-rouge">unsubscribed</code>.</p>
 
 <h3 id="example-request-to-create-an-alias-only-user">Example request to create an alias-only user</h3>
 
@@ -483,9 +483,9 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <h3 id="fatal-error-response-codes">Fatal error response codes</h3>
 
-<p>For status codes and associated error messages that Braze returns if your request encounters a fatal error, reference <a href="/docs/api/errors/#fatal-errors">Fatal errors &amp; responses</a>.</p>
+<p>For status codes and associated error messages that Braze returns if your request encounters a fatal error, reference <a href="/docs/api/errors#fatal-errors">Fatal errors &amp; responses</a>.</p>
 
-<p>If you receive the error “provided external_id is blacklisted and disallowed”, your request may have included a “dummy user.” For more information, refer to <a href="/docs/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking">Spam blocking</a>.</p>
+<p>If you receive the error “provided external_id is blacklisted and disallowed”, your request may have included a “dummy user.” For more information, refer to <a href="/docs/user_guide/data_and_analytics/user_data_collection/user_archival#spam-blocking">Spam blocking</a>.</p>
 
 <h3 id="endpoint-specific-errors">Endpoint-specific errors</h3>
 
@@ -572,7 +572,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 <p>If the <code class="language-plaintext highlighter-rouge">external_id</code> exists, Braze prioritizes the most recently updated profile with an external ID for updates. If the <code class="language-plaintext highlighter-rouge">external_id</code> doesn’t exist, Braze prioritizes the most recently updated profile for updates.</p>
 
 <h3 id="what-happens-if-no-profile-with-the-email-address-exists">What happens if no profile with the email address exists?</h3>
-<p>Braze creates a profile and an email-only user and sets the email field to test@braze.com, as noted in the example request for updating a user profile by email address. Braze does not create an alias.</p>
+<p>Braze creates a profile and an email-only user and sets the email field to test@example.com, as noted in the example request for updating a user profile by email address. Braze does not create an alias.</p>
 
 <h3 id="how-do-you-use-userstrack-to-import-legacy-user-data">How do you use <code class="language-plaintext highlighter-rouge">/users/track</code> to import legacy user data?</h3>
 <p>You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application, all information following their identification using the SDK is merged with the existing user profile you created using the API call. Any user behavior recorded anonymously by the SDK before identification is lost upon merging with the existing API-generated user profile.</p>
@@ -586,8 +586,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 <p>To avoid duplicates:</p>
 
 <ul>
-  <li>When transitioning users from email-only or phone-only profiles to identified profiles, use the <a href="/docs/api/endpoints/user_data/post_user_identify/"><code class="language-plaintext highlighter-rouge">/users/identify</code> endpoint</a> to assign an <code class="language-plaintext highlighter-rouge">external_id</code> to the existing profile, rather than sending both to <code class="language-plaintext highlighter-rouge">/users/track</code>.</li>
-  <li>If duplicates already exist, merge them using the <a href="/docs/api/endpoints/user_data/post_users_merge/"><code class="language-plaintext highlighter-rouge">/users/merge</code> endpoint</a>.</li>
+  <li>When transitioning users from email-only or phone-only profiles to identified profiles, use the <a href="/docs/api/endpoints/user_data/post_user_identify"><code class="language-plaintext highlighter-rouge">/users/identify</code> endpoint</a> to assign an <code class="language-plaintext highlighter-rouge">external_id</code> to the existing profile, rather than sending both to <code class="language-plaintext highlighter-rouge">/users/track</code>.</li>
+  <li>If duplicates already exist, merge them using the <a href="/docs/api/endpoints/user_data/post_users_merge"><code class="language-plaintext highlighter-rouge">/users/merge</code> endpoint</a>.</li>
 </ul>
 
 <h3 id="how-does-userstrack-handle-duplicate-events">How does <code class="language-plaintext highlighter-rouge">/users/track</code> handle duplicate events?</h3>
@@ -616,7 +616,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <h3 id="why-is-my-userstrack-response-slower-than-i-expect">Why is my <code class="language-plaintext highlighter-rouge">/users/track</code> response slower than I expect?</h3>
 
-<p>Successful <code class="language-plaintext highlighter-rouge">/users/track</code> calls are usually accepted quickly, but Braze still processes attribute, event, and purchase updates asynchronously. Perceived latency can increase when payloads are large or when network routing to your <a href="/docs/api/basics/#endpoints">REST endpoint</a> is slow. If you need a synchronous acknowledgment per user or stricter ordering between calls, see <a href="/docs/api/endpoints/user_data/post_user_track_synchronous/"><code class="language-plaintext highlighter-rouge">/users/track/sync</code></a> (<strong>limited beta</strong>).</p>
+<p>Successful <code class="language-plaintext highlighter-rouge">/users/track</code> calls are usually accepted quickly, but Braze still processes attribute, event, and purchase updates asynchronously. Perceived latency can increase when payloads are large or when network routing to your <a href="/docs/api/basics#endpoints">REST endpoint</a> is slow. If you need a synchronous acknowledgment per user or stricter ordering between calls, see <a href="/docs/api/endpoints/user_data/post_user_track_synchronous"><code class="language-plaintext highlighter-rouge">/users/track/sync</code></a> (<strong>limited beta</strong>).</p>
 
 <h3 id="how-do-rate-limits-affect-userstrack">How do rate limits affect <code class="language-plaintext highlighter-rouge">/users/track</code>?</h3>
 
@@ -624,7 +624,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <h3 id="why-do-i-get-400-bad-request-with-a-bad-syntax-or-parse-error">Why do I get <code class="language-plaintext highlighter-rouge">400 Bad Request</code> with a bad syntax or parse error?</h3>
 
-<p>An HTTP <code class="language-plaintext highlighter-rouge">400</code> with a syntax or parse error typically means the request body is not valid JSON. Common causes include trailing commas, comments inside JSON, single-quoted strings, an extra opening <code class="language-plaintext highlighter-rouge">{</code> before the payload, or sending a non-JSON body while the <code class="language-plaintext highlighter-rouge">Content-Type</code> header is <code class="language-plaintext highlighter-rouge">application/json</code>. Validate payloads with a JSON linter before sending, confirm your HTTP client JSON-encodes objects (rather than concatenating raw strings), and confirm the body is UTF-8 encoded. For other <code class="language-plaintext highlighter-rouge">400</code> responses (for example, payload size and per-request object limits), refer to <a href="/docs/api/errors/#fatal-errors">Fatal errors &amp; responses</a> and the <a href="#endpoint-specific-errors">Endpoint-specific errors</a> table on this page.</p>
+<p>An HTTP <code class="language-plaintext highlighter-rouge">400</code> with a syntax or parse error typically means the request body is not valid JSON. Common causes include trailing commas, comments inside JSON, single-quoted strings, an extra opening <code class="language-plaintext highlighter-rouge">{</code> before the payload, or sending a non-JSON body while the <code class="language-plaintext highlighter-rouge">Content-Type</code> header is <code class="language-plaintext highlighter-rouge">application/json</code>. Validate payloads with a JSON linter before sending, confirm your HTTP client JSON-encodes objects (rather than concatenating raw strings), and confirm the body is UTF-8 encoded. For other <code class="language-plaintext highlighter-rouge">400</code> responses (for example, payload size and per-request object limits), refer to <a href="/docs/api/errors#fatal-errors">Fatal errors &amp; responses</a> and the <a href="#endpoint-specific-errors">Endpoint-specific errors</a> table on this page.</p>
 
 <h2 id="monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau">Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU</h2>
 

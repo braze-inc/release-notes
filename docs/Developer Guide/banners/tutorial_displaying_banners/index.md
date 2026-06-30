@@ -1,6 +1,6 @@
 # Tutorial: Displaying a Banner by Placement ID
 
-> Follow along with the sample code in this tutorial to display Banners using their placement ID. For more general information, see [Banners](https://www.braze.com/docs/developer_guide/banners/).
+> Follow along with the sample code in this tutorial to display Banners using their placement ID. For more general information, see [Banners](https://www.braze.com/docs/developer_guide/banners).
 
 
 

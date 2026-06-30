@@ -6,7 +6,7 @@ Braze segmentation allows you to target users based on custom event or purchase 
 
 ## Why use Segment Extensions?
 
-Braze segments give you powerful targeting tools to create dynamic groups of users. For most use cases, this is enough to reach your audience effectively. Segment Extensions are designed for advanced use cases where you need to analyze behaviors from up to two years ago or apply complex logic—without compromising data retention or system performance. You can use [SQL](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/) queries (SQL Segment Extensions) or data from your own [data warehouse](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/cdi_segments/) to refine your audience further.
+Braze segments give you powerful targeting tools to create dynamic groups of users. For most use cases, this is enough to reach your audience effectively. Segment Extensions are designed for advanced use cases where you need to analyze behaviors from up to two years ago or apply complex logic—without compromising data retention or system performance. You can use [SQL](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments) queries (SQL Segment Extensions) or data from your own [data warehouse](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/cdi_segments) to refine your audience further.
 
 For example, Braze default segmentation will find users that fit specific criteria you define, such as identifying a user who recently purchased one of your products. Segment Extensions let you go deeper—like identifying users who bought a particular color of a specific product at least twice between 18 to 24 months ago. Segment Extensions are an enhancement, not a requirement. If you need more advanced filters or a longer lookback window, they're a great tool to help while keeping your data usage optimized.
 
@@ -31,11 +31,11 @@ From the Segment Extensions table, select  **Create New Extension**, then select
 Best for when you don't want to use SQL.
 - **Start with a template:** Create a SQL segment with a customizable template using Snowflake data.
 - **Incremental refresh:** Write a Snowflake SQL segment that automatically refreshes the last 2 days of data or manually refresh as needed. Best for balancing accuracy and cost-efficiency.
-- **Full refresh:** Write a SQL segment with Snowflake data or any [CDI connected source](https://www.braze.com/docs/cdi_segment_extensions/) that recalculates the entire audience upon manual refresh. Best for when you need a complete, up-to-date view of your audience.
+- **Full refresh:** Write a SQL segment with Snowflake data or any [CDI connected source](https://www.braze.com/docs/cdi_segment_extensions) that recalculates the entire audience upon manual refresh. Best for when you need a complete, up-to-date view of your audience.
 
 ![Table with different Segment Extension creation experiences to select from.](https://www.braze.com/docs/assets/img/segment/segment_extension_modal.png?389f8fd34f15bb22810ef986bbc258c0){: style="max-width:50%"}
 
-If you select an experience that uses SQL, refer to [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/) for further information. If you select **Simple extension**, continue to step 2.
+If you select an experience that uses SQL, refer to [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments) for further information. If you select **Simple extension**, continue to step 2.
 
 #### SQL credit usage
 
@@ -82,7 +82,7 @@ If you are using eCommerce recommended events and add an event property, the pro
 
 ![Segment Extension details with a dropdown of available properties.](https://www.braze.com/docs/assets/img/segment/ecommerce_recommended_event_properties.png?ecccea5128ef36a889bb0c96cbdd0fb5)
 
-We also support segmentation based on [nested event properties](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/nested_objects/). In the comparison dropdown, select the comparison that matches your nested property’s data type. You can use the same nested event property syntax to add nested properties for any eCommerce recommended events that contain nested properties. For info on the different nested properties available, see [Types of eCommerce recommended events](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/#types-of-ecommerce-recommended-events). To generate the necessary schema for your Segment Extension’s property name, follow the steps in [Nested objects in custom events](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/nested_objects/).
+We also support segmentation based on [nested event properties](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/nested_objects). In the comparison dropdown, select the comparison that matches your nested property’s data type. You can use the same nested event property syntax to add nested properties for any eCommerce recommended events that contain nested properties. For info on the different nested properties available, see [Types of eCommerce recommended events](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events#types-of-ecommerce-recommended-events). To generate the necessary schema for your Segment Extension’s property name, follow the steps in [Nested objects in custom events](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/nested_objects).
 
 ![Segmenting based on nested event properties.](https://www.braze.com/docs/assets/img/segment/nested_segment_extensions.png?69b3db4f970eaaa679d47f4eff4ca6b9)
 
@@ -91,7 +91,7 @@ Segment Extensions rely on long term storage of event properties and don't have 
 **Note:**
 
 
-You don't need Segment Extensions to use event properties or nested custom attributes in your segment. Segment Extensions just extend the historic window used to create a default segment. You can create a real-time default [segment](https://www.braze.com/docs/user_guide/audience/segments/) that uses event properties from the past 30 days or uses nested custom attributes. Similarly, you can [schedule your message](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/) to trigger in real time based on an event property—no Segment Extension required. 
+You don't need Segment Extensions to use event properties or nested custom attributes in your segment. Segment Extensions just extend the historic window used to create a default segment. You can create a real-time default [segment](https://www.braze.com/docs/user_guide/audience/segments) that uses event properties from the past 30 days or uses nested custom attributes. Similarly, you can [schedule your message](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery) to trigger in real time based on an event property—no Segment Extension required. 
 
 
 
@@ -127,13 +127,13 @@ To view the Segment Extension criteria, select **View Extension Details** to sho
 
 ![Extension for "1 email click in the last 56 days".](https://www.braze.com/docs/assets/img/segment/segment_extension8.png?82e460b2752c4f223fb392710c1c6206){: style="max-width:70%;"}
 
-Now you can proceed as usual with [creating your segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/).
+Now you can proceed as usual with [creating your segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment).
 
 ## Frequently asked questions
 
 ### Can I create a Segment Extension that uses multiple custom events?
 
-Yes. You can add multiple events or reference multiple Snowflake tables when using [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/). 
+Yes. You can add multiple events or reference multiple Snowflake tables when using [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments). 
 
 When using **Simple extension** Segment Extensions, you can select one custom event, one purchase event, or one channel interaction. However, you can combine multiple Segment Extensions with an AND or OR when creating the default segment.
 

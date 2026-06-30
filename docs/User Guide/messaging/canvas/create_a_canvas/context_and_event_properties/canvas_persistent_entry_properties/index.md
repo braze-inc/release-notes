@@ -5,7 +5,7 @@
 **Important:**
 
 
-Persistent entry properties are an artifact of the original Canvas editor, so there are deprecated references to terms like Canvas entry properties that remain for historical reference. For the current Canvas editor, refer to [Context and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/).<br><br>To use persistent entry properties in the current Canvas editor, you must either create a new Canvas or [clone](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases) an existing one to the current editor.
+Persistent entry properties are an artifact of the original Canvas editor, so there are deprecated references to terms like Canvas entry properties that remain for historical reference. For the current Canvas editor, refer to [Context and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties).<br><br>To use persistent entry properties in the current Canvas editor, you must either create a new Canvas or [clone](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases) an existing one to the current editor.
 
 
 
@@ -13,13 +13,13 @@ Persistent entry properties are an artifact of the original Canvas editor, so th
 
 Entry properties can be used in action-based and API-triggered Canvases. These entry properties are defined when a Canvas is triggered by a custom event, purchase, or API call. Refer to the following articles for more information:
 
-- [Canvas entry properties object](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context/)
-- [Event properties object](https://www.braze.com/docs/api/objects_filters/event_object/)
-- [Purchase object](https://www.braze.com/docs/api/objects_filters/purchase_object/#purchase-product_id)
+- [Canvas entry properties object](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context)
+- [Event properties object](https://www.braze.com/docs/api/objects_filters/event_object)
+- [Purchase object](https://www.braze.com/docs/api/objects_filters/purchase_object#purchase-product_id)
 
 Properties passed in from these objects can be referenced by using the `canvas_entry_properties` Liquid tag. For example, a request with `"canvas_entry_properties": {"product_name": "shoes", "product_price": 79.99}` could add the word "shoes" to a message by adding the Liquid `{{canvas_entry_properties.${product_name}}}`.
 
-When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user's journey in the Canvas and deleted when the user exits the Canvas. Note that Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/nested_objects/) instead.
+When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user's journey in the Canvas and deleted when the user exits the Canvas. Note that Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/nested_objects) instead.
 
 **Note:**
 
@@ -43,7 +43,7 @@ In the case that a Canvas entry property is null or blank, you can abort message
 ```
 
 
-To read more about aborting messages with Liquid, check out our [Liquid documentation](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages/#abort-messages).
+To read more about aborting messages with Liquid, check out our [Liquid documentation](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages#abort-messages).
 
 ## Global Canvas entry properties
 
@@ -81,9 +81,9 @@ In this request, the global value for "food allergies" is "none". For Customer_1
 
 If you have a Canvas that is triggered when a user browses an item in your eCommerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. You could reference the product name by using `{{canvas_entry_properties.${product_name}}}`
 
-![](https://www.braze.com/docs/assets/img/persistent_entry_properties/PEP1.png?cfb36698247506235033c958bced5bde){: style="border:0;margin-left:15px;"}
+![If you have a Canvas that is triggered when a user browses an item in your eCommerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. You could reference the product name by using {{canvas_entry_properties.${product_name}}}.](https://www.braze.com/docs/assets/img/persistent_entry_properties/PEP1.png?cfb36698247506235033c958bced5bde){: style="border:0;margin-left:15px;"}
 
 The second step may send another push notification prompting the user to checkout if they added the item to their cart but have not purchased it yet. You can continue to reference the `product_name` entry property by using `{{canvas_entry_properties.${product_name}}}`.
 
-![](https://www.braze.com/docs/assets/img/persistent_entry_properties/PEP12.png?15b080f00294f9fcdef2024ad6cbad0e){: style="border:0;margin-left:15px;"}
+![Screenshot related to use case.](https://www.braze.com/docs/assets/img/persistent_entry_properties/PEP12.png?15b080f00294f9fcdef2024ad6cbad0e){: style="border:0;margin-left:15px;"}
 

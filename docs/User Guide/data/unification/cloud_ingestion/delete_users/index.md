@@ -8,7 +8,7 @@ User delete syncs are supported for all available Cloud Data Ingestion data sour
 
 Follow the standard process to [create a new integration in the Braze dashboard](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations#step-1-set-up-tables-or-views) for the data warehouse you want to connect to. Ensure that you include a role that can access the delete table. On the **Create import sync** page, set the **Data Type** to **Delete Users** so that the proper actions are taken during the integration run to delete users.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/deletion_1.png?7e204a477811793793217523cd23d869)
+![Follow the standard process to create a new integration in the Braze dashboard for the data warehouse you want to connect to. Ensure that you include a role that can access the delete table. On the Create import sync page, set the Data Type to Delete Users so that the proper actions are taken during the integration run to delete users.](https://www.braze.com/docs/assets/img/cloud_ingestion/deletion_1.png?7e204a477811793793217523cd23d869)
 
 ## Configure source data
 
@@ -116,7 +116,7 @@ When a sync runs, Braze directly connects to your data warehouse instance, retri
 **Warning:**
 
 
-Deleting user profiles cannot be undone. The delete action permanently removes users, which may cause discrepancies in your data. For details, see [Effects of deleting user profiles](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/#effects-of-deleting-user-profiles).
+Deleting user profiles cannot be undone. The delete action permanently removes users, which may cause discrepancies in your data. For details, see [Effects of deleting user profiles](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete#effects-of-deleting-user-profiles).
 
 
 

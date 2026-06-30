@@ -353,7 +353,7 @@ Here is an example of how you would add an HTML product block to your order conf
 
 ## Message personalization
 
-[Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/) is a powerful templating language used by Braze that allows you to create dynamic and personalized content for your customers. By using Liquid tags, you can customize messages based on customer data, product information, and other variables, enhancing the shopping experience and driving engagement.
+[Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) is a powerful templating language used by Braze that allows you to create dynamic and personalized content for your customers. By using Liquid tags, you can customize messages based on customer data, product information, and other variables, enhancing the shopping experience and driving engagement.
 
 ### Key features of Liquid
 
@@ -365,8 +365,8 @@ Here is an example of how you would add an HTML product block to your order conf
 
 To begin personalizing your messages using Liquid tags, you can refer to the following resources:
 
-- [Shopify data](https://www.braze.com/docs/shopify_features/#shopify-data) reference with pre-defined liquid tags
-- [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/)
+- [Shopify data](https://www.braze.com/docs/shopify_features#shopify-data) reference with pre-defined liquid tags
+- [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid)
 
 ## Segmentation
 
@@ -376,18 +376,16 @@ For more information on getting started with segments, check out [About Braze se
 
 ### Recommended events
 
-eCommerce events are based on [recommended events](https://www.braze.com/docs/recommended_events/).
+eCommerce events are based on [recommended events](https://www.braze.com/docs/recommended_events).
 Because recommended events are more opinionated custom events, you can search for the recommended eCommerce event names by selecting any [custom event filter](https://www.braze.com/docs/user_guide/data/activation/events/custom_events#segmentation-filters).
 
 ### eCommerce filters
 
 Segment your users with eCommerce filters, like **Ecommerce Source** and **Total Revenue**, by going to the **Ecommerce** section within the segmenter. 
 
-For a list of eCommerce filters and their definitions, refer to [Segment filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters/) and select the "eCommerce" search category.
+For a list of eCommerce filters and their definitions, refer to [Segment filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters) and select the "eCommerce" search category.
 
 ![Segment filters dropdown with "Ecommerce" filters.](https://www.braze.com/docs/assets/img_archive/ecommerce_filters.png?d28b6620fb3bf9ca97c74e8f7a377c96){: style="max-width:50%"}
-
-
 
 
 
@@ -449,8 +447,8 @@ After you launch a campaign or Canvas using the "Places Order" conversion event,
 
 #### eCommerce revenue dashboard
 
-To gain insights into revenue attributed to the last campaign or Canvas a user interacted with before placing an order, use the [eCommerce revenue dashboard](https://www.braze.com/docs/ecommerce_revenue_dashboard/) and select a conversion window.
+To gain insights into revenue attributed to the last campaign or Canvas a user interacted with before placing an order, use the [eCommerce revenue dashboard](https://www.braze.com/docs/ecommerce_revenue_dashboard) and select a conversion window.
 
 ### Revenue report 
 
-To analyze data from these new events, go to the [Dashboard Builder](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/) and view the [**eCommerce Revenue - Last Touch Attribution** dashboard](https://www.braze.com/docs/ecommerce_revenue_dashboard/).
+To analyze data from these new events, go to the [Dashboard Builder](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder) and view the [**eCommerce Revenue - Last Touch Attribution** dashboard](https://www.braze.com/docs/ecommerce_revenue_dashboard).

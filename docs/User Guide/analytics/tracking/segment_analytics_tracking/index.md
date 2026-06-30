@@ -15,13 +15,13 @@ An app can have tracking turned on for up to 25 segments. Braze recommends track
 **Note:**
 
 
-After enabling analytics tracking, there may be a delay until the segment data populates. If the data does not populate within 24 hours, [contact Support](https://www.braze.com/docs/braze_support/).
+After enabling analytics tracking, there may be a delay until the segment data populates. If the data does not populate within 24 hours, [contact Support](https://www.braze.com/docs/braze_support).
 
 
 
 ## Viewing revenue and purchases over time
 
-Go to **Analytics** > **Revenue Report** to view data on [revenue and purchases over time for this segment](https://www.braze.com/docs/user_guide/analytics/reports/revenue_report/).
+Go to **Analytics** > **Revenue Report** to view data on [revenue and purchases over time for this segment](https://www.braze.com/docs/user_guide/analytics/reports/revenue_report).
 
 Revenue and purchase charts reflect activity recorded after analytics tracking is turned on for that segment. Turning tracking on does not backfill earlier purchases into those reports. When you compare segments, use only time ranges where tracking was enabled for each segment you select.
 
@@ -51,5 +51,5 @@ When analytics tracking is turned on, you can use Query Builder report templates
 
 ### What should I check if analytics tracking looks wrong or empty?
 
-Confirm **Analytics Tracking** is still enabled in **Segment Details**, you have not exceeded the per-app limit (25 segments with tracking), and allow up to 24 hours for data to populate after you first enable tracking. If issues continue, verify the segment definition and report date range, then [contact Support](https://www.braze.com/docs/braze_support/).
+Confirm **Analytics Tracking** is still enabled in **Segment Details**, you have not exceeded the per-app limit (25 segments with tracking), and allow up to 24 hours for data to populate after you first enable tracking. If issues continue, verify the segment definition and report date range, then [contact Support](https://www.braze.com/docs/braze_support).
 

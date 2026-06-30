@@ -17,13 +17,13 @@ When customers open customer service tickets on a platform like Zendesk, you can
 
 ## Integrating with Braze
 
-Braze has an integration with [Iterate](https://www.braze.com/docs/partners/additional_channels_and_extensions/extensions/surveys/iterate/), a customer insights and survey platform. With Data Transformation, you can save multiple survey responses under one nested custom attribute, instead of to the existing integration that saves multiple custom attributes.
+Braze has an integration with [Iterate](https://www.braze.com/docs/partners/additional_channels_and_extensions/extensions/surveys/iterate), a customer insights and survey platform. With Data Transformation, you can save multiple survey responses under one nested custom attribute, instead of to the existing integration that saves multiple custom attributes.
 
 ## Example transformation code
 
 Consider this sample payload from Typeform, a survey platform, which sends whenever a survey response is received.
 
-![](https://www.braze.com/docs/assets/img/data_transformation/data_transformation2.png?6bb06c0aa893bd03c9227de15c977e66)
+![Screenshot related to example transformation code.](https://www.braze.com/docs/assets/img/data_transformation/data_transformation2.png?6bb06c0aa893bd03c9227de15c977e66)
 
 
 

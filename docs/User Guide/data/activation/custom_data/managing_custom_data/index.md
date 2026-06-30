@@ -1,8 +1,8 @@
 # Manage custom data
 
-> This page covers how to pre-populate custom data in your campaigns and segments, manage custom events and attributes and their properties, and configure data types. For blocklisting and deleting custom data, see [Blocklist custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/blocklist_custom_data/).
+> This page covers how to pre-populate custom data in your campaigns and segments, manage custom events and attributes and their properties, and configure data types. For blocklisting and deleting custom data, see [Blocklist custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/blocklist_custom_data).
 
-To learn how to manage custom attributes in particular (including adding descriptions, adding tags, and marking attributes as PII), refer to [Managing custom attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes/#managing-custom-attributes).
+To learn how to manage custom attributes in particular (including adding descriptions, adding tags, and marking attributes as PII), refer to [Managing custom attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes#managing-custom-attributes).
 
 ## Pre-populate custom data
 
@@ -15,7 +15,7 @@ To pre-populate custom events and attributes, do the following:
 ![Navigate to Custom Attributes or Custom Events or Products.](https://www.braze.com/docs/assets/img_archive/prepopulate_page.png?83c13a3d675018771f68754ebc098403){: style="max-width:90%;" }
 
 {: start="2"}
-2. To add a custom attribute, event, or product, go to the respective page and select **Add Custom Attributes** or **Add Custom Events** or **Add Products**.<br><br>For custom attributes, select a [data type](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types/#custom-attribute-data-types) for this attribute (for instance, boolean or string). An attribute's data type determines the segmentation filters available for that attribute. <br><br>![Add new attribute or event](https://www.braze.com/docs/assets/img_archive/prepopulate_add.png?a4058d90444e8e1f0e9c052eaf51a631){: style="max-width:80%;" }
+2. To add a custom attribute, event, or product, go to the respective page and select **Add Custom Attributes** or **Add Custom Events** or **Add Products**.<br><br>For custom attributes, select a [data type](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types) for this attribute (for instance, boolean or string). An attribute's data type determines the segmentation filters available for that attribute. <br><br>![Add new attribute or event](https://www.braze.com/docs/assets/img_archive/prepopulate_add.png?a4058d90444e8e1f0e9c052eaf51a631){: style="max-width:80%;" }
 3. Select **Save**.
 
 ### Naming custom events and custom attributes
@@ -24,13 +24,13 @@ Custom events and custom attributes are case-sensitive. Keep this in mind when y
 
 ## Managing properties
 
-After you have created a custom event or product, select **Manage Properties** for that event or product to add new properties, blocklist existing properties, and view which campaigns or Canvases use this property in a [trigger event](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/).
+After you have created a custom event or product, select **Manage Properties** for that event or product to add new properties, blocklist existing properties, and view which campaigns or Canvases use this property in a [trigger event](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery).
 
 ![Custom properties for a custom event.](https://www.braze.com/docs/assets/img_archive/manageproperties1.png?230b915bbbeff93a008b5205c985d54c){: style="max-width:80%"}
 
-To blocklist event or product properties, use the actions menu on the properties page. For blocklisting custom attributes, events, or products entirely, see [Blocklist custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/blocklist_custom_data/).
+To blocklist event or product properties, use the actions menu on the properties page. For blocklisting custom attributes, events, or products entirely, see [Blocklist custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/blocklist_custom_data).
 
-To make these added custom attributes, events, products, or event properties traceable, you must ask your development team to create them in the SDK using the exact name you used to add them earlier. Or, you can use the Braze [API](https://www.braze.com/docs/api/basics/) to import data on that attribute. After that, the custom attribute, event, or other is actionable and applied to your users.
+To make these added custom attributes, events, products, or event properties traceable, you must ask your development team to create them in the SDK using the exact name you used to add them earlier. Or, you can use the Braze [API](https://www.braze.com/docs/api/basics) to import data on that attribute. After that, the custom attribute, event, or other is actionable and applied to your users.
 
 
 
@@ -105,11 +105,11 @@ If you need all existing user data to match the new type, you must re-send the a
 | String | Numeric values can be coerced to their string form when the attribute is forced to **String** |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Data type coercion" }
 
-For more information on specific filter options exposed by different data type comparisons, check out [Configuring reporting](https://www.braze.com/docs/user_guide/analytics/reports/configure_reporting/). For more information on the different available data types, refer to [Data types](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types/#custom-attribute-data-types).
+For more information on specific filter options exposed by different data type comparisons, check out [Configuring reporting](https://www.braze.com/docs/user_guide/analytics/reports/configure_reporting). For more information on the different available data types, refer to [Data types](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types).
 
 **Note:**
 
 
-Data sent to Braze is immutable and cannot be deleted or modified after Braze receives it. However, you can use any of the steps listed in the preceding sections to exercise control over what you're tracking in your dashboard. To blocklist or delete custom data, see [Blocklist custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/blocklist_custom_data/).
+Data sent to Braze is immutable and cannot be deleted or modified after Braze receives it. However, you can use any of the steps listed in the preceding sections to exercise control over what you're tracking in your dashboard. To blocklist or delete custom data, see [Blocklist custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/blocklist_custom_data).
 
 

@@ -11,7 +11,7 @@ Similarly, if you want to split multiple variants evenly using whole-number perc
 **Tip:**
 
 
-To distribute users in a Canvas, you could add a [Decision Split step](https://www.braze.com/docs/decision_split/) and separate users based on their [random bucket numbers](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers/).
+To distribute users in a Canvas, you could add a [Decision Split step](https://www.braze.com/docs/decision_split) and separate users based on their [random bucket numbers](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers).
 
 
 

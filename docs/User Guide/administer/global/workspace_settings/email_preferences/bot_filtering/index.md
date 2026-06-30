@@ -31,7 +31,7 @@ The following Braze metrics can be affected by bot clicks:
 - Heatmap
 - Certain segment filters
 
-[Braze Intelligence features](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/) that leverage click data on top of our detection systems may be impacted. Turning on the setting has the potential to disrupt our detection systems temporarily, which may result in a decrease in the metric or input due to this exclusion of suspected bot clicks:
+[Braze Intelligence features](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite) that leverage click data on top of our detection systems may be impacted. Turning on the setting has the potential to disrupt our detection systems temporarily, which may result in a decrease in the metric or input due to this exclusion of suspected bot clicks:
 
 - Intelligent Selection
 - Intelligent Channel
@@ -48,7 +48,7 @@ Unsubscribes from suspected bot clicks will not be affected. Braze will continue
 
 ## Segmentation filters affected by bot filtering
 
-The following [segmentation filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters/) can be affected by bot filtering for email messages:
+The following [segmentation filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters) can be affected by bot filtering for email messages:
 
 - [Clicked/Opened Campaign or Canvas With Tag](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#clicked-opened-campaign-or-canvas-with-tag)
 - [Clicked/Opened Step](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#clicked-opened-step)

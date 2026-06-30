@@ -814,16 +814,16 @@ To export your revenue data, select <i class="fas fa-bars" title="Chart context 
 **Tip:**
 
 
-Looking for more ways to get revenue data? Try adding purchase behavior (as well as purchase of a product) to campaigns or Canvases as [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events/).
+Looking for more ways to get revenue data? Try adding purchase behavior (as well as purchase of a product) to campaigns or Canvases as [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events).
 
 
 
-You can also view revenue statistics on a case-by-case basis on the [Campaign Analytics](https://www.braze.com/docs/user_guide/analytics/reports/campaign_analytics/) or [Canvas Analytics](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) pages.
+You can also view revenue statistics on a case-by-case basis on the [Campaign Analytics](https://www.braze.com/docs/user_guide/analytics/reports/campaign_analytics) or [Canvas Analytics](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics) pages.
 
 **Tip:**
 
 
-Revenue reports cannot be exported through API. For help with CSV exports, refer to [export troubleshooting](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/).
+Revenue reports cannot be exported through API. For help with CSV exports, refer to [export troubleshooting](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting).
 
 
 

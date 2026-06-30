@@ -18,9 +18,9 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 
 1. Log into [OneLogin](https://app.onelogin.com/login). Click on **Administration**.![OneLogin Administration page.](https://www.braze.com/docs/assets/img/onelogin_1.jpg?c12f731cbe58f83e6840061e983a1a5b)<br><br>
 2. Go to **Apps** > **Add Apps** in the top navigation bar. Search for "Braze" and select the Braze app.![Search results for Braze in OneLogin.](https://www.braze.com/docs/assets/img/onelogin_2.jpg?b9c966078c3876391e9315a0484c7435)<br><br>
-3. Save the Braze app to your Company.![](https://www.braze.com/docs/assets/img/onelogin_3.jpg?cd8273d1b4bf391ba74dc6fab7dc2df5)<br><br>
+3. Save the Braze app to your Company.![2. Go to Apps > Add Apps in the top navigation bar. Search for "Braze" and select the Braze app.!Search results for Braze in OneLogin.](https://www.braze.com/docs/assets/img/onelogin_3.jpg?cd8273d1b4bf391ba74dc6fab7dc2df5)<br><br>
 4. When saved, go to **Configuration** and add your **Braze Domain** and **RelayState** API key.![OneLogin Configuration tab for the Braze app.](https://www.braze.com/docs/assets/img/onelogin_4.png?b9eb39a2cc69d3aa1f79535d3a4d3217)<br><br>
-5. Braze expects the SAML assertions in a [specific format](https://www.braze.com/docs/user_guide/administer/global/saml_single_sign_on/saml_sso_setup/#configure-your-identity-provider). Under **Parameters** the attributes supported by Braze should be pre-populated. Verify that they are correct.![Braze SAML parameters in OneLogin.](https://www.braze.com/docs/assets/img/onelogin_5.jpg?2200471c9ea1f5f7eb47002f11529219)<br><br>
+5. Braze expects the SAML assertions in a [specific format](https://www.braze.com/docs/user_guide/administer/global/saml_single_sign_on/saml_sso_setup#configure-your-identity-provider). Under **Parameters** the attributes supported by Braze should be pre-populated. Verify that they are correct.![Braze SAML parameters in OneLogin.](https://www.braze.com/docs/assets/img/onelogin_5.jpg?2200471c9ea1f5f7eb47002f11529219)<br><br>
 6. Copy the **Certificate** and **SAML 2.0 Endpoint (HTTP)** needed to set up the Braze dashboard from under the **SSO** tab.![Certificates to copy from the Braze app SSO tab in OneLogin.](https://www.braze.com/docs/assets/img/onelogin_6.jpg?dae57038f8370a14b3cd21fb76cdd61f)
 
 ### Step 2: Configure OneLogin within Braze
@@ -43,7 +43,7 @@ On this page, input the following:
 **Tip:**
 
 
-If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication](https://www.braze.com/docs/user_guide/administer/global/saml_single_sign_on/saml_sso_setup/#restriction) from the **Company Settings** page.
+If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication](https://www.braze.com/docs/user_guide/administer/global/saml_single_sign_on/saml_sso_setup#restriction) from the **Company Settings** page.
 
 
 

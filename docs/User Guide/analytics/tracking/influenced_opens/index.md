@@ -16,5 +16,5 @@ Influenced opens are added to the direct opens of a campaign to give a number of
 
 ![Influenced opens statistics on the Campaign Details page for a campaign](https://www.braze.com/docs/assets/img_archive/Influenced_Opens2.png?0994225b5c488653a15ca53c3a0578d2)
 
-For more information on tracking opens, check out the conversion tracking section of our [best practices for push](https://www.braze.com/docs/user_guide/channels/push/best_practices/).
+For more information on tracking opens, check out the conversion tracking section of our [best practices for push](https://www.braze.com/docs/user_guide/channels/push/best_practices).
 

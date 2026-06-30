@@ -1,4 +1,4 @@
-<div id='api_rbgmsojjzakv' class='api_div' data-search-keywords='prerequisites canvas_id context broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes'>
+<div id='api_uhjuyidqebcn' class='api_div' data-search-keywords='prerequisites canvas_id context broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes'>
 <h1 id="send-canvas-messages-using-api-triggered-delivery">Send Canvas messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/trigger/send</p>
@@ -10,7 +10,7 @@
 
 <p>API-triggered delivery allows you to store message content in the Braze dashboard while dictating when a message is sent, and to whom using your API.</p>
 
-<p>Before you can send messages with this endpoint, you must have a <a href="/docs/api/identifier_types/#canvas-api-identifier">Canvas ID</a> (which is created when you build a Canvas).</p>
+<p>Before you can send messages with this endpoint, you must have a <a href="/docs/api/identifier_types#canvas-api-identifier">Canvas ID</a> (which is created when you build a Canvas).</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c9a8a5fe-a101-4755-99f2-73aa8fc146fe" class="seeme">See me in Postman</a></div>
 
@@ -92,7 +92,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">canvas_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">Canvas identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">Canvas identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">context</code></td>
@@ -110,13 +110,13 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">audience</code></td>
       <td>Optional</td>
       <td>Connected audience object</td>
-      <td>See <a href="/docs/api/objects_filters/connected_audience/">Connected audience</a>. When you include <code class="language-plaintext highlighter-rouge">audience</code>, the message is sent only to users who match the defined filters, such as custom attributes and subscription statuses.</td>
+      <td>See <a href="/docs/api/objects_filters/connected_audience">Connected audience</a>. When you include <code class="language-plaintext highlighter-rouge">audience</code>, the message is sent only to users who match the defined filters, such as custom attributes and subscription statuses.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">recipients</code></td>
       <td>Optional</td>
       <td>Array</td>
-      <td>See <a href="/docs/api/objects_filters/recipient_object/">Recipients object</a>. <br /><br />If <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> is <code class="language-plaintext highlighter-rouge">false</code>, an <code class="language-plaintext highlighter-rouge">attributes</code> object must be included on the recipient. <br /><br />If not provided and <code class="language-plaintext highlighter-rouge">broadcast</code> is set to <code class="language-plaintext highlighter-rouge">true</code>, the message is sent to the entire segment configured as the Canvas’s target audience in the Braze dashboard.<br /><br /> The <code class="language-plaintext highlighter-rouge">recipients</code> array may contain up to 50 objects. Each object must include exactly one of <code class="language-plaintext highlighter-rouge">external_user_id</code>, <code class="language-plaintext highlighter-rouge">user_alias</code>, or <code class="language-plaintext highlighter-rouge">email</code>, and may include a per-recipient <code class="language-plaintext highlighter-rouge">context</code> object for Canvas context properties (per-recipient keys override the parent-level <code class="language-plaintext highlighter-rouge">context</code> when they conflict). <br /><br />If <code class="language-plaintext highlighter-rouge">email</code> is the identifier, you must include <a href="/docs/api/endpoints/user_data/post_user_identify#identifying-users-by-email"><code class="language-plaintext highlighter-rouge">prioritization</code></a> in the recipients object.</td>
+      <td>See <a href="/docs/api/objects_filters/recipient_object">Recipients object</a>. <br /><br />If <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> is <code class="language-plaintext highlighter-rouge">false</code>, an <code class="language-plaintext highlighter-rouge">attributes</code> object must be included on the recipient. <br /><br />If not provided and <code class="language-plaintext highlighter-rouge">broadcast</code> is set to <code class="language-plaintext highlighter-rouge">true</code>, the message is sent to the entire segment configured as the Canvas’s target audience in the Braze dashboard.<br /><br /> The <code class="language-plaintext highlighter-rouge">recipients</code> array may contain up to 50 objects. Each object must include exactly one of <code class="language-plaintext highlighter-rouge">external_user_id</code>, <code class="language-plaintext highlighter-rouge">user_alias</code>, or <code class="language-plaintext highlighter-rouge">email</code>, and may include a per-recipient <code class="language-plaintext highlighter-rouge">context</code> object for Canvas context properties (per-recipient keys override the parent-level <code class="language-plaintext highlighter-rouge">context</code> when they conflict). <br /><br />If <code class="language-plaintext highlighter-rouge">email</code> is the identifier, you must include <a href="/docs/api/endpoints/user_data/post_user_identify#identifying-users-by-email"><code class="language-plaintext highlighter-rouge">prioritization</code></a> in the recipients object.</td>
     </tr>
   </tbody>
 </table>
@@ -262,7 +262,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="response-details">Response details</h2>
 
-<p>Message-sending endpoint responses include the message’s <code class="language-plaintext highlighter-rouge">dispatch_id</code> for reference back to the dispatch of the message. The <code class="language-plaintext highlighter-rouge">dispatch_id</code> is the ID of the message dispatch (unique ID for each “transmission” sent from the Braze platform). Check out <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">Dispatch ID behavior</a> for more information.</p>
+<p>Message-sending endpoint responses include the message’s <code class="language-plaintext highlighter-rouge">dispatch_id</code> for reference back to the dispatch of the message. The <code class="language-plaintext highlighter-rouge">dispatch_id</code> is the ID of the message dispatch (unique ID for each “transmission” sent from the Braze platform). Check out <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id">Dispatch ID behavior</a> for more information.</p>
 
 <h3 id="example-success-response">Example success response</h3>
 
@@ -282,7 +282,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <p>If your Canvas is archived, you see this <code class="language-plaintext highlighter-rouge">notice</code> message: “The Canvas is archived. Unarchive the Canvas to ensure trigger requests will take effect.” If your Canvas is not active, you see this <code class="language-plaintext highlighter-rouge">notice</code> message: “The Canvas is paused. Resume the Canvas to ensure trigger requests will take effect.”</p>
 
-<p>If your request encounters a fatal error, refer to <a href="/docs/api/errors/#fatal-errors">Errors and responses</a> for the error code and description.</p>
+<p>If your request encounters a fatal error, refer to <a href="/docs/api/errors#fatal-errors">Errors and responses</a> for the error code and description.</p>
 
 <h2 id="considerations">Considerations</h2>
 
@@ -295,17 +295,17 @@ Authorization: Bearer YOUR-REST-API-KEY
   <li><strong>Email and SMS addressing.</strong> For most Email or SMS API-triggered sends to someone who is not already in Braze, include the delivery fields you need inside <code class="language-plaintext highlighter-rouge">attributes</code> (for example <code class="language-plaintext highlighter-rouge">email</code>, or the phone attributes your workspace uses for SMS). You can also set subscription group membership or subscription status there when opt-in state must change in the same call.</li>
   <li><strong>Canvas eligibility.</strong> After the profile exists or updates, that user must still match the Canvas’s dashboard target audience and channel send rules (for example opted in for email) or Braze does not send the message.</li>
   <li><strong>User alias limitation</strong>: The <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> flag cannot be used with user aliases. To send to an alias-only user, the user must already exist in Braze.</li>
-  <li><strong>Segment targeting</strong>: The <code class="language-plaintext highlighter-rouge">segment_id</code> parameter is not supported for this endpoint. To target a segment, configure the segment in the Canvas’s target audience settings in the Braze dashboard and use <code class="language-plaintext highlighter-rouge">broadcast: true</code>, or use the <code class="language-plaintext highlighter-rouge">audience</code> parameter with <a href="/docs/api/objects_filters/connected_audience/">Connected Audience</a> filters.</li>
+  <li><strong>Segment targeting</strong>: The <code class="language-plaintext highlighter-rouge">segment_id</code> parameter is not supported for this endpoint. To target a segment, configure the segment in the Canvas’s target audience settings in the Braze dashboard and use <code class="language-plaintext highlighter-rouge">broadcast: true</code>, or use the <code class="language-plaintext highlighter-rouge">audience</code> parameter with <a href="/docs/api/objects_filters/connected_audience">Connected Audience</a> filters.</li>
   <li><strong>Combined targeting</strong>: When you include both the <code class="language-plaintext highlighter-rouge">recipients</code> parameter and configure a target segment in the dashboard, the message is sent only to user profiles that are specified in the API call and also match the segment’s filters.</li>
   <li><strong>Server-to-server calls</strong>: If you’re making server-to-server calls, you may need to allowlist the appropriate API URL if you’re behind a firewall.</li>
 </ul>
 
 <h2 id="attributes-object-for-canvas">Attributes object for Canvas</h2>
 
-<p>Use the messaging object <code class="language-plaintext highlighter-rouge">attributes</code> to add, create, or update attributes and values for a user before sending them an API-triggered Canvas using the <code class="language-plaintext highlighter-rouge">canvas/trigger/send</code> endpoint. This API call processes the user attributes object before it processes and sends the Canvas. This helps minimize the risk of issues caused by <a href="/docs/user_guide/messaging/ab_testing/concepts/race_conditions/">race conditions</a>. However, by default, subscription groups cannot be updated this way.</p>
+<p>Use the messaging object <code class="language-plaintext highlighter-rouge">attributes</code> to add, create, or update attributes and values for a user before sending them an API-triggered Canvas using the <code class="language-plaintext highlighter-rouge">canvas/trigger/send</code> endpoint. This API call processes the user attributes object before it processes and sends the Canvas. This helps minimize the risk of issues caused by <a href="/docs/user_guide/messaging/ab_testing/concepts/race_conditions">race conditions</a>. However, by default, subscription groups cannot be updated this way.</p>
 
 <p><strong>Note:</strong></p>
 
-<p>Looking for the campaign version of this endpoint? Check out <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/">Sending campaign messages using API-triggered delivery</a>.</p>
+<p>Looking for the campaign version of this endpoint? Check out <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns">Sending campaign messages using API-triggered delivery</a>.</p>
 
 </div>

@@ -4,10 +4,10 @@
  
 ## Step 1: Create a new catalog
 
-Before creating a new Cloud Data Ingestion (CDI) integration for [catalogs](https://www.braze.com/docs/user_guide/data/activation/catalogs/), you need to create a new catalog or identify an existing catalog you want to use for the integration. There are a few ways to create a new catalog and any of these will work for the CDI integration:
+Before creating a new Cloud Data Ingestion (CDI) integration for [catalogs](https://www.braze.com/docs/user_guide/data/activation/catalogs), you need to create a new catalog or identify an existing catalog you want to use for the integration. There are a few ways to create a new catalog and any of these will work for the CDI integration:
 - Upload a [CSV](https://www.braze.com/docs/user_guide/data/activation/catalogs/create#method-1-upload-csv)
 - Create a catalog in the [Braze dashboard](https://www.braze.com/docs/user_guide/data/activation/catalogs/create#method-2-create-in-browser) or during CDI setup.
-- Create a catalog using the [Create catalog endpoint](https://www.braze.com/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/)
+- Create a catalog using the [Create catalog endpoint](https://www.braze.com/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog)
 
 Any changes to the catalog schema (for example, adding new fields or changing field type) must be made through the catalog dashboard before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your data warehouse data and the schema in Braze.
 
@@ -206,11 +206,11 @@ Filenames must follow AWS rules and be unique. Append timestamps to help ensure 
 
 The complete S3 setup requires an S3 bucket, an Amazon SQS queue, and an AWS IAM role and policy. Braze only processes files uploaded after the sync is created, so re-upload existing files you want to ingest.
 
-For the full S3 setup flow, see [File storage integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations/), especially:
+For the full S3 setup flow, see [File storage integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations), especially:
 
-- [Setting up Cloud Data Ingestion in AWS](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations/#setting-up-cloud-data-ingestion-in-aws)
-- [Setting up Cloud Data Ingestion in Braze](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations/#setting-up-cloud-data-ingestion-in-braze)
-- [Troubleshooting](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations/#troubleshooting)
+- [Setting up Cloud Data Ingestion in AWS](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations#setting-up-cloud-data-ingestion-in-aws)
+- [Setting up Cloud Data Ingestion in Braze](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations#setting-up-cloud-data-ingestion-in-braze)
+- [Troubleshooting](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations#troubleshooting)
 
 For common AWS-side notification and permission issues, refer to [Granting permissions to publish event notification messages to a destination](https://docs.aws.amazon.com/AmazonS3/latest/userguide/grant-destinations-permissions-to-s3.html).
 
@@ -248,7 +248,7 @@ ID,PAYLOAD
 
 
 
-For additional file examples, see [File storage integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
+For additional file examples, see [File storage integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations).
 
 
 
@@ -258,7 +258,7 @@ For additional file examples, see [File storage integrations](https://www.braze.
 **Note:**
 
 
-The sync views in this section apply to data warehouse integrations only. For S3 file storage, Braze processes new files as they're uploaded to your bucket. See [File storage integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations/) for details.
+The sync views in this section apply to data warehouse integrations only. For S3 file storage, Braze processes new files as they're uploaded to your bucket. See [File storage integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations) for details.
 
 
 

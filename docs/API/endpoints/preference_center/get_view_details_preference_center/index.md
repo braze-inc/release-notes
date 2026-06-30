@@ -1,4 +1,4 @@
-<div id='api_ubfyqwbyasxj' class='api_div' data-search-keywords='prerequisites name preference_center_api_id created_at updated_at preference_center_title preference_center_page_html confirmation_page_html redirect_page_html preference_center_options state'>
+<div id='api_nfhrzwsvlqhq' class='api_div' data-search-keywords='prerequisites name preference_center_api_id created_at updated_at preference_center_title preference_center_page_html confirmation_page_html redirect_page_html preference_center_options state'>
 <h1 id="view-details-for-preference-center">View details for preference center</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/preference_center/v1/{preferenceCenterExternalID}</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">preference_center.get</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">preference_center.get</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

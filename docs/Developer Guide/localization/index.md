@@ -1,6 +1,6 @@
 # Localization
 
-> Learn about localization and supported languages for the Braze SDK, so you can connect with your users across the globe. For guidance on setting up localized messages, refer to [Localization](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/) in our Messaging fundamentals section.
+> Learn about localization and supported languages for the Braze SDK, so you can connect with your users across the globe. For guidance on setting up localized messages, refer to [Localization](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization) in our Messaging fundamentals section.
 
 ## About localization
 

@@ -29,7 +29,7 @@ Next, you can edit settings for Intelligent Delivery, Quiet Hours overrides, and
 
 #### Intelligent Timing
 
-You can enable [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing/) with a fallback option when a user's profile does not have enough data to calculate an optimal time. We recommend enabling Intelligent Timing and [rate limiting](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#rate-limiting-and-frequency-capping/) as an additional check for any delays between users entering the Message step and the actual message sending.
+You can enable [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing) with a fallback option when a user's profile does not have enough data to calculate an optimal time. We recommend enabling Intelligent Timing and [rate limiting](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#rate-limiting-and-frequency-capping) as an additional check for any delays between users entering the Message step and the actual message sending.
 
 Select **Using Intelligent Timing** in the **Delivery Settings** tab. Here, you can select either the most popular time or a specific fallback time. If Quiet Hours are enabled, the Message step also allows you to override this setting.
 
@@ -43,10 +43,10 @@ Delivery validations evaluate user profile criteria at send time. App-related fi
 
 If your workspace has multiple apps and a Message step should target a specific app, use one of the following approaches instead:
 
-- When composing the message, [specify your delivery platforms](https://www.braze.com/docs/user_guide/channels/in_app_messages/traditional/#step-2-specify-delivery-platforms), such as **Mobile Apps** or **Web Browsers**.
+- When composing the message, [specify your delivery platforms](https://www.braze.com/docs/user_guide/channels/in_app_messages/traditional#step-2-specify-delivery-platforms), such as **Mobile Apps** or **Web Browsers**.
 - Use Liquid to check the targeted device or app at send time:
-  - `{{targeted_device.${platform}}}` evaluates the platform for the user's current session. For more information, see [Targeted device information](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/#targeted-device-information).
-  - `{{app.${api_id}}}` evaluates which app is requesting the message. Combine this tag with `abort_message()` to prevent sends to the wrong app. For more information, see [Targeted app information](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/#targeted-app-information).
+  - `{{targeted_device.${platform}}}` evaluates the platform for the user's current session. For more information, see [Targeted device information](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags#targeted-device-information).
+  - `{{app.${api_id}}}` evaluates which app is requesting the message. Combine this tag with `abort_message()` to prevent sends to the wrong app. For more information, see [Targeted app information](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags#targeted-app-information).
 
 ![Delivery Validations are enabled to validate the audience at message send. Delivery validations advancement behavior is set to progress the user to the next step in the Canvas if delivery validations are not met.](https://www.braze.com/docs/assets/img/canvas_components/message_step5.png?b7f0f9d772194934ebbd013b7eacfd5e){: style="max-width:90%;"}
 
@@ -104,8 +104,6 @@ If an action-based Canvas is triggered by an inbound SMS message, you can refere
 
 
 
-
-
 Entry properties are configured in the **Entry Schedule** step of creating a Canvas and will indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `context` object has a maximum size limit of 50 KB.
 
 Entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: ``{context.${property_name}}``. Events must be custom events or purchase events to be used this way.
@@ -123,13 +121,13 @@ Use the following Liquid when referencing these entry properties: ``context.${pr
 For example, consider the following request: `\"context\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with the Liquid `{{context.${product_name}}}`.
 
 
-You can also leverage [persistent entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties/) in any Message step to guide your users through personalized steps throughout your Canvas workflow.
+You can also leverage [persistent entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties) in any Message step to guide your users through personalized steps throughout your Canvas workflow.
 
 ### Event properties
 
 Event properties refer to the properties that you set for custom events and purchase events. These event properties can be used in campaigns with action-based delivery as well as Canvases. 
 
-In Canvas, custom event and purchase event properties can be used in Liquid in any Message step that follows an [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths/) step. For example, when referencing `event_properties`, use this Liquid snippet: ``{{event_properties.${property_name}}}`` 
+In Canvas, custom event and purchase event properties can be used in Liquid in any Message step that follows an [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) step. For example, when referencing `event_properties`, use this Liquid snippet: ``{{event_properties.${property_name}}}`` 
 
 **Important:**
 

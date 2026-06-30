@@ -1,17 +1,17 @@
-<div id='api_rvjriwnajubv' class='api_div' data-search-keywords='prerequisites content_block_id name content description content_type tags created_at last_edited inclusion_count inclusion_data message'>
+<div id='api_ikiereinyfic' class='api_div' data-search-keywords='prerequisites content_block_id name content description content_type tags created_at last_edited inclusion_count inclusion_data message'>
 <h1 id="see-content-block-information">See Content Block information</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/content_blocks/info</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to call information for your existing <a href="/docs/user_guide/messaging/design_and_edit/content_blocks/">Content Blocks</a>.</p>
+  <p>Use this endpoint to call information for your existing <a href="/docs/user_guide/messaging/design_and_edit/content_blocks">Content Blocks</a>.</p>
 </blockquote>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.info</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.info</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -39,7 +39,7 @@
       <td><code class="language-plaintext highlighter-rouge">content_block_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>The Content Block identifier. <br /><br />You can find this by either listing Content Block information through an API call or going to the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers/">API Keys</a> page, then scrolling to the bottom and searching for your Content Block API identifier.</td>
+      <td>The Content Block identifier. <br /><br />You can find this by either listing Content Block information through an API call or going to the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers">API Keys</a> page, then scrolling to the bottom and searching for your Content Block API identifier.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">include_inclusion_data</code></td>

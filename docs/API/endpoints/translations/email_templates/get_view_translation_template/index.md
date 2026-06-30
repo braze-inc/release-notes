@@ -1,16 +1,16 @@
-<div id='api_vjjktnupjnvz' class='api_div' data-search-keywords='prerequisites translations locale uuid name country language locale_key translation_map id_0 id_1 id_2 errors message'>
+<div id='api_ihwyvlehsirh' class='api_div' data-search-keywords='prerequisites translations locale uuid name country language locale_key translation_map id_0 id_1 id_2 errors message'>
 <h1 id="view-all-translations-and-locales-for-an-email-template">View all translations and locales for an email template</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/translations/</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to view all translations and locales for an <a href="/docs/user_guide/messaging/templates/email_templates/">email template</a>. See <a href="/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/">Locales in messages</a> for more information about translation features.</p>
+  <p>Use this endpoint to view all translations and locales for an <a href="/docs/user_guide/messaging/templates/email_templates">email template</a>. See <a href="/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages">Locales in messages</a> for more information about translation features.</p>
 </blockquote>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.translations.get</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.translations.get</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

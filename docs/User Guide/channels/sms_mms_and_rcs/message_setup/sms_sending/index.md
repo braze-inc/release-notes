@@ -6,7 +6,7 @@
 
 ### Select your subscription group
 
-SMS messages must be sent from a [subscription group](https://www.braze.com/docs/sms_rcs_subscription_groups/). A subscription group is a collection of sending phone numbers (such as short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. You must designate a subscription group to ensure only subscribed users are targeted. Some clients may find they have multiple subscription groups for different use cases, such as transactional SMS messaging and promotional SMS messaging.<br><br>
+SMS messages must be sent from a [subscription group](https://www.braze.com/docs/sms_rcs_subscription_groups). A subscription group is a collection of sending phone numbers (such as short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. You must designate a subscription group to ensure only subscribed users are targeted. Some clients may find they have multiple subscription groups for different use cases, such as transactional SMS messaging and promotional SMS messaging.<br><br>
 
 ### Input message body
 
@@ -18,14 +18,14 @@ SMS message segments are how the SMS industry counts messages. A message segment
 
 ### Keyword customization (optional)
 
-Regulations require that there are responses to all Opt-In, Opt-Out, and Help/Info SMS keyword responses. With Braze, you are able to define your own keywords to trigger Opt-In, Opt-Out, and Help responses, manage your own responses that get sent to users, and define keyword sets for different languages. For more, refer to our collection on [Keyword processing](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/).
+Regulations require that there are responses to all Opt-In, Opt-Out, and Help/Info SMS keyword responses. With Braze, you are able to define your own keywords to trigger Opt-In, Opt-Out, and Help responses, manage your own responses that get sent to users, and define keyword sets for different languages. For more, refer to our collection on [Keyword processing](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing).
 
 **Tip:**
 
 
-Want to learn how to create an SMS campaign? Check out our step-by-step guide on [Creating an SMS, MMS, or RCS message](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/create/).
+Want to learn how to create an SMS campaign? Check out our step-by-step guide on [Creating an SMS, MMS, or RCS message](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/create).
 
 
 
-For sending best practices, including multi-country and high-volume sending guidance, refer to [Best practices for SMS, MMS, and RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/best_practices/).
+For sending best practices, including multi-country and high-volume sending guidance, refer to [Best practices for SMS, MMS, and RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/best_practices).
 

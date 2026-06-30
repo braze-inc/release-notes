@@ -27,7 +27,7 @@ The following SDK versions are required to receive Push Stories:
 
 To use Push Stories, do the following:
 
-1. Create a [push campaign](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/).
+1. Create a [push campaign](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message).
 2. For your **Notification Type**, select **Push Stories**.
 3. Select **iOS** or **Android**. Note that if you select both for a push message, the option to create a Push Story won't appear. 
 
@@ -52,7 +52,7 @@ If you are pulling in images with [Connected Content](https://www.braze.com/docs
 
 ### Image and text specifications
 
-The following image and text specifications apply to the photo carousel portion of Push Stories. For information on the basic push that users interact with to activate the Push Story, refer to [Push message and image formats](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats/).
+The following image and text specifications apply to the photo carousel portion of Push Stories. For information on the basic push that users interact with to activate the Push Story, refer to [Push message and image formats](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats).
 
 
 

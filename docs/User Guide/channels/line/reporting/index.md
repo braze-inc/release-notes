@@ -5,7 +5,7 @@
 **Tip:**
 
 
-Looking for definitions for the terms and metrics in your report? Refer to [Report metrics glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary/).
+Looking for definitions for the terms and metrics in your report? Refer to [Report metrics glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary).
 
 
 
@@ -28,7 +28,7 @@ Review this panel to see overall metrics such as the number of messages sent to 
 
 #### Control groups
 
-To measure the impact of an individual LINE message, you can add a [control group](https://www.braze.com/docs/user_guide/messaging/ab_testing/) to an A/B test. The top-level **Campaign Details** panel doesn’t include metrics from the Control Group variant.
+To measure the impact of an individual LINE message, you can add a [control group](https://www.braze.com/docs/user_guide/messaging/ab_testing) to an A/B test. The top-level **Campaign Details** panel doesn’t include metrics from the Control Group variant.
 
 ### LINE performance
 
@@ -40,7 +40,7 @@ If you want to simplify your view, select **+ Add/Remove Columns** and clear any
 
 #### LINE metrics
 
-Here are some key LINE metrics you may see in your analytics. To see the definitions of all LINE metrics used in Braze, refer to [Report metrics glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary/).
+Here are some key LINE metrics you may see in your analytics. To see the definitions of all LINE metrics used in Braze, refer to [Report metrics glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary).
 
 | Term | Definition |
 | --- | --- |
@@ -59,10 +59,10 @@ To get a day-by-day breakdown, select the <i class="fas fa-bars"></i> hamburger 
 
 ### Conversion event details
  
-The **Conversion Event Details** panel shows you the performance of your conversion events for your campaign. For more information, refer to [Conversion events](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/conversion_correlation/).
+The **Conversion Event Details** panel shows you the performance of your conversion events for your campaign. For more information, refer to [Conversion events](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/conversion_correlation).
 
 ### Conversion correlation
 
-The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion correlation](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/conversion_correlation/).
+The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion correlation](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/conversion_correlation).
 
 

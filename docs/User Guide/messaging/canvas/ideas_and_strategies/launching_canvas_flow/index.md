@@ -9,7 +9,7 @@ As you prepare to launch your Canvas, Braze recommends that you check your Canva
 
 ## Race conditions 
 
-Consider the [race conditions](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/race_conditions/) that may be occur before launching your Canvas. 
+Consider the [race conditions](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/race_conditions) that may be occur before launching your Canvas. 
 
 To enter a Canvas, users must be in the entry audience before the entry schedule occurs regardless of whether the Canvas is scheduled, action-based, or API-triggered. 
 
@@ -20,7 +20,7 @@ Note that users who qualify for your entry audience after the Canvas launches wi
 **Tip:**
 
 
-Check out [Entry schedule types](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/#step-12-determine-your-canvas-entry-schedule) for guidance and details for when to use scheduled, action-based, or API-triggered delivery for your Canvas!
+Check out [Entry schedule types](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#step-12-determine-your-canvas-entry-schedule) for guidance and details for when to use scheduled, action-based, or API-triggered delivery for your Canvas!
 
 
 
@@ -28,7 +28,7 @@ Check out [Entry schedule types](https://www.braze.com/docs/user_guide/messaging
 
 In general, avoid configuring an action-based or API-triggered Canvas with the same trigger as the audience filter. For example, after a Canvas is launched, users who perform a specific action will be included in the entry audience, so there's no need to add the event as an audience filter. 
 
-For more details on available segmentation filters to target your audience, see [Segmentation Filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters/).
+For more details on available segmentation filters to target your audience, see [Segmentation Filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters).
 
 ### Batch multiple API requests
 
@@ -59,23 +59,23 @@ There are four main components you can use to segment your users in a simple, ef
 
 ### Audience Paths
 
-Use [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths/) steps to segment users within the Canvas based on custom attributes, custom events, and previous message engagement data from user profiles.
+Use [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths) steps to segment users within the Canvas based on custom attributes, custom events, and previous message engagement data from user profiles.
 
 ### Decision Split
 
-The [Decision Split](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/decision_split/) step allows you to send your users to different user journey paths based on their answers to a polar question.
+The [Decision Split](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/decision_split) step allows you to send your users to different user journey paths based on their answers to a polar question.
 
 ### Action Paths
 
-[Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths/) focus on segmenting users based on real-time behaviors such as custom events, purchase events, and custom attribute changes. 
+[Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) focus on segmenting users based on real-time behaviors such as custom events, purchase events, and custom attribute changes. 
 
 ### Experiment Paths
 
-Similar to Action Paths, you can leverage [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step/) steps in your Canvas to test multiple Canvas paths against each other, along with a control group. This tracks path performance, allowing you to make informed decisions when building your Canvas journey. 
+Similar to Action Paths, you can leverage [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step) steps in your Canvas to test multiple Canvas paths against each other, along with a control group. This tracks path performance, allowing you to make informed decisions when building your Canvas journey. 
 
 ## Testing before launch
 
-After reviewing the finer details of your Canvas, check out [Sending test Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/sending_test_canvases/) for different methods you can leverage to test your Canvas with test users.
+After reviewing the finer details of your Canvas, check out [Sending test Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/sending_test_canvases) for different methods you can leverage to test your Canvas with test users.
 
 ## Launch checklist
 
@@ -98,7 +98,7 @@ After reviewing the finer details of your Canvas, check out [Sending test Canvas
 
 ### Confirm your Canvas saves correctly and all steps are valid
 
-If your Canvas isn't loading and won't progress, this can be caused when a previous version of the Canvas wasn't saved properly and contains invalid steps. You can duplicate the Canvas from the dashboard. If the issue persists, open a [support ticket](https://www.braze.com/docs/braze_support/).
+If your Canvas isn't loading and won't progress, this can be caused when a previous version of the Canvas wasn't saved properly and contains invalid steps. You can duplicate the Canvas from the dashboard. If the issue persists, open a [support ticket](https://www.braze.com/docs/braze_support).
 
 ## Troubleshooting
 
@@ -114,7 +114,7 @@ If your Canvas isn't loading and won't progress, this can be caused when a previ
 
 **Check user availability for additional filters in your Canvas step**
 - Confirm that they performed the prerequisite custom event or purchase.
-- Check if there's a [race condition](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/race_conditions/), which impacts the messages users receive if they trigger multiple actions at the same time.
+- Check if there's a [race condition](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/race_conditions), which impacts the messages users receive if they trigger multiple actions at the same time.
 - Make sure there aren't specific filters in the step that could have blocked users from receiving the message.
 - Search for conflicts between different steps within the same Canvas. For example, users who didn't receive the message might be stopped by a filter that requires the completion of another step on a different branch.
 - Confirm that users meet additional validation rules.

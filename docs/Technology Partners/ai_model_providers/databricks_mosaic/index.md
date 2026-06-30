@@ -40,8 +40,6 @@
 
 
 
-
-
 _This integration is maintained by Databricks._
 
 ## About the integration

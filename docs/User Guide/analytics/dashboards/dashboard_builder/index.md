@@ -18,7 +18,7 @@ Now, follow the respective steps for your data source:
 
 
 {: start="4"}
-4. Select **+ Add Tile** and then choose one of the reports you created in [Report Builder (New)](https://www.braze.com/docs/user_guide/analytics/reports/report_builder/).
+4. Select **+ Add Tile** and then choose one of the reports you created in [Report Builder (New)](https://www.braze.com/docs/user_guide/analytics/reports/report_builder).
 
 **Important:**
 
@@ -42,7 +42,7 @@ After a Report Builder report is added to a Dashboard Builder tile, the tile is 
         - If you choose one of the chart options, use the **X-axis** dropdown to select a single column from your query results to use as your x-axis.
         - Use the **Y-axis** dropdown to select which metrics to include in your visualization. By default, all columns from your query results will display, so de-select the columns you’re not interested in viewing.<br><br>![Toggles for different chart types.](https://www.braze.com/docs/assets/img/query_builder_axis.png?f4d10bf7af9ac554108d4cce786929a8)<br><br>
         - (Optional) You can use the **Grouping** dropdown to group together your query results. For example, if you have campaign ID as a column result and you want to add together all the rows with that value, use the **Grouping** dropdown.  
-        - (Optional) To edit the data being displayed, select the query that is attached to the visual and make your edits in [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/). 
+        - (Optional) To edit the data being displayed, select the query that is attached to the visual and make your edits in [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder). 
 6. Select **Save** after you've changed the visualization to your liking.
 7. Add a name, description, and tag to make your dashboard easier to find later.
 

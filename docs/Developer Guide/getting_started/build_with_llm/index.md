@@ -68,7 +68,7 @@ Save the configuration and restart VS Code.
 **Note:**
 
 
-Context7 is different from the [Braze MCP server](https://www.braze.com/docs/developer_guide/mcp_server/). Context7 provides your AI assistant with access to **Braze documentation**, while the Braze MCP server provides read-only access to **your Braze workspace data** (such as campaigns, segments, and analytics). You can use both together for a more complete AI-assisted development experience.
+Context7 is different from the [Braze MCP server](https://www.braze.com/docs/developer_guide/mcp_server). Context7 provides your AI assistant with access to **Braze documentation**, while the Braze MCP server provides read-only access to **your Braze workspace data** (such as campaigns, segments, and analytics). You can use both together for a more complete AI-assisted development experience.
 
 
 
@@ -78,7 +78,7 @@ After you set up Context7, include `use context7` in your prompts to signal your
 
 ### React Native SDK
 
-These prompts demonstrate common integration tasks for the [Braze React Native SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native).
+These prompts demonstrate common integration tasks for the [Braze React Native SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=react%20native).
 
 #### Initializing the SDK
 
@@ -115,7 +115,7 @@ programmatically. Use context7.
 
 ### Web SDK
 
-These prompts demonstrate common integration tasks for the [Braze Web SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web).
+These prompts demonstrate common integration tasks for the [Braze Web SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web).
 
 #### Initializing the SDK
 

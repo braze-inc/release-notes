@@ -1,21 +1,21 @@
-<div id='api_wfkigkndkvec' class='api_div' data-search-keywords='prerequisites name description content state tags content_block_id liquid_tag created_at message'>
+<div id='api_jparazenqpxz' class='api_div' data-search-keywords='prerequisites name description content state tags content_block_id liquid_tag created_at message'>
 <h1 id="create-content-block">Create Content Block</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/content_blocks/create</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to create a <a href="/docs/user_guide/messaging/design_and_edit/content_blocks/">Content Block</a>.</p>
+  <p>Use this endpoint to create a <a href="/docs/user_guide/messaging/design_and_edit/content_blocks">Content Block</a>.</p>
 </blockquote>
 
 <p><strong>Tip:</strong></p>
 
-<p>You can also call this endpoint through the <a href="/docs/user_guide/brazeai/mcp_server/">Braze MCP server</a> using the <a href="/docs/user_guide/brazeai/mcp_server/available_api_functions/#content-blocks"><code class="language-plaintext highlighter-rouge">create_content_block</code></a> function. This lets AI tools like Claude and Cursor create content blocks through natural language prompts.</p>
+<p>You can also call this endpoint through the <a href="/docs/user_guide/brazeai/mcp_server">Braze MCP server</a> using the <a href="/docs/user_guide/brazeai/mcp_server/available_api_functions#content-blocks"><code class="language-plaintext highlighter-rouge">create_content_block</code></a> function. This lets AI tools like Claude and Cursor create content blocks through natural language prompts.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.create</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.create</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -91,7 +91,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       <td><code class="language-plaintext highlighter-rouge">tags</code></td>
       <td>Optional</td>
       <td>Array of strings</td>
-      <td><a href="/docs/user_guide/messaging/governance/tags/">Tags</a> must already exist.</td>
+      <td><a href="/docs/user_guide/messaging/governance/tags">Tags</a> must already exist.</td>
     </tr>
   </tbody>
 </table>

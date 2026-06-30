@@ -1,6 +1,6 @@
 # Track transactional emails
 
-> This page describes how to set up real-time tracking for [transactional email campaigns](https://www.braze.com/docs/user_guide/channels/transactional_email/create_a_transactional_email/). For more information about the endpoint itself, refer to [Send transactional emails using API-triggered delivery](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/).
+> This page describes how to set up real-time tracking for [transactional email campaigns](https://www.braze.com/docs/user_guide/channels/transactional_email/create_a_transactional_email). For more information about the endpoint itself, refer to [Send transactional emails using API-triggered delivery](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_transactional_message).
 
 When you send transactional emails—like order confirmations or password resets—it’s essential to know whether they reach your customers. With Braze transactional HTTP event postbacks, you’ll get real-time insights into the status of every transactional email, so you can act quickly if there’s an issue.
 
@@ -28,7 +28,7 @@ In your Braze dashboard:
 2. Under **Transactional Event Status Postback**, enter the URL where Braze should send status updates for your transactional emails.
 3. Test the postback.
 
-![](https://www.braze.com/docs/assets/img/transactional_webhook_url.png?567829e92a620f3227cb64ce58d3f634)
+![Transactional Event Status Postback URL field in Email Preferences.](https://www.braze.com/docs/assets/img/transactional_webhook_url.png?567829e92a620f3227cb64ce58d3f634)
 
 ### Postback body
 

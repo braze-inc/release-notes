@@ -62,7 +62,7 @@ By default, we collect numbers globally, however you can limit the number of cou
 
 #### Invalid phone numbers
 
-If your users input a phone number that includes any unaccepted special characters, they will see a generic error indicator that is not customizable and will not be able to submit the form. You can view the error behavior in the **Preview & Test** tab and on your test device. Refer to this article to learn [how Braze formats phone numbers](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/#importing-phone-numbers).
+If your users input a phone number that includes any unaccepted special characters, they will see a generic error indicator that is not customizable and will not be able to submit the form. You can view the error behavior in the **Preview & Test** tab and on your test device. Refer to this article to learn [how Braze formats phone numbers](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers#importing-phone-numbers).
 
 ### Step 4: Add disclaimer language (for SMS and RCS sign-up forms)
 
@@ -83,11 +83,11 @@ This documentation is not intended to provide, nor may it be relied fully upon, 
 
 
 
-For more information about SMS and RCS compliance, see [Laws and regulations for SMS, MMS, and RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations/).
+For more information about SMS and RCS compliance, see [Laws and regulations for SMS, MMS, and RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations).
 
 ### Step 5: Style your message
 
-Customize the look and feel of your message using the drag-and-drop [in-app message components](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize/style_settings/#message-components).
+Customize the look and feel of your message using the drag-and-drop [in-app message components](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize/style_settings#message-components).
 
 ## Analyzing the results
 

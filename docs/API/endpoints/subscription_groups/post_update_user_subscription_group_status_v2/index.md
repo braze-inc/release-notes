@@ -1,4 +1,4 @@
-<div id='api_kixwmyqpikhb' class='api_div' data-search-keywords='prerequisites subscription_groups subscription_group_id subscription_state external_ids emails phones use_double_opt_in_logic'>
+<div id='api_rzxmexhayxiw' class='api_div' data-search-keywords='prerequisites subscription_groups subscription_group_id subscription_state external_ids emails phones use_double_opt_in_logic'>
 <h1 id="update-users-subscription-group-status-v2">Update user’s subscription group status (V2)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/v2/subscription/status/set</p>
@@ -24,15 +24,15 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">subscription.status.set</code> permission.</p>
+<p>To use this endpoint, you need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">subscription.status.set</code> permission.</p>
 
 <p><strong>Note:</strong></p>
 
-<p>If you’re interested in using this endpoint with <a href="/docs/user_guide/channels/line/message_users/subscription_groups/">LINE subscription groups</a>, contact your customer success manager. <br /><br />For LINE subscription groups, we recommend using a custom attribute to track website or app consent separately, and then targeting campaigns using that custom attribute in combination with the LINE subscription state. This approach ensures your subscription state accurately reflects users who have actually subscribed in the LINE app. Manually adding users to LINE subscription groups using the API may lead to out-of-sync states and failed sends since Braze cannot re-subscribe users in the LINE app or send messages to users who have blocked an account in LINE.</p>
+<p>If you’re interested in using this endpoint with <a href="/docs/user_guide/channels/line/message_users/subscription_groups">LINE subscription groups</a>, contact your customer success manager. <br /><br />For LINE subscription groups, we recommend using a custom attribute to track website or app consent separately, and then targeting campaigns using that custom attribute in combination with the LINE subscription state. This approach ensures your subscription state accurately reflects users who have actually subscribed in the LINE app. Manually adding users to LINE subscription groups using the API may lead to out-of-sync states and failed sends since Braze cannot re-subscribe users in the LINE app or send messages to users who have blocked an account in LINE.</p>
 
 <h2 id="differences-from-v1">Differences from V1</h2>
 
-<p>The V2 endpoint differs from the <a href="/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/">V1 endpoint</a> in the following ways:</p>
+<p>The V2 endpoint differs from the <a href="/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status">V1 endpoint</a> in the following ways:</p>
 
 <ul>
   <li><strong>Multiple subscription groups</strong>: V2 lets you update multiple subscription groups in a single API request, while V1 supports only one subscription group per request.</li>
@@ -104,7 +104,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <p><strong>Tip:</strong></p>
 
-<p>When creating new users using the <a href="/docs/api/endpoints/user_data/post_user_track/"><code class="language-plaintext highlighter-rouge">/users/track</code> endpoint</a>, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.</p>
+<p>When creating new users using the <a href="/docs/api/endpoints/user_data/post_user_track"><code class="language-plaintext highlighter-rouge">/users/track</code> endpoint</a>, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.</p>
 
 <h2 id="request-parameters">Request parameters</h2>
 
@@ -119,7 +119,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   </thead>
   <tbody>
     <tr>
-      <td><a href="/docs/api/identifier_types/?tab=subscription%20group%20ids"><code class="language-plaintext highlighter-rouge">subscription_group_id</code></a></td>
+      <td><a href="/docs/api/identifier_types?tab=subscription%20group%20ids"><code class="language-plaintext highlighter-rouge">subscription_group_id</code></a></td>
       <td>Required</td>
       <td>String</td>
       <td>The <code class="language-plaintext highlighter-rouge">id</code> of your subscription group.</td>
@@ -152,7 +152,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">use_double_opt_in_logic</code></td>
       <td>Optional</td>
       <td>Boolean</td>
-      <td>Defaults to <code class="language-plaintext highlighter-rouge">false</code> if omitted. For SMS subscription groups, set to <code class="language-plaintext highlighter-rouge">true</code> to enter the user into the <a href="/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in/">SMS double opt-in</a> workflow when their subscription status is set to <code class="language-plaintext highlighter-rouge">subscribed</code>. Users entered into the double opt-in workflow in this way receive at most one opt-in prompt reply message per day, regardless of the number of times they are entered into the workflow. If this parameter is omitted or set to <code class="language-plaintext highlighter-rouge">false</code>, users are subscribed without entering the double opt-in workflow. This parameter is not applicable to email subscription groups.</td>
+      <td>Defaults to <code class="language-plaintext highlighter-rouge">false</code> if omitted. For SMS subscription groups, set to <code class="language-plaintext highlighter-rouge">true</code> to enter the user into the <a href="/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in">SMS double opt-in</a> workflow when their subscription status is set to <code class="language-plaintext highlighter-rouge">subscribed</code>. Users entered into the double opt-in workflow in this way receive at most one opt-in prompt reply message per day, regardless of the number of times they are entered into the workflow. If this parameter is omitted or set to <code class="language-plaintext highlighter-rouge">false</code>, users are subscribed without entering the double opt-in workflow. This parameter is not applicable to email subscription groups.</td>
     </tr>
   </tbody>
 </table>
@@ -195,12 +195,12 @@ Authorization: Bearer YOUR-REST-API-KEY
     {
       "subscription_group_id":"subscription_group_identifier",
       "subscription_state":"subscribed",
-      "external_ids":["example-user","example1@email.com"]
+      "external_ids":["example-user","example1@example.com"]
     },
     {
       "subscription_group_id":"subscription_group_identifier",
       "subscription_state":"subscribed",
-      "external_ids":["example-user","example1@email.com"]
+      "external_ids":["example-user","example1@example.com"]
     }
   ]
 }
@@ -229,7 +229,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     {
       "subscription_group_id":"subscription_group_identifier",
       "subscription_state":"subscribed",
-      "emails":["example1@email.com","example2@email.com"]
+      "emails":["example1@example.com","example2@example.com"]
     }
   ]
 }

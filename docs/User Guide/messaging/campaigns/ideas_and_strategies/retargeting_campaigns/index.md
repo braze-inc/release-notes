@@ -22,7 +22,7 @@ Use this filter to find users who have or have not:
 - Opened an email
 - Viewed an in-app message
 
-![](https://www.braze.com/docs/assets/img_archive/clickedopened.png?7e399c5fb40a7bc81669f369d99d0d31)
+![Clicked/Opened Campaign filter with channel interaction options.](https://www.braze.com/docs/assets/img_archive/clickedopened.png?7e399c5fb40a7bc81669f369d99d0d31)
 
 This can be further specified by selecting which campaign you want to retarget.
 
@@ -36,7 +36,7 @@ Use this filter to find users who have or have not interacted with campaigns or 
 - Opened an email
 - Viewed an in-app message
 
-![](https://www.braze.com/docs/assets/img_archive/retarget_tag_filter.png?1b1bbd9beabb4ab61aac00ea434756b6)
+![Clicked or opened Campaign or Canvas with tag filter.](https://www.braze.com/docs/assets/img_archive/retarget_tag_filter.png?1b1bbd9beabb4ab61aac00ea434756b6)
 
 ### Converted From Campaign 
 
@@ -44,7 +44,7 @@ Use this filter to find users who have or have not converted (based on the prima
 
 For recurring campaigns, this filter refers to whether users have converted on the most recent message from the campaign.
 
-![](https://www.braze.com/docs/assets/img_archive/converted_from_campaign.png?59d3db2b48627ad6fa648772f506e682)
+![Converted From Campaign filter with campaign selection.](https://www.braze.com/docs/assets/img_archive/converted_from_campaign.png?59d3db2b48627ad6fa648772f506e682)
 
 ### Converted From Canvas 
 
@@ -52,19 +52,19 @@ Use this filter to find users who have or have not converted (based on the prima
 
 For recurring Canvases this filter refers to whether users have ever converted anytime they've gone through the Canvas.
 
-![](https://www.braze.com/docs/assets/img_archive/converted_from_canvas.png?5d4ccd7e0258815de4f3eadc8e1e5588)
+![Converted From Canvas filter with Canvas selection.](https://www.braze.com/docs/assets/img_archive/converted_from_canvas.png?5d4ccd7e0258815de4f3eadc8e1e5588)
 
 ### In Campaign Control Group 
 
 Use this filter to find users who are or are not in the control group of your target campaign.
 
-![](https://www.braze.com/docs/assets/img_archive/campaign_control_group.png?2a54afc2584408084c0bdc1a1216d6a5)
+![In Campaign Control Group filter with campaign selection.](https://www.braze.com/docs/assets/img_archive/campaign_control_group.png?2a54afc2584408084c0bdc1a1216d6a5)
 
 ### In Canvas Control Group 
 
 Use this filter to find users who are or are not in the control group of your target Canvas, which can be selected in the dropdown.
 
-![](https://www.braze.com/docs/assets/img_archive/canvas_control_group.png?a782a7dba4ebdfaa957350230c2273df)
+![In Canvas Control Group filter with Canvas selection.](https://www.braze.com/docs/assets/img_archive/canvas_control_group.png?a782a7dba4ebdfaa957350230c2273df)
 
 ### Last received message from specific campaign 
 
@@ -76,13 +76,13 @@ Use this filter to find users who last received a specific campaign before or af
 
 
 
-![](https://www.braze.com/docs/assets/img_archive/last_received_specific_campaign.png?0a0da03b8b03466c13edecd82211a941)
+![Last received message from specific campaign filter with date options.](https://www.braze.com/docs/assets/img_archive/last_received_specific_campaign.png?0a0da03b8b03466c13edecd82211a941)
 
 ### Last received message from campaign or Canvas with tag 
 
 Use this filter to find users who last received a campaign or Canvas with a given tag before or after a specified date or number of days. This filter doesn't consider when users received other campaigns or Canvases.
 
-![](https://www.braze.com/docs/assets/img_archive/last_received_campaign_with_tag.png?52e364ac991ef7a517cc286f51f501af)
+![Last received message from campaign or Canvas with tag filter.](https://www.braze.com/docs/assets/img_archive/last_received_campaign_with_tag.png?52e364ac991ef7a517cc286f51f501af)
 
 ### Received message from campaign 
 
@@ -94,13 +94,13 @@ Use this filter to find users who have or have not received your target campaign
 
 
 
-![](https://www.braze.com/docs/assets/img_archive/receivedcamp.png?478edbbea8d971bcda2cc7d270d24e51)
+![Received message from campaign filter with campaign selection.](https://www.braze.com/docs/assets/img_archive/receivedcamp.png?478edbbea8d971bcda2cc7d270d24e51)
 
 ### Received message from campaign or Canvas with tag 
 
 Use this filter to find users who have or have not received a campaign or Canvas that has your target tag.
 
-![](https://www.braze.com/docs/assets/img_archive/received_campaign_with_tag.png?41712639ec66e30397e1b5f93452e83f)
+![Received message from campaign or Canvas with tag filter.](https://www.braze.com/docs/assets/img_archive/received_campaign_with_tag.png?41712639ec66e30397e1b5f93452e83f)
 
 ## Advantages with retargeting campaigns
 

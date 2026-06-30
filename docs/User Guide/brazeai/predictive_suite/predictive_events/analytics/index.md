@@ -17,7 +17,7 @@ The distribution of the likelihood scores for the entire prediction audience is 
 
 As you move the slider handles to different positions, the bar in the left half of the panel will inform you how many users out of the entire prediction audience would be targeted using the part of the population you've selected.
 
-![](https://www.braze.com/docs/assets/img/purchasePrediction/purchaseTargeting.png?94bcc580da09aace2daddcb8b5244500){: style="max-width:90%"} 
+![As you move the slider handles to different positions, the bar in the left half of the panel will inform you how many users out of the entire prediction audience would be targeted using the part of the population you've selected.](https://www.braze.com/docs/assets/img/purchasePrediction/purchaseTargeting.png?94bcc580da09aace2daddcb8b5244500){: style="max-width:90%"} 
 
 ## Likelihood score {#purchase_score}
 
@@ -33,12 +33,12 @@ The scores and the corresponding categories will be updated according to the sch
 
 ### Accessing user-level likelihood scores
 
-To view the likelihood score for a single user, look up that user in the dashboard and go to **Engagement** > **Predictions** to see their score. To access scores and categories for many users at once, create a [segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/) using the [Event Likelihood Score](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#event-likelihood-score) or [Event Likelihood Category](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#event-likelihood-category) filters, then export the users from that segment. When exporting, you can include the likelihood scores in the export data.
+To view the likelihood score for a single user, look up that user in the dashboard and go to **Engagement** > **Predictions** to see their score. To access scores and categories for many users at once, create a [segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment) using the [Event Likelihood Score](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#event-likelihood-score) or [Event Likelihood Category](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#event-likelihood-category) filters, then export the users from that segment. When exporting, you can include the likelihood scores in the export data.
 
 **Note:**
 
 
-While both predictive events and [predictive churn](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_churn/) assign scores to users, there are important differences:<br><br>
+While both predictive events and [predictive churn](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_churn) assign scores to users, there are important differences:<br><br>
 
 - **Predictive events** (purchase predictions): Consider all users in the prediction audience, regardless of whether they've performed the target event before. For example, a purchase prediction can identify users likely to make their first purchase.
 - **Predictive churn**: Only considers users who have already performed the custom event. Churn predictions identify users who have done something before and are likely to stop doing it. A user who has never logged in cannot be considered "churned" if they don't log in.

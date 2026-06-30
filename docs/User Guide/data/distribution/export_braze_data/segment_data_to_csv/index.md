@@ -5,7 +5,7 @@
 **Note:**
 
 
-CSV export options appear in the **User Data** dropdown only for company users who have the ["Export User Data" permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/) for that workspace.
+CSV export options appear in the **User Data** dropdown only for company users who have the ["Export User Data" permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for that workspace.
 
 
 
@@ -44,9 +44,7 @@ Due to file size restrictions, your export may fail if the estimated size of you
 
 
 
-If you've linked your [Amazon S3 credentials](https://www.braze.com/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration) to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. You must be logged into the dashboard to access the download link emailed to you.
-
-
+If you've linked your [Amazon S3 credentials](https://www.braze.com/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3#amazon-s3-integration) to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. You must be logged into the dashboard to access the download link emailed to you.
 
 
 
@@ -137,7 +135,7 @@ The following is included in your export depending on your selection.
 **Note:**
 
 
-When you export user data from a Canvas step, the CSV includes all users who have been in that step over the lifetime of the Canvas step. You can't limit the export to a date range or other time window. For how to run these exports, see [Export Canvas data](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_canvas_data/).
+When you export user data from a Canvas step, the CSV includes all users who have been in that step over the lifetime of the Canvas step. You can't limit the export to a date range or other time window. For how to run these exports, see [Export Canvas data](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_canvas_data).
 
 
 
@@ -157,7 +155,7 @@ When you export user data from a Canvas step, the CSV includes all users who hav
 **Tip:**
 
 
-For help with CSV and API exports, visit our [troubleshooting](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/) article.
+For help with CSV and API exports, visit our [troubleshooting](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting) article.
 
 
 
@@ -180,18 +178,18 @@ You can split a large segment into smaller segments and then export each of the 
 
 
 
-You can also use [random bucket numbers](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers/) to break your user base into multiple segments, and then combine them after export. For example, if you need to break up your segment into two different segments, you can do so with the following filters:
+You can also use [random bucket numbers](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers) to break your user base into multiple segments, and then combine them after export. For example, if you need to break up your segment into two different segments, you can do so with the following filters:
 - Segment 1: Random bucket number is less than 5000 (includes 0-4999)
 - Segment 2: Random bucket number is more than 4999 (includes 5000-9999)
 
 
 
 
-You can also leverage the following endpoints to export user data for a specific segment. Note that these endpoints are subject to data limits and [rate limits](https://www.braze.com/docs/api/basics/).
-- [`/users/export/segment`](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment/)
-- [`/users/export/global_control_group`](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_global_control_group/)
+You can also leverage the following endpoints to export user data for a specific segment. Note that these endpoints are subject to data limits and [rate limits](https://www.braze.com/docs/api/basics).
+- [`/users/export/segment`](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment)
+- [`/users/export/global_control_group`](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_global_control_group)
 
-If you've connected [Amazon S3 credentials](https://www.braze.com/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration), large exports can be delivered to your bucket in addition to the emailed download link, as described in [Segment CSV export details](#segment-csv-export-details).
+If you've connected [Amazon S3 credentials](https://www.braze.com/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3#amazon-s3-integration), large exports can be delivered to your bucket in addition to the emailed download link, as described in [Segment CSV export details](#segment-csv-export-details).
 
 
 

@@ -73,5 +73,5 @@ Data shown in the dashboard may have up to a short delay in showing recent traff
 
 ## Related articles
 
-- [API usage alerts](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/api_usage_alerts/)
+- [API usage alerts](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/api_usage_alerts)
 - [Rate limits](https://www.braze.com/docs/api/api_limits)

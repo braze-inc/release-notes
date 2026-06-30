@@ -2,16 +2,16 @@
 
 > Use Braze dashboard tools to insert Liquid personalization without writing every tag by hand. The **Add Personalization** flow builds the right syntax for you, and the Liquid editor helps you read and extend templates quickly.
 
-For Liquid syntax rules, supported tags, and advanced patterns, refer to [Using Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid/) and [Supported personalization tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/).
+For Liquid syntax rules, supported tags, and advanced patterns, refer to [Using Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid) and [Supported personalization tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags).
 
 ## Add Personalization in composers and settings
 
 The **Add Personalization** tool appears near templated text fields across the dashboard, including:
 
 - **Campaign and Canvas steps** for channels that support Liquid in the body or headers (for example, email, push, SMS, in-app messages, Content Cards, and webhooks).
-- **Drag-and-drop editors**, where the control is often in the block or editor toolbar. For example, in drag-and-drop in-app messages you can select **Add Personalization**, choose a personalization type, and then place the generated snippet into your content before previewing under **Preview & Test**. For more channel-specific notes, see your channel’s drag-and-drop or composer article (such as [In-app message style settings](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize/style_settings/#adding-liquid) or [Create an email with drag-and-drop](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/)).
-- **Specialized composers** that expose a personalization picker—for example, [item recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/using_recommendations/) use **Personalization Type** options like **Item Recommendation** inside the same style of window.
-- **Landing pages**, where you can add Liquid personalization in the drag-and-drop editor or in page and block settings. For details, see [Personalize landing pages](https://www.braze.com/docs/user_guide/messaging/landing_pages/personalize_landing_pages/).
+- **Drag-and-drop editors**, where the control is often in the block or editor toolbar. For example, in drag-and-drop in-app messages you can select **Add Personalization**, choose a personalization type, and then place the generated snippet into your content before previewing under **Preview & Test**. For more channel-specific notes, see your channel’s drag-and-drop or composer article (such as [In-app message style settings](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize/style_settings#adding-liquid) or [Create an email with drag-and-drop](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop)).
+- **Specialized composers** that expose a personalization picker—for example, [item recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/using_recommendations) use **Personalization Type** options like **Item Recommendation** inside the same style of window.
+- **Landing pages**, where you can add Liquid personalization in the drag-and-drop editor or in page and block settings. For details, see [Personalize landing pages](https://www.braze.com/docs/user_guide/messaging/landing_pages/personalize_landing_pages).
 
 ## Insert pre-formatted variables and defaults
 
@@ -23,7 +23,7 @@ The tool inserts Liquid with your specified default value at the point where you
 
 ![A GIF of the Add Personalization modal that shows the user inserting "fellow traveler" as a default value, and the modal replacing the highlighted text "name" in the composer with the Liquid snippet.](https://www.braze.com/docs/assets/img_archive/insert_var_shot.gif?498223ac1dd3a3dab9e1da5eccdf9626)
 
-You can still type `{{` in many composers to use autocomplete, or paste tags from elsewhere; for details, see [Inserting tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid/#inserting-tags) in **Using Liquid**.
+You can still type `{{` in many composers to use autocomplete, or paste tags from elsewhere; for details, see [Inserting tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid#inserting-tags) in **Using Liquid**.
 
 ### Assign variables
 
@@ -74,7 +74,7 @@ You have ${{custom_attribute.${giftcard_balance} | plus: {{balance}}}} to spend!
 
 Find yourself assigning the same variables in every message? Instead of writing out the `assign` tag over and over again, you can save that tag as a Content Block and put it at the top of your message instead.<br><br>
 
-1. [Create a Content Block](https://www.braze.com/docs/user_guide/messaging/design_and_edit/content_blocks/#create-a-content-block).
+1. [Create a Content Block](https://www.braze.com/docs/user_guide/messaging/design_and_edit/content_blocks#create-a-content-block).
 2. Give your Content Block a name (no spaces or special characters).
 3. Select **Edit** at the bottom of the page.
 4. Enter your `assign` tags.
@@ -101,6 +101,6 @@ You can also use predictive Liquid for custom attributes, attribute names, and m
 
 ## Next steps
 
-- [Using Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid/) — syntax, `assign`, conditionals, and filters in Braze
-- [Setting default values](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/setting_default_values/) — defaults in Liquid beyond the modal
-- [Filters](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters/) — format dates, math, strings, and more
+- [Using Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid) — syntax, `assign`, conditionals, and filters in Braze
+- [Setting default values](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/setting_default_values) — defaults in Liquid beyond the modal
+- [Filters](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters) — format dates, math, strings, and more

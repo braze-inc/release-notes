@@ -32,7 +32,7 @@ To create a full refresh SQL Segment Extension:
 
 1. Go to **Audience** > **Segment Extensions**.
 2. Select **Create New Extension**, then select **Full refresh**.<br><br>
-   ![](https://www.braze.com/docs/assets/img/segment/segment_extension_modal.png?389f8fd34f15bb22810ef986bbc258c0){: style="max-width:50%" }<br><br>
+   ![Create New Extension modal with Full refresh and Incremental refresh options.](https://www.braze.com/docs/assets/img/segment/segment_extension_modal.png?389f8fd34f15bb22810ef986bbc258c0){: style="max-width:50%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to [Step 2](#step-2-write-your-sql) for requirements and resources.<br><br>
    ![SQL editor showing an example SQL Segment Extension.](https://www.braze.com/docs/assets/img_archive/sql_segments_editor.png?65b1c2e96aaf44c065185fa5c63faf84){: style="max-width:60%" }<br><br>
 4. Save your Segment Extension.
@@ -44,7 +44,7 @@ To create an incremental refresh SQL Segment Extension:
 
 1. Go to **Audience** > **Segment Extensions**.
 2. Select **Create New Extension** and select **Incremental refresh**.<br><br>
-   ![](https://www.braze.com/docs/assets/img/segment/segment_extension_modal.png?389f8fd34f15bb22810ef986bbc258c0){: style="max-width:50%" }<br><br>
+   ![Create New Extension modal with Full refresh and Incremental refresh options.](https://www.braze.com/docs/assets/img/segment/segment_extension_modal.png?389f8fd34f15bb22810ef986bbc258c0){: style="max-width:50%" }<br><br>
 3. Add a name for your Segment Extension and input your SQL. Refer to the section [Writing SQL](#writing-sql) for requirements and resources.<br><br>
    ![SQL editor showing an example incremental SQL Segment Extension.](https://www.braze.com/docs/assets/img_archive/sql_segments_editor_incremental.png?cbd25f0f9a05678d85f804b574b3e384){: style="max-width:60%" }<br><br>
 4. If desired, select **Regenerate Extension Daily**.<br><br>

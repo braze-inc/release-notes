@@ -39,17 +39,17 @@ By default, the approval workflow setting is off for Campaigns and Canvases. To 
 **Important:**
 
 
-Campaign approval is not supported for [API campaigns](https://www.braze.com/docs/api/api_campaigns) and [Transactional Email campaigns](https://www.braze.com/docs/user_guide/channels/transactional_email/create_a_transactional_email/).
+Campaign approval is not supported for [API campaigns](https://www.braze.com/docs/api/api_campaigns) and [Transactional Email campaigns](https://www.braze.com/docs/user_guide/channels/transactional_email/create_a_transactional_email).
 
 
 
 ## Setting user permissions
 
-After you turn on the approval workflow, you must set user permissions so your company users can approve or deny Campaigns and Canvases. Both permissions can also be applied to Workspaces or [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams/) or added to a [permission set](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/#permission-sets).
+After you turn on the approval workflow, you must set user permissions so your company users can approve or deny Campaigns and Canvases. Both permissions can also be applied to Workspaces or [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams) or added to a [permission set](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#permission-sets).
 
 
 
-You must have the ["Approve and Deny Campaigns" permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/#managing-limited-and-team-role-permissions). This permission controls who can update the approval status of a campaign. With this permission, you can do the following:
+You must have the ["Approve and Deny Campaigns" permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#managing-limited-and-team-role-permissions). This permission controls who can update the approval status of a campaign. With this permission, you can do the following:
 
 - Self-approve the Campaign
 - Approve and launch the Campaign
@@ -61,7 +61,7 @@ After approval statuses are set on the **Summary** step, any subsequent changes 
 
 
 
-You must have the ["Approve and Deny Canvases" permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/#managing-limited-and-team-role-permissions). This permission controls who can update the approval status of a Canvas. With this permission, you can do the following:
+You must have the ["Approve and Deny Canvases" permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#managing-limited-and-team-role-permissions). This permission controls who can update the approval status of a Canvas. With this permission, you can do the following:
 
 - Self-approve the Canvas
 - Approve and launch the Canvas

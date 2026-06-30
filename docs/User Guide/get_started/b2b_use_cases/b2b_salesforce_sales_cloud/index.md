@@ -20,7 +20,7 @@ Braze currently offers two integrations to Salesforce Sales Cloud for the follow
 **Note:**
 
 
-This integration is purely to update Salesforce from Braze as part of your lead acquisition and nurturing efforts. For syncing data from Salesforce back to Braze, check out [B2B data model](https://www.braze.com/docs/user_guide/get_started/b2b_use_cases/b2b_data_models/) or connect with one of our [technology partners](https://www.braze.com/docs/partners/home/). 
+This integration is purely to update Salesforce from Braze as part of your lead acquisition and nurturing efforts. For syncing data from Salesforce back to Braze, check out [B2B data model](https://www.braze.com/docs/user_guide/get_started/b2b_use_cases/b2b_data_models) or connect with one of our [technology partners](https://www.braze.com/docs/partners/home). 
 
 
 
@@ -92,9 +92,9 @@ Select **+ Add New Header** for each of the following request headers.
  
 ## Updating a lead in Salesforce Sales Cloud {#updating-lead}
 
-To set up a Braze Salesforce Sales Cloud webhook that updates leads in Salesforce, you need a common identifier between Salesforce Sales Cloud and Braze. The example below uses the Salesforce `lead_id` as the Braze `external_id`, but you can also accomplish this by using a `user_alias`. For details on this, refer to [B2B Data](https://www.braze.com/docs/user_guide/get_started/b2b_use_cases/b2b_data_models/)
+To set up a Braze Salesforce Sales Cloud webhook that updates leads in Salesforce, you need a common identifier between Salesforce Sales Cloud and Braze. The example below uses the Salesforce `lead_id` as the Braze `external_id`, but you can also accomplish this by using a `user_alias`. For details on this, refer to [B2B Data](https://www.braze.com/docs/user_guide/get_started/b2b_use_cases/b2b_data_models)
 
-This example specifically demonstrates how to update a lead’s lead stage to “MQL” (Marketing Qualified Lead) after a lead crosses a certain lead threshold. This is a core part of our [B2B lead scoring workflow](https://www.braze.com/docs/user_guide/get_started/b2b_use_cases/lead_scoring/) use case.
+This example specifically demonstrates how to update a lead’s lead stage to “MQL” (Marketing Qualified Lead) after a lead crosses a certain lead threshold. This is a core part of our [B2B lead scoring workflow](https://www.braze.com/docs/user_guide/get_started/b2b_use_cases/lead_scoring) use case.
 
 ### Step 1: Collect your `client_id` and `client_secret`
 

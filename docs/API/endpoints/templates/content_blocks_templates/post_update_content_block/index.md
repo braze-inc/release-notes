@@ -1,21 +1,21 @@
-<div id='api_uffoicqguwpd' class='api_div' data-search-keywords='prerequisites content_block_id name description content state tags liquid_tag created_at message'>
+<div id='api_qbaaprpopacm' class='api_div' data-search-keywords='prerequisites content_block_id name description content state tags liquid_tag created_at message'>
 <h1 id="update-content-block">Update Content Block</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/content_blocks/update</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to update a <a href="/docs/user_guide/messaging/design_and_edit/content_blocks/">Content Block</a>.</p>
+  <p>Use this endpoint to update a <a href="/docs/user_guide/messaging/design_and_edit/content_blocks">Content Block</a>.</p>
 </blockquote>
 
 <p><strong>Tip:</strong></p>
 
-<p>You can also call this endpoint through the <a href="/docs/user_guide/brazeai/mcp_server/">Braze MCP server</a> using the <a href="/docs/user_guide/brazeai/mcp_server/available_api_functions/#content-blocks"><code class="language-plaintext highlighter-rouge">update_content_block</code></a> function. This lets AI tools like Claude and Cursor update content blocks through natural language prompts.</p>
+<p>You can also call this endpoint through the <a href="/docs/user_guide/brazeai/mcp_server">Braze MCP server</a> using the <a href="/docs/user_guide/brazeai/mcp_server/available_api_functions#content-blocks"><code class="language-plaintext highlighter-rouge">update_content_block</code></a> function. This lets AI tools like Claude and Cursor update content blocks through natural language prompts.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -99,7 +99,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       <td><code class="language-plaintext highlighter-rouge">tags</code></td>
       <td>Optional</td>
       <td>Array of strings</td>
-      <td><a href="/docs/user_guide/messaging/governance/tags/">Tags</a> must already exist.</td>
+      <td><a href="/docs/user_guide/messaging/governance/tags">Tags</a> must already exist.</td>
     </tr>
   </tbody>
 </table>

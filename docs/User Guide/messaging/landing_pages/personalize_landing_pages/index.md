@@ -5,13 +5,13 @@
 **Important:**
 
 
-Liquid personalization for landing pages is only available on the Pro tier of landing pages. Currently, [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/), [multi-language](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/multi_language_settings/), and [promotion codes](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes) are not supported with Liquid personalization in landing pages.
+Liquid personalization for landing pages is only available on the Pro tier of landing pages. Currently, [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content), [multi-language](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/multi_language_settings), and [promotion codes](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes) are not supported with Liquid personalization in landing pages.
 
 
 
 ## Inserting Liquid
 
-In the drag-and-drop editor, you can insert Liquid personalization both in the editor and in the page or block settings in the right-hand panel. For instructions on implementing Liquid, check out our dedicated [Liquid documentation](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/conditional_logic/#using-liquid).
+In the drag-and-drop editor, you can insert Liquid personalization both in the editor and in the page or block settings in the right-hand panel. For instructions on implementing Liquid, check out our dedicated [Liquid documentation](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/conditional_logic#using-liquid).
 
 ![Landing page editor with Liquid personalization added.](https://www.braze.com/docs/assets/img/landing_pages/lp_liquid_.png?371784f5ff969d7007c0d4065ecbb365)
 
@@ -37,13 +37,13 @@ To prevent your page from exceeding size limits or experiencing slow load times,
 - Doesn't continuously loops through or references large data sets.
 - Doesn't rely on extensive mathematical or conditional logic within the Liquid block.
 
-Additionally, avoid embedding large scripts, stylesheets, and base64-encoded assets directly in your landing page code. These inline assets count toward the page size limit and can slow down rendering. Instead, upload fonts, images, stylesheets, and scripts to the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/). Assets served from the media library are hosted on Braze's CDN, so they do not get processed for Liquid rendering and do not count toward the page size limit.
+Additionally, avoid embedding large scripts, stylesheets, and base64-encoded assets directly in your landing page code. These inline assets count toward the page size limit and can slow down rendering. Instead, upload fonts, images, stylesheets, and scripts to the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library). Assets served from the media library are hosted on Braze's CDN, so they do not get processed for Liquid rendering and do not count toward the page size limit.
 
 ### Use Liquid for identified and anonymous users 
 
 Liquid can customize the landing page experience for both identified and anonymous visitors.
 
-- **Identified users:** Link to the landing page from a Braze message and include the [landing page Liquid tag](https://www.braze.com/docs/user_guide/messaging/landing_pages/tracking_users/#using-landing-page-liquid-tags). This associates the user with their Braze profile and personalizes the page experience.
+- **Identified users:** Link to the landing page from a Braze message and include the [landing page Liquid tag](https://www.braze.com/docs/user_guide/messaging/landing_pages/tracking_users#using-landing-page-liquid-tags). This associates the user with their Braze profile and personalizes the page experience.
 - **Anonymous visitors:** Use Liquid for contextual, non-profile-based content, such as a random number or a time-of-day greeting.
 
 ### Pre-fill form fields
@@ -70,7 +70,7 @@ You can use a **Custom Code** block to fetch data from external endpoints and di
 **Warning:**
 
 
-When fetching external data, you are responsible for the security of your implementation. External identifiers used in API calls should be UUIDs or use an equivalently secure naming scheme, see [User ID naming best practices](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids/#naming-best-practices).
+When fetching external data, you are responsible for the security of your implementation. External identifiers used in API calls should be UUIDs or use an equivalently secure naming scheme, see [User ID naming best practices](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids#naming-best-practices).
 
 
 
@@ -126,7 +126,7 @@ When fetching external data in landing pages:
 - **Loading states:** Users will see placeholder text until the endpoint responds. Consider adding a loading indicator or skeleton screen.
 - **Error handling:** If the endpoint fails or is slow to respond, the page may appear broken. Implement appropriate error messages and fallbacks.
 - **Performance:** The page loads immediately, but data appears after the external request completes. Keep your API responses fast for the best user experience.
-- **Security:** Ensure your API endpoint validates the identifier and only returns data the user is authorized to see. Implement rate limiting to prevent abuse. For guidance on choosing secure identifiers, see [User ID naming best practices](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids/#naming-best-practices).
+- **Security:** Ensure your API endpoint validates the identifier and only returns data the user is authorized to see. Implement rate limiting to prevent abuse. For guidance on choosing secure identifiers, see [User ID naming best practices](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids#naming-best-practices).
 
 ## Fallback pages
 

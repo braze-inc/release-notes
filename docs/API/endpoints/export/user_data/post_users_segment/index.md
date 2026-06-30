@@ -1,4 +1,4 @@
-<div id='api_vnnwvnrrkluc' class='api_div' data-search-keywords='prerequisites segment_id callback_endpoint fields_to_export output_format message object_prefix url created_at external_id user_aliases alias_name alias_label braze_id first_name last_name email dob home_city country phone language time_zone last_coordinates gender total_revenue attributed_campaign attributed_source attributed_adgroup attributed_ad push_subscribe email_subscribe custom_attributes custom_events name first last count purchases devices model os carrier idfv idfa google_ad_id roku_ad_id ad_tracking_enabled push_tokens app platform token device_id notifications_enabled provisionally_opted_in apps version sessions first_used last_used campaigns_received last_received engaged opened_email opened_push clicked_email clicked_triggered_in_app_message converted api_campaign_id variation_name variation_api_id in_control canvases_received api_canvas_id last_received_message last_entered last_exited steps_received api_canvas_step_id cards_clicked random_bucket push_opted_in_at multiple_converted last_entered_control_at'>
+<div id='api_rkxhhtavgxsu' class='api_div' data-search-keywords='prerequisites segment_id callback_endpoint fields_to_export output_format message object_prefix url created_at external_id user_aliases alias_name alias_label braze_id first_name last_name email dob home_city country phone language time_zone last_coordinates gender total_revenue attributed_campaign attributed_source attributed_adgroup attributed_ad push_subscribe email_subscribe custom_attributes custom_events name first last count purchases devices model os carrier idfv idfa google_ad_id roku_ad_id ad_tracking_enabled push_tokens app platform token device_id notifications_enabled provisionally_opted_in apps version sessions first_used last_used campaigns_received last_received engaged opened_email opened_push clicked_email clicked_triggered_in_app_message converted api_campaign_id variation_name variation_api_id in_control canvases_received api_canvas_id last_received_message last_entered last_exited steps_received api_canvas_step_id cards_clicked random_bucket push_opted_in_at multiple_converted last_entered_control_at'>
 <h1 id="export-user-profile-by-segment">Export user profile by segment</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/export/segment</p>
@@ -24,7 +24,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">users.export.segment</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.export.segment</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -141,7 +141,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">segment_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>Identifier for the segment to be exported. See <a href="/docs/api/identifier_types/">segment identifier</a>.<br /><br />The <code class="language-plaintext highlighter-rouge">segment_id</code> for a given segment can be found from the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers/">API Keys</a> page within your Braze account or you can use the <a href="/docs/api/endpoints/export/segments/get_segment/">Segment List Endpoint</a>.</td>
+      <td>Identifier for the segment to be exported. See <a href="/docs/api/identifier_types">segment identifier</a>.<br /><br />The <code class="language-plaintext highlighter-rouge">segment_id</code> for a given segment can be found from the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers">API Keys</a> page within your Braze account or you can use the <a href="/docs/api/endpoints/export/segments/get_segment">Segment List Endpoint</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">callback_endpoint</code></td>
@@ -239,22 +239,22 @@ Authorization: Bearer YOUR-REST-API-KEY
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attributed_campaign</code></td>
       <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration/">attribution integrations</a>, if set up. Identifier for a particular ad campaign.</td>
+      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for a particular ad campaign.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attributed_source</code></td>
       <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration/">attribution integrations</a>, if set up. Identifier for the platform the ad was on.</td>
+      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for the platform the ad was on.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attributed_adgroup</code></td>
       <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration/">attribution integrations</a>, if set up. Identifier for an optional sub-grouping below campaign.</td>
+      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for an optional sub-grouping below campaign.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attributed_ad</code></td>
       <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration/">attribution integrations</a>, if set up. Identifier for an optional sub-grouping below campaign and ad group.</td>
+      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for an optional sub-grouping below campaign and ad group.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">push_subscribe</code></td>
@@ -396,7 +396,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   <li>Both <code class="language-plaintext highlighter-rouge">custom_events</code> and <code class="language-plaintext highlighter-rouge">purchases</code> contain fields for <code class="language-plaintext highlighter-rouge">first</code> and <code class="language-plaintext highlighter-rouge">count</code>. Both of these fields reflect information from all time, and are not limited to data from the last 90 days. For example, if a particular user first did the event 90 days ago, this is accurately reflected in the <code class="language-plaintext highlighter-rouge">first</code> field, and the <code class="language-plaintext highlighter-rouge">count</code> field takes into account events that occurred prior to the last 90 days as well.</li>
   <li>The number of concurrent segment exports a company can run at the endpoint level is capped at 100. Attempts that surpass this limit result in an error.</li>
   <li>Attempting to export a segment a second time while the first export job is still running results in a 429 error.</li>
-  <li>A <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/?sdktab=cloud%20storage%20connected#segment-export-api-downloads"><code class="language-plaintext highlighter-rouge">403 Forbidden</code> response</a> often means the export file isn’t ready yet.</li>
+  <li>A <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting?sdktab=cloud%20storage%20connected#segment-export-api-downloads"><code class="language-plaintext highlighter-rouge">403 Forbidden</code> response</a> often means the export file isn’t ready yet.</li>
   <li>Subscription group data is not available through segment exports. To identify users by subscription status, create a separate segment based on subscription group membership and export that segment.</li>
 </ul>
 
@@ -416,7 +416,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h3 id="null-url"><code class="language-plaintext highlighter-rouge">null</code> URL</h3>
 
-<p>If the response includes <code class="language-plaintext highlighter-rouge">"url": null</code> (or omits a download URL) and you have configured a <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/">cloud storage integration</a> such as an Amazon S3 bucket or Azure Blob Storage container, Braze writes the export to your connected bucket or container instead of returning a temporary download URL in the API response. Retrieve the files from your connected cloud storage bucket or container.</p>
+<p>If the response includes <code class="language-plaintext highlighter-rouge">"url": null</code> (or omits a download URL) and you have configured a <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting">cloud storage integration</a> such as an Amazon S3 bucket or Azure Blob Storage container, Braze writes the export to your connected bucket or container instead of returning a temporary download URL in the API response. Retrieve the files from your connected cloud storage bucket or container.</p>
 
 <p>If a download URL is returned, it is valid for only a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.</p>
 
@@ -847,13 +847,13 @@ Authorization: Bearer YOUR-REST-API-KEY
     </span><span class="p">],</span><span class="w">
     </span><span class="nl">"braze_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5fbd99bac125ca40511f2cb1"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"random_bucket"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2365</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"first_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"last_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"example@braze.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"first_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Alex"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"last_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Smith"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"example@example.com"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dob"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1980-12-21"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"home_city"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Chicago"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"country"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"+442071838750"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"+15555550123"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"language"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"time_zone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Eastern Time (US &amp; Canada)"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"last_coordinates"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">41.84157636433568</span><span class="p">,</span><span class="w"> </span><span class="mf">-87.83520818508256</span><span class="p">],</span><span class="w">
@@ -974,6 +974,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <p><strong>Tip:</strong></p>
 
-<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/">Export troubleshooting</a>.</p>
+<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting">Export troubleshooting</a>.</p>
 
 </div>

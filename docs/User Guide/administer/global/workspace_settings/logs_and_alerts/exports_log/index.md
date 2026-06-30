@@ -1,6 +1,6 @@
 # Exports log
 
-> Use the **Exports Log** page to view the status of export jobs and cancel ongoing exports directly from the Braze platform. <br><br> Currently, the exports log only supports segment exports. For information about the segment export tool, refer to [Exporting segment data to CSV](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/segment_data_to_csv/).
+> Use the **Exports Log** page to view the status of export jobs and cancel ongoing exports directly from the Braze platform. <br><br> Currently, the exports log only supports segment exports. For information about the segment export tool, refer to [Exporting segment data to CSV](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/segment_data_to_csv).
 
 You can find the exports log by going to **Settings** > **Exports Log**. Here, you can view previous exports, the name of exported segments, the status of each export, the source of each export, and when each export started and finished. 
 

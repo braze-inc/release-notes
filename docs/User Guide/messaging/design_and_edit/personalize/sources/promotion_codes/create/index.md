@@ -45,7 +45,7 @@ Make sure your CSV file follows these guidelines:
 - Includes a column for promotion codes.
 - Has one promotion code per row.
 
-You can use our built-in integration with [Voucherify](https://www.braze.com/docs/partners/ecommerce/loyalty/voucherify/) or [Talon.One](https://www.braze.com/docs/partners/ecommerce/loyalty/talonone/) to create and export promotion codes.
+You can use our built-in integration with [Voucherify](https://www.braze.com/docs/partners/ecommerce/loyalty/voucherify) or [Talon.One](https://www.braze.com/docs/partners/ecommerce/loyalty/talonone) to create and export promotion codes.
 
 **Important:**
 

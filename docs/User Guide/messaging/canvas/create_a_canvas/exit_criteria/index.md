@@ -5,7 +5,7 @@
 > How quickly a user fully leaves the Canvas depends on the step they're in, especially for Delay steps.
 > For more information, see [How users exit](#how-users-exit).
 
-### How users exit
+## How users exit
 
 When a user performs the exit event, Braze immediately marks them to exit the Canvas. After that, they don't advance to any later steps.
 
@@ -100,6 +100,6 @@ Let's say we want to target users who haven't placed an order at our backpack su
 **Tip:**
 
 
-To set up exit criteria that compare event properties against Canvas entry properties (for example, exiting only when a user purchases the specific item they abandoned), see [Matching exit criteria to entry events](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/matching_entry_and_exit_criteria/).
+To set up exit criteria that compare event properties against Canvas entry properties (for example, exiting only when a user purchases the specific item they abandoned), see [Matching exit criteria to entry events](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/matching_entry_and_exit_criteria).
 
 

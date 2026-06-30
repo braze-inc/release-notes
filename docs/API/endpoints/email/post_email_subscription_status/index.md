@@ -1,4 +1,4 @@
-<div id='api_ybnlqlpdajsn' class='api_div' data-search-keywords='prerequisites email subscription_state'>
+<div id='api_kykdkhmsewap' class='api_div' data-search-keywords='prerequisites email subscription_state'>
 <h1 id="change-email-subscription-status">Change email subscription status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/status</p>
@@ -16,7 +16,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">email.status</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">email.status</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -41,7 +41,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 3
 4
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-  </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@braze.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@example.com"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"subscription_state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subscribed"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
@@ -75,7 +75,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="troubleshooting-sendgrid-email-blocks">Troubleshooting SendGrid email blocks</h2>
 
-<p>When SendGrid blocks a recipient, update subscription status with this endpoint and review engagement with segment filters. Use <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> soft-bounce events for deliverability monitoring, and confirm subscription state before retrying sends.</p>
+<p>When SendGrid blocks a recipient, update subscription status with this endpoint and review engagement with segment filters. Use <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> soft-bounce events for deliverability monitoring, and confirm subscription state before retrying sends.</p>
 
 <h2 id="example-request">Example request</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -89,7 +89,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
-  "email": "example@braze.com",
+  "email": "example@example.com",
   "subscription_state": "subscribed"
 }'
 </pre></td></tr></tbody></table></code></pre></div></div>

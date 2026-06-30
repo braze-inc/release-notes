@@ -1,4 +1,4 @@
-<div id='api_vaeigkzwisil' class='api_div' data-search-keywords='prerequisites schedule_id schedule messages'>
+<div id='api_ddgswtahmhhq' class='api_div' data-search-keywords='prerequisites schedule_id schedule messages'>
 <h1 id="update-scheduled-messages">Update scheduled messages</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/schedule/update</p>
@@ -14,7 +14,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">messages.schedule.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">messages.schedule.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -75,13 +75,13 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">schedule</code></td>
       <td>Optional</td>
       <td>Object</td>
-      <td>See <a href="/docs/api/objects_filters/schedule_object/">schedule object</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/schedule_object">schedule object</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">messages</code></td>
       <td>Optional</td>
       <td>Object</td>
-      <td>See <a href="/docs/api/objects_filters/#messaging-objects">available messaging objects</a>.</td>
+      <td>See <a href="/docs/api/objects_filters#messaging-objects">available messaging objects</a>.</td>
     </tr>
   </tbody>
 </table>

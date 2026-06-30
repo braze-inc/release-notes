@@ -5,8 +5,8 @@ The Braze Swift SDK helps you integrate Braze messaging, analytics, and user eng
 
 To get started, refer to the following resources:
 
-- [Braze User Guide](https://www.braze.com/docs/user_guide/introduction/)
-- [Braze Developer Guide](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift)
+- [Braze User Guide](https://www.braze.com/docs/user_guide/introduction)
+- [Braze Developer Guide](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift)
 
 ## Quickstart
 
@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 AppDelegate.braze?.changeUser(userId: "Jane Doe")
 ```
 
-For more information about advanced integration options, see the [Braze Developer Guide](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift).
+For more information about advanced integration options, see the [Braze Developer Guide](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift).
 
 ## Version support
 

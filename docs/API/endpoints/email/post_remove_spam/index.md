@@ -1,4 +1,4 @@
-<div id='api_lryelkxdllml' class='api_div' data-search-keywords='prerequisites email'>
+<div id='api_csqcqedmjlxp' class='api_div' data-search-keywords='prerequisites email'>
 <h1 id="remove-email-addresses-from-spam-list">Remove email addresses from spam list</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/spam/remove</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">email.spam.remove</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">email.spam.remove</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -35,7 +35,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 2
 3
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-  </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@braze.com"</span><span class="w">
+  </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@example.com"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -71,7 +71,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "email": "example@braze.com"
+  "email": "example@example.com"
 }'
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>

@@ -1,4 +1,4 @@
-<div id='api_ttldphxzqexg' class='api_div' data-search-keywords='prerequisites schedule_id'>
+<div id='api_fgbfsccoisou' class='api_div' data-search-keywords='prerequisites schedule_id'>
 <h1 id="delete-scheduled-messages">Delete scheduled messages</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/schedule/delete</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">messages.schedule.delete</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">messages.schedule.delete</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

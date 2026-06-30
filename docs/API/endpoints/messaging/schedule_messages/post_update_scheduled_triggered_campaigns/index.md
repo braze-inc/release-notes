@@ -1,4 +1,4 @@
-<div id='api_ieunqrshquxq' class='api_div' data-search-keywords='prerequisites campaign_id schedule_id schedule'>
+<div id='api_rjgrwwaaxfxc' class='api_div' data-search-keywords='prerequisites campaign_id schedule_id schedule'>
 <h1 id="update-scheduled-api-triggered-campaigns">Update scheduled API-triggered campaigns</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/schedule/update</p>
@@ -10,7 +10,7 @@
 
 <p>You can pass in <code class="language-plaintext highlighter-rouge">trigger_properties</code> that Braze templates into the message itself.</p>
 
-<p>Note that to send messages with this endpoint, you must have a campaign ID, created when you build an <a href="/docs/api/api_campaigns/">API-Triggered Campaign</a>.</p>
+<p>Note that to send messages with this endpoint, you must have a campaign ID, created when you build an <a href="/docs/api/api_campaigns">API-Triggered Campaign</a>.</p>
 
 <p>Any schedule completely overwrites the one you provided in the create schedule request or previous update schedule requests. For example, if you originally set the schedule to <code class="language-plaintext highlighter-rouge">"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}</code> and then later update it to <code class="language-plaintext highlighter-rouge">"schedule" : {"time" : "2015-02-20T14:14:47"}</code>, Braze sends the message at the specified time in UTC, not in the user’s local time.</p>
 
@@ -20,7 +20,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">campaigns.trigger.schedule.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">campaigns.trigger.schedule.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -72,7 +72,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">campaign_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">campaign identifier</a></td>
+      <td>See <a href="/docs/api/identifier_types">campaign identifier</a></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">schedule_id</code></td>
@@ -84,7 +84,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">schedule</code></td>
       <td>Required</td>
       <td>Object</td>
-      <td>See <a href="/docs/api/objects_filters/schedule_object/">schedule object</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/schedule_object">schedule object</a>.</td>
     </tr>
   </tbody>
 </table>

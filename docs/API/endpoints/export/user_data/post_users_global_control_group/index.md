@@ -1,4 +1,4 @@
-<div id='api_oniqpwtryhdt' class='api_div' data-search-keywords='prerequisites callback_endpoint fields_to_export output_format message object_prefix url created_at external_id user_aliases alias_name alias_label braze_id first_name last_name email dob home_city country phone language time_zone last_coordinates gender total_revenue attributed_campaign attributed_source attributed_adgroup attributed_ad custom_attributes custom_events name first last count purchases devices model os carrier idfv idfa google_ad_id roku_ad_id ad_tracking_enabled apps platform version sessions first_used last_used random_bucket device_id'>
+<div id='api_uklziojsaqss' class='api_div' data-search-keywords='prerequisites callback_endpoint fields_to_export output_format message object_prefix url created_at external_id user_aliases alias_name alias_label braze_id first_name last_name email dob home_city country phone language time_zone last_coordinates gender total_revenue attributed_campaign attributed_source attributed_adgroup attributed_ad custom_attributes custom_events name first last count purchases devices model os carrier idfv idfa google_ad_id roku_ad_id ad_tracking_enabled apps platform version sessions first_used last_used random_bucket device_id'>
 <h1 id="export-user-profile-by-global-control-group">Export user profile by Global Control Group</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/export/global_control_group</p>
@@ -10,13 +10,13 @@
 
 <p>User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). All users in a Global Control Group are included each time the files are generated. Braze doesn’t store a history of when users are added and removed from a Global Control Group.</p>
 
-<p>To locate the segment identifier of your Global Control Group, refer to <a href="/docs/api/identifier_types/?tab=segments#segment-identifier">API identifier types</a>.</p>
+<p>To locate the segment identifier of your Global Control Group, refer to <a href="/docs/api/identifier_types?tab=segments#segment-identifier">API identifier types</a>.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">users.export.global_control_group</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.export.global_control_group</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -30,7 +30,7 @@
 
 <h2 id="credentials-based-response-details">Credentials-based response details</h2>
 
-<p>If you have added your <a href="/docs/partners/data_and_analytics/cloud_storage/amazon_s3/">S3</a> or <a href="/docs/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/">Azure</a> credentials to Braze through the respective <strong>Technology Partners</strong> page, then each file is uploaded in your bucket as a ZIP file with the key format that looks like <code class="language-plaintext highlighter-rouge">segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip</code>. If using Azure, make sure that you have the <strong>Make this the default data export destination</strong> box checked in the Azure partner overview page in Braze.</p>
+<p>If you have added your <a href="/docs/partners/data_and_analytics/cloud_storage/amazon_s3">S3</a> or <a href="/docs/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents">Azure</a> credentials to Braze through the respective <strong>Technology Partners</strong> page, then each file is uploaded in your bucket as a ZIP file with the key format that looks like <code class="language-plaintext highlighter-rouge">segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip</code>. If using Azure, make sure that you have the <strong>Make this the default data export destination</strong> box checked in the Azure partner overview page in Braze.</p>
 
 <p>Generally, we create one file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the <code class="language-plaintext highlighter-rouge">json</code> files to a single file if needed. If you specify an <code class="language-plaintext highlighter-rouge">output_format</code> of <code class="language-plaintext highlighter-rouge">gzip</code>, then the file extension is <code class="language-plaintext highlighter-rouge">.gz</code> instead of <code class="language-plaintext highlighter-rouge">.zip</code>.</p>
 
@@ -198,22 +198,22 @@ Authorization: Bearer YOUR-REST-API-KEY
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attributed_campaign</code></td>
       <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration/">attribution integrations</a>, if set up. Identifier for a particular ad campaign.</td>
+      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for a particular ad campaign.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attributed_source</code></td>
       <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration/">attribution integrations</a>, if set up. Identifier for the platform the ad was on.</td>
+      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for the platform the ad was on.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attributed_adgroup</code></td>
       <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration/">attribution integrations</a>, if set up. Identifier for an optional sub-grouping below campaign.</td>
+      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for an optional sub-grouping below campaign.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attributed_ad</code></td>
       <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration/">attribution integrations</a>, if set up. Identifier for an optional sub-grouping below campaign and ad group.</td>
+      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for an optional sub-grouping below campaign and ad group.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">braze_id</code></td>
@@ -574,13 +574,13 @@ Authorization: Bearer YOUR-REST-API-KEY
     </span><span class="p">],</span><span class="w">
     </span><span class="nl">"braze_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5fbd99bac125ca40511f2cb1"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"random_bucket"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2365</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"first_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"last_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"example@braze.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"first_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Alex"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"last_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Smith"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"example@example.com"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dob"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1980-12-21"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"home_city"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Chicago"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"country"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"+442071838750"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"+15555550123"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"language"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"time_zone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Eastern Time (US &amp; Canada)"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"last_coordinates"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">41.84157636433568</span><span class="p">,</span><span class="w"> </span><span class="mf">-87.83520818508256</span><span class="p">],</span><span class="w">

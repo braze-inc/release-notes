@@ -6,12 +6,12 @@
 
 In-app messages are triggered when the SDK logs one of the following custom event types: `Session Start`, `Push Click`, `Any Purchase`, `Specific Purchase`,and `Custom Event` (the last two containing robust property filters).
 
-At the start of a user's session, Braze will deliver all eligible in-app messages to their device, while simultaneously prefetching assets to minimize display latency. If the trigger event has more than one eligible in-app message, only the message with the highest priority will be delivered. For more information, see [Session Lifecycle](https://www.braze.com/docs/developer_guide/analytics/tracking_sessions/#about-the-session-lifecycle).
+At the start of a user's session, Braze will deliver all eligible in-app messages to their device, while simultaneously prefetching assets to minimize display latency. If the trigger event has more than one eligible in-app message, only the message with the highest priority will be delivered. For more information, see [Session Lifecycle](https://www.braze.com/docs/developer_guide/analytics/tracking_sessions#about-the-session-lifecycle).
 
 **Note:**
 
 
-In-app messages can't be triggered through the API or by API events&#8212;only custom events logged by the SDK. To learn more about logging, see [Logging Custom Events](https://www.braze.com/docs/developer_guide/analytics/logging_events/).
+In-app messages can't be triggered through the API or by API events&#8212;only custom events logged by the SDK. To learn more about logging, see [Logging Custom Events](https://www.braze.com/docs/developer_guide/analytics/logging_events).
 
 
 
@@ -21,7 +21,7 @@ Braze sends the following types of in-app messages to user devices upon session 
 
 ### `inapp` (standard)
 
-An `inapp` (or "[standard](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/#standard-message-types)") in-app message is already templated with the necessary information, such as custom attributes that Braze already knows. Generally, when the in-app message downloads to the device, the trigger event causes the SDK to display the `inapp` in-app message even when the device is offline or on airplane mode.
+An `inapp` (or "[standard](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages#standard-message-types)") in-app message is already templated with the necessary information, such as custom attributes that Braze already knows. Generally, when the in-app message downloads to the device, the trigger event causes the SDK to display the `inapp` in-app message even when the device is offline or on airplane mode.
 
 ### `templated_iam` (templated)
 
@@ -165,10 +165,10 @@ For more advanced control over message timing, including deferring and restoring
 
 
 
-1. Implement the [`IInAppMessageManagerListener`](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?sdktab=android&tab=global%20listener#android_step-1-implement-the-custom-manager-listener) to set a custom listener.
+1. Implement the [`IInAppMessageManagerListener`](https://www.braze.com/docs/developer_guide/in_app_messages/customization?sdktab=android&tab=global%20listener#android_step-1-implement-the-custom-manager-listener) to set a custom listener.
 2. Update your [`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html) method to return [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html).
 
-For more advanced control over message timing, including displaying later and re-enqueuing, refer to our [Customizing Messages](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?tab=global%20listener&subtab=kotlin#android_step-2-instruct-braze-to-use-the-custom-manager-listener) page.
+For more advanced control over message timing, including displaying later and re-enqueuing, refer to our [Customizing Messages](https://www.braze.com/docs/developer_guide/in_app_messages/customization?tab=global%20listener&subtab=kotlin#android_step-2-instruct-braze-to-use-the-custom-manager-listener) page.
 
 
 
@@ -317,7 +317,7 @@ Braze.getInstance(applicationContext).subscribeToPushNotificationEvents { event 
 
 #### Step 2: Create a push campaign
 
-Create a [silent push campaign](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=android) triggered via the server sent event.
+Create a [silent push campaign](https://www.braze.com/docs/developer_guide/push_notifications/silent?sdktab=android) triggered via the server sent event.
 
 ![Delivery step of a silent push campaign configured for action-based delivery with a server_event custom event trigger.](https://www.braze.com/docs/assets/img_archive/serverSentPush.png?ba3ed6cdbb6033f36d1e824f9ac5c350)
 
@@ -383,7 +383,7 @@ Due to a push message being used to record an SDK logged custom event, Braze wil
 
 #### Step 2: Create a silent push campaign
 
-Create a [silent push campaign](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=swift) that is triggered via the server-sent event. 
+Create a [silent push campaign](https://www.braze.com/docs/developer_guide/push_notifications/silent?sdktab=swift) that is triggered via the server-sent event. 
 
 ![An action-based delivery in-app message campaign that will be delivered to users whose user profiles have the custom event "server_event".](https://www.braze.com/docs/assets/img_archive/iosServerSentPush.png?f2398c5efce1eef517dc7eabe0b5801b)
 

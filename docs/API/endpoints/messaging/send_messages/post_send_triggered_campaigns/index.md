@@ -1,4 +1,4 @@
-<div id='api_mxkpsziwfcpn' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
+<div id='api_nbyexpwxcofq' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
 <h1 id="send-campaign-messages-using-api-triggered-delivery">Send campaign messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/send</p>
@@ -10,7 +10,7 @@
 
 <p>API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom using your API.</p>
 
-<p>If you’re targeting a segment, a record of your request is stored in the <a href="https://dashboard.braze.com/app_settings/developer_console/activitylog/">Developer Console</a>. To send messages with this endpoint, you must have a <a href="/docs/api/identifier_types/">campaign ID</a> created when you build an <a href="/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery">API-triggered campaign</a>.</p>
+<p>If you’re targeting a segment, a record of your request is stored in the <a href="https://dashboard.braze.com/app_settings/developer_console/activitylog/">Developer Console</a>. To send messages with this endpoint, you must have a <a href="/docs/api/identifier_types">campaign ID</a> created when you build an <a href="/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery">API-triggered campaign</a>.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05" class="seeme">See me in Postman</a></div>
 
@@ -110,19 +110,19 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">campaign_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">campaign identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">campaign identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">send_id</code></td>
       <td>Optional</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">send identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">send identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">trigger_properties</code></td>
       <td>Optional</td>
       <td>Object</td>
-      <td>See <a href="/docs/api/objects_filters/trigger_properties_object/">trigger properties</a>. Personalization key-value pairs apply to all users in this request.</td>
+      <td>See <a href="/docs/api/objects_filters/trigger_properties_object">trigger properties</a>. Personalization key-value pairs apply to all users in this request.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">broadcast</code></td>
@@ -134,13 +134,13 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">audience</code></td>
       <td>Optional</td>
       <td>Connected audience object</td>
-      <td>See <a href="/docs/api/objects_filters/connected_audience/">connected audience</a>. When you include <code class="language-plaintext highlighter-rouge">audience</code>, the message is sent only to users who match the defined filters, such as custom attributes and subscription statuses.</td>
+      <td>See <a href="/docs/api/objects_filters/connected_audience">connected audience</a>. When you include <code class="language-plaintext highlighter-rouge">audience</code>, the message is sent only to users who match the defined filters, such as custom attributes and subscription statuses.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">recipients</code></td>
       <td>Optional</td>
       <td>Array</td>
-      <td>See <a href="/docs/api/objects_filters/recipient_object/">recipients object</a>.<br /><br />If <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> is <code class="language-plaintext highlighter-rouge">false</code>, an <code class="language-plaintext highlighter-rouge">attributes</code> object must be included.<br /><br />You can update a user’s subscription group status by including <code class="language-plaintext highlighter-rouge">subscription_groups</code> in the nested <code class="language-plaintext highlighter-rouge">attributes</code> object. For more details, refer to <a href="/docs/api/objects_filters/user_attributes_object">User attributes object</a>.<br /><br />If <code class="language-plaintext highlighter-rouge">recipients</code> is not provided and <code class="language-plaintext highlighter-rouge">broadcast</code> is set to true, the message is sent to the entire segment configured as the campaign’s target audience in the Braze dashboard.<br /><br />If <code class="language-plaintext highlighter-rouge">email</code> is the identifier, you must include <a href="/docs/api/endpoints/user_data/post_user_identify#identifying-users-by-email"><code class="language-plaintext highlighter-rouge">prioritization</code></a> in the recipients object.</td>
+      <td>See <a href="/docs/api/objects_filters/recipient_object">recipients object</a>.<br /><br />If <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> is <code class="language-plaintext highlighter-rouge">false</code>, an <code class="language-plaintext highlighter-rouge">attributes</code> object must be included.<br /><br />You can update a user’s subscription group status by including <code class="language-plaintext highlighter-rouge">subscription_groups</code> in the nested <code class="language-plaintext highlighter-rouge">attributes</code> object. For more details, refer to <a href="/docs/api/objects_filters/user_attributes_object">User attributes object</a>.<br /><br />If <code class="language-plaintext highlighter-rouge">recipients</code> is not provided and <code class="language-plaintext highlighter-rouge">broadcast</code> is set to true, the message is sent to the entire segment configured as the campaign’s target audience in the Braze dashboard.<br /><br />If <code class="language-plaintext highlighter-rouge">email</code> is the identifier, you must include <a href="/docs/api/endpoints/user_data/post_user_identify#identifying-users-by-email"><code class="language-plaintext highlighter-rouge">prioritization</code></a> in the recipients object.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attachments</code></td>
@@ -155,7 +155,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <p>This section discusses how Braze picks a user profile for sending and what happens when one profile is not selected.</p>
 
-<p>A user’s subscription group status can be updated using the inclusion of a <code class="language-plaintext highlighter-rouge">subscription_groups</code> parameter within the <code class="language-plaintext highlighter-rouge">attributes</code> object. For more details, refer to <a href="/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens">User attributes object</a>.</p>
+<p>A user’s subscription group status can be updated using the inclusion of a <code class="language-plaintext highlighter-rouge">subscription_groups</code> parameter within the <code class="language-plaintext highlighter-rouge">attributes</code> object. For more details, refer to <a href="/docs/api/objects_filters/user_attributes_object#migrating-push-tokens">User attributes object</a>.</p>
 
 <h4 id="recipient-limits-and-profile-creation">Recipient limits and profile creation</h4>
 
@@ -195,7 +195,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <p><strong>Note:</strong></p>
 
-<p>The <code class="language-plaintext highlighter-rouge">segment_id</code> parameter is not supported for this endpoint. To target a segment, configure the segment in the campaign’s target audience settings in the Braze dashboard and use <code class="language-plaintext highlighter-rouge">"broadcast": true</code>, or use the <code class="language-plaintext highlighter-rouge">audience</code> parameter with <a href="/docs/api/objects_filters/connected_audience/">Connected Audience</a> filters.</p>
+<p>The <code class="language-plaintext highlighter-rouge">segment_id</code> parameter is not supported for this endpoint. To target a segment, configure the segment in the campaign’s target audience settings in the Braze dashboard and use <code class="language-plaintext highlighter-rouge">"broadcast": true</code>, or use the <code class="language-plaintext highlighter-rouge">audience</code> parameter with <a href="/docs/api/objects_filters/connected_audience">Connected Audience</a> filters.</p>
 
 <h2 id="example-request">Example request</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -354,16 +354,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="response-details">Response details</h2>
 
-<p>Message-sending endpoint responses include the message’s <code class="language-plaintext highlighter-rouge">dispatch_id</code> for reference back to the dispatch of the message. The <code class="language-plaintext highlighter-rouge">dispatch_id</code> is the ID of the message dispatch, a unique ID for each transmission sent from Braze. When using this endpoint, you receive a single <code class="language-plaintext highlighter-rouge">dispatch_id</code> for an entire batched set of users. For more information on <code class="language-plaintext highlighter-rouge">dispatch_id</code> check out our documentation on <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">Dispatch ID behavior</a>.</p>
+<p>Message-sending endpoint responses include the message’s <code class="language-plaintext highlighter-rouge">dispatch_id</code> for reference back to the dispatch of the message. The <code class="language-plaintext highlighter-rouge">dispatch_id</code> is the ID of the message dispatch, a unique ID for each transmission sent from Braze. When using this endpoint, you receive a single <code class="language-plaintext highlighter-rouge">dispatch_id</code> for an entire batched set of users. For more information on <code class="language-plaintext highlighter-rouge">dispatch_id</code> check out our documentation on <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id">Dispatch ID behavior</a>.</p>
 
-<p>If your request encounters a fatal error, refer to <a href="/docs/api/errors/#fatal-errors">Errors and responses</a> for the error code and description.</p>
+<p>If your request encounters a fatal error, refer to <a href="/docs/api/errors#fatal-errors">Errors and responses</a> for the error code and description.</p>
 
 <h2 id="attributes-object-for-campaigns">Attributes object for campaigns</h2>
 
-<p>Braze has a messaging object called <code class="language-plaintext highlighter-rouge">attributes</code> that lets you add, create, or update attributes and values for a user before you send them an API-triggered campaign. Using the <code class="language-plaintext highlighter-rouge">campaign/trigger/send</code> endpoint as this API call processes the user attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by <a href="/docs/user_guide/messaging/ab_testing/concepts/race_conditions/">race conditions</a>.</p>
+<p>Braze has a messaging object called <code class="language-plaintext highlighter-rouge">attributes</code> that lets you add, create, or update attributes and values for a user before you send them an API-triggered campaign. Using the <code class="language-plaintext highlighter-rouge">campaign/trigger/send</code> endpoint as this API call processes the user attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by <a href="/docs/user_guide/messaging/ab_testing/concepts/race_conditions">race conditions</a>.</p>
 
 <p><strong>Tip:</strong></p>
 
-<p>Looking for the Canvas version of this endpoint? Check out <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint">Sending Canvas messages using API-triggered delivery</a>.</p>
+<p>Looking for the Canvas version of this endpoint? Check out <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases#create-send-endpoint">Sending Canvas messages using API-triggered delivery</a>.</p>
 
 </div>

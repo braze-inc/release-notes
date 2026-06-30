@@ -108,7 +108,7 @@ COPY INTO
 ![AWS Properties tab](https://www.braze.com/docs/assets/img/aws-properties.png?842cf60a53909de8ce2e9978762fa540){: height="50%" width="50%"}
 
 {: start="2"}
-2. Create new events for each set of Currents Data, as needed ([Messaging](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/), [User Behavior](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/)), or both.
+2. Create new events for each set of Currents Data, as needed ([Messaging](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events), [User Behavior](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events)), or both.
 
 ![Creating a new event in AWS](https://www.braze.com/docs/assets/img/aws-events.png?ecf244dc3e6f400bb857c64c3235b1a3){: height="50%" width="50%"}
 
@@ -117,14 +117,14 @@ COPY INTO
 
 ## Configuring auto-ingest Snowpipes {#auto-ingest-snowpipes}
 
-For the AWS SQS configuration to produce the correct tables, you must define the structure of the incoming data properly by using the following examples and schemas determined in our Currents documentation for [Message Engagement or Messaging Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/), [User or Customer Behavior Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/), or both.
+For the AWS SQS configuration to produce the correct tables, you must define the structure of the incoming data properly by using the following examples and schemas determined in our Currents documentation for [Message Engagement or Messaging Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events), [User or Customer Behavior Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events), or both.
 
 It is critical to structure your tables in accordance with the Braze Currents schemas, as Braze Currents will continuously load data into them through specific fields with specific data types. For example, a `user_id` will be loaded as a string and called a `user_id` in Currents data.
 
 **Note:**
 
 
-  Depending on your Currents integration, you may have different events you must set up (such as [Message Engagement or Messaging Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/) and [User or Customer Behavior Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/)). You can also write a script for some or all of this process.
+  Depending on your Currents integration, you may have different events you must set up (such as [Message Engagement or Messaging Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events) and [User or Customer Behavior Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events)). You can also write a script for some or all of this process.
 
 
 

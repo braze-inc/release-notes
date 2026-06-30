@@ -7,18 +7,18 @@
 
 
 
-#### RCS-verified sender
+### RCS-verified sender
 
 RCS is a modern messaging system that offers more features than traditional SMS, introducing capabilities like branded sender IDs, rich media, and interactive content, such as scrollable carousels, quick replies, CTA buttons, and more. It’s designed to provide a sleeker and more engaging user experience.  
 
-##### Details
+#### Details
 
 | Visual components | Access | Throughput | MMS enabled | 1-way vs. 2-way |
 | --- | --- | --- | --- | --- |
 | - Brand name<br>- logo<br>- optional caption<br> - verified badge | 4—6 weeks for carrier approval | Throughput and delivery rely on the recipient having an active data connection (mobile data or Wi-Fi). RCS doesn’t rely on fixed network-imposed limits like SMS does; RCS messages are sent over data networks rather than the traditional cellular signaling channels used by SMS. | N/A | 2-way |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Details" }
 
-##### Pros and cons
+#### Pros and cons
 
 | Pros |
 | ---- |

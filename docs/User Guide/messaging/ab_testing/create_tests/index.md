@@ -7,7 +7,7 @@
 ## Step 1: Create your campaign
 
 1. Go to **Messaging** > **Campaigns**.
-2. Select **Create campaign** and a channel for the campaign from the section that allows multivariate and A/B testing. For detailed documentation on each messaging channel, refer to [Create a campaign](https://www.braze.com/docs/user_guide/messaging/campaigns/creating_campaign/).
+2. Select **Create campaign** and a channel for the campaign from the section that allows multivariate and A/B testing. For detailed documentation on each messaging channel, refer to [Create a campaign](https://www.braze.com/docs/user_guide/messaging/campaigns/creating_campaign).
 
 ## Step 2: Compose your variants
 
@@ -19,14 +19,14 @@ For some ideas on how to get started differentiating your variants, refer to [Ti
 
 ## Step 3: Schedule your campaign
 
-Scheduling your multivariate campaign works the same as scheduling any other Braze campaign. All standard [delivery types](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/) are available.
+Scheduling your multivariate campaign works the same as scheduling any other Braze campaign. All standard [delivery types](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types) are available.
 
 After a multivariate test begins, you can't make changes to the campaign. If you change the parameters, such as the subject line or HTML body, Braze considers the experiment compromised and immediately disables the experiment.
 
 **Important:**
 
 
-To use an [optimization](https://www.braze.com/docs/user_guide/messaging/ab_testing/optimizations/) (available for select channels), schedule your campaign to deliver once. Optimizations aren't available for campaigns that repeat or have re-eligibility turned on.
+To use an [optimization](https://www.braze.com/docs/user_guide/messaging/ab_testing/optimizations) (available for select channels), schedule your campaign to deliver once. Optimizations aren't available for campaigns that repeat or have re-eligibility turned on.
 
 
 
@@ -34,7 +34,7 @@ To use an [optimization](https://www.braze.com/docs/user_guide/messaging/ab_test
 
 Select segments to target, then distribute the members across your selected variants and the optional [control group](#including-a-control-group). For best practices around choosing a segment to test with, see [Choosing a segment](#choosing-a-segment).
 
-For push, email, and webhook campaigns scheduled to send once, you can also use an [optimization](https://www.braze.com/docs/user_guide/messaging/ab_testing/optimizations/). An optimization reserves a portion of your target audience from the A/B test and holds them for a second optimized send based on the results from the first test.
+For push, email, and webhook campaigns scheduled to send once, you can also use an [optimization](https://www.braze.com/docs/user_guide/messaging/ab_testing/optimizations). An optimization reserves a portion of your target audience from the A/B test and holds them for a second optimized send based on the results from the first test.
 
 ### Control group {#including-a-control-group}
 
@@ -57,17 +57,17 @@ When using rate limiting with an A/B test, the rate limit isn't applied to the c
 
 #### Control groups with Intelligent Selection
 
-The size of the control group for a campaign with [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_selection/) is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20%, and the variants are split evenly across the remaining 80%. However, if you have enough variants that each variant is sent to less than 20% of users, then the control group must become smaller. When Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
+The size of the control group for a campaign with [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_selection) is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20%, and the variants are split evenly across the remaining 80%. However, if you have enough variants that each variant is sent to less than 20% of users, then the control group must become smaller. When Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
 
 ## Step 5: Designate a conversion event (optional)
 
 Setting a conversion event for a campaign allows you to see how many recipients of that campaign performed a particular action after receiving it.
 
-This only affects the test if you chose **Primary Conversion Rate** in the previous steps. For more information, refer to [Conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events/). 
+This only affects the test if you chose **Primary Conversion Rate** in the previous steps. For more information, refer to [Conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events). 
 
 ## Step 6: Review and launch
 
-On the confirmation page, review the details of your multivariate campaign and launch the test! Next, learn how to [understand your test results](https://www.braze.com/docs/user_guide/messaging/ab_testing/analytics/).
+On the confirmation page, review the details of your multivariate campaign and launch the test! Next, learn how to [understand your test results](https://www.braze.com/docs/user_guide/messaging/ab_testing/analytics).
 
 ## Things to know
 
@@ -90,7 +90,7 @@ Depending on which channel you select, you can test different components of your
 **Tip:**
 
 
-When running A/B tests, don't forget to generate [funnel reports](https://www.braze.com/docs/user_guide/analytics/reports/funnel_reports/) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
+When running A/B tests, don't forget to generate [funnel reports](https://www.braze.com/docs/user_guide/analytics/reports/funnel_reports) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
 
 
 
@@ -98,7 +98,7 @@ In addition, the ideal length of your test may also vary depending on the channe
 
 For instance, if you're testing a push, you may achieve significant results faster than when testing email, since users see pushes immediately, but it may be days before they see or open an email. If you're testing in-app messages, keep in mind that users must open the app to see the campaign, so you should wait longer to collect results from both your most active app openers as well as your more typical users.
 
-If you're unsure how long your test should run for, the [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_selection/) feature can be useful for finding a Winning Variant efficiently.
+If you're unsure how long your test should run for, the [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_selection) feature can be useful for finding a Winning Variant efficiently.
 
 ### Choosing a segment {#choosing-a-segment}
 
@@ -132,6 +132,6 @@ Note that if a control variant doesn't consist of any Canvas steps, exit criteri
 **Note:**
 
 
-If you manually use random bucket numbers for control groups, check out [things to watch for](https://www.braze.com/docs/user_guide/audience/global_control_group/#things-to-watch-for) in your control groups.
+If you manually use random bucket numbers for control groups, check out [things to watch for](https://www.braze.com/docs/user_guide/audience/global_control_group#things-to-watch-for) in your control groups.
 
 

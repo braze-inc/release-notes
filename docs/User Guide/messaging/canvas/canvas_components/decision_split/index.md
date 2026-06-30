@@ -12,7 +12,7 @@ To create a decision split in your workflow, add a step to your Canvas. Then, dr
 
 ### Define your split
 
-How do you want to split your users? You can use [segments](https://www.braze.com/docs/user_guide/audience/segments/) and filters to draw the line. Essentially, you're creating a `true` or `false` query that will evaluate your users and then funnel them to one step or another. You must use at least one segment or one filter. You do not need to use both a segment and a filter.
+How do you want to split your users? You can use [segments](https://www.braze.com/docs/user_guide/audience/segments) and filters to draw the line. Essentially, you're creating a `true` or `false` query that will evaluate your users and then funnel them to one step or another. You must use at least one segment or one filter. You do not need to use both a segment and a filter.
 
 ![A Decision Split step with the filter "Foreground Push Enabled is true" selected.](https://www.braze.com/docs/assets/img/define-split-2.png?7dc82c6222a05b056ec2d283e102d49c)
 

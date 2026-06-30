@@ -2,7 +2,7 @@
 
 > Selections are groups of data that you can use to personalize a message for each user in your campaign. When you use a selection, you’re essentially setting up custom filters based on specific columns in your catalog. This could include filters for brand, size, location, date added, and more. It gives you control over what you’re showing to users by allowing you to define criteria that items must meet first.<br><br>This page covers how to create and use selections with your catalogs.
 
-After creating a [catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs/), you can further reference your catalog data by incorporating selections in your Braze campaigns or recommendations.
+After creating a [catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs), you can further reference your catalog data by incorporating selections in your Braze campaigns or recommendations.
 
 ![The Selections section in an example catalog.](https://www.braze.com/docs/assets/img_archive/catalog_selections1.png?4e33a32b7e73c8cff3c5aa88d107316c)
 
@@ -10,11 +10,11 @@ After creating a [catalog](https://www.braze.com/docs/user_guide/data/activation
 
 - You can create up to 30 selections per catalog.
 - You can add up to 10 filters per selection.
-- Selections are great for refining recommendations from Braze catalog data. If you're looking for inspiration, check out [About item recommendations](https://www.braze.com/docs/user_guide/brazeai/recommendations/) for example use cases.
+- Selections are great for refining recommendations from Braze catalog data. If you're looking for inspiration, check out [About item recommendations](https://www.braze.com/docs/user_guide/brazeai/recommendations) for example use cases.
 
 ## Geolocation filters
 
-If your catalog includes a [Geolocation field type](https://www.braze.com/docs/user_guide/data/activation/catalogs/create/#supported-data-types), you can use geolocation-based filters in your selections to surface catalog items based on their proximity to a geographic point.
+If your catalog includes a [Geolocation field type](https://www.braze.com/docs/user_guide/data/activation/catalogs/create#supported-data-types), you can use geolocation-based filters in your selections to surface catalog items based on their proximity to a geographic point.
 
 Two geolocation operators are available:
 

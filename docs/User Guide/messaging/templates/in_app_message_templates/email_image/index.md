@@ -44,7 +44,7 @@ When creating a drag-and-drop in-app message, select **Email sign-up with backgr
 
 ### Step 3: Customize your email sign-up component
 
-To get started building your email sign-up form, select the email capture element in the editor. By default, collected email addresses will have the global subscription group **Subscribed**. To opt in users to specific subscription groups, refer to [Updating email subscription states](https://www.braze.com/docs/user_guide/channels/email/subscriptions/#updating-email-subscription-states).
+To get started building your email sign-up form, select the email capture element in the editor. By default, collected email addresses will have the global subscription group **Subscribed**. To opt in users to specific subscription groups, refer to [Updating email subscription states](https://www.braze.com/docs/user_guide/channels/email/subscriptions#updating-email-subscription-states).
 
 You can customize the placeholder text and label text of the email capture element.
 
@@ -86,7 +86,7 @@ You can customize the placeholder text and label text of the email capture eleme
 
 ### Step 5: Style your message
 
-Customize the look and feel of your sign-up form using the drag-and-drop [in-app message components](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize/style_settings/#message-components). Add your own background image by replacing the default background image URL in the **Message container** menu or remove the URL and select your image from the [Media Library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/).
+Customize the look and feel of your sign-up form using the drag-and-drop [in-app message components](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize/style_settings#message-components). Add your own background image by replacing the default background image URL in the **Message container** menu or remove the URL and select your image from the [Media Library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library).
 
 ## Analyzing the results
 

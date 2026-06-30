@@ -106,7 +106,7 @@ The destination URL needs to be provided for any link with a base URL that match
 **Important:**
 
 
-**Sending template messages via the API**: WhatsApp click tracking (using `brz.ai` or a custom tracking domain and the **Click tracking URL** field in the message composer) isn't supported when sending WhatsApp template messages through the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages/).
+**Sending template messages via the API**: WhatsApp click tracking (using `brz.ai` or a custom tracking domain and the **Click tracking URL** field in the message composer) isn't supported when sending WhatsApp template messages through the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages).
 
 If you send a template message through the API, you can populate CTA URL variables (using `button_variables`), but Braze doesn't generate a click-tracking URL or redirect link in the API request flow. To use click tracking, send the template from the Braze dashboard or via a Braze campaign trigger.
 
@@ -157,7 +157,7 @@ If a draft is created within an active Canvas, a shortened URL won’t be genera
 
 ## Reporting
 
-When click tracking is turned on or used with supported templates, the WhatsApp performance table includes the column **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on WhatsApp metrics, refer to [WhatsApp message performance](https://www.braze.com/docs/user_guide/channels/whatsapp/reporting/).
+When click tracking is turned on or used with supported templates, the WhatsApp performance table includes the column **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on WhatsApp metrics, refer to [WhatsApp message performance](https://www.braze.com/docs/user_guide/channels/whatsapp/reporting).
 
 ![WhatsApp Message Canvas step.](https://www.braze.com/docs/assets/img/whatsapp/click_tracking/canvas_step.png?ab23bbc44f1e832fd27353869cbd1c71){: style="max-width:30%;"}
 

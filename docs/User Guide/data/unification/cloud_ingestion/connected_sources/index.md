@@ -4,7 +4,7 @@
 
 After adding a connected source to your Braze workspace, you can create a CDI segment within Segment Extensions. CDI Segment Extensions let you write SQL that directly queries your data warehouse (using data there that’s made available through your CDI Connected Source), and creates and maintains a group of users that can be targeted within Braze. 
 
-For more information on creating a segment with this source, refer to [CDI Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/cdi_segments/).
+For more information on creating a segment with this source, refer to [CDI Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/cdi_segments).
 
 **Warning:**
 
@@ -370,11 +370,11 @@ Depending on the configuration of your Microsoft Fabric account, you may need to
 
 Create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Connected Sources**, and then select **Create new data sync** > **Snowflake Import**.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_tab.png?2550c0d1db9c4ef4c0032cb484d47ec7){: style="max-width:80%;"}
+![Connected Sources page with options to create a new data sync.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_tab.png?2550c0d1db9c4ef4c0032cb484d47ec7){: style="max-width:80%;"}
 
 Input the information for your Snowflake data warehouse and source schema, then proceed to the next step.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_sf_1.png?34da30284cfbf721277d79c3199f2637)
+![Snowflake connection fields for warehouse and source schema.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_sf_1.png?34da30284cfbf721277d79c3199f2637)
 
 #### Step 3.2: Configure sync details
 
@@ -389,13 +389,13 @@ If queries are consistently timing out and you have set a maximum runtime of 60 
 
 
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_sf_2.png?4c516abf79f88ffcef9503de23839ca6)
+![Snowflake sync name and maximum runtime configuration.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_sf_2.png?4c516abf79f88ffcef9503de23839ca6)
 
 #### Step 3.3: Note the public key  
 
 In the **Test connection** step, take note of the RSA public key. You'll need it to complete the integration in Snowflake.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_sf_3.png?499b859de1e8760927f18fb22cccb790)
+![Snowflake Test connection step showing the RSA public key.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_sf_3.png?499b859de1e8760927f18fb22cccb790)
 
 
 
@@ -403,11 +403,11 @@ In the **Test connection** step, take note of the RSA public key. You'll need it
 
 Create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Connected Sources**, and then select **Create data connection** > **Amazon Redshift Import**.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_tab.png?2550c0d1db9c4ef4c0032cb484d47ec7){: style="max-width:80%;"}
+![Connected Sources page with options to create a new data sync.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_tab.png?2550c0d1db9c4ef4c0032cb484d47ec7){: style="max-width:80%;"}
 
 Input the information for your Redshift data warehouse and source schema, then proceed to the next step.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_rd_1.png?8a041080a12aad19310ea1ee797bc08e)
+![Redshift connection fields for warehouse and source schema.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_rd_1.png?8a041080a12aad19310ea1ee797bc08e)
 
 #### Step 3.2: Configure sync details
 
@@ -422,13 +422,13 @@ If queries are consistently timing out and you have set a maximum runtime of 60 
 
 
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_rd_2.png?8306f4dbd621ccb04899b819c031a19d)
+![Redshift sync name and maximum runtime configuration.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_rd_2.png?8306f4dbd621ccb04899b819c031a19d)
 
 #### Step 3.3: Note the public key (optional)
 
 If your credentials have **Connect with SSH Tunnel** selected, take note of the RSA public key in the **Test connection** step. You'll need it to complete the integration in Redshift.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_rd_3.png?e6efca3231de1cad0909797457a73213)
+![Redshift Test connection step showing the RSA public key.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_rd_3.png?e6efca3231de1cad0909797457a73213)
 
 
 
@@ -436,11 +436,11 @@ If your credentials have **Connect with SSH Tunnel** selected, take note of the 
 
 Create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Connected Sources**, and then select **Create new data sync** > **Google BigQuery Import**.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_tab.png?2550c0d1db9c4ef4c0032cb484d47ec7){: style="max-width:80%;"}
+![Connected Sources page with options to create a new data sync.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_tab.png?2550c0d1db9c4ef4c0032cb484d47ec7){: style="max-width:80%;"}
 
 Input the information for your BigQuery project and dataset, then proceed to the next step.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_bg_1.png?19a3bc8306d9dc7e25f870072586aa61)
+![Screenshot related to step 3.1: add bigquery connection information and source table.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_bg_1.png?19a3bc8306d9dc7e25f870072586aa61)
 
 #### Step 3.2: Configure sync details
 
@@ -455,13 +455,13 @@ If queries are consistently timing out and you have set a maximum runtime of 60 
 
 
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_bg_2.png?91948da454b8279c10db64646d55349d)
+![Screenshot related to step 3.2: configure sync details.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_bg_2.png?91948da454b8279c10db64646d55349d)
 
 #### Step 3.3: Test the connection
 
 Select **Test Connection** to verify that the list of tables visible to the user is what you expect, then select **Done**. Your connected source is now created and ready to use in CDI Segment Extensions.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_test_connection.png?48c30775b743229d2b9b58c847f53bb6)
+![Test Connection step showing tables available to the connected source.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_test_connection.png?48c30775b743229d2b9b58c847f53bb6)
 
 
 
@@ -469,11 +469,11 @@ Select **Test Connection** to verify that the list of tables visible to the user
 
 Create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Connected Sources**, and then select **Create new data sync** > **Databricks Import**.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_tab.png?2550c0d1db9c4ef4c0032cb484d47ec7){: style="max-width:80%;"}
+![Connected Sources page with options to create a new data sync.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_tab.png?2550c0d1db9c4ef4c0032cb484d47ec7){: style="max-width:80%;"}
 
 Input the information for your Databricks credentials and, optional catalog and source schema, then proceed to the next step.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_databricks_1.png?f28b76a02fe9ab75a4281f60d8e4a1c8)
+![Databricks connection fields for credentials and source schema.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_databricks_1.png?f28b76a02fe9ab75a4281f60d8e4a1c8)
 
 #### Step 3.2: Configure sync details
 
@@ -488,13 +488,13 @@ If queries are consistently timing out and you have set a maximum runtime of 60 
 
 
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_db_2.png?4d897c3f6311d5858b30258dc027ff98)
+![Databricks sync name and maximum runtime configuration.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_db_2.png?4d897c3f6311d5858b30258dc027ff98)
 
 #### Step 3.3: Test the connection
 
 Select **Test Connection** to verify that the list of tables visible to the user is what you expect, then select **Done**. Your connected source is now created and ready to use in CDI Segment Extensions.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_test_connection.png?48c30775b743229d2b9b58c847f53bb6)
+![Test Connection step showing tables available to the connected source.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_test_connection.png?48c30775b743229d2b9b58c847f53bb6)
 
 
 
@@ -502,11 +502,11 @@ Select **Test Connection** to verify that the list of tables visible to the user
 
 Create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Connected Sources**, and then select **Create new data sync** > **Microsoft Fabric Import**.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_tab.png?2550c0d1db9c4ef4c0032cb484d47ec7){: style="max-width:80%;"}
+![Connected Sources page with options to create a new data sync.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_tab.png?2550c0d1db9c4ef4c0032cb484d47ec7){: style="max-width:80%;"}
 
 Input the information for your Microsoft Fabric credentials, as well as the source warehouse and schema, then proceed to the next step.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_mf_1.png?eb54c9e8616c7bda20885b90fd5a5d4a)
+![Microsoft Fabric connection fields for credentials and source schema.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_mf_1.png?eb54c9e8616c7bda20885b90fd5a5d4a)
 
 #### Step 3.2: Configure sync details
 
@@ -521,13 +521,13 @@ If queries are consistently timing out and you have set a maximum runtime of 60 
 
 
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_mf_2.png?5f77b0cd6c90a779699d93316633b7e8)
+![Microsoft Fabric sync name and maximum runtime configuration.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_mf_2.png?5f77b0cd6c90a779699d93316633b7e8)
 
 #### Step 3.3: Test the connection
 
 Select **Test Connection** to verify that the list of tables visible to the user is what you expect, then select **Done**. Your connected source is now created and ready to use in CDI Segment Extensions.
 
-![](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_test_connection.png?48c30775b743229d2b9b58c847f53bb6)
+![Test Connection step showing tables available to the connected source.](https://www.braze.com/docs/assets/img/cloud_ingestion/connected_source_test_connection.png?48c30775b743229d2b9b58c847f53bb6)
 
 
 
@@ -604,7 +604,7 @@ You may set up multiple sources with Braze, but each source should be configured
 
 ## Using the connected source
 
-After the source is created, you can use it to create one or more CDI Segment Extensions. For more information on creating a segment with this source, refer to the [CDI Segment Extensions documentation](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/cdi_segments/).
+After the source is created, you can use it to create one or more CDI Segment Extensions. For more information on creating a segment with this source, refer to the [CDI Segment Extensions documentation](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/cdi_segments).
 
 **Note:**
 

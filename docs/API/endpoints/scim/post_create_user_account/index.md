@@ -1,4 +1,4 @@
-<div id='api_hpbykjpndjuj' class='api_div' data-search-keywords='prerequisites schemas id name department permissions roles team'>
+<div id='api_bajioktjdpkw' class='api_div' data-search-keywords='prerequisites schemas id name department permissions roles team'>
 <h1 id="create-new-dashboard-user-account">Create new dashboard user account</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/scim/v2/Users</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need a SCIM token. You’ll use your service origin as the <code class="language-plaintext highlighter-rouge">X-Request-Origin</code> header. For more information, refer to <a href="/docs/scim/automated_user_provisioning/">Automated user provisioning</a>.</p>
+<p>To use this endpoint, you’ll need a SCIM token. You’ll use your service origin as the <code class="language-plaintext highlighter-rouge">X-Request-Origin</code> header. For more information, refer to <a href="/docs/scim/automated_user_provisioning">Automated user provisioning</a>.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -74,7 +74,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 40
 </pre></td><td class="rouge-code"><pre>{
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
-    "userName": "user@test.com",
+    "userName": "user@example.com",
     "name": {
         "givenName": "Test",
         "familyName": "User"
@@ -148,13 +148,13 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
       <td><code class="language-plaintext highlighter-rouge">department</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>Valid department string from the <a href="/docs/scim_api_appendix/#department-strings">department string documentation</a>.</td>
+      <td>Valid department string from the <a href="/docs/scim_api_appendix#department-strings">department string documentation</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">permissions</code></td>
       <td>Optional</td>
       <td>JSON object</td>
-      <td>Permissions object as described in the <a href="/docs/scim_api_appendix/#permissions-object">permissions object documentation</a>.</td>
+      <td>Permissions object as described in the <a href="/docs/scim_api_appendix#permissions-object">permissions object documentation</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -202,7 +202,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 <span class="nt">--header</span> <span class="s1">'Authorization: Bearer YOUR-SCIM–TOKEN-HERE'</span> <span class="se">\</span>
 <span class="nt">--data</span> raw <span class="s1">'{
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
-    "userName": "user@test.com",
+    "userName": "user@example.com",
     "name": {
         "givenName": "Test",
         "familyName": "User"
@@ -311,7 +311,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
     </span><span class="nl">"schemas"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"urn:ietf:params:scim:schemas:core:2.0:User"</span><span class="p">],</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dfa245b7-24195aec-887bb3ad-602b3340"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"userName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@test.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"userName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@example.com"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"givenName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"familyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="w">
@@ -412,12 +412,12 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
     <tr>
       <td><code class="language-plaintext highlighter-rouge">department</code></td>
       <td>String</td>
-      <td>Valid department string from the <a href="/docs/scim_api_appendix/#department-strings">department string documentation</a>.</td>
+      <td>Valid department string from the <a href="/docs/scim_api_appendix#department-strings">department string documentation</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">permissions</code></td>
       <td>JSON object</td>
-      <td>Permissions object as described in the <a href="/docs/scim_api_appendix/#permissions-object">permissions object documentation</a>.</td>
+      <td>Permissions object as described in the <a href="/docs/scim_api_appendix#permissions-object">permissions object documentation</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">id</code></td>

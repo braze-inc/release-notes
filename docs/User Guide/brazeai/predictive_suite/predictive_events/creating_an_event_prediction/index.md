@@ -1,6 +1,6 @@
 # Create an event prediction
 
-> A prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_events/).
+> A prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_events).
 
 In Braze, go to **Analytics** > **Predictive Events**.
 
@@ -20,18 +20,18 @@ There is a limit of five concurrently active predictions. Before purchasing Pred
 {: start="2"}
 2. Give your prediction a unique name. You can also provide a description to save any relevant notes.
 
-![](https://www.braze.com/docs/assets/img/purchasePrediction/purchases_step1.png?fea2777da35b97ab42637e769b7f10ba)
+![Screenshot related to step 1: create a new prediction.](https://www.braze.com/docs/assets/img/purchasePrediction/purchases_step1.png?fea2777da35b97ab42637e769b7f10ba)
 
 {: start="3"}
 3. Click **Forward** to move to the next step. <br><br>Optionally, you can click **Build Now** to use all the default settings and skip to the last step of creation. You will have a chance to review the settings before starting the build process. Also, you can return to any step later by clicking it in the top bar.
 
 ## Step 2: Specify event tracking {#event-tracking}
 
-Specify if your users' events are stored in Braze as [purchase events](https://www.braze.com/docs/user_guide/data/activation/events/purchase_events/), [custom events](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/), or the [order placed event](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/?tab=ecommerce.order_placed).
+Specify if your users' events are stored in Braze as [purchase events](https://www.braze.com/docs/user_guide/data/activation/events/purchase_events), [custom events](https://www.braze.com/docs/user_guide/data/activation/events/custom_events), or the [order placed event](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events?tab=ecommerce.order_placed).
 
 Here, you'll see if the selected method provides enough data for Braze to create a machine learning model. If the requirement is not met, try and select the other logging method if it is also used by your application. Unfortunately, if it is not, Braze is unable to create a prediction with the quantity of data available. If you believe you're incorrectly seeing this error, get in touch with your customer success manager.
 
-#### Event window
+### Event window
 
 The event window is the time frame in which you want to predict if a user will perform the event. It can be set up to 60 days. This window is used to query historical data for training the prediction. Additionally, after the prediction is created and users receive scores, the likelihood score indicates how likely a user is to perform the event within the number of days specified by the event window.
 

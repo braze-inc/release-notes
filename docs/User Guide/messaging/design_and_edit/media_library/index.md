@@ -12,7 +12,7 @@
 | "Replace Media Library Assets" permission | Replace the file of an existing media library asset while keeping its URL and asset ID stable |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Media library permissions" }
 
-For more information, see [User permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/).
+For more information, see [User permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions).
 
 ## Media library versus CDN
 
@@ -42,7 +42,7 @@ Later, when drafting a message in Braze, you can pull in your images from the me
 
 **Tip:**
 
- For more help with the media library, check out our [Media library FAQ](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/faq/). 
+ For more help with the media library, check out our [Media library FAQ](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/faq). 
 
 
 ## Replace a file
@@ -68,11 +68,11 @@ To replace an asset, you must have the "Replace Media Library Assets" permission
 
 Some channels create an optimized copy of the image when the message is set up, resulting in a separate URL. Replacing the original media library asset does not update what consumers see for messages created using those channels, including in-app messages, Content Cards, push notifications, and banners.
 
-You can also replace an asset programmatically using the [`PUT /media_library/replace_file`](https://www.braze.com/docs/api/endpoints/media_library/manage_assets/replace_file/) endpoint.
+You can also replace an asset programmatically using the [`PUT /media_library/replace_file`](https://www.braze.com/docs/api/endpoints/media_library/manage_assets/replace_file) endpoint.
 
 ## Image specifications
 
-All images uploaded to the media library must be less than 5&nbsp;MB. Supported file types are PNG, JPEG, GIF, SVG, and WebP. For recommended image sizes and specifications by messaging channel, refer to [Image specifications](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/image_specifications/).
+All images uploaded to the media library must be less than 5&nbsp;MB. Supported file types are PNG, JPEG, GIF, SVG, and WebP. For recommended image sizes and specifications by messaging channel, refer to [Image specifications](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/image_specifications).
 
 **Important:**
 
@@ -88,9 +88,9 @@ You can generate images for your own media library using [GPT Image 2.0](https:/
 **Important:**
 
 
-Before using this feature, review [how your data is used and sent to OpenAI](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#ai-policy).
+Before using this feature, review [how your data is used and sent to OpenAI](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#ai-policy).
 
 
 
-If you don't see **AI Image Generator** on the **Media Library** page, confirm you have **Edit Media Library Assets** permission. If the option is still missing, contact your Braze customer team to confirm your workspace has access to BrazeAI image generation. If generation fails, review the [OpenAI content policy](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#ai-policy).
+If you don't see **AI Image Generator** on the **Media Library** page, confirm you have **Edit Media Library Assets** permission. If the option is still missing, contact your Braze customer team to confirm your workspace has access to BrazeAI image generation. If generation fails, review the [OpenAI content policy](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#ai-policy).
 

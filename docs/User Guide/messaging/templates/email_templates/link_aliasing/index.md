@@ -32,7 +32,7 @@ To create a link alias, open your email body in the campaign or Canvas component
 ### Drag-and-drop editor
 
 1. Select **Edit Email Body** to open the drag-and-drop composer.
-2. In the composer sidebar, select **Content** (alongside **Sending Settings** and **Preview & Test**). For more on this layout, see [Create an email with drag-and-drop](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/).
+2. In the composer sidebar, select **Content** (alongside **Sending Settings** and **Preview & Test**). For more on this layout, see [Create an email with drag-and-drop](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop).
 3. In the **Content** submenu, select **Link Management** (it appears under **Design and Build**). If the submenu is collapsed, expand it using the arrow control on the sidebar.
 
 ### HTML editor
@@ -71,7 +71,7 @@ Here, you can sort, search, and turn off tracking for link aliases.
 **Tip:**
 
 
-Use the [List link alias for campaign](https://www.braze.com/docs/get_campaign_link_alias/) and [List link alias for Canvas](https://www.braze.com/docs/get_canvas_link_alias/) endpoints to extract the `alias` set in each message variant in a campaign or an email-specific Canvas component.
+Use the [List link alias for campaign](https://www.braze.com/docs/get_campaign_link_alias) and [List link alias for Canvas](https://www.braze.com/docs/get_canvas_link_alias) endpoints to extract the `alias` set in each message variant in a campaign or an email-specific Canvas component.
 
 
 
@@ -135,7 +135,7 @@ In the composer sidebar, select **Content** > **Link Management** (under **Desig
 **Tip:**
 
 
-To track link engagement metrics, make sure your link precedes with either HTTP or HTTPS. To turn off click tracking for specific links, refer to [Universal links and App Links](https://www.braze.com/docs/user_guide/channels/email/customize/universal_links_and_app_links/#turning-off-click-tracking-on-a-link-to-link-basis).
+To track link engagement metrics, make sure your link precedes with either HTTP or HTTPS. To turn off click tracking for specific links, refer to [Universal links and App Links](https://www.braze.com/docs/user_guide/channels/email/customize/universal_links_and_app_links#turning-off-click-tracking-on-a-link-to-link-basis).
 
 
 
@@ -164,7 +164,7 @@ If you use the "Clicked Alias in Any Campaign or Canvas Step" segmentation filte
 
 If you use the "Clicked Alias in Campaign" or "Clicked Alias in Canvas" segmentation filter, this filters your users by whether they clicked a specific alias in a specific campaign or Canvas. If multiple users share the same email address and the link alias is clicked, all other users who share the email address have their user profiles updated. These profiles are also updated by delivery and open events, not just click events. 
 
-The following segmentation filters apply to click events that are tracked at the time the event is processed. This means untracked links won't remove existing data and tracking a link won't backfill the data. For more details, see [Segmentation filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters/).
+The following segmentation filters apply to click events that are tracked at the time the event is processed. This means untracked links won't remove existing data and tracking a link won't backfill the data. For more details, see [Segmentation filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters).
 
 #### Untracking links
 
@@ -178,7 +178,7 @@ To view all of the links in your email campaign and their respective total click
 
 ### Email clicks event
 
-If you export your engagement data with Currents, an email click event will be slightly different if you have link aliasing enabled. It will have two additional fields for the [email clicks event](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events#email-clicks-events/) when link aliasing is turned on: `link_id` and `link_alias`.
+If you export your engagement data with Currents, an email click event will be slightly different if you have link aliasing enabled. It will have two additional fields for the [email clicks event](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events#email-clicks-events) when link aliasing is turned on: `link_id` and `link_alias`.
 
 ```json
 // Email Click: users.messages.email.Click
@@ -212,7 +212,7 @@ If you export your engagement data with Currents, an email click event will be s
 **Update:**
 
 
-The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [`dispatch_id` behavior](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/) in Canvas and campaigns.
+The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [`dispatch_id` behavior](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/dispatch_id) in Canvas and campaigns.
 
 _Update noted in August 2019._
 
@@ -245,7 +245,7 @@ Do the following:
 **Note:**
 
 
-When you use [link templates](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_template/) with Liquid-generated URLs, Braze may conservatively normalize the rendered URL after Liquid runs when it contains exactly two `?` characters used as query separators. The second `?` may be rewritten to `&` so Braze changes as little of the URL as possible. <br><br>Braze does not try to fix every duplicate-`?` pattern, and handling of more complex URLs stays intentionally limited. Add the correct `?` or `&` in your markup first, and treat any normalization as a limited safeguard—not a substitute for well-formed URLs or for getting links recognized in **Link Management** when no delimiter is present.
+When you use [link templates](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_template) with Liquid-generated URLs, Braze may conservatively normalize the rendered URL after Liquid runs when it contains exactly two `?` characters used as query separators. The second `?` may be rewritten to `&` so Braze changes as little of the URL as possible. <br><br>Braze does not try to fix every duplicate-`?` pattern, and handling of more complex URLs stays intentionally limited. Add the correct `?` or `&` in your markup first, and treat any normalization as a limited safeguard—not a substitute for well-formed URLs or for getting links recognized in **Link Management** when no delimiter is present.
 
 
 
@@ -284,7 +284,7 @@ Each distinct `href` in the message maps to **one** link ID and one link alias f
 Use the following approaches in Braze first:
 
 - **Campaign and Canvas email analytics:** Review aggregate clicks by link from **Message Analytics** > **Email Performance** > **Preview & Heatmap** with **Show Heatmap** turned on, as described in [Untracking links](#untracking-links).
-- **Per-recipient clicks in Query Builder:** Run the **Email URLs clicked** [Query Builder template](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/query_templates/#email-templates) for a campaign or Canvas. The template surfaces de-personalized links for summary counts; the CSV export includes the user IDs of clickers, the link they clicked, and a timestamp. (De-personalized URLs strip Liquid tags for the summary view; see the template description for details.)
+- **Per-recipient clicks in Query Builder:** Run the **Email URLs clicked** [Query Builder template](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/query_templates#email-templates) for a campaign or Canvas. The template surfaces de-personalized links for summary counts; the CSV export includes the user IDs of clickers, the link they clicked, and a timestamp. (De-personalized URLs strip Liquid tags for the summary view; see the template description for details.)
 - **Alias-level breakdowns in the composer:** If you need each destination (for example, each `offer_id`) to appear as its own row in **Link Management** and in alias-based reporting, use separate `href` values (and therefore separate aliases)—for example, distinct links per branch—instead of one link whose path changes per user.
 
 If you also use streaming engagement exports, email click events include a **`url`** field; see [Email clicks event](#email-clicks-event) on this page for how that payload relates to link aliasing.
@@ -361,7 +361,7 @@ Without the `lid` value, Braze doesn't treat the URL as link-aliased for trackin
 
 Alternatively, you can turn off link aliasing in the dashboard while you plan a backend change. Go to **Settings** > **Email Preferences** > **Link Aliasing Settings**. 
 
-If you can't change your destination systems, contact [Braze Support](https://www.braze.com/docs/braze_support/) to disable link aliasing for your workspace. Note the following considerations if link aliasing is turned off for your workspace:
+If you can't change your destination systems, contact [Braze Support](https://www.braze.com/docs/braze_support) to disable link aliasing for your workspace. Note the following considerations if link aliasing is turned off for your workspace:
 
 - New email messages and Content Blocks typically won't receive new link-alias markup (such as the `lid` query parameter).
 - Existing messages that were created while link aliasing was on can still contain link-alias markup in the HTML. You may need to manually remove leftover `lid` parameters where you no longer want them.

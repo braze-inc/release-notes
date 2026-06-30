@@ -1,6 +1,6 @@
 # Customize the feed for Content Cards
 
-> A Content Card feed is the sequence of Content Cards in your mobile or web applications. This article covers configuring when the feed is refreshed, the order of the cards, managing multiple feeds, and "empty feed" error messages. For the full list of content card types, see [About Content Cards](https://www.braze.com/docs/developer_guide/content_cards/). 
+> A Content Card feed is the sequence of Content Cards in your mobile or web applications. This article covers configuring when the feed is refreshed, the order of the cards, managing multiple feeds, and "empty feed" error messages. For the full list of content card types, see [About Content Cards](https://www.braze.com/docs/developer_guide/content_cards). 
 
 ## About the session lifecycle
 
@@ -66,7 +66,7 @@ function refresh() {
 }
 ```
 
-To open Content Card links in a new browser tab instead of the same tab, set `openCardsInNewTab: true` in your Web SDK initialization options. For more information about initialization options, see [Web SDK repository guide](https://www.braze.com/docs/developer_guide/sdk_repository_guides/web/).
+To open Content Card links in a new browser tab instead of the same tab, set `openCardsInNewTab: true` in your Web SDK initialization options. For more information about initialization options, see [Web SDK repository guide](https://www.braze.com/docs/developer_guide/sdk_repository_guides/web).
 
 
 
@@ -146,7 +146,7 @@ Braze uses a token bucket algorithm to enforce the following rate limits:
 **Important:**
 
 
-The Braze SDK also applies rate limits for performance and reliability. Keep this in mind when running automated tests or performing manual QA. See [Braze SDK rate limits](https://www.braze.com/docs/developer_guide/sdk_integration/rate_limits/) for more information. 
+The Braze SDK also applies rate limits for performance and reliability. Keep this in mind when running automated tests or performing manual QA. See [Braze SDK rate limits](https://www.braze.com/docs/developer_guide/sdk_integration/rate_limits) for more information. 
 
 
 
@@ -413,7 +413,7 @@ The style used to display this message can be found via [`Braze.ContentCardsDisp
 </style>
 ```
 
-For more information on customizing Content Card style elements, see [Customizing style](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/style/).
+For more information on customizing Content Card style elements, see [Customizing style](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/style).
 
 
 To customize the "empty feed" error message with Jetpack Compose, you can pass in an `emptyString` to [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html). You can also pass in [`emptyTextStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-list-styling/index.html#1193499348%2FProperties%2F-1725759721) to `ContentCardListStyling` to further customize this message.
@@ -478,7 +478,7 @@ Content Cards can be filtered on your app so that only specific cards are displa
 
 ### Step 1: Set key-value pairs on cards
 
-When creating a Content Card campaign, set [key-value pair data](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/behavior/) on each card. You will use this key-value pair to categorize cards. Key-value pairs are stored in the `extras` property in the card's data model.
+When creating a Content Card campaign, set [key-value pair data](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/behavior) on each card. You will use this key-value pair to categorize cards. Key-value pairs are stored in the `extras` property in the card's data model.
 
 For this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed in. The value will be whatever your custom feeds will be, such as `home_screen` or `marketing`.
 

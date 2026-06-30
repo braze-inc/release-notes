@@ -4,7 +4,7 @@
 
 ## 4XX errors
 
-`4XX` errors indicate that there's an issue with the request sent to the endpoint. These errors are typically caused by erroneous requests, including malformed parameters, missing authentication headers, or incorrect URLs. Note that these errors also apply to the [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder/).
+`4XX` errors indicate that there's an issue with the request sent to the endpoint. These errors are typically caused by erroneous requests, including malformed parameters, missing authentication headers, or incorrect URLs. Note that these errors also apply to the [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder).
 
 Refer to the following table for error code details and steps to resolve:
 
@@ -142,18 +142,18 @@ When requests are halted, Braze simulates responses with a `598` error code to i
 
 The following error codes contribute to the unhealthy host detector failure count: `408`, `429`, `502`, `503`, `504`, `529`.
 
-For webhooks, Braze automatically retries HTTP requests that were halted by the unhealthy host detector. This automatic retry uses exponential backoff and retries only a few times before failing. For more information on webhook errors, refer to [Errors, retry logic, and timeouts](https://www.braze.com/docs/user_guide/channels/webhooks/create_a_webhook/#errors-retry-logic-and-timeouts).
+For webhooks, Braze automatically retries HTTP requests that were halted by the unhealthy host detector. This automatic retry uses exponential backoff and retries only a few times before failing. For more information on webhook errors, refer to [Errors, retry logic, and timeouts](https://www.braze.com/docs/user_guide/channels/webhooks/create_a_webhook#errors-retry-logic-and-timeouts).
 
-For Connected Content, if requests to the target host are halted by the unhealthy host detector, Braze continues to render messages and follow your Liquid logic as if it received an error response code. If you want to ensure these Connected Content requests are retried when they're halted by the unhealthy host detector, use the `:retry` option. For more information on the `:retry` option, see [Connected Content retries](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/connected_content_retries/).
+For Connected Content, if requests to the target host are halted by the unhealthy host detector, Braze continues to render messages and follow your Liquid logic as if it received an error response code. If you want to ensure these Connected Content requests are retried when they're halted by the unhealthy host detector, use the `:retry` option. For more information on the `:retry` option, see [Connected Content retries](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/connected_content_retries).
 
-If you believe the unhealthy host detection may be causing issues, contact [Braze Support](https://www.braze.com/docs/support_contact/).
+If you believe the unhealthy host detection may be causing issues, contact [Braze Support](https://www.braze.com/docs/support_contact).
 
 ### Connected Content returns no response body
 
 If a Connected Content call renders as blank in your message preview or send, check:
 
 - **Non-breaking spaces in the URL:** Braze strips non-breaking spaces (`&nbsp;` or Unicode `U+00A0`) from Connected Content URLs before making the request. If your URL was copied from a document or dashboard field that inserted non-breaking spaces between characters, the request may fail or return no usable body. Re-type the URL in plain text or remove hidden spaces, then preview again.
-- **HTTP errors and empty bodies:** For status codes above 300 or blocked hosts, Connected Content can render an empty string. See [Making an API call](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call/) and review failures in the **Message Activity Log**.
+- **HTTP errors and empty bodies:** For status codes above 300 or blocked hosts, Connected Content can render an empty string. See [Making an API call](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call) and review failures in the **Message Activity Log**.
 
 ## Automated emails and Message Activity Log entries
 
@@ -171,7 +171,7 @@ If you experience more than 100,000 webhook or Connected Content endpoint errors
 **Note:**
 
 
-You can configure the error threshold per workspace. To adjust this threshold, contact [Braze Support](https://www.braze.com/docs/support_contact/).
+You can configure the error threshold per workspace. To adjust this threshold, contact [Braze Support](https://www.braze.com/docs/support_contact).
 
 
 
@@ -189,7 +189,7 @@ To sign up to receive these emails, do the following:
 
 ### Message Activity Log entries
 
-If a failure occurs, there is at least one entry in the [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/) related to it. If the request is retried and eventually succeeds, those details are available in Currents and Snowflake Data Share. Note that even if a request eventually succeeds after a retry, the errors can still trigger the automated email.
+If a failure occurs, there is at least one entry in the [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log) related to it. If the request is retried and eventually succeeds, those details are available in Currents and Snowflake Data Share. Note that even if a request eventually succeeds after a retry, the errors can still trigger the automated email.
 
 ### Additional failure insights in Braze Currents
 
@@ -202,4 +202,4 @@ Connected Content requests are not included in these webhook failure events.
 
 
 
-For more information, refer to the [Message engagement events glossary](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/).
+For more information, refer to the [Message engagement events glossary](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events).

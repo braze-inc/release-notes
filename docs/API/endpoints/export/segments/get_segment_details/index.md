@@ -1,4 +1,4 @@
-<div id='api_usqegjfnyydo' class='api_div' data-search-keywords='prerequisites message created_at updated_at name description text_description tags teams'>
+<div id='api_irfsttyrehta' class='api_div' data-search-keywords='prerequisites message created_at updated_at name description text_description tags teams'>
 <h1 id="export-segment-details">Export segment details</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/segments/details</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">segments.details</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">segments.details</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -40,7 +40,7 @@
       <td><code class="language-plaintext highlighter-rouge">segment_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">Segment API identifier</a>.<br /><br /> The <code class="language-plaintext highlighter-rouge">segment_id</code> for a given segment can be found on the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers/">API Keys</a> page within your Braze account or you can use the <a href="/docs/api/endpoints/export/segments/get_segment/">Export segment list endpoint</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">Segment API identifier</a>.<br /><br /> The <code class="language-plaintext highlighter-rouge">segment_id</code> for a given segment can be found on the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers">API Keys</a> page within your Braze account or you can use the <a href="/docs/api/endpoints/export/segments/get_segment">Export segment list endpoint</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -79,6 +79,6 @@
 
 <p><strong>Tip:</strong></p>
 
-<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/">Export troubleshooting</a>.</p>
+<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting">Export troubleshooting</a>.</p>
 
 </div>

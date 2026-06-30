@@ -1,4 +1,4 @@
-<div id='api_nhhntxieovjc' class='api_div' data-search-keywords='prerequisites campaign_id send_id recipients audience broadcast trigger_properties schedule time in_local_time at_optimal_time dispatch_id schedule_id message'>
+<div id='api_ffxrijxnorlk' class='api_div' data-search-keywords='prerequisites campaign_id send_id recipients audience broadcast trigger_properties schedule time in_local_time at_optimal_time dispatch_id schedule_id message'>
 <h1 id="schedule-api-triggered-campaigns">Schedule API-triggered campaigns</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/schedule/create</p>
@@ -10,13 +10,13 @@
 
 <p>You can pass in <code class="language-plaintext highlighter-rouge">trigger_properties</code> that will be templated into the message itself.</p>
 
-<p>Note that to send messages with this endpoint, you must have a <a href="/docs/api/identifier_types/">campaign ID</a>, created when you build an <a href="/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery/">API-triggered campaign</a>.</p>
+<p>Note that to send messages with this endpoint, you must have a <a href="/docs/api/identifier_types">campaign ID</a>, created when you build an <a href="/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery">API-triggered campaign</a>.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">campaigns.trigger.schedule.create</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">campaigns.trigger.schedule.create</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -89,25 +89,25 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">campaign_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">campaign identifier</a></td>
+      <td>See <a href="/docs/api/identifier_types">campaign identifier</a></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">send_id</code></td>
       <td>Optional</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">send identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">send identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">recipients</code></td>
       <td>Optional</td>
       <td>Array of recipients objects</td>
-      <td>See <a href="/docs/api/objects_filters/recipient_object/">recipients object</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/recipient_object">recipients object</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">audience</code></td>
       <td>Optional</td>
       <td>Connected audience object</td>
-      <td>See <a href="/docs/api/objects_filters/connected_audience/">connected audience</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/connected_audience">connected audience</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">broadcast</code></td>
@@ -119,13 +119,13 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">trigger_properties</code></td>
       <td>Optional</td>
       <td>Object</td>
-      <td>Personalization key-value pairs for all users in this send. See <a href="/docs/api/objects_filters/trigger_properties_object/">trigger properties</a>.</td>
+      <td>Personalization key-value pairs for all users in this send. See <a href="/docs/api/objects_filters/trigger_properties_object">trigger properties</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">schedule</code></td>
       <td>Required</td>
       <td>Schedule object</td>
-      <td>See <a href="/docs/api/objects_filters/schedule_object/">schedule object</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/schedule_object">schedule object</a>.</td>
     </tr>
   </tbody>
 </table>

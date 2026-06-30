@@ -52,8 +52,6 @@ Sending patterns influence domain reputation. When they misalign with the follow
 
 
 
-
-
 ## Message content
 
 Content filters help MBPs protect their users from phishing, malware, and unwanted mail. Your creativity may look benign, but still resemble patterns filters watch for.
@@ -70,9 +68,9 @@ Subscriber actions feed both reputation systems and future inbox decisions. High
 
 ## Related resources
 
-- [Sunset policies](https://www.braze.com/docs/user_guide/channels/email/best_practices/sunset_policies/)
-- [IP warming](https://www.braze.com/docs/user_guide/channels/email/email_setup/ip_warming/)
-- [Deliverability pitfalls and spam traps](https://www.braze.com/docs/user_guide/channels/email/email_setup/deliverability_pitfalls_and_spam_traps/)
-- [Know before you send](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/know_before_you_send/#general)
-- [Consent and address collection](https://www.braze.com/docs/user_guide/channels/email/email_setup/consent_and_address_collection/#subscriber-states)
-- [Email FAQ](https://www.braze.com/docs/user_guide/channels/email/faq/#what-happens-when-an-email-is-sent-out-and-multiple-profiles-have-the-same-email-address)
+- [Sunset policies](https://www.braze.com/docs/user_guide/channels/email/best_practices/sunset_policies)
+- [IP warming](https://www.braze.com/docs/user_guide/channels/email/email_setup/ip_warming)
+- [Deliverability pitfalls and spam traps](https://www.braze.com/docs/user_guide/channels/email/email_setup/deliverability_pitfalls_and_spam_traps)
+- [Know before you send](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/know_before_you_send#general)
+- [Consent and address collection](https://www.braze.com/docs/user_guide/channels/email/email_setup/consent_and_address_collection#subscriber-states)
+- [Email FAQ](https://www.braze.com/docs/user_guide/channels/email/faq#what-happens-when-an-email-is-sent-out-and-multiple-profiles-have-the-same-email-address)

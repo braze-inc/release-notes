@@ -2,13 +2,13 @@
 
 > Hightouch's [Personalization API](https://hightouch.com/docs/destinations/personalization-api) is a managed service that lets you host a low-latency data API based on any dataset in your cloud data warehouse.
 
-![](https://www.braze.com/docs/assets/img/hightouch/cohort7.png?f899abf86f0734d1f8174b304161dc0a)
+![Hightouch Personalization API architecture diagram showing data flow from a data warehouse through Hightouch to mobile apps, web experiences, and dynamic emails.](https://www.braze.com/docs/assets/img/hightouch/cohort7.png?f899abf86f0734d1f8174b304161dc0a)
 
 The Braze and Hightouch integration allows you to use the API with [Braze Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call/) to pull up-to-date customer or object data into your campaigns or Canvases at the time-of-send.
 
 Hightouch's Personalization API provides a REST endpoint to use within your Braze configuration. Specifically, you can use the Braze Connected Content offering to make a GET request to the Personalization API to retrieve all information related to a particular identifier. The data exposed by this API could represent customer, product, or any other object data. 
 
-![](https://www.braze.com/docs/assets/img/hightouch/cohort6.png?6c65c7c763b7c011fc63152074270756)
+![Diagram showing data from Snowflake, BigQuery, and Redshift flowing through the Hightouch Personalization API to Braze Connected Content.](https://www.braze.com/docs/assets/img/hightouch/cohort6.png?6c65c7c763b7c011fc63152074270756)
 
 ## Prerequisites
 
@@ -116,7 +116,7 @@ For the example payload below:
 ```json
 {
     "user_id": 12345,
-    "full_name": "Jane Doe",
+    "full_name": "Alex Smith",
     "lifetime_value": 1492.18,
     "churn_risk": 0.04,
     "90_day_summary": {
@@ -147,7 +147,7 @@ For the example payload below:
         ],
         "upcoming_album_release": {
             "title": "Universal Language",
-            "artist": "Simon Doty",
+            "artist": "Alex Lee",
             "label": "Anjunadeep",
             "release_date": "2023-04-28"
         }

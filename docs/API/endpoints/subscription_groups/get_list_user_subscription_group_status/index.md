@@ -1,4 +1,4 @@
-<div id='api_qumkobwacppr' class='api_div' data-search-keywords='prerequisites status message'>
+<div id='api_xpqcicvxmpmz' class='api_div' data-search-keywords='prerequisites status message'>
 <h1 id="list-users-subscription-group-status">List user’s subscription group status</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/subscription/status/get</p>
@@ -24,7 +24,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">subscription.status.get</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">subscription.status.get</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -49,7 +49,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="/docs/api/identifier_types/?tab=subscription%20group%20ids"><code class="language-plaintext highlighter-rouge">subscription_group_id</code></a></td>
+      <td><a href="/docs/api/identifier_types?tab=subscription%20group%20ids"><code class="language-plaintext highlighter-rouge">subscription_group_id</code></a></td>
       <td>Required</td>
       <td>String</td>
       <td>The <code class="language-plaintext highlighter-rouge">id</code> of your subscription group.</td>
@@ -96,7 +96,7 @@
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre></td><td class="rouge-code"><pre>curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&amp;email=example@braze.com' \
+</pre></td><td class="rouge-code"><pre>curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&amp;email=example@example.com' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 </pre></td></tr></tbody></table></code></pre></div></div>
 

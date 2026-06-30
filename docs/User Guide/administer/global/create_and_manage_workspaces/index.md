@@ -12,7 +12,7 @@ Everything you do in Braze happens within a workspace. Workspaces are a shared e
 
 ### Step 1: Have a plan
 
-Before you begin, make sure you've worked with your team and your Braze onboarding manager to determine the best workspace configuration for your use case. To learn more about planning your workspaces in Braze, check out our [Getting Started: Workspaces](https://www.braze.com/docs/user_guide/get_started/workspaces/) guide.
+Before you begin, make sure you've worked with your team and your Braze onboarding manager to determine the best workspace configuration for your use case. To learn more about planning your workspaces in Braze, check out our [Getting Started: Workspaces](https://www.braze.com/docs/user_guide/get_started/workspaces) guide.
 
 ### Step 2: Add your workspace
 
@@ -119,7 +119,7 @@ To delete your workspace or app instance:
 1. Go to **Settings** > **App Settings**.
 2. Select **Delete workspace** to delete the respective workspace, or select the trash can icon next to the respective app instance.
 
-You cannot delete app instances or workspaces that are currently being used for targeting users or that have over 1,000 users. If you try to do so, you’ll receive an error message. To proceed and delete them, [create a Support case](https://www.braze.com/docs/user_guide/administer/personal/braze_support/) that includes a dashboard link and the name of the app instance or workspace to be deleted.
+You cannot delete app instances or workspaces that are currently being used for targeting users or that have over 1,000 users. If you try to do so, you’ll receive an error message. To proceed and delete them, [create a Support case](https://www.braze.com/docs/user_guide/administer/personal/braze_support) that includes a dashboard link and the name of the app instance or workspace to be deleted.
 
 **Warning:**
 
@@ -181,5 +181,5 @@ In the original Canvas workflow, add your segment to the Canvas component level 
 
 After creating your workspace, configure it:
 
-- [Workspace settings](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/) to set up API keys, email preferences, push settings, and more.
-- [Manage company users](https://www.braze.com/docs/user_guide/administer/global/user_management/manage_company_users/) to add users and assign permissions for this workspace.
+- [Workspace settings](https://www.braze.com/docs/user_guide/administer/global/workspace_settings) to set up API keys, email preferences, push settings, and more.
+- [Manage company users](https://www.braze.com/docs/user_guide/administer/global/user_management/manage_company_users) to add users and assign permissions for this workspace.

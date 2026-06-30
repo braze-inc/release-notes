@@ -29,7 +29,7 @@ Your treatment group is similar in size to your Global Control Group, but it is 
 
 ### Exclude users from feature flags
 
-You can't enable [feature flags](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/feature_flags/) for users in your Global Control Group. This means users in your Global Control Group also can't be part of feature flag experiments.
+You can't enable [feature flags](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/feature_flags) for users in your Global Control Group. This means users in your Global Control Group also can't be part of feature flag experiments.
 
 ### Exclude users from the Global Control Group
 
@@ -84,7 +84,7 @@ After disabling your Control Group, you can save a new one. When you enter a per
 
 If you'd like to see which users are in your Global Control Group, you can export your Group's members by CSV or API. 
 
-To run a CSV export, navigate to the **Global Control Group Settings** tab and click <i class="fas fa-download"></i>&nbsp;**Export**. To export by API, use the [`/users/export/global_control_group` endpoint](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_global_control_group/).
+To run a CSV export, navigate to the **Global Control Group Settings** tab and click <i class="fas fa-download"></i>&nbsp;**Export**. To export by API, use the [`/users/export/global_control_group` endpoint](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_global_control_group).
 
 **Important:**
 
@@ -109,7 +109,7 @@ To view a report for your Global Control Group from the dashboard, go to **Analy
 
 Next, select the parameter you want to run your report with (sessions or a particular custom event) and select **Run Report**.
 
-![](https://www.braze.com/docs/assets/img/control_group/control_group6.png?63853e0519c639ffa07a46ab13e62c01)
+![Next, select the parameter you want to run your report with (sessions or a particular custom event) and select Run Report.](https://www.braze.com/docs/assets/img/control_group/control_group6.png?63853e0519c639ffa07a46ab13e62c01)
 
 ### Configuring your report
 
@@ -181,9 +181,9 @@ In short, users in the Global Control Group are filtered out of the campaign or 
 
 #### Global Control Group segments on the Developer Console
 
-You may see multiple **Global Control** segments in the **Additional API Identifiers** section of the [API Keys](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers/) page. This is because each time the Global Control Group is enabled or disabled, a new Global Control Group is formed. This leads to multiple segments labeled "Global Control Group".
+You may see multiple **Global Control** segments in the **Additional API Identifiers** section of the [API Keys](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers) page. This is because each time the Global Control Group is enabled or disabled, a new Global Control Group is formed. This leads to multiple segments labeled "Global Control Group".
 
-Only one of these segments is active and can be queried using the [`/users/export/global_control_group` endpoint](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_global_control_group/), or exported from the dashboard. The export from the dashboard specifically states which subsegments make up this Global Control Group.
+Only one of these segments is active and can be queried using the [`/users/export/global_control_group` endpoint](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_global_control_group), or exported from the dashboard. The export from the dashboard specifically states which subsegments make up this Global Control Group.
 
 ## Testing best practices
 

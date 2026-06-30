@@ -1,4 +1,4 @@
-<div id='api_hegrjlbgrkyu' class='api_div' data-search-keywords='prerequisites email'>
+<div id='api_cxbxqjkzlthd' class='api_div' data-search-keywords='prerequisites email'>
 <h1 id="blacklist-emails">Blacklist emails</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/blacklist</p>
@@ -6,7 +6,7 @@
 
 <p><strong>Important:</strong></p>
 
-<p>Braze has released the <a href="/docs/api/endpoints/email/post_blocklist/"><code class="language-plaintext highlighter-rouge">/email/blocklist</code> endpoint</a> with the same functionality as the <code class="language-plaintext highlighter-rouge">/email/blacklist</code> endpoint. We recommend you use the <code class="language-plaintext highlighter-rouge">/email/blocklist</code> endpoint instead.</p>
+<p>Braze has released the <a href="/docs/api/endpoints/email/post_blocklist"><code class="language-plaintext highlighter-rouge">/email/blocklist</code> endpoint</a> with the same functionality as the <code class="language-plaintext highlighter-rouge">/email/blacklist</code> endpoint. We recommend you use the <code class="language-plaintext highlighter-rouge">/email/blocklist</code> endpoint instead.</p>
 
 <blockquote>
   <p>Use this endpoint to unsubscribe a user from email and mark them as hard bounced.</p>
@@ -16,7 +16,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">email.blacklist</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">email.blacklist</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

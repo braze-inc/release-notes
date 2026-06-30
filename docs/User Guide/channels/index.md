@@ -16,6 +16,6 @@ While the matrix highlights core channels, it is adaptable: SMS and WhatsApp, fo
 You can use Braze to create accessible messaging campaigns across each channel. Work with your engineers to ensure that you meet accessibility standards in your implementation. If you'd like additional guidance, we recommend:
 
 - [Accessible Messaging Foundations](https://learning.braze.com/accessible-messaging-foundations): Learn fundamental accessibility principles that apply to brand communications in this Braze Learning course.
-- [Building Accessible Messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/accessibility/): Learn how to add alt text and structure your content for assistive technologies directly within Braze.
+- [Building Accessible Messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/accessibility): Learn how to add alt text and structure your content for assistive technologies directly within Braze.
 
 If you have feedback about the accessibility of Braze or messages sent from Braze, we'd love to hear from you. Open the **Support** menu in the global header and select **Share feedback** to send us your thoughts.

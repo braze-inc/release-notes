@@ -1,6 +1,6 @@
 # Navigation deep links in Braze Pilot
 
-> Braze Pilot supports deep linking from Braze messaging to particular parts of the Pilot app. This allows you to create engagement use cases, driving users into various parts of the Pilot application. You can also use optional deep link parameters to customize the content on particular pages in the app for the user. For more on deep linking, see [Deep link to in-app content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls/#what-is-deep-linking).
+> Braze Pilot supports deep linking from Braze messaging to particular parts of the Pilot app. This allows you to create engagement use cases, driving users into various parts of the Pilot application. You can also use optional deep link parameters to customize the content on particular pages in the app for the user. For more on deep linking, see [Deep link to in-app content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls#what-is-deep-linking).
 
 ## General
 

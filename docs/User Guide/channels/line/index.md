@@ -12,7 +12,7 @@ Before you start, make sure you have the following:
 - [LINE developers account](https://developers.line.biz/en/docs/line-developers-console/login-account/)
 - [LINE messaging API channel](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-For a full walkthrough, refer to [LINE setup](https://www.braze.com/docs/user_guide/channels/line/line_setup/).
+For a full walkthrough, refer to [LINE setup](https://www.braze.com/docs/user_guide/channels/line/line_setup).
 
 ## Use cases
 
@@ -29,5 +29,5 @@ For a full walkthrough, refer to [LINE setup](https://www.braze.com/docs/user_gu
 
 ## Next steps
 
-- [LINE setup](https://www.braze.com/docs/user_guide/channels/line/line_setup/)
-- [Create a LINE message](https://www.braze.com/docs/user_guide/channels/line/create_a_line_message/)
+- [LINE setup](https://www.braze.com/docs/user_guide/channels/line/line_setup)
+- [Create a LINE message](https://www.braze.com/docs/user_guide/channels/line/create_a_line_message)

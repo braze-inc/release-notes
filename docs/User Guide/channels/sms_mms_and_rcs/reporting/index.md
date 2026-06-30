@@ -122,9 +122,9 @@ You can track SMS opt-ins and opt-outs with the following methods:
 
 | Method | Description |
 |--------|-------------|
-| Segmenter | The segmenter displays the number of users in a specific [Subscription Group](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters/#subscription-group). It does not deduplicate by phone number—if multiple users share the same phone number, each instance is counted separately. |
+| Segmenter | The segmenter displays the number of users in a specific [Subscription Group](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#subscription-group). It does not deduplicate by phone number—if multiple users share the same phone number, each instance is counted separately. |
 | Subscription group timeseries | Provides a daily snapshot of subscriptions for email and phone numbers. The timeseries counts subscriptions, unsubscribes, and resubscribes. For example, if a user subscribes, unsubscribes, and then resubscribes, they are counted as one subscribed user. |
-| Currents | Use Currents to export [subscription and engagement events](https://www.braze.com/docs/message_events_glossary/) for your own reporting. |
+| Currents | Use Currents to export [subscription and engagement events](https://www.braze.com/docs/message_events_glossary) for your own reporting. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Track SMS opt-ins and opt-outs" }
 
 **Note:**
@@ -136,7 +136,7 @@ The _Opt-In_ and _Opt-Out_ statistics in the **SMS/MMS/RCS Performance** panel r
 
 ### Track SMS campaign opt-outs
 
-Track SMS opt-outs at the campaign level by using the inbound receive table instead of the subscription group state change table. For example, in [Query Builder](https://www.braze.com/docs/user_guide/analytics/query_builder/) or your data warehouse, you can run a query that references the `USERS_MESSAGES_SMS_INBOUNDRECEIVE` or [`USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED`](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/#USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED) table.
+Track SMS opt-outs at the campaign level by using the inbound receive table instead of the subscription group state change table. For example, in [Query Builder](https://www.braze.com/docs/user_guide/analytics/query_builder) or your data warehouse, you can run a query that references the `USERS_MESSAGES_SMS_INBOUNDRECEIVE` or [`USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED`](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED) table.
 
 This example query references the `USERS_MESSAGES_SMS_INBOUNDRECEIVE` table:
 
@@ -153,7 +153,7 @@ This returns users who opted out of SMS communications for the given workspace a
 
 ### Opt-out timing
 
-Keyword and inbound-message events in Currents or your data warehouse, such as timestamps on [`users.messages.sms.InboundReceive`](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events) or subscription group state change events, are the authoritative source for when Braze recorded the opt-out.
+Keyword and inbound-message events in Currents or your data warehouse, such as timestamps on [`users.messages.sms.InboundReceive`](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#sms-inbound-received-events) or subscription group state change events, are the authoritative source for when Braze recorded the opt-out.
 
 **Note:**
 
@@ -162,7 +162,7 @@ Event timestamps reflect when Braze received or processed the inbound message, n
 
 
 
-The user profile shows current subscription state but may not surface a single "SMS unsubscribed at" field unless you set a [custom attribute](https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/) or similar when processing opt-outs.
+The user profile shows current subscription state but may not surface a single "SMS unsubscribed at" field unless you set a [custom attribute](https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes) or similar when processing opt-outs.
 
 ## Charges applied to SMS sending outcomes
 
@@ -324,4 +324,4 @@ This table reflects Braze billing, not your provider's billing. Outcomes that ar
 
 ## Reconcile *Rejections* with Snowflake or Currents
 
-The *Rejections* metric in the dashboard is an aggregate workspace count. It isn't a row-level export, so you can't always match each rejection to a single row in Snowflake or a single `users.messages.sms.Rejection` event in Currents. For example, if the user profile was deleted before Braze finished processing the rejection for warehouse export, that rejection doesn't appear in your `USERS_MESSAGES_SMS_REJECTION_SHARED` table or Currents payload, while aggregate SMS reporting can still reflect the outcome. For more information, see the [SQL table reference](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/#sms-message-events-and-deleted-user-profiles) and [SMS Rejection events](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-rejection-events) in the Currents event glossary.
+The *Rejections* metric in the dashboard is an aggregate workspace count. It isn't a row-level export, so you can't always match each rejection to a single row in Snowflake or a single `users.messages.sms.Rejection` event in Currents. For example, if the user profile was deleted before Braze finished processing the rejection for warehouse export, that rejection doesn't appear in your `USERS_MESSAGES_SMS_REJECTION_SHARED` table or Currents payload, while aggregate SMS reporting can still reflect the outcome. For more information, see the [SQL table reference](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#sms-message-events-and-deleted-user-profiles) and [SMS Rejection events](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#sms-rejection-events) in the Currents event glossary.

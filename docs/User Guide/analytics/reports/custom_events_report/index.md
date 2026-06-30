@@ -27,7 +27,7 @@ To export your custom events data, select <i class="fas fa-bars" title="Chart co
 **Tip:**
 
 
-For help with CSV and API exports, refer to [Export troubleshooting](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, refer to [Export troubleshooting](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting).
 
 
 

@@ -9,9 +9,9 @@ With this approach, you can:
 - Trigger SMS messages from your backend in real time.
 - Track analytics alongside all of your marketing-owned campaigns and Canvases.
 - Extend the use case with additional Braze features, such as message delays, follow-up retargeting, and A/B testing.
-- Optionally, switch to [API-triggered delivery](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery/) to define your message templates in the Braze dashboard while still triggering sends from your backend.
+- Optionally, switch to [API-triggered delivery](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery) to define your message templates in the Braze dashboard while still triggering sends from your backend.
 
-To send an SMS message through the REST API, you need to set up an API campaign in the Braze dashboard, then use the [`/messages/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages/) endpoint to send the message.
+To send an SMS message through the REST API, you need to set up an API campaign in the Braze dashboard, then use the [`/messages/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages) endpoint to send the message.
 
 ## Prerequisites
 
@@ -35,12 +35,12 @@ To complete this guide, you need:
 
 ## Step 2: Send an SMS message using the API
 
-Construct a POST request to the [`/messages/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages/) endpoint. Include the campaign ID, the recipient's external user ID, and the SMS content in the request payload.
+Construct a POST request to the [`/messages/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages) endpoint. Include the campaign ID, the recipient's external user ID, and the SMS content in the request payload.
 
 **Important:**
 
 
-Each recipient referenced in `external_user_ids` must already exist in Braze. API-only sends don't create new user profiles. If you need to create users as part of a send, use [`/users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) first, or use an [API-triggered campaign](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) instead.
+Each recipient referenced in `external_user_ids` must already exist in Braze. API-only sends don't create new user profiles. If you need to create users as part of a send, use [`/users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) first, or use an [API-triggered campaign](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns) instead.
 
 
 
@@ -52,7 +52,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 ```
 
-Replace `YOUR_REST_ENDPOINT` with the [REST endpoint URL](https://www.braze.com/docs/api/basics/#endpoints) for your workspace.
+Replace `YOUR_REST_ENDPOINT` with the [REST endpoint URL](https://www.braze.com/docs/api/basics#endpoints) for your workspace.
 
 
 ```json
@@ -71,7 +71,7 @@ Replace `YOUR_REST_ENDPOINT` with the [REST endpoint URL](https://www.braze.com/
 ```
 
 
-Replace the placeholder values with your actual IDs. The `body` field supports [Liquid personalization](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/), so you can tailor the message content to each recipient. For the full list of parameters supported by the SMS messaging object, see [SMS object](https://www.braze.com/docs/api/objects_filters/messaging/sms_object/).
+Replace the placeholder values with your actual IDs. The `body` field supports [Liquid personalization](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid), so you can tailor the message content to each recipient. For the full list of parameters supported by the SMS messaging object, see [SMS object](https://www.braze.com/docs/api/objects_filters/messaging/sms_object).
 
 After constructing the request, send the POST request from your backend service to the Braze REST API.
 
@@ -86,6 +86,6 @@ After completing the setup, verify your integration:
 
 ## Considerations
 
-- Confirm that your SMS campaigns comply with relevant regulations and carrier requirements. Include opt-out instructions (such as "Text STOP to opt out") in every message. For more information, see [SMS laws and regulations](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations/) and [Opt-in and opt-out keywords](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/optin_optout/).
-- Use Braze [personalization features](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/) to tailor SMS content to individual consumers, including dynamic content and user-specific data.
-- The Braze REST API offers additional [messaging endpoints](https://www.braze.com/docs/api/endpoints/messaging/) for scheduling messages, triggering campaigns, and more.
+- Confirm that your SMS campaigns comply with relevant regulations and carrier requirements. Include opt-out instructions (such as "Text STOP to opt out") in every message. For more information, see [SMS laws and regulations](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations) and [Opt-in and opt-out keywords](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/optin_optout).
+- Use Braze [personalization features](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize) to tailor SMS content to individual consumers, including dynamic content and user-specific data.
+- The Braze REST API offers additional [messaging endpoints](https://www.braze.com/docs/api/endpoints/messaging) for scheduling messages, triggering campaigns, and more.

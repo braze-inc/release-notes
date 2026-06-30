@@ -1,4 +1,4 @@
-<div id='api_qgdfheoauxvr' class='api_div' data-search-keywords='prerequisites canvas_id name description tag_names'>
+<div id='api_gvvxxkvncmky' class='api_div' data-search-keywords='prerequisites canvas_id name description tag_names'>
 <h1 id="duplicate-canvases-using-the-api">Duplicate Canvases using the API</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/duplicate</p>
@@ -54,7 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">canvas_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">Canvas identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">Canvas identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">name</code></td>

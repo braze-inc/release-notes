@@ -7,13 +7,13 @@
 Context variables can be set in two ways:
 
 - **At Canvas entry:** When users enter a Canvas, data from the event or API trigger can automatically populate context variables.
-- **In a Context step:** You can define or update context variables manually inside the Canvas by adding a [Context step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context/).
+- **In a Context step:** You can define or update context variables manually inside the Canvas by adding a [Context step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context).
 
 Each context variable includes:
 
 - A name (such as `flight_time` or `subscription_renewal_date`)
 - A data type (such as number, string, time, or array)
-- A value you assign using [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/) or through the **Add Personalization** tool.
+- A value you assign using [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) or through the **Add Personalization** tool.
 
 When defined, you can use a context variable throughout the Canvas by referencing it in this format: `{{context.${example_variable_name}}}`.
 
@@ -25,9 +25,9 @@ For example, if a customer has two upcoming flights, they'll have two separate j
 
 ## Considerations
 
-You can define up to 10 context variables per [Context step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context/). Each variable name can be up to 100 characters and must use only letters, numbers, or underscores.
+You can define up to 10 context variables per [Context step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context). Each variable name can be up to 100 characters and must use only letters, numbers, or underscores.
 
-Context variable definitions can be up to 10,240 characters. If you pass context variables into an API-triggered Canvas, they share the same namespace as variables created in a Context step. For example, if you send a variable `purchased_item` in the [`/canvas/trigger/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) context object, you can reference it as `{{context.${purchased_item}}}`. If you redefine that variable in a Context step, the new value will override the API value for that user's journey.
+Context variable definitions can be up to 10,240 characters. If you pass context variables into an API-triggered Canvas, they share the same namespace as variables created in a Context step. For example, if you send a variable `purchased_item` in the [`/canvas/trigger/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases) context object, you can reference it as `{{context.${purchased_item}}}`. If you redefine that variable in a Context step, the new value will override the API value for that user's journey.
 
 You can store up to 50 KB per Context step, distributed across up to 10 variables. If the total size of all variables in a step exceeds 50 KB, any variables that exceed the limit will not be evaluated or stored. For example, if you have three variables in a Context step:
 
@@ -44,7 +44,7 @@ Context variables that are created or updated in the step can be assigned the fo
 **Note:**
 
 
-Context variables have the same expected formats for data types as [event properties](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types/#expected-format). <br><br>When using the array type, Braze tries to parse the value as JSON, which allows arrays of objects to be successfully created. If the objects within your arrays are not valid JSON, the result will be a simple array of strings. <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as ```{{context.${object_array} | as_json_string }}```
+Context variables have the same expected formats for data types as [event properties](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#expected-format). <br><br>When using the array type, Braze tries to parse the value as JSON, which allows arrays of objects to be successfully created. If the objects within your arrays are not valid JSON, the result will be a simple array of strings. <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as ```{{context.${object_array} | as_json_string }}```
 
 
 
@@ -73,13 +73,13 @@ For object data types, you can use dot notation to specify a path through the da
 }
 ```
 
-In an [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths/) or [Decision Split](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/decision_split/) filter, enter the path as the context variable name using dot notation (for example, `order_summary.shipping.carrier`). When the filter is evaluated, Braze resolves that path to the value `overnight`.
+In an [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths) or [Decision Split](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/decision_split) filter, enter the path as the context variable name using dot notation (for example, `order_summary.shipping.carrier`). When the filter is evaluated, Braze resolves that path to the value `overnight`.
 
-In Liquid (such as in a [Message](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step/) step), use `{{context.${order_summary}.shipping.carrier}}` instead.
+In Liquid (such as in a [Message](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step) step), use `{{context.${order_summary}.shipping.carrier}}` instead.
 
 ## Using context variables
 
-You can use context variables anywhere you use Liquid in a Canvas, such as in [Message](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step/) and [User Update](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update/) steps, by selecting **Add Personalization**. For in-app messages and Banners in Message steps, you can select context variables to determine when the message should expire.
+You can use context variables anywhere you use Liquid in a Canvas, such as in [Message](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step) and [User Update](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update) steps, by selecting **Add Personalization**. For in-app messages and Banners in Message steps, you can select context variables to determine when the message should expire.
 
 For example, let's say you want to notify passengers about their VIP lounge access before their upcoming flight. This message should only be sent to passengers who purchased a first-class ticket. A context variable is a flexible way to track this information.
 
@@ -163,17 +163,17 @@ The exit criteria state that at any point in a user’s journey in the Canvas, t
 
 ### Set an expiration
 
-For [Banners](https://www.braze.com/docs/user_guide/channels/banners/) and [in-app messages](https://www.braze.com/docs/user_guide/channels/in_app_messages/) in a Canvas [Message](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step/) step, select **A duration after the step is available** for expiration, then turn on **Personalize duration** to drive the availability window from a context variable—for example, to match a promotion or booking duration from a Context step.
+For [Banners](https://www.braze.com/docs/user_guide/channels/banners) and [in-app messages](https://www.braze.com/docs/user_guide/channels/in_app_messages) in a Canvas [Message](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step) step, select **A duration after the step is available** for expiration, then turn on **Personalize duration** to drive the availability window from a context variable—for example, to match a promotion or booking duration from a Context step.
 
 **Personalize duration** applies to that duration-based expiration option. If you choose **On a specific date and time** instead, set the expiration using the date and time controls.
 
 ### Action Path delays
 
-In an [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths/) step, under **Evaluation Window**, turn on **Personalize delay** to set how long users are held in the step from a context variable. Use this when the wait period should differ per user based on details such as tier or region.
+In an [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) step, under **Evaluation Window**, turn on **Personalize delay** to set how long users are held in the step from a context variable. Use this when the wait period should differ per user based on details such as tier or region.
 
 ### Context variable filters
 
-You can create filters that use previously declared context variables in [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths/) and [Decision Split](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/decision_split/) steps.
+You can create filters that use previously declared context variables in [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths) and [Decision Split](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/decision_split) steps.
 
 **Note:**
 
@@ -186,14 +186,12 @@ Context variables are declared and only accessible in the scope of a Canvas, mea
 
 ![Decision Split step example with the option to create a filter with a context variable.](https://www.braze.com/docs/assets/img/context_decision_split.png?2b0b9149335a2ac917d26eadd79d37c4){: style="max-width:90%;"}
 
-Similar to how Canvas context variables have pre-defined types, the comparisons between context variables and static values must have [matching data types](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support#supported-data-types). The context variable filter allows comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for [nested custom attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support/).
+Similar to how Canvas context variables have pre-defined types, the comparisons between context variables and static values must have [matching data types](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support#supported-data-types). The context variable filter allows comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for [nested custom attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support).
 
 **Note:**
 
 
 Use the same data type for your context variable and comparison. For example, if your context variable is a time data type, use time comparisons (such as "before" or "after"). Using mismatching data types (such as string comparisons with a time context variable) may cause unexpected behavior.
-
-
 
 
 
@@ -275,5 +273,5 @@ In all circumstances, we strongly recommend using [Liquid time_zone filters](htt
 
 ## Related articles
 
-- [Context step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context/)
-- [Personalization and dynamic content with Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/)
+- [Context step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context)
+- [Personalization and dynamic content with Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid)

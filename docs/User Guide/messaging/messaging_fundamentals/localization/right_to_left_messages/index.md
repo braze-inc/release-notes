@@ -41,7 +41,7 @@ For push notifications, title alignment generally follows the device language se
 **Note:**
 
 
-Rendering still depends on the device OS and push client. Send [test messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/) to your own devices to confirm alignment before you go live.
+Rendering still depends on the device OS and push client. Send [test messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages) to your own devices to confirm alignment before you go live.
 
 
 

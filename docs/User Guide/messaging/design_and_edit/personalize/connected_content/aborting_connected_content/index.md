@@ -15,7 +15,7 @@ In the following example, the conditionals `connected.recommendations.size < 5` 
 
 ## Specify an abort reason
 
-You can also specify an abort reason, which will be saved to the [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/). This abort reason must be a string and cannot contain Liquid.
+You can also specify an abort reason, which will be saved to the [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log). This abort reason must be a string and cannot contain Liquid.
 
 
 `{% abort_message('Could not get enough recommendations') %}`

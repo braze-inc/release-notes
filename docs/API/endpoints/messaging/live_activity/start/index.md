@@ -1,11 +1,11 @@
-<div id='api_fpcrckowuhhb' class='api_div' data-search-keywords='arranging automatic dismissal app_id activity_id activity_attributes_type activity_attributes content_state stale_date notification external_user_ids custom_audience segment_id message error'>
+<div id='api_ntrladztjdzz' class='api_div' data-search-keywords='arranging automatic dismissal app_id activity_id activity_attributes_type activity_attributes content_state stale_date notification external_user_ids custom_audience segment_id message error'>
 <h1 id="start-live-activity">Start Live Activity</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/live_activity/start</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to remotely start <a href="/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift">Live Activities</a> displayed in your iOS app. This endpoint requires additional setup.</p>
+  <p>Use this endpoint to remotely start <a href="/docs/developer_guide/push_notifications/live_notifications?sdktab=swift">Live Activities</a> displayed in your iOS app. This endpoint requires additional setup.</p>
 </blockquote>
 
 <p>After you create a Live Activity, you can make a POST request to remotely start your activity for a segment, a connected audience, or specific external user IDs. For more information about Apple’s Live Activities, see <a href="https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications">Starting and updating Live Activities with ActivityKit push notifications</a>.</p>
@@ -14,7 +14,7 @@
 
 <p><strong>Tip:</strong></p>
 
-<p>To end a Live Activity, use the <a href="/docs/api/endpoints/messaging/live_activity/update/"><code class="language-plaintext highlighter-rouge">/messages/live_activity/update</code></a> endpoint with <code class="language-plaintext highlighter-rouge">end_activity</code> set to <code class="language-plaintext highlighter-rouge">true</code>.</p>
+<p>To end a Live Activity, use the <a href="/docs/api/endpoints/messaging/live_activity/update"><code class="language-plaintext highlighter-rouge">/messages/live_activity/update</code></a> endpoint with <code class="language-plaintext highlighter-rouge">end_activity</code> set to <code class="language-plaintext highlighter-rouge">true</code>.</p>
 
 <h2 id="arranging-automatic-dismissal">Arranging automatic dismissal</h2>
 
@@ -24,8 +24,8 @@
   <li>Send a <code class="language-plaintext highlighter-rouge">/messages/live_activity/start</code> request with an <code class="language-plaintext highlighter-rouge">activity_id</code> you can reuse later.</li>
   <li>Store that <code class="language-plaintext highlighter-rouge">activity_id</code> and your target end time in your backend scheduler.</li>
   <li>At the target end time, send a <code class="language-plaintext highlighter-rouge">/messages/live_activity/update</code> request with <code class="language-plaintext highlighter-rouge">end_activity</code> set to <code class="language-plaintext highlighter-rouge">true</code>.</li>
-  <li>Configure dismissal behavior in the same update request. For details, see the <a href="/docs/api/endpoints/messaging/live_activity/update/"><code class="language-plaintext highlighter-rouge">/messages/live_activity/update</code></a> endpoint.</li>
-  <li>Verify send and outcome events in the <a href="/docs/user_guide/administrative/app_settings/message_activity_log_tab/">Message Activity Log</a>.</li>
+  <li>Configure dismissal behavior in the same update request. For details, see the <a href="/docs/api/endpoints/messaging/live_activity/update"><code class="language-plaintext highlighter-rouge">/messages/live_activity/update</code></a> endpoint.</li>
+  <li>Verify send and outcome events in the <a href="/docs/user_guide/administrative/app_settings/message_activity_log_tab">Message Activity Log</a>.</li>
 </ol>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd" class="seeme">See me in Postman</a></div>
@@ -36,7 +36,7 @@
 
 <ul>
   <li>Generate an API key with the <code class="language-plaintext highlighter-rouge">messages.live_activity.start</code> permission.</li>
-  <li><a href="/docs/developer_guide/push_notifications/live_notifications/?tab=local&amp;sdktab=swift#swift_create-an-activity">Create a Live Activity</a> using the Braze Swift SDK.</li>
+  <li><a href="/docs/developer_guide/push_notifications/live_notifications?tab=local&amp;sdktab=swift#swift_create-an-activity">Create a Live Activity</a> using the Braze Swift SDK.</li>
 </ul>
 
 <p><strong>Important:</strong></p>
@@ -99,7 +99,7 @@
       <td><code class="language-plaintext highlighter-rouge">app_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>App <a href="/docs/api/identifier_types/#the-app-identifier">API identifier</a> retrieved from the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers/">API Keys</a> page.</td>
+      <td>App <a href="/docs/api/identifier_types#the-app-identifier">API identifier</a> retrieved from the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers">API Keys</a> page.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">activity_id</code></td>
@@ -135,25 +135,25 @@
       <td><code class="language-plaintext highlighter-rouge">notification</code></td>
       <td>Required</td>
       <td>Object</td>
-      <td>Include an <a href="/docs/api/objects_filters/messaging/apple_object/"><code class="language-plaintext highlighter-rouge">apple_push</code></a> object to define a push notification. The behavior of this push notification depends on if the user is active or if the user is using a proxy device. <ul><li>If a <code>notification</code> is included and the user is active on their iPhone when the update is delivered, the updated Live Activity UI will slide down and display like a push notification.</li><li>If a <code>notification</code> is included and the user is not active on their iPhone, their screen will light up to display the updated Live Activity UI on their lock screen.</li><li>The <code>notification alert</code> will not display as a standard push notification. Additionally, if a user has a proxy device, like an Apple Watch, the <code>alert</code> will be displayed there.</li></ul></td>
+      <td>Include an <a href="/docs/api/objects_filters/messaging/apple_object"><code class="language-plaintext highlighter-rouge">apple_push</code></a> object to define a push notification. The behavior of this push notification depends on if the user is active or if the user is using a proxy device. <ul><li>If a <code>notification</code> is included and the user is active on their iPhone when the update is delivered, the updated Live Activity UI will slide down and display like a push notification.</li><li>If a <code>notification</code> is included and the user is not active on their iPhone, their screen will light up to display the updated Live Activity UI on their lock screen.</li><li>The <code>notification alert</code> will not display as a standard push notification. Additionally, if a user has a proxy device, like an Apple Watch, the <code>alert</code> will be displayed there.</li></ul></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">external_user_ids</code></td>
       <td>Optional if <code class="language-plaintext highlighter-rouge">segment_id</code> or <code class="language-plaintext highlighter-rouge">custom_audience</code> is provided</td>
       <td>Array of strings</td>
-      <td>See <a href="/docs/api/objects_filters/user_attributes_object/#braze-user-profile-fields">external user ID</a>. Maximum 50 external user IDs.</td>
+      <td>See <a href="/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields">external user ID</a>. Maximum 50 external user IDs.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">segment_id</code></td>
       <td>Optional if <code class="language-plaintext highlighter-rouge">external_user_ids</code> or <code class="language-plaintext highlighter-rouge">custom_audience</code> is provided</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">segment identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">segment identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">custom_audience</code></td>
       <td>Optional if <code class="language-plaintext highlighter-rouge">external_user_ids</code> or <code class="language-plaintext highlighter-rouge">segment_id</code> is provided</td>
       <td>Connected audience object</td>
-      <td>See <a href="/docs/api/objects_filters/connected_audience/">connected audience</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/connected_audience">connected audience</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -236,7 +236,7 @@
 
 <h3 id="example-error-response">Example error response</h3>
 
-<p>The <code class="language-plaintext highlighter-rouge">4XX</code> class of status code indicates a client error. Refer to the <a href="/docs/api/errors/">API errors and responses article</a> for more information about errors you may encounter.</p>
+<p>The <code class="language-plaintext highlighter-rouge">4XX</code> class of status code indicates a client error. Refer to the <a href="/docs/api/errors">API errors and responses article</a> for more information about errors you may encounter.</p>
 
 <p>The status code <code class="language-plaintext highlighter-rouge">400</code> could return the following response body.</p>
 

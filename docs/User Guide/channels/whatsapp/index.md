@@ -11,7 +11,7 @@ Before you start, make sure you have the following:
 - A Meta Business Manager account and a WhatsApp Business account
 - A WhatsApp phone number that meets [Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers) requirements
 
-For a full walkthrough, refer to [WhatsApp setup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/).
+For a full walkthrough, refer to [WhatsApp setup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup).
 
 ## Use cases
 
@@ -26,5 +26,5 @@ For a full walkthrough, refer to [WhatsApp setup](https://www.braze.com/docs/use
 
 ## Next steps
 
-- [WhatsApp setup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/)
-- [Create a WhatsApp message](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message/)
+- [WhatsApp setup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup)
+- [Create a WhatsApp message](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message)

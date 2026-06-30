@@ -120,7 +120,7 @@ After the schema generates, the Flow **Custom Attribute** section will display t
 
 ### Step 1: Create an Action Path
 
-Create an [Action Path](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths/) Canvas step or an action-based campaign. Select a **Send a WhatsApp inbound message** trigger and **Responded to Flow** condition, and then select the relevant Flow or **Any Flow**.
+Create an [Action Path](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) Canvas step or an action-based campaign. Select a **Send a WhatsApp inbound message** trigger and **Responded to Flow** condition, and then select the relevant Flow or **Any Flow**.
 
 ![A trigger for users who sent an inbound WhatsApp message and responded to any Flow.](https://www.braze.com/docs/assets/img/whatsapp/flows/trigger_responded_flow.png?3e6d3555eeb58bdebce8b1b37a80e78a)
 
@@ -174,11 +174,11 @@ A new WhatsApp message “clears” the Canvas’s ability to use (and reuse) th
 
 ## Adding a Flow personalization tag
 
-To use the Flow response through Liquid with [supported personalization tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/), complete the following steps:
+To use the Flow response through Liquid with [supported personalization tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags), complete the following steps:
 
 1. When composing your WhatsApp message, select <i class="fas fa-plus-circle"></i> **Add Personalization** to open the **Add Personalization** window
 2. Select **WhatsApp Properties** for the personalization type and **inbound_flow_response** for the custom attribute. This can be used to save information to user profiles, include it in messages, or forward it to other services, like webhooks.
 
 ![WhatsApp message composer with an "Add Personalization" component to insert a WhatsApp properties personalization with the custom attribute inbound_flow_response.](https://www.braze.com/docs/assets/img/whatsapp/flows/inbound_flow_response.png?b03ff920cbb76580f5b2e7a261ae450d){: style="max-width:80%;"}
 
-For any questions or further assistance, contact [Support](https://www.braze.com/docs/braze_support/).
+For any questions or further assistance, contact [Support](https://www.braze.com/docs/braze_support).

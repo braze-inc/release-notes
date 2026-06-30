@@ -4,7 +4,7 @@
 
 ## About AI item recommendations
 
-Use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs/). After creating your recommendation, you can use personalization to insert those products into your messages.
+Use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs). After creating your recommendation, you can use personalization to insert those products into your messages.
 
 **Tip:**
 
@@ -22,7 +22,7 @@ Use AI item recommendations to calculate the most popular products or create per
 
 Before you start, you must have the following:
 
-- At least one [catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs/) to use any of the recommendation types described below.
+- At least one [catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs) to use any of the recommendation types described below.
 - Purchase or event data on Braze (custom events, the order placed event, or the purchase object) that includes a reference to the item and must match the catalog item IDs.
 
 ### Step 1: Create a new recommendation
@@ -48,7 +48,7 @@ Give your recommendation a name and optional description.
 
 ### Step 3: Define your recommendation {#recommendation-type}
 
-Select a recommendation type. Each type uses the last six months of item interaction data, such as a purchase, an order placed, or custom event data. For more detailed information and uses cases for each, see [Types and Uses Cases](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/).
+Select a recommendation type. Each type uses the last six months of item interaction data, such as a purchase, an order placed, or custom event data. For more detailed information and uses cases for each, see [Types and Uses Cases](https://www.braze.com/docs/user_guide/brazeai/item_recommendations).
 
 **Tip:**
 
@@ -69,11 +69,11 @@ For example, when using the pro version of AI item recommendations, if a user pu
 
 #### Step 3.2: Select a catalog
 
-If not already populated, select the [catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs/) that this recommendation will pull items from.
+If not already populated, select the [catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs) that this recommendation will pull items from.
 
 #### Step 3.3: Add a selection (optional)
 
-If you'd like more control over your recommendation, choose a [selection](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. Selections that contain Liquid can't be used in your recommendation.
+If you'd like more control over your recommendation, choose a [selection](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. Selections that contain Liquid can't be used in your recommendation.
 
 ![An example of the "in-stock" selection selected for the recommendation.](https://www.braze.com/docs/assets/img/item_recs_2-2.png?1846eb29d6db9c1a6f087e648ef9f349)
 
@@ -90,10 +90,10 @@ Select the event you want this recommendation to optimize for. This event is usu
 
 You can optimize for:
 
-- Purchase events with the [Purchase Object](https://www.braze.com/docs/api/objects_filters/purchase_object/)
+- Purchase events with the [Purchase Object](https://www.braze.com/docs/api/objects_filters/purchase_object)
 - Custom events that represent a purchase
 - Custom events that represent any other item interaction (such as product views, clicks, or media plays)
-- Orders placed with the [order placed event](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/?tab=ecommerce.order_placed)
+- Orders placed with the [order placed event](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events?tab=ecommerce.order_placed)
 
 If you choose **Custom Event**, select your event from the list.
 
@@ -121,7 +121,7 @@ The **Property Name** field will pre-populate with a list of fields sent through
 There are some requirements for selecting your property:
 
 - Must map to the `id` field of your selected catalog.
-- **If you selected Order Placed Event or are using [eCommerce events](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/) to train item recommendations:** Enter `products.product_id` for the product ID.
+- **If you selected Order Placed Event or are using [eCommerce events](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events) to train item recommendations:** Enter `products.product_id` for the product ID.
   - The field can be inside an array of products, or end with an array of IDs. In either case, each product ID will be treated as a separate, sequential event with the same timestamp.
 - **If you selected Purchase Object:** Must be the `product_id` or a field of your interaction event's `properties`.
 - **If you selected Custom Event:** Must be a field of your custom event's `properties`.

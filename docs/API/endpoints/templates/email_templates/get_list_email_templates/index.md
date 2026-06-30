@@ -1,4 +1,4 @@
-<div id='api_dsyjebwgpcol' class='api_div' data-search-keywords='prerequisites count templates email_template_id template_name created_at updated_at tags'>
+<div id='api_qpmzovvijzgi' class='api_div' data-search-keywords='prerequisites count templates email_template_id template_name created_at updated_at tags'>
 <h1 id="list-available-email-templates">List available email templates</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/list</p>
@@ -11,7 +11,7 @@
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.email.list</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.email.list</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

@@ -9,13 +9,13 @@ This article will walk you through a use case for the **Post-Purchase Feedback**
 To successfully use this template, you'll need the following:
 
 - A [custom attribute](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes#managing-custom-attributes) to reference for feedback survey results.
-- A configured [Braze Audience Sync](https://www.braze.com/docs/partners/canvas_audience_sync/) with the partners and audiences you use.
+- A configured [Braze Audience Sync](https://www.braze.com/docs/partners/canvas_audience_sync) with the partners and audiences you use.
 
 ## Tailoring the template to your needs
 
 Let's say we're working for Decorumsoft, a mobile video game developer. We'll use the post-purchase feedback template to gauge feedback for our latest video game launch, Proxy War 3: War of Thirst. Using this feedback, we'll inform our development plans for the expansion pack, Liquid Mirage.
 
-Before creating the Canvas, we set up the [Braze Audience Sync to Google](https://www.braze.com/docs/partners/canvas_audience_sync/google_audience_sync/) integration so that we can add user data from Braze to Google Audiences to send advertisements based on behavioral triggers, segmentation, and more.
+Before creating the Canvas, we set up the [Braze Audience Sync to Google](https://www.braze.com/docs/partners/canvas_audience_sync/google_audience_sync) integration so that we can add user data from Braze to Google Audiences to send advertisements based on behavioral triggers, segmentation, and more.
 
 To access the post-purchase feedback template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates**. Then, next to **Post-Purchase Feedback**, select **Apply Template**. Now, we can go through the template to fit it for our needs.
 
@@ -83,7 +83,7 @@ We'll begin our customization by going through each messaging component to updat
 **Tip:**
 
 
-You can use [Canvas entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/) to customize the messages in your Canvas based on which product you're referring to.
+You can use [Canvas entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties) to customize the messages in your Canvas based on which product you're referring to.
 
 
 
@@ -124,6 +124,6 @@ After testing and reviewing our Canvas to make sure it works as expected, select
 **Tip:**
 
 
-Check out our [Pre and post-launch checklist](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
+Check out our [Pre and post-launch checklist](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
 
 

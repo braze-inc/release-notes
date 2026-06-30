@@ -1,22 +1,22 @@
-<div id='api_pwuqzdevejni' class='api_div' data-search-keywords='prerequisites schemas name department permissions roles team id'>
+<div id='api_rihxegfxsgcm' class='api_div' data-search-keywords='prerequisites schemas name department permissions roles team id'>
 <h1 id="update-dashboard-user-account">Update dashboard user account</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/scim/v2/Users/{id}</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to update an existing dashboard user account by specifying the resource <code class="language-plaintext highlighter-rouge">id</code> returned by the SCIM <a href="/docs/api/endpoints/scim/post_create_user_account/"><code class="language-plaintext highlighter-rouge">POST</code></a> method.</p>
+  <p>Use this endpoint to update an existing dashboard user account by specifying the resource <code class="language-plaintext highlighter-rouge">id</code> returned by the SCIM <a href="/docs/api/endpoints/scim/post_create_user_account"><code class="language-plaintext highlighter-rouge">POST</code></a> method.</p>
 </blockquote>
 
 <p>It allows you to update of given and family names, permissions (for setting permissions at the company, workspace, and team level) and department.</p>
 
-<p>For security reasons, <code class="language-plaintext highlighter-rouge">userName</code> (email address) cannot be updated through this endpoint. If you want to change the <code class="language-plaintext highlighter-rouge">userName</code> (email address) for a user, contact <a href="/docs/support_contact/">Support</a>.</p>
+<p>For security reasons, <code class="language-plaintext highlighter-rouge">userName</code> (email address) cannot be updated through this endpoint. If you want to change the <code class="language-plaintext highlighter-rouge">userName</code> (email address) for a user, contact <a href="/docs/support_contact">Support</a>.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f9a1642-988e-4011-8fb8-db4340ea1ac7" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need a SCIM token. You’ll use your service origin as the <code class="language-plaintext highlighter-rouge">X-Request-Origin</code> header. For more information, refer to <a href="/docs/scim/automated_user_provisioning/">Automated user provisioning</a>.</p>
+<p>To use this endpoint, you’ll need a SCIM token. You’ll use your service origin as the <code class="language-plaintext highlighter-rouge">X-Request-Origin</code> header. For more information, refer to <a href="/docs/scim/automated_user_provisioning">Automated user provisioning</a>.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -44,7 +44,7 @@
       <td><code class="language-plaintext highlighter-rouge">id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>The user’s resource ID. This parameter is returned by the  <code class="language-plaintext highlighter-rouge">POST</code> <code class="language-plaintext highlighter-rouge">/scim/v2/Users/</code> or <code class="language-plaintext highlighter-rouge">GET</code>  <code class="language-plaintext highlighter-rouge">/scim/v2/Users?filter=userName eq "user@test.com"</code> methods.</td>
+      <td>The user’s resource ID. This parameter is returned by the  <code class="language-plaintext highlighter-rouge">POST</code> <code class="language-plaintext highlighter-rouge">/scim/v2/Users/</code> or <code class="language-plaintext highlighter-rouge">GET</code>  <code class="language-plaintext highlighter-rouge">/scim/v2/Users?filter=userName eq "user@example.com"</code> methods.</td>
     </tr>
   </tbody>
 </table>
@@ -165,13 +165,13 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
       <td><code class="language-plaintext highlighter-rouge">department</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>Valid department string from the <a href="/docs/scim_api_appendix/#department-strings">department string documentation</a>.</td>
+      <td>Valid department string from the <a href="/docs/scim_api_appendix#department-strings">department string documentation</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">permissions</code></td>
       <td>Required</td>
       <td>JSON object</td>
-      <td>Permissions object as described in the <a href="/docs/scim_api_appendix/#permissions-object">permissions object documentation</a>.</td>
+      <td>Permissions object as described in the <a href="/docs/scim_api_appendix#permissions-object">permissions object documentation</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -318,7 +318,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
     </span><span class="nl">"schemas"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"urn:ietf:params:scim:schemas:core:2.0:User"</span><span class="p">],</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dfa245b7-24195aec-887bb3ad-602b3340"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"userName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@test.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"userName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@example.com"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"givenName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"familyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="w">

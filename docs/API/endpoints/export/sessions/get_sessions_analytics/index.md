@@ -1,4 +1,4 @@
-<div id='api_qojyabsdamki' class='api_div' data-search-keywords='prerequisites message data time sessions'>
+<div id='api_lyresxbdqovj' class='api_div' data-search-keywords='prerequisites message data time sessions'>
 <h1 id="export-app-session-by-time">Export app session by time</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/sessions/data_series</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">sessions.data_series</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">sessions.data_series</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -58,13 +58,13 @@
       <td><code class="language-plaintext highlighter-rouge">app_id</code></td>
       <td>Optional</td>
       <td>String</td>
-      <td>App API identifier retrieved from the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers/">API Keys</a> page to limit analytics to a specific app.</td>
+      <td>App API identifier retrieved from the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers">API Keys</a> page to limit analytics to a specific app.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">segment_id</code></td>
       <td>Optional</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">Segment API identifier</a>. Segment ID indicating the analytics-enabled segment for which sessions should be returned.</td>
+      <td>See <a href="/docs/api/identifier_types">Segment API identifier</a>. Segment ID indicating the analytics-enabled segment for which sessions should be returned.</td>
     </tr>
   </tbody>
 </table>
@@ -103,6 +103,6 @@
 
 <p><strong>Tip:</strong></p>
 
-<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/">Export troubleshooting</a>.</p>
+<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting">Export troubleshooting</a>.</p>
 
 </div>

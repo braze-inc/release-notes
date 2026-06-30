@@ -4,18 +4,18 @@
 
 ## Prerequisites
 
-Before you can create or use item recommendations in Braze, you'll need to [create at least one catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs/create/)&#8212;only items from that catalog will be recommended to users.
+Before you can create or use item recommendations in Braze, you'll need to [create at least one catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs/create)&#8212;only items from that catalog will be recommended to users.
 
 ## Types and use cases
 
 ### AI Personalized {#ai}
 
-As part of the [AI item recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai/) feature, AI Personalized recommendations take advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
+As part of the [AI item recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai) feature, AI Personalized recommendations take advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
 
 AI Personalized recommendations use the last 6 months of item interaction data, like purchases or custom events, to build the recommendation model. For users without enough data for a personalized list, the most popular items serve as a fallback, so your users are still getting relevant suggestions.
 
 With AI item recommendations, you can also further filter the items available with 
-[selections](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections/). However, selections with Liquid cannot be used in AI recommendations, so keep that in mind when building your catalog selections.
+[selections](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections). However, selections with Liquid cannot be used in AI recommendations, so keep that in mind when building your catalog selections.
 
 **Tip:**
 
@@ -40,20 +40,20 @@ Predict and recommend the items a user is most likely to purchase next, based on
 
 - AI item recommendations
 - Catalog of relevant items
-- A method for tracking purchases: a purchase object, a custom event, or an [order placed event](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/?tab=ecommerce.order_placed)
+- A method for tracking purchases: a purchase object, a custom event, or an [order placed event](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events?tab=ecommerce.order_placed)
 
 
 
 **Setting it up**
 
 
-1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai).
 2. Set the **Type** to **AI Personalized**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose how you currently track purchase events and the corresponding event property.
 6. Train the recommendation.
-7. [Use the recommendation in messaging](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/using_recommendations/).
+7. [Use the recommendation in messaging](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/using_recommendations).
 
 
 
@@ -83,7 +83,7 @@ Encourage users to explore popular items in your catalog based on purchases. To 
 **Setting it up**
 
 
-1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai).
 2. Set the **Type** to **Most popular**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items. For example, the food delivery service might have a selection to filter for restaurant location or type of dish.
@@ -109,7 +109,7 @@ Encourage users to explore items that they’ve recently liked or items that are
 **Setting it up**
 
 
-1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -135,7 +135,7 @@ Highlight items that have gained attention across your user base through views t
 **Setting it up**
 
 
-1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai).
 2. Set the **Type** to **Most popular**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -163,7 +163,7 @@ For example, a fashion retailer could promote clothes and accessories that are t
 **Setting it up**
 
 
-1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai).
 2. Set the **Type** to **Most popular**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -199,7 +199,7 @@ Encourage users to revisit items that they’ve recently clicked on, based on a 
 **Setting it up**
 
 
-1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -225,7 +225,7 @@ Encourage users to explore items that they’ve recently liked or items that are
 **Setting it up**
 
 
-1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -255,7 +255,7 @@ Promote items that users have recently interacted with, including views, clicks,
 **Setting it up**
 
 
-1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -281,7 +281,7 @@ Remind users of their interest in items that they recently added to their cart, 
 **Setting it up**
 
 
-1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
+1. Create an [AI item recommendation](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -319,7 +319,7 @@ Highlight items that your users have recently purchased with increased frequency
 **Setting it up**
 
 
-1. Create an [AI item recommendation](https://www.braze.com/docs/ai_item_recommendations/).
+1. Create an [AI item recommendation](https://www.braze.com/docs/ai_item_recommendations).
 2. Set the **Type** to **Trending**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -345,7 +345,7 @@ Highlight items that your users have recently liked with increased frequency. Fo
 **Setting it up**
 
 
-1. Create an [AI item recommendation](https://www.braze.com/docs/ai_item_recommendations/).
+1. Create an [AI item recommendation](https://www.braze.com/docs/ai_item_recommendations).
 2. Set the **Type** to **Trending**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -359,7 +359,7 @@ Highlight items that your users have recently liked with increased frequency. Fo
 
 ### Selections-based {#selections-based}
 
-[Selections](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections/) are specific groups of catalog data. When you use a selection, you're essentially setting up custom filters based on specific columns in your catalog. This could include filters for brand, size, location, date added, and more. It gives you control over what you’re recommending by allowing you to define criteria that items must meet to be shown to users.
+[Selections](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections) are specific groups of catalog data. When you use a selection, you're essentially setting up custom filters based on specific columns in your catalog. This could include filters for brand, size, location, date added, and more. It gives you control over what you’re recommending by allowing you to define criteria that items must meet to be shown to users.
 
 The previous three types all involve setting up and training a recommendation model in Braze. While you can use selections in those models as well, you can also accomplish some recommendation use cases with just catalog selections and Liquid personalization.
 
@@ -395,7 +395,7 @@ For example, a tech eCommerce platform could alert tech enthusiasts about the la
 3. Make sure **Randomize Sort Order** is turned off.
 4. For **Sort Field**, select your date added field.
 5. Set **Sort Order** to descending.
-6. [Use the selection in messaging](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections/#using-selections-in-messaging).
+6. [Use the selection in messaging](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections#using-selections-in-messaging).
 
 
 
@@ -416,10 +416,10 @@ For example, an online bookstore could offer a "Surprise Me" feature, recommendi
 **Setting it up**
 
 
-1. [Create a selection](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections/#creating-a-selection) based on your catalog.
+1. [Create a selection](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections#creating-a-selection) based on your catalog.
 2. (Optional) Add any filters if desired.
 3. Turn on **Randomize Sort Order**.
-4. [Use the selection in messaging](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections/#using-selections-in-messaging).
+4. [Use the selection in messaging](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections#using-selections-in-messaging).
 
 
 
@@ -427,7 +427,7 @@ For example, an online bookstore could offer a "Surprise Me" feature, recommendi
 
 ### Rules-based {#rules-based}
 
-A [rules-based recommendation](https://www.braze.com/docs/rules_based_recommendations/) engine uses user data and product information to suggest relevant items to users within messages. It uses Liquid and either Braze catalogs or Connected Content to dynamically personalize content based on user behavior and attributes.
+A [rules-based recommendation](https://www.braze.com/docs/rules_based_recommendations) engine uses user data and product information to suggest relevant items to users within messages. It uses Liquid and either Braze catalogs or Connected Content to dynamically personalize content based on user behavior and attributes.
 
 Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's individual purchase history and tastes unless you update the logic; therefore, this method is best for recommendations that don’t need frequent updates.
 

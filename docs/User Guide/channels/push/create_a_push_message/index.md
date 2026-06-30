@@ -16,17 +16,17 @@ Not sure whether to use a campaign or a Canvas? Campaigns are better for single,
 1. Go to **Messaging** > **Campaigns**, then select **Create campaign**.
 2. For campaigns targeting multiple channels, select **Multichannel**. Otherwise, select **Push notification**.
 3. Name your campaign something clear and meaningful.
-4. Add [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams/) and [Tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags/) as needed. 
+4. Add [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams) and [Tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags) as needed. 
 
 **Tip:**
 
  
-Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder/), you can filter by particular tags.
+Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder), you can filter by particular tags.
 
 
 
 {: start="5"}
-5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing](https://www.braze.com/docs/user_guide/messaging/ab_testing/).
+5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing](https://www.braze.com/docs/user_guide/messaging/ab_testing).
 
 **Tip:**
 
@@ -37,11 +37,11 @@ If all of the messages in your campaign are going to be similar or have the same
 
 
 
-1. [Create your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/) using the Canvas composer.
+1. [Create your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
-3. Choose a [step schedule](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/#schedule-delay) and specify a delay as needed.
+3. Choose a [step schedule](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types#schedule-delay) and specify a delay as needed.
 4. Filter your Audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
-5. Choose your [advancement behavior](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases/).
+5. Choose your [advancement behavior](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases).
 6. Choose any other messaging channels which you would like to pair with your message.
 
 
@@ -69,10 +69,10 @@ If you're creating a multiple platform push campaign and you select Web and/or K
 Otherwise, for iOS and Android, select your notification type:
 
 - Standard push
-- [Push stories](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/push_stories/) (supported on Android + iOS)
+- [Push stories](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/push_stories) (supported on Android + iOS)
 - Inline image (Android only)
 
-If you want to include images in your push campaign, refer to the following guides on creating a rich notification for [iOS](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/rich_notifications/) or [Android](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/rich_notifications/).
+If you want to include images in your push campaign, refer to the following guides on creating a rich notification for [iOS](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/rich_notifications) or [Android](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/rich_notifications).
 
 ## Step 4: Compose your push message
 
@@ -84,13 +84,13 @@ The content of the **Compose** tab varies based on your chosen notification type
 
 ### Notification channel or group (iOS and Android)
 
-For more information on platform-specific notification options, see [iOS Notification Options](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/notification_options/) or [Android Notification Options](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/notification_options/).
+For more information on platform-specific notification options, see [iOS Notification Options](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/notification_options) or [Android Notification Options](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/notification_options).
 
 ### Language
 
-Add copy in multiple languages using the **Add Languages** button. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
+Add copy in multiple languages using the **Add Languages** button. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/localization#languages-supported).
 
-If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages/).
+If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages).
 
 ### Title and body
 
@@ -98,18 +98,18 @@ If you're adding copy in a language that is written right-to-left, note that the
 
 Start typing in the message box and watch a preview appear in the preview box to the left. Push messages must be formatted in plain text. 
 
-Add a headline using the **Title** field. To make your push personalized and targeted, you can include [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/).
+Add a headline using the **Title** field. To make your push personalized and targeted, you can include [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid).
 
 
 
 Start typing in the message box and watch a preview appear in the preview box to the left. Push messages must be formatted in plain text. 
 
-To make your push personalized and targeted, you can include [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/).
+To make your push personalized and targeted, you can include [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid).
 
 **Important:**
 
 
-You **cannot** send an Android push message without a title&#8212;however, you can enter a single space instead. Keep in mind, if your message only contains a single space, it will be sent as a silent push notification. For more information, refer to [Silent push notifications](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=android).
+You **cannot** send an Android push message without a title&#8212;however, you can enter a single space instead. Keep in mind, if your message only contains a single space, it will be sent as a silent push notification. For more information, refer to [Silent push notifications](https://www.braze.com/docs/developer_guide/push_notifications/silent?sdktab=android).
 
 
 
@@ -118,7 +118,7 @@ You **cannot** send an Android push message without a title&#8212;however, you c
 **Tip:**
 
 
-Need help creating awesome copy? Try using the [AI copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#generate-copy). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating awesome copy? Try using the [AI copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#generate-copy). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Launch AI Copywriter button, located in the Body field of the push composer.](https://www.braze.com/docs/assets/img/ai_copywriter/ai_copywriter_push.png?f66cf0157909e66edfece14064213c59){: style="max-width:60%"}
 
@@ -130,10 +130,8 @@ Where supported, your app icon is automatically added as the image for your push
 
 For additional guidance on using images in your push notifications, refer to the following articles:
 
-- [Create rich notifications for iOS](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/rich_notifications/)
-- [Create rich notifications for Android](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/rich_notifications/)
-
-
+- [Create rich notifications for iOS](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/rich_notifications)
+- [Create rich notifications for Android](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/rich_notifications)
 
 
 
@@ -175,7 +173,7 @@ For additional guidance on using images in your push notifications, refer to the
 
 ### On-click behavior
 
-Specify what happens when a user selects the body of a push notification with **On-Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a [deep link](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls/).
+Specify what happens when a user selects the body of a push notification with **On-Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a [deep link](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls).
 
 Here, you can also set up button prompts within your push notification, such as:
 
@@ -190,7 +188,7 @@ If a user has your app installed on multiple devices, by default, your push mess
 
 ![Device options checkbox to only send this push to the user's most recently used device.](https://www.braze.com/docs/assets/img_archive/push_recent_device.png?d60d3b2a3b6f7a3d9a53f95d9bc6548f){: style="max-width:70%;" }
 
-There is some nuance for this setting. If this option is selected, Braze will limit multiple sends from occurring except when a campaign targets multiple platforms, such as both iOS and Android. If the user has your app on both an iOS and an Android device, they'll receive a push for both platforms. If a user's most recently used device isn't [push enabled](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states/#foreground-push-enabled), the message will not send.
+There is some nuance for this setting. If this option is selected, Braze will limit multiple sends from occurring except when a campaign targets multiple platforms, such as both iOS and Android. If the user has your app on both an iOS and an Android device, they'll receive a push for both platforms. If a user's most recently used device isn't [push enabled](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states#foreground-push-enabled), the message will not send.
 
 By default, Braze sends messages to every device a user owns that has a valid push token. For iOS, you can further refine your reach by choosing to send notifications only to iPad devices, or only to iPhone and iPod devices.
 
@@ -202,7 +200,7 @@ If desired, you can set the push destination to **Most recently used device**.
 
 The most recently used device is determined by which device has the most recently updated push token, rather than which device had the most recent session.
 * If a new device's push token is added to a user profile through the API, that device is immediately considered the most recently used, even if the user hasn't started a session on it yet.
-* If a user's most recently used device is not [push enabled](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states/#foreground-push-enabled), the message will not send at all.
+* If a user's most recently used device is not [push enabled](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states#foreground-push-enabled), the message will not send at all.
 
 Multiple sends can still occur if a campaign targets different platforms, such as both iOS and Android. If a user has the app on both, they can receive a push for both platforms.
 
@@ -212,7 +210,7 @@ For iOS, you can further limit messaging by only sending push notifications to i
 
 Testing is arguably one of the most critical steps. After you finish composing your perfect push message, test it before sending it out. Select the **Test** tab to choose from options on how to test your push message. In **Test Recipients**, you can select a content test group or individual users. You can also use **Preview message as user** to get a sense of how your message may view on mobile for a random user, existing user, custom user, or multi-language user.
 
-For more information, see [Send test messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=push).
+For more information, see [Send test messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages?tab=push).
 
 ## Step 6: Build the remainder of your campaign or Canvas
 
@@ -223,15 +221,15 @@ Build the remainder of your campaign; see the following sections for further det
 
 ### Choose delivery schedule or trigger
 
-Push messages can be delivered based on a scheduled time, an action, or based on an API trigger. For more, refer to [Scheduling your campaign](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/).
+Push messages can be delivered based on a scheduled time, an action, or based on an API trigger. For more, refer to [Scheduling your campaign](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign).
 
-For action-based delivery, you can also set the campaign's duration and [Quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/).
+For action-based delivery, you can also set the campaign's duration and [Quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours).
 
-This step is also where you can specify delivery controls, such as allowing users to become [re-eligible](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/re_eligibility/#campaigns) to receive the campaign, or enabling [frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping/#frequency-capping) rules.
+This step is also where you can specify delivery controls, such as allowing users to become [re-eligible](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/re_eligibility#campaigns) to receive the campaign, or enabling [frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#frequency-capping) rules.
 
 ### Choose users to target
 
-Next, you must [target users](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/target_users/) by choosing segments or filters to narrow your audience. You automatically receive a preview of what that approximate segment population looks like. Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, select **Show Additional Stats**.
+Next, you must [target users](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/target_users) by choosing segments or filters to narrow your audience. You automatically receive a preview of what that approximate segment population looks like. Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, select **Show Additional Stats**.
 
 **Important:**
 
@@ -244,7 +242,7 @@ Your message will only be sent to users who already match the conditions you set
 
 
 
-When you view the Total Reachable Users for your filtered audience, you may notice that the sum of the individual columns is smaller than the Total Reachable Users. This gap is usually because there are a number of users who qualify for the segment or filters in the campaign, but are not reachable through push (for example, because they don't have valid or active [push tokens](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_token_lifecycle/#push-tokens)).
+When you view the Total Reachable Users for your filtered audience, you may notice that the sum of the individual columns is smaller than the Total Reachable Users. This gap is usually because there are a number of users who qualify for the segment or filters in the campaign, but are not reachable through push (for example, because they don't have valid or active [push tokens](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_token_lifecycle#push-tokens)).
 
 
 
@@ -253,7 +251,7 @@ When you view the Total Reachable Users for your filtered audience, you may noti
 
 Keep in mind that exact segment membership is always calculated before the message is sent.
 
-You can also choose to only send your campaign to users who have a specific [subscription status](https://www.braze.com/docs/user_guide/channels/email/subscriptions/), such as those who are subscribed and opted in to push.
+You can also choose to only send your campaign to users who have a specific [subscription status](https://www.braze.com/docs/user_guide/channels/email/subscriptions), such as those who are subscribed and opted in to push.
 
 Optionally, you can also limit delivery to a specified number of users within the segment, or allow users to receive the same message twice upon a recurrence of the campaign.
 
@@ -276,13 +274,13 @@ With this configuration, don't include any filters in the **Target Audiences** s
 
 ### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze allows you to track how often users perform specific actions, [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 
 
 
 
-If you haven't done so already, complete the remaining sections of your Canvas component. For details on how to build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
+If you haven't done so already, complete the remaining sections of your Canvas component. For details on how to build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#step-3-build-your-canvas) step of our Canvas documentation.
 
 
 
@@ -291,7 +289,7 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 
 After you've finished building the last of your campaign or Canvas, review its details. For campaigns, the final page gives you a summary of the campaign you designed. Confirm all the relevant details, make sure you've tested your message, then send it and watch the data roll in!
 
-Next, see [Push reporting](https://www.braze.com/docs/user_guide/channels/push/reporting/) to learn how you can access the results of your push campaign. For push notifications, you'll be able to view statistics for the number of messages sent, delivered, bounced, opened, and directly opened.
+Next, see [Push reporting](https://www.braze.com/docs/user_guide/channels/push/reporting) to learn how you can access the results of your push campaign. For push notifications, you'll be able to view statistics for the number of messages sent, delivered, bounced, opened, and directly opened.
 
 ### Troubleshooting
 
@@ -299,7 +297,7 @@ Next, see [Push reporting](https://www.braze.com/docs/user_guide/channels/push/r
 
 If you're using the default on-click behavior for your SDK version and selecting a push notification with a web URL opens in the app instead of in a web browser, check the following integration guides to determine push notification handling:
 
-- [Swift](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift#swift_step-2-enable-push-capabilities)
+- [Swift](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#swift_step-2-enable-push-capabilities)
 - [Android](https://www.braze.com/docs/developer_guide/push_notifications#android_step-1-register-braze-firebase-messaging-service)
 
 **Important:**

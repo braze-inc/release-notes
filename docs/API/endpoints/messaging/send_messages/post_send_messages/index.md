@@ -1,4 +1,4 @@
-<div id='api_grmbkmejckbg' class='api_div' data-search-keywords='creating new users with api sends broadcast external_user_ids user_aliases segment_id audience campaign_id send_id override_frequency_capping recipient_subscription_state messages android_push apple_push content_card email kindle_push web_push webhook whats_app sms'>
+<div id='api_ctkzozkjovfh' class='api_div' data-search-keywords='creating new users with api sends broadcast external_user_ids user_aliases segment_id audience campaign_id send_id override_frequency_capping recipient_subscription_state messages android_push apple_push content_card email kindle_push web_push webhook whats_app sms'>
 <h1 id="send-messages-immediately-using-the-api-only">Send messages immediately using the API only</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/send</p>
@@ -26,11 +26,11 @@
 
 <h3 id="option-1-use-userstrack-then-send">Option 1: Use <code class="language-plaintext highlighter-rouge">/users/track</code> then send</h3>
 
-<p>First, create the user with the <a href="/docs/api/endpoints/user_data/post_user_track/"><code class="language-plaintext highlighter-rouge">/users/track</code></a> endpoint, then wait for the data to propagate (generally, a few minutes is recommended) before initiating the API-only send. Note that Braze doesn’t guarantee data processing times on <code class="language-plaintext highlighter-rouge">/users/track</code>, so <a href="/docs/user_guide/messaging/ab_testing/concepts/race_conditions/">race conditions</a> may occur if you don’t allow enough time between these calls.</p>
+<p>First, create the user with the <a href="/docs/api/endpoints/user_data/post_user_track"><code class="language-plaintext highlighter-rouge">/users/track</code></a> endpoint, then wait for the data to propagate (generally, a few minutes is recommended) before initiating the API-only send. Note that Braze doesn’t guarantee data processing times on <code class="language-plaintext highlighter-rouge">/users/track</code>, so <a href="/docs/user_guide/messaging/ab_testing/concepts/race_conditions">race conditions</a> may occur if you don’t allow enough time between these calls.</p>
 
 <h3 id="option-2-use-an-api-triggered-campaign-or-canvas">Option 2: Use an API-triggered campaign or Canvas</h3>
 
-<p>Use an <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/">API-triggered campaign</a> or <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/">Canvas</a> workflow. These allow you to create a recipient if one doesn’t already exist. This option simplifies your backend processes, but requires you to configure a campaign or Canvas in the Braze dashboard.</p>
+<p>Use an <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns">API-triggered campaign</a> or <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases">Canvas</a> workflow. These allow you to create a recipient if one doesn’t already exist. This option simplifies your backend processes, but requires you to configure a campaign or Canvas in the Braze dashboard.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
@@ -50,7 +50,7 @@
 
 <p><strong>Tip:</strong></p>
 
-<p>Be sure to include <a href="/docs/api/objects_filters/#messaging-objects">messaging objects</a> in your body to complete your requests.</p>
+<p>Be sure to include <a href="/docs/api/objects_filters#messaging-objects">messaging objects</a> in your body to complete your requests.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -134,37 +134,37 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">external_user_ids</code></td>
       <td>Optional</td>
       <td>Array of strings</td>
-      <td>See <a href="/docs/api/objects_filters/user_attributes_object/#braze-user-profile-fields">external user ID</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields">external user ID</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">user_aliases</code></td>
       <td>Optional</td>
       <td>Array of user alias objects</td>
-      <td>See <a href="/docs/api/objects_filters/user_alias_object/">user alias object</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/user_alias_object">user alias object</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">segment_id </code></td>
       <td>Optional</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/#segment-identifier">segment identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types#segment-identifier">segment identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">audience</code></td>
       <td>Optional</td>
       <td>Connected audience object</td>
-      <td>See <a href="/docs/api/objects_filters/connected_audience/">connected audience</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/connected_audience">connected audience</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">campaign_id</code></td>
       <td>Optional*</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/#campaign-identifier/">campaign identifier</a> for more information. <br /><br />*Required if you wish to track campaign metrics (such as <em>Sends</em>, <em>Clicks</em>, or <em>Bounces</em>) on the Braze dashboard, or if you want to see events associated with this message in the user profile <a href="/docs/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab">Message History tab</a>.</td>
+      <td>See <a href="/docs/api/identifier_types#campaign-identifier">campaign identifier</a> for more information. <br /><br />*Required if you wish to track campaign metrics (such as <em>Sends</em>, <em>Clicks</em>, or <em>Bounces</em>) on the Braze dashboard, or if you want to see events associated with this message in the user profile <a href="/docs/user_guide/engagement_tools/segments/user_profiles#messaging-history-tab">Message History tab</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">send_id</code></td>
       <td>Optional</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/#send-identifier">send identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types#send-identifier">send identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">override_frequency_capping</code></td>
@@ -182,7 +182,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">messages</code></td>
       <td>Optional</td>
       <td>Messaging objects</td>
-      <td>See <a href="/docs/api/objects_filters/#messaging-objects">available messaging objects</a>.</td>
+      <td>See <a href="/docs/api/objects_filters#messaging-objects">available messaging objects</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -330,6 +330,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="response-details">Response details</h2>
 
-<p>Message sending endpoint responses include the message’s <code class="language-plaintext highlighter-rouge">dispatch_id</code> for reference back to the dispatch of the message. The <code class="language-plaintext highlighter-rouge">dispatch_id</code> is the ID of the message dispatch, meaning the unique ID for each “transmission” sent from Braze. For more information, refer to <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">Dispatch ID behavior</a>.</p>
+<p>Message sending endpoint responses include the message’s <code class="language-plaintext highlighter-rouge">dispatch_id</code> for reference back to the dispatch of the message. The <code class="language-plaintext highlighter-rouge">dispatch_id</code> is the ID of the message dispatch, meaning the unique ID for each “transmission” sent from Braze. For more information, refer to <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id">Dispatch ID behavior</a>.</p>
 
 </div>

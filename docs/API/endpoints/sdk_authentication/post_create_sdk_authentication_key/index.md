@@ -1,4 +1,4 @@
-<div id='api_basqtblsmovf' class='api_div' data-search-keywords='prerequisites app_id rsa_public_key_str description make_primary id'>
+<div id='api_ayqmqdaqdvdx' class='api_div' data-search-keywords='prerequisites app_id rsa_public_key_str description make_primary id'>
 <h1 id="create-sdk-authentication-key">Create SDK Authentication key</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/app_group/sdk_authentication/create</p>
@@ -10,7 +10,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">sdk_authentication.create</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">sdk_authentication.create</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

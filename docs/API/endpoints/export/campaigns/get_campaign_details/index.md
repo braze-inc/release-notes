@@ -1,4 +1,4 @@
-<div id='api_vqqzmotesyzk' class='api_div' data-search-keywords='prerequisites message created_at updated_at archived draft enabled has_post_launch_draft name description schedule_type channels first_sent last_sent tags teams messages message_variation_id channel has_translatable_content conversion_behaviors extras subject body from reply_to title amp_body preheader custom_plain_text should_inline_css should_whitespace_header email_headers type data pages header text choices choice_id custom_attribute_key custom_attribute_value deleted alert action image_url large_image_url subscription_group_id url headers method template_name template_language_code header_variables body_variables button_variables layout header_text body_text footer_text buttons window product custom_event_name app_ids'>
+<div id='api_nuwgeezkmpyz' class='api_div' data-search-keywords='prerequisites message created_at updated_at archived draft enabled has_post_launch_draft name description schedule_type channels first_sent last_sent tags teams messages message_variation_id channel has_translatable_content conversion_behaviors extras subject body from reply_to title amp_body preheader custom_plain_text should_inline_css should_whitespace_header email_headers type data pages header text choices choice_id custom_attribute_key custom_attribute_value deleted alert action image_url large_image_url subscription_group_id url headers method template_name template_language_code header_variables body_variables button_variables layout header_text body_text footer_text buttons window product custom_event_name app_ids'>
 <h1 id="export-campaign-details">Export campaign details</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/campaigns/details</p>
@@ -8,13 +8,13 @@
   <p>Use this endpoint to retrieve relevant information on a specified campaign, which can be identified by the <code class="language-plaintext highlighter-rouge">campaign_id</code>.</p>
 </blockquote>
 
-<p>If you want to retrieve Canvas data, refer to the <a href="/docs/api/endpoints/export/canvas/get_canvas_details/">Export Canvas details</a> endpoint.</p>
+<p>If you want to retrieve Canvas data, refer to the <a href="/docs/api/endpoints/export/canvas/get_canvas_details">Export Canvas details</a> endpoint.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">campaigns.details</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">campaigns.details</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -42,7 +42,7 @@
       <td><code class="language-plaintext highlighter-rouge">campaign_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">campaign API identifier</a>.<br /><br /> The <code class="language-plaintext highlighter-rouge">campaign_id</code> for API campaigns can be found on the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers/">API Keys</a> page and the <strong>Campaign Details</strong> page within your dashboard; or you can use the <a href="#campaign-list-endpoint">Export campaigns list endpoint</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">campaign API identifier</a>.<br /><br /> The <code class="language-plaintext highlighter-rouge">campaign_id</code> for API campaigns can be found on the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers">API Keys</a> page and the <strong>Campaign Details</strong> page within your dashboard; or you can use the <a href="#campaign-list-endpoint">Export campaigns list endpoint</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">post_launch_draft_version</code></td>
@@ -437,6 +437,6 @@
 
 <p><strong>Tip:</strong></p>
 
-<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/">Export troubleshooting</a>.</p>
+<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting">Export troubleshooting</a>.</p>
 
 </div>

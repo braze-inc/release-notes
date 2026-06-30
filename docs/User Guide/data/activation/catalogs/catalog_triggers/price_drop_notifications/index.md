@@ -85,7 +85,7 @@ After setting up the price drop notifications in a catalog, follow these steps t
 1. Set up an action-based Canvas.
 2. Select **Perform Price Drop Event** as the trigger.
 3. Select the name of the catalog with the price drop notifications.
-4. Continue [setting up](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/) your Canvas as you would.
+4. Continue [setting up](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas) your Canvas as you would.
 
 Now, your customers will be notified when an item's price drops.
 
@@ -96,8 +96,6 @@ To template in details about the catalog item that has dropped in price, you can
 Using ``{{context.${catalog_update}.item_id}}`` will return the ID of the item that dropped in price. ``{{context.${catalog_update}.previous_value}}`` will return the price value of the item before the update, and ``{{context.${catalog_update}.new_value}}`` will return the new price value after the update. 
 
 Use the Liquid tag ``{% catalog_items <name_of_your_catalog> {{context.${catalog_update}.item_id}} %}`` at the top of your message, then use `{{items[0].<field_name>}}` to access data about that item throughout the message.
-
-
 
 
 

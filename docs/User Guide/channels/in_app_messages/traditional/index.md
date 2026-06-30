@@ -1,6 +1,6 @@
 # Create an in-app message with the traditional editor
 
-> You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-app message prep guide](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices/).
+> You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-app message prep guide](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices).
 
 ## Step 1: Choose where to build your message {#create-new-campaign-in-app}
 
@@ -12,9 +12,9 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
 2. Select **In-App Message**. Note that in-app messages aren't available in multichannel campaigns.
 3. Name your campaign something clear and meaningful.
-4. Add [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams/) and [Tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags/) as needed.
-   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder/), you can filter by particular tags.
-5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing](https://www.braze.com/docs/user_guide/messaging/ab_testing/).
+4. Add [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams) and [Tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags) as needed.
+   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder), you can filter by particular tags.
+5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing](https://www.braze.com/docs/user_guide/messaging/ab_testing).
 
 **Tip:**
 
@@ -26,11 +26,11 @@ If all of the messages in your campaign are going to be similar or have the same
 
 
 
-1. [Create your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/) using the Canvas composer.
+1. [Create your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
-3. Choose a [step schedule](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/#schedule-delay) and specify a delay as needed. Note that steps containing in-app messages cannot be action-based.
+3. Choose a [step schedule](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types#schedule-delay) and specify a delay as needed. Note that steps containing in-app messages cannot be action-based.
 4. Filter your Audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
-5. Choose your [advancement behavior](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases/).
+5. Choose your [advancement behavior](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases).
 6. Choose any other messaging channels which you would like to pair with your message.
 
 **Important:**
@@ -40,7 +40,7 @@ You can't have multiple in-app message variants in a single step.
 
 
 
-You can find more Canvas-specific information in [In-app messages in Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/#messages-in-canvas).
+You can find more Canvas-specific information in [In-app messages in Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#messages-in-canvas).
 
 
 
@@ -58,7 +58,7 @@ Start by choosing which platforms should receive the message. Use this selection
 
 ## Step 3: Specify your message types
 
-Once you've selected a sending platform, browse the message types, layouts, and other options associated with it. Learn more about the expected behavior and look of each of these messages on our [Message types](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/) page, or by clicking on the linked message types in the following tables.
+Once you've selected a sending platform, browse the message types, layouts, and other options associated with it. Learn more about the expected behavior and look of each of these messages on our [Message types](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types) page, or by clicking on the linked message types in the following tables.
 
 When deciding which message type to use, consider how much space your message will occupy and how disruptive it may feel to the user experience.
 
@@ -185,7 +185,7 @@ The content of the **Compose** tab varies based on your chosen message options i
 
 ### Language
 
-Select **Add Languages** and select your desired languages from the provided list. This will insert [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
+Select **Add Languages** and select your desired languages from the provided list. This will insert [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/conditional_logic#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/localization#languages-supported).
 
 ### Image
 
@@ -229,11 +229,9 @@ Depending on your message type, you can **Upload Image**, **Pick a Badge**, or u
 
 
 
-
-
 ### Header and body
 
-Write anything you want! Include completely custom copy (often with custom HTML capabilities) with the options to include [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid/) and other types of personalization. The faster you can get your message across and get your customer clicking—the better! We recommend clear and concise headers and message content.
+Write anything you want! Include completely custom copy (often with custom HTML capabilities) with the options to include [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid) and other types of personalization. The faster you can get your message across and get your customer clicking—the better! We recommend clear and concise headers and message content.
 
 Some message types do not need and therefore do not ask for headers.
 
@@ -241,13 +239,13 @@ Some message types do not need and therefore do not ask for headers.
 
 ##### Generating AI copy
 
-Need help creating awesome copy? Try using the [AI copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#generate-copy). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating awesome copy? Try using the [AI copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#generate-copy). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Launch AI Copywriter button, located in the Message field of the in-app message composer.](https://www.braze.com/docs/assets/img/ai_copywriter/ai_copywriter_iam.png?ee0903850c68f4837acd2eed22be5db5){: style="max-width:60%"}
 
 ##### Creating right-to-left messages
 
-Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages/) for best practices.
+Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages) for best practices.
 
 ### Button text {#buttons}
 
@@ -270,11 +268,11 @@ When your customer clicks on a button in your in-app message, the following acti
 | Action | Description |
 |---|---|
 | Redirect to Web URL | Open a non-native web page. |
-| [Deep Link into App](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls/#deep-link-to-in-app-content) | Deep link into an existing screen in your app. |
+| [Deep Link into App](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls#deep-link-to-in-app-content) | Deep link into an existing screen in your app. |
 | Close Message | Closes the currently active message. |
-| Log Custom Event | Choose a [custom event](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/) to trigger. Can be used to display another in-app message or trigger additional messaging. |
-| Log Custom Attribute | Choose a [custom attribute](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes/) to set for the current user. |
-| Request Push Permission | Shows the native push permission. Read more about [push priming](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/), as well as [best practices](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states/#best-practices) for priming users for push. |
+| Log Custom Event | Choose a [custom event](https://www.braze.com/docs/user_guide/data/activation/events/custom_events) to trigger. Can be used to display another in-app message or trigger additional messaging. |
+| Log Custom Attribute | Choose a [custom attribute](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes) to set for the current user. |
+| Request Push Permission | Shows the native push permission. Read more about [push priming](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages), as well as [best practices](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states#best-practices) for priming users for push. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="On-click behavior #button-actions" }
 
 Note: the __Request Push Permission__, __Log Custom Event__, and __Log Custom Attribute__ options require the following SDK minimum versions:
@@ -312,7 +310,7 @@ The content of the **Style** tab varies based on your chosen message options in 
 
 | Formatting | Input | Description |
 |---|---|---|
-|[Color Profile](https://www.braze.com/docs/user_guide/messaging/templates/in_app_message_templates/in_app_message_template/#reusable-color-profiles) | Apply from in-app message templates gallery. | Select **Apply Template** and choose from the gallery. Then, select **Save**. |
+|[Color Profile](https://www.braze.com/docs/user_guide/messaging/templates/in_app_message_templates/in_app_message_template#reusable-color-profiles) | Apply from in-app message templates gallery. | Select **Apply Template** and choose from the gallery. Then, select **Save**. |
 |Text Alignment | Left, Center, or Right.  | Only available for newer Braze SDK versions. |
 |Header | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color.  |
 |Text | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. |
@@ -323,12 +321,12 @@ The content of the **Style** tab varies based on your chosen message options in 
 |Chevron or other Close Message Option | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Step 5: Style your in-app message #step-5-style-your-in-app-message" }
 
-Always [preview and test](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=in-app%20message) your message before sending.
+Always [preview and test](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages?tab=in-app%20message) your message before sending.
 
 **Important:**
 
 
-Some in-app message types do not have the option for styling beyond uploading custom HTML (or CSS or JavaScript) and assets using a ZIP file. [Web Modal with CSS](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize/#web-modal-css) allows you to upload or write custom CSS to create beautiful, all-around custom-styled messaging.
+Some in-app message types do not have the option for styling beyond uploading custom HTML (or CSS or JavaScript) and assets using a ZIP file. [Web Modal with CSS](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize#web-modal-css) allows you to upload or write custom CSS to create beautiful, all-around custom-styled messaging.
 
 
 
@@ -336,7 +334,7 @@ Some in-app message types do not have the option for styling beyond uploading cu
 
 ### Key-value pairs
 
-You can add [key-value pairs](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/key_value_pairs/) to send extra custom fields to user devices.
+You can add [key-value pairs](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/key_value_pairs) to send extra custom fields to user devices.
 
 ## Step 7: Build the remainder of your campaign or Canvas
 
@@ -369,7 +367,7 @@ In-app message delivery is entirely based on the following action triggers:
 
 A start date and time must be selected; however, an end date is optional. An end date will stop that specific in-app message from showing up on devices after the specified date/time.
 
-Refer to our developer documentation for [server-side event triggering](https://www.braze.com/docs/developer_guide/in_app_messages/triggering_messages/?tab=web) and [local in-app message delivery](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
+Refer to our developer documentation for [server-side event triggering](https://www.braze.com/docs/developer_guide/in_app_messages/triggering_messages?tab=web) and [local in-app message delivery](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery#local-in-app-messages).
 
 #### Online versus offline triggering
 
@@ -403,7 +401,7 @@ To set priorities within these buckets, click **Set Exact Priority**, and you ca
 
 ### Choose users to target
 
-Next, you must [target users](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/target_users/) by choosing segments or filters to narrow your audience. You automatically receive a snapshot of what that approximate segment population looks like. Keep in mind that exact segment membership is always calculated before the message is sent.
+Next, you must [target users](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/target_users) by choosing segments or filters to narrow your audience. You automatically receive a snapshot of what that approximate segment population looks like. Keep in mind that exact segment membership is always calculated before the message is sent.
 
 **Note:**
 
@@ -418,7 +416,7 @@ In some scenarios, you may want to re-evaluate a user's eligibility as they trig
 
 ![Checkbox for "Re-evaluate campaign eligibility before displaying" selected.](https://www.braze.com/docs/assets/img_archive/re-evaluate-iam-membership.png?57c8ca286b218a268d43280ad3673872){:style="max-width:60%"}
 
-When you select **Re-evaluate campaign eligibility before displaying**, an additional request to Braze will be made to confirm that the user is still eligible for this message before sending. Additionally, any [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/) variables or [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/) will be templated at that moment before the message is displayed.
+When you select **Re-evaluate campaign eligibility before displaying**, an additional request to Braze will be made to confirm that the user is still eligible for this message before sending. Additionally, any [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) variables or [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content) will be templated at that moment before the message is displayed.
 
 This prevents in-app messages from being sent to users within expired or archived campaigns. If you don't re-evaluate a user's eligibility, the user will receive the in-app message even after the campaign has expired or is archived because the message is in your SDK and waiting for users to trigger it.
 
@@ -433,29 +431,29 @@ Do not use this option for messages that can be triggered while a user is offlin
 
 #### Use data added by REST API in a message
 
-User data that the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) adds in the same session can sometimes be used in that user's in-app message. For example, if a user is in the audience for an in-app message that is waiting on a trigger, starts a session, and in that same session the REST API updates their profile, that new data can appear in the in-app message when **Re-evaluate campaign eligibility before displaying** is selected. Braze won't template the in-app message until it's time to render.
+User data that the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) adds in the same session can sometimes be used in that user's in-app message. For example, if a user is in the audience for an in-app message that is waiting on a trigger, starts a session, and in that same session the REST API updates their profile, that new data can appear in the in-app message when **Re-evaluate campaign eligibility before displaying** is selected. Braze won't template the in-app message until it's time to render.
 
 If one trigger both sends data to Braze and fires the in-app message, the message can't use that newly updated profile data, even with a scheduled delay. Use two separate triggers instead: one to send the data, and one to trigger the in-app message.
 
 ### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze allows you to track how often users perform specific actions, [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 
 
 
-If you haven't done so already, complete the remaining sections of your Canvas component. For further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
+If you haven't done so already, complete the remaining sections of your Canvas component. For further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#step-3-build-your-canvas) step of our Canvas documentation.
 
-For information on Canvas-specific in-app messaging options, refer to [In-app messages in Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/#messages-in-canvas).
+For information on Canvas-specific in-app messaging options, refer to [In-app messages in Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#messages-in-canvas).
 
 
 
 
 ## Step 8: Review and deploy
 
-After you've finished building the last of your campaign or Canvas, review its details, [test it](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=in-app%20message), then send it!
+After you've finished building the last of your campaign or Canvas, review its details, [test it](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages?tab=in-app%20message), then send it!
 
-Next, check out [In-app message reporting](https://www.braze.com/docs/user_guide/channels/in_app_messages/reporting/) to learn how you can access the results of your messaging campaigns.
+Next, check out [In-app message reporting](https://www.braze.com/docs/user_guide/channels/in_app_messages/reporting) to learn how you can access the results of your messaging campaigns.
 
 ## Things to know
 

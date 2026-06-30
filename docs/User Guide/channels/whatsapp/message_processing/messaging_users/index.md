@@ -96,7 +96,7 @@ You can only add WhatsApp list messages to Canvases that are action-based, as th
 
 #### Step 2: Create a WhatsApp Message step
 
-Add a WhatsApp [Message step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step/), and then select the response message layout of **List Message**.
+Add a WhatsApp [Message step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step), and then select the response message layout of **List Message**.
 
 ![A selectable collection of the different types of WhatsApp response messages you can create, including "List Message".](https://www.braze.com/docs/assets/img/whatsapp/list_message_option.png?2a35e77bc113528e0c05c28b94e5f1d0){: style="max-width:70%;"}
 
@@ -112,7 +112,7 @@ Change the order of sections and rows by selecting and dragging the icon next to
 
 ![Dragging a list section into a new location.](https://www.braze.com/docs/assets/img/whatsapp/drag_list_order.png?2983f8d43bff92b06ab1b553a464d541){: style="max-width:60%;"}
 
-Back in the Canvas composer, add an [Action path](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths/) after the Message step that has a group for each list response. In each group:
+Back in the Canvas composer, add an [Action path](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) after the Message step that has a group for each list response. In each group:
 
 1. Add a trigger for **Sent inbound WhatsApp subscription group** and select the respective WhatsApp subscription group.
 2. Check the **Where the message body** checkbox.
@@ -124,7 +124,7 @@ Continue to build out your Canvas.
 
 ### Creating actions paths for long descriptions
 
-If you have row descriptions, you must use **Matches regex** to specify a row. For example, if you want to specify a row with the description, "Our new style that fits over your favorite pair of ankle boots", you could use [regex](https://www.braze.com/docs/user_guide/audience/segments/regex/) with "ankle boots".
+If you have row descriptions, you must use **Matches regex** to specify a row. For example, if you want to specify a row with the description, "Our new style that fits over your favorite pair of ankle boots", you could use [regex](https://www.braze.com/docs/user_guide/audience/segments/regex) with "ankle boots".
 
 ![A WhatsApp trigger using the filter for "Matches regex" to capture response messages with "ankle boots".](https://www.braze.com/docs/assets/img/whatsapp/regex_list_message.png?2ca4c40951f2c66d97479cfdff10479b)
 
@@ -137,11 +137,11 @@ Response messages need to be sent within 24 hours of receiving a user's message.
 The following events unblock response messages: 
 
 - Inbound message 
-  - [Action Path](https://www.braze.com/docs/action_paths/) or [action-based entry](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/) with the trigger **Send a WhatsApp inbound message**.
+  - [Action Path](https://www.braze.com/docs/action_paths) or [action-based entry](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery) with the trigger **Send a WhatsApp inbound message**.
 
 ![An action-based entry step with the trigger "Send a WhatsApp inbound message".](https://www.braze.com/docs/assets/img/whatsapp/whatsapp_inbound_message_trigger.png?b1c4ced44353dc412960ddabd1d13fef)
 
-- [API-triggered entry](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery/)
+- [API-triggered entry](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery)
 - Inbound product message 
   - [`ecommerce.cart_updated`](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events#types-of-ecommerce-recommended-events?tab=ecommerce.cart_updated) event
 
@@ -149,7 +149,7 @@ The following events unblock response messages:
 
 ### Filtering by a custom time attribute
 
-If your action-based WhatsApp campaign or Canvas audience depends on a custom time attribute falling within a relative window (for example, between now and the next 24 hours), combine two filters as described in [Time](https://www.braze.com/docs/user_guide/data/activation/custom_data/custom_attributes/#time).
+If your action-based WhatsApp campaign or Canvas audience depends on a custom time attribute falling within a relative window (for example, between now and the next 24 hours), combine two filters as described in [Time](https://www.braze.com/docs/user_guide/data/activation/custom_data/custom_attributes#time).
 
 ### Inbound media storage and URL expiration
 
@@ -161,4 +161,5 @@ However, the `inbound_media_urls` Liquid field, which references the URL of that
 
 
 If you save an `inbound_media_urls` value to a user custom attribute for later use, be aware of this seven-day expiration. Attempting to access the URL after it has expired results in a broken link.
+
 

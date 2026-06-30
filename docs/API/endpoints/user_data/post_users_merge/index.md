@@ -1,4 +1,4 @@
-<div id='api_cdqlxmbcpuht' class='api_div' data-search-keywords='prerequisites merge_updates message'>
+<div id='api_hohciqatgrrm' class='api_div' data-search-keywords='prerequisites merge_updates message'>
 <h1 id="merge-users">Merge users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/merge</p>
@@ -14,7 +14,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">users.merge</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.merge</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -76,7 +76,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 <ul>
   <li>First name</li>
   <li>Last name</li>
-  <li>Email addresses (unless they are <a href="/docs/user_guide/data/infrastructure/field_level_encryption/">encrypted</a>)</li>
+  <li>Email addresses (unless they are <a href="/docs/user_guide/data/infrastructure/field_level_encryption">encrypted</a>)</li>
   <li>Gender</li>
   <li>Date of birth</li>
   <li>Phone number</li>
@@ -114,7 +114,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <p>When merging users, using the <code class="language-plaintext highlighter-rouge">/users/merge</code> endpoint works the same way as using the <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser"><code class="language-plaintext highlighter-rouge">changeUser()</code> method</a>.</p>
 
-<p>Braze handles three user types differently when merging: users marked for deletion, test users, and Global Control Group users. For details, see <a href="/docs/user_guide/audience/manage_audience/merge_duplicate_users/merge_behavior/">User merge behavior</a>.</p>
+<p>Braze handles three user types differently when merging: users marked for deletion, test users, and Global Control Group users. For details, see <a href="/docs/user_guide/audience/manage_audience/merge_duplicate_users/merge_behavior">User merge behavior</a>.</p>
 
 <h4 id="custom-event-date-and-purchase-event-date-behavior">Custom event date and purchase event date behavior</h4>
 
@@ -204,11 +204,11 @@ Authorization: Bearer YOUR_REST_API_KEY
     },
     {
       "identifier_to_merge": {
-        "email": "user1@braze.com",
+        "email": "user1@example.com",
         "prioritization": ["unidentified", "most_recently_updated"]
       },
       "identifier_to_keep":  {
-        "email": "user2@braze.com",
+        "email": "user2@example.com",
         "prioritization": ["identified", "most_recently_updated"]
       }
     },
@@ -232,7 +232,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <h3 id="merging-unidentified-user">Merging unidentified user</h3>
 
-<p>The following request would merge the most recently updated unidentified user with email address <code class="language-plaintext highlighter-rouge">john.smith@braze.com</code> into the user with an external ID <code class="language-plaintext highlighter-rouge">john</code>. In this example, using <code class="language-plaintext highlighter-rouge">most_recently_updated</code> filters the query to one unidentified user. So, if there were two unidentified users with this email address, only one would get merged into the user who has an external ID <code class="language-plaintext highlighter-rouge">john</code>.</p>
+<p>The following request would merge the most recently updated unidentified user with email address <code class="language-plaintext highlighter-rouge">john.smith@example.com</code> into the user with an external ID <code class="language-plaintext highlighter-rouge">john</code>. In this example, using <code class="language-plaintext highlighter-rouge">most_recently_updated</code> filters the query to one unidentified user. So, if there were two unidentified users with this email address, only one would get merged into the user who has an external ID <code class="language-plaintext highlighter-rouge">john</code>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -257,7 +257,7 @@ Authorization: Bearer YOUR_REST_API_KEY
   "merge_updates": [
     {
       "identifier_to_merge": {
-        "email": "john.smith@braze.com",
+        "email": "john.smith@example.com",
         "prioritization": ["unidentified", "most_recently_updated"]
       },
       "identifier_to_keep": {
@@ -270,7 +270,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <h3 id="merging-unidentified-user-into-identified-user">Merging unidentified user into identified user</h3>
 
-<p>This next example merges the most recently updated unidentified user with email address <code class="language-plaintext highlighter-rouge">john.smith@braze.com</code> into the most recently updated identified user with email address <code class="language-plaintext highlighter-rouge">john.smith@braze.com</code>.</p>
+<p>This next example merges the most recently updated unidentified user with email address <code class="language-plaintext highlighter-rouge">john.smith@example.com</code> into the most recently updated identified user with email address <code class="language-plaintext highlighter-rouge">john.smith@example.com</code>.</p>
 
 <p>Using <code class="language-plaintext highlighter-rouge">most_recently_updated</code> filters the queries to one user (one unidentified user for <code class="language-plaintext highlighter-rouge">identifier_to_merge</code>, and one identified user for the <code class="language-plaintext highlighter-rouge">identifier_to_keep</code>).</p>
 
@@ -298,11 +298,11 @@ Authorization: Bearer YOUR_REST_API_KEY
   "merge_updates": [
     {
       "identifier_to_merge": {
-        "email": "john.smith@braze.com",
+        "email": "john.smith@example.com",
         "prioritization": ["unidentified", "most_recently_updated"]
       },
       "identifier_to_keep": {
-        "email": "john.smith@braze.com",
+        "email": "john.smith@example.com",
         "prioritization": ["identified", "most_recently_updated"]
       }
     }
@@ -312,7 +312,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <h3 id="merging-an-unidentified-user-without-including-the-most_recently_updated-prioritization">Merging an unidentified user without including the most_recently_updated prioritization</h3>
 
-<p>If there are two unidentified users with the mail address <code class="language-plaintext highlighter-rouge">john.smith@braze.com</code>, this example request doesn’t merge any users because there are two unidentified users with that email address. This request only works if there is only one unidentified user with the email address <code class="language-plaintext highlighter-rouge">john.smith@braze.com</code>.</p>
+<p>If there are two unidentified users with the mail address <code class="language-plaintext highlighter-rouge">john.smith@example.com</code>, this example request doesn’t merge any users because there are two unidentified users with that email address. This request only works if there is only one unidentified user with the email address <code class="language-plaintext highlighter-rouge">john.smith@example.com</code>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -337,7 +337,7 @@ Authorization: Bearer YOUR_REST_API_KEY
   "merge_updates": [
     {
       "identifier_to_merge": {
-        "email": "john.smith@braze.com",
+        "email": "john.smith@example.com",
         "prioritization": ["unidentified"]
       },
       "identifier_to_keep": {

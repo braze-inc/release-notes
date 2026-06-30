@@ -4,7 +4,7 @@
 
 You must include one of `external_user_id`, `user_alias`, `braze_id`, or `email` in this object. **Requests must specify only one.**
 
-The recipients object allows you to combine the [user alias object](https://www.braze.com/docs/api/objects_filters/user_alias_object/), the [trigger properties object](https://www.braze.com/docs/api/objects_filters/trigger_properties_object/), the [Canvas entry properties object](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context/), and the [user attributes object](https://www.braze.com/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens).
+The recipients object allows you to combine the [user alias object](https://www.braze.com/docs/api/objects_filters/user_alias_object), the [trigger properties object](https://www.braze.com/docs/api/objects_filters/trigger_properties_object), the [Canvas entry properties object](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context), and the [user attributes object](https://www.braze.com/docs/api/objects_filters/user_attributes_object#migrating-push-tokens).
 
 ## Object body
 
@@ -24,15 +24,15 @@ The recipients object allows you to combine the [user alias object](https://www.
 
 When `send_to_existing_only` is `true`, Braze only sends the message to existing users. However, you cannot use this flag with user aliases.
 
-When `send_to_existing_only` is `false`, you must include an `attributes` object on the same recipient. The flag does not replace `attributes`. Braze uses `attributes` for the pre-send profile create or update (for example adding `email` or phone fields for Email or SMS delivery, or updating subscription groups). Without that object, you do not get the intended combined behavior for net-new users on [`/campaigns/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) or [`/canvas/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/).
+When `send_to_existing_only` is `false`, you must include an `attributes` object on the same recipient. The flag does not replace `attributes`. Braze uses `attributes` for the pre-send profile create or update (for example adding `email` or phone fields for Email or SMS delivery, or updating subscription groups). Without that object, you do not get the intended combined behavior for net-new users on [`/campaigns/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns) or [`/canvas/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases).
 
 That profile must still meet the message's audience and channel eligibility rules before Braze sends.
 
-- [Braze ID](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle/)
-- [User aliases](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
-- [External user ID](https://www.braze.com/docs/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
-- [Prioritization](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify/#identifying-users-by-email)
-- [User attributes object](https://www.braze.com/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens)
+- [Braze ID](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle)
+- [User aliases](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases)
+- [External user ID](https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields)
+- [Prioritization](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify#identifying-users-by-email)
+- [User attributes object](https://www.braze.com/docs/api/objects_filters/user_attributes_object#migrating-push-tokens)
 
 ## Recipient object deduping
 

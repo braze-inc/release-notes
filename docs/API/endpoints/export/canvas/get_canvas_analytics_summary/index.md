@@ -1,4 +1,4 @@
-<div id='api_xixhchrnthai' class='api_div' data-search-keywords='prerequisites data name total_stats revenue conversions conversions_by_entry_time entries variant_stats step_stats messages android_push sent opens influenced_opens bounces message'>
+<div id='api_sbgojpojojzk' class='api_div' data-search-keywords='prerequisites data name total_stats revenue conversions conversions_by_entry_time entries variant_stats step_stats messages android_push sent opens influenced_opens bounces message'>
 <h1 id="export-canvas-data-summary-analytics">Export Canvas data summary analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/data_summary</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.data_summary</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.data_summary</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -40,7 +40,7 @@
       <td><code class="language-plaintext highlighter-rouge">canvas_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">Canvas API identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">Canvas API identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">ending_at</code></td>
@@ -97,7 +97,7 @@
 
 <p><strong>Note:</strong></p>
 
-<p>In <code class="language-plaintext highlighter-rouge">total_stats</code>, <code class="language-plaintext highlighter-rouge">variant_stats</code>, and <code class="language-plaintext highlighter-rouge">step_stats</code>, <code class="language-plaintext highlighter-rouge">conversions</code> is the count for the <a href="/docs/user_guide/messaging/messaging_fundamentals/conversion_events/">primary conversion event</a> of the Canvas. When you configure additional conversion events, the payload can also include <code class="language-plaintext highlighter-rouge">conversions1</code>, <code class="language-plaintext highlighter-rouge">conversions2</code>, and higher-indexed fields for the second, third, and further events. This is similar to the <a href="/docs/api/endpoints/export/campaigns/get_campaign_analytics/#multivariate-response">multivariate response</a> for the ` /campaigns/data_series<code class="language-plaintext highlighter-rouge"> endpoint. Where present, fields ending in </code>_by_entry_time` attribute those conversions by Canvas entry time.</p>
+<p>In <code class="language-plaintext highlighter-rouge">total_stats</code>, <code class="language-plaintext highlighter-rouge">variant_stats</code>, and <code class="language-plaintext highlighter-rouge">step_stats</code>, <code class="language-plaintext highlighter-rouge">conversions</code> is the count for the <a href="/docs/user_guide/messaging/messaging_fundamentals/conversion_events">primary conversion event</a> of the Canvas. When you configure additional conversion events, the payload can also include <code class="language-plaintext highlighter-rouge">conversions1</code>, <code class="language-plaintext highlighter-rouge">conversions2</code>, and higher-indexed fields for the second, third, and further events. This is similar to the <a href="/docs/api/endpoints/export/campaigns/get_campaign_analytics#multivariate-response">multivariate response</a> for the ` /campaigns/data_series<code class="language-plaintext highlighter-rouge"> endpoint. Where present, fields ending in </code>_by_entry_time` attribute those conversions by Canvas entry time.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -192,7 +192,7 @@
 <h2 id="related-articles">Related articles</h2>
 
 <ul>
-  <li><a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/">Export troubleshooting</a></li>
+  <li><a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting">Export troubleshooting</a></li>
 </ul>
 
 </div>

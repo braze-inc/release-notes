@@ -1,6 +1,6 @@
 # HTML in-app messages
 
-> Learn how to add the Braze JavaScript interface to your app, so you can use the Braze API to create [HTML in-app messages](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/custom_html/) in your custom WebViews.
+> Learn how to add the Braze JavaScript interface to your app, so you can use the Braze API to create [HTML in-app messages](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/custom_html) in your custom WebViews.
 
 
 

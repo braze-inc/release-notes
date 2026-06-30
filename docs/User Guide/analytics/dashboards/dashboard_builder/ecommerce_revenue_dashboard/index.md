@@ -1,11 +1,11 @@
 # eCommerce revenue dashboard
 
-> The **eCommerce Revenue - Last Touch Attribution** dashboard tracks last-touch attributed revenue for campaigns and Canvases using [eCommerce recommended events](https://www.braze.com/docs/ecommerce_events/). Use this dashboard to understand which messages drive revenue and to monitor overall eCommerce performance over time.
+> The **eCommerce Revenue - Last Touch Attribution** dashboard tracks last-touch attributed revenue for campaigns and Canvases using [eCommerce recommended events](https://www.braze.com/docs/ecommerce_events). Use this dashboard to understand which messages drive revenue and to monitor overall eCommerce performance over time.
 
 **Note:**
 
 
-If you're using the new [Shopify connector](https://www.braze.com/docs/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), eCommerce recommended events are automatically available through the integration. Otherwise, these events must be implemented before data appears in this dashboard.
+If you're using the new [Shopify connector](https://www.braze.com/docs/partners/ecommerce/shopify/multiple_stores?tab=shopify%20connector), eCommerce recommended events are automatically available through the integration. Otherwise, these events must be implemented before data appears in this dashboard.
 
 
 

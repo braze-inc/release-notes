@@ -1,4 +1,4 @@
-<div id='api_kqjbhkwiokns' class='api_div' data-search-keywords='prerequisites'>
+<div id='api_qsnotrcgegoh' class='api_div' data-search-keywords='prerequisites'>
 <h1 id="update-preference-center">Update preference center</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/preference_center/v1/{preferenceCenterExternalID}</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">preference_center.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">preference_center.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

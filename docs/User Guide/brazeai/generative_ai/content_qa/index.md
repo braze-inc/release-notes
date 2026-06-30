@@ -15,4 +15,4 @@ This feature is now part of [BrazeAI Operator™](https://www.braze.com/docs/use
 On the **Test** tab for SMS, Android push, iOS push, and traditional in-app messages, select **Review with Operator** to review your content before sending. Operator checks for spelling and grammar errors, off-brand or inappropriate tone, offensive language, and stray code or unrendered Liquid. It flags each issue with the specific text and a suggested fix, or confirms the content is clean.
 
 
-For more information, including supported features, best practices, and example prompts, see [Review content quality in Operator capabilities](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#review-content-quality).
+For more information, including supported features, best practices, and example prompts, see [Review content quality in Operator capabilities](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#review-content-quality).

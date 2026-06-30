@@ -14,7 +14,7 @@
 }
 ```
 
-- [App identifier](https://www.braze.com/docs/api/identifier_types/)
+- [App identifier](https://www.braze.com/docs/api/identifier_types)
 
 ### Message Types
 
@@ -34,7 +34,7 @@
 **Important:**
 
 
-**Media send limitations:** Media sends (documents, videos, and other media types) are not supported by the `messages/send` API. Only TEXT and IMAGE header types are supported for template messages sent through the API. If your WhatsApp template uses a DOCUMENT, VIDEO, or other media type header, you cannot send it using the `messages/send` API. Use the [Campaigns Triggered API](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) or the Braze dashboard to send templates with media headers.
+**Media send limitations:** Media sends (documents, videos, and other media types) are not supported by the `messages/send` API. Only TEXT and IMAGE header types are supported for template messages sent through the API. If your WhatsApp template uses a DOCUMENT, VIDEO, or other media type header, you cannot send it using the `messages/send` API. Use the [Campaigns Triggered API](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns) or the Braze dashboard to send templates with media headers.
 
 
 
@@ -117,7 +117,7 @@ Currently, only one button variable can be specified, which is the path componen
 }
 ```
 
-###### Example
+##### Example
 
 ```json
 {
@@ -135,7 +135,7 @@ Currently, only one button variable can be specified, which is the path componen
 }
 ```
 
-###### Example
+##### Example
 
 ```json
 {

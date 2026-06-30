@@ -440,7 +440,7 @@ field_name = '{{catalog_fields.${custom_label}}}'
 
 ### Segments
 
-For selecting segments that have [Analytics Tracking](https://www.braze.com/docs/user_guide/analytics/tracking/segment_analytics_tracking/) turned on. Set this to the segment analytics ID, which corresponds to the IDs stored in the `user_segment_membership_ids` column in the tables where this column is available.
+For selecting segments that have [Analytics Tracking](https://www.braze.com/docs/user_guide/analytics/tracking/segment_analytics_tracking) turned on. Set this to the segment analytics ID, which corresponds to the IDs stored in the `user_segment_membership_ids` column in the tables where this column is available.
 
 
 

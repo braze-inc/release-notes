@@ -2,7 +2,7 @@
 
 > While our standard in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. 
 
-This message type is available in the [traditional editor](https://www.braze.com/docs/user_guide/channels/in_app_messages/traditional/).
+This message type is available in the [traditional editor](https://www.braze.com/docs/user_guide/channels/in_app_messages/traditional).
 
 ## How it works
 
@@ -155,7 +155,7 @@ In addition to custom JavaScript, Braze SDKs can also send analytics data with t
 **Warning:**
 
 
-The use of `abButtonID` is not supported in [HTML with Preview](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/custom_html/#html-upload-with-preview/) message types. For more information, see our [upgrade guide](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/custom_html/#html-upload-with-preview).
+The use of `abButtonID` is not supported in [HTML with Preview](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/custom_html#html-upload-with-preview) message types. For more information, see our [upgrade guide](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/custom_html#html-upload-with-preview).
 
 
 
@@ -226,11 +226,11 @@ Because this message type can only be received by certain later SDK versions, us
 
 ### Creating a campaign {#instructions}
 
-Your mobile app users need to upgrade to the supported SDK versions to receive a **Custom Code** in-app message. We recommend that you [nudge users to upgrade](https://www.braze.com/docs/user_guide/messaging/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions.
+Your mobile app users need to upgrade to the supported SDK versions to receive a **Custom Code** in-app message. We recommend that you [nudge users to upgrade](https://www.braze.com/docs/user_guide/messaging/campaigns/ideas_and_strategies/new_features) their mobile apps before launching campaigns that depend on newer Braze SDK versions.
 
 #### Asset files
 
-When creating custom code in-app messages with HTML upload, you can upload campaign assets to the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/) to reference in your message.
+When creating custom code in-app messages with HTML upload, you can upload campaign assets to the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library) to reference in your message.
 
 The following file types are supported for upload:
 
@@ -272,7 +272,7 @@ You can select <i class="fa-solid fa-magnifying-glass"></i> **Search** within th
 
 ### Button tracking {#button-tracking-improvements}
 
-You can track performance within your custom code in-app message using the [`brazeBridge.logClick(button_id)`](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/) JavaScript method. This allows you to programmatically track "Button 1", "Button 2", and "Body Clicks" using `brazeBridge.logClick('0')`, `brazeBridge.logClick('1')`, or `brazeBridge.logClick()`, respectively.
+You can track performance within your custom code in-app message using the [`brazeBridge.logClick(button_id)`](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types) JavaScript method. This allows you to programmatically track "Button 1", "Button 2", and "Body Clicks" using `brazeBridge.logClick('0')`, `brazeBridge.logClick('1')`, or `brazeBridge.logClick()`, respectively.
 
 | Clicks     | Method                       |
 | ---------- | ---------------------------- |

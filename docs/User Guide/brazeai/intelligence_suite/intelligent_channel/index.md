@@ -17,7 +17,7 @@ To enable the Intelligent Channel filter, select the **Intelligent Channel** fil
 **Important:**
 
 
-To compute the engagement rate of the SMS channel, turn on [SMS link shortening](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening#overview/) with advanced tracking and click tracking. Without this tracking, SMS may be selected as the Intelligent Channel for a 0% engagement rate because of our [tie-breaking behavior](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_channel#tie-breaking).
+To compute the engagement rate of the SMS channel, turn on [SMS link shortening](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening#overview) with advanced tracking and click tracking. Without this tracking, SMS may be selected as the Intelligent Channel for a 0% engagement rate because of our [tie-breaking behavior](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_channel#tie-breaking).
 
 
 

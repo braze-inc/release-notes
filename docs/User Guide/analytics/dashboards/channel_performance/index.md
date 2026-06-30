@@ -58,8 +58,8 @@ The “Other” category includes any user string that cannot be identified as d
 
 To better understand what is in this "Other" category, you can extract the user agents using either of these options:
 
-1. [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/) will send you the exact user agent string that was retrieved from your users' devices.
-2. Leverage our [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/) to use SQL or our [AI Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder#generating-sql-with-the-ai-query-builder) to view the user agents.
+1. [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents) will send you the exact user agent string that was retrieved from your users' devices.
+2. Leverage our [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder) to use SQL or our [AI Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder#generating-sql-with-the-ai-query-builder) to view the user agents.
 
 ![Engagement by Device report that shows the number of clicks for mobile, desktop, tablet, and other devices. The most number of clicks occurs on mobile devices.](https://www.braze.com/docs/assets/img/engagement_by_device_type.png?5a5e8fbdc8837e2756a99e6131eeabfc){: style="max-width:70%;"}
 
@@ -85,7 +85,7 @@ The **Time of the day** engagement report breaks down opens or clicks by each ho
 
 ![An example Time of the day engagement report with the opens or clicks from 12 am to 11 pm.](https://www.braze.com/docs/assets/img_archive/time_engagement_day.png?e3b7db8e1491bded5f6f3acd7fecda4f)
 
-For more information on analytics for your emails, check out [Email reporting](https://www.braze.com/docs/user_guide/channels/email/reporting/).
+For more information on analytics for your emails, check out [Email reporting](https://www.braze.com/docs/user_guide/channels/email/reporting).
 
 
 
@@ -188,7 +188,7 @@ For the _Unique Opens_ metric, Braze will deduplicate any repeat opens registere
 
 ## Empty values in your data
 
-#### If a metric displays "0%" or "0"
+### If a metric displays "0%" or "0"
 
 This means Braze recorded zero for that particular metric during the time frame you've selected.
 
@@ -198,7 +198,7 @@ This means that while Braze recorded positive counts for a particular metric for
 
 #### If a metric displays "--"
 
-This means Braze hasn't recorded any data for that metric during the time you selected. If you haven't set up or sent any emails yet, learn more about how to do so in our dedicated [Email](https://www.braze.com/docs/user_guide/channels/email/) section.
+This means Braze hasn't recorded any data for that metric during the time you selected. If you haven't set up or sent any emails yet, learn more about how to do so in our dedicated [Email](https://www.braze.com/docs/user_guide/channels/email) section.
 
 --->
 

@@ -1,8 +1,8 @@
 # Feature Flag
 
-> Feature flags allow you to experiment and confirm your hypotheses around new features. Marketers can use feature flags to segment your audience in [Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/) and track the impact of feature rollout on conversions. Moreover, [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step#experiment-paths) allow you optimize these conversions by testing different messages or paths against each other and determining which is most effective. Use the Winning Path as you progressively rollout your feature to a wider audience.
+> Feature flags allow you to experiment and confirm your hypotheses around new features. Marketers can use feature flags to segment your audience in [Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas) and track the impact of feature rollout on conversions. Moreover, [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step#experiment-paths) allow you optimize these conversions by testing different messages or paths against each other and determining which is most effective. Use the Winning Path as you progressively rollout your feature to a wider audience.
 
-Looking for more information about feature flags and how they can be used in Braze? Check out our dedicated [Feature flags](https://www.braze.com/docs/developer_guide/feature_flags/) articles.
+Looking for more information about feature flags and how they can be used in Braze? Check out our dedicated [Feature flags](https://www.braze.com/docs/developer_guide/feature_flags) articles.
 
 ## Creating a feature flag
 
@@ -25,8 +25,6 @@ Properties in a Canvas step can be changed after launch, and even after a user g
 
 - **Two Canvases reference the same feature flag, and a user enters both:** The user receives the value set in the Canvas they entered most recently, not the earlier Canvas. That value appears in the **Feature Flags Eligibility** tab.
 - **A Canvas has two Feature Flag steps that reference the same feature flag:** The user receives the value set in the second step while they are on that path, and that value appears in the **Feature Flags Eligibility** tab.
-
-
 
 
 

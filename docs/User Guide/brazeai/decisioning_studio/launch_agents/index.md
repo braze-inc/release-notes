@@ -20,7 +20,7 @@ Once launched, your agent will:
 
 Once launched, your agent needs feedback data to learn and improve. This includes conversions data, engagement data, and activations data that tell the agent what happened after customer engagement decisions were sent.
 
-For detailed requirements on preparing these critical feedback data assets, see [Preparing your data sources](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data/).
+For detailed requirements on preparing these critical feedback data assets, see [Preparing your data sources](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data).
 
 **Note:**
 

@@ -19,7 +19,7 @@ You can add up to 10 WhatsApp Business accounts per workspace. The business acco
 ![WhatsApp Messaging Integration section with options to add a business account or add a subscription group and number.](https://www.braze.com/docs/assets/img/whatsapp/multiple_wabas.png?432027085b74a6da96800d095f97bb7e)
 
 {: start="2"}
-2. Go through the sign-up workflow. For a detailed step-by-step walkthrough, refer to [WhatsApp embedded signup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/embedded_signup/).
+2. Go through the sign-up workflow. For a detailed step-by-step walkthrough, refer to [WhatsApp embedded signup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/embedded_signup).
 
 **Important:**
 
@@ -30,7 +30,7 @@ Your phone number must follow all the requirements of any WhatsApp phone number,
 
 ## Multiple subscription groups and phone numbers
 
-Message templates are shared among all phone numbers in the same WhatsApp Business account. For details about WhatsApp subscription groups, view [Subscription groups](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups/).
+Message templates are shared among all phone numbers in the same WhatsApp Business account. For details about WhatsApp subscription groups, view [Subscription groups](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups).
 
 Each WhatsApp phone number will appear as a separate WhatsApp chat to users. Each phone number within a WhatsApp Business account operates independently from each other, so they can have the same or different values for the following: 
 - Display name 

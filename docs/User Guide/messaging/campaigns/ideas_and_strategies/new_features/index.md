@@ -82,7 +82,7 @@ When you release a new app version and introduce new features, users may not not
 **Tip:**
 
 
-Looking to retarget a specific portion of your audience? Check out [Retargeting Campaigns](https://www.braze.com/docs/user_guide/messaging/campaigns/ideas_and_strategies/retargeting_campaigns/) to learn how to retarget campaigns by leveraging your user's previous actions.
+Looking to retarget a specific portion of your audience? Check out [Retargeting Campaigns](https://www.braze.com/docs/user_guide/messaging/campaigns/ideas_and_strategies/retargeting_campaigns) to learn how to retarget campaigns by leveraging your user's previous actions.
 
 
 

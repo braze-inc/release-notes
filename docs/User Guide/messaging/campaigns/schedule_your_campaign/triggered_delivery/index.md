@@ -45,11 +45,11 @@ Select a trigger event. This can include any of the following:
 - Sending an SMS inbound message
 - Sending a WhatsApp inbound message
 
-You can also further filter trigger events through Braze [custom event properties](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/), allowing for customizable event properties for custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. 
+You can also further filter trigger events through Braze [custom event properties](https://www.braze.com/docs/user_guide/data/activation/events/custom_events), allowing for customizable event properties for custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. 
 
 For example, let's say we have a campaign with an abandoned cart custom event that is further targeted by the "cart value" property filter. This campaign will only reach users who've left between $100 and $200 worth of goods in their carts. 
 
-![](https://www.braze.com/docs/assets/img_archive/customEventProperties.png?03200b17e56f8f8ad0c6ab439de76832)
+![Abandoned cart campaign filtered by a custom event property for cart value between $100 and $200.](https://www.braze.com/docs/assets/img_archive/customEventProperties.png?03200b17e56f8f8ad0c6ab439de76832)
 
 **Note:**
 
@@ -67,7 +67,7 @@ With respect to the trigger event for when a user adds an email address to their
 
 In addition, triggered in-app messages still abide by in-app message delivery rules and appear at the beginning of an app session.
 
-![](https://www.braze.com/docs/assets/img_archive/schedule_triggered1.png?6ccb4bb44367935c2731fdb706294179)
+![Action-based campaign delivery schedule showing trigger event configuration options.](https://www.braze.com/docs/assets/img_archive/schedule_triggered1.png?6ccb4bb44367935c2731fdb706294179)
 
 ### Step 2: Select delay length
 
@@ -82,18 +82,18 @@ Braze uses the timestamp sent with the custom event to evaluate the delay for an
 
 Additionally, users who complete the trigger event after your campaign is launched will be the first to start receiving the message after the delay has passed. Users who have completed the trigger event before the campaign launches will not qualify to receive the campaign.
 
-![](https://www.braze.com/docs/assets/img_archive/schedule_triggered22.png?344b24782984d634b1f917506f486a10)
+![Screenshot related to step 2: select delay length.](https://www.braze.com/docs/assets/img_archive/schedule_triggered22.png?344b24782984d634b1f917506f486a10)
 
-You may also elect to send the campaign on either a specific day of the week (by choosing "on the next" and then selecting a day) or a specific number of days (by selecting "in") in the future. Alternatively, you may choose to send your message using the [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing/) feature instead of manually selecting a delivery time.
+You may also elect to send the campaign on either a specific day of the week (by choosing "on the next" and then selecting a day) or a specific number of days (by selecting "in") in the future. Alternatively, you may choose to send your message using the [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing) feature instead of manually selecting a delivery time.
 
-![](https://www.braze.com/docs/assets/img_archive/schedule_triggered7.png?7cd1b104ce285507fcc1c1a2c00dbad6)
-![](https://www.braze.com/docs/assets/img_archive/schedule_triggered8.png?e083874d57df6aa2ce79ca02f7f144d1)
+![You may also elect to send the campaign on either a specific day of the week (by choosing "on the next" and then selecting a day) or a specific number of days (by selecting "in") in the future. Alternatively, you may choose to send your message using the Intelligent Timing feature instead of manually selecting a delivery time.](https://www.braze.com/docs/assets/img_archive/schedule_triggered7.png?7cd1b104ce285507fcc1c1a2c00dbad6)
+![You may also elect to send the campaign on either a specific day of the week (by choosing "on the next" and then selecting a day) or a specific number of days (by selecting "in") in the future. Alternatively, you may choose to send your message using the Intelligent Timing feature instead of manually selecting a delivery time.](https://www.braze.com/docs/assets/img_archive/schedule_triggered8.png?e083874d57df6aa2ce79ca02f7f144d1)
 
 ### Step 3: Select exception events
 
-Select an exception event that will disqualify users from receiving this campaign. You can only do this if your triggered message sends after a time delay. [Exception events](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/exit_criteria#exception-events) can be making a purchase, starting a session, performing one of a campaign's designated [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events/), or performing a custom event. If a user completes the trigger event but then completes your exception event before the message sends due to the time delay, they will not receive the campaign. Users who do not receive the campaign due to the exception event will automatically be eligible to receive it in the future, the next time they complete the trigger event, even if you do not elect for users to become [re-eligible](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/re_eligibility/).
+Select an exception event that will disqualify users from receiving this campaign. You can only do this if your triggered message sends after a time delay. [Exception events](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/exit_criteria#exception-events) can be making a purchase, starting a session, performing one of a campaign's designated [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events), or performing a custom event. If a user completes the trigger event but then completes your exception event before the message sends due to the time delay, they will not receive the campaign. Users who do not receive the campaign due to the exception event will automatically be eligible to receive it in the future, the next time they complete the trigger event, even if you do not elect for users to become [re-eligible](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/re_eligibility).
 
-![](https://www.braze.com/docs/assets/img_archive/schedule_triggered32.png?acb51106cfdb5126ec9dca555dcb7ce1)
+![Select an exception event that will disqualify users from receiving this campaign. You can only do this if your triggered message sends after a time delay. Exception events can be making a purchase, starting a session, performing one of a campaign's designated conversion events, or performing a custom event. If a user completes the trigger event but then completes your exception event before the message sends due to the time delay, they will not receive the campaign. Users who do not receive the campaign due to the exception event will automatically be eligible to receive it in the future, the next time they complete the trigger event, even if you do not elect for users to become re-eligible.](https://www.braze.com/docs/assets/img_archive/schedule_triggered32.png?acb51106cfdb5126ec9dca555dcb7ce1)
 
 You can read more about how to employ exception events in our section on [use cases](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery#use-cases).
 
@@ -110,7 +110,7 @@ You cannot make a "session start" both the trigger event and exception event for
 
 Assign the campaign's duration by specifying a start time and optional end time.
 
-![](https://www.braze.com/docs/assets/img_archive/schedule_triggered43.png?71f7ed158b550d21b735cd3c1b3e8093)
+![Screenshot related to step 4: assign duration.](https://www.braze.com/docs/assets/img_archive/schedule_triggered43.png?71f7ed158b550d21b735cd3c1b3e8093)
 
 If a user completes a trigger event during the specified time frame but qualifies for the message outside of the time frame due to a scheduled delay, then they will not receive the campaign. Therefore, if you set a time delay longer than the message's time frame, no users will receive your campaign. In addition, you can elect to send the message in users' [local time zones](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/scheduled_delivery#local-time-zone-campaigns).
 
@@ -118,13 +118,13 @@ If a user completes a trigger event during the specified time frame but qualifie
 
 Select whether the user will receive the campaign during a specific portion of the day. If you give the message a time frame and the user either completes the trigger event outside the time frame or the message delay causes them to miss the time frame, then by default, the user will not receive your message.
 
-![](https://www.braze.com/docs/assets/img_archive/schedule_triggered5.png?caacd6087dffd240a0b080f7cbfcc318)
+![Select whether the user will receive the campaign during a specific portion of the day. If you give the message a time frame and the user either completes the trigger event outside the time frame or the message delay causes them to miss the time frame, then by default, the user will not receive your message.](https://www.braze.com/docs/assets/img_archive/schedule_triggered5.png?caacd6087dffd240a0b080f7cbfcc318)
 
 In the case where a user completes the trigger event within the time frame, but the message delay causes the user to fall out of the time frame, you can check the following box so that these users will still receive the campaign.
 
-![](https://www.braze.com/docs/assets/img_archive/schedule_triggered_next_available.png?e2662aab96bc7c6bada68851e8e47133)
+![Screenshot related to step 5: select time frame.](https://www.braze.com/docs/assets/img_archive/schedule_triggered_next_available.png?e2662aab96bc7c6bada68851e8e47133)
 
-If a user doesn't receive the message because they miss the time frame, then they will still be qualified to receive it the next time they complete the trigger event, even if you did not elect for users to become [re-eligible](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/re_eligibility/). If you do elect for users to become re-eligible, then users can receive the campaign each time they complete the trigger event, assuming they qualify during the specified time frame.
+If a user doesn't receive the message because they miss the time frame, then they will still be qualified to receive it the next time they complete the trigger event, even if you did not elect for users to become [re-eligible](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/re_eligibility). If you do elect for users to become re-eligible, then users can receive the campaign each time they complete the trigger event, assuming they qualify during the specified time frame.
 
 If you have also assigned the campaign a certain duration, then a user must qualify within both the duration and the specific portion of the day to receive the message.
 
@@ -132,7 +132,7 @@ If you have also assigned the campaign a certain duration, then a user must qual
 
 Determine whether users can become [re-eligible](https://www.braze.com/docs/assets/img_archive/ReEligible.png?54f6ec86d4066809985bee3d688cb72e) for the campaign. If you allow users to become re-eligible, you may specify a time delay before the user can receive the campaign again. This will prevent your triggered campaigns from becoming "spammy".
 
-![](https://www.braze.com/docs/assets/img_archive/schedule_triggered6.png?c5e436e11bf9a583ce1ab6737fd04b75)
+![Screenshot related to step 6: determine re-eligibility.](https://www.braze.com/docs/assets/img_archive/schedule_triggered6.png?c5e436e11bf9a583ce1ab6737fd04b75)
 
 ## Use cases
 
@@ -147,13 +147,13 @@ In addition, when creating welcome campaigns, you can trigger messages to send a
 Any of these things will prevent a user who has completed the trigger event from receiving the campaign:
 
 - The user completed the exception event before the time delay had fully elapsed.
-- Liquid [`abort_message` logic](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages/)  was used and the message was aborted based on the `abort_message` logic or rules.
+- Liquid [`abort_message` logic](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages)  was used and the message was aborted based on the `abort_message` logic or rules.
 - The time delay caused the user to become qualified to receive the campaign after the duration has ended.
 - The time delay caused the user to become qualified to receive the campaign outside of the specified portion of the day.
 - The user has already received the campaign (including attribution through shared channel identifiers—for example, if they share an email with someone who received, opened, or clicked it), and users do not become re-eligible.
 - While users are re-eligible to receive the campaign, they can only re-trigger it after a certain period of time, and that period of time has not yet elapsed.
 
-[Segmenting](https://www.braze.com/docs/user_guide/audience/segments/) a triggered campaign on user data recorded at the time of the event may cause a [race condition](https://www.braze.com/docs/help/best_practices/race_conditions/#race-conditions). This happens when the user attribute on which the campaign is segmented gets changed, but the change hasn't been processed for the user when the campaign is sent. Since campaigns check for segment membership on entry, this can lead to the user not receiving the campaign.
+[Segmenting](https://www.braze.com/docs/user_guide/audience/segments) a triggered campaign on user data recorded at the time of the event may cause a [race condition](https://www.braze.com/docs/help/best_practices/race_conditions#race-conditions). This happens when the user attribute on which the campaign is segmented gets changed, but the change hasn't been processed for the user when the campaign is sent. Since campaigns check for segment membership on entry, this can lead to the user not receiving the campaign.
 
 For example, imagine you want to send an event-triggered campaign to male users who just registered. When the user registers, you record a custom event `registration` and simultaneously set the user's `gender` attribute. The event may trigger the campaign before Braze has processed the user's gender, preventing them from receiving the campaign.
 
@@ -174,7 +174,7 @@ If your campaign is triggered by a specific custom event and you select a segmen
 
 We recommend either changing the target audience to include all users, or checking that the users expected to perform the event are already part of the campaign's audience for the message to be triggered.
 
-![](https://www.braze.com/docs/assets/img_archive/reevaluate_segment_membership.png?3b32676eaca8b72ce56cf5b01b9078c8)
+![Screenshot related to audience criteria evaluation.](https://www.braze.com/docs/assets/img_archive/reevaluate_segment_membership.png?3b32676eaca8b72ce56cf5b01b9078c8)
 
 ### Troubleshooting custom events
 

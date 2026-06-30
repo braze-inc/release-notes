@@ -62,7 +62,7 @@ Here are some links you might need to consult as you build up your SMS, MMS, or 
 
 A customer's privacy is key to a meaningful and respectful relationship. Respecting a customer's privacy and information is just another opportunity to create a bond between them and your brand. Sometimes, using marketing tools can put data and privacy last.
 
-Luckily for you, Braze follows the guidelines of many [security regulations](https://www.braze.com/docs/developer_guide/disclosures/security_qualifications/#security-qualifications), including [GDPR](https://www.braze.com/docs/dp-technical-assistance/).
+Luckily for you, Braze follows the guidelines of many [security regulations](https://www.braze.com/docs/developer_guide/disclosures/security_qualifications#security-qualifications), including [GDPR](https://www.braze.com/docs/dp-technical-assistance).
 
 The [CTIA](https://www.ctia.org/) (a trade association representing the wireless communications industry in the United States) recommends that you maintain and conspicuously display a clear and easy-to-understand privacy policy.
 
@@ -74,13 +74,13 @@ The Telephone Consumer Protection Act ([TCPA](https://en.wikipedia.org/wiki/Tele
 
 Remember to comply with the [National Do Not Call Registry](https://www.donotcall.gov/).
 
-Braze uses [Subscription Groups](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/) to manage groups of users based on their level of consent.
+Braze uses [Subscription Groups](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing) to manage groups of users based on their level of consent.
 
 #### Compliance through fuzzy opt-out
 
 To help automate the recognition of non-standard opt-out requests, you can enable fuzzy opt-out in your subscription group settings if you're a US customer.
 
-- **Immediate configuration:** By default, fuzzy opt-out sends a clarification message. To enact an immediate opt-out instead of a clarification, you can configure your workspace by following the instructions in the [Fuzzy opt-out section](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/fuzzy_opt_out/#configure-fuzzy-opt-out). 
+- **Immediate configuration:** By default, fuzzy opt-out sends a clarification message. To enact an immediate opt-out instead of a clarification, you can configure your workspace by following the instructions in the [Fuzzy opt-out section](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/fuzzy_opt_out#configure-fuzzy-opt-out). 
 - **Manual keyword additions:** We recommend manually adding high-risk words to your **Opt-Out** keyword category, such as "REMOVE", "END", "HALT", "CEASE", "DISCONTINUE", and "UNSUBSCRIBE", in addition to the default keywords already provided.
 
 ### Spam and cadence

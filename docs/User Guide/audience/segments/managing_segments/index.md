@@ -45,7 +45,7 @@ Go to a segment's **Messaging Use** section for an overview of where the segment
 **Note:**
 
 
-To prevent loops of segments referencing one another, segments that use the **Segment Membership** filter can't be referenced by other segments. For more details, refer to [Segmentation Filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters/).
+To prevent loops of segments referencing one another, segments that use the **Segment Membership** filter can't be referenced by other segments. For more details, refer to [Segmentation Filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters).
 
 
 
@@ -64,7 +64,7 @@ You can also perform bulk actions–specifically, bulk archiving and bulk taggin
 **Tip:**
 
 
-If you need a machine-readable export of the existing segments in the workspace (not only the current table view), use the [Export segment list endpoint](https://www.braze.com/docs/api/endpoints/export/segments/get_segment/) and paginate through the results. To audit archived segments, review them separately in the **Segments** dashboard using the status filter.
+If you need a machine-readable export of the existing segments in the workspace (not only the current table view), use the [Export segment list endpoint](https://www.braze.com/docs/api/endpoints/export/segments/get_segment) and paginate through the results. To audit archived segments, review them separately in the **Segments** dashboard using the status filter.
 
 
 

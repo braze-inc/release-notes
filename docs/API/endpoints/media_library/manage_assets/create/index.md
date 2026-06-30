@@ -1,4 +1,4 @@
-<div id='api_qkrsbophgzdl' class='api_div' data-search-keywords='prerequisites asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
+<div id='api_iyfasmecejkp' class='api_div' data-search-keywords='prerequisites asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
 <h1 id="upload-an-asset-to-the-media-library">Upload an asset to the media library</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/media_library/create</p>
@@ -10,11 +10,11 @@
 
 <p><strong>Tip:</strong></p>
 
-<p>You can also call this endpoint through the <a href="/docs/user_guide/brazeai/mcp_server/">Braze MCP server</a> using the <a href="/docs/user_guide/brazeai/mcp_server/available_api_functions/#media-library"><code class="language-plaintext highlighter-rouge">create_media_library_asset</code></a> function. This lets AI tools like Claude and Cursor upload assets to your media library through natural language prompts.</p>
+<p>You can also call this endpoint through the <a href="/docs/user_guide/brazeai/mcp_server">Braze MCP server</a> using the <a href="/docs/user_guide/brazeai/mcp_server/available_api_functions#media-library"><code class="language-plaintext highlighter-rouge">create_media_library_asset</code></a> function. This lets AI tools like Claude and Cursor upload assets to your media library through natural language prompts.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">media_library.create</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">media_library.create</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -285,7 +285,7 @@
     <tr>
       <td><code class="language-plaintext highlighter-rouge">GENERIC_ERROR</code></td>
       <td>500</td>
-      <td>An unexpected error occurred during upload. The <code class="language-plaintext highlighter-rouge">meta</code> object includes the <code class="language-plaintext highlighter-rouge">original_error</code> message for debugging. Try again or contact <a href="/docs/support_contact/">Support</a>.</td>
+      <td>An unexpected error occurred during upload. The <code class="language-plaintext highlighter-rouge">meta</code> object includes the <code class="language-plaintext highlighter-rouge">original_error</code> message for debugging. Try again or contact <a href="/docs/support_contact">Support</a>.</td>
     </tr>
   </tbody>
 </table>

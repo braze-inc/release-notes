@@ -76,8 +76,6 @@ After you select the standard setup onboarding path, you’ll need to choose whe
 
 
 
-
-
 Now you’ll select the Shopify data you want to track.
 
 ![“Tracking Shopify data” section with a checkbox to track behavioral events and user attributes.](https://www.braze.com/docs/assets/img/shopify/tracking_shopify_data.png?17b975ab97f07c885e16ace136234fd0)
@@ -90,8 +88,6 @@ The following events will be enabled by default in the standard integration.
 {: .reset-td-br-1 .reset-td-br-2  .reset-td-br-3 aria-label="Standard data setup" }
 
 For more information on the data tracked through the integration, refer to [Shopify Data Features](https://www.braze.com/docs/shopify_data_features/).
-
-
 
 
 
@@ -185,7 +181,7 @@ braze.logCustomEvent(
   “subscribed_to_newsletter”,
   {
     newsletterName: ‘News and Offers’,
-    customerEmail: ‘customer_1@gmail.com’,
+    customerEmail: ‘customer_1@example.com’,
     sendOffers: true
   }
 );
@@ -264,7 +260,7 @@ Braze sends the following parameters to your endpoint:
 #### Example endpoint
 
 ```http
-GET https://mystore.com/custom_id?shopify_customer_id=1234&email_address=bob@braze.com&shopify_storefront=dev-store.myshopify.com
+GET https://mystore.com/custom_id?shopify_customer_id=1234&email_address=bob@example.com&shopify_storefront=dev-store.myshopify.com
 ```
 
 #### Expected response

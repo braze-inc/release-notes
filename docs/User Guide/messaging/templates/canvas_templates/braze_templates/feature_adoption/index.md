@@ -6,7 +6,7 @@ In this article, we'll walk you through a use case for the **Feature Adoption** 
 
 ## Prerequisites
 
-To successfully use this template, you'll need to a [custom event](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/) that references when users have used the feature.
+To successfully use this template, you'll need to a [custom event](https://www.braze.com/docs/user_guide/data/activation/events/custom_events) that references when users have used the feature.
 
 ## Tailoring the template to your needs
 
@@ -103,6 +103,6 @@ After testing and reviewing our Canvas to make sure it works as expected, select
 **Tip:**
 
 
-Check out our [Pre and post-launch checklist](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
+Check out our [Pre and post-launch checklist](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
 
 

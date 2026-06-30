@@ -30,14 +30,14 @@ Catalogs support up to 1,000 fields per item and can store millions of rows, mak
 
 Catalogs also power automated messaging through catalog triggers. Set up back-in-stock notifications and price drop notifications to automatically message users when catalog items change.
 
-For more information, see [Catalog triggers](https://www.braze.com/docs/user_guide/data/activation/catalogs/catalog_triggers/).
+For more information, see [Catalog triggers](https://www.braze.com/docs/user_guide/data/activation/catalogs/catalog_triggers).
 
 ## Selections
 
 Use selections to group catalog items by filters you define. For example, create a selection of items under $20 or items in a specific category, then reference the filtered set in your messages.
 
-For more information, see [Selections](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections/).
+For more information, see [Selections](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections).
 
 ## Getting started
 
-To create and manage catalogs, see [Catalogs](https://www.braze.com/docs/user_guide/data/activation/catalogs/). To learn how to reference catalog data in your messages, see [Using catalogs in a message](https://www.braze.com/docs/user_guide/data/activation/catalogs/use/).
+To create and manage catalogs, see [Catalogs](https://www.braze.com/docs/user_guide/data/activation/catalogs). To learn how to reference catalog data in your messages, see [Using catalogs in a message](https://www.braze.com/docs/user_guide/data/activation/catalogs/use).
