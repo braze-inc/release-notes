@@ -2,7 +2,7 @@
 
 > This page covers how to use Braze Cloud Data Ingestion (CDI) SQL Editor to create and validate syncs with SQL queries.
 
-Cloud Data Ingestion's SQL Editor lets you create syncs by writing SQL queries directly against your data warehouse. This removes the need to create or maintain a dedicated CDI table, which was previously required in [Step 1.1 of Data Warehouse Integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+Cloud Data Ingestion's SQL Editor lets you create syncs by writing SQL queries directly against your data warehouse. This removes the need to create or maintain a dedicated CDI table, which was previously required in [Step 1.1 of Data Warehouse Integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations#step-1-set-up-tables-or-views).
 
 Use the SQL Editor when you want to:
 
@@ -39,7 +39,7 @@ Follow these steps to create source first, then a sync with SQL Editor. If you'v
 **Note:**
 
 
-Note that these steps use a Snowflake source as an example. The setup process for other data warehouse sources is similar and can be found in [Step 2: Create a new source in Braze dashboard](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations#step-2-create-a-new-source-in-the-braze-dashboard) of the [Setting up data warehouse integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations/#setting-up-data-warehouse-integrations) documentation.
+Note that these steps use a Snowflake source as an example. The setup process for other data warehouse sources is similar and can be found in [Step 2: Create a new source in Braze dashboard](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations#step-2-create-a-new-source-in-the-braze-dashboard) of the [Setting up data warehouse integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations#setting-up-data-warehouse-integrations) documentation.
 
 
 
@@ -265,7 +265,7 @@ If your query returns zero rows:
 
 ## PAYLOAD support (legacy)
 
-SQL Editor supports [legacy CDI tables](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations/?tab=snowflake#step-1-set-up-tables-or-views) where a `PAYLOAD` column is present.
+SQL Editor supports [legacy CDI tables](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations?tab=snowflake#step-1-set-up-tables-or-views) where a `PAYLOAD` column is present.
 
 If your query includes:
 

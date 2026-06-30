@@ -1,6 +1,6 @@
 # Content Blocks
 
-> Content Blocks allow you to manage reusable, cross-channel content in a single, centralized location. Use them to create a consistent look and feel across your campaigns, distribute the same offer codes through different channels, or build pre-defined assets for consistent messaging at scale. You can also create and manage your Content Blocks [using the API](https://www.braze.com/docs/api/endpoints/templates/).
+> Content Blocks allow you to manage reusable, cross-channel content in a single, centralized location. Use them to create a consistent look and feel across your campaigns, distribute the same offer codes through different channels, or build pre-defined assets for consistent messaging at scale. You can also create and manage your Content Blocks [using the API](https://www.braze.com/docs/api/endpoints/templates).
 
 ## Create a Content Block
 

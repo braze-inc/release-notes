@@ -1,4 +1,4 @@
-<div id='api_avmvomthxugb' class='api_div' data-search-keywords='prerequisites external_ids user_aliases device_id braze_id email_address phone fields_to_export message users invalid_user_ids created_at external_id alias_name alias_label first_name last_name email dob home_city country language time_zone last_coordinates gender total_revenue attributed_campaign attributed_source attributed_adgroup attributed_ad push_subscribe email_subscribe custom_attributes custom_events name first last count purchases devices model os carrier idfv idfa google_ad_id roku_ad_id ad_tracking_enabled push_tokens app platform token notifications_enabled provisionally_opted_in apps version sessions first_used last_used campaigns_received last_received engaged opened_email opened_push clicked_email clicked_triggered_in_app_message converted api_campaign_id variation_name variation_api_id in_control canvases_received api_canvas_id last_received_message last_entered last_exited steps_received api_canvas_step_id cards_clicked random_bucket push_opted_in_at multiple_converted last_entered_control_at'>
+<div id='api_kgoltqsjatuy' class='api_div' data-search-keywords='prerequisites external_ids user_aliases device_id braze_id email_address phone fields_to_export message users invalid_user_ids created_at external_id alias_name alias_label first_name last_name email dob home_city country language time_zone last_coordinates gender total_revenue attributed_campaign attributed_source attributed_adgroup attributed_ad push_subscribe email_subscribe custom_attributes custom_events name first last count purchases devices model os carrier idfv idfa google_ad_id roku_ad_id ad_tracking_enabled push_tokens app platform token notifications_enabled provisionally_opted_in apps version sessions first_used last_used campaigns_received last_received engaged opened_email opened_push clicked_email clicked_triggered_in_app_message converted api_campaign_id variation_name variation_api_id in_control canvases_received api_canvas_id last_received_message last_entered last_exited steps_received api_canvas_step_id cards_clicked random_bucket push_opted_in_at multiple_converted last_entered_control_at'>
 <h1 id="export-user-profile-by-identifier">Export user profile by identifier</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/export/ids</p>
@@ -14,7 +14,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">users.export.ids</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.export.ids</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -80,7 +80,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">user_aliases</code></td>
       <td>Optional</td>
       <td>Array of user alias object</td>
-      <td><a href="/docs/api/objects_filters/user_alias_object/">User aliases</a> for users to export.</td>
+      <td><a href="/docs/api/objects_filters/user_alias_object">User aliases</a> for users to export.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">device_id</code></td>
@@ -148,7 +148,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   ],
   "device_id": "1234567",
   "braze_id": "braze_identifier",
-  "email_address": "example@braze.com",
+  "email_address": "example@example.com",
   "phone": "11112223333",
   "fields_to_export": ["first_name", "email", "purchases"]
 }'
@@ -175,22 +175,22 @@ Authorization: Bearer YOUR-REST-API-KEY
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attributed_campaign</code></td>
       <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration/">attribution integrations</a>, if set up. Identifier for a particular ad campaign.</td>
+      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for a particular ad campaign.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attributed_source</code></td>
       <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration/">attribution integrations</a>, if set up. Identifier for the platform the ad was on.</td>
+      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for the platform the ad was on.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attributed_adgroup</code></td>
       <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration/">attribution integrations</a>, if set up. Identifier for an optional sub-grouping below campaign.</td>
+      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for an optional sub-grouping below campaign.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attributed_ad</code></td>
       <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration/">attribution integrations</a>, if set up. Identifier for an optional sub-grouping below campaign and ad group.</td>
+      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for an optional sub-grouping below campaign and ad group.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">push_subscribe</code></td>
@@ -765,13 +765,13 @@ Authorization: Bearer YOUR-REST-API-KEY
     </span><span class="p">],</span><span class="w">
     </span><span class="nl">"braze_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5fbd99bac125ca40511f2cb1"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"random_bucket"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2365</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"first_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"last_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"example@braze.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"first_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Alex"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"last_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Smith"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"example@example.com"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dob"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1980-12-21"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"home_city"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Chicago"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"country"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"+442071838750"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"+15555550123"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"language"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"time_zone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Eastern Time (US &amp; Canada)"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"last_coordinates"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">41.84157636433568</span><span class="p">,</span><span class="w"> </span><span class="mf">-87.83520818508256</span><span class="p">],</span><span class="w">
@@ -892,6 +892,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <p><strong>Tip:</strong></p>
 
-<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/">Export troubleshooting</a>.</p>
+<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting">Export troubleshooting</a>.</p>
 
 </div>

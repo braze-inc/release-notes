@@ -6,7 +6,7 @@ You can use nested objects—objects that are inside of another object—to send
 
 ## Considerations
 
-- Nested data is supported for both [custom events](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/) and [purchase events](https://www.braze.com/docs/user_guide/data/activation/events/purchase_events/), but not other event types.
+- Nested data is supported for both [custom events](https://www.braze.com/docs/user_guide/data/activation/events/custom_events) and [purchase events](https://www.braze.com/docs/user_guide/data/activation/events/purchase_events), but not other event types.
 - Event property objects that contain array or object values can have an event property payload of up to 100 KB.
 - Event property schemas cannot be generated for purchase events.
 - Event property schemas are generated through sampling custom events from the last 24 hours.
@@ -25,7 +25,7 @@ You can access the nested data in your custom event by generating a schema for e
 2. Select **Manage Properties** for the events with nested properties.
 3. Select the <i class="fas fa-arrows-rotate"></i> button to generate the schema. To view the schema, select the <i class="fas fa-plus"></i> plus button.
 
-![](https://www.braze.com/docs/assets/img_archive/schema_generation_example.png?31b42db79256367b9c1fb718dcdae7f5){: style="max-width:80%;"}
+![3. Select the button to generate the schema. To view the schema, select the plus button.](https://www.braze.com/docs/assets/img_archive/schema_generation_example.png?31b42db79256367b9c1fb718dcdae7f5){: style="max-width:80%;"}
 
 If new properties are sent in the future, they won't be in the schema until it is regenerated. Schemas can be regenerated every 24 hours.
 
@@ -168,9 +168,9 @@ If your event property contains the `[]` or `.` characters, escape them by wrapp
 
 ### Segmentation
 
-To segment users based on nested event properties, you must use [Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/). After you've generated a schema, the nested objects explorer will display in the segmentation section. 
+To segment users based on nested event properties, you must use [Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension). After you've generated a schema, the nested objects explorer will display in the segmentation section. 
 
-![](https://www.braze.com/docs/assets/img_archive/nested_event_properties_segmentation.png?008ffd14cf449829bf822881bd94946e)
+![Screenshot related to segmentation.](https://www.braze.com/docs/assets/img_archive/nested_event_properties_segmentation.png?008ffd14cf449829bf822881bd94946e)
 
 Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)).
 
@@ -180,7 +180,7 @@ To edit or create Segment Extensions, you'll need "Edit Segments" permission.
 
 Using the **Add Personalization** modal, select **Advanced Event Properties** as the personalization type. This allows the option to add a nested event properties after a schema has been generated.
 
-![](https://www.braze.com/docs/assets/img_archive/nested_event_properties_personalization.png?3784a2b9ba97ae8b3c46727db5501c20){: style="max-width:70%;"}
+![Using the Add Personalization modal, select Advanced Event Properties as the personalization type. This allows the option to add a nested event properties after a schema has been generated.](https://www.braze.com/docs/assets/img_archive/nested_event_properties_personalization.png?3784a2b9ba97ae8b3c46727db5501c20){: style="max-width:70%;"}
 
 ## Testing nested objects in messages
 

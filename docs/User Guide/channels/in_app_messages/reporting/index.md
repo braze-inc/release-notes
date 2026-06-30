@@ -118,7 +118,7 @@ For more information, refer to [Funnel reports](https://www.braze.com/docs/user_
 
 ## In-app message metrics
 
-Here are the key in-app message metrics you may see in your analytics. For definitions of all metrics used in Braze, refer to the [Report Metrics Glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary/).
+Here are the key in-app message metrics you may see in your analytics. For definitions of all metrics used in Braze, refer to the [Report Metrics Glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary).
 
 **Note:**
 

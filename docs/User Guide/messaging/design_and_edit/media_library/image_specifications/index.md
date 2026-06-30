@@ -2,7 +2,7 @@
 
 > In general, smaller and high-quality images will load faster, so we recommend using the smallest asset possible to achieve your desired output. To maximize your image use in specific channels, refer to the details in this article.
 
-You should always [preview and test your messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/) on a variety of devices to confirm that the most important areas of your image and message appear as expected.
+You should always [preview and test your messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages) on a variety of devices to confirm that the most important areas of your image and message appear as expected.
 
 ## Image behavior
 
@@ -24,7 +24,7 @@ You should always [preview and test your messages](https://www.braze.com/docs/us
 
 ## Video
 
-Videos uploaded to the media library can only be used in WhatsApp messages. For more information, refer to [Creating a WhatsApp message](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message/#outbound-messages).
+Videos uploaded to the media library can only be used in WhatsApp messages. For more information, refer to [Creating a WhatsApp message](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message#outbound-messages).
 
 ## GIFs
 
@@ -105,7 +105,7 @@ GIFs are supported in iOS push, in-app messages, email, Content Cards, and MMS o
  Create assets with confidence! Our in-app message image templates and safe-zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP](https://www.braze.com/docs/assets/download_file/Braze-In-App-Message-Design-Templates.zip?50a8730464ef2e32295ac3cd13cc6c05). 
 
 
-For more information, refer to [In-app message creative details](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize/).
+For more information, refer to [In-app message creative details](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize).
 
 #### Font Awesome
 
@@ -158,7 +158,7 @@ For best results, refer to the following message length guidelines when crafting
 | Android notification drawer | 597 characters | N/A |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Recommended message lengths" }
 
-For more information about iOS character counts, see [iOS character count guidelines](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/rich_notifications/#character-count).
+For more information about iOS character counts, see [iOS character count guidelines](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/rich_notifications#character-count).
 
 #### Web push
 
@@ -230,5 +230,5 @@ Large image notifications display best when using an image of at least 600 x 300
 
 
 
-For additional resources, see [Push image and text specifications](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats/).
+For additional resources, see [Push image and text specifications](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats).
 

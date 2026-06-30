@@ -1,4 +1,4 @@
-<div id='api_uatvjnfddimm' class='api_div' data-search-keywords='prerequisites created_at updated_at name description archived draft enabled has_post_launch_draft schedule_type first_entry last_entry channels variants id first_step_ids first_step_id tags teams steps next_step_ids next_paths next_step_id messages message_variation_id channel has_translatable_content message type message_1 subject body message_2 title message_3 message_4 header'>
+<div id='api_kmpapwfrpqdd' class='api_div' data-search-keywords='prerequisites created_at updated_at name description archived draft enabled has_post_launch_draft schedule_type first_entry last_entry channels variants id first_step_ids first_step_id tags teams steps next_step_ids next_paths next_step_id messages message_variation_id channel has_translatable_content message type message_1 subject body message_2 title message_3 message_4 header'>
 <h1 id="export-canvas-details">Export Canvas details</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/details</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.details</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.details</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -40,7 +40,7 @@
       <td><code class="language-plaintext highlighter-rouge">canvas_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">Canvas API Identifier</a></td>
+      <td>See <a href="/docs/api/identifier_types">Canvas API Identifier</a></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">post_launch_draft_version</code></td>
@@ -399,6 +399,6 @@
 
 <p><strong>Tip:</strong></p>
 
-<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/">Export troubleshooting</a>.</p>
+<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting">Export troubleshooting</a>.</p>
 
 </div>

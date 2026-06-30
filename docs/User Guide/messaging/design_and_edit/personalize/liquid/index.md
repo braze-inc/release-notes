@@ -2,13 +2,13 @@
 
 Liquid acts as a bridge between your message and your user data. When you send a message, Braze scans the text for Liquid syntax. When it finds Liquid, it pulls the relevant data for that specific user and replaces the code with the actual value before the message is sent.
 
-For example, you can retrieve a custom attribute from a user profile that is an integer data type and round that value to the nearest whole number. For more on Liquid syntax and usage, refer to [**Supported personalization tags**](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/).
+For example, you can retrieve a custom attribute from a user profile that is an integer data type and round that value to the nearest whole number. For more on Liquid syntax and usage, refer to [**Supported personalization tags**](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags).
 
 Liquid templating language supports the use of objects, tags, and filters.
 
-- [**Objects**](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/) allow you to insert personalized attributes into your messages.
-- [**Tags**](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/) allow you to insert data into messaging and use conditional logic to send messages if certain conditions are met. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
-- [**Filters**](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters/) allow you to reformat personalized attributes and dynamic content. For example, you could use the [`date` filter](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters#date-filter) to convert a timestamp, such as *2016-09-07 08:43:50 UTC*, into a date, such as *September 7, 2016*.
+- [**Objects**](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) allow you to insert personalized attributes into your messages.
+- [**Tags**](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags) allow you to insert data into messaging and use conditional logic to send messages if certain conditions are met. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
+- [**Filters**](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters) allow you to reformat personalized attributes and dynamic content. For example, you could use the [`date` filter](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters#date-filter) to convert a timestamp, such as *2016-09-07 08:43:50 UTC*, into a date, such as *September 7, 2016*.
 
 **Warning:**
 
@@ -29,7 +29,7 @@ The following new array and math filters are available for use in your Liquid as
 - `sort_natural`
 - `where`
 
-Refer to [Filters](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters/) for definitions.
+Refer to [Filters](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters) for definitions.
 
 ## Terms to know
 

@@ -28,7 +28,7 @@ When **Advance users based on ranked order** is turned on, this means **Ranking*
 **Tip:**
 
 
-To route users based on their current attributes or segment membership rather than actions they perform, use [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths/) instead.
+To route users based on their current attributes or segment membership rather than actions they perform, use [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths) instead.
 
 
 
@@ -52,7 +52,7 @@ Add a trigger or multiple triggers to define your action groups. Here, you can s
 
 - Place an order
 - Start a session
-- Perform a [custom event](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/)
+- Perform a [custom event](https://www.braze.com/docs/user_guide/data/activation/events/custom_events)
 - Perform a conversion event
 - Add an email address
 - Change a custom attribute value.
@@ -78,7 +78,7 @@ If users enter an action path multiple times and have multiple entries in the ac
 
 | Ranking status | Action path behavior |
 |---|--------------|
-| **Off** | A user can enter an action path more than once. These entries are held in the action path until a trigger action or event is recorded. If the trigger event does not satisfy an entry's property filters (for example, a [context variable](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_variables/) does not match the trigger's property filters), the entry remains in the action path. <br><br>If the trigger event satisfies more than one entry, Braze deduplicates only these entries and immediately advances the earliest matching entry through the relevant action group. |
+| **Off** | A user can enter an action path more than once. These entries are held in the action path until a trigger action or event is recorded. If the trigger event does not satisfy an entry's property filters (for example, a [context variable](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_variables) does not match the trigger's property filters), the entry remains in the action path. <br><br>If the trigger event satisfies more than one entry, Braze deduplicates only these entries and immediately advances the earliest matching entry through the relevant action group. |
 | **On** | All entries advance at the end of the relevant evaluation window. No deduplication occurs. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Canvases with re-eligibility" }
 
@@ -89,4 +89,4 @@ Do not change **Advance users based on ranked order** after launch when users ar
 
 
 
-Note that the rankings aren't [editable after launch](https://www.braze.com/docs/post-launch_edits/).
+Note that the rankings aren't [editable after launch](https://www.braze.com/docs/post-launch_edits).

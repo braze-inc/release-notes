@@ -1,4 +1,4 @@
-<div id='api_pjrqqdtphunp' class='api_div' data-search-keywords='prerequisites keys id rsa_public_key description is_primary'>
+<div id='api_ylomweaosjin' class='api_div' data-search-keywords='prerequisites keys id rsa_public_key description is_primary'>
 <h1 id="list-sdk-authentication-keys">List SDK Authentication keys</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/app_group/sdk_authentication/keys</p>
@@ -10,7 +10,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">sdk_authentication.keys</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">sdk_authentication.keys</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

@@ -1,6 +1,6 @@
 # In-app message surveys
 
-> Braze surveys collect feedback in in-app messages that you can analyze and use in follow-up messaging. During beta, surveys are built in the [drag-and-drop editor](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop/).
+> Braze surveys collect feedback in in-app messages that you can analyze and use in follow-up messaging. During beta, surveys are built in the [drag-and-drop editor](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop).
 
 
 

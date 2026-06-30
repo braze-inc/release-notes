@@ -11,7 +11,7 @@ For a step-by-step walkthrough, check out our Braze Learning course: [Crafting P
 
 ## Prerequisites
 
-Before you can use recommendations in your messaging, you'll need to [create and train a recommendation engine](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/). Training can take anywhere between 10 minutes and 36 hours&#8212;you'll receive an email when it's finished or if an error has occurred.
+Before you can use recommendations in your messaging, you'll need to [create and train a recommendation engine](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations). Training can take anywhere between 10 minutes and 36 hours&#8212;you'll receive an email when it's finished or if an error has occurred.
 
 ## Using recommendations in your messaging
 

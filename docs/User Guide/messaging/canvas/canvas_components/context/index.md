@@ -13,7 +13,7 @@ Context variables exist only for that specific Canvas journey. They don't change
 **Tip:**
 
 
-For a full reference on context variables, including data types, usage, and best practices, see the [Context variables reference](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables/).
+For a full reference on context variables, including data types, usage, and best practices, see the [Context variables reference](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables).
 
 
 
@@ -24,7 +24,7 @@ You can set context variables in two ways:
 - **At Canvas entry:** Properties from the custom event or API trigger are automatically populated as context variables.
 - **In a Context step:** Define or update context variables manually by adding a Context step.
 
-Each context variable requires a name, a data type, and a value (set using Liquid or the Add Personalization tool). When defined, you can reference context variables throughout the Canvas using Liquid, such as `{{context.${flight_time}}}`. In the **Context variable name** field, you can also enter the context variable name or select it from the dropdown in the step editor. For details, see [Context variables reference](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables/).
+Each context variable requires a name, a data type, and a value (set using Liquid or the Add Personalization tool). When defined, you can reference context variables throughout the Canvas using Liquid, such as `{{context.${flight_time}}}`. In the **Context variable name** field, you can also enter the context variable name or select it from the dropdown in the step editor. For details, see [Context variables reference](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables).
 
 Each Canvas entry redefines context variables based on the latest entry data and Canvas setup, allowing users to have multiple active journeys with their own context. For example, if a customer has two upcoming flights, they'll have two separate journey states running simultaneously&#8212;each with its own flight-specific context variables like departure time and destination. This allows you to send personalized reminders about their 2 pm flight to New York while sending different updates about their 8 am flight to Los Angeles tomorrow, so that each message stays relevant to the specific booking.
 
@@ -49,7 +49,7 @@ Without Connected Content, Context steps process much faster because there are n
 - The total size of all variables in a step cannot exceed 50 KB.
 - Variables passed in using API triggers share the same namespace as those created in Context steps; redefining a variable in a Context step overrides the API value.
 
-For more details and advanced usage, see [Context variables reference](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables/).
+For more details and advanced usage, see [Context variables reference](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables).
 
 ## Creating a Context step
 
@@ -79,13 +79,13 @@ You can define up to 10 context variables for each Context step.
 To define a context variable:
 
 1. Give your context variable a **name**.
-2. Select a [data type](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables/#data-types).
+2. Select a [data type](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables#data-types).
 3. Write a Liquid expression manually or use **Add Personalization** to create a Liquid snippet from pre-existing attributes.
 4. Select **Preview** to check the value of your context variable.
 5. (Optional) To add additional variables, select **Add Context variable** and repeat steps 1-4.
 6. When you're finished, select **Done**.
 
-Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. In the **Context variable name** field, you can also enter the context variable name or select it from the dropdown in the step editor. For a full walkthrough, see [Context variables reference](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables/).
+Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. In the **Context variable name** field, you can also enter the context variable name or select it from the dropdown in the step editor. For a full walkthrough, see [Context variables reference](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables).
 
 **Important:**
 
@@ -96,15 +96,13 @@ When referencing context variables, always use the format `{{context.${variable_
 
 ### Context variable filters
 
-You can create filters using context variables in [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths/) and [Decision Split](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/decision_split/) steps.
+You can create filters using context variables in [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths) and [Decision Split](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/decision_split) steps.
 
-To route users based on an [Agent step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/agent_step/) response, add the Agent step before your Audience Paths or Decision Split step. The Agent step stores its output in Canvas context, which you can evaluate with context variable filters in those branching steps.
+To route users based on an [Agent step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/agent_step) response, add the Agent step before your Audience Paths or Decision Split step. The Agent step stores its output in Canvas context, which you can evaluate with context variable filters in those branching steps.
 
 If the agent returns an object and you want to filter on a nested property, enter the path in the **Context variable name** field using dot notation instead of only the top-level variable name (for example, `intent_agent.persona` when `persona` is nested under `intent_agent`).
 
-For filter setup, comparison logic, and advanced examples, see [Context variables reference](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables/#context-variable-filters).
-
-
+For filter setup, comparison logic, and advanced examples, see [Context variables reference](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables#context-variable-filters).
 
 
 
@@ -146,7 +144,7 @@ For filter setup, comparison logic, and advanced examples, see [Context variable
 
 ## Previewing user paths
 
-We recommend testing and [previewing your user paths](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths/) to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.
+We recommend testing and [previewing your user paths](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.
 
 **Note:**
 
@@ -161,7 +159,7 @@ If the context variable is valid, you can reference the variable throughout your
 
 ## Converting Connected Content strings to JSON
 
-When making a [Connected Content call](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call/) in a Context step, JSON returned from the call is evaluated as a string data type for consistency and error prevention. If you want to convert this string into JSON, convert it by using `as_json_string`. For example:
+When making a [Connected Content call](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call) in a Context step, JSON returned from the call is evaluated as a string data type for consistency and error prevention. If you want to convert this string into JSON, convert it by using `as_json_string`. For example:
 
 
 ```liquid
@@ -187,7 +185,7 @@ In these circumstances:
 
 When troubleshooting, monitor the _Not Updated_ metric to check that your context variable is updating correctly. If the context variable is invalid, your users can continue in your Canvas past the Context step, but may not qualify for later steps.
 
-Refer to [Data types](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables/#data-types) for the example setups for each data type.
+Refer to [Data types](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables#data-types) for the example setups for each data type.
 
 ### Delays in sending with Connected Content
 
@@ -229,7 +227,7 @@ In all circumstances, we strongly recommend using [Liquid time_zone filters](htt
 
 Now that Canvas Context is generally available, the following details apply:
 
-- All timestamps with a [datetime type](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/custom_event_properties/) from [trigger event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/) in action-based Canvases are in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
+- All timestamps with a [datetime type](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/custom_event_properties) from [trigger event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties) in action-based Canvases are in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
 - This change impacts all action-based Canvases, whether the specific Canvas is using a Context step or not.
 
 #### What is the reason for this change?

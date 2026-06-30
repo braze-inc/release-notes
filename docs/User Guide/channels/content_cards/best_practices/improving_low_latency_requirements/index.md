@@ -5,7 +5,7 @@
 **Tip:**
 
 
-Are you trying to display prominent, customized banners on your app or website? Try [Banners](https://www.braze.com/docs/user_guide/channels/banners/), which are built to support low-latency banner use cases.
+Are you trying to display prominent, customized banners on your app or website? Try [Banners](https://www.braze.com/docs/user_guide/channels/banners), which are built to support low-latency banner use cases.
 
 
 

@@ -23,7 +23,7 @@ Canvas results can be exported on an individual component basis for the original
 **Tip:**
 
 
-For help with CSV and API exports, visit our [export troubleshooting](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/) article.
+For help with CSV and API exports, visit our [export troubleshooting](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting) article.
 
 
 

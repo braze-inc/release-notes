@@ -33,7 +33,7 @@ There are two types of link templates you can create:
 - [Link template that inserts before a URL](#prepend-link-template)
 - [Link template that inserts after a URL](#append-link-template)
 
-When using link templates and [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/), Liquid must only be added within the body tag to ensure consistent rendering.
+When using link templates and [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid), Liquid must only be added within the body tag to ensure consistent rendering.
 
 ### Prepend: Create a link template that inserts before a URL {#prepend-link-template}
 
@@ -66,7 +66,7 @@ To apply a link template in the HTML editor or the drag-and-drop editor, follow 
 **Important:**
 
 
-To access the **Link Management** tab in the updated HTML editor or the drag-and-drop editor, you must have link aliasing turned on. To turn on link aliasing, contact your account manager. For more information, see [Link aliasing](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing/).
+To access the **Link Management** tab in the updated HTML editor or the drag-and-drop editor, you must have link aliasing turned on. To turn on link aliasing, contact your account manager. For more information, see [Link aliasing](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing).
 
 
 
@@ -86,7 +86,7 @@ As you add link templates in the **Link Management** tab, scroll to the right to
 
 ## Managing link templates
 
-You can also [duplicate](https://www.braze.com/docs/user_guide/messaging/templates/managing_templates/) link templates. Learn more about creating and managing templates and creative content in [Templates & Media](https://www.braze.com/docs/user_guide/messaging/templates/).
+You can also [duplicate](https://www.braze.com/docs/user_guide/messaging/templates/managing_templates) link templates. Learn more about creating and managing templates and creative content in [Templates & Media](https://www.braze.com/docs/user_guide/messaging/templates).
 
 **Important:**
 
@@ -97,5 +97,5 @@ Archiving templates is not currently available for link templates.
 
 ## Frequently asked questions
 
-For answers to frequently asked questions about link templates, check out our [Templates FAQ](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/faq/) page.
+For answers to frequently asked questions about link templates, check out our [Templates FAQ](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/faq) page.
 

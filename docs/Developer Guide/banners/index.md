@@ -123,8 +123,6 @@ Iframes allow for dynamic and personalized content updates that don't require ch
 
 
 
-
-
 ### Dimensions and sizing
 
 Here's what you need to know about Banner dimensions and sizing:

@@ -19,15 +19,13 @@ IP warming is the **most important step** in the email setup process. Though it 
 
 
 
-[IP warming](https://www.braze.com/docs/user_guide/channels/email/email_setup/ip_warming/) is when you send a relatively small number of emails out in your first batch, then over time, slightly increase the volume in the following batches until you reach your typical daily volume. This is done at the very end of your email setup process.
+[IP warming](https://www.braze.com/docs/user_guide/channels/email/email_setup/ip_warming) is when you send a relatively small number of emails out in your first batch, then over time, slightly increase the volume in the following batches until you reach your typical daily volume. This is done at the very end of your email setup process.
 
 By starting with smaller volumes of email, you are establishing a level of trust with your email provider, showing you are only sending emails to relevant users. Sending your first batch of emails to your most engaged users can help you gain trust faster with your provider.
 
-After you're done warming up your IP, you can [start creating and sending emails](https://www.braze.com/docs/user_guide/channels/email/html_editor/)!
+After you're done warming up your IP, you can [start creating and sending emails](https://www.braze.com/docs/user_guide/channels/email/html_editor)!
 
 ## Legally required transactional emails
-
-
 
 
 

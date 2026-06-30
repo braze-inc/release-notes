@@ -1,4 +1,4 @@
-<div id='api_jhhyaoioezsq' class='api_div' data-search-keywords='prerequisites broadcast external_user_ids user_aliases audience campaign_id send_id override_messaging_limits recipient_subscription_state schedule time in_local_time at_optimal_time messages apple_push android_push kindle_push web_push email webhook content_card sms dispatch_id schedule_id message'>
+<div id='api_dsxdkpnpptqa' class='api_div' data-search-keywords='prerequisites broadcast external_user_ids user_aliases audience campaign_id send_id override_messaging_limits recipient_subscription_state schedule time in_local_time at_optimal_time messages apple_push android_push kindle_push web_push email webhook content_card sms dispatch_id schedule_id message'>
 <h1 id="create-scheduled-messages">Create scheduled messages</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/schedule/create</p>
@@ -18,7 +18,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">messages.schedule.create</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">messages.schedule.create</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -120,37 +120,37 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">external_user_ids</code></td>
       <td>Optional</td>
       <td>Array of strings</td>
-      <td>See <a href="/docs/api/objects_filters/user_attributes_object/#braze-user-profile-fields">external user identifier</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields">external user identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">user_aliases</code></td>
       <td>Optional</td>
       <td>Array of user alias objects</td>
-      <td>See <a href="/docs/api/objects_filters/user_alias_object/">user alias object</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/user_alias_object">user alias object</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">audience</code></td>
       <td>Optional</td>
       <td>Connected audience object</td>
-      <td>See <a href="/docs/api/objects_filters/connected_audience/">connected audience</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/connected_audience">connected audience</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">segment_id</code></td>
       <td>Optional</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">segment identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">segment identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">campaign_id</code></td>
       <td>Optional</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">campaign identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">campaign identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">send_id</code></td>
       <td>Optional</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">send identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">send identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">override_messaging_limits</code></td>
@@ -168,13 +168,13 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">schedule</code></td>
       <td>Required</td>
       <td>Schedule object</td>
-      <td>See <a href="/docs/api/objects_filters/schedule_object/">schedule object</a></td>
+      <td>See <a href="/docs/api/objects_filters/schedule_object">schedule object</a></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">messages</code></td>
       <td>Optional</td>
       <td>Messaging object</td>
-      <td>See <a href="/docs/api/objects_filters/#messaging-objects">available messaging objects</a>.</td>
+      <td>See <a href="/docs/api/objects_filters#messaging-objects">available messaging objects</a>.</td>
     </tr>
   </tbody>
 </table>

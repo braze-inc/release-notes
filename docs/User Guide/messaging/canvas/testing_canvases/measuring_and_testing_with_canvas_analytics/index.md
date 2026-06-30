@@ -12,7 +12,7 @@ This is a great place to get a high-level overview to check how your Canvas is p
 
 ### Reachable users and exact statistics {#reachable-users-and-exact-statistics}
 
-When **[Calculate exact statistics](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/#single-user-segments)** is running for audiences tied to your Canvas, Braze may briefly show a rounded estimate in the **Reachable users** area. The exact total replaces the estimate when the calculation finishes. Select **Show Additional Stats** for a full per-channel breakdown. The Canvas builder documents the same flow under **Target Population**; see [Calculating target population](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/#calculating-target-population).
+When **[Calculate exact statistics](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment#single-user-segments)** is running for audiences tied to your Canvas, Braze may briefly show a rounded estimate in the **Reachable users** area. The exact total replaces the estimate when the calculation finishes. Select **Show Additional Stats** for a full per-channel breakdown. The Canvas builder documents the same flow under **Target Population**; see [Calculating target population](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#calculating-target-population).
 
 ![The Canvas Details page showing top-line statistics including messages sent, conversion rate, total entries, total revenue, total exits, and estimated audience, with channel and statistics filters.](https://www.braze.com/docs/assets/img_archive/Journey_5.png?bac8aa2dd1321b465cb524c570ebf35e)
 
@@ -77,7 +77,7 @@ For example, if a user completes two steps and then makes a purchase, that reven
 
 
 
-Beyond that, you can see a more explicit breakdown of [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events/), including the following:
+Beyond that, you can see a more explicit breakdown of [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events), including the following:
 
 - Conversion totals and conversion rates for each conversion event
 - Uplift against the control variant
@@ -105,8 +105,8 @@ For our last example, let's say we have a Canvas with re-eligibility turned on. 
 
 ### Funnel report
 
-Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a Canvas. If your Canvas uses a control group or multiple variants, you'll be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data. For more information on funnel reports, see [Funnel reports](https://www.braze.com/docs/user_guide/analytics/reports/funnel_reports/).
+Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a Canvas. If your Canvas uses a control group or multiple variants, you'll be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data. For more information on funnel reports, see [Funnel reports](https://www.braze.com/docs/user_guide/analytics/reports/funnel_reports).
 
 ### Retention report
 
-User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy. Braze now allows you to measure user retention right on the **Canvas Analytics** page. For more information on how to read and interpret your retention report, check out [Retention reports](https://www.braze.com/docs/user_guide/analytics/reports/retention_reports/).
+User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy. Braze now allows you to measure user retention right on the **Canvas Analytics** page. For more information on how to read and interpret your retention report, check out [Retention reports](https://www.braze.com/docs/user_guide/analytics/reports/retention_reports).

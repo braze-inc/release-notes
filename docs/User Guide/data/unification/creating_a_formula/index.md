@@ -16,7 +16,7 @@ The following are some examples of the kinds of behavior patterns that can be de
 
 ## Creating formulas
 
-Formulas can be accessed in the statistics panels on the [Home](https://www.braze.com/docs/user_guide/analytics/dashboards/home/), [Revenue Report](https://www.braze.com/docs/user_guide/analytics/reports/revenue_report/), and [Custom Events Report](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/) pages in the dashboard. To view this panel, go to the **Performance Over Time** chart, change the **Statistics For** dropdown to **KPI Formulas**, and then select at least one KPI formula to populate the chart.
+Formulas can be accessed in the statistics panels on the [Home](https://www.braze.com/docs/user_guide/analytics/dashboards/home), [Revenue Report](https://www.braze.com/docs/user_guide/analytics/reports/revenue_report), and [Custom Events Report](https://www.braze.com/docs/user_guide/data/activation/events/custom_events) pages in the dashboard. To view this panel, go to the **Performance Over Time** chart, change the **Statistics For** dropdown to **KPI Formulas**, and then select at least one KPI formula to populate the chart.
 
 ![View statistics for KPI formulas in the Braze dashboard](https://www.braze.com/docs/assets/img_archive/kpi_forms.png?4b5a22951b04ebb79db7b12936b9d9c2)
 
@@ -75,6 +75,6 @@ table td {
 | --- | --- |
 | Custom event count | MAU |
 |  | DAU |
-|  | Segment size (only segments that have [analytics tracking](https://www.braze.com/docs/viewing_and_understanding_segment_data/) enabled can be used) |
+|  | Segment size (only segments that have [analytics tracking](https://www.braze.com/docs/viewing_and_understanding_segment_data) enabled can be used) |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Custom event dashboard" }
 

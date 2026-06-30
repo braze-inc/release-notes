@@ -1,4 +1,4 @@
-<div id='api_rvbnhxxopnji' class='api_div' data-search-keywords='prerequisites email'>
+<div id='api_yaggxxxuajlb' class='api_div' data-search-keywords='prerequisites email'>
 <h1 id="blocklist-emails">Blocklist emails</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/blocklist</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">email.blacklist</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">email.blacklist</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

@@ -1,4 +1,4 @@
-<div id='api_ylzzdptjrvpi' class='api_div' data-search-keywords='prerequisites users email phone external_id subscription_groups id name channel status total_count message'>
+<div id='api_ryinuvmmcblj' class='api_div' data-search-keywords='prerequisites users email phone external_id subscription_groups id name channel status total_count message'>
 <h1 id="list-users-subscription-groups">List user’s subscription groups</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/subscription/user/status</p>
@@ -22,7 +22,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">subscription.groups.get</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">subscription.groups.get</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -95,7 +95,7 @@
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre></td><td class="rouge-code"><pre>curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&amp;email=example@braze.com&amp;limit=100&amp;offset=0' \
+</pre></td><td class="rouge-code"><pre>curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&amp;email=example@example.com&amp;limit=100&amp;offset=0' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 </pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -150,8 +150,8 @@
     </span><span class="nl">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@example.com"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50505050"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20500"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+11112223333"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"external_identifier"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"subscription_groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                 </span><span class="p">{</span><span class="w">
                   </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ec2fcc919fca"</span><span class="p">,</span><span class="w">

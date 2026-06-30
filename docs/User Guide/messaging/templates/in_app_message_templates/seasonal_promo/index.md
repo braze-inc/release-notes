@@ -48,11 +48,11 @@ To get started building your seasonal promotion, select the button component in 
 
 ![The in-app message editor with a side menu for customizing the button element.](https://www.braze.com/docs/assets/img/drag_and_drop/templates/seasonal_promo_button.png?c19acf41ee52c33663a5566239015b80)
 
-You can also add additional messages to your seasonal promotion in the **Pages** section, and then link them together for a sequential flow. For example, you can put together a sequence of messages that briefly describe the product's capabilities and end with a button that takes users to the product page. Learn how to do that in [Connect pages together](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop/?tab=adding%20pages#step-3a-connect-pages-together).
+You can also add additional messages to your seasonal promotion in the **Pages** section, and then link them together for a sequential flow. For example, you can put together a sequence of messages that briefly describe the product's capabilities and end with a button that takes users to the product page. Learn how to do that in [Connect pages together](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop?tab=adding%20pages#step-3a-connect-pages-together).
 
 ### Step 4: Style your message
 
-Customize the look and feel of your seasonal promotion using the drag-and-drop [in-app message components](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize/style_settings/#message-components). Add your own background image by replacing the default background image URL in the **Message container** menu or remove the URL and select your image from the [Media Library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/).
+Customize the look and feel of your seasonal promotion using the drag-and-drop [in-app message components](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize/style_settings#message-components). Add your own background image by replacing the default background image URL in the **Message container** menu or remove the URL and select your image from the [Media Library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library).
 
 ![The in-app message editor with a side menu for selecting the background image.](https://www.braze.com/docs/assets/img/drag_and_drop/templates/seasonal_promo_image.png?25fa1100ead4d474723b80012f716bf3)
 

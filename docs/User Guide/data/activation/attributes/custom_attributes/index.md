@@ -7,7 +7,7 @@ When stored in Braze, custom attributes can be used to build out audience segmen
 **Important:**
 
 
-**Names are exact matches.** Custom attribute keys are **case-sensitive**—for example, `Home_City` and `home_city` are two different attributes. When you send data through the [REST API](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) or an SDK, Braze **strips leading and trailing spaces** from attribute names, so `greeting` and ` greeting ` resolve to the same key. Use the same spelling and casing everywhere you reference an attribute—in **Data Settings** > **Custom Attributes**, API and SDK payloads, and CSV imports. For how Braze coerces incoming values when you [force a data type](https://www.braze.com/docs/user_guide/data/activation/custom_data/managing_custom_data/#data-type-coercion), see [Managing custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/managing_custom_data/).
+**Names are exact matches.** Custom attribute keys are **case-sensitive**—for example, `Home_City` and `home_city` are two different attributes. When you send data through the [REST API](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) or an SDK, Braze **strips leading and trailing spaces** from attribute names, so `greeting` and ` greeting ` resolve to the same key. Use the same spelling and casing everywhere you reference an attribute—in **Data Settings** > **Custom Attributes**, API and SDK payloads, and CSV imports. For how Braze coerces incoming values when you [force a data type](https://www.braze.com/docs/user_guide/data/activation/custom_data/managing_custom_data#data-type-coercion), see [Managing custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/managing_custom_data).
 
 
 
@@ -16,13 +16,13 @@ When stored in Braze, custom attributes can be used to build out audience segmen
 Some common custom attribute use cases include:
 
 - Targeting and suppressing audiences by segmenting users based on traits like loyalty tier, subscription status, preferred language, or plan type
-- Personalizing messages with [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/) by referencing attributes such as a user's first name, rewards points, or favorite category
+- Personalizing messages with [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) by referencing attributes such as a user's first name, rewards points, or favorite category
 - Tracking lifecycle stages and user states, such as onboarding stage, account status, or trial end date
-- Counting low-value actions with [numeric attributes](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types/#numbers), such as incrementing a `feature_views_count` attribute each time a user views a feature
-- Recording when low-value actions last occurred using [time attributes](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types/#time), such as `last_support_ticket_at` or `last_password_reset_at`
-- Storing user interests and history as [arrays](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types/#arrays), such as favorite genres or recently viewed content, for interest-based targeting
-- Storing richer profile data as [objects](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support/) or [arrays of objects](https://www.braze.com/docs/user_guide/data/activation/attributes/array_of_objects/), such as structured preferences or multiple saved addresses
-- Triggering action-based messages when an attribute value changes using [attribute triggers](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/attribute_triggers/), such as sending a tier-up notification when a user's `rewards_tier` changes
+- Counting low-value actions with [numeric attributes](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#numbers), such as incrementing a `feature_views_count` attribute each time a user views a feature
+- Recording when low-value actions last occurred using [time attributes](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#time), such as `last_support_ticket_at` or `last_password_reset_at`
+- Storing user interests and history as [arrays](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#arrays), such as favorite genres or recently viewed content, for interest-based targeting
+- Storing richer profile data as [objects](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support) or [arrays of objects](https://www.braze.com/docs/user_guide/data/activation/attributes/array_of_objects), such as structured preferences or multiple saved addresses
+- Triggering action-based messages when an attribute value changes using [attribute triggers](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/attribute_triggers), such as sending a tier-up notification when a user's `rewards_tier` changes
 
 ## Manage custom attributes {#managing-custom-attributes}
 
@@ -53,7 +53,7 @@ When you block a custom attribute:
 
 Additionally, if a blocked custom attribute is currently referenced by filters or triggers in other areas of Braze, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 
-For more details on blocklisting and deleting custom data, see [Blocklist custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/blocklist_custom_data/).
+For more details on blocklisting and deleting custom data, see [Blocklist custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/blocklist_custom_data).
 
 ### Mark as personally identifiable information (PII)
 
@@ -61,11 +61,11 @@ Administrators can also create custom attributes and mark them as PII from this 
 
 ### Add descriptions
 
-You can add a description to a custom attribute after it's created if you have the `Manage Events, Attributes, Purchases` [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/). Select **Edit description** for the custom attribute and input whatever you like, such as a note for your team.
+You can add a description to a custom attribute after it's created if you have the `Manage Events, Attributes, Purchases` [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions). Select **Edit description** for the custom attribute and input whatever you like, such as a note for your team.
 
 ### Add tags
 
-You can add tags to a custom attribute after it's created if you have the "Manage Events, Attributes, Purchases" [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/). The tags can then be used to filter the list of attributes. 
+You can add tags to a custom attribute after it's created if you have the "Manage Events, Attributes, Purchases" [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions). The tags can then be used to filter the list of attributes. 
 
 ### Remove custom attributes
 
@@ -89,7 +89,7 @@ The custom attribute must not currently be in use in any active campaigns, Canva
 1. Stop any active campaigns or Canvases that use the attribute in segments or filters.
 2. Remove the attribute from all segment, campaign, and Canvas filters.
 3. Go to **Data Settings** > **Custom Attributes** (or **Custom Events**), find the attribute, and update it to the desired data type.
-4. Update the attribute values on existing user profiles to match the new data type (for example, using the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/)).
+4. Update the attribute values on existing user profiles to match the new data type (for example, using the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track)).
 5. Reapply the attribute to relevant segments, campaigns, and Canvases, then reactivate any stopped campaigns or Canvases.
 
 ### Things to know
@@ -118,13 +118,13 @@ The following lists methods across various platforms that are used to set custom
 
 
 
-- [Android and FireOS](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes/?sdktab=android)
-- [iOS](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes/?sdktab=swift)
-- [Web](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes/?sdktab=web)
-- [React Native](https://www.braze.com/docs/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
-- [Unity](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes/?sdktab=unity)
-- [.NET MAUI (formerly Xamarin)](https://www.braze.com/docs/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
-- [Roku](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes/)
+- [Android and FireOS](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes?sdktab=android)
+- [iOS](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes?sdktab=swift)
+- [Web](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes?sdktab=web)
+- [React Native](https://www.braze.com/docs/developer_guide/platform_integration_guides/react_native/analytics#logging-custom-attributes)
+- [Unity](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes?sdktab=unity)
+- [.NET MAUI (formerly Xamarin)](https://www.braze.com/docs/developer_guide/platform_integration_guides/xamarin/analytics#setting-custom-attributes)
+- [Roku](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes)
 
 
 
@@ -133,7 +133,7 @@ The following lists methods across various platforms that are used to set custom
 
 All data stored on the **User Profile**, including custom attribute data, is retained indefinitely as long as each profile is [active](https://www.braze.com/docs/user_archival#active-users).
 
-For a full reference of all data types you can store as custom attributes—including booleans, numbers, strings, arrays, time, objects, and arrays of objects—see [Custom attribute data types](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types/).
+For a full reference of all data types you can store as custom attributes—including booleans, numbers, strings, arrays, time, objects, and arrays of objects—see [Custom attribute data types](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types).
 
 ### Blank strings versus null values
 

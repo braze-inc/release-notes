@@ -1,4 +1,4 @@
-<div id='api_kllhizzrqxyp' class='api_div' data-search-keywords='prerequisites emails email hard_bounced_at message'>
+<div id='api_gcqhqwaawgzt' class='api_div' data-search-keywords='prerequisites emails email hard_bounced_at message'>
 <h1 id="query-hard-bounced-emails">Query hard bounced emails</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/email/hard_bounces</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">email.hard_bounces</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">email.hard_bounces</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

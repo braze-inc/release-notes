@@ -15,4 +15,4 @@ This feature is now part of [BrazeAI Operator™](https://www.braze.com/docs/use
 In the [Data Transformation](https://www.braze.com/docs/user_guide/data/unification/data_transformation/) editor, select **Insert Code** to generate transformation code that turns an incoming webhook payload into valid Braze API requests.
 
 
-For more information, including example prompts, see [Generate data transformation code in Operator capabilities](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#generate-data-transformation-code).
+For more information, including example prompts, see [Generate data transformation code in Operator capabilities](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#generate-data-transformation-code).

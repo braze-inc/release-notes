@@ -12,7 +12,7 @@ Follow these steps to build a Gmail promotion card for an email campaign. Note t
 
 ### Step 1: Create an email campaign
 
-First, [create your email campaign](https://www.braze.com/docs/user_guide/channels/email/html_editor/), and select the **HTML code editor** as your editing experience.
+First, [create your email campaign](https://www.braze.com/docs/user_guide/channels/email/html_editor), and select the **HTML code editor** as your editing experience.
 
 ### Step 2: Add details to Gmail Promotion card
 
@@ -93,7 +93,7 @@ After building your Gmail Promotion card, select **Generate HTML code**. Copy an
 **Tip:**
 
 
-For the drag-and-drop editor, copy and paste the generated HTML code into the [custom head tags](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/#custom-head-tags) section under **Sending Settings**.
+For the drag-and-drop editor, copy and paste the generated HTML code into the [custom head tags](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop#custom-head-tags) section under **Sending Settings**.
 
 
 

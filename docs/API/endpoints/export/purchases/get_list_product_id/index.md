@@ -1,4 +1,4 @@
-<div id='api_fowxfwlmbeao' class='api_div' data-search-keywords='prerequisites products message'>
+<div id='api_npygzxgjkltx' class='api_div' data-search-keywords='prerequisites products message'>
 <h1 id="export-product-ids">Export product IDs</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/purchases/product_list</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">purchases.product_list</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">purchases.product_list</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -72,6 +72,6 @@
 **Tip:**
 
 
-For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting).
 
 

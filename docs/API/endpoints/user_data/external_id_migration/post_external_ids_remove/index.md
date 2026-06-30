@@ -1,4 +1,4 @@
-<div id='api_dfpgkayhkuwd' class='api_div' data-search-keywords='prerequisites external_ids'>
+<div id='api_nmfrifdeynle' class='api_div' data-search-keywords='prerequisites external_ids'>
 <h1 id="remove-external-id">Remove external ID</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/external_ids/remove</p>
@@ -18,7 +18,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">users.external_ids.remove</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.external_ids.remove</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

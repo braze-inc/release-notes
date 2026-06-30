@@ -1,6 +1,6 @@
 # Customize the behavior of Content Cards
 
-> This implementation guide discusses changing the behavior of Content Cards, adding extras such as key-value pairs to your payload, and recipes for common customizations. For the full list of content card types, see [About Content Cards](https://www.braze.com/docs/developer_guide/content_cards/). 
+> This implementation guide discusses changing the behavior of Content Cards, adding extras such as key-value pairs to your payload, and recipes for common customizations. For the full list of content card types, see [About Content Cards](https://www.braze.com/docs/developer_guide/content_cards). 
 
 ## Key-value pairs
 
@@ -40,7 +40,7 @@ It's important that your marketing and developer teams coordinate on which key-v
 
 ## Content Cards as supplemental content
 
-![](https://www.braze.com/docs/assets/img/cc_implementation/supplementary.png?04f6645c99fe71ac7abb4cba8a46ccbd){: style="float:right;max-width:25%;margin-left:15px;border:0;"}
+![Feed with a hybrid list blending local data and Braze Content Cards.](https://www.braze.com/docs/assets/img/cc_implementation/supplementary.png?04f6645c99fe71ac7abb4cba8a46ccbd){: style="float:right;max-width:25%;margin-left:15px;border:0;"}
 
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
@@ -48,7 +48,7 @@ The example to the right shows a feed with a hybrid list of items that are popul
 
 ### API-triggered key-value pairs
 
-[API-triggered campaigns](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery/) are a good strategy to employ when a card's values depend on external factors to determine what content to display to the user. For example, to display supplemental content, set key-value pairs using Liquid. Note that `class_type` should be known at set-up time.
+[API-triggered campaigns](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery) are a good strategy to employ when a card's values depend on external factors to determine what content to display to the user. For example, to display supplemental content, set key-value pairs using Liquid. Note that `class_type` should be known at set-up time.
 
 ![The key-value pairs for the supplemental Content Cards use case. In this example, different aspects of the card such as "tile_id", "tile_deeplink", and "tile_title" are set using Liquid.](https://www.braze.com/docs/assets/img/cc_implementation/supplementary_content.png?1b9481939960e31dc1b1e5ef57d51b68){: style="max-width:60%;"}
 
@@ -57,11 +57,11 @@ The example to the right shows a feed with a hybrid list of items that are popul
 
 Content Cards can be leveraged to create dynamic and interactive experiences for your users. In the example to the right, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
 
-The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs allow you to filter and display type-specific Content Cards on the checkout screen. For more information on using key-value pairs to manage multiple feeds, see [Customizing the default Content Card feed](https://www.braze.com/docs/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds). 
+The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs allow you to filter and display type-specific Content Cards on the checkout screen. For more information on using key-value pairs to manage multiple feeds, see [Customizing the default Content Card feed](https://www.braze.com/docs/developer_guide/customization_guides/content_cards/customizing_feed#multiple-feeds). 
 <br>
 <br>
 
-![](https://www.braze.com/docs/assets/img/cc_implementation/discount.png?0f629adf0e5b56e0d2dc52b0b9f3e087){: style="max-width:80%;"} 
+![Interactive Content Card showing a checkout promotion.](https://www.braze.com/docs/assets/img/cc_implementation/discount.png?0f629adf0e5b56e0d2dc52b0b9f3e087){: style="max-width:80%;"} 
 
 ## Content Card badges
 

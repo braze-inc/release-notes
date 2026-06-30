@@ -1,4 +1,4 @@
-<div id='api_cdemoelpzels' class='api_div' data-search-keywords='prerequisites segment_id'>
+<div id='api_ugtajqavrgoa' class='api_div' data-search-keywords='prerequisites segment_id'>
 <h1 id="cancel-exports-by-segment">Cancel exports by segment</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/export/segment/cancel</p>
@@ -10,7 +10,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">segments.list</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">segments.list</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

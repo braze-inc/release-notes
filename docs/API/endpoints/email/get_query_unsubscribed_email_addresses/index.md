@@ -1,11 +1,11 @@
-<div id='api_wxtkbjsrmbud' class='api_div' data-search-keywords='prerequisites emails email unsubscribed_at message'>
+<div id='api_mmkyvypqggsu' class='api_div' data-search-keywords='prerequisites emails email unsubscribed_at message'>
 <h1 id="query-list-of-unsubscribed-email-addresses">Query list of unsubscribed email addresses</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/email/unsubscribes</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to return the latest emails that have unsubscribed during the time period from <code class="language-plaintext highlighter-rouge">start_date</code> to <code class="language-plaintext highlighter-rouge">end_date</code>. For a full subscription state history, use <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> to track this data.</p>
+  <p>Use this endpoint to return the latest emails that have unsubscribed during the time period from <code class="language-plaintext highlighter-rouge">start_date</code> to <code class="language-plaintext highlighter-rouge">end_date</code>. For a full subscription state history, use <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> to track this data.</p>
 </blockquote>
 
 <p>You can use this endpoint to set up a bi-directional sync between Braze and other email systems or your own database.</p>
@@ -14,7 +14,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">email.unsubscribe</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">email.unsubscribe</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -86,7 +86,7 @@
 <h2 id="example-request">Example request</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre></td><td class="rouge-code"><pre>curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?start_date=2020-01-01&amp;end_date=2020-02-01&amp;limit=1&amp;offset=1&amp;sort_direction=desc&amp;email=example@braze.com' \
+</pre></td><td class="rouge-code"><pre>curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?start_date=2020-01-01&amp;end_date=2020-02-01&amp;limit=1&amp;offset=1&amp;sort_direction=desc&amp;email=example@example.com' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 </pre></td></tr></tbody></table></code></pre></div></div>
 

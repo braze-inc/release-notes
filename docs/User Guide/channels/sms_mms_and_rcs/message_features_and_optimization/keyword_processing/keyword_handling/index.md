@@ -13,7 +13,7 @@ SMS, MMS, and RCS with Braze gives you the option to create keyword triggers, cu
 **Note:**
 
 
-Braze uses your full set of opt-out keywords ([default keywords](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/optin_optout/) and [custom keywords](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/keyword_handling/)) for exact opt-out handling and [fuzzy opt-out](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/fuzzy_opt_out/).
+Braze uses your full set of opt-out keywords ([default keywords](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/optin_optout) and [custom keywords](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/keyword_handling)) for exact opt-out handling and [fuzzy opt-out](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/fuzzy_opt_out).
 
 
 
@@ -40,7 +40,7 @@ The following rules apply to keywords and keyword responses:
 **Tip:**
 
 
-Interested in seeing how these keywords can be used in your campaigns and Canvases to retarget and trigger messages? Visit [User retargeting](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting/) for more information.
+Interested in seeing how these keywords can be used in your campaigns and Canvases to retarget and trigger messages? Visit [User retargeting](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting) for more information.
 
 
 
@@ -53,7 +53,7 @@ You can manage your own responses that are sent to users after they text in a ke
 
 1. In the Braze dashboard, go to **Audience** > **Subscription Group Management** and select an **SMS/MMS/RCS** subscription group. <br><br>
 2. Under **Global Keywords**, select a keyword category to edit a response for by selecting the pencil icon. ![Opt-in keywords with the pencil icon displaying.](https://www.braze.com/docs/assets/img/sms/sms_keywords.png?9a58afab3c3c146f8190a82ef858cfd1)<br><br> 
-3. In the tab that opens, edit your response. Be mindful of our [six rules to get compliance right](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response, and read the following rules that apply to keywords and keyword responses.<br><br>
+3. In the tab that opens, edit your response. Be mindful of our [six rules to get compliance right](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations#the-six-rules-to-get-compliance-right) as you create your response, and read the following rules that apply to keywords and keyword responses.<br><br>
 4. To automatically shorten static URLs in your response, select the **Link Shortening** toggle. The character counter will update to show the expected length of the shortened URL. ![A GIF showing the character counter updating when the "Link Shortening" toggle is on.](https://www.braze.com/docs/assets/img/sms/link_shortening.gif?18623dce0cd6a779cdd2b605c73ee454){: style="max-width:60%;"}
 
 #### Considerations
@@ -69,7 +69,7 @@ You can manage your own responses that are sent to users after they text in a ke
 **Tip:**
 
  
-If an action-based Canvas is triggered by an inbound SMS, MMS, or RCS message, you can reference SMS, MMS, or RCS properties in the first [message step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step/) of the Canvas.
+If an action-based Canvas is triggered by an inbound SMS, MMS, or RCS message, you can reference SMS, MMS, or RCS properties in the first [message step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step) of the Canvas.
 
 
 
@@ -109,7 +109,7 @@ To create a custom keyword category, do the following:
 2. Select **Add custom keyword**. ![Fields to add new keywords.](https://www.braze.com/docs/assets/img/sms/sms_custom_step.png?a8ec7b1a61a447e862a38e3c3a6653f2){: style="max-width:90%;"}
 3. Provide a keyword category name and define which keywords a user can text in to receive the reply message.
 
-After this keyword category is created, it will be available to [filter and trigger](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting/) against in your campaigns and Canvases.
+After this keyword category is created, it will be available to [filter and trigger](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting) against in your campaigns and Canvases.
 
 Keywords created in custom keyword categories adhere to all of the rules and validations for the creation of new keywords. 
 
@@ -133,18 +133,18 @@ We strongly recommend setting up an auto-response when subscribed users text som
 
 To send a default reply—for example, "Sorry! We didn't recognize that keyword."—do the following:
 
-1. Create an [SMS campaign](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/create/).
+1. Create an [SMS campaign](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/create).
 2. For **Target audience**, choose **All users** (the trigger still limits who receives the message).
 3. For **Schedule**, choose **Action-based delivery**.
 4. Set the trigger to **Send inbound SMS** to the appropriate subscription group **within keyword category OTHER**.
 5. In the **Messaging** step, enter the response body you want users to receive.
 
-For how Braze handles inbound messages from **unknown** phone numbers (before a profile exists), see [Handle unknown phone numbers](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/unknown_phone_numbers/).
+For how Braze handles inbound messages from **unknown** phone numbers (before a profile exists), see [Handle unknown phone numbers](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/unknown_phone_numbers).
 
 **Tip:**
 
 
-Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit [User retargeting](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting/) for more information.
+Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit [User retargeting](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting) for more information.
 
 
 

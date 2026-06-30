@@ -6,9 +6,9 @@
 
 To enable location collection on your app, refer to the developer guide for the platform you're using:
 
-- [iOS](https://www.braze.com/docs/developer_guide/analytics/tracking_location/?sdktab=swift)
-- [Android](https://www.braze.com/docs/developer_guide/analytics/tracking_location/?sdktab=android)
-- [Web](https://www.braze.com/docs/developer_guide/analytics/tracking_location/?sdktab=web)
+- [iOS](https://www.braze.com/docs/developer_guide/analytics/tracking_location?sdktab=swift)
+- [Android](https://www.braze.com/docs/developer_guide/analytics/tracking_location?sdktab=android)
+- [Web](https://www.braze.com/docs/developer_guide/analytics/tracking_location?sdktab=web)
 
 In general, mobile apps use the device's GPS chip and other systems (such as Wi-Fi scanning) to track a user's location. Web apps use WPS (Wi-Fi Positioning System) to track a user's location. All of these platforms require users to opt in to location tracking. The accuracy of your location tracking data may be affected by whether or not your users have Wi-Fi enabled on their devices. Android users can also choose different location modes—users that are on "Battery saving" or "Device only" mode may have inaccurate data.
 
@@ -24,17 +24,17 @@ Now, Braze uses the IP address to set the country value on user profiles created
 
 When enabled, automatic location collection in the SDK is separate from IP-based country behavior. It relates to device location signals such as GPS when the user has granted permission, which powers filters like `Most Recent Location`. It does not automatically populate fine-grained fields such as city from IP alone. 
 
-For city or postal-level targeting, use [`setLastKnownLocation()`](https://www.braze.com/docs/developer_guide/analytics/tracking_location/) (see the SDK article for your platform), your own IP geolocation service writing custom attributes, or [Location targeting](https://www.braze.com/docs/user_guide/audience/segments/location_targeting/) with the data you collect.
+For city or postal-level targeting, use [`setLastKnownLocation()`](https://www.braze.com/docs/developer_guide/analytics/tracking_location) (see the SDK article for your platform), your own IP geolocation service writing custom attributes, or [Location targeting](https://www.braze.com/docs/user_guide/audience/segments/location_targeting) with the data you collect.
 
 ## Location targeting
 
 Using location tracking data and segments, you can set up location-based campaigns and strategies. For example, you may want to run a promotional campaign for users who live in a particular region or exclude users in a region that has stricter regulations.
 
-Refer to [Location targeting](https://www.braze.com/docs/user_guide/audience/segments/location_targeting/) for more information on creating a location segment.
+Refer to [Location targeting](https://www.braze.com/docs/user_guide/audience/segments/location_targeting) for more information on creating a location segment.
 
 ## Hard setting the default location attribute
 
-You can also use the [`users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) in our API to update the [`current_location`](https://www.braze.com/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens) standard attribute. An example is:
+You can also use the [`users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) in our API to update the [`current_location`](https://www.braze.com/docs/api/objects_filters/user_attributes_object#migrating-push-tokens) standard attribute. An example is:
 
 ```
 https://[your_braze_rest_endpoint]/users/track
@@ -54,9 +54,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Combining existing beacon or geofence support with our targeting and messaging features gives you more information about your users' physical actions so you can message them accordingly. You can leverage location tracking with some of our partners: 
 
-- [Radar](https://www.braze.com/docs/partners/message_personalization/location/radar/)
-- [Infillion](https://www.braze.com/docs/partners/message_personalization/location/infillion/)
-- [Foursquare](https://www.braze.com/docs/partners/message_personalization/location/foursquare/)
+- [Radar](https://www.braze.com/docs/partners/message_personalization/location/radar)
+- [Infillion](https://www.braze.com/docs/partners/message_personalization/location/infillion)
+- [Foursquare](https://www.braze.com/docs/partners/message_personalization/location/foursquare)
 
 ## Differences between geofences and location tracking
 

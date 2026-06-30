@@ -1,4 +1,4 @@
-<div id='api_xiyxumsevogm' class='api_div' data-search-keywords='prerequisites message data time purchase_quantity'>
+<div id='api_ngleapylegzi' class='api_div' data-search-keywords='prerequisites message data time purchase_quantity'>
 <h1 id="export-number-of-purchases">Export number of purchases</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/purchases/quantity_series</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">purchases.quantity_series</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">purchases.quantity_series</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -58,7 +58,7 @@
       <td><code class="language-plaintext highlighter-rouge">app_id</code></td>
       <td>Optional</td>
       <td>String</td>
-      <td>App API identifier retrieved from the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers/">API Keys</a> page. If excluded, results for all apps in a workspace will be returned.</td>
+      <td>App API identifier retrieved from the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers">API Keys</a> page. If excluded, results for all apps in a workspace will be returned.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">product</code></td>
@@ -106,6 +106,6 @@
 **Tip:**
 
 
-For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting).
 
 

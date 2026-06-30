@@ -1,11 +1,11 @@
 # Create a Canvas
 
-> This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup). You can also start from a [Braze Canvas template](https://www.braze.com/docs/user_guide/messaging/templates/canvas_templates/braze_templates/) to speed up your setup. For more information, see [Canvas templates](https://www.braze.com/docs/user_guide/messaging/templates/canvas_templates/).
+> This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup). You can also start from a [Braze Canvas template](https://www.braze.com/docs/user_guide/messaging/templates/canvas_templates/braze_templates) to speed up your setup. For more information, see [Canvas templates](https://www.braze.com/docs/user_guide/messaging/templates/canvas_templates).
 
 **Expand for original Canvas editor details**
 
 
-You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends [cloning your Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases/) to the most current editor.
+You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends [cloning your Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases) to the most current editor.
 
 
 
@@ -55,19 +55,19 @@ The Canvas builder will guide you step-by-step through setting up your Canvas—
     Learn how to [build your Canvas](#step-2-build-your-canvas) using the Canvas builder.
   
   
-    Here, you will find the summary of your Canvas details. If you have the [Canvas approval workflow](https://www.braze.com/docs/user_guide/messaging/governance/approvals/) turned on, you can approve the listed Canvas details before launching.
+    Here, you will find the summary of your Canvas details. If you have the [Canvas approval workflow](https://www.braze.com/docs/user_guide/messaging/governance/approvals) turned on, you can approve the listed Canvas details before launching.
 
   
 
 
 ### Step 1.1: Start with your Canvas basics
 
-Here, you'll name your Canvas, assign [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams/#teams), and create or add [Tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags/#tags). You can also assign conversion events for the Canvas.
+Here, you'll name your Canvas, assign [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams#teams), and create or add [Tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags#tags). You can also assign conversion events for the Canvas.
 
 **Tip:**
 
 
-Tag your Canvases so they're easy to find and build reports out of. For instance, when using [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder/), you can filter by particular tags.
+Tag your Canvases so they're easy to find and build reports out of. For instance, when using [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder), you can filter by particular tags.
 
 
 
@@ -75,7 +75,7 @@ Tag your Canvases so they're easy to find and build reports out of. For instance
 
 #### Choose conversion events
 
-Choose your conversion event type, then select the conversions to record. These [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events/) will measure the efficiency of your Canvas. 
+Choose your conversion event type, then select the conversions to record. These [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events) will measure the efficiency of your Canvas. 
 
 ![Primary Conversion Event A with the Makes Purchase conversion event type to record conversations for users who make any purchase within a three day conversion deadline.](https://www.braze.com/docs/assets/img/add_canvas_conversions.png?5c23b8494f820bfef398421aa1f34582)
 
@@ -97,7 +97,7 @@ In this example, based on the time-based options, users enter this Canvas every 
 
 ![The "Entry Schedule" page with the type set to "Scheduled". Due to the selection, time-based options are shown, including frequency, start time, recurrence, days, and more.](https://www.braze.com/docs/assets/img_archive/Canvas_Scheduled_Delivery.png?22f99135bf3f487106e3767213fe849e)
 
-When using local time zone delivery, Braze evaluates entry eligibility twice: first at Samoa time (UTC+13) on the scheduled day, and again at the user's local time. A user must be eligible for both checks to enter the Canvas. If your entry filters use relative time windows (for example, "more than 2 days ago"), the 24-hour period may not have elapsed at the time of the first check, causing users to enter one day late. To avoid this, use a broader time window, such as at least two days. For more details, see [When does Braze evaluate users for local time zone delivery?](https://www.braze.com/docs/user_guide/messaging/campaigns/faq/#when-does-braze-evaluate-users-for-local-time-zone-delivery)
+When using local time zone delivery, Braze evaluates entry eligibility twice: first at Samoa time (UTC+13) on the scheduled day, and again at the user's local time. A user must be eligible for both checks to enter the Canvas. If your entry filters use relative time windows (for example, "more than 2 days ago"), the 24-hour period may not have elapsed at the time of the first check, causing users to enter one day late. To avoid this, use a broader time window, such as at least two days. For more details, see [When does Braze evaluate users for local time zone delivery?](https://www.braze.com/docs/user_guide/messaging/campaigns/faq#when-does-braze-evaluate-users-for-local-time-zone-delivery)
 
 
 With action-based delivery, users will enter the Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event.
@@ -114,14 +114,14 @@ If your action-based Canvas sends messages earlier than expected, check that you
 
 
 
-With API-triggered delivery, users will enter your Canvas and begin receiving messages after they have been added using the [`/canvas/trigger/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) via the API. In the dashboard, you can find an example cURL request that does this as well as assign optional [`context`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [context object](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context/). 
+With API-triggered delivery, users will enter your Canvas and begin receiving messages after they have been added using the [`/canvas/trigger/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases) via the API. In the dashboard, you can find an example cURL request that does this as well as assign optional [`context`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases) using the [context object](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context). 
 
 ![An example of API-triggered delivery with a Canvas ID and an example of a cURL request.](https://www.braze.com/docs/assets/img_archive/Canvas_API_Triggered_Delivery.png?cf4427ae7e5690a60da1dc8aaf5f9520)
 
 You can use the following endpoints for API-triggered delivery:
-- [POST: Send Canvas Messages via API-Triggered Delivery](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)
-- [POST: Schedule API-Triggered Canvases](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/)
-- [POST: Update Scheduled API-Triggered Canvases](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/)
+- [POST: Send Canvas Messages via API-Triggered Delivery](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases)
+- [POST: Schedule API-Triggered Canvases](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases)
+- [POST: Update Scheduled API-Triggered Canvases](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases)
 
 
 
@@ -151,7 +151,7 @@ In **Entry Controls**, you can limit the number of users every time the Canvas i
 
 #### Testing your audience
 
-After adding segments and filters to your target audience, you can test if your audience is set up as expected by [looking up a user](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/) to confirm if they match the audience criteria.
+After adding segments and filters to your target audience, you can test if your audience is set up as expected by [looking up a user](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment) to confirm if they match the audience criteria.
 
 ![The "User Lookup" field, which allows you to search by external user ID or Braze ID.](https://www.braze.com/docs/assets/img_archive/user_lookup.png?a23b1b90dd9a139a54218f61761a0040){: style="max-width:80%;"}
 
@@ -176,11 +176,11 @@ Braze does not recommend selecting **Every time the Canvas is scheduled** for IP
 
 #### Setting exit criteria
 
-Setting the [exit criteria](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/exit_criteria/) determines which users you want to exit a Canvas. If a user performs the exception event or matches the segments and filters, they won't receive any further messages.
+Setting the [exit criteria](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/exit_criteria) determines which users you want to exit a Canvas. If a user performs the exception event or matches the segments and filters, they won't receive any further messages.
 
 #### Calculating target population
 
-In the **Target Population** section, you can view a summary of your audience, such as your selected segments and additional filters, and a breakdown of how many users are reachable per messaging channel. To calculate the exact number of reachable users in your target audience instead of the default estimation, select [Calculate exact statistics](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/#calculating-exact-statistics).
+In the **Target Population** section, you can view a summary of your audience, such as your selected segments and additional filters, and a breakdown of how many users are reachable per messaging channel. To calculate the exact number of reachable users in your target audience instead of the default estimation, select [Calculate exact statistics](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment#calculating-exact-statistics).
 
 Note that:
 
@@ -202,7 +202,7 @@ To view additional statistics, such as the average lifetime revenue for targeted
 
 ### Step 1.4: Select your send settings
 
-Select **Send Settings** to edit your subscription settings, turn on rate limiting, and to turn on [quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/). By turning on [rate limiting](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping/#rate-limiting-and-canvas-components) or [frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping/#frequency-capping), you can ease the marketing pressure placed on your users and ensure you aren't over-messaging them.
+Select **Send Settings** to edit your subscription settings, turn on rate limiting, and to turn on [quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours). By turning on [rate limiting](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#rate-limiting-and-canvas-components) or [frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#frequency-capping), you can ease the marketing pressure placed on your users and ensure you aren't over-messaging them.
 
 For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 
@@ -221,7 +221,7 @@ With this configuration, don't include any filters in the **Target Audience** st
 
 
 
-If desired, specify [quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/) (the time during which your messages will not be sent) for your Canvas. Check **Enable Quiet Hours** in your **Send Settings**. Then, select your quiet hours in your user's local time and what action will follow if the message triggers inside of those quiet hours.
+If desired, specify [quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours) (the time during which your messages will not be sent) for your Canvas. Check **Enable Quiet Hours** in your **Send Settings**. Then, select your quiet hours in your user's local time and what action will follow if the message triggers inside of those quiet hours.
 
 ![The "Quiet Hours" page displaying a checkbox for enabling quiet hours. If enabled, the start time, end time, and fallback behavior can be set.](https://www.braze.com/docs/assets/img/quiet_hours.png?6de04fa223fe658a5708e2199f3615b6)
 
@@ -230,7 +230,7 @@ If desired, specify [quiet hours](https://www.braze.com/docs/user_guide/messagin
 **Tip:**
 
 
-Save time and streamline your Canvas creation by using [Braze Canvas templates](https://www.braze.com/docs/user_guide/messaging/templates/canvas_templates/braze_templates/)! Browse our library of pre-built templates to find one that fits your use case and customize it to meet your specific needs. For more information, see [Canvas templates](https://www.braze.com/docs/user_guide/messaging/templates/canvas_templates/).
+Save time and streamline your Canvas creation by using [Braze Canvas templates](https://www.braze.com/docs/user_guide/messaging/templates/canvas_templates/braze_templates)! Browse our library of pre-built templates to find one that fits your use case and customize it to meet your specific needs. For more information, see [Canvas templates](https://www.braze.com/docs/user_guide/messaging/templates/canvas_templates).
 
 
 
@@ -247,15 +247,15 @@ You can add additional variants by selecting the <i class="fas fa-plus-circle"><
 **Tip:**
 
 
-By default, Canvas variant assignment is determined by a deterministic hash of the user ID and Canvas ID (not a user's [random bucket number](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers/)), meaning that a given user is consistently assigned to the same variant on re-entry, as long as the variant distribution percentages remain unchanged. If you adjust the variant distribution after launch, users may be assigned to different variants when they re-enter the Canvas. <br><br>If you need assignment that stays fixed when distribution percentages change, use a single Canvas variant and route users with an [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths/) step. At the start of the journey, use a [User Update](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update/) step to store a random number in a custom attribute, then filter on that attribute in Audience Paths.
+By default, Canvas variant assignment is determined by a deterministic hash of the user ID and Canvas ID (not a user's [random bucket number](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers)), meaning that a given user is consistently assigned to the same variant on re-entry, as long as the variant distribution percentages remain unchanged. If you adjust the variant distribution after launch, users may be assigned to different variants when they re-enter the Canvas. <br><br>If you need assignment that stays fixed when distribution percentages change, use a single Canvas variant and route users with an [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths) step. At the start of the journey, use a [User Update](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update) step to store a random number in a custom attribute, then filter on that attribute in Audience Paths.
 
 **Expand for steps**
 
 
 
 1. Create a **Number** custom attribute to store your random number. Name it something easy to locate, like `lottery_number` or `random_assignment`. In your dashboard, go to **Data Settings** > **Custom Attributes**.<br><br>
-2. Use a single Canvas variant (or add the same User Update step to each variant). Add a [User Update](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update/) step at the beginning of the journey. This step generates and stores the random number before users reach your Audience Paths step.<br><br>
-3. In the User Update step, select the [Advanced JSON Editor](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update#advanced-json-editor). Use the {% random %} tag to generate the number. For details, see [Send messages with a random number](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/#send-messages-with-a-random-number). For example, `{% random 10 %}` returns an integer from 0 through 9. Set the custom attribute from step 1 using JSON like this:<br><br>
+2. Use a single Canvas variant (or add the same User Update step to each variant). Add a [User Update](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update) step at the beginning of the journey. This step generates and stores the random number before users reach your Audience Paths step.<br><br>
+3. In the User Update step, select the [Advanced JSON Editor](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update#advanced-json-editor). Use the {% random %} tag to generate the number. For details, see [Send messages with a random number](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags#send-messages-with-a-random-number). For example, `{% random 10 %}` returns an integer from 0 through 9. Set the custom attribute from step 1 using JSON like this:<br><br>
 ```json
 {% if {{custom_attribute.${lottery_number}}} == blank %}
 {% capture lottery_number_str %}{% random 10 %}{% endcapture %}
@@ -273,7 +273,7 @@ By default, Canvas variant assignment is determined by a deterministic hash of t
 The `{% if %}` block sets the number only when the attribute is blank, so users keep the same assignment when they re-enter the Canvas.<br><br>
 
 {: start="4"}
-4. Add an [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths/) step after the User Update step. In each audience group, add filters based on your custom attribute instead of using variant distribution percentages.<br><br>For example, if you used `{% random 10 %}`, one group might use `lottery_number` **is less than 4**, another **is more than 3 and less than 7**, and a third **is more than 6 and less than 10**.
+4. Add an [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths) step after the User Update step. In each audience group, add filters based on your custom attribute instead of using variant distribution percentages.<br><br>For example, if you used `{% random 10 %}`, one group might use `lottery_number` **is less than 4**, another **is more than 3 and less than 7**, and a third **is more than 6 and less than 10**.
 
 
 
@@ -308,11 +308,11 @@ As your Canvas journey increases in steps, the maximum duration is the longest p
 
 Looking to edit a step in your user journey? Check out how to do this depending on your Canvas workflow!
 
-You can edit any step in your Canvas workflow by selecting any of the components. For example, let's say you want to edit your first step, a [Delay](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/delay_step/) component, in your workflow to a specific day. Select the step to view its settings and adjust your delay to March 1. This means on March 1, your users will move to the next step in your Canvas.
+You can edit any step in your Canvas workflow by selecting any of the components. For example, let's say you want to edit your first step, a [Delay](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/delay_step) component, in your workflow to a specific day. Select the step to view its settings and adjust your delay to March 1. This means on March 1, your users will move to the next step in your Canvas.
 
 ![An example "Delay" step with the delay set to "Until a specific day."](https://www.braze.com/docs/assets/img_archive/edit_delay_flow.png?85910b32d35e4ab16123584dece94166)
 
-Or you can quickly edit and adjust the **Action Settings** of your [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths/) step to hold users for a window of time. This prioritizes their next path based on the actions during this evaluation period.
+Or you can quickly edit and adjust the **Action Settings** of your [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) step to hold users for a window of time. This prioritizes their next path based on the actions during this evaluation period.
 
 ![The second step in the canvas, "Action Settings", with an evaluation window set to 1 day.](https://www.braze.com/docs/assets/img_archive/action_paths_flow.png?81a7e5358605cc4e4c3c36be45171bcf)
 
@@ -320,7 +320,7 @@ The lightweight components in Canvas allow for a simple editing experience, so a
 
 #### Messages in Canvas
 
-Edit the messages in a Canvas component to control messages that a particular step will send. Canvas can send email, mobile, and web push messages, and webhooks to integrate with other systems. Similar to campaigns, you can use certain [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid/) templating to personalize your messages.
+Edit the messages in a Canvas component to control messages that a particular step will send. Canvas can send email, mobile, and web push messages, and webhooks to integrate with other systems. Similar to campaigns, you can use certain [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid) templating to personalize your messages.
 
 **Tip:**
 
@@ -330,7 +330,7 @@ Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas co
 
 
 
-The Message component manages the messages sent to users. You can select your **Messaging Channels** and adjust **Delivery Settings** to optimize your Canvas messaging. For more details on this component, check out [Message](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step/).
+The Message component manages the messages sent to users. You can select your **Messaging Channels** and adjust **Delivery Settings** to optimize your Canvas messaging. For more details on this component, check out [Message](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step).
 
 ![The "Set up Messages" step, with "Messaging Channels" selected which displays the list of available messaging channels, such as android push, content cards, email, and more.](https://www.braze.com/docs/assets/img_archive/message_setup_settings_flow.png?cf71f5ea09b73a5015c94e63ab2b10e8)
 
@@ -339,7 +339,7 @@ Select **Done** after you've finished configuring your Canvas component.
 
 
 
-The [`context` object](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context/) is configured in the **Entry Schedule** step of creating a Canvas and indicates the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `context` object can be up to 50 KB. 
+The [`context` object](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context) is configured in the **Entry Schedule** step of creating a Canvas and indicates the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `context` object can be up to 50 KB. 
 
 Use the following Liquid when referencing these properties created upon entering the Canvas:  ``context.${property_name}`` . Note that the events must be custom events or purchase events to be used this way.
 
@@ -363,7 +363,7 @@ In the first Message step following an Action Path, you can use `event_propertie
 
 To move a connection between steps, select the arrow connecting the two components and select a different component. To remove the connection, select the arrow followed by **Cancel Connection** in the footer of the Canvas composer.
 
-If a single variant has multiple branches with the same audience and send time, Braze does not guarantee an even split across those branches. Distribution may favor the branch that was created first. For an even split, use [Random Bucket Number](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers/) filters on each branch. For more information, see [What happens if the audience and send time are identical for a Canvas that has one variant, but multiple branches?](https://www.braze.com/docs/user_guide/messaging/canvas/faqs/#what-happens-if-the-audience-and-send-time-are-identical-for-a-canvas-that-has-one-variant-but-multiple-branches).
+If a single variant has multiple branches with the same audience and send time, Braze does not guarantee an even split across those branches. Distribution may favor the branch that was created first. For an even split, use [Random Bucket Number](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers) filters on each branch. For more information, see [What happens if the audience and send time are identical for a Canvas that has one variant, but multiple branches?](https://www.braze.com/docs/user_guide/messaging/canvas/faqs#what-happens-if-the-audience-and-send-time-are-identical-for-a-canvas-that-has-one-variant-but-multiple-branches).
 
 ## Step 3: Add a control group
 
@@ -379,7 +379,7 @@ In this example, we have our Canvas divided into two variants. Variant 1 has 70%
 
 ### Intelligent Selection for Canvas
 
-Intelligent Selection capabilities are now available within multivariate Canvases. Similar to the [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_selection/) feature for multivariate Campaigns, Intelligent Selection for Canvas analyzes the performance of each Canvas variant and adjusts the percentage of users being funneled through each variant. This distribution is based on each variant's performance metrics to maximize the total expected number of conversions.
+Intelligent Selection capabilities are now available within multivariate Canvases. Similar to the [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_selection) feature for multivariate Campaigns, Intelligent Selection for Canvas analyzes the performance of each Canvas variant and adjusts the percentage of users being funneled through each variant. This distribution is based on each variant's performance metrics to maximize the total expected number of conversions.
 
 Keep in mind that multivariate Canvases allow you to test more than copy, but timing and channels as well. Through Intelligent Selection, you can test Canvases more efficiently and have confidence that your users will be sent on the best possible Canvas journey.
 
@@ -400,6 +400,6 @@ You can also save your Canvas as a draft if you need to come back to it.
 **Tip:**
 
 
-Need to make edits to your Canvas after launch? Well, you can! Check out [Editing Canvases after launch](https://www.braze.com/docs/post-launch_edits/) for more information.
+Need to make edits to your Canvas after launch? Well, you can! Check out [Editing Canvases after launch](https://www.braze.com/docs/post-launch_edits) for more information.
 
 

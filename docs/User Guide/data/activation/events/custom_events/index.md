@@ -1,6 +1,6 @@
 # [![Braze Learning course](https://www.braze.com/docs/assets/img/bl_icon3.png?5f6465f63e399dec15d7020b6f4d2452)](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom events
 
-> This article describes custom events and properties, user profile event history, related segmentation filters, Canvas entry properties, relevant analytics, and more. To learn about Braze events in general, refer to [Events](https://www.braze.com/docs/user_guide/data/activation/events/).
+> This article describes custom events and properties, user profile event history, related segmentation filters, Canvas entry properties, relevant analytics, and more. To learn about Braze events in general, refer to [Events](https://www.braze.com/docs/user_guide/data/activation/events).
 
 Custom events are actions taken by, or updates about, your users. When custom events are logged, they can trigger any number and type of follow-up campaigns. You can then use [segmentation filters](#segmentation-filters) to segment users based on how recently and frequently those custom events occurred. This makes custom events best suited for tracking high-value user interactions within your application.
 
@@ -8,13 +8,13 @@ Custom events are actions taken by, or updates about, your users. When custom ev
 
 Some common custom event use cases include:
 
-- Triggering a campaign or Canvas based on a custom event using [action-based delivery](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/)
+- Triggering a campaign or Canvas based on a custom event using [action-based delivery](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery)
 - Segmenting users by how many times they performed a custom event, when the last time the event occurred, and similar
 - Using dashboard [custom event analytics](#analytics) to view an aggregate of how often each event occurred
-- Finding additional analytics using [funnel](https://www.braze.com/docs/user_guide/analytics/reports/funnel_reports#step-2-select-events-for-funnel-steps) and [retention](https://www.braze.com/docs/user_guide/analytics/reports/retention_reports/) reports
-- Leveraging [persistent entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps
-- Generating more sophisticated analytics with [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/)
-- Setting up [exit criteria](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/exit_criteria/) to define when users should exit your Canvas
+- Finding additional analytics using [funnel](https://www.braze.com/docs/user_guide/analytics/reports/funnel_reports#step-2-select-events-for-funnel-steps) and [retention](https://www.braze.com/docs/user_guide/analytics/reports/retention_reports) reports
+- Leveraging [persistent entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties) to use metadata from your customer event for personalization in your Canvas steps
+- Generating more sophisticated analytics with [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents)
+- Setting up [exit criteria](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/exit_criteria) to define when users should exit your Canvas
 
 ## Managing custom events
 
@@ -34,15 +34,15 @@ When you block a custom event:
 
 Additionally, if a blocked custom event is currently referenced by filters or triggers in other areas of Braze, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 
-For more details on blocklisting and deleting custom data, see [Blocklist custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/blocklist_custom_data/).
+For more details on blocklisting and deleting custom data, see [Blocklist custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/blocklist_custom_data).
 
 ### Adding descriptions
 
-You can add a description to a custom event after it's created if you have the `Manage Events, Attributes, Purchases` [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/). Select **Edit description** for the custom event and input whatever you like, such as a note for your team.
+You can add a description to a custom event after it's created if you have the `Manage Events, Attributes, Purchases` [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions). Select **Edit description** for the custom event and input whatever you like, such as a note for your team.
 
 ### Adding tags
 
-You can add tags to a custom event after it's created if you have the "Manage Events, Attributes, Purchases" [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/). The tags can then be used to filter the list of events.
+You can add tags to a custom event after it's created if you have the "Manage Events, Attributes, Purchases" [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions). The tags can then be used to filter the list of events.
 
 ### Exporting data
 
@@ -51,7 +51,7 @@ To export the list of custom events as a CSV file, select **Export all** at the 
 **Note:**
 
 
-There is no fixed dashboard cap on how many distinct **custom events** or **custom attributes** you can define or store on a profile; practical limits depend on data shape, ingestion volume, and workspace performance. If you plan to track a very large catalog of events or attributes, work with your Braze account team on modeling and hygiene (for example, [blocklisting](https://www.braze.com/docs/user_guide/data/activation/custom_data/blocklist_custom_data/) unused data).
+There is no fixed dashboard cap on how many distinct **custom events** or **custom attributes** you can define or store on a profile; practical limits depend on data shape, ingestion volume, and workspace performance. If you plan to track a very large catalog of events or attributes, work with your Braze account team on modeling and hygiene (for example, [blocklisting](https://www.braze.com/docs/user_guide/data/activation/custom_data/blocklist_custom_data) unused data).
 
 
 
@@ -69,13 +69,13 @@ Custom events require additional setup. Refer to the list below for documentatio
 
 
 
-- [Android and FireOS](https://www.braze.com/docs/developer_guide/analytics/logging_events/?tab=android)
-- [iOS](https://www.braze.com/docs/developer_guide/analytics/logging_events/?tab=swift)
-- [Web](https://www.braze.com/docs/developer_guide/analytics/logging_events/?tab=web)
-- [React Native](https://www.braze.com/docs/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
-- [Unity](https://www.braze.com/docs/developer_guide/analytics/logging_events/?tab=unity)
-- [.NET MAUI (formerly Xamarin)](https://www.braze.com/docs/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
-- [Roku](https://www.braze.com/docs/developer_guide/analytics/logging_events/?tab=roku)
+- [Android and FireOS](https://www.braze.com/docs/developer_guide/analytics/logging_events?tab=android)
+- [iOS](https://www.braze.com/docs/developer_guide/analytics/logging_events?tab=swift)
+- [Web](https://www.braze.com/docs/developer_guide/analytics/logging_events?tab=web)
+- [React Native](https://www.braze.com/docs/developer_guide/platform_integration_guides/react_native/analytics#logging-custom-events)
+- [Unity](https://www.braze.com/docs/developer_guide/analytics/logging_events?tab=unity)
+- [.NET MAUI (formerly Xamarin)](https://www.braze.com/docs/developer_guide/platform_integration_guides/xamarin/analytics#tracking-custom-events)
+- [Roku](https://www.braze.com/docs/developer_guide/analytics/logging_events?tab=roku)
 
 
 
@@ -118,7 +118,7 @@ Common use cases include:
 **Note:**
 
 
-Viewing the **Event History** tab requires both the **Search Users** and **View PII** user permissions because event properties can contain personal data. For more information, refer to [Company user permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/).
+Viewing the **Event History** tab requires both the **Search Users** and **View PII** user permissions because event properties can contain personal data. For more information, refer to [Company user permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions).
 
 
 
@@ -167,5 +167,5 @@ Segments created with custom event data can't show previous historical data from
 
 Custom event properties are custom event metadata or attributes that describe a specific occurrence of an event. These properties can be used for further qualifying trigger conditions, increasing personalization in messaging, tracking conversions, and generating more sophisticated analytics through raw data export.
 
-To learn more, refer to [Custom event properties](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/custom_event_properties/).
+To learn more, refer to [Custom event properties](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/custom_event_properties).
 

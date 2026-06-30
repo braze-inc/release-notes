@@ -6,7 +6,7 @@
 
 Content Cards availability depends on your Braze package. Contact your account manager or customer success manager to get started.
 
-Before you can use Content Cards, you need to integrate the [Braze SDK](https://www.braze.com/docs/developer_guide/content_cards/) into your app or website. No additional setup is required. To build your own UI instead, refer to the [Content Card customization guide](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/).
+Before you can use Content Cards, you need to integrate the [Braze SDK](https://www.braze.com/docs/developer_guide/content_cards) into your app or website. No additional setup is required. To build your own UI instead, refer to the [Content Card customization guide](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards).
 
 ## Benefits of using Content Cards
 
@@ -17,8 +17,6 @@ Here are some benefits of using Content Cards versus having your developers buil
 - **Cohesive customer journeys:** You can combine Content Cards with other channels in Braze to create consistent customer experiences. A popular use case is sending a push notification, then saving that notification as a Content Card in your app for anyone who didn't engage with the push. If the content is built directly into your app by your developers, then it's isolated from the rest of your messaging.
 - **No required opt-in:** Similar to in-app messages, Content Cards don't require opt-in or permissions from your users. But while in-app messages are permissionless and short-lived, Content Cards are permissionless and permanent. This means messaging strategies that pair together in-app messages and Content Cards strike a great balance.
 - **More control over the messaging experience:** While you'll still need your developers to help with the initial setup of Content Cards, afterward, you can control the message, recipients, timing, and more directly from your Braze dashboard.
-
-
 
 
 
@@ -114,11 +112,11 @@ Take advantage of Content Cards to highlight promotional messages and unclaimed 
 
 ### Other use cases
 
-Outside of these main use cases, customers use Content Cards in many different ways. The power of Content Cards is their flexibility. If the use case you want is not shown here, you can set up [key-value pairs](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/key_value_pairs/) and send the payloads to your app or website.
+Outside of these main use cases, customers use Content Cards in many different ways. The power of Content Cards is their flexibility. If the use case you want is not shown here, you can set up [key-value pairs](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/key_value_pairs) and send the payloads to your app or website.
 
-For an overview on how to implement Content Card placements in your app or website, refer to [Creating custom Content Cards](https://www.braze.com/docs/developer_guide/content_cards/creating_cards/).
+For an overview on how to implement Content Card placements in your app or website, refer to [Creating custom Content Cards](https://www.braze.com/docs/developer_guide/content_cards/creating_cards).
 
 ## Next steps
 
-- [Create a Content Card](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card/)
-- [Creative details](https://www.braze.com/docs/user_guide/channels/content_cards/creative_details/)
+- [Create a Content Card](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card)
+- [Creative details](https://www.braze.com/docs/user_guide/channels/content_cards/creative_details)

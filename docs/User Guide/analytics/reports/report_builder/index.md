@@ -146,7 +146,7 @@ You can share a dashboard link to the report by selecting **Share** and one of t
 1. Select the dotted icon at the top of the report table.
 2. Select **Add to dashboard**.
 3. Select whether you want to create a new dashboard or add to an existing dashboard.<br><br>![Window with options to select if you want to add the report to a new or existing dashboard.](https://www.braze.com/docs/assets/img/report_builder_2/add_to_dashboard.png?3c232fc0d40d1c600da9018bb71df7e3){: style="width:90%;"}<br><br>
-4. Follow the steps in [Dashboard Builder](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/) to learn more about building a dashboard.
+4. Follow the steps in [Dashboard Builder](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder) to learn more about building a dashboard.
 
 ## Troubleshooting
 
@@ -160,4 +160,4 @@ For example, suppose **Last sent** is January 1, 2025–April 14, 2025, so a cam
 
 Report download links expire after one hour. If your link has expired, generate a new report and download it within the hour. There is no way to extend the expiry time.
 
-If you have an [Amazon S3 bucket](https://www.braze.com/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/) connected in **Partner Integrations**, you may be able to retrieve data from older reports by browsing your S3 bucket directly.
+If you have an [Amazon S3 bucket](https://www.braze.com/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) connected in **Partner Integrations**, you may be able to retrieve data from older reports by browsing your S3 bucket directly.

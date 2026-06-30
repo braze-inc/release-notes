@@ -1,10 +1,10 @@
 # Track users through a form
 
-> Learn how to track users who submit a form through your landing page by adding a landing page Liquid tag to your  messages. This Liquid tag is supported across all Braze messaging channels, including email, SMS, in-app messages, and more. To learn more about tracking data, see [About landing page tracking data](https://www.braze.com/docs/user_guide/messaging/landing_pages/about_tracking_data/).
+> Learn how to track users who submit a form through your landing page by adding a landing page Liquid tag to your  messages. This Liquid tag is supported across all Braze messaging channels, including email, SMS, in-app messages, and more. To learn more about tracking data, see [About landing page tracking data](https://www.braze.com/docs/user_guide/messaging/landing_pages/about_tracking_data).
 
 ## Prerequisites
 
-Before you start, you'll need to create a [landing page](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages/) and a [campaign](https://www.braze.com/docs/user_guide/messaging/campaigns/creating_campaign/).
+Before you start, you'll need to create a [landing page](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages) and a [campaign](https://www.braze.com/docs/user_guide/messaging/campaigns/creating_campaign).
 
 ## How it works
 

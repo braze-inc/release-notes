@@ -5,7 +5,7 @@
 **Tip:**
 
 
-To read more about custom keywords and how to set up two-way messaging to take advantage of these retargeting options, visit our [custom keyword](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/keyword_handling/) article.
+To read more about custom keywords and how to set up two-way messaging to take advantage of these retargeting options, visit our [custom keyword](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/keyword_handling) article.
 
   
 
@@ -43,11 +43,11 @@ Filters users who have received a message from a specific campaign. With this fi
 
 To trigger messages as users receive SMS, MMS, or RCS messages from a specific campaign, select **Interact with Campaign** as the trigger action for an action-based campaign. Next, select **Receive SMS** and the SMS, MMS, or RCS campaign you would like to use.
 
-![](https://www.braze.com/docs/assets/img/sms/trigger.png?ad1574286a26c3b5625028d78a6c3488)
+![To trigger messages as users receive SMS, MMS, or RCS messages from a specific campaign, select Interact with Campaign as the trigger action for an action-based campaign. Next, select Receive SMS and the SMS, MMS, or RCS campaign you would like to use.](https://www.braze.com/docs/assets/img/sms/trigger.png?ad1574286a26c3b5625028d78a6c3488)
 
 ### Filter by advanced tracking links
 
-Retarget users who have clicked campaigns with [advanced tracking links](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening/).
+Retarget users who have clicked campaigns with [advanced tracking links](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening).
 Only campaigns that have advanced tracking enabled appear in the following dropdowns:
 
 #### Retarget users who have clicked a specific SMS, MMS, or RCS Campaign
@@ -56,7 +56,7 @@ Only campaigns that have advanced tracking enabled appear in the following dropd
 2. Select **clicked shortened sms link**.
 3. Choose the desired campaign.
 
-![](https://www.braze.com/docs/assets/img/sms/retargeting5.png?32d68323f8987a9bf85876f4a00cfcee)
+![Screenshot related to retarget users who have clicked a specific sms, mms, or rcs campaign.](https://www.braze.com/docs/assets/img/sms/retargeting5.png?32d68323f8987a9bf85876f4a00cfcee)
 
 #### Retarget users who have clicked a specific Canvas Step
 
@@ -64,11 +64,11 @@ Only campaigns that have advanced tracking enabled appear in the following dropd
 2. Select **clicked shortened sms link**.
 3. Choose the desired Canvas and Canvas step.
 
-![](https://www.braze.com/docs/assets/img/keyword_example1.jpg?c5399d5e1558e4a977928534d5846662)
+![Screenshot related to retarget users who have clicked a specific canvas step.](https://www.braze.com/docs/assets/img/keyword_example1.jpg?c5399d5e1558e4a977928534d5846662)
 
 ## Keyword category-specific retargeting
 
-In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 25 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about Global keyword categories and how to set them up, refer to [Keyword processing](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/). 
+In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 25 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about Global keyword categories and how to set them up, refer to [Keyword processing](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing). 
 
 ### Filter by recency
 
@@ -101,7 +101,7 @@ When evaluating if an inbound message meets a defined trigger event, the leading
 **Tip:**
 
  
-If an action-based Canvas is triggered by an inbound SMS or MMS message, you can reference [supported SMS Liquid properties](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/) in any Canvas step until the next action path.
+If an action-based Canvas is triggered by an inbound SMS or MMS message, you can reference [supported SMS Liquid properties](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags) in any Canvas step until the next action path.
 
 
 

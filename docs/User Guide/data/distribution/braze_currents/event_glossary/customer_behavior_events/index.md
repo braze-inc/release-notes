@@ -4,16 +4,16 @@
 
 
 
-Storage schemas apply to the flat file event data we send to data warehouse storage partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). Some event and destination combinations listed here are not yet generally available. For information on which events are supported by various partners, refer to our list of [available partners](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/available_partners/) and check their respective pages.
+Storage schemas apply to the flat file event data we send to data warehouse storage partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). Some event and destination combinations listed here are not yet generally available. For information on which events are supported by various partners, refer to our list of [available partners](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/available_partners) and check their respective pages.
 
 **Tip:**
 
 
-These events are also available as SQL tables in the [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/), [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/), and [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/). For SQL table schemas and column details, refer to the [SQL table reference](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/).
+These events are also available as SQL tables in the [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder), [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments), and [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). For SQL table schemas and column details, refer to the [SQL table reference](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables).
 
 
 
-Contact your Braze representative or open a [support ticket](https://www.braze.com/docs/braze_support/) if you need access to additional event entitlements. If you can't find what you need on this page, check out our [Message Engagement Events Library](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
+Contact your Braze representative or open a [support ticket](https://www.braze.com/docs/braze_support) if you need access to additional event entitlements. If you can't find what you need on this page, check out our [Message Engagement Events Library](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 
 
@@ -63,7 +63,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 <!--overview-end-->
 
-<div id='api_quvpkemygigm' class='api_div' data-search-keywords='random bucket number update events random bucket number app_group_id external_user_id id prev_random_bucket_number random_bucket_number time user_id'>
+<div id='api_nrccctvpzwoj' class='api_div' data-search-keywords='random bucket number update events random bucket number app_group_id external_user_id id prev_random_bucket_number random_bucket_number time user_id'>
 <h2 id="random-bucket-number-update-events">Random Bucket Number Update events</h2>
 
 <div class="api_tags" data-tags="Random Bucket Number" data-tags-lower="random bucket number"></div>
@@ -101,7 +101,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_yiroojbpvbcu' class='api_div' data-search-keywords='custom events custom events ad_id ad_id_type ad_tracking_enabled app_group_id app_id device_id device_model external_user_id id name os_version platform properties time timezone user_id adid event_properties event_type idfa insert_id library user event distinct_id token context device model type traits timestamp'>
+<div id='api_lwqykfuvfidw' class='api_div' data-search-keywords='custom events custom events ad_id ad_id_type ad_tracking_enabled app_group_id app_id device_id device_model external_user_id id name os_version platform properties time timezone user_id adid event_properties event_type idfa insert_id library user event distinct_id token context device model type traits timestamp'>
 <h2 id="custom-events">Custom events</h2>
 
 <div class="api_tags" data-tags="Custom Events" data-tags-lower="custom events"></div>
@@ -344,17 +344,17 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li>For Custom Events, the payload will also be populated with any <a href="/docs/user_guide/data/activation/events/custom_events/custom_event_properties#custom-event-properties">custom event properties</a> that are associated with the event.</li>
-  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a>, <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
-  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager or account manager to enable the feature flipper for sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
+  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: <a href="/docs/developer_guide/analytics/managing_data_collection?sdktab=swift">iOS</a>, <a href="/docs/developer_guide/sdk_integration?sdktab=android#android_google-advertising-id">Android</a>.</li>
+  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> data, contact your customer success manager or account manager to enable the feature flipper for sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
 
 </div>
 
-<div id='api_qfwqcxlfqwlz' class='api_div' data-search-keywords='install attribution events attribution app_group_id external_user_id id source time user_id device_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
+<div id='api_frjggtukckst' class='api_div' data-search-keywords='install attribution events attribution app_group_id external_user_id id source time user_id device_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
 <h2 id="install-attribution-events">Install Attribution events</h2>
 
 <div class="api_tags" data-tags="Attribution" data-tags-lower="attribution"></div>
@@ -521,7 +521,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_adjhogolosxq' class='api_div' data-search-keywords='location events locations ad_id ad_id_type ad_tracking_enabled alt_accuracy altitude app_group_id app_id device_id device_model external_user_id id latitude ll_accuracy longitude os_version platform time user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token context device model type traits timestamp'>
+<div id='api_epkgjxdqrojv' class='api_div' data-search-keywords='location events locations ad_id ad_id_type ad_tracking_enabled alt_accuracy altitude app_group_id app_id device_id device_model external_user_id id latitude ll_accuracy longitude os_version platform time user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token context device model type traits timestamp'>
 <h2 id="location-events">Location events</h2>
 
 <div class="api_tags" data-tags="Locations" data-tags-lower="locations"></div>
@@ -802,16 +802,16 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a>, <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
-  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager or account manager to enable the feature flipper for sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
+  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: <a href="/docs/developer_guide/analytics/managing_data_collection?sdktab=swift">iOS</a>, <a href="/docs/developer_guide/sdk_integration?sdktab=android#android_google-advertising-id">Android</a>.</li>
+  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> data, contact your customer success manager or account manager to enable the feature flipper for sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
 
 </div>
 
-<div id='api_xfyfinmgriaj' class='api_div' data-search-keywords='purchase events purchases ad_id ad_id_type ad_tracking_enabled app_group_id app_id currency device_id device_model external_user_id id os_version platform price product_id properties time user_id adid event_properties event_type idfa insert_id library user event distinct_id token context device model type traits timestamp'>
+<div id='api_blqbyfbxbwbd' class='api_div' data-search-keywords='purchase events purchases ad_id ad_id_type ad_tracking_enabled app_group_id app_id currency device_id device_model external_user_id id os_version platform price product_id properties time user_id adid event_properties event_type idfa insert_id library user event distinct_id token context device model type traits timestamp'>
 <h2 id="purchase-events">Purchase events</h2>
 
 <div class="api_tags" data-tags="Purchases" data-tags-lower="purchases"></div>
@@ -1078,17 +1078,17 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li>For Purchase events, the payload will also be populated with any <a href="/docs/user_guide/data/activation/events/purchase_events#purchase-properties">purchase event properties</a> that are associated with the event.</li>
-  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a>, <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
-  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager or account manager to enable the feature flipper for sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
+  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: <a href="/docs/developer_guide/analytics/managing_data_collection?sdktab=swift">iOS</a>, <a href="/docs/developer_guide/sdk_integration?sdktab=android#android_google-advertising-id">Android</a>.</li>
+  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> data, contact your customer success manager or account manager to enable the feature flipper for sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
 
 </div>
 
-<div id='api_dtrzwuurkbpp' class='api_div' data-search-keywords='first session events sessions app_group_id app_id country device_id device_model external_user_id gender id language os_version platform sdk_version session_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
+<div id='api_gcggxzngcyah' class='api_div' data-search-keywords='first session events sessions app_group_id app_id country device_id device_model external_user_id gender id language os_version platform sdk_version session_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
 <h2 id="first-session-events">First Session events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1313,7 +1313,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_xbflynlxqwoh' class='api_div' data-search-keywords='session end events sessions app_group_id app_id device_id device_model duration external_user_id id os_version platform session_id time user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
+<div id='api_autrqyyspdog' class='api_div' data-search-keywords='session end events sessions app_group_id app_id device_id device_model duration external_user_id id os_version platform session_id time user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
 <h2 id="session-end-events">Session End events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1532,7 +1532,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_currvvahcvfi' class='api_div' data-search-keywords='session start events sessions app_group_id app_id device_id device_model external_user_id id os_version platform session_id time user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
+<div id='api_vwcbzixecikp' class='api_div' data-search-keywords='session start events sessions app_group_id app_id device_id device_model external_user_id id os_version platform session_id time user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
 <h2 id="session-start-events">Session Start events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1745,7 +1745,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_wbjzyiemksxb' class='api_div' data-search-keywords='live activity push to start token change events live activity, push to start token activity_attributes_type app_group_id app_id device_id external_user_id id ios_push_token_apns_gateway push_to_start_token push_token_state_change_type sdk_version time user_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
+<div id='api_fcoltwdyebwc' class='api_div' data-search-keywords='live activity push to start token change events live activity, push to start token activity_attributes_type app_group_id app_id device_id external_user_id id ios_push_token_apns_gateway push_to_start_token push_token_state_change_type sdk_version time user_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
 <h2 id="live-activity-push-to-start-token-change-events">Live Activity Push To Start Token Change events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Push To Start Token" data-tags-lower="live activity, push to start token"></div>
@@ -1956,7 +1956,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_qcyftdnlbwiv' class='api_div' data-search-keywords='live activity update token change events live activity, update token activity_id app_group_id app_id device_id external_user_id id ios_push_token_apns_gateway push_token_state_change_type sdk_version time update_token user_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
+<div id='api_hujqlacykohz' class='api_div' data-search-keywords='live activity update token change events live activity, update token activity_id app_group_id app_id device_id external_user_id id ios_push_token_apns_gateway push_token_state_change_type sdk_version time update_token user_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
 <h2 id="live-activity-update-token-change-events">Live Activity Update Token Change events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Update Token" data-tags-lower="live activity, update token"></div>
@@ -2167,7 +2167,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_fkcfahqufdga' class='api_div' data-search-keywords='push notification token state change events push, token state change app_group_id app_id external_user_id id ios_push_token_apns_gateway platform push_token push_token_created_at push_token_device_id push_token_foreground_push_disabled push_token_provisionally_opted_in push_token_state_change_type push_token_updated_at sdk_version time time_ms user_id web_push_token_public_key web_push_token_user_auth web_push_token_vapid_public_key event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
+<div id='api_mamlhyhbjhnp' class='api_div' data-search-keywords='push notification token state change events push, token state change app_group_id app_id external_user_id id ios_push_token_apns_gateway platform push_token push_token_created_at push_token_device_id push_token_foreground_push_disabled push_token_provisionally_opted_in push_token_state_change_type push_token_updated_at sdk_version time time_ms user_id web_push_token_public_key web_push_token_user_auth web_push_token_vapid_public_key event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
 <h2 id="push-notification-token-state-change-events">Push Notification Token State Change events</h2>
 
 <div class="api_tags" data-tags="Push, Token State Change" data-tags-lower="push, token state change"></div>
@@ -2216,7 +2216,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"push_token_updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the push token was last updated"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"sdk_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the Braze SDK in use during the event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"time_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) Time in millisecond when the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) Time in milliseconds when the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"web_push_token_public_key"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Public key of the push token, only applies to web push tokens"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"web_push_token_user_auth"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User auth of the push token, only applies to web push tokens"</span><span class="p">,</span><span class="w">
@@ -2265,7 +2265,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"push_token_provisionally_opted_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Provisionally opted in flag of the push token"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"push_token_state_change_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) A description of the push token state change type"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"push_token_updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the push token was last updated"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"time_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) Time in millisecond when the event happened"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"time_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) Time in milliseconds when the event happened"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"web_push_token_public_key"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Public key of the push token, only applies to web push tokens"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"web_push_token_user_auth"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User auth of the push token, only applies to web push tokens"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"web_push_token_vapid_public_key"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) VAPID public key of the push token, only applies to web push tokens"</span><span class="w">
@@ -2323,7 +2323,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"push_token_provisionally_opted_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Provisionally opted in flag of the push token"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"push_token_state_change_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) A description of the push token state change type"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"push_token_updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the push token was last updated"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"time_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) Time in millisecond when the event happened"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"time_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) Time in milliseconds when the event happened"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"web_push_token_public_key"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Public key of the push token, only applies to web push tokens"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"web_push_token_user_auth"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User auth of the push token, only applies to web push tokens"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"web_push_token_vapid_public_key"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) VAPID public key of the push token, only applies to web push tokens"</span><span class="w">
@@ -2383,7 +2383,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"push_token_state_change_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) A description of the push token state change type"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"push_token_updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the push token was last updated"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"time_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) Time in millisecond when the event happened"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"time_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) Time in milliseconds when the event happened"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Mixpanel API token"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"web_push_token_public_key"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Public key of the push token, only applies to web push tokens"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"web_push_token_user_auth"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User auth of the push token, only applies to web push tokens"</span><span class="p">,</span><span class="w">
@@ -2443,7 +2443,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"push_token_provisionally_opted_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Provisionally opted in flag of the push token"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"push_token_state_change_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) A description of the push token state change type"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"push_token_updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the push token was last updated"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"time_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) Time in millisecond when the event happened"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"time_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) Time in milliseconds when the event happened"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"web_push_token_public_key"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Public key of the push token, only applies to web push tokens"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"web_push_token_user_auth"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User auth of the push token, only applies to web push tokens"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"web_push_token_vapid_public_key"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) VAPID public key of the push token, only applies to web push tokens"</span><span class="w">
@@ -2454,7 +2454,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li>The <code class="language-plaintext highlighter-rouge">push_token_foreground_push_disabled</code> field indicates whether the push token can receive foreground or background push.
@@ -2485,7 +2485,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 <h5 id="add">Add</h5>
 
-<p>An “add” event is ingested when a new token is registered. This happens when a user opens the app on a new device for the first time, or when a token is set through the <a href="/docs/api/endpoints/user_data/post_user_track/"><code class="language-plaintext highlighter-rouge">/users/track</code></a> endpoint with <code class="language-plaintext highlighter-rouge">push_tokens</code> for a user that didn’t previously have one.</p>
+<p>An “add” event is ingested when a new token is registered. This happens when a user opens the app on a new device for the first time, or when a token is set through the <a href="/docs/api/endpoints/user_data/post_user_track"><code class="language-plaintext highlighter-rouge">/users/track</code></a> endpoint with <code class="language-plaintext highlighter-rouge">push_tokens</code> for a user that didn’t previously have one.</p>
 
 <p><strong>Note:</strong></p>
 
@@ -2526,12 +2526,12 @@ Certain events return a `platform` value that specifies the platform of the user
 <ul>
   <li>The SDK calls <code class="language-plaintext highlighter-rouge">changeUser</code> from an anonymous profile to an identified profile. The “remove” event has an empty <code class="language-plaintext highlighter-rouge">external_user_id</code>.</li>
   <li>The SDK calls <code class="language-plaintext highlighter-rouge">changeUser</code> from one identified profile to another. Both events have a non-empty <code class="language-plaintext highlighter-rouge">external_user_id</code>.</li>
-  <li>The <a href="/docs/api/endpoints/user_data/post_users_merge/"><code class="language-plaintext highlighter-rouge">/users/merge</code></a> endpoint or duplicate user cleanup moves the orphaned user’s tokens to the surviving user.</li>
+  <li>The <a href="/docs/api/endpoints/user_data/post_users_merge"><code class="language-plaintext highlighter-rouge">/users/merge</code></a> endpoint or duplicate user cleanup moves the orphaned user’s tokens to the surviving user.</li>
 </ul>
 
 <p><strong>Note:</strong></p>
 
-<p>If an anonymous profile is identified through the <a href="/docs/api/endpoints/user_data/post_user_identify/"><code class="language-plaintext highlighter-rouge">/users/identify</code></a> endpoint, the <code class="language-plaintext highlighter-rouge">user_id</code> does not change and no token state change event is emitted.</p>
+<p>If an anonymous profile is identified through the <a href="/docs/api/endpoints/user_data/post_user_identify"><code class="language-plaintext highlighter-rouge">/users/identify</code></a> endpoint, the <code class="language-plaintext highlighter-rouge">user_id</code> does not change and no token state change event is emitted.</p>
 
 <h4 id="querying-for-the-latest-active-token-state">Querying for the latest active token state</h4>
 

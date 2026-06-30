@@ -1420,7 +1420,7 @@ BrazeBinding.SetUserLastName("last name");
 
 
 ```csharp
-BrazeBinding.SetUserEmail("email@email.com");
+BrazeBinding.SetUserEmail("user@example.com");
 ```
 
 

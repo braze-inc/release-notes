@@ -8,7 +8,7 @@ You can upload user attributes and events through a CSV import in Braze, a serve
 
 ### Braze CSV import
 
-You can use CSV import to record and update the following user attributes and custom events. To get started, see [CSV Import](https://www.braze.com/docs/user_guide/audience/manage_audience/import_users/csv_import/).
+You can use CSV import to record and update the following user attributes and custom events. To get started, see [CSV Import](https://www.braze.com/docs/user_guide/audience/manage_audience/import_users/csv_import).
 
 |Type|Definition|Example|Maximum file size|
 |---|---|---|---|
@@ -26,7 +26,7 @@ When you upload a large CSV through **Import Users** in the dashboard, the page 
 **Note:**
 
 
-When importing custom events with properties, you must use dot notation in your CSV column headers. For more information about formatting custom events, refer to [Understanding custom event formatting](https://www.braze.com/docs/user_guide/audience/manage_audience/import_users/csv_import/?tab=custom%20events#understanding-custom-event-formatting).
+When importing custom events with properties, you must use dot notation in your CSV column headers. For more information about formatting custom events, refer to [Understanding custom event formatting](https://www.braze.com/docs/user_guide/audience/manage_audience/import_users/csv_import?tab=custom%20events#understanding-custom-event-formatting).
 
 
 
@@ -38,11 +38,11 @@ Estimated execution times for a file with 1,000,000 rows should be around five m
 
 ### REST API
 
-Use the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) to record custom events, user attributes, and purchases for users.
+Use the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) to record custom events, user attributes, and purchases for users.
 
 ### Cloud Data Ingestion
 
-Use Braze [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/) to import and maintain user attributes.
+Use Braze [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion) to import and maintain user attributes.
 
 ## HTML validation
 

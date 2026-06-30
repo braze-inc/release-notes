@@ -30,7 +30,7 @@ Scheduled delivery involves adjusting your campaigns to send at a specific time,
 
 *Who are you trying to reach?*
 
-You can use pre-defined [segments](https://www.braze.com/docs/user_guide/audience/segments/) to target users based on their demographic, behavioral, or technical characteristics and actions. Add more filters when building your campaign to tailor your segment further. Only the users who match these target audience criteria can enter the journey. Check out this table for a quick summary of the available filter types.
+You can use pre-defined [segments](https://www.braze.com/docs/user_guide/audience/segments) to target users based on their demographic, behavioral, or technical characteristics and actions. Add more filters when building your campaign to tailor your segment further. Only the users who match these target audience criteria can enter the journey. Check out this table for a quick summary of the available filter types.
 
 | Filter | Description |
 |---|---|
@@ -46,7 +46,7 @@ You can use pre-defined [segments](https://www.braze.com/docs/user_guide/audienc
 
 *Why are you building this campaign?*
 
-It's always important to have a defined goal in mind, and campaigns help you understand how you perform against KPIs like session engagement, purchases, and custom events. Selecting at least one [conversion event](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events/) will give you the ability to understand your campaign performance.
+It's always important to have a defined goal in mind, and campaigns help you understand how you perform against KPIs like session engagement, purchases, and custom events. Selecting at least one [conversion event](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events) will give you the ability to understand your campaign performance.
 
 ### The "where": Find my audience
 

@@ -1,4 +1,4 @@
-<div id='api_csiehfruhehw' class='api_div' data-search-keywords='rate limit message'>
+<div id='api_wzpyehmrzqdn' class='api_div' data-search-keywords='rate limit message'>
 <h1 id="trigger-a-sync">Trigger a sync</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/cdi/integrations/{integration_id}/sync</p>
@@ -94,6 +94,6 @@
   </tbody>
 </table>
 
-<p>For additional status codes and associated error messages, refer to <a href="/docs/api/errors/#fatal-errors">Fatal errors &amp; responses</a>.</p>
+<p>For additional status codes and associated error messages, refer to <a href="/docs/api/errors#fatal-errors">Fatal errors &amp; responses</a>.</p>
 
 </div>

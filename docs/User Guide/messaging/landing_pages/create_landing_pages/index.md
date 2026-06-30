@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-To access the landing page builder, you need [certain permissions](https://www.braze.com/docs/user_guide/messaging/landing_pages/#prerequisites). If you don’t have access, ask your Braze admin for help.
+To access the landing page builder, you need [certain permissions](https://www.braze.com/docs/user_guide/messaging/landing_pages#prerequisites). If you don’t have access, ask your Braze admin for help.
 
 ## Creating a landing page
 
@@ -31,7 +31,7 @@ We suggest following these best practices:
 | Site title | The title that displays on the browser tab. | Use up to 60 characters. |
 | Meta description | A text snippet that displays in search results. | Use between 140-160 characters.|
 | Favicon | The icon that appears next to the site title on the browser tab. | Use an aspect ratio of 1:1, and a supported file type of PNG, JPEG, or ICO. |
-| Page URL | This is URL path to your landing page. This value is also referenced when using [landing page liquid tags](https://www.braze.com/docs/user_guide/messaging/landing_pages/tracking_users/) that you can embed in a message to automatically identify when they submit your form.| This value must be unique across your workspace. |
+| Page URL | This is URL path to your landing page. This value is also referenced when using [landing page liquid tags](https://www.braze.com/docs/user_guide/messaging/landing_pages/tracking_users) that you can embed in a message to automatically identify when they submit your form.| This value must be unique across your workspace. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Site details" }
 
 ### Step 3: Customize the page
@@ -40,7 +40,7 @@ If you haven't already, select **Save as draft**. To start customizing your page
 
 ![An example landing page being created in the drag-and-drop editor.](https://www.braze.com/docs/assets/img/landing_pages/template.png?2e3c8b82789890d483ed19f22b4c9d30)
 
-The editor uses two types of components for landing page composition: basic blocks and form blocks. All blocks must be placed in a row. For a dedicated reference of each block and properties, see [Editor blocks (landing pages)](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks/?sdktab=landing%20pages).
+The editor uses two types of components for landing page composition: basic blocks and form blocks. All blocks must be placed in a row. For a dedicated reference of each block and properties, see [Editor blocks (landing pages)](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks?sdktab=landing%20pages).
 
 ![The 'Build' section containing 'Rows' and 'Form Blocks'.](https://www.braze.com/docs/assets/img/landing_pages/dnd.png?616d6745467a4ea38667439c2ff61642){: style="max-width:35%;"}
 
@@ -97,7 +97,7 @@ You can use these blocks to create a form that links user-submitted data to thei
 **Important:**
 
 
-After creating a landing page with a form, be sure to embed its [landing page Liquid tag](https://www.braze.com/docs/user_guide/messaging/landing_pages/tracking_users/) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
+After creating a landing page with a form, be sure to embed its [landing page Liquid tag](https://www.braze.com/docs/user_guide/messaging/landing_pages/tracking_users) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
 
 
 

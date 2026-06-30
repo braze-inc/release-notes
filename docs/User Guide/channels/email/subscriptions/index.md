@@ -31,7 +31,7 @@ If a user marks one or more of your emails as spam, Braze sends only transaction
 **Tip:**
 
 
-Refer to our [IP warming](https://www.braze.com/docs/user_guide/channels/email/email_setup/ip_warming/) best practices for guidance on how to re-engage your users effectively.
+Refer to our [IP warming](https://www.braze.com/docs/user_guide/channels/email/email_setup/ip_warming) best practices for guidance on how to re-engage your users effectively.
 
 
 
@@ -341,7 +341,7 @@ Use the Braze SDK to update a user's subscription state.
 
 #### REST API
 
-Use the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) to update the [`email_subscribe` attribute](https://www.braze.com/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens) for a user. For example, to set a user's email subscription state to unsubscribed when they use a custom unsubscribe link, include `email_subscribe: "unsubscribed"` in the user attributes in your request.
+Use the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) to update the [`email_subscribe` attribute](https://www.braze.com/docs/api/objects_filters/user_attributes_object#migrating-push-tokens) for a user. For example, to set a user's email subscription state to unsubscribed when they use a custom unsubscribe link, include `email_subscribe: "unsubscribed"` in the user attributes in your request.
 
 #### User profile
 
@@ -360,8 +360,8 @@ Include [Preference center](#email-preference-center) Liquid at the bottom of yo
 
 Use any of the following methods to check a user's email subscription state:
 
-1. **REST API export:** Use the [Export users by segment](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment/) or [Export users by identifier](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/) endpoints to export individual user profiles in JSON format.
-2. **User profile:** Find the user's profile on the [Search Users](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles/) page, then select the **Engagement** tab to view and manually update a user's subscription state.
+1. **REST API export:** Use the [Export users by segment](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment) or [Export users by identifier](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier) endpoints to export individual user profiles in JSON format.
+2. **User profile:** Find the user's profile on the [Search Users](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles) page, then select the **Engagement** tab to view and manually update a user's subscription state.
 
 When a user updates their email address, their subscription state is set to subscribed. If the updated email address already exists elsewhere in a Braze workspace, the user inherits the subscription state from that existing user unless **Resubscribe users when they update their email setting** is turned on in **Sending Configuration**.
 
@@ -370,13 +370,13 @@ To troubleshoot subscription state changes, review **Email Subscription-State Ch
 | Source | Description |
 | ------ | ----------- |
 | SDK | User attribute update sent through a Braze SDK |
-| REST API | User attribute update sent through the [`/users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) endpoint |
+| REST API | User attribute update sent through the [`/users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) endpoint |
 | Dashboard | Subscription state changed manually on the user profile page |
 | CSV Import | Subscription state set during a user CSV import |
 | Preference Center | User updated their preference from a Braze-hosted preference center |
 | Subscription Page | User selected an unsubscribe link in an email and landed on the Braze subscription page |
 | List-Unsubscribe | User unsubscribed through the email client's native list-unsubscribe header |
-| Canvas User Update Step | Subscription state updated by a [User Update step](https://www.braze.com/docs/user_guide/engagement_tools/canvas/canvas_components/user_update/) in a Canvas |
+| Canvas User Update Step | Subscription state updated by a [User Update step](https://www.braze.com/docs/user_guide/engagement_tools/canvas/canvas_components/user_update) in a Canvas |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Email subscription state update sources" }
 
 When a user's global email subscription state changes, Braze propagates that state to other profiles that share the same email address, up to 100 profiles per change. Braze does not guarantee propagation when more than 100 profiles share the same email address. If users who share an email show different subscription states, contact Braze Support.
@@ -451,13 +451,13 @@ You can see counts of users who changed their subscription state (subscribed or 
 ### Checking a user's email subscription group
 
 - **User profile:** Individual user profiles can be accessed through the Braze dashboard from the [Search Users](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles#access-profiles) page. Here, you can look up user profiles by email address, phone number, or external user ID. You can also view a user's email subscription groups in the **Engagement** tab.
-- **Braze REST API:** Use the [List user’s subscription groups endpoint](https://www.braze.com/docs/api/endpoints/subscription_groups/get_list_user_subscription_groups/) or [List user’s subscription group status endpoint](https://www.braze.com/docs/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) to view individual user profile's subscription groups. 
+- **Braze REST API:** Use the [List user’s subscription groups endpoint](https://www.braze.com/docs/api/endpoints/subscription_groups/get_list_user_subscription_groups) or [List user’s subscription group status endpoint](https://www.braze.com/docs/api/endpoints/subscription_groups/get_list_user_subscription_group_status) to view individual user profile's subscription groups. 
 
 ## Email preference center
 
 The email preference center lets you manage which users receive subscription group newsletters. Find it in the dashboard under **Subscription Groups**. Each subscription group you create is added to the preference center list. 
 
-To learn more about how to add or customize a preference center, refer to [Preference center](https://www.braze.com/docs/user_guide/channels/email/subscriptions/).
+To learn more about how to add or customize a preference center, refer to [Preference center](https://www.braze.com/docs/user_guide/channels/email/subscriptions).
 
 ## Changing email subscriptions {#changing-email-subscriptions}
 
@@ -469,7 +469,7 @@ When a user selects "Unsubscribe from all of the above types of emails" in the p
 
 If you don't want to use the default footer, create a workspace-wide custom email footer and template it into every email using `{{${email_footer}}}`.
 
-This lets you avoid creating a new footer for every email template or email campaign. For steps, see [Custom email footer](https://www.braze.com/docs/user_guide/channels/email/customize/custom_email_footer/).
+This lets you avoid creating a new footer for every email template or email campaign. For steps, see [Custom email footer](https://www.braze.com/docs/user_guide/channels/email/customize/custom_email_footer).
 
 #### Managing subscription states for Chinese IP addresses
 
@@ -486,7 +486,7 @@ To use a custom landing page instead:
 
 Include a resubscribe link (for example `{{${set_user_to_subscribed_url}}}`) so users can undo an accidental unsubscribe.
 
-You can also send users to your site and update status with the Braze REST API (for example link with `?user_id={{${user_id}}}` and then call [`/email/status`](https://www.braze.com/docs/api/endpoints/email/post_email_subscription_status/).
+You can also send users to your site and update status with the Braze REST API (for example link with `?user_id={{${user_id}}}` and then call [`/email/status`](https://www.braze.com/docs/api/endpoints/email/post_email_subscription_status).
 
 **Note:**
 
@@ -529,7 +529,7 @@ Braze supports three targeting states:
 **Important:**
 
 
-It's your responsibility to comply with any applicable [spam laws](https://www.braze.com/docs/help/best_practices/spam_regulations/#spam-regulations) when using these targeting settings.
+It's your responsibility to comply with any applicable [spam laws](https://www.braze.com/docs/help/best_practices/spam_regulations#spam-regulations) when using these targeting settings.
 
 
 

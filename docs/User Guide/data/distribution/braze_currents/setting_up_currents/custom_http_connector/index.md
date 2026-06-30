@@ -55,7 +55,7 @@ We typically give a two-week notice for these changes, but sometimes this isn't 
 **Tip:**
 
 
-For the full list of Currents event schemas, see [Message Engagement Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/) and [Customer Behavior Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/).
+For the full list of Currents event schemas, see [Message Engagement Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events) and [Customer Behavior Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events).
 
 
 

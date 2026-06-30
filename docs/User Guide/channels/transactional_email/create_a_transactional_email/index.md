@@ -5,7 +5,7 @@
 **Important:**
 
 
-Braze Transactional Email is only available as part of select Braze packages. Contact your Braze customer success manager or open a [support ticket](https://www.braze.com/docs/braze_support/) for more details.
+Braze Transactional Email is only available as part of select Braze packages. Contact your Braze customer success manager or open a [support ticket](https://www.braze.com/docs/braze_support) for more details.
 
 
 
@@ -21,14 +21,14 @@ In short, you can use transactional emails to send business-critical notificatio
 **Important:**
 
 
-Transactional emails differ from transactional campaigns, which can be used to target your users without additional costs. Transactional campaigns, for instance, can include messages sent after a user adds an item to their cart. Check out [audience targeting options](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/target_users/) for more information. 
+Transactional emails differ from transactional campaigns, which can be used to target your users without additional costs. Transactional campaigns, for instance, can include messages sent after a user adds an item to their cart. Check out [audience targeting options](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/target_users) for more information. 
 
 
 
 **Note:**
 
 
-Transactional Email API sends support Message Archiving. If message archiving is enabled for email in your workspace, Braze saves a rendered copy of each transactional email send. For more information, see [Message archiving](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/message_archiving/).
+Transactional Email API sends support Message Archiving. If message archiving is enabled for email in your workspace, Braze saves a rendered copy of each transactional email send. For more information, see [Message archiving](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/message_archiving).
 
 
 
@@ -42,7 +42,7 @@ Now, you can move on to configuring your transactional email campaign.
 
 ## Step 2: Configure your campaign
 
-The campaign creation flow for Transaction Email campaigns is simplified compared to that of a [standard email campaign](https://www.braze.com/docs/user_guide/channels/email/html_editor/) to ensure your business-critical transaction email can reach all users.
+The campaign creation flow for Transaction Email campaigns is simplified compared to that of a [standard email campaign](https://www.braze.com/docs/user_guide/channels/email/html_editor) to ensure your business-critical transaction email can reach all users.
 
 As a result, you'll notice several settings you may be familiar with from other Braze campaign types are not required when setting up this campaign type:
 
@@ -62,7 +62,7 @@ To configure your transactional email campaign, follow these steps:
 **Note:**
 
 
-The one-click list-unsubscribe setting for transactional email campaigns defaults to **Use workspace default**, similar to other email campaigns. Since this is intended for transactional messaging, Braze doesn't add one-click unsubscribe. To add a one-click unsubscribe to this campaign type, [edit this setting](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/email_preferences/#message-level-one-click-list-unsubscribe) under **Sending Info**.
+The one-click list-unsubscribe setting for transactional email campaigns defaults to **Use workspace default**, similar to other email campaigns. Since this is intended for transactional messaging, Braze doesn't add one-click unsubscribe. To add a one-click unsubscribe to this campaign type, [edit this setting](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/email_preferences#message-level-one-click-list-unsubscribe) under **Sending Info**.
 
 
 

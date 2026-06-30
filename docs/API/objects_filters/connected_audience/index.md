@@ -6,14 +6,14 @@ Instead of pre-building a segment for every possible audience combination, you p
 
 ## How it works
 
-1. Define your message by either creating an API-triggered campaign or Canvas in the Braze dashboard, or define message content entirely inline using the [messaging objects](https://www.braze.com/docs/api/objects_filters/#messaging-objects) in your API request. Use [trigger properties](https://www.braze.com/docs/api/objects_filters/trigger_properties_object/) or [Canvas context](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context/) for dynamic personalization.
+1. Define your message by either creating an API-triggered campaign or Canvas in the Braze dashboard, or define message content entirely inline using the [messaging objects](https://www.braze.com/docs/api/objects_filters#messaging-objects) in your API request. Use [trigger properties](https://www.braze.com/docs/api/objects_filters/trigger_properties_object) or [Canvas context](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context) for dynamic personalization.
 2. Call a supported endpoint and include your connected audience filters in the `audience` parameter, or in `custom_audience` for `/messages/live_activity/start`. You can filter on custom attributes, push subscription status, email subscription status, and last-used-app time.
 3. Braze evaluates the filters at send time, delivering the message only to users who match your criteria.
 
 **Tip:**
 
 
-A `campaign_id` isn't required when using the `audience` parameter. The [`/messages/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages/) and [`/messages/schedule/create`](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/post_schedule_messages/) endpoints let you define message content inline without a pre-created campaign. However, if you want to track campaign-level metrics (such as sends, clicks, or bounces) on the dashboard, include a `campaign_id`.
+A `campaign_id` isn't required when using the `audience` parameter. The [`/messages/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages) and [`/messages/schedule/create`](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/post_schedule_messages) endpoints let you define message content inline without a pre-created campaign. However, if you want to track campaign-level metrics (such as sends, clicks, or bounces) on the dashboard, include a `campaign_id`.
 
 
 
@@ -23,13 +23,13 @@ Because the audience is defined per request, your backend systems can trigger co
 
 You can use the connected audience object on these endpoints:
 
-- [`/messages/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages/)
-- [`/campaigns/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/)
-- [`/canvas/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)
-- [`/messages/schedule/create`](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/post_schedule_messages/)
-- [`/campaigns/trigger/schedule/create`](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/)
-- [`/canvas/trigger/schedule/create`](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/)
-- [`/messages/live_activity/start`](https://www.braze.com/docs/api/endpoints/messaging/live_activity/start/) (uses `custom_audience`)
+- [`/messages/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages)
+- [`/campaigns/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns)
+- [`/canvas/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases)
+- [`/messages/schedule/create`](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/post_schedule_messages)
+- [`/campaigns/trigger/schedule/create`](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns)
+- [`/canvas/trigger/schedule/create`](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases)
+- [`/messages/live_activity/start`](https://www.braze.com/docs/api/endpoints/messaging/live_activity/start) (uses `custom_audience`)
 
 ## Use cases
 
@@ -49,7 +49,7 @@ In each case, a single campaign or API-only message definition handles all varia
 
 ## Example request
 
-The following example uses the [`/campaigns/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) endpoint to target users who have favorited a specific show and are opted in to push notifications:
+The following example uses the [`/campaigns/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns) endpoint to target users who have favorited a specific show and are opted in to push notifications:
 
 ```json
 {
@@ -140,7 +140,7 @@ The custom attribute's data type determines the comparisons that are valid for a
 | Comparison | Additional considerations |
 | --- | --- |
 | `value` | The `value` is not required when using the `exists` or `does_not_exist` comparisons. `value` must be an ISO 8601 datetime string when using the `before` and `after` comparisons. |
-|`matches_regex` | When using the `matches_regex` comparison, the value passed must be a string. To read more about using regular expressions with Braze, refer to [Regular expressions](https://www.braze.com/docs/user_guide/engagement_tools/segments/regex/#regex-with-braze) and [Custom attribute data types](https://www.braze.com/docs/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types). |
+|`matches_regex` | When using the `matches_regex` comparison, the value passed must be a string. To read more about using regular expressions with Braze, refer to [Regular expressions](https://www.braze.com/docs/user_guide/engagement_tools/segments/regex#regex-with-braze) and [Custom attribute data types](https://www.braze.com/docs/developer_guide/platform_wide/analytics_overview#custom-attribute-data-types). |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Attribute comparison caveats" }
 
 #### Custom attribute example

@@ -100,5 +100,5 @@ This graph gives you the ability to quickly see your total data point usage vers
 
 ## Next steps
 
-- [Notification preferences](https://www.braze.com/docs/user_guide/administer/global/admin_settings/notification_preferences/) to configure alerts for billing-related events and usage thresholds.
-- [Credits usage dashboard](https://www.braze.com/docs/credits_usage_dashboard/) to monitor message credit consumption.
+- [Notification preferences](https://www.braze.com/docs/user_guide/administer/global/admin_settings/notification_preferences) to configure alerts for billing-related events and usage thresholds.
+- [Credits usage dashboard](https://www.braze.com/docs/credits_usage_dashboard) to monitor message credit consumption.

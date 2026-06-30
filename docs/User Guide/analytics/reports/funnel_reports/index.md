@@ -31,7 +31,7 @@ Funnel reporting is available from the following locations in the dashboard:
 **Important:**
 
 
-Funnel Reports are not available for [API campaigns](https://www.braze.com/docs/api/api_campaigns/).
+Funnel Reports are not available for [API campaigns](https://www.braze.com/docs/api/api_campaigns).
 
 
 

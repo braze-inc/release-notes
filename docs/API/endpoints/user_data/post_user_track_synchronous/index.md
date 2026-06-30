@@ -1,4 +1,4 @@
-<div id='api_amatbzstpaiw' class='api_div' data-search-keywords='synchronous and asynchronous api calls attributes events purchases users custom_attributes custom_events purchase_events message errors'>
+<div id='api_wzsjmfasqrfv' class='api_div' data-search-keywords='synchronous and asynchronous api calls attributes events purchases users custom_attributes custom_events purchase_events message errors'>
 <h1 id="create-and-update-users-synchronous">Create and update users (synchronous)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track/sync</p>
@@ -24,7 +24,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">users.track.sync</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.track.sync</code> permission.</p>
 
 <p>Customers using the API for server-to-server calls may need to allowlist <code class="language-plaintext highlighter-rouge">rest.iad-01.braze.com</code> if they’re behind a firewall.</p>
 
@@ -76,19 +76,19 @@ Authorization: Bearer YOUR_REST_API_KEY
       <td><code class="language-plaintext highlighter-rouge">attributes</code></td>
       <td>Optional</td>
       <td>One attributes object</td>
-      <td>See <a href="/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens">user attributes object</a></td>
+      <td>See <a href="/docs/api/objects_filters/user_attributes_object#migrating-push-tokens">user attributes object</a></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">events</code></td>
       <td>Optional</td>
       <td>One event object</td>
-      <td>See <a href="/docs/api/objects_filters/event_object/">events object</a></td>
+      <td>See <a href="/docs/api/objects_filters/event_object">events object</a></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">purchases</code></td>
       <td>Optional</td>
       <td>One purchase object</td>
-      <td>See <a href="/docs/api/objects_filters/purchase_object/">purchases object</a></td>
+      <td>See <a href="/docs/api/objects_filters/purchase_object">purchases object</a></td>
     </tr>
   </tbody>
 </table>
@@ -256,7 +256,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 --data-raw '{
     "events": [
         {
-            "email": "test@braze.com",
+            "email": "test@example.com",
             "app_id": "your_app_identifier",
             "name": "rented_movie",
             "time": "2022-12-06T19:20:45+01:00",
@@ -300,7 +300,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 </pre></td><td class="rouge-code"><pre>{
     "users": [
         {
-            "email": "test@braze.com",
+            "email": "test@example.com",
             "custom_events": [
                 {
                 "name": "rented_movie",

@@ -1,4 +1,4 @@
-<div id='api_qwakkimxzsrr' class='api_div' data-search-keywords='when alias_label and alias_name already exist user_aliases external_id alias_name alias_label aliases_processed message'>
+<div id='api_lvgxfrpiqjfr' class='api_div' data-search-keywords='when alias_label and alias_name already exist user_aliases external_id alias_name alias_label aliases_processed message'>
 <h1 id="create-new-user-alias">Create new user alias</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/alias/new</p>
@@ -16,7 +16,7 @@
 
 <h2 id="when-alias_label-and-alias_name-already-exist">When <code class="language-plaintext highlighter-rouge">alias_label</code> and <code class="language-plaintext highlighter-rouge">alias_name</code> already exist</h2>
 
-<p>The combination of <code class="language-plaintext highlighter-rouge">alias_label</code> and <code class="language-plaintext highlighter-rouge">alias_name</code> must be unique across your user base. For more information, see <a href="/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases">User aliases</a>.</p>
+<p>The combination of <code class="language-plaintext highlighter-rouge">alias_label</code> and <code class="language-plaintext highlighter-rouge">alias_name</code> must be unique across your user base. For more information, see <a href="/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases">User aliases</a>.</p>
 
 <p>If you send a request where the <code class="language-plaintext highlighter-rouge">alias_label</code> and <code class="language-plaintext highlighter-rouge">alias_name</code> pair already exists for any user (whether on the same user or another), the endpoint still returns a successful response (for example, <code class="language-plaintext highlighter-rouge">"aliases_processed": 1</code>, <code class="language-plaintext highlighter-rouge">"message": "success"</code>). In that case, no new alias is added to the user in the request. Because the <code class="language-plaintext highlighter-rouge">alias_label</code> and <code class="language-plaintext highlighter-rouge">alias_name</code> pair is already in use, the request does not make any changes, and it can appear that the alias was never added to the user in question.</p>
 
@@ -24,7 +24,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">users.alias.new</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.alias.new</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       <td><code class="language-plaintext highlighter-rouge">user_aliases</code></td>
       <td>Required</td>
       <td>Array of new user alias objects</td>
-      <td>See <a href="/docs/api/objects_filters/user_alias_object/">user alias object</a>.<br /><br /> For more information on <code class="language-plaintext highlighter-rouge">alias_name</code> and <code class="language-plaintext highlighter-rouge">alias_label</code>, check out our <a href="/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases">User Aliases</a> documentation.</td>
+      <td>See <a href="/docs/api/objects_filters/user_alias_object">user alias object</a>.<br /><br /> For more information on <code class="language-plaintext highlighter-rouge">alias_name</code> and <code class="language-plaintext highlighter-rouge">alias_label</code>, check out our <a href="/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases">User Aliases</a> documentation.</td>
     </tr>
   </tbody>
 </table>

@@ -1,4 +1,4 @@
-<div id='api_znqfgelyuqre' class='api_div' data-search-keywords='prerequisites schemas id name department permissions team'>
+<div id='api_tsvzhfkkyree' class='api_div' data-search-keywords='prerequisites schemas id name department permissions team'>
 <h1 id="search-existing-dashboard-user-account-by-email">Search existing dashboard user account by email</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>scim/v2/Users?filter=userName%20eq%20”user%40test.com”</p>
@@ -10,13 +10,13 @@
 
 <p>Note that when the query parameter is URL encoded it will read like this:</p>
 
-<p><code class="language-plaintext highlighter-rouge">/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22</code></p>
+<p><code class="language-plaintext highlighter-rouge">/scim/v2/Users?filter=userName%20eq%20%22user@example.com%22</code></p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5037d810-b822-4c54-bb51-f30470a42a95" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need a SCIM token. You’ll use your service origin as the <code class="language-plaintext highlighter-rouge">X-Request-Origin</code> header. For more information, refer to <a href="/docs/scim/automated_user_provisioning/">Automated user provisioning</a>.</p>
+<p>To use this endpoint, you’ll need a SCIM token. You’ll use your service origin as the <code class="language-plaintext highlighter-rouge">X-Request-Origin</code> header. For more information, refer to <a href="/docs/scim/automated_user_provisioning">Automated user provisioning</a>.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -64,7 +64,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 2
 3
 4
-</pre></td><td class="rouge-code"><pre>curl <span class="nt">--location</span> <span class="nt">--request</span> GET <span class="se">\ </span><span class="s1">'https://rest.iad-01.braze.com/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22'</span> <span class="se">\</span>
+</pre></td><td class="rouge-code"><pre>curl <span class="nt">--location</span> <span class="nt">--request</span> GET <span class="se">\ </span><span class="s1">'https://rest.iad-01.braze.com/scim/v2/Users?filter=userName%20eq%20%22user@example.com%22'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Authorization: Bearer YOUR-API-KEY-HERE'</span> <span class="se">\</span>
@@ -109,7 +109,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     </span><span class="nl">"totalResults"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="nl">"Resources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"userName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@test.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"userName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@example.com"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dfa245b7-24195aec-887bb3ad-602b3340"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"givenName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">

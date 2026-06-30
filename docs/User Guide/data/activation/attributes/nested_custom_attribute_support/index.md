@@ -168,7 +168,7 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
 **Note:**
 
 
-This approach can't be used to delete a nested key inside an [array of objects](https://www.braze.com/docs/user_guide/data/activation/attributes/array_of_objects/).
+This approach can't be used to delete a nested key inside an [array of objects](https://www.braze.com/docs/user_guide/data/activation/attributes/array_of_objects).
 
 
 
@@ -368,7 +368,7 @@ Check that a schema has been generated if you don't see the option to insert nes
 
 ## Regenerate schemas {#regenerate-schema}
 
-After a schema has been generated, you can regenerate it **once per calendar day** (based on your company's time zone). This section describes how to regenerate your schema. For more detailed information on schemas, see [Generate a schema using the nested object explorer](https://www.braze.com/docs/user_guide/audience/segments/segment_with_nested_custom_attributes/#generate-schema).
+After a schema has been generated, you can regenerate it **once per calendar day** (based on your company's time zone). This section describes how to regenerate your schema. For more detailed information on schemas, see [Generate a schema using the nested object explorer](https://www.braze.com/docs/user_guide/audience/segments/segment_with_nested_custom_attributes#generate-schema).
 
 To regenerate the schema for your nested custom attribute:
 

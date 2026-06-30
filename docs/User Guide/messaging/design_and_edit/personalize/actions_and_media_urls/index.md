@@ -28,7 +28,7 @@ Everything after the colon within a deep link is free-form text. It's up to you 
 **Important:**
 
 
-For apps built with wrapper frameworks (for example, Flutter or Cordova), Braze does not provide wrapper-specific deep linking support. You must configure deep links at the native iOS and Android layers. For Cordova, see [Deep linking in push notifications](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking/?sdktab=cordova).
+For apps built with wrapper frameworks (for example, Flutter or Cordova), Braze does not provide wrapper-specific deep linking support. You must configure deep links at the native iOS and Android layers. For Cordova, see [Deep linking in push notifications](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking?sdktab=cordova).
 
 
 
@@ -69,7 +69,7 @@ To include UTM tags in your deep links for push notifications, set the on-click 
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spring2016giftcards&utm_content=ios_deeplink
 ```
 
-![](https://www.braze.com/docs/assets/img_archive/push_utm_tags.png?092a5d2d2d1ed2d537ea01f92b3c5dd4)
+![Screenshot related to attribute push opens and in-app message clicks with utm tags.](https://www.braze.com/docs/assets/img_archive/push_utm_tags.png?092a5d2d2d1ed2d537ea01f92b3c5dd4)
 
 
 
@@ -80,7 +80,7 @@ To include UTM tags in the deep links in your in-app messages, use the following
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spring2021giftcards&utm_content=web_link
 ```
 
-![](https://www.braze.com/docs/assets/img_archive/iam_utm_tags.png?b3664cc88b293b450edd67679ce65224)
+![Screenshot related to attribute push opens and in-app message clicks with utm tags.](https://www.braze.com/docs/assets/img_archive/iam_utm_tags.png?b3664cc88b293b450edd67679ce65224)
 
 
 
@@ -91,7 +91,7 @@ You can dynamically construct your URL directly within the Braze composer, allow
 
 ### Create a URL with supported Liquid personalization tags
 
-URLs can be dynamically generated through the use of any [supported Liquid personalization tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/).
+URLs can be dynamically generated through the use of any [supported Liquid personalization tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags).
 
 
 ```liquid
@@ -118,7 +118,7 @@ We shorten URLs that are rendered by Liquid, even those included in API-trigger 
 
 ### Shorten URLs in `/messages/send` endpoint
 
-Link shortening is also turned on for API-only messages through the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages/). For a full list of request parameters, see [request parameters](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages/#request-parameters).
+Link shortening is also turned on for API-only messages through the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages). For a full list of request parameters, see [request parameters](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages#request-parameters).
 
 | Parameter | Required | Data type | Description |
 | --------- | ---------| --------- | ----------- |

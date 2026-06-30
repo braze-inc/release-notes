@@ -4,9 +4,9 @@
 
 ## eCommerce recommended events
 
-[eCommerce recommended events](https://www.braze.com/docs/ecommerce_events/) cover six steps in the purchase journey: `product_viewed`, `cart_updated`, `checkout_started`, `order_placed`, `order_cancelled`, and `order_refunded`. When you successfully send these events, Braze validates the data and makes it available to a growing set of platform features.
+[eCommerce recommended events](https://www.braze.com/docs/ecommerce_events) cover six steps in the purchase journey: `product_viewed`, `cart_updated`, `checkout_started`, `order_placed`, `order_cancelled`, and `order_refunded`. When you successfully send these events, Braze validates the data and makes it available to a growing set of platform features.
 
-These features include Canvas templates for abandoned browse, abandoned cart, abandoned checkout, and order confirmation flows; eCommerce reporting; and calculated user profile fields for _Total Revenue_, _Total Orders_, and _Total Refunds_. You can also build segments using nested product property filtering through [Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/), personalize abandoned cart messages with the `{% shopping_cart %}` Liquid tag, and feed BrazeAI<sup>TM</sup> capabilities like [Predictive Events](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_events/), [Predictive Churn](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_churn/), and [item recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/), along with other capabilities. 
+These features include Canvas templates for abandoned browse, abandoned cart, abandoned checkout, and order confirmation flows; eCommerce reporting; and calculated user profile fields for _Total Revenue_, _Total Orders_, and _Total Refunds_. You can also build segments using nested product property filtering through [Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension), personalize abandoned cart messages with the `{% shopping_cart %}` Liquid tag, and feed BrazeAI<sup>TM</sup> capabilities like [Predictive Events](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_events), [Predictive Churn](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_churn), and [item recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations), along with other capabilities. 
 
 Because these events follow a defined schema, each supported feature can read the structured data without custom property mapping or per-feature configuration on your end.
 
@@ -48,11 +48,9 @@ Because these events follow a defined schema, each supported feature can read th
 
 
 
-
-
 ### How eCommerce events work
 
-eCommerce events are custom events with predefined names and property schemas. You send them using the [Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events/) or the [`/users/track` REST API endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/), and Braze validates each event against its schema on ingestion. When validation passes, Braze automatically applies post-processing specific to that event type, such as calculating revenue fields and managing cart state on user profiles.
+eCommerce events are custom events with predefined names and property schemas. You send them using the [Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events) or the [`/users/track` REST API endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track), and Braze validates each event against its schema on ingestion. When validation passes, Braze automatically applies post-processing specific to that event type, such as calculating revenue fields and managing cart state on user profiles.
 
 eCommerce events work everywhere other custom events do: triggers and filters for performed custom events, custom events reporting, and more. However, their schema validation unlocks additional capabilities, including:
 
@@ -82,18 +80,18 @@ The six eCommerce recommended events map to stages of the purchase journey. Fire
 
 
 The following examples show the REST API payload for each event.
-For client-side logging, `ecommerce.product_viewed`, `ecommerce.cart_updated`, `ecommerce.checkout_started`, and `ecommerce.order_placed` use SDK eCommerce event APIs where available, while `ecommerce.order_cancelled` and `ecommerce.order_refunded` use `logCustomEvent`. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events/).
+For client-side logging, `ecommerce.product_viewed`, `ecommerce.cart_updated`, `ecommerce.checkout_started`, and `ecommerce.order_placed` use SDK eCommerce event APIs where available, while `ecommerce.order_cancelled` and `ecommerce.order_refunded` use `logCustomEvent`. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events).
 
 
 
 
 
 
-Trigger when a user views a product detail page. This event is compatible with Braze catalog [back-in-stock notifications](https://www.braze.com/docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications/) and [price drop notifications](https://www.braze.com/docs/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications/).
+Trigger when a user views a product detail page. This event is compatible with Braze catalog [back-in-stock notifications](https://www.braze.com/docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications) and [price drop notifications](https://www.braze.com/docs/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications).
 
 #### Client-side implementation
 
-Use SDK eCommerce event APIs where available. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events/).
+Use SDK eCommerce event APIs where available. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events).
 
 #### Event properties
 
@@ -148,7 +146,7 @@ Trigger every time the contents of a user's cart change.
 
 #### Client-side implementation
 
-Use SDK eCommerce event APIs where available. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events/).
+Use SDK eCommerce event APIs where available. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events).
 
 You can send this event in one of two ways:
 
@@ -210,7 +208,7 @@ Trigger when the user initiates the checkout flow (for example, selects "Checkou
 
 #### Client-side implementation
 
-Use SDK eCommerce event APIs where available. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events/).
+Use SDK eCommerce event APIs where available. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events).
 
 #### Event properties
 
@@ -305,7 +303,7 @@ Trigger when an order is successfully completed or payment is confirmed.
 
 #### Client-side implementation
 
-Use SDK eCommerce event APIs where available. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events/).
+Use SDK eCommerce event APIs where available. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events).
 
 **Important:**
 
@@ -416,7 +414,7 @@ Trigger when an order is cancelled.
 
 #### Client-side implementation
 
-Use `logCustomEvent`. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events/).
+Use `logCustomEvent`. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events).
 
 **Important:**
 
@@ -516,7 +514,7 @@ Trigger when a full or partial refund is issued.
 
 #### Client-side implementation
 
-Use `logCustomEvent`. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events/).
+Use `logCustomEvent`. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events).
 
 **Important:**
 
@@ -662,7 +660,7 @@ Non-USD currency values are automatically converted to USD using the exchange ra
 
 ## Implement eCommerce events 
 
-You can send eCommerce events through the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) (server-side) or through the Braze SDKs (client-side). For SDK implementation examples, see [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events/).
+You can send eCommerce events through the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) (server-side) or through the Braze SDKs (client-side). For SDK implementation examples, see [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events).
 
 ### Send events server-side
 
@@ -708,11 +706,11 @@ POST /users/track
 
 ### Data points and billing
 
-eCommerce events don't consume [data points](https://www.braze.com/docs/user_guide/data/infrastructure/data_points/). You can log them without any impact to your data point usage.
+eCommerce events don't consume [data points](https://www.braze.com/docs/user_guide/data/infrastructure/data_points). You can log them without any impact to your data point usage.
 
 ### Event size limit
 
-Event properties sent to `/users/track` are capped at 102,400 bytes (100 KB) per event. For triggered campaign and Canvas messages, the `trigger_properties` sent to [`/campaigns/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) and [`/canvas/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) have a stricter default limit of 51,200 bytes (50 KB).
+Event properties sent to `/users/track` are capped at 102,400 bytes (100 KB) per event. For triggered campaign and Canvas messages, the `trigger_properties` sent to [`/campaigns/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns) and [`/canvas/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases) have a stricter default limit of 51,200 bytes (50 KB).
 
 For a best practice, send only the product information you need for triggering, personalizing, or attributing the event. Store richer product details—such as descriptions, full variant lists, inventory, or alternate images—in Braze Catalogs. Reference these details by `product_id` or `variant_id` when sending messages. Use the `metadata` object selectively for order or product-specific context that messaging will use.
 
@@ -733,7 +731,7 @@ The source property is a required string that identifies where the event origina
 
 ### Metadata flexibility
 
-Both the event-level and product-level metadata objects accept arbitrary key-value pairs, so you can attach custom dimensions without modifying the core schema. Common examples include `order_status_url`, `gift_wrapped`, `loyalty_points_earned`, or `warehouse_id`. These properties are available in Liquid personalization, Currents exports, and segmentation through [Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/).
+Both the event-level and product-level metadata objects accept arbitrary key-value pairs, so you can attach custom dimensions without modifying the core schema. Common examples include `order_status_url`, `gift_wrapped`, `loyalty_points_earned`, or `warehouse_id`. These properties are available in Liquid personalization, Currents exports, and segmentation through [Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension).
 
 **Important:**
 

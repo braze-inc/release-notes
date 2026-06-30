@@ -1,4 +1,4 @@
-<div id='api_vrwqoqmhrfzj' class='api_div' data-search-keywords='prerequisites message data time conversions_by_send_time conversions1_by_send_time conversions2_by_send_time conversions3_by_send_time conversions conversions1 conversions2 conversions3 unique_recipients revenue messages ios_push variation_api_id sent direct_opens total_opens bounces body_clicks android_push webhook errors email opens unique_opens clicks unique_clicks unsubscribes delivered reported_spam sms sent_to_carrier rejected delivery_failed opt_out help whats_app failed read content_cards total_clicks total_dismissals total_impressions unique_dismissals unique_impressions trigger_in_app_message variation_name impressions first_button_clicks second_button_clicks enrolled'>
+<div id='api_rnzkdavqnvwu' class='api_div' data-search-keywords='prerequisites message data time conversions_by_send_time conversions1_by_send_time conversions2_by_send_time conversions3_by_send_time conversions conversions1 conversions2 conversions3 unique_recipients revenue messages ios_push variation_api_id sent direct_opens total_opens bounces body_clicks android_push webhook errors email opens unique_opens clicks unique_clicks unsubscribes delivered reported_spam sms sent_to_carrier rejected delivery_failed opt_out help whats_app failed read content_cards total_clicks total_dismissals total_impressions unique_dismissals unique_impressions trigger_in_app_message variation_name impressions first_button_clicks second_button_clicks enrolled'>
 <h1 id="export-campaign-analytics">Export campaign analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/campaigns/data_series</p>
@@ -18,7 +18,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">campaigns.data_series</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">campaigns.data_series</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -46,7 +46,7 @@
       <td><code class="language-plaintext highlighter-rouge">campaign_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">campaign API identifier</a>.<br /><br /> The <code class="language-plaintext highlighter-rouge">campaign_id</code> for API campaigns can be found on the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers/">API Keys</a> page and the <strong>Campaign Details</strong> page within your dashboard, or you can use the <a href="/docs/api/endpoints/export/campaigns/get_campaigns/">List campaigns endpoint</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">campaign API identifier</a>.<br /><br /> The <code class="language-plaintext highlighter-rouge">campaign_id</code> for API campaigns can be found on the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers">API Keys</a> page and the <strong>Campaign Details</strong> page within your dashboard, or you can use the <a href="/docs/api/endpoints/export/campaigns/get_campaigns">List campaigns endpoint</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">length</code></td>
@@ -413,7 +413,7 @@
 
 <p><strong>Tip:</strong></p>
 
-<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting/">Export troubleshooting</a>.</p>
+<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting">Export troubleshooting</a>.</p>
 
 </div>
 
@@ -421,6 +421,6 @@
 
 ### Viewing delivery failures for API-triggered campaigns
 
-The [`/campaigns/data_series`](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_analytics/) endpoint returns aggregated daily stats (for example, `delivery_failed` for SMS or `errors` for webhooks). It does not return per-recipient failure reasons.
+The [`/campaigns/data_series`](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_analytics) endpoint returns aggregated daily stats (for example, `delivery_failed` for SMS or `errors` for webhooks). It does not return per-recipient failure reasons.
 
-For per-message send failures, bounces, and aborts from API-triggered or API campaigns, use the [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/) in the dashboard. For custom reports on send and delivery events, use [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/) with [query templates](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/query_templates/) or custom SQL. You can also stream failure events through Currents or Snowflake Data Sharing if your workspace has those products enabled.
+For per-message send failures, bounces, and aborts from API-triggered or API campaigns, use the [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log) in the dashboard. For custom reports on send and delivery events, use [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder) with [query templates](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/query_templates) or custom SQL. You can also stream failure events through Currents or Snowflake Data Sharing if your workspace has those products enabled.

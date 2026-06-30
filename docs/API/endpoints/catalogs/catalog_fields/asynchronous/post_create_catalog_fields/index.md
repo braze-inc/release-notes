@@ -1,4 +1,4 @@
-<div id='api_ksktdgqeyhui' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
+<div id='api_zdeptshbvtia' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
 <h1 id="create-catalog-fields">Create catalog fields</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/catalogs/{catalog_name}/fields</p>
@@ -10,7 +10,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">catalogs.create_fields</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">catalogs.create_fields</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -192,7 +192,7 @@
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">arbitrary-error</code></td>
-      <td>An arbitrary error occurred. Please try again or contact <a href="/docs/support_contact/">Support</a>.</td>
+      <td>An arbitrary error occurred. Please try again or contact <a href="/docs/support_contact">Support</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">catalog-not-found</code></td>

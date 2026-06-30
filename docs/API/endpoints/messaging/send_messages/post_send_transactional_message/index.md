@@ -1,4 +1,4 @@
-<div id='api_giiwxbmvlpwz' class='api_div' data-search-keywords='prerequisites external_send_id trigger_properties recipient user_alias external_user_id attributes dispatch_id status metadata campaign_api_id received_at enqueued_at executed_at sent_at processed_at delivered_at bounced_at aborted_at reason'>
+<div id='api_ucqdabrlnudw' class='api_div' data-search-keywords='prerequisites external_send_id trigger_properties recipient user_alias external_user_id attributes dispatch_id status metadata campaign_api_id received_at enqueued_at executed_at sent_at processed_at delivered_at bounced_at aborted_at reason'>
 <h1 id="send-transactional-emails-using-api-triggered-delivery">Send transactional emails using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/transactional/v1/campaigns/{campaign_id}/send</p>
@@ -14,7 +14,7 @@
 
 <p>Transactional Email is currently available as part of select Braze packages. Contact your Braze customer success manager for more details.</p>
 
-<p>Similar to the <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/">Send triggered campaign endpoint</a>, this campaign type allows you to house message content inside of the Braze dashboard while dictating when and to whom a message is sent via your API. Unlike the Send triggered campaign endpoint, which accepts an audience or segment to send messages to, a request to this endpoint must specify a single user either by <code class="language-plaintext highlighter-rouge">external_user_id</code> or <code class="language-plaintext highlighter-rouge">user_alias</code>, as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.</p>
+<p>Similar to the <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns">Send triggered campaign endpoint</a>, this campaign type allows you to house message content inside of the Braze dashboard while dictating when and to whom a message is sent via your API. Unlike the Send triggered campaign endpoint, which accepts an audience or segment to send messages to, a request to this endpoint must specify a single user either by <code class="language-plaintext highlighter-rouge">external_user_id</code> or <code class="language-plaintext highlighter-rouge">user_alias</code>, as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cec874e1-fa51-42a6-9a8d-7fc57d6a63bc" class="seeme">See me in Postman</a></div>
 
@@ -107,7 +107,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">trigger_properties</code></td>
       <td>Optional</td>
       <td>Object</td>
-      <td>See <a href="/docs/api/objects_filters/trigger_properties_object/">trigger properties</a>. Personalization key-value pairs that apply to the user in this request.</td>
+      <td>See <a href="/docs/api/objects_filters/trigger_properties_object">trigger properties</a>. Personalization key-value pairs that apply to the user in this request.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">recipient</code></td>
@@ -219,7 +219,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   </tbody>
 </table>
 
-<p>Most endpoints at Braze have a rate limit implementation that returns a 429 response code if you make too many requests. The transactional sending endpoint has a paid hourly allotment measured in units (for example, 50,000 units per hour, depending on your package). There is no separate per-endpoint rate limit for this endpoint: you can send beyond your allotted volume, but only the allotted volume is covered by SLA; requests above that allotment still send but are not covered by SLA. Requests to this endpoint count toward your <a href="/docs/api/api_limits/">overall external API rate limit</a>. If you exceed that limit (for example, 250,000 requests per hour across all endpoints), Braze returns 429 and throttles requests until the limit resets. The transactional volume count resets each hour. Contact Braze Support if you need more information about this functionality.</p>
+<p>Most endpoints at Braze have a rate limit implementation that returns a 429 response code if you make too many requests. The transactional sending endpoint has a paid hourly allotment measured in units (for example, 50,000 units per hour, depending on your package). There is no separate per-endpoint rate limit for this endpoint: you can send beyond your allotted volume, but only the allotted volume is covered by SLA; requests above that allotment still send but are not covered by SLA. Requests to this endpoint count toward your <a href="/docs/api/api_limits">overall external API rate limit</a>. If you exceed that limit (for example, 250,000 requests per hour across all endpoints), Braze returns 429 and throttles requests until the limit resets. The transactional volume count resets each hour. Contact Braze Support if you need more information about this functionality.</p>
 
 <h2 id="transactional-http-event-postback">Transactional HTTP event postback</h2>
 
@@ -244,7 +244,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   <li>Test the postback.</li>
 </ol>
 
-<p><img src="/docs/assets/img/transactional_webhook_url.png?567829e92a620f3227cb64ce58d3f634" alt="" /></p>
+<p><img src="/docs/assets/img/transactional_webhook_url.png?567829e92a620f3227cb64ce58d3f634" alt="Transactional Event Status Postback URL field in Email Preferences." /></p>
 
 <h3 id="postback-body">Postback body</h3>
 

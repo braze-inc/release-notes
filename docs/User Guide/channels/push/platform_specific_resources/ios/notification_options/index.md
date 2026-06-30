@@ -75,15 +75,15 @@ Unlike a traditional iOS push token, a provisional push token acts as a "trial p
 **Tip:**
 
 
-Provisional Authorization has the potential dramatically increase your opt-in rate, but only if users see value in your messages. Be sure to use our [user segmentation](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/), [location targeting](https://www.braze.com/docs/user_guide/audience/locations_and_geofences/), and [personalization](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/) features to ensure that the appropriate users are getting these "trial" notifications at the right time. Then, you can encourage users to fully opt-in to your push notifications, knowing that they add value to your users' experience with your app.
+Provisional Authorization has the potential dramatically increase your opt-in rate, but only if users see value in your messages. Be sure to use our [user segmentation](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment), [location targeting](https://www.braze.com/docs/user_guide/audience/locations_and_geofences), and [personalization](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags) features to ensure that the appropriate users are getting these "trial" notifications at the right time. Then, you can encourage users to fully opt-in to your push notifications, knowing that they add value to your users' experience with your app.
 
 
 
-Whichever option the user chooses will add the appropriate token or [subscription status](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states/) to their [Contact Settings](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles#engagement-tab) under the **Engagement** tab in their user profile.
+Whichever option the user chooses will add the appropriate token or [subscription status](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states) to their [Contact Settings](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles#engagement-tab) under the **Engagement** tab in their user profile.
 
 ![Contact settings with a push subscribed status.](https://www.braze.com/docs/assets/img/profile-push-prov-auth.png?8aea04642c2835e9143b91dc15a58d0a){: width="50%"}
 
-You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters/).
+You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters).
 
 ![Segment Details panel with the sample segment filter "Provisionally Authorized on iOS Stopwatch (iOS) is true" to target users.](https://www.braze.com/docs/assets/img/segment-push-prov-auth.png?8f2b32ad8b2e9e4ae28a5ab8e071a6d4)
 
@@ -103,12 +103,12 @@ If you use additional push prompts or [in-app push primers](https://www.braze.co
 
 #### Set up provisional push notifications
 
-Braze allows you to register for Provisional Authentication by updating your code in your token registration snippet within your Braze iOS SDK implementation using the following snippets as an example (send these to your developers or ensure they [implement provisional push authentication during the integration process](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/#using-usernotification-framework-ios-10)).
+Braze allows you to register for Provisional Authentication by updating your code in your token registration snippet within your Braze iOS SDK implementation using the following snippets as an example (send these to your developers or ensure they [implement provisional push authentication during the integration process](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration#using-usernotification-framework-ios-10)).
 
 **Warning:**
 
 
-The implementation of provisional push authentication only supports iOS 12+ and will error out if the deployment target is before that. You can learn more about this [in our more detailed implementation documentation here](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/#using-usernotification-framework-ios-10).
+The implementation of provisional push authentication only supports iOS 12+ and will error out if the deployment target is before that. You can learn more about this [in our more detailed implementation documentation here](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration#using-usernotification-framework-ios-10).
 
 
 
@@ -182,6 +182,6 @@ This feature does not have minimum SDK version requirements, but is only applied
 
 For more information on maximum message lengths for different message types, refer to the following resources:
 
-- [Image and text specifications](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats/)
-- [iOS character count guidelines](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/rich_notifications/#character-count)
+- [Image and text specifications](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats)
+- [iOS character count guidelines](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/rich_notifications#character-count)
 

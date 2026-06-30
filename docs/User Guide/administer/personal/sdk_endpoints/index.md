@@ -32,4 +32,4 @@ When integrating your SDK, use the SDK endpoint. When making calls to our REST A
 
 
 
-For details about accessing the API, see our [API overview article](https://www.braze.com/docs/api/basics/). 
+For details about accessing the API, see our [API overview article](https://www.braze.com/docs/api/basics). 

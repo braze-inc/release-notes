@@ -6,7 +6,7 @@
 
 | Requirement | Description |
 | --- | --- |
-| Two-factor authentication or SSO | You must have [two-factor authentication](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings/#two-factor-authentication) (2FA) or [single sign-on](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings/#single-sign-on-sso-authentication) (SSO) enabled for your account. |
+| Two-factor authentication or SSO | You must have [two-factor authentication](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#two-factor-authentication) (2FA) or [single sign-on](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#single-sign-on-sso-authentication) (SSO) enabled for your account. |
 | Correct permissions | You must be either an account admin or a workspace admin, or have "Manage Transformations" user permissions. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Prerequisites" }
 
@@ -73,7 +73,7 @@ Here’s what it looks like for Typeform:
 **Note:**
 
 
-Braze Data Transformation may not yet support external platforms that require special verification or authentication for webhooks. Consider leaving [product feedback](https://www.braze.com/docs/user_guide/administer/personal/product_portal/) if you're interested in using this type of platform with Braze Data Transformation.
+Braze Data Transformation may not yet support external platforms that require special verification or authentication for webhooks. Consider leaving [product feedback](https://www.braze.com/docs/user_guide/administer/personal/product_portal) if you're interested in using this type of platform with Braze Data Transformation.
 
 
 
@@ -86,7 +86,7 @@ If you're a developer or have significant experience with JavaScript code, follo
 **Tip:**
 
 
-To generate transformation code with AI, choose **Code with Operator** above the transformation code editor. To use this, a webhook must be sent to your transformation. To start from a pre-built template instead, choose **Insert Template**. For example prompts, see [Generate data transformation code](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#generate-data-transformation-code).
+To generate transformation code with AI, choose **Code with Operator** above the transformation code editor. To use this, a webhook must be sent to your transformation. To start from a pre-built template instead, choose **Insert Template**. For example prompts, see [Generate data transformation code](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#generate-data-transformation-code).
 
 **Code with Operator** is only available if Operator is enabled for your account. If you don't see it, contact your account manager.
 

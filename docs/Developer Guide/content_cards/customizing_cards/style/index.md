@@ -1,6 +1,6 @@
 # Customize the style of Content Cards
 
-> Braze Content Cards come with a default look and feel. This article covers styling options for your Content Cards to help you match your brand identity. For the full list of content card types, see [About Content Cards](https://www.braze.com/docs/developer_guide/content_cards/).
+> Braze Content Cards come with a default look and feel. This article covers styling options for your Content Cards to help you match your brand identity. For the full list of content card types, see [About Content Cards](https://www.braze.com/docs/developer_guide/content_cards).
 
 ## Creating a custom style
 
@@ -11,7 +11,7 @@ The default Content Cards UI is imported from the UI layer of the Braze SDK. Fro
 **Note:**
 
 
-Content Card properties such as `title`, `cardDescription`, `imageUrl`, etc., are directly editable through the [dashboard](https://www.braze.com/docs/user_guide/channels/content_cards/creative_details/), which is the preferred method for changing these details.
+Content Card properties such as `title`, `cardDescription`, `imageUrl`, etc., are directly editable through the [dashboard](https://www.braze.com/docs/user_guide/channels/content_cards/creative_details), which is the preferred method for changing these details.
 
 
 
@@ -241,7 +241,7 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
   </style>
 ```
 
-For more information about font customization in the Android SDK, see the [font family guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization).
+For more information about font customization in the Android SDK, see the [font family guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization#font-customization).
 
 
 To change the default font programmatically, you can set the [`titleTextStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#715371549%2FProperties%2F-1725759721) of `ContentCardStyling`.
@@ -523,7 +523,7 @@ if (isDarkMode && darkModeImage) {
 
 
 
-This pattern works for any appearance-dependent content, including text, colors, or layouts. Upload your dark mode image assets to the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/image_specifications/), then reference them in a key-value pair.
+This pattern works for any appearance-dependent content, including text, colors, or layouts. Upload your dark mode image assets to the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/image_specifications), then reference them in a key-value pair.
 
 ### Disabling unread indicator
 

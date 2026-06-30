@@ -10,7 +10,7 @@ The three required event assets (activations, engagements, and conversions) toge
 - **Engagements** tell the model how customers responded to the message
 - **Conversions** tell the model whether the ultimate business outcome was achieved
 
-Each of these must be structured as an incremental event stream (not a snapshot). See [Snapshots versus event streams](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data/data_streams/) for details.
+Each of these must be structured as an incremental event stream (not a snapshot). See [Snapshots versus event streams](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data/data_streams) for details.
 
 **Note:**
 

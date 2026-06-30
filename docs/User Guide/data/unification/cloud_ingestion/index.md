@@ -9,7 +9,7 @@ With Braze Cloud Data Ingestion (CDI), you set up an integration between your da
 **Note:**
 
 
-Sync frequency in the dashboard controls how often Braze runs a sync (for example, options such as hourly or more frequent runs within an hour). It does not set a custom interval longer than one hour between runs. To run a sync outside the scheduled cadence—such as on demand after your warehouse load completes—use the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync/) endpoint with your integration ID.
+Sync frequency in the dashboard controls how often Braze runs a sync (for example, options such as hourly or more frequent runs within an hour). It does not set a custom interval longer than one hour between runs. To run a sync outside the scheduled cadence—such as on demand after your warehouse load completes—use the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint with your integration ID.
 
 
 
@@ -72,13 +72,13 @@ When syncing user data through Cloud Data Ingestion, you can identify users usin
 | `PHONE` | The user's phone number. If multiple profiles with the same phone number exist, the most recently updated profile is prioritized for updates. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="User identifiers for data ingestion" }
 
-For detailed information about setting up table columns and payload formatting requirements, see [Table setup for Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup/).
+For detailed information about setting up table columns and payload formatting requirements, see [Table setup for Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup).
 
-For source-specific setup instructions and SQL examples, see [Data Warehouse integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations/).
+For source-specific setup instructions and SQL examples, see [Data Warehouse integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations).
 
 ## Data point usage
 
-For customers on data points-based billing, data point billing for Cloud Data Ingestion is equivalent to billing for updates through the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#user-track). Refer to [Data points](https://www.braze.com/docs/user_guide/data/infrastructure/data_points/) for more information. 
+For customers on data points-based billing, data point billing for Cloud Data Ingestion is equivalent to billing for updates through the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#user-track). Refer to [Data points](https://www.braze.com/docs/user_guide/data/infrastructure/data_points) for more information. 
 
 **Important:**
 

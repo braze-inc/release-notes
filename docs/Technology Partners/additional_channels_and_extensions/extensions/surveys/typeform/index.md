@@ -61,11 +61,11 @@ Follow the steps in [Typeform's webhooks documentation](https://www.typeform.com
 
 For step 4, add your Data Transformation webhook URL as the **Destination URL**
 
-![](https://www.braze.com/docs/assets/img/typeform/typeform_add_webhook.png?44ba6b055afe5f544cc2c4bd48359c73){: style="max-width:50%" }
+![Typeform webhook setup with the Destination URL field.](https://www.braze.com/docs/assets/img/typeform/typeform_add_webhook.png?44ba6b055afe5f544cc2c4bd48359c73){: style="max-width:50%" }
 
 Send a test event to your Data Transformation by clicking **View deliveries** and then **Send test request**.
 
-![](https://www.braze.com/docs/assets/img/typeform/typeform_test_request.png?9021daad26d8d4305994f81f27650a88)
+![Typeform View deliveries page with Send test request selected.](https://www.braze.com/docs/assets/img/typeform/typeform_test_request.png?9021daad26d8d4305994f81f27650a88)
 
 ### Step 3: Write transformation code to accept your chosen Typeform events
 
@@ -76,7 +76,7 @@ In this step, you transform the webhook payload that is sent from Typeform to a 
 3. Click **Validate** to return a preview of your code’s output and to check if it’s an acceptable `/users/track` request.
 4. Save and activate your Data Transformation.
 
-![](https://www.braze.com/docs/assets/img/typeform/typeform_test_result.png?38e7a228c3a3754733dbc64b35f9767c)
+![Data Transformation preview showing a successful Typeform test payload validation.](https://www.braze.com/docs/assets/img/typeform/typeform_test_result.png?38e7a228c3a3754733dbc64b35f9767c)
 
 #### Request body format
 
@@ -643,7 +643,7 @@ After you have written your data transformation, click **Validate** to make your
 
 When activated, custom event data is logged to a user's profile when they complete your form.
 
-![](https://www.braze.com/docs/assets/img/typeform/typeform_custom_event.png?d77da0705b2353b4e4dc3f1aa486e517)
+![User profile showing a custom event logged after Typeform submission.](https://www.braze.com/docs/assets/img/typeform/typeform_custom_event.png?d77da0705b2353b4e4dc3f1aa486e517)
 
 ## Monitoring and troubleshooting
 

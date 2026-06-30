@@ -42,7 +42,7 @@ You can create up to five messaging rules.
 2. Select **Create rule**.
 3. Give this rule a name (for example, "All user subscriptions").
 4. For **Message type**, select **Campaign**, **Canvas**, or **Both Canvas and Campaigns** to apply the approval rule.
-5. Enter a number for **Maximum reachable users**. For more information, refer to [Audience statistics](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/target_users/#audience-statistics).
+5. Enter a number for **Maximum reachable users**. For more information, refer to [Audience statistics](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/target_users#audience-statistics).
 6. Select **Save**.
 
 ![An example messaging rule "Rule 1" for campaigns with 100,000 users as the maximum. There is one user who can approve the Canvas and campaign to launch.](https://www.braze.com/docs/assets/img/target_population_approval_example.png?17cc9d990a62688d6c1218f6ba7b9608){: style="max-width:90%;"}

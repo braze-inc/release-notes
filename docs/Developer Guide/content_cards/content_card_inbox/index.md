@@ -169,7 +169,7 @@ fun ContentCardItem(
 !!step
 lines-MainApplication.kt=12
 
-#### 1. Enable debugging (optional)
+### 1. Enable debugging (optional)
 
 To make troubleshooting easier while developing, consider enabling debugging.
 
@@ -365,7 +365,7 @@ class ContentCardsActivity : ComponentActivity() {
 !!step
 lines-MainApplication.kt=12
 
-#### 1. Enable debugging (optional)
+### 1. Enable debugging (optional)
 
 To make troubleshooting easier while developing, consider enabling debugging.
 
@@ -404,7 +404,7 @@ Impressions should only be logged once when a card is viewed by the user. Here, 
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift). You'll also need to [enable in-app messages for Swift](https://www.braze.com/docs/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift). You'll also need to [enable in-app messages for Swift](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=swift#swift_enabling-in-app-messages).
 
 ## Making an inbox with Content Cards for Swift
 
@@ -538,7 +538,7 @@ class BrazeInboxViewController: UITableViewController {
 !!step
 lines-AppDelegate.swift=15
 
-#### 1. Enable debugging (optional)
+### 1. Enable debugging (optional)
 
 To make troubleshooting easier while developing, consider enabling debugging.
 
@@ -750,7 +750,7 @@ braze.requestContentCardsRefresh();
 !!step
 lines-main.js=3-4,9
 
-#### 1. Enable debugging (optional)
+### 1. Enable debugging (optional)
 
 To make troubleshooting easier while developing, consider enabling debugging. Optionally, you can also run Braze Web SDK methods in the console.
 

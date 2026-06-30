@@ -52,6 +52,10 @@ Before migrating, ensure your Braze SDK meets the minimum version requirements:
 
 
 
+Dismissals and re-eligibility require the following minimum SDK versions:
+
+<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1410' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 14.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#671' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.7.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#4210' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 42.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+
 ### Subscribe to updates
 
 #### Content Cards approach
@@ -789,9 +793,10 @@ Banners only support scheduled delivery campaigns. To migrate a message that was
 | **Display & Targeting** |
 | Feed UI | ✅ Default feed available | ❌ Placement-based only |
 | Context-specific placement | ❌ Feed-based | ✅ Native placement support |
-| Native prioritization | ❌ Requires custom logic | ✅ Built-in prioritization |
+| Prioritization | ❌ Requires custom logic | ✅ Native prioritization |
 | **User Interaction** |
-| Manual dismissal | ✅ Supported | ❌ Not supported |
+| Manual dismissal | ✅ Supported | ✅ Supported |
+| Re-eligibility after dismissal | ❌ Requires custom filters or campaign logic | ✅ Default waiting period |
 | Pinned cards | ✅ Supported | N/A |
 | **Analytics** |
 | Automatic analytics (default UI) | ✅ Supported | ✅ Supported |

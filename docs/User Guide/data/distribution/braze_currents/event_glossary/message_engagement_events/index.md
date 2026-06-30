@@ -4,16 +4,16 @@
 
 
 
-Storage schemas apply to the flat file event data we send to Data Warehouse Storage partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/available_partners/) and check their respective pages.
+Storage schemas apply to the flat file event data we send to Data Warehouse Storage partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/available_partners) and check their respective pages.
 
 **Tip:**
 
 
-These events are also available as SQL tables in the [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/), [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/), and [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/). For SQL table schemas and column details, refer to the [SQL table reference](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/).
+These events are also available as SQL tables in the [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder), [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments), and [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). For SQL table schemas and column details, refer to the [SQL table reference](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables).
 
 
 
-Contact your account manager or open a [support ticket](https://www.braze.com/docs/braze_support/) if you need access to additional event entitlements. If you can't find what you need in this article, check out our [Customer Behavior Events Library](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
+Contact your account manager or open a [support ticket](https://www.braze.com/docs/braze_support) if you need access to additional event entitlements. If you can't find what you need in this article, check out our [Customer Behavior Events Library](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 
 
@@ -64,7 +64,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 
 - Currents drops events with payloads greater than 900&nbsp;KB.
-- Objects related to Canvas Flow have IDs you can use for grouping and translate to human-readable names through the [Export Canvas details endpoint](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvas_details/).
+- Objects related to Canvas Flow have IDs you can use for grouping and translate to human-readable names through the [Export Canvas details endpoint](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvas_details).
 - Certain fields might not show their most recent state immediately after you update a campaign or Canvas:
   - `campaign_name`
   - `canvas_name`
@@ -82,7 +82,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 <!--overview-end-->
 
-<div id='api_fpnhmujbxhqt' class='api_div' data-search-keywords='agent executed events agent agent_id agent_name cache_hit cache_tokens canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name completion_tokens duration error external_user_id id input invocation_id invocation_source is_error llm_owned_by_customer model_name model_provider output prompt_tokens provider_request_id reasoning_tokens request_id time total_tokens user_id event_type properties user'>
+<div id='api_viaralthfmte' class='api_div' data-search-keywords='agent executed events agent agent_id agent_name cache_hit cache_tokens canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name completion_tokens duration error external_user_id id input invocation_id invocation_source is_error llm_owned_by_customer model_name model_provider output prompt_tokens provider_request_id reasoning_tokens request_id time total_tokens user_id event_type properties user'>
 <h2 id="agent-executed-events">Agent executed events</h2>
 
 <div class="api_tags" data-tags="Agent" data-tags-lower="agent"></div>
@@ -152,7 +152,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"prompt_tokens"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) how many prompt tokens this request used"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"provider_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) any request ID given to us by the model provider for the api call"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"reasoning_tokens"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) how many reasoning tokens this request used"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) unique id for this overall LLM request and complete execution"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Unique id for this overall LLM request and complete execution"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) unix timestamp at which this event is logged"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"total_tokens"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) how many total tokens this request used"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
@@ -228,7 +228,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"prompt_tokens"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) how many prompt tokens this request used"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"provider_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) any request ID given to us by the model provider for the api call"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"reasoning_tokens"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) how many reasoning tokens this request used"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) unique id for this overall LLM request and complete execution"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Unique id for this overall LLM request and complete execution"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"total_tokens"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) how many total tokens this request used"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) unix timestamp at which this event is logged"</span><span class="p">,</span><span class="w">
@@ -241,7 +241,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_rkycadljznlv' class='api_div' data-search-keywords='tool invocation events agent agent_id agent_name duration id invocation_source is_error request_id time tool_arguments tool_call_id tool_name event_type properties user'>
+<div id='api_uvqrzadfuvmf' class='api_div' data-search-keywords='tool invocation events agent agent_id agent_name duration id invocation_source is_error request_id time tool_arguments tool_call_id tool_name event_type properties user'>
 <h2 id="tool-invocation-events">Tool invocation events</h2>
 
 <div class="api_tags" data-tags="Agent" data-tags-lower="agent"></div>
@@ -272,7 +272,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"invocation_source"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) which ruby object invoked the LLM request"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"is_error"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, boolean) whether or not this request errored out"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) unique id for this overall LLM request and complete execution"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Unique id for this overall LLM request and complete execution"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, long) unix timestamp at which this event is logged"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"tool_arguments"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) JSON of the tool arguments"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"tool_call_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) globally unique id for this tool call"</span><span class="p">,</span><span class="w">
@@ -310,7 +310,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"duration"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) How long the tool invocation took in milliseconds"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"invocation_source"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) which ruby object invoked the LLM request"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"is_error"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, boolean) whether or not this request errored out"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) unique id for this overall LLM request and complete execution"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Unique id for this overall LLM request and complete execution"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"tool_arguments"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) JSON of the tool arguments"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"tool_call_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) globally unique id for this tool call"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"tool_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the Tool"</span><span class="w">
@@ -322,7 +322,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_nmvnmsskvntd' class='api_div' data-search-keywords='uninstall events uninstall app_group_id app_id device_id external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_uttoyuniulbx' class='api_div' data-search-keywords='uninstall events uninstall app_group_id app_id device_id external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="uninstall-events">Uninstall events</h2>
 
 <div class="api_tags" data-tags="Uninstall" data-tags-lower="uninstall"></div>
@@ -553,7 +553,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_tszetjzvhdpj' class='api_div' data-search-keywords='global subscription state change events subscription app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name channel channel_identifier email_address external_user_id id message_variation_id send_id state_change_source subscription_status time timezone user_id event_properties message_variation_name event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_plrdscqsedpu' class='api_div' data-search-keywords='global subscription state change events subscription app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name channel channel_identifier email_address external_user_id id message_variation_id send_id state_change_source subscription_status time timezone user_id event_properties message_variation_name event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="global-subscription-state-change-events">Global Subscription State Change events</h2>
 
 <div class="api_tags" data-tags="Subscription" data-tags-lower="subscription"></div>
@@ -964,7 +964,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">state_change_source</code> will return a string of the full source name. For example, the source CSV import will return the string <code class="language-plaintext highlighter-rouge">CSV Import</code>. Available sources are listed below:</li>
@@ -1035,7 +1035,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_cfzyvbqmffsv' class='api_div' data-search-keywords='subscription group state change events subscription app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name channel channel_identifier dispatch_id email_address external_user_id id message_variation_id message_variation_name phone_number send_id state_change_source subscription_group_id subscription_status time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_drghdaiheuzh' class='api_div' data-search-keywords='subscription group state change events subscription app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name channel channel_identifier dispatch_id email_address external_user_id id message_variation_id message_variation_name phone_number send_id state_change_source subscription_group_id subscription_status time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="subscription-group-state-change-events">Subscription Group State Change events</h2>
 
 <div class="api_tags" data-tags="Subscription" data-tags-lower="subscription"></div>
@@ -1494,7 +1494,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 <ul>
 <li><code>dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code>dispatch_id</code>. Use <code>dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
 <li><code>state_change_source</code> returns a string of the full source name. For example, the source CSV import will return the string <code>CSV import</code>. Available sources are listed below:</li>
@@ -1519,7 +1519,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_kvthlcqzwrcp' class='api_div' data-search-keywords='campaign conversion events campaign, conversion app_group_id app_id campaign_id campaign_name conversion_behavior conversion_behavior_index external_user_id id message_variation_id message_variation_name send_id time timezone user_id device_id event_properties dispatch_id event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_hisgzswywrjw' class='api_div' data-search-keywords='campaign conversion events campaign, conversion app_group_id app_id campaign_id campaign_name conversion_behavior conversion_behavior_index external_user_id id message_variation_id message_variation_name send_id time timezone user_id device_id event_properties dispatch_id event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="campaign-conversion-events">Campaign Conversion events</h2>
 
 <div class="api_tags" data-tags="Campaign, Conversion" data-tags-lower="campaign, conversion"></div>
@@ -1848,7 +1848,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_xiloalbrnhea' class='api_div' data-search-keywords='campaign control group enrollment events campaign, entry app_group_id app_id campaign_id campaign_name external_user_id id message_variation_id message_variation_name send_id time timezone user_id device_id event_properties dispatch_id event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_gvrbzgadlvik' class='api_div' data-search-keywords='campaign control group enrollment events campaign, entry app_group_id app_id campaign_id campaign_name external_user_id id message_variation_id message_variation_name send_id time timezone user_id device_id event_properties dispatch_id event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="campaign-control-group-enrollment-events">Campaign Control Group Enrollment events</h2>
 
 <div class="api_tags" data-tags="Campaign, Entry" data-tags-lower="campaign, entry"></div>
@@ -2149,7 +2149,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_tctidxvusopi' class='api_div' data-search-keywords='canvas conversion events canvas, conversion app_group_id app_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name conversion_behavior conversion_behavior_index external_user_id id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_ftasypnkfdit' class='api_div' data-search-keywords='canvas conversion events canvas, conversion app_group_id app_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name conversion_behavior conversion_behavior_index external_user_id id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="canvas-conversion-events">Canvas Conversion events</h2>
 
 <div class="api_tags" data-tags="Canvas, Conversion" data-tags-lower="canvas, conversion"></div>
@@ -2480,7 +2480,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_rnkzpvfqdkjt' class='api_div' data-search-keywords='canvas entry events canvas, entry app_group_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id in_control_group time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_vkvgudwydxoh' class='api_div' data-search-keywords='canvas entry events canvas, entry app_group_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id in_control_group time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="canvas-entry-events">Canvas Entry events</h2>
 
 <div class="api_tags" data-tags="Canvas, Entry" data-tags-lower="canvas, entry"></div>
@@ -2785,7 +2785,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_ydnuulpgevks' class='api_div' data-search-keywords='exit match audience events exit, canvas app_group_api_id app_group_id canvas_api_id canvas_id canvas_name canvas_step_api_id canvas_step_id canvas_step_name canvas_variation_api_id canvas_variation_id canvas_variation_name external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_kiapvqzrgyhw' class='api_div' data-search-keywords='exit match audience events exit, canvas app_group_api_id app_group_id canvas_api_id canvas_id canvas_name canvas_step_api_id canvas_step_id canvas_step_name canvas_variation_api_id canvas_variation_id canvas_variation_name external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="exit-match-audience-events">Exit Match Audience events</h2>
 
 <div class="api_tags" data-tags="Exit, Canvas" data-tags-lower="exit, canvas"></div>
@@ -3068,7 +3068,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_zjrertakzjzq' class='api_div' data-search-keywords='exit perform event events exit, canvas app_group_api_id app_group_id canvas_api_id canvas_id canvas_name canvas_step_api_id canvas_step_id canvas_step_name canvas_variation_api_id canvas_variation_id canvas_variation_name external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_qcryoaiuqusg' class='api_div' data-search-keywords='exit perform event events exit, canvas app_group_api_id app_group_id canvas_api_id canvas_id canvas_name canvas_step_api_id canvas_step_id canvas_step_name canvas_variation_api_id canvas_variation_id canvas_variation_name external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="exit-perform-event-events">Exit Perform Event events</h2>
 
 <div class="api_tags" data-tags="Exit, Canvas" data-tags-lower="exit, canvas"></div>
@@ -3351,7 +3351,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_ditvtcogiyrf' class='api_div' data-search-keywords='experiment step conversion events canvas, conversion app_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name conversion_behavior conversion_behavior_index experiment_split_id experiment_split_name experiment_step_id external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_uhtywgycuyht' class='api_div' data-search-keywords='experiment step conversion events canvas, conversion app_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name conversion_behavior conversion_behavior_index experiment_split_id experiment_split_name experiment_step_id external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="experiment-step-conversion-events">Experiment Step Conversion events</h2>
 
 <div class="api_tags" data-tags="Canvas, Conversion" data-tags-lower="canvas, conversion"></div>
@@ -3684,7 +3684,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_njjqnitfopth' class='api_div' data-search-keywords='experiment split entry events canvas, entry canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name experiment_split_id experiment_split_name experiment_step_id external_user_id id in_control_group time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_jtoxeyexiplo' class='api_div' data-search-keywords='experiment split entry events canvas, entry canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name experiment_split_id experiment_split_name experiment_step_id external_user_id id in_control_group time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="experiment-split-entry-events">Experiment Split Entry events</h2>
 
 <div class="api_tags" data-tags="Canvas, Entry" data-tags-lower="canvas, entry"></div>
@@ -3995,7 +3995,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_gxziirivwzit' class='api_div' data-search-keywords='canvas step progression events canvas, progression app_group_id canvas_entry_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id exit_reason external_user_id id is_canvas_entry next_step_id progression_type time user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_jdvtslrtvwhm' class='api_div' data-search-keywords='canvas step progression events canvas, progression app_group_id canvas_entry_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id exit_reason external_user_id id is_canvas_entry next_step_id progression_type time user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="canvas-step-progression-events">Canvas Step Progression events</h2>
 
 <div class="api_tags" data-tags="Canvas, Progression" data-tags-lower="canvas, progression"></div>
@@ -4346,7 +4346,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_tipwzuuqqfog' class='api_div' data-search-keywords='banner abort events banner, abort abort_log abort_type ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
+<div id='api_bsbqaasrssxp' class='api_div' data-search-keywords='banner abort events banner, abort abort_log abort_type ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
 <h2 id="banner-abort-events">Banner Abort events</h2>
 
 <div class="api_tags" data-tags="Banner, Abort" data-tags-lower="banner, abort"></div>
@@ -4849,17 +4849,17 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/#abort-types">Abort types</a>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#abort-types">Abort types</a>.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_type</code> will be <code class="language-plaintext highlighter-rouge">frequency_capped</code> if the message was aborted due to a global frequency cap rule.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_log</code> includes information about the specific rule that triggered the abort. An example is: <code class="language-plaintext highlighter-rouge">Frequency cap rule: 5 Banner messages every 1 week</code></li>
 </ul>
 
 </div>
 
-<div id='api_axxwjhihhqqz' class='api_div' data-search-keywords='banner click events banner, clicks ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser button_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
+<div id='api_ayabslcznbss' class='api_div' data-search-keywords='banner click events banner, clicks ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser button_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
 <h2 id="banner-click-events">Banner Click events</h2>
 
 <div class="api_tags" data-tags="Banner, Clicks" data-tags-lower="banner, clicks"></div>
@@ -5352,7 +5352,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_gcllspolvrew' class='api_div' data-search-keywords='banner dismissal events banner, dismissal ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser button_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties braze_user_id canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
+<div id='api_rrxzxcetusle' class='api_div' data-search-keywords='banner dismissal events banner, dismissal ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser button_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties braze_user_id canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
 <h2 id="banner-dismissal-events">Banner Dismissal events</h2>
 
 <div class="api_tags" data-tags="Banner, Dismissal" data-tags-lower="banner, dismissal"></div>
@@ -5923,7 +5923,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_tnptjqfdjiyk' class='api_div' data-search-keywords='banner impression events banner, impressions ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
+<div id='api_amgikvekzamy' class='api_div' data-search-keywords='banner impression events banner, impressions ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
 <h2 id="banner-impression-events">Banner Impression events</h2>
 
 <div class="api_tags" data-tags="Banner, Impressions" data-tags-lower="banner, impressions"></div>
@@ -6404,7 +6404,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_dstkoqqjdmig' class='api_div' data-search-keywords='content card abort events abort, content cards abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_zqkqvbzjwaon' class='api_div' data-search-keywords='content card abort events abort, content cards abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="content-card-abort-events">Content Card Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Content Cards" data-tags-lower="abort, content cards"></div>
@@ -6795,18 +6795,18 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
-  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/#abort-types">Abort types</a>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#abort-types">Abort types</a>.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_type</code> will be <code class="language-plaintext highlighter-rouge">frequency_capped</code> if the message was aborted due to a global frequency cap rule.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_log</code> includes information about the specific rule that triggered the abort. An example is: <code class="language-plaintext highlighter-rouge">Frequency cap rule: 5 Content Card messages every 1 week</code></li>
 </ul>
 
 </div>
 
-<div id='api_xxdfbykbghfe' class='api_div' data-search-keywords='content card click events content cards, clicks ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id device_model external_user_id id message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties card_id dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_wvylzneljmfd' class='api_div' data-search-keywords='content card click events content cards, clicks ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id device_model external_user_id id message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties card_id dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="content-card-click-events">Content Card Click events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Clicks" data-tags-lower="content cards, clicks"></div>
@@ -7271,16 +7271,16 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
-  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
+  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration?sdktab=android#android_google-advertising-id">Android</a>.</li>
+  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
 
 </div>
 
-<div id='api_keokarenruwc' class='api_div' data-search-keywords='content card dismiss events content cards, dismissal ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id device_model external_user_id id message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties card_id dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_utqwgcstxaae' class='api_div' data-search-keywords='content card dismiss events content cards, dismissal ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id device_model external_user_id id message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties card_id dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="content-card-dismiss-events">Content Card Dismiss events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Dismissal" data-tags-lower="content cards, dismissal"></div>
@@ -7745,16 +7745,16 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
-  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
+  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration?sdktab=android#android_google-advertising-id">Android</a>.</li>
+  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
 
 </div>
 
-<div id='api_nynqywbgieje' class='api_div' data-search-keywords='content card impression events content cards, impressions ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id device_model external_user_id id message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties card_id dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_godljaqwyygs' class='api_div' data-search-keywords='content card impression events content cards, impressions ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id device_model external_user_id id message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties card_id dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="content-card-impression-events">Content Card Impression events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Impressions" data-tags-lower="content cards, impressions"></div>
@@ -8219,16 +8219,16 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
-  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
+  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration?sdktab=android#android_google-advertising-id">Android</a>.</li>
+  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
 
 </div>
 
-<div id='api_mdeejytyzltc' class='api_div' data-search-keywords='content card send events content cards, sends app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id external_user_id id message_extras message_variation_id message_variation_name send_id time timezone user_id event_properties card_id dispatch_id event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_cslrkuroqair' class='api_div' data-search-keywords='content card send events content cards, sends app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id external_user_id id message_extras message_variation_id message_variation_name send_id time timezone user_id event_properties card_id dispatch_id event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="content-card-send-events">Content Card Send events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Sends" data-tags-lower="content cards, sends"></div>
@@ -8615,15 +8615,15 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">message_extras</code> allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language or country), and Canvas entry properties. Refer to <a href="/docs/message_extras_tag/">Message extras</a> to learn more.</li>
+  <li><code class="language-plaintext highlighter-rouge">message_extras</code> allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language or country), and Canvas entry properties. Refer to <a href="/docs/message_extras_tag">Message extras</a> to learn more.</li>
 </ul>
 
 </div>
 
-<div id='api_ilbifefrqrup' class='api_div' data-search-keywords='email abort events abort, email abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id email_address external_user_id id ip_pool message_variation_id message_variation_name send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_ndxuxexbmyjt' class='api_div' data-search-keywords='email abort events abort, email abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id email_address external_user_id id ip_pool message_variation_id message_variation_name send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-abort-events">Email Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Email" data-tags-lower="abort, email"></div>
@@ -9040,18 +9040,18 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
-  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/#abort-types">Abort types</a>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#abort-types">Abort types</a>.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_type</code> will be <code class="language-plaintext highlighter-rouge">frequency_capped</code> if the message was aborted due to a global frequency cap rule.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_log</code> includes information about the specific rule that triggered the abort. An example is: <code class="language-plaintext highlighter-rouge">Frequency cap rule: 5 email messages every 1 week</code></li>
 </ul>
 
 </div>
 
-<div id='api_gbvibtlaobjz' class='api_div' data-search-keywords='email bounce events email, bounce app_group_id bounce_reason campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool is_drop message_variation_id message_variation_name send_id sending_ip time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_hmproadckcfl' class='api_div' data-search-keywords='email bounce events email, bounce app_group_id bounce_reason campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool is_drop message_variation_id message_variation_name send_id sending_ip time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-bounce-events">Email Bounce events</h2>
 
 <div class="api_tags" data-tags="Email, Bounce" data-tags-lower="email, bounce"></div>
@@ -9492,19 +9492,19 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
     <ul>
-      <li>The behavior for <code class="language-plaintext highlighter-rouge">dispatch_id</code> differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. For more information, see <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">Dispatch ID behavior</a>.</li>
+      <li>The behavior for <code class="language-plaintext highlighter-rouge">dispatch_id</code> differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. For more information, see <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id">Dispatch ID behavior</a>.</li>
     </ul>
   </li>
 </ul>
 
 </div>
 
-<div id='api_kyvsjqilsejk' class='api_div' data-search-keywords='email click events email, clicks app_group_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_class device_model device_os dispatch_id email_address esp external_user_id from_domain id ip_pool is_amp is_suspected_bot_click link_alias link_id mailbox_provider message_variation_id message_variation_name send_id suspected_bot_click_reason time timezone url user_agent user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device model traits link_url timestamp type asset_id asset_type click_id email_sha256 event_id event_time'>
+<div id='api_eflbbkfniipm' class='api_div' data-search-keywords='email click events email, clicks app_group_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_class device_model device_os dispatch_id email_address esp external_user_id from_domain id ip_pool is_amp is_suspected_bot_click link_alias link_id mailbox_provider message_variation_id message_variation_name send_id suspected_bot_click_reason time timezone url user_agent user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device model traits link_url timestamp type asset_id asset_type click_id click_id_type email_sha256 event_id event_time'>
 <h2 id="email-click-events">Email Click events</h2>
 
 <div class="api_tags" data-tags="Email, Clicks" data-tags-lower="email, clicks"></div>
@@ -10076,6 +10076,7 @@ Certain events return a `platform` value that specifies the platform of the user
 13
 14
 15
+16
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Click</span><span class="w"> </span><span class="err">(users.messages.email.Click)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -10084,6 +10085,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"click_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Unique ID for the link which was clicked, as created by Braze"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"click_id_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) The click identifier type; indicates the source query parameter name for click_id"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"email_sha256"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) SHA-256 hash of the normalized email address; only present for email events"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"event_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
@@ -10093,19 +10095,19 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
     <ul>
-      <li>The behavior for <code class="language-plaintext highlighter-rouge">dispatch_id</code> differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. For more information, see <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">Dispatch ID behavior</a>.</li>
+      <li>The behavior for <code class="language-plaintext highlighter-rouge">dispatch_id</code> differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. For more information, see <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id">Dispatch ID behavior</a>.</li>
     </ul>
   </li>
 </ul>
 
 </div>
 
-<div id='api_uvkfospxbouo' class='api_div' data-search-keywords='email deferral events email, deferral app_group_id attempt_count campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name deferral_reason dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name recipient_domain send_id sending_ip time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_pktxzekjuhcn' class='api_div' data-search-keywords='email deferral events email, deferral app_group_id attempt_count campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name deferral_reason dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name recipient_domain send_id sending_ip time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-deferral-events">Email Deferral events</h2>
 
 <div class="api_tags" data-tags="Email, Deferral" data-tags-lower="email, deferral"></div>
@@ -10548,7 +10550,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
@@ -10560,7 +10562,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_rfmdakpdpjuh' class='api_div' data-search-keywords='email delivery events email, delivery app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name send_id sending_ip time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_kbtknypvcrje' class='api_div' data-search-keywords='email delivery events email, delivery app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name send_id sending_ip time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-delivery-events">Email Delivery events</h2>
 
 <div class="api_tags" data-tags="Email, Delivery" data-tags-lower="email, delivery"></div>
@@ -10977,7 +10979,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
@@ -10989,7 +10991,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_gqexwtjbpcxm' class='api_div' data-search-keywords='email mark as spam events email, spam app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name send_id time timezone user_agent user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_gqsqekvjbrpv' class='api_div' data-search-keywords='email mark as spam events email, spam app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name send_id time timezone user_agent user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-mark-as-spam-events">Email Mark As Spam events</h2>
 
 <div class="api_tags" data-tags="Email, Spam" data-tags-lower="email, spam"></div>
@@ -11414,7 +11416,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
@@ -11426,7 +11428,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_ggaoeqqegtje' class='api_div' data-search-keywords='email open events email, opens app_group_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_class device_model device_os dispatch_id email_address esp external_user_id from_domain id ip_pool is_amp machine_open mailbox_provider message_variation_id message_variation_name send_id time timezone user_agent user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device model traits timestamp type asset_id asset_type email_sha256 event_id event_time'>
+<div id='api_uaevnckbtsbz' class='api_div' data-search-keywords='email open events email, opens app_group_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_class device_model device_os dispatch_id email_address esp external_user_id from_domain id ip_pool is_amp machine_open mailbox_provider message_variation_id message_variation_name send_id time timezone user_agent user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device model traits timestamp type asset_id asset_type email_sha256 event_id event_time'>
 <h2 id="email-open-events">Email Open events</h2>
 
 <div class="api_tags" data-tags="Email, Opens" data-tags-lower="email, opens"></div>
@@ -11971,7 +11973,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
@@ -11983,7 +11985,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_wmyfvmyctwuu' class='api_div' data-search-keywords='email retry events email, retry app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name country device_id dispatch_id email_address external_user_id gender id ip_pool language message_variation_id message_variation_name retry_log retry_type send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_fvivexmzhcvx' class='api_div' data-search-keywords='email retry events email, retry app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name country device_id dispatch_id email_address external_user_id gender id ip_pool language message_variation_id message_variation_name retry_log retry_type send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-retry-events">Email Retry events</h2>
 
 <div class="api_tags" data-tags="Email, Retry" data-tags-lower="email, retry"></div>
@@ -12410,7 +12412,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_qsdlqbfijlaw' class='api_div' data-search-keywords='email send events email, sends app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address external_user_id id ip_pool message_extras message_variation_id message_variation_name send_id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes esp from_domain source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type asset_id asset_type email_sha256 event_id event_time'>
+<div id='api_ceehkiyetjqr' class='api_div' data-search-keywords='email send events email, sends app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address external_user_id from_domain id ip_pool message_extras message_variation_id message_variation_name send_id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes esp source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type asset_id asset_type email_sha256 event_id event_time'>
 <h2 id="email-send-events">Email Send events</h2>
 
 <div class="api_tags" data-tags="Email, Sends" data-tags-lower="email, sends"></div>
@@ -12442,6 +12444,7 @@ Certain events return a `platform` value that specifies the platform of the user
 23
 24
 25
+26
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Send</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -12457,6 +12460,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
@@ -12849,20 +12853,20 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
     <ul>
-      <li>The behavior for <code class="language-plaintext highlighter-rouge">dispatch_id</code> differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. For more information, see <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">Dispatch ID behavior</a>.</li>
+      <li>The behavior for <code class="language-plaintext highlighter-rouge">dispatch_id</code> differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. For more information, see <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id">Dispatch ID behavior</a>.</li>
     </ul>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">message_extras</code> allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to <a href="/docs/message_extras_tag/">Message extras</a> to learn more.</li>
+  <li><code class="language-plaintext highlighter-rouge">message_extras</code> allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to <a href="/docs/message_extras_tag">Message extras</a> to learn more.</li>
 </ul>
 
 </div>
 
-<div id='api_kkfdtmvxdhik' class='api_div' data-search-keywords='email soft bounce events email, bounce app_group_id bounce_reason campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name send_id sending_ip time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_twaushkkmqlf' class='api_div' data-search-keywords='email soft bounce events email, bounce app_group_id bounce_reason campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name send_id sending_ip time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-soft-bounce-events">Email Soft Bounce events</h2>
 
 <div class="api_tags" data-tags="Email, Bounce" data-tags-lower="email, bounce"></div>
@@ -13291,19 +13295,19 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
     <ul>
-      <li>The behavior for <code class="language-plaintext highlighter-rouge">dispatch_id</code> differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. For more information, see <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">Dispatch ID behavior</a>.</li>
+      <li>The behavior for <code class="language-plaintext highlighter-rouge">dispatch_id</code> differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. For more information, see <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id">Dispatch ID behavior</a>.</li>
     </ul>
   </li>
 </ul>
 
 </div>
 
-<div id='api_cdzzztvzzfoa' class='api_div' data-search-keywords='email unsubscribe events email, subscription app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address external_user_id id ip_pool message_variation_id message_variation_name send_id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_dmctcwkiughz' class='api_div' data-search-keywords='email unsubscribe events email, subscription app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address external_user_id id ip_pool message_variation_id message_variation_name send_id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-unsubscribe-events">Email Unsubscribe events</h2>
 
 <div class="api_tags" data-tags="Email, Subscription" data-tags-lower="email, subscription"></div>
@@ -13312,7 +13316,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 <p><strong>Important:</strong></p>
 
-<p>The <code class="language-plaintext highlighter-rouge">Unsubscribe</code> event is considered a specialized click event that is fired when your user clicks the unsubscribe link in the email (either a normal unsubscribe link within the email body or footer, or using the <a href="/docs/user_guide/administer/global/workspace_settings/email_preferences/#list-unsubscribe">list-unsubscribe header</a>), not when the user changes state to unsubscribed. If subscription state change is sent through the API, or with a custom (non-Braze) unsubscribe link, it does not trigger an email unsubscribe event on Currents.</p>
+<p>The <code class="language-plaintext highlighter-rouge">Unsubscribe</code> event is considered a specialized click event that is fired when your user clicks the unsubscribe link in the email (either a normal unsubscribe link within the email body or footer, or using the <a href="/docs/user_guide/administer/global/workspace_settings/email_preferences#list-unsubscribe">list-unsubscribe header</a>), not when the user changes state to unsubscribed. If subscription state change is sent through the API, or with a custom (non-Braze) unsubscribe link, it does not trigger an email unsubscribe event on Currents.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -13696,19 +13700,19 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
     <ul>
-      <li>The behavior for <code class="language-plaintext highlighter-rouge">dispatch_id</code> differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. For more information, see <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id/">Dispatch ID behavior</a>.</li>
+      <li>The behavior for <code class="language-plaintext highlighter-rouge">dispatch_id</code> differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. For more information, see <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id">Dispatch ID behavior</a>.</li>
     </ul>
   </li>
 </ul>
 
 </div>
 
-<div id='api_ujibzoqzpmpn' class='api_div' data-search-keywords='feature flag experiment impression events feature flags, impressions app_group_id app_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id feature_flag_id_name gender id language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_majhpysakfzx' class='api_div' data-search-keywords='feature flag experiment impression events feature flags, impressions app_group_id app_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id feature_flag_id_name gender id language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="feature-flag-experiment-impression-events">Feature Flag Experiment Impression events</h2>
 
 <div class="api_tags" data-tags="Feature Flags, Impressions" data-tags-lower="feature flags, impressions"></div>
@@ -14139,7 +14143,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_niombzlhikhd' class='api_div' data-search-keywords='in-app message abort events in-app messages, abort abort_log abort_type ad_id ad_id_type ad_tracking_enabled app_group_id app_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name card_id carrier device_id device_model dispatch_id external_user_id id message_variation_id message_variation_name os_version platform resolution send_id time timezone user_id version adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_mkcwmtvoginy' class='api_div' data-search-keywords='in-app message abort events in-app messages, abort abort_log abort_type ad_id ad_id_type ad_tracking_enabled app_group_id app_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name card_id carrier device_id device_model dispatch_id external_user_id id message_variation_id message_variation_name os_version platform resolution send_id time timezone user_id version adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="in-app-message-abort-events">In-App Message Abort events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Abort" data-tags-lower="in-app messages, abort"></div>
@@ -14636,17 +14640,17 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/#abort-types">Abort types</a>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#abort-types">Abort types</a>.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_type</code> will be <code class="language-plaintext highlighter-rouge">frequency_capped</code> if the message was aborted due to a global frequency cap rule.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_log</code> includes information about the specific rule that triggered the abort. An example is: <code class="language-plaintext highlighter-rouge">Frequency cap rule: 5 in-app messages every 1 week</code></li>
 </ul>
 
 </div>
 
-<div id='api_awyatzvdrcor' class='api_div' data-search-keywords='in-app message click events in-app messages, clicks ad_id ad_id_type ad_tracking_enabled app_group_id app_id button_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name card_id device_id device_model external_user_id id message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_wzlgwullowlp' class='api_div' data-search-keywords='in-app message click events in-app messages, clicks ad_id ad_id_type ad_tracking_enabled app_group_id app_id button_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name card_id device_id device_model external_user_id id message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="in-app-message-click-events">In-App Message Click events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Clicks" data-tags-lower="in-app messages, clicks"></div>
@@ -15127,16 +15131,16 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
-  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
+  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration?sdktab=android#android_google-advertising-id">Android</a>.</li>
+  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
 
 </div>
 
-<div id='api_gaxkpemyytvb' class='api_div' data-search-keywords='in-app message impression events in-app messages, impressions ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name card_id device_id device_model external_user_id id locale_key message_extras message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_oaaarxwjyptn' class='api_div' data-search-keywords='in-app message impression events in-app messages, impressions ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name card_id device_id device_model external_user_id id locale_key message_extras message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="in-app-message-impression-events">In-App Message Impression events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Impressions" data-tags-lower="in-app messages, impressions"></div>
@@ -15629,16 +15633,16 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
-  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
+  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration?sdktab=android#android_google-advertising-id">Android</a>.</li>
+  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
 </ul>
 
 </div>
 
-<div id='api_edbmdnzlujtu' class='api_div' data-search-keywords='line abort events line, abort abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name message_variation_id native_line_id send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_qthznvvmuvxc' class='api_div' data-search-keywords='line abort events line, abort abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name message_variation_id native_line_id send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="line-abort-events">LINE Abort events</h2>
 
 <div class="api_tags" data-tags="LINE, Abort" data-tags-lower="line, abort"></div>
@@ -16043,18 +16047,18 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
-  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/#abort-types">Abort types</a>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#abort-types">Abort types</a>.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_type</code> will be <code class="language-plaintext highlighter-rouge">frequency_capped</code> if the message was aborted due to a global frequency cap rule.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_log</code> includes information about the specific rule that triggered the abort. An example is: <code class="language-plaintext highlighter-rouge">Frequency cap rule: 5 LINE messages every 1 week</code></li>
 </ul>
 
 </div>
 
-<div id='api_wsyfwsswttnx' class='api_div' data-search-keywords='line click events line, clicks app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id is_suspected_bot_click line_channel_id line_channel_name message_variation_id native_line_id send_id short_url subscription_group_id time timezone url user_agent user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_mrjonwigmldd' class='api_div' data-search-keywords='line click events line, clicks app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id is_suspected_bot_click line_channel_id line_channel_name message_variation_id native_line_id send_id short_url subscription_group_id time timezone url user_agent user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="line-click-events">LINE Click events</h2>
 
 <div class="api_tags" data-tags="LINE, Clicks" data-tags-lower="line, clicks"></div>
@@ -16481,7 +16485,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
@@ -16489,7 +16493,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_nfswsvljfebm' class='api_div' data-search-keywords='line inbound receive events line, inbound received app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name media_id message_body message_variation_id native_line_id send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_escxvkkwslio' class='api_div' data-search-keywords='line inbound receive events line, inbound received app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name media_id message_body message_variation_id native_line_id send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="line-inbound-receive-events">LINE Inbound Receive events</h2>
 
 <div class="api_tags" data-tags="LINE, Inbound Received" data-tags-lower="line, inbound received"></div>
@@ -16894,7 +16898,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
@@ -16902,7 +16906,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_nbkktvswirjq' class='api_div' data-search-keywords='line retry events line, retry app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name message_variation_id native_line_id retry_log retry_type send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_kmoipqqmqxam' class='api_div' data-search-keywords='line retry events line, retry app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name message_variation_id native_line_id retry_log retry_type send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="line-retry-events">LINE Retry events</h2>
 
 <div class="api_tags" data-tags="LINE, Retry" data-tags-lower="line, retry"></div>
@@ -17309,7 +17313,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_fsvkawdxxwzr' class='api_div' data-search-keywords='line send events line, sends app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name message_extras message_variation_id native_line_id send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_hfyaahhdwqdv' class='api_div' data-search-keywords='line send events line, sends app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name message_extras message_variation_id native_line_id send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="line-send-events">LINE Send events</h2>
 
 <div class="api_tags" data-tags="LINE, Sends" data-tags-lower="line, sends"></div>
@@ -17702,7 +17706,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
@@ -17710,7 +17714,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_lrwkyfpnfddp' class='api_div' data-search-keywords='live activity outcome events live activity, outcome activity_attributes_type activity_id app_group_id app_id external_user_id id live_activity_event_outcome live_activity_event_type push_to_start_token time update_token user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_pmrpceobfjec' class='api_div' data-search-keywords='live activity outcome events live activity, outcome activity_attributes_type activity_id app_group_id app_id external_user_id id live_activity_event_outcome live_activity_event_type push_to_start_token time update_token user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="live-activity-outcome-events">Live Activity Outcome events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Outcome" data-tags-lower="live activity, outcome"></div>
@@ -17997,7 +18001,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_xrffywtrnfzh' class='api_div' data-search-keywords='live activity send events live activity, sends activity_attributes_type activity_id app_group_id app_id external_user_id id live_activity_event_type push_to_start_token time update_token user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_nxefphhxrjan' class='api_div' data-search-keywords='live activity send events live activity, sends activity_attributes_type activity_id app_group_id app_id external_user_id id live_activity_event_type push_to_start_token time update_token user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="live-activity-send-events">Live Activity Send events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Sends" data-tags-lower="live activity, sends"></div>
@@ -18272,7 +18276,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_oiimtutxpezb' class='api_div' data-search-keywords='push notification abort events abort, push abort_log abort_type app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name platform send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_qgwpclcohjda' class='api_div' data-search-keywords='push notification abort events abort, push abort_log abort_type app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name platform send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="push-notification-abort-events">Push Notification Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Push" data-tags-lower="abort, push"></div>
@@ -18687,18 +18691,18 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
-  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/#abort-types">Abort types</a>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#abort-types">Abort types</a>.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_type</code> will be <code class="language-plaintext highlighter-rouge">frequency_capped</code> if the message was aborted due to a global frequency cap rule.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_log</code> includes information about the specific rule that triggered the abort. An example is: <code class="language-plaintext highlighter-rouge">Frequency cap rule: 5 push messages every 1 week</code></li>
 </ul>
 
 </div>
 
-<div id='api_lnduuvixfjoh' class='api_div' data-search-keywords='push notification bounce events push, bounce ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name platform push_token send_id time timezone user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_csljwhuccnmf' class='api_div' data-search-keywords='push notification bounce events push, bounce ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name platform push_token send_id time timezone user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="push-notification-bounce-events">Push Notification Bounce events</h2>
 
 <div class="api_tags" data-tags="Push, Bounce" data-tags-lower="push, bounce"></div>
@@ -19143,16 +19147,16 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager or account manager to enable the feature flipper for sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
+  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> data, contact your customer success manager or account manager to enable the feature flipper for sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
 </ul>
 
 </div>
 
-<div id='api_rzycnqvbegml' class='api_div' data-search-keywords='push notification ios foreground open events push, ios, opens ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name platform send_id time timezone user_id adid event_properties device_model os_version event_type idfa insert_id library properties user event distinct_id token context device model type traits timestamp'>
+<div id='api_wdizdhdgnloh' class='api_div' data-search-keywords='push notification ios foreground open events push, ios, opens ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name platform send_id time timezone user_id adid event_properties device_model os_version event_type idfa insert_id library properties user event distinct_id token context device model type traits timestamp'>
 <h2 id="push-notification-ios-foreground-open-events">Push Notification iOS Foreground Open events</h2>
 
 <div class="api_tags" data-tags="Push, iOS, Opens" data-tags-lower="push, ios, opens"></div>
@@ -19503,17 +19507,17 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
-  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
+  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration?sdktab=android#android_google-advertising-id">Android</a>.</li>
+  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
 </ul>
 
 </div>
 
-<div id='api_jrneausjejpq' class='api_div' data-search-keywords='push notification open events push, opens ad_id ad_id_type ad_tracking_enabled app_group_id app_id button_action_type button_string campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id device_model dispatch_id external_user_id id message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_zormudnvdmld' class='api_div' data-search-keywords='push notification open events push, opens ad_id ad_id_type ad_tracking_enabled app_group_id app_id button_action_type button_string campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id device_model dispatch_id external_user_id id message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="push-notification-open-events">Push Notification Open events</h2>
 
 <div class="api_tags" data-tags="Push, Opens" data-tags-lower="push, opens"></div>
@@ -19986,17 +19990,17 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
-  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
+  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration?sdktab=android#android_google-advertising-id">Android</a>.</li>
+  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
 </ul>
 
 </div>
 
-<div id='api_tjztkbcefzjl' class='api_div' data-search-keywords='push notification retry events push, retry app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name country device_id dispatch_id external_user_id gender id language message_variation_id message_variation_name platform retry_log retry_type send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_fzgqbewrbzsv' class='api_div' data-search-keywords='push notification retry events push, retry app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name country device_id dispatch_id external_user_id gender id language message_variation_id message_variation_name platform retry_log retry_type send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="push-notification-retry-events">Push Notification Retry events</h2>
 
 <div class="api_tags" data-tags="Push, Retry" data-tags-lower="push, retry"></div>
@@ -20419,7 +20423,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_uojvjeoydrda' class='api_div' data-search-keywords='push notification send events push, sends ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id locale_key message_extras message_variation_id message_variation_name platform push_token send_id time timezone user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_nujzjhyyyiap' class='api_div' data-search-keywords='push notification send events push, sends ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id locale_key message_extras message_variation_id message_variation_name platform push_token send_id time timezone user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="push-notification-send-events">Push Notification Send events</h2>
 
 <div class="api_tags" data-tags="Push, Sends" data-tags-lower="push, sends"></div>
@@ -20888,18 +20892,18 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id">Android</a>.</li>
-  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
-  <li><code class="language-plaintext highlighter-rouge">message_extras</code> allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to <a href="/docs/message_extras_tag/">Message extras</a> to learn more.</li>
+  <li>For <code class="language-plaintext highlighter-rouge">ad_id</code>, <code class="language-plaintext highlighter-rouge">ad_id_type</code>, and <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for <a href="/docs/developer_guide/analytics/managing_data_collection?sdktab=swift">iOS</a> and <a href="/docs/developer_guide/sdk_integration?sdktab=android#android_google-advertising-id">Android</a>.</li>
+  <li>If you’re using Kafka to ingest <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> data, contact your customer success manager to enable sending <code class="language-plaintext highlighter-rouge">ad_id</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">message_extras</code> allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to <a href="/docs/message_extras_tag">Message extras</a> to learn more.</li>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
 </ul>
 
 </div>
 
-<div id='api_mcybwoinwtef' class='api_div' data-search-keywords='rcs abort events rcs, abort abort_log abort_type app_group_id campaign_id campaign_name canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_variation_id message_variation_name subscription_group_id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_neyvvvvpqiqe' class='api_div' data-search-keywords='rcs abort events rcs, abort abort_log abort_type app_group_id campaign_id campaign_name canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_variation_id message_variation_name subscription_group_id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="rcs-abort-events">RCS Abort events</h2>
 
 <div class="api_tags" data-tags="RCS, Abort" data-tags-lower="rcs, abort"></div>
@@ -21246,17 +21250,17 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/#abort-types">Abort types</a>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#abort-types">Abort types</a>.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_type</code> will be <code class="language-plaintext highlighter-rouge">frequency_capped</code> if the message was aborted due to a global frequency cap rule.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_log</code> includes information about the specific rule that triggered the abort. An example is: <code class="language-plaintext highlighter-rouge">Frequency cap rule: 5 RCS messages every 1 week</code></li>
 </ul>
 
 </div>
 
-<div id='api_rlwvzexiydvf' class='api_div' data-search-keywords='rcs click events rcs, clicks app_group_id campaign_id campaign_name canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id element_label element_type external_user_id id interaction_type is_suspected_bot_click message_variation_id message_variation_name send_id short_url subscription_group_id suspected_bot_click_reason time url user_agent user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_qpumndleybrg' class='api_div' data-search-keywords='rcs click events rcs, clicks app_group_id campaign_id campaign_name canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id element_label element_type external_user_id id interaction_type is_suspected_bot_click message_variation_id message_variation_name send_id short_url subscription_group_id suspected_bot_click_reason time url user_agent user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="rcs-click-events">RCS Click events</h2>
 
 <div class="api_tags" data-tags="RCS, Clicks" data-tags-lower="rcs, clicks"></div>
@@ -21717,7 +21721,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_cyygarduivql' class='api_div' data-search-keywords='rcs delivery events rcs, delivery app_group_id campaign_id campaign_name canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id from_rcs_sender id message_variation_id message_variation_name send_id subscription_group_id time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_sedkorcfgyyx' class='api_div' data-search-keywords='rcs delivery events rcs, delivery app_group_id campaign_id campaign_name canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id from_rcs_sender id message_variation_id message_variation_name send_id subscription_group_id time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="rcs-delivery-events">RCS Delivery events</h2>
 
 <div class="api_tags" data-tags="RCS, Delivery" data-tags-lower="rcs, delivery"></div>
@@ -22108,7 +22112,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
@@ -22116,7 +22120,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_kpuxmymzoocs' class='api_div' data-search-keywords='rcs inbound received events rcs, inbound received action app_group_id campaign_id campaign_name canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id media_urls message_body message_variation_id message_variation_name send_id subscription_group_id time to_rcs_sender user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_lkbrypcesnvd' class='api_div' data-search-keywords='rcs inbound received events rcs, inbound received action app_group_id campaign_id campaign_name canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id media_urls message_body message_variation_id message_variation_name send_id subscription_group_id time to_rcs_sender user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="rcs-inbound-received-events">RCS Inbound Received events</h2>
 
 <div class="api_tags" data-tags="RCS, Inbound Received" data-tags-lower="rcs, inbound received"></div>
@@ -22515,7 +22519,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_gekpmsbhylqo' class='api_div' data-search-keywords='rcs read events rcs, read app_group_id campaign_id campaign_name canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_variation_id message_variation_name time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_ckkbpgkyhyrf' class='api_div' data-search-keywords='rcs read events rcs, read app_group_id campaign_id campaign_name canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_variation_id message_variation_name time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="rcs-read-events">RCS Read events</h2>
 
 <div class="api_tags" data-tags="RCS, Read" data-tags-lower="rcs, read"></div>
@@ -22844,7 +22848,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_xgsifmxapuwz' class='api_div' data-search-keywords='rcs rejection events rcs, rejection app_group_id campaign_id campaign_name canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id error external_user_id from_rcs_sender id is_sms_fallback message_variation_id message_variation_name provider_error_code send_id subscription_group_id time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_sqepafklmzjo' class='api_div' data-search-keywords='rcs rejection events rcs, rejection app_group_id campaign_id campaign_name canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id error external_user_id from_rcs_sender id is_sms_fallback message_variation_id message_variation_name provider_error_code send_id subscription_group_id time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="rcs-rejection-events">RCS Rejection events</h2>
 
 <div class="api_tags" data-tags="RCS, Rejection" data-tags-lower="rcs, rejection"></div>
@@ -23273,7 +23277,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_gdptczyaoyws' class='api_div' data-search-keywords='rcs send events rcs, sends app_group_id campaign_id campaign_name canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name category device_id dispatch_id external_user_id from_rcs_sender id message_extras message_variation_id message_variation_name send_id subscription_group_id time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_dmcbkvfqgjsu' class='api_div' data-search-keywords='rcs send events rcs, sends app_group_id campaign_id campaign_name canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name category device_id dispatch_id external_user_id from_rcs_sender id message_extras message_variation_id message_variation_name send_id subscription_group_id time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="rcs-send-events">RCS Send events</h2>
 
 <div class="api_tags" data-tags="RCS, Sends" data-tags-lower="rcs, sends"></div>
@@ -23688,7 +23692,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
@@ -23696,7 +23700,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_sykrhksajecl' class='api_div' data-search-keywords='sms abort events abort, sms abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_variation_id message_variation_name subscription_group_id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_sgxqmodgqvxv' class='api_div' data-search-keywords='sms abort events abort, sms abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_variation_id message_variation_name subscription_group_id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="sms-abort-events">SMS Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, SMS" data-tags-lower="abort, sms"></div>
@@ -24055,17 +24059,17 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/#abort-types">Abort types</a>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#abort-types">Abort types</a>.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_type</code> will be <code class="language-plaintext highlighter-rouge">frequency_capped</code> if the message was aborted due to a global frequency cap rule.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_log</code> includes information about the specific rule that triggered the abort. An example is: <code class="language-plaintext highlighter-rouge">Frequency cap rule: 5 SMS messages every 1 week</code></li>
 </ul>
 
 </div>
 
-<div id='api_ewisnhzzpenh' class='api_div' data-search-keywords='sms carrier send events sms, sends app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id external_user_id from_phone_number id message_variation_id message_variation_name send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_folsiwwnwnxx' class='api_div' data-search-keywords='sms carrier send events sms, sends app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id external_user_id from_phone_number id message_variation_id message_variation_name send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="sms-carrier-send-events">SMS Carrier Send events</h2>
 
 <div class="api_tags" data-tags="SMS, Sends" data-tags-lower="sms, sends"></div>
@@ -24472,7 +24476,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
@@ -24480,7 +24484,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_nploabeqtzrf' class='api_div' data-search-keywords='sms delivery events sms, delivery app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id external_user_id from_phone_number id is_sms_fallback message_variation_id message_variation_name send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_tiwmoqbkskda' class='api_div' data-search-keywords='sms delivery events sms, delivery app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id external_user_id from_phone_number id is_sms_fallback message_variation_id message_variation_name send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="sms-delivery-events">SMS Delivery events</h2>
 
 <div class="api_tags" data-tags="SMS, Delivery" data-tags-lower="sms, delivery"></div>
@@ -24895,7 +24899,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
@@ -24903,7 +24907,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_vjmbyvqbalyv' class='api_div' data-search-keywords='sms delivery failure events sms, delivery, failure app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id error external_user_id id is_sms_fallback message_variation_id message_variation_name provider_error_code send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_xzfcqmkilsie' class='api_div' data-search-keywords='sms delivery failure events sms, delivery, failure app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id error external_user_id id is_sms_fallback message_variation_id message_variation_name provider_error_code send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="sms-delivery-failure-events">SMS Delivery Failure events</h2>
 
 <div class="api_tags" data-tags="SMS, Delivery, Failure" data-tags-lower="sms, delivery, failure"></div>
@@ -25330,7 +25334,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
@@ -25338,7 +25342,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_wdyeursteaqs' class='api_div' data-search-keywords='sms inbound received events sms, inbound received action app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id inbound_phone_number media_urls message_body message_variation_id message_variation_name subscription_group_id time user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_rmgydsbpuiyz' class='api_div' data-search-keywords='sms inbound received events sms, inbound received action app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id inbound_phone_number media_urls message_body message_variation_id message_variation_name subscription_group_id time user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="sms-inbound-received-events">SMS Inbound Received events</h2>
 
 <div class="api_tags" data-tags="SMS, Inbound Received" data-tags-lower="sms, inbound received"></div>
@@ -25739,7 +25743,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_rrggaczrlivp' class='api_div' data-search-keywords='sms rejection events sms, rejection app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id error external_user_id from_phone_number id is_sms_fallback message_variation_id message_variation_name provider_error_code send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_dskfyygpssmv' class='api_div' data-search-keywords='sms rejection events sms, rejection app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id error external_user_id from_phone_number id is_sms_fallback message_variation_id message_variation_name provider_error_code send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="sms-rejection-events">SMS Rejection events</h2>
 
 <div class="api_tags" data-tags="SMS, Rejection" data-tags-lower="sms, rejection"></div>
@@ -26182,7 +26186,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
@@ -26190,7 +26194,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_dxsvlncwqvhk' class='api_div' data-search-keywords='sms retry events sms, retry app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_variation_id message_variation_name retry_log retry_type subscription_group_id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_htiafjimsvsu' class='api_div' data-search-keywords='sms retry events sms, retry app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_variation_id message_variation_name retry_log retry_type subscription_group_id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="sms-retry-events">SMS Retry events</h2>
 
 <div class="api_tags" data-tags="SMS, Retry" data-tags-lower="sms, retry"></div>
@@ -26551,7 +26555,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_dpybxcxexchj' class='api_div' data-search-keywords='sms send events sms, sends app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name category dispatch_id external_user_id id message_extras message_variation_id message_variation_name send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type asset_id asset_type event_id event_time phone_sha256'>
+<div id='api_roxafnoxnhsn' class='api_div' data-search-keywords='sms send events sms, sends app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name category dispatch_id external_user_id id message_extras message_variation_id message_variation_name send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type asset_id asset_type event_id event_time phone_sha256'>
 <h2 id="sms-send-events">SMS Send events</h2>
 
 <div class="api_tags" data-tags="SMS, Sends" data-tags-lower="sms, sends"></div>
@@ -26996,16 +27000,16 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">message_extras</code> allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to <a href="/docs/message_extras_tag/">Message extras</a> to learn more.</li>
+  <li><code class="language-plaintext highlighter-rouge">message_extras</code> allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to <a href="/docs/message_extras_tag">Message extras</a> to learn more.</li>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
 </ul>
 
 </div>
 
-<div id='api_vtyeaofwcurq' class='api_div' data-search-keywords='sms short link click events sms, clicks app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id is_suspected_bot_click message_variation_id message_variation_name short_url suspected_bot_click_reason time timezone url user_agent user_id user_phone_number device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type asset_id asset_type event_id event_time phone_sha256'>
+<div id='api_srhjzbceasfl' class='api_div' data-search-keywords='sms short link click events sms, clicks app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id is_suspected_bot_click message_variation_id message_variation_name short_url suspected_bot_click_reason time timezone url user_agent user_id user_phone_number device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type asset_id asset_type event_id event_time phone_sha256'>
 <h2 id="sms-short-link-click-events">SMS Short Link Click events</h2>
 
 <div class="api_tags" data-tags="SMS, Clicks" data-tags-lower="sms, clicks"></div>
@@ -27450,7 +27454,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_zlbtvxukjrmh' class='api_div' data-search-keywords='webhook abort events abort, webhooks abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_rmpzsssjrrgx' class='api_div' data-search-keywords='webhook abort events abort, webhooks abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="webhook-abort-events">Webhook Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Webhooks" data-tags-lower="abort, webhooks"></div>
@@ -27841,18 +27845,18 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
-  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/#abort-types">Abort types</a>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#abort-types">Abort types</a>.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_type</code> will be <code class="language-plaintext highlighter-rouge">frequency_capped</code> if the message was aborted due to a global frequency cap rule.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_log</code> includes information about the specific rule that triggered the abort. An example is: <code class="language-plaintext highlighter-rouge">Frequency cap rule: 5 webhook messages every 1 week</code></li>
 </ul>
 
 </div>
 
-<div id='api_veokebqvvwqh' class='api_div' data-search-keywords='webhook failure events failure, webhooks app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name content_length dispatch_id endpoint_url external_user_id host http_status_code id is_terminal message_variation_id message_variation_name raw_response retry_count send_id time url_path user_id webhook_duration webhook_failure_source event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_kyvhcnyeergd' class='api_div' data-search-keywords='webhook failure events failure, webhooks app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name content_length dispatch_id endpoint_url external_user_id host http_status_code id is_terminal message_variation_id message_variation_name raw_response retry_count send_id time url_path user_id webhook_duration webhook_failure_source event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="webhook-failure-events">Webhook Failure events</h2>
 
 <div class="api_tags" data-tags="Failure, Webhooks" data-tags-lower="failure, webhooks"></div>
@@ -28319,7 +28323,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
@@ -28327,7 +28331,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_tcfcvkysiqiy' class='api_div' data-search-keywords='webhook retry events webhooks, retry app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name country device_id dispatch_id external_user_id gender id language message_variation_id message_variation_name retry_log retry_type send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_lsysbdbrbnyg' class='api_div' data-search-keywords='webhook retry events webhooks, retry app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name country device_id dispatch_id external_user_id gender id language message_variation_id message_variation_name retry_log retry_type send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="webhook-retry-events">Webhook Retry events</h2>
 
 <div class="api_tags" data-tags="Webhooks, Retry" data-tags-lower="webhooks, retry"></div>
@@ -28728,7 +28732,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_oeazqrywnzzi' class='api_div' data-search-keywords='webhook send events webhooks, sends app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id external_user_id id message_extras message_variation_id message_variation_name send_id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_pasuagtjtcnz' class='api_div' data-search-keywords='webhook send events webhooks, sends app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id external_user_id id message_extras message_variation_id message_variation_name send_id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="webhook-send-events">Webhook Send events</h2>
 
 <div class="api_tags" data-tags="Webhooks, Sends" data-tags-lower="webhooks, sends"></div>
@@ -29103,16 +29107,16 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">message_extras</code> allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language or country), and Canvas entry properties. Refer to <a href="/docs/message_extras_tag/">Message extras</a> to learn more.</li>
+  <li><code class="language-plaintext highlighter-rouge">message_extras</code> allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language or country), and Canvas entry properties. Refer to <a href="/docs/message_extras_tag">Message extras</a> to learn more.</li>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
 </ul>
 
 </div>
 
-<div id='api_iedhfeqnfuge' class='api_div' data-search-keywords='whatsapp abort events whatsapp, abort abort_log abort_type app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name subscription_group_id time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_knhwgfwczmzq' class='api_div' data-search-keywords='whatsapp abort events whatsapp, abort abort_log abort_type app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name subscription_group_id time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-abort-events">WhatsApp Abort events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Abort" data-tags-lower="whatsapp, abort"></div>
@@ -29531,18 +29535,18 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
-  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/#abort-types">Abort types</a>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#abort-types">Abort types</a>.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_type</code> will be <code class="language-plaintext highlighter-rouge">frequency_capped</code> if the message was aborted due to a global frequency cap rule.</li>
   <li><code class="language-plaintext highlighter-rouge">abort_log</code> includes information about the specific rule that triggered the abort. An example is: <code class="language-plaintext highlighter-rouge">Frequency cap rule: 5 WhatsApp messages every 1 week</code></li>
 </ul>
 
 </div>
 
-<div id='api_uybdtxlrigbk' class='api_div' data-search-keywords='whatsapp tracked link click events whatsapp, clicks app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id external_user_id id message_variation_id message_variation_name short_url time timezone url user_agent user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_euxuuzdhcmmq' class='api_div' data-search-keywords='whatsapp tracked link click events whatsapp, clicks app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id external_user_id id message_variation_id message_variation_name short_url time timezone url user_agent user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-tracked-link-click-events">WhatsApp Tracked Link Click events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Clicks" data-tags-lower="whatsapp, clicks"></div>
@@ -29939,7 +29943,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_glelnamtcwol' class='api_div' data-search-keywords='whatsapp delivery events whatsapp, delivery app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id flow_id from_phone_number id message_id message_variation_id message_variation_name send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_xattxwsczuvj' class='api_div' data-search-keywords='whatsapp delivery events whatsapp, delivery app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id flow_id from_phone_number id message_id message_variation_id message_variation_name send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-delivery-events">WhatsApp Delivery events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Delivery" data-tags-lower="whatsapp, delivery"></div>
@@ -30394,7 +30398,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
@@ -30402,7 +30406,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_rioeblhpvoga' class='api_div' data-search-keywords='whatsapp failure events whatsapp, failure app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id flow_id from_phone_number id message_id message_variation_id message_variation_name provider_error_code provider_error_title send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_pvemxoashpjt' class='api_div' data-search-keywords='whatsapp failure events whatsapp, failure app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id flow_id from_phone_number id message_id message_variation_id message_variation_name provider_error_code provider_error_title send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-failure-events">WhatsApp Failure events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Failure" data-tags-lower="whatsapp, failure"></div>
@@ -30881,7 +30885,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
@@ -30889,7 +30893,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_jdkokhyckjoe' class='api_div' data-search-keywords='whatsapp inbound received events whatsapp, inbound received action app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name catalog_id device_id external_user_id flow_id flow_response_json id in_reply_to inbound_phone_number media_urls message_body message_id message_variation_id message_variation_name product_id quick_reply_text subscription_group_id time timezone user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_uudleaqmztlu' class='api_div' data-search-keywords='whatsapp inbound received events whatsapp, inbound received action app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name catalog_id device_id external_user_id flow_id flow_response_json id in_reply_to inbound_phone_number media_urls message_body message_id message_variation_id message_variation_name product_id quick_reply_text subscription_group_id time timezone user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-inbound-received-events">WhatsApp Inbound Received events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Inbound Received" data-tags-lower="whatsapp, inbound received"></div>
@@ -31404,7 +31408,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_cwflifjcumja' class='api_div' data-search-keywords='whatsapp read events whatsapp, read app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id flow_id from_phone_number id message_id message_variation_id message_variation_name send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_udwlipkyfxtu' class='api_div' data-search-keywords='whatsapp read events whatsapp, read app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id flow_id from_phone_number id message_id message_variation_id message_variation_name send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-read-events">WhatsApp Read events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Read" data-tags-lower="whatsapp, read"></div>
@@ -31859,7 +31863,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
@@ -31867,7 +31871,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_henfcygunjgv' class='api_div' data-search-keywords='whatsapp retry events whatsapp, retry app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name retry_log retry_type subscription_group_id time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_wwwymkjtpfoa' class='api_div' data-search-keywords='whatsapp retry events whatsapp, retry app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name retry_log retry_type subscription_group_id time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-retry-events">WhatsApp Retry events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Retry" data-tags-lower="whatsapp, retry"></div>
@@ -32290,7 +32294,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_pkllhegvmfpa' class='api_div' data-search-keywords='whatsapp send events whatsapp, sends app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id flow_id from_phone_number id message_extras message_id message_variation_id message_variation_name send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties canvas_variation_name event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_qezteqzufmrw' class='api_div' data-search-keywords='whatsapp send events whatsapp, sends app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id flow_id from_phone_number id message_extras message_id message_variation_id message_variation_name send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties canvas_variation_name event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-send-events">WhatsApp Send events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Sends" data-tags-lower="whatsapp, sends"></div>
@@ -32755,7 +32759,7 @@ Certain events return a `platform` value that specifies the platform of the user
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h4 id="property-details">Property details</h4>
+<h3 id="property-details">Property details</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
@@ -32763,7 +32767,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_ewswrxdoqhbd' class='api_div' data-search-keywords='user profile update events profile app_group_id app_id archived country custom_attributes dob email_address external_user_id first_name gender home_city id language last_name phone_number time time_ms timezone update_source user_id'>
+<div id='api_gwtdbiuunmdc' class='api_div' data-search-keywords='user profile update events profile app_group_id app_id archived country custom_attributes dob email_address external_user_id first_name gender home_city id language last_name phone_number time time_ms timezone update_source user_id'>
 <h2 id="user-profile-update-events">User Profile Update events</h2>
 
 <div class="api_tags" data-tags="Profile" data-tags-lower="profile"></div>

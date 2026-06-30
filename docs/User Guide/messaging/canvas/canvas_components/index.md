@@ -18,4 +18,4 @@ When creating your user journeys, you may want to also test for the most effecti
 
 ### Integration
 
-Want to sync up with your brand's first-party user data? Leverage the available audience sync options for [Facebook](https://www.braze.com/docs/partners/canvas_audience_sync/facebook_audience_sync/) and [Google](https://www.braze.com/docs/partners/canvas_audience_sync/google_audience_sync/).
+Want to sync up with your brand's first-party user data? Leverage the available audience sync options for [Facebook](https://www.braze.com/docs/partners/canvas_audience_sync/facebook_audience_sync) and [Google](https://www.braze.com/docs/partners/canvas_audience_sync/google_audience_sync).

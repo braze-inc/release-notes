@@ -58,7 +58,7 @@ Although the drag-and-drop editor simplifies your workflow with these blocks, yo
 
 ### Rows
 
-**Rows** are structural units that define the horizontal composition of a section of the message by using columns. You can either empty rows or [Content Blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/content_blocks/). Using more than one column allows you to put different content elements side by side. This way, you can add all the structural elements you need to your message, regardless of the template you selected when you started.
+**Rows** are structural units that define the horizontal composition of a section of the message by using columns. You can either empty rows or [Content Blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/content_blocks). Using more than one column allows you to put different content elements side by side. This way, you can add all the structural elements you need to your message, regardless of the template you selected when you started.
 
 #### Nesting images inside text blocks
 
@@ -75,7 +75,7 @@ Not sure whether your email message should be sent using a campaign or a Canvas?
 **Note:**
 
 
-You can't save a drag-and-drop email from a campaign or Canvas directly to **Templates** > **Email Templates** as an email template. Build under **Templates** first, or see [Can I save my drag-and-drop email as a template after I build it within my campaign or Canvas?](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/faq/#can-i-save-my-drag-and-drop-email-as-a-template-after-i-build-it-within-my-campaign-or-canvas) for recreating a drag-and-drop template or exporting HTML with **Download file**.
+You can't save a drag-and-drop email from a campaign or Canvas directly to **Templates** > **Email Templates** as an email template. Build under **Templates** first, or see [Can I save my drag-and-drop email as a template after I build it within my campaign or Canvas?](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/faq#can-i-save-my-drag-and-drop-email-as-a-template-after-i-build-it-within-my-campaign-or-canvas) for recreating a drag-and-drop template or exporting HTML with **Download file**.
 
 
 
@@ -124,7 +124,7 @@ As you build your email, you can toggle between a desktop and mobile view to pre
 **Tip:**
 
 
-Need help creating awesome copy? Try using the [AI copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#generate-copy). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating awesome copy? Try using the [AI copywriting assistant](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#generate-copy). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Copywriter button, located in the Content panel next to Style Settings in the drag-and-drop editor.](https://www.braze.com/docs/assets/img/ai_copywriter/ai_copywriter_dnd.png?64a3974e5f4f563d832108315f669da0)
 
@@ -183,7 +183,7 @@ If the email looks different in the editor than in preview or test send, confirm
 
 
 
-Go to the **Preview and Test** section. Here, you have the option of previewing your email as a user or sending a test message. This section also includes [Inbox Vision](https://www.braze.com/docs/user_guide/channels/email/inbox_vision/), which allows you to check that your email has rendered correctly across different mobile and web clients.
+Go to the **Preview and Test** section. Here, you have the option of previewing your email as a user or sending a test message. This section also includes [Inbox Vision](https://www.braze.com/docs/user_guide/channels/email/inbox_vision), which allows you to check that your email has rendered correctly across different mobile and web clients.
 
 **Tip:**
 
@@ -221,9 +221,9 @@ Inbox Vision allows you to view your email campaigns from the perspective of ema
 
 It's important to test and check the finer details of your email message. For example, background images in email messaging may sometimes cause white lines or disconnects to appear between images, or clients such as Windows Outlook may not show background images. Using Inbox Vision can help identify these discrepancies between clients. In this scenario, set a fallback background color so that these images can render as expected.
 
-For more information, see [Send test messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=email).
+For more information, see [Send test messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages?tab=email).
 
-After using the drag-and-drop editor to design and create your email message, continue to [build](https://www.braze.com/docs/user_guide/channels/email/html_editor/#step-4-build-the-remainder-of-your-campaign-or-canvas) the remainder of your campaign or Canvas.
+After using the drag-and-drop editor to design and create your email message, continue to [build](https://www.braze.com/docs/user_guide/channels/email/html_editor#step-4-build-the-remainder-of-your-campaign-or-canvas) the remainder of your campaign or Canvas.
 
 **About the updated HTML engine**
 
@@ -235,7 +235,7 @@ Our average exported HTML data footprint size has been reduced, leading to faste
 HTML rendering has improved based on the following updates that minimize the number of conditional comments and CSS media queries. As a result, HTML files are smaller and more efficiently coded.
 - Migration from a `<div>` element-based design to a standard `<table aria-label="Use Inbox Vision">` formatted codebase
   <caption>Use Inbox Vision</caption>
-- [Editor blocks (email)](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks/?sdktab=email) have been re-coded for conciseness
+- [Editor blocks (email)](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks?sdktab=email) have been re-coded for conciseness
 - The final HTML code is compressed to remove whitespace between tags
 - Transparent dividers are automatically converted into content padding
 
@@ -248,7 +248,7 @@ As you continue building drag-and-drop emails, you can further customize each em
 **Tip:**
 
 
-You can create a custom theme for your drag-and-drop editor using [global style settings](https://www.braze.com/docs/user_guide/channels/email/customize/email_global_style_settings/).
+You can create a custom theme for your drag-and-drop editor using [global style settings](https://www.braze.com/docs/user_guide/channels/email/customize/email_global_style_settings).
 
 
 
@@ -295,7 +295,7 @@ Liquid personalization is not supported for image blocks and button link type fi
 
 #### Dynamic images
 
-You can choose to include dynamic images in your email messaging by including [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/#about-connected-content) or [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/) in your image source attribute. For example, instead of a static image, you can insert  `https://example.com/images/?imageBanner={{first_name}}`  as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
+You can choose to include dynamic images in your email messaging by including [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content#about-connected-content) or [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) in your image source attribute. For example, instead of a static image, you can insert  `https://example.com/images/?imageBanner={{first_name}}`  as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
 
 **Important:**
 
@@ -310,7 +310,7 @@ When composing your message, you can toggle the text direction between left-to-r
 
 ![Email drag-and-drop editor menu with button to toggle text alignment between right-to-left and left-to-right.](https://www.braze.com/docs/assets/img/dnd/dnd_template1.png?9e1ed3295461e5beff470ca6472573a9){: style="max-width:50%;"}
 
-The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages/).
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages).
 
 ### HTML
 
@@ -330,11 +330,11 @@ Another common use case is to flag specific links as universal links. Universal 
 * **SendGrid:** `universal = "true"`
 * **SparkPost:** `data-msys-sublink = "open-in-app"` (a [custom sub-path](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) must be configured)
 
-To set up universal links, refer to [Universal links and App Links](https://www.braze.com/docs/user_guide/channels/email/customize/universal_links_and_app_links/).
+To set up universal links, refer to [Universal links and App Links](https://www.braze.com/docs/user_guide/channels/email/customize/universal_links_and_app_links).
 
-Alternatively, you can integrate with one of our attribution partners, such as [Branch](https://www.braze.com/docs/partners/message_orchestration/deeplinking/branch_for_deeplinking/) or [AppsFlyer](https://www.braze.com/docs/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), to manage universal links.
+Alternatively, you can integrate with one of our attribution partners, such as [Branch](https://www.braze.com/docs/partners/message_orchestration/deeplinking/branch_for_deeplinking) or [AppsFlyer](https://www.braze.com/docs/partners/message_orchestration/attribution/appsflyer/appsflyer#email-deep-linking-and-click-tracking), to manage universal links.
 
-Lastly, predefined attributes are available to help make your message accessible. Learn more at our dedicated [Building accessible messages in Braze](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/accessibility/) article.
+Lastly, predefined attributes are available to help make your message accessible. Learn more at our dedicated [Building accessible messages in Braze](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/accessibility) article.
 
 #### Custom head tags
 

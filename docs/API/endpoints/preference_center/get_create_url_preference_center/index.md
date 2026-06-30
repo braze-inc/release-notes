@@ -1,4 +1,4 @@
-<div id='api_sxpldethprec' class='api_div' data-search-keywords='prerequisites preference_center_url'>
+<div id='api_azbpeamghogi' class='api_div' data-search-keywords='prerequisites preference_center_url'>
 <h1 id="generate-preference-center-url">Generate preference center URL</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/preference_center/v1/{preferenceCenterExternalID}/url/{userID}</p>
@@ -14,7 +14,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">preference_center.user.get</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">preference_center.user.get</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

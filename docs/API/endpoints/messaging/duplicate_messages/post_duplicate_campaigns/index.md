@@ -1,4 +1,4 @@
-<div id='api_erqwxopiwdcn' class='api_div' data-search-keywords='prerequisites campaign_id name description tag_names'>
+<div id='api_sgzldbnzvgwc' class='api_div' data-search-keywords='prerequisites campaign_id name description tag_names'>
 <h1 id="duplicate-campaigns-using-the-api">Duplicate campaigns using the API</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/duplicate</p>
@@ -54,7 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">campaign_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">campaign identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">campaign identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">name</code></td>

@@ -9,7 +9,7 @@ Note that while trigger properties can be templated into messages, they aren't a
 **Note:**
 
 
-The `trigger_properties` object and `api_trigger_properties.${product_name}` syntax is only supported in campaigns. To customize messages with keys and values from an API trigger request for Canvas, use the [Canvas entry properties object](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context/). The `trigger_properties` object has a maximum size limit of 50 KB.
+The `trigger_properties` object and `api_trigger_properties.${product_name}` syntax is only supported in campaigns. To customize messages with keys and values from an API trigger request for Canvas, use the [Canvas entry properties object](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context). The `trigger_properties` object has a maximum size limit of 50 KB.
 
 
 

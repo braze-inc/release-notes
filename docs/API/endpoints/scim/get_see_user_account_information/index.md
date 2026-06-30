@@ -1,18 +1,18 @@
-<div id='api_blstihbhgccn' class='api_div' data-search-keywords='prerequisites schemas id name department permissions roles team'>
+<div id='api_eiiqgxjkosee' class='api_div' data-search-keywords='prerequisites schemas id name department permissions roles team'>
 <h1 id="look-up-an-existing-dashboard-user-account-by-resource-id">Look up an existing dashboard user account by resource ID</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/scim/v2/Users/{id}</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to look up an existing dashboard user account by specifying the resource <code class="language-plaintext highlighter-rouge">id</code> returned by the SCIM <a href="/docs/api/endpoints/scim/post_create_user_account/"><code class="language-plaintext highlighter-rouge">POST</code></a> method.</p>
+  <p>Use this endpoint to look up an existing dashboard user account by specifying the resource <code class="language-plaintext highlighter-rouge">id</code> returned by the SCIM <a href="/docs/api/endpoints/scim/post_create_user_account"><code class="language-plaintext highlighter-rouge">POST</code></a> method.</p>
 </blockquote>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need a SCIM token. You’ll use your service origin as the <code class="language-plaintext highlighter-rouge">X-Request-Origin</code> header. For more information, refer to <a href="/docs/scim/automated_user_provisioning/">Automated user provisioning</a>.</p>
+<p>To use this endpoint, you’ll need a SCIM token. You’ll use your service origin as the <code class="language-plaintext highlighter-rouge">X-Request-Origin</code> header. For more information, refer to <a href="/docs/scim/automated_user_provisioning">Automated user provisioning</a>.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -40,7 +40,7 @@
       <td><code class="language-plaintext highlighter-rouge">id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>The user’s resource ID. This parameter is returned by the <code class="language-plaintext highlighter-rouge">POST</code> <code class="language-plaintext highlighter-rouge">/scim/v2/Users/</code> or <code class="language-plaintext highlighter-rouge">GET</code>  <code class="language-plaintext highlighter-rouge">/scim/v2/Users?filter=userName eq "user@test.com"</code> methods.</td>
+      <td>The user’s resource ID. This parameter is returned by the <code class="language-plaintext highlighter-rouge">POST</code> <code class="language-plaintext highlighter-rouge">/scim/v2/Users/</code> or <code class="language-plaintext highlighter-rouge">GET</code>  <code class="language-plaintext highlighter-rouge">/scim/v2/Users?filter=userName eq "user@example.com"</code> methods.</td>
     </tr>
   </tbody>
 </table>
@@ -117,7 +117,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
     </span><span class="nl">"schemas"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"urn:ietf:params:scim:schemas:core:2.0:User"</span><span class="p">],</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dfa245b7-24195aec-887bb3ad-602b3340"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"userName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@test.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"userName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@example.com"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"givenName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"familyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="w">

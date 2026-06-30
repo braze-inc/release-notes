@@ -1,4 +1,4 @@
-<div id='api_pvkvqqdsmndk' class='api_div' data-search-keywords='prerequisites subscription_group_id subscription_state external_id phone use_double_opt_in_logic email message'>
+<div id='api_mqzcfvvccodl' class='api_div' data-search-keywords='prerequisites subscription_group_id subscription_state external_id phone use_double_opt_in_logic email message'>
 <h1 id="update-users-subscription-group-status">Update user’s subscription group status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/subscription/status/set</p>
@@ -20,11 +20,11 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">subscription.status.set</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">subscription.status.set</code> permission.</p>
 
 <p><strong>Note:</strong></p>
 
-<p>If you’re interested in using this endpoint with <a href="/docs/user_guide/channels/line/message_users/subscription_groups/">LINE subscription groups</a>, contact your customer success manager.</p>
+<p>If you’re interested in using this endpoint with <a href="/docs/user_guide/channels/line/message_users/subscription_groups">LINE subscription groups</a>, contact your customer success manager.</p>
 
 <h2 id="how-braze-handles-orphaned-subscription-states">How Braze handles orphaned subscription states</h2>
 
@@ -102,13 +102,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 <p>* Email subscription groups: You must include either <code class="language-plaintext highlighter-rouge">email</code> or <code class="language-plaintext highlighter-rouge">external_id</code>.</p>
 
-<p>This property should not be used for updating a user’s profile information. Use the <a href="/docs/api/endpoints/user_data/post_user_track/">/users/track</a> property instead.</p>
+<p>This property should not be used for updating a user’s profile information. Use the <a href="/docs/api/endpoints/user_data/post_user_track">/users/track</a> property instead.</p>
 
 <p><strong>Tip:</strong></p>
 
-<p><strong>Adding existing users to a subscription group:</strong> This endpoint is the recommended way to backfill or bulk-update subscription group membership for existing users. You can pass up to 50 <code class="language-plaintext highlighter-rouge">external_id</code>s, email addresses, or phone numbers per request. Users can also update their own subscription status through an <a href="/docs/user_guide/channels/email/subscriptions/">email preference center</a> link.</p>
+<p><strong>Adding existing users to a subscription group:</strong> This endpoint is the recommended way to backfill or bulk-update subscription group membership for existing users. You can pass up to 50 <code class="language-plaintext highlighter-rouge">external_id</code>s, email addresses, or phone numbers per request. Users can also update their own subscription status through an <a href="/docs/user_guide/channels/email/subscriptions">email preference center</a> link.</p>
 
-<p><strong>Creating new users with a subscription group:</strong> When creating new users using the <a href="/docs/api/endpoints/user_data/post_user_track/"><code class="language-plaintext highlighter-rouge">/users/track</code></a> endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.</p>
+<p><strong>Creating new users with a subscription group:</strong> When creating new users using the <a href="/docs/api/endpoints/user_data/post_user_track"><code class="language-plaintext highlighter-rouge">/users/track</code></a> endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.</p>
 
 <h2 id="request-parameters">Request parameters</h2>
 
@@ -123,7 +123,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   </thead>
   <tbody>
     <tr>
-      <td><a href="/docs/api/identifier_types/?tab=subscription%20group%20ids"><code class="language-plaintext highlighter-rouge">subscription_group_id</code></a></td>
+      <td><a href="/docs/api/identifier_types?tab=subscription%20group%20ids"><code class="language-plaintext highlighter-rouge">subscription_group_id</code></a></td>
       <td>Required</td>
       <td>String</td>
       <td>The <code class="language-plaintext highlighter-rouge">id</code> of your subscription group.</td>
@@ -156,7 +156,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">use_double_opt_in_logic</code></td>
       <td>Optional</td>
       <td>Boolean</td>
-      <td>Applies only to SMS subscription groups; ignored for email and other subscription group types. Defaults to <code class="language-plaintext highlighter-rouge">false</code> if omitted. For SMS subscription groups, set to <code class="language-plaintext highlighter-rouge">true</code> to enter the user into the <a href="/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in/">SMS double opt-in</a> workflow when their subscription status is set to <code class="language-plaintext highlighter-rouge">subscribed</code>. Users entered into the double opt-in workflow in this way receive at most one opt-in prompt reply message per day, regardless of the number of times they are entered into the workflow. If this parameter is omitted or set to <code class="language-plaintext highlighter-rouge">false</code>, users are subscribed without entering the double opt-in workflow.</td>
+      <td>Applies only to SMS subscription groups; ignored for email and other subscription group types. Defaults to <code class="language-plaintext highlighter-rouge">false</code> if omitted. For SMS subscription groups, set to <code class="language-plaintext highlighter-rouge">true</code> to enter the user into the <a href="/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in">SMS double opt-in</a> workflow when their subscription status is set to <code class="language-plaintext highlighter-rouge">subscribed</code>. Users entered into the double opt-in workflow in this way receive at most one opt-in prompt reply message per day, regardless of the number of times they are entered into the workflow. If this parameter is omitted or set to <code class="language-plaintext highlighter-rouge">false</code>, users are subscribed without entering the double opt-in workflow.</td>
     </tr>
   </tbody>
 </table>
@@ -182,7 +182,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "subscription_group_id": "subscription_group_identifier",
   "subscription_state": "unsubscribed",
   "external_id": "external_identifier",
-  "email": ["example1@email.com", "example2@email.com"]
+  "email": ["example1@example.com", "example2@example.com"]
 }
 '
 </pre></td></tr></tbody></table></code></pre></div></div>
@@ -225,7 +225,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="troubleshooting-intermittent-update-failures">Troubleshooting intermittent update failures</h2>
 
-<p>If subscription group updates intermittently fail or appear out of sync, wait several minutes between update requests or call <a href="/docs/api/endpoints/subscription_groups/get_list_user_subscription_group_status/"><code class="language-plaintext highlighter-rouge">/subscription/user/status</code></a> to confirm the user’s state before sending another update.</p>
+<p>If subscription group updates intermittently fail or appear out of sync, wait several minutes between update requests or call <a href="/docs/api/endpoints/subscription_groups/get_list_user_subscription_group_status"><code class="language-plaintext highlighter-rouge">/subscription/user/status</code></a> to confirm the user’s state before sending another update.</p>
 
 <p><strong>Important:</strong></p>
 

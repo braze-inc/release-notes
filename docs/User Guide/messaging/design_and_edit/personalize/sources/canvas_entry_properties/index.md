@@ -23,8 +23,8 @@ Persistent entry properties let you reference the original entry data in every s
 **Important:**
 
 
-Persistent entry properties are part of the original Canvas entry properties workflow. For the current updated Canvas editor, refer to [Context and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/).
+Persistent entry properties are part of the original Canvas entry properties workflow. For the current updated Canvas editor, refer to [Context and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties).
 
 
 
-For the full reference on persistent entry properties, see [Persistent entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties/).
+For the full reference on persistent entry properties, see [Persistent entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties).

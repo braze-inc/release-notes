@@ -1,11 +1,8 @@
 # Localization settings
 
-> The multi-language feature allows you to use [translation tags](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/) to target users in different languages and locations all within a single message.
+> The multi-language feature allows you to use [translation tags](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages) to target users in different languages and locations all within a single message.
 
 ## Prerequisites
-
-
-
 
 
 
@@ -16,7 +13,7 @@
 1. Go to **Settings** > **Localization Settings**.
 2. Select **Add locale**, and then select **Default locale** or **Custom Attributes**.
 3. Enter a name for the locale.
-4. [Select a language for accessibility](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/#language-settings-and-accessibility). This setting allows assistive technologies like screen readers to correctly pronounce text.
+4. [Select a language for accessibility](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages#language-settings-and-accessibility). This setting allows assistive technologies like screen readers to correctly pronounce text.
 5. Select the respective user attributes for your chosen locale option. When setting up a locale, you can either select languages from the default user attributes or custom attributes. You can't select from both.
 
 
@@ -39,7 +36,7 @@ For **Custom Attributes**, use the dropdown to select the associated custom attr
 {: start="6"}
 6. Select **Add locale**.
 
-For steps to use these locales in your messages, refer to [Using locales](https://www.braze.com/docs/locales_in_messages/).
+For steps to use these locales in your messages, refer to [Using locales](https://www.braze.com/docs/locales_in_messages).
 
 ## Considerations
 

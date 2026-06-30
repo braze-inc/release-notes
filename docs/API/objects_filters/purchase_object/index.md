@@ -40,8 +40,6 @@
 
 
 
-
-
 ## What is a purchase object?
 
 A purchase object is an object that gets passed through the API when a purchase has been made. Each purchase object is located within a purchase array, with each object being a single purchase by a particular user at a particular time. The purchase object has many different fields that allow the Braze backend to store and use this information for customization, data collection, and personalization.
@@ -72,15 +70,15 @@ A purchase object is an object that gets passed through the API when a purchase 
 }
 ```
 
-- [External user ID](https://www.braze.com/docs/api/basics/#user-ids)
-- [App identifier](https://www.braze.com/docs/api/identifier_types/)
+- [External user ID](https://www.braze.com/docs/api/basics#user-ids)
+- [App identifier](https://www.braze.com/docs/api/identifier_types)
 - [ISO 4217 Currency Code Wiki](http://en.wikipedia.org/wiki/ISO_4217)
 - [ISO 8601 Time Code Wiki](https://en.wikipedia.org/wiki/ISO_8601)
 
 **Note:**
 
 
-Some identifier pairs cannot be used together, and `email` takes precedence over `phone` when both are provided. For full details, refer to [Identifier resolution](https://www.braze.com/docs/api/objects_filters/user_attributes_object/#identifier-resolution).
+Some identifier pairs cannot be used together, and `email` takes precedence over `phone` when both are provided. For full details, refer to [Identifier resolution](https://www.braze.com/docs/api/objects_filters/user_attributes_object#identifier-resolution).
 
 
 
@@ -145,11 +143,11 @@ Property values can be any of the following data types:
 The following keys are reserved and cannot be used as property names: `time`, `product_id`, `quantity`, `event_name`, `price`, and `currency`. Using a reserved key in the `properties` object returns the error "Invalid 'properties' field".
 
 
-For a consolidated reference of data types across custom attributes, event properties, and catalogs, see [Data types](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types/#purchase-event-property-data-types).
+For a consolidated reference of data types across custom attributes, event properties, and catalogs, see [Data types](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#purchase-event-property-data-types).
 
 ### Purchase properties
 
-[Purchase properties](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) can be used to trigger messages and for personalization using Liquid, also allowing you to segment based on these properties.
+[Purchase properties](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/purchase_events#purchase-properties) can be used to trigger messages and for personalization using Liquid, also allowing you to segment based on these properties.
 
 #### Naming conventions
 
@@ -216,8 +214,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Purchase objects, event objects, and webhooks
 
-Using the example provided, we can see that someone bought a backpack with the properties: color, monogram, checkout duration, size, and brand. We can then create segments with these properties by using [purchase event properties](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) or send custom messages through a channel using Liquid. For example, "Hello **Ann F.**, Thanks for purchasing that **red, medium backpack** for **$40.00**! Thanks for shopping at **Backpack Locker**!"
+Using the example provided, we can see that someone bought a backpack with the properties: color, monogram, checkout duration, size, and brand. We can then create segments with these properties by using [purchase event properties](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/purchase_events#purchase-properties) or send custom messages through a channel using Liquid. For example, "Hello **Ann F.**, Thanks for purchasing that **red, medium backpack** for **$40.00**! Thanks for shopping at **Backpack Locker**!"
 
-If you do want to save, store and track properties to segment with, you need to set them up as custom attributes. This can be done using [Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/), which allow you to target users based on custom event or purchase behavior stored for the lifetime of that user profile.
+If you do want to save, store and track properties to segment with, you need to set them up as custom attributes. This can be done using [Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension), which allow you to target users based on custom event or purchase behavior stored for the lifetime of that user profile.
 
 

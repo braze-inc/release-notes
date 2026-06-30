@@ -15,7 +15,7 @@ After upgrading the SDK, your mobile users must upgrade their app. You can filte
 
 
 
-You can choose when Braze creates a card on the **Delivery** step when creating a new [Content Card campaign](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card/) with scheduled delivery.
+You can choose when Braze creates a card on the **Delivery** step when creating a new [Content Card campaign](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card) with scheduled delivery.
 
 ![Content Card Controls section when editing the delivery of a scheduled Content Card.](https://www.braze.com/docs/assets/img_archive/card_creation.png?1cb9429fbbe6ff7e2e40a673b9753477)
 
@@ -29,7 +29,7 @@ Regardless of your selected option, the Content Card expiration date countdown b
 
 
 
-You can choose when Braze creates a card on the **Messaging Channels** tab of a Content Card [Message step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step/).
+You can choose when Braze creates a card on the **Messaging Channels** tab of a Content Card [Message step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step).
 
 ![Content Card Controls section when editing the delivery of a scheduled Content Card.](https://www.braze.com/docs/assets/img_archive/card_creation_canvas.png?c61917e98daa146421ce1bfbc85a1589)
 
@@ -62,7 +62,7 @@ In the **Expiration (Time in Feed)** settings, you can select **Personalize dura
 **Important:**
 
 
-Content Cards have a maximum expiration of 30 days, even when using personalized duration with context variables. Any value set beyond 30 days is capped at 30 days. For more details, refer to [Card expiration](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card/#card-expiration).
+Content Cards have a maximum expiration of 30 days, even when using personalized duration with context variables. Any value set beyond 30 days is capped at 30 days. For more details, refer to [Card expiration](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card#card-expiration).
 
 
 
@@ -134,7 +134,7 @@ Multichannel campaigns do not support at-first impression cards, so all Content 
 
 ### Use Canvas context properties {#using-canvas-context-properties}
 
-When personalizing Content Cards with [Canvas context properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/), use the `${...}` syntax (for example, `{{context.${property_name}}}`). Dot notation without the syntax (for example, `{{context.property_name}}`) may not resolve correctly in Content Cards, even if it works in other channels like push and email.
+When personalizing Content Cards with [Canvas context properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties), use the `${...}` syntax (for example, `{{context.${property_name}}}`). Dot notation without the syntax (for example, `{{context.property_name}}`) may not resolve correctly in Content Cards, even if it works in other channels like push and email.
 
 ### Change card creation after launch {#changing-card-creation-after-launch}
 

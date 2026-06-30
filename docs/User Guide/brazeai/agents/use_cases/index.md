@@ -1,4 +1,4 @@
-<div id='api_punxmglgdktq' class='api_div' data-search-keywords='write personalized messaging based on a user’s context canvas agent'>
+<div id='api_qwqslmgeasri' class='api_div' data-search-keywords='write personalized messaging based on a user’s context canvas agent'>
 <h2 id="write-personalized-messaging-based-on-a-users-context">Write personalized messaging based on a user’s context</h2>
 
 <div class="api_tags" data-tags="Canvas agent" data-tags-lower="canvas agent"></div>
@@ -104,7 +104,7 @@ You must return an object containing exactly five keys: "email_subject_line", "e
 
 Input &amp; Output Example:
 &lt;input_example&gt; 
-{{${first_name}}}: John Doe
+{{${first_name}}}: Alex Smith
 {{${language}}}: en
 {{custom_attribute.${loyalty_status}}}: Gold Tier
 {{context.${city_searched}}}: Tokyo
@@ -112,13 +112,13 @@ Input &amp; Output Example:
 The user IS in the segment: “Logged multiple searches in the past 30D”.
 &lt;/input_example&gt;
 &lt;output_example&gt; 
-{ "email_subject_line": "John, your Tokyo Gold Tier deals are waiting", "email_preheader": "Find the best hotel brands for your Tokyo getaway.", "push_title": "John, Tokyo is calling!", "push_body": "Your Gold Tier deals are ready. Tap to view exclusive hotel offers.", "explanation": "Personalized on Tokyo and Gold Tier; matched survey value props; English per language code; kept within character limits for email and push." }
+{ "email_subject_line": "Alex, your Tokyo Gold Tier deals are waiting", "email_preheader": "Find the best hotel brands for your Tokyo getaway.", "push_title": "Alex, Tokyo is calling!", "push_body": "Your Gold Tier deals are ready. Tap to view exclusive hotel offers.", "explanation": "Personalized on Tokyo and Gold Tier; matched survey value props; English per language code; kept within character limits for email and push." }
 &lt;/output_example&gt;
 </pre></td></tr></tbody></table></code></pre></div></div>
 
 </div>
 
-<div id='api_gprswzovwzki' class='api_div' data-search-keywords='analyze user feedback to determine next steps canvas agent'>
+<div id='api_gxeapounrxvp' class='api_div' data-search-keywords='analyze user feedback to determine next steps canvas agent'>
 <h2 id="analyze-user-feedback-to-determine-next-steps">Analyze user feedback to determine next steps</h2>
 
 <div class="api_tags" data-tags="Canvas agent" data-tags-lower="canvas agent"></div>
@@ -204,7 +204,7 @@ You must return an object containing exactly four fields: sentiment, topic, acti
 
 Input &amp; Output Example:
 &lt;input_example&gt;
-{{${first_name}}}: Sarah 
+{{${first_name}}}: Alex 
 {{custom_attribute.${loyalty_status}}}: Platinum
 {{context.${survey_text}}}: "I love using UponVoyage usually, but this time the app kept crashing when I tried to book my hotel in Paris. It was really frustrating." 
 {{context.${trip_destination}}}: Paris
@@ -216,7 +216,7 @@ Input &amp; Output Example:
 
 </div>
 
-<div id='api_yrypwnqwffoz' class='api_div' data-search-keywords='classify inbound messages for opt-out intent canvas agent'>
+<div id='api_tvjsuunzeoyt' class='api_div' data-search-keywords='classify inbound messages for opt-out intent canvas agent'>
 <h2 id="classify-inbound-messages-for-opt-out-intent">Classify inbound messages for opt-out intent</h2>
 
 <div class="api_tags" data-tags="Canvas agent" data-tags-lower="canvas agent"></div>
@@ -336,7 +336,7 @@ Input: “This sucks—what’s the promo code?” → false
 
 </div>
 
-<div id='api_llhdnwaaygkz' class='api_div' data-search-keywords='write high-converting descriptions that align with brand guidelines catalog agent'>
+<div id='api_xkkviffavvyy' class='api_div' data-search-keywords='write high-converting descriptions that align with brand guidelines catalog agent'>
 <h2 id="write-high-converting-descriptions-that-align-with-brand-guidelines">Write high-converting descriptions that align with brand guidelines</h2>
 
 <div class="api_tags" data-tags="Catalog agent" data-tags-lower="catalog agent"></div>
@@ -439,7 +439,7 @@ Price Tier: $$$
 
 </div>
 
-<div id='api_hhvrkfqipwpk' class='api_div' data-search-keywords='provide translations based on language used by region catalog agent'>
+<div id='api_ttzeuhruxcyt' class='api_div' data-search-keywords='provide translations based on language used by region catalog agent'>
 <h2 id="provide-translations-based-on-language-used-by-region">Provide translations based on language used by region</h2>
 
 <div class="api_tags" data-tags="Catalog agent" data-tags-lower="catalog agent"></div>

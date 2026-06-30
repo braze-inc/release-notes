@@ -13,19 +13,19 @@ When Personalized Paths is turned on in an Experiment Path step, the behavior is
 
 ### Step 1: Add an Experiment Path
 
-Add an [Experiment Path](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step/) to your Canvas, then turn on **Personalized Paths**.
+Add an [Experiment Path](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step) to your Canvas, then turn on **Personalized Paths**.
 
-![](https://www.braze.com/docs/assets/img/experiment_step/experiment_personalized_path.png?eb8c92d149171f5374e0bd20695baa97)
+![Add an Experiment Path to your Canvas, then turn on Personalized Paths.](https://www.braze.com/docs/assets/img/experiment_step/experiment_personalized_path.png?eb8c92d149171f5374e0bd20695baa97)
 
 ### Step 2: Configure Personalized Paths settings
 
-Specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/#choose-conversion-events). 
+Specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#choose-conversion-events). 
 
-If you choose opens or clicks as your conversion event, make sure the first step in the path is a [Message step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step/). Braze only counts engagement from the first Message step in each respective path. If the path starts with a different step (like a Delay or Audience Path step) and the message comes later, that message won’t be included when evaluating performance.
+If you choose opens or clicks as your conversion event, make sure the first step in the path is a [Message step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step). Braze only counts engagement from the first Message step in each respective path. If the path starts with a different step (like a Delay or Audience Path step) and the message comes later, that message won’t be included when evaluating performance.
 
 Then set the **Experiment Window**. The **Experiment Window** determines how long users will be sent down all paths before choosing the best path for each user in the delay group. The window begins when the first user enters the step.
 
-![](https://www.braze.com/docs/assets/img/experiment_step/experiment_personalized_settings.png?5e8b9459a8b7d1b40bd9f10dd178f4b1)
+![Screenshot related to step 2: configure personalized paths settings.](https://www.braze.com/docs/assets/img/experiment_step/experiment_personalized_settings.png?5e8b9459a8b7d1b40bd9f10dd178f4b1)
 
 ### Step 3: Determine fallback
 
@@ -33,11 +33,11 @@ By default, if the results of the test aren't enough to determine a statisticall
 
 Alternatively, you can select **Continue sending all future users the mix of paths**.
 
-![](https://www.braze.com/docs/assets/img/experiment_step/experiment_winning_statistical.png?97018ff3ff3f4884ab67d2d6b45fc413)
+![Alternatively, you can select Continue sending all future users the mix of paths.](https://www.braze.com/docs/assets/img/experiment_step/experiment_winning_statistical.png?97018ff3ff3f4884ab67d2d6b45fc413)
 
 This option will send future users down the mix of paths according to the percentages specified in the experiment path distribution.
 
-![](https://www.braze.com/docs/assets/img/experiment_step/experiment_personalized_percentages.png?1f49ecf3f9ae34ed202afe7928b08a5a)
+![Screenshot related to step 3: determine fallback.](https://www.braze.com/docs/assets/img/experiment_step/experiment_personalized_percentages.png?1f49ecf3f9ae34ed202afe7928b08a5a)
 
 ### Step 4: Add your paths and launch the Canvas
 
@@ -48,11 +48,11 @@ A single Experiment Path component can contain up to four paths. However, for si
 
 Finish setting up your Canvas as needed, then launch it. When the first user has entered the experiment, you can check the Canvas to see analytics as they come in and [track your experiment's performance](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step#tracking-performance).
 
-![](https://www.braze.com/docs/assets/img/experiment_step/experiment_personalized_delay_group_pending.png?a98da7b7ef318ce275ce533c8141aed0){: style="max-width:75%;" }
+![Screenshot related to step 4: add your paths and launch the canvas.](https://www.braze.com/docs/assets/img/experiment_step/experiment_personalized_delay_group_pending.png?a98da7b7ef318ce275ce533c8141aed0){: style="max-width:75%;" }
 
 When the experiment window passes and the experiment is complete, Braze will send users in the delay group to their respective paths with the highest personalized likelihood of conversion based on the recommendation of the predictive model.
 
-![](https://www.braze.com/docs/assets/img/experiment_step/experiment_personalized_delay_group_complete.png?5776e182794e3baf07c173f226889436){: style="max-width:75%;" }
+![Screenshot related to step 4: add your paths and launch the canvas.](https://www.braze.com/docs/assets/img/experiment_step/experiment_personalized_delay_group_complete.png?5776e182794e3baf07c173f226889436){: style="max-width:75%;" }
 
 
 
@@ -63,7 +63,7 @@ When the first user has entered the experiment, you can check the Canvas to see 
 
 When the experiment window passes and the experiment is complete, all subsequent users to enter the Canvas will be sent down the path most likely to result in conversion for them.
 
-![](https://www.braze.com/docs/assets/img/experiment_step/experiment_personalized_recurring_analytics.png?4ecea4e57721a45c74d71e8d6da1ad15){: style="max-width:75%;" }
+![Screenshot related to step 4: add your paths and launch the canvas.](https://www.braze.com/docs/assets/img/experiment_step/experiment_personalized_recurring_analytics.png?4ecea4e57721a45c74d71e8d6da1ad15){: style="max-width:75%;" }
 
 
 
@@ -83,7 +83,7 @@ By default, the test looks for associations between user’s custom events and t
 
 The relationships between custom events and path preferences are displayed in the table on the **Initial Experiment** tab.
 
-![](https://www.braze.com/docs/assets/img_archive/experiment_personalized_analytics_custom_data.png?43266098d174501e8c27fb85217a8823)
+![Screenshot related to analytics.](https://www.braze.com/docs/assets/img_archive/experiment_personalized_analytics_custom_data.png?43266098d174501e8c27fb85217a8823)
 
 If the test can't find a meaningful relationship between custom events and path preferences, the test falls back to a session-based analysis method, and no custom event data tables are shown.
 

@@ -1,6 +1,6 @@
 # Deep Linking in Content Cards
 
-> Learn how deep link within a Content Card using the Braze SDK. To learn more about deep links, check out [What is deep linking?](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls/#what-is-deep-linking).
+> Learn how deep link within a Content Card using the Braze SDK. To learn more about deep links, check out [What is deep linking?](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls#what-is-deep-linking).
 
 
 

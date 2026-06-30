@@ -1,6 +1,6 @@
 # Report Builder (legacy)
 
-> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you can export your data and save your report to view in the future.<br><br>For a descriptive list of the metrics you'll find in your reports, refer to the [Report Metrics Glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary/).
+> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you can export your data and save your report to view in the future.<br><br>For a descriptive list of the metrics you'll find in your reports, refer to the [Report Metrics Glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary).
 
 ![Campaign Comparison Example](https://www.braze.com/docs/assets/img/campaign_comparison/campaign_main.png?9910240ecfbdc170fdb6f00747b2400a){: style="max-width:80%;"}
 
@@ -58,7 +58,7 @@ After you've created your report, you'll find a blank table containing campaigns
 
 ![Campaign Options](https://www.braze.com/docs/assets/img/campaign_comparison/campaign_comparison_columns.png?fe3e5a4364ba304abdd82a0834959689){: style="max-width:80%;"}
 
-Your table will populate with the metrics you choose. For definitions of these metrics, refer to the [Report Metrics Glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary/). Some metrics are only available for campaign comparison reports.
+Your table will populate with the metrics you choose. For definitions of these metrics, refer to the [Report Metrics Glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary). Some metrics are only available for campaign comparison reports.
 
 You can also toggle calculations for the **Average** of any rate or numerical metric and **Total** for any numerical metric.
 

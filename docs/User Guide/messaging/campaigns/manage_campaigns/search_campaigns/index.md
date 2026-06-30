@@ -13,7 +13,7 @@ You can use the search bar to enter keywords and phrases that are related to you
 
 ![The campaign list page with three campaigns listed. The page is organized to show active campaigns. The columns are Name, Status, Stop date, Campaign type, and Sent to organize the view.](https://www.braze.com/docs/assets/img/campaign_list_example.png?c37551c06d970911d58b9406d1cb4804)
 
-### Selecting a status
+## Selecting a status
 
 By default, the campaign list will show your active and idle campaigns. You can select the dropdown to view campaigns by their status (active, draft, archived, stopped, and idle).
 
@@ -21,7 +21,7 @@ For example, if you want to audit your campaign drafts, select **Status** > **Dr
 
 ### Searching by tags
 
-Searching your campaigns by [tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags/) can further narrow down your results. For example, if you're trying to find all the campaigns you built for targeting new customers, frequent buyers, lapsed customers, you could search these campaigns by their shared tag **Targeting by customer type**.
+Searching your campaigns by [tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags) can further narrow down your results. For example, if you're trying to find all the campaigns you built for targeting new customers, frequent buyers, lapsed customers, you could search these campaigns by their shared tag **Targeting by customer type**.
 
 ### Adjusting filters
 

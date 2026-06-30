@@ -54,7 +54,7 @@ After your domain is verified, your custom domains will appear in the table on t
 
 ![List of custom domains and statuses.](https://www.braze.com/docs/assets/img/custom_domain_statuses.png?d8b2e50e2c5af7aa7c0533d46112a0c8){: style="max-width:60%;"}
 
-Live monitoring will alert you in the Braze dashboard if any of your active domains have an issue, so that your custom links remain usable. If you encounter any issues, refer to the in-app error details or contact Braze [Support](https://www.braze.com/docs/braze_support/) for assistance.
+Live monitoring will alert you in the Braze dashboard if any of your active domains have an issue, so that your custom links remain usable. If you encounter any issues, refer to the in-app error details or contact Braze [Support](https://www.braze.com/docs/braze_support) for assistance.
 
 ## Assigning custom domains to subscription groups
 
@@ -96,4 +96,4 @@ Yes. After a custom domain is verified, it can be used in all SMS, RCS, and What
 
 ### What if I have questions or need further support?
 
-For more detailed guidance on setting up and managing custom domains, including troubleshooting steps and technical requirements, [contact Support](https://www.braze.com/docs/braze_support/).
+For more detailed guidance on setting up and managing custom domains, including troubleshooting steps and technical requirements, [contact Support](https://www.braze.com/docs/braze_support).

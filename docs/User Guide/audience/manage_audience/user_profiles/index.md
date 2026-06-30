@@ -13,12 +13,12 @@ To access a user's profile, go to the **Search Users** page and search for a use
 - Push token
 - User alias with the format "[user_alias]:[alias_name]", such as "amplitude_id:user_123"
 
-If a match is found, you can view the information you've recorded for this user with the Braze SDK. Otherwise, if your search returns multiple user profiles, you can merge each profile individually or perform a bulk user merge. For a full walkthrough, see [Merge duplicate users](https://www.braze.com/docs/user_guide/audience/manage_audience/merge_duplicate_users/).
+If a match is found, you can view the information you've recorded for this user with the Braze SDK. Otherwise, if your search returns multiple user profiles, you can merge each profile individually or perform a bulk user merge. For a full walkthrough, see [Merge duplicate users](https://www.braze.com/docs/user_guide/audience/manage_audience/merge_duplicate_users).
 
 **Note:**
 
 
-**Search Users** is not the same as **User Lookup** in the segment or campaign composer. **User Lookup** tests whether a specific user matches your audience and accepts only `external_id` or `braze_id`. **Search Users** on this page supports email, phone, push token, and user alias. For more information, see [Testing segments](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/#testing-segments).
+**Search Users** is not the same as **User Lookup** in the segment or campaign composer. **User Lookup** tests whether a specific user matches your audience and accepts only `external_id` or `braze_id`. **Search Users** on this page supports email, phone, push token, and user alias. For more information, see [Testing segments](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment#testing-segments).
 
 
 
@@ -35,7 +35,7 @@ When a phone number is used in the search, it is changed into [`E.164`](https://
 
 User profiles are a great resource for troubleshooting and testing because you can easily access information about a user's engagement history, segment membership, device, and operating system.
 
-For example, if a user reports a problem and you aren't sure what device and operating system they are using, you can use the [Overview tab](#overview-tab) to find this information (as long as you have their email or user ID). You can also view a user's language, which could be helpful if you're troubleshooting a [multi-lingual campaign](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/) that didn't behave as expected.
+For example, if a user reports a problem and you aren't sure what device and operating system they are using, you can use the [Overview tab](#overview-tab) to find this information (as long as you have their email or user ID). You can also view a user's language, which could be helpful if you're troubleshooting a [multi-lingual campaign](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization) that didn't behave as expected.
 
 You can use the [Engagement tab](#engagement-tab) to verify whether a certain user received a campaign. In addition, if this particular user did receive the campaign, you can see when they received it. You can also verify whether a user is in a certain segment and whether a user is opted in to push, email, or both. This information is useful for troubleshooting purposes. For example, you should check this information if a user doesn't receive a campaign that you expected them to receive or receives a campaign that you did not expect them to receive.
 
@@ -66,7 +66,7 @@ The **Overview** tab contains basic information about a user and their interacti
 | Purchases | Lifetime revenue attributed to this user, their last purchase, total number of purchases, and a list of each purchase. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Overview tab #overview-tab" }
 
-For more information on this data, see [SDK data collection](https://www.braze.com/docs/user_guide/data/unification/user_data/sdk_data_collection/).
+For more information on this data, see [SDK data collection](https://www.braze.com/docs/user_guide/data/unification/user_data/sdk_data_collection).
 
 
 <a id="engagement-tab"></a>
@@ -78,14 +78,14 @@ The **Engagement** tab contains information about a user's interactions with the
 
 | Engagement category | Contains |
 | --- | --- |
-| Contact settings | Subscription status for email, SMS, and push, and the subscription groups this user is associated with for these three channels. This section also includes changelog information for push tokens. Refer to [email](https://www.braze.com/docs/user_guide/channels/email/subscriptions/), [SMS](https://www.braze.com/docs/sms_rcs_subscription_groups/), and [push](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states/) for information on how subscriptions and opt-ins are set. |
-| Campaigns received | **Campaigns received** reflects channel-specific send and view timing. Most channels record a send when Braze passes the message to the delivery provider, even when the message is not ultimately delivered. **Content Cards** are different: campaigns appear here only after the user views the card in the app. For a breakdown by channel, see [When campaigns appear in Campaigns received](#when-campaigns-appear-in-campaigns-received). <br><br>When a message is received, opened, or clicked, Braze updates data for all profiles that share the same channel identifier as the profile that logged the interaction (for example, the same email address for email, or the same phone number for SMS or WhatsApp). Users who share an identifier with someone who received, opened, or clicked the message can match this filter even if they were not originally in the campaign or were not directly sent the message.<br><br>These lists use [messaging interaction data](https://www.braze.com/docs/api/data_retention/messaging_interaction_data/) (including expiration rules) when determining what appears for retargeting and history.<br><br> Select a campaign from the list to view it. |
+| Contact settings | Subscription status for email, SMS, and push, and the subscription groups this user is associated with for these three channels. This section also includes changelog information for push tokens. Refer to [email](https://www.braze.com/docs/user_guide/channels/email/subscriptions), [SMS](https://www.braze.com/docs/sms_rcs_subscription_groups), and [push](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states) for information on how subscriptions and opt-ins are set. |
+| Campaigns received | **Campaigns received** reflects channel-specific send and view timing. Most channels record a send when Braze passes the message to the delivery provider, even when the message is not ultimately delivered. **Content Cards** are different: campaigns appear here only after the user views the card in the app. For a breakdown by channel, see [When campaigns appear in Campaigns received](#when-campaigns-appear-in-campaigns-received). <br><br>When a message is received, opened, or clicked, Braze updates data for all profiles that share the same channel identifier as the profile that logged the interaction (for example, the same email address for email, or the same phone number for SMS or WhatsApp). Users who share an identifier with someone who received, opened, or clicked the message can match this filter even if they were not originally in the campaign or were not directly sent the message.<br><br>These lists use [messaging interaction data](https://www.braze.com/docs/api/data_retention/messaging_interaction_data) (including expiration rules) when determining what appears for retargeting and history.<br><br> Select a campaign from the list to view it. |
 | Segments | Segments this user is included in. Select a segment from the list to view it. |
 | Communication stats | When this user last received messages from you from each channel. |
-| Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs](https://www.braze.com/docs/user_guide/messaging/campaigns/ideas_and_strategies/install_attribution/). |
-| Miscellaneous | The user's [random bucket number](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers/). |
+| Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs](https://www.braze.com/docs/user_guide/messaging/campaigns/ideas_and_strategies/install_attribution). |
+| Miscellaneous | The user's [random bucket number](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers). |
 | Canvas messages received | Canvas messages this user has received and when. Send timing follows the same channel rules as **Campaigns received**; see [When campaigns appear in Campaigns received](#when-campaigns-appear-in-campaigns-received).<br><br> When a message is received, opened, or clicked, Braze updates data for all profiles that share the same channel identifier as the profile that logged the interaction (for example, the same email address for email, or the same phone number for SMS or WhatsApp). Users who share an identifier with someone who received, opened, or clicked the message can match this filter even if they were not originally in the campaign or were not directly sent the message.<br><br> Select a message from the list to view it. |
-| Predictions | [Churn prediction](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_churn/) and [event prediction](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_events/) scores for this user. |
+| Predictions | [Churn prediction](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_churn) and [event prediction](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_events) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Engagement tab" }
 
 
@@ -97,7 +97,7 @@ The **Engagement** tab contains information about a user's interactions with the
 **Note:**
 
 
-To view the **Event History** tab, you need the **Search Users** and **View PII** [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/), because event properties can contain personal data.
+To view the **Event History** tab, you need the **Search Users** and **View PII** [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions), because event properties can contain personal data.
 
 
 
@@ -122,13 +122,13 @@ In general, Braze lists a campaign under **Campaigns received** after it attempt
 - **Email:** Braze logs a send when the message is handed off to your email service provider (ESP). After that handoff, the message is not aborted because of Liquid logic, rate limiting, or the user being marked as unreachable. The next events are often a delivery or a bounce.
 - **Push:** Braze logs a send when the message is handed off to the push provider (for example, Apple Push Notification service (APNs) or Firebase Cloud Messaging (FCM)). The provider usually tries to deliver immediately; if the device is unavailable (for example, offline), the provider may retry until the message expires.
 - **In-app messages:** Braze logs a send when the campaign is launched.
-- **Content Cards:** When Braze records a _Sent_ event depends on delivery type and your **Card Creation** setting. A Content Card campaign appears under **Campaigns received** on the user profile only after the user views the card in the app. For the full breakdown, see [When sends are logged](https://www.braze.com/docs/user_guide/channels/content_cards/reporting/#when-sends-are-logged) and [Campaigns Received and retargeting filters](https://www.braze.com/docs/user_guide/channels/content_cards/reporting/#campaigns-received-and-retargeting-filters) in the Content Card reporting article.
+- **Content Cards:** When Braze records a _Sent_ event depends on delivery type and your **Card Creation** setting. A Content Card campaign appears under **Campaigns received** on the user profile only after the user views the card in the app. For the full breakdown, see [When sends are logged](https://www.braze.com/docs/user_guide/channels/content_cards/reporting#when-sends-are-logged) and [Campaigns Received and retargeting filters](https://www.braze.com/docs/user_guide/channels/content_cards/reporting#campaigns-received-and-retargeting-filters) in the Content Card reporting article.
 - **SMS, WhatsApp, and webhooks:** Braze logs a send when the message enters the delivery path for that channel (for example, the SMS or WhatsApp provider, or your webhook endpoint).
 
 **Note:**
 
 
-These descriptions cover when a send is logged for **Campaigns received**. They are separate from [message aborts](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages/) that can stop a message before it reaches a provider.
+These descriptions cover when a send is logged for **Campaigns received**. They are separate from [message aborts](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages) that can stop a message before it reaches a provider.
 
 
 
@@ -141,7 +141,7 @@ The **Message History** tab of the user profile shows recent messaging-related e
 **Note:**
 
 
-The data in this tab isn't updated after a user is merged. Additionally, any events associated with messages sent through API (for example, the [/messages/send endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages/#creating-new-users-with-api-sends)) do not appear in this tab if there is no campaign ID specified in those sends.
+The data in this tab isn't updated after a user is merged. Additionally, any events associated with messages sent through API (for example, the [/messages/send endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages#creating-new-users-with-api-sends)) do not appear in this tab if there is no campaign ID specified in those sends.
 
 
 
@@ -153,7 +153,7 @@ For each event in the **Messaging History** table, you can see the messaging cha
 
 ##### Message engagement events
 
-The following message engagement events are available for email, SMS, push, in-app messages, Content Cards, and webhooks. To learn more about how specific events are tracked, refer to the [Message engagement event glossary](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/).
+The following message engagement events are available for email, SMS, push, in-app messages, Content Cards, and webhooks. To learn more about how specific events are tracked, refer to the [Message engagement event glossary](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events).
 
 | Channel | Engagement events available |
 | --- | --- |
@@ -168,7 +168,7 @@ The following message engagement events are available for email, SMS, push, in-a
 
 ##### Message abort events
 
-Message abort events occur when a message sent to a user was aborted due to conditional logic in [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages/) or [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/aborting_connected_content#aborting-messages), or from Liquid rendering timeouts.
+Message abort events occur when a message sent to a user was aborted due to conditional logic in [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages) or [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/aborting_connected_content#aborting-messages), or from Liquid rendering timeouts.
 
 Abort events are available for the following channels:
 
@@ -207,7 +207,7 @@ Some fields may be absent in a user's **Message History** tab in the following s
 
 ## Related articles
 
-- [User profile lifecycle](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle/)
-- [POST: Export user profile by identifier](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/)
-- [POST: Delete users](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/)
+- [User profile lifecycle](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle)
+- [POST: Export user profile by identifier](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier)
+- [POST: Delete users](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete)
 

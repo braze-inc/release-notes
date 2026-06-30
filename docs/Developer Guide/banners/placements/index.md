@@ -592,7 +592,7 @@ This feature is not currently supported on Roku.
 
 ### Step 5: Send a test Banner (optional) {#handling-test-cards}
 
-Before you launch a Banner campaign, you can [send a test Banner](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=banners) to verify your integration. Test Banners are stored in a separate in-memory cache and don't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
+Before you launch a Banner campaign, you can [send a test Banner](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages?tab=banners) to verify your integration. Test Banners are stored in a separate in-memory cache and don't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
 
 **Note:**
 
@@ -623,7 +623,7 @@ If your Banner uses the **Custom Code** editor block in the Braze dashboard, you
 </button>
 ```
 
-For the full reference, see [Custom code and JavaScript bridge for Banners](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner/#custom-code). The `brazeBridge` provides a communication layer between the Banner's internal HTML and the parent Braze SDK.
+For the full reference, see [Custom code and JavaScript bridge for Banners](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner#custom-code). The `brazeBridge` provides a communication layer between the Banner's internal HTML and the parent Braze SDK.
 
 ### Custom UI implementations (headless)
 
@@ -910,7 +910,7 @@ You can use custom properties from your Banner campaign to retrieve key–value 
 
 ### Prerequisites
 
-You must [add custom properties](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner/#custom-properties) to your Banner campaign. Additionally, these are the minimum SDK versions required to access custom properties:
+You must [add custom properties](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner#custom-properties) to your Banner campaign. Additionally, these are the minimum SDK versions required to access custom properties:
 
 <div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1310' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 13.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#610' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#3800' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 38.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/flutter/changelog/#1510' class='sdk-versions--chip flutter-sdk' target='_blank'>Flutter: 15.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/react_native/changelog/#1700' class='sdk-versions--chip reactnative-sdk' target='_blank'>React Native: 17.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 

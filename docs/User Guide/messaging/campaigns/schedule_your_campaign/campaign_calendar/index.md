@@ -32,4 +32,4 @@ Change the month by selecting <i class="fa-solid fa-chevron-left" style="color: 
 
 ![The Send Calendar displaying all scheduled campaigns in the current month.](https://www.braze.com/docs/assets/img/campaign_calendar/content_calendar_sends.png?4dc5c1291ae4618fe39c1e59cf1d1aca)
 
-View or modify your campaigns by selecting the campaign in the calendar. For more information, see [Managing campaigns](https://www.braze.com/docs/user_guide/messaging/campaigns/manage_campaigns/).
+View or modify your campaigns by selecting the campaign in the calendar. For more information, see [Managing campaigns](https://www.braze.com/docs/user_guide/messaging/campaigns/manage_campaigns).

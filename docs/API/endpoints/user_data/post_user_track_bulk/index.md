@@ -1,4 +1,4 @@
-<div id='api_jbggjwfkrjko' class='api_div' data-search-keywords='when to use this endpoint attributes events purchases message attributes_processed events_processed purchases_processed errors'>
+<div id='api_dpzzdskbqurx' class='api_div' data-search-keywords='when to use this endpoint attributes events purchases message attributes_processed events_processed purchases_processed errors'>
 <h1 id="create-and-update-users-bulk">Create and update users (bulk)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track/bulk</p>
@@ -12,7 +12,7 @@
 
 <h2 id="when-to-use-this-endpoint">When to use this endpoint</h2>
 
-<p>Like the <a href="/docs/api/endpoints/user_data/post_user_track/"><code class="language-plaintext highlighter-rouge">/users/track</code> endpoint</a>, you can use this endpoint to update user profiles. This endpoint is better suited for bulk updates:</p>
+<p>Like the <a href="/docs/api/endpoints/user_data/post_user_track"><code class="language-plaintext highlighter-rouge">/users/track</code> endpoint</a>, you can use this endpoint to update user profiles. This endpoint is better suited for bulk updates:</p>
 
 <ul>
   <li><strong>Larger requests:</strong> Send up to 1,000 users per request, so you can make fewer requests for large backfills and syncs.</li>
@@ -27,9 +27,9 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you must have an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">users.track.bulk</code> permission.</p>
+<p>To use this endpoint, you must have an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.track.bulk</code> permission.</p>
 
-<p>If you’re making server-to-server calls behind a firewall, you may need to allowlist your Braze REST endpoint (for example, <code class="language-plaintext highlighter-rouge">rest.iad-01.braze.com</code>). For more information, see <a href="/docs/api/basics/#api-definitions">API endpoints</a>.</p>
+<p>If you’re making server-to-server calls behind a firewall, you may need to allowlist your Braze REST endpoint (for example, <code class="language-plaintext highlighter-rouge">rest.iad-01.braze.com</code>). For more information, see <a href="/docs/api/basics#api-definitions">API endpoints</a>.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -85,19 +85,19 @@ Authorization: Bearer YOUR_REST_API_KEY
       <td><code class="language-plaintext highlighter-rouge">attributes</code></td>
       <td>Optional</td>
       <td>Array of attributes objects</td>
-      <td>See <a href="/docs/api/objects_filters/user_attributes_object/">user attributes object</a></td>
+      <td>See <a href="/docs/api/objects_filters/user_attributes_object">user attributes object</a></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">events</code></td>
       <td>Optional</td>
       <td>Array of event objects</td>
-      <td>See <a href="/docs/api/objects_filters/event_object/">events object</a></td>
+      <td>See <a href="/docs/api/objects_filters/event_object">events object</a></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">purchases</code></td>
       <td>Optional</td>
       <td>Array of purchase objects</td>
-      <td>See <a href="/docs/api/objects_filters/purchase_object/">purchases object</a></td>
+      <td>See <a href="/docs/api/objects_filters/purchase_object">purchases object</a></td>
     </tr>
   </tbody>
 </table>
@@ -314,9 +314,9 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <h3 id="fatal-error-response-codes">Fatal error response codes</h3>
 
-<p>For status codes and associated error messages that Braze returns when your request has a fatal error, see <a href="/docs/api/errors/#fatal-errors">Fatal errors &amp; responses</a>.</p>
+<p>For status codes and associated error messages that Braze returns when your request has a fatal error, see <a href="/docs/api/errors#fatal-errors">Fatal errors &amp; responses</a>.</p>
 
-<p>If you receive the error “provided external_id is blacklisted and disallowed”, your request may include a “dummy user.” For more information, see <a href="/docs/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking">Spam blocking</a>.</p>
+<p>If you receive the error “provided external_id is blacklisted and disallowed”, your request may include a “dummy user.” For more information, see <a href="/docs/user_guide/data_and_analytics/user_data_collection/user_archival#spam-blocking">Spam blocking</a>.</p>
 
 <h2 id="frequently-asked-questions">Frequently asked questions</h2>
 

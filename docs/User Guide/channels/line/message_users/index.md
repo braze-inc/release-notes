@@ -16,7 +16,7 @@ Set your trigger words when scheduling an action-based delivery campaign.
 
 ### Canvas
 
-Set your trigger words within [action paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths/) in your Canvas.
+Set your trigger words within [action paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) in your Canvas.
 
 ![Action path with a trigger of "Send this campaign to users who sent inbound LINE to subscription group where the message body is" and a blank field.](https://www.braze.com/docs/assets/img/line/trigger_word_canvas.png?f12bb0196522135e0170c40b5874c78b)
 

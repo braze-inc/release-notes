@@ -52,7 +52,7 @@ For Salesforce Marketing Cloud integrations, Decisioning Studio Go requires:
 1. **Data Extensions:** Your audience must be defined in a Data Extension that Decisioning Studio Go can access. Use the SubscriberKey as the primary user identifier.
 2. **Tracking Events access:** As long as the Installed App Package supports end-to-end automated setup, no additional configuration is required. 
 
-The data extensions and SQL queries are configured as part of the [orchestration setup](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/).
+The data extensions and SQL queries are configured as part of the [orchestration setup](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration).
 
 
 
@@ -66,5 +66,5 @@ The data extensions and SQL queries are configured as part of the [orchestration
 
 Now that you understand how Go connects to data, proceed to set up your CEP integration:
 
-- [Set up orchestration](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)
+- [Set up orchestration](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration)
 

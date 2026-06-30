@@ -1,4 +1,4 @@
-<div id='api_nwmyigjshnfl' class='api_div' data-search-keywords='prerequisites campaign_id send_id message'>
+<div id='api_nzmtqwvkyhfc' class='api_div' data-search-keywords='prerequisites campaign_id send_id message'>
 <h1 id="create-send-ids">Create send IDs</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/sends/id/create</p>
@@ -60,13 +60,13 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">campaign_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">campaign identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">campaign identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">send_id</code></td>
       <td>Optional</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">send identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">send identifier</a>.</td>
     </tr>
   </tbody>
 </table>

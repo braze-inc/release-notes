@@ -1,4 +1,4 @@
-<div id='api_swxnytevjepo' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
+<div id='api_lismqhnlmazf' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
 <h1 id="delete-catalog-field">Delete catalog field</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/catalogs/{catalog_name}/fields/{field_name}</p>
@@ -10,7 +10,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">catalogs.delete_fields</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">catalogs.delete_fields</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

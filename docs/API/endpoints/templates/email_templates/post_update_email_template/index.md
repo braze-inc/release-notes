@@ -1,4 +1,4 @@
-<div id='api_ihdojsdawcrk' class='api_div' data-search-keywords='prerequisites email_template_id template_name subject body plaintext_body preheader tags should_inline_css'>
+<div id='api_ibuzdivxiqev' class='api_div' data-search-keywords='prerequisites email_template_id template_name subject body plaintext_body preheader tags should_inline_css'>
 <h1 id="update-existing-email-templates">Update existing email templates</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/templates/email/update</p>
@@ -8,18 +8,18 @@
   <p>Use this endpoint to update email templates on the Braze dashboard.</p>
 </blockquote>
 
-<p>You can access an email template’s <code class="language-plaintext highlighter-rouge">email_template_id</code> by navigating to it on the <strong>Templates &amp; Media</strong> page. The <a href="/docs/api/endpoints/templates/email_templates/post_create_email_template/">Create email template endpoint</a> will also return an <code class="language-plaintext highlighter-rouge">email_template_id</code> reference.</p>
+<p>You can access an email template’s <code class="language-plaintext highlighter-rouge">email_template_id</code> by navigating to it on the <strong>Templates &amp; Media</strong> page. The <a href="/docs/api/endpoints/templates/email_templates/post_create_email_template">Create email template endpoint</a> will also return an <code class="language-plaintext highlighter-rouge">email_template_id</code> reference.</p>
 
 <p>All fields other than the <code class="language-plaintext highlighter-rouge">email_template_id</code> are optional, but you must specify at least one field to update.</p>
 
 <p><strong>Tip:</strong></p>
 
-<p>You can also call this endpoint through the <a href="/docs/user_guide/brazeai/mcp_server/">Braze MCP server</a> using the <a href="/docs/user_guide/brazeai/mcp_server/available_api_functions/#templates"><code class="language-plaintext highlighter-rouge">update_email_template</code></a> function. This lets AI tools like Claude and Cursor update email templates through natural language prompts.</p>
+<p>You can also call this endpoint through the <a href="/docs/user_guide/brazeai/mcp_server">Braze MCP server</a> using the <a href="/docs/user_guide/brazeai/mcp_server/available_api_functions#templates"><code class="language-plaintext highlighter-rouge">update_email_template</code></a> function. This lets AI tools like Claude and Cursor update email templates through natural language prompts.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#afb25494-3350-458d-932d-5bf4220049fa" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.email.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.email.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -77,7 +77,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       <td><code class="language-plaintext highlighter-rouge">email_template_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>Your <a href="/docs/api/identifier_types/">email template’s API identifier</a>.</td>
+      <td>Your <a href="/docs/api/identifier_types">email template’s API identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">template_name</code></td>
@@ -113,7 +113,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       <td><code class="language-plaintext highlighter-rouge">tags</code></td>
       <td>Optional</td>
       <td>String</td>
-      <td><a href="/docs/user_guide/messaging/governance/tags/">Tags</a> must already exist.</td>
+      <td><a href="/docs/user_guide/messaging/governance/tags">Tags</a> must already exist.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">should_inline_css</code></td>

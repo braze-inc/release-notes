@@ -1,6 +1,6 @@
 # Clone Canvases to Canvas Flow
 
-> If you have an existing Canvas from the original editor, you can clone this Canvas to create a copy in Canvas Flow. By switching to the current Canvas workflow, you gain access to lightweight [Canvas components](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/), [persistent entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/#canvas-entry-properties), and [post-launch editing](https://www.braze.com/docs/post-launch_edits). Your original Canvas will not be altered or deleted.
+> If you have an existing Canvas from the original editor, you can clone this Canvas to create a copy in Canvas Flow. By switching to the current Canvas workflow, you gain access to lightweight [Canvas components](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components), [persistent entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#canvas-entry-properties), and [post-launch editing](https://www.braze.com/docs/post-launch_edits). Your original Canvas will not be altered or deleted.
 
 **Important:**
 
@@ -15,12 +15,12 @@ To clone your Canvas, do the following:
 2. Identify the Canvas you want to create a copy of in the Canvas Flow workflow. You can clone Canvases with a **Draft**, **Active**, or **Stopped** status. 
 3. Click <i class="fas fa-ellipsis-vertical"></i> **More actions** and select **Clone to Canvas Flow**.
 
-![](https://www.braze.com/docs/assets/img_archive/clone_to_v2_workflow.png?21828e1cc6b1fdbcee95cb74e5e1c4d0){: style="max-width:25%;"}
+![Flow diagram for the described process.](https://www.braze.com/docs/assets/img_archive/clone_to_v2_workflow.png?21828e1cc6b1fdbcee95cb74e5e1c4d0){: style="max-width:25%;"}
 
 {: start="4"}
 4. Enter the name of your new Canvas and click **Clone to Canvas Flow**. 
 
-![](https://www.braze.com/docs/assets/img_archive/clone_to_v2_modal.png?0668006801d64875cebfcb0760772fca){: style="max-width:70%;"}
+![Content Card modal placement example.](https://www.braze.com/docs/assets/img_archive/clone_to_v2_modal.png?0668006801d64875cebfcb0760772fca){: style="max-width:70%;"}
 
 Now, you have two versions of your Canvas: the original Canvas and the Canvas Flow version. Your original Canvas still has its original status, and the cloned Canvas has a **Draft** status. You can still access the original Canvas, but Braze recommends using the Canvas Flow workflow to continue building your Canvases.
 
@@ -47,6 +47,6 @@ If re-eligibility is off, add the filter "Entered Canvas Variation". If re-eligi
 
 For API-triggered Canvases, coordinate with your engineering team to ensure that these Canvases are using the new Canvas ID when the new Canvases are ready to launch.
 
-For more information about the differences between the original Canvas editor and Canvas Flow experience, check out [Canvas FAQ](https://www.braze.com/docs/user_guide/messaging/canvas/faqs/#what-are-the-main-differences-between-canvas-flow-and-the-original-canvas-editor).
+For more information about the differences between the original Canvas editor and Canvas Flow experience, check out [Canvas FAQ](https://www.braze.com/docs/user_guide/messaging/canvas/faqs#what-are-the-main-differences-between-canvas-flow-and-the-original-canvas-editor).
 
 

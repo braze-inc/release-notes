@@ -11,7 +11,7 @@ In the linked Braze Learning course, we show you how regular expressions can be 
 ## Resources
 
 - [Regular expression basics](https://learning.braze.com/regular-expression-basics-for-braze) Braze Learning course
-- [Regex Cheat Sheet](https://www.braze.com/docs/regex_cheat_sheet/)
+- [Regex Cheat Sheet](https://www.braze.com/docs/regex_cheat_sheet)
 - [Sample Data RTF](https://www.braze.com/docs/assets/download_file/regex-dummy-data.rtf?a2fce36c12fb35f03ae3b0819aca3ee8)
 
 ## Regex debugger
@@ -195,7 +195,7 @@ For example, if you're trying to target users who live in cities that start with
 
 ### How do I filter for specific phone numbers?
 
-Before using regex to filter phone numbers, remember that numbers logged for user profiles must be in [E.164](https://en.wikipedia.org/wiki/E.164) format, as specified in [User phone numbers](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/).
+Before using regex to filter phone numbers, remember that numbers logged for user profiles must be in [E.164](https://en.wikipedia.org/wiki/E.164) format, as specified in [User phone numbers](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers).
 
 Assuming you're searching for US phone numbers, use the regex format `1?\d\d\d\d\d\d\d\d\d\d`, where each repetition of `\d` is a digit you want to specify. The first three digits are the area code.
 

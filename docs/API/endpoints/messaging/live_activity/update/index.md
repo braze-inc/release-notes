@@ -1,11 +1,11 @@
-<div id='api_jmdhqcvwnfcy' class='api_div' data-search-keywords='prerequisites app_id activity_id content_state end_activity dismissal_date stale_date notification message error'>
+<div id='api_xrpoerwrzqyb' class='api_div' data-search-keywords='prerequisites app_id activity_id content_state end_activity dismissal_date stale_date notification message error'>
 <h1 id="update-live-activity">Update Live Activity</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/live_activity/update</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to update and end <a href="/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift">Live Activities</a> displayed by your iOS app. This endpoint requires additional setup.</p>
+  <p>Use this endpoint to update and end <a href="/docs/developer_guide/push_notifications/live_notifications?sdktab=swift">Live Activities</a> displayed by your iOS app. This endpoint requires additional setup.</p>
 </blockquote>
 
 <p>After you register a Live Activity, you can pass a JSON payload to update your Apple Push Notification service (APNs). See Apple’s documentation on <a href="https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications">updating your Live Activity with push notification payloads</a> for more information.</p>
@@ -20,7 +20,7 @@
 
 <ul>
   <li>Generate an API key with the <code class="language-plaintext highlighter-rouge">messages.live_activity.update</code> permission.</li>
-  <li>Register a Live Activity <a href="/docs/developer_guide/push_notifications/live_notifications/?tab=remote&amp;sdktab=swift">remotely</a> or <a href="/docs/developer_guide/push_notifications/live_notifications/?tab=local&amp;sdktab=swift">locally</a> using the Braze Swift SDK.</li>
+  <li>Register a Live Activity <a href="/docs/developer_guide/push_notifications/live_notifications?tab=remote&amp;sdktab=swift">remotely</a> or <a href="/docs/developer_guide/push_notifications/live_notifications?tab=local&amp;sdktab=swift">locally</a> using the Braze Swift SDK.</li>
 </ul>
 
 <p><strong>Important:</strong></p>
@@ -75,7 +75,7 @@
       <td><code class="language-plaintext highlighter-rouge">app_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>App <a href="/docs/api/identifier_types/#the-app-identifier">API identifier</a> retrieved from the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers/">API Keys</a> page.</td>
+      <td>App <a href="/docs/api/identifier_types#the-app-identifier">API identifier</a> retrieved from the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers">API Keys</a> page.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">activity_id</code></td>
@@ -111,7 +111,7 @@
       <td><code class="language-plaintext highlighter-rouge">notification</code></td>
       <td>Optional</td>
       <td>Object</td>
-      <td>Include an <a href="/docs/api/objects_filters/messaging/apple_object/"><code class="language-plaintext highlighter-rouge">apple_push</code></a> object to define a push notification. The behavior of this push notification depends on if the user is active or if the user is using a proxy device. <ul><li>If a <code>notification</code> is included and the user is active on their iPhone when the update is delivered, the updated Live Activity UI will slide down and display like a push notification.</li><li>If a <code>notification</code> is included and the user is not active on their iPhone, their screen will light up to display the updated Live Activity UI on their lock screen.</li><li>The <code>notification alert</code> will not display as a standard push notification. Additionally, if a user has a proxy device, like an Apple Watch, the <code>alert</code> will be displayed there.</li></ul></td>
+      <td>Include an <a href="/docs/api/objects_filters/messaging/apple_object"><code class="language-plaintext highlighter-rouge">apple_push</code></a> object to define a push notification. The behavior of this push notification depends on if the user is active or if the user is using a proxy device. <ul><li>If a <code>notification</code> is included and the user is active on their iPhone when the update is delivered, the updated Live Activity UI will slide down and display like a push notification.</li><li>If a <code>notification</code> is included and the user is not active on their iPhone, their screen will light up to display the updated Live Activity UI on their lock screen.</li><li>The <code>notification alert</code> will not display as a standard push notification. Additionally, if a user has a proxy device, like an Apple Watch, the <code>alert</code> will be displayed there.</li></ul></td>
     </tr>
   </tbody>
 </table>
@@ -178,7 +178,7 @@
 
 <h3 id="example-error-response">Example error response</h3>
 
-<p>The <code class="language-plaintext highlighter-rouge">4XX</code> class of status code indicates a client error. Refer to the <a href="/docs/api/errors/">API errors and responses article</a> for more information about errors you may encounter.</p>
+<p>The <code class="language-plaintext highlighter-rouge">4XX</code> class of status code indicates a client error. Refer to the <a href="/docs/api/errors">API errors and responses article</a> for more information about errors you may encounter.</p>
 
 <p>The status code <code class="language-plaintext highlighter-rouge">400</code> could return the following response body.</p>
 

@@ -1,11 +1,11 @@
-<div id='api_ksuqujzwhwzz' class='api_div' data-search-keywords='prerequisites'>
+<div id='api_apizlkcxoman' class='api_div' data-search-keywords='prerequisites'>
 <h1 id="remove-dashboard-user-account">Remove dashboard user account</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/scim/v2/Users/{id}</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to permanently delete an existing dashboard user by specifying the resource <code class="language-plaintext highlighter-rouge">id</code> returned by the SCIM <a href="/docs/api/endpoints/scim/post_create_user_account/"><code class="language-plaintext highlighter-rouge">POST</code></a> method.</p>
+  <p>Use this endpoint to permanently delete an existing dashboard user by specifying the resource <code class="language-plaintext highlighter-rouge">id</code> returned by the SCIM <a href="/docs/api/endpoints/scim/post_create_user_account"><code class="language-plaintext highlighter-rouge">POST</code></a> method.</p>
 </blockquote>
 
 <p>This is similar to deleting a user in the <strong>Company Users</strong> section of the Braze dashboard.</p>
@@ -14,7 +14,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need a SCIM token. You’ll use your service origin as the <code class="language-plaintext highlighter-rouge">X-Request-Origin</code> header. For more information, refer to <a href="/docs/scim/automated_user_provisioning/">Automated user provisioning</a>.</p>
+<p>To use this endpoint, you’ll need a SCIM token. You’ll use your service origin as the <code class="language-plaintext highlighter-rouge">X-Request-Origin</code> header. For more information, refer to <a href="/docs/scim/automated_user_provisioning">Automated user provisioning</a>.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -42,7 +42,7 @@
       <td><code class="language-plaintext highlighter-rouge">id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>The user’s resource ID. This parameter is returned by the  <code class="language-plaintext highlighter-rouge">POST</code> <code class="language-plaintext highlighter-rouge">/scim/v2/Users/</code> or <code class="language-plaintext highlighter-rouge">GET</code>  <code class="language-plaintext highlighter-rouge">/scim/v2/Users?filter=userName eq "user@test.com"</code> methods.</td>
+      <td>The user’s resource ID. This parameter is returned by the  <code class="language-plaintext highlighter-rouge">POST</code> <code class="language-plaintext highlighter-rouge">/scim/v2/Users/</code> or <code class="language-plaintext highlighter-rouge">GET</code>  <code class="language-plaintext highlighter-rouge">/scim/v2/Users?filter=userName eq "user@example.com"</code> methods.</td>
     </tr>
   </tbody>
 </table>

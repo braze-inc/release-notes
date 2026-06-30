@@ -1,6 +1,6 @@
 # Landing page surveys
 
-> Braze surveys collect feedback on landing pages that you can analyze and use in follow-up messaging. During beta, surveys are built in the [landing page drag-and-drop editor](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages/).
+> Braze surveys collect feedback on landing pages that you can analyze and use in follow-up messaging. During beta, surveys are built in the [landing page drag-and-drop editor](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages).
 
 
 

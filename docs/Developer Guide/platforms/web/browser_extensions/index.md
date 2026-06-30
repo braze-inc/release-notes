@@ -39,7 +39,7 @@ However, if you use [Google Tag Manager](https://www.braze.com/docs/developer_gu
 **Tip:**
 
 
-Before you get started, make sure you've read through the Web SDK's [Initial SDK setup guide](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web) to learn more about our JavaScript integration in general.  <br><br>You may also want to bookmark the [JavaScript SDK reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) for full details on all of the different SDK methods and configuration options.
+Before you get started, make sure you've read through the Web SDK's [Initial SDK setup guide](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web) to learn more about our JavaScript integration in general.  <br><br>You may also want to bookmark the [JavaScript SDK reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) for full details on all of the different SDK methods and configuration options.
 
 
 

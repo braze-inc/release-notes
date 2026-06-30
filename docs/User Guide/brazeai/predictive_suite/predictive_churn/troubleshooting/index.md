@@ -35,8 +35,8 @@ A prediction audience definition cannot exceed 100 million users. If you see a m
 
 ### Prediction has poor quality
 
-![](https://www.braze.com/docs/assets/img/churn/churn3.png?1a657d342b9c8d94a0d5d7c6dbf8b762){: style="float:right;max-width:40%;margin-left:15px;"}
-If your model has a [prediction quality](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_churn/analytics/) of 40% or greater, you are in a great place! But if your prediction quality drops to 39% or less, you may need to edit your churn and prediction audience definitions to be more specific or have different time windows. 
+![Screenshot related to prediction has poor quality.](https://www.braze.com/docs/assets/img/churn/churn3.png?1a657d342b9c8d94a0d5d7c6dbf8b762){: style="float:right;max-width:40%;margin-left:15px;"}
+If your model has a [prediction quality](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_churn/analytics) of 40% or greater, you are in a great place! But if your prediction quality drops to 39% or less, you may need to edit your churn and prediction audience definitions to be more specific or have different time windows. 
 
 If you are unable to meet both the audience size requirement while building your prediction definitions and achieve a prediction quality of greater than 40%, it likely means that the data sent to Braze is not ideal for this use case, that there are not enough users with which to build a model against, or that your product life cycle is longer than our current 60-day lookback window supports. 
 

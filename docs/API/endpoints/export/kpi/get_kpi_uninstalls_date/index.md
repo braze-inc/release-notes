@@ -1,4 +1,4 @@
-<div id='api_mwohhkfqjemu' class='api_div' data-search-keywords='prerequisites message data time uninstalls'>
+<div id='api_lzassczscxak' class='api_div' data-search-keywords='prerequisites message data time uninstalls'>
 <h1 id="export-kpis-for-daily-app-uninstalls-by-date">Export KPIs for daily app uninstalls by date</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/kpi/uninstalls/data_series</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">kpi.uninstalls.data_series</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">kpi.uninstalls.data_series</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -52,7 +52,7 @@
       <td><code class="language-plaintext highlighter-rouge">app_id</code></td>
       <td>Optional</td>
       <td>String</td>
-      <td>App API identifier retrieved from the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers/">API Keys</a> page. If excluded, results for all apps in workspace will be returned.</td>
+      <td>App API identifier retrieved from the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers">API Keys</a> page. If excluded, results for all apps in workspace will be returned.</td>
     </tr>
   </tbody>
 </table>

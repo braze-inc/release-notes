@@ -112,7 +112,7 @@ configuration.devicePropertyAllowList = @[
 **Tip:**
 
 
-To learn more about automatically-collected device properties, see [SDK Data Collection](https://www.braze.com/docs/user_guide/data/unification/user_data/sdk_data_collection/).
+To learn more about automatically-collected device properties, see [SDK Data Collection](https://www.braze.com/docs/user_guide/data/unification/user_data/sdk_data_collection).
 
 
 

@@ -8,10 +8,10 @@ Suppression lists are dynamic and automatically apply to all forms of messaging,
 
 ### Message types and channels affected by suppression lists
 
-Suppression lists will apply to all message types and channels except for [feature flags](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/feature_flags/). This means that suppression lists by default apply to all channels, campaigns, and Canvases, including:
-- [API campaigns](https://www.braze.com/docs/api/api_campaigns/)
+Suppression lists will apply to all message types and channels except for [feature flags](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/feature_flags). This means that suppression lists by default apply to all channels, campaigns, and Canvases, including:
+- [API campaigns](https://www.braze.com/docs/api/api_campaigns)
 - API-triggered campaigns and Canvases
-- [Transactional emails](https://www.braze.com/docs/user_guide/channels/transactional_email/create_a_transactional_email/)
+- [Transactional emails](https://www.braze.com/docs/user_guide/channels/transactional_email/create_a_transactional_email)
 
 The only message type that suppression lists do not apply to is feature flags. Users in a suppression list won't be suppressed from feature flags, but will be suppressed from all other channels. 
 
@@ -20,7 +20,7 @@ You can use exception tags so that suppression list users are still targeted by 
 **Note:**
 
 
-Suppression lists are applied to API campaigns that are created in the Braze dashboard with a `campaign_id`. Suppression lists don't apply to messages sent through [Braze messaging endpoints](https://www.braze.com/docs/api/endpoints/messaging/) without an associated `campaign_id`. 
+Suppression lists are applied to API campaigns that are created in the Braze dashboard with a `campaign_id`. Suppression lists don't apply to messages sent through [Braze messaging endpoints](https://www.braze.com/docs/api/endpoints/messaging) without an associated `campaign_id`. 
 
 
 
@@ -42,7 +42,7 @@ All users can view suppression lists, but only users with [admin permissions](ht
 **Important:**
 
 
-Though the setup process seems similar to [segment creation](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/), a suppression list is a group of users that you **do not** want to send messages to regardless of segment membership.
+Though the setup process seems similar to [segment creation](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment), a suppression list is a group of users that you **do not** want to send messages to regardless of segment membership.
 
 
 

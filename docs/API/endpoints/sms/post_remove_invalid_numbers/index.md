@@ -1,4 +1,4 @@
-<div id='api_cmxqtwxoljqo' class='api_div' data-search-keywords='prerequisites phone_numbers'>
+<div id='api_qelrgdvjsepq' class='api_div' data-search-keywords='prerequisites phone_numbers'>
 <h1 id="remove-invalid-phone-numbers">Remove invalid phone numbers</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/sms/invalid_phone_numbers/remove</p>
@@ -14,7 +14,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key/">API key</a> with the <code class="language-plaintext highlighter-rouge">sms.invalid_phone_numbers.remove</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">sms.invalid_phone_numbers.remove</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

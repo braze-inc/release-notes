@@ -7,13 +7,13 @@ Referencing your Canvas version history can be especially helpful to maintain a 
 **Tip:**
 
 
-For a full list of Canvases in your workspace (for example, for an audit), use the [Export Canvas list endpoint](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvases/) and paginate through the results.
+For a full list of Canvases in your workspace (for example, for an audit), use the [Export Canvas list endpoint](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvases) and paginate through the results.
 
 
 
 ## Managing versions
 
-![](https://www.braze.com/docs/assets/img_archive/canvas_version_history.png?fa1f6cbc19dbec1183cb586dccc33006){: style="float:right;max-width:35%;margin-left:15px;"}
+![Screenshot related to managing versions.](https://www.braze.com/docs/assets/img_archive/canvas_version_history.png?fa1f6cbc19dbec1183cb586dccc33006){: style="float:right;max-width:35%;margin-left:15px;"}
 
 To create a new version, click **Update Canvas**. This allows you to make changes without overwriting the Canvas's previous setup. When a new Canvas version is created, the users already in the Canvas will progress through the workflow of the new version. Users entering the Canvas will also enter the new version. 
 

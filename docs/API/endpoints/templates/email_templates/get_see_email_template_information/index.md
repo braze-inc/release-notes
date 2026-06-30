@@ -1,4 +1,4 @@
-<div id='api_gjnvmcnxjgng' class='api_div' data-search-keywords='prerequisites email_template_id template_name description subject preheader body plaintext_body should_inline_css tags created_at updated_at'>
+<div id='api_ndjbqfpbdzsh' class='api_div' data-search-keywords='prerequisites email_template_id template_name description subject preheader body plaintext_body should_inline_css tags created_at updated_at'>
 <h1 id="see-email-template-information">See email template information</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/info</p>
@@ -15,7 +15,7 @@
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key/">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.email.info</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.email.info</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -43,7 +43,7 @@
       <td><code class="language-plaintext highlighter-rouge">email_template_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types/">email template API identifier</a>.</td>
+      <td>See <a href="/docs/api/identifier_types">email template API identifier</a>.</td>
     </tr>
   </tbody>
 </table>

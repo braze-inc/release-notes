@@ -73,7 +73,7 @@ After setting up the back-in-stock feature in a catalog, follow these steps to u
 1. Set up an action-based Canvas.
 2. Select **Back in stock** as the trigger.
 3. Select the name of the catalog with the back-in-stock notifications.
-4. Continue [setting up](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/) your Canvas as you would.
+4. Continue [setting up](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas) your Canvas as you would.
 
 Now, your customers can be notified when an item is back in stock.
 
@@ -84,8 +84,6 @@ To template in details about the catalog item that's back in stock, you can use 
 Using ``{{context.${catalog_update}.item_id}}`` will return the ID of the item that came back in stock. ``{{context.${catalog_update}.previous_value}}`` will return the inventory value of the item prior to the update, and ``{{context.${catalog_update}.new_value}}`` will return the new inventory value after the update.
 
 Use the Liquid tag ``{% catalog_items <name_of_your_catalog> {{context.${catalog_update}.item_id}} %}`` at the top of your message, then use ``{{ items[0].<field_name> }}`` to access data about that item throughout the message.
-
-
 
 
 
