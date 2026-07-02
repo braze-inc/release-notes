@@ -66,7 +66,7 @@ These views provide periodic snapshots of user profile attributes. The data is d
 * Faster query execution, particularly when filtering on attributes other than `USER_ID`.
 * **Limitation:** Data is not up to date in real time.
 
-<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><b>note</b><br />
+<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><span class='alert-label' role='heading' aria-level='6'>note</span><br />
 <p><strong>Understanding date fields:</strong></p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">TIME</code> and <code class="language-plaintext highlighter-rouge">TIME_MS</code>: Represent the time the user profile update occurred in Braze (in seconds and milliseconds, respectively). For backfilled data, these values are the time of the backfill.</li>
@@ -133,7 +133,7 @@ These views provide near real-time updates on user profile attributes, with data
     * Queries without USER_ID filters require aggregation across all users, leading to significantly longer execution times.
     * Queries on a large dataset (such as over 100 million users) may take many minutes.
 
-<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><b>note</b><br />
+<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><span class='alert-label' role='heading' aria-level='6'>note</span><br />
 <p><strong>Understanding date fields:</strong></p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">TIME</code> and <code class="language-plaintext highlighter-rouge">TIME_MS</code>: Represent the time the user profile update occurred in Braze (in seconds and milliseconds, respectively). For backfilled data, these values are the time of the backfill.</li>
@@ -196,7 +196,7 @@ These views store historical change logs of user attributes, capturing changes w
 * Data is snapshotted every 12 hours, meaning multiple updates in this window are combined into a single record. Individual changes within this period are not separately retained.
 * `EFF_DT` and `END_DT` mark the start and end of a user’s attribute state.
 
-<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><b>note</b><br />
+<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><span class='alert-label' role='heading' aria-level='6'>note</span><br />
 <p><strong>Understanding date fields:</strong></p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">TIME</code> and <code class="language-plaintext highlighter-rouge">TIME_MS</code>: Represent the time the user profile update occurred in Braze (in seconds and milliseconds, respectively). For backfilled data, these values are the time of the backfill.</li>

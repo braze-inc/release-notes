@@ -974,6 +974,11 @@ Unlike with [Segment Extensions](https://www.braze.com/docs/user_guide/audience/
 
 When approved, additional properties can be added in the dashboard under **Data Settings** > **Custom Events** by selecting **Manage Properties**. You can then use these event properties in the target step of the campaign or Canvas builder.
 
+<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><span class='alert-label' role='heading' aria-level='6'>note</span><br />
+<p>When you view segmentable purchase properties in <strong>Data Settings</strong> &gt; <strong>Products</strong>, the list displays property keys (names such as “color” or “brand”), not the actual property values (such as “red” or “Nike”).</p>
+</div></div>
+
+
 ### Canvas entry properties and event properties
 
 You can use Canvas entry properties and event properties in your Canvas user journeys.

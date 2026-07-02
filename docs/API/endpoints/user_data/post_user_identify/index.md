@@ -1,4 +1,4 @@
-<div id='api_klllnpiddvtc' class='api_div' data-search-keywords='how it works aliases_to_identify emails_to_identify phone_numbers_to_identify aliases_processed message'>
+<div id='api_vlgkfblzpuqm' class='api_div' data-search-keywords='how it works aliases_to_identify emails_to_identify phone_numbers_to_identify aliases_processed message'>
 <h1 id="identify-users">Identify users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/identify</p>
@@ -231,6 +231,10 @@ Authorization: Bearer YOUR_REST_API_KEY
 <p><strong>Tip:</strong></p>
 
 <p>For more information on <code class="language-plaintext highlighter-rouge">alias_name</code> and <code class="language-plaintext highlighter-rouge">alias_label</code>, check out our <a href="/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases">user aliases</a> documentation.</p>
+
+<h3 id="why-does-my-identify-request-return-success-but-the-profile-did-not-merge">Why does my identify request return success but the profile did not merge?</h3>
+
+<p><code class="language-plaintext highlighter-rouge">201 Created</code> with <code class="language-plaintext highlighter-rouge">message: success</code> means we accepted the request. It does not guarantee that every alias or email in the payload matched an existing profile—case mismatches on <code class="language-plaintext highlighter-rouge">alias_name</code>, duplicate profiles, or our prioritization rules can result in no visible merge even though the call succeeded. Verify that <code class="language-plaintext highlighter-rouge">alias_name</code> casing exactly matches our stored values, check for duplicate profiles with <a href="/docs/api/endpoints/user_data/post_users_merge/"><code class="language-plaintext highlighter-rouge">/users/merge</code></a>, and review <a href="#identifying-users-by-email"><code class="language-plaintext highlighter-rouge">prioritization</code></a> when using <code class="language-plaintext highlighter-rouge">emails_to_identify</code>.</p>
 
 <h2 id="response">Response</h2>
 

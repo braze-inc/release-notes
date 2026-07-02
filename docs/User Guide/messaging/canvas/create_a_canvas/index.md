@@ -217,11 +217,13 @@ These subscription settings are applied on a per-step basis, meaning that there 
 **Important:**
 
 
-With this configuration, don't include any filters in the **Target Audience** step that limits the audience to a single channel (for example, `Foreground Push Enabled = True` or `Email Subscription = Opted-In`).
+With this configuration, do not include any filters in the **Target Audience** step that limit the audience to a single channel (for example, `Foreground Push Enabled = True` or `Email Subscription = Opted-In`).
 
 
 
-If desired, specify [quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours) (the time during which your messages will not be sent) for your Canvas. Check **Enable Quiet Hours** in your **Send Settings**. Then, select your quiet hours in your user's local time and what action will follow if the message triggers inside of those quiet hours.
+You can choose to specify [quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours) (the time during which your messages are not sent) for your Canvas. Check **Enable Quiet Hours** in your **Send Settings**. Then, select your quiet hours in your user's local time and whether the message should abort or send at the next available time.
+
+When **Send at next available time** is selected, quiet hours suppress the message and send it at the next available time outside quiet hours. For example, let's say quiet hours are set up to prevent messages from being sent between 11:30 am and 2:30 pm in the user's local time, and a user enters a Message step at 11:35 am. Because this time is within quiet hours, the message is not sent yet, and the user receives the Message step at 2:30 pm, which is after quiet hours.
 
 ![The "Quiet Hours" page displaying a checkbox for enabling quiet hours. If enabled, the start time, end time, and fallback behavior can be set.](https://www.braze.com/docs/assets/img/quiet_hours.png?6de04fa223fe658a5708e2199f3615b6)
 

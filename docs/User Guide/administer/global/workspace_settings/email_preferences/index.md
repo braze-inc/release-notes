@@ -175,13 +175,13 @@ Click tracking applies only to links that start with `http://` or `https://`. `m
 **Note:**
 
 
-Since February 15, 2024, new companies have the list-unsubscribe header (with one-click unsubscribe) enabled by default.
+Since June 15, 2026, when the one-click list-unsubscribe header is configured to scope to a specific subscription group, Braze no longer includes the mailto header in emails. Users who unsubscribe through the list-unsubscribe header are unsubscribed from only that specific subscription group, not globally.
 
 
 
 Using a list-unsubscribe header allows your recipients to unsubscribe easily from marketing emails by displaying an **Unsubscribe** button within the mailbox UI, and not the message body.
 
-Test sends typically **do not** include list-unsubscribe headers. Whether the live header appears is up to the mailbox provider and is reputation-based—stronger sender reputation usually improves visibility.
+Test sends typically don't include list-unsubscribe headers. Whether the live header appears is up to the mailbox provider and is reputation-based—stronger sender reputation usually improves visibility.
 
 ![Email client mailbox UI with an Unsubscribe option next to the message, where list-unsubscribe appears outside the message body.](https://www.braze.com/docs/assets/img_archive/list_unsub_img1.png?29f75f3af0dcf74113993afa4fb36d72){: style="float:right;max-width:60%;margin-left:15px;"}
 

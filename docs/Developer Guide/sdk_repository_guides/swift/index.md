@@ -5,8 +5,8 @@ The Braze Swift SDK helps you integrate Braze messaging, analytics, and user eng
 
 To get started, refer to the following resources:
 
-- [Braze User Guide](https://www.braze.com/docs/user_guide/introduction)
-- [Braze Developer Guide](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift)
+- [Braze User Guide](https://www.braze.com/docs/user_guide/introduction/)
+- [Braze Developer Guide](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift)
 
 ## Quickstart
 
@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 AppDelegate.braze?.changeUser(userId: "Jane Doe")
 ```
 
-For more information about advanced integration options, see the [Braze Developer Guide](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift).
+For more information about advanced integration options, see the [Braze Developer Guide](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift).
 
 ## Version support
 
@@ -78,13 +78,13 @@ The following table describes each library in the Braze Swift SDK.
 <sup>1</sup> _Push notifications not supported on tvOS_<br/>
 <sup>2</sup> _Geofence monitoring not supported on tvOS and visionOS_
 
-[analytics]: /docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/
-[push notifications]: /docs/user_guide/message_building_by_channel/push
-[In-App Messages]: /docs/user_guide/message_building_by_channel/in-app_messages
-[Content Cards]: /docs/user_guide/message_building_by_channel/content_cards
-[location analytics and geofence monitoring]: /docs/user_guide/engagement_tools/locations_and_geofences
-[rich push notifications]: /docs/user_guide/message_building_by_channel/push/ios/rich_notifications/
-[Push Stories]: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/
+[analytics]: https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/
+[push notifications]: https://www.braze.com/docs/user_guide/message_building_by_channel/push
+[In-App Messages]: https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages
+[Content Cards]: https://www.braze.com/docs/user_guide/message_building_by_channel/content_cards
+[location analytics and geofence monitoring]: https://www.braze.com/docs/user_guide/engagement_tools/locations_and_geofences
+[rich push notifications]: https://www.braze.com/docs/user_guide/message_building_by_channel/push/ios/rich_notifications/
+[Push Stories]: https://www.braze.com/docs/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/
 
 ## Examples
 
@@ -102,7 +102,7 @@ Explore our [examples project](https://github.com/braze-inc/braze-swift-sdk/blob
 
 ## Contact
 
-For questions, contact [support@braze.com](mailto:support@braze.com).
+For questions, contact Braze Technical Support for assistance.
 
 [braze-inc/braze-swift-sdk]: https://github.com/braze-inc/braze-swift-sdk
 [braze-inc/braze-swift-sdk-prebuilt-static]: https://github.com/braze-inc/braze-swift-sdk-prebuilt-static
