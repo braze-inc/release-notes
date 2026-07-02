@@ -55,7 +55,7 @@ npm install --save @braze/web-sdk@5.4.0
 **Important:**
 
 
-The Braze Web SDK version must be 5.4.0.
+The Braze Web SDK version must be 5.4.0 or later.
 
 
 

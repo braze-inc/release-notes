@@ -149,6 +149,11 @@ For a consolidated reference of data types across custom attributes, event prope
 
 [Purchase properties](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/purchase_events#purchase-properties) can be used to trigger messages and for personalization using Liquid, also allowing you to segment based on these properties.
 
+<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><span class='alert-label' role='heading' aria-level='6'>note</span><br />
+<p>When you view segmentable purchase properties in <strong>Data Settings</strong> &gt; <strong>Products</strong>, the list displays property keys (names such as “color” or “brand”), not the actual property values (such as “red” or “Nike”).</p>
+</div></div>
+
+
 #### Naming conventions
 
 It's important to note that this feature is turned on **per product**, not per purchase. For example, if a you have a high volume of distinct products, but each has the same properties, segmenting may be more unnecessary.

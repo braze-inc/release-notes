@@ -1,4 +1,4 @@
-<div id='api_ngleapylegzi' class='api_div' data-search-keywords='prerequisites message data time purchase_quantity'>
+<div id='api_jkjwnflgmaql' class='api_div' data-search-keywords='prerequisites message data time purchase_quantity'>
 <h1 id="export-number-of-purchases">Export number of purchases</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/purchases/quantity_series</p>

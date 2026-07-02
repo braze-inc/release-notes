@@ -1,4 +1,4 @@
-<div id='api_nbyexpwxcofq' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
+<div id='api_iuotwllpnciz' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
 <h1 id="send-campaign-messages-using-api-triggered-delivery">Send campaign messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/send</p>
@@ -365,5 +365,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 <p><strong>Tip:</strong></p>
 
 <p>Looking for the Canvas version of this endpoint? Check out <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases#create-send-endpoint">Sending Canvas messages using API-triggered delivery</a>.</p>
+
+<h3 id="why-doesnt-liquid-render-when-i-put-it-directly-in-my-json-body">Why doesn’t Liquid render when I put it directly in my JSON body?</h3>
+
+<p>When your request body is valid JSON, Braze evaluates any Liquid in the payload on the server. If you embed Liquid as raw strings, quote and escape those strings so the body stays valid JSON—for example, escape double quotes inside strings. If the body fails JSON parsing, Braze returns a <code class="language-plaintext highlighter-rouge">400</code> before it evaluates any Liquid. When supported, pass dynamic values through <a href="/docs/api/objects_filters/trigger_properties_object/"><code class="language-plaintext highlighter-rouge">trigger_properties</code></a> instead of embedding Liquid directly in the payload.</p>
 
 </div>
