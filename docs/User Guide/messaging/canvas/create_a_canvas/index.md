@@ -13,7 +13,7 @@ You can no longer create or duplicate Canvases using the original Canvas experie
 
 First, go to **Messaging** > **Canvas**, then select **Create Canvas**.
 
-The Canvas builder will guide you step-by-step through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Select each of the following tabs to view which settings you can adjust for each builder step.
+The Canvas builder will guide you step-by-step through setting up your Canvas—everything from naming it to setting conversion events and bringing the intended users into your customer journey. Select each of the following tabs to view which settings you can adjust for each builder step.
 
 
   
@@ -163,9 +163,9 @@ Entry controls determine if users are allowed to re-enter a Canvas. You can also
 - **Action-Based:** Hourly, daily, or the lifetime of the Canvas
 - **API-Triggered:** Hourly, daily, or the lifetime of the Canvas
 
-For example, if you have an action-based Canvas and select **Limit entrance volume** and set the **Maximum entries** field to 5,000 users with **Daily** as the limit cadence, then the Canvas only sends to 5,000 users per day.
+For example, if you have a scheduled Canvas and select **Limit entrance volume** and set the **Maximum entries** field to 500,000 users with **Every time Canvas is scheduled** as the limit cadence, then the Canvas only sends to 500,000 users per scheduled send.
 
-![The "Entry Controls" page displaying checkboxes for "Allow users to re-enter Canvas" and "Limit entrance volume". The latter allows you to set the maximum entries and choose a cadence that depends on the entry schedule type (for example, lifetime of the Canvas or every time the Canvas is scheduled for scheduled entry, and hourly, daily, or lifetime of the Canvas for action-based and API-triggered entry).](https://www.braze.com/docs/assets/img_archive/entry_controls.png?dfccafba9b227bdb87b55966803dbf88)
+![The "Entry Controls" page displaying checkboxes for "Allow users to re-enter Canvas" and "Limit entrance volume".](https://www.braze.com/docs/assets/img_archive/entry_controls.png?9e0f62e25c3f814fcf77aeb6facd8e9f)
 
 **Tip:**
 

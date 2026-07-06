@@ -97,7 +97,7 @@ The **Engagement** tab contains information about a user's interactions with the
 **Note:**
 
 
-To view the **Event History** tab, you need the **Search Users** and **View PII** [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions), because event properties can contain personal data.
+To view the **Event History** tab, you need the **Search Users**, **View User Event Properties**, and **View PII** [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions), because event properties can contain personal data.
 
 
 

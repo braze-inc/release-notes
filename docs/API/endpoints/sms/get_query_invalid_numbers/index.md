@@ -1,4 +1,4 @@
-<div id='api_vquzqhqdjlnk' class='api_div' data-search-keywords='prerequisites sms phone invalid_detected_at reason message'>
+<div id='api_yvkrhjljzdnp' class='api_div' data-search-keywords='prerequisites sms phone invalid_detected_at reason message'>
 <h1 id="query-invalid-phone-numbers">Query invalid phone numbers</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/sms/invalid_phone_numbers</p>
