@@ -1,4 +1,4 @@
-<div id='api_gbvtkhnhgzhy' class='api_div' data-search-keywords='synchronous and asynchronous api calls attributes events purchases users custom_attributes custom_events purchase_events message errors'>
+<div id='api_cietbakqeerr' class='api_div' data-search-keywords='synchronous and asynchronous api calls attributes events purchases users custom_attributes custom_events purchase_events message errors'>
 <h1 id="create-and-update-users-synchronous">Create and update users (synchronous)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track/sync</p>
@@ -442,6 +442,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 <p>Yes, as long as the requests are for different users, or each request updates different attributes, events, purchases for one user.</p>
 
 <p>If you’re sending multiple requests for a user, for the same attribute, event, or purchase, Braze recommends waiting for a successful response between each request to prevent race conditions from occurring.</p>
+
+<p>If you still see inconsistent profile state when calling <code class="language-plaintext highlighter-rouge">/users/track</code> for the same user in quick succession, switch those updates to <code class="language-plaintext highlighter-rouge">/users/track/sync</code> and issue one request at a time, waiting for each <code class="language-plaintext highlighter-rouge">2XX</code> response before the next. That ordering is the supported way to avoid read-after-write races across tight loops or parallel workers.</p>
 
 <h3 id="why-doesnt-the-response-value-match-the-one-in-my-original-request">Why doesn’t the response value match the one in my original request?</h3>
 

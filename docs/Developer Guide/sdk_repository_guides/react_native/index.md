@@ -1,4 +1,6 @@
 <!-- BEGIN GENERATED README CONTENT -->
+# React Native SDK repository guide
+
 ## About the Braze React Native SDK
 
 The Braze React Native SDK connects your iOS and Android apps to Braze: user profiles, messaging surfaces, analytics, and feature flags. It wraps the native [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk) and [Braze Android SDK](https://github.com/braze-inc/braze-android-sdk) behind a JavaScript API.
@@ -220,7 +222,7 @@ Braze.subscribeToInAppMessage(false, (event) => {
 ### Content Cards
 
 ``` typescript
-const cards = await Braze.getContentCards();
+const cards = await Braze.getCachedContentCards();
 Braze.requestContentCardsRefresh();
 Braze.launchContentCards(); // default Braze UI
 
@@ -239,7 +241,7 @@ Braze.requestBannersRefresh(["homepage_banner"]);
 const banner = await Braze.getBanner("homepage_banner");
 
 // Or use the native Banner view:
-// <Braze.BrazeBannerView placementID="homepage_banner" />
+// <Braze.BrazeBannerView placementId="homepage_banner" />
 ```
 
 ### Push notifications

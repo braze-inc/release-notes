@@ -14,7 +14,7 @@ Looking for definitions for the terms and metrics listed in your report? Refer t
 
 
 
-From the **Campaign Analytics** tab, you can view your reports in a series of panels. You may see more or less than those listed in the sections below, but each has its own useful purpose.
+From the **Campaign Analytics** tab, you can view your reports in a series of panels. You may see more or less than those listed in the following sections, but each has its own useful purpose.
 
 ### Time range
 

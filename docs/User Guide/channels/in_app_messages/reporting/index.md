@@ -14,7 +14,7 @@ Looking for definitions for the terms and metrics listed in your report? Refer t
 
 
 
-From the **Campaign Analytics** tab, you can view your reports in a series of panels. You may see more or less than those listed in the sections below, but each has its own useful purpose.
+From the **Campaign Analytics** tab, you can view your reports in a series of panels. You may see more or less than those listed in the following sections, but each has its own useful purpose.
 
 ### Time range
 
@@ -136,12 +136,14 @@ For in-app messages, this page defines unique impressions using a calendar-day b
 | Conversion rate | The metric of total daily unique impressions (*Unique Impressions*) is used to calculate the conversion rate. <br><br> Conversion Rate = (Primary Conversions) / (Unique Impressions) <br><br> For in-app messages, *Unique Impressions* can be counted only once per calendar day in your workspace's time zone. The number of times a user completes a desired action (a "conversion") can increase within that same calendar day. Therefore, if a user completes a conversion multiple times within a day, the *Conversion Rate* can increase accordingly, but *Unique Impressions* are counted only once for that calendar day. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="In-app message metrics" }
 
-**Note:**
+**Tip:**
 
 
-In A/B tests, control group *Unique Impressions* can exceed variant *Unique Impressions*, and control *Total Impressions* can exceed variant *Total Impressions*, when variant messages require render time (for example, large images or templated Connected Content). Users who trigger the message but leave before the variant finishes rendering may not log variant impressions, while the control group logs impressions without rendering a message.
+*Total Impressions* can exceed *Unique Impressions* when a user views the message more than once on the same calendar day (see the metric definitions in the preceding table). To investigate users with inflated impression counts, create a segment with the **Device Count** filter set to **more than** `1`, and the **Received Message from Campaign** filter for the specific campaign.
 
 
+
+For control group versus variant impression imbalances in A/B tests, see [Discrepancies between the control group and variant](https://www.braze.com/docs/user_guide/messaging/ab_testing/analytics#discrepancies-between-the-control-group-and-variant).
 
 ## How do conversions increment with re-eligibility?
 

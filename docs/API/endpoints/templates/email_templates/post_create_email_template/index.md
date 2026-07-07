@@ -1,4 +1,4 @@
-<div id='api_yfgxmsniheyt' class='api_div' data-search-keywords='prerequisites template_name subject body plaintext_body preheader tags should_inline_css email_template_id message'>
+<div id='api_oisacnevnwtf' class='api_div' data-search-keywords='prerequisites template_name subject body plaintext_body preheader tags should_inline_css email_template_id message'>
 <h1 id="create-email-template">Create email template</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/templates/email/create</p>

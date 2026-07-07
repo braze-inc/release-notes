@@ -350,7 +350,21 @@ Braze lets you set a **Custom Unsubscribe Page** with your own HTML. This page a
 
 ![Custom unsubscribe page HTML editor and preview for the page shown after a user unsubscribes from email.](https://www.braze.com/docs/assets/img/email_settings/custom_unsubscribe.png?84484d87c3101bdd7d62628878db6caf)
 
-For email list management best practices, see [Managing email subscriptions](https://www.braze.com/docs/user_guide/channels/email/faq#unsubscribed-email-addresses).
+### External font domains
+
+When creating custom  pages, Braze sanitizes HTML inputs to prevent cross-site scripting (XSS) attacks. As part of this security measure, external resource URLs—including font URLs—are removed unless they're from the following allowed domains:
+
+- `assets.appboycdn.com`
+- `braze-images.com`
+- `cdn.braze.com`
+- `cdn.braze.eu`
+- `fonts.googleapis.com`
+- `fonts.gstatic.com`
+
+If you need to use custom fonts in your  page, reference fonts from one of these domains or use [web-safe fonts](https://www.w3schools.com/cssref/css_websafe_fonts.php) instead.
+
+For email list management best practices, see [Email subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions/).
+
 
 
 
@@ -359,7 +373,21 @@ You can create a custom opt-in page using your own HTML. Including this in your 
 
 ![Custom opt-in page HTML editor and preview for branded email subscription confirmation.](https://www.braze.com/docs/assets/img/email_settings/custom_opt_in.png?3b73dc55346060c4c5e3a2a64dffa74e)
 
-For email list management best practices, see [Managing email subscriptions](https://www.braze.com/docs/user_guide/channels/email/faq#unsubscribed-email-addresses).
+### External font domains
+
+When creating custom  pages, Braze sanitizes HTML inputs to prevent cross-site scripting (XSS) attacks. As part of this security measure, external resource URLs—including font URLs—are removed unless they're from the following allowed domains:
+
+- `assets.appboycdn.com`
+- `braze-images.com`
+- `cdn.braze.com`
+- `cdn.braze.eu`
+- `fonts.googleapis.com`
+- `fonts.gstatic.com`
+
+If you need to use custom fonts in your  page, reference fonts from one of these domains or use [web-safe fonts](https://www.w3schools.com/cssref/css_websafe_fonts.php) instead.
+
+For email list management best practices, see [Email subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions/).
+
 
 
 

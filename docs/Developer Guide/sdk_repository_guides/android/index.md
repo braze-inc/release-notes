@@ -1,4 +1,6 @@
 <!-- BEGIN GENERATED README CONTENT -->
+# Android SDK repository guide
+
 ## About the Braze Android SDK
 
 The Braze Android SDK helps you integrate Braze messaging, analytics, and user engagement capabilities into your application.
