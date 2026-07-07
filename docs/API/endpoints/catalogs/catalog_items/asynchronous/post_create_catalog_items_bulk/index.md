@@ -1,4 +1,4 @@
-<div id='api_xoyorjesvxdx' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
+<div id='api_hcghgwjljvmh' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
 <h1 id="create-multiple-catalog-items">Create multiple catalog items</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/catalogs/{catalog_name}/items</p>

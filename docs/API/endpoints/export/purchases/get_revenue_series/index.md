@@ -1,4 +1,4 @@
-<div id='api_aoxqkfsovlif' class='api_div' data-search-keywords='prerequisites message data time revenue'>
+<div id='api_bworxsxahger' class='api_div' data-search-keywords='prerequisites message data time revenue'>
 <h1 id="export-revenue-data-by-time">Export revenue data by time</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/purchases/revenue_series</p>

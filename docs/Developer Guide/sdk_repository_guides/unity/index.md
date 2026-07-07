@@ -1,4 +1,6 @@
 <!-- BEGIN GENERATED README CONTENT -->
+# Unity SDK repository guide
+
 ## About the Braze Unity SDK
 
 The Braze Unity SDK helps you integrate Braze messaging, analytics, and user engagement capabilities into your application.

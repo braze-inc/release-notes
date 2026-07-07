@@ -1,4 +1,4 @@
-<div id='api_hizhqilkqdds' class='api_div' data-search-keywords='prerequisites products message'>
+<div id='api_ppyzrrjiqiil' class='api_div' data-search-keywords='prerequisites products message'>
 <h1 id="export-product-ids">Export product IDs</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/purchases/product_list</p>

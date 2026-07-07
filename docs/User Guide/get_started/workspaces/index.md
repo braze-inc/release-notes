@@ -220,6 +220,13 @@ The following table describes the benefits and drawbacks of these two approaches
     </tbody>
 </table>
 
+**Note:**
+
+
+For how MAU differs when viewing all apps versus a single app, see [Monthly active users](https://www.braze.com/docs/user_guide/analytics/dashboards/home#monthly-active-users).
+
+
+
 ## Best practices
 
 ### Set up a testing workspace

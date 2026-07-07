@@ -78,7 +78,7 @@ Your selection for **Rows** affects the metrics you can select.
 **Tip:**
 
 
-If you want to report on Canvas variants or steps, select **Canvases** for rows and either leave the field empty or select **Date** as the drilldown. This creates a **Canvas View** dropdown to view metrics for the Canvas only, or group metrics by variant, step, or message. 
+If you want to report on Canvas variants or steps, select **Canvases** for rows and either leave the field empty or select **Date** as the drilldown. This creates a **Canvas View** dropdown to view metrics for the Canvas only, or group metrics by variant, step, or message.<br><br> When you group by step, the preview table while configuring your report shows a maximum of 50 rows. Run the report or export it as a CSV to view all rows.
 
 ![The opened "Canvas View" dropdown.](https://www.braze.com/docs/assets/img/report_builder_2/canvas_view_dropdown.png?ac6ed27e6aa75a07b508c2e2063bab66){: style="width:40%;"}
 
@@ -105,7 +105,7 @@ In the same report, _Unique Recipients_ can be higher than _Unique Impressions_ 
 
 ## Viewing a report
 
-After running your report, you can view your results in table format on the report page. 
+After running your report, you can view your results in table format on the report page.
 
 ![A table of the report data for each campaign's metrics.](https://www.braze.com/docs/assets/img/report_builder_2/report_table.png?06010414c51ded431c6fdc1214da2c7c){: style="width:90%;"}
 

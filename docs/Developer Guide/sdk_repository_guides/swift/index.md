@@ -1,4 +1,6 @@
 <!-- BEGIN GENERATED README CONTENT -->
+# Swift SDK repository guide
+
 ## About the Braze Swift SDK
 
 The Braze Swift SDK helps you integrate Braze messaging, analytics, and user engagement capabilities into your application.
