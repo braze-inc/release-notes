@@ -1,4 +1,4 @@
-<div id='api_cietbakqeerr' class='api_div' data-search-keywords='synchronous and asynchronous api calls attributes events purchases users custom_attributes custom_events purchase_events message errors'>
+<div id='api_fenfxvrsahmb' class='api_div' data-search-keywords='synchronous and asynchronous api calls attributes events purchases users custom_attributes custom_events purchase_events message errors'>
 <h1 id="create-and-update-users-synchronous">Create and update users (synchronous)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track/sync</p>
@@ -18,7 +18,7 @@
 
 <p>In a synchronous call, the API returns a status code <code class="language-plaintext highlighter-rouge">201</code>, indicating that your request was successfully received, understood, accepted, and completed. The call response shows select user profile fields as a result of the operation.</p>
 
-<p>This endpoint has a lower rate limit than the <code class="language-plaintext highlighter-rouge">/users/track</code> endpoint (see <a href="#rate-limit">rate limit</a> below). Each <code class="language-plaintext highlighter-rouge">/users/track/sync</code> request can contain only  one event object, one attribute object, <strong>or</strong> one purchase object. This endpoint should be reserved for user profile updates where a synchronous call is needed. For a healthy implementation, we recommend using <code class="language-plaintext highlighter-rouge">/users/track/sync</code> and <code class="language-plaintext highlighter-rouge">/users/track</code> together.</p>
+<p>This endpoint has a lower rate limit than the <code class="language-plaintext highlighter-rouge">/users/track</code> endpoint (see <a href="#rate-limit">Rate limit</a>). Each <code class="language-plaintext highlighter-rouge">/users/track/sync</code> request can contain only one event object, one attribute object, <strong>or</strong> one purchase object. This endpoint should be reserved for user profile updates where a synchronous call is needed. For a healthy implementation, we recommend using <code class="language-plaintext highlighter-rouge">/users/track/sync</code> and <code class="language-plaintext highlighter-rouge">/users/track</code> together.</p>
 
 <p>For example, if you’re sending consecutive requests for the same user over a short period of time, race conditions are possible with the asynchronous <code class="language-plaintext highlighter-rouge">/users/track</code> endpoint, but with the <code class="language-plaintext highlighter-rouge">/users/track/sync</code> endpoint you can send those requests in sequence, each after receiving a <code class="language-plaintext highlighter-rouge">2XX</code> response.</p>
 
@@ -449,6 +449,6 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <p>Although your request is completed, it’s possible your custom attribute value didn’t update. This can happen when your custom attribute update exceeds the maximum number of characters, exceeds array limits, or if the user does not exist in Braze and you have <code class="language-plaintext highlighter-rouge">_update_existing_only = true</code>.</p>
 
-<p>In these cases, treat the response as an indication that your request, while completed, your desired update has not been made. Troubleshoot with the reasons why this may happen from above.</p>
+<p>In these cases, treat the response as an indication that your request, while completed, your desired update has not been made. Troubleshoot using the reasons listed in <a href="#why-doesnt-the-response-value-match-the-one-in-my-original-request">Why doesn’t the response value match the one in my original request?</a>.</p>
 
 </div>

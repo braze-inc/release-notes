@@ -1,4 +1,4 @@
-<div id='api_vhnregqbiwkj' class='api_div' data-search-keywords='prerequisites translations translation_map id_0 id_1 message errors'>
+<div id='api_rggjhhwbwnam' class='api_div' data-search-keywords='prerequisites translations translation_map id_0 id_1 message errors'>
 <h1 id="view-default-source-values-for-a-content-blocks-translation-tags">View default source values for a Content Block’s translation tags</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/content_blocks/translations/source</p>
