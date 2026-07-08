@@ -1,4 +1,4 @@
-<div id='api_lmvtpsvwdxme' class='api_div' data-search-keywords='prerequisites subscription_group_id subscription_state external_id phone use_double_opt_in_logic email message'>
+<div id='api_sddghqqbeqez' class='api_div' data-search-keywords='prerequisites subscription_group_id subscription_state external_id phone use_double_opt_in_logic email message'>
 <h1 id="update-users-subscription-group-status">Update user’s subscription group status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/subscription/status/set</p>

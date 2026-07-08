@@ -1,4 +1,4 @@
-<div id='api_ydbyvabxvtfz' class='api_div' data-search-keywords='write personalized messaging based on a user’s context canvas agent'>
+<div id='api_wozsfqiqammn' class='api_div' data-search-keywords='write personalized messaging based on a user’s context canvas agent'>
 <h2 id="write-personalized-messaging-based-on-a-users-context">Write personalized messaging based on a user’s context</h2>
 
 <div class="api_tags" data-tags="Canvas agent" data-tags-lower="canvas agent"></div>
@@ -118,7 +118,7 @@ The user IS in the segment: “Logged multiple searches in the past 30D”.
 
 </div>
 
-<div id='api_vxfmjvdwgqte' class='api_div' data-search-keywords='analyze user feedback to determine next steps canvas agent'>
+<div id='api_crxkqkszkyla' class='api_div' data-search-keywords='analyze user feedback to determine next steps canvas agent'>
 <h2 id="analyze-user-feedback-to-determine-next-steps">Analyze user feedback to determine next steps</h2>
 
 <div class="api_tags" data-tags="Canvas agent" data-tags-lower="canvas agent"></div>
@@ -216,7 +216,7 @@ Input &amp; Output Example:
 
 </div>
 
-<div id='api_fattlgouupoo' class='api_div' data-search-keywords='classify inbound messages for opt-out intent canvas agent'>
+<div id='api_fnhapbbdrunb' class='api_div' data-search-keywords='classify inbound messages for opt-out intent canvas agent'>
 <h2 id="classify-inbound-messages-for-opt-out-intent">Classify inbound messages for opt-out intent</h2>
 
 <div class="api_tags" data-tags="Canvas agent" data-tags-lower="canvas agent"></div>
@@ -336,7 +336,7 @@ Input: “This sucks—what’s the promo code?” → false
 
 </div>
 
-<div id='api_jgmrrtacrvtx' class='api_div' data-search-keywords='write high-converting descriptions that align with brand guidelines catalog agent'>
+<div id='api_hjmztihmqosd' class='api_div' data-search-keywords='write high-converting descriptions that align with brand guidelines catalog agent'>
 <h2 id="write-high-converting-descriptions-that-align-with-brand-guidelines">Write high-converting descriptions that align with brand guidelines</h2>
 
 <div class="api_tags" data-tags="Catalog agent" data-tags-lower="catalog agent"></div>
@@ -439,7 +439,7 @@ Price Tier: $$$
 
 </div>
 
-<div id='api_lgjietpondro' class='api_div' data-search-keywords='provide translations based on language used by region catalog agent'>
+<div id='api_bcdtxocydeuq' class='api_div' data-search-keywords='provide translations based on language used by region catalog agent'>
 <h2 id="provide-translations-based-on-language-used-by-region">Provide translations based on language used by region</h2>
 
 <div class="api_tags" data-tags="Catalog agent" data-tags-lower="catalog agent"></div>
