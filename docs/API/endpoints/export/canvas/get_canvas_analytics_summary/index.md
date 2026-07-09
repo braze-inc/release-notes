@@ -1,4 +1,4 @@
-<div id='api_fvlpxcwnfbhq' class='api_div' data-search-keywords='prerequisites data name total_stats revenue conversions conversions_by_entry_time entries variant_stats step_stats messages android_push sent opens influenced_opens bounces message'>
+<div id='api_bbmmbqvrwkbn' class='api_div' data-search-keywords='prerequisites data name total_stats revenue conversions conversions_by_entry_time entries variant_stats step_stats messages android_push sent opens influenced_opens bounces message'>
 <h1 id="export-canvas-data-summary-analytics">Export Canvas data summary analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/data_summary</p>
