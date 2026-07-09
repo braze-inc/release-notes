@@ -57,7 +57,7 @@ During integration onboarding, you will need to select when the Braze SDKs initi
 
 
 - Website visits (sessions) count towards your Monthly Active User (MAU) allotments.
-- The Braze Web SDK and JavaScript SDK versions will automatically set to v5.4.0.
+- The Braze Web SDK and JavaScript SDK versions automatically set to v6.8.0. You can upgrade your SDK version at any time from the integration settings.
 
 
 
