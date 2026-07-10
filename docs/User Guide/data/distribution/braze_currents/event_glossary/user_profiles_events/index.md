@@ -40,7 +40,70 @@ Currents drops events with payloads larger than 900 KB.
 
 <!--overview-end-->
 
-<div id='api_etudaibkbrzr' class='api_div' data-search-keywords='user profile update events profile app_group_id app_id archived country custom_attributes dob email_address external_user_id first_name gender home_city id language last_name phone_number time time_ms timezone update_source user_id'>
+
+<div id='api_qhbkcaibukdd' class='api_div' data-search-keywords='user delete request events user delete request when a user is deleted by customer request app_group_id id time user_id'>
+<h2 id="user-delete-request-events">User Delete Request events</h2>
+
+<div class="api_tags" data-tags="User Delete Request" data-tags-lower="user delete request"></div>
+
+<p>when a user is deleted by customer request</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.UserDeleteRequest</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+</div>
+
+<div id='api_htrmsfunjyau' class='api_div' data-search-keywords='user orphan events user orphan when a user is orphaned, meaning the user is merged with another user’s profile app_group_id app_id device_id external_user_id id orphaned_by_id time user_id'>
+<h2 id="user-orphan-events">User Orphan events</h2>
+
+<div class="api_tags" data-tags="User Orphan" data-tags-lower="user orphan"></div>
+
+<p>when a user is orphaned, meaning the user is merged with another user’s profile</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.UserOrphan</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"orphaned_by_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) BSON ID of the user whose profile was merged with the orphaned user's profile"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+</div>
+
+<div id='api_lafvjawijelj' class='api_div' data-search-keywords='user profile update events profile this represents the profile updates for a user. app_group_id app_id archived country custom_attributes dob email_address external_user_id first_name gender home_city id language last_name phone_number time time_ms timezone update_source user_id'>
 <h2 id="user-profile-update-events">User Profile Update events</h2>
 
 <div class="api_tags" data-tags="Profile" data-tags-lower="profile"></div>
@@ -79,7 +142,7 @@ Currents drops events with payloads larger than 900 KB.
   </span><span class="nl">"archived"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) When set to True, indicates that this user was archived within Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"country"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Country of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"custom_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Valid JSON string of the updated custom attributes"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"dob"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Date of birth of the user in format </span><span class="se">\"</span><span class="s2">YYYY-MM-DD</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dob"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Date of birth of the user in ISO-8601 format"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"first_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] First name of the user"</span><span class="p">,</span><span class="w">

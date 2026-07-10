@@ -1,4 +1,4 @@
-<div id='api_ncdbasxhcngm' class='api_div' data-search-keywords='prerequisites app_id key_id keys id rsa_public_key description is_primary'>
+<div id='api_cawqkhgmthmc' class='api_div' data-search-keywords='prerequisites app_id key_id keys id rsa_public_key description is_primary'>
 <h1 id="set-primary-sdk-authentication-key">Set primary SDK Authentication key</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/app_group/sdk_authentication/primary</p>

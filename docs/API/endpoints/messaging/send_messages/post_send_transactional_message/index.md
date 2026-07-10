@@ -1,4 +1,4 @@
-<div id='api_cvgvbdbefren' class='api_div' data-search-keywords='prerequisites external_send_id trigger_properties recipient user_alias external_user_id attributes dispatch_id status metadata campaign_api_id received_at enqueued_at executed_at sent_at processed_at delivered_at bounced_at aborted_at reason'>
+<div id='api_guzzdsutrisx' class='api_div' data-search-keywords='prerequisites external_send_id trigger_properties recipient user_alias external_user_id attributes dispatch_id status metadata campaign_api_id received_at enqueued_at executed_at sent_at processed_at delivered_at bounced_at aborted_at reason'>
 <h1 id="send-transactional-emails-using-api-triggered-delivery">Send transactional emails using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/transactional/v1/campaigns/{campaign_id}/send</p>
