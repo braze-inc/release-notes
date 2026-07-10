@@ -1846,6 +1846,13 @@ Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct 
 
 
 
+**Note:**
+
+
+`Braze.init` returns immediately on the calling thread. The SDK processes startup work on an internal queue. Reading sync properties such as `braze.deviceId` directly after `init` on the main thread will block the calling thread until the SDK has completed its post-initialization operations. For main-thread or latency-sensitive contexts, use `braze.getDeviceId(_:)` (Swift) or `[braze getDeviceIdWithCompletion:^(NSString *deviceId) { ... }]` (Objective-C) to read the value without blocking.
+
+
+
 ## Optional configurations
 
 ### Logging

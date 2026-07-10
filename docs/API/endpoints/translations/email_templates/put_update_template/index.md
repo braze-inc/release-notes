@@ -1,4 +1,4 @@
-<div id='api_nhveekjytgky' class='api_div' data-search-keywords='prerequisites template_id locale_id translation_map id_0 id_1 id_2 message errors id'>
+<div id='api_lluegwolbpln' class='api_div' data-search-keywords='prerequisites template_id locale_id translation_map id_0 id_1 id_2 message errors id'>
 <h1 id="update-translations-for-an-email-template">Update translations for an email template</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/templates/email/translations/</p>

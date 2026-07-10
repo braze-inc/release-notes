@@ -4,7 +4,7 @@
 
 ## How to file a ticket
 
-1. Ask Operator a question, then select <i class="fa-regular fa-circle-question"></i> **File a support ticket** (or ask Operator to file one).
+1. Ask Operator a question, then select <i class="fa-regular fa-circle-question"></i> **Contact Support** (or ask Operator to file one).
 2. Fill in the title and description of the issue.
 3. Review the suggested attachments and context to include.
 4. Review and select **Submit**.

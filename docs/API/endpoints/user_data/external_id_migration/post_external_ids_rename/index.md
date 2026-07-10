@@ -1,4 +1,4 @@
-<div id='api_uxaozgztflcv' class='api_div' data-search-keywords='prerequisites external_id_renames'>
+<div id='api_yjuvsoddnksc' class='api_div' data-search-keywords='how renaming works external_id_renames'>
 <h1 id="rename-external-id">Rename external ID</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/external_ids/rename</p>
@@ -10,13 +10,21 @@
 
 <p>You can send up to 50 rename objects per request.</p>
 
-<p>This endpoint sets a new (primary) <code class="language-plaintext highlighter-rouge">external_id</code> for the user and deprecates their existing <code class="language-plaintext highlighter-rouge">external_id</code>. This means that the user can be identified by either <code class="language-plaintext highlighter-rouge">external_id</code> until the deprecated one is removed. Having multiple external IDs allows for a migration period so that legacy versions of your apps that use the previous external ID naming schema don’t break.</p>
+<p>This endpoint sets a new (primary) <code class="language-plaintext highlighter-rouge">external_id</code> for the user and deprecates their existing <code class="language-plaintext highlighter-rouge">external_id</code>. This means that the user can be identified by either <code class="language-plaintext highlighter-rouge">external_id</code> until the deprecated one is removed. Having multiple external IDs allows for a migration period so that legacy versions of your apps that use the previous external ID naming schema don’t break. The profile remains fully functional under both identifiers during the migration window—the Braze SDK, REST API, and messaging pipelines can continue to reference the user by either ID until the deprecated one is explicitly removed.</p>
 
 <p>After your old naming schema is no longer in use, we highly recommend removing deprecated external IDs using the <a href="/docs/api/endpoints/user_data/external_id_migration/post_external_ids_remove"><code class="language-plaintext highlighter-rouge">/users/external_ids/remove</code> endpoint</a>.</p>
 
 <p><strong>Warning:</strong></p>
 
 <p>Make sure to remove deprecated external IDs with the <code class="language-plaintext highlighter-rouge">/users/external_ids/remove</code> endpoint instead of <code class="language-plaintext highlighter-rouge">/users/delete</code>. Sending a request to <code class="language-plaintext highlighter-rouge">/users/delete</code> with the deprecated external ID deletes the user profile entirely and cannot be undone.</p>
+
+<h2 id="how-renaming-works">How renaming works</h2>
+
+<p>When you call this endpoint, it assigns a new primary <code class="language-plaintext highlighter-rouge">external_id</code> to a user profile while simultaneously converting the previous primary <code class="language-plaintext highlighter-rouge">external_id</code> into a deprecated external ID. After a successful rename, the user profile holds exactly one primary <code class="language-plaintext highlighter-rouge">external_id</code> (the new value) and one deprecated external ID (the old value).</p>
+
+<p>Subsequent rename calls on the same profile are permitted: each rename creates an additional deprecated external ID, so a profile may accumulate one primary <code class="language-plaintext highlighter-rouge">external_id</code> and multiple deprecated external IDs over time. However, the <code class="language-plaintext highlighter-rouge">new_external_id</code> value must not already exist on any Braze profile, either as a primary or a deprecated external ID.</p>
+
+<p>The endpoint does not log data points and does not affect MAU counts. All historical user data—events, purchases, attributes, campaign engagement—remains attached to the same profile.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#17682d2b-1546-4a3c-9703-aa5a12861d7c" class="seeme">See me in Postman</a></div>
 
@@ -74,8 +82,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 <p>Note the following:</p>
 
 <ul>
-  <li>The <code class="language-plaintext highlighter-rouge">current_external_id</code> must be the user’s primary ID, and cannot be a deprecated ID.</li>
-  <li>The <code class="language-plaintext highlighter-rouge">new_external_id</code> must not already be in use as either a primary ID or a deprecated ID.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">current_external_id</code> must be the user’s primary ID, and cannot be a deprecated ID. If the value passed as <code class="language-plaintext highlighter-rouge">current_external_id</code> is itself a deprecated ID on the profile, the call will fail. Before retrying a failed rename, use the <a href="/docs/api/endpoints/export/user_data/post_users_identifier/"><code class="language-plaintext highlighter-rouge">/users/export/ids</code> endpoint</a> to confirm which ID is currently primary.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">new_external_id</code> must not already be in use as either a primary ID or a deprecated ID. Attempting to rename to an ID that is already stored as a deprecated ID returns a “new_external_id is already in use” error.</li>
   <li>The <code class="language-plaintext highlighter-rouge">current_external_id</code> and <code class="language-plaintext highlighter-rouge">new_external_id</code> cannot be the same.</li>
 </ul>
 
@@ -129,6 +137,43 @@ Authorization: Bearer YOUR-REST-API-KEY
   <li>Rate limit hit (more than 1,000 requests per minute)</li>
 </ul>
 
+<h2 id="bulk-migrations">Bulk migrations</h2>
+
+<p>For migrations involving large user populations, batch users into groups of up to 50 and send each batch as a separate API call. The endpoint is subject to a rate limit of 1,000 requests per minute. At maximum batch size (50 objects per request), this allows up to 50,000 user renames per minute.</p>
+
+<p>Each rename object in the batch is processed independently. A failure on one object does not block the others in the same request. The response body distinguishes successful renames (listed in the <code class="language-plaintext highlighter-rouge">external_ids</code> array) from failed ones (listed in the <code class="language-plaintext highlighter-rouge">rename_errors</code> array with an index reference back to the position of the failing object in the request array).</p>
+
+<p>When running bulk migrations:</p>
+
+<ol>
+  <li>Iterate through the full user population in batches of up to 50 pairs.</li>
+  <li>On each response, inspect both <code class="language-plaintext highlighter-rouge">external_ids</code> (success) and <code class="language-plaintext highlighter-rouge">rename_errors</code> (failure) to identify any users that need to be retried.</li>
+  <li>Collect failed objects and schedule retry batches separately. Common failure causes include the <code class="language-plaintext highlighter-rouge">new_external_id</code> already being in use, or the <code class="language-plaintext highlighter-rouge">current_external_id</code> being a deprecated ID rather than a primary ID.</li>
+  <li>Log successes and failures against your own records so the migration state is tracked outside Braze.</li>
+</ol>
+
+<h2 id="verifying-the-current-external-id">Verifying the current external ID</h2>
+
+<p>During a migration, you may need to confirm which external ID is the active primary identifier on a given profile—for example, when determining whether a specific user has already been migrated, or when troubleshooting a failed rename. Use the <a href="/docs/api/endpoints/export/user_data/post_users_identifier/"><code class="language-plaintext highlighter-rouge">/users/export/ids</code> endpoint</a> for this purpose.</p>
+
+<p>The export endpoint resolves both primary and deprecated external IDs to the same underlying profile and always returns the current primary <code class="language-plaintext highlighter-rouge">external_id</code> in the response. This means you can query any known identifier for a user—old or new—and the response will contain the canonical primary ID. This is a reliable way to determine migration state.</p>
+
+<p>To check only the external ID (rather than pulling the full profile), pass <code class="language-plaintext highlighter-rouge">fields_to_export</code> with only the <code class="language-plaintext highlighter-rouge">external_id</code> field.</p>
+
+<h2 id="recommended-migration-workflow">Recommended migration workflow</h2>
+
+<p>For most migration use cases, the recommended sequence is:</p>
+
+<ol>
+  <li><strong>Test in staging</strong> — Run the full rename-and-verify flow against a development or staging workspace before touching production.</li>
+  <li><strong>Rename in batches</strong> — Use the <code class="language-plaintext highlighter-rouge">/users/external_ids/rename</code> endpoint in batches of up to 50, handling <code class="language-plaintext highlighter-rouge">rename_errors</code> on each response and queuing failed pairs for retry.</li>
+  <li><strong>Verify</strong> — After each batch (or at the end of migration), spot-check profiles using <code class="language-plaintext highlighter-rouge">/users/export/ids</code> to confirm the expected primary <code class="language-plaintext highlighter-rouge">external_id</code> is set.</li>
+  <li><strong>Maintain the deprecation window</strong> — Keep deprecated external IDs active for as long as any system (including legacy app versions in the field) may still reference the old IDs. Don’t rush this step.</li>
+  <li><strong>Remove deprecated IDs</strong> — Once all systems are confirmed to be using the new IDs, use <a href="/docs/api/endpoints/user_data/external_id_migration/post_external_ids_remove"><code class="language-plaintext highlighter-rouge">/users/external_ids/remove</code></a> in batches of up to 50 to clean up.</li>
+</ol>
+
+<p>If you’re also migrating your SDK integration (for example, changing the value passed to <code class="language-plaintext highlighter-rouge">changeUser</code>), coordinate the API-side rename with the app release schedule so that the new external ID is in use on both the server and the client before deprecated IDs are removed.</p>
+
 <h2 id="frequently-asked-questions">Frequently asked questions</h2>
 
 <h3 id="does-this-impact-mau">Does this impact MAU?</h3>
@@ -145,5 +190,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h3 id="what-is-the-recommended-deprecation-period">What is the recommended deprecation period?</h3>
 <p>We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them after there is no longer a need to reference users by the deprecated ID.</p>
+
+<h3 id="how-many-deprecated-external-ids-can-a-profile-have">How many deprecated external IDs can a profile have?</h3>
+<p>A user profile can hold one primary <code class="language-plaintext highlighter-rouge">external_id</code> and any number of deprecated external IDs accumulated through successive rename operations. There is no documented cap on the number of deprecated IDs a single profile can hold, but Braze recommends removing them as soon as they are no longer needed.</p>
 
 </div>
