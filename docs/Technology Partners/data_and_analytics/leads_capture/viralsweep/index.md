@@ -23,7 +23,7 @@ The Braze and ViralSweep integration allows you to hold sweepstakes and contests
 
 In ViralSweep, navigate to **Integrations > Email & SMS > Add Service** and select **Braze**. 
 
-![](https://www.braze.com/docs/assets/img/viralsweep/connect.gif?92c61d3ac11e19e29a30dfaf95bc37ee)
+![ViralSweep integrations page with Braze selected under Email and SMS services.](https://www.braze.com/docs/assets/img/viralsweep/connect.gif?92c61d3ac11e19e29a30dfaf95bc37ee)
 
 ### Step 2 : Add Braze Credentials
 

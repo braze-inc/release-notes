@@ -22,7 +22,7 @@ To integrate Census in the Census platform, navigate to the **Connections** tab 
 
 In the prompt that appears, name this connection, and provide your Braze endpoint URL and Braze REST API key (and, optionally, your data import key to sync cohorts).
 
-![](https://www.braze.com/docs/assets/img/census/add_service.png?4613eee7ef8cd3b8431636c45b718579){: style="max-width:60%;"}
+![Census new destination dialog configured for Braze connection credentials.](https://www.braze.com/docs/assets/img/census/add_service.png?4613eee7ef8cd3b8431636c45b718579){: style="max-width:60%;"}
 
 ### Step 2: Create a Census sync
 

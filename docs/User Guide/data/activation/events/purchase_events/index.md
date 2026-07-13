@@ -44,7 +44,7 @@ Purchase events are purchase actions taken by your users, and are used to record
 
 ## Log purchase events
 
-You can log purchases by passing a [purchase object](https://www.braze.com/docs/api/objects_filters/purchase_object) through the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track), or using one of our SDK libraries listed below.
+You can log purchases by passing a [purchase object](https://www.braze.com/docs/api/objects_filters/purchase_object) through the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track), or using one of our SDK libraries listed in the following section.
 
 **Note:**
 

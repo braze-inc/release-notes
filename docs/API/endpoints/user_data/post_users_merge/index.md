@@ -1,4 +1,4 @@
-<div id='api_pdchenfqkatj' class='api_div' data-search-keywords='prerequisites merge_updates message'>
+<div id='api_evsxftksxjpi' class='api_div' data-search-keywords='prerequisites merge_updates message'>
 <h1 id="merge-users">Merge users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/merge</p>
@@ -65,7 +65,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <h3 id="merge-behavior">Merge behavior</h3>
 
-<p>The behavior documented below is true for all Braze features that <strong>are not</strong> powered by Snowflake. User merges won’t be reflected for the <strong>Messaging History</strong> tab, Segment Extensions, Query Builder, and Currents.</p>
+<p>The following behavior is true for all Braze features that <strong>are not</strong> powered by Snowflake. User merges won’t be reflected for the <strong>Messaging History</strong> tab, Segment Extensions, Query Builder, and Currents.</p>
 
 <p><strong>Important:</strong></p>
 

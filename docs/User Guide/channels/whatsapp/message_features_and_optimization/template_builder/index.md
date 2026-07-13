@@ -53,7 +53,7 @@ Under **Layout**, select the template type:
 
 #### Header (optional)
 
-Add a header to appear above the message body. You can choose:
+Add a header to appear before the message body. You can choose:
 
 - **Text:** A short text header.  
 - **Media:** An image, video, or document (URL only). Braze stores the media reference and submits a sample to Meta for approval.  
@@ -72,7 +72,7 @@ You can add personalization wherever the **+** plus button appears. Not all fiel
 
 #### Footer (optional)
 
-Add a short footer to appear below the message body.
+Add a short footer to appear after the message body.
 
 #### Buttons (optional)
 

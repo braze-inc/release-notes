@@ -20,7 +20,7 @@ By default, for your user to receive your messages through push, their push subs
 |Opt-in State|Description|
 |---|---|
 |`Subscribed`| Default push subscription state when a user profile is created in Braze. |
-|`Opted-In`| A user has explicitly expressed a preference to receive push notifications. Braze automatically moves a user's opt-in state to `Opted-In` if the user accepts an OS-level push prompt.<br><br>This does not apply to Android 12 or below users.|
+|`Opted-In`| A user has explicitly expressed a preference to receive push notifications. Braze automatically moves a user's opt-in state to `Opted-In` if the user accepts an OS-level push prompt.<br><br>This does not apply to Android 12 or earlier users.|
 |`Unsubscribed`| A user explicitly unsubscribed from push through your application or other methods your brand provides. By default, Braze push campaigns target only users that are `Subscribed` or `Opted-in` for push.|
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Push subscription states #push-sub-states" }
 
@@ -151,7 +151,7 @@ The following table shows how different user actions affect iOS push enablement,
 
 ## Push permission
 
-All push-enabled platforms - iOS, Web, and Android - require explicit opt-in through an OS-level system prompt, with some slight differences described below.
+All push-enabled platforms - iOS, Web, and Android - require explicit opt-in through an OS-level system prompt, with some slight differences described in the following section.
 
 Because a user's decision is final and you can't ask again after they decline, using [push primer](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages) in-app messages is an important strategy for increasing your opt-in rates.
 
@@ -166,7 +166,7 @@ Because a user's decision is final and you can't ask again after they decline, u
 
 ### Android
 
-Before Android 13, permission was not needed to send push notifications. On Android 12 and below, all users are considered `Subscribed` upon their first session when Braze automatically requests a push token. At this point, the user is **push enabled** with a valid push token for that device and a default subscription state of `Subscribed`.
+Before Android 13, permission was not needed to send push notifications. On Android 12 and under, all users are considered `Subscribed` upon their first session when Braze automatically requests a push token. At this point, the user is **push enabled** with a valid push token for that device and a default subscription state of `Subscribed`.
 
 Starting with [Android 13](https://www.braze.com/docs/developer_guide/platforms/android/android_13), push permission must be asked of and granted by the user. Your app can manually request permission from the user at opportune times, but if not, users will be prompted automatically when your app creates a [notification channel](https://developer.android.com/reference/android/app/NotificationChannel).
 
@@ -263,7 +263,7 @@ If the user is added as a test user, in **Developer Console** > **User Event Log
 - **iOS background enabled:** The user has been served the push prompt and said no, or said yes and later turned off push notifications in their device settings (reflected after the user has a session).
 - **iOS foreground enabled:** The user has been served the push prompt and is eligible to receive foreground push.
 
-Campaign analytics will reflect the push statistics inline with the above details. You can also download the user profiles who entered the campaign or Canvas to cross-reference user profiles.
+Campaign analytics will reflect the push statistics inline with the earlier in this section details. You can also download the user profiles who entered the campaign or Canvas to cross-reference user profiles.
 
 ## Other platform-specific scenarios
 

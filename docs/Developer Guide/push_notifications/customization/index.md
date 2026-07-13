@@ -360,7 +360,7 @@ Currently, Google doesn't list their supported HTML tags for Android directly in
 
 You can showcase a larger image within your Android push notification using inline image push. With this design, users won't have to manually expand the push to enlarge the image. Unlike regular Android push notifications, inline image push images are in a 3:2 aspect ratio.
 
-![](https://www.braze.com/docs/assets/img/android/push/inline_image_push_android_1.png?bf2ba99d9b6423b4d8d94e5d8d9c5908){: style="max-width:50%;"}
+![Android push notification preview showing inline image push rendering.](https://www.braze.com/docs/assets/img/android/push/inline_image_push_android_1.png?bf2ba99d9b6423b4d8d94e5d8d9c5908){: style="max-width:50%;"}
 
 ### Compatibility
 
@@ -377,13 +377,13 @@ Devices running Android 12 will render differently due to changes in custom push
 
 When creating an Android push message, this feature is available in the **Notification Type** dropdown.
 
-![The push campaign editor showing the location of the "Notification Type" dropdown (above the standard push preview).](https://www.braze.com/docs/assets/img/android/push/android_inline_image_notification_type.png?fc31f4cadbcef37649e3b980d03ce868)
+![The push campaign editor showing the location of the "Notification Type" dropdown near the standard push preview.](https://www.braze.com/docs/assets/img/android/push/android_inline_image_notification_type.png?fc31f4cadbcef37649e3b980d03ce868)
 
 ## Settings
 
 There are many advanced settings available for Android push notifications sent through the Braze dashboard. This article will describe these features and how to use them successfully.
 
-![](https://www.braze.com/docs/assets/img_archive/android_advanced_settings.png?8131f34243617db90fdf5780cbc3cf33)
+![Braze Android push composer advanced settings panel.](https://www.braze.com/docs/assets/img_archive/android_advanced_settings.png?8131f34243617db90fdf5780cbc3cf33)
 
 ### Notification ID {#notification-id}
 
@@ -734,7 +734,7 @@ See the Apple Developer Documentation regarding [preparing custom alert sounds](
 
 When creating a push campaign through the dashboard, click the **Settings** tab on the **Compose** step to view the advanced settings available.
 
-![](https://www.braze.com/docs/assets/img_archive/ios_advanced_settings.png?16f142abe70d854830708b0cb21d9465)
+![Braze iOS push campaign compose settings tab with advanced options.](https://www.braze.com/docs/assets/img_archive/ios_advanced_settings.png?16f142abe70d854830708b0cb21d9465)
 
 ### Key-value pairs
 
@@ -771,7 +771,7 @@ Before you can use this feature, you'll need to [integrate the Android Braze SDK
 
 There are many advanced settings available for FireOS push notifications sent through the Braze dashboard. This article will describe these features and how to use them successfully.
 
-![](https://www.braze.com/docs/assets/img_archive/android_advanced_settings.png?8131f34243617db90fdf5780cbc3cf33)
+![Braze FireOS push composer advanced settings panel.](https://www.braze.com/docs/assets/img_archive/android_advanced_settings.png?8131f34243617db90fdf5780cbc3cf33)
 
 ### Time to live (TTL) {#ttl}
 

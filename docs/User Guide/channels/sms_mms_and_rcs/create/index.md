@@ -265,7 +265,7 @@ Write your message using languages and personalization ([Liquid](https://www.bra
 **Important:**
 
 
-Before proceeding, read the [RCS message type guidelines](#step-3-compose-your-message) above. RCS messages are [charged per message](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator), so it's a good idea to understand what can be included in each type.
+Before proceeding, read the [RCS message type guidelines](#step-3-compose-your-message) earlier in this section. RCS messages are [charged per message](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator), so it's a good idea to understand what can be included in each type.
 
 
 

@@ -86,11 +86,11 @@ For example, let's create a simple translation key, `description`:
 3. Add "Web" in the **Platforms** dropdown. 
 4. When you are ready, click **Save**.
 
-![](https://www.braze.com/docs/assets/img/lokalise/1_add_key.png?35655c9e0baa7f77e24ae5da3dd9c68f){: style="max-width:60%"}
+![Lokalise Add Key modal creating the `description` translation key.](https://www.braze.com/docs/assets/img/lokalise/1_add_key.png?35655c9e0baa7f77e24ae5da3dd9c68f){: style="max-width:60%"}
 
 Your translation key should appear in the project editor:
 
-![](https://www.braze.com/docs/assets/img/lokalise/2_translation_key_added.png?9469f66f976fcac5d99ec756375545c0){: style="max-width:90%"}
+![Lokalise project editor showing the newly added translation key.](https://www.braze.com/docs/assets/img/lokalise/2_translation_key_added.png?9469f66f976fcac5d99ec756375545c0){: style="max-width:90%"}
 
 ##### Known issues
 
@@ -114,7 +114,7 @@ The translation file URL is the URL that you will need when configuring a Braze 
 
 To test this URL, copy it and replace `{{${language}}}` with a language code (for example, `en`) and open this URL in your browser. You will see a JSON file with your keys and translations:
 
-![](https://www.braze.com/docs/assets/img/lokalise/4_testing_json_lokalise.png?6f57dce0c951366de0c0c1dec152d058)
+![Browser view of the Lokalise exported translation JSON file.](https://www.braze.com/docs/assets/img/lokalise/4_testing_json_lokalise.png?6f57dce0c951366de0c0c1dec152d058)
 
 #### Step 4: Use translations in Braze campaign
 
@@ -143,7 +143,7 @@ Now use the translations variable to display the desired translations by their k
 For example, to display the `description` key, use`{{ translations.description }}`.
 
 
-![](https://www.braze.com/docs/assets/img/lokalise/6_integration_usage_sample.png?ba1f3a09745838f2c0424d01d9d3008e)
+![Braze email editor example showing Connected Content translations from Lokalise.](https://www.braze.com/docs/assets/img/lokalise/6_integration_usage_sample.png?ba1f3a09745838f2c0424d01d9d3008e)
 
 Lastly, save the email template and preview it. You should see your translation being displayed.
 

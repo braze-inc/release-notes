@@ -11,7 +11,7 @@
 **Note:**
 
 
-If your Shopify account is associated with more than one store, you can change the store you’re logged into by selecting the store icon at the top-right of the page and selecting **Switch stores**.
+If your Shopify account is associated with more than one store, you can change the store you’re logged into by selecting the store icon in the header and selecting **Switch stores**.
 
 
 
@@ -337,7 +337,7 @@ To add content cards or feature flags, you will need to collaborate with your de
 
 #### Web push notifications
 
-Web push currently is not supported for the Shopify integration. To request support, submit a product request through the [Braze product portal](https://www.braze.com/docs/user_guide/administer/personal/product_portal/).
+Web push currently is not supported for the Shopify integration. 
 
 ## Step 7: Finish setup
 

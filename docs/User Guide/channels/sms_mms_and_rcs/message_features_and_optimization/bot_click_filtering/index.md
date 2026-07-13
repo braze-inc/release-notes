@@ -21,7 +21,7 @@ The following Braze metrics and workflows are impacted by bot clicks:
     - **Experiment steps:** Excludes bot clicks for reliable experiment outcomes.
     - **Currents data exports:** Includes `is_suspected_bot_click` and `suspected_bot_click_reason` fields to help analyze human versus bot clicks. These fields are available in [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents), [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake), and [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder).
 
-Unsubscribes from suspected bot clicks are unaffected. Braze processes all unsubscribe requests as usual. To block these unsubscribes, [submit product feedback](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
+Unsubscribes from suspected bot clicks are unaffected. Braze processes all unsubscribe requests as usual. 
 
 ## Currents fields in SMS click events
 

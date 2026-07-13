@@ -60,28 +60,28 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 !!step
 lines-index.js=5
 
-#### 1. Enable debugging (optional)
+### 1. Enable debugging (optional)
 
 To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-index.js=8-23
 
-#### 2. Subscribe to Banner updates
+### 2. Subscribe to Banner updates
 
 Use `subscribeToBannersUpdates()` to register a handler that runs whenever a Banner is updated. Inside the handler, call `braze.getBanner("global_banner")` to get the latest placement.
 
 !!step
 lines-index.js=15-22
 
-#### 3. Insert the Banner and handle control groups
+### 3. Insert the Banner and handle control groups
 
 Use `braze.insertBanner(banner, container)` to insert a Banner when it's returned. To ensure keep your layout clean, hide or collapse Banners that are apart of a control group (for example, when `isControl` is `true`).
 
 !!step
 lines-index.js=25
 
-#### 4. Refresh your Banners
+### 4. Refresh your Banners
 
 After initializing the SDK, call `requestBannersRefresh(["global_banner", ...])` to ensure that Banners are refreshed at the start of each session.
 
@@ -90,7 +90,7 @@ You can also call this function at any time to refresh Banner placements later.
 !!step
 lines-main.html=3
 
-#### 5. Add a container for your Banner
+### 5. Add a container for your Banner
 
 In your HTML, add a new `<div>` element and give it a short, Banner-related `id`, such as `global-banner-container`. Braze will use this `<div>` to insert your Banner into the page.
 
@@ -197,28 +197,28 @@ class MainActivity : ComponentActivity() {
 !!step
 lines-MainApplication.kt=12
 
-#### 1. Enable debugging (optional)
+### 1. Enable debugging (optional)
 
 To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-MainApplication.kt=21-28
 
-#### 2. Subscribe to Banner updates
+### 2. Subscribe to Banner updates
 
 Use `subscribeToBannersUpdates()` to register a handler that runs whenever a Banner is updated.
 
 !!step
 lines-MainActivity.kt=10-14
 
-#### 3. Refresh your placements
+### 3. Refresh your placements
 
 After initializing the Braze SDK, call `requestBannersRefresh(["PLACEMENT_ID"])`  to fetch the latest Banner content for that placement.
 
 !!step
 lines-banners.xml=15-19
 
-#### 4. Define `BannerView` in your `banners.xml`
+### 4. Define `BannerView` in your `banners.xml`
 
 In `banners.xml`, declare a `<com.braze.ui.banners.BannerView>` element with `app:placementId="PLACEMENT_ID"`. Braze will use this element to insert your Banner into your UI.
 
@@ -353,37 +353,37 @@ final class BannerViewController: UIViewController {
 !!step
 lines-AppDelegate.swift=14
 
-#### 1. Enable debugging (optional)
+### 1. Enable debugging (optional)
 
 To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-AppDelegate.swift=20
 
-#### 2. Refresh your placements
+### 2. Refresh your placements
 
 After initializing the Braze SDK, `call requestBannersRefresh(placementIds: ["PLACEMENT_ID"])` to refresh Banner content at the start of each session.
 
 !!step
 lines-BannerViewController.swift=19-37
 
-#### 3. Initialize the Banner and provide a callback
+### 3. Initialize the Banner and provide a callback
 
 Create a `BrazeBannerUI.BannerUIView` instance with your Braze object and placement ID, and provide a `processContentUpdates` callback to unhide the Banner and update its height constraint based on the provided content height.
 
 !!step
 lines-BannerViewController.swift=38-40
 
-#### 4. Enable Auto Layout constraints
+### 4. Enable Auto Layout constraints
 
 Hide the Banner view by default, then disable autoresizing mask translation to enable Auto Layout constraints.
 
 !!step
 lines-BannerViewController.swift=43-58
 
-#### 5. Anchor content and set height constraints
+### 5. Anchor content and set height constraints
 
-Anchor your main content to the top using Auto Layout, and place the Banner view directly below it. Pin the Banner’s leading, trailing, and bottom edges to the safe area, and set an initial height constraint of `0` that will be updated when content loads.
+Anchor your main content to the top using Auto Layout, and place the Banner view after it. Pin the Banner’s leading, trailing, and bottom edges to the safe area, and set an initial height constraint of `0` that will be updated when content loads.
 
 
 
@@ -484,49 +484,49 @@ struct BannerSwiftUIView: View {
 !!step
 lines-AppDelegate.swift=13
 
-#### 1. Enable debugging (optional)
+### 1. Enable debugging (optional)
 
 To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-AppDelegate.swift=19
 
-#### 2. Refresh your placements
+### 2. Refresh your placements
 
 After initializing the Braze SDK, call `requestBannersRefresh(placementIds: ["PLACEMENT_ID"])` to refresh Banner content at the start of each session.
 
 !!step
 lines-BannerSwiftUIView.swift=1-46
 
-#### 3. Create a view component
+### 3. Create a view component
 
 Create a reusable SwiftUI view component that displays available Banners and contains your main app content if needed.
 
 !!step
 lines-BannerSwiftUIView.swift=36-43
 
-#### 4. Only display available Banners
+### 4. Only display available Banners
 
 Only attempt to show `BrazeBannerUI.BannerView` if the SDK is initialized and Banner content exists for that user. In `.onAppear`, call `getBanner(for:placementID)` to set the state of `hasBannerForPlacement`.
 
 !!step
 lines-BannerSwiftUIView.swift=17-32
 
-#### 5. Only show `BannerView` after it loads
+### 5. Only show `BannerView` after it loads
 
 To avoid blank space in your UI, only show `BrazeBannerUI.BannerView` if a Banner is present and the SDK is initialized.
 
 !!step
 lines-BannerSwiftUIView.swift=23-32
 
-#### 6. Dynamically update Banner height
+### 6. Dynamically update Banner height
 
 Use the `processContentUpdates` callback to fetch the Banner’s content height as soon as it loads. Update your SwiftUI state (`contentHeight`) and apply a `.frame(height:)` constraint using the provided height.
 
 !!step
 lines-BannerSwiftUIView.swift=34
 
-#### 7. Limit the Banner height
+### 7. Limit the Banner height
 
 To ensure your Banner never exceeds the maximum height, apply a `.frame(height: min(contentHeight, 80))` modifier. This will keep your UI visually balanced regardless of the Banner's content.
 

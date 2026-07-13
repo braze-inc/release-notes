@@ -377,7 +377,7 @@ braze.requestBannersRefresh(["sample_placement_id"]);
 **Note:**
 
 
-Both Content Cards and Banners automatically track analytics when using their default UI components. The examples below are for custom implementations where you're building your own UI.
+Both Content Cards and Banners automatically track analytics when using their default UI components. The following examples are for custom implementations where you're building your own UI.
 
 
 

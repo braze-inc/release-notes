@@ -1022,7 +1022,7 @@ Push notifications are rate-limited, so don't be afraid of sending as many as yo
 Before you can send an iOS push notification using Braze, you need to upload your `.p8`  push notification file, as described in [Apple's developer documentation](https://developer.apple.com/documentation/usernotifications/establishing-a-token-based-connection-to-apns):
 
 1. In your Apple developer account, go to [**Certificates, Identifiers & Profiles**](https://developer.apple.com/account/ios/certificate).
-2. Under **Keys**, select **All** and click the add button (+) in the upper-right corner.
+2. Under **Keys**, select **All** and click the add button (+) at the top of the page.
 3. Under **Key Description**, enter a unique name for the signing key.
 4. Under **Key Services**, select the **Apple Push Notification service (APNs)** checkbox, then click **Continue**. Click **Confirm**.
 5. Note the key ID. Click **Download** to generate and download the key. Make sure to save the downloaded file in a secure place, as you cannot download this more than once.
@@ -1500,7 +1500,7 @@ Dynamic APNs Gateway Management is turned on by default and provides reliability
 
 ## About push notifications for Android TV
 
-![](https://www.braze.com/docs/assets/img/Television.png?bf36c19525c113aaa61e5554d969b4b3){: style="float:right;max-width:25%;margin-left:15px; border: 0"}
+![Android TV device illustration used for the Android TV push notifications guide.](https://www.braze.com/docs/assets/img/Television.png?bf36c19525c113aaa61e5554d969b4b3){: style="float:right;max-width:25%;margin-left:15px; border: 0"}
 
 While not a native feature, Android TV push integration is made possible by leveraging the Braze Android SDK and Firebase Cloud Messaging to register a push token for Android TV. It is, however, necessary to build a UI to display the notification payload after it is received.
 
@@ -1649,7 +1649,7 @@ pushEventsStreamSubscription = braze.subscribeToPushNotificationEvents((BrazePus
 pushEventsStreamSubscription.cancel();
 ```
 
-##### Push notification event fields
+#### Push notification event fields
 
 **Note:**
 
@@ -1658,7 +1658,7 @@ Because of platform limitations on iOS, the Braze SDK can only process push payl
 
 
 
-For a full list of push notification fields, refer to the table below:
+For a full list of push notification fields, refer to the following table:
 
 | Field Name         | Type      | Description |
 | ------------------ | --------- | ----------- |
@@ -1709,7 +1709,7 @@ Newer phones manufactured by [Huawei](https://huaweimobileservices.com/) come eq
 
 Before getting started, you'll need to register and set up a [Huawei Developer account](https://developer.huawei.com/consumer/en/console). In your Huawei account, go to **My Projects > Project Settings > App Information**, and take note of the `App ID` and `App secret`.
 
-![](https://www.braze.com/docs/assets/img/huawei/huawei-credentials.png?b06eeb235330781a1d837e9d2d1733b7)
+![Huawei developer console app information page showing the App ID and App secret.](https://www.braze.com/docs/assets/img/huawei/huawei-credentials.png?b06eeb235330781a1d837e9d2d1733b7)
 
 ### Step 2: Create a new Huawei app in the Braze dashboard
 
@@ -1717,11 +1717,11 @@ In the Braze dashboard, go to **App Settings**, listed under the **Settings** na
 
 Click **+ Add App**, provide a name (such as My Huawei App), select `Android` as the platform.
 
-![](https://www.braze.com/docs/assets/img/huawei/huawei-create-app.png?a6844b04811452719ae57875b2eb1261){: style="max-width:60%;"}
+![Braze Add App dialog creating an Android Huawei app.](https://www.braze.com/docs/assets/img/huawei/huawei-create-app.png?a6844b04811452719ae57875b2eb1261){: style="max-width:60%;"}
 
 Once your new Braze app has been created, locate the push notification settings and select `Huawei` as the push provider. Next, provide your `Huawei Client Secret` and `Huawei App ID`.
 
-![](https://www.braze.com/docs/assets/img/huawei/huawei-dashboard-credentials.png?c91a9f413f10a2ef3043876640b61dac)
+![Braze Huawei push provider settings with Huawei App ID and Client Secret fields.](https://www.braze.com/docs/assets/img/huawei/huawei-dashboard-credentials.png?c91a9f413f10a2ef3043876640b61dac)
 
 ### Step 3: Integrate the Huawei messaging SDK into your app
 
@@ -1822,7 +1822,7 @@ Since your Huawei app in the Braze dashboard is built upon the Android push plat
 
 To send push to only Huawei apps, [create a new Segment](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform) and select your Huawei App within the **Apps** section.
 
-![](https://www.braze.com/docs/assets/img/huawei/huawei-segmentation.png?3e7b24b199a37e61f4606496cda6f982)
+![Braze segment app filter selecting the Huawei app for push targeting.](https://www.braze.com/docs/assets/img/huawei/huawei-segmentation.png?3e7b24b199a37e61f4606496cda6f982)
 
 Of course, if you want to send the same push to all Android push providers, you can choose not to specify the app which will send to all Android apps configured within the current workspace.
 
@@ -1915,7 +1915,7 @@ If you were previously using `expo-notifications` to manage your push key, run `
 
 ### Step 2: Request push notifications permission
 
-Use the `Braze.requestPushPermission()` method (available on v1.38.0 and up) to request permission for push notifications from the user on iOS and Android 13+. For Android 12 and below, this method is a no-op.
+Use the `Braze.requestPushPermission()` method (available on v1.38.0 and up) to request permission for push notifications from the user on iOS and Android 13+. For Android 12 and earlier, this method is a no-op.
 
 This method takes in a required parameter that specifies which permissions the SDK should request from the user on iOS. These options have no effect on Android.
 
@@ -1950,7 +1950,7 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 
 ##### Push notification event fields
 
-For a full list of push notification fields, refer to the table below:
+For a full list of push notification fields, refer to the following table:
 
 | Field Name         | Type      | Description |
 | ------------------ | --------- | ----------- |
@@ -1972,7 +1972,7 @@ For a full list of push notification fields, refer to the table below:
 
 ### Step 3: Enable deep linking (optional)
 
-To enable Braze to handle deep links inside React components when a push notification is clicked, first implement the steps described in [React Native Linking](https://reactnative.dev/docs/linking) library, or with your solution of choice. Then, follow the additional steps below.
+To enable Braze to handle deep links inside React components when a push notification is clicked, first implement the steps described in [React Native Linking](https://reactnative.dev/docs/linking) library, or with your solution of choice. Then, follow the additional steps.
 
 To learn more about what deep links are, see our [FAQ article](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls/#what-is-deep-linking).
 
@@ -2243,7 +2243,7 @@ Then, create and register your `BrazeReactDelegate` in `didFinishLaunchingWithOp
 
 
 
-For an example integration, reference our sample app [here](https://github.com/braze-inc/braze-react-native-sdk/blob/master/BrazeProject/ios/BrazeProject/AppDelegate.mm).
+For an example integration, reference our sample app [in this AppDelegate example](https://github.com/braze-inc/braze-react-native-sdk/blob/master/BrazeProject/ios/BrazeProject/AppDelegate.mm).
 
 
 
@@ -2302,7 +2302,7 @@ Braze.getInitialPushPayload((payload) => {
 **Note:**
 
 
-In Expo-managed workflow, the Braze Expo Plugin handles native push processing automatically. You control foreground UI via the Expo Notifications presentation options shown above.
+In Expo-managed workflow, the Braze Expo Plugin handles native push processing automatically. You control foreground UI via the Expo Notifications presentation options shown earlier.
 
 
 
@@ -2500,11 +2500,11 @@ Integrating the Firebase Unity SDK may cause your `AndroidManifest.xml` to be ov
 
 #### Step 1.2: Set your Firebase credentials
 
-You need to input your Firebase Server Key and Sender ID into the Braze dashboard. To do this, log in to the [Firebase Developers Console](https://console.firebase.google.com/) and select your Firebase project. Next, select **Cloud Messaging** under **Settings** and copy the Server Key and Sender ID:<br>![](https://www.braze.com/docs/assets/img_archive/finding_firebase_server_key.png?de34d7ce2b1ae4b9c4a9d543b5b40585 "FirebaseServerKey")
+You need to input your Firebase Server Key and Sender ID into the Braze dashboard. To do this, log in to the [Firebase Developers Console](https://console.firebase.google.com/) and select your Firebase project. Next, select **Cloud Messaging** under **Settings** and copy the Server Key and Sender ID:<br>![Firebase console Cloud Messaging settings showing the Server Key and Sender ID.](https://www.braze.com/docs/assets/img_archive/finding_firebase_server_key.png?de34d7ce2b1ae4b9c4a9d543b5b40585 "FirebaseServerKey")
 
 In Braze, select your Android app on the **App Settings** page under **Manage Settings**. Next, enter your Firebase Server Key in the **Firebase Cloud Messaging Server Key** field and Firebase Sender ID in the **Firebase Cloud Messaging Sender** ID field.
 
-![](https://www.braze.com/docs/assets/img_archive/fcm_api_insert.png?f02bb98f5a702d5268f5ddaeee0c27cc "FCMKey")
+![Braze Android app settings with Firebase Cloud Messaging server key and sender ID fields.](https://www.braze.com/docs/assets/img_archive/fcm_api_insert.png?f02bb98f5a702d5268f5ddaeee0c27cc "FCMKey")
 
 
 
@@ -2567,7 +2567,7 @@ The Braze SDK can automatically handle push registration with the Firebase Cloud
 Before you can send an iOS push notification using Braze, you need to upload your `.p8`  push notification file, as described in [Apple's developer documentation](https://developer.apple.com/documentation/usernotifications/establishing-a-token-based-connection-to-apns):
 
 1. In your Apple developer account, go to [**Certificates, Identifiers & Profiles**](https://developer.apple.com/account/ios/certificate).
-2. Under **Keys**, select **All** and click the add button (+) in the upper-right corner.
+2. Under **Keys**, select **All** and click the add button (+) at the top of the page.
 3. Under **Key Description**, enter a unique name for the signing key.
 4. Under **Key Services**, select the **Apple Push Notification service (APNs)** checkbox, then click **Continue**. Click **Confirm**.
 5. Note the key ID. Click **Download** to generate and download the key. Make sure to save the downloaded file in a secure place, as you cannot download this more than once.
@@ -2675,7 +2675,7 @@ The required ADM Jar file may be placed anywhere in your project according to th
 
 Lastly, you must add the Client Secret and Client ID you obtained in [Step 1](#unity_step-1-enable-adm) to the Braze dashboard's **Manage Settings** page.
 
-![](https://www.braze.com/docs/assets/img_archive/fire_os_dashboard.png?725b1fd9d8208f4a861323e5fc16a376)
+![Braze Fire OS app settings page with ADM client ID and client secret fields.](https://www.braze.com/docs/assets/img_archive/fire_os_dashboard.png?725b1fd9d8208f4a861323e5fc16a376)
 
 
 
@@ -2805,7 +2805,7 @@ To learn more about ADM push listeners, see [Amazon: Integrate Amazon Device Mes
 
 
 
-#### Deep linking to in-app resources
+### Deep linking to in-app resources
 
 Although Braze can handle standard deep links (such as website URLs, Android URIs, etc.) by default, creating custom deep links requires an additional Manifest setup.
 

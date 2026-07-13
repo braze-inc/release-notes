@@ -8,7 +8,7 @@ If you're an admin, you can configure the countries that are on the allowlist. T
 
 ## Selecting countries
 
-Add countries to the allowlist with the dropdown. The most common SMS, MMS, and RCS countries are shown at the top, with others shown below. You can also search for countries by typing in the text field.
+Add countries to the allowlist with the dropdown. The most common SMS, MMS, and RCS countries are shown at the top, with others shown in the following section. You can also search for countries by typing in the text field.
 
 ![The "Country allowlist" dropdown with the most common countries displaying at the top.](https://www.braze.com/docs/assets/img/sms/allowlist_dropdown.png?fdf84b8364c3970633cdaaf14b8a6deb){: style="max-width:80%;"}
 

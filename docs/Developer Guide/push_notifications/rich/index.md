@@ -14,7 +14,7 @@ Before you can use this feature, you'll need to [integrate the Swift Braze SDK](
 
 To create a [notification service extension](https://developer.apple.com/reference/usernotifications/unnotificationserviceextension), navigate to **File > New > Target** in Xcode and select **Notification Service Extension**.
 
-![](https://www.braze.com/docs/assets/img_archive/ios10_se_at.png?ad077697c9a4c7c7bc3ca07a6405c05d){: style="max-width:90%"}
+![Xcode target picker creating a Notification Service Extension for rich push.](https://www.braze.com/docs/assets/img_archive/ios10_se_at.png?ad077697c9a4c7c7bc3ca07a6405c05d){: style="max-width:90%"}
 
 Ensure that **Embed In Application** is set to embed the extension in your application.
 
@@ -91,7 +91,7 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 
 To add `BrazeNotificationService.xcframework` to your `Notification Service Extension`, see [Manual integration](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/sdk_integration?tab=manual/).
 
-![](https://www.braze.com/docs/assets/img/swift/rich_push/manual1.png?43f3a21a35ff7bd8ba2e787947a860b3)
+![Xcode project with BrazeNotificationService.xcframework added to the notification service extension.](https://www.braze.com/docs/assets/img/swift/rich_push/manual1.png?43f3a21a35ff7bd8ba2e787947a860b3)
 
 
 

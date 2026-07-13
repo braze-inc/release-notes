@@ -126,7 +126,7 @@ $$;
 
 
 {: start="2"}
-2. Run one of the below commands in your Snowflake account to execute the procedure.
+2. Run one of the following commands in your Snowflake account to execute the procedure.
 
 
 
@@ -241,7 +241,7 @@ $$;
 
 
 {: start="2"}
-2. Run one of the below commands to execute the procedure. 
+2. Run one of the following commands to execute the procedure.
 
 
 

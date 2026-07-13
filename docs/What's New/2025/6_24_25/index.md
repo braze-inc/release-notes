@@ -6,7 +6,7 @@
 
 ## New SDK tutorials
 
-Each Braze SDK tutorial offers step-by-step instructions along with full sample code. Choose a tutorial below to get started:
+Each Braze SDK tutorial offers step-by-step instructions along with full sample code. Choose a tutorial from this list to get started:
 
 - [Displaying Banners](https://www.braze.com/docs/developer_guide/banners/tutorial_displaying_banners)
 - [Customizing in-app message styling](https://www.braze.com/docs/developer_guide/in_app_messages/tutorials/customizing_message_styling)
@@ -65,7 +65,7 @@ The Braze and [Stripe](https://www.braze.com/docs/partners/stripe) integration a
 
 ## SDK updates
 
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+The latest SDK updates have been released. Breaking updates are listed in the SDK updates section; all other updates can be found in the corresponding SDK changelogs.
 
 - [React Native SDK 15.0.1](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md)
 - [Flutter SDK 14.0.1-14.0.2](https://pub.dev/packages/braze_plugin/changelog)

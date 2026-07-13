@@ -76,7 +76,7 @@ Then follow the [standard investigation path](#standard-investigation-path).
 | Likely cause | What to check |
 | --- | --- |
 | Wrong **Send To** target | Confirm the campaign or Canvas step targets **Mobile Apps** or **Web Browsers** as appropriate. A Web-only campaign won't send to Android devices. |
-| Custom UI or handler suppresses display | Review delegates (mobile) or [`braze.subscribeToInAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) (Web). See [Customization](https://www.braze.com/docs/developer_guide/in_app_messages/customization) and your SDK tab below. |
+| Custom UI or handler suppresses display | Review delegates (mobile) or [`braze.subscribeToInAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) (Web). See [Customization](https://www.braze.com/docs/developer_guide/in_app_messages/customization) and your SDK tab for your platform. |
 | Integration never worked on this platform | Confirm this platform and app version have shown in-app messages before. |
 | Trigger didn't fire on the device | The trigger must occur locally through the SDK. A REST API call can't trigger an in-app message in the SDK. See [Triggering messages](https://www.braze.com/docs/developer_guide/in_app_messages/triggering_messages). |
 | Empty `triggers` in event user logs | Segment, re-eligibility, frequency cap, or control group. See [Troubleshoot messages not being returned](#troubleshoot-messages-not-being-returned). |
@@ -107,7 +107,7 @@ Common causes:
 - **Scheduled dashboard delay:** Confirm whether a delay is configured on the campaign or step.
 - **Trigger sync race:** If users log an event immediately after session start, triggers may not be synced yet. Consider triggering off session start and segmenting on the intended event so delivery happens on the next session after the event.
 - **Sequential in-app messages:** If you're deferring or restoring messages in a tour, see [Deferring triggered in-app messages](https://www.braze.com/docs/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
-- **Large assets or slow CDN:** Optimize images and video for HTML in-app messages. On mobile, images may download before display on slow networks—select your SDK tab below for platform notes.
+- **Large assets or slow CDN:** Optimize images and video for HTML in-app messages. On mobile, images may download before display on slow networks—select your SDK tab for platform notes.
 
 **Note:**
 
@@ -235,7 +235,7 @@ When integrating Braze alongside third-party network logging libraries, develope
 
 #### Domains
 
-The full list of CDN domains is as listed below:
+The full list of CDN domains is as follows:
 
 * `"appboy-images.com"`
 * `"braze-images.com"`
@@ -244,7 +244,7 @@ The full list of CDN domains is as listed below:
 
 #### Examples
 
-Below are libraries that are known to conflict with Braze asset caching, along with example code to work around the issue. If your project uses a library that causes an unavailable resource error and is not listed below, consult the documentation of that library for similar usage APIs.
+The following libraries are known to conflict with Braze asset caching, along with example code to work around the issue. If your project uses a library that causes an unavailable resource error and is not listed here, consult the documentation of that library for similar usage APIs.
 
 ##### Netfox
 

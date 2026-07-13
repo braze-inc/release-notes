@@ -28,7 +28,7 @@ In Treasure Data, navigate to the **Catalog** under the **Integrations Hub** and
 
 In the **New Authentication** prompt that shows up, name your connection and provide your Braze REST API key and REST endpoint. Select **Done** when finished.
 
-![](https://www.braze.com/docs/assets/img/treasure_data/braze_authentication.png?f3b0a591b1a4fb3e1438145cfa87214d){: style="max-width:80%;"}
+![Treasure Data Braze authentication form with REST API key and endpoint fields.](https://www.braze.com/docs/assets/img/treasure_data/braze_authentication.png?f3b0a591b1a4fb3e1438145cfa87214d){: style="max-width:80%;"}
 
 ### Step 2: Define your query
 
@@ -43,7 +43,7 @@ For users using HIVE to build queries, HIVE requires that any columns or tables 
 
 Next, select **Export Results** and select an existing integration authentication.
 
-![](https://www.braze.com/docs/assets/img/treasure_data/query_2.png?cd2c46ce629cad72ca056a4d0657e11a){: style="max-width:80%;"}
+![Treasure Data query results page with Export Results and Braze integration selected.](https://www.braze.com/docs/assets/img/treasure_data/query_2.png?cd2c46ce629cad72ca056a4d0657e11a){: style="max-width:80%;"}
 
 Define additional export results parameters as outlined in the following [customization section](#customization). In your export integration content, review the integration parameters.
 

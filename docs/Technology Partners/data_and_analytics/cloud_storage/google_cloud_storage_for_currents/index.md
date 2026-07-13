@@ -36,7 +36,7 @@ This can be done using the following instructions, which will walk you through c
 
 Create a new role in your Google Cloud Platform Console by navigating to **IAM & admin** > **Roles** > **+ Create Role**.
 
-![](https://www.braze.com/docs/assets/img/gcs1.png?4e1f3a9236118018ea5648ae97b77c44)
+![Google Cloud IAM roles page with the Create Role action.](https://www.braze.com/docs/assets/img/gcs1.png?4e1f3a9236118018ea5648ae97b77c44)
 
 Give the role a name, then select **+Add Permissions** and choose the following:
 
@@ -55,7 +55,7 @@ The `storage.objects.delete` permission is optional. It allows Braze to clean up
 
 When you're finished, select **Create**.
 
-![](https://www.braze.com/docs/assets/img/gcs2.png?15e5fa535cb3cce9e29ab0aeefc4b408)
+![Google Cloud custom role editor with storage permissions selected.](https://www.braze.com/docs/assets/img/gcs2.png?15e5fa535cb3cce9e29ab0aeefc4b408)
 
 ### Step 2: Create a new service account
 
@@ -63,7 +63,7 @@ When you're finished, select **Create**.
 
 Create a new service account in your Google Cloud Platform Console by navigating to **IAM & admin** > **Service Accounts** and selecting **Create Service Account**.
 
-![](https://www.braze.com/docs/assets/img/gcs3.png?e6a0627949edaeec00b8ea7bf284f67d)
+![Google Cloud service accounts page with Create Service Account selected.](https://www.braze.com/docs/assets/img/gcs3.png?e6a0627949edaeec00b8ea7bf284f67d)
 
 Next, give the service account a name and grant it access to your newly created custom role.
 
@@ -73,7 +73,7 @@ Next, give the service account a name and grant it access to your newly created 
 
 At the bottom of the page, use the **Create Key** button to create a **JSON** private key to use in Braze. After the key is created, it will download onto your machine.
 
-![](https://www.braze.com/docs/assets/img/gcs5.png?fa5b2e2962c25642ef33c54b0447bf84)
+![Google Cloud service account key creation dialog set to JSON key type.](https://www.braze.com/docs/assets/img/gcs5.png?fa5b2e2962c25642ef33c54b0447bf84)
 
 ### Step 3: Set up Currents in Braze
 

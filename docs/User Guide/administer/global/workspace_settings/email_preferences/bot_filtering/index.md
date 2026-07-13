@@ -44,7 +44,7 @@ The following Braze metrics can be affected by bot clicks:
     - Personalized Variant
 - Estimated real open rate
 
-Unsubscribes from suspected bot clicks will not be affected. Braze will continue to process all unsubscribe requests as usual. If you would like Braze to block these unsubscribes, submit [product feedback](https://www.braze.com/docs/user_guide/administer/personal/product_portal).
+Unsubscribes from suspected bot clicks will not be affected. Braze will continue to process all unsubscribe requests as usual. 
 
 ## Segmentation filters affected by bot filtering
 

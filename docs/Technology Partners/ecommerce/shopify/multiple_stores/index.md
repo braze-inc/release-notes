@@ -5,7 +5,7 @@
 **Important:**
 
 
-This feature doesn't support Shopify Markets or Markets Pro. If you would like to request support for these, submit a [product request](https://www.braze.com/docs/user_guide/administer/personal/product_portal/).
+This feature doesn't support Shopify Markets or Markets Pro. 
 
 
 

@@ -61,15 +61,15 @@ Your Snapchat connection will be applied at the Braze workspace level. If your S
 
 Add a component in your Canvas and select **Audience Sync**.
 
-![](https://www.braze.com/docs/assets/img/audience_sync/audience_sync3.png?f8c55b39f63207dc472a2c8aeaedff40){: style="max-width:35%;"} ![](https://www.braze.com/docs/assets/img/audience_sync/audience_sync5.png?cc74c79d5b1a336e22d0e016e3e1a7c5){: style="max-width:28%;"}
+![Canvas step selector with the Audience Sync component option.](https://www.braze.com/docs/assets/img/audience_sync/audience_sync3.png?f8c55b39f63207dc472a2c8aeaedff40){: style="max-width:35%;"} ![Audience Sync component card added to a Canvas path.](https://www.braze.com/docs/assets/img/audience_sync/audience_sync5.png?cc74c79d5b1a336e22d0e016e3e1a7c5){: style="max-width:28%;"}
 
 ### Step 3: Sync setup
 
 Click on the **Custom Audience** button to open the component editor.
 
-Select **TikTok** as the desired Audience Sync partner.
+Select **Snapchat** as the desired Audience Sync partner.
 
-![](https://www.braze.com/docs/assets/img/audience_sync/audience_sync4.png?51c2acce2b4ffaec0f219184b0ba1851){: style="max-width:80%;"}
+![Audience Sync component editor with Snapchat selected as the sync partner.](https://www.braze.com/docs/assets/img/audience_sync/audience_sync4.png?51c2acce2b4ffaec0f219184b0ba1851){: style="max-width:80%;"}
 
 Then select your desired Snapchat ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience.
 

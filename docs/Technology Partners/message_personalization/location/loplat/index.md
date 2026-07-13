@@ -43,7 +43,7 @@ Create a new API key in the Braze dashboard. Copy the API key and paste it at **
 3. Go to loplat X and create a campaign following the instructions in the [loplat X user's guide](https://loplatx-user-guide.notion.site/Campaign-integration-b92f8120cbe74d19a3a5f593657b4e8e#2ed232c885014f19b1870b9fca4230fb).
 4. Paste the Braze campaign ID under the **Campaign Message Settings**, and launch the campaign.
 
-![](https://www.braze.com/docs/assets/img/loplat/loplat_api_triggered_delivery.png?30732d4ab773129103e8f8c816544d6a)
+![loplat X campaign settings showing Braze campaign ID for API-triggered delivery.](https://www.braze.com/docs/assets/img/loplat/loplat_api_triggered_delivery.png?30732d4ab773129103e8f8c816544d6a)
 
 #### Action-based delivery
 
@@ -53,6 +53,6 @@ With the integration, you can apply location conditions by sending geofence info
 3. Go to the Braze dashboard and create a campaign or Canvas that sends with **Action-Based Delivery**.
 4. Select the custom event you created in loplat X to set a location trigger action.
 
-![](https://www.braze.com/docs/assets/img/loplat/loplat_action_based_delivery.png?6e4c58d3497265a77275e78639b5b012)
+![Braze action-based campaign setup using a loplat custom event as trigger.](https://www.braze.com/docs/assets/img/loplat/loplat_action_based_delivery.png?6e4c58d3497265a77275e78639b5b012)
 
 

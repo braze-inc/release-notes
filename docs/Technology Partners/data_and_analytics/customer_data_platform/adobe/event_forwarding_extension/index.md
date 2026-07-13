@@ -52,7 +52,7 @@ Create a new [event forwarding secret](https://experienceleague.adobe.com/docs/e
 
 After installing the extension, create a new event forwarding [rule](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en) and configure its conditions as desired. When configuring the actions for the rule, select the **Braze** extension, then select **Send Event** for the action type.
 
-![](https://www.braze.com/docs/assets/img/efe.png?9c68eaaff918993b4f8c89e1334e9925)
+![Adobe event forwarding rule action configured to use Braze Send Event.](https://www.braze.com/docs/assets/img/efe.png?9c68eaaff918993b4f8c89e1334e9925)
 
 
 
@@ -124,7 +124,7 @@ All attributes added within the configuration will be sent each time the event i
 
 After installing the extension, create a new event forwarding [rule](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en) and configure its conditions as desired. When configuring the actions for the rule, select the **Braze** extension, then select **Send Purchase Event** for the action type.
 
-![](https://www.braze.com/docs/assets/img/efe2.png?8dbaf737a737407334edc64a3b3433c2)
+![Adobe event forwarding rule action configured to use Braze Send Purchase Event.](https://www.braze.com/docs/assets/img/efe2.png?8dbaf737a737407334edc64a3b3433c2)
 
 
 

@@ -53,7 +53,7 @@ Using a raw text **Request Body**, compose the webhook body to include the desir
 }
  ```
 
-![](https://www.braze.com/docs/assets/img/sessionm/SessionMWebhookComposer.png?e6dd296c07d8915e42eff5e36ac0e17b){: style="max-width:85%;"}
+![SessionM webhook composer with JSON payload for Braze campaign trigger setup.](https://www.braze.com/docs/assets/img/sessionm/SessionMWebhookComposer.png?e6dd296c07d8915e42eff5e36ac0e17b){: style="max-width:85%;"}
 
 In the **Settings** tab, add the key-value pairs for each request header field:
     - Create a key `Content-Type` with a corresponding value `application/json`

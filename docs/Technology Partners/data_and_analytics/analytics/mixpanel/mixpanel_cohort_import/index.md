@@ -21,7 +21,7 @@ In adherence to Mixpanel's data retention policies, events sent before January 1
 
 In Braze, go to **Partner Integrations** > **Technology Partners** and select **Mixpanel**. Here, you will find the REST endpoint and generate your Braze data import key. 
 
-Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Mixpanel's dashboard.<br><br>![](https://www.braze.com/docs/assets/img_archive/currents-mixpanel-edit.png?5e459c9172ed061eccb0ba20a773eb81)
+Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Mixpanel's dashboard.<br><br>![Braze Mixpanel technology partner page showing the data import key and endpoint.](https://www.braze.com/docs/assets/img_archive/currents-mixpanel-edit.png?5e459c9172ed061eccb0ba20a773eb81)
 
 ### Step 2: Set up the Braze integration in Mixpanel
 
@@ -30,13 +30,13 @@ Once generated, you can create a new key or invalidate an existing one. The data
 3. In the prompt that appears, provide the Braze data import key and REST endpoint.
 4. Select **Continue**.
 
-![](https://www.braze.com/docs/assets/img_archive/mixpanel2.png?09ffeb7c342422ec102bc508a79cb62b){: style="max-width:50%;"}
+![Mixpanel Braze integration setup modal with key and endpoint fields.](https://www.braze.com/docs/assets/img_archive/mixpanel2.png?09ffeb7c342422ec102bc508a79cb62b){: style="max-width:50%;"}
 
 ### Step 3: Export a Mixpanel cohort to Braze
 
 In Mixpanel, go to **Data Management > Cohorts**. Select the cohort to send to Braze and then select **Export to Braze**. Lastly, select a one-time sync or dynamic sync. Selecting dynamic sync keeps the cohort updated on a recurring schedule controlled by Mixpanel. For the latest sync cadence, see [Mixpanel's Braze cohort sync documentation](https://docs.mixpanel.com/docs/cohort-sync/integrations/braze).
 
-![](https://www.braze.com/docs/assets/img_archive/mixpanel3.png?ddb4d40231ba31da10031fdc016101d3){: style="max-width:50%;"}
+![Mixpanel cohort export flow showing Export to Braze sync options.](https://www.braze.com/docs/assets/img_archive/mixpanel3.png?ddb4d40231ba31da10031fdc016101d3){: style="max-width:50%;"}
 
 **Important:**
 

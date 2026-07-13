@@ -797,7 +797,7 @@ To customize the presentation of in-app messages and react to various lifecycle 
 
 ### Step 1: Implement the `BrazeInAppMessageUIDelegate` protocol 
 
-First, implement the `BrazeInAppMessageUIDelegate` protocol and any corresponding methods you wish. In our example below, we are implementing this protocol in our application's `AppDelegate` class.
+First, implement the `BrazeInAppMessageUIDelegate` protocol and any corresponding methods you wish. In the following example, this protocol is implemented in the application's `AppDelegate` class.
 
 
 
@@ -1011,7 +1011,7 @@ This swipe behavior is built into the default `BrazeInAppMessageUI` [`SlideupVie
 **Note:**
 
 
-Tapping outside of a slideup message does not dismiss it. For modal or full in-app messages, you can enable outside tap dismissals using the `dismissOnBackgroundTap` attribute described below.
+Tapping outside of a slideup message does not dismiss it. For modal or full in-app messages, you can enable outside tap dismissals using the `dismissOnBackgroundTap` attribute described in the following section.
 
 
 
@@ -1533,7 +1533,7 @@ To use this delegate, assign it to `brazeInAppMessagePresenter.delegate` after i
 
 ### Overriding the default native UI
 
-If you wish to fully customize the presentation of your in-app messages at the native iOS layer, conform to the [`BrazeInAppMessagePresenter`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter) protocol and assign your custom presenter following the sample below:
+If you wish to fully customize the presentation of your in-app messages at the native iOS layer, conform to the [`BrazeInAppMessagePresenter`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter) protocol and assign your custom presenter following this sample:
 
 ```objc
 BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];

@@ -257,7 +257,7 @@ The Web SDK includes basic user-agent-based bot detection that filters out known
 **Important:**
 
 
-The solutions outlined below are general suggestions. Tailor bot filtering logic to your unique environment and traffic patterns.
+The following solutions are general suggestions. Tailor bot filtering logic to your unique environment and traffic patterns.
 
 
 
@@ -378,7 +378,7 @@ This guide uses code samples from the Braze Web SDK 4.0.0+. To upgrade to the la
 
 
 
-When you reference the Braze Web SDK from our content delivery network, for example, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (as recommended by our default integration instructions), your users receive minor updates (bug fixes and backward compatible features, versions `a.a.a` through `a.a.z` in the above examples) automatically when they refresh your site.
+When you reference the Braze Web SDK from our content delivery network, for example, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (as recommended by our default integration instructions), your users receive minor updates (bug fixes and backward compatible features, versions `a.a.a` through `a.a.z` in this example) automatically when they refresh your site.
 
 However, when we release major changes, we require you to upgrade the Braze Web SDK manually to ensure that breaking changes do not impact your integration. Additionally, if you download our SDK and host it yourself, you don't receive any version updates automatically and should upgrade manually to receive the latest features and bug fixes.
 
@@ -1365,9 +1365,9 @@ We recommend using the [Swift Package Manager (SwiftPM)](https://swift.org/packa
 
 #### Step 1.1: Import SDK version
 
-Open your project and navigate to your project's settings. Select the **Swift Packages** tab and click on the <i class="fas fa-plus"></i> add button below the packages list.
+Open your project and navigate to your project's settings. Select the **Swift Packages** tab and click on the <i class="fas fa-plus"></i> add button under the packages list.
 
-![](https://www.braze.com/docs/assets/img/swiftpackages.png?1987d5a2a722497bf1f2f38ab52aa14a)
+![Xcode project settings with the Swift Packages tab and add package button.](https://www.braze.com/docs/assets/img/swiftpackages.png?1987d5a2a722497bf1f2f38ab52aa14a)
 
 **Note:**
 
@@ -1378,7 +1378,7 @@ Starting in version 7.4.0, the Braze Swift SDK has additional distribution chann
 
 Enter the URL of our iOS Swift SDK repository `https://github.com/braze-inc/braze-swift-sdk` in the text field. Under the **Dependency Rule** section, select the SDK version. Finally, click **Add Package**.
 
-![](https://www.braze.com/docs/assets/img/importsdk_example.png?38a74eb0e009cc281bd78ac130e2089c)
+![Xcode Add Package dialog with the Braze Swift SDK repository URL entered.](https://www.braze.com/docs/assets/img/importsdk_example.png?38a74eb0e009cc281bd78ac130e2089c)
 
 #### Step 1.2: Select your packages
 
@@ -1412,7 +1412,7 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 
 Select the package that best suits your needs and click **Add Package**. Make sure you select `BrazeKit` at a minimum.
 
-![](https://www.braze.com/docs/assets/img/add_package.png?2fa980e608a800e7e3649f34d79f2ea7)
+![Xcode package products list selecting BrazeKit before adding the package.](https://www.braze.com/docs/assets/img/add_package.png?2fa980e608a800e7e3649f34d79f2ea7)
 
 
 
@@ -1918,7 +1918,7 @@ Before you start, verify your environment is supported by the [latest Braze Cord
 **Warning:**
 
 
-Only add the Braze Cordova SDK using the methods below. Do not attempt to install using other methods as it could lead to a security breach.
+Only add the Braze Cordova SDK using the following methods. Do not attempt to install using other methods as it could lead to a security breach.
 
 
 
@@ -2459,7 +2459,7 @@ import 'package:braze_plugin/braze_plugin.dart';
 final BrazePlugin braze = BrazePlugin();
 ```
 
-Then call `initialize()` with your app identifier API key and SDK endpoint to create the Braze instance. See the options below for where to call this method in your app.
+Then call `initialize()` with your app identifier API key and SDK endpoint to create the Braze instance. See the following options for where to call this method in your app flow.
 
 #### Standard initialization
 
@@ -2710,7 +2710,7 @@ When using `androidNotificationLargeIcon` and `androidNotificationSmallIcon`, fo
 
 To use custom push notification icons with the Braze Expo plugin:
 
-1. Create your icon files following the Icon requirements listed below.
+1. Create your icon files following the Icon requirements listed in the Icon requirements.
 2. Place them in your project's Android native directories at `android/app/src/main/res/drawable-<density>/`.
    For example, use `android/app/src/main/res/drawable-mdpi/` and `android/app/src/main/res/drawable-hdpi/`.
 3. Alternatively, if you're managing assets in your React Native directory, you can use Expo's [app.json icon configuration](https://docs.expo.dev/versions/latest/config/app/#icon) or create an [Expo config plugin](https://docs.expo.dev/config-plugins/introduction/) to copy the icons to the Android drawable folders during prebuild.
@@ -2882,7 +2882,7 @@ override fun onNewIntent(intent: Intent) {
 
 To import certain Braze libraries, such as BrazeUI, into an Objective-C++ file, you must use the `#import` syntax. Starting in version `7.4.0` of the Braze Swift SDK, binaries have an [optional distribution channel as dynamic XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic), which are compatible with this syntax.
 
-If you'd like to use this distribution channel, manually override the CocoaPods source locations in your Podfile. Reference the sample below and replace `{your-version}` with the relevant version you wish to import:
+If you'd like to use this distribution channel, manually override the CocoaPods source locations in your Podfile. Reference this sample and replace `{your-version}` with the relevant version you wish to import:
 
 ```ruby
 pod 'BrazeKit', :podspec => 'https://raw.githubusercontent.com/braze-inc/braze-swift-sdk-prebuilt-dynamic/{your-version}/BrazeKit.podspec'
@@ -3084,7 +3084,7 @@ When using `androidNotificationLargeIcon` and `androidNotificationSmallIcon`, fo
 
 To use custom push notification icons with the Braze Expo plugin:
 
-1. Create your icon files following the Icon requirements listed below.
+1. Create your icon files following the Icon requirements listed in the Icon requirements.
 2. Place them in your project's Android native directories at `android/app/src/main/res/drawable-<density>/` (for example, `android/app/src/main/res/drawable-mdpi/`, `drawable-hdpi/`, or similar.)
 3. Alternatively, if you're managing assets in your React Native directory, you can use Expo's [app.json icon configuration](https://docs.expo.dev/versions/latest/config/app/#icon) or create an [Expo config plugin](https://docs.expo.dev/config-plugins/introduction/) to copy the icons to the Android drawable folders during prebuild.
 
@@ -3387,7 +3387,7 @@ The following code snippet shows how to import the library in your React Native 
 import Braze from "@braze/react-native-sdk";
 ```
 
-Then call `Braze.initialize()` with your app identifier API key and SDK endpoint to create the Braze instance. See the options below for where to call this method in your app.
+Then call `Braze.initialize()` with your app identifier API key and SDK endpoint to create the Braze instance. See the following options for where to call this method in your app flow.
 
 #### Standard initialization
 
@@ -3616,7 +3616,7 @@ The Braze [`.unitypackage`](https://docs.unity3d.com/Manual/AssetPackages.html) 
 The Braze Unity package is available for download on the [Braze Unity releases page](https://github.com/Appboy/appboy-unity-sdk/releases) with two integration options:
 
 1. `Appboy.unitypackage` only
-  - This package bundles the Braze Android and iOS SDKs without any additional dependencies. With this integration method, there will not be proper functionality of Braze in-app messaging, and Content Cards features on iOS. If you intend on utilizing full Braze functionality without custom code, use the option below instead.
+  - This package bundles the Braze Android and iOS SDKs without any additional dependencies. With this integration method, there will not be proper functionality of Braze in-app messaging and Content Cards features on iOS. If you intend on utilizing full Braze functionality without custom code, use the next option instead.
   - To use this integration option, ensure that the box next to `Import SDWebImage dependency` is *unchecked* in the Unity UI under "Braze Configuration".
 2. `Appboy.unitypackage` with `SDWebImage`
   - This integration option bundles the Braze Android and iOS SDKs and the [SDWebImage](https://github.com/SDWebImage/SDWebImage) dependency for the iOS SDK, which is required for the proper functionality of Braze in-app messaging, and Content Cards features on iOS. The `SDWebImage` framework is used for downloading and displaying images, including GIFs. If you intend on utilizing full Braze functionality, download and import this package.
@@ -3720,7 +3720,7 @@ All Activity classes registered in your `AndroidManifest.xml` file should be ful
 
 To find your package name, click **File > Build Settings > Player Settings > Android Tab**.
 
-![](https://www.braze.com/docs/assets/img_archive/UnityPackageName.png?f672b49d7a69b2d915c7fef6571dac94)
+![Unity Player Settings Android tab showing the application package name.](https://www.braze.com/docs/assets/img_archive/UnityPackageName.png?f672b49d7a69b2d915c7fef6571dac94)
 
 In your `AndroidManifest.xml`, all instances of `REPLACE_WITH_YOUR_PACKAGE_NAME` should be replaced with your `Package Name` from the previous step.
 
@@ -3766,7 +3766,7 @@ Braze provides a native Unity solution for automating the Unity iOS integration.
 2. Check the **Automate Unity iOS Integration** box.
 3. In the **Braze API Key** field, input your application's API key found in **Manage Settings**.
 
-![](https://www.braze.com/docs/assets/img_archive/unity-ios-appboyconfig.png?c5f9508c68a8b4486761374b9ac78841)
+![Unity Braze Configuration window with Automate Unity iOS Integration and Braze API Key fields.](https://www.braze.com/docs/assets/img_archive/unity-ios-appboyconfig.png?c5f9508c68a8b4486761374b9ac78841)
 
 If your application is already using another `UnityAppController` subclass, you will need to merge your subclass implementation with `AppboyAppDelegate.mm`.
 

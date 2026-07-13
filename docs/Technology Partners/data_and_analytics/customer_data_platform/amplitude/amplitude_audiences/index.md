@@ -54,11 +54,11 @@ User trait and computation syncs will create new users for user identifiers that
 
 Refer to Amplitude's documentation to learn more about [syncing properties, recommendations, and cohorts to third-party destinations](https://help.amplitude.com/hc/en-us/articles/360060055531).
 
-#### How to sync user properties and computations
+### How to sync user properties and computations
 
 In Amplitude Audiences, select **Syncs > Create Sync**.
 
-![](https://www.braze.com/docs/assets/img/amplitude11.png?591c184baa0735a7c54f4cea674d4954)
+![Amplitude Audiences Syncs page with Create Sync selected.](https://www.braze.com/docs/assets/img/amplitude11.png?591c184baa0735a7c54f4cea674d4954)
 
 Next, choose to sync a user property, computation, cohort, or recommendation. 
 
@@ -67,11 +67,11 @@ Next, choose to sync a user property, computation, cohort, or recommendation.
 
 Select **User Property** and then the desired user property to sync.
 
-![](https://www.braze.com/docs/assets/img/amplitude7.png?0eb91bb9a5118fb2bda9232f26f82862)
+![Amplitude sync setup step selecting a user property to sync.](https://www.braze.com/docs/assets/img/amplitude7.png?0eb91bb9a5118fb2bda9232f26f82862)
 
 Next, select a destination to sync your user property to.
 
-![](https://www.braze.com/docs/assets/img/amplitude8.png?a9dec0731797202415bf21d570f6211b)
+![Amplitude destination selector for syncing properties to Braze.](https://www.braze.com/docs/assets/img/amplitude8.png?a9dec0731797202415bf21d570f6211b)
 
 Lastly, define the frequency of your sync.
 
@@ -82,11 +82,11 @@ Lastly, define the frequency of your sync.
 
 Select **Computation** and then the desired computation to sync
 
-![](https://www.braze.com/docs/assets/img/amplitude10.png?adf1e4c0e8a57de5f009fd4d730a4da0)
+![Amplitude sync setup step selecting a computation to sync.](https://www.braze.com/docs/assets/img/amplitude10.png?adf1e4c0e8a57de5f009fd4d730a4da0)
 
 Next, select a destination to sync your computation to.
 
-![](https://www.braze.com/docs/assets/img/amplitude8.png?a9dec0731797202415bf21d570f6211b)
+![Amplitude destination selector for syncing computations to Braze.](https://www.braze.com/docs/assets/img/amplitude8.png?a9dec0731797202415bf21d570f6211b)
 
 Lastly, define the frequency of your sync.
 

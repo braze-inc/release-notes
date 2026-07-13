@@ -44,7 +44,7 @@ If you're starting from scratch, choose a destination for your transformation. Y
 **Note:**
 
 
-Want to request additional templates or destinations? Consider leaving [product feedback](https://www.braze.com/docs/user_guide/administrative/access_braze/portal/).
+
 
 
 

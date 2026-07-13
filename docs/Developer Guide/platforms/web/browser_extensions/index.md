@@ -15,7 +15,7 @@ In general, since extensions are HTML and JavaScript, you can use Braze for the 
 
 ## What's not supported
 
-* Using the Braze SDK from within a service worker is not supported. You can still use the Braze SDK in your extension's popup or settings page.
+* Using the Braze SDK from within a service worker is not supported. You can still use the Braze SDK in your extension's popup or settings page. 
 
 ## Extension types
 

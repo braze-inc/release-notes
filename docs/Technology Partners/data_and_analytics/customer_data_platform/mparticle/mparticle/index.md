@@ -150,7 +150,7 @@ In mParticle, navigate to **Setup > Outputs > Add Outputs** and select **Braze**
 | Enable event stream forwarding | (Server-to-server) When enabled, all events will be forwarded in real-time. If not, all events will be forwarded in bulk. When choosing to enable event stream forwarding, ensure that the data you are passing to Braze will respect [rate limits](https://www.braze.com/docs/api/api_limits/). |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Configure your Braze output settings" }
 
-![](https://www.braze.com/docs/assets/img_archive/configure_settings.png?e8f9aa94edfd47614a3a43cfa152685c)
+![mParticle Braze output settings with app identifier, identity mapping, and instance fields.](https://www.braze.com/docs/assets/img_archive/configure_settings.png?e8f9aa94edfd47614a3a43cfa152685c)
 
 ### Embedded kit integration
 
@@ -185,7 +185,7 @@ mParticle's [Braze event kit integration guide](https://docs.mparticle.com/integ
 
 In mParticle, navigate to **Connections** > **Connect** > **[Your desired platform]** > **Connect Output** to add Braze as an output. Then, select **Save**.
 
-![](https://www.braze.com/docs/assets/img_archive/mParticle_event_config.png?8cca6fd30d8d209159ecf5b02df0f80c)
+![mParticle event kit connection setup for Braze output.](https://www.braze.com/docs/assets/img_archive/mParticle_event_config.png?8cca6fd30d8d209159ecf5b02df0f80c)
 
 Not all connection settings will apply to all platforms and integration types. For a breakdown of connection settings and the platforms they apply to, see [mParticle's documentation](https://docs.mparticle.com/integrations/braze/event/#connection-settings).
 
@@ -208,7 +208,7 @@ For server-side data to be forwarded to Braze, it must include an `external_id`;
 
 In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** when completed. 
 
-![](https://www.braze.com/docs/assets/img_archive/mParticle_connections.png?c5e3e3e506c047002b809700bbd9f781)
+![mParticle Connections screen for adding Braze as an output on a platform.](https://www.braze.com/docs/assets/img_archive/mParticle_connections.png?c5e3e3e506c047002b809700bbd9f781)
 
 Not all connection settings will apply to all platforms and integration types. For a breakdown of connection settings and the platforms they apply to, see [mParticle's documentation](https://docs.mparticle.com/integrations/braze/event/#connection-settings).
 

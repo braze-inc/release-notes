@@ -7,7 +7,7 @@
 
 
 
-<!-- Add this below after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
+<!-- Add this after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
 
 
 
@@ -32,7 +32,7 @@ When creating a drag-and-drop in-app message, select **Onboarding flow** for you
 
 
 
-<!-- Add this below after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
+<!-- Add this after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
 
 
 
@@ -59,7 +59,7 @@ Customize the look and feel of your onboarding flow using the drag-and-drop [in-
 
 
 
-<!-- Add this below after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
+<!-- Add this after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
 
 
 

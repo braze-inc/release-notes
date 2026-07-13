@@ -96,7 +96,7 @@ Select **Process Catalog** to create the catalog.
 **Important:**
 
 
-Your CSV file can be rejected if you go above your [tier](#tiers). 
+Your CSV file can be rejected if you go earlier in this section your [tier](#tiers). 
 
 
 
