@@ -18,7 +18,7 @@ If you set User IDs to identify users when a new user logs in they will be count
 
 Using our selection of filters, create a user segment that you feel encompasses your most loyal, consistent user base. The following sample segment defines the top users.
 
-![](https://www.braze.com/docs/assets/img_archive/define_top_users.png?af5120ae4af9f53d17d0be4bdc3f8605 "Define your top users")
+![Sample Braze segment filters defining a top users audience.](https://www.braze.com/docs/assets/img_archive/define_top_users.png?af5120ae4af9f53d17d0be4bdc3f8605 "Define your top users")
 
 Additionally, you will not have to continue updating this segment, as users who pass in or out of the campaign's restrictions will be correspondingly targeted or dismissed.
 

@@ -6,7 +6,7 @@
 
 To pull campaign or Canvas metrics for a defined date range, use one of the following approaches:
 
-- Submit a [product request](https://portal.braze.com/) for date-aligned exports when you need dashboard-style reporting outside standard API windows.
+- 
 - Call the [campaign analytics](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_analytics) or [Canvas analytics](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvas_analytics) endpoints with `ending_at` and `length` parameters (or use [`/campaigns/data_series`](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_analytics) and [`/canvas/data_series`](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvas_analytics)) for time-series data.
 - Stream events to your warehouse with [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents) when you need ongoing, queryable message engagement data in Amazon S3, Azure Blob Storage, or another supported destination.
 

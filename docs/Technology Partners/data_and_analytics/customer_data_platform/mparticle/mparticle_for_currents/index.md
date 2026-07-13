@@ -30,7 +30,7 @@ From your mParticle admin account, navigate to **Setup > Inputs**. Locate **Braz
 
 The Braze feed integration supports four separate feeds: iOS, Android, Web, and Unbound. The unbound feed can be used for events such as emails that are not connected to a platform. You will need to create an input for each main platform feed. You can create additional inputs from **Setup > Inputs**, on the **Feed Configurations** tab.
 
-![](https://www.braze.com/docs/assets/img/braze-feed-inputs.png?a0e43836326d93c1cf79f7778410037e)
+![mParticle feed input setup showing Braze iOS, Android, Web, and unbound feed options.](https://www.braze.com/docs/assets/img/braze-feed-inputs.png?a0e43836326d93c1cf79f7778410037e)
 
 For each feed, under **Act as Platform** select the matching platform from the list. If you do not see an option to select an **act-as** feed, the data will be treated as unbound, but can still be forwarded to data warehouse outputs.
 

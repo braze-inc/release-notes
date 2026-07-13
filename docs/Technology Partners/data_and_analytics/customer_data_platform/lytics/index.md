@@ -108,7 +108,7 @@ You can import audience data from Braze to Lytics using the following methods:
 
 #### Step 1: Create a Lytics API Token
 
-Navigate to the Lytics Account Menu in the bottom left corner by selecting your account name, and select **Access Tokens** from the dropdown menu. Next, select **Create API Token**
+Navigate to the Lytics Account Menu by selecting your account name, and select **Access Tokens** from the dropdown menu. Next, select **Create API Token**
 
 ![Lytics Access Tokens screen with Create API Token selected from the account menu.](https://www.braze.com/docs/assets/img/lytics/create_token.png?6ab29104b8ca4bc9b19473b1e1b0e653){: style="max-width:80%;"}
 

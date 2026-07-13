@@ -38,7 +38,7 @@ Some of these integration methods use the `f_auto` and `q_auto` Cloudinary Trans
 
 The most direct way to use images and videos directly from Cloudinary's DAM in your Braze campaigns and Canvases is to pull the URL from the Cloudinary Media Library's **Asset** page.
 
-![A grid view of Cloudinary's Image Asset Library, with the top right of one of the images highlighted, showing a "Copy URL" tooltip.](https://www.braze.com/docs/assets/img/cloudinary/one.png?1c7fa18c065651c209759aa9ce7295a1)
+![A grid view of Cloudinary's Image Asset Library, with one image highlighted and a "Copy URL" tooltip visible.](https://www.braze.com/docs/assets/img/cloudinary/one.png?1c7fa18c065651c209759aa9ce7295a1)
 
 ### Images and GIFs setup
 
@@ -190,7 +190,7 @@ For more guidance on how Transformation parameters can be used to design an asse
 ```
 
 
-![A white church with a blue roof overlooking the sea, in the top left of the image the words "John Smith" are imposed on an opage dark great rectangle.](https://www.braze.com/docs/assets/img/cloudinary/two.png?2cdfb7a0f514b33e6199f7573ed6cc9e)
+![A white church with a blue roof overlooking the sea, with the words "John Smith" displayed in a dark, semi-transparent rectangle over the image.](https://www.braze.com/docs/assets/img/cloudinary/two.png?2cdfb7a0f514b33e6199f7573ed6cc9e)
 
 ```
 

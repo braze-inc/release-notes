@@ -44,7 +44,7 @@ If you're starting from scratch, choose a destination for your transformation. Y
 **Note:**
 
 
-Want to request additional templates or destinations? Consider leaving [product feedback](https://www.braze.com/docs/user_guide/administrative/access_braze/portal/).
+
 
 
 
@@ -73,7 +73,7 @@ Here’s what it looks like for Typeform:
 **Note:**
 
 
-Braze Data Transformation may not yet support external platforms that require special verification or authentication for webhooks. Consider leaving [product feedback](https://www.braze.com/docs/user_guide/administer/personal/product_portal) if you're interested in using this type of platform with Braze Data Transformation.
+Braze Data Transformation may not yet support external platforms that require special verification or authentication for webhooks. 
 
 
 
@@ -86,7 +86,7 @@ If you're a developer or have significant experience with JavaScript code, follo
 **Tip:**
 
 
-To generate transformation code with AI, choose **Code with Operator** above the transformation code editor. To use this, a webhook must be sent to your transformation. To start from a pre-built template instead, choose **Insert Template**. For example prompts, see [Generate data transformation code](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#generate-data-transformation-code).
+To generate transformation code with AI, choose **Code with Operator** in the transformation code editor. To use this, a webhook must be sent to your transformation. To start from a pre-built template instead, choose **Insert Template**. For example prompts, see [Generate data transformation code](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#generate-data-transformation-code).
 
 **Code with Operator** is only available if Operator is enabled for your account. If you don't see it, contact your account manager.
 

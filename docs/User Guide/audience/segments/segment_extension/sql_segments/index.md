@@ -141,7 +141,7 @@ Additionally, your standard SQL query must adhere to the following rules:
 All incremental refresh queries consist of two parts: a query, and schema details.
 
 1. In the editor, write a query that selects `user_id`s from your desired table.
-2. Add schema details by selecting an **Operator**, **Number of times**, and **Time period** from the fields above the editor. The query will check if the sum of the aggregate column meets a certain condition specified by the `{{operator}}` and `{{number of times}}` placeholders. This functions similarly to the workflow for creating classic Segment Extensions.<br><br>
+2. Add schema details by selecting an **Operator**, **Number of times**, and **Time period** from the fields at the top of the editor. The query will check if the sum of the aggregate column meets a certain condition specified by the `{{operator}}` and `{{number of times}}` placeholders. This functions similarly to the workflow for creating classic Segment Extensions.<br><br>
    - **Operator:** Indicate if the event has happened more than, less than, or equal to a number of occurrences.<br>
    ![Operator field with "More than" selected.](https://www.braze.com/docs/assets/img_archive/sql_segments_operator.png?5ff7885636668959c79ebe7f7682cba8)<br><br>
    - **Number of times:** How many times you would like to evaluate the event in relation to the operator.<br>

@@ -233,7 +233,7 @@ The rendered copy is uploaded immediately before sending the message to the user
 
 ### Can I create a new bucket specifically for message archiving while keeping the current bucket used for Currents data?
 
-No. If you're interested in creating these specific buckets, submit [product feedback](https://www.braze.com/docs/user_guide/administer/personal/product_portal).
+No. 
 
 ### Is archived data written to a dedicated folder in an existing bucket, similar to how Currents data exports are structured?
 

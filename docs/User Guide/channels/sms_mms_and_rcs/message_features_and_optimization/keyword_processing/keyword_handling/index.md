@@ -89,7 +89,7 @@ Non-English languages do not come with preset keywords and responses, so senders
 
 
 
-If you need to delete a language, select the **Delete Language** button at the bottom right.
+If you need to delete a language, select the **Delete Language** button at the bottom of the page.
 
 ![Global Keywords page with the "Italian" tab selected. Additional tabs exist for each added language.](https://www.braze.com/docs/assets/img/sms/multi-language2.png?011cb7b7c96f351e3cf45c0893634cda)
 

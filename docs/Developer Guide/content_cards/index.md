@@ -67,7 +67,7 @@ In this example, we have a `<div id="feed"></div>` in which we want to place the
 </script>
 ```
 
-When using the `toggleContentCards(parentNode, filterFunction)` and `showContentCards(parentNode, filterFunction)` methods, if no arguments are provided, all Content Cards will be shown in a fixed-position sidebar on the right-hand side of the page. Otherwise, the feed will be placed in the specified `parentNode` option.
+When using the `toggleContentCards(parentNode, filterFunction)` and `showContentCards(parentNode, filterFunction)` methods, if no arguments are provided, all Content Cards will be shown in a fixed-position sidebar on the page. Otherwise, the feed will be placed in the specified `parentNode` option.
 
 |Parameters | Description |
 |---|---|
@@ -184,7 +184,7 @@ Use these methods when displaying Content Cards using the Braze default feed UI:
 
 |Method | Description |
 |---|---|
-|[`showContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)| Displays the default Content Cards feed. Renders cards into a provided `parentNode` HTML element, or as a fixed-position sidebar on the right side of the page if no element is given. Accepts an optional `filterFunction` to sort or filter cards before display. |
+|[`showContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)| Displays the default Content Cards feed. Renders cards into a provided `parentNode` HTML element, or as a fixed-position sidebar if no element is given. Accepts an optional `filterFunction` to sort or filter cards before display. |
 |[`hideContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#hidecontentcards)| Hides the default Content Cards feed if it is currently showing. |
 |[`toggleContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards)| Shows the default Content Cards feed if it is hidden, or hides it if it is visible. If you need to display multiple Content Card feeds simultaneously, use `showContentCards` and `hideContentCards` instead. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Default feed methods" }
@@ -668,7 +668,7 @@ The `BrazeContentCard` [object](https://pub.dev/documentation/braze_plugin/lates
 
 ### Listen for Content Card data in the Dart layer
 
-To receive Content Card data in the Dart layer, use the code below to create a `StreamSubscription` and call `braze.subscribeToContentCards()`. Remember to `cancel()` the stream subscription when it is no longer needed.
+To receive Content Card data in the Dart layer, use the following code to create a `StreamSubscription` and call `braze.subscribeToContentCards()`. Remember to `cancel()` the stream subscription when it is no longer needed.
 
 ```dart
 // Create stream subscription
@@ -822,7 +822,7 @@ For a full reference of the captioned image card, see the [Android](https://braz
 
 ### Classic
 
-Classic cards have a title, description, and an optional image on the left of the text.
+Classic cards have a title, description, and an optional image before the text.
 
 |Property           | Description                                                                                                       |
 |-------------------|-------------------------------------------------------------------------------------------------------------------|
@@ -916,7 +916,7 @@ Incoming `string` messages received in your Content Cards game object callback c
 
 Parsing Content Cards requires JSON parsing, see the following example for details:
 
-##### Example Content Cards callback
+### Example Content Cards callback
 
 ```csharp
 void ExampleCallback(string message) {
@@ -1032,7 +1032,7 @@ For a full reference of the captioned image card, see the [Android](https://braz
 
 ### Classic
 
-Classic cards have a title, description, and an optional image on the left of the text.
+Classic cards have a title, description, and an optional image before the text.
 
 |Property           | Description                                                                                                       |
 |-------------------|-------------------------------------------------------------------------------------------------------------------|

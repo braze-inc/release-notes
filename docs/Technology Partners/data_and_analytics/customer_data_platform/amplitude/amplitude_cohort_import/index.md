@@ -10,13 +10,13 @@ Any integration you set up will count toward your account's data point volume.
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Amplitude**. Here, you will find the REST endpoint and generate your Braze data import key. 
 
-Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Amplitude's dashboard.<br><br>![](https://www.braze.com/docs/assets/img/amplitude3.png?38b3dc2b3f9bde4d55eae3d00cb1fc64)
+Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Amplitude's dashboard.<br><br>![Braze Amplitude technology partner page showing data import key and endpoint.](https://www.braze.com/docs/assets/img/amplitude3.png?38b3dc2b3f9bde4d55eae3d00cb1fc64)
 
 ### Step 2: Set up the Braze integration in Amplitude
 
 In Amplitude, navigate to **Sources & Destinations** > **[project name]** > **Destinations** > **Braze**. In the prompt that appears, provide the Braze data import key and REST endpoint, and click **Save**.
 
-![](https://www.braze.com/docs/assets/img/amplitude.png?06f71e4a43cba36dc31e7b27d1eff321)
+![Amplitude destination settings for Braze cohort sync with credentials entered.](https://www.braze.com/docs/assets/img/amplitude.png?06f71e4a43cba36dc31e7b27d1eff321)
 
 ### Step 3: Export an Amplitude cohort to Braze
 

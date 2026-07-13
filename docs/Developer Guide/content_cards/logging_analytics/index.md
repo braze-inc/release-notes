@@ -143,7 +143,7 @@ let cards: [Braze.ContentCard] = AppDelegate.braze?.contentCards.cards
 **Note:**
 
 
-Reading `contentCards.cards`, `contentCards.unviewedCards`, or `contentCards.lastUpdate` blocks the calling thread until the SDK has completed its post-initialization operations. Use the non-blocking getters below for main-thread or latency-sensitive contexts.
+Reading `contentCards.cards`, `contentCards.unviewedCards`, or `contentCards.lastUpdate` blocks the calling thread until the SDK has completed its post-initialization operations. Use the non-blocking getters in [Non-blocking snapshot accessors](#non-blocking-snapshot-accessors) for main-thread or latency-sensitive contexts.
 
 
 
@@ -168,7 +168,7 @@ let cancellable = AppDelegate.braze?.contentCards.subscribeToUpdates { [weak sel
 let stream: AsyncStream<[Braze.ContentCard]> = AppDelegate.braze?.contentCards.cardsStream
 ```
 
-### Non-blocking snapshot accessors
+### Non-blocking snapshot accessors {#non-blocking-snapshot-accessors}
 
 Use these methods to read the current cached state without blocking the calling thread. Each completion handler is always delivered on the main thread.
 
@@ -458,12 +458,12 @@ If you don't call `handleBrazeAction()`, on-click behaviors configured in the Br
 
 
 
-On-click behavior is handled automatically by the default Content Cards UI. For custom implementations, use the [`IContentCardsActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html) interface described in the [Logging analytics](#logging-analytics) section above.
+On-click behavior is handled automatically by the default Content Cards UI. For custom implementations, use the [`IContentCardsActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html) interface described in the [Logging analytics](#logging-analytics) section.
 
 
 
 
-On-click behavior is handled automatically by the default Content Cards UI. For custom implementations, use the [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) protocol described in the [Logging analytics](#logging-analytics) section above.
+On-click behavior is handled automatically by the default Content Cards UI. For custom implementations, use the [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) protocol described in the [Logging analytics](#logging-analytics) section.
 
 
 
@@ -473,7 +473,7 @@ On-click behavior is handled automatically by the default Content Cards UI. For 
 
 If *Unique Dismissals* exceeds *Unique Impressions*, your custom Content Card integration logged dismissals without logging impressions for those same cards. Braze's default Content Card UI logs both automatically, so this mismatch appears only when you use a custom UI.
 
-Log an impression each time you display a card, and log a dismissal when the user dismisses it. For method names and examples, see the platform sections below.
+Log an impression each time you display a card, and log a dismissal when the user dismisses it. For method names and examples, see the following platform sections.
 
 ## Missing Content Cards analytics
 

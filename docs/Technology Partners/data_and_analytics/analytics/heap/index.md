@@ -18,5 +18,5 @@ Give your export a name, then proceed to the **Current Details** page. On this p
 
 After configuring your integration's credentials, check all message engagement, customer behavior, and user events you would like to export to Heap, and click **Launch Current**.
 
-![](https://www.braze.com/docs/assets/img/heap/heap4.png?eaa7066e4dd15ac7937d616df262bcec){: style="max-width:90%;"}
+![Braze Heap Current setup page with endpoint, token, and event selection fields.](https://www.braze.com/docs/assets/img/heap/heap4.png?eaa7066e4dd15ac7937d616df262bcec){: style="max-width:90%;"}
 

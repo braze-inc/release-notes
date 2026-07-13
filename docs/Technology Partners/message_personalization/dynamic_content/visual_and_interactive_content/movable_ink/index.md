@@ -103,21 +103,21 @@ Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate
 
 
 
-In the Braze platform, paste your creative tag into your email body.![](https://www.braze.com/docs/assets/img/movable_ink/web2.png?0f347aa298c031e9af34bfcdb7da056a){: style="max-width:90%"}<br><br>
+In the Braze platform, paste your creative tag into your email body.![Braze email composer with a Movable Ink creative tag inserted in the message body.](https://www.braze.com/docs/assets/img/movable_ink/web2.png?0f347aa298c031e9af34bfcdb7da056a){: style="max-width:90%"}<br><br>
 
 
 
 
 1. In the Braze Platform:
-	- Android Push: Paste the URL in the **Push Icon Image** and **Expanded Notification Image** fields.<br>![](https://www.braze.com/docs/assets/img/movable_ink/android.png?bce45bbe9c9c1b4bd2dab82383afd4ea){: style="max-width:60%"}<br><br>
-	- iOS Push: Paste URL in **Media** link field and denote the file format you are using.<br>![](https://www.braze.com/docs/assets/img/movable_ink/ios.png?340802991798bfdafe207390696aed63){: style="max-width:60%"}<br><br>
-	- Web Push: Paste the URL in the **Push Icon Image** and **Large Notification Image** fields.<br>![](https://www.braze.com/docs/assets/img/movable_ink/web.png?127f65406fe6c7b862d9f93a0c3bcc4a){: style="max-width:60%"}<br><br>
+	- Android Push: Paste the URL in the **Push Icon Image** and **Expanded Notification Image** fields.<br>![Braze Android push settings showing image URL fields for Movable Ink content.](https://www.braze.com/docs/assets/img/movable_ink/android.png?bce45bbe9c9c1b4bd2dab82383afd4ea){: style="max-width:60%"}<br><br>
+	- iOS Push: Paste URL in **Media** link field and denote the file format you are using.<br>![Braze iOS push composer media field populated with a Movable Ink URL.](https://www.braze.com/docs/assets/img/movable_ink/ios.png?340802991798bfdafe207390696aed63){: style="max-width:60%"}<br><br>
+	- Web Push: Paste the URL in the **Push Icon Image** and **Large Notification Image** fields.<br>![Braze web push editor with push icon and large image URL fields.](https://www.braze.com/docs/assets/img/movable_ink/web.png?127f65406fe6c7b862d9f93a0c3bcc4a){: style="max-width:60%"}<br><br>
 2. To make sure images are not cached, prepend the URL in the message with empty Liquid tags: <br>```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```
 
 
 
 
-1. In the Braze platform, paste the URL in the **Rich Notification Media** field.![](https://www.braze.com/docs/assets/img/movable_ink/image.png?d68c91f54e16c1887be4613cd7e8d4fd){: style="max-width:60%"}<br><br>
+1. In the Braze platform, paste the URL in the **Rich Notification Media** field.![Braze rich notification media field with a Movable Ink image URL.](https://www.braze.com/docs/assets/img/movable_ink/image.png?d68c91f54e16c1887be4613cd7e8d4fd){: style="max-width:60%"}<br><br>
 2. Provide a unique URL to help prevent caching. To confirm that Movable Ink's real-time images work and will not be affected by caching, use Liquid to append a timestamp to the end of the Movable Ink image URL.
 
 To do this, use the following syntax, replacing the image URL as needed:
@@ -135,7 +135,7 @@ This template will take the current time (in seconds), append it to the end of t
 
 
 
-1. In the Braze platform, paste the URL in the **Rich Notification Media** field.![](https://www.braze.com/docs/assets/img/movable_ink/image.png?d68c91f54e16c1887be4613cd7e8d4fd){: style="max-width:60%"}<br><br>
+1. In the Braze platform, paste the URL in the **Rich Notification Media** field.![Braze content card media field with a Movable Ink image URL.](https://www.braze.com/docs/assets/img/movable_ink/image.png?d68c91f54e16c1887be4613cd7e8d4fd){: style="max-width:60%"}<br><br>
 2. For mobile: Content Cards images on iOS and Android are cached upon receipt and do not refresh. 
   - As a workaround, schedule your campaign as a daily, weekly, or monthly recurring message with a corresponding expiration so the Content Card will be re-templated. For example, a Content Card that should refresh once a day should be set as a daily scheduled send with a 1-day expiration.
 3. To ensure that Movable Ink's real-time images work and will not be affected by caching when the Content Card is re-templated, use Liquid to append a timestamp to the end of the Movable Ink image URL.

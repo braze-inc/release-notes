@@ -30,7 +30,7 @@ For example:
 
 ## Integration
 
-Outlined below are four different integrations: email acquisition, SMS acquisition, custom attributes, and webhooks. The integration you choose will depend on your Quikly activation and use case.
+This section outlines four different integrations: email acquisition, SMS acquisition, custom attributes, and webhooks. The integration you choose will depend on your Quikly activation and use case.
 
 
 
@@ -90,7 +90,7 @@ Here is the complete workflow when a customer provides their mobile number and c
 2. Quikly performs a user lookup using the [Export user profile by identifier endpoint](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/) to see if a user profile exists with a given `email_address`. If no user exists, create an alias-only profile via the Braze [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/), setting the user's email as the user alias to reference that user in the future (as the user won't have an external ID).
 3. Update the subscription status using the [Update user's subscription group status endpoint](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/).
 
-To support existing double opt-in SMS subscription workflows, Quikly can send a custom event to Braze rather than the workflow above. In that case, rather than updating the subscription status directly, the [custom event triggers the double opt-in process](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in/) and the subscription status is periodically monitored to verify the user has fully opted-in before crediting them in the Quikly activation.
+To support existing double opt-in SMS subscription workflows, Quikly can send a custom event to Braze rather than the standard workflow in this section. In that case, rather than updating the subscription status directly, the [custom event triggers the double opt-in process](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in/) and the subscription status is periodically monitored to verify the user has fully opted-in before crediting them in the Quikly activation.
 
 **Important:**
 

@@ -160,12 +160,25 @@ For more ideas on improving deliverability, read [Deliverability pitfalls and sp
 
 ## Set up Microsoft Smart Network Data Services (SNDS)
 
-If Microsoft is your main mailbox provider, you can use this integration to access and view your Microsoft reputation data. This way, you can monitor the health of your IPs to help determine how your emails are being received.
+If Microsoft is your main mailbox provider, you can view Microsoft SNDS data in the Deliverability Center. This includes dedicated sending IPs for workspaces that use Amazon SES, SendGrid, or SparkPost. Use this data to monitor IP health and understand how Microsoft inbox providers are rating your sending.
+
+Microsoft SNDS provides IP-level data on spam complaints, spam trap hits, and sending volume as reported by Microsoft inbox providers such as Outlook, Hotmail, and Live.
 
 **Important:**
 
 
 If you don't see your data in the Deliverability Center, contact [Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) with a list of your IP addresses.
+
+
+
+### Amazon SES
+
+For workspaces that send email through Amazon SES, the Deliverability Center displays Microsoft SNDS metrics for your dedicated sending IPs. Braze backfills up to 90 days of historical SNDS data when this feature is turned on for your workspace.
+
+**Note:**
+
+
+Amazon SES doesn't provide **Trap message period start** or **Trap message period end** metrics. For SES sending IPs, those columns are hidden in the Microsoft SNDS table. You can still view other SNDS metrics for those IPs, including spam trap hits.
 
 
 
@@ -210,6 +223,10 @@ To calculate the complaint rate, divide the number of complaints by the number o
 #### Spam trap hits
 
 Spam trap hits are the number of messages sent to "trap accounts," which are accounts maintained by Outlook.com that don't solicit any mail. It's likely that any messages sent to these trap accounts are considered spam, so it's important to monitor this metric to make sure that it's low. Low spam trap hits means the messages aren't sent to these accounts and are being sent to actual accounts instead.
+
+#### Trap message period start and end
+
+These columns show when the first and last messages sent to trap accounts were received from the IP during the activity period. Amazon SES does not provide these metrics, so the columns are hidden when you view only SES sending IPs in the Microsoft SNDS table.
 
 **Tip:**
 

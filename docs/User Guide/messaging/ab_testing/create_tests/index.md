@@ -51,7 +51,7 @@ Using a control group when determining a winner by _Opens_ or _Clicks_ is not re
 
 
 
-#### Control groups with A/B testing
+#### Control groups and A/B testing
 
 When using rate limiting with an A/B test, the rate limit isn't applied to the control group in the same way as the test group, which is a potential source of time bias. Use appropriate conversion windows to avoid this bias.
 

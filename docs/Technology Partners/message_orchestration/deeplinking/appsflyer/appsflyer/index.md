@@ -98,7 +98,7 @@ Here, you find the REST endpoint and generate your Braze data import key. After 
 
 ### Step 3: Configure Braze in AppsFlyer's dashboard
 
-1. In AppsFlyer, navigate to the **Integrated Partners** page on the left bar. Next, search for **Braze** and select the Braze logo to open a configuration window.
+1. In AppsFlyer, navigate to the **Integrated Partners** page from the navigation menu. Next, search for **Braze** and select the Braze logo to open a configuration window.
 2. Within the **Integration** tab, switch on **Activate Partner**.
 3. Provide the data import key and REST endpoint that you found in the Braze dashboard. 
 4. Toggle **Advanced Privacy** off and save your configuration.
@@ -157,7 +157,7 @@ AppsFlyer provides a [service](https://support.appsflyer.com/hc/en-us/articles/2
 
 Following the initial elements of [Braze’s Email set-up guidance](https://www.braze.com/docs/user_guide/message_building_by_channel/email/email_setup/ssl/#acquiring-an-ssl-certificate), create an email sending domain and a click tracking domain. For support, you can raise a ticket via the Braze Dashboard to initiate setup for the new CTD with the Braze Email team.
 
-![Braze UI showing the “Get Help” button, found under the “Support” button on the top right corner](https://www.braze.com/docs/assets/img/attribution/appsflyer/1.png?9f8b32829abc0d7d8880d47683799dfa)
+![Braze UI showing the “Get Help” button under the “Support” button in the top navigation bar.](https://www.braze.com/docs/assets/img/attribution/appsflyer/1.png?9f8b32829abc0d7d8880d47683799dfa)
 
 Creating a new CTD is mandatory, even if you already use an existing one. This ensures that there is no impact on the traffic of current live email campaigns. 
 
@@ -182,7 +182,7 @@ Now it's time to set your Braze integration in AppsFlyer. This step and the foll
 To set your Braze integration in AppsFlyer:
 
 ### 1. In AppsFlyer, from the side menu, select Engage > ESP integration.
-![Appsflyer UI showing the “ESP Integration” button, found in the left hand menu](https://www.braze.com/docs/assets/img/attribution/appsflyer/2.png?fec4b42d98499e8203e0a489e38d2e67)
+![Appsflyer UI showing the “ESP Integration” button in the navigation menu.](https://www.braze.com/docs/assets/img/attribution/appsflyer/2.png?fec4b42d98499e8203e0a489e38d2e67)
 
  
 ### 2. Select Braze.

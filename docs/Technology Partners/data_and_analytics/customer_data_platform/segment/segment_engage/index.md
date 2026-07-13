@@ -35,7 +35,7 @@ Follow [Segment’s instructions](https://segment.com/docs/connections/destinati
 ### Step 4: Create a Braze segment from the Engage audience
 In Braze, navigate to **Segments**, create a new segment, and select **Segment Cohorts** as your filter. From here, you can choose which Segment cohort you wish to include. After the Segment cohort segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
-![](https://www.braze.com/docs/assets/img/segment/segment3.png?e3dfd701676b490ca848b7c607a5306a)
+![Braze segment builder using the Segment Cohorts filter.](https://www.braze.com/docs/assets/img/segment/segment3.png?e3dfd701676b490ca848b7c607a5306a)
 
 ## Cloud Mode integration
 

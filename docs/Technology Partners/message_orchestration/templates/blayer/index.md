@@ -8,7 +8,7 @@ _This integration is maintained by B.Layer._
 
 The Braze and B.Layer integration allows you to use the B.Layer in-app message builder to help you build on-brand in-app messages that can be exported as a zip file or inline HTML to Braze. This integration does not require additional developer resources, saving you time and budget.
 
-![](https://www.braze.com/docs/assets/img/blayer/blayer2.png?ce7f1712152f0bb1df4d81e8f975900e)
+![B.Layer builder interface previewing a branded in-app message.](https://www.braze.com/docs/assets/img/blayer/blayer2.png?ce7f1712152f0bb1df4d81e8f975900e)
 
 ## Prerequisites
 
@@ -32,13 +32,13 @@ They are working with brands like Lifesum, Blinkist, OnX Hunt, and many more to 
 In B.Layer, on the hamburger menu at the top of the page, click **Brand assets > add your brand assets**. Here, you can assign your brand color and fonts. 
 You are all set. Now you can start designing your in-app message.
 
-![](https://www.braze.com/docs/assets/img/blayer/blayer4.png?d920275065e0ff47aae885ce5f1d7ee8)
+![B.Layer brand assets screen for configuring colors and fonts.](https://www.braze.com/docs/assets/img/blayer/blayer4.png?d920275065e0ff47aae885ce5f1d7ee8)
 
 #### Design your in-app message
 
 To design your in-app message, select a single in-app message. Next, style your message and add the components you need. Each component can be adjusted.
 
-![](https://www.braze.com/docs/assets/img/blayer/blayer5.png?de3cc412b5c54551201e0e7a191c908d)
+![B.Layer message editor with components and style controls.](https://www.braze.com/docs/assets/img/blayer/blayer5.png?de3cc412b5c54551201e0e7a191c908d)
 
 ### Download your in-app message
 
@@ -46,9 +46,9 @@ Once you are done, download your message. Your message can be downloaded as a ZI
 
 ### Step 2: Add B.Layer custom code
 
-In Braze, create a custom code in-app message. If you have a ZIP file, drag and drop it into the box above the code section. If you have an inline HTML file, paste the inline HTML into the HTML section.
+In Braze, create a custom code in-app message. If you have a ZIP file, drag and drop it into the upload box in this section. If you have an inline HTML file, paste the inline HTML into the HTML section.
 
-![](https://www.braze.com/docs/assets/img/blayer/blayer6.png?de400a9cb4afb01d948933fdf5b4069b)
+![Braze custom code in-app message editor with B.Layer export content.](https://www.braze.com/docs/assets/img/blayer/blayer6.png?de400a9cb4afb01d948933fdf5b4069b)
 
 ## Button tracking
 

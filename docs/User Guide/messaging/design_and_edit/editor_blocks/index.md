@@ -165,7 +165,7 @@ Inserts an image from the [media library](https://www.braze.com/docs/user_guide/
 | Property | Description |
 |---|---|
 | Auto width | Modifies the width of the image in pixels. |
-| Align | Orients the image to either the left, center, or right of the block. |
+| Align | Sets image alignment to left, center, or right within the block. |
 | Image with Liquid | Use [Liquid](https://www.braze.com/docs/liquid/) logic to dynamically set different images within the same block of content. |
 | URL | Set an image using the address to where it's hosted. |
 | Alternate text | A short description of the image that gives users the same information shown in the image. Essential for screen-reader accessibility or when the image fails to load. |
@@ -592,7 +592,7 @@ Multi-line text field for survey-style flows. If you don't see this block, conta
 | Required input field | Marks whether the field must be filled before the form can be submitted. |
 | Minimum characters | The minimum number of characters a user must enter. |
 | Maximum characters | The maximum number of characters a user can enter. |
-| Hide character count | Hides or shows the live character counter below the text area. |
+| Hide character count | Hides or shows the live character counter for the text area. |
 | Placeholder text | Text shown inside the empty text area until the user types. |
 | Height (rows of text) | Controls how tall the text area appears, measured in rows. |
 | Font family | Typeface for the text area text. |
@@ -928,7 +928,7 @@ Multi-line text field for survey-style flows. If you don't see this block, conta
 | Required input field | Marks whether the field must be filled before the form can be submitted. |
 | Minimum characters | The minimum number of characters a user must enter. |
 | Maximum characters | The maximum number of characters a user can enter. |
-| Hide character count | Hides or shows the live character counter below the text area. |
+| Hide character count | Hides or shows the live character counter for the text area. |
 | Placeholder text | Text shown inside the empty text area until the user types. |
 | Height (rows of text) | Controls how tall the text area appears, measured in rows. |
 | Font family | Typeface for the text area text. |
@@ -1153,7 +1153,7 @@ Multi-line text field for survey-style flows. If you don't see this block, conta
 | Required input field | Marks whether the field must be filled before the form can be submitted. |
 | Minimum characters | The minimum number of characters a user must enter. |
 | Maximum characters | The maximum number of characters a user can enter. |
-| Hide character count | Hides or shows the live character counter below the text area. |
+| Hide character count | Hides or shows the live character counter for the text area. |
 | Placeholder text | Text shown inside the empty text area until the user types. |
 | Height (rows of text) | Controls how tall the text area appears, measured in rows. |
 | Font family | Typeface for the text area text. |
@@ -1183,7 +1183,7 @@ Inserts a reusable row you saved earlier as a drag-and-drop Content Block. Saved
 
 Drag blocks from the **Build** section into a row in the drag-and-drop preference center editor. Each block has its own settings; the right-side panel switches to properties or styling for the selected element.
 
-Before you edit blocks, add subscription groups and configure the subscription **smart block** (see below). For the full setup flow, see [Create an email preference center with drag-and-drop](https://www.braze.com/docs/user_guide/audience/subscription_preferences/preference_center/dnd_preference_center/).
+Before you edit blocks, add subscription groups and configure the subscription **smart block** (see the following section). For the full setup flow, see [Create an email preference center with drag-and-drop](https://www.braze.com/docs/user_guide/audience/subscription_preferences/preference_center/dnd_preference_center/).
 
 ### Title and paragraph
 

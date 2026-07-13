@@ -85,7 +85,7 @@ For more details about FCM, visit [Cloud messaging](https://firebase.google.com/
 
 Braze provides push notification errors within the message activity log. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
 
-![](https://www.braze.com/docs/assets/img_archive/message_activity_log.png?6577302323ab3f2df3196a973320b8d3)
+![Braze message activity log showing push notification error entries.](https://www.braze.com/docs/assets/img_archive/message_activity_log.png?6577302323ab3f2df3196a973320b8d3)
 
 ## Troubleshooting scenarios
 
@@ -296,7 +296,7 @@ Common errors you might see here include user-specific notifications, such as ["
 
 In addition, Braze also provides a push changelog on the user profile under the **Engagement** tab. This changelog provides insight into push registration behavior such as token invalidation, push registration errors, tokens being moved to new users, etc.
 
-![](https://www.braze.com/docs/assets/img_archive/push_changelog.gif?36d10186d33121a195e943385dd0d02a){: style="max-width:50%;" }
+![Braze user profile Engagement tab showing the push registration changelog.](https://www.braze.com/docs/assets/img_archive/push_changelog.gif?36d10186d33121a195e943385dd0d02a){: style="max-width:50%;" }
 
 ### Message Activity Log errors
 
@@ -480,7 +480,7 @@ For more details about FCM, visit [Cloud messaging](https://firebase.google.com/
 
 Braze provides push notification errors within the message activity log. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
 
-![](https://www.braze.com/docs/assets/img_archive/message_activity_log.png?6577302323ab3f2df3196a973320b8d3)
+![Braze message activity log showing push notification error entries.](https://www.braze.com/docs/assets/img_archive/message_activity_log.png?6577302323ab3f2df3196a973320b8d3)
 
 ## Troubleshooting scenarios
 

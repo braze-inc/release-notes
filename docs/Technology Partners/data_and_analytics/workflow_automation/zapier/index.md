@@ -32,7 +32,7 @@ Next, define the zap action. When your zap is enabled, and your trigger is detec
 
 Continuing our example, we want to send a POST request as a JSON to a Braze endpoint. This can be done by selecting the **Webhooks** option under **Apps**.
 
-![](https://www.braze.com/docs/assets/img_archive/zapier3.png?fabe6b841fccfb4ccf868de16faf88b0)
+![Zapier Apps step with Webhooks selected for the action.](https://www.braze.com/docs/assets/img_archive/zapier3.png?fabe6b841fccfb4ccf868de16faf88b0)
 
 ### Step 3: Set up Braze POST
 
@@ -62,7 +62,7 @@ When setting up your webhook, use the following settings and provide your Braze 
 }
 ```
 
-![](https://www.braze.com/docs/assets/img/zapier.png?d8f78b5fc15cba30e9d7306665ec3cc0){: style="max-width:70%;"}
+![Zapier webhook configuration with Braze endpoint, headers, and payload fields.](https://www.braze.com/docs/assets/img/zapier.png?d8f78b5fc15cba30e9d7306665ec3cc0){: style="max-width:70%;"}
 
 ### Step 4: Create a Braze campaign
 

@@ -7,7 +7,7 @@
 
 
 
-<!-- Add this below after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
+<!-- Add this after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
 
 
 
@@ -32,7 +32,7 @@ When creating a drag-and-drop in-app message, select **Email sign-up** for your 
 
 
 
-<!-- Add this below after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
+<!-- Add this after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
 
 
 
@@ -61,7 +61,7 @@ If the user enters an email address that includes any unaccepted special charact
 
 
 
-<!-- Add this below after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
+<!-- Add this after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
 
 
 
@@ -82,7 +82,7 @@ Customize the look and feel of your sign-up form using the drag-and-drop [in-app
 
 
 
-<!-- Add this below after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
+<!-- Add this after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
 
 
 
@@ -99,7 +99,7 @@ Customize the look and feel of your sign-up form using the drag-and-drop [in-app
 
 
 
-<!-- Add this below after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
+<!-- Add this after the disclaimers are added to all email sign-up templates: "We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes."-->
 
 
 

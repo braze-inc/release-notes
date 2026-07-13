@@ -478,7 +478,7 @@ If a subscription group referenced in **Sending Info** for one-click is archived
 **Is the one-click unsubscribe setting available for email templates?**
 
 
-No, we currently do not have plans to add this for email templates, as these templates aren't assigned to a sending domain. If you're interested in this feature for email templates, submit [product feedback](https://www.braze.com/docs/user_guide/administer/personal/product_portal).
+No, we currently do not have plans to add this for email templates, as these templates aren't assigned to a sending domain. 
 
 
 

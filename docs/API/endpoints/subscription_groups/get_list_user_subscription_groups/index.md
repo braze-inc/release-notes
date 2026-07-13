@@ -1,4 +1,4 @@
-<div id='api_urmusxbuqmdq' class='api_div' data-search-keywords='prerequisites users email phone external_id subscription_groups id name channel status total_count message'>
+<div id='api_sspyjczlgufs' class='api_div' data-search-keywords='prerequisites users email phone external_id subscription_groups id name channel status total_count message'>
 <h1 id="list-users-subscription-groups">List user’s subscription groups</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/subscription/user/status</p>
