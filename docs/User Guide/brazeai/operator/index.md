@@ -11,7 +11,7 @@ Open Operator from any page in the Braze dashboard.
 ![The BrazeAI Operator icon next to a user profile.](https://www.braze.com/docs/assets/img/operator/operator_icon.png?09140fc9ad7a60e1aa61e8c943c1be4c)
 
 {:start="2"}
-2. The Operator chat panel opens on the right-hand side of the screen.
+2. The Operator chat panel opens in a side panel.
 
 ![The Operator chat panel.](https://www.braze.com/docs/assets/img/operator/operator_chat_panel.png?1dec234825cddb701686c1d1cd85dd14)
 

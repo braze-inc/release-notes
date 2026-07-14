@@ -1,4 +1,4 @@
-<div id='api_hiolpazlbjef' class='api_div' data-search-keywords='prerequisites app_id apple certificate jwt_key_id jwt_team_id jwt_bundle_id apns_gateway firebase credential huawei app_secret kindle client_id client_secret message'>
+<div id='api_cptnvcglcgdu' class='api_div' data-search-keywords='prerequisites app_id apple certificate jwt_key_id jwt_team_id jwt_bundle_id apns_gateway firebase credential huawei app_secret kindle client_id client_secret message'>
 <h1 id="update-push-credentials">Update push credentials</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/apps/push_credential/update</p>

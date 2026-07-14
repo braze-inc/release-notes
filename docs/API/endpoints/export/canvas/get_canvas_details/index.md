@@ -1,4 +1,4 @@
-<div id='api_cbrmkdpqtlxf' class='api_div' data-search-keywords='prerequisites created_at updated_at name description archived draft enabled has_post_launch_draft schedule_type first_entry last_entry channels variants id first_step_ids first_step_id tags teams steps next_step_ids next_paths next_step_id messages message_variation_id channel has_translatable_content message type message_1 subject body message_2 title message_3 message_4 header'>
+<div id='api_fvdhydwsdwdx' class='api_div' data-search-keywords='prerequisites created_at updated_at name description archived draft enabled has_post_launch_draft schedule_type first_entry last_entry channels variants id first_step_ids first_step_id tags teams steps next_step_ids next_paths next_step_id messages message_variation_id channel has_translatable_content message type message_1 subject body message_2 title message_3 message_4 header'>
 <h1 id="export-canvas-details">Export Canvas details</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/details</p>

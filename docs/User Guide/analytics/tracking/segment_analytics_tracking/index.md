@@ -29,7 +29,7 @@ Revenue and purchase charts reflect activity recorded after analytics tracking i
 
 To visually compare segment data for any custom time range, add or remove segments from the graph. Select **By Segment** in the **Breakdown** dropdown, and then select your segments in **Breakdown values**.
 
-Select any segment name above the graph to turn on or off visibility for that segment's metrics.
+Select any segment name in the graph legend to turn on or off visibility for that segment's metrics.
 
 ![Revenue for multiple segments](https://www.braze.com/docs/assets/img_archive/segment_revenue_multiple.png?78fb3f54c51d913ad20b5585ae573c3f)
 

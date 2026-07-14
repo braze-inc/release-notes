@@ -63,7 +63,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 <!--overview-end-->
 
-<div id='api_pixgedvnrbfo' class='api_div' data-search-keywords='random bucket number update events random bucket number this user event occurs every time a new user is created within their workspace. during this event, each new user gets assigned a random bucket number that you can then use to create uniformly-distributed segments of random users. use this to group together a range of random bucket number values and compare performance across your campaigns and campaign variants. app_group_id external_user_id id prev_random_bucket_number random_bucket_number time user_id'>
+<div id='api_bffaoaodqcmi' class='api_div' data-search-keywords='random bucket number update events random bucket number this user event occurs every time a new user is created within their workspace. during this event, each new user gets assigned a random bucket number that you can then use to create uniformly-distributed segments of random users. use this to group together a range of random bucket number values and compare performance across your campaigns and campaign variants. app_group_id external_user_id id prev_random_bucket_number random_bucket_number time user_id'>
 <h2 id="random-bucket-number-update-events">Random Bucket Number Update events</h2>
 
 <div class="api_tags" data-tags="Random Bucket Number" data-tags-lower="random bucket number"></div>
@@ -101,7 +101,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_vdwiykbuabgh' class='api_div' data-search-keywords='custom events custom events this event occurs when a specific custom event is triggered. use this to track when users perform custom events in your application. ad_id ad_id_type ad_tracking_enabled app_group_id app_id device_id device_model external_user_id id name os_version platform properties time timezone user_id adid event_properties event_type idfa insert_id library user event distinct_id token context device model type traits timestamp'>
+<div id='api_txhecpyacsbu' class='api_div' data-search-keywords='custom events custom events this event occurs when a specific custom event is triggered. use this to track when users perform custom events in your application. ad_id ad_id_type ad_tracking_enabled app_group_id app_id device_id device_model external_user_id id name os_version platform properties time timezone user_id adid event_properties event_type idfa insert_id library user event distinct_id token context device model type traits timestamp'>
 <h2 id="custom-events">Custom events</h2>
 
 <div class="api_tags" data-tags="Custom Events" data-tags-lower="custom events"></div>
@@ -354,7 +354,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_wrmstpanoozd' class='api_div' data-search-keywords='install attribution events attribution this event occurs when an app installation is attributed to a source. use this to track where your app installs are coming from. app_group_id external_user_id id source time user_id device_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
+<div id='api_kkkeejccocof' class='api_div' data-search-keywords='install attribution events attribution this event occurs when an app installation is attributed to a source. use this to track where your app installs are coming from. app_group_id external_user_id id source time user_id device_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
 <h2 id="install-attribution-events">Install Attribution events</h2>
 
 <div class="api_tags" data-tags="Attribution" data-tags-lower="attribution"></div>
@@ -521,7 +521,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_qklmiqrzcvoj' class='api_div' data-search-keywords='location events locations this event is triggered when a user visits a specified location. use this to track users triggering location events in your app. ad_id ad_id_type ad_tracking_enabled alt_accuracy altitude app_group_id app_id device_id device_model external_user_id id latitude ll_accuracy longitude os_version platform time user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token context device model type traits timestamp'>
+<div id='api_hmivxnfeqwbe' class='api_div' data-search-keywords='location events locations this event is triggered when a user visits a specified location. use this to track users triggering location events in your app. ad_id ad_id_type ad_tracking_enabled alt_accuracy altitude app_group_id app_id device_id device_model external_user_id id latitude ll_accuracy longitude os_version platform time user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token context device model type traits timestamp'>
 <h2 id="location-events">Location events</h2>
 
 <div class="api_tags" data-tags="Locations" data-tags-lower="locations"></div>
@@ -811,7 +811,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_bwchgvihklbc' class='api_div' data-search-keywords='purchase events purchases this event occurs when a user makes a purchase. use this data to track when users purchase something in the application. ad_id ad_id_type ad_tracking_enabled app_group_id app_id currency device_id device_model external_user_id id os_version platform price product_id properties time user_id adid event_properties event_type idfa insert_id library user event distinct_id token context device model type traits timestamp'>
+<div id='api_gtcwimcpvltw' class='api_div' data-search-keywords='purchase events purchases this event occurs when a user makes a purchase. use this data to track when users purchase something in the application. ad_id ad_id_type ad_tracking_enabled app_group_id app_id currency device_id device_model external_user_id id os_version platform price product_id properties time user_id adid event_properties event_type idfa insert_id library user event distinct_id token context device model type traits timestamp'>
 <h2 id="purchase-events">Purchase events</h2>
 
 <div class="api_tags" data-tags="Purchases" data-tags-lower="purchases"></div>
@@ -1088,7 +1088,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_kmtwbqamfjsy' class='api_div' data-search-keywords='first session events sessions this event occurs when a user starts their first session in your application. use this data to track when users start sessions. app_group_id app_id country device_id device_model external_user_id gender id language os_version platform sdk_version session_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
+<div id='api_etevlygrlsme' class='api_div' data-search-keywords='first session events sessions this event occurs when a user starts their first session in your application. use this data to track when users start sessions. app_group_id app_id country device_id device_model external_user_id gender id language os_version platform sdk_version session_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
 <h2 id="first-session-events">First Session events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1313,7 +1313,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_ahpshgukxaxt' class='api_div' data-search-keywords='session end events sessions this occurs when a user exits your application, therefore ending their current session. use this data to track when sessions end, and along with the appropriate session start event, calculate the duration of their time in a session. app_group_id app_id device_id device_model duration external_user_id id os_version platform session_id time user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
+<div id='api_irbgtsmpdvdx' class='api_div' data-search-keywords='session end events sessions this occurs when a user exits your application, therefore ending their current session. use this data to track when sessions end, and along with the appropriate session start event, calculate the duration of their time in a session. app_group_id app_id device_id device_model duration external_user_id id os_version platform session_id time user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
 <h2 id="session-end-events">Session End events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1532,7 +1532,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_fmwkrgsojrcj' class='api_div' data-search-keywords='session start events sessions this event occurs when a user starts a session. use this data to track when users start sessions. app_group_id app_id device_id device_model external_user_id id os_version platform session_id time user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
+<div id='api_xkrfvaudfojb' class='api_div' data-search-keywords='session start events sessions this event occurs when a user starts a session. use this data to track when users start sessions. app_group_id app_id device_id device_model external_user_id id os_version platform session_id time user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
 <h2 id="session-start-events">Session Start events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1745,7 +1745,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_cmncicrmttag' class='api_div' data-search-keywords='live activity push to start token change events live activity, push to start token this event occurs when braze syncs the live activity push to start token with the user. activity_attributes_type app_group_id app_id device_id external_user_id id ios_push_token_apns_gateway push_to_start_token push_token_state_change_type sdk_version time user_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
+<div id='api_mubtrirgwgwf' class='api_div' data-search-keywords='live activity push to start token change events live activity, push to start token this event occurs when braze syncs the live activity push to start token with the user. activity_attributes_type app_group_id app_id device_id external_user_id id ios_push_token_apns_gateway push_to_start_token push_token_state_change_type sdk_version time user_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
 <h2 id="live-activity-push-to-start-token-change-events">Live Activity Push To Start Token Change events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Push To Start Token" data-tags-lower="live activity, push to start token"></div>
@@ -1962,7 +1962,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_zegopgdtxfbz' class='api_div' data-search-keywords='live activity update token change events live activity, update token this event occurs when braze syncs live activity update token with the user activity_id app_group_id app_id device_id external_user_id id ios_push_token_apns_gateway push_token_state_change_type sdk_version time update_token user_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
+<div id='api_uvpyrxdvejyz' class='api_div' data-search-keywords='live activity update token change events live activity, update token this event occurs when braze syncs live activity update token with the user activity_id app_group_id app_id device_id external_user_id id ios_push_token_apns_gateway push_token_state_change_type sdk_version time update_token user_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
 <h2 id="live-activity-update-token-change-events">Live Activity Update Token Change events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Update Token" data-tags-lower="live activity, update token"></div>
@@ -2173,7 +2173,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_wsiyzbdzjcaa' class='api_div' data-search-keywords='push notification token state change events push, token state change this event occurs when a push token is inserted, updated, or removed. use this to track the states of push tokens. app_group_id app_id external_user_id id ios_push_token_apns_gateway platform push_token push_token_created_at push_token_device_id push_token_foreground_push_disabled push_token_provisionally_opted_in push_token_state_change_type push_token_updated_at sdk_version time time_ms user_id web_push_token_public_key web_push_token_user_auth web_push_token_vapid_public_key event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
+<div id='api_sehgzydrfwge' class='api_div' data-search-keywords='push notification token state change events push, token state change this event occurs when a push token is inserted, updated, or removed. use this to track the states of push tokens. app_group_id app_id external_user_id id ios_push_token_apns_gateway platform push_token push_token_created_at push_token_device_id push_token_foreground_push_disabled push_token_provisionally_opted_in push_token_state_change_type push_token_updated_at sdk_version time time_ms user_id web_push_token_public_key web_push_token_user_auth web_push_token_vapid_public_key event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
 <h2 id="push-notification-token-state-change-events">Push Notification Token State Change events</h2>
 
 <div class="api_tags" data-tags="Push, Token State Change" data-tags-lower="push, token state change"></div>

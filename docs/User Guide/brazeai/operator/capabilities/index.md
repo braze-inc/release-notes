@@ -21,6 +21,8 @@ All existing entry points remain in place, so your workflows are unaffected. The
 | Content review | Checked content for spelling, grammar, tone, offensive language, and stray code | **Review with Operator** button on the **Test** tab |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="What's available through Operator" }
 
+Operator can also generate HTML for Banners in the Banner HTML editor. For more information, see [Generate messages](#generate-messages).
+
 ## Apply brand guidelines {#apply-brand-guidelines}
 
 Operator uses the brand guidelines configured in your workspace so generated copy, templates, and images match your brand's voice, tone, and style. To set up brand guidelines, go to **Content** > **Brand Guidelines**. For more information, see [Brand guidelines](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/brand_guidelines). For details on applying brand guidelines for use with Operator, see [Apply brand guidelines](https://www.braze.com/docs/user_guide/brazeai/operator#apply-brand-guidelines).
@@ -67,6 +69,50 @@ The tone of generated copy is driven by your prompt. Describe the style you want
   
   <span class="copy-feedback"></span>
   <button class="btn copy-block-btn" data-clipboard-text="Translate this copy into Spanish." title="Copy to clipboard" aria-label="Copy to clipboard">
+    <i class="fas fa-copy" aria-hidden="true"></i>
+  </button>
+</div>
+
+
+## Generate messages {#generate-messages}
+
+Operator can generate message HTML in supported composers. Describe the message you want in natural language, review the output, and insert it into your composer.
+
+You get the best results when you use Operator in the composer you're building, where it has [page-aware context](https://www.braze.com/docs/user_guide/brazeai/operator/#leverage-page-aware-context) for the channel and message type. When [brand guidelines](#apply-brand-guidelines) are configured, Operator applies them automatically.
+
+### HTML Banners {#generate-messages-html-banners}
+
+In the [Banner HTML editor](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner/#compose-a-banner), select **Ask Operator** to generate HTML for your Banner. Describe the layout, content, and styling you want. Operator can include [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/) personalization in the generated markup.
+
+Keep the conversation going to refine the result—for example, ask for a different layout, shorter copy, or updated button styling—before you insert the HTML into the editor.
+
+#### Example prompts {#generate-messages-html-banners-example-prompts}
+
+<div class="copy-block">
+  <p class="copy-block-text">Build a Banner that promotes our summer sale with a headline, short description, and Shop now button.</p>
+  
+  <span class="copy-feedback"></span>
+  <button class="btn copy-block-btn" data-clipboard-text="Build a Banner that promotes our summer sale with a headline, short description, and Shop now button." title="Copy to clipboard" aria-label="Copy to clipboard">
+    <i class="fas fa-copy" aria-hidden="true"></i>
+  </button>
+</div>
+
+
+<div class="copy-block">
+  <p class="copy-block-text">Use a two-column layout with a product image in the first column and the headline, description, and Shop now button stacked in the second column.</p>
+  
+  <span class="copy-feedback"></span>
+  <button class="btn copy-block-btn" data-clipboard-text="Use a two-column layout with a product image in the first column and the headline, description, and Shop now button stacked in the second column." title="Copy to clipboard" aria-label="Copy to clipboard">
+    <i class="fas fa-copy" aria-hidden="true"></i>
+  </button>
+</div>
+
+
+<div class="copy-block">
+  <p class="copy-block-text">Make the dismiss button smaller and position it as a corner dismiss control.</p>
+  
+  <span class="copy-feedback"></span>
+  <button class="btn copy-block-btn" data-clipboard-text="Make the dismiss button smaller and position it as a corner dismiss control." title="Copy to clipboard" aria-label="Copy to clipboard">
     <i class="fas fa-copy" aria-hidden="true"></i>
   </button>
 </div>
