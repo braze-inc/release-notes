@@ -1,6 +1,6 @@
 # Troubleshoot segments
 
-> Match your symptom below to find the right section. This page covers launch errors, user eligibility, filter issues, and analytics mismatches. For filter definitions, see [Segmentation filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters). For segment size estimates, exact counts, and historical membership charts, see [Measure segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size).
+> Match your symptom in the following list to find the right section. This page covers launch errors, user eligibility, filter issues, and analytics mismatches. For filter definitions, see [Segmentation filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters). For segment size estimates, exact counts, and historical membership charts, see [Measure segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size).
 
 ## Start here: Match your symptom
 

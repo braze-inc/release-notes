@@ -4,7 +4,7 @@
 
 Braze manages a number of different instances for our dashboard, SDK, and REST endpoints, which we call "clusters." Your Braze onboarding manager will let you know which cluster you're on. To learn more about the Braze SDK, check out the [Braze 101](https://learning.braze.com/braze-101) Braze Learning course.
 
-Logging in at [dashboard.braze.com](https://dashboard.braze.com) will automatically send you to the right cluster address.
+Logging in at [dashboard.braze.com](https://dashboard.braze.com) automatically sends you to the correct cluster address.
 
 
 

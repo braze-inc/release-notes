@@ -1,4 +1,4 @@
-<div id='api_pluzydwmjfkk' class='api_div' data-search-keywords='prerequisites email_template_id template_name description subject preheader body plaintext_body should_inline_css tags created_at updated_at'>
+<div id='api_aqwoqxcupoph' class='api_div' data-search-keywords='prerequisites email_template_id template_name description subject preheader body plaintext_body should_inline_css tags created_at updated_at'>
 <h1 id="see-email-template-information">See email template information</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/info</p>

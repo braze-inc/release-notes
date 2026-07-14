@@ -1,11 +1,11 @@
-<div id='api_mnjovjgndeci' class='api_div' data-search-keywords='prerequisites campaign_id name description tag_names'>
+<div id='api_ykonygkxkudp' class='api_div' data-search-keywords='prerequisites campaign_id name description tag_names'>
 <h1 id="duplicate-campaigns-using-the-api">Duplicate campaigns using the API</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/duplicate</p>
 <div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
-  <p>Use this endpoint to duplicate campaigns. This API endpoint is similar to <a href="/docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns#duplicating-segments-campaigns-and-canvases">duplicating campaigns in the Braze dashboard</a>.</p>
+  <p>Use this endpoint to duplicate campaigns. This API endpoint is similar to <a href="/docs/user_guide/messaging/governance/duplicating">duplicating campaigns in the Braze dashboard</a>.</p>
 </blockquote>
 
 <h2 id="prerequisites">Prerequisites</h2>
@@ -34,7 +34,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   </span><span class="nl">"campaign_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">campaign</span><span class="w"> </span><span class="err">identifier</span><span class="p">,</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">name</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">resulting</span><span class="w"> </span><span class="err">campaign</span><span class="p">,</span><span class="w">
   </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">description</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">resulting</span><span class="w"> </span><span class="err">campaign</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"tag_names"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">tags</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">resulting</span><span class="w"> </span><span class="err">campaign</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"tag_names"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">strings)</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">tags</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">resulting</span><span class="w"> </span><span class="err">campaign</span><span class="p">,</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -71,7 +71,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     <tr>
       <td><code class="language-plaintext highlighter-rouge">tag_names</code></td>
       <td>Optional</td>
-      <td>String</td>
+      <td>Array of strings</td>
       <td>The tags for the resulting campaign. These must be existing tags. If you add new tags in the request, they overwrite any tags that were on the original campaign.</td>
     </tr>
   </tbody>
@@ -79,6 +79,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="response">Response</h2>
 
-<p>This endpoint will return a <code class="language-plaintext highlighter-rouge">202</code> status code, and the campaign creation will occur asynchronously. You can use the <a href="/docs/user_guide/administrative/app_settings/company_settings/security_settings/#downloading-a-security-event-report">security event download</a> to see records of when campaigns were duplicated and by which API key.</p>
+<p>This endpoint returns a <code class="language-plaintext highlighter-rouge">202</code> status code, and the campaign creation occurs asynchronously. You can use the <a href="/docs/user_guide/administer/global/admin_settings/security_settings/#security-event-report">security event download</a> to see records of when campaigns were duplicated and by which API key.</p>
 
 </div>
