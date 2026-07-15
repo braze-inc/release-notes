@@ -288,7 +288,49 @@ An [array](https://www.braze.com/docs/user_guide/data/activation/attributes/cust
 
 
 
-For arrays, you must use "contains" and can't use "==". 
+For arrays, you must use `contains` and can't use `==`.
+
+#### How `contains` works with strings versus arrays
+
+The `contains` operator behaves differently depending on whether it's evaluating a string or an array:
+
+- **Strings:** `contains` checks for a substring anywhere inside the text.
+- **Arrays:** `contains` checks for an exact match against a complete element inside the array.
+
+**Important:**
+
+
+If an attribute is stored as an array (for example, `["med1", "med2", "abc"]`), searching for `contains "ab"` will evaluate to `false` because no single element in that list is exactly `"ab"`.
+
+
+
+##### Substring matching on arrays
+
+If you need to look for a partial match (substring) within an array attribute, you must first convert the array into a single string using the `join` filter.
+
+Because Braze does not support inline filters directly within conditional `{% if %}` blocks, you must follow a two-step process: first, assign the joined value to a variable, then run your conditional check.
+
+
+```liquid
+{% comment %} 1. Convert the array to a string using a comma separator {% endcomment %}
+{% assign products_string = {{custom_attribute.${product_array}}} | join: "," %}
+
+{% comment %} 2. Perform the substring check on the new variable {% endcomment %}
+{% if products_string contains "ab" %}
+  Match found!
+{% else %}
+  No match.
+{% endif %}
+```
+
+
+
+**Tip:**
+
+
+Because `join` combines array elements into one string (default separator: a single space), substring checks can match across element boundaries (for example, `["Napa", "boulevard"]` becomes `Napa boulevard`, where `contains "a b"` is `true`). Use an explicit separator such as "," to make boundaries clearer and reduce accidental cross-element matches.
+
+
 
 ### Time
 

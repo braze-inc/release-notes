@@ -57,6 +57,13 @@ Link aliasing is only supported in `href` attributes within HTML anchor tags whe
 
 
 
+**Important:**
+
+
+In the drag-and-drop editor, your link must include a question mark (`?`) before the hash symbol (`#`) in your URL for the link alias to appear in the **Link Management** tab.
+
+
+
 ## Managing link aliases
 
 To view all of your tracked link aliases, do the following:
@@ -151,10 +158,16 @@ Braze only tracks up to the last 100 clicked link aliases at the profile level.
 
 
 ### Action-based filters
- 
-You can create action-based messages targeting any link (tracked or not tracked) or retarget users based on whether they clicked an alias across any email campaign or Canvas component.
+
+When link aliasing is enabled for your workspace, you can create action-based messages targeting any link (tracked or not tracked) or retarget users based on whether they clicked an alias across any email campaign or Canvas component.
 
 ![Action-Based Options to target users who have clicked an alias in a Canvas component or interacted with a campaign.](https://www.braze.com/docs/assets/img/link_aliasing_action_based_filters.png?b0b5cd8c547e577641e1c18b1a3edb00)
+
+- If a campaign is archived, link tracking is turned off and that link alias can't be used in a different filter.
+- If a link has tracking turned on and was clicked in a campaign, you can find the campaign as an available option in the segment filter, even if link tracking has since been turned off, as long as at least one link on that message is still tracked.
+- You can only select a tracked link as a filter if it's in an active (launched) Canvas, using the **Clicked Alias in Canvas Step** filter dropdown. If the link is being tracked in a Canvas draft, you can't select the tracked link as a filter.
+
+To set links as untracked, go to **Settings** > **Email Preferences** > **Link Aliasing Settings**.
 
 ### Segmentation filters
 

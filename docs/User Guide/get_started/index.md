@@ -5,7 +5,7 @@
 **Tip:**
 
 
-We highly recommend checking out our free [Practitioner Learning Path](https://learning.braze.com/page/practitioner) along with these articles. No special login or account is needed. If you're a developer looking for a technical rundown of Braze, check out [Getting Started for Developers](https://www.braze.com/docs/developer_guide/getting_started/platform_overview), too.
+We highly recommend checking out our free [Practitioner Learning Path](https://learning.braze.com/page/practitioner) along with these articles. No special login or account is needed. If you're a developer looking for a technical rundown of Braze, check out <a href="/docs/developer_guide/getting_started/platform_overview">Getting Started for Developers</a>, too.
 
 
 
