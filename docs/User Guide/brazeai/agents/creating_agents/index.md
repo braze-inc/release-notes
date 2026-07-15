@@ -15,7 +15,7 @@ Before you start, you'll need the following:
 
 ## How it works
 
-When you create an agent, you define its purpose and set guardrails for how it should behave. After it's live, the agent can be deployed in Braze to generate personalized copy, make real-time decisions, or update catalog fields. As you build your agent, you can save it as a draft, and you can pause or update an agent anytime from the dashboard.
+When you create an agent, you define its purpose and set guardrails for how it should behave. After it's live, the agent can be deployed in Braze to generate personalized copy, make real-time decisions, or update catalog fields. As you build your agent, you can save it as a draft, and you can pause or update an agent anytime from the dashboard. Each save creates a new version you can review in the [Version history](https://www.braze.com/docs/user_guide/brazeai/agents/reference#version-history) tab.
 
 The following use cases showcase a few ways to leverage custom agents.
 
@@ -52,7 +52,11 @@ Next, set up the details for your agent:
 2. (optional) Add tags to filter your agent.
 3. Choose the [model](https://www.braze.com/docs/user_guide/brazeai/agents/reference#models) for your agent to use.
 4. If you're not using the **Braze Auto** model, select the model's [thinking level](https://www.braze.com/docs/user_guide/brazeai/agents/reference#thinking-levels). You can choose from minimal, low, medium, or high. We recommend starting with **Minimal** and testing your agent's responses and adjusting this as needed.
-5. Set a daily invocation limit. By default, this value is set to 250,000, but can be raised to 1,000,000. If you're interested in increasing the limit over 1,000,000, contact your customer success manager to learn more.
+5. Set a daily invocation limit. By default, this value is set to 250,000, but can be raised to 1,000,000. If you're interested in increasing the limit higher than 1,000,000, contact your customer success manager to learn more.
+
+The **Daily action credit cost limit** field specifies the maximum number of credits this agent can consume per day. Braze calculates it from your workspace's per-invocation credit ratio for the selected model (from your contract, shown on the [Credit Ratios](https://www.braze.com/docs/user_guide/administer/global/billing/credits_usage) page) multiplied by the daily invocation limit. The estimate updates when you change the model or invocation limit.
+
+To manage cost, lower the daily invocation limit. For [bring-your-own (BYO)](https://www.braze.com/docs/user_guide/brazeai/agents/reference#option-2-bring-your-own-api-key) models, you can also switch to a lower-cost model or reduce the [thinking level](https://www.braze.com/docs/user_guide/brazeai/agents/reference#thinking-levels). **Braze Auto** does not support adjusting the thinking level. Track actual usage in **Settings** > **Billing** > **Credits Usage** > **Agent Console**.
 
 ![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model, and setting a daily invocation limit.](https://www.braze.com/docs/assets/img/ai_agent/create_custom_agent.png?39fb479ac0a363596cf85f72afac8863){: style="max-width:75%;"}
 
@@ -64,22 +68,30 @@ Include instructions for what the agent should do in unexpected or ambiguous sce
 
 Refer to the [Writing instructions](https://www.braze.com/docs/user_guide/brazeai/agents/reference#writing-instructions) for best practices and [Examples](https://www.braze.com/docs/user_guide/brazeai/agents/reference#examples) for inspiration on how to prompt your agent.
 
-**Tip:**
-
-
-For Canvas agents, you can use Liquid in your instructions to reference user attributes, such as their first and last name, or custom attributes. Any Liquid variable in the agent instructions is automatically passed to the Agent step when a user enters the step.
-
-
-
 #### Add context {#add-resources}
+
+**Important:**
+
+
+Agents only receive data you explicitly pass in—they do not search user profiles or warn you when required data is missing. Use Liquid in your instructions, select **+ Agent context**, add upstream [Context steps](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context) in Canvas, or pass additional context on the Agent step. For a full list of data sources and design guidance, see [What data agents receive](https://www.braze.com/docs/user_guide/brazeai/agents/reference#what-data-agents-receive).
+
+
 
 Select **+ Agent context** to choose what your agent can reference. This includes:
 
 - [Catalog fields](https://www.braze.com/docs/user_guide/brazeai/agents/reference#catalogs-and-fields): Give the agent access to your catalog data for more accurate responses.
+- [Knowledge sources](https://www.braze.com/docs/user_guide/brazeai/agents/knowledge_sources): Give the agent access to catalog data through a knowledge source for more accurate retrieval than attaching a catalog directly.
 - [Segment membership](https://www.braze.com/docs/user_guide/brazeai/agents/reference#segment-membership-context): Let the agent personalize responses based on which segments a user belongs to. You can select up to five segments.
 - [Brand guidelines](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/brand_guidelines): Reference the brand voice and style guidelines for the agent to follow. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
 - [All Canvas Context](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables): Analyze all Canvas context data for a user when this agent is invoked, including any variables that are not referenced in the **Instructions** section.
 - [User interaction data](https://www.braze.com/docs/user_guide/brazeai/agents/reference#user-history): Provide the agent with each user's recent campaign and Canvas opens, clicks, and conversion data.
+
+**Tip:**
+
+
+For Canvas agents, you can use Liquid in your instructions to reference user attributes, such as their first and last name, or custom attributes. Any Liquid variable in the agent instructions is automatically passed to the Agent step when a user enters the step. See [What data agents receive](https://www.braze.com/docs/user_guide/brazeai/agents/reference#what-data-agents-receive) for how to pass Canvas context and profile data deliberately.
+
+
 
 ### Step 5: Select the output {#select-output}
 

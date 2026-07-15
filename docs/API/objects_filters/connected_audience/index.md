@@ -31,6 +31,8 @@ You can use the connected audience object on these endpoints:
 - [`/canvas/trigger/schedule/create`](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases)
 - [`/messages/live_activity/start`](https://www.braze.com/docs/api/endpoints/messaging/live_activity/start) (uses `custom_audience`)
 
+Note that the `audience` parameter does not support array of objects.
+
 ## Use cases
 
 Use connected audiences for scenarios where your back-end systems detect an event and need to notify a dynamically determined set of users:
@@ -106,6 +108,19 @@ The connected audience object is composed of either a single connected audience 
 ## Connected audience filters
 
 Combine multiple filters with `AND` and `OR` operators to create a connected audience filter.
+
+### Considerations
+
+Connected audiences cannot filter users by:
+
+ - Default attributes
+ - Custom events
+ - Segments
+ - Message engagement events
+ - Nested custom attributes
+
+To use these filters, we recommend incorporating them into an audience segment and then specifying that segment in the `segment_id` parameter for the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). When using other endpoints, you must add the segment to the API-triggered campaign or Canvas in the Braze dashboard first. If you need to filter on nested attributes, use a [standard segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment) instead.
+
 
 ### Custom attribute filter
 
@@ -220,6 +235,7 @@ This filter allows you to segment based on a user's email subscription status.
 This filter allows you to segment based on when the user last used the app. These filters contain two fields:
 
 #### Filter body
+
 ```json
 {
   "last_used_app":
@@ -232,15 +248,3 @@ This filter allows you to segment based on when the user last used the app. Thes
 
 - **Allowed comparisons:** `after`, `before`
 - **Allowed values:** datetime (ISO 8601 string)
-
-### Considerations
-
-Connected audiences cannot filter users by:
-
- - Default attributes
- - Custom events
- - Segments
- - Message engagement events
- - Nested custom attributes
- 
-To use these filters, we recommend incorporating them into an audience segment and then specifying that segment in the `segment_id` parameter for the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). When using other endpoints, you'll need to add the segment to the API-triggered campaign or Canvas in the Braze dashboard first.

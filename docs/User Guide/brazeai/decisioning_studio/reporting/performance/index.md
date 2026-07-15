@@ -94,7 +94,7 @@ This section reinforces the relationship between the different views:
 
 - The KPI card is a window-level calculation.
 - The chart is a daily calculation.
-- The*table shows the underlying totals driving the KPI.
+- The table shows the underlying totals driving the KPI.
 
 ![Performance report showing the aggregate table at the bottom, with columns for Group, Incremental LTV, Customer, and Incremental LTV / Customer for each comparison group.](https://www.braze.com/docs/assets/img/decisioning_studio/reporting_performance_aggregate_table.png?b28a81a4f06ff7c15bd60882af837365)
 

@@ -16,4 +16,4 @@ The Braze and Kubit integration allows you to [import Kubit user cohorts](https:
 
 Take advantage of [Snowflake secure data sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/) to share your Braze raw campaign and impression data with Kubit to incorporate them into Kubit's self-service analytics, providing you a full picture of users' lifecycle.
 
-For reference, here are all the [Braze fields](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt) which are available to be incorporated into Kubit analytics. The details of this step are very customer-specific and require special configurations. Talk to your Kubit account manager or [support@kubit.ai](support@kubit.ai) to learn more.
+For reference, here are all the [Braze fields](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt) which are available to be incorporated into Kubit analytics. The details of this step are very customer-specific and require special configurations. Talk to your Kubit account manager or [support@kubit.ai](mailto:support@kubit.ai) to learn more.

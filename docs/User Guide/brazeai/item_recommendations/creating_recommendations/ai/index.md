@@ -88,6 +88,13 @@ If you can't find your selection, make sure it's set up in your catalog first.
 
 Select the event you want this recommendation to optimize for. This event is usually a purchase, but it can also be any interaction with an item.
 
+**Tip:**
+
+
+When configuring AI item recommendations, your choice of event is important. Your triggering event determines who gets an AI-generated recommendation—AI item recommendations are generated for users who have completed the event you configure, so this choice directly determines who receives recommendations. Select an event that covers the full audience segment you want to reach.<br><br> At the same time, balance coverage against relevance. Top-of-funnel events (like Product Viewed) tend to capture a broader audience but be less connected to business outcomes, whereas bottom-of-funnel events (like Purchased) tend to produce more targeted, business-relevant recommendations. The best event is one that balances coverage with influence on the bottom line.
+
+
+
 You can optimize for:
 
 - Purchase events with the [Purchase Object](https://www.braze.com/docs/api/objects_filters/purchase_object)

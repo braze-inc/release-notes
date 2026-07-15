@@ -1,4 +1,4 @@
-<div id='api_jvqjgoktnnku' class='api_div' data-search-keywords='select users by how many times an event has occurred event select users that opened a certain email campaign more than once in the past.'>
+<div id='api_dsyonhiedcil' class='api_div' data-search-keywords='select users by how many times an event has occurred event select users that opened a certain email campaign more than once in the past.'>
 <h2 id="select-users-by-how-many-times-an-event-has-occurred">Select users by how many times an event has occurred</h2>
 <div class="api_tags" data-tags="Event" data-tags-lower="event"></div>
 
@@ -17,7 +17,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_ofvohzlmdabh' class='api_div' data-search-keywords='select users that performed an action and sum up a property value property select users that made a bet on sports with the sum of all of their bets being greater than a certain amount.'>
+<div id='api_samrcbibiyld' class='api_div' data-search-keywords='select users that performed an action and sum up a property value property select users that made a bet on sports with the sum of all of their bets being greater than a certain amount.'>
 <h2 id="select-users-that-performed-an-action-and-sum-up-a-property-value">Select users that performed an action and sum up a property value</h2>
 <div class="api_tags" data-tags="Property" data-tags-lower="property"></div>
 
@@ -32,7 +32,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_cayfsrurynel' class='api_div' data-search-keywords='select users based on how many times an event occurred in a time range event, time range select users with more than three email opens in the last 30 days.'>
+<div id='api_bkxiqrugedyw' class='api_div' data-search-keywords='select users based on how many times an event occurred in a time range event, time range select users with more than three email opens in the last 30 days.'>
 <h2 id="select-users-based-on-how-many-times-an-event-occurred-in-a-time-range">Select users based on how many times an event occurred in a time range</h2>
 <div class="api_tags" data-tags="Event, Time range" data-tags-lower="event, time range"></div>
 
@@ -53,7 +53,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_syfetypyogtx' class='api_div' data-search-keywords='select users that recorded at least one event across multiple time ranges event, time range select users that made a purchase in each of the last four quarters. this user segment can be used with audience sync to identify high-value lookalike customers for acquisition.'>
+<div id='api_mowxqkctfnue' class='api_div' data-search-keywords='select users that recorded at least one event across multiple time ranges event, time range select users that made a purchase in each of the last four quarters. this user segment can be used with audience sync to identify high-value lookalike customers for acquisition.'>
 <h2 id="select-users-that-recorded-at-least-one-event-across-multiple-time-ranges">Select users that recorded at least one event across multiple time ranges</h2>
 <div class="api_tags" data-tags="Event, Time range" data-tags-lower="event, time range"></div>
 
@@ -92,7 +92,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_ebcudkaheefq' class='api_div' data-search-keywords='select any purchase with certain properties purchase, property select customers that made any purchase that contains the property “type = shops” in 14 days.'>
+<div id='api_guxcqupwhqnp' class='api_div' data-search-keywords='select any purchase with certain properties purchase, property select customers that made any purchase that contains the property “type = shops” in 14 days.'>
 <h2 id="select-any-purchase-with-certain-properties">Select any purchase with certain properties</h2>
 <div class="api_tags" data-tags="Purchase, Property" data-tags-lower="purchase, property"></div>
 
@@ -135,7 +135,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_gvgbabvviufu' class='api_div' data-search-keywords='select users that were sent a message that wasn’t delivered message, delivery select users that have been sent an sms campaign or canvas, but the message did not make it to the carrier. for example, the message might have been stopped by a queue overflow.'>
+<div id='api_yesvlfufjupp' class='api_div' data-search-keywords='select users that were sent a message that wasn’t delivered message, delivery select users that have been sent an sms campaign or canvas, but the message did not make it to the carrier. for example, the message might have been stopped by a queue overflow.'>
 <h2 id="select-users-that-were-sent-a-message-that-wasnt-delivered">Select users that were sent a message that wasn’t delivered</h2>
 <div class="api_tags" data-tags="Message, Delivery" data-tags-lower="message, delivery"></div>
 
@@ -162,7 +162,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_twpqzantvfox' class='api_div' data-search-keywords='find all sms messages that were sent but didn’t reach the carrier because of queue overflow message, carrier this can be repurposed for other types of messages sent from a particular canvas that weren’t delivered.'>
+<div id='api_gyfsoolspyma' class='api_div' data-search-keywords='find all sms messages that were sent but didn’t reach the carrier because of queue overflow message, carrier this can be repurposed for other types of messages sent from a particular canvas that weren’t delivered.'>
 <h2 id="find-all-sms-messages-that-were-sent-but-didnt-reach-the-carrier-because-of-queue-overflow">Find all SMS messages that were sent but didn’t reach the carrier because of queue overflow</h2>
 <div class="api_tags" data-tags="Message, Carrier" data-tags-lower="message, carrier"></div>
 
@@ -190,7 +190,7 @@
 <p><code class="language-plaintext highlighter-rouge">CANVAS_ID</code> is the number after <code class="language-plaintext highlighter-rouge">/canvas/</code> in your Canvas URL.</p>
 </div>
 
-<div id='api_kbvypklgbawb' class='api_div' data-search-keywords='select users that made any purchase with a property array containing a specific value purchase, property'>
+<div id='api_eizliopgvtfc' class='api_div' data-search-keywords='select users that made any purchase with a property array containing a specific value purchase, property'>
 <h2 id="select-users-that-made-any-purchase-with-a-property-array-containing-a-specific-value">Select users that made any purchase with a property array containing a specific value</h2>
 <div class="api_tags" data-tags="Purchase, Property" data-tags-lower="purchase, property"></div>
 
@@ -205,7 +205,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_xjrhoaakljnq' class='api_div' data-search-keywords='find all users that had multiple 30003 errors and 0 deliveries error, delivery that is helpful for solving situations when you want to stop sending to users that are failing to receive messages but aren’t getting marked as invalid because they don’t have the required error code. you can either retarget these users to update their phone number or unsubscribe them.'>
+<div id='api_uaovmfjzvxan' class='api_div' data-search-keywords='find all users that had multiple 30003 errors and 0 deliveries error, delivery that is helpful for solving situations when you want to stop sending to users that are failing to receive messages but aren’t getting marked as invalid because they don’t have the required error code. you can either retarget these users to update their phone number or unsubscribe them.'>
 <h2 id="find-all-users-that-had-multiple-30003-errors-and-0-deliveries">Find all users that had multiple 30003 errors and 0 deliveries</h2>
 <div class="api_tags" data-tags="Error, Delivery" data-tags-lower="error, delivery"></div>
 
@@ -236,7 +236,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_tulyzfotdkrf' class='api_div' data-search-keywords='find users with specific event properties and event counts in a time range event, property, time range find users that meet the following conditions simultaneously:'>
+<div id='api_dxdkuxlsheww' class='api_div' data-search-keywords='find users with specific event properties and event counts in a time range event, property, time range find users that meet the following conditions simultaneously:'>
 <h2 id="find-users-with-specific-event-properties-and-event-counts-in-a-time-range">Find users with specific event properties and event counts in a time range</h2>
 <div class="api_tags" data-tags="Event, Property, Time range" data-tags-lower="event, property, time range"></div>
 
@@ -277,7 +277,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_lkbnglryoksp' class='api_div' data-search-keywords='select users whose most recent session was on a specific device model session, device'>
+<div id='api_okkonxtdlvys' class='api_div' data-search-keywords='select users whose most recent session was on a specific device model session, device'>
 <h2 id="select-users-whose-most-recent-session-was-on-a-specific-device-model">Select users whose most recent session was on a specific device model</h2>
 <div class="api_tags" data-tags="Session, Device" data-tags-lower="session, device"></div>
 
@@ -296,7 +296,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_znevaqhfbrny' class='api_div' data-search-keywords='find users that selected the second button of an in-app message in a specific time range time range'>
+<div id='api_sgpfkadmncwo' class='api_div' data-search-keywords='find users that selected the second button of an in-app message in a specific time range time range'>
 <h2 id="find-users-that-selected-the-second-button-of-an-in-app-message-in-a-specific-time-range">Find users that selected the second button of an in-app message in a specific time range</h2>
 <div class="api_tags" data-tags="Time range" data-tags-lower="time range"></div>
 
@@ -315,7 +315,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_gnxefpmgezxj' class='api_div' data-search-keywords='find users that purchased in each of the last three calendar months purchase, time range'>
+<div id='api_vhpntrkxjrlq' class='api_div' data-search-keywords='find users that purchased in each of the last three calendar months purchase, time range'>
 <h2 id="find-users-that-purchased-in-each-of-the-last-three-calendar-months">Find users that purchased in each of the last three calendar months</h2>
 <div class="api_tags" data-tags="Purchase, Time range" data-tags-lower="purchase, time range"></div>
 
@@ -350,7 +350,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_ifzkntwslksa' class='api_div' data-search-keywords='select users that completed a custom event with a specific property when property is an integer event, property sending a message to users that watched a series in the last six months and are about to leave the platform.'>
+<div id='api_pthzqapmllex' class='api_div' data-search-keywords='select users that completed a custom event with a specific property when property is an integer event, property sending a message to users that watched a series in the last six months and are about to leave the platform.'>
 <h2 id="select-users-that-completed-a-custom-event-with-a-specific-property-when-property-is-an-integer">Select users that completed a custom event with a specific property when property is an integer</h2>
 <div class="api_tags" data-tags="Event, Property" data-tags-lower="event, property"></div>
 
@@ -385,7 +385,7 @@
 </pre></td></tr></tbody></table></code></pre></div></div>
 </div>
 
-<div id='api_emshamoczlgg' class='api_div' data-search-keywords='find the average number of emails a user receives daily message'>
+<div id='api_usxpjnimxunl' class='api_div' data-search-keywords='find the average number of emails a user receives daily message'>
 <h2 id="find-the-average-number-of-emails-a-user-receives-daily">Find the average number of emails a user receives daily</h2>
 <div class="api_tags" data-tags="Message" data-tags-lower="message"></div>
 
@@ -449,7 +449,7 @@
 
 </div>
 
-<div id='api_ioxzayuavzyn' class='api_div' data-search-keywords='find the average number of emails a user receives weekly message'>
+<div id='api_jtuukjeptkxz' class='api_div' data-search-keywords='find the average number of emails a user receives weekly message'>
 <h2 id="find-the-average-number-of-emails-a-user-receives-weekly">Find the average number of emails a user receives weekly</h2>
 <div class="api_tags" data-tags="Message" data-tags-lower="message"></div>
 
