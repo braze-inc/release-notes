@@ -230,7 +230,7 @@ Strings and arrays require straight apostrophes around them, while booleans and 
 
 ### Boolean
 
-[Booleans](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes#booleans) are binary values, and can be set to either `true` or `false`, such as `registration_complete: true`. Boolean values don't have apostrophes around them.
+[Booleans](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#booleans) are binary values, and can be set to either `true` or `false`, such as `registration_complete: true`. Boolean values don't have apostrophes around them.
 
 
 
@@ -242,7 +242,7 @@ Strings and arrays require straight apostrophes around them, while booleans and 
 
 ### Number
 
-[Numbers](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes#numbers) are numeric values, which can be integers or floats. For example, a user may have `shoe_size: 10` or `levels_completed: 287`. Number values don't have apostrophes around them.
+[Numbers](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types) are numeric values, which can be integers or floats. For example, a user may have `shoe_size: 10` or `levels_completed: 287`. Number values don't have apostrophes around them.
 
 
 
@@ -264,7 +264,7 @@ You can also use other [basic operators](https://shopify.dev/docs/themes/liquid/
 
 ### String
 
-A [string](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes#strings) is made up of alphanumeric characters and stores a piece of data about your user. For example, you may have `favorite_color: red` or `phone_number: 3025981329`. String values must have apostrophes around them.
+A [string](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types) is made up of alphanumeric characters and stores a piece of data about your user. For example, you may have `favorite_color: red` or `phone_number: 3025981329`. String values must have apostrophes around them.
 
 
 
@@ -278,7 +278,7 @@ For strings, you can use both "==" or "contains" in your Liquid.
 
 ### Array
 
-An [array](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes#arrays) is a list of information about your user. For example, a user may have `last_viewed_shows: stranger things, planet earth, westworld`. Array values must have apostrophes around them.
+An [array](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types) is a list of information about your user. For example, a user may have `last_viewed_shows: stranger things, planet earth, westworld`. Array values must have apostrophes around them.
 
 
 
@@ -334,7 +334,7 @@ Because `join` combines array elements into one string (default separator: a sin
 
 ### Time
 
-A time stamp of when an event took place. [Time](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes#time) values must have a [math filter](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters#math-filters) on them to be used in conditional logic.
+A time stamp of when an event took place. [Time](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types) values must have a [math filter](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters#math-filters) on them to be used in conditional logic.
 
 
 

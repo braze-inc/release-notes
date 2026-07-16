@@ -46,7 +46,7 @@ The previews will be reflected and are interactive.
 **Important:**
 
 
-If you are pulling in images with [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content#about-connected-content), ensure that your image URL begins with `https://`. Using `http://` will crash your app.
+If you are pulling in images with [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content), ensure that your image URL begins with `https://`. Using `http://` will crash your app.
 
 
 

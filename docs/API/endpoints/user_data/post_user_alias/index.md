@@ -1,4 +1,4 @@
-<div id='api_nyixvwzhldlz' class='api_div' data-search-keywords='when alias_label and alias_name already exist user_aliases external_id alias_name alias_label aliases_processed message'>
+<div id='api_ymcwtfxdttcc' class='api_div' data-search-keywords='when alias_label and alias_name already exist user_aliases external_id alias_name alias_label aliases_processed message attributes user_alias string_attribute'>
 <h1 id="create-new-user-alias">Create new user alias</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/alias/new</p>
@@ -128,5 +128,43 @@ Authorization: Bearer YOUR_REST_API_KEY
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-</div>
+<h2 id="troubleshooting">Troubleshooting</h2>
 
+<h3 id="why-are-my-attributes-not-updating-after-i-create-a-user-alias-using-this-endpoint">Why are my attributes not updating after I create a user alias using this endpoint?</h3>
+
+<p>This usually happens when <code class="language-plaintext highlighter-rouge">/users/alias/new</code> is followed by a separate <code class="language-plaintext highlighter-rouge">/users/track</code> request that tries to update attributes by alias. The track request can be processed before Braze can consistently resolve the new <code class="language-plaintext highlighter-rouge">alias_label</code> and <code class="language-plaintext highlighter-rouge">alias_name</code> pair to a profile, so attributes do not land on the user you expect.</p>
+
+<p><strong>Recommended approach:</strong> Use a single <a href="/docs/api/endpoints/user_data/post_user_track"><code class="language-plaintext highlighter-rouge">/users/track</code></a> call only when you want to create an alias-only profile or update a profile by an alias that already exists. In the <code class="language-plaintext highlighter-rouge">attributes</code> array, put <code class="language-plaintext highlighter-rouge">user_alias</code> and your profile fields in the same <a href="/docs/api/objects_filters/user_attributes_object/">user attributes object</a> so Braze resolves the user and applies the update in one step.</p>
+
+<p>Set <code class="language-plaintext highlighter-rouge">_update_existing_only</code> to <code class="language-plaintext highlighter-rouge">false</code> when you may need to create an alias-only profile from that object. If you omit it while using <code class="language-plaintext highlighter-rouge">user_alias</code>, Braze defaults to update-only behavior and does not create the alias-only profile. If the alias already exists on a user in your workspace, the same request updates that profile with your new attributes.</p>
+
+<p>You can’t use <code class="language-plaintext highlighter-rouge">/users/track</code> to add a new alias to an existing user identified by <code class="language-plaintext highlighter-rouge">external_id</code>. In a user attributes object, <code class="language-plaintext highlighter-rouge">external_id</code> and <code class="language-plaintext highlighter-rouge">user_alias</code> are mutually exclusive. To add an alias to an identified user, first call <code class="language-plaintext highlighter-rouge">/users/alias/new</code>. After the alias is attached, you can update that profile with <code class="language-plaintext highlighter-rouge">/users/track</code> by <code class="language-plaintext highlighter-rouge">external_id</code> or by the existing alias.</p>
+
+<p>For example, the following <code class="language-plaintext highlighter-rouge">/users/track</code> body creates an alias-only profile if the alias doesn’t exist yet, or updates the existing profile that already has that alias:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"user_alias"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"alias_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@example.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"alias_label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"_update_existing_only"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"string_attribute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_alias_only_update"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+</div>

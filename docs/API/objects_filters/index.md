@@ -12,7 +12,7 @@
 - [Alias to identify object](https://www.braze.com/docs/api/objects_filters/aliases_to_identify)
 - [Trigger properties object](https://www.braze.com/docs/api/objects_filters/trigger_properties_object)
 - [User alias object](https://www.braze.com/docs/api/objects_filters/user_alias_object)
-- [User attribute object](https://www.braze.com/docs/api/objects_filters/user_attributes_object#migrating-push-tokens)
+- [User attribute object](https://www.braze.com/docs/api/objects_filters/user_attributes_object#migrate-push-tokens)
 - [Schedule object](https://www.braze.com/docs/api/objects_filters/schedule_object)
 - [Catalog selection object](https://www.braze.com/docs/api/objects_filters/catalog_selection_object)
 

@@ -1,4 +1,4 @@
-<div id='api_svmpgsknjxnt' class='api_div' data-search-keywords='prerequisites template_id locale_id translation_map id_0 id_1 id_2 message errors id'>
+<div id='api_vhdbgthaggml' class='api_div' data-search-keywords='prerequisites template_id locale_id translation_map id_0 id_1 id_2 message errors id'>
 <h1 id="update-translations-for-an-email-template">Update translations for an email template</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/templates/email/translations/</p>
@@ -10,7 +10,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.translations.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.translations.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

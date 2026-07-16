@@ -1,4 +1,4 @@
-<div id='api_sfgwjndzxmre' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
+<div id='api_dhbuuwlyreel' class='api_div' data-search-keywords='prerequisites message errors id parameters parameter_values'>
 <h1 id="edit-catalog-item">Edit catalog item</h1>
 <div class="api_type"><div class="method patch ">patch</div>
 <p>/catalogs/{catalog_name}/items/{item_id}</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">catalogs.update_item</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">catalogs.update_item</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

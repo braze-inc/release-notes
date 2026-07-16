@@ -1,4 +1,4 @@
-<div id='api_nbosbdfcmtil' class='api_div' data-search-keywords='prerequisites app_id apple certificate jwt_key_id jwt_team_id jwt_bundle_id apns_gateway firebase credential huawei app_secret kindle client_id client_secret message'>
+<div id='api_xswdwgowrxcg' class='api_div' data-search-keywords='prerequisites app_id apple certificate jwt_key_id jwt_team_id jwt_bundle_id apns_gateway firebase credential huawei app_secret kindle client_id client_secret message'>
 <h1 id="update-push-credentials">Update push credentials</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/apps/push_credential/update</p>
@@ -41,7 +41,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">apps.push_credential</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">apps.push_credential</code> permission.</p>
 
 <h2 id="request-body">Request body</h2>
 

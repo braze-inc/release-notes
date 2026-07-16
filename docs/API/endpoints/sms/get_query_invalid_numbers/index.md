@@ -1,4 +1,4 @@
-<div id='api_nxpvqddkessn' class='api_div' data-search-keywords='prerequisites sms phone invalid_detected_at reason message'>
+<div id='api_tsjauzxduzez' class='api_div' data-search-keywords='prerequisites sms phone invalid_detected_at reason message'>
 <h1 id="query-invalid-phone-numbers">Query invalid phone numbers</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/sms/invalid_phone_numbers</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">sms.invalid_phone_numbers</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">sms.invalid_phone_numbers</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

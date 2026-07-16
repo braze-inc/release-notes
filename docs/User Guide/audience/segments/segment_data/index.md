@@ -4,7 +4,7 @@
 
 ## Accessing data about your segments and membership
 
-The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and select the name of a segment to edit and view its data. To learn how to create a segment, check out [Create a Segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment#creating-a-segment).
+The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and select the name of a segment to edit and view its data. To learn how to create a segment, check out [Create a Segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment).
 
 ![Segments page](https://www.braze.com/docs/assets/img_archive/segments.png?82eb0cb0b89d355203024d7c8287ede3)
 

@@ -46,7 +46,7 @@ Using the [Braze Audience Sync to LinkedIn](https://www.braze.com/docs/partners/
 
 ### Oracle Crowdtwist - Data & analytics
 
-[Oracle Crowdtwist](https://www.braze.com/docs/partners/crowdtwist) is a leading cloud-native customer loyalty solution to empower brands to offer personalized customer experiences. Their solution offers over 100 out-of-the-box engagement paths, providing rapid time-to-value for marketers to develop a more complete view of the customer.
+[Oracle Crowdtwist](https://www.braze.com/docs/partners/crowdtwist) is a leading cloud-native customer loyalty solution to empower brands to offer personalized customer experiences. Their solution offers over 100 default engagement paths, providing rapid time-to-value for marketers to develop a more complete view of the customer.
 
 ### Fullstory - Dynamic Content
 
@@ -58,7 +58,7 @@ Using the [Braze Audience Sync to LinkedIn](https://www.braze.com/docs/partners/
 
 ### DOTS.ECO - Extensions
 
-[DOTS.ECO](https://www.braze.com/docs/partners/docs.eco) lets you reward users with real-world environmental impact through trackable digital certificates. Each certificate can include metadata like a shareable certificate URL and image URL, so users can view (and revisit) their proof of impact.
+[DOTS.ECO](https://www.braze.com/docs/partners/dots.eco) lets you reward users with real-world environmental impact through trackable digital certificates. Each certificate can include metadata like a shareable certificate URL and image URL, so users can view (and revisit) their proof of impact.
 
 ### Mailizio - Message orchestration
 

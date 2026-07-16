@@ -44,7 +44,7 @@ These characteristics could then be tagged as the following custom attributes:
 These attributes allow you to send campaigns to users such as:
 
 1. Reminding users who haven't used the app in seven days and have promotional credit in their account to return to the app and use the credit.
-2. Using our message templates and [personalization features](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/overview#personalized-messaging) to drag the unique promotion code attribute into messaging directed at users.
+2. Using our message templates and [personalization features](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize) to drag the unique promotion code attribute into messaging directed at users.
 
 **Important:**
 

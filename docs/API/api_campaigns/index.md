@@ -36,7 +36,7 @@ To configure your campaign, perform the following steps:
 ## API calls
 
 After you save your API campaign, include the following in your API request:
-- The generated `campaign_id` fields with your API request where noted in the [Send Messages Endpoints](https://www.braze.com/docs/api/endpoints/messaging#send-endpoints).
+- The generated `campaign_id` fields with your API request where noted in the [Send Messages Endpoints](https://www.braze.com/docs/api/endpoints/messaging).
 - A [message object](https://www.braze.com/docs/api/objects_filters#messaging-objects) for each platform included in the campaign. In the message object, provide the message variation ID. This specifies that statistics should be collected and displayed under that variant. The following message objects are supported: Android, Content Cards, email, iOS, Kindle, SMS/MMS, web push, and webhook.
 
 

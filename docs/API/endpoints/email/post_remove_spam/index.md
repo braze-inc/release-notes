@@ -1,4 +1,4 @@
-<div id='api_twkrhgdoocgn' class='api_div' data-search-keywords='prerequisites email'>
+<div id='api_icprsutbabfz' class='api_div' data-search-keywords='prerequisites email'>
 <h1 id="remove-email-addresses-from-spam-list">Remove email addresses from spam list</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/spam/remove</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">email.spam.remove</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">email.spam.remove</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

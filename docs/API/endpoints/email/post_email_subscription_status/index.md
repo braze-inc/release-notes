@@ -1,4 +1,4 @@
-<div id='api_hrsgnahzttor' class='api_div' data-search-keywords='prerequisites email subscription_state'>
+<div id='api_zxagrdxeifyl' class='api_div' data-search-keywords='prerequisites email subscription_state'>
 <h1 id="change-email-subscription-status">Change email subscription status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/status</p>
@@ -20,7 +20,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">email.status</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">email.status</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

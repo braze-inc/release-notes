@@ -19,7 +19,7 @@ If you don't specify any, requests can be sent from any IP address.
 **Tip:**
 
 
-Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [IPs to whitelist](https://www.braze.com/docs/user_guide/channels/webhooks/create_a_webhook#ip-whitelisting).
+Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [IPs to whitelist](https://www.braze.com/docs/user_guide/channels/webhooks/create_a_webhook#ip-allowlisting).
 
 
 

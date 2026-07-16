@@ -1301,7 +1301,7 @@ For each relevant build variant, create a new `braze.xml` in the `src/<build var
 **Tip:**
 
 
-To learn how to set up the API key in your code, see [Runtime configuration](https://www.braze.com/docs/developer_guide/sdk_initalization/?sdktab=android).
+To learn how to set up the API key in your code, see [Runtime configuration](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android#runtime-configuration).
 
 
 

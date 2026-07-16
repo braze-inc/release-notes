@@ -23,7 +23,7 @@ Any existing custom HTML templates must be re-created using the drag-and-drop ed
 
 ## Step 3: Customize your template 
 
-After selecting your editor experience, this is your opportunity to get creative with customizing your email template. You can use HTML to create and emulate your branding in the HTML editor, or include a variety of [creative details](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop#creative-details) in the drag-and-drop editor.
+After selecting your editor experience, this is your opportunity to get creative with customizing your email template. You can use HTML to create and emulate your branding in the HTML editor, or include a variety of [creative details](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop) in the drag-and-drop editor.
 
 ### Include an unsubscribe link
 
@@ -81,7 +81,7 @@ If you make any edits to an existing template, those changes will not be reflect
 
 You can view email templates at **Templates** > **Email Templates**, filtering by status, type, tags, the user who created it, or searching by template name. You need the relevant user permissions, such as **View Email Templates**, to view these templates. For more details, see [User permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions).
 
-As you create more email templates, you can [duplicate](https://www.braze.com/docs/user_guide/messaging/templates/managing_templates#duplicate-templates) and [archive](https://www.braze.com/docs/user_guide/messaging/templates/managing_templates#archive-templates) email templates. Learn more about creating and managing your library of templates and creative content in [Templates and Media](https://www.braze.com/docs/user_guide/messaging/templates).
+As you create more email templates, you can [duplicate](https://www.braze.com/docs/user_guide/messaging/templates/managing_templates#duplicating-templates) and [archive](https://www.braze.com/docs/user_guide/messaging/templates/managing_templates#archiving-templates) email templates. Learn more about creating and managing your library of templates and creative content in [Templates and Media](https://www.braze.com/docs/user_guide/messaging/templates).
 
 ### Use your templates in API campaigns
 

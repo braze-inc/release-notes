@@ -16,7 +16,7 @@ If you're participating in the [Canvas Context step early access](https://www.br
 
 ### Segment funnel statistics
 
-Select [View funnel statistics](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/#viewing-funnel-statistics) to display the statistics for that filter group and see how each added filter impacts your segment statistics. You’ll see an estimated count and percentage for users who are targeted by all filters up to that point. Once the statistics are displayed for a filter group, they will update automatically whenever you change the filters. 
+Select [View funnel statistics](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/#viewing-funnel-statistics) to display the statistics for that filter group and see how each added filter impacts your segment statistics. You’ll see an estimated count and percentage for users who are targeted by all filters up to that point. After the statistics are displayed for a filter group, they will update automatically whenever you change the filters. 
 
 ### New response fields for `/campaigns/details` endpoint for push notifications
 
@@ -67,7 +67,7 @@ We’ve added new use case articles to help you get the most out of BrazeAI™. 
 
 - [Predictive Churn](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_churn/use_case/): Identify customers at risk of churning and take action early.
 - [Predictive Events](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_events/use_case/): Anticipate key user actions and shape experiences in real time.
-- [Recommendations](https://www.braze.com/docs/user_guide/brazeai/recommendations/use_case ): Deliver more relevant content and products based on customer behavior.
+- [Recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/use_case): Deliver more relevant content and products based on customer behavior.
 
 ### MCP server
 

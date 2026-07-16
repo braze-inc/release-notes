@@ -1,4 +1,4 @@
-<div id='api_okjakthnvhwc' class='api_div' data-search-keywords='prerequisites message data time uninstalls'>
+<div id='api_hkppyggfchxb' class='api_div' data-search-keywords='prerequisites message data time uninstalls'>
 <h1 id="export-kpis-for-daily-app-uninstalls-by-date">Export KPIs for daily app uninstalls by date</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/kpi/uninstalls/data_series</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">kpi.uninstalls.data_series</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">kpi.uninstalls.data_series</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

@@ -28,7 +28,7 @@ Here are guidelines to select the variables:
 - `Catalog field`: A particular field (column name) within this catalog
 - `Value`: A specific value within that field or column <br><br> Using the health app as an example, let’s say that within the catalog for each doctor you could book, there’s a field called `specialty` that contains a value such as `vision` or `dental`. To segment users who have visited any doctors with the value `dental`, you can select `specialty` as the `Catalog field`, and select `dental` as the `Value`.
 
-5. After creating a SQL Segment, we recommend clicking **Run Preview** to see if your query returns users or if there are errors. For more information about [previewing query results](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#previewing-results), managing [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#managing-sql-segment-extensions), and more, check out [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments). 
+5. After creating a SQL Segment, we recommend clicking **Run Preview** to see if your query returns users or if there are errors. For more information about [previewing query results](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#step-3-preview-the-query), managing [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#managing-your-segment-extensions), and more, check out [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments). 
 
 **Note:**
 
@@ -132,7 +132,7 @@ You would set up a catalog segment by using the following variables:
 
 ### Does running a catalog segment consume SQL Segment Extension credits?
 
-Yes, catalog segments are powered by SQL and consume SQL Segment Extension credits. To learn more, check out [SQL Segments usage](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#monitoring-your-sql-segments-usage).
+Yes, catalog segments are powered by SQL and consume SQL Segment Extension credits. To learn more, check out [SQL Segments usage](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#credits).
 
 ### Does creating a catalog segment consume SQL Segment Extension allotments?
 

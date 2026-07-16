@@ -109,7 +109,7 @@ Whether using one of our [technology partners](https://www.braze.com/docs/partne
 
 ### External partners
 
-Check out [Technology partners](https://www.braze.com/docs/partners/home) to learn about our B2B partners that offer lead-scoring capabilities. Don’t see your tool there? You can integrate by calling our [`users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#track-users) API endpoint. 
+Check out [Technology partners](https://www.braze.com/docs/partners/home) to learn about our B2B partners that offer lead-scoring capabilities. Don’t see your tool there? You can integrate by calling our [`users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API endpoint. 
 
 ### Internal lead scoring data models
 

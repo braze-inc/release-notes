@@ -35,7 +35,7 @@ Select any segment name in the graph legend to turn on or off visibility for tha
 
 ## Sessions over time
 
-Similarly, you can find data on [sessions over time for this particular segment](https://www.braze.com/docs/user_guide/analytics/dashboards/home#exporting-app-usage-data) on the **Home** page.
+Similarly, you can find data on [sessions over time for this particular segment](https://www.braze.com/docs/user_guide/analytics/dashboards/home) on the **Home** page.
 
 ![Session data by segment](https://www.braze.com/docs/assets/img_archive/events_over_time2.png?a7be3e61df95c64d7cdd9b5028977eee)
 
@@ -45,7 +45,7 @@ View data on [Custom events over time for segments](https://www.braze.com/docs/u
 
 ## Using Query Builder templates
 
-When analytics tracking is turned on, you can use Query Builder report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments. To learn more, check out [Segment data](https://www.braze.com/docs/user_guide/audience/segments/segment_data#performance-data-by-segment).
+When analytics tracking is turned on, you can use Query Builder report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments. To learn more, check out [Segment data](https://www.braze.com/docs/user_guide/audience/segments/segment_data#viewing-performance-data-by-segment).
 
 ## Frequently asked questions
 

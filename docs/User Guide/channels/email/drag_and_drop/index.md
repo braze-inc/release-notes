@@ -295,7 +295,7 @@ Liquid personalization is not supported for image blocks and button link type fi
 
 #### Dynamic images
 
-You can choose to include dynamic images in your email messaging by including [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content#about-connected-content) or [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) in your image source attribute. For example, instead of a static image, you can insert  `https://example.com/images/?imageBanner={{first_name}}`  as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
+You can choose to include dynamic images in your email messaging by including [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content) or [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) in your image source attribute. For example, instead of a static image, you can insert  `https://example.com/images/?imageBanner={{first_name}}`  as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
 
 **Important:**
 

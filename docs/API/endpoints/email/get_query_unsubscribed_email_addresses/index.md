@@ -1,4 +1,4 @@
-<div id='api_mozcpupbtrul' class='api_div' data-search-keywords='prerequisites emails email unsubscribed_at message'>
+<div id='api_pnuwdlpmbten' class='api_div' data-search-keywords='prerequisites emails email unsubscribed_at message'>
 <h1 id="query-list-of-unsubscribed-email-addresses">Query list of unsubscribed email addresses</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/email/unsubscribes</p>
@@ -14,7 +14,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">email.unsubscribe</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">email.unsubscribe</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

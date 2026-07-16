@@ -420,7 +420,7 @@ To generate AI output through BrazeAI features that leverage OpenAI (â€œOutputâ€
 
 ## Data privacy and security {#data-privacy-and-security}
 
-Operator integrates with OpenAI to generate output. For more information about what information Braze sends to OpenAI, how that data is used, and your intellectual property rights, see [How data is used with OpenAI](https://www.braze.com/docs/user_guide/brazeai/operator#how-data-is-used-with-openai).
+Operator integrates with OpenAI to generate output. For more information about what information Braze sends to OpenAI, how that data is used, and your intellectual property rights, see [How data is used with OpenAI](https://www.braze.com/docs/user_guide/brazeai/operator#data-privacy-and-security).
 
 ## Next steps {#next-steps}
 

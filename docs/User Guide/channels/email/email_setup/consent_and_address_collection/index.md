@@ -4,7 +4,7 @@
 
 ## Subscriber states
 
-There are three email subscription states for a user: **opted in**, **subscribed**, and **unsubscribed**. To change a user's subscription state, check out our article on [changing subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions#changing-subscriptions) or use our [Subscription APIs](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status).
+There are three email subscription states for a user: **opted in**, **subscribed**, and **unsubscribed**. To change a user's subscription state, check out our article on [changing subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions#changing-email-subscriptions) or use our [Subscription APIs](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status).
 
 | Subscriber State | Description |
 |---|---|

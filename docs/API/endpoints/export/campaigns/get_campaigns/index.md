@@ -1,4 +1,4 @@
-<div id='api_gqfzquqgbgsz' class='api_div' data-search-keywords='prerequisites message campaigns id last_edited name is_api_campaign tags'>
+<div id='api_tvbqcrujwztj' class='api_div' data-search-keywords='prerequisites message campaigns id last_edited name is_api_campaign tags'>
 <h1 id="export-campaigns-list">Export campaigns list</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/campaigns/list</p>
@@ -14,7 +14,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">campaigns.list</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">campaigns.list</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

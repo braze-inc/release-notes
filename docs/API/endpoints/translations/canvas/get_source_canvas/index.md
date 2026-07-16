@@ -1,4 +1,4 @@
-<div id='api_itiyaqaicero' class='api_div' data-search-keywords='prerequisites translations translation_map id_0 id_1 message errors'>
+<div id='api_qjzllplczcry' class='api_div' data-search-keywords='prerequisites translations translation_map id_0 id_1 message errors'>
 <h1 id="view-default-source-values-for-a-canvass-translation-tags">View default source values for a canvas’s translation tags</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/translations/source</p>
@@ -10,7 +10,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.translations.get</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.translations.get</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
