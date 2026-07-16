@@ -1,4 +1,4 @@
-<div id='api_xbftdwnxjfpb' class='api_div' data-search-keywords='prerequisites message data time revenue'>
+<div id='api_qttvxvdyteur' class='api_div' data-search-keywords='prerequisites message data time revenue'>
 <h1 id="export-revenue-data-by-time">Export revenue data by time</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/purchases/revenue_series</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">purchases.revenue_series</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">purchases.revenue_series</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

@@ -88,9 +88,9 @@ You can generate images for your own media library using [GPT Image 2.0](https:/
 **Important:**
 
 
-Before using this feature, review [how your data is used and sent to OpenAI](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#ai-policy).
+Before using this feature, review [how your data is used and sent to OpenAI](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#data-privacy-and-security).
 
 
 
-If you don't see **AI Image Generator** on the **Media Library** page, confirm you have **Edit Media Library Assets** permission. If the option is still missing, contact your Braze customer team to confirm your workspace has access to BrazeAI image generation. If generation fails, review the [OpenAI content policy](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#ai-policy).
+If you don't see **AI Image Generator** on the **Media Library** page, confirm you have **Edit Media Library Assets** permission. If the option is still missing, contact your Braze customer team to confirm your workspace has access to BrazeAI image generation. If generation fails, review the [OpenAI content policy](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#data-privacy-and-security).
 

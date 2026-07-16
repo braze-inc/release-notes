@@ -4,7 +4,7 @@
 
 ## General considerations
 
-- If you are building a campaign, how many variants of this message would you like to display? For variant testing ideas, check out [Tips for different channels](https://www.braze.com/docs/user_guide/messaging/ab_testing#tips-different-channels).
+- If you are building a campaign, how many variants of this message would you like to display? For variant testing ideas, check out [Tips for different channels](https://www.braze.com/docs/user_guide/messaging/ab_testing/create_tests#tips-different-channels).
 - If you are building a Canvas, will this message be paired with other messaging channels in that step?
 - When would you like [your message to expire](https://www.braze.com/docs/canvas_in-app_messages)?
 

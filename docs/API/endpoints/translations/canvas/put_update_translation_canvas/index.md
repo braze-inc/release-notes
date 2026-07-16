@@ -1,4 +1,4 @@
-<div id='api_dttvjpzkkaqb' class='api_div' data-search-keywords='prerequisites workflow_id step_id message_variation_id locale_id translation_map id_3 message errors'>
+<div id='api_ztilmyzesfba' class='api_div' data-search-keywords='prerequisites workflow_id step_id message_variation_id locale_id translation_map id_3 message errors'>
 <h1 id="update-translation-in-a-canvas">Update translation in a Canvas</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/canvas/translations</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.translations.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.translations.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

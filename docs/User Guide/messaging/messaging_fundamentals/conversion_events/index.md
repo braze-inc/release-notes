@@ -47,7 +47,7 @@ Note the following about how Braze handles multiple conversions:
 
 The primary conversion event is the first event you add during campaign or Canvas creation. This event has the most bearing on your engagement and reporting. Braze uses your primary conversion event to:
 
-- Compute the winning message variation in [multivariate](https://www.braze.com/docs/user_guide/messaging/ab_testing#multivariate-and-ab-testing) campaigns or Canvases.
+- Compute the winning message variation in [multivariate](https://www.braze.com/docs/user_guide/messaging/ab_testing/optimizations#winning-variant) campaigns or Canvases.
 - Determine the window when revenue is calculated for the campaign or Canvas.
 - Adjust message distributions for campaigns and Canvases using [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_selection).
 

@@ -5,7 +5,7 @@
 **Warning:**
 
 
-CDI Segment Extensions query your data warehouse directly, so you will incur all costs associated with running these queries in your data warehouse. CDI Segment Extensions won't consume [SQL segment credits](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#monitoring-your-sql-segments-usage), don't count towards your Segment Extension limit, and do not log data points.
+CDI Segment Extensions query your data warehouse directly, so you will incur all costs associated with running these queries in your data warehouse. CDI Segment Extensions won't consume [SQL segment credits](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#credits), don't count towards your Segment Extension limit, and do not log data points.
 
 
 
@@ -35,7 +35,7 @@ To view the available data tables, including their schema and any available desc
 
 ![To view the available data tables, including their schema and any available descriptions, select Reference. When you're ready, select a connection.](https://www.braze.com/docs/assets/img/segment/connection_schema_with_descriptions.png?242ac24afefc400186610bd05f249137){: style="max-width:100%;"}
 
-Next, write the SQL for your segment using [the Braze SQL syntax](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#writing-sql).
+Next, write the SQL for your segment using [the Braze SQL syntax](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#step-2-write-your-sql).
 
 Keep in mind, all CDI Segment Extensions must use `external_user_id` as the selected column, and your `external_user_id` should match the one set in Braze for users.
 
@@ -55,7 +55,7 @@ To learn how you can preview your Segment Extensions, manage your Segment Extens
 
 
 
-Finally, you can [use this Segment Extension](https://www.braze.com/docs/user_guide/audience/segments/segment_extension#step-5-use-your-extension-in-a-segment) within a Braze segment to send a campaign or Canvas to this audience.
+Finally, you can [use this Segment Extension](https://www.braze.com/docs/user_guide/audience/segments/segment_extension#step-6-use-your-extension-in-a-segment) within a Braze segment to send a campaign or Canvas to this audience.
 
 ## Considerations
 

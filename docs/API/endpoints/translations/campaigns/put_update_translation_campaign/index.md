@@ -1,4 +1,4 @@
-<div id='api_iqglkeazuyqy' class='api_div' data-search-keywords='prerequisites campaign_id message_variation_id locale_id translation_map id_3 message errors'>
+<div id='api_tqdsixkzgnne' class='api_div' data-search-keywords='prerequisites campaign_id message_variation_id locale_id translation_map id_3 message errors'>
 <h1 id="update-translation-in-a-campaign">Update translation in a campaign</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/campaigns/translations</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">campaigns.translations.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">campaigns.translations.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

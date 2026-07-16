@@ -1,4 +1,4 @@
-<div id='api_yoiprnxzazad' class='api_div' data-search-keywords='prerequisites subscription_groups subscription_group_id subscription_state external_ids emails phones use_double_opt_in_logic'>
+<div id='api_rnjshtipsxzf' class='api_div' data-search-keywords='prerequisites subscription_groups subscription_group_id subscription_state external_ids emails phones use_double_opt_in_logic'>
 <h1 id="update-users-subscription-group-status-v2">Update user’s subscription group status (V2)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/v2/subscription/status/set</p>
@@ -24,7 +24,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">subscription.status.set</code> permission.</p>
+<p>To use this endpoint, you need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">subscription.status.set</code> permission.</p>
 
 <p><strong>Note:</strong></p>
 

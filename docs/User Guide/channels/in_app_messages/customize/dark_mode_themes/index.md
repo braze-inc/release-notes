@@ -16,7 +16,7 @@ Dark Mode, located in the **Design** tab when [creating an in-app message](https
 
 ![User switching between Light Mode style and Dark Mode styles in the Style tab when creating an in-app message.](https://www.braze.com/docs/assets/img_archive/iam-dark-mode.gif?d9bf89c6ba6a0ec888e069b6d7ac7b17)
 
-When this option is enabled, you can choose dark theme colors for your in-app message using the color picker, or by selecting existing [Color Profiles](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize#color-profile) to reuse existing Dark or Light themes.
+When this option is enabled, you can choose dark theme colors for your in-app message using the color picker, or by selecting existing [Color Profiles](https://www.braze.com/docs/user_guide/messaging/templates/in_app_message_templates/in_app_message_template#color-profile) to reuse existing Dark or Light themes.
 
 **Note:**
 
@@ -30,7 +30,7 @@ You may still use this feature even if your app does not offer its own dark them
 To use Dark Mode for all in-app messages, first create a color profile that aligns with your Dark Mode theme.
 
 1. Go to **Content** > **In-App Message**.
-2. Select **Create Templates** and choose [Color Profile](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize#color-profile) from the dropdown.
+2. Select **Create Templates** and choose [Color Profile](https://www.braze.com/docs/user_guide/messaging/templates/in_app_message_templates/in_app_message_template#color-profile) from the dropdown.
 3. Create and save your color profile. 
  
 When creating a Dark Mode version of an in-app message, you can select that color profile to keep the look of your in-app messages consistent.

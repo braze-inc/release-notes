@@ -1,4 +1,4 @@
-<div id='api_cgwzrdrqipjv' class='api_div' data-search-keywords='anniversaries and holidays anniversaries and holidays'>
+<div id='api_mynuhyfuxuju' class='api_div' data-search-keywords='anniversaries and holidays anniversaries and holidays'>
 <h2 id="anniversaries-and-holidays">Anniversaries and holidays</h2>
 
 <div class="api_tags" data-tags="Anniversaries and holidays" data-tags-lower="anniversaries and holidays"></div>
@@ -164,7 +164,7 @@ Message if today isn't one of the provided holidays.
 
 </div>
 
-<div id='api_fygmeklwekqm' class='api_div' data-search-keywords='app usage app usage'>
+<div id='api_goseyqzfjtml' class='api_div' data-search-keywords='app usage app usage'>
 <h2 id="app-usage">App usage</h2>
 
 <div class="api_tags" data-tags="App usage" data-tags-lower="app usage"></div>
@@ -269,7 +269,7 @@ Message for a less active user
 
 </div>
 
-<div id='api_svmfjnnzumck' class='api_div' data-search-keywords='countdowns countdowns'>
+<div id='api_yadeuypvdvfk' class='api_div' data-search-keywords='countdowns countdowns'>
 <h2 id="countdowns">Countdowns</h2>
 
 <div class="api_tags" data-tags="Countdowns" data-tags-lower="countdowns"></div>
@@ -721,7 +721,7 @@ Hi, the offer is only valid today.
 
 </div>
 
-<div id='api_kxfanohyniki' class='api_div' data-search-keywords='custom attribute custom attribute'>
+<div id='api_hsdefjrstofo' class='api_div' data-search-keywords='custom attribute custom attribute'>
 <h2 id="custom-attribute">Custom attribute</h2>
 
 <div class="api_tags" data-tags="Custom attribute" data-tags-lower="custom attribute"></div>
@@ -763,7 +763,7 @@ There is a shovel here.
 
 <h3 id="european-currency-format">Format currency for European number conventions</h3>
 
-<p>For locales that use a comma as the decimal separator and a period as the thousands separator (for example, Germany or Italy), use the <a href="/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters#money-filter"><code class="language-plaintext highlighter-rouge">money</code></a> and <a href="/docs/user_guide/messaging/design_and_edit/personalize/liquid/advanced_filters#number-formatting-filters"><code class="language-plaintext highlighter-rouge">number_with_delimiter</code></a> filters with <code class="language-plaintext highlighter-rouge">replace</code> to swap separators. Use <code class="language-plaintext highlighter-rouge">#</code> as a temporary placeholder so periods and commas aren’t swapped in the same pass.</p>
+<p>For locales that use a comma as the decimal separator and a period as the thousands separator (for example, Germany or Italy), use the <a href="/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters#money-filters"><code class="language-plaintext highlighter-rouge">money</code></a> and <a href="/docs/user_guide/messaging/design_and_edit/personalize/liquid/advanced_filters#number-formatting-filters"><code class="language-plaintext highlighter-rouge">number_with_delimiter</code></a> filters with <code class="language-plaintext highlighter-rouge">replace</code> to swap separators. Use <code class="language-plaintext highlighter-rouge">#</code> as a temporary placeholder so periods and commas aren’t swapped in the same pass.</p>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre><span class="cp">{{</span><span class="w"> </span><span class="mf">1234567.89</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">money</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">number_with_delimiter</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'.'</span><span class="p">,</span><span class="w"> </span><span class="s1">'#'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">','</span><span class="p">,</span><span class="w"> </span><span class="s1">'.'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'#'</span><span class="p">,</span><span class="w"> </span><span class="s1">','</span><span class="w"> </span><span class="cp">}}</span>
@@ -803,7 +803,7 @@ Hi <span class="cp">{{</span><span class="nv">name</span><span class="p">[</span
 
 </div>
 
-<div id='api_ragsyzdcznpr' class='api_div' data-search-keywords='custom event custom event attributes external_id'>
+<div id='api_lhoccwgutqbd' class='api_div' data-search-keywords='custom event custom event attributes external_id'>
 <h2 id="custom-event">Custom event</h2>
 
 <div class="api_tags" data-tags="Custom event" data-tags-lower="custom event"></div>
@@ -979,7 +979,7 @@ Did you forget something in your shopping cart?
 
 </div>
 
-<div id='api_brzrxhsiwwwb' class='api_div' data-search-keywords='language language'>
+<div id='api_gxdwfqfwdauo' class='api_div' data-search-keywords='language language'>
 <h2 id="language">Language</h2>
 
 <div class="api_tags" data-tags="Language" data-tags-lower="language"></div>
@@ -1156,7 +1156,7 @@ tuesday default
 
 </div>
 
-<div id='api_tlmqhrwhqisk' class='api_div' data-search-keywords='miscellaneous miscellaneous'>
+<div id='api_emzyoqjgndru' class='api_div' data-search-keywords='miscellaneous miscellaneous'>
 <h2 id="miscellaneous">Miscellaneous</h2>
 
 <div class="api_tags" data-tags="Miscellaneous" data-tags-lower="miscellaneous"></div>
@@ -1693,7 +1693,7 @@ All episodes of <span class="cp">{{</span><span class="nv">new_shows_clean</span
 
 </div>
 
-<div id='api_ljprufdpwtbk' class='api_div' data-search-keywords='platform targeting platform targeting'>
+<div id='api_vdppfbdnmstw' class='api_div' data-search-keywords='platform targeting platform targeting'>
 <h2 id="platform-targeting">Platform targeting</h2>
 
 <div class="api_tags" data-tags="Platform targeting" data-tags-lower="platform targeting"></div>
@@ -1844,7 +1844,7 @@ This is a message for Verizon users!
 
 </div>
 
-<div id='api_vmblafaonxza' class='api_div' data-search-keywords='sms sms'>
+<div id='api_nuhffetbnutc' class='api_div' data-search-keywords='sms sms'>
 <h2 id="sms">SMS</h2>
 
 <div class="api_tags" data-tags="SMS" data-tags-lower="sms"></div>
@@ -1883,7 +1883,7 @@ Thanks for joining our SMS program!
 
 </div>
 
-<div id='api_xnacttcsoomi' class='api_div' data-search-keywords='time zones time zones'>
+<div id='api_slirvbdkwlkf' class='api_div' data-search-keywords='time zones time zones'>
 <h2 id="time-zones">Time zones</h2>
 
 <div class="api_tags" data-tags="Time zones" data-tags-lower="time zones"></div>
@@ -2119,7 +2119,7 @@ Sign up for our exclusive time-limited offer now!
 
 </div>
 
-<div id='api_hkuerljawmce' class='api_div' data-search-keywords='week/day/month week/day/month'>
+<div id='api_jxghpouowkxu' class='api_div' data-search-keywords='week/day/month week/day/month'>
 <h2 id="weekdaymonth">Week/Day/Month</h2>
 
 <div class="api_tags" data-tags="Week/Day/Month" data-tags-lower="week/day/month"></div>

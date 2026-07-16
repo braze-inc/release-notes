@@ -52,7 +52,7 @@ To archive multiple templates, select the checkbox next to each template that yo
 **Important:**
 
 
-Archiving is not currently available for [link templates](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing#link-templates).
+Archiving is not currently available for [link templates](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing).
 
 
 

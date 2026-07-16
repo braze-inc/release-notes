@@ -1,4 +1,4 @@
-<div id='api_uytnawkckwsh' class='api_div' data-search-keywords='prerequisites translations locale uuid name country language locale_key translation_map id_0 id_1 id_2 errors message'>
+<div id='api_gmvqjoswcnjb' class='api_div' data-search-keywords='prerequisites translations locale uuid name country language locale_key translation_map id_0 id_1 id_2 errors message'>
 <h1 id="view-all-translations-and-locales-for-an-email-template">View all translations and locales for an email template</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/translations/</p>
@@ -10,7 +10,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.translations.get</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.translations.get</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

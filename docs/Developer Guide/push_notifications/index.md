@@ -680,7 +680,7 @@ In your `braze.xml`, specify:
 <string name="com_braze_fallback_firebase_cloud_messaging_service_classpath">com.company.OurFirebaseMessagingService</string>
 ```
 
-or set via [runtime configuration:](https://www.braze.com/docs/developer_guide/sdk_initalization/?sdktab=android)
+or set via [runtime configuration:](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android#runtime-configuration)
 
 
 
@@ -769,7 +769,7 @@ To enable Braze to automatically open your app and any deep links when a push no
 <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
-This flag can also be set via [runtime configuration](https://www.braze.com/docs/developer_guide/sdk_initalization/?sdktab=android):
+This flag can also be set via [runtime configuration](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android#runtime-configuration):
 
 
 
@@ -878,7 +878,7 @@ The Braze dashboard supports setting deep links or web URLs in push notification
 
 The Android SDK, by default, will place your host app's main launcher activity in the back stack when following push deep links. Braze allows you to set a custom activity to open in the back stack in place of your main launcher activity or to disable the back stack altogether.
 
-For example, to set an activity called `YourMainActivity` as the back stack activity using [runtime configuration](https://www.braze.com/docs/developer_guide/sdk_initalization/?sdktab=android):
+For example, to set an activity called `YourMainActivity` as the back stack activity using [runtime configuration](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android#runtime-configuration):
 
 
 
@@ -1082,7 +1082,7 @@ The automation steps performed by the SDK are compatible with pre-existing push 
 
 
 The SDK must be initialized on the main thread to enable push notification automation. SDK initialization must happen before the application has finished launching or in your AppDelegate [`application(_:didFinishLaunchingWithOptions:)`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) implementation.
-If your application requires additional setup before initializing the SDK, please refer to the [Delayed Initialization](https://www.braze.com/docs/developer_guide/sdk_initalization/?sdktab=swift) documentation page.
+If your application requires additional setup before initializing the SDK, please refer to the [Delayed Initialization](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift#step-2-set-up-delayed-initialization-optional) documentation page.
 
 
 

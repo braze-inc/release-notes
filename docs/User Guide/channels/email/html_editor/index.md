@@ -38,7 +38,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 1. [Create your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
-3. Choose a [step schedule](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types#schedule-delay) and specify a delay as needed.
+3. Choose a [step schedule](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types) and specify a delay as needed.
 4. Filter your Audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
 5. Choose your [advancement behavior](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases).
 6. Choose any other messaging channels that you would like to pair with your message.
@@ -60,7 +60,7 @@ Braze offers two editing experiences when creating an email campaign: our [drag-
 
 ![Choosing between the drag-and-drop editor, HTML editor, or templates for your email editing experience.](https://www.braze.com/docs/assets/img_archive/choose_email_creation.png?aca7b8d0e033a4a868923644f3297a4b){: style="max-width:75%" }
 
-Then, you can either select an existing [email template](https://www.braze.com/docs/user_guide/channels/email/html_editor#creating-an-email-template), [upload a template](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/html_email_template) from a file (HTML editor only), or use a blank template.
+Then, you can either select an existing [email template](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/email_template), [upload a template](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/html_email_template) from a file (HTML editor only), or use a blank template.
 
 If you use the HTML editor and need background colors to stay consistent in the Gmail mobile app when the device is in dark mode, see [Gmail mobile app and Dark Mode background colors](#gmail-dark-mode).
 
@@ -310,7 +310,7 @@ For API-triggered campaigns, when the trigger action is set to **Interact With C
 
 
 
-You can also set the campaign's duration, specify [Quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours), and set [frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#frequency-capping) rules.
+You can also set the campaign's duration, specify [Quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours), and set [frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#about-frequency-capping) rules.
 
 ### Choose users to target
 
@@ -364,7 +364,7 @@ You can allow up to a 30-day window during which Braze counts a conversion if th
 
 
 
-If you haven't done so already, complete the remaining sections of your Canvas components. For further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#step-3-build-your-canvas) step of our Canvas documentation.
+If you haven't done so already, complete the remaining sections of your Canvas components. For further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#step-2-build-your-canvas) step of our Canvas documentation.
 
 
 

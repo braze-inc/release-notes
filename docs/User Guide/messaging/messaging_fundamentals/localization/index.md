@@ -31,9 +31,9 @@ In this approach, localization is applied to a single template in Braze using [L
 
 ### One template per country 
 
-This approach separates templating into different sending locales. After sending, the dashboard reports sending analytics based on each country separately, and any downstream user-level [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents#access-currents) events will also be tied to a specific campaign.
+This approach separates templating into different sending locales. After sending, the dashboard reports sending analytics based on each country separately, and any downstream user-level [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents#how-to-access-currents) events will also be tied to a specific campaign.
 
-- Templates benefit from implementing [tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags#tags) for maintenance and tracking purposes.
+- Templates benefit from implementing [tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags#managing-tags) for maintenance and tracking purposes.
 - Campaigns can inherit the configurations from the same [Braze template](https://www.braze.com/docs/user_guide/messaging/templates) and [Content Blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/content_blocks) (such as [email templates](https://www.braze.com/docs/user_guide/messaging/templates/email_templates) that contain Liquid).
 - Pre-existing campaigns and templates can be [duplicated](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/duplicating) to allow a faster time time-to-value.
 
@@ -48,7 +48,7 @@ This approach separates templating into different sending locales. After sending
 
 In this approach, localization is handled within [Canvas basics](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_basics#building-the-customer-journey) and Liquid to define messaging for each user. 
 
-After a Canvas is sent, the dashboard provides aggregated [Canvas Analytics](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics), whereas the user level engagement can be measured via custom [segment funnels](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size), such as combining [**Country**](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#country) and [**Received Canvas Step**](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#received-canvas-step) filters.
+After a Canvas is sent, the dashboard provides aggregated [Canvas Analytics](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics), whereas the user level engagement can be measured via custom [segment funnels](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size), such as combining [**Country**](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#country) and [**Received Canvas Step**](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#received-message-from-canvas-step) filters.
 
 | Advantages | Considerations |
 | --- | --- |
@@ -64,7 +64,7 @@ Localization can be achieved with the following methods:
 - Separate Canvases per country, this ensures the complex user journeys are defined at the top of the funnel using audience filters
 - Bespoke user journeys per country, the implementation of [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths) to intuitively segment users on a large scale for each journey by creating separate message threads for each country in a single Canvas
 
-Once sent, the dashboard provides dynamic analytics per country and within user-level [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents#access-currents) events based on the customer’s current location.
+Once sent, the dashboard provides dynamic analytics per country and within user-level [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents#how-to-access-currents) events based on the customer’s current location.
 
 | Advantages | Considerations |
 | --- | --- |
@@ -226,7 +226,7 @@ Create a CSV in the following format:
 
 
 
-These catalog items can them be referenced using [personalization](https://www.braze.com/docs/user_guide/data/activation/catalogs/create#using-catalogs-in-a-message), shown below, or [selections](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections) that allow you to create groups of data. 
+These catalog items can them be referenced using [personalization](https://www.braze.com/docs/user_guide/data/activation/catalogs/create), shown in the following example, or [selections](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections) that allow you to create groups of data. 
 
 
 ```liquid
@@ -238,7 +238,7 @@ These catalog items can them be referenced using [personalization](https://www.b
 
 
 
-Many Braze partners offer localization solutions, including [Transifex](https://www.braze.com/docs/partners/message_personalization/localization/transifex#about-transifex) and [Crowdin](https://crowdin.com/). Typically users use the platform alongside an internal team and translation agency. These translations are then uploaded there and are then accessible via REST API. These services also often leverage [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content), allowing users to fetch the translations via API.
+Many Braze partners offer localization solutions, including [Transifex](https://www.braze.com/docs/partners/message_personalization/localization/transifex#about-the-integration) and [Crowdin](https://crowdin.com/). Typically users use the platform alongside an internal team and translation agency. These translations are then uploaded there and are then accessible via REST API. These services also often leverage [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content), allowing users to fetch the translations via API.
 
 For example, the following Connected Content calls call Transifex and Crowdin to fetch a translation, leveraging `{{${language}}}` to identify the correct translation for a given user. This translation is then saved in the JSON block "strings" and referenced.
 

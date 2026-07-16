@@ -77,7 +77,7 @@ For Android, this version name is based on the [Package Version Name](https://de
 
 ### Have not used feature
 
-When you release a new app version and introduce new features, users may not notice new content. Running a feature awareness campaign is a great way to teach users about new features or features they have never used. To do so, you must create a [custom attribute](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#custom-data) that is assigned to users who have never completed a certain action within your app or use a [custom event](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#custom-data) to track a particular action. You can use this attribute (or event) to segment the users you want to send the campaign to.
+When you release a new app version and introduce new features, users may not notice new content. Running a feature awareness campaign is a great way to teach users about new features or features they have never used. To do so, you must create a [custom attribute](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters) that is assigned to users who have never completed a certain action within your app or use a [custom event](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters) to track a particular action. You can use this attribute (or event) to segment the users you want to send the campaign to.
 
 **Tip:**
 

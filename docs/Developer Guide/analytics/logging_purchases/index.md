@@ -1,6 +1,6 @@
 # Log purchases
 
-> Learn how to log in-app purchases through the Braze SDK, so you can determine your revenue over-time and across sources. This will let you segment users [based on their lifetime value](https://www.braze.com/docs/developer_guide/analytics#purchase-events--revenue-tracking) using custom events, custom attributes, and purchase events.
+> Learn how to log in-app purchases through the Braze SDK, so you can determine your revenue over-time and across sources. This lets you segment users [based on their lifetime value](https://www.braze.com/docs/developer_guide/analytics#purchase-events-revenue-tracking) using custom events, custom attributes, and purchase events.
 
 **Note:**
 
@@ -266,7 +266,7 @@ You can also use our REST API to record purchases. For more information, refer t
 
 ## Logging orders
 
-If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification](https://www.braze.com/docs/api/objects_filters/purchase_object#product-id-naming-conventions) to learn more. 
+If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification](https://www.braze.com/docs/api/objects_filters/purchase_object#naming-conventions) to learn more. 
 
 ## Reserved keys
 

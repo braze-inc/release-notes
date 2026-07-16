@@ -2,7 +2,7 @@
 
 ## Developer Guide detangle
 
-Identical content that's shared across multiple SDKs are starting to be merged together using the docs site's new SDK tabbing feature. This month [SDK integration](https://www.braze.com/docs/developer_guide/sdk_integration/), [SDK initialization](https://www.braze.com/docs/developer_guide/sdk_initialization/), and [Content Cards](https://www.braze.com/docs/developer_guide/content_cards/) were combined. Stay tuned for more updates in the coming months.
+Identical content that's shared across multiple SDKs are starting to be merged together using the docs site's new SDK tabbing feature. This month [SDK integration](https://www.braze.com/docs/developer_guide/sdk_integration/), [SDK initialization](https://www.braze.com/docs/developer_guide/sdk_integration/), and [Content Cards](https://www.braze.com/docs/developer_guide/content_cards/) were combined. Stay tuned for more updates in the coming months.
 
 ## Data flexibility
  

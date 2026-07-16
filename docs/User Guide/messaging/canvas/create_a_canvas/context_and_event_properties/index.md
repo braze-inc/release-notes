@@ -99,7 +99,7 @@ Audience eligibility is evaluated once at Canvas entry. If a user is merged duri
 
 If you're using timestamps with a [datetime type](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/custom_event_properties) from events that trigger action-based Canvases, which are referenced using [context](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties), timestamps are normalized to UTC.
 
-Given this behavior, Braze strongly recommends you use a Liquid timezone filter like the following example to guarantee that your messages are sent with your [preferred timezone](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters#time-zone-filter).
+Given this behavior, Braze strongly recommends you use a Liquid timezone filter like the following example to guarantee that your messages are sent with your [preferred timezone](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters).
 
 
 ```liquid

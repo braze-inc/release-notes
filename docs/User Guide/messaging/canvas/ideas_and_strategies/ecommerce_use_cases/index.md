@@ -365,7 +365,7 @@ Here is an example of how you would add an HTML product block to your order conf
 
 To begin personalizing your messages using Liquid tags, you can refer to the following resources:
 
-- [Shopify data](https://www.braze.com/docs/shopify_features#shopify-data) reference with pre-defined liquid tags
+- <a href="/docs/partners/ecommerce/shopify/shopify_data_features#tracked-shopify-events">Shopify data</a> reference with pre-defined liquid tags
 - [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid)
 
 ## Segmentation
@@ -433,7 +433,7 @@ To segment by nested event properties, you can leverage [Segment Extensions](htt
 
 ### Custom events report
 
-You can track eCommerce recommended event volume in the [Custom Events report](https://www.braze.com/docs/user_guide/data/activation/events/custom_events#analytics). Filter by **Perform Custom Event**, then specify the [eCommerce recommended event name](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events#types-of-ecommerce-recommended-events) to view its performance over time.
+You can track eCommerce recommended event volume in the [Custom Events report](https://www.braze.com/docs/user_guide/data/activation/events/custom_events#analytics). Filter by **Perform Custom Event**, then specify the [eCommerce recommended event name](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events) to view its performance over time.
 
 ![Custom Events chart displaying results for six selected events.](https://www.braze.com/docs/assets/img/ecommerce/custom_events_chart.png?08dc9262f5b12eb58d3283988fc7544c)
 

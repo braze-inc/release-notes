@@ -1,4 +1,4 @@
-<div id='api_sutgtocgbgfj' class='api_div' data-search-keywords='synchronous and asynchronous api calls attributes events purchases users custom_attributes custom_events purchase_events message errors'>
+<div id='api_rywabhlhbeqa' class='api_div' data-search-keywords='synchronous and asynchronous api calls attributes events purchases users custom_attributes custom_events purchase_events message errors'>
 <h1 id="create-and-update-users-synchronous">Create and update users (synchronous)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track/sync</p>
@@ -76,7 +76,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       <td><code class="language-plaintext highlighter-rouge">attributes</code></td>
       <td>Optional</td>
       <td>One attributes object</td>
-      <td>See <a href="/docs/api/objects_filters/user_attributes_object#migrating-push-tokens">user attributes object</a></td>
+      <td>See <a href="/docs/api/objects_filters/user_attributes_object#migrate-push-tokens">user attributes object</a></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">events</code></td>

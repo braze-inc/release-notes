@@ -1,4 +1,4 @@
-<div id='api_fodnakjoctwm' class='api_div' data-search-keywords='prerequisites canvases id last_edited name tags message'>
+<div id='api_yvzmcixjzfio' class='api_div' data-search-keywords='prerequisites canvases id last_edited name tags message'>
 <h1 id="export-canvas-list">Export Canvas list</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/list</p>
@@ -16,7 +16,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.list</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.list</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

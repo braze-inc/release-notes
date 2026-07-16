@@ -42,11 +42,11 @@ To check if a user is alias-only, [check if the user exists](#step-1-check-if-us
 
 ## Capturing user data when alias-only user information is already present
 
-When a user creates an account or identifies themselves through email sign-up, you can merge the profiles. For a list of fields that can be merged, refer to [Merge updates behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#merge_updates-behavior).
+When a user creates an account or identifies themselves through email sign-up, you can merge the profiles. For a list of fields that can be merged, refer to [Merge updates behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#merge-behavior).
 
 ### Merging duplicate user profiles
 
-As your user data grows, you can merge duplicate user profiles from the Braze dashboard. These duplicate profiles must be found using the same search query. For more information on how to duplicate user profiles, check out [Merge profiles](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles#merge-profiles).
+As your user data grows, you can merge duplicate user profiles from the Braze dashboard. These duplicate profiles must be found using the same search query. For more information on how to duplicate user profiles, check out [Merge duplicate users](https://www.braze.com/docs/user_guide/audience/manage_audience/merge_duplicate_users).
 
 You can also use the [Merge users endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge) to merge one user profile into another. 
 

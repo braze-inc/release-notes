@@ -1,4 +1,4 @@
-<div id='api_twpmnxdncxzc' class='api_div' data-search-keywords='prerequisites items id message errors parameters parameter_values'>
+<div id='api_akqeqltdaslt' class='api_div' data-search-keywords='prerequisites items id message errors parameters parameter_values'>
 <h1 id="list-catalog-item-details">List catalog item details</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/catalogs/{catalog_name}/items/{item_id}</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">catalogs.get_item</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">catalogs.get_item</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

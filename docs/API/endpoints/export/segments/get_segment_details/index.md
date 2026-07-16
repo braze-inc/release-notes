@@ -1,4 +1,4 @@
-<div id='api_wvtdfphidjqi' class='api_div' data-search-keywords='prerequisites message created_at updated_at name description text_description tags teams'>
+<div id='api_heynterzzddn' class='api_div' data-search-keywords='prerequisites message created_at updated_at name description text_description tags teams'>
 <h1 id="export-segment-details">Export segment details</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/segments/details</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">segments.details</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">segments.details</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

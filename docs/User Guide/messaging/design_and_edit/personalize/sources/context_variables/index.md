@@ -186,7 +186,7 @@ Context variables are declared and only accessible in the scope of a Canvas, mea
 
 ![Decision Split step example with the option to create a filter with a context variable.](https://www.braze.com/docs/assets/img/context_decision_split.png?2b0b9149335a2ac917d26eadd79d37c4){: style="max-width:90%;"}
 
-Similar to how Canvas context variables have pre-defined types, the comparisons between context variables and static values must have [matching data types](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support#supported-data-types). The context variable filter allows comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for [nested custom attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support).
+Similar to how Canvas context variables have pre-defined types, the comparisons between context variables and static values must have [matching data types](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support). The context variable filter allows comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for [nested custom attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support).
 
 **Note:**
 
