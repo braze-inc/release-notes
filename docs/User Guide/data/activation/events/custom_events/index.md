@@ -155,7 +155,7 @@ You can also use **Filters** to break down your custom events by hour, monthly a
 **Tip:**
 
 
-[Increment custom attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes#integers) to keep a counter on a user action similar to a custom event. However, you can't view custom attribute data in a time series. User actions that don't need to be analyzed in a time series should be recorded using this method.
+[Increment custom attributes](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types) to keep a counter on a user action similar to a custom event. However, you can't view custom attribute data in a time series. User actions that don't need to be analyzed in a time series should be recorded using this method.
 
 
 

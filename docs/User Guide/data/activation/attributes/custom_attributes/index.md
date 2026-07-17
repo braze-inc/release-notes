@@ -18,9 +18,9 @@ Some common custom attribute use cases include:
 - Targeting and suppressing audiences by segmenting users based on traits like loyalty tier, subscription status, preferred language, or plan type
 - Personalizing messages with [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) by referencing attributes such as a user's first name, rewards points, or favorite category
 - Tracking lifecycle stages and user states, such as onboarding stage, account status, or trial end date
-- Counting low-value actions with [numeric attributes](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#numbers), such as incrementing a `feature_views_count` attribute each time a user views a feature
-- Recording when low-value actions last occurred using [time attributes](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#time), such as `last_support_ticket_at` or `last_password_reset_at`
-- Storing user interests and history as [arrays](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#arrays), such as favorite genres or recently viewed content, for interest-based targeting
+- Counting low-value actions with [numeric attributes](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types), such as incrementing a `feature_views_count` attribute each time a user views a feature
+- Recording when low-value actions last occurred using [time attributes](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types), such as `last_support_ticket_at` or `last_password_reset_at`
+- Storing user interests and history as [arrays](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types), such as favorite genres or recently viewed content, for interest-based targeting
 - Storing richer profile data as [objects](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support) or [arrays of objects](https://www.braze.com/docs/user_guide/data/activation/attributes/array_of_objects), such as structured preferences or multiple saved addresses
 - Triggering action-based messages when an attribute value changes using [attribute triggers](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/attribute_triggers), such as sending a tier-up notification when a user's `rewards_tier` changes
 
@@ -72,7 +72,7 @@ You can add tags to a custom attribute after it's created if you have the "Manag
 There are two ways you can remove custom attributes from user profiles:
 
 * Select the custom attribute name to be removed in a [User Update step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update#removing-custom-attributes).
-* Set the `null` value in your API request to the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#user-track).
+* Set the `null` value in your API request to the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track).
 
 ### Export data
 

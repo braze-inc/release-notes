@@ -4,7 +4,7 @@
 
 ### `Live Activities Push to Start Registered for App` segmentation filter
 
-The [`Live Activities Push to Start Registered for App` filter](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters/#live-activites-push-to-start-registered-for-app) segments your users by whether they are registered to start a Live Activity through iOS push notifications for a specific app.
+The [`Live Activities Push to Start Registered for App` filter](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters/#live-activities-push-to-start-registered-for-app) segments your users by whether they are registered to start a Live Activity through iOS push notifications for a specific app.
 
 ### RFM SQL Segment Extension
 
@@ -40,13 +40,13 @@ When using Currents, you can now reference `abort_type` in the channel abort eve
 
 
 
-You can [add a background row image](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize/#background-image) to an in-app message or landing page in the **Row properties** panel. Toggle on **Background image**, and then provide an image URL or select an image from the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/). Finally, configure your alt text, size, position, and whether the image repeats to create patterns across the row.
+You can [add a background row image](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize/style_settings#background-image) to an in-app message or landing page in the **Row properties** panel. Toggle on **Background image**, and then provide an image URL or select an image from the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/). Finally, configure your alt text, size, position, and whether the image repeats to create patterns across the row.
 
 ![A row background image of a pizza that has a horizontal repeat pattern.](https://www.braze.com/docs/assets/img_archive/background_row.png?7eb107ac958fdbf5ea9dca2fd0724fd0)
 
 ### Copy preview link
 
-Use **Copy preview link** in your [Banners](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner/#step-5-test-your-message-optional), [email custom footers](https://www.braze.com/docs/user_guide/channels/email/customize/custom_email_footer/#creating-your-custom-footer), and [email opt-in and unsubscribe pages](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/email_preferences/?tab=custom%20footer#subscription-pages-and-footers) to generate a shareable link that shows how your content will look like for a random user.
+Use **Copy preview link** in your [Banners](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner/#step-5-test-your-message-optional), [email custom footers](https://www.braze.com/docs/user_guide/channels/email/customize/custom_email_footer/#create-your-custom-footer), and [email opt-in and unsubscribe pages](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/email_preferences/?tab=custom%20footer#subscription-pages-and-footers) to generate a shareable link that shows how your content looks for a random user.
 
 ### WhatsApp messages with optimized delivery
 
@@ -84,8 +84,8 @@ You can now customize your [Braze Agent](https://www.braze.com/docs/user_guide/b
 
 - Applying [brand guidelines](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/brand_guidelines/) for your agent to adhere to in its response. 
 - Referencing a catalog to further personalize your message.
-- Structuring an agent's output by providing the [output format](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents/#output-format).
-- Adjusting the [temperature](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents/#temperature) for the level of deviation for your agent's output.
+- Structuring an agent's output by providing the [output format](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents#select-output).
+- Adjusting the [temperature](https://www.braze.com/docs/user_guide/brazeai/agents/reference) for the level of deviation for your agent's output.
 
 ### ChatGPT models with BrazeAI<sup>TM</sup> Operator
 

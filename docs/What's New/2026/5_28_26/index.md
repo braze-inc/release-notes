@@ -10,7 +10,7 @@ The [Push Performance dashboard](https://www.braze.com/docs/user_guide/analytics
 
 
 
-Catalogs now support distance-based filtering with the new geolocation field type and Catalog Selection operators. This helps you create more relevant location-aware experiences, such as showing each user their nearest restaurant, filtering open properties within 50 km for a real estate campaign, or targeting stores near a specific event. Instead of approximating geographic targeting with city or region codes, you can filter catalog items by proximity to a center point, including a Liquid user attribute such as a user's most recent location. For more information, see [Selections](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections#how-it-works).
+Catalogs now support distance-based filtering with the new geolocation field type and Catalog Selection operators. This helps you create more relevant location-aware experiences, such as showing each user their nearest restaurant, filtering open properties within 50 km for a real estate campaign, or targeting stores near a specific event. Instead of approximating geographic targeting with city or region codes, you can filter catalog items by proximity to a center point, including a Liquid user attribute such as a user's most recent location. For more information, see [Selections](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections).
 
 ### Banner and RCS for Report Builder
 

@@ -8,6 +8,20 @@
 | Unsubscribed | The user didn't follow the LINE channel from within their LINE app, or the user explicitly unfollowed the LINE channel. <br><br> Users who unsubscribe from a LINE subscription group will no longer receive any LINE messages from sending channels that belong to the subscription group. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="LINE subscription groups" }
 
-## Setting a user's LINE subscription group
+## Set a user's LINE subscription group
 
 LINE hosts the users' subscription status. Braze processes the follow and unfollow events that update the subscription status.
+
+**Important:**
+
+
+LINE subscription groups can't be moved between workspaces. If you re-integrate a LINE channel in another workspace after archiving its subscription group, Braze creates a new subscription group in the target workspace—the original stays in the first workspace.
+
+
+
+## Archive behavior
+
+- **Standard archive:** If you archive a LINE subscription group and don't re-integrate the channel in another workspace, you can unarchive the subscription group later.
+- **Permanent archive:** If you re-integrate the LINE channel in a different workspace after archiving its subscription group, the original subscription group is permanently archived and can't be unarchived through the dashboard.
+
+For channel re-integration steps, refer to [LINE setup](https://www.braze.com/docs/user_guide/channels/line/line_setup/#re-integrate-a-line-channel-in-another-workspace).

@@ -181,7 +181,7 @@ JSON objects in catalogs are only ingested through the API. You can't upload a J
 
 
 
-Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid#assigning-variables) to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array. Variables referenced as the catalog item ID must be wrapped in curly brackets to be referenced properly, such as ``.
+Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/dashboard_tools#assign-variables) to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array. Variables referenced as the catalog item ID must be wrapped in curly brackets to be referenced properly, such as ``.
 
 **Tip:**
 

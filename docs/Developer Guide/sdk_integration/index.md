@@ -129,7 +129,7 @@ braze.openSession();
 **Important:**
 
 
-**In-App Message Display**: To display in-app messages automatically when they're triggered, you must call `braze.automaticallyShowInAppMessages()`. Without this call, in-app messages don't display automatically. If you want to manage message display manually, remove this call and use `braze.subscribeToInAppMessage()` instead. For more information, see [In-app message delivery](https://www.braze.com/docs/developer_guide/in_app_messages/delivery/).
+**In-App Message Display**: To display in-app messages automatically when they're triggered, you must call `braze.automaticallyShowInAppMessages()`. Without this call, in-app messages don't display automatically. If you want to manage message display manually, remove this call and use `braze.subscribeToInAppMessage()` instead. For more information, see [Disabling automatic triggers](https://www.braze.com/docs/developer_guide/in_app_messages/triggering_messages#disabling-automatic-triggers).
 
 
 

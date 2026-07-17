@@ -1,4 +1,4 @@
-<div id='api_rmrifubbffpp' class='api_div' data-search-keywords='prerequisites canvas_id schedule_id schedule'>
+<div id='api_gzefjisximgh' class='api_div' data-search-keywords='prerequisites canvas_id schedule_id schedule'>
 <h1 id="update-scheduled-api-triggered-canvases">Update scheduled API-triggered Canvases</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/trigger/schedule/update</p>
@@ -10,7 +10,7 @@
 
 <p>This allows you to decide what action triggers the message to send. You can pass in <code class="language-plaintext highlighter-rouge">trigger_properties</code> that Braze templates into the message itself.</p>
 
-<p>Note that to send messages with this endpoint, you must have a Canvas ID, created when you build a <a href="/docs/api/identifier_types#canvas-api-identifier">Canvas</a>.</p>
+<p>Note that to send messages with this endpoint, you must have a Canvas ID, created when you build a <a href="/docs/api/identifier_types#canvas-identifier">Canvas</a>.</p>
 
 <p>Any schedule will completely overwrite the one that you provided in the create schedule request or in previous update schedule requests.</p>
 <ul>
@@ -22,7 +22,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.trigger.schedule.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.trigger.schedule.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

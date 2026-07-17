@@ -1,4 +1,4 @@
-<div id='api_lojefhduvrdp' class='api_div' data-search-keywords='prerequisites canvas_id schedule_id'>
+<div id='api_hfqtcuafyyys' class='api_div' data-search-keywords='prerequisites canvas_id schedule_id'>
 <h1 id="delete-scheduled-api-triggered-canvases">Delete scheduled API-triggered Canvases</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/trigger/schedule/delete</p>
@@ -14,7 +14,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.trigger.schedule.delete</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.trigger.schedule.delete</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

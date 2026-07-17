@@ -50,7 +50,7 @@ The `PAYLOAD` value follows the same object formats used by the Braze `/users/tr
 
 | Data type | Formatting reference |
 | --- | --- |
-| `attributes` | [User attributes object](https://www.braze.com/docs/api/objects_filters/user_attributes_object#migrating-push-tokens) |
+| `attributes` | [User attributes object](https://www.braze.com/docs/api/objects_filters/user_attributes_object#migrate-push-tokens) |
 | `events` | [Events object](https://www.braze.com/docs/api/objects_filters/event_object) |
 | `purchases` | [Purchases object](https://www.braze.com/docs/api/objects_filters/purchase_object) |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Set up the PAYLOAD column" }

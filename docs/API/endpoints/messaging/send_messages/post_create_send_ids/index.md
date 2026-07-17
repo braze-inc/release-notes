@@ -1,4 +1,4 @@
-<div id='api_kmfpmnzqncuc' class='api_div' data-search-keywords='prerequisites campaign_id send_id message'>
+<div id='api_bkxudimkwilu' class='api_div' data-search-keywords='prerequisites campaign_id send_id message'>
 <h1 id="create-send-ids">Create send IDs</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/sends/id/create</p>

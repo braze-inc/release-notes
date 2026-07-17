@@ -5,14 +5,14 @@
 ## Step 1: Create a new catalog
 
 Before creating a new Cloud Data Ingestion (CDI) integration for [catalogs](https://www.braze.com/docs/user_guide/data/activation/catalogs), you need to create a new catalog or identify an existing catalog you want to use for the integration. There are a few ways to create a new catalog and any of these will work for the CDI integration:
-- Upload a [CSV](https://www.braze.com/docs/user_guide/data/activation/catalogs/create#method-1-upload-csv)
-- Create a catalog in the [Braze dashboard](https://www.braze.com/docs/user_guide/data/activation/catalogs/create#method-2-create-in-browser) or during CDI setup.
+- Upload a [CSV](https://www.braze.com/docs/user_guide/data/activation/catalogs/create#creating-a-catalog)
+- Create a catalog in the [Braze dashboard](https://www.braze.com/docs/user_guide/data/activation/catalogs/create#creating-a-catalog) or during CDI setup.
 - Create a catalog using the [Create catalog endpoint](https://www.braze.com/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog)
 
 Any changes to the catalog schema (for example, adding new fields or changing field type) must be made through the catalog dashboard before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your data warehouse data and the schema in Braze.
 
 ## Step 2: Integrate Cloud Data Ingestion with catalog data
-The setup for a catalog sync closely follows the process for [user-data CDI integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations#product-setup). 
+The setup for a catalog sync closely follows the process for [user-data CDI integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations). 
 
 
 

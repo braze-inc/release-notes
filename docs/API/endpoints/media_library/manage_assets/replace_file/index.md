@@ -1,4 +1,4 @@
-<div id='api_ozcfizdjmayy' class='api_div' data-search-keywords='prerequisites asset_id asset_url asset_file message error_code meta info new_image_asset name size url ext'>
+<div id='api_igqzxjqaetgs' class='api_div' data-search-keywords='prerequisites asset_id asset_url asset_file message error_code meta info new_image_asset name size url ext'>
 <h1 id="replace-an-asset-in-the-media-library">Replace an asset in the media library</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/media_library/replace_file</p>
@@ -10,7 +10,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">media_library.replace</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">media_library.replace</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

@@ -50,7 +50,7 @@ Use the [**Push Settings** page](https://www.braze.com/docs/user_guide/administe
 
 
 
-You can use [promotion codes](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes) in in-app message campaigns by inserting a [promotion code list snippet](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes#creating-a-promotion-code-list) into the message body of your in-app message campaign.
+You can use [promotion codes](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes) in in-app message campaigns by inserting a [promotion code list snippet](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes/create#create) into the message body of your in-app message campaign.
 
 ### Handling webhook errors and rate limiting
 

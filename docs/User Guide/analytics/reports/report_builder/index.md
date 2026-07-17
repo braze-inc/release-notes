@@ -61,7 +61,8 @@ Try out different configurations of drilldown options to explore the [many ways 
 8. Then, depending on your selections in step 3, choose to manually or automatically add campaigns, Canvases, or both to your report.
     - **Add manually:** Choose each campaign or Canvas to include in the report by using the filters for **Last Sent** dates and tags or channels, or searching the campaign or Canvas name.<br><br>![The "Manually add campaigns and canvases" section with a list of campaigns to select.](https://www.braze.com/docs/assets/img/report_builder_2/manually_add.png?9ed99ae9f1068c415e6ea2900cef808c){: style="width:90%;"}<br><br>
     - **Add automatically:** Set rules for which campaigns or Canvases to include in the report. You're only required to select one field on this page.
-        - Note that as additional campaigns or Canvases satisfy the conditions you set on this screen, they will automatically be added to future runs of your report.<br><br>![The "Automatically add campaigns and canvases" section with fields to set rules for which campaigns and Canvases should be added to the report.](https://www.braze.com/docs/assets/img/report_builder_2/automatically_add.png?181a52d19a6ed3f988c67b008b6e7869){: style="width:90%;"}<br><br>
+        - Note that as additional campaigns or Canvases satisfy the conditions you set on this screen, they are automatically added to future runs of your report.
+        - Banners isn't an option in the **Channel** dropdown, so you can't use channel rules to automatically add Banner campaigns or Canvases. You can still include Banner KPIs in your report metrics.<br><br>![The "Automatically add campaigns and canvases" section with fields to set rules for which campaigns and Canvases should be added to the report.](https://www.braze.com/docs/assets/img/report_builder_2/automatically_add.png?181a52d19a6ed3f988c67b008b6e7869){: style="width:90%;"}<br><br>
 9. Run the report by selecting **Save & Run**.
 
 **Note:**

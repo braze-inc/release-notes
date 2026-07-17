@@ -1,4 +1,4 @@
-<div id='api_litkusxddhhn' class='api_div' data-search-keywords='prerequisites asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
+<div id='api_ihqokzqaipst' class='api_div' data-search-keywords='prerequisites asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
 <h1 id="upload-an-asset-to-the-media-library">Upload an asset to the media library</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/media_library/create</p>
@@ -14,7 +14,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">media_library.create</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">media_library.create</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

@@ -1,4 +1,4 @@
-<div id='api_rzbrydqdxmjt' class='api_div' data-search-keywords='prerequisites scheduled_broadcasts name id type tags next_send_time schedule_type'>
+<div id='api_lumckpdabnch' class='api_div' data-search-keywords='prerequisites scheduled_broadcasts name id type tags next_send_time schedule_type'>
 <h1 id="list-upcoming-scheduled-campaigns-and-canvases">List upcoming scheduled campaigns and Canvases</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/messages/scheduled_broadcasts</p>
@@ -14,7 +14,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">messages.schedule_broadcasts</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">messages.schedule_broadcasts</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
