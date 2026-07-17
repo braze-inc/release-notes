@@ -1,4 +1,4 @@
-<div id='api_ynfcnwbfgtal' class='api_div' data-search-keywords='prerequisites preference_centers name preference_center_api_id created_at updated_at'>
+<div id='api_anffzwyygljy' class='api_div' data-search-keywords='prerequisites preference_centers name preference_center_api_id created_at updated_at'>
 <h1 id="list-preference-centers">List preference centers</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/preference_center/v1/list</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">preference_center.list</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">preference_center.list</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

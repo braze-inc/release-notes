@@ -6,7 +6,7 @@ Phone numbers are shown in the user profile in local formats, but will not be in
 
 ## Importing phone numbers
 
-You can import phone numbers by [uploading a CSV](https://www.braze.com/docs/user_guide/audience/manage_audience/import_users#csv) or [via API](https://www.braze.com/docs/api/endpoints/user_data#user-track-endpoint) to create a user.
+You can import phone numbers by [uploading a CSV](https://www.braze.com/docs/user_guide/audience/manage_audience/import_users#constructing-your-csv) or [via API](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) to create a user.
 
 ### Formatting
 

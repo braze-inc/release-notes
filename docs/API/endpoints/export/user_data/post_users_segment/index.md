@@ -1,4 +1,4 @@
-<div id='api_frbmtqifxaab' class='api_div' data-search-keywords='prerequisites segment_id callback_endpoint fields_to_export output_format message object_prefix url created_at external_id user_aliases alias_name alias_label braze_id first_name last_name email dob home_city country phone language time_zone last_coordinates gender total_revenue attributed_campaign attributed_source attributed_adgroup attributed_ad push_subscribe email_subscribe custom_attributes custom_events name first last count purchases devices model os carrier idfv idfa google_ad_id roku_ad_id ad_tracking_enabled push_tokens app platform token device_id notifications_enabled provisionally_opted_in apps version sessions first_used last_used campaigns_received last_received engaged opened_email opened_push clicked_email clicked_triggered_in_app_message converted api_campaign_id variation_name variation_api_id in_control canvases_received api_canvas_id last_received_message last_entered last_exited steps_received api_canvas_step_id cards_clicked random_bucket push_opted_in_at multiple_converted last_entered_control_at'>
+<div id='api_iginsebhqzjg' class='api_div' data-search-keywords='prerequisites segment_id callback_endpoint fields_to_export output_format message object_prefix url created_at external_id user_aliases alias_name alias_label braze_id first_name last_name email dob home_city country phone language time_zone last_coordinates gender total_revenue attributed_campaign attributed_source attributed_adgroup attributed_ad push_subscribe email_subscribe custom_attributes custom_events name first last count purchases devices model os carrier idfv idfa google_ad_id roku_ad_id ad_tracking_enabled push_tokens app platform token device_id notifications_enabled provisionally_opted_in apps version sessions first_used last_used campaigns_received last_received engaged opened_email opened_push clicked_email clicked_triggered_in_app_message converted api_campaign_id variation_name variation_api_id in_control canvases_received api_canvas_id last_received_message last_entered last_exited steps_received api_canvas_step_id cards_clicked random_bucket push_opted_in_at multiple_converted last_entered_control_at'>
 <h1 id="export-user-profile-by-segment">Export user profile by segment</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/export/segment</p>
@@ -24,7 +24,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.export.segment</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">users.export.segment</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -384,7 +384,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     <tr>
       <td><code class="language-plaintext highlighter-rouge">user_aliases</code></td>
       <td>Object</td>
-      <td><a href="/docs/api/objects_filters/user_alias_object#user-alias-object-specification">User aliases object</a> containing the <code class="language-plaintext highlighter-rouge">alias_name</code> and <code class="language-plaintext highlighter-rouge">alias_label</code>, if exists.</td>
+      <td><a href="/docs/api/objects_filters/user_alias_object">User aliases object</a> containing the <code class="language-plaintext highlighter-rouge">alias_name</code> and <code class="language-plaintext highlighter-rouge">alias_label</code>, if exists.</td>
     </tr>
   </tbody>
 </table>

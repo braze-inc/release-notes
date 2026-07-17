@@ -28,7 +28,7 @@ After adding locales to your workspace, you can [target users in different langu
 
 ### Configure width for drag-and-drop Content Blocks
 
-[Adjust the width of your Content Block](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/dnd_editor_blocks/#using-the-editor-to-add-a-content-block) by selecting the button in the navigation menu. The default width is 100% when not specified in your email global style settings; otherwise, the global settings will be honored.
+[Adjust the width of your Content Block](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks?sdktab=email) by selecting the button in the navigation menu. The default width is 100% when not specified in your email global style settings; otherwise, the global settings will be honored.
 
 ![A double-sided arrow with an option to edit the width.](https://www.braze.com/docs/assets/img_archive/content_block_width_updated.png?14e436ba0d3a6292dd5ef7e526dc2cde){: style="max-width:30%;" }
 

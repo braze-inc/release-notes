@@ -42,7 +42,7 @@ For shared styling and composition controls, see:
 
 
 - [In-app message drag-and-drop editor blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks/?sdktab=in-app%20messages)
-- [Landing page form blocks](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages/#form-blocks)
+- [Landing page form blocks](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages)
 
 
 You can add the following form blocks to surveys:

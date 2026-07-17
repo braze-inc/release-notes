@@ -1,4 +1,4 @@
-<div id='api_tzmiitbzyahm' class='api_div' data-search-keywords='prerequisites name preference_center_title preference_center_page_html confirmation_page_html state options rel type sizes color href'>
+<div id='api_xeyvtwdjwgvf' class='api_div' data-search-keywords='prerequisites name preference_center_title preference_center_page_html confirmation_page_html state options rel type sizes color href'>
 <h1 id="create-preference-center">Create preference center</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/preference_center/v1</p>
@@ -12,7 +12,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">preference_center.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">preference_center.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

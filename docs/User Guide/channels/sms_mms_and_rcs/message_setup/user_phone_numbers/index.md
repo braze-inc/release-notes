@@ -24,7 +24,7 @@ Here's a few examples showing the differences between local and `E.164` formatti
 
 When importing phone numbers, it's important that you follow the [recommended format](#recommended-format). To import phone numbers, use one of the following methods:
 
-- [Uploading a CSV to Braze](https://www.braze.com/docs/user_guide/audience/manage_audience/import_users#csv)
+- [Uploading a CSV to Braze](https://www.braze.com/docs/user_guide/audience/manage_audience/import_users#constructing-your-csv)
 - [Using the `/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track)
 
 **Important:**

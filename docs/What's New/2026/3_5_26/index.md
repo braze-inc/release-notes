@@ -34,7 +34,7 @@ Braze has launched a new [data center](https://www.braze.com/docs/user_guide/dat
 
 
 
-[Snowflake Data Share](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/currents_changelogs/#changes-for-data-sharing-3) now includes additional fields reflecting Campaign and Canvas information across 66 existing tables, including:
+[Snowflake Data Share](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/currents_changelogs) now includes additional fields reflecting Campaign and Canvas information across 66 existing tables, including:
 
 - `campaign_name`
 - `canvas_name`

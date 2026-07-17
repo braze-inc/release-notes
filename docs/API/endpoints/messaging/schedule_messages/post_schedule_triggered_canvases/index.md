@@ -1,4 +1,4 @@
-<div id='api_hakbknyyvkja' class='api_div' data-search-keywords='prerequisites canvas_id recipients audience broadcast context schedule time in_local_time at_optimal_time'>
+<div id='api_bqgbnsaohrzc' class='api_div' data-search-keywords='prerequisites canvas_id recipients audience broadcast context schedule time in_local_time at_optimal_time'>
 <h1 id="schedule-api-triggered-canvases">Schedule API-triggered Canvases</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/trigger/schedule/create</p>
@@ -10,13 +10,13 @@
 
 <p>You can pass in <code class="language-plaintext highlighter-rouge">context</code> that will be templated into the messages sent by the first steps of the Canvas.</p>
 
-<p>Note that to send messages with this endpoint, you must have a <a href="/docs/api/identifier_types#canvas-api-identifier">Canvas ID</a>, created when you build a Canvas.</p>
+<p>Note that to send messages with this endpoint, you must have a <a href="/docs/api/identifier_types#canvas-identifier">Canvas ID</a>, created when you build a Canvas.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4bc75890-b807-405d-b226-5aca284e6b7d" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.trigger.schedule.create</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">canvas.trigger.schedule.create</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

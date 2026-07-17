@@ -1,4 +1,4 @@
-<div id='api_zurtgbuzitwz' class='api_div' data-search-keywords='prerequisites app_id activity_id content_state end_activity dismissal_date stale_date notification message error'>
+<div id='api_tynhvoaqpydf' class='api_div' data-search-keywords='prerequisites app_id activity_id content_state end_activity dismissal_date stale_date notification message error'>
 <h1 id="update-live-activity">Update Live Activity</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/live_activity/update</p>
@@ -75,7 +75,7 @@
       <td><code class="language-plaintext highlighter-rouge">app_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>App <a href="/docs/api/identifier_types#the-app-identifier">API identifier</a> retrieved from the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers">API Keys</a> page.</td>
+      <td>App <a href="/docs/api/identifier_types#app-identifier">API identifier</a> retrieved from the <a href="/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers">API Keys</a> page.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">activity_id</code></td>

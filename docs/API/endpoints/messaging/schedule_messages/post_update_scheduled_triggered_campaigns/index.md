@@ -1,4 +1,4 @@
-<div id='api_lwabrgaejtfa' class='api_div' data-search-keywords='prerequisites campaign_id schedule_id schedule'>
+<div id='api_imwcyootyqwh' class='api_div' data-search-keywords='prerequisites campaign_id schedule_id schedule'>
 <h1 id="update-scheduled-api-triggered-campaigns">Update scheduled API-triggered campaigns</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/schedule/update</p>
@@ -20,7 +20,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key">API key</a> with the <code class="language-plaintext highlighter-rouge">campaigns.trigger.schedule.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">campaigns.trigger.schedule.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

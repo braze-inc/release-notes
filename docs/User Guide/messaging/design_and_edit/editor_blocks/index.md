@@ -561,7 +561,7 @@ Inserts a dropdown with a predefined list of items from which users can select o
 
 ### Checkbox
 
-Inserts a checkbox. If the user checks the box, the block's [boolean custom attribute](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes/#custom-attribute-data-types) is set to `true`. If left unchecked, its attribute is set to `false`.
+Inserts a checkbox. If the user checks the box, the block's [boolean custom attribute](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types) is set to `true`. If left unchecked, its attribute is set to `false`.
 
 | Property | Description |
 | --- | --- |
@@ -574,7 +574,7 @@ Inserts a checkbox. If the user checks the box, the block's [boolean custom attr
 
 ### Checkbox group
 
-Users can select from multiple choices. Values are set or added to a defined [array custom attribute](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes/#custom-attribute-data-types).
+Users can select from multiple choices. Values are set or added to a defined [array custom attribute](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types).
 
 | Property | Description |
 | --- | --- |
@@ -808,7 +808,7 @@ Adds vertical spacing between elements.
 
 ### Custom code
 
-Inserts custom HTML, CSS, or JavaScript for advanced customization, such as [Google Tag Manager](https://www.braze.com/docs/user_guide/messaging/landing_pages/#google-tag-manager).
+Inserts custom HTML, CSS, or JavaScript for advanced customization, such as [Google Tag Manager](https://www.braze.com/docs/user_guide/messaging/landing_pages#adding-google-tag-manager-to-a-landing-page).
 
 | Property | Description |
 | --- | --- |
@@ -897,7 +897,7 @@ A predefined list of items; users pick one. You can map values to custom attribu
 
 ### Checkbox
 
-When checked, sets the block's [boolean custom attribute](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes/#custom-attribute-data-types) to `true`; when unchecked, to `false`.
+When checked, sets the block's [boolean custom attribute](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types) to `true`; when unchecked, to `false`.
 
 | Property | Description |
 | --- | --- |
@@ -910,7 +910,7 @@ When checked, sets the block's [boolean custom attribute](https://www.braze.com/
 
 ### Checkbox group
 
-Users pick multiple options; values set or append to a defined [array custom attribute](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes/#custom-attribute-data-types).
+Users pick multiple options; values set or append to a defined [array custom attribute](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types).
 
 | Property | Description |
 | --- | --- |

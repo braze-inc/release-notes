@@ -1,4 +1,4 @@
-<div id='api_kuwymyikmcyh' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
+<div id='api_xypqivjkkgcf' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
 <h1 id="send-campaign-messages-using-api-triggered-delivery">Send campaign messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/send</p>
@@ -140,7 +140,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">recipients</code></td>
       <td>Optional</td>
       <td>Array</td>
-      <td>See <a href="/docs/api/objects_filters/recipient_object">recipients object</a>.<br /><br />If <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> is <code class="language-plaintext highlighter-rouge">false</code>, an <code class="language-plaintext highlighter-rouge">attributes</code> object must be included.<br /><br />You can update a user’s subscription group status by including <code class="language-plaintext highlighter-rouge">subscription_groups</code> in the nested <code class="language-plaintext highlighter-rouge">attributes</code> object. For more details, refer to <a href="/docs/api/objects_filters/user_attributes_object">User attributes object</a>.<br /><br />If <code class="language-plaintext highlighter-rouge">recipients</code> is not provided and <code class="language-plaintext highlighter-rouge">broadcast</code> is set to true, the message is sent to the entire segment configured as the campaign’s target audience in the Braze dashboard.<br /><br />If <code class="language-plaintext highlighter-rouge">email</code> is the identifier, you must include <a href="/docs/api/endpoints/user_data/post_user_identify#identifying-users-by-email"><code class="language-plaintext highlighter-rouge">prioritization</code></a> in the recipients object.</td>
+      <td>See <a href="/docs/api/objects_filters/recipient_object">recipients object</a>.<br /><br />If <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> is <code class="language-plaintext highlighter-rouge">false</code>, an <code class="language-plaintext highlighter-rouge">attributes</code> object must be included.<br /><br />You can update a user’s subscription group status by including <code class="language-plaintext highlighter-rouge">subscription_groups</code> in the nested <code class="language-plaintext highlighter-rouge">attributes</code> object. For more details, refer to <a href="/docs/api/objects_filters/user_attributes_object">User attributes object</a>.<br /><br />If <code class="language-plaintext highlighter-rouge">recipients</code> is not provided and <code class="language-plaintext highlighter-rouge">broadcast</code> is set to true, the message is sent to the entire segment configured as the campaign’s target audience in the Braze dashboard.<br /><br />If <code class="language-plaintext highlighter-rouge">email</code> is the identifier, you must include <a href="/docs/api/endpoints/user_data/post_user_identify#identifying-users-by-email-addresses-and-phone-numbers"><code class="language-plaintext highlighter-rouge">prioritization</code></a> in the recipients object.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attachments</code></td>
@@ -155,7 +155,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <p>This section discusses how Braze picks a user profile for sending and what happens when one profile is not selected.</p>
 
-<p>A user’s subscription group status can be updated using the inclusion of a <code class="language-plaintext highlighter-rouge">subscription_groups</code> parameter within the <code class="language-plaintext highlighter-rouge">attributes</code> object. For more details, refer to <a href="/docs/api/objects_filters/user_attributes_object#migrating-push-tokens">User attributes object</a>.</p>
+<p>A user’s subscription group status can be updated using the inclusion of a <code class="language-plaintext highlighter-rouge">subscription_groups</code> parameter within the <code class="language-plaintext highlighter-rouge">attributes</code> object. For more details, refer to <a href="/docs/api/objects_filters/user_attributes_object#migrate-push-tokens">User attributes object</a>.</p>
 
 <h4 id="recipient-limits-and-profile-creation">Recipient limits and profile creation</h4>
 
@@ -364,7 +364,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <p><strong>Tip:</strong></p>
 
-<p>Looking for the Canvas version of this endpoint? Check out <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases#create-send-endpoint">Sending Canvas messages using API-triggered delivery</a>.</p>
+<p>Looking for the Canvas version of this endpoint? Check out <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases#send-canvas-messages-using-api-triggered-delivery">Sending Canvas messages using API-triggered delivery</a>.</p>
 
 <h3 id="why-doesnt-liquid-render-when-i-put-it-directly-in-my-json-body">Why doesn’t Liquid render when I put it directly in my JSON body?</h3>
 

@@ -224,7 +224,7 @@ The [Push Performance dashboard](https://www.braze.com/docs/user_guide/analytics
 
 
 
-Catalogs now support distance-based filtering with the new geolocation field type and Catalog Selection operators. This helps you create more relevant location-aware experiences, such as showing each user their nearest restaurant, filtering open properties within 50 km for a real estate campaign, or targeting stores near a specific event. Instead of approximating geographic targeting with city or region codes, you can filter catalog items by proximity to a center point, including a Liquid user attribute such as a user's most recent location. For more information, see [Selections](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections#how-it-works).
+Catalogs now support distance-based filtering with the new geolocation field type and Catalog Selection operators. This helps you create more relevant location-aware experiences, such as showing each user their nearest restaurant, filtering open properties within 50 km for a real estate campaign, or targeting stores near a specific event. Instead of approximating geographic targeting with city or region codes, you can filter catalog items by proximity to a center point, including a Liquid user attribute such as a user's most recent location. For more information, see [Selections](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections).
 
 #### Banner and RCS for Report Builder
 
@@ -610,7 +610,7 @@ Braze has launched a new [data center](https://www.braze.com/docs/user_guide/dat
 
 
 
-[Snowflake Data Share](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/currents_changelogs/#changes-for-data-sharing-3) now includes additional fields reflecting Campaign and Canvas information across 66 existing tables, including:
+[Snowflake Data Share](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/currents_changelogs) now includes additional fields reflecting Campaign and Canvas information across 66 existing tables, including:
 
 - `campaign_name`
 - `canvas_name`
@@ -779,7 +779,7 @@ Built on a non-contextual multi-armed bandit optimizer, Content Optimizer sends 
 
 
 
-To match eCommerce recommended events with the existing purchase event, we added the ["Places Order" conversion event](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/ecommerce_use_cases/#conversions-report), which is similar to “Makes Purchase".
+To match eCommerce recommended events with the existing purchase event, we added the ["Places Order" conversion event](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/ecommerce_use_cases#conversions-dashboard), which is similar to “Makes Purchase".
 
 ### Channels & Touchpoints
 
@@ -787,11 +787,11 @@ To match eCommerce recommended events with the existing purchase event, we added
 
 
 
-After adding locales to your workspace, [target users in different languages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/#translating-locales) all within a single banner.
+After adding locales to your workspace, [target users in different languages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages#use-locales) all within a single banner.
 
 #### Configure width for drag-and-drop Content Blocks
 
-[Adjust the width of your Content Block](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/dnd_editor_blocks/#using-the-editor-to-add-a-content-block) by selecting the button in the navigation menu. The default width is 100% when not specified in your email global style settings; otherwise, the global settings will be honored.
+[Adjust the width of your Content Block](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks?sdktab=email) by selecting the button in the navigation menu. The default width is 100% when not specified in your email global style settings; otherwise, the global settings will be honored.
 
 ![A double-sided arrow with an option to edit the width.](https://www.braze.com/docs/assets/img_archive/content_block_width_updated.png?14e436ba0d3a6292dd5ef7e526dc2cde){: style="max-width:30%;" }
 

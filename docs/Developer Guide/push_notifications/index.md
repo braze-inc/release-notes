@@ -1516,8 +1516,8 @@ To use this feature, you'll need to complete the following:
 To set up push notifications for Android TV:
 
 1. Create a custom view in your app to display your notifications.
-2. Create a [custom notification factory](https://www.braze.com/docs/developer_guide/push_notifications/customization#customization-display). This will override the default SDK behavior and allow you to manually display the notifications. By returning `null`, this will prevent the SDK from processing and will require custom code to display the notification. After these steps have been completed, you can start sending push to Android TV!<br><br>
-3. (Optional) To track click analytics effectively, set up click analytics tracking. This can be achieved by creating a [push callback](https://www.braze.com/docs/developer_guide/push_notifications/customization#push-callback) to listen for Braze push opened and received intents.
+2. Create a [custom notification factory](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=android#android_customization-display). This overrides the default SDK behavior and allows you to manually display the notifications. By returning `null`, this prevents the SDK from processing and requires custom code to display the notification. After these steps have been completed, you can start sending push to Android TV!<br><br>
+3. (Optional) To track click analytics effectively, set up click analytics tracking. This can be achieved by creating a [push callback](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=android#android_push-callback) to listen for Braze push opened and received intents.
 
 **Note:**
 
@@ -1555,7 +1555,7 @@ Anytime you add, remove, or update your Cordova plugins, Cordova will overwrite 
 
 ## Enabling push deep linking
 
-By default, the Braze Cordova SDK doesn't automatically handle deep links from push notifications. To enable push deep linking, follow the configuration steps in [Deep linking](https://www.braze.com/docs/developer_guide/cordova/deep_linking/).
+By default, the Braze Cordova SDK doesn't automatically handle deep links from push notifications. To enable push deep linking, follow the configuration steps in [Deep linking](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking?sdktab=cordova).
 For more details about these and other push configuration options, see [Optional configurations](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=cordova#optional).
 
 ## Disabling basic push notifications (iOS only)
