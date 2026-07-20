@@ -62,7 +62,7 @@ The Canvas builder will guide you step-by-step through setting up your Canvas—
 
 ### Step 1.1: Start with your Canvas basics
 
-Here, you'll name your Canvas, assign [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams#teams), and create or add [Tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags#managing-tags). You can also assign conversion events for the Canvas.
+Here, you'll name your Canvas, assign [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams), and create or add [Tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags). You can also assign conversion events for the Canvas.
 
 **Tip:**
 

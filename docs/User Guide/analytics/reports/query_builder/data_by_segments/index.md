@@ -2,7 +2,7 @@
 
 > Use [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder) report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments.
 
-[Analytics tracking](https://www.braze.com/docs/user_guide/analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) must be turned on for the segments you want to access metrics for.
+[Analytics tracking](https://www.braze.com/docs/user_guide/analytics/tracking/segment_analytics_tracking) must be turned on for the segments you want to access metrics for.
 
 To run these reports, do the following:
 1. In **Query Builder**, choose to create a new SQL report with a template. 

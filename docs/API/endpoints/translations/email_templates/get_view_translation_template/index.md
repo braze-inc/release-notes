@@ -1,4 +1,4 @@
-<div id='api_jjgiexqsjmzy' class='api_div' data-search-keywords='prerequisites translations locale uuid name country language locale_key translation_map id_0 id_1 id_2 errors message'>
+<div id='api_ombefsffktvc' class='api_div' data-search-keywords='prerequisites translations locale uuid name country language locale_key translation_map id_0 id_1 id_2 errors message'>
 <h1 id="view-all-translations-and-locales-for-an-email-template">View all translations and locales for an email template</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/translations/</p>

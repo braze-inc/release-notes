@@ -20,7 +20,7 @@ When a new user signs up or registers on the website or app, ask for their phone
 
 After the user signs up, do the following:
 
-1. Use the [`/subscription/status/set` endpoint](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status#update-users-subscription-group-status) to create the user and save their attributes.
+1. Use the [`/subscription/status/set` endpoint](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status) to create the user and save their attributes.
 
 
 ```http
