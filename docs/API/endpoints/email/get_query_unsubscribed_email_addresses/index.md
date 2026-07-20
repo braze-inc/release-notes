@@ -1,4 +1,4 @@
-<div id='api_ywqzokmewlyj' class='api_div' data-search-keywords='prerequisites emails email unsubscribed_at message'>
+<div id='api_xvqepvajciip' class='api_div' data-search-keywords='prerequisites emails email unsubscribed_at message'>
 <h1 id="query-list-of-unsubscribed-email-addresses">Query list of unsubscribed email addresses</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/email/unsubscribes</p>

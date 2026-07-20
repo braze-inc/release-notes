@@ -69,7 +69,7 @@ Open your device settings and locate Braze Pilot. Then, update the settings to a
 
 
 
-You can use a Braze in-app message to request push permissions for the app, just like you would for your own consumers. To learn how to build this type of message in Braze, see [Push primer in-app messages](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages#push-primer-in-app-messages).
+You can use a Braze in-app message to request push permissions for the app, just like you would for your own consumers. To learn how to build this type of message in Braze, see [Push primer in-app messages](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages).
 
 <div class="imgDiv">
 <img src="/docs/assets/img/braze_pilot/push_primer1.png?3fd84b9ed75ed208e4d8e2cb2a3b5d71" style="max-width:40%">

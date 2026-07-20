@@ -1,4 +1,4 @@
-<div id='api_xypqivjkkgcf' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
+<div id='api_gxobkmuqeime' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
 <h1 id="send-campaign-messages-using-api-triggered-delivery">Send campaign messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/send</p>
@@ -364,7 +364,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <p><strong>Tip:</strong></p>
 
-<p>Looking for the Canvas version of this endpoint? Check out <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases#send-canvas-messages-using-api-triggered-delivery">Sending Canvas messages using API-triggered delivery</a>.</p>
+<p>Looking for the Canvas version of this endpoint? Check out <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases">Sending Canvas messages using API-triggered delivery</a>.</p>
 
 <h3 id="why-doesnt-liquid-render-when-i-put-it-directly-in-my-json-body">Why doesn’t Liquid render when I put it directly in my JSON body?</h3>
 

@@ -7,7 +7,7 @@
 Braze recommends that you only send customer data that you intend to utilize on the Braze platform. Consider the philosophy of the "Four T's of Braze" to ensure you only send data that you will use to:
 
 - **Target** your audiences by building [audience segments](https://www.braze.com/docs/user_guide/audience/segments).
-- **Trigger** your messages with [action-based](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery#action-based-delivery) or [API-triggered](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery) delivery.
+- **Trigger** your messages with [action-based](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery) or [API-triggered](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery) delivery.
 - **Template** and personalize your messages with [Liquid conditional logic](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid).
 - **Track** the efficacy of your campaigns with [conversion tracking](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events).
 

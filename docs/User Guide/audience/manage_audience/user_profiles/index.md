@@ -170,7 +170,7 @@ The following message engagement events are available for email, SMS, push, in-a
 
 ##### Message abort events
 
-Message abort events occur when a message sent to a user was aborted due to conditional logic in [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages) or [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/aborting_connected_content#aborting-connected-content), or from Liquid rendering timeouts.
+Message abort events occur when a message sent to a user was aborted due to conditional logic in [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages) or [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/aborting_connected_content), or from Liquid rendering timeouts.
 
 Abort events are available for the following channels:
 

@@ -55,7 +55,7 @@ Every example asks the model to return an `explanation` field alongside its outp
 
 <!--overview-end-->
 
-<div id='api_xraqosupyhvp' class='api_div' data-search-keywords='write personalized messaging based on a user’s context content generation, canvas step agent use this canvas step agent to generate coordinated email subject lines, preheaders, and push notification title and body copy for users who searched in the app but did not book. the goal is to retarget them in a canvas journey with localized, brand-safe messaging that drives checkout while respecting each channel’s character limits.'>
+<div id='api_bgwysliptrrb' class='api_div' data-search-keywords='write personalized messaging based on a user’s context content generation, canvas step agent use this canvas step agent to generate coordinated email subject lines, preheaders, and push notification title and body copy for users who searched in the app but did not book. the goal is to retarget them in a canvas journey with localized, brand-safe messaging that drives checkout while respecting each channel’s character limits.'>
 <h2 id="write-personalized-messaging-based-on-a-users-context">Write personalized messaging based on a user’s context</h2>
 
 <div class="api_tags" data-tags="Content generation, canvas step agent" data-tags-lower="content generation, canvas step agent"></div>
@@ -173,7 +173,7 @@ The user IS in the segment: “Logged multiple searches in the past 30D”.
 
 </div>
 
-<div id='api_prtjxopnccvs' class='api_div' data-search-keywords='analyze user feedback to determine next steps data standardization, canvas step agent this example describes how a canvas step agent can analyze user feedback from post-trip surveys and categorize sentiment and topics. the goal of this agent is to determine the next steps for a separate crm platform.'>
+<div id='api_njebcvavgzpb' class='api_div' data-search-keywords='analyze user feedback to determine next steps data standardization, canvas step agent this example describes how a canvas step agent can analyze user feedback from post-trip surveys and categorize sentiment and topics. the goal of this agent is to determine the next steps for a separate crm platform.'>
 <h2 id="analyze-user-feedback-to-determine-next-steps">Analyze user feedback to determine next steps</h2>
 
 <div class="api_tags" data-tags="Data standardization, canvas step agent" data-tags-lower="data standardization, canvas step agent"></div>
@@ -267,7 +267,7 @@ Input &amp; Output Example:
 
 </div>
 
-<div id='api_uyhxirkmrhtl' class='api_div' data-search-keywords='categorize users into interest buckets from existing attributes affinity agent, canvas step agent this example describes how a canvas step agent can classify users into specific interest buckets based on existing custom attributes and high-intent behavioral signals, then recommend the single best next experience or item. the goal is to route users to precisely targeted experiences—such as cart recovery or category-specific recommendations—grounded only in verified data, without hallucinating attributes that aren’t present.'>
+<div id='api_wesihbwmnhge' class='api_div' data-search-keywords='categorize users into interest buckets from existing attributes affinity agent, canvas step agent this example describes how a canvas step agent can classify users into specific interest buckets based on existing custom attributes and high-intent behavioral signals, then recommend the single best next experience or item. the goal is to route users to precisely targeted experiences—such as cart recovery or category-specific recommendations—grounded only in verified data, without hallucinating attributes that aren’t present.'>
 <h2 id="categorize-users-into-interest-buckets-from-existing-attributes">Categorize users into interest buckets from existing attributes</h2>
 
 <div class="api_tags" data-tags="Affinity agent, canvas step agent" data-tags-lower="affinity agent, canvas step agent"></div>
@@ -386,7 +386,7 @@ Recent Search: "cordless drill"
 
 </div>
 
-<div id='api_epkasychatuj' class='api_div' data-search-keywords='route users to the most relevant canvas path from recent behavior affinity agent, canvas step agent this example describes how a canvas step agent can infer a user’s current motivation from recent behavior and context—such as recent favorites or search history—and return the single best route key for their next step. the goal is to send each user down the most relevant canvas path without manual segmentation.'>
+<div id='api_dhfewngbeyqt' class='api_div' data-search-keywords='route users to the most relevant canvas path from recent behavior affinity agent, canvas step agent this example describes how a canvas step agent can infer a user’s current motivation from recent behavior and context—such as recent favorites or search history—and return the single best route key for their next step. the goal is to send each user down the most relevant canvas path without manual segmentation.'>
 <h2 id="route-users-to-the-most-relevant-canvas-path-from-recent-behavior">Route users to the most relevant Canvas path from recent behavior</h2>
 
 <div class="api_tags" data-tags="Affinity agent, canvas step agent" data-tags-lower="affinity agent, canvas step agent"></div>
@@ -490,7 +490,7 @@ Recently Engaged Products: Drill bits
 
 </div>
 
-<div id='api_hounpfzuevpu' class='api_div' data-search-keywords='assign users to interest categories from real-time high-intent actions affinity agent, canvas step agent this example describes how a canvas step agent can assign users to one to three interest categories based on recent high-intent actions and behavioral context (passed through canvas context), then recommend the single best next experience or item. the goal is to personalize the next step of a customer journey in real time using verified behavioral signals rather than assumptions.'>
+<div id='api_rtcndpwpvcve' class='api_div' data-search-keywords='assign users to interest categories from real-time high-intent actions affinity agent, canvas step agent this example describes how a canvas step agent can assign users to one to three interest categories based on recent high-intent actions and behavioral context (passed through canvas context), then recommend the single best next experience or item. the goal is to personalize the next step of a customer journey in real time using verified behavioral signals rather than assumptions.'>
 <h2 id="assign-users-to-interest-categories-from-real-time-high-intent-actions">Assign users to interest categories from real-time high-intent actions</h2>
 
 <div class="api_tags" data-tags="Affinity agent, canvas step agent" data-tags-lower="affinity agent, canvas step agent"></div>
@@ -614,7 +614,7 @@ Recent Search: "18v cordless drill"
 
 </div>
 
-<div id='api_uqhegsapfafw' class='api_div' data-search-keywords='classify inbound messages for opt-out intent classification and routing, canvas step agent this example describes how a canvas step agent can evaluate one inbound customer message at a time and return whether it should be treated as a request to opt out of future messaging (for example, stop, unsubscribe, or revoke consent). the goal is to output a strict boolean so you can branch journeys conservatively, reducing the risk of messaging after revocation while avoiding false positives when the user is clearly asking a question or continuing to engage.'>
+<div id='api_izyordpjwqmg' class='api_div' data-search-keywords='classify inbound messages for opt-out intent classification and routing, canvas step agent this example describes how a canvas step agent can evaluate one inbound customer message at a time and return whether it should be treated as a request to opt out of future messaging (for example, stop, unsubscribe, or revoke consent). the goal is to output a strict boolean so you can branch journeys conservatively, reducing the risk of messaging after revocation while avoiding false positives when the user is clearly asking a question or continuing to engage.'>
 <h2 id="classify-inbound-messages-for-opt-out-intent">Classify inbound messages for opt-out intent</h2>
 
 <div class="api_tags" data-tags="Classification and routing, canvas step agent" data-tags-lower="classification and routing, canvas step agent"></div>
@@ -734,7 +734,7 @@ Input: “This sucks—what’s the promo code?” → false
 
 </div>
 
-<div id='api_jgmaekspofdy' class='api_div' data-search-keywords='standardize inbound messages into structured data for automation data standardization, canvas step agent this example describes how a canvas step agent can normalize messy, unstructured inbound sms or chat replies into a consistent structured format—classifying intent, extracting entities, and flagging compliance signals such as opt-outs and pii. the goal is to give downstream automation and internal notifications clean, machine-readable data for reliable routing.'>
+<div id='api_ogmefciuudrd' class='api_div' data-search-keywords='standardize inbound messages into structured data for automation data standardization, canvas step agent this example describes how a canvas step agent can normalize messy, unstructured inbound sms or chat replies into a consistent structured format—classifying intent, extracting entities, and flagging compliance signals such as opt-outs and pii. the goal is to give downstream automation and internal notifications clean, machine-readable data for reliable routing.'>
 <h2 id="standardize-inbound-messages-into-structured-data-for-automation">Standardize inbound messages into structured data for automation</h2>
 
 <div class="api_tags" data-tags="Data standardization, canvas step agent" data-tags-lower="data standardization, canvas step agent"></div>
@@ -848,7 +848,7 @@ Raw message: "STOP sending me these texts!!!"
 
 </div>
 
-<div id='api_rzxblspcuggp' class='api_div' data-search-keywords='write high-converting descriptions that align with brand guidelines content generation, catalog agent this example describes how a catalog agent can leverage user data and brand guidelines. the goal of this catalog agent is to use brand guidelines to generate short descriptions for each travel destination and explanations for how the agent generated them.'>
+<div id='api_qvlrhpgcxayq' class='api_div' data-search-keywords='write high-converting descriptions that align with brand guidelines content generation, catalog agent this example describes how a catalog agent can leverage user data and brand guidelines. the goal of this catalog agent is to use brand guidelines to generate short descriptions for each travel destination and explanations for how the agent generated them.'>
 <h2 id="write-high-converting-descriptions-that-align-with-brand-guidelines">Write high-converting descriptions that align with brand guidelines</h2>
 
 <div class="api_tags" data-tags="Content generation, catalog agent" data-tags-lower="content generation, catalog agent"></div>
@@ -947,7 +947,7 @@ Price Tier: $$$
 
 </div>
 
-<div id='api_keibhprlznqp' class='api_div' data-search-keywords='provide translations based on language used by region catalog enrichment, catalog agent this example describes how a catalog agent can translate english ui and marketing strings into each region’s target language using catalog rows that define locale, ui placement, and character limits. the goal is to produce localized text you map back to your catalog columns, with explanations when shortening, locale choices, or manual review apply.'>
+<div id='api_anzsssqtqjew' class='api_div' data-search-keywords='provide translations based on language used by region catalog enrichment, catalog agent this example describes how a catalog agent can translate english ui and marketing strings into each region’s target language using catalog rows that define locale, ui placement, and character limits. the goal is to produce localized text you map back to your catalog columns, with explanations when shortening, locale choices, or manual review apply.'>
 <h2 id="provide-translations-based-on-language-used-by-region">Provide translations based on language used by region</h2>
 
 <div class="api_tags" data-tags="Catalog enrichment, catalog agent" data-tags-lower="catalog enrichment, catalog agent"></div>
@@ -1063,7 +1063,7 @@ Max Characters: 20
 
 </div>
 
-<div id='api_jhbkccvrhpzd' class='api_div' data-search-keywords='enrich catalog items with descriptions, categories, and tags catalog enrichment, catalog agent this example describes how a catalog agent can enhance existing catalog items by generating an improved product description (45–90 words), a standardized category, and a set of tags from the item’s existing data. the goal is to scale on-brand catalog enrichment across many products without manual copywriting, while avoiding hallucinated facts or prohibited claims.'>
+<div id='api_ykkgtxdqzntt' class='api_div' data-search-keywords='enrich catalog items with descriptions, categories, and tags catalog enrichment, catalog agent this example describes how a catalog agent can enhance existing catalog items by generating an improved product description (45–90 words), a standardized category, and a set of tags from the item’s existing data. the goal is to scale on-brand catalog enrichment across many products without manual copywriting, while avoiding hallucinated facts or prohibited claims.'>
 <h2 id="enrich-catalog-items-with-descriptions-categories-and-tags">Enrich catalog items with descriptions, categories, and tags</h2>
 
 <div class="api_tags" data-tags="Catalog enrichment, catalog agent" data-tags-lower="catalog enrichment, catalog agent"></div>
@@ -1166,7 +1166,7 @@ existing_category: "hydration"
 
 </div>
 
-<div id='api_rcujpjsyvmrl' class='api_div' data-search-keywords='standardize unstructured input with approximate catalog matching data standardization, canvas step agent this example describes how a canvas step agent can process unstructured user input—such as manually typed text with typos or variations—and use llm-assisted matching against catalog search results to standardize it against known catalog items. the goal is to identify what the user actually meant from their imperfect input, which is especially useful when liquid lookups cannot handle approximate matches.'>
+<div id='api_aldwsqpcvvah' class='api_div' data-search-keywords='standardize unstructured input with approximate catalog matching data standardization, canvas step agent this example describes how a canvas step agent can process unstructured user input—such as manually typed text with typos or variations—and use llm-assisted matching against catalog search results to standardize it against known catalog items. the goal is to identify what the user actually meant from their imperfect input, which is especially useful when liquid lookups cannot handle approximate matches.'>
 <h2 id="standardize-unstructured-input-with-approximate-catalog-matching">Standardize unstructured input with approximate catalog matching</h2>
 
 <div class="api_tags" data-tags="Data standardization, canvas step agent" data-tags-lower="data standardization, canvas step agent"></div>

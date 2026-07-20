@@ -43,7 +43,7 @@ In the case that a Canvas entry property is null or blank, you can abort message
 ```
 
 
-To read more about aborting messages with Liquid, check out our [Liquid documentation](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages#abort-messages).
+To read more about aborting messages with Liquid, check out our [Liquid documentation](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages).
 
 ## Global Canvas entry properties
 

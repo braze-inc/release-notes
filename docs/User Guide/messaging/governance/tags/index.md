@@ -51,4 +51,4 @@ This feature is currently in early access. Contact your customer success manager
 
 
 
-For information on renaming, removing, or nesting tags across your dashboard, see [Managing tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags#managing-tags).
+For information on renaming, removing, or nesting tags across your dashboard, see [Managing tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags).
