@@ -1,4 +1,4 @@
-<div id='api_dfrwxwydhpmb' class='api_div' data-search-keywords='prerequisites workflow_id step_id message_variation_id locale_id translation_map id_3 message errors'>
+<div id='api_mnhuqbkcjnab' class='api_div' data-search-keywords='prerequisites workflow_id step_id message_variation_id locale_id translation_map id_3 message errors'>
 <h1 id="update-translation-in-a-canvas">Update translation in a Canvas</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/canvas/translations</p>

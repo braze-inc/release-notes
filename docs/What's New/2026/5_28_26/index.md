@@ -26,7 +26,7 @@ The [`ecommerce.cart_updated` event](https://www.braze.com/docs/user_guide/data/
 
 
 
-You can use [Content Optimizer](https://www.braze.com/docs/user_guide/brazeai/content_optimizer) to optimize hooks, bodies, and CTAs for SMS, MMS, and RCS messages. Content Optimizer is an agent that helps you test and optimize message content at scale, using AI to generate and evaluate high volumes of content variants automatically.
+You can use [Content Optimizer](https://www.braze.com/docs/user_guide/brazeai/content_optimizer) to optimize hooks, bodies, and CTAs for SMS, MMS, and RCS messages. Content Optimizer helps you test and optimize message content at scale, using AI to generate and evaluate high volumes of content variants automatically.
 
 ## Orchestration
 

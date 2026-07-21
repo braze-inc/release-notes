@@ -1,4 +1,4 @@
-<div id='api_mxgpeqrqaqxe' class='api_div' data-search-keywords='prerequisites email subscription_state'>
+<div id='api_yehlgcmngiok' class='api_div' data-search-keywords='prerequisites email subscription_state'>
 <h1 id="change-email-subscription-status">Change email subscription status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/status</p>
