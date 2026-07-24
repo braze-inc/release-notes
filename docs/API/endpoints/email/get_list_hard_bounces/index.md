@@ -1,4 +1,4 @@
-<div id='api_otxhemvpycru' class='api_div' data-search-keywords='prerequisites emails email hard_bounced_at message'>
+<div id='api_iqfokggtkbof' class='api_div' data-search-keywords='prerequisites emails email hard_bounced_at message'>
 <h1 id="query-hard-bounced-emails">Query hard bounced emails</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/email/hard_bounces</p>

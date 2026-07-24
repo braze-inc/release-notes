@@ -32,6 +32,13 @@ To create and manage custom attributes in the dashboard, go to **Data Settings**
 
 The **Last updated** column lists the last time the custom attribute was edited, such as when it was last set to blocklist or active.
 
+**Note:**
+
+
+If an array custom attribute appears on a user profile without values, verify that the attribute's **Max Length** is greater than `0`. For step-by-step troubleshooting, see [Data types](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#arrays).
+
+
+
 **Important:**
 
 

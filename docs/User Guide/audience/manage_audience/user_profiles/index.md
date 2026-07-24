@@ -143,7 +143,7 @@ The data in this tab isn't updated after a user is merged. Additionally, any eve
 **Important:**
 
 
-RCS events aren't currently supported in the **Messaging History** tab.
+In the **Messaging History** tab, RCS events are included with SMS events. RCS events don't appear separately.
 
 
 

@@ -22,6 +22,7 @@ The following changes were made to Currents in Version 4:
 * Field changes to event type `users.messages.rcs.Rejection`:
     * Added new `string` field `canvas_step_message_variation_id`: API ID of the Canvas step message variation this user received
 
+
 Refer to the [Currents changelog](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/currents_changelogs) for the event changes for each release.
 
 ### Export sync logs by all rows
@@ -71,3 +72,4 @@ The latest SDK updates have been released. Breaking updates are listed in the SD
     - Removes News Feed.
         - This fully removes all UI elements, data models, and actions associated with News Feed.
 - [Web SDK 6.4.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+

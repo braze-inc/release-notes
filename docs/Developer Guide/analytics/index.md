@@ -138,6 +138,13 @@ abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta',
 
 The default and maximum number of elements in an array is 500. You can update the maximum number of arrays in the Braze dashboard, under **Data Settings** > **Custom Attributes**. Arrays exceeding the maximum number of elements are truncated to contain the maximum number of elements.
 
+**Note:**
+
+
+If an array custom attribute appears on a user profile but shows no values, check the attribute's **Max Length** in **Data Settings** > **Custom Attributes**. A **Max Length** of `0` prevents values from displaying on the profile. For troubleshooting steps, see [Custom attribute data types](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#arrays).
+
+
+
 The following table describes available segmentation options for array attributes.
 
 | Segmentation Options | Dropdown Filter | Input Options |

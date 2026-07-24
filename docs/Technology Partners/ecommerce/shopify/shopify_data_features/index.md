@@ -437,6 +437,14 @@ The Shopify integration uses [eCommerce recommended events](https://www.braze.co
 
 
 
+**Note:**
+
+
+Braze relies on Shopify to provide required event properties (such as `cart_id` or `cart_token`) for eCommerce events. In rare cases, temporary issues with Shopify may cause these properties to be missed, which can cause affected events to be dropped.
+
+
+
+
 
 **Event**: `ecommerce.product_viewed`<br>
 **Type**: Recommended event<br>

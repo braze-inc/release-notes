@@ -137,7 +137,8 @@ Once you've finished designing and building your email message, it's time to add
 1. Under **Sending Info**, select an email as the **From Display Name + Address**. You can also customize this by selecting **Customize From Display Name + Address**.
 2. Select an email as the **Reply-To Address**. You can also customize this by selecting **Customize Reply-To Address**.
 3. Next, select an email as the **BCC Address** to make your email visible to this address.
-4. Add a subject line to your email. Optionally, you can also add a preheader and a whitespace after the preheader.
+4. Add a subject line to your email. Optionally, you can also add a preheader. To add whitespace after the preheader, select the **Add whitespace after preheader** checkbox.
+
 
 
 
@@ -156,8 +157,16 @@ A preview in the right-hand panel will populate with the sending information you
 In **Sending Settings** > **Advanced**, you can add email attachments by the following methods:
 
 - **Upload a file:** Drag and drop or browse to upload a file directly from your computer to the email. Braze validates the file type and size (up to 2&nbsp;MB by default) before uploading, then these files are uploaded to the media library. Files that are larger than 2&nbsp;MB limit cannot be uploaded.
-- **Use the media library:** Browse and select from assets already stored in the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library). PDFs, Word documents, Excel files, and PowerPoint presentations are all supported. 
-- **Add from URL:** Enter a URL pointing to the file and provide a display filename. Because Braze cannot probe arbitrary URLs for size during email composition, the file size is enforced at send time. Note that Liquid is not supported in this field.
+- **Use the media library:** Browse and select from assets already stored in the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library). PDFs, Word documents, Excel files, and PowerPoint presentations are all supported.
+- **Add from URL:** Enter a URL pointing to the file and provide a display filename. Because Braze cannot probe arbitrary URLs for size during email composition, the file size is enforced at send time. 
+
+**Note:**
+
+
+Liquid is not supported in the **Add from URL** field.
+
+
+
 
 Refer to [Email guidelines](https://www.braze.com/docs/user_guide/channels/email/best_practices/email_guidelines) for specific best practices to consider.
 

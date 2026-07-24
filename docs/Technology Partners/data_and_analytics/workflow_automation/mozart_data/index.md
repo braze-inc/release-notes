@@ -13,6 +13,7 @@ The Braze and Mozart Data integration allows you to:
 - Combine Braze data with other applications data to gain a more holistic understanding of user behaviors
 - Integrate with a business intelligence tool to further explore the data that is stored in Snowflake
 
+
 ## Prerequisites
 
 <style>

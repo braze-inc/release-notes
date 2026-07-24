@@ -55,8 +55,7 @@ sequenceDiagram
 
 ```
 
-
-### Step 1: Configuring your Google Cloud API key
+### Step 1: Configure your Google Cloud API key
 
 In developing your app, you'll need to provide the Braze Android SDK with your Firebase sender ID. Additionally, you'll need to provide an API Key for server applications to the Braze dashboard. Braze will use this API key to send messages to your devices. You will also need to check that FCM service is enabled in Google Developer's console. 
 
@@ -71,23 +70,23 @@ A common mistake during this step is using the app identifier API key instead of
 
 In typical integrations, the Braze Android SDK will handle registering devices for FCM capability. This will usually happen immediately upon opening the app for the first time. After registration, Braze will be provided with an FCM Registration ID, which is used to send messages to that device specifically. We will store the Registration ID for that user, and that user will become "push registered" if they previously did not have a push token for any of your apps.
 
-### Step 3: Launching a Braze push campaign
+### Step 3: Launch a Braze push campaign
 
-When a push campaign is launched, Braze will make requests to FCM to deliver your message. Braze will use the API key copied in the dashboard to authenticate and verify that we can send push notifications to the push tokens provided.
+When a push campaign is launched, Braze makes requests to FCM to deliver your message. Braze uses the API key copied in the dashboard to authenticate and verify that we can send push notifications to the push tokens provided.
 
-### Step 4: Removing invalid tokens
+### Step 4: Remove invalid tokens
 
 If FCM informs us that any of the push tokens we were attempting to send a message to are invalid, we remove those tokens from the user profiles they were associated with. If users have no other push tokens, they will no longer show up as "Push Registered" under the **Segments** page.
 
 For more details about FCM, visit [Cloud messaging](https://firebase.google.com/docs/cloud-messaging/).
 
-## Utilizing the push error logs
+## Use the push error logs
 
-Braze provides push notification errors within the message activity log. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
+Braze provides push notification errors within the message activity log. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Selecting an error message redirects you to relevant documentation to help you troubleshoot a particular incident.
 
 ![Braze message activity log showing push notification error entries.](https://www.braze.com/docs/assets/img_archive/message_activity_log.png?6577302323ab3f2df3196a973320b8d3)
 
-## Troubleshooting scenarios
+## Troubleshooting
 
 ### Push isn't sending
 
@@ -120,7 +119,12 @@ We recommend setting a breakpoint or logging to confirm that the FCM-generated p
 
 For FCM push to work, Google Play Services must be present on the device. If Google Play Services isn't on a device, push registration will not occur.
 
-**Note:** Google Play Services is not installed on Android emulators without Google APIs installed.
+**Note:**
+
+
+Google Play Services is not installed on Android emulators without Google APIs installed.
+
+
 
 #### Device not connected to the internet
 
@@ -147,8 +151,6 @@ If a push notification isn't delivered, make sure it didn't bounce by looking in
 1. Make sure to pass a valid push token to Braze from [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token).
 
 #### Error: NotRegistered
-
-1. `NotRegistered` typically occurs when an app has been deleted from a device. Braze uses `NotRegistered` internally to signal that an app has been uninstalled from a device.
 
 2. `NotRegistered` may also occur when multiple registrations occur and a second registration invalidates the first token.
 
@@ -197,9 +199,11 @@ The Firebase Cloud Messaging server key provided in the Braze dashboard is inval
 
 ### Push clicks not logged
 
-Braze logs push clicks automatically, so this scenario should be comparatively rare.
+If push clicks are not being logged, it is possible that push click data has not been flushed to our servers yet. The Braze Android SDK may throttle flushes.
 
-If push clicks are not being logged, it is possible that push click data has not been flushed to our servers yet. Braze throttles the frequency of its flushes based on the strength of the network connection. With a good network connection, push click-data should arrive at the server within a minute in most circumstances.
+If you implemented a custom push handler, ensure that you are appropriately [preserving native push analytics](https://www.braze.com/docs/developer_guide/push_notifications/logging_message_data/?tab=android#preserving-native-push-analytics-with-custom-push-handling)
+
+Logging push clicks is a network operation and is bound by networking limitations. As such, while the Braze Android SDK attempts to accommodate for network failures and will retry failed requests, some event loss is to be expected.
 
 ### Deep links not working
 
@@ -235,11 +239,12 @@ The Apple Push Notification service (APNs) is the infrastructure for sending pus
 3. You launch a Braze push campaign
 4. Braze removes invalid tokens
 
+
 ### Step 1: Configuring the push certificate and provisioning profile
 
-In developing your app, you'll need to create an SSL certificate to enable push notifications. This certificate will be included in the provisioning profile your app is built with and will also need to be uploaded to the Braze dashboard. The certificate allows Braze to tell APNs that we are allowed to send push notifications on your behalf.
+To develop your app, create an SSL certificate to enable push notifications. This certificate is included in the provisioning profile your app is built with and must also be uploaded to the Braze dashboard. The certificate allows Braze to tell APNs that it is authorized to send push notifications on your behalf.
 
-There are two types of [provisioning profiles](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) and certificates: development and distribution. We recommend just using distribution profiles and certificates to avoid any confusion. If you choose to use different profiles and certificates for development and distribution, ensure that the certificate uploaded to the dashboard matches the provisioning profile you are currently using.
+There are two types of [provisioning profiles](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html) and certificates: development and distribution. We recommend using only distribution profiles and certificates to avoid any confusion. If you choose to use different profiles and certificates for development and distribution, ensure that the certificate uploaded to the dashboard matches the provisioning profile you are currently using.
 
 **Warning:**
 
@@ -250,7 +255,7 @@ Do not change the push certificate environment (development versus production). 
 
 ### Step 2: Devices register for APNs and provide Braze with push tokens
 
-When users open your app, they will be prompted to accept push notifications. If they accept this prompt, APNs will generate a push token for that particular device. The Swift SDK will immediately and asynchronously send up the push token for apps using the default [automatic flush policy](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/fine_network_traffic_control/#automatic-request-processing). After we have a push token associated with a user, they will show as "Push Registered" in the dashboard on their user profile under the **Engagement** tab and will be eligible to receive push notifications from Braze campaigns.
+When users open your app, they are prompted to accept push notifications. If they accept this prompt, APNs generates a push token for that particular device. The Swift SDK immediately and asynchronously sends the push token for apps using the default [automatic flush policy](https://www.braze.com/docs/developer_guide/platforms/legacy_sdks/ios/advanced_use_cases/fine_network_traffic_control#automatic-request-processing). After we have a push token associated with a user, they show as "Push Registered" in the dashboard on their user profile under the **Engagement** tab and are eligible to receive push notifications from Braze campaigns.
 
 **Note:**
 
@@ -261,19 +266,19 @@ Starting in macOS 13, on certain devices, you can test push notifications on an 
 
 #### Considerations for push token generation
 
-- If users install your app on another device, another token will be created and captured in the same way. 
-- If users reinstall your app, a new token will be generated and passed to Braze. However, the original token may still be logged as valid by APNs and Braze.
-- If users uninstall your app, Braze doesn't get immediately notified of this and the token will still appear as valid until it is retired by APNs. 
-- At some point, APNs will retire old tokens. Braze doesn't have control or visibility of this. 
+- If users install your app on another device, Braze creates and captures another token the same way.
+- If users reinstall your app, the SDK generates a new token and passes it to Braze. However, APNs and Braze may still log the original token as valid.
+- If users uninstall your app, Braze does not immediately receive a notification, and the token still appears as valid until APNs retires it.
+- At some point, APNs retires old tokens. Braze does not control or have visibility into this.
 
 ### Step 3: Launching a Braze push campaign
 
-When a push campaign is launched, Braze will make requests to APNs to deliver your message. Specifically, the requests are passed to APNs for each current valid push token unless **Send to a user's most recent device** is selected. After Braze receives a successful response from APNs, we will log a successful delivery on the user profile, though the user may not have received the actual message for reasons including:
+When a push campaign is launched, Braze makes requests to APNs to deliver your message. Specifically, the requests are passed to APNs for each current valid push token unless **Send to a user's most recent device** is selected. After Braze receives a successful response from APNs, Braze logs a successful delivery on the user profile, though the user may not have received the actual message for reasons including:
 - Their device is powered off.
 - Their device isn't connected to the internet (Wi-Fi or cellular).
 - They recently uninstalled the app.
 
-Braze will use the SSL push certificate uploaded in the dashboard to authenticate and verify that we are allowed to send push notifications to the push tokens provided. If a device is online, the notification should be received shortly after the campaign has been sent. Note that Braze sets the default APNs [expiration date](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns#2947607) for notifications to 30 days.
+Braze uses the SSL push certificate uploaded in the dashboard to authenticate and verify that it is authorized to send push notifications to the push tokens provided. If a device is online, the notification should be received shortly after the campaign has been sent. Note that Braze sets the default APNs [expiration date](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns#2947607) for notifications to 30 days.
 
 ### Step 4: Removing invalid tokens
 
@@ -288,7 +293,7 @@ It's normal for APNs to initially return a success status even if a token become
 
 ## Using the push error logs
 
-The [Message Activity Log](https://www.braze.com/docs/user_guide/administrative/app_settings/message_activity_log_tab/) gives you the opportunity to see any messages (especially error messages) associated with your campaigns and sends, including push notification errors. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
+The [Message Activity Log](https://www.braze.com/docs/user_guide/administrative/app_settings/message_activity_log_tab/) lets you see any messages (especially error messages) associated with your campaigns and sends, including push notification errors. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Selecting an error message redirects you to relevant documentation to help you troubleshoot a particular incident.
 
 ![Push error logs displaying the time the error occurred, the app name, the channel, error type, and error message.](https://www.braze.com/docs/assets/img_archive/message_activity_log.png?6577302323ab3f2df3196a973320b8d3)
 
@@ -302,8 +307,8 @@ In addition, Braze also provides a push changelog on the user profile under the 
 
 #### Received unregistered sending to push token {#received-unregistered-sending}
 
-- Make sure that the push token being sent to Braze from the method `AppDelegate.braze?.notifications.register(deviceToken:)` is valid. You can look in the **Message Activity Log** to see the push token. It should look something like `6e407a9be8d07f0cdeb9e724733a89445f57a89ec890d63867c482a483506fa6`, a long string containing a mix of letters and numbers. If your push token looks different, check your [code](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze) for sending Braze the push tokens.
-- Ensure that your push provisioning profile matches the environment you're testing. Universal certificates may be configured in the Braze dashboard to send to either the development or production APNs environment. Using a development certificate for a production app or a production certificate for a development app will not work.
+- Make sure that the push token being sent to Braze from the method `AppDelegate.braze?.notifications.register(deviceToken:)` is valid. You can look in the **Message Activity Log** to see the push token. It should look something like `6e407a9be8d07f0cdeb9e724733a89445f57a89ec890d63867c482a483506fa6`, a long string containing a mix of letters and numbers. If your push token looks different, check your [code](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift#swift_step-32-register-push-tokens-with-braze) for sending Braze the push tokens.
+- Ensure that your push provisioning profile matches the environment you're testing. Universal certificates may be configured in the Braze dashboard to send to either the development or production APNs environment. Using a development certificate for a production app or a production certificate for a development app does not work.
  - Check that the push token you have uploaded to Braze matches the provisioning profile you used to build the app you sent the push token from.
 
 #### Device token not for topic
@@ -331,6 +336,7 @@ The `BadDeviceToken` is an APNs error code and does not originate from Braze. Th
 - Apple refreshed the push token, which invalidated the old token.
 - The app was built for a production environment, but the push credentials uploaded to Braze are set for a development environment (or the other way around).
 
+
 ## Push registration issues
 
 ### No push registration prompt
@@ -347,8 +353,8 @@ Ensure that your app is correctly configured to allow push notifications. Common
     1. In Xcode, navigate to **Preferences > Accounts** (or use the keyboard shortcut <kbd>Command</kbd>+<kbd>,</kbd>).
     2. Select the Apple ID you use for your developer account and click **View Details**.
     3. On the next page, click **<i class="fas fa-redo-alt"></i> Refresh** and confirm that you're pulling all available provisioning profiles.
-- Check you have [properly enabled push capability](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-2-enable-push-capabilities) in your app.
-- Check your push provisioning profile matches the environment you're testing in. Universal certificates may be configured in the Braze dashboard to send to either the development or production APNs environment. Using a development certificate for a production app or a production certificate for a development app will not work.
+- Check you have [properly enabled push capability](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift#swift_step-2-enable-push-capabilities) in your app.
+- Check your push provisioning profile matches the environment you're testing in. Universal certificates may be configured in the Braze dashboard to send to either the development or production APNs environment. Using a development certificate for a production app or a production certificate for a development app does not work.
 - Check that you are calling our `registerPushToken` method by setting a breakpoint in your code.
 - Make sure you're testing using a device (push will not work on a simulator) and have good network connectivity.
 
@@ -390,8 +396,8 @@ The following would indicate a problem with push registration or that the user's
 
 ## Push clicks not logged {#push-clicks-not-logged}
 
-- Make sure you have followed the [push integration steps](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling).
-- Braze does not handle push notifications received silently in the foreground (default foreground push behavior prior to the `UserNotifications` framework). This means that links will not be opened,  and push clicks will not be logged. If your application has not yet integrated the `UserNotifications` framework, Braze will not handle push notifications when the application state is `UIApplicationStateActive`. Ensure that your app does not delay calls to [push handling methods](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling); otherwise, the Swift SDK may treat push notifications as silent foreground push events and not handle them.
+- Make sure you have followed the [push integration steps](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift#swift_step-33-enable-push-handling).
+- Braze does not handle push notifications received silently in the foreground (default foreground push behavior prior to the `UserNotifications` framework). This means that links will not be opened,  and push clicks will not be logged. If your application has not yet integrated the `UserNotifications` framework, Braze will not handle push notifications when the application state is `UIApplicationStateActive`. Ensure that your app does not delay calls to [push handling methods](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift#swift_step-33-enable-push-handling); otherwise, the Swift SDK may treat push notifications as silent foreground push events and not handle them.
 
 ## Deep links not working
 
@@ -399,14 +405,13 @@ For comprehensive troubleshooting across all channels—including universal link
 
 ### Web links from push clicks not opening
 
-Links in push notifications need to be ATS compliant to be opened in web views. Ensure that your web links use HTTPS. For more information, refer to [ATS compliance](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#app-transport-security-ats).
+Links in push notifications need to be ATS compliant to be opened in web views. Ensure that your web links use HTTPS. For more information, refer to [ATS compliance](https://www.braze.com/docs/developer_guide/platforms/legacy_sdks/ios/advanced_use_cases/linking#app-transport-security-ats).
 
 ### Deep links from push clicks not opening
 
 Most of the code that handles deep links also handles push opens. First, ensure that push opens are being logged. If not, fix that issue (as the fix often fixes link handling).
 
 If opens are being logged, check whether it is an issue with the deep link in general or with the deep linking push click handling. To do this, test to see if a deep link from an in-app message click works.
-
 
 
 
@@ -450,8 +455,7 @@ sequenceDiagram
 
 ```
 
-
-### Step 1: Configuring your Google Cloud API key
+### Step 1: Configure your Google Cloud API key
 
 In developing your app, you'll need to provide the Braze Android SDK with your Firebase sender ID. Additionally, you'll need to provide an API Key for server applications to the Braze dashboard. Braze will use this API key to send messages to your devices. You will also need to check that FCM service is enabled in Google Developer's console. 
 
@@ -466,23 +470,23 @@ A common mistake during this step is using the app identifier API key instead of
 
 In typical integrations, the Braze Android SDK will handle registering devices for FCM capability. This will usually happen immediately upon opening the app for the first time. After registration, Braze will be provided with an FCM Registration ID, which is used to send messages to that device specifically. We will store the Registration ID for that user, and that user will become "push registered" if they previously did not have a push token for any of your apps.
 
-### Step 3: Launching a Braze push campaign
+### Step 3: Launch a Braze push campaign
 
-When a push campaign is launched, Braze will make requests to FCM to deliver your message. Braze will use the API key copied in the dashboard to authenticate and verify that we can send push notifications to the push tokens provided.
+When a push campaign is launched, Braze makes requests to FCM to deliver your message. Braze uses the API key copied in the dashboard to authenticate and verify that we can send push notifications to the push tokens provided.
 
-### Step 4: Removing invalid tokens
+### Step 4: Remove invalid tokens
 
 If FCM informs us that any of the push tokens we were attempting to send a message to are invalid, we remove those tokens from the user profiles they were associated with. If users have no other push tokens, they will no longer show up as "Push Registered" under the **Segments** page.
 
 For more details about FCM, visit [Cloud messaging](https://firebase.google.com/docs/cloud-messaging/).
 
-## Utilizing the push error logs
+## Use the push error logs
 
-Braze provides push notification errors within the message activity log. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
+Braze provides push notification errors within the message activity log. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Selecting an error message redirects you to relevant documentation to help you troubleshoot a particular incident.
 
 ![Braze message activity log showing push notification error entries.](https://www.braze.com/docs/assets/img_archive/message_activity_log.png?6577302323ab3f2df3196a973320b8d3)
 
-## Troubleshooting scenarios
+## Troubleshooting
 
 ### Push isn't sending
 
@@ -515,7 +519,12 @@ We recommend setting a breakpoint or logging to confirm that the FCM-generated p
 
 For FCM push to work, Google Play Services must be present on the device. If Google Play Services isn't on a device, push registration will not occur.
 
-**Note:** Google Play Services is not installed on Android emulators without Google APIs installed.
+**Note:**
+
+
+Google Play Services is not installed on Android emulators without Google APIs installed.
+
+
 
 #### Device not connected to the internet
 
@@ -542,8 +551,6 @@ If a push notification isn't delivered, make sure it didn't bounce by looking in
 1. Make sure to pass a valid push token to Braze from [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token).
 
 #### Error: NotRegistered
-
-1. `NotRegistered` typically occurs when an app has been deleted from a device. Braze uses `NotRegistered` internally to signal that an app has been uninstalled from a device.
 
 2. `NotRegistered` may also occur when multiple registrations occur and a second registration invalidates the first token.
 
@@ -592,9 +599,11 @@ The Firebase Cloud Messaging server key provided in the Braze dashboard is inval
 
 ### Push clicks not logged
 
-Braze logs push clicks automatically, so this scenario should be comparatively rare.
+If push clicks are not being logged, it is possible that push click data has not been flushed to our servers yet. The Braze Android SDK may throttle flushes.
 
-If push clicks are not being logged, it is possible that push click data has not been flushed to our servers yet. Braze throttles the frequency of its flushes based on the strength of the network connection. With a good network connection, push click-data should arrive at the server within a minute in most circumstances.
+If you implemented a custom push handler, ensure that you are appropriately [preserving native push analytics](https://www.braze.com/docs/developer_guide/push_notifications/logging_message_data/?tab=android#preserving-native-push-analytics-with-custom-push-handling)
+
+Logging push clicks is a network operation and is bound by networking limitations. As such, while the Braze Android SDK attempts to accommodate for network failures and will retry failed requests, some event loss is to be expected.
 
 ### Deep links not working
 

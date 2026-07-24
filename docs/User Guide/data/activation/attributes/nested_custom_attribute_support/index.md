@@ -16,6 +16,7 @@ In the following example, the custom attribute `favorite_book` contains the nest
 }
 ```
 
+
 ## Supported data types
 
 The following data types are supported:

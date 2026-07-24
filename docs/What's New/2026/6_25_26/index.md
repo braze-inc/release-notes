@@ -41,6 +41,7 @@ The standalone BrazeAI assistants found throughout the dashboard are unified int
 - Content QA with AI
 - AI Copilot for Data Transformations
 
+
 The existing entry points remain where each legacy assistant button used to live. Instead of opening a standalone assistant, these entry points now open the Operator pane with dynamic prompts that are pre-scoped to your task. These entry points provide a direct route into Operator so you can use these capabilities without adjusting your existing workflows.
 
 ### Operator support for campaign creation and editing
@@ -52,6 +53,7 @@ This functionality is available from the **Campaigns** page or from within any e
 - Respond to prompts such as "I want to send our lapsed users a push notification with a 20% off promo code the next time they open the app or log a custom event that cancels their subscription".
 - Assist you in each individual step of the campaign wizard, with full visibility into what you're working on and the ability to change form inputs on the page.
 - Navigate to the correct step in the wizard to begin taking action, whether you start from an open campaign or the **Campaigns** page.
+
 
 ### Operator support for Content Blocks
 
@@ -74,6 +76,7 @@ You can do the following in the [Agent Console](https://www.braze.com/docs/user_
 - Set required input fields for a Catalog agentic field, so that the agent doesn't run if a required input field value is empty or missing.
 - Re-run an agent for all empty cells of an agentic column to fill any missing values without re-running the entire column.
 
+
 ### Edit a launched Content Optimizer step
 
 
@@ -82,7 +85,8 @@ After your Canvas is launched, you can now [update a Content Optimizer step](htt
 
 - Add new variants to any existing component, either manually or using AI-generated suggestions, up to the five-variant limit per component.
 - Deactivate variants to stop sending them to users.
-- Re-activate previously deactivated variants, as long as doing so keeps the component at or under the five-variant limit.
+- Re-activate previously deactivated variants, as long as doing so keeps the component at or below the five-variant limit.
+
 
 ## Channels & Touchpoints
 

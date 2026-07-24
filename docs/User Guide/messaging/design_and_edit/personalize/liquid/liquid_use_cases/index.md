@@ -1,4 +1,4 @@
-<div id='api_kchngfsbcqzx' class='api_div' data-search-keywords='anniversaries and holidays anniversaries and holidays'>
+<div id='api_uoqyxahkprch' class='api_div' data-search-keywords='anniversaries and holidays anniversaries and holidays'>
 <h2 id="anniversaries-and-holidays">Anniversaries and holidays</h2>
 
 <div class="api_tags" data-tags="Anniversaries and holidays" data-tags-lower="anniversaries and holidays"></div>
@@ -164,7 +164,7 @@ Message if today isn't one of the provided holidays.
 
 </div>
 
-<div id='api_hkhvfmakgzct' class='api_div' data-search-keywords='app usage app usage'>
+<div id='api_fhdwfhcqfysm' class='api_div' data-search-keywords='app usage app usage'>
 <h2 id="app-usage">App usage</h2>
 
 <div class="api_tags" data-tags="App usage" data-tags-lower="app usage"></div>
@@ -269,7 +269,7 @@ Message for a less active user
 
 </div>
 
-<div id='api_oqtaqehsezkw' class='api_div' data-search-keywords='countdowns countdowns'>
+<div id='api_wlrjgjuhfavb' class='api_div' data-search-keywords='countdowns countdowns'>
 <h2 id="countdowns">Countdowns</h2>
 
 <div class="api_tags" data-tags="Countdowns" data-tags-lower="countdowns"></div>
@@ -721,7 +721,7 @@ Hi, the offer is only valid today.
 
 </div>
 
-<div id='api_rgcqxkuwlhjp' class='api_div' data-search-keywords='custom attribute custom attribute'>
+<div id='api_yoszdlkmbiis' class='api_div' data-search-keywords='custom attribute custom attribute'>
 <h2 id="custom-attribute">Custom attribute</h2>
 
 <div class="api_tags" data-tags="Custom attribute" data-tags-lower="custom attribute"></div>
@@ -803,7 +803,7 @@ Hi <span class="cp">{{</span><span class="nv">name</span><span class="p">[</span
 
 </div>
 
-<div id='api_okmdktgdlanl' class='api_div' data-search-keywords='custom event custom event attributes external_id'>
+<div id='api_apkkusmqvqxb' class='api_div' data-search-keywords='custom event custom event attributes external_id'>
 <h2 id="custom-event">Custom event</h2>
 
 <div class="api_tags" data-tags="Custom event" data-tags-lower="custom event"></div>
@@ -979,7 +979,7 @@ Did you forget something in your shopping cart?
 
 </div>
 
-<div id='api_ceahwiwdacsj' class='api_div' data-search-keywords='language language'>
+<div id='api_dkggpolhukwv' class='api_div' data-search-keywords='language language'>
 <h2 id="language">Language</h2>
 
 <div class="api_tags" data-tags="Language" data-tags-lower="language"></div>
@@ -1156,7 +1156,7 @@ tuesday default
 
 </div>
 
-<div id='api_drflhnatzjps' class='api_div' data-search-keywords='miscellaneous miscellaneous'>
+<div id='api_dvbevucpdcou' class='api_div' data-search-keywords='miscellaneous miscellaneous'>
 <h2 id="miscellaneous">Miscellaneous</h2>
 
 <div class="api_tags" data-tags="Miscellaneous" data-tags-lower="miscellaneous"></div>
@@ -1693,7 +1693,7 @@ All episodes of <span class="cp">{{</span><span class="nv">new_shows_clean</span
 
 </div>
 
-<div id='api_atuihjbjyluc' class='api_div' data-search-keywords='platform targeting platform targeting'>
+<div id='api_uycuokxbeblx' class='api_div' data-search-keywords='platform targeting platform targeting'>
 <h2 id="platform-targeting">Platform targeting</h2>
 
 <div class="api_tags" data-tags="Platform targeting" data-tags-lower="platform targeting"></div>
@@ -1844,7 +1844,7 @@ This is a message for Verizon users!
 
 </div>
 
-<div id='api_txesatxqlzcc' class='api_div' data-search-keywords='sms sms'>
+<div id='api_tpwvaespbfyl' class='api_div' data-search-keywords='sms sms'>
 <h2 id="sms">SMS</h2>
 
 <div class="api_tags" data-tags="SMS" data-tags-lower="sms"></div>
@@ -1883,7 +1883,7 @@ Thanks for joining our SMS program!
 
 </div>
 
-<div id='api_kbhlzodwrecg' class='api_div' data-search-keywords='time zones time zones'>
+<div id='api_hixfqqqwfneb' class='api_div' data-search-keywords='time zones time zones'>
 <h2 id="time-zones">Time zones</h2>
 
 <div class="api_tags" data-tags="Time zones" data-tags-lower="time zones"></div>
@@ -2119,7 +2119,7 @@ Sign up for our exclusive time-limited offer now!
 
 </div>
 
-<div id='api_utkhbzledaoy' class='api_div' data-search-keywords='week/day/month week/day/month'>
+<div id='api_vjgsylcaudak' class='api_div' data-search-keywords='week/day/month week/day/month'>
 <h2 id="weekdaymonth">Week/Day/Month</h2>
 
 <div class="api_tags" data-tags="Week/Day/Month" data-tags-lower="week/day/month"></div>

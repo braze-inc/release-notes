@@ -397,11 +397,11 @@ In your Google Tag Manager integration, navigate to your Braze Initialization Ta
 
 ## Prerequisites
 
-Before you can use Braze Content Cards, you'll need to integrate the [Braze Android SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android) into your app. However, no additional setup is required.
+Before you can use Braze Content Cards, you must integrate the [Braze Android SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android) into your app. However, no additional setup is required.
 
 ## Google fragments
 
-In Android, the Content Cards feed is implemented as a [fragment](https://developer.android.com/guide/components/fragments.html) available in the Braze Android UI project. The [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) class will automatically refresh and display the contents of the Content Cards and log usage analytics. The cards that can appear in a user's `ContentCards` are created on the Braze dashboard.
+In Android, the Content Cards feed is implemented as a [fragment](https://developer.android.com/guide/components/fragments.html) available in the Braze Android UI project. The [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) class automatically refreshes and displays the contents of the Content Cards and logs usage analytics. The cards that can appear in a user's `ContentCards` are created on the Braze dashboard.
 
 To learn how to add a fragment to an activity, see [Google's fragments documentation](https://developer.android.com/guide/fragments#Adding).
 
@@ -416,7 +416,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 |Property | Description |
 |---|---|
 |`getId()` | Returns the card's ID set by Braze.|
-|`getViewed()` | Returns a boolean reflects if the card is read or unread by the user.|
+|`getViewed()` | Returns a boolean that reflects whether the card is read or unread by the user.|
 |`getExtras()` | Returns a map of key-value extras for this card.|
 |`getCreated()`  | Returns the unix timestamp of the card's creation time from Braze.|
 |`isPinned` | Returns a boolean that reflects whether the card is pinned.|
@@ -436,7 +436,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 |Property | Description |
 |---|---|
 |`getImageUrl()` | Returns the URL of the card's image.|
-|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL.|
+|`getUrl()` | Returns the URL that is opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL.|
 |`getDomain()` | Returns link text for the property URL.|
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Image only #banner-image-card-for-android" }
 
@@ -449,19 +449,19 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 |`getImageUrl()` | Returns the URL of the card's image.|
 |`getTitle()` | Returns the title text for the card.|
 |`getDescription()` | Returns the body text for the card.|
-|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL.|
+|`getUrl()` | Returns the URL that is opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL.|
 |`getDomain()` | Returns the link text for the property URL. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Captioned image #captioned-image-card-for-android" }
 
 ### Classic {#text-Announcement-card-for-android}
 
-A classic card without an image included will result in a [text announcement card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html). If an image is included, you will receive a [short news card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html).
+A classic card without an image included results in a [text announcement card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html). If an image is included, you receive a [short news card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html).
 
 |Property | Description |
 |---|---|
 |`getTitle()` | Returns the title text for the card. |
 |`getDescription()` | Returns the body text for the card. |
-|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL. | 
+|`getUrl()` | Returns the URL that is opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL. | 
 |`getDomain()` | Returns the link text for the property URL. |
 |`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short News Card. |
 |`isDismissed` | Returns a boolean that reflects whether the card has been dismissed. Set to `true` to mark the card as dismissed. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
@@ -848,12 +848,12 @@ For a full reference of the control card, see the [Android](https://braze-inc.gi
 
 ## Prerequisites
 
-Before you can use Content Cards, you'll need to integrate the [Braze Swift SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift) into your app. Then you'll need to complete the steps for setting up your tvOS app.
+Before you can use Content Cards, integrate the [Braze Swift SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift) into your app. Then complete the steps for setting up your tvOS app.
 
 **Important:**
 
 
-Keep in mind, you'll need to implement your own custom UI since Content Cards are supported via headless UI using the Swift SDK&#8212;which does not include any default UI or views for tvOS.
+Implement your own custom UI since Content Cards are supported via headless UI using the Swift SDK&#8212;which does not include any default UI or views for tvOS.
 
 
 
@@ -863,20 +863,20 @@ Keep in mind, you'll need to implement your own custom UI since Content Cards ar
 
 In Braze, select **Settings** > **App Settings**, then select **Add App**. Enter a name for your tvOS app, select **iOS**&#8212;_not tvOS_&#8212;then select **Add App**.
 
-![ALT_TEXT.](https://www.braze.com/docs/assets/img/tvos.png?d1c5036d5b83f425591adb03556ca684){: style="width:70%"}
+![Add App dialog in Braze with the iOS platform selected to register a tvOS app.](https://www.braze.com/docs/assets/img/tvos.png?d1c5036d5b83f425591adb03556ca684){: style="width:70%"}
 
 **Warning:**
 
 
-If you select the **tvOS** checkbox, you will not be able to customize Content Cards for tvOS.
+If you select the **tvOS** checkbox, you cannot customize Content Cards for tvOS.
 
 
 
 ### Step 2: Get your app's API key
 
-In your app settings, select your new tvOS app then take note of your app's API key. You'll use this key to configure your app in Xcode.
+In your app settings, select your new tvOS app, then take note of your app's API key. Use this key to configure your app in Xcode.
 
-![ALT_TEXT](https://www.braze.com/docs/assets/img/tvos1.png?9851deb799c1c88a248f97bd284c91cb){: style="width:70%"}
+![App settings for a tvOS app showing the API key used for SDK integration.](https://www.braze.com/docs/assets/img/tvos1.png?9851deb799c1c88a248f97bd284c91cb){: style="width:70%"}
 
 ### Step 3: Integrate BrazeKit
 
@@ -884,7 +884,7 @@ Use your app's API key to integrate the [Braze Swift SDK](https://github.com/bra
 
 ### Step 4: Create your custom UI
 
-Because Braze doesn't provide a default UI for content cards on tvOS, you'll need to customize it yourself. For a full walkthrough, see our step-by-step tutorial: [Customizing content cards for tvOS](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/content-cards-customization/). For a sample project, see [Braze Swift SDK samples](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#contentcards-custom-ui).
+Because Braze doesn't provide a default UI for content cards on tvOS, customize it yourself. For a full walkthrough, see our step-by-step tutorial: [Customizing content cards for tvOS](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/content-cards-customization/). For a sample project, see [Braze Swift SDK samples](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#contentcards-custom-ui).
 
 
 

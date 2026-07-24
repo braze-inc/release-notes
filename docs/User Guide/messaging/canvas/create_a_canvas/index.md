@@ -106,6 +106,13 @@ You can control other aspects of the Canvas behavior from the **Entry Audience**
 
 ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2025.](https://www.braze.com/docs/assets/img_archive/Canvas_Action_Based_Delivery.png?cd3f800b27ec326fc0e11bee12630e2e)
 
+**Note:**
+
+
+**Interact with Canvas Step** is not available as an action-based entry trigger for Canvases. It can only be used as a trigger for campaigns. To trigger one Canvas from another, use the [Send to Destination](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/send_to_destination) Canvas component, or create a [Braze-to-Braze webhook](https://www.braze.com/docs/user_guide/channels/webhooks/use_case_create_a_braze_to_braze_webhook#trigger-a-second-canvas-from-an-initial-canvas) that calls the `/canvas/trigger/send` endpoint.
+
+
+
 **Important:**
 
 
@@ -209,6 +216,7 @@ For Canvases targeting email and push channels, you may want to limit your Canva
 - **User A** is subscribed to email and is push enabled. This user doesn't receive the email but will receive the push.
 - **User B** is opted-in to email but is not push enabled. This user will receive the email but doesn't receive the push.
 - **User C** is opted-in to email and is push enabled. This user will receive both the email and the push.
+
 
 To do so, set the **Subscription Settings** to send this Canvas to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default. 
 

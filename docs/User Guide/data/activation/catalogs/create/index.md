@@ -153,6 +153,13 @@ Note that you won't be able to edit this name after the catalog is created. You 
 
 After creating the catalog, you can begin referencing the [catalog in a campaign](https://www.braze.com/docs/user_guide/data/activation/catalogs/using_catalogs).
 
+**Important:**
+
+
+Previously uploaded CSV files are available to download from the **Catalogs** page for 30 days after the upload date. After 30 days, the file is permanently deleted and can no longer be accessed.
+
+
+
 
 
 ### Prerequisites

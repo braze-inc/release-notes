@@ -8,7 +8,7 @@
 **Important:**
 
 
-Braze is introducing [granular permissions](https://www.braze.com/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=granular%20permissions), a more flexible way to manage user access. Refer to [Migrating to granular permissions](https://www.braze.com/docs/granular_permissions_migration/) to learn about the migration process, and the [Granular SCIM API](https://www.braze.com/docs/scim_api_appendix/?sdktab=granular%20scim%20api/) tab to view the granular SCIM API objects and appendix.
+Braze now offers [granular permissions](https://www.braze.com/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=granular%20permissions), a more flexible way to manage user access. For more information, see [Migrating to granular permissions](https://www.braze.com/docs/granular_permissions_migration/) and the [Granular SCIM API](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api/) tab to view the granular SCIM API objects and appendix.
 
 
 
@@ -36,22 +36,22 @@ A valid permissions object is a JSON object with the following key-value pairs:
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
-| `companyPermissions` | Optional | Array | Array of company-level permission strings from the [Company permission strings](https://www.braze.com/docs/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_company) table, in which the presence of the string corresponds to the user having the corresponding permission. |
-| `roles` | Optional | Array | Array of [role objects](https://www.braze.com/docs/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_role-object). |
-| `appGroup` | Required | Array | Array of [workspace permission objects](https://www.braze.com/docs/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_workspace-permissions-set-object). |
+| `companyPermissions` | Optional | Array | Array of company-level permission strings from the [Company permission strings](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_company) table, in which the presence of the string corresponds to the user having the corresponding permission. |
+| `roles` | Optional | Array | Array of [role objects](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_role-object). |
+| `appGroup` | Required | Array | Array of [workspace permission objects](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_workspace-permission-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Permissions object" }
 
 ### Workspace permissions object {#workspace-permission-object}
 
-A valid app group permission object is a JSON object with the following key-value pairs:
+A valid workspace permission object is a JSON object with the following key-value pairs:
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
 | `appGroupName`| Optional | String | Name of the workspace. Used to specify which workspace the permissions contained within this object are for. | 
 | `appGroupId` | Required if `appGroupName` is missing | String | ID of the workspace, serving as an alternative method of specifying the workspace. |
-| `appGroupPermissionSets` | Optional | Array | Array with a single [workspace permissions set object](https://www.braze.com/docs/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_workspace-permissions-set-object). |
-| `appGroupPermissions` | Required | Array | Array of workspace-level permission strings from the [workspace permission strings](https://www.braze.com/docs/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_workspace-strings) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified workspace. |
-| `team` | Optional | Array | Array of [Team permission objects](https://www.braze.com/docs/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_team-permissions-object). |
+| `appGroupPermissionSets` | Optional | Array | Array with a single [workspace permissions set object](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_workspace-permissions-set-object). |
+| `appGroupPermissions` | Required | Array | Array of workspace-level permission strings from the [workspace permission strings](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_workspace-strings) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified workspace. |
+| `team` | Optional | Array | Array of [Team permission objects](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_team-permissions-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Workspace permissions object #workspace-permission-object" }
 
 ### Workspace permissions set object {#workspace-permissions-set-object}
@@ -64,7 +64,7 @@ A valid workspace permissions set object is a JSON object with the following key
 | `appGroupPermissionSetID` | Required if `appGroupPermissionSetName` is missing | String | ID of the workspace, serving as an alternative method of specifying the workspace permission set assigned to the user for this workspace. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Workspace permissions set object #workspace-permissions-set-object" }
 
-### Team permissions object
+### Team permissions object {#team-permissions-object}
 
 A valid team permission object is a JSON object with the following key-value pairs:
 
@@ -72,12 +72,12 @@ A valid team permission object is a JSON object with the following key-value pai
 | --- | --- | --- | --- |
 | `teamName` | Optional | String | Name of the team, which can be used to specify which team the permissions within this object are for. |
 | `teamId` | Required if `teamName` is missing | String | ID of the team, serving as an alternative method of specifying the team. |
-| `teamPermissions` | Required | Array | Array of team-level permission strings from the [teams permission strings](https://www.braze.com/docs/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_team) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified team. |
+| `teamPermissions` | Required | Array | Array of team-level permission strings from the [teams permission strings](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_team) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified team. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Team permissions object" }
 
-## Role object
+## Role object {#role-object}
 
-A valid role object is a JSON object with the following key value pairs:
+A valid role object is a JSON object with the following key-value pairs:
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
@@ -162,9 +162,9 @@ A valid role object is a JSON object with the following key value pairs:
 
 ## Granular permissions migration
 
-Existing SCIM integrations and [legacy SCIM API objects](https://www.braze.com/docs/scim_api_appendix/?sdktab=legacy%20scim%20api) will continue to work after the granular permissions migration in late April. 
+Existing SCIM integrations and [legacy SCIM API objects](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api) continue to work after the granular permissions migration in late April. 
 
-You aren't required to take any immediate action. However, we encourage you to review your integrations for any permissions that will be granularized. For example, if you are currently sending `basic_access` in the API, we suggest you update your integration after granularization to include the specific permissions (for example, `"appGroupPermissions":["view_campaigns","edit_campaigns"]`). Braze will continue to accept legacy strings, like `basic_access`, after the granular permissions migration so that existing integrations do not break.
+You aren't required to take any immediate action. However, review your integrations for permissions that move to granular permissions. For example, if you are currently sending `basic_access` in the API, update your integration after granularization to include the specific permissions (for example, `"appGroupPermissions":["view_campaigns","edit_campaigns"]`). Braze continues to accept legacy strings, like `basic_access`, after the granular permissions migration so that existing integrations do not break.
 
 ## Permissions object
 
@@ -190,22 +190,22 @@ A valid permissions object is a JSON object with the following key-value pairs:
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
-| `companyPermissions` | Optional | Array | Array of [company-level permission strings](https://www.braze.com/docs/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_company), in which the presence of the string corresponds to the user having the corresponding permission. |
-| `roles` | Optional | Array | Array of [role objects](https://www.braze.com/docs/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_role-object). |
-| `appGroup` | Required | Array | Array of [workspace permission objects](https://www.braze.com/docs/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_workspace-permissions-object). |
+| `companyPermissions` | Optional | Array | Array of [company-level permission strings](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_company), in which the presence of the string corresponds to the user having the corresponding permission. |
+| `roles` | Optional | Array | Array of [role objects](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_role-object). |
+| `appGroup` | Required | Array | Array of [workspace permission objects](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_workspace-permissions-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Permissions object" }
 
-### Workspace permissions object
+### Workspace permissions object {#workspace-permissions-object}
 
-A valid app group permission object is a JSON object with the following key-value pairs:
+A valid workspace permission object is a JSON object with the following key-value pairs:
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
 | `appGroupName`| Optional | String | Name of the workspace. Used to specify which workspace the permissions contained within this object are for. | 
 | `appGroupId` | Required if `appGroupName` is missing | String | ID of the workspace, serving as an alternative method of specifying the workspace. |
-| `appGroupPermissionSets` | Optional | Array | Array with a single [workspace permissions set object](https://www.braze.com/docs/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_workspace-permissions-set-object). |
-| `appGroupPermissions` | Required | Array | Array of workspace-level permission strings from the [workspace permission strings](https://www.braze.com/docs/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_workspace-strings) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified workspace. |
-| `team` | Optional | Array | Array of [Team permission objects](https://www.braze.com/docs/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_team-permissions-object). |
+| `appGroupPermissionSets` | Optional | Array | Array with a single [workspace permissions set object](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_workspace-permissions-set-object). |
+| `appGroupPermissions` | Required | Array | Array of workspace-level permission strings from the [workspace permission strings](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_workspace-strings) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified workspace. |
+| `team` | Optional | Array | Array of [Team permission objects](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_team-permissions-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Workspace permissions object" }
 
 ### Workspace permissions set object {#workspace-permissions-set-object}
@@ -218,7 +218,7 @@ A valid workspace permissions set object is a JSON object with the following key
 | `appGroupPermissionSetID` | Required if `appGroupPermissionSetName` is missing | String | ID of the workspace, serving as an alternative method of specifying the workspace permission set assigned to the user for this workspace. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Workspace permissions set object #workspace-permissions-set-object" }
 
-### Team permissions object
+### Team permissions object {#team-permissions-object}
 
 A valid team permission object is a JSON object with the following key-value pairs:
 
@@ -226,12 +226,12 @@ A valid team permission object is a JSON object with the following key-value pai
 | --- | --- | --- | --- |
 | `teamName` | Optional | String | Name of the team, which can be used to specify which team the permissions within this object are for. |
 | `teamId` | Required if `teamName` is missing | String | ID of the team, serving as an alternative method of specifying the team. |
-| `teamPermissions` | Required | Array | Array of team-level permission strings from the [teams permission strings](https://www.braze.com/docs/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_team) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified team. |
+| `teamPermissions` | Required | Array | Array of team-level permission strings from the [teams permission strings](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_team) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified team. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Team permissions object" }
 
-## Role object
+## Role object {#role-object}
 
-A valid role object is a JSON object with the following key value pairs:
+A valid role object is a JSON object with the following key-value pairs:
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |

@@ -13,6 +13,7 @@ The Braze and Komo integration allows you to gather first and zero-party data th
 - Progressively build user profiles in Braze over time as the user continues to engage and share more data about themselves
 - Standardize the look and feel of transactional emails sent through Braze
 
+
 ## Prerequisites
 
 | Requirement | Description |

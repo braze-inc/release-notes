@@ -10,6 +10,7 @@ The benefits of using SQL variables include:
 - Swap in values by adding variables that allow you to reuse the report for slightly different use cases in the future (such as a different custom event).
 - Reduce user error when editing your SQL by reducing the amount of editing needed for each report. Teammates that are more comfortable with SQL can create reports that less technical teammates can then use.
 
+
 ## Using variables
 
 ### Step 1: Add a variable

@@ -39,9 +39,10 @@ If all of the messages in your campaign are going to be similar or have the same
 1. [Create your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
 3. Choose a [step schedule](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types) and specify a delay as needed.
-4. Filter your Audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
+4. Filter your audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
 5. Choose your [advancement behavior](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases).
-6. Choose any other messaging channels that you would like to pair with your message.
+6. Choose any other messaging channels which you would like to pair with your message.
+
 
 
 
@@ -148,6 +149,7 @@ After you finish designing and building your email message, add your sending inf
 
 
 
+
 A preview in the right-hand panel will populate with the sending information you've added. This information can also be updated by going to **Settings** > **Email Preferences** > **Sending Configuration**.
 
 #### Advanced
@@ -162,7 +164,15 @@ You can also add email attachments by the following methods:
 
 - **Upload a file:** Drag and drop or browse to upload a file directly from your computer to the email. Braze validates the file type and size (up to 2&nbsp;MB by default) before uploading, then these files are uploaded to the media library. Files that are larger than 2&nbsp;MB limit cannot be uploaded.
 - **Use the media library:** Browse and select from assets already stored in the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library). PDFs, Word documents, Excel files, and PowerPoint presentations are all supported.
-- **Add from URL:** Enter a URL pointing to the file and provide a display filename. Because Braze cannot probe arbitrary URLs for size during email composition, the file size is enforced at send time. Note that Liquid is not supported in this field.
+- **Add from URL:** Enter a URL pointing to the file and provide a display filename. Because Braze cannot probe arbitrary URLs for size during email composition, the file size is enforced at send time. 
+
+**Note:**
+
+
+Liquid is not supported in the **Add from URL** field.
+
+
+
 
 Refer to [Email guidelines](https://www.braze.com/docs/user_guide/channels/email/best_practices/email_guidelines) for specific best practices to consider.
 
@@ -341,6 +351,7 @@ For multichannel campaigns targeting both email and push channels, you may want 
 - **User A** is subscribed to email and is push enabled. This user doesn't receive the email but will receive the push.
 - **User B** is opted-in to email but is not push enabled. This user will receive the email but doesn't receive the push.
 - **User C** is opted-in to email and is push enabled. This user will receive both the email and the push.
+
 
 To do so, under **Audience Summary**, select to send this campaign to "opted-in users only". This option will check that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
 

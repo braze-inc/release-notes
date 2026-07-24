@@ -1,17 +1,11 @@
 # The Braze MCP server
 
-> Learn about the Braze MCP server, a secure connection that lets AI tools like Claude and Cursor access non-PII Braze data to answer questions, analyze trends, and provide insights.
+> Learn about the Braze MCP server, a secure remote connection that lets AI tools like Claude and Cursor access non-PII Braze data to answer questions, analyze trends, provide insights, and create content.
 
 **Important:**
 
 
-This summer, Braze is launching a remote, Braze-hosted MCP server in early access. It replaces the locally hosted beta server (`braze-mcp-server` on [PyPI](https://pypi.org/project/braze-mcp-server/) and the Claude Desktop extension directory).<br><br>
-
-**What this means for you:**<br><br>
-
-- The locally hosted server will continue to work, but it is no longer supported. We won't be adding new endpoints or fixing issues in the beta.
-- When the remote server is available in early access, you'll need to switch to it. The remote server requires no local installation, uses OAuth instead of static API keys, and works with MCP clients like Claude, Copilot, Gemini CLI, Codex, and Cursor.
-- Watch this page for early access availability, or contact your Braze account team to express interest.
+The remote MCP server is in Early Access. Contact your account manager to request access.
 
 
 
@@ -30,79 +24,101 @@ After [setting up the Braze MCP server], you can connect AI tools like agents, a
 - CRM engineers creating multi-step agent workflows.
 - Technical marketers experimenting with natural language queries.
 
-The Braze MCP server includes both read-only and write endpoints. They do not return data from Braze user profiles. You choose which endpoints to assign to your Braze API key, and that choice controls what an agent can read, create, or update. For the full list of available endpoints and their required permissions, see [Available API functions].
+The Braze MCP server includes both read and write tools. These tools do not return data from Braze user profiles. Your agents inherit your Braze dashboard user permissions. For the full list of available tools, see [Available API functions].
 
 **Warning:**
 
 
-Only assign the API key permissions you want your agent to have. If you don't want your agent to make changes in Braze, leave any write permissions off when you create your API key. Agents may try to write data through any write permission you grant.
+Tools that expose user-level PII are not available.
 
 
 
-## Usage example
+Use the MCP server to ask questions about campaign and Canvas performance, explore your segments and custom attributes, generate reports, and create content such as email templates, content blocks, and media library assets through natural language.
 
-You can interact with Braze through natural language using tools like Claude or Cursor. For other examples and best practices, see [Using the Braze MCP server].
+## Is the beta MCP server deprecated?
 
+Yes. The locally hosted MCP server released in August 2025 is deprecated and will not receive additional updates. You can continue using it, but Braze recommends migrating to the remote-hosted version.
 
+### How is the remote server different?
 
-**Example prompt:** `What are my available Braze functions?`  
-**Example response:** Used `list_functions` and returned the available Braze MCP function categories.
+The previous Braze MCP server ran locally on your machine. You needed to install a package, manage a config file, and create a Braze API key with the right permissions. The remote MCP server removes that local setup.
 
+Connect from a supported MCP client in under a minute. Authentication uses OAuth. Access is tied to your Braze dashboard user account, not a shared API key, so what an agent can see and do mirrors your dashboard permissions. If a dashboard user loses access in Braze, the client loses access too.
 
+The key differences are:
 
-**Example prompt:** `What are my available Braze functions?`  
-**Example response:** Queried `list_functions` and listed functions such as `get_canvas_list`.
-
-
+- **Setup:** Paste a Braze URL instead of installing a package and editing config files.
+- **Auth:** Sign in with your Braze account instead of creating an API key.
+- **Permissions:** Access is based on your dashboard user account instead of API key permissions.
+- **Workspace targeting:** Workspace context is passed per request instead of being fixed in local config.
 
 ## Frequently Asked Questions (FAQ) {#faq}
 
 ### Which MCP clients are supported?
 
-Only [Claude](https://claude.ai/) and [Cursor](https://cursor.com/) are officially supported. You must have an account for one of these clients to use the Braze MCP server.
+Any MCP client that supports remote MCP servers with OAuth can work. Braze has verified:
+
+- Claude through custom connectors
+- ChatGPT through custom connectors
+- Cursor
+- OpenAI Codex
+- Claude Code
 
 ### What Braze data can my MCP client access?
 
-MCP clients can access endpoints that don't return PII. You control which endpoints an agent can use through the permissions you assign to your API key.
+MCP clients can access tools that do not return user-level PII.
 
 ### Can my MCP client change Braze data?
 
-Yes. The server exposes a focused set of write endpoints that let agents create or update content in your workspace, such as media library assets, email templates, and content blocks. Each write endpoint requires its own API key permission. If you don't want your agent to make a given change in Braze, leave that permission off when you create your API key. For the full list of write functions and their required permissions, see [Available API functions].
+Yes, if your dashboard user has those permissions.
 
-### Can I use a third-party MCP server for Braze?
+### Do I still need a Braze API key?
 
-Using a third-party MCP server for Braze data is not recommended. Only use the official Braze MCP server hosted on [PyPi](https://pypi.org/project/braze-mcp-server/).
+Not for MCP. API keys still work for the REST API and are not being deprecated.
 
-### Why doesn't the Braze MCP server offer PII access?
+### Which regions are supported?
 
-To protect user data while supporting valuable use cases, the server is limited to endpoints that don't typically return PII. This reduces risk for your workspace and the people in it.
+Both Braze clusters are supported. Two endpoints are available today:
 
-### Can I reuse my API keys?
+- `https://mcp.braze.com/mcp` (US)
+- `https://mcp.braze.eu/mcp` (EU)
 
-No. You'll need to create a new API key for your MCP client. Remember to only give your AI tools access to what you’re comfortable with, and avoid elevated permissions.
+Either endpoint can reach any Braze cluster.
 
-### Is the Braze MCP server hosted locally or remotely?
+### Can I use the Braze remote MCP server with tools other than the verified list?
 
-The currently available Braze MCP server is hosted locally. A remote, Braze-hosted MCP server is coming to Early Access this summer and will replace the locally hosted beta server.
+You can try, but authentication may be blocked. Braze currently maintains an allowlist of supported domains for security. If your tool is not on the list and you run into authentication issues, contact [mcp-product@braze.com](mailto:mcp-product@braze.com).
 
-### Why is Cursor only listing functions?
+### Does the remote server support multiple workspaces?
 
-Check if you're in ask mode or agent mode. To use the MCP server, you need to be in agent mode.
+Yes. Specify the workspace per conversation or per request. One connection covers all workspaces you are authorized to access.
 
-### What do I do when the agent returns an answer that looks incorrect?
+### Can my agent access user-level PII?
 
-When working with tools like Cursor, you may want to try changing the model used. For example, if you have it set to auto, try changing it to a specific model and experiment to find which model performs best for your use case. You can also try starting a new chat and retrying the prompt. 
+No. As of now, tools that expose PII are not available.
 
-If issues persist, you can email us at [mcp-product@braze.com](mailto:mcp-product@braze.com) to let us know. If possible, include a video and expand the call functions so we can see what calls the agent attempted.
+### What happens when my permissions change?
 
-## Disclaimer
+Agent access changes with the dashboard user. Permission changes apply on the next request. Deactivated dashboard users lose MCP access.
+
+### Why do I not see the Braze connector in my client's directory?
+
+Directory listings roll out after Early Access begins. You can always connect manually using the Braze MCP URL.
+
+### My company uses IP allowlisting. Can we use the remote MCP server?
+
+Not right now. Customers who use [IP Allowlisting](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#dashboard-ip-allowlisting) cannot participate in the Early Access program.
+
+## Legal disclaimer
 <!-- Braze Legal must approve any changes to this content. -->
 <!-- Note: Keep these comments under this H2 heading to avoid breaking how headings on certain pages are rendered. -->
 
-The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) is a newly introduced open-source protocol that may be susceptible to security issues or vulnerabilities at this time.
+### How instructions and responses are handled
 
-Braze MCP Server setup code and instructions are provided by Braze “as is” and without any warranties, and customers use it at their own risk. Braze shall not be responsible for any consequences arising from improper setup, misuse of the MCP, or any potential security issues that may arise. Braze strongly encourages customers to review their configurations carefully and to follow the outlined guidelines to reduce risks associated with the integrity and security of their Braze environment.
+The Braze MCP server receives instructions from your Third-Party Provider MCP client, such as Claude, ChatGPT, Copilot, Gemini CLI, Codex, or Cursor, exactly as that provider's underlying AI model formulates them. When you type a request in natural language, the AI model interprets your request and translates it into one or more specific tool calls to Braze. Braze receives and executes the tool call as sent. Braze does not see your original natural-language prompt and cannot verify that the generated tool call fully or accurately reflects your intended request.
 
-For assistance or clarification, please contact [Braze Support](https://www.braze.com/docs/user_guide/administrative/access_braze/support).
+When Braze returns data or a result, that response is sent back to your Third-Party Provider MCP client, which then interprets, formats, and presents it to you. Braze does not control how the AI model presents, summarizes, or describes returned information.
+
+Braze is not liable for instructions generated by, or responses conveyed through, any Third-Party Provider MCP client. Braze recommends not using "auto-mode" if your Third-Party Provider MCP client offers it for automatic action implementation. Review AI-generated summaries against source data in your Braze dashboard and review any AI-proposed action before implementing it through your Third-Party Provider MCP client.
 
 

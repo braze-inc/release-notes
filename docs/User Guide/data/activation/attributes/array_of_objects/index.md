@@ -75,7 +75,7 @@ When a nested custom attribute in your request contains any invalid values (such
 **Tip:**
 
 
-For more information on using arrays of objects for user attributes objects, refer to [User attributes object](https://www.braze.com/docs/api/objects_filters/user_attributes_object#migrate-push-tokens).
+For more information on using arrays of objects for user attributes objects, refer to [User attributes object](https://www.braze.com/docs/api/objects_filters/user_attributes_object).
 
 
 

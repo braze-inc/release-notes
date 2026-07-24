@@ -239,6 +239,7 @@ In this step, you'll transform the webhook payload from the source platform to a
   - Subscription group updates
   - Email address as an identifier
 
+
 Select **Validate** to return a preview of your code's output and to check if it's an acceptable `/users/track` request.
 
 **Note:**

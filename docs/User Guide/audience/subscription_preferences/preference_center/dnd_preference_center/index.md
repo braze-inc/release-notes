@@ -80,6 +80,13 @@ Every block has its own settings, such as granular control on padding. The right
 
 If you're using the Custom Code block in your preference center, inline frames may not generate in the custom code when delivered to your users.
 
+**Note:**
+
+
+Content Blocks with links cannot be used in the drag-and-drop preference center. Links within Content Blocks are not clickable.
+
+
+
 
 
 

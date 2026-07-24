@@ -44,14 +44,14 @@ To resume data collection, you can use the [`enableSDK()`](https://js.appboycdn.
 
 ## Google Play privacy questionnaire {#privacy-questionnaire}
 
-Starting in April 2022, Android developers must complete Google Play's [Data safety form](https://support.google.com/googleplay/android-developer/answer/10787469) to disclose privacy and security practices. This guide provides instructions on how to fill out this new form with information on how Braze handles your app data. 
+Starting in April 2022, Android developers must complete Google Play's [Data safety form](https://support.google.com/googleplay/android-developer/answer/10787469) to disclose privacy and security practices. This guide provides instructions on how to fill out this new form with information on how Braze handles your app data.
 
-As the app developer, you are in control of what data you send to Braze. Data received by Braze is processed according to your instructions. This is what Google classifies as a [service provider](https://support.google.com/googleplay/android-developer/answer/10787469?hl=en#zippy=%2Cwhat-kinds-of-activities-can-service-providers-perform). 
+As the app developer, you are in control of what data you send to Braze. Data received by Braze is processed according to your instructions. This is what Google classifies as a [service provider](https://support.google.com/googleplay/android-developer/answer/10787469?hl=en#zippy=%2Cwhat-kinds-of-activities-can-service-providers-perform).
 
 **Important:**
 
 
-This article provides information related to the data the Braze SDK processes as related to the Google safety section questionnaire. This article is not providing legal advice, so we recommend consulting with your legal team before submitting any information to Google.
+This article provides information related to the data the Braze SDK processes as related to the Google safety section questionnaire. This article is not providing legal advice, so consult your legal team before submitting any information to Google.
 
 
 
@@ -68,7 +68,7 @@ For more information about handling user requests for their data and deletion, s
 
 ### Data collection
 
-The data collected by Braze is determined by your specific integration and the user data you choose to collect. To learn more about what data Braze collects by default and how to disable certain attributes, see our [SDK data collection options](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration).
+The data collected by Braze is determined by your specific integration and the user data you choose to collect. To learn more about what data Braze collects by default and how to disable certain attributes, see our [SDK data collection options](https://www.braze.com/docs/user_guide/data/unification/user_data/sdk_data_collection/#minimum-integration).
 
 <table aria-label="Data collection" id="datatypes">
     <thead>
@@ -146,7 +146,7 @@ The data collected by Braze is determined by your specific integration and the u
         </tr>
         <tr>
             <td>Other in-app messages</td>
-            <td>If you send In-app messages or push notifications through Braze, we collect information on when users have opened or read these messages.</td>
+            <td>If you send in-app messages or push notifications through Braze, we collect information on when users have opened or read these messages.</td>
         </tr>
         <tr>
             <td rowspan="2">Photos and videos</td>
@@ -224,7 +224,7 @@ The data collected by Braze is determined by your specific integration and the u
     </tbody>
 </table>
 
-To learn more about other device data that Braze collects which may fall outside the scope of Google Play's data safety guidelines, see our [Android storage overview](https://www.braze.com/docs/developer_guide/storage/?tab=android) and our [SDK data collection options](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration).
+To learn more about other device data that Braze collects which may fall outside the scope of Google Play's data safety guidelines, see our [Android storage overview](https://www.braze.com/docs/developer_guide/storage/?tab=android) and our [SDK data collection options](https://www.braze.com/docs/user_guide/data/unification/user_data/sdk_data_collection/#minimum-integration).
 
 ## Disabling data tracking
 
@@ -236,7 +236,7 @@ You can use the method [`wipeData()`](https://braze-inc.github.io/braze-android-
 
 ## Resuming data tracking
 
-To resume data collection, you can use the [`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html) method. Keep in mind, this will not restore any previously wiped data.
+To resume data collection, you can use the [`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html) method. Keep in mind, this does not restore any previously wiped data.
 
 
 
@@ -245,7 +245,7 @@ To resume data collection, you can use the [`enableSDK()`](https://braze-inc.git
 
 ### What is tracking data?
 
-Apple defines "tracking data" as data collected in your app about an end-user or device that's linked to third-party data (such as targeted advertising), or a data broker. For a complete definition with examples, see [Apple: Tracking](https://developer.apple.com/app-store/app-privacy-details/#user-tracking).
+Apple defines "tracking data" as data collected in your app about an end user or device that's linked to third-party data (such as targeted advertising), or a data broker. For a complete definition with examples, see [Apple: Tracking](https://developer.apple.com/app-store/app-privacy-details/#user-tracking).
 
 By default, the Braze SDK does not collect tracking data. However, depending on your Braze SDK configuration, you may be required to list Braze-specific data in your app's privacy manifest.
 
@@ -255,7 +255,7 @@ A privacy manifest is a file in your Xcode project that describes the reason you
 
 ### API tracking-data domains
 
-Starting with iOS 17.2, Apple will block all declared tracking endpoints in your app until the end-user accepts an [Ad Tracking Transparency (ATT) prompt](https://support.apple.com/en-us/HT212025). Braze provides tracking endpoints to route your tracking data, while still allowing you to route non-tracking first-party data to the original endpoint. 
+Starting with iOS 17.2, Apple will block all declared tracking endpoints in your app until the end user accepts an [Ad Tracking Transparency (ATT) prompt](https://support.apple.com/en-us/HT212025). Braze provides tracking endpoints to route your tracking data, while still allowing you to route non-tracking first-party data to the original endpoint. 
 
 ## Declaring Braze tracking data
 
@@ -305,7 +305,7 @@ Under **App Privacy Configuration**, choose **NSPrivacyTrackingDomains**. In the
 
 ### Step 4: Declare your tracking data
 
-Next, open `AppDelegate.swift` then list each [tracking property](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty/) you want to declare by creating a static or dynamic tracking list. Keep in mind, Apple will block these properties until the end-user accepts their ATT prompt, so only list the properties you and your legal team consider tracking. For example:
+Next, open `AppDelegate.swift` then list each [tracking property](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty/) you want to declare by creating a static or dynamic tracking list. Keep in mind, Apple will block these properties until the end user accepts their ATT prompt, so only list the properties you and your legal team consider tracking. For example:
 
 
 
@@ -340,10 +340,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
-In the following example, the tracking list is automatically updated after the end-user accepts the ATT prompt.
+In the following example, the tracking list is automatically updated after the end user accepts the [App Tracking Transparency (ATT) prompt](https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/requesttrackingauthorization(completionhandler:)). Requesting authorization on app activation is a per-scene event, so this code belongs in your `SceneDelegate.swift` file's `sceneDidBecomeActive(_:)` method rather than `AppDelegate.swift`'s `applicationDidBecomeActive(_:)` (required for apps that have adopted the [`UIScene` life cycle](https://developer.apple.com/documentation/technotes/tn3187-migrating-to-the-uikit-scene-based-life-cycle)). Your Braze instance remains reachable from `SceneDelegate` through the `AppDelegate.braze` static property configured in Step 1.
 
 ```swift
-func applicationDidBecomeActive(_ application: UIApplication) {
+func sceneDidBecomeActive(_ scene: UIScene) {
   // Request and check your user's tracking authorization status.
   ATTrackingManager.requestTrackingAuthorization { status in
     // Let Braze know whether user data is allowed to be collected for tracking.
@@ -351,7 +351,7 @@ func applicationDidBecomeActive(_ application: UIApplication) {
     AppDelegate.braze?.set(adTrackingEnabled: enableAdTracking)
 
     // Add the `.firstName` and `.lastName` properties, while removing the `.everything` configuration.
-    AppDelegate.braze.updateTrackingAllowList(
+    AppDelegate.braze?.updateTrackingAllowList(
       adding: [.firstName, .lastName],
       removing: [.everything]
     )
@@ -363,10 +363,10 @@ func applicationDidBecomeActive(_ application: UIApplication) {
 
 ### Step 5: Prevent infinite retry loops
 
-To prevent the SDK from entering an infinite retry loop, use the `set(adTrackingEnabled: enableAdTracking)` method to handle ATT permissions. The `adTrackingEnabled` property in your method should be handled similar to the following:
+To prevent the SDK from entering an infinite retry loop, use the `set(adTrackingEnabled: enableAdTracking)` method to handle ATT permissions. The `adTrackingEnabled` property in your `SceneDelegate.swift` method should be handled similar to the following:
 
 ```swift
-func applicationDidBecomeActive(_ application: UIApplication) {
+func sceneDidBecomeActive(_ scene: UIScene) {
     // Request and check your user's tracking authorization status.
     ATTrackingManager.requestTrackingAuthorization { status in
       // Let Braze know whether user data is allowed to be collected for tracking.
@@ -396,7 +396,7 @@ To resume data collection, set [`enabled`](https://braze-inc.github.io/braze-swi
 
 In previous versions of the Braze iOS SDK, the IDFV (Identifier for Vendor) field was automatically collected as the user's device ID. Beginning in Swift SDK `v5.7.0`, the IDFV field was optionally disabled, and instead, Braze would set a random UUID as the device ID. Starting in Swift SDK `v7.0.0`, the IDFV field will not be collected by default, and a UUID will be set as the device ID instead.
 
-The `useUUIDAsDeviceId` feature configures the [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) to set the device ID as a UUID. Traditionally, the iOS SDK would assign the device ID equal to the Apple-generated IDFV value. With this feature enabled by default on your iOS app, all new users created via the SDK would be assigned a device ID equal to a UUID.
+The `useUUIDAsDeviceId` feature configures the [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) to set the device ID as a UUID. Traditionally, the iOS SDK would assign the device ID equal to the Apple-generated IDFV value. With this feature enabled by default on your iOS app, all new users created through the SDK would be assigned a device ID equal to a UUID.
 
 If you still want to collect IDFV separately, you can use [`set(identifierforvendor:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforvendor:)).
 
@@ -453,9 +453,9 @@ No. When enabled, this feature will not overwrite any user data in Braze. New UU
 
 Yes, this feature can be toggled on and off at your discretion. Previously stored device IDs will never be overwritten.
 
-#### Can I still capture the IDFV value via Braze elsewhere?
+#### Can I still capture the IDFV value through Braze elsewhere?
 
-Yes, you can still optionally collect the IDFV via the Swift SDK (collection is disabled by default). 
+Yes, you can still optionally collect the IDFV through the Swift SDK (collection is disabled by default). 
 
 
 
