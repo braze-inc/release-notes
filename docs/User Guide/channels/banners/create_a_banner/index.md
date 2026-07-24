@@ -209,6 +209,7 @@ You can add custom properties to a Banner to attach structured metadata, such as
 - Use metadata such as a `timestamp` or JSON object to trigger conditional logic.
 - Control the behavior of a Banner based on included metadata like `ratio` or `format`.
 
+
 Custom properties work the same way in both the drag-and-drop editor and the HTML editor. To add a custom property, select **Settings** > **Properties** > **Add property**.
 
 ![The properties page showing the option to add the first custom property to a Banner campaign.](https://www.braze.com/docs/assets/img/banners/add_property.png?8b36823cad72205eb171a61e7d768401)

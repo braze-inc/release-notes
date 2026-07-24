@@ -8,6 +8,7 @@ The Braze and Optimizely integration is a two-way integration that allows you to
 - Send Braze Currents events from Braze to Optimizely’s reporting tool.
 - Sync ODP customer data and events to Braze to enrich your Braze customer data and trigger Braze messaging based on customer events in ODP.
 
+
 ## Prerequisites
 
 | Requirement                     | Description |

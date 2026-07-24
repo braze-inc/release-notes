@@ -25,10 +25,10 @@ For RCS messages, link shortening and URL-level click tracking are supported for
 
 
 The length of the URL is determined by the type of tracking that is turned on:
-- **Basic tracking** enables campaign-level click tracking. Static URLs will have a length of 20 characters, and personalized URLs will have a length of 25 characters.
-- **Advanced tracking** enables campaign-level and user-level click tracking, and enables use of segmentation and retargeting capabilities which rely on clicks. Clicks will also generate an [SMS click event](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/) sent through Currents. Static URLs with advanced tracking will have a length of 27-28 characters, allowing you to create segments of users who have clicked on URLs. Personalized URLs will have a length of 32-33 characters.
+- **Basic tracking** enables campaign-level click tracking. Static URLs have a length of 20 characters, and personalized URLs have a length of 25 characters.
+- **Advanced tracking** enables campaign-level and user-level click tracking, and enables use of segmentation and retargeting capabilities which rely on clicks. Clicks also generate an [SMS click event](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/) sent through Currents. Static URLs with advanced tracking have a length of 27-28 characters, allowing you to create segments of users who have clicked on URLs. Personalized URLs have a length of 32-33 characters.
 
-Links are shortened using our shared short domain (`brz.ai`) or your custom link shortening domain. An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/p/8jshX/2dj8d` (advanced, personalized). Refer to [Testing](#testing) for more information.
+Links are shortened using our shared short domain (`brz.ai`) or your custom link shortening domain. An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/p/8jshX/2dj8d` (advanced, personalized). Refer to [Testing](#legacy_testing) for more information.
 
 Any static URLs that start with `http://` or `https://` are shortened. Static shortened URLs are valid for one year from the date they were created. Shortened URLs that contain Liquid personalization are valid for two months. 
 
@@ -78,7 +78,7 @@ https://example.com/?campaign_utm={{campaign.${api_id}}}&user_attribute={{custom
 ```
 
 
-We also support the shortening of custom-defined Liquid variables, such as in the following examples:
+Braze also supports the shortening of custom-defined Liquid variables, such as in the following examples:
 
 ### Create a URL using Liquid variables
 
@@ -93,7 +93,7 @@ https://example.com/{{url_var}}
 
 **Supported channels:** KakaoTalk, LINE, SMS, RCS, WhatsApp
 
-We shorten URLs that are rendered by Liquid, even those included in API-trigger properties. For example, if `{{api_trigger_properties.${url_value}}}` represents a valid URL, we shorten and track that URL before sending the message. 
+Braze shortens URLs that are rendered by Liquid, even those included in API-trigger properties. For example, if `{{api_trigger_properties.${url_value}}}` represents a valid URL, Braze shortens and tracks that URL before sending the message. 
 
 ### Shorten URLs in `/messages/send` endpoint
 
@@ -184,6 +184,7 @@ FROM USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED AS c
       AND (s.message_variation_id = c.message_variation_id OR s.canvas_step_message_variation_id = c.canvas_step_message_variation_id)
 WHERE s.send_id IS NOT NULL; 
 ```
+
 
 
 

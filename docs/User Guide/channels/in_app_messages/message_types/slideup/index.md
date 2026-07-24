@@ -11,8 +11,9 @@ This message type is available in the [traditional editor](https://www.braze.com
 Slideup messages can contain up to three lines of copy before truncation with ellipses. Images in slideups will never be cropped or clipped—they will always scale down to fit within the 50 x 50 pixel image container.
 
 - All images must be less than 5&nbsp;MB.
-- We only accept PNG, JPEG, and GIF file types.
+- We accept only PNG, JPEG, and [GIF](https://www.braze.com/docs/developer_guide/in_app_messages/gifs?sdktab=android) file types.
 - We recommend that your images be 500&nbsp;KB.
+
 
 **Tip:**
 

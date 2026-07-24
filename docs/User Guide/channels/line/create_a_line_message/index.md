@@ -50,6 +50,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 
 
+
 ## Step 2: Compose your LINE message
 
 Write your message using personalization (such as Liquid or Connected Content) as needed. LINE allows up to five message bubbles in each message, which can be any of the available messages layouts: text, image, rich, or card-based.

@@ -4,7 +4,7 @@
 
 ## Key-value pairs
 
-Braze enables you to send extra data payloads via Content Cards to user devices using key-value pairs. These can help you track internal metrics, update app content, and customize properties. [Add key-value pairs using the dashboard](https://www.braze.com/docs/user_guide/message_building_by_channel/content_cards/create#step-4-configure-additional-settings-optional). 
+Braze enables you to send extra data payloads through Content Cards to user devices using key-value pairs. These can help you track internal metrics, update app content, and customize properties. [Add key-value pairs using the dashboard](https://www.braze.com/docs/user_guide/message_building_by_channel/content_cards/create#step-4-configure-additional-settings-optional). 
  
 **Note:**
 
@@ -44,7 +44,7 @@ It's important that your marketing and developer teams coordinate on which key-v
 
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
-The accompanying example shows a feed with a hybrid list of items that are populated via local data and Content Cards powered by Braze. With this, Content Cards can be indistinguishable alongside existing content.
+The accompanying example shows a feed with a hybrid list of items that are populated using local data and Content Cards powered by Braze. With this, Content Cards can be indistinguishable alongside existing content.
 
 ### API-triggered key-value pairs
 
@@ -114,11 +114,13 @@ You can then use this information to display a badge signifying how many unread 
 
 The following sample uses `braze.contentCards` to request and display the number of unread Content Cards. After the app is closed and the user's session ends, this code requests a card count, filtering the number of cards based on the `viewed` property.
 
+Apps that have adopted the [`UIScene` life cycle](https://developer.apple.com/documentation/technotes/tn3187-migrating-to-the-uikit-scene-based-life-cycle) (required for apps built with [Xcode 27 and later](https://developer.apple.com/documentation/xcode-release-notes/xcode-27-release-notes)) should implement this in `SceneDelegate.swift`'s `sceneDidEnterBackground(_:)` rather than `AppDelegate.swift`'s `applicationDidEnterBackground(_:)`.
+
 
 
 
 ```swift
-func applicationDidEnterBackground(_ application: UIApplication)
+func sceneDidEnterBackground(_ scene: UIScene)
 ```
 
 Within this method, implement the following code, which actively updates the badge count while the user views cards during a given session:
@@ -132,7 +134,7 @@ UIApplication.shared.applicationIconBadgeNumber = unreadCards?.count ?? 0
 
 
 ```objc
-(void)applicationDidEnterBackground:(UIApplication *)application
+(void)sceneDidEnterBackground:(UIScene *)scene
 ```
 
 Within this method, implement the following code, which actively updates the badge count while the user views cards during a given session:

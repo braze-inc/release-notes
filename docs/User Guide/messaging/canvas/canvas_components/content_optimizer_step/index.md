@@ -237,6 +237,7 @@ After your Canvas is launched, you can update a running Content Optimizer step b
 - Deactivate variants to stop sending them to users.
 - Re-activate previously deactivated variants, as long as doing so keeps the component at or below the five-variant limit.
 
+
 When you publish changes, the optimizer resets and begins reallocating traffic from scratch across all active variants and combinations. Avoid updating variants while the step is in the Learning state. Historical data from before the edit is retained and viewable in the **Content Analytics** tab.
 
 The following settings cannot be changed after launch:
