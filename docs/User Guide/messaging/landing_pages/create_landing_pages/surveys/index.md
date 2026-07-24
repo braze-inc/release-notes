@@ -55,6 +55,7 @@ You can add the following form blocks to surveys:
 - Dropdown
 - Single checkbox
 - Checkbox group
+- Rating scale
 
 ### Randomize answer choices
 
@@ -76,6 +77,22 @@ You can configure:
 During early access, long text responses are available in reporting and exports, but they can't be logged as user profile custom attributes.
 
 ![Long text capture block settings.](https://www.braze.com/docs/assets/img/surveys/long-form-surveys.png?92db595db8a8cbd42cf1afbf62b4aabd){: style="max-width:40%;"}
+
+### Rating scale
+
+Rating scale is useful for capturing sentiment, satisfaction, or likelihood to recommend as a single number.
+
+In the settings panel, select a scale from the dropdown:
+
+- **1–10**
+- **1–5**
+- **0–10** (standard Net Promoter Score (NPS) range)
+
+You can collect a rating as a survey response, log it as an integer custom attribute, or both. Pair a rating scale block with a [long text capture](#long-text-capture) block to collect a numeric score alongside qualitative feedback in the same survey.
+
+
+![Rating scale to give likelihood of recommending product to a friend from 1 to 10.](https://www.braze.com/docs/assets/img/surveys/landing_page_rating_scale_example.png?eeb3565e4c7192a17a872ad702c884ea){: style="max-width:70%;"}
+
 
 ## Configure required fields and attributes
 

@@ -11,6 +11,13 @@ You can also find a copy of the [Web Braze SDK changelog on GitHub](https://gith
 
 
 
+<h2 id="6101">6.10.1</h2>
+
+<h5 id="fixed">Fixed</h5>
+<ul>
+  <li>Fixed an issue where subscribing to Banner or Content Card updates after a session had already started could trigger redundant refresh requests.</li>
+</ul>
+
 <h2 id="6100">6.10.0</h2>
 
 <h5 id="added">Added</h5>
@@ -18,7 +25,7 @@ You can also find a copy of the [Web Braze SDK changelog on GitHub](https://gith
   <li>Added <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logout"><code class="language-plaintext highlighter-rouge">braze.logout()</code></a>, which unregisters push for the current browser and, on success, wipes locally stored SDK data and disables the SDK.</li>
 </ul>
 
-<h5 id="fixed">Fixed</h5>
+<h5 id="fixed-1">Fixed</h5>
 <ul>
   <li>Fixed an issue where <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#unregisterpush"><code class="language-plaintext highlighter-rouge">unregisterPush()</code></a> invoked the <code class="language-plaintext highlighter-rouge">errorCallback</code> instead of the <code class="language-plaintext highlighter-rouge">successCallback</code> when push notifications are not supported in the browser.</li>
 </ul>
@@ -32,7 +39,7 @@ You can also find a copy of the [Web Braze SDK changelog on GitHub](https://gith
   <li>Added optional <code class="language-plaintext highlighter-rouge">subtotal_value</code>, <code class="language-plaintext highlighter-rouge">tax</code>, and <code class="language-plaintext highlighter-rouge">shipping</code> fields on the <code class="language-plaintext highlighter-rouge">ecommerce.order_placed</code>, <code class="language-plaintext highlighter-rouge">ecommerce.cart_updated</code>, and <code class="language-plaintext highlighter-rouge">ecommerce.checkout_started</code> eCommerce events.</li>
 </ul>
 
-<h5 id="fixed-1">Fixed</h5>
+<h5 id="fixed-2">Fixed</h5>
 <ul>
   <li>Fixed an issue where the optional <code class="language-plaintext highlighter-rouge">type</code> field for the <code class="language-plaintext highlighter-rouge">ecommerce.product_viewed</code> eCommerce event was on the <code class="language-plaintext highlighter-rouge">metadata</code> object instead of the root object. The <code class="language-plaintext highlighter-rouge">metadata</code> object still accepts the <code class="language-plaintext highlighter-rouge">type</code> field, but integrators will need to move it to the root object in order for back-in-stock notifications to work properly.</li>
   <li>Fixed an issue where validation for the <code class="language-plaintext highlighter-rouge">discounts</code> field on the <code class="language-plaintext highlighter-rouge">ecommerce.order_placed</code> eCommerce event allowed non-array values.</li>
@@ -46,14 +53,14 @@ You can also find a copy of the [Web Braze SDK changelog on GitHub](https://gith
   <li>Added <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logecommerceevent"><code class="language-plaintext highlighter-rouge">braze.logEcommerceEvent()</code></a> to log eCommerce lifecycle events such as product viewed, cart updated, checkout started, and order placed.</li>
 </ul>
 
-<h5 id="fixed-2">Fixed</h5>
+<h5 id="fixed-3">Fixed</h5>
 <ul>
   <li>Fixed an issue where a new Banner impression would not be logged for a placement ID if the underlying Banner changed mid-session.</li>
 </ul>
 
 <h2 id="671">6.7.1</h2>
 
-<h5 id="fixed-3">Fixed</h5>
+<h5 id="fixed-4">Fixed</h5>
 <ul>
   <li>Fixed an issue where Braze pushes were not displayed properly.</li>
 </ul>
@@ -66,7 +73,7 @@ You can also find a copy of the [Web Braze SDK changelog on GitHub](https://gith
   <li><a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh"><code class="language-plaintext highlighter-rouge">braze.requestBannersRefresh()</code></a> no longer requires the <code class="language-plaintext highlighter-rouge">allowUserSuppliedJavascript</code> initialization option to be enabled.</li>
 </ul>
 
-<h5 id="fixed-4">Fixed</h5>
+<h5 id="fixed-5">Fixed</h5>
 <ul>
   <li>Fixed an issue with the CDN integration on Safari 26+ that could cause messaging sync requests to fail in certain scenarios.</li>
   <li>Fixed an issue where the Braze SDK would attempt to display push notifications sent from other push providers</li>
@@ -86,7 +93,7 @@ You can also find a copy of the [Web Braze SDK changelog on GitHub](https://gith
   <li>Added the <code class="language-plaintext highlighter-rouge">Banner.html</code> property to support manually injecting HTML for cases where <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner"><code class="language-plaintext highlighter-rouge">insertBanner</code></a> is not appropriate.</li>
 </ul>
 
-<h5 id="fixed-5">Fixed</h5>
+<h5 id="fixed-6">Fixed</h5>
 <ul>
   <li>Improved request retry timing to prefer server-configurable values for resiliency and consistency with other Braze SDKs</li>
 </ul>
@@ -98,14 +105,14 @@ You can also find a copy of the [Web Braze SDK changelog on GitHub](https://gith
   <li>Added methods <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logbannerimpressions"><code class="language-plaintext highlighter-rouge">braze.logBannerImpressions()</code></a> and <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logbannerclick"><code class="language-plaintext highlighter-rouge">braze.logBannerClick()</code></a> to allow integrators to manually log both the banner impression and click events. These methods should only be called if you’re bypassing <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner"><code class="language-plaintext highlighter-rouge">insertBanner</code></a> and building custom UI for banners similar to other channels.</li>
 </ul>
 
-<h5 id="fixed-6">Fixed</h5>
+<h5 id="fixed-7">Fixed</h5>
 <ul>
   <li>Fixed an issue where In-App Messages for the previous user were still displayed after changing users.</li>
 </ul>
 
 <h2 id="631">6.3.1</h2>
 
-<h5 id="fixed-7">Fixed</h5>
+<h5 id="fixed-8">Fixed</h5>
 <ul>
   <li>Fixed an issue where banner impressions were not cleared from local storage when a new session was opened.</li>
 </ul>
@@ -138,7 +145,7 @@ You can also find a copy of the [Web Braze SDK changelog on GitHub](https://gith
   <li>The default client-side rate limiting value for Banners refresh has been increased. For more information on SDK rate limiting, please refer to the <a href="https://www.braze.com/docs/developer_guide/sdk_integration/rate_limits#braze-sdk-rate-limits">Braze Developer Guide</a></li>
 </ul>
 
-<h5 id="fixed-8">Fixed</h5>
+<h5 id="fixed-9">Fixed</h5>
 <ul>
   <li>Fixed an issue where Banner serialization keys were inconsistent between SDK versions, which could cause Banners to display incorrectly until the first Banners refresh after a version upgrade.</li>
   <li>Fixed an issue where PetalBot and Meta web crawlers were not properly detected.</li>
@@ -186,7 +193,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Any new session subscriptions now immediately invoke the callback if a new session has already started.</li>
 </ul>
 
-<h5 id="fixed-9">Fixed</h5>
+<h5 id="fixed-10">Fixed</h5>
 <ul>
   <li>Subscription methods now correctly trigger refreshes when <code class="language-plaintext highlighter-rouge">openSession()</code> is called, even if <code class="language-plaintext highlighter-rouge">changeUser()</code> was called first.</li>
   <li>Fixed an issue where Banners could display with a small amount of whitespace at the bottom.</li>
@@ -195,7 +202,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="591">5.9.1</h2>
 
-<h5 id="fixed-10">Fixed</h5>
+<h5 id="fixed-11">Fixed</h5>
 <ul>
   <li>Fixed an issue where rate limit state persisted across users and sessions causing requests to be incorrectly rate limited at session start.</li>
 </ul>
@@ -207,14 +214,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Added <code class="language-plaintext highlighter-rouge">brazeBridge.setBannerHeight()</code> to allow Banners to resize dynamically.</li>
 </ul>
 
-<h5 id="fixed-11">Fixed</h5>
+<h5 id="fixed-12">Fixed</h5>
 <ul>
   <li>Fixed an edge case with retry logic for Feature Flags, Content Cards and Banners network requests.</li>
 </ul>
 
 <h2 id="581">5.8.1</h2>
 
-<h5 id="fixed-12">Fixed</h5>
+<h5 id="fixed-13">Fixed</h5>
 <ul>
   <li>Fixed an issue with the npm version of the Web SDK that prevented Banner clicks from being logged.</li>
 </ul>
@@ -227,7 +234,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li><a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh"><code class="language-plaintext highlighter-rouge">requestBannersRefresh</code></a> now waits for the initial response from the backend and tries again if Banners are enabled.</li>
 </ul>
 
-<h5 id="fixed-13">Fixed</h5>
+<h5 id="fixed-14">Fixed</h5>
 <ul>
   <li>Fixed a race condition causing “not enabled” messages to be logged for Banners and Feature Flags methods on the user’s first session.</li>
 </ul>
@@ -239,7 +246,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Added a method <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setlineid"><code class="language-plaintext highlighter-rouge">User.setLineId</code></a> used to set the user’s <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/line">LINE</a> User ID.</li>
 </ul>
 
-<h5 id="fixed-14">Fixed</h5>
+<h5 id="fixed-15">Fixed</h5>
 <ul>
   <li>Fixed an issue where the chevron icon pointed in the wrong direction on SlideUp in-app messages when using RTL languages.</li>
 </ul>
@@ -251,7 +258,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="561">5.6.1</h2>
 
-<h5 id="fixed-15">Fixed</h5>
+<h5 id="fixed-16">Fixed</h5>
 <ul>
   <li>Fixed an issue where the Tizen operating system was not accurately reported in device properties.</li>
 </ul>
@@ -263,7 +270,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Added support for the Banners campaign type.</li>
 </ul>
 
-<h5 id="fixed-16">Fixed</h5>
+<h5 id="fixed-17">Fixed</h5>
 <ul>
   <li>Fixed an issue where the SDK could erroneously request a triggers refresh even if no session is started.</li>
   <li>Fixed an issue where <code class="language-plaintext highlighter-rouge">ControlMessage</code> instances would allow multiple impressions.</li>
@@ -288,14 +295,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="532">5.3.2</h2>
 
-<h5 id="fixed-17">Fixed</h5>
+<h5 id="fixed-18">Fixed</h5>
 <ul>
   <li>Fixed a regression introduced in 5.2.0 that could cause HTML In-App Messages to render incorrectly when an external script is loaded synchronously.</li>
 </ul>
 
 <h2 id="531">5.3.1</h2>
 
-<h5 id="fixed-18">Fixed</h5>
+<h5 id="fixed-19">Fixed</h5>
 <ul>
   <li>Fixed an issue where a custom <code class="language-plaintext highlighter-rouge">serviceWorkerLocation</code> was not used when calling <code class="language-plaintext highlighter-rouge">unregisterPush</code>.</li>
 </ul>
@@ -313,7 +320,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   </li>
 </ul>
 
-<h5 id="fixed-19">Fixed</h5>
+<h5 id="fixed-20">Fixed</h5>
 <ul>
   <li>Fixed an issue where <code class="language-plaintext highlighter-rouge">e.preventDefault()</code> could be called on events that were not cancelable.</li>
 </ul>
@@ -332,7 +339,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>The SDK will now check for existing permissions before requesting push permissions.</li>
 </ul>
 
-<h5 id="fixed-20">Fixed</h5>
+<h5 id="fixed-21">Fixed</h5>
 <ul>
   <li>Fixed an issue where <code class="language-plaintext highlighter-rouge">unregisterPush()</code> failed to invoke the <code class="language-plaintext highlighter-rouge">successCallback()</code> function in some cases where the user has already unsubscribed to push.</li>
   <li>Fixed an issue where characters <code class="language-plaintext highlighter-rouge">|</code> and <code class="language-plaintext highlighter-rouge">:</code> were not supported in the <code class="language-plaintext highlighter-rouge">userId</code>.</li>
@@ -341,7 +348,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="511">5.1.1</h2>
 
-<h5 id="fixed-21">Fixed</h5>
+<h5 id="fixed-22">Fixed</h5>
 <ul>
   <li>Fixed an issue where content cards sync request count persisted across users causing requests to be incorrectly rate limited.</li>
 </ul>
@@ -353,7 +360,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>The <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetofeatureflagsupdates"><code class="language-plaintext highlighter-rouge">subscribeToFeatureFlagsUpdates()</code></a> callback will be triggered first with cached feature flags only if this cache is from the current session.</li>
 </ul>
 
-<h5 id="fixed-22">Fixed</h5>
+<h5 id="fixed-23">Fixed</h5>
 <ul>
   <li>Fixed an issue where in-app messages failed to render a transparent background when using color-scheme.</li>
   <li>Fixed an issue where impressions for a given feature flag ID were limited to once-per-user instead of once-per-session.</li>
@@ -361,7 +368,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="501">5.0.1</h2>
 
-<h5 id="fixed-23">Fixed</h5>
+<h5 id="fixed-24">Fixed</h5>
 <ul>
   <li>Fixed a bug where toggling <code class="language-plaintext highlighter-rouge">noCookies</code> initialization option from true to false did not create all the necessary cookies.</li>
   <li>Fixed an issue where user attributes could not be nulled out by setting a specific null value.</li>
@@ -383,14 +390,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="4102">4.10.2</h2>
 
-<h5 id="fixed-24">Fixed</h5>
+<h5 id="fixed-25">Fixed</h5>
 <ul>
   <li>Fixed a CSS templating issue in the npm version of the SDK introduced in 4.10.1 that caused in-app messages to display without the expected styles when using Braze built-in UI.</li>
 </ul>
 
 <h2 id="4101">4.10.1</h2>
 
-<h5 id="fixed-25">Fixed</h5>
+<h5 id="fixed-26">Fixed</h5>
 <ul>
   <li>Fixed an issue where user attributes could not be nulled out by setting a specific null value.</li>
 </ul>
@@ -427,7 +434,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Deprecated the <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.banner.html"><code class="language-plaintext highlighter-rouge">Banner</code></a> class.</li>
 </ul>
 
-<h5 id="fixed-26">Fixed</h5>
+<h5 id="fixed-27">Fixed</h5>
 <ul>
   <li>Fixed an issue where in-app messages with images would fail to display when a parent node is supplied to <code class="language-plaintext highlighter-rouge">showInAppMessage()</code> and the parent node has not been attached to the DOM before the display callback is invoked.</li>
   <li>Fixed an issue where the callbacks passed to <code class="language-plaintext highlighter-rouge">requestContentCardsRefresh()</code> were sometimes not triggered when this call was queued behind another <code class="language-plaintext highlighter-rouge">requestContentCardsRefresh()</code> or <code class="language-plaintext highlighter-rouge">subscribeToContentCardsUpdates()</code> request.</li>
@@ -437,14 +444,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="483">4.8.3</h2>
 
-<h5 id="fixed-27">Fixed</h5>
+<h5 id="fixed-28">Fixed</h5>
 <ul>
   <li>Fixed an issue where <code class="language-plaintext highlighter-rouge">manageServiceWorkerExternally</code> initialization option failed to register service-worker when trying to register from a path higher than the service-worker location.</li>
 </ul>
 
 <h2 id="482">4.8.2</h2>
 
-<h5 id="fixed-28">Fixed</h5>
+<h5 id="fixed-29">Fixed</h5>
 <ul>
   <li>Fixed an issue where slow / failed image loading prevents subsequent in-app messages from displaying.</li>
   <li>Fixed a regression introduced in 4.8.0 where push notifications failed to display in Safari versions &lt;= 15.</li>
@@ -452,7 +459,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="481">4.8.1</h2>
 
-<h5 id="fixed-29">Fixed</h5>
+<h5 id="fixed-30">Fixed</h5>
 <ul>
   <li>Fixed an issue where content cards were sometimes not marked as read upon card impression.</li>
   <li>Improved the typings for the <code class="language-plaintext highlighter-rouge">isControl</code> field on In-App Message and Card classes.</li>
@@ -465,7 +472,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>The <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetofeatureflagsupdates"><code class="language-plaintext highlighter-rouge">subscribeToFeatureFlagsUpdates</code></a> callback will now always be called first with the currently cached feature flags, and when feature flag updates are available.</li>
 </ul>
 
-<h5 id="fixed-30">Fixed</h5>
+<h5 id="fixed-31">Fixed</h5>
 <ul>
   <li>Fixed the return type for <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsupdates"><code class="language-plaintext highlighter-rouge">subscribeToContentCardsUpdates()</code></a>.</li>
   <li>Fixed the return type for <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetofeatureflagsupdates"><code class="language-plaintext highlighter-rouge">subscribeToFeatureFlagsUpdates()</code></a>.</li>
@@ -481,14 +488,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="472">4.7.2</h2>
 
-<h5 id="fixed-31">Fixed</h5>
+<h5 id="fixed-32">Fixed</h5>
 <ul>
   <li>Fixed a regression with the noCookies option which caused some localStorage keys to be persisted in cookie storage.</li>
 </ul>
 
 <h2 id="471">4.7.1</h2>
 
-<h5 id="fixed-32">Fixed</h5>
+<h5 id="fixed-33">Fixed</h5>
 <ul>
   <li>Improved the type definition of <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html"><code class="language-plaintext highlighter-rouge">Card.extras</code></a>.</li>
   <li>Fixed a regression introduced in 4.0.0 where the <code class="language-plaintext highlighter-rouge">manageServiceWorkerExternally</code> and <code class="language-plaintext highlighter-rouge">disablePushTokenMaintenance</code> initialization options could not work as expected.</li>
@@ -505,7 +512,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   </li>
 </ul>
 
-<h5 id="fixed-33">Fixed</h5>
+<h5 id="fixed-34">Fixed</h5>
 <ul>
   <li>Fixed an issue where <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission"><code class="language-plaintext highlighter-rouge">requestPushPermission</code></a> did not call the <code class="language-plaintext highlighter-rouge">deniedCallback</code> if the SDK encountered certain errors when registering push.</li>
   <li>Fixed an issue where <code class="language-plaintext highlighter-rouge">requestPushPermission</code> did not log a message if push is not supported on the user’s browser.</li>
@@ -514,7 +521,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="463">4.6.3</h2>
 
-<h5 id="fixed-34">Fixed</h5>
+<h5 id="fixed-35">Fixed</h5>
 <ul>
   <li>Fixed an issue preventing Feature Flags refreshes when SDK Authentication errors occur.</li>
 </ul>
@@ -528,7 +535,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="461">4.6.1</h2>
 
-<h5 id="fixed-35">Fixed</h5>
+<h5 id="fixed-36">Fixed</h5>
 <ul>
   <li>Improved the type definition of <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.featureflag.html"><code class="language-plaintext highlighter-rouge">FeatureFlag.properties</code></a>.</li>
 </ul>
@@ -548,7 +555,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="451">4.5.1</h2>
 
-<h5 id="fixed-36">Fixed</h5>
+<h5 id="fixed-37">Fixed</h5>
 <ul>
   <li>Fixed an issue where sites with globally-scoped <code class="language-plaintext highlighter-rouge">svg</code> and <code class="language-plaintext highlighter-rouge">img</code> CSS caused certain elements of the built-in UI to display incorrectly.</li>
 </ul>
@@ -578,7 +585,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>IndexedDB connections now close after a transaction has been completed.</li>
 </ul>
 
-<h5 id="fixed-37">Fixed</h5>
+<h5 id="fixed-38">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in 4.0.0 where In-App Message closing animations did not work as expected.</li>
 </ul>
@@ -593,7 +600,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="421">4.2.1</h2>
 
-<h5 id="fixed-38">Fixed</h5>
+<h5 id="fixed-39">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in 4.0.3, where IAM displays could sometimes fail due to an internal race condition.</li>
 </ul>
@@ -612,21 +619,21 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Added a method <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions"><code class="language-plaintext highlighter-rouge">braze.logContentCardImpressions()</code></a> to log that the user saw the given Content Cards. This method is equivalent to calling <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcardimpressions"><code class="language-plaintext highlighter-rouge">braze.logCardImpressions()</code></a> with parameter <code class="language-plaintext highlighter-rouge">forContentCards = true</code>.</li>
 </ul>
 
-<h5 id="fixed-39">Fixed</h5>
+<h5 id="fixed-40">Fixed</h5>
 <ul>
   <li>Fixed an issue where calling <code class="language-plaintext highlighter-rouge">unregisterPush()</code> when the user is already unregistered would fail to execute the success callback function.</li>
 </ul>
 
 <h2 id="406">4.0.6</h2>
 
-<h5 id="fixed-40">Fixed</h5>
+<h5 id="fixed-41">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in 4.0.0 that incorrectly failed to display valid IAMs with an unknown Braze Action type error.</li>
 </ul>
 
 <h2 id="405">4.0.5</h2>
 
-<h5 id="fixed-41">Fixed</h5>
+<h5 id="fixed-42">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in 4.0.0 that prevented the SDK from running with certain rollup.js configurations.</li>
 </ul>
@@ -638,14 +645,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Deprecated and changed the obsolete <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardsdisplayed">logContentCardsDisplayed</a> method to a no-op. Card impressions should be logged using <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcardimpressions">logCardImpressions</a>.</li>
 </ul>
 
-<h5 id="fixed-42">Fixed</h5>
+<h5 id="fixed-43">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in 4.0.0 that prevented control in-app message impressions from being logged.</li>
 </ul>
 
 <h2 id="403">4.0.3</h2>
 
-<h5 id="fixed-43">Fixed</h5>
+<h5 id="fixed-44">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in 4.0.0 where Safari push did not work unless the full <code class="language-plaintext highlighter-rouge">baseUrl</code> (e.g. <code class="language-plaintext highlighter-rouge">https://sdk.iad-01.braze.com/api/v3</code>) was specified in the initialization options.</li>
   <li>The SDK will now ignore In-App Messages containing a push prompt Braze Action for users who have already registered for push or whose browser does not support push.</li>
@@ -658,14 +665,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Cookies set by the Braze Web SDK now expire after 400 days per the recommendation of the <a href="https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-4.1.2.2">HTTP Working Group’s draft RFC 6265</a></li>
 </ul>
 
-<h5 id="fixed-44">Fixed</h5>
+<h5 id="fixed-45">Fixed</h5>
 <ul>
   <li>Removed usages of the nullish coalescing operator for better compatibility with various webpack configurations.</li>
 </ul>
 
 <h2 id="401">4.0.1</h2>
 
-<h5 id="fixed-45">Fixed</h5>
+<h5 id="fixed-46">Fixed</h5>
 <ul>
   <li>The <code class="language-plaintext highlighter-rouge">created</code> field is now set for <code class="language-plaintext highlighter-rouge">Card</code> objects when using Content Cards.</li>
   <li>Added <code class="language-plaintext highlighter-rouge">"type": "module"</code> to the package.json so frameworks like Next.js recognize the SDK as an ES Module.</li>
@@ -719,14 +726,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Calling <code class="language-plaintext highlighter-rouge">changeUser()</code> with an SDK Authentication signature will now update the signature when it is called with the current user’s ID.</li>
 </ul>
 
-<h5 id="fixed-46">Fixed</h5>
+<h5 id="fixed-47">Fixed</h5>
 <ul>
   <li>Fixed an issue where removing the <code class="language-plaintext highlighter-rouge">ab-pause-scrolling</code> class was not sufficient to allow scrolling on touchscreen devices during the display of an in-app message.</li>
 </ul>
 
 <h2 id="341">3.4.1</h2>
 
-<h5 id="fixed-47">Fixed</h5>
+<h5 id="fixed-48">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in 3.3.0 where event timestamps could become incorrect when a network request fails and the event is placed back in the queue.</li>
 </ul>
@@ -743,7 +750,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Cards with subclass <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/appboy.controlcard.html"><code class="language-plaintext highlighter-rouge">ControlCard</code></a> are no longer counted in <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/appboy.feed.html#getunreadcardcount"><code class="language-plaintext highlighter-rouge">Feed.getUnreadCardCount</code></a> or <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/appboy.contentcards.html#getunviewedcardcount"><code class="language-plaintext highlighter-rouge">ContentCards.getUnviewedCardCount</code></a>.</li>
 </ul>
 
-<h5 id="fixed-48">Fixed</h5>
+<h5 id="fixed-49">Fixed</h5>
 <ul>
   <li>Fixed an issue where globally-scoped CSS could cause the text and close button of In-App Messages to display incorrectly when using the built-in UI.</li>
   <li>Fixed an accessibility issue with Content Cards where some feed children did not have the <code class="language-plaintext highlighter-rouge">article</code> role.</li>
@@ -773,7 +780,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Deprecated the <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#initializationoptions.__type.enablehtmlinappmessages"><code class="language-plaintext highlighter-rouge">enableHtmlInAppMessages</code></a> initialization option in favor of <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#initializationoptions.__type.enablehtmlinappmessages"><code class="language-plaintext highlighter-rouge">allowUserSuppliedJavascript</code></a>. These options are functionally equivalent and no other changes are required.</li>
 </ul>
 
-<h5 id="fixed-49">Fixed</h5>
+<h5 id="fixed-50">Fixed</h5>
 <ul>
   <li>Fixed incorrect typing for <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/appboy.user.html#setcountry"><code class="language-plaintext highlighter-rouge">User.setCountry</code></a>.</li>
   <li>Added missing <code class="language-plaintext highlighter-rouge">dismissed</code> property to TypeScript definition and docs for <code class="language-plaintext highlighter-rouge">Card</code> subclasses.</li>
@@ -792,14 +799,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Increased clickable area of all buttons in the built-in UI to be at least 45x45px to comply with mobile accessibility best-practices. This includes some minor changes to the Content Cards and News Feed UI to accommodate the larger buttons.</li>
 </ul>
 
-<h5 id="fixed-50">Fixed</h5>
+<h5 id="fixed-51">Fixed</h5>
 <ul>
   <li>Fixed an issue where some network requests fail on websites using certain libraries that overwrite the native Promise object.</li>
 </ul>
 
 <h2 id="312">3.1.2</h2>
 
-<h5 id="fixed-51">Fixed</h5>
+<h5 id="fixed-52">Fixed</h5>
 <ul>
   <li>Added default <code class="language-plaintext highlighter-rouge">alt</code> text to In-App Message and Content Card images to improve screen-reader experience.</li>
   <li>Improved the display of different aspect ratios for <code class="language-plaintext highlighter-rouge">ClassicCard</code> images when using the built-in UI.</li>
@@ -810,7 +817,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="311">3.1.1</h2>
 
-<h5 id="fixed-52">Fixed</h5>
+<h5 id="fixed-53">Fixed</h5>
 <ul>
   <li>Fixed an issue where a javascript error could be thrown when showing Content Cards or In-App Messages in certain environments where <code class="language-plaintext highlighter-rouge">this</code> is undefined.</li>
 </ul>
@@ -827,14 +834,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Relaxed the email address validation used by the SDK in favor of the more accurate Braze backend validation. Valid addresses with unusual structures or international characters which were previously rejected will now be accepted.</li>
 </ul>
 
-<h5 id="fixed-53">Fixed</h5>
+<h5 id="fixed-54">Fixed</h5>
 <ul>
   <li>Fixed an issue where the SDK was improperly handling session starts when switching between subdomains, causing a short delay in triggering in-app messages.</li>
 </ul>
 
 <h2 id="301">3.0.1</h2>
 
-<h5 id="fixed-54">Fixed</h5>
+<h5 id="fixed-55">Fixed</h5>
 <ul>
   <li>Fixed incorrect type definitions for the <code class="language-plaintext highlighter-rouge">extras</code> property of Card and In-App Message classes.</li>
   <li>Fixed a regression introduced in 2.5.0 where the functionality of the <code class="language-plaintext highlighter-rouge">manageServiceWorkerExternally</code> and <code class="language-plaintext highlighter-rouge">disablePushTokenMaintenance</code> initialization options were swapped.</li>
@@ -861,14 +868,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>The Braze Web SDK has brand new docs, which can be found <a href="https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html">here</a>. Any URLs from the previous docs will redirect to the appropriate location.</li>
 </ul>
 
-<h5 id="fixed-55">Fixed</h5>
+<h5 id="fixed-56">Fixed</h5>
 <ul>
   <li>Fixed an issue where browser version was incorrectly reported in Android Webview.</li>
 </ul>
 
 <h2 id="271">2.7.1</h2>
 
-<h5 id="fixed-56">Fixed</h5>
+<h5 id="fixed-57">Fixed</h5>
 <ul>
   <li>Fixed a regression introduced in 2.5.0 where the functionality of the <code class="language-plaintext highlighter-rouge">manageServiceWorkerExternally</code> and <code class="language-plaintext highlighter-rouge">disablePushTokenMaintenance</code> initialization options were swapped.</li>
 </ul>
@@ -886,7 +893,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Cards received from the Content Cards test send feature of the Braze dashboard are no longer removed when the SDK receives an update to the user’s Content Cards.</li>
 </ul>
 
-<h5 id="fixed-57">Fixed</h5>
+<h5 id="fixed-58">Fixed</h5>
 <ul>
   <li>Removed code that could result in javascript errors in certain webpack configurations where the <code class="language-plaintext highlighter-rouge">global</code> object is not accessible by the SDK.</li>
   <li>Fixed an issue where the <code class="language-plaintext highlighter-rouge">ab.Card</code> methods <code class="language-plaintext highlighter-rouge">removeAllSubscriptions</code>, <code class="language-plaintext highlighter-rouge">removeSubscription</code>, <code class="language-plaintext highlighter-rouge">subscribeToClickedEvent</code>, and <code class="language-plaintext highlighter-rouge">subscribeToDismissedEvent</code> were minified, resulting in <code class="language-plaintext highlighter-rouge">undefined</code> when called.</li>
@@ -905,7 +912,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>The new HTML In-App Message type now allows multiple clicks to be logged for a given message.</li>
 </ul>
 
-<h5 id="fixed-58">Fixed</h5>
+<h5 id="fixed-59">Fixed</h5>
 <ul>
   <li>Made push-related methods more defensive against edge-cases where <code class="language-plaintext highlighter-rouge">Notification</code> is not defined.</li>
   <li>Fixed an issue where unexpected backend responses could result in a javascript error.</li>
@@ -914,7 +921,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="252">2.5.2</h2>
 
-<h5 id="fixed-59">Fixed</h5>
+<h5 id="fixed-60">Fixed</h5>
 <ul>
   <li>Fixed an issue that could cause some prerender user agents to fail to be appropriately recognized as a web crawler.</li>
 </ul>
@@ -926,7 +933,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="251">2.5.1</h2>
 
-<h5 id="fixed-60">Fixed</h5>
+<h5 id="fixed-61">Fixed</h5>
 <ul>
   <li>Fixed an issue in Content Cards where <code class="language-plaintext highlighter-rouge">getUnviewedCardCount()</code> returns <code class="language-plaintext highlighter-rouge">undefined</code>. This issue was introduced in 2.5.0.</li>
 </ul>
@@ -948,7 +955,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Decreased the size of the service worker by 20%.</li>
 </ul>
 
-<h5 id="fixed-61">Fixed</h5>
+<h5 id="fixed-62">Fixed</h5>
 <ul>
   <li>Fixed an issue where refreshing Content Cards or News Feed while the feed is showing could cause multiple impressions to be logged for the same card.</li>
   <li>Fixed a bug where calling <code class="language-plaintext highlighter-rouge">setEmail</code> with an email address containing capital letters could sometimes be incorrectly rejected.</li>
@@ -960,7 +967,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="243">2.4.3</h2>
 
-<h5 id="fixed-62">Fixed</h5>
+<h5 id="fixed-63">Fixed</h5>
 <ul>
   <li>Fixed a bug that would cause <code class="language-plaintext highlighter-rouge">appboy.registerAppboyPushMessages</code> to fail when called immediately on a user’s first session.</li>
   <li>Fixed an issue where using both the <code class="language-plaintext highlighter-rouge">manageServiceWorkerExternally</code> and <code class="language-plaintext highlighter-rouge">serviceWorkerLocation</code> initialization options would cause the SDK to not register for push if the provided service worker location was in a sub-directory.</li>
@@ -969,7 +976,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="242">2.4.2</h2>
 
-<h5 id="fixed-63">Fixed</h5>
+<h5 id="fixed-64">Fixed</h5>
 <ul>
   <li>Fixed a bug introduced in 2.4.1 that would focus inline feeds, causing the page to scroll when content cards are shown out of view.</li>
 </ul>
@@ -994,7 +1001,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   </li>
 </ul>
 
-<h5 id="fixed-64">Fixed</h5>
+<h5 id="fixed-65">Fixed</h5>
 <ul>
   <li>Fixed a bug introduced in 2.4.0 that could cause a javascript error in integrations that only include the core library. This error would occur when a Content Card with a URL is received.</li>
 </ul>
@@ -1016,7 +1023,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Deprecated the <code class="language-plaintext highlighter-rouge">subscribeToNewInAppMessages</code> method in favor of the new <a href="https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.subscribeToInAppMessage"><code class="language-plaintext highlighter-rouge">subscribeToInAppMessage</code></a> method, which has a simpler interface.</li>
 </ul>
 
-<h5 id="fixed-65">Fixed</h5>
+<h5 id="fixed-66">Fixed</h5>
 <ul>
   <li>Improved support for In-App Messages on “notched” devices (for example, iPhone X, Pixel 3XL).</li>
   <li>The logic that prevents the page behind a modal or fullscreen In-App Message from scrolling now functions correctly on iOS.</li>
@@ -1035,14 +1042,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="234">2.3.4</h2>
 
-<h5 id="fixed-66">Fixed</h5>
+<h5 id="fixed-67">Fixed</h5>
 <ul>
   <li>Fix regression introduced in 2.3.3 that could prevent analytics from being logged from the service worker.</li>
 </ul>
 
 <h2 id="233">2.3.3</h2>
 
-<h5 id="fixed-67">Fixed</h5>
+<h5 id="fixed-68">Fixed</h5>
 <ul>
   <li>Improved some In-App Message CSS styles to be more resilient against conflicts with any page-wide CSS.</li>
   <li>Improved the resiliency of the code that allows body content to scroll again when modal or fullscreen in-app messages are dismissed.</li>
@@ -1063,7 +1070,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>The Braze Web SDK now automatically enqueues trigger events that occur while triggers are being synced with the Braze backend, and replays them when the sync is complete. This fixes a race condition that could cause users to inadvertantly miss messages when trigger events occur directly after calling <code class="language-plaintext highlighter-rouge">openSession</code> or <code class="language-plaintext highlighter-rouge">changeUser</code>. This change obsoletes usage of the <code class="language-plaintext highlighter-rouge">messagingReadyCallback</code>, which is now deprecated (but will continue to function).</li>
 </ul>
 
-<h5 id="fixed-68">Fixed</h5>
+<h5 id="fixed-69">Fixed</h5>
 <ul>
   <li>Fixed an issue which prevented tall <code class="language-plaintext highlighter-rouge">ab.HtmlMessage</code> objects from scrolling on iOS.</li>
   <li>Fixed “Object doesn’t support this action” error in Internet Explorer 11 or older when showing <code class="language-plaintext highlighter-rouge">ab.HtmlMessage</code> objects.</li>
@@ -1076,7 +1083,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Improved the look and feel of In-App Messages to adhere to the latest UX and UI best practices. Changes affect font sizes, padding, and responsiveness across all message types. Now supports button border styling.</li>
 </ul>
 
-<h5 id="fixed-69">Fixed</h5>
+<h5 id="fixed-70">Fixed</h5>
 <ul>
   <li>This feature, which regressed in 2.1.0, has been restored: when you call <code class="language-plaintext highlighter-rouge">appboy.openSession</code>, if the user has previously granted the site permission to send push, Braze will now automatically send the user’s push token to Braze backend. This will allow users to continue to receive push messages if they manually remove push permission and then subsequently manually reenable it - and will also cause user push tokens to automatically migrate to Braze over time when moving to Braze from a previously-integrated third-party push provider.</li>
 </ul>
@@ -1135,7 +1142,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Added <code class="language-plaintext highlighter-rouge">appboyBridge.web.trackLocation()</code> in HTML in-app messages. This enables HTML in-app message soft location tracking prompts.</li>
 </ul>
 
-<h5 id="fixed-70">Fixed</h5>
+<h5 id="fixed-71">Fixed</h5>
 <ul>
   <li>News Feed and Content Cards clicks and impressions will now be logged multiple times for a given card (if they in fact occur multiple times). Impressions will still only be logged for a given card once per viewing of the feed (regardless of how many times it scrolls in and out of view).</li>
   <li>Improved logic around IndexedDB to better catch and log errors (prevents security errors with disabled cookies on certain browsers, or from Safari’s “Intelligent Tracking Prevention” when integrated in an iFrame).</li>
@@ -1156,7 +1163,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Updated push token handling to automatically remove blocked users from the pushable audience on session start.</li>
 </ul>
 
-<h5 id="fixed-71">Fixed</h5>
+<h5 id="fixed-72">Fixed</h5>
 <ul>
   <li>Fixed issue in Content Cards where the <code class="language-plaintext highlighter-rouge">getUnviewedCardCount</code> method on <code class="language-plaintext highlighter-rouge">ab.ContentCards</code> could not be invoked properly.</li>
   <li>Fixed a bug where the <a href="https://js.appboycdn.com/web-sdk/latest/doc/ab.User.html#addAlias"><code class="language-plaintext highlighter-rouge">addAlias</code> method</a> was returning an object instead of a boolean value.</li>
@@ -1170,7 +1177,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="221">2.2.1</h2>
 
-<h5 id="fixed-72">Fixed</h5>
+<h5 id="fixed-73">Fixed</h5>
 <ul>
   <li>Prevent push received/clicked analytics from being sent to the Braze backend when <code class="language-plaintext highlighter-rouge">appboy.stopWebTracking</code> has been called.</li>
 </ul>
@@ -1183,7 +1190,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Added support for web push on Accelerated Mobile Pages (AMP). See https://www.braze.com/documentation/Web/#amp-support for setup information.</li>
 </ul>
 
-<h5 id="fixed-73">Fixed</h5>
+<h5 id="fixed-74">Fixed</h5>
 <ul>
   <li>Fixed an issue where in-app messages triggered on session start could potentially be templated with the old user’s attributes.</li>
 </ul>
@@ -1195,7 +1202,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="211">2.1.1</h2>
 
-<h5 id="fixed-74">Fixed</h5>
+<h5 id="fixed-75">Fixed</h5>
 <ul>
   <li>Prevent push received/clicked analytics from being sent to the Braze backend when <code class="language-plaintext highlighter-rouge">appboy.stopWebTracking</code> has been called.</li>
 </ul>
@@ -1207,7 +1214,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Added <a href="https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#wipeData"><code class="language-plaintext highlighter-rouge">appboy.wipeData()</code></a> to allow deletion of locally stored SDK data. After calling this method, users will appear as a new anonymous user on a new device.</li>
 </ul>
 
-<h5 id="fixed-75">Fixed</h5>
+<h5 id="fixed-76">Fixed</h5>
 <ul>
   <li>Improved push registration and unregistration
     <ul>
@@ -1227,7 +1234,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="209">2.0.9</h2>
 
-<h5 id="fixed-76">Fixed</h5>
+<h5 id="fixed-77">Fixed</h5>
 <ul>
   <li>Prevent push received/clicked analytics from being sent to the Braze backend when <code class="language-plaintext highlighter-rouge">appboy.stopWebTracking</code> has been called.</li>
 </ul>
@@ -1260,7 +1267,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="206">2.0.6</h2>
 
-<h5 id="fixed-77">Fixed</h5>
+<h5 id="fixed-78">Fixed</h5>
 <ul>
   <li>Fixed a javascript error introduced in 2.0.5 when logging in the service worker.</li>
 </ul>
@@ -1275,7 +1282,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Improved accessibility for in-app messages and news feed by focusing on elements where appropriate, allowing users to tab through various buttons, and adding labels where appropriate.</li>
 </ul>
 
-<h5 id="fixed-78">Fixed</h5>
+<h5 id="fixed-79">Fixed</h5>
 <ul>
   <li>Fixed a bug that caused <code class="language-plaintext highlighter-rouge">appboy.display.automaticallyShowNewInAppMessages()</code> not to function correctly when called after calling <code class="language-plaintext highlighter-rouge">appboy.destroy()</code> and then calling <code class="language-plaintext highlighter-rouge">appboy.initialize()</code> a second time.</li>
   <li>The <code class="language-plaintext highlighter-rouge">openSession</code> and <code class="language-plaintext highlighter-rouge">changeUser</code> methods now take a <code class="language-plaintext highlighter-rouge">messagingReadyCallback</code> that executes when the Braze Web SDK is ready to show messaging data to this user. This fixes a race condition where custom events could be logged before in-app messages had been fetched from the Braze backend and users would not see intended messaging.</li>
@@ -1295,21 +1302,21 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="203">2.0.3</h2>
 
-<h5 id="fixed-79">Fixed</h5>
+<h5 id="fixed-80">Fixed</h5>
 <ul>
   <li>Fixed a null reference error when replaying calls made using the new integration snippet on IE 11.</li>
 </ul>
 
 <h2 id="202">2.0.2</h2>
 
-<h5 id="fixed-80">Fixed</h5>
+<h5 id="fixed-81">Fixed</h5>
 <ul>
   <li>Fixed an issue with our minification that would cause the Braze Web SDK to leak polyfill functions into the global namespace.</li>
 </ul>
 
 <h2 id="201">2.0.1</h2>
 
-<h5 id="fixed-81">Fixed</h5>
+<h5 id="fixed-82">Fixed</h5>
 <ul>
   <li>Fixed automatic css loading when used in combination with the doNotLoadFontAwesome initialization option.</li>
 </ul>
@@ -1341,7 +1348,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Added <a href="https://js.appboycdn.com/web-sdk/latest/doc/ab.User.html#setLanguage"><code class="language-plaintext highlighter-rouge">ab.User.setLanguage</code></a> method to allow explicit control over the language you use in the Braze dashboard to localize your messaging content.</li>
 </ul>
 
-<h5 id="fixed-82">Fixed</h5>
+<h5 id="fixed-83">Fixed</h5>
 <ul>
   <li>Fixed array validation on pages where the Array type has been modified by other scripts.</li>
 </ul>
@@ -1358,7 +1365,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Contains service-worker support for Web Push notifications that require user interaction to be dismissed.</li>
 </ul>
 
-<h5 id="fixed-83">Fixed</h5>
+<h5 id="fixed-84">Fixed</h5>
 <ul>
   <li>Improved time zone recognition on modern browsers to prevent possible ambiguity between different zones with similar UTC offsets.</li>
   <li>Broadened detection of the Android OS to better recognize newer hardware and as-of-yet unreleased hardware on an ongoing basis.</li>
@@ -1378,7 +1385,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Added user aliasing capability. Aliases can be used in the API and dashboard to identify users in addition to their ID.  See the <a href="https://js.appboycdn.com/web-sdk/latest/doc/ab.User.html#addAlias"><code class="language-plaintext highlighter-rouge">addAlias method documentation</code></a> for more information.</li>
 </ul>
 
-<h5 id="fixed-84">Fixed</h5>
+<h5 id="fixed-85">Fixed</h5>
 <ul>
   <li>Fixed issue in which the local cache of seen in-app messages and news feed cards was being cleared when the anonymous user was identified, allowing certain items to be retriggered or appear unread.</li>
 </ul>
@@ -1390,7 +1397,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>When you call <code class="language-plaintext highlighter-rouge">appboy.openSession</code>, if the user has previously granted the site permission to send push, Braze will now automatically send the user’s push token to Braze backend. This will allow users to continue to receive push messages if they manually remove push permission and then subsequently manually reenable it - and will also cause user push tokens to automatically migrate to Braze over time when moving to Braze from a previously-integrated third-party push provider.</li>
 </ul>
 
-<h5 id="fixed-85">Fixed</h5>
+<h5 id="fixed-86">Fixed</h5>
 <ul>
   <li>IMPORTANT: Due to a behavioral change in Chrome 59, to reliably receive notifications, you must update the service worker from https://js.appboycdn.com/web-sdk/1.6/service-worker.js.</li>
   <li><code class="language-plaintext highlighter-rouge">appboy.display.automaticallyShowNewInAppMessages()</code> may now be safely called multiple times on the same <code class="language-plaintext highlighter-rouge">appboy</code> instance.</li>
@@ -1398,7 +1405,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="1610">1.6.10</h2>
 
-<h5 id="fixed-86">Fixed</h5>
+<h5 id="fixed-87">Fixed</h5>
 <ul>
   <li>A bug in our documentation for soft push prompts could cause Control Group stats to fail. If you previously implemented soft push prompts, please refer to the latest version of our documentation: https://www.braze.com/documentation/Web/#soft-push-prompts</li>
 </ul>
@@ -1412,7 +1419,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="168">1.6.8</h2>
 
-<h5 id="fixed-87">Fixed</h5>
+<h5 id="fixed-88">Fixed</h5>
 <ul>
   <li>Fixed “Notification is not defined” error when calling <code class="language-plaintext highlighter-rouge">appboy.isPushPermissionGranted</code>/<code class="language-plaintext highlighter-rouge">appboy.isPushBlocked</code> on Chrome versions prior to 46.</li>
 </ul>
@@ -1424,7 +1431,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>The Braze Web SDK now supports HTML content in-app messages. For your security, these must be enabled by supplying the <code class="language-plaintext highlighter-rouge">enableHtmlInAppMessages</code> configuration option when calling <code class="language-plaintext highlighter-rouge">appboy.initialize</code>.</li>
 </ul>
 
-<h5 id="fixed-88">Fixed</h5>
+<h5 id="fixed-89">Fixed</h5>
 <ul>
   <li>The News Feed css is now defensive against any global box-sizing css rules that may exist on your site, and handles classic card image styling more gracefully.</li>
   <li>On mobile devices, Fullscreen in-app messages’ close buttons are sized relative to the entire device - this ensures touchable targets on high-resolution phones.</li>
@@ -1433,14 +1440,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="166">1.6.6</h2>
 
-<h5 id="fixed-89">Fixed</h5>
+<h5 id="fixed-90">Fixed</h5>
 <ul>
   <li>Fixed a data-storage issue where a small number of users impacted by the issue fixed in 1.6.5 may record a new session on page load after upgrading to 1.6.5.</li>
 </ul>
 
 <h2 id="165">1.6.5</h2>
 
-<h5 id="fixed-90">Fixed</h5>
+<h5 id="fixed-91">Fixed</h5>
 <ul>
   <li>Cookies are now stored with path=/ for sitewide accessibility, ensuring that identification persists sitewide in all situations. This fixes an issue introduced in 1.6.0.</li>
 </ul>
@@ -1452,7 +1459,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>The Braze Web SDK now ignores web crawler activity by default - this saves datapoints, makes analytics more accurate, and may improve page rank (this change can be reversed with the <code class="language-plaintext highlighter-rouge">allowCrawlerActivity</code> initialization option).</li>
 </ul>
 
-<h5 id="fixed-91">Fixed</h5>
+<h5 id="fixed-92">Fixed</h5>
 <ul>
   <li>Fixed an issue where in-app messages triggered off of push clicks wouldn’t fire because the push click happened before the in-app message configuration was synced to the device.</li>
   <li>Increased defensiveness against corrupted localStorage or cookie data.</li>
@@ -1480,7 +1487,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="161">1.6.1</h2>
 
-<h5 id="fixed-92">Fixed</h5>
+<h5 id="fixed-93">Fixed</h5>
 <ul>
   <li>Improved Modal in-app message layout to prevent text-view scrolling until necessary.</li>
 </ul>
@@ -1493,7 +1500,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="160">1.6.0</h2>
 
-<h5 id="fixed-93">Fixed</h5>
+<h5 id="fixed-94">Fixed</h5>
 <ul>
   <li>Fixed an edge-case that could cause SlideUp in-app messages to appear offscreen if many were triggered in rapid succession.</li>
 </ul>
@@ -1505,7 +1512,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="151">1.5.1</h2>
 
-<h5 id="fixed-94">Fixed</h5>
+<h5 id="fixed-95">Fixed</h5>
 <ul>
   <li>Fixed a rendering issue that could cause FullScreen in-app messages to appear partially off-screen on very short browser windows.</li>
 </ul>
@@ -1546,7 +1553,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Added ability to specify on a message-by-message basis whether in-app message clicks should open in a new tab or same tab.</li>
 </ul>
 
-<h5 id="fixed-95">Fixed</h5>
+<h5 id="fixed-96">Fixed</h5>
 <ul>
   <li>Fixed an issue which caused emoji in web push messages to be broken on Firefox.</li>
 </ul>
@@ -1570,7 +1577,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Added support for Braze Feedback through the new appboy.submitFeedback method.</li>
 </ul>
 
-<h5 id="fixed-96">Fixed</h5>
+<h5 id="fixed-97">Fixed</h5>
 <ul>
   <li>In-App Messages now track click analytics even when the click action is “None.”</li>
   <li>Prevent Mobile Safari in Private Browsing mode from throwing an exception. This issue was introduced in 1.3.0.</li>
@@ -1578,7 +1585,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="131">1.3.1</h2>
 
-<h5 id="fixed-97">Fixed</h5>
+<h5 id="fixed-98">Fixed</h5>
 <ul>
   <li>Prevent Firefox from throwing an exception when in Private Browsing mode. This issue was introduced in 1.3.0.</li>
 </ul>
@@ -1595,7 +1602,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Adds support for triggered in-app messages.</li>
 </ul>
 
-<h5 id="fixed-98">Fixed</h5>
+<h5 id="fixed-99">Fixed</h5>
 <ul>
   <li>Fixed a bug where news feed cards weren’t always immediately being marked as read during scrolling.</li>
 </ul>
@@ -1607,7 +1614,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="122">1.2.2</h2>
 
-<h5 id="fixed-99">Fixed</h5>
+<h5 id="fixed-100">Fixed</h5>
 <ul>
   <li>Fixed a javascript error that could occur when attempting to showFeed before the body has loaded.</li>
   <li>Made in-app message buttons explicitly display:inline-block so that they still display correctly if the site is styling buttons as display:block.</li>
@@ -1615,7 +1622,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="121">1.2.1</h2>
 
-<h5 id="fixed-100">Fixed</h5>
+<h5 id="fixed-101">Fixed</h5>
 <ul>
   <li>The service worker now reads Braze’s backend URL from IndexedDB, which allows web push to function for clients with custom Braze endpoints.</li>
   <li>isPushBlocked now returns false when isPushSupported is false instead of erroring.</li>
@@ -1634,7 +1641,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Introduced appboy.toggleFeed as a convenience method - it simply calls appboy.showFeed or appboy.destroyFeed based on whether there’s currently a feed showing.</li>
 </ul>
 
-<h5 id="fixed-101">Fixed</h5>
+<h5 id="fixed-102">Fixed</h5>
 <ul>
   <li>Buttonless FullScreen and Modal messages now respect body click actions from the dashboard.</li>
 </ul>
@@ -1652,7 +1659,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Expanded browser detection to recognize more niche browsers.</li>
 </ul>
 
-<h5 id="fixed-102">Fixed</h5>
+<h5 id="fixed-103">Fixed</h5>
 <ul>
   <li>Fixed an issue which would cause some Android devices to be detected as Linux.</li>
 </ul>
@@ -1664,7 +1671,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Introduced <code class="language-plaintext highlighter-rouge">appboy.logFeedDisplayed</code>, which is called automatically when using <code class="language-plaintext highlighter-rouge">appboy.display.showFeed</code>.</li>
 </ul>
 
-<h5 id="fixed-103">Fixed</h5>
+<h5 id="fixed-104">Fixed</h5>
 <ul>
   <li>Fixed a race condition which could cause events to be double-counted if the user had the site open in very many tabs at once.</li>
 </ul>
@@ -1676,7 +1683,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="101">1.0.1</h2>
 
-<h5 id="fixed-104">Fixed</h5>
+<h5 id="fixed-105">Fixed</h5>
 <ul>
   <li>The SDK now logs correctly to the console when enableLogging is true (or toggleAppboyLogging has been called) and no custom logger has been specified.</li>
 </ul>
@@ -1695,7 +1702,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="024">0.2.4</h2>
 
-<h5 id="fixed-105">Fixed</h5>
+<h5 id="fixed-106">Fixed</h5>
 <ul>
   <li>Fixed an issue which was causing the in-app message refresh throttle not to persist beyond a single page load.</li>
 </ul>
@@ -1707,7 +1714,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Introduce <code class="language-plaintext highlighter-rouge">appboy.display.destroyFeed</code> method to allow integrators to implement a toggle feed button or otherwise hide the feed from code.</li>
 </ul>
 
-<h5 id="fixed-106">Fixed</h5>
+<h5 id="fixed-107">Fixed</h5>
 <ul>
   <li>Prevent potential race condition which could cause news feed cards to not be marked as read for a short amount of time.</li>
 </ul>
@@ -1719,7 +1726,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="022">0.2.2</h2>
 
-<h5 id="fixed-107">Fixed</h5>
+<h5 id="fixed-108">Fixed</h5>
 <ul>
   <li>Fix issue where already-cached news feed cards were not properly having impressions logged when the news feed was first shown.</li>
 </ul>
@@ -1736,7 +1743,7 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
   <li>Give the news feed a z-index just below bootstrap modal backdrops.</li>
 </ul>
 
-<h5 id="fixed-108">Fixed</h5>
+<h5 id="fixed-109">Fixed</h5>
 <ul>
   <li>Support legacy Internet Explorer (complete IE9 support, generally functional IE8 support).</li>
 </ul>
@@ -1755,14 +1762,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="015">0.1.5</h2>
 
-<h5 id="fixed-109">Fixed</h5>
+<h5 id="fixed-110">Fixed</h5>
 <ul>
   <li>Correctly identify IE11.</li>
 </ul>
 
 <h2 id="014">0.1.4</h2>
 
-<h5 id="fixed-110">Fixed</h5>
+<h5 id="fixed-111">Fixed</h5>
 <ul>
   <li>Fixed issue where SlideUp message clicks with a clickAction of URI were not being respected.</li>
   <li>Fixed issue where Date custom attributes, custom event properties, and purchase properties were not being recognized as Dates by the Braze platform.</li>
@@ -1804,14 +1811,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="005">0.0.5</h2>
 
-<h5 id="fixed-111">Fixed</h5>
+<h5 id="fixed-112">Fixed</h5>
 <ul>
   <li>Fixed critical issue which caused browser tabs to become unresponsive with no network connection.</li>
 </ul>
 
 <h2 id="004">0.0.4</h2>
 
-<h5 id="fixed-112">Fixed</h5>
+<h5 id="fixed-113">Fixed</h5>
 <ul>
   <li>Defend against NS_ERROR_FILE_CORRUPTED (corrupted browser SQLite database) and more generally against inability to use localStorage.</li>
 </ul>
@@ -1825,14 +1832,14 @@ This includes removal of the <code class="language-plaintext highlighter-rouge">
 
 <h2 id="002">0.0.2</h2>
 
-<h5 id="fixed-113">Fixed</h5>
+<h5 id="fixed-114">Fixed</h5>
 <ul>
   <li>Fixed a bug where due to minification, locally stored data was version-specific.</li>
 </ul>
 
 <h2 id="001">0.0.1</h2>
 
-<h5 id="fixed-114">Fixed</h5>
+<h5 id="fixed-115">Fixed</h5>
 <ul>
   <li>Fixed bug where multibyte UTF-8 characters were being rejected for various attributes.</li>
   <li>Harden usage of localStorage slightly.</li>

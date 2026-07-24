@@ -1006,7 +1006,7 @@ By default, slideup in-app messages can be dismissed with a swipe gesture. The d
 - **Slideup from the bottom:** Swiping from top to bottom dismisses the message. Swiping from bottom to top does not dismiss it.
 - **Slideup from the top:** Swiping from bottom to top dismisses the message. Swiping from top to bottom does not dismiss it.
 
-This swipe behavior is built into the default `BrazeInAppMessageUI` [`SlideupView`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/slideupview) and applies only to slideup in-app messages. Modal and full in-app messages don't support swipe-to-dismiss. To further customize the slideup view, including swipe behavior, you can modify the [`SlideupView.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/slideupview/attributes-swift.struct) or provide a custom view via subclassing.
+This swipe behavior is built into the default `BrazeInAppMessageUI` [`SlideupView`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/slideupview) and applies only to slideup in-app messages. Modal and full in-app messages don't support swipe-to-dismiss. To further customize the slideup view, including swipe behavior, you can modify the [`SlideupView.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/slideupview/attributes-swift.struct) or provide a custom view through subclassing.
 
 **Note:**
 
@@ -1031,7 +1031,7 @@ BrazeInAppMessageUI.ModalImageView.Attributes.defaults.dismissOnBackgroundTap = 
 
 
 
-Customization via `Attributes` is not available in Objective-C.
+Customization through `Attributes` is not available in Objective-C.
 
 
 
@@ -1343,17 +1343,18 @@ func inAppMessage(_ ui: BrazeInAppMessageUI, displayChoiceForMessage message: Br
 
 ### Step 3: Create a deep link
 
-In your deep link handling code, add the following code to process the `{YOUR-APP-SCHEME}:app-store-review` deep link. Note that you will need to import `StoreKit` to use `SKStoreReviewController`:
+In your [`scene:openURLContexts:`](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking/?sdktab=swift#swift_step-3-implement-a-handler) handler, add the following code to process the `{YOUR-APP-SCHEME}:app-store-review` deep link. Note that you will need to import `StoreKit` to use `SKStoreReviewController`:
 
 
 
 
 ```swift
-func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+  guard let url = URLContexts.first?.url else { return }
   let urlString = url.absoluteString.removingPercentEncoding
   if (urlString == "{YOUR-APP-SCHEME}:app-store-review") {
     SKStoreReviewController.requestReview()
-    return true;
+    return;
   }
   // Other deep link handling code…
 }
@@ -1363,11 +1364,12 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 
 ```objc
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
+- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts {
+  NSURL *url = URLContexts.allObjects.firstObject.URL;
   NSString *urlString = url.absoluteString.stringByRemovingPercentEncoding;
   if ([urlString isEqualToString:@"{YOUR-APP-SCHEME}:app-store-review"]) {
     [SKStoreReviewController requestReview];
-    return YES;
+    return;
   }
   // Other deep link handling code…
 }

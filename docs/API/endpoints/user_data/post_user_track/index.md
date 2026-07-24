@@ -1,4 +1,4 @@
-<div id='api_vavrmgdevgfa' class='api_div' data-search-keywords='need to update users in bulk? attributes events purchases message attributes_processed events_processed purchases_processed errors'>
+<div id='api_titjiwfbxkwc' class='api_div' data-search-keywords='need to update users in bulk? attributes events purchases message attributes_processed events_processed purchases_processed errors'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
@@ -76,7 +76,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       <td><code class="language-plaintext highlighter-rouge">attributes</code></td>
       <td>Optional</td>
       <td>Array of attributes objects</td>
-      <td>See <a href="/docs/api/objects_filters/user_attributes_object#migrate-push-tokens">user attributes object</a></td>
+      <td>See <a href="/docs/api/objects_filters/user_attributes_object">user attributes object</a></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">events</code></td>

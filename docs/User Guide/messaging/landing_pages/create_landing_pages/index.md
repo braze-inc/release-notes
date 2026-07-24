@@ -80,6 +80,7 @@ Adjust the span properties to update your text styling, which includes:
 
 
 
+
 You can use these blocks to create a form that links user-submitted data to their profile in Braze. Keep in mind, if you use form blocks, you'll also need to create an additional landing page for the confirmation state.
 
 ![A form block that registers a new customer and will send a discount code to their email.](https://www.braze.com/docs/assets/img/landing_pages/form.png?b13f9c730db6ff88091d8f5213c4a0c4){: style="max-width:70%;"}
@@ -106,7 +107,7 @@ After creating a landing page with a form, be sure to embed its [landing page Li
 
 #### Page container styles
 
-You can set styles to be applied across all relevant component blocks in your landing page from the **Page container** tab. These styles will be used everywhere on your page except where you override them with a specific block.
+You can set styles to be applied across all relevant component blocks in your landing page from the **Page container** tab. These styles apply everywhere on your page except where you override them with a specific block.
 
 We recommend setting up page container-level styles before you customize styles at the block level. You can also add a background image for the entire page.
 

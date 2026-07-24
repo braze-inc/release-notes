@@ -129,3 +129,4 @@ The latest SDK updates have been released. Breaking updates are listed in the SD
 - [Braze Segment Android 17.0.0](https://github.com/braze-inc/braze-segment-android/releases/tag/v17.0.0)
     - This is the final release of the Braze Segment Android plugin because it uses Analytics-Android, which reached end-of-support in March 2026. Migrate to the [Braze Segment Kotlin plugin](https://github.com/braze-inc/braze-segment-kotlin), which uses [Analytics-Kotlin](https://github.com/segmentio/analytics-kotlin).
     - Upgrades native SDK versions.
+

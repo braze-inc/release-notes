@@ -590,7 +590,7 @@ UNNotificationCategory *likeCategory = [UNNotificationCategory categoryWithIdent
 **Note:**
 
 
-When you create a `UNNotificationAction`, you can specify a list of action options. For example, `.foreground` lets your users open your app after tapping the action button. This is necessary for navigational on-click behaviors, such as "Open App" and "Deep Link into Application". If you want an action button that simply dismisses the notification without opening the app, leave `.foreground` out of the action's `options` array. For more information, see [`UNNotificationActionOptions`](https://developer.apple.com/documentation/usernotifications/unnotificationactionoptions).
+When you create a `UNNotificationAction`, you can specify a list of action options. For example, `.foreground` lets your users open your app after tapping the action button. This is necessary for navigational on-click behaviors, such as "Open App" and "Deep Link into Application". If you want an action button that dismisses the notification without opening the app, leave `.foreground` out of the action's `options` array. For more information, see [`UNNotificationActionOptions`](https://developer.apple.com/documentation/usernotifications/unnotificationactionoptions).
 
 
 
@@ -601,7 +601,7 @@ After you register a category, use the Braze dashboard to send notifications of 
 **Tip:**
 
 
-You only need to define action buttons on the Braze dashboard for behaviors that can't be created locally in your Swift code, such as deep linking into your app or redirecting to a web URL. These actions need to be configured on the dashboard so they can define what URL or deep link to open. For action buttons that simply dismiss the notification without opening the app, you don't need to configure them on the dashboard—dismissal behavior is handled automatically by iOS. Just register your custom category and its actions in your app code, then enter the matching category name on the dashboard.
+You only need to define action buttons on the Braze dashboard for behaviors that can't be created locally in your Swift code, such as deep linking into your app or redirecting to a web URL. These actions need to be configured on the dashboard so they can define what URL or deep link to open. For action buttons that dismiss the notification without opening the app, you don't need to configure them on the dashboard—dismissal behavior is handled automatically by iOS. Just register your custom category and its actions in your app code, then enter the matching category name on the dashboard.
 
 
 
@@ -614,7 +614,7 @@ You only need to define action buttons on the Braze dashboard for behaviors that
 
 ### Example: Custom push category {#example-custom-push-category}
 
-Suppose you want to create a push notification with two action buttons: **Manage**, which deep links into your app, and **Keep**, which simply dismisses the notification.
+Suppose you want to create a push notification with two action buttons: **Manage**, which deep links into your app, and **Keep**, which dismisses the notification.
 
 In the following example, the `MANAGE_IDENTIFIER` action includes the `.foreground` option, which opens the app when tapped—this is necessary because it will deep link into a specific part of the app. The `KEEP_IDENTIFIER` action uses an empty options array, meaning it will dismiss the notification without opening the app.
 
@@ -645,7 +645,7 @@ Badges are small icons that are ideal for getting a user's attention. You can sp
 
 Braze will automatically clear the badge count when a Braze notification is received while the app is in the foreground. Manually setting the badge number to 0 will also clear notifications in the notification center. 
 
-If you do not have a plan for clearing badges as part of normal app operation or by sending pushes that clear the badge, you should clear the badge when the app becomes active by adding the following code to your app's `applicationDidBecomeActive:` delegate method:
+If you do not have a plan for clearing badges as part of normal app operation or by sending pushes that clear the badge, you should clear the badge when the app becomes active by adding the following code to your `SceneDelegate.swift` file's `sceneDidBecomeActive(_:)` method (or your app's `applicationDidBecomeActive:` delegate method, if your app has not yet adopted the [`UIScene` life cycle](https://developer.apple.com/documentation/technotes/tn3187-migrating-to-the-uikit-scene-based-life-cycle)):
 
 
 
@@ -726,7 +726,7 @@ You must specify a protocol URL that directs to the location of the sound file i
 
 ![The push composer in the Braze dashboard](https://www.braze.com/docs/assets/img_archive/sound_push_ios.png?c035b34ffb6c0f720f6d2c08ca1ba2b2)
 
-If the specified sound file doesn't exist or the keyword "default" is entered, Braze will use the default device alert sound. Aside from our dashboard, sound can also be configured via our [messaging API][12].
+If the specified sound file doesn't exist or the keyword "default" is entered, Braze will use the default device alert sound. Aside from our dashboard, sound can also be configured through our [messaging API][12].
 
 See the Apple Developer Documentation regarding [preparing custom alert sounds](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html) for additional information.
 
@@ -738,7 +738,7 @@ When creating a push campaign through the dashboard, click the **Settings** tab 
 
 ### Key-value pairs
 
-Braze allows you to send custom-defined string key-value pairs, known as `extras`, along with a push notification to your application. Extras can be defined via the dashboard or API and will be available as key-value pairs within the `notification` dictionary passed to your push delegate implementations.
+Braze allows you to send custom-defined string key-value pairs, known as `extras`, along with a push notification to your application. Extras can be defined through the dashboard or API and will be available as key-value pairs within the `notification` dictionary passed to your push delegate implementations.
 
 ### Alert options
 

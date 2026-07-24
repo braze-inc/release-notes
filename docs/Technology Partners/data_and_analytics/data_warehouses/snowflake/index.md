@@ -51,6 +51,7 @@ For Snowflake, data sharing happens between a [data provider](https://docs.snowf
 3. If you're using a CRR share, specify the cloud provider and region.
 4. When you're finished, select **Create Datashare**. This will send the datashare to your Snowflake account.
 
+
 ### Step 2: Create the database in Snowflake
 
 1. After a few minutes, you should receive the inbound datashare in your Snowflake account.
@@ -80,6 +81,7 @@ Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 - Map raw event or user data to a CRM (like Salesforce)
 - And more
 
+
 For a full list of available tables and columns, refer to the [SQL table reference](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/). Snowflake Data Sharing includes all tables in that reference, plus additional Snowflake-exclusive tables for snapshots, campaign and Canvas changelogs, agent console events, and message retry events.
 
 You can also [download the raw table schemas](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt) as a text file.
@@ -104,6 +106,7 @@ Non-breaking changes can happen at any time and generally provide additional fun
 - Adding a new table or view
 - Adding a column to an existing table or view
 
+
 **Important:**
 
 
@@ -113,10 +116,11 @@ Because new columns are considered non-breaking, Braze strongly recommends expli
 
 #### Breaking changes
 
-When possible, breaking changes will be preceded by an announcement and a migration period. Examples of breaking changes include:
+When possible, breaking changes are preceded by an announcement and a migration period. Examples of breaking changes include:
 - Removing a table or view
 - Removing a column from an existing table or view
 - Changing the type or nullability of an existing column
+
 
 ### Snowflake regions
 

@@ -1,4 +1,4 @@
-<div id='api_gbbjowxjmouz' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
+<div id='api_orjxykkcdlka' class='api_div' data-search-keywords='prerequisites campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url'>
 <h1 id="send-campaign-messages-using-api-triggered-delivery">Send campaign messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/send</p>
@@ -155,7 +155,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <p>This section discusses how Braze picks a user profile for sending and what happens when one profile is not selected.</p>
 
-<p>A user’s subscription group status can be updated using the inclusion of a <code class="language-plaintext highlighter-rouge">subscription_groups</code> parameter within the <code class="language-plaintext highlighter-rouge">attributes</code> object. For more details, refer to <a href="/docs/api/objects_filters/user_attributes_object#migrate-push-tokens">User attributes object</a>.</p>
+<p>A user’s subscription group status can be updated using the inclusion of a <code class="language-plaintext highlighter-rouge">subscription_groups</code> parameter within the <code class="language-plaintext highlighter-rouge">attributes</code> object. For more details, refer to <a href="/docs/api/objects_filters/user_attributes_object">User attributes object</a>.</p>
 
 <h4 id="recipient-limits-and-profile-creation">Recipient limits and profile creation</h4>
 

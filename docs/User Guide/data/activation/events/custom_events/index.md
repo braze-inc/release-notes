@@ -10,11 +10,12 @@ Some common custom event use cases include:
 
 - Triggering a campaign or Canvas based on a custom event using [action-based delivery](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery)
 - Segmenting users by how many times they performed a custom event, when the last time the event occurred, and similar
-- Using dashboard [custom event analytics](#analytics) to view an aggregate of how often each event occurred
+- Using dashboard [custom event analytics](https://www.braze.com/docs/user_guide/data/activation/events/custom_events#analytics) to view an aggregate of how often each event occurred
 - Finding additional analytics using [funnel](https://www.braze.com/docs/user_guide/analytics/reports/funnel_reports#step-2-select-events-for-funnel-steps) and [retention](https://www.braze.com/docs/user_guide/analytics/reports/retention_reports) reports
 - Leveraging [persistent entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties) to use metadata from your customer event for personalization in your Canvas steps
 - Generating more sophisticated analytics with [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents)
 - Setting up [exit criteria](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/exit_criteria) to define when users should exit your Canvas
+
 
 ## Managing custom events
 
@@ -31,6 +32,7 @@ When you block a custom event:
 - Future data won't be collected for that event.
 - Existing data won't be available unless that event is unblocked.
 - That event won't show up in filters or graphs.
+
 
 Additionally, if a blocked custom event is currently referenced by filters or triggers in other areas of Braze, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 

@@ -30,6 +30,7 @@ Braze has launched a new [data center](https://www.braze.com/docs/user_guide/dat
 - `agentconsole.ToolInvocation`: Added `request_id` (string)—a unique ID for the overall LLM request and complete execution.
 - `users.messages.rcs.InboundReceive`: Added `canvas_variation_name` (string)—the name of the Canvas variation the user received.
 
+
 ### Campaign and Canvas fields for Snowflake Data Share
 
 
@@ -177,3 +178,4 @@ The latest SDK updates have been released. Breaking updates are listed in the SD
 - [React Native SDK 19.0.0](https://github.com/braze-inc/braze-react-native-sdk/releases/tag/19.0.0)
     - Updates the native Swift SDK version bindings from Braze Swift SDK 13.3.0 to 14.0.1.
     - Updates the native Android SDK version bindings from Braze Android SDK 40.0.2 to 41.0.0.
+

@@ -98,6 +98,7 @@ The event property segmentation filters include:
 - Has made any purchases with property A with value B, X times in the last Y days.
 - Adds the ability to segment within 1 to 30 days.
 
+
 ![A filter group that has 'Abandoned Cart' with property 'number of items' and value 2 more than 1 time in the last 30 calendar days.](https://www.braze.com/docs/assets/img/nested_object3.png?e737f9afc6c05f1115860d67c189e868)
 
 Data is logged only for a given event property after you enable it, and event properties are available only from that date moving forward.

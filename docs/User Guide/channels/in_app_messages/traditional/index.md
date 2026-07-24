@@ -28,10 +28,11 @@ If all of the messages in your campaign are going to be similar or have the same
 
 1. [Create your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
-3. Choose a [step schedule](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types) and specify a delay as needed. Note that steps containing in-app messages cannot be action-based.
-4. Filter your Audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
+3. Choose a [step schedule](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types) and specify a delay as needed.
+4. Filter your audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
 5. Choose your [advancement behavior](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases).
 6. Choose any other messaging channels which you would like to pair with your message.
+
 
 **Important:**
 
@@ -291,6 +292,8 @@ Choose between the following options:
  
 - **Dismiss Automatically:** Select how many seconds the message will remain on the screen.
 - **Wait for User Swipe or Touch:** Requires a dismissal or close option.
+
+Dismissing a message logs an impression but not a click. For how clicks are tracked by user action, see [Click tracking](https://www.braze.com/docs/user_guide/channels/in_app_messages/reporting/#click-tracking).
 
 ### Slide up position
 

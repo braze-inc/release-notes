@@ -17,7 +17,7 @@ For example, Sam might open your emails in the morning regularly, but she opens 
 
 If a user doesn't have any relevant engagement data for Braze to calculate the optimal send time, you can specify a fallback time.
 
-## Use cases
+## Examples
 
 - Send recurring campaigns that aren't time sensitive
 - Automate campaigns with users from multiple time zones
@@ -29,7 +29,7 @@ This section describes how to configure Intelligent Timing for your campaigns an
 
 
 
-### Step 1: Add intelligent timing
+### Step 1: Add Intelligent Timing
 
 1. Create a campaign and compose your message.
 2. Select the **Scheduled Delivery** as your delivery type.

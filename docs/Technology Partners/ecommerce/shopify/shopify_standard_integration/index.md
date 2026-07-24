@@ -34,6 +34,13 @@ After you select the standard setup onboarding path, you’ll need to choose whe
     - Track only identified users
     - Starts tracking data when site visitors sign up or log into their accounts
 
+**Note:**
+
+
+New customers are provisioned on the latest Braze Web SDK and JavaScript SDK versions during setup. Existing customers can view their current SDK version in integration settings, get notified when a newer version is available, and self-serve upgrades from integration settings.
+
+
+
 ## Step 3: Configure your Shopify data
 
 ### Standard data setup
@@ -277,9 +284,10 @@ It is critical to validate that the `shopify_customer_id` and `email_address` (i
 #### Failure behavior and merging
 Any status code other than `200` is considered a failure.
 
-- **Merge implications:** If the endpoint fails (returns non-`200` or times out), Braze cannot retrieve the external ID. Consequently, the merge between the Shopify user and the Braze user profile will not happen at that time.
-- **Retry logic:** Braze may attempt standard immediate network retries, but if the failure persists, the merge will be deferred until the next qualifying event (for example, the next time the user updates their profile or completes a checkout).
+- **Merge implications:** If the endpoint fails (returns non-`200` or times out), Braze cannot retrieve the external ID. Consequently, the merge between the Shopify user and the Braze user profile does not happen at that time.
+- **Retry logic:** Braze may attempt standard immediate network retries, but if the failure persists, the merge is deferred until the next qualifying event (for example, the next time the user updates their profile or completes a checkout).
 - **Supportability:** To support timely user merging, ensure your endpoint is highly available and handles the optional `email_address` field gracefully.
+
 
 ### Step 4.3: Input your external ID
 
@@ -289,7 +297,8 @@ Repeat [Step 4](#step-4), and enter your endpoint URL after selecting custom ext
 
 - If your external ID isn't generated when Braze sends a request to your endpoint, the integration will default to using the Shopify customer ID when the `changeUser` function is called. This step is crucial for merging the anonymous user profile with the identified user profile. As a result, there may be a temporary period during which different types of external IDs exist within your workspace.
 - When the external ID is available in the `braze.external_id` metafield, the integration will prioritize and assign this external ID. 
-    - If the Shopify customer ID was previously set as the Braze external ID, it will be replaced with the `braze.external_id` metafield value. 
+    - If the Shopify customer ID was previously set as the Braze external ID, it will be replaced with the `braze.external_id` metafield value.
+
 
 ### Step 4.4: Collect your email or SMS opt-ins from Shopify (optional)
 
@@ -305,6 +314,7 @@ If you use the email or SMS channels, you can sync your email and SMS marketing 
 As mentioned in [Shopify overview](https://www.braze.com/docs/shopify_overview/), if you want to use a third-party capture form, your developers need to integrate Braze SDK code. This will let you capture the email address and global email subscription status from form submissions. Specifically, you need to implement and test these methods to your `theme.liquid` file:<br><br>
 - [setEmail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail): Sets the email address on the user profile
 - [setEmailNotificationSubscriptionType](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype): Updates the global email subscription status
+
 
 
 

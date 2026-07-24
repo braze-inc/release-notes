@@ -51,7 +51,8 @@ If all of the messages in your campaign are similar or have the same content, co
 3. Choose a [step schedule](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types) and specify a delay as needed.
 4. Filter your audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
 5. Choose your [advancement behavior](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases).
-6. Choose any other messaging channels you want to pair with your message.
+6. Choose any other messaging channels which you would like to pair with your message.
+
 
 **Tip:**
 

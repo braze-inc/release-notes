@@ -54,6 +54,7 @@ The standalone BrazeAI assistants found throughout the dashboard are unified int
 - Content QA with AI
 - AI Copilot for Data Transformations
 
+
 The existing entry points remain where each legacy assistant button used to live. Instead of opening a standalone assistant, these entry points now open the Operator pane with dynamic prompts that are pre-scoped to your task. These entry points provide a direct route into Operator so you can use these capabilities without adjusting your existing workflows.
 
 #### Operator support for campaign creation and editing
@@ -65,6 +66,7 @@ This functionality is available from the **Campaigns** page or from within any e
 - Respond to prompts such as "I want to send our lapsed users a push notification with a 20% off promo code the next time they open the app or log a custom event that cancels their subscription".
 - Assist you in each individual step of the campaign wizard, with full visibility into what you're working on and the ability to change form inputs on the page.
 - Navigate to the correct step in the wizard to begin taking action, whether you start from an open campaign or the **Campaigns** page.
+
 
 #### Operator support for Content Blocks
 
@@ -87,6 +89,7 @@ You can do the following in the [Agent Console](https://www.braze.com/docs/user_
 - Set required input fields for a Catalog agentic field, so that the agent doesn't run if a required input field value is empty or missing.
 - Re-run an agent for all empty cells of an agentic column to fill any missing values without re-running the entire column.
 
+
 #### Edit a launched Content Optimizer step
 
 
@@ -95,7 +98,8 @@ After your Canvas is launched, you can now [update a Content Optimizer step](htt
 
 - Add new variants to any existing component, either manually or using AI-generated suggestions, up to the five-variant limit per component.
 - Deactivate variants to stop sending them to users.
-- Re-activate previously deactivated variants, as long as doing so keeps the component at or under the five-variant limit.
+- Re-activate previously deactivated variants, as long as doing so keeps the component at or below the five-variant limit.
+
 
 ### Channels & Touchpoints
 
@@ -208,6 +212,7 @@ The latest SDK updates have been released. Breaking updates are listed in the SD
 
 
 
+
 **May 28, 2026**
 
 
@@ -311,6 +316,7 @@ The latest SDK updates have been released. Breaking updates are listed in the SD
         - This allows compatibility with any version of the Braze SDK from `14.0.0` up to, but not including, `15.0.0`.
         - Refer to the [changelog entry for `14.0.0`](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#1400) for more information on potential breaking changes.
     - Adds support for SDK Authentication.
+
 
 
 
@@ -452,6 +458,7 @@ The latest SDK updates have been released. Breaking updates are listed in the SD
 
 
 
+
 **April 2, 2026**
 
 
@@ -570,6 +577,7 @@ The latest SDK updates have been released. Breaking updates are listed in the SD
 
 
 
+
 **March 5, 2026**
 
 
@@ -605,6 +613,7 @@ Braze has launched a new [data center](https://www.braze.com/docs/user_guide/dat
 - `agentconsole.AgentExecuted`: Added `error` (string)—a description of any error that occurred.
 - `agentconsole.ToolInvocation`: Added `request_id` (string)—a unique ID for the overall LLM request and complete execution.
 - `users.messages.rcs.InboundReceive`: Added `canvas_variation_name` (string)—the name of the Canvas variation the user received.
+
 
 #### Campaign and Canvas fields for Snowflake Data Share
 
@@ -757,6 +766,7 @@ The latest SDK updates have been released. Breaking updates are listed in the SD
 
 
 
+
 **February 5, 2026**
 
 
@@ -890,6 +900,7 @@ The latest SDK updates have been released. Breaking updates are listed in the SD
 
 
 
+
 **January 8, 2026**
 
 
@@ -916,6 +927,7 @@ These following changes were made to Currents in Version 4:
     * Field `user_id` is now *optional*.
 * Field changes to event type `users.messages.rcs.Rejection`:
     * Added new `string` field `canvas_step_message_variation_id`: API ID of the Canvas step message variation this user received
+
 
 Refer to the [Currents changelog](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/currents_changelogs) for the event changes for each release.
 
@@ -966,6 +978,7 @@ The latest SDK updates have been released. Breaking updates are listed in the SD
     - Removes News Feed.
         - This fully removes all UI elements, data models, and actions associated with News Feed.
 - [Web SDK 6.4.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+
 
 
 

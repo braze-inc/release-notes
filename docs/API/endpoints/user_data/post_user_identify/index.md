@@ -1,4 +1,4 @@
-<div id='api_cguwpxotlqxh' class='api_div' data-search-keywords='how it works aliases_to_identify emails_to_identify phone_numbers_to_identify aliases_processed message'>
+<div id='api_zdhrwghtwvla' class='api_div' data-search-keywords='how it works aliases_to_identify emails_to_identify phone_numbers_to_identify aliases_processed message'>
 <h1 id="identify-users">Identify users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/identify</p>
@@ -141,7 +141,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       <td><code class="language-plaintext highlighter-rouge">emails_to_identify</code></td>
       <td>Required</td>
       <td>Array of aliases to identify object</td>
-      <td>Required if <code class="language-plaintext highlighter-rouge">email</code> is specified as the identifier. Email addresses to identify users. See <a href="#identifying-users-by-email">Identifying users by email</a>.</td>
+      <td>Required if <code class="language-plaintext highlighter-rouge">email</code> is specified as the identifier. Email addresses to identify users. See <a href="#identifying-users-by-email-addresses-and-phone-numbers">Identifying users by email</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">phone_numbers_to_identify</code></td>
@@ -234,7 +234,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <h3 id="why-does-my-identify-request-return-success-but-the-profile-did-not-merge">Why does my identify request return success but the profile did not merge?</h3>
 
-<p><code class="language-plaintext highlighter-rouge">201 Created</code> with <code class="language-plaintext highlighter-rouge">message: success</code> means we accepted the request. It does not guarantee that every alias or email in the payload matched an existing profile—case mismatches on <code class="language-plaintext highlighter-rouge">alias_name</code>, duplicate profiles, or our prioritization rules can result in no visible merge even though the call succeeded. Verify that <code class="language-plaintext highlighter-rouge">alias_name</code> casing exactly matches our stored values, check for duplicate profiles with <a href="/docs/api/endpoints/user_data/post_users_merge/"><code class="language-plaintext highlighter-rouge">/users/merge</code></a>, and review <a href="#identifying-users-by-email"><code class="language-plaintext highlighter-rouge">prioritization</code></a> when using <code class="language-plaintext highlighter-rouge">emails_to_identify</code>.</p>
+<p><code class="language-plaintext highlighter-rouge">201 Created</code> with <code class="language-plaintext highlighter-rouge">message: success</code> means Braze accepted the request. It does not guarantee that every alias or email in the payload matched an existing profile—case mismatches on <code class="language-plaintext highlighter-rouge">alias_name</code>, duplicate profiles, or Braze prioritization rules can result in no visible merge even though the call succeeded. Verify that <code class="language-plaintext highlighter-rouge">alias_name</code> casing exactly matches stored values, check for duplicate profiles with <a href="/docs/api/endpoints/user_data/post_users_merge/"><code class="language-plaintext highlighter-rouge">/users/merge</code></a>, and review <a href="#identifying-users-by-email-addresses-and-phone-numbers"><code class="language-plaintext highlighter-rouge">prioritization</code></a> when using <code class="language-plaintext highlighter-rouge">emails_to_identify</code>.</p>
 
 <h2 id="response">Response</h2>
 
