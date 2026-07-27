@@ -1,4 +1,4 @@
-<div id='api_mmvmdcmeleza' class='api_div' data-search-keywords='prerequisites message campaigns id last_edited name is_api_campaign tags'>
+<div id='api_khrsbboxdiqg' class='api_div' data-search-keywords='prerequisites message campaigns id last_edited name is_api_campaign tags'>
 <h1 id="export-campaigns-list">Export campaigns list</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/campaigns/list</p>
@@ -89,7 +89,7 @@
 12
 13
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">status</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">export</span><span class="p">,</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">'success'</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">completed</span><span class="w"> </span><span class="err">without</span><span class="w"> </span><span class="err">errors</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">'success'</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">request</span><span class="w"> </span><span class="err">completes</span><span class="w"> </span><span class="err">without</span><span class="w"> </span><span class="err">errors</span><span class="p">,</span><span class="w">
     </span><span class="nl">"campaigns"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Campaign</span><span class="w"> </span><span class="err">API</span><span class="w"> </span><span class="err">identifier</span><span class="p">,</span><span class="w">

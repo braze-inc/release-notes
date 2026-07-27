@@ -59,8 +59,15 @@ Events sent from Braze Currents to Amplitude will count toward your Amplitude ev
 
 ![The Braze Amplitude Currents page. This page includes fields for integration name, contact email, API key, and US region. The lower half of the Currents page lists available Currents events you can send.](https://www.braze.com/docs/assets/img/amplitude4.png?607f90c8f39df0c1a922b12bfc531f47)
 
+**Tip:**
 
-Check out Amplitude's [integration docs](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration) to learn more. 
+
+If you receive an "Invalid API key" error when pasting your Amplitude API key, try manually typing the key instead. Some browsers may add hidden characters when copying and pasting that can cause validation errors.
+
+
+
+
+For more information, see Amplitude's [Appboy Amplitude Integration](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration).
 
 
 ## Rate limits
