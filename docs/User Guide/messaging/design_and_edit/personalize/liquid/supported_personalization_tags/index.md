@@ -173,6 +173,24 @@ You can use the `assign` tag to create a variable in the message composer. We re
 
 After you create a variable, you can reference that variable in your messaging logic or message. This tag comes in handy when you want to reformat content that is returned from our [Connected Content](https://www.braze.com/docs/assets/img_archive/personalized_firstname_.png?ab1f2c99d1b34b0bdddaab42c8916a0b) feature. You can read more in Shopify's documentation on [variable tags](https://docs.shopify.com/themes/liquid/tags/variable-tags).
 
+**Important:**
+
+
+Strings wrapped in single quotes inside an `assign` tag are treated as literal strings. Liquid personalization tags inside single quotes are not interpolated. For example:
+
+
+```liquid
+{% assign name_intro = 'My name is {{${first_name}}}' %}
+{{ name_intro }}
+```
+
+
+This outputs the literal text `My name is {{${first_name}}}` instead of the user's first name.
+
+To include personalization, use variables or concatenate strings with the [`append`](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters#string-filters) filter. For URL templating with personalization, refer to [link templates](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_template).
+
+
+
 **Tip:**
 
 

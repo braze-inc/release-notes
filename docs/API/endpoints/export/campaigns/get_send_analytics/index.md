@@ -1,4 +1,4 @@
-<div id='api_mwihworkqvkn' class='api_div' data-search-keywords='prerequisites message data time messages ios_push variation_name sent delivered undelivered delivery_failed direct_opens total_opens bounces body_clicks revenue unique_recipients conversions conversions_by_send_time conversions1 conversions1_by_send_time conversions2 conversions2_by_send_time conversions3 conversions3_by_send_time'>
+<div id='api_gqnnxkxkgkve' class='api_div' data-search-keywords='prerequisites data time messages ios_push variation_name sent delivered undelivered delivery_failed direct_opens total_opens bounces body_clicks revenue unique_recipients conversions conversions_by_send_time conversions1 conversions1_by_send_time conversions2 conversions2_by_send_time conversions3 conversions3_by_send_time message'>
 <h1 id="export-send-analytics">Export send analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/sends/data_series</p>
@@ -122,9 +122,7 @@
 41
 42
 43
-44
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">status</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">export</span><span class="p">,</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">'success'</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">completed</span><span class="w"> </span><span class="err">without</span><span class="w"> </span><span class="err">errors</span><span class="p">,</span><span class="w">
     </span><span class="nl">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">date</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">ISO</span><span class="w"> </span><span class="mi">8601</span><span class="w"> </span><span class="err">date</span><span class="p">,</span><span class="w">
@@ -165,7 +163,7 @@
         </span><span class="nl">"revenue"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">float)</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
-  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">'success'</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">request</span><span class="w"> </span><span class="err">completes</span><span class="w"> </span><span class="err">without</span><span class="w"> </span><span class="err">errors</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 

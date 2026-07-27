@@ -1,4 +1,4 @@
-<div id='api_akpmwyeaziam' class='api_div' data-search-keywords='prerequisites data name stats time total_stats revenue conversions conversions_by_entry_time entries variant_stats step_stats messages email sent opens unique_opens clicks sms sent_to_carrier delivered rejected delivery_failed opt_out help message'>
+<div id='api_wifqcbuzsofv' class='api_div' data-search-keywords='prerequisites data name stats time total_stats revenue conversions conversions_by_entry_time entries variant_stats step_stats messages email sent opens unique_opens clicks sms sent_to_carrier delivered rejected delivery_failed opt_out help message'>
 <h1 id="export-canvas-data-series-analytics">Export Canvas data series analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/data_series</p>
@@ -215,7 +215,7 @@
       </span><span class="err">...</span><span class="w"> </span><span class="err">(more</span><span class="w"> </span><span class="err">stats</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">time)</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">status</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">export</span><span class="p">,</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">'success'</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">completed</span><span class="w"> </span><span class="err">without</span><span class="w"> </span><span class="err">errors</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">'success'</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">request</span><span class="w"> </span><span class="err">completes</span><span class="w"> </span><span class="err">without</span><span class="w"> </span><span class="err">errors</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 

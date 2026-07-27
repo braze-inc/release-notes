@@ -1,4 +1,4 @@
-<div id='api_ccnrgbnnmetl' class='api_div' data-search-keywords='prerequisites products message'>
+<div id='api_sifskyixnwnt' class='api_div' data-search-keywords='prerequisites products message'>
 <h1 id="export-product-ids">Export product IDs</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/purchases/product_list</p>
@@ -63,7 +63,7 @@
   </span><span class="nl">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="s2">"product_name"</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">name</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">product</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">'success'</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">request</span><span class="w"> </span><span class="err">completes</span><span class="w"> </span><span class="err">without</span><span class="w"> </span><span class="err">errors</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 

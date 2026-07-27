@@ -1,4 +1,4 @@
-<div id='api_icuqgmajncgx' class='api_div' data-search-keywords='prerequisites data name total_stats revenue entries conversions conversions_by_entry_time conversions1 conversions1_by_entry_time conversions2 conversions2_by_entry_time conversions3 conversions3_by_entry_time variant_stats step_stats messages android_push sent opens influenced_opens bounces message'>
+<div id='api_gnpanxvlwqvr' class='api_div' data-search-keywords='prerequisites data name total_stats revenue entries conversions conversions_by_entry_time conversions1 conversions1_by_entry_time conversions2 conversions2_by_entry_time conversions3 conversions3_by_entry_time variant_stats step_stats messages android_push sent opens influenced_opens bounces message'>
 <h1 id="export-canvas-data-summary-analytics">Export Canvas data summary analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/data_summary</p>
@@ -257,7 +257,7 @@
       </span><span class="err">...</span><span class="w"> </span><span class="err">(more</span><span class="w"> </span><span class="err">steps)</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">status</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">export</span><span class="p">,</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">'success'</span><span class="w"> </span><span class="err">on</span><span class="w"> </span><span class="err">successful</span><span class="w"> </span><span class="err">completion</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">'success'</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">request</span><span class="w"> </span><span class="err">completes</span><span class="w"> </span><span class="err">without</span><span class="w"> </span><span class="err">errors</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 

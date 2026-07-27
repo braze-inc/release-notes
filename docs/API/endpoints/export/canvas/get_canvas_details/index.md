@@ -1,4 +1,4 @@
-<div id='api_cmisdvhldfke' class='api_div' data-search-keywords='prerequisites created_at updated_at name description archived draft enabled has_post_launch_draft schedule_type first_entry last_entry channels variants id first_step_ids first_step_id tags teams steps next_step_ids next_paths next_step_id messages message_variation_id channel has_translatable_content message type message_1 subject body message_2 title message_3 message_4 header'>
+<div id='api_dsbhbooxoghu' class='api_div' data-search-keywords='prerequisites created_at updated_at name description archived draft enabled has_post_launch_draft schedule_type first_entry last_entry channels variants id first_step_ids first_step_id tags teams steps next_step_ids next_paths next_step_id messages message_variation_id channel has_translatable_content message type message_1 subject body message_2 title message_3 message_4 header'>
 <h1 id="export-canvas-details">Export Canvas details</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/details</p>
@@ -171,7 +171,7 @@
     </span><span class="p">},</span><span class="w">
     </span><span class="err">...</span><span class="w"> </span><span class="err">(more</span><span class="w"> </span><span class="err">steps)</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">status</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">export</span><span class="p">,</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">'success'</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">completed</span><span class="w"> </span><span class="err">without</span><span class="w"> </span><span class="err">errors</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">'success'</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">request</span><span class="w"> </span><span class="err">completes</span><span class="w"> </span><span class="err">without</span><span class="w"> </span><span class="err">errors</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
