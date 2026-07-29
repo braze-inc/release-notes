@@ -7,6 +7,171 @@ For more information on any of the updates listed on this page, contact your acc
 
 
 
+**July 23, 2026**
+
+
+
+## July 23, 2026 release
+
+### Data & Reporting
+
+#### Messaging Diagnostics dashboard
+
+
+
+The [Messaging Diagnostics dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard) provides a high-level breakdown of message sending outcomes, allowing you to spot trends and diagnose potential issues in your messaging setup. This dashboard can help you understand why messages from your campaigns or Canvases may not have been sent as expected. Contact your customer success manager for access to the feature.
+
+#### CSV Custom Events mapper
+
+
+
+The [CSV import flow](https://www.braze.com/docs/user_guide/audience/manage_audience/import_users/csv_import#about-csv-import) for custom events now includes a mapper that lets you map event names and event property headers to Braze fields before import. This update brings the custom events experience in line with the custom attributes flow and reduces the need to reformat files before upload. The flow includes uploading a CSV, mapping required fields and events, mapping event properties, and then selecting targeting preferences before import. If your file already matches the expected format, you can continue through the flow without making mapping changes.
+
+#### Catalogs free storage now supports up to 500 MB
+
+
+
+The free version of [catalogs](https://www.braze.com/docs/user_guide/data/activation/catalogs/create#tiers) now supports up to 500 MB of storage across all CSV files.
+
+### BrazeAI<sup>TM</sup>
+
+#### Operator can now update Settings pages for you
+
+
+
+[Operator](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities) can now make changes directly on more Settings pages, so you can describe a change in natural language instead of clicking through configuration screens. Supported pages include:
+
+- Quiet hours
+- Push settings
+- Messaging rate limits
+- Messaging rules and always-on approval workflows
+- Other identifiers and API limits
+- Contact information
+
+For example, on the Quiet hours page, ask Operator to set quiet hours from 9 PM to 8 AM for SMS.
+
+#### Remote Braze MCP server
+
+
+
+The [Braze MCP server](https://www.braze.com/docs/user_guide/brazeai/mcp_server) is a remote-hosted connection that lets you connect AI agents such as Claude, ChatGPT, Cursor, VSCode, Codex, Google Antigravity, and Claude Code directly to Braze. Through natural language, agents can read campaign, Canvas, and segment analytics, custom attributes, events, KPIs, and catalogs, and create or update email templates, Content Blocks, and media library assets. No user-profile PII is exposed.
+
+To connect, paste a single endpoint URL into your MCP client—`https://mcp.braze.com/mcp` for US or `https://mcp.braze.eu/mcp` for EU—then sign in with OAuth, including SSO. The server launches with the available tools.
+
+### Orchestration
+
+#### Teams audience scoping
+
+
+
+The [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams/) audience configuration now supports multiple filters.
+
+### Channels & Touchpoints
+
+#### Survey rating scale for in-app messages and landing pages
+
+
+
+Add a numeric rating scale to a form block in both [landing page surveys](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages/surveys#rating-scale) and [in-app message surveys](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop/surveys#rating-scale) to capture sentiment, satisfaction, and likelihood-to-recommend without any custom code. Three ranges are supported: 1–10, 1–5, and 0–10 (the standard NPS range).
+
+#### WhatsApp limited time offer templates
+
+
+
+[WhatsApp limited time offer templates](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message/message_and_image_formats#limited-time-offer-templates) display a time-sensitive promotional offer with an optional countdown as the offer nears expiration. Use this layout for time-boxed promotions, such as seasonal sales or offers personalized to a user attribute.
+
+#### Shopify self-serve SDK version upgrade
+
+
+
+New [Shopify](https://www.braze.com/docs/partners/ecommerce/shopify/) customers are provisioned on the latest Braze Web SDK and JavaScript SDK versions during setup. Existing customers can view their current SDK version in integration settings, get notified when a newer version is available, and self-serve upgrades from integration settings.
+
+#### HTML editor for Banners
+
+
+
+When you compose a Banner, you can now build it [using the HTML editor](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner#compose-a-banner). The HTML editor is best for teams that already maintain their own HTML templates or want full control over markup and styling for Banners. You can write or paste custom HTML directly into the editor.
+
+#### Replace a file in the media library
+
+
+
+You can now [replace the file of an existing media library asset](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library#replace-a-file) while keeping its URL and asset ID stable. Because the URL doesn't change, any campaign, Canvas, Content Block, or template that references that asset automatically reflects the updated file, so you don't have to manually re-upload or re-link it everywhere it's used.
+
+#### Grid view for the media library
+
+
+
+The media library and select template libraries now offer a grid view alongside the existing list view. Grid view displays assets as thumbnails with key metadata (name, type, last modified), making it faster to find images and creative by sight instead of by filename. Filtering and search work the same in both views.
+
+#### Shareable Preview support for more channels
+
+
+
+[Shareable Preview](https://www.braze.com/docs/user_guide/channels/email/html_editor#step-3b-preview-and-test-your-message) now supports the following additional channels:
+
+- SMS, MMS, and RCS
+- WhatsApp
+- Push
+- Content Cards
+- LINE
+
+From a campaign or message, generate a link and share it with reviewers who don't have Braze dashboard access—brand, legal, or an outside agency, for example. Recipients open the link in any browser to see the message rendered as a customer would, including any test personalization.
+
+#### Push credentials update API
+
+
+
+You can now update push credentials programmatically with the [Update push credentials endpoint](https://www.braze.com/docs/api/endpoints/apps/post_update_push_credential). Each request updates one app and one platform (`apple`, `firebase`, `huawei`, or `kindle`) and accepts credential payloads as Base64-encoded values. This helps teams manage large app portfolios and credential rotation policies without relying on manual dashboard uploads.
+
+### Partnerships
+
+#### Refiner - Surveys
+
+[Refiner](https://refiner.io) is an in-app survey platform for SaaS and mobile apps. It enables product and voice-of-customer teams to launch targeted in-app surveys and continuously collect NPS, CSAT, CES, product feedback, and zero-party user data.
+
+#### Stayfilm - Visual and Interactive Content
+
+[Stayfilm](https://www.stayfilm.com/) is a REST API for automated, personalized video production at scale. The platform integrates data, images, text, soundtracks, narration, and visual effects to generate customized video content for eCommerce, marketplaces, CRM workflows, and marketing campaigns.
+
+#### Validity - Data and Analytics
+
+[Validity Everest](https://www.validity.com/everest/) is an email deliverability platform that helps you measure inbox placement and protect your sending reputation. The Braze and Validity integration syncs your Everest seed list to Braze, automatically seeds qualifying campaigns and Canvases, and pulls engagement metrics back into Validity Inbox so you can compare seed-based placement with real subscriber engagement.
+
+### SDK
+
+The following SDK updates have been released. For more details, see [SDK Changelogs](https://www.braze.com/docs/developer_guide/changelogs).
+
+#### SDK breaking updates
+
+The latest SDK updates have been released. Breaking updates are listed in the SDK updates section; all other updates can be found in the corresponding SDK changelogs.
+
+- [Android SDK 43.0.0](https://github.com/braze-inc/braze-android-sdk/releases/tag/v43.0.0)
+    - Adds `unregisterPush` and logout methods.
+    - Adds additional fields to eCommerce events.
+    - Adds exponential backoff for push notification image loading.
+- [Swift SDK 17.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
+    - Adds additional fields to eCommerce events.
+    - Makes data states predictable after initialization.
+    - Adds non-blocking accessors for device and user identifiers.
+    - Removes the deprecated push-to-start update API on `Braze.LiveActivities`.
+- [Web SDK 6.10.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+    - Adds `unregisterPush` and logout methods.
+    - Adds additional fields to eCommerce events.
+    - Fixes a Banner and Content Card issue related to redundant refreshes on startup.
+    - Adds a public method for Banner dismissal.
+- [Flutter SDK 21.0.0](https://github.com/braze-inc/braze-flutter-sdk/releases/tag/v21.0.0)
+    - Updates the native iOS bridge.
+    - Removes deprecated methods.
+    - Updates `changeUser`, `enableSDK`, and `disableSDK` handlers to return completion results.
+- [Expo SDK 5.2.0](https://github.com/braze-inc/braze-expo-plugin/releases/tag/v5.2.0)
+    - Updates the sample app to Expo SDK 56.
+- [React Native SDK 22.0.0](https://www.npmjs.com/package/@braze/react-native-sdk/v/22.0.0)
+    - Adds support for Banner dismissals.
+    - Includes binding updates.
+
+
+
 **June 25, 2026**
 
 
@@ -897,141 +1062,6 @@ The latest SDK updates have been released. Breaking updates are listed in the SD
 - [Expo Plugin 3.2.0](https://github.com/braze-inc/braze-expo-plugin/blob/main/CHANGELOG.md)
 - [Swift SDK 14.0.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
 
-
-
-
-
-**January 8, 2026**
-
-
-## January 8, 2026 release
-
-### Data & Reporting
-
-#### Updates to Currents events
-
-
-
-These following changes were made to Currents in Version 4:
-
-* Field changes to event type `users.behaviors.pushnotification.TokenStateChange`:
-    * Added new `string` field `push_token`: Push token of the event
-* Field changes to event type `users.messages.pushnotification.Bounce`:
-    * Added new `string` field `push_token`: Push token of the event
-* Field changes to event type `users.messages.pushnotification.Send`:
-    * Added new `string` field `push_token`: Push token of the event
-* Field changes to event type `users.messages.rcs.Click`:
-    * Added new `string` field `canvas_variation_name`: Name of the Canvas variation this user received
-    * Field `user_phone_number` is now *optional*.
-* Field changes to event type `users.messages.rcs.InboundReceive`:
-    * Field `user_id` is now *optional*.
-* Field changes to event type `users.messages.rcs.Rejection`:
-    * Added new `string` field `canvas_step_message_variation_id`: API ID of the Canvas step message variation this user received
-
-
-Refer to the [Currents changelog](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/currents_changelogs) for the event changes for each release.
-
-#### Export sync logs by all rows
-
-
-
-In the [Cloud Data Ingestion **Sync Log** dashboard](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sync_logs/#exporting-sync-logs), choose to export the row-level logs for a sync run by:
-
-* **Rows with errors:** Downloads a file containing only the rows that had an **Error** status.
-* **All rows:** Downloads a file containing every row processed in the run.
-
-### Channels & Touchpoints
-
-#### Bring Your Own (BYO) WhatsApp connector
-
-The [Bring Your Own (BYO) WhatsApp connector](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/byo_connector/) offers a partnership between Braze and Infobip, in which you give Braze access to your Infobip WhatsApp Business Manager (WABA). This allows you to manage and pay for messaging costs directly with Infobip while using Braze for segmentation, personalization, and campaign orchestration. 
-
-#### Banners in Canvas
-
-
-
-Select **Banners** as a messaging channel in a [Message step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step) for Canvas. Use the drag-and-drop editor to create personalized inline messages, providing non-intrusive, contextually relevant experiences that update automatically at the start of each user session. 
-
-#### Dynamic BCC
-
-
-
-With [dynamic BCC](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/email_preferences/?tab=bcc%20address#dynamic-bcc), use Liquid in your BCC address. Note that this feature is only available in **Email Preferences** and can’t be set on the campaign itself. Only one BCC address per email recipient is allowed.
-
-#### Channel-based rate limits
-
-As an alternative to a rate limit that gets shared across an entire multi-channel campaign or Canvas, select a specific rate limit per channel. In this case, the rate limit will apply to each of your selected channels. For example, set your campaign or Canvas to send a maximum of 5,000 webhooks and 2,500 SMS messages per minute across the campaign or Canvas. For more details, see [Rate limiting and frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping).
-
-### Partnerships
-
-#### LILT - Localization
-
-[LILT](https://www.braze.com/docs/partners/lilt/) is the complete AI solution for enterprise translation and content creation. LILT enables global organizations to scale and optimize their content, product, communications, and support operations, with AI agents and fully automated workflows.
-
-### SDK breaking updates
-
-The latest SDK updates have been released. Breaking updates are listed in the SDK updates section; all other updates can be found in the corresponding SDK changelogs.
-
-- [Android 40.1.1](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#4011)
-- [Android SDK 40.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#4010)
-- [Swift SDK 14.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
-    - Removes News Feed.
-        - This fully removes all UI elements, data models, and actions associated with News Feed.
-- [Web SDK 6.4.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
-
-
-
-
-
-**December 9, 2025**
-
-
-
-## December 9, 2025
-
-### Data & Reporting
-
-#### Adding Google Tag Manager to a landing page
-
-To add Google Tag Manager to your landing pages, add a Custom Code block to your landing page in the drag-and-drop editor, then [insert the Tag Manager code](https://www.braze.com/docs/user_guide/messaging/landing_pages#adding-google-tag-manager-to-a-landing-page) into the block.
-
-### Orchestration
-
-#### SMS Liquid use case
-
-The [Respond with different messages based on inbound SMS keyword](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/liquid_use_cases#sms-keyword-response) use case incorporates dynamic SMS keyword processing to respond to specific inbound messages with different message copy. For example, you can send different responses when someone texts “START” versus “JOIN”.
-
-#### Allowlisting for Connected Content
-
-You can allowlist specific URLs to be used for [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call). To access this feature, contact your customer success manager.
-
-### Channels & Touchpoints
-
-#### SMS character encoding
-
-Our [SMS segment calculator](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator/#segment-calculator) now has character encoding! Select **Display Character Encoding** to identify which characters are encoded as GSM-7 or UCS-2. 
-
-![SMS segment calculator with a sample SMS message entered in the textbox and the character encoding turned on.](https://www.braze.com/docs/assets/img/sms/character_encoding.png?9545163f307597e2f6b1b0564c086d5a){: style="max-width:70%;"}
-
-#### WhatsApp messages with optimization
-
-Because MM API for WhatsApp doesn’t offer 100% deliverability, it's important to understand how to retarget users who may not have received your message on other channels. 
-
-To retarget users, we recommend building a segment of users who didn’t receive a specific message. To do this, filter by the error code `131049`, which indicates that a marketing template message was not sent due to WhatsApp’s per-user marketing template limit enforcement. You can do this by [using Braze Currents or SQL Segment Extensions](https://www.braze.com/docs/user_guide/channels/whatsapp/message_features_and_optimization/optimized_delivery/#retargeting-users-on-other-braze-channels).
-
-### Partnerships
-
-#### OtherLevels - Dynamic content
-
-[OtherLevels](https://www.braze.com/docs/partners/otherlevels/) is an experience platform that uses generative AI to transform how sports brands, publishers, and operators connect with their customers by transforming traditional content into on-brand personalized video and rich media experiences at scale.
-
-### SDK
-
-#### SDK breaking updates
-
-The latest SDK updates have been released. Breaking updates are listed in the SDK updates section; all other updates can be found in the corresponding SDK changelogs.
-
-- [Web SDK 6.3.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
 
 
 

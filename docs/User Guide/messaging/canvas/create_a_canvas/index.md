@@ -147,6 +147,17 @@ If a user re-enters the Canvas, reaches the same component as their previous ent
 
 Only the users who match your defined criteria can enter the journey in the **Target Audience** step, meaning Braze evaluates the target audience for eligibility first **before** users enter the Canvas journey. For example, if you want to target new users, you can select a segment of users who first used your app less than a week ago.
 
+**Important:**
+
+
+In workspaces with multiple apps, Canvas entry audience eligibility (including segments and filters) is evaluated only when users enter the Canvas, not at individual Message steps. If your workspace has multiple apps and you need to ensure message steps target only users of a specific app, use one of the following approaches in each Message step:
+- Turn on **Validate audience at message send** in the Message step [delivery validations](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#delivery-validations) and add app-specific segments or filters.
+- Use Liquid to check the targeted device or app at send time.
+
+Without these safeguards, users who qualified for the journey in one app may receive messages intended for another app if they also use other apps in your workspace.
+
+
+
 In **Entry Controls**, you can limit the number of users every time the Canvas is scheduled to run. For API trigger-based and action-based Canvases, this limit occurs at every UTC hour. 
 
 

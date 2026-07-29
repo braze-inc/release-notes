@@ -209,4 +209,11 @@ To add a key-value pair to a Content Card, go to the **Settings** tab in the Bra
 
 ![Add key-value pair to Content Card](https://www.braze.com/docs/assets/img_archive/kvp_content_cards.png?e3490a9d7cab61f2a9903c9a3b7ef53e){: style="max-width:70%;"}
 
+**Note:**
+
+
+Control variants do not support key-value pairs. If you need to capture analytics for control groups in A/B tests, create a message variant with a key-value pair such as `control=true` and hide it in your app code while logging impressions.
+
+
+
 

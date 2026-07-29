@@ -103,7 +103,7 @@ After the integration process completes, Braze will automatically pull that chan
 **Note:**
 
 
-If you need to update or rotate the channel secret for an already integrated LINE channel, contact [Braze Support](https://www.braze.com/docs/braze_support) to request an update.
+You can update or rotate the channel secret and channel access token for an already integrated LINE channel by going to **Partner Integrations** > **Technology Partners** > **LINE** and selecting your integration.
 
 
 

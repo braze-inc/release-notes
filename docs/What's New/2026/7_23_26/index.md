@@ -1,9 +1,7 @@
 # July 23, 2026 release
 
-<!-- Fill out the following six sections ("Data & Reporting," "BrazeAI<sup>TM</sup>", "Orchestration," "Channels & Touchpoints", "Partnerships", and "SDK") using the example section under the next HTML comment. -->
 ## Data & Reporting
 
-<!-- An example release note title specific to the “Data & Reporting” section. -->
 ### Messaging Diagnostics dashboard
 
 
@@ -57,6 +55,12 @@ The [Teams](https://www.braze.com/docs/user_guide/administer/global/user_managem
 
 ## Channels & Touchpoints
 
+### Survey rating scale for in-app messages and landing pages
+
+
+
+Add a numeric rating scale to a form block in both [landing page surveys](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages/surveys#rating-scale) and [in-app message surveys](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop/surveys#rating-scale) to capture sentiment, satisfaction, and likelihood-to-recommend without any custom code. Three ranges are supported: 1–10, 1–5, and 0–10 (the standard NPS range).
+
 ### WhatsApp limited time offer templates
 
 
@@ -107,7 +111,6 @@ From a campaign or message, generate a link and share it with reviewers who don'
 
 You can now update push credentials programmatically with the [Update push credentials endpoint](https://www.braze.com/docs/api/endpoints/apps/post_update_push_credential). Each request updates one app and one platform (`apple`, `firebase`, `huawei`, or `kindle`) and accepts credential payloads as Base64-encoded values. This helps teams manage large app portfolios and credential rotation policies without relying on manual dashboard uploads.
 
-<!-- Use this section to highlight new Braze partnerships by including an overview of each integration and a link to the related partner page on Braze Docs. -->
 ## Partnerships
 
 ### Refiner - Surveys
@@ -122,7 +125,6 @@ You can now update push credentials programmatically with the [Update push crede
 
 [Validity Everest](https://www.validity.com/everest/) is an email deliverability platform that helps you measure inbox placement and protect your sending reputation. The Braze and Validity integration syncs your Everest seed list to Braze, automatically seeds qualifying campaigns and Canvases, and pulls engagement metrics back into Validity Inbox so you can compare seed-based placement with real subscriber engagement.
 
-<!-- Use this section to list any new SDKs or SDK updates that are already released. -->
 ## SDK
 
 The following SDK updates have been released. For more details, see [SDK Changelogs](https://www.braze.com/docs/developer_guide/changelogs).

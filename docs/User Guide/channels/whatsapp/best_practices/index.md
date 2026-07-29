@@ -44,3 +44,11 @@ A suggested best practice is to provide instructions about how to out-out in the
  
 ![WhatsApp message with a footer stating to respond STOP to unsubscribe from the channel](https://www.braze.com/docs/assets/img/whatsapp/whatsapp_unsubscribe.png?f5405d96a688199fa369493ca8245489){: style="max-width:35%;"}
 
+### Minimize response latency for two-way flows {#minimize-response-latency-for-two-way-flows}
+
+For interactive Canvas flows that reply with [response messages](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message/message_and_image_formats#response-messages):
+
+- Place the response message step immediately after the inbound trigger or Action Path evaluation.
+- Use [webhooks](https://www.braze.com/docs/user_guide/channels/webhooks/create_a_webhook) instead of User Update steps when subscription changes are not required before the reply.
+- Avoid long delays or multi-day waits between inbound messages and response sends; the WhatsApp customer service window is 24 hours per inbound message.
+

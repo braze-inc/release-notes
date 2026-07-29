@@ -39,6 +39,13 @@ This option will send future users down the mix of paths according to the percen
 
 ![Screenshot related to step 3: determine fallback.](https://www.braze.com/docs/assets/img/experiment_step/experiment_personalized_percentages.png?1f49ecf3f9ae34ed202afe7928b08a5a)
 
+**Note:**
+
+
+If the experiment completes with insufficient results, only the **Initial Experiment** tab is shown because the model determines that personalization would not outperform a single best-performing path. For more details, refer to [Analytics](#analytics).
+
+
+
 ### Step 4: Add your paths and launch the Canvas
 
 
@@ -72,7 +79,7 @@ When the experiment window passes and the experiment is complete, all subsequent
 
 When Personalized Paths is turned on and produces sufficient results, your analytics view is separated into two tabs: **Initial Experiment** and **Personalized Paths**. 
 
-If the experiment completes with insufficient results, only the **Initial Experiment** tab is shown since the model determines that personalization would not outperform sending all users down a single best-performing path. In this case, your configured fallback behavior is applied, and no Personalized Paths analytics are available.
+If the experiment completes with insufficient results (for example, when the model's projected lift is less than the 0.5% threshold or no meaningful user segments are identified), only the **Initial Experiment** tab is shown because the model determines that personalization would not outperform a single best-performing path. In this case, your configured fallback behavior is applied, and no Personalized Paths analytics are available.
 
 
 

@@ -211,22 +211,7 @@ Any `brazeBridge` JavaScript methods you use in your HTML won't update user prof
 
 
 
-### SDK requirements {#supported-sdk-versions}
-
-To use the HTML preview for in-app messages, you must upgrade to the following minimum Braze SDK versions:
-
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#500' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 5.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#250' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 2.5.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#800' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 8.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
-
-**Warning:**
-
-
-Because this message type can only be received by certain later SDK versions, users who are on unsupported SDK versions will not receive the message. Consider adopting this message type after a significant portion of your user base is reachable, or target only those users whose app version is later than the requirements. Learn more about [filtering by most recent app version](https://www.braze.com/docs/user_guide/messaging/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
-
-
-
 ### Creating a campaign {#instructions}
-
-Your mobile app users need to upgrade to the supported SDK versions to receive a **Custom Code** in-app message. We recommend that you [nudge users to upgrade](https://www.braze.com/docs/user_guide/messaging/campaigns/ideas_and_strategies/new_features) their mobile apps before launching campaigns that depend on newer Braze SDK versions.
 
 #### Asset files
 
@@ -303,9 +288,8 @@ Calling `brazeBridge.closeMessage()` closes the message but does not log analyti
 
 ### Backward incompatible changes {#backward-incompatible-changes}
 
-1. The most notable incompatible change with this new message type is the SDK requirements. Users whose app SDK does not meet the minimum [SDK version requirements](#supported-sdk-versions) will not be shown the message.
-2. The `braze://close` deeplink, which was previously supported on mobile apps, has been removed in favor of the JavaScript `brazeBridge.closeMessage()`. This allows for cross-platform HTML messages, since the web does not support deeplinks.
-3. Automatic click tracking, which used `?abButtonId=0` for button IDs, and "body click" tracking on close buttons have been removed. The following code examples show how to change your HTML to use our new click tracking JavaScript methods:
+1. The `braze://close` deeplink, which was previously supported on mobile apps, has been removed in favor of the JavaScript `brazeBridge.closeMessage()`. This allows for cross-platform HTML messages, since the web does not support deeplinks.
+2. Automatic click tracking, which used `?abButtonId=0` for button IDs, and "body click" tracking on close buttons have been removed. The following code examples show how to change your HTML to use our new click tracking JavaScript methods:
 
    | Before | After |
    |:-------- |:------------|

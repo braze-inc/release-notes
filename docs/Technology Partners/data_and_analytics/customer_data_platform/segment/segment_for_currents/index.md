@@ -42,6 +42,7 @@ Keep in mind, Braze only sends event data for users without an `external_user_id
 
 
 
+
 **Important:**
 
 

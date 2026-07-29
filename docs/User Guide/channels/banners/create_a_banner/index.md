@@ -116,6 +116,15 @@ To customize your message's background properties, border settings, and more, se
 
 
 
+
+ Hide rows and blocks by device
+
+To tailor your layout for desktop versus tablet and mobile, select a row or block on the canvas, then use the **Hide on** toggle in the properties panel to hide it on **Desktop** or **Tablet and smaller devices**. A hidden row or block won't appear for that device type, either when previewing  in the drag-and-drop editor or .
+
+
+
+
+
 The HTML editor is best for teams that already maintain their own HTML templates or want full control over markup and styling. You can write or paste custom HTML directly into the editor. Liquid personalization tags are fully supported, so you can reference user attributes, custom attributes, catalog items, and more.
 
 **Tip:**

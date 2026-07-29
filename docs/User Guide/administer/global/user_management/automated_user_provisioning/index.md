@@ -24,6 +24,7 @@ SCIM provisioning availability depends on your platform edition. If this feature
 
 
 
+
 **Important:**
 
 
@@ -84,6 +85,7 @@ Select **Test API Credentials**. A verification message appears if the integrati
 
 
 
+
 **Important:**
 
 
@@ -127,6 +129,7 @@ Use the **Okta - Custom app integration** option if you set up a custom app for 
 2. Select **Assign** and select an option.
 3. Assign the app to the people who should have access to Braze.
 4. Select **Done**.
+
 
 
 
