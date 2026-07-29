@@ -17,6 +17,23 @@ Next, configure your copy and notifications the same way as you would normally f
 
 ![Next, configure your copy and notifications the same way as you would normally for scheduled notifications and select API-Triggered Delivery. For more information on the triggering of these campaigns from your server, check out this API-triggered campaign sending article.](https://www.braze.com/docs/assets/img_archive/api_triggered_campaign_delivery.png?205130b3abf4e10eb92f5dea1912ee5c)
 
+## Reducing delay between your API trigger and send
+
+If messages take longer than expected to send after you call the trigger endpoint, check whether the user profile is ready at trigger time.
+
+By default, `send_to_existing_only` is `true` on [`/campaigns/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns). Braze sends only to existing users and does not create net-new profiles in that call. To create or update a user and send in the same request, set `send_to_existing_only` to `false` and include an `attributes` object on each recipient.
+
+For email campaigns, also include `email` (and any other required delivery fields) inside `attributes`. If the profile has no email address when you trigger the send, Braze retries for up to approximately 2 hours while waiting for profile data to arrive. Including `email` in the same call avoids that delay.
+
+For full request parameters, examples, and retry behavior, see [Send API-triggered campaigns](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns#recipient-limits-and-profile-creation) and the [recipients object](https://www.braze.com/docs/api/objects_filters/recipient_object).
+
+**Note:**
+
+
+This guidance applies to API-triggered campaigns (`/campaigns/trigger/send`). The [transactional email endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_transactional_message) uses a different request shape (`recipient`, singular) and does not support `send_to_existing_only`. To create a user inline with transactional sends, pass `attributes` on the `recipient` object instead.
+
+
+
 ## Using the templated content included with an API request
 
 In addition to triggering the message, you can also include content with the API request to be templated into the message within the `trigger_properties` object. This content can be referenced in the body of the message. Use exactly two curly brackets per Liquid tag in `trigger_properties` and message copy. An example is: `{{api_trigger_properties.${your_property}}}`. An extra `{` or `}` is a common cause of [API-triggered personalization failures](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/faq#why-is-my-api-triggered-liquid-failing-in-braze).

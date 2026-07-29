@@ -98,13 +98,40 @@ You can also use a combination of HTML that includes Liquid. For example, you ca
 ```
 
 
-The preference center has a checkbox that allows your users to unsubscribe from all emails. Note that you cannot save these preferences if sent as a test message.
+The preference center has a checkbox that allows your users to unsubscribe from all emails.
 
-**Important:**
+## Testing preference centers {#testing-preference-centers}
+
+Preference center links are generated for each user at send time and are tied to a live campaign or Canvas send. Test sends and editor previews do not support saving subscription changes. This is expected behavior.
+
+### What you'll see
+
+- **Test sends:** Preference center Liquid tags may not resolve to a valid link. If the page loads, the **Save Preferences** button is disabled, and subscription changes are not saved.
+- **Drag-and-drop editor Preview tab:** You can preview layout and styling, but you cannot test saving preferences from the editor.
+
+### How to test end-to-end
+
+To verify that preference center links and buttons work before a full launch:
+
+1. Create a campaign or Canvas email step that includes your preference center Liquid tag.
+2. Target only your test users or a small internal segment.
+3. Launch the message and open the email from a real inbox (not **Send Test**).
+4. Select the preference center link, update subscription groups, and select **Save Preferences**.
+5. Confirm the changes on the user's profile in the Braze dashboard.
 
 
-The above Liquid tag only works when launching a campaign or Canvas. Sending a test email does not generate a valid link. To verify the preference center link, launch the message in a campaign targeting only your test profile.
 
+For other test-send limitations, see [Send test messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages#limitations).
+
+### Preview, test send, and live send
+
+| Method | Preview layout | Save subscription changes |
+| --- | --- | --- |
+| Drag-and-drop editor **Preview** tab | Yes | No |
+| Campaign or Canvas **Send Test** | Partial (email arrives) | No |
+| Live send to a test user or segment | Yes | Yes |
+| [Generate preference center URL](https://www.braze.com/docs/api/endpoints/preference_center/get_create_url_preference_center) API | Yes | Yes |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Preview, test send, and live send" }
 
 
 #### Edit a preference center
@@ -154,6 +181,10 @@ This approach does not require query string value-pairs embedded in the URL as t
 ```
 
 ## Frequently asked questions
+
+### Why doesn't my preference center work in a test send?
+
+Preference center links require a live send context. Test sends do not generate valid preference center URLs, and the **Save Preferences** button is disabled if the page loads. This is expected behavior. To test end-to-end, launch a campaign or Canvas step to a test user or small internal segment, or use the [Generate preference center URL endpoint](https://www.braze.com/docs/api/endpoints/preference_center/get_create_url_preference_center). For details, see [Testing preference centers](#testing-preference-centers).
 
 ### I haven't created a preference center. Why am I seeing "PreferenceCenterBrazeDefault" on my dashboard?
 

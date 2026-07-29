@@ -98,9 +98,11 @@ Next, customize the confirmation page by selecting **Confirmation Page**. This p
 
 ## Step 6: Preview and launch your preference center
 
-You can preview your preference center by selecting the **Preview** tab within the editor. However, testing functionality is disabled. Additionally, test sends of campaigns or Canvas steps that include the preference center Liquid tag do not generate a valid link. To test the full functionality of your preference center, send a live campaign or Canvas. After editing your preference center, you can close the editor by selecting **Done**.
+You can preview your preference center by selecting the **Preview** tab within the editor. The preview shows both the preference center and the confirmation page.
 
-The preview shows both the preference center and the confirmation page. Select **Save as Draft** to return to this preference center later, or if you are satisfied, select **Launch Preference Center**.
+However, testing functionality is disabled. Additionally, test sends of campaigns or Canvas steps that include the preference center Liquid tag do not generate a valid link. This preview does not let you save subscription changes—it only shows how the page looks. To test saving preferences, see [Testing preference centers](#testing-preference-centers). After editing your preference center, you can close the editor by selecting the **Done** button.
+
+Select **Save as Draft** to return to this preference center later, or if you are satisfied, select **Launch Preference Center**.
 
 When launching the preference center, you're prompted to confirm the name, as it cannot be edited after launching. After you confirm the name, the preference center launches and is ready for use.
 
@@ -149,6 +151,46 @@ To place a link to the preference center in your emails, copy the Liquid tag of 
 ![The Copy Liquid option in the row of a preference center.](https://www.braze.com/docs/assets/img/preference_center/preference_center10.png?93fe48f596806cd71e7b8d3b58af7556){: style="max-width:75%;"}
 
 Add the Liquid tag to the desired place in your email, similar to how [unsubscribe URLs](https://www.braze.com/docs/user_guide/channels/email/customize/custom_email_footer#adding-a-custom-unsubscribe-link) are inserted.
+
+## Testing preference centers {#testing-preference-centers}
+
+Preference center links are generated for each user at send time and are tied to a live campaign or Canvas send. Test sends and editor previews do not support saving subscription changes. This is expected behavior.
+
+### What you'll see
+
+- **Test sends:** Preference center Liquid tags may not resolve to a valid link. If the page loads, the **Save Preferences** button is disabled, and subscription changes are not saved.
+- **Drag-and-drop editor Preview tab:** You can preview layout and styling, but you cannot test saving preferences from the editor.
+
+### How to test end-to-end
+
+To verify that preference center links and buttons work before a full launch:
+
+1. Create a campaign or Canvas email step that includes your preference center Liquid tag.
+2. Target only your test users or a small internal segment.
+3. Launch the message and open the email from a real inbox (not **Send Test**).
+4. Select the preference center link, update subscription groups, and select **Save Preferences**.
+5. Confirm the changes on the user's profile in the Braze dashboard.
+
+
+
+For other test-send limitations, see [Send test messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages#limitations).
+
+### Preview, test send, and live send
+
+| Method | Preview layout | Save subscription changes |
+| --- | --- | --- |
+| Drag-and-drop editor **Preview** tab | Yes | No |
+| Campaign or Canvas **Send Test** | Partial (email arrives) | No |
+| Live send to a test user or segment | Yes | Yes |
+| [Generate preference center URL](https://www.braze.com/docs/api/endpoints/preference_center/get_create_url_preference_center) API | Yes | Yes |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Preview, test send, and live send" }
+
+
+## Frequently asked questions
+
+### Why doesn't my preference center work in a test send?
+
+Preference center links require a live send context. Test sends do not generate valid preference center URLs, and the **Save Preferences** button is disabled if the page loads. This is expected behavior. To test end-to-end, launch a campaign or Canvas step to a test user or small internal segment. For details, see [Testing preference centers](#testing-preference-centers).
 
 ## Handle errors
 

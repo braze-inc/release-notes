@@ -20,7 +20,7 @@ You can either log in from the [Braze.com](https://www.braze.com) home site, or 
 * [Okta](https://www.braze.com/docs/user_guide/administer/global/saml_single_sign_on/okta)
 * [OneLogin](https://www.braze.com/docs/user_guide/administer/global/saml_single_sign_on/onelogin)
 
-After you log into Braze with SSO, you can no longer use your password to log into the dashboard.Both email addresses will direct emails to the same inbox, but Braze will recognize them as separate accounts when you log in. Clearing cookies will log you out, so unsaved work will be lost.
+After you log into Braze with SSO, you can no longer use your password to log into the dashboard. Both email addresses will direct emails to the same inbox, but Braze will recognize them as separate accounts when you log in. Clearing cookies will log you out, so unsaved work will be lost.
 
 ## Supported browsers
 

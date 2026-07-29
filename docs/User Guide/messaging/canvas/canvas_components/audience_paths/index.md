@@ -53,15 +53,17 @@ The default Audience Paths component contains two default audience groups, **Gro
 
 ### Defining audience groups
 
-The following screenshot shows the layout of an expanded Audience Paths step. Here, you can define up to eight audience groups (one preset and seven customizable). To define an audience group, select the group name from the Audience Paths editor. You can rename your audience group, choose the filters and segments that apply to your group, and add or delete groups.
-
-For example, if you wanted to target onboarding messaging to a group of users, you might select retargeting filters, such as "Has clicked email" and "Has clicked in-app message".
+The following screenshot shows the layout of an expanded Audience Paths step. Here, you can define up to eight audience groups (one preset and seven customizable). To define an audience group, select the group name from the Audience Paths editor. You can rename your audience group, choose the filters and segments that apply to your group, and add or delete groups. For example, if you wanted to target onboarding messaging to a group of users, you might select retargeting filters, such as "Has clicked email" and "Has clicked in-app message".
 
 ![An expanded Audience Path with groups for "Loves Asian Cuisine”, “Loves Latin Cuisine”, “Loves European Cuisine”, and "Everyone Else".](https://www.braze.com/docs/assets/img/audience_path/audience_path3.png?4171d06315efceae6d9b733df80b09a4)
 
 After the Audience Paths step is complete, each audience group will have a separate branch. You can continue using Audience Paths to further filter your audience, or continue your Canvas journey with the standard Canvas steps. 
 
 ![Two Audience Paths with different groups based on engagement.](https://www.braze.com/docs/assets/img/audience_path/audience_path4.png?8003dd4487fe8f324bc0af9051bf9adb){: style="max-width:50%"}
+
+#### Using comparison filters with context variables
+
+When splitting on a context variable that holds a date, see [Day of Year and Time filters for date context variables](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables/#day-of-year-and-time-filters-for-date-context-variables) to choose the correct comparison type.
 
 ### Testing audience groups
 

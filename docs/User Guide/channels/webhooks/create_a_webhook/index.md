@@ -134,7 +134,14 @@ Certain endpoints may require that you include headers in your request. In the *
 
 ![Request header examples for "Authorization" key and "Content-type" key.](https://www.braze.com/docs/assets/img_archive/webhook_request_headers_example.png?4715c97a5b7a3437fa7555e4f8ec8298)
 
-Common request headers are `Content-Type` specifications (which describe what type of data to expect in the body, such as XML or JSON) and authorization headers that contain your credentials with your vendor or system. 
+Common request headers are [`Content-Type`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) specifications (which describe what type of data to expect in the body, such as XML or JSON) and [`Authorization`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization) headers that contain your credentials with your vendor or system.
+
+**Note:**
+
+
+HTTP header names are case-insensitive per [RFC 7230, section 3.2 ("Each header field consists of a case-insensitive field name")](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2). If your receiving endpoint or any intermediate services (such as CDNs) transform header casing, this won't affect header processing—`Content-Type`, `content-type`, and `CONTENT-TYPE` are all treated identically.
+
+ 
 
 Content type specifications must use the key `Content-Type`. Common values are `application/json` or `application/x-www-form-urlencoded`.
 
@@ -242,6 +249,14 @@ Braze retries the earlier in this section status codes up to five times within 3
 
 
 `Retry-After` and rate-limit response headers can affect how long Braze waits before a **retriable** attempt (for example, after `408`, `429`, or `5XX`). They do not make non-retriable responses, such as `401`, eligible for retry.
+
+#### 403 Forbidden and IP allowlisting
+
+`403 Forbidden` responses means your endpoint received the request but refused it. Common causes include invalid or missing authentication, insufficient API permissions, and network rules (such as a firewall or web application firewall) that block Braze's outbound IP addresses.
+
+If webhook requests consistently return `403` and your authentication headers are correct, allowlist the Braze IPs for your cluster on the server that receives the webhook. See [IP allowlisting](#ip-allowlisting). Connected Content requests use the same outbound IPs; see [Connected Content IP allowlisting](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call#connected-content-ip-allowlisting).
+
+For other `4XX` troubleshooting steps, refer to [Troubleshoot webhook and Connected Content requests](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/troubleshooting_webhooks_and_connected_content#4xx-errors).
 
 #### Authentication and Connected Content credentials
 

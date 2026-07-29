@@ -11,6 +11,13 @@ After integrating the SDK, you can enable [SDK Authentication](https://www.braze
 
 
 
+**Note:**
+
+
+If SDK initialization fails with HTTPS certificate trust errors (for example, `SSLHandshakeException` with `Trust anchor for certification path not found`), refer to [Troubleshooting SDK certificate trust errors](https://www.braze.com/docs/developer_guide/sdk_integration/troubleshooting_certificate_errors).
+
+
+
 
 
 ## About the Web Braze SDK
