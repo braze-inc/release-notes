@@ -2,6 +2,15 @@
 
 > Automated user provisioning lets you create and manage Braze users through an API instead of manually in the dashboard. Braze supports this through System for Cross-domain Identity Management (SCIM). This article walks you through what information to provide, how to generate your SCIM token, and where to find your SCIM API endpoint.
 
+
+
+
+
+
+
+
+
+
 ## Accessing SCIM provisioning settings
 
 **Important:**
@@ -35,6 +44,15 @@ SCIM provisioning availability depends on your platform edition. If this feature
 
 
 Use the **Okta - Braze app** option if you set up the Braze app for SAML SSO in Okta. If you set up a custom app for SSO, follow the instructions in the [Okta - Custom app integration](https://www.braze.com/docs/user_guide/administer/global/user_management/automated_user_provisioning?tab=okta%20-%20custom%20app%20integration#step-1-set-up-scim-provisioning) tab.
+
+
+
+
+
+
+
+
+
 
 ## Step 1: Set up SCIM provisioning
 
@@ -97,6 +115,15 @@ Select **Test API Credentials**. A verification message appears if the integrati
 
 Use the **Okta - Custom app integration** option if you set up a custom app for SSO. If you set up the Braze app for SAML SSO in Okta, follow the instructions in the [Okta - Braze app](https://www.braze.com/docs/user_guide/administer/global/user_management/automated_user_provisioning?tab=okta%20-%20braze%20app#step-1-set-up-scim-provisioning) tab.
 
+
+
+
+
+
+
+
+
+
 ## Step 1: Set up SCIM provisioning
 
 ### Step 1.1: Enable SCIM
@@ -140,6 +167,15 @@ Use the **Okta - Custom app integration** option if you set up a custom app for 
 
 
  is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+
+
+
+
+
+
+
+
+
 
 
 
