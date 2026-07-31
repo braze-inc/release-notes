@@ -402,7 +402,7 @@ For email list management best practices, see [Email subscriptions](https://www.
 **Tip:**
 
 
-When in the **Preview** section for a subscription page or footer, select **Copy preview link** to generate and copy a shareable preview link that shows what the email footer, unsubscribe page, or opt-in page looks like for a random user. The link lasts for seven days before it needs to be regenerated.
+When in the **Preview** section for a subscription page or footer, select **Copy preview link** to generate and copy a shareable preview link that shows what the email footer, unsubscribe page, or opt-in page looks like for a random user. For more information, see [Shareable preview](https://www.braze.com/docs/user_guide/messaging/governance/shareable_preview).
 
 
 

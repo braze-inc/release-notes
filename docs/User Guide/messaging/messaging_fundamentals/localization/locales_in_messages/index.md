@@ -159,7 +159,7 @@ After selecting locales, add translations to your message using one of the follo
 
 
 
-Select **Download template** to download a CSV containing a matrix of your selected translation IDs and locales. Enter translations for each locale. Upload the completed file and translations will be applied to your message. 
+Select **Download template** to download a CSV containing a matrix of your selected translation IDs and locales. 
 
 **Important:**
 
@@ -167,6 +167,18 @@ Select **Download template** to download a CSV containing a matrix of your selec
 To prevent display issues with non-English characters, avoid using Excel for your translation CSV.
 
 
+
+When you fill out the template, translate only the text content for each locale. If HTML tags are present in the downloaded template, leave them unchanged and translate only the text within the tags.
+
+For example, if the template contains:
+
+```
+<p style="margin:0;margin-bottom:0">A charming bakery dedicated to crafting artisanal breads.</p>
+```
+
+Only translate the text `A charming bakery dedicated to crafting artisanal breads.` and keep the HTML tags `<p style="margin:0;margin-bottom:0">` and `</p>` as is.
+
+Then, upload the completed file and translations will be applied to your message.
 
 ![CSV with translation tags for a title, offer text, offer amount, and CTA.](https://www.braze.com/docs/assets/img/multi-language_support/csv_template_example.png?763a9fc513b36d65d7a801fa163a32f5){: style="max-width:50%;"}
 

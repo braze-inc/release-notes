@@ -1,6 +1,35 @@
 # Troubleshoot push notifications
 
-> Learn how to troubleshoot push notifications for the Braze SDK.
+> Use this page to diagnose push notification delivery and display issues on a device. For dashboard-side delivery checks (subscription status, segments, caps), see [Troubleshoot push](https://www.braze.com/docs/user_guide/channels/push/troubleshooting).
+
+Before you debug, add yourself as a [test user](https://www.braze.com/docs/user_guide/administer/global/user_management/internal_groups#adding-test-users) and review [Sending test messages](https://www.braze.com/docs/developer_guide/push_notifications/sending_test_messages).
+
+## Start here: Match your symptom
+
+Find the behavior you're seeing in the table, then follow that section's steps. If you're not sure which section applies, use the [standard investigation path](#standard-investigation-path).
+
+| Symptom | Go to |
+| --- | --- |
+| Push not received on one platform | Select your SDK tab in [Platform-specific troubleshooting](#platform-specific-troubleshooting) |
+| Line breaks around Liquid tags look wrong when saving | [Line breaks in push notifications](#push-linebreaks) |
+| Dashboard delivery checks (subscription, segment, caps) | [Troubleshoot push](https://www.braze.com/docs/user_guide/channels/push/troubleshooting) |
+| Deep link from push doesn't open correctly | [Deep linking troubleshooting](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking_troubleshooting) |
+| Common push error codes | [Common push error messages](https://www.braze.com/docs/user_guide/channels/push/push_error_codes) |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Push SDK symptom" }
+
+## Standard investigation path
+
+Use this workflow for every push notification incident. Start at step 1.
+
+1. Confirm the device has a valid push token and push permission is granted in device settings.
+2. In the dashboard, confirm the test user matches the campaign or Canvas [segment](https://www.braze.com/docs/user_guide/channels/push/troubleshooting#segment) and is not in the [control group](https://www.braze.com/docs/user_guide/channels/push/troubleshooting#control-group-status).
+3. Send a [test push](https://www.braze.com/docs/developer_guide/push_notifications/sending_test_messages) to the test device.
+4. [Enable verbose logging](https://www.braze.com/docs/developer_guide/sdk_integration/verbose_logging), reproduce the issue, and review platform-specific guidance in your [SDK tab](#platform-specific-troubleshooting).
+5. If the issue persists, contact [Braze Support](https://www.braze.com/docs/braze_support) with verbose logs, platform, SDK version, and campaign or Canvas ID.
+
+## Platform-specific troubleshooting
+
+Select your SDK tab for platform-specific setup and display checks.
 
 
 

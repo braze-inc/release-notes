@@ -39,19 +39,90 @@ The Braze SDK does not need to be initialized to call `disableSDK()`, allowing y
 
 To resume data collection, you can use the [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) method.
 
+## Logout and Unregister Push
+
+The Braze SDK provides methods to stop targeting a device when a user unregisters from push notifications or logs out. These methods remove push registration data from the current user on the Braze server and the SDK, so Braze no longer sends future push notification campaigns to that user.
+
+### Logout {#logout}
+
+When a user logs out from an application, call the SDK's `logout` method to remove the device's push registration from the current user and automatically perform cleanup actions on the SDK. The `logout` method performs the following:
+
+- Unregisters the device's push token from the current user on the Braze server.
+- If the unregister call succeeds, the SDK wipes locally-stored SDK data and disables the SDK.
+- On failure, invokes the `errorCallback` to allow the integrator to take action.
+
+The following example shows callback-based `logout` handling. Use it when you need immediate success and error handling, and replace the logging with your app flow.
+
+```javascript
+import { logout } from "@braze/web-sdk";
+
+const successCallback = () => {
+  console.log('Successfully logged out');
+};
+
+const errorCallback = () => {
+  console.log('Failed to log out');
+};
+
+logout(successCallback, errorCallback);
+```
+
+#### Re-enable tracking and push after `logout`
+
+After a successful `logout`, call [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk), then re-register for notifications with your operating system (OS) or push provider by following [Web push setup](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=web).
+
+#### Avoid immediate unregister calls
+
+Avoid calling `logout` or `unregisterPush` directly after registering for push notifications with the OS or push provider. Due to asynchronous server processing, this can rarely re-add the push token to the Braze user.
+
+### Unregister Push {#unregister-push}
+
+To stop sending push to a device without additional automated cleanup, use the `unregisterPush` method. This removes the device's push token from the current user on Braze's server, and clears the locally-stored token.
+
+The following example shows callback-based `unregisterPush` handling. Use it when you need immediate success and error handling, and replace the logging with your app flow.
+
+```javascript
+import { unregisterPush } from "@braze/web-sdk";
+
+const successCallback = () => {
+  console.log('Successfully unregistered from push');
+};
+
+const errorCallback = () => {
+  console.log('Failed to unregister from push');
+};
+
+unregisterPush(successCallback, errorCallback);
+```
+
+#### Re-register push after `unregisterPush`
+
+After calling `unregisterPush`, re-register for notifications with your OS or push provider by following [Web push setup](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=web) before sending Braze push notifications again.
+
+**Note:**
+
+
+On supported browsers, when an active push subscription exists, `unregisterPush` also unregisters the Braze-managed service worker after unsubscribing from the browser Push API. If you set `manageServiceWorkerExternally` to `true`, the SDK does not unregister the service worker for you.
+
+
+
+#### Avoid immediate unregister calls
+
+Avoid calling `logout` or `unregisterPush` directly after registering for push notifications with the OS or push provider. Due to asynchronous server processing, this can rarely re-add the push token to the Braze user.
+
 
 
 
 ## Google Play privacy questionnaire {#privacy-questionnaire}
 
-Starting in April 2022, Android developers must complete Google Play's [Data safety form](https://support.google.com/googleplay/android-developer/answer/10787469) to disclose privacy and security practices. This guide provides instructions on how to fill out this new form with information on how Braze handles your app data.
+Starting in April 2022, Android developers must complete Google Play's [Data safety form](https://support.google.com/googleplay/android-developer/answer/10787469) to disclose privacy and security practices. This guide provides instructions on how to fill out this new form with information on how Braze handles your app data. 
 
-As the app developer, you are in control of what data you send to Braze. Data received by Braze is processed according to your instructions. This is what Google classifies as a [service provider](https://support.google.com/googleplay/android-developer/answer/10787469?hl=en#zippy=%2Cwhat-kinds-of-activities-can-service-providers-perform).
+As the app developer, you are in control of what data you send to Braze. Data received by Braze is processed according to your instructions. This is what Google classifies as a [service provider](https://support.google.com/googleplay/android-developer/answer/10787469?hl=en#zippy=%2Cwhat-kinds-of-activities-can-service-providers-perform). 
 
 **Important:**
 
 
-This article provides information related to the data the Braze SDK processes as related to the Google safety section questionnaire. This article is not providing legal advice, so consult your legal team before submitting any information to Google.
+This article provides information related to the data the Braze SDK processes as related to the Google safety section questionnaire. This article is not providing legal advice, so we recommend consulting with your legal team before submitting any information to Google.
 
 
 
@@ -68,7 +139,7 @@ For more information about handling user requests for their data and deletion, s
 
 ### Data collection
 
-The data collected by Braze is determined by your specific integration and the user data you choose to collect. To learn more about what data Braze collects by default and how to disable certain attributes, see our [SDK data collection options](https://www.braze.com/docs/user_guide/data/unification/user_data/sdk_data_collection/#minimum-integration).
+The data collected by Braze is determined by your specific integration and the user data you choose to collect. To learn more about what data Braze collects by default and how to disable certain attributes, see our [SDK data collection options](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration).
 
 <table aria-label="Data collection" id="datatypes">
     <thead>
@@ -146,7 +217,7 @@ The data collected by Braze is determined by your specific integration and the u
         </tr>
         <tr>
             <td>Other in-app messages</td>
-            <td>If you send in-app messages or push notifications through Braze, we collect information on when users have opened or read these messages.</td>
+            <td>If you send In-app messages or push notifications through Braze, we collect information on when users have opened or read these messages.</td>
         </tr>
         <tr>
             <td rowspan="2">Photos and videos</td>
@@ -224,7 +295,7 @@ The data collected by Braze is determined by your specific integration and the u
     </tbody>
 </table>
 
-To learn more about other device data that Braze collects which may fall outside the scope of Google Play's data safety guidelines, see our [Android storage overview](https://www.braze.com/docs/developer_guide/storage/?tab=android) and our [SDK data collection options](https://www.braze.com/docs/user_guide/data/unification/user_data/sdk_data_collection/#minimum-integration).
+To learn more about other device data that Braze collects which may fall outside the scope of Google Play's data safety guidelines, see our [Android storage overview](https://www.braze.com/docs/developer_guide/storage/?tab=android) and our [SDK data collection options](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration).
 
 ## Disabling data tracking
 
@@ -236,7 +307,107 @@ You can use the method [`wipeData()`](https://braze-inc.github.io/braze-android-
 
 ## Resuming data tracking
 
-To resume data collection, you can use the [`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html) method. Keep in mind, this does not restore any previously wiped data.
+To resume data collection, you can use the [`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html) method. Keep in mind, this will not restore any previously wiped data.
+
+## Logout and Unregister Push
+
+The Braze SDK provides methods to stop targeting a device when a user unregisters from push notifications or logs out. These methods remove push registration data from the current user on the Braze server and the SDK, so Braze no longer sends future push notification campaigns to that user.
+
+### Logout {#logout}
+
+When a user logs out from an application, call the SDK's `logout` method to remove the device's push registration from the current user and automatically perform cleanup actions on the SDK. The `logout` method performs the following:
+
+- Unregisters the device's push token from the current user on the Braze server.
+- If the unregister call succeeds, the SDK wipes locally-stored SDK data and disables the SDK.
+- On failure, raises an error and an `isRetriable` flag to allow the integrator to take action.
+
+The following callback example shows `logout` success and error handling. Use it for callback-based logout flows, and replace the logging with your retry or re-authentication logic.
+
+```kotlin
+// Completion callback
+Braze.getInstance(context).logout { result ->
+  result
+    .onSuccess {
+      Log.d(TAG, "Logout successful")
+    }
+    .onFailure { error ->
+      val pushError = error as? BrazePushUnregistrationException
+      Log.e(TAG, "Logout failed: ${error.message}, isRetriable: ${pushError?.isRetriable}")
+    }
+}
+```
+
+The following coroutine example shows the suspending `logout` API. Use it in coroutine-based flows and customize the success and failure branches for your app.
+
+```kotlin
+lifecycleScope.launch {
+  runCatching { Braze.getInstance(context).logout() }
+    .onSuccess {
+      Log.d(TAG, "Logout successful")
+    }
+    .onFailure { error ->
+      val pushError = error as? BrazePushUnregistrationException
+      Log.e(TAG, "Logout failed: ${error.message}, isRetriable: ${pushError?.isRetriable}")
+    }
+}
+```
+
+#### Re-enable tracking and push after `logout`
+
+After a successful `logout`, re-enable the SDK with [`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html), then re-register for notifications with your operating system (OS) or push provider by following [Android push setup](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=android).
+
+#### Avoid immediate unregister calls
+
+Avoid calling `logout` or `unregisterPush` directly after registering for push notifications with the OS or push provider. Due to asynchronous server processing, this can rarely re-add the push token to the Braze user.
+
+### Unregister Push {#unregister-push}
+
+To stop sending push to a device without additional automated cleanup, use the `unregisterPush` method. This removes the device's push token from the current user on Braze's server, and clears the locally-stored token.
+
+The following callback example shows how to handle `unregisterPush` results. Use it when your flow is callback-based, and replace the logging with your own retry handling.
+
+```kotlin
+// Completion callback
+Braze.getInstance(context).unregisterPush { result ->
+  result
+    .onSuccess {
+      Log.d(TAG, "Push unregistered successfully")
+    }
+    .onFailure { error ->
+      val pushError = error as? BrazePushUnregistrationException
+      Log.e(
+        TAG,
+        "Push unregistration failed: ${error.message}, isRetriable: ${pushError?.isRetriable}"
+      )
+    }
+}
+```
+
+The following coroutine example shows the suspending `unregisterPush` API. Use it in coroutine-based flows and customize the success and failure branches for your app.
+
+```kotlin
+lifecycleScope.launch {
+  runCatching { Braze.getInstance(context).unregisterPush() }
+    .onSuccess {
+      Log.d(TAG, "Push unregistered successfully")
+    }
+    .onFailure { error ->
+      val pushError = error as? BrazePushUnregistrationException
+      Log.e(
+        TAG,
+        "Push unregistration failed: ${error.message}, isRetriable: ${pushError?.isRetriable}"
+      )
+    }
+}
+```
+
+#### Re-register push after `unregisterPush`
+
+After calling `unregisterPush`, re-register for notifications with your OS or push provider by following [Android push setup](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=android) before sending Braze push notifications again.
+
+#### Avoid immediate unregister calls
+
+Avoid calling `logout` or `unregisterPush` directly after registering for push notifications with the OS or push provider. Due to asynchronous server processing, this can rarely re-add the push token to the Braze user.
 
 
 
@@ -392,6 +563,189 @@ If you use manual push integration, and your app calls `wipeData()` and later re
 
 To resume data collection, set [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled/) to `true`. Keep in mind, this will not restore any previously wiped data.
 
+## Logout and Unregister Push
+
+The Braze SDK provides methods to stop targeting a device when a user unregisters from push notifications or logs out. These methods remove push registration data from the current user on the Braze server and the SDK, so Braze no longer sends future push notification campaigns to that user.
+
+### Logout {#logout}
+
+When a user logs out from an application, call the SDK's `logout` method to remove the device's push registration from the current user and automatically perform cleanup actions on the SDK. The `logout` method performs the following:
+
+- Unregisters the device's push token, and any Live Activities push-to-start tokens, from the current user on the Braze server.
+- If the unregister call succeeds, the SDK wipes locally-stored SDK data and disables the SDK.
+- On failure, raises an error and an `isRetriable` flag to allow the integrator to take action.
+
+
+
+
+The following completion-handler example shows `logout` success and failure handling. Use it for callback-based flows, and replace the logging with your app's retry or re-authentication logic.
+
+```swift
+// Completion handler
+AppDelegate.braze?.logout { result in
+  switch result {
+  case .success:
+    print("Logout successful")
+  case .failure(let error):
+    print("Logout failed: \(error.message), isRetriable: \(error.isRetriable)")
+  }
+}
+```
+
+The following async example shows the suspending `logout` API. Use it for async workflows and customize the success and failure branches for your app.
+
+```swift
+// Async/await
+do {
+  try await AppDelegate.braze?.logout()
+  print("Logout successful")
+} catch let error as Braze.LogoutErrorResult {
+  print("Logout failed: \(error.message), isRetriable: \(error.isRetriable)")
+}
+```
+
+
+
+
+This Objective-C example shows completion-based `logout` handling. Use it in Objective-C integrations and replace the logging with your app flow.
+
+```objc
+[AppDelegate.braze logoutWithCompletion:^(NSError * _Nullable error) {
+  if (error) {
+    NSNumber *isRetriable = error.userInfo[BRZLogoutErrorUserInfoKey.isRetriable];
+    NSLog(@"Logout failed: %@, isRetriable=%@", error.localizedDescription, isRetriable);
+  }
+}];
+```
+
+
+
+
+#### Re-enable tracking and push after `logout`
+
+After a successful `logout`, set [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled/) back to `true`, then re-register for notifications with your operating system (OS) or push provider by following [Swift push setup](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift).
+
+#### Avoid immediate unregister calls
+
+Avoid calling `logout` or `unregisterPush` directly after registering for push notifications with the OS or push provider. Due to asynchronous server processing, this can rarely re-add the push token to the Braze user.
+
+### Unregister Push {#unregister-push}
+
+To stop sending push to a device without additional automated cleanup, use the `unregisterPush` method. This removes the device's push token from the current user on Braze's server, and clears the locally-stored token.
+
+
+
+
+The following completion-handler example shows `unregisterPush` success and failure handling. Use it for callback-based flows, and replace the logging with your own retry logic.
+
+```swift
+// Completion handler
+AppDelegate.braze?.notifications.unregisterPush { result in
+  switch result {
+  case .success:
+    print("Push unregistered successfully")
+  case .failure(let error):
+    print("Push unregistration failed: \(error.message), isRetriable: \(error.isRetriable)")
+  }
+}
+```
+
+The following async example shows the suspending `unregisterPush` API. Use it for async workflows and customize the success and failure branches for your app.
+
+```swift
+// Async/await
+do {
+  try await AppDelegate.braze?.notifications.unregisterPush()
+  print("Push unregistered successfully")
+} catch let error as Braze.PushUnregistrationError {
+  print("Push unregistration failed: \(error.message), isRetriable: \(error.isRetriable)")
+}
+```
+
+
+
+
+This Objective-C example shows completion-based `unregisterPush` handling. Use it in Objective-C integrations and replace the logging with your app flow.
+
+```objc
+[AppDelegate.braze.notifications unregisterPushWithCompletion:^(NSError * _Nullable error) {
+  if (error) {
+    NSNumber *isRetriable = error.userInfo[BRZPushUnregistrationErrorUserInfoKey.isRetriable];
+    NSNumber *statusCode = error.userInfo[BRZPushUnregistrationErrorUserInfoKey.httpStatusCode];
+    NSLog(@"Push unregistration failed: %@, isRetriable=%@ status=%@",
+          error.localizedDescription, isRetriable, statusCode);
+  }
+}];
+```
+
+
+
+
+#### Re-register push after `unregisterPush`
+
+After calling `unregisterPush`, re-register for notifications with your OS or push provider by following [Swift push setup](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift) before sending Braze push notifications again.
+
+#### Avoid immediate unregister calls
+
+Avoid calling `logout` or `unregisterPush` directly after registering for push notifications with the OS or push provider. Due to asynchronous server processing, this can rarely re-add the push token to the Braze user.
+
+### Unregister push-to-start tokens for Live Activities {#unregister-push-to-start}
+
+Live Activities can be started remotely using push-to-start tokens. To stop Braze from remotely starting Live Activities on a device, call the `unregisterPushToStart` method to unregister all currently-registered types (default) or a specified list of Activity types.
+
+Note that currently-running Live Activities continue to receive updates and that this method will only remove the ability to start new activities remotely. For more information on Live Activities, see [Live Activities](https://www.braze.com/docs/developer_guide/live_notifications/live_activities).
+
+**Note:**
+
+
+Avoid calling `logout` or `unregisterPushToStart` directly after calling `registerPushToStart` for a Live Activity. Due to the asynchronous nature of server processing, in rare cases, this can lead to the push-to-start token being re-added to the Braze user.
+
+
+
+The following example shows how to unregister all push-to-start activity types. Use it when a signed-out user should no longer receive new remotely started Live Activities.
+
+```swift
+// Unregister all currently-registered activity types
+// Completion handler
+AppDelegate.braze?.liveActivities.unregisterPushToStart { result in
+  switch result {
+  case .success:
+    print("Push-to-start unregistered successfully")
+  case .failure(let error):
+    print("Push-to-start unregistration failed: \(error.message), isRetriable: \(error.isRetriable)")
+  }
+}
+
+// Async/await
+do {
+  try await AppDelegate.braze?.liveActivities.unregisterPushToStart()
+  print("Push-to-start unregistered successfully")
+} catch let error as Braze.PushUnregistrationError {
+  print("Push-to-start unregistration failed: \(error.message), isRetriable: \(error.isRetriable)")
+}
+```
+
+The following example shows how to unregister specific activity types. Use it when only selected Live Activities should stop being started remotely.
+
+```swift
+// Unregister specific activity types
+AppDelegate.braze?.liveActivities.unregisterPushToStart(types: ["ActivityType1", "ActivityType2"]) { result in
+  switch result {
+  case .success:
+    print("Push-to-start unregistered successfully")
+  case .failure(let error):
+    print("Push-to-start unregistration failed: \(error.message), isRetriable: \(error.isRetriable)")
+  }
+}
+```
+
+**Note:**
+
+
+`unregisterPushToStart` doesn't have an Objective-C API, as Live Activities rely on Swift-only types.
+
+
+
 ## IDFV collection
 
 In previous versions of the Braze iOS SDK, the IDFV (Identifier for Vendor) field was automatically collected as the user's device ID. Beginning in Swift SDK `v5.7.0`, the IDFV field was optionally disabled, and instead, Braze would set a random UUID as the device ID. Starting in Swift SDK `v7.0.0`, the IDFV field will not be collected by default, and a UUID will be set as the device ID instead.
@@ -523,6 +877,10 @@ Braze.updateTrackingPropertyAllowList({
 
 For more information, refer to [Privacy Manifest](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/privacy_manifest/).
 
+## Logout and Unregister Push
+
+This feature is not yet supported on the React Native SDK.
+
 
 
 
@@ -575,6 +933,10 @@ When you [initialize the Braze SDK](https://www.braze.com/docs/developer_guide/s
 The Roku SDK doesn't generate any server-side delete request when you clear the registry. If you also need to remove the user from Braze, send a request to [`/users/delete`](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/) using the user's `external_id` or `braze_id`.
 
 
+
+## Logout and Unregister Push
+
+This feature is not yet supported on the Roku SDK.
 
 
 
