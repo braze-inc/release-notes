@@ -338,6 +338,13 @@ For **Time** attributes, the following segmentation options are available.
 | Check if the time attribute **does not exist** on a user's profile or is null | **IS BLANK** | **N/A** | If this filter specifies a time attribute that isn't on a user profile, the user will match this filter. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Number attribute details" }
 
+**Note:**
+
+
+When using **in less than** or **in more than** operators with 90 days or more, Braze automatically converts the value to weeks when you save the segment. For example, 90 days is converted to 13 weeks.
+
+
+
 #### Time attribute details
 
 - Day of Recurring Event

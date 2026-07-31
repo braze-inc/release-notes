@@ -326,6 +326,13 @@ The file preview shows only the first few rows of your file. To check every row 
 
 
 
+**Important:**
+
+
+CSV user imports are available to download from the dashboard for 14 days after upload. After this period, the file is deleted from storage and is no longer accessible.
+
+
+
 ### Step 5: Map your fields {#csv-data-mapping}
 
 After the preview, you can map your CSV headers to Braze attributes, events, or event properties. Braze automatically maps fields in your CSV file to attributes, events, or event properties with identical names, and creates new fields where necessary. You’ll also have the flexibility to manually adjust suggestions or select different attributes, events, or properties.

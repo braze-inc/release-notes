@@ -218,9 +218,7 @@ The random user may or may not be part of your segmentation criteria. Segmentati
 
 
 
-You can also select **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated. 
-
-Note that any edits made to an email template won't reflect in a previously generated link. You'll need to generate a new link preview to see any edits.
+You can also select **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. For more information, see [Shareable preview](https://www.braze.com/docs/user_guide/messaging/governance/shareable_preview).
 
 ![Email preview with a button to "Copy preview link" and copy the generated link.](https://www.braze.com/docs/assets/img/dnd_email_link_preview.png?0921fa30efe7fbe7503f99fbca2b810a)
 

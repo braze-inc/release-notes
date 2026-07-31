@@ -71,3 +71,4 @@ To enter users into the [SMS double opt-in](https://www.braze.com/docs/user_guid
 <br><br>
 Subscription updates through the REST API don't automatically trigger welcome messages. To send a welcome message, create an action-based campaign with the [Update Subscription Group Status](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/attribute_triggers#update-subscription-group-status) trigger and set the update source to **REST API**.
 
+
