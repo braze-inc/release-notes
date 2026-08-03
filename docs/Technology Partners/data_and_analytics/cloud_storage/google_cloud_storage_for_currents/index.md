@@ -53,6 +53,13 @@ The `storage.objects.delete` permission is optional. It allows Braze to clean up
 
 
 
+**Important:**
+
+
+If your bucket uses [hierarchical namespace](https://cloud.google.com/storage/docs/hns-overview), you must also add the `storage.folders.create` permission. On these buckets, folders are managed resources, so Braze needs this permission to create the folder structure for your exported files. Without it, Braze cannot write to the bucket and the integration fails to export data.
+
+
+
 When you're finished, select **Create**.
 
 ![Google Cloud custom role editor with storage permissions selected.](https://www.braze.com/docs/assets/img/gcs2.png?15e5fa535cb3cce9e29ab0aeefc4b408)

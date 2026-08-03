@@ -15,6 +15,8 @@ The `trigger_properties` object and `api_trigger_properties.${product_name}` syn
 
 ## Object body
 
+The `trigger_properties` object supports strings, numbers, booleans, dates, objects, and arrays as data types.
+
 ```json
 {
   "trigger_properties" : {
@@ -31,5 +33,14 @@ The `trigger_properties` object and `api_trigger_properties.${product_name}` syn
   }
 }
 ```
+
+## Liquid templating examples
+
+Reference trigger properties in your message templates using the `api_trigger_properties` namespace:
+
+- Strings: `{{api_trigger_properties.${product_name}}}` returns `"shoes"`
+- Numbers: `{{api_trigger_properties.${product_price}}}` returns `79.99`
+- Nested objects: `{{api_trigger_properties.${details}.${color}}}` returns `"red"`
+- Array elements: `{{api_trigger_properties.${related_skus}[0]}}` returns `"123"`
 
 
