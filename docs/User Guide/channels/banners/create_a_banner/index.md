@@ -178,6 +178,14 @@ For the full JavaScript bridge reference, see [Custom code and JavaScript bridge
 
 #### Step 3.3: Configure dismissal behavior (optional) {#dismiss-behavior}
 
+**Important:**
+
+
+Banner dismissals require the following minimum SDK versions. Older SDK versions do not render Banners with dismissal enabled.
+<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1410' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 14.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#671' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.7.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#4210' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 42.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/flutter/changelog/#2000' class='sdk-versions--chip flutter-sdk' target='_blank'>Flutter: 20.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/react_native/changelog/#2200' class='sdk-versions--chip reactnative-sdk' target='_blank'>React Native: 22.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+
+
+
 
 
 

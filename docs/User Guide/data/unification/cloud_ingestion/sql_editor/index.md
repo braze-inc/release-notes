@@ -11,13 +11,6 @@ Use the SQL Editor when you want to:
 - Avoid constructing a `PAYLOAD` column
 - Handle more complex data use cases with SQL
 
-**Important:**
-
-
-Cloud Data Ingestion SQL Editor is in beta. Contact your customer success manager or account manager for access.
-
-
-
 ## Prerequisites and limitations
 
 The SQL Editor has the following limitations:

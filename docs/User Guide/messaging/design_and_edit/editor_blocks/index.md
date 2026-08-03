@@ -301,7 +301,7 @@ Renders product rows from a [Product Catalog](https://www.braze.com/docs/user_gu
 
 You can add personalization to your email using Liquid or Connected Content.
 
-- **Liquid:** Under **Content** > **Personalization**, select an attribute, copy the snippet, and paste it into a Title, Paragraph, or List block (basic Liquid) or HTML block (advanced Liquid). In general, while you can use basic Liquid in Title, Paragraph, and List blocks, we recommend using HTML blocks for heavier logic to avoid layout issues. Note that Liquid isn't supported in image blocks or in button URL fields.
+- **Liquid:** Under **Content** > **Personalization**, select an attribute, copy the snippet, and paste it into an HTML block. While basic Liquid snippets may work in Title, Paragraph, and List blocks, placing Liquid in these blocks can cause unexpected behavior and layout issues. To avoid issues, use HTML blocks for any Liquid logic. Note that Liquid isn't supported in image blocks or in button URL fields.
 - **[Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/):** Add an **HTML** block and place your `{% connected_content %}` call there.
 
 
