@@ -593,13 +593,32 @@ Braze.getInstance(context).setRegisteredPushToken("FCM_TOKEN");
 
 
 
+#### Using multiple Firebase projects {#multiple-firebase-projects}
+
+If your app uses multiple Firebase projects, use these steps:
+
+1. Keep Braze push on the default Firebase project initialized from your app's `google-services.json`.
+2. If you use a custom Firebase messaging service, complete [Register Installation IDs in custom Firebase messaging services](#android_register-installation-id-custom-firebase-service).
+3. If your app obtains a push token another way, manually set `registeredPushToken` as shown in the previous tip.
+
+**Important:**
+
+
+Firebase Cloud Messaging has no supported API for retrieving a token from a `FirebaseApp` that you initialize manually. `FirebaseMessagingService` callbacks such as `onNewToken` and `onRegistered` only fire for the default project. For more information, see [Configure multiple projects](https://firebase.google.com/docs/projects/multiprojects) in the Firebase documentation.
+
+
+
+For version details, see [SDK changelogs](https://www.braze.com/docs/developer_guide/changelogs?sdktab=android).
+
 ### Step 8: Remove automatic requests in your application class
 
 To prevent Braze from triggering unnecessary network requests every time you send silent push notifications, remove any automatic network requests configured in your `Application` class's `onCreate()` method. For more information see, [Android Developer Reference: Application](https://developer.android.com/reference/android/app/Application).
 
 ## Displaying notifications
 
-### Step 1: Register Braze Firebase Messaging Service
+<a id="android_step-1-register-braze-firebase-messaging-service"></a>
+
+### Step 1: Register Braze Firebase Messaging Service {#register-braze-firebase-messaging-service}
 
 You can either create a new, existing, or non-Braze Firebase Messaging Service. Choose whichever best meets your specific needs.
 
@@ -629,11 +648,23 @@ Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `Ap
 
 If you already have a Firebase Messaging Service registered, you can pass [`RemoteMessage`](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage) objects to Braze via [`BrazeFirebaseMessagingService.handleBrazeRemoteMessage()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-firebase-messaging-service/-companion/handle-braze-remote-message.html). This method will only display a notification if the [`RemoteMessage`](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage) object originated from Braze and will safely ignore if not.
 
+<a id="android_register-installation-id-custom-firebase-service"></a>
+
+#### Register Installation IDs in custom Firebase messaging services {#register-installation-id-custom-firebase-service}
+
+If you're using `firebase-messaging` v25.1.0 or later, Firebase registration uses the Firebase Installation ID. In your custom Firebase messaging service, override `onRegistered` and set `registeredPushToken`.
+
 
 
 
 ```java
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
+  @Override
+  public void onRegistered(String installationId) {
+    super.onRegistered(installationId);
+    Braze.getInstance(this).setRegisteredPushToken(installationId);
+  }
+
   @Override
   public void onMessageReceived(RemoteMessage remoteMessage) {
     super.onMessageReceived(remoteMessage);
@@ -653,6 +684,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 ```kotlin
 class MyFirebaseMessagingService : FirebaseMessagingService() {
+  override fun onRegistered(installationId: String) {
+    super.onRegistered(installationId)
+    Braze.getInstance(this).registeredPushToken = installationId
+  }
+
   override fun onMessageReceived(remoteMessage: RemoteMessage?) {
     super.onMessageReceived(remoteMessage)
     if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
@@ -1664,14 +1700,14 @@ For a full list of push notification fields, refer to the following table:
 | ------------------ | --------- | ----------- |
 | `payloadType`     | String    | Specifies the notification payload type. The two values that are sent from the Braze Flutter SDK are `push_opened` and `push_received`.  Only `push_opened` events are supported on iOS. |
 | `url`              | String    | Specifies the URL that was opened by the notification. |
-| `useWebview`      | Boolean   | If `true`, URL will open in-app in a modal webview. If `false`, the URL will open in the device browser. |
+| `useWebview`      | Boolean   | If `true`, URL opens in-app in a modal webview. If `false`, the URL opens in the device browser. |
 | `title`            | String    | Represents the title of the notification. |
 | `body`             | String    | Represents the body or content text of the notification. |
 | `summaryText`     | String    | Represents the summary text of the notification. This is mapped from `subtitle` on iOS. |
 | `badgeCount`      | Number   | Represents the badge count of the notification. |
 | `timestamp`        | Number | Represents the time at which the payload was received by the application. |
 | `isSilent`        | Boolean   | If `true`, the payload is received silently. For details on sending Android silent push notifications, refer to [Silent push notifications on Android](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=android). For details on sending iOS silent push notifications, refer to [Silent push notifications on iOS](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=swift). |
-| `isBrazeInternal`| Boolean   | This will be `true` if a notification payload was sent for an internal SDK feature, such as Feature Flag sync or uninstall tracking. The payload is received silently for the user. |
+| `isBrazeInternal`| Boolean   | This is `true` if a notification payload was sent for an internal SDK feature, such as Feature Flag sync or uninstall tracking. The payload is received silently for the user. |
 | `imageUrl`        | String    | Specifies the URL associated with the notification image. |
 | `brazeProperties` | Object    | Represents Braze properties associated with the campaign (key-value pairs). |
 | `ios`              | Object    | Represents iOS-specific fields. |
@@ -1693,6 +1729,32 @@ To test your integration after configuring push notifications in the native laye
 Starting with Xcode 14, you can test remote push notifications on an iOS simulator.
 
 
+
+### Step 4: Add deep links (Android)
+
+**Warning:**
+
+
+On Android, `com_braze_handle_push_deep_links_automatically` defaults to `false`. With the default, tapping a push notification still sends a `push_opened` event to your Dart listener, but the native SDK does not bring your app to the foreground or open the deep link destination automatically. If your app doesn't launch when a notification is tapped, this flag is the most likely cause.
+
+
+
+To enable Braze to automatically open your app and any deep links when a push notification is tapped, set `com_braze_handle_push_deep_links_automatically` to `true` in your `braze.xml`:
+
+```xml
+<bool name="com_braze_handle_push_deep_links_automatically">true</bool>
+```
+
+This flag can also be set through [runtime configuration](https://www.braze.com/docs/developer_guide/sdk_integration#android_runtime-configuration) in your native Android code:
+
+```kotlin
+val brazeConfig = BrazeConfig.Builder()
+        .setHandlePushDeepLinksAutomatically(true)
+        .build()
+Braze.configure(this, brazeConfig)
+```
+
+If you want to custom handle deep links instead, use the `subscribeToPushNotificationEvents()` listener described in Step 2 to route the `push_opened` event's `url` field yourself. For more information, see [Deep linking](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking/?sdktab=flutter).
 
 
 

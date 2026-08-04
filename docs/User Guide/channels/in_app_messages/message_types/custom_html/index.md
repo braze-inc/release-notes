@@ -24,6 +24,18 @@ To enable HTML in-app messages through the Web SDK, you must supply the `allowUs
 
 
 
+## Character encoding {#character-encoding}
+
+When building custom HTML in-app messages with special characters—such as Cyrillic script, accented characters, or other non-ASCII text—include UTF-8 encoding in your HTML to ensure proper display. Without UTF-8 encoding, these characters may appear broken or missing when rendered in the webview.
+
+To enable UTF-8 encoding, add the following meta tag inside your HTML `<head>` section:
+
+```html
+<meta charset="UTF-8">
+```
+
+This forces UTF-8 encoding, which is the expected character set for webviews that display in-app messages.
+
 ## JavaScript bridge {#javascript-bridge}
 
 Custom HTML in-app messages and Banners support a JavaScript "bridge" to interface with the Braze SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `brazeBridge` or `appboyBridge` variable.
