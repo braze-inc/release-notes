@@ -47,9 +47,11 @@ If you want to use your unique discount codes in a single-send campaign, or you 
 
 ![A Liquid code snippet with a button copy it.][4]{: style="max-width:60%;"}
 
-Paste the Liquid snippet into a campaign or Canvas step. 
+Paste the Liquid snippet into a campaign or Canvas step.
 
-![A GIF showing the Liquid snippet being added to a Canvas step.][5]
+<video autoplay muted loop playsinline loading="lazy" style="max-width:100%;" aria-label="A video showing the Liquid snippet being added to a Canvas step.">
+  <source src="/docs/assets/img/shopify/liquid_promo_code.mp4?c34d792af1db3e74886050c2ce006fc0" type="video/mp4">
+</video>
 
 If you want users to receive a single unique discount code no matter how many times the discount code is referenced in campaigns or Canvases, create a [User Update](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update/) step directly before the first Message step that assigns the discount code to a custom attribute, like "Promo Code".
 
@@ -93,5 +95,4 @@ When a discount code is referenced by multiple steps in the same Canvas or by se
 [2]: /docs/assets/img/shopify/export_discount_codes.png?246f9f43cdcf09e091fac9e3d04cb2a3
 [3]: /docs/assets/img/shopify/edited_codes_csv.png?b24894f0cb40b306879211942af11805
 [4]: /docs/assets/img/shopify/liquid_code_snippet.png?fae29377bc4d4e646d2a30d27a908a41
-[5]: /docs/assets/img/shopify/liquid_promo_code.gif?3dc1d2e66014c58bb882252ce1a7be12
 [6]: /docs/assets/img/shopify/user_update_step.png?3b414d45bc94722d8f7bb0245cdc28b2

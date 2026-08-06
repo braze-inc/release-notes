@@ -12,7 +12,7 @@ The **Messaging Diagnostics** dashboard is generally available. Contact your cus
 **Note:**
 
 
-To access the **Messaging Diagnostics** dashboard, you need the "View Dashboard Reports" [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for your workspace.
+To access the **Messaging Diagnostics** dashboard, you need the "View Dashboard Reports" and "View PII" [user permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for your workspace.
 
 
 

@@ -38,16 +38,16 @@ Analytics numbers in the dashboard and Snowflake may differ slightly. Braze meas
 
 
 
-#### Estimated Audience and Current Audience
+#### Estimated Audience and Current Audience {#estimated-audience-and-current-audience}
 
-Depending on how large your workspace is, the **Campaign Details** panel may label audience statistics **Estimated Audience** or **Current Audience**.
+Depending on the total number of users in your workspace, the **Campaign Details** panel labels audience statistics **Current Audience** or **Estimated Audience**.
 
 The following table summarizes what each label means.
 
 | Footer label | When it is used |
 | --- | --- |
-| **Estimated Audience** | Braze does not run a full-database count by default. Audience size is estimated from a sample and extrapolated, similar to the **Reachable users** range in the segment builder. Margins of error are expected, especially for large workspaces or small segments as a share of the workspace. |
-| **Current Audience** | Braze can compute the default statistic with a full scan of workspace profiles, so the displayed audience size is a current, unsampled count (still subject to channel reachability, subscription rules, and other targeting options). |
+| **Current Audience** | The workspace has 50,000 users or fewer. Braze runs a full scan of workspace profiles for the default statistic, so the displayed audience size is a current, unsampled count (still subject to channel reachability, subscription rules, and other targeting options). |
+| **Estimated Audience** | The workspace has more than 50,000 users. Braze doesn't run a full-database count by default. Audience size is estimated from a sample and extrapolated, similar to the **Reachable users** range in the segment builder. Margins of error are expected, especially for small segments as a share of the workspace. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Estimated Audience and Current Audience" }
 
 For details on sampling behavior, **Calculate exact statistics**, and segmenting **Reachable users**, see [Measure segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size/).
@@ -146,3 +146,9 @@ You may see the message `Email was deferred due to the following reason(s): [IPs
 This pattern usually means you're sending faster than the mailbox provider accepts for your current reputation. In addition to improving engagement and list quality, use [delivery speed rate limiting](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#delivery-speed-rate-limiting) to cap how quickly messages leave Braze for a campaign or Canvas. That helps reduce throttling while you work with your deliverability team on longer-term fixes.
 
 If throttling persists for specific domains, reduce volume to those domains and contact Braze deliverability support for guidance.
+
+### Unknown IP reputation status
+
+If your email performance report shows an "unknown" value for IP reputation, this may be related to a Google Postmaster Tools outage. Google Postmaster Tools provides reputation data for Gmail deliverability, and temporary service disruptions can result in missing or unknown reputation values.
+
+If you see an unknown reputation status and have questions about your email deliverability, contact [Braze Support](https://www.braze.com/docs/support_contact/).

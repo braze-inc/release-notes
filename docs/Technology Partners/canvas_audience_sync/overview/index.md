@@ -32,7 +32,7 @@ table td {
 | [The Trade Desk](https://www.braze.com/docs/partners/canvas_audience_sync/trade_desk_audience_sync/) | Up to 24 hours | N/A | Yes | {::nomarkdown}<ul><li>There is no minimum audience size for CRM audiences in The Trade Desk.</li><li>There is no limit for how many audiences The Trade Desk supports.</li><li>If you sync to an audience with a region set to the EU, phone number is not supported.</li></ul>{:/} |
 | [TikTok](https://www.braze.com/docs/partners/canvas_audience_sync/tiktok_audience_sync/) | Between 24 and 48 hours | TikTok processes 50 queries per second and 10,000 users per request. Braze batches users every 5 seconds. | Yes | {::nomarkdown}<ul><li>TikTok supports up to 400 ad audiences.</li><li>TikTok audiences require at least 1,000 users to start serving ads.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 aria-label="Overview" }
-<sup>When the rate limit is reached, Braze will retry syncs for 13 hours.</sup>
+<sup>When the rate limit is reached, Braze retries syncs for 13 hours.</sup>
 
 ## How it works
 
@@ -55,21 +55,21 @@ For each partner, you’ll need to configure the following as part of your Audie
 - Action to either add or remove users 
 - Fields to match 
 
-Keep in mind that Braze will sync users as soon as they enter the Audience Sync step within your Canvas. 
+Keep in mind that Braze syncs users as soon as they enter the Audience Sync step within your Canvas. 
 
-For each Audience Sync destination, the partner may have different requirements for which fields we can send. Refer to the specific partner documentation for more details. 
+For each Audience Sync destination, the partner may have different requirements for which fields Braze can send. Refer to the specific partner documentation for more details. 
 
 ### Audience Sync Pro
 
-To use an Audience Sync Pro partner including TikTok, Pinterest, Snapchat, or Criteo, you’ll be able to select your partners based on your Audience Sync Pro purchase allotments in the **Audience Sync Pro** section on the **Technology Partners** page.
+To use an Audience Sync Pro partner including TikTok, Pinterest, Snapchat, or Criteo, you can select your partners based on your Audience Sync Pro purchase allotments in the **Audience Sync Pro** section on the **Technology Partners** page.
 
 ![Audience Sync Pro with no partners selected yet.](https://www.braze.com/docs/assets/img/audience_sync/audience_sync_pro1.png?8c566b03061fdcde746e301206097908){: style="max-width:75%;"}
 
-First, select the partners you intend to use by selecting Select Partners. Each purchase of Audience Sync Pro will provide you 3 allotted Audience Sync Pro destinations, which will be available within each of your workspaces within your dashboard.
+First, select the partners you intend to use. Each purchase of Audience Sync Pro provides you 3 allotted Audience Sync Pro destinations, which are available within each of your workspaces within your dashboard.
 
 ![Option to select up to three partners to connect to Braze.](https://www.braze.com/docs/assets/img/audience_sync/audience_sync_pro2.png?9241321ce291c56e2abbb2e5367084bc){: style="max-width:65%;"}
 
-After selecting your Audience Sync Pro destinations, connect your selected partner ad account by clicking on the partner tile.
+After selecting your Audience Sync Pro destinations, connect your selected partner ad account by clicking the partner tile.
 
 ![An example of Snapchat and TikTok selected as partners for Audience Sync.](https://www.braze.com/docs/assets/img/audience_sync/audience_sync_pro3a.png?45949f7c559263a2db2304187d5803b3){: style="max-width:70%;"}
 
@@ -89,17 +89,17 @@ When users enter an Audience Sync step in Canvas, Braze enqueues them into a bat
 
 High-volume Canvases may dispatch sooner because batches fill faster. Lower-volume Canvases wait until the latency timer expires. Braze doesn't guarantee a fixed dispatch time; the timing depends on batch size and the configured latency window.
 
-Braze records dispatch activity in internal logs for monitoring and troubleshooting, but these timestamps are not exposed as queryable fields. After Braze dispatches a batch to the partner API, the partner processes the audience update according to their own Service Level Agreements—typically 6-48 hours. 
+Braze records dispatch activity in internal logs for monitoring and troubleshooting, but these timestamps are not exposed as queryable fields. After Braze dispatches a batch to the partner API, the partner processes the audience update according to their own Service Level Agreements—typically 6–48 hours. 
 
 Braze doesn't receive confirmation from partners that individual users have been matched or synced. Partner responses are HTTP acknowledgments of receipt, not match confirmations. To verify that an audience has been populated, check the partner's ad platform (such as Google Ads Audience Manager or Meta Business Manager).
 
 ### Audience Sync error emails
 
-If the error is related to the overall partner integration (such as an authorization issue), an email is sent to the user who connected the integration. If that user no longer exists, then the administrators will receive the emails. 
+If the error is related to the overall partner integration (such as an authorization issue), an email is sent to the user who connected the integration. If that user no longer exists, then the administrators receive the emails.
 
 If the error is related to issues with the Audience Sync component (such as "Audience Does Not Exist") in Canvas, an email is sent to the user who set up the Canvas. If that user no longer exists, then it falls back to the company administrator.
 
-To configure who will receive these emails, contact your customer success manager to add recipients under **Notification Preferences**. Because this feature will change the current behavior, you'll need to immediately add recipients to this new notification preference as Braze doesn't opt-in anyone by default, and to make sure no error emails are missed.
+To configure who receives these emails, contact your customer success manager to add recipients under **Notification Preferences**. This preference covers both integration errors and Audience Sync component errors. Recipients you add receive these emails in addition to the user associated with the error.
 
 ## Data privacy considerations
 
