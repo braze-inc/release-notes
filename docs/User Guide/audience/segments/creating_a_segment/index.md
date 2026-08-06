@@ -17,7 +17,17 @@ Optionally, you can do the following:
 - Add a [team](https://www.braze.com/docs/user_guide/administer/global/user_management/teams) to your segment.
 - Add [tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags) to your segment for further organization.
 
-![Create Segment modal where the segment is named "Lapsed Users" with the Segment Description as "This is our main Lapsed User segment to target non-actives within the past fourteen days." with two buttons: Cancel and Create Segment.](https://www.braze.com/docs/assets/img_archive/segment_app_selection.png?64546f15e5f12bcf6a82cd28839d67fa){: style="max-width:80%;"}
+Segments are saved as soon as you select **Create Segment**. You don't need to select **Save** on the segment editor first.
+
+**Note:**
+
+
+If you have the team-level "Edit Segments" permission only (not workspace-level), Braze assigns a team when the segment is created:
+<br><br>
+- **One eligible team:** That team is assigned automatically.
+- **Multiple eligible teams:** Braze assigns the first team in your list of eligible teams. You can change the team on the segment editor before sharing or using the segment.
+
+
 
 ## Step 3: Choose your app or platform
 
@@ -103,11 +113,15 @@ Braze doesn't generate profiles for users until they've used the app for the fir
 
 ![Segmenter filter groups with the AND operator.](https://www.braze.com/docs/assets/img_archive/segmenter_filter_groups.png?ba850355b8967497aaab8f2748046d98)
 
+#### Date and recency filter display
+
+When you set a relative time filter using days (such as an event performed more than 84&nbsp;days and less than 91&nbsp;days ago), Braze converts the value to weeks after you save if the day count divides evenly by seven. For example, 91&nbsp;days displays as 13&nbsp;weeks, but 121&nbsp;days stays in days because it doesn't divide evenly. This is a display change only—the values are still stored and processed as days.
+
 **Important:**
 
 
-Segments already using the **Segment Membership** filter cannot be further included or nested into other segments. This prevents a cycle where Segment A includes Segment B, which then tries to include Segment A again. If that happened, the segment would keep referencing itself, making it impossible to calculate who actually belongs in it.
-
+Segments already using the **Segment Membership** filter cannot be further included or nested into other segments. This prevents a cycle where Segment A includes Segment B, which then tries to include Segment A again. If this occurs, the segment keeps referencing itself, making it impossible to calculate who belongs in it.
+<br><br>
 Also, nesting segments like this adds complexity and can slow things down. Instead, recreate the segment you're trying to include using the same filters.
 
 

@@ -1,4 +1,4 @@
-<div id='api_sjoybgesdrha' class='api_div' data-search-keywords='when alias_label and alias_name already exist user_aliases external_id alias_name alias_label aliases_processed message attributes user_alias string_attribute'>
+<div id='api_idkazpmxbgru' class='api_div' data-search-keywords='when alias_label and alias_name already exist user_aliases external_id alias_name alias_label aliases_processed message attributes user_alias string_attribute'>
 <h1 id="create-new-user-alias">Create new user alias</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/alias/new</p>
@@ -13,6 +13,8 @@
 <p><strong>Adding a user alias for an existing user</strong> requires an <code class="language-plaintext highlighter-rouge">external_id</code> to be included in the new user alias object. If the <code class="language-plaintext highlighter-rouge">external_id</code> is present in the object but there is no user with that <code class="language-plaintext highlighter-rouge">external_id</code>, the alias will not be added to any users. If an <code class="language-plaintext highlighter-rouge">external_id</code> is not present, a user will still be created but will need to be identified later. You can do this using the “Identifying Users” and the <code class="language-plaintext highlighter-rouge">users/identify</code> endpoint.</p>
 
 <p><strong>Creating a new alias-only user</strong> requires the <code class="language-plaintext highlighter-rouge">external_id</code> to be omitted from the new user alias object. After the user is created, use the <code class="language-plaintext highlighter-rouge">/users/track</code> endpoint to associate the alias-only user with attributes, events, and purchases, and the <code class="language-plaintext highlighter-rouge">/users/identify</code> endpoint to identify the user with an <code class="language-plaintext highlighter-rouge">external_id</code>.</p>
+
+<p>You can send API-triggered campaigns to users by <code class="language-plaintext highlighter-rouge">user_alias</code> using the <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns"><code class="language-plaintext highlighter-rouge">/campaigns/trigger/send</code></a> endpoint.</p>
 
 <h2 id="when-alias_label-and-alias_name-already-exist">When <code class="language-plaintext highlighter-rouge">alias_label</code> and <code class="language-plaintext highlighter-rouge">alias_name</code> already exist</h2>
 

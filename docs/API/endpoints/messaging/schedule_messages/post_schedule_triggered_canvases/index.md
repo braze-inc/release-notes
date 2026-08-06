@@ -1,4 +1,4 @@
-<div id='api_xyehfvncmhuw' class='api_div' data-search-keywords='prerequisites canvas_id recipients audience broadcast context schedule time in_local_time at_optimal_time'>
+<div id='api_xdxhbahmyeab' class='api_div' data-search-keywords='prerequisites canvas_id recipients audience broadcast context schedule time in_local_time at_optimal_time'>
 <h1 id="schedule-api-triggered-canvases">Schedule API-triggered Canvases</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/trigger/schedule/create</p>
@@ -11,6 +11,10 @@
 <p>You can pass in <code class="language-plaintext highlighter-rouge">context</code> that will be templated into the messages sent by the first steps of the Canvas.</p>
 
 <p>Note that to send messages with this endpoint, you must have a <a href="/docs/api/identifier_types#canvas-identifier">Canvas ID</a>, created when you build a Canvas.</p>
+
+<p><strong>Note:</strong></p>
+
+<p>Canvas entries are recorded at the scheduled message time, not when this API request is made. Users triggered for a future-dated schedule won’t appear as entries until that scheduled time arrives.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4bc75890-b807-405d-b226-5aca284e6b7d" class="seeme">See me in Postman</a></div>
 
