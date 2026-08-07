@@ -215,6 +215,13 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 
 After you finish building your campaign or Canvas, review its details, [test it](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages), then send it. For more information, see [Send test messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages?tab=content%20card).
 
+**Note:**
+
+
+While Content Cards do not require push notifications in production, test sends require push to be enabled on your test devices because the card is delivered in the push payload. Test Content Cards expire approximately five minutes after they are sent.
+
+
+
 **Warning:**
 
 

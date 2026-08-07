@@ -304,3 +304,48 @@ This error usually indicates extra or missing curly braces. Do not nest `{{ }}` 
 
 The `{% connected_content %}` tag with retry is not supported for all message types, including some in-app message formats. Remove retry parameters or use a supported channel for retried Connected Content calls.
 
+
+### Why am I seeing "Liquid Error: Comparison of Time with String Failed"?
+
+This error occurs when comparing a time custom attribute or event property directly to a blank value (an empty string). Liquid does not support direct comparisons between different data types, such as a time object and a string.
+
+The following is a common example that causes this error:
+
+
+```liquid
+{% if {{custom_attribute.${expiration_date}}} == blank %}
+  <a>Some words</a>
+{% endif %}
+```
+
+
+This fails because you cannot compare a custom attribute with a data type of time to a string (`blank`).
+
+To resolve this, convert the time attribute to a string by assigning it to a variable and using the `default` filter when the attribute evaluates to blank at render time:
+
+
+```liquid
+{% assign expiration_date = {{custom_attribute.${expiration_date}}} | default: "" %}
+
+{% if expiration_date == blank %}
+  <a>Example Words</a>
+{% endif %}
+```
+
+
+
+When comparing a time custom attribute against the current time or future dates, use the same approach:
+
+
+```liquid
+{% assign today = 'now' | date: '%s' %}
+{% assign month = 'now' | date: '%s' | plus: 2592000 %}
+{% assign expiration_date = {{custom_attribute.${expiration_date}}} | default: "" %}
+
+{% if expiration_date == blank %}
+  <a>Example Words</a>
+{% elsif expiration_date >= today and expiration_date >= month %}
+  <a>More Words</a>
+{% endif %}
+```
+
