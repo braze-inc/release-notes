@@ -19,7 +19,13 @@ To download a copy of your data, select <i class="fa-solid fa-bars" style="color
 
 ## Send calendar
 
-The send calendar displays all your scheduled campaigns for the current month.
+The send calendar displays scheduled campaigns for the current month. Canvases, action-based campaigns, and API-triggered campaigns are not included.
+
+Campaigns are color-coded by type in the **Key**:
+
+- Blue indicates multichannel campaigns.
+- Purple indicates multivariate campaigns.
+- Gray indicates disabled campaigns.
 
 **Note:**
 

@@ -621,6 +621,13 @@ This Objective-C example shows completion-based `logout` handling. Use it in Obj
 
 
 
+**Note:**
+
+
+`logout` does not end currently-running Live Activities. In the success callback, manually end any running Live Activities using ActivityKit's [`end(_:dismissalPolicy:)`](https://developer.apple.com/documentation/activitykit/activity/end(_:dismissalpolicy:)) method.
+
+
+
 #### Re-enable tracking and push after `logout`
 
 After a successful `logout`, set [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled/) back to `true`, then re-register for notifications with your operating system (OS) or push provider by following [Swift push setup](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift).
@@ -694,6 +701,10 @@ Avoid calling `logout` or `unregisterPush` directly after registering for push n
 Live Activities can be started remotely using push-to-start tokens. To stop Braze from remotely starting Live Activities on a device, call the `unregisterPushToStart` method to unregister all currently-registered types (default) or a specified list of Activity types.
 
 Note that currently-running Live Activities continue to receive updates and that this method will only remove the ability to start new activities remotely. For more information on Live Activities, see [Live Activities](https://www.braze.com/docs/developer_guide/live_notifications/live_activities).
+
+#### End any running Live Activities
+
+`unregisterPushToStart` does not end currently-running Live Activities. In the success callback, manually end any running Live Activities using ActivityKit's [`end(_:dismissalPolicy:)`](https://developer.apple.com/documentation/activitykit/activity/end(_:dismissalpolicy:)) method.
 
 **Note:**
 

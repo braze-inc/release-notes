@@ -31,13 +31,12 @@ KakaoTalk is supported in both campaigns and Canvas. Campaigns are best suited f
 
 1. Select the **KakaoTalk channel** dropdown, which populates a list of KakaoTalk channels you have set up through the Technology Partners page, and select the KakaoTalk channel to use to send the message.
 2. Select the message type to send:
-- Text
-- Image
-- List item
-    - Narrow
-    - Wide
-
-![KakaoTalk Variants section with three types of messages to select from.](https://www.braze.com/docs/assets/img/kakaotalk/kakaotalk_variants.png?e2c53c8b951e35dff43d56da32288828)
+   - Text
+   - Image
+       - Narrow
+       - Wide
+   - List item
+   - Carousel
 
 
 
@@ -120,7 +119,7 @@ A wide image message features a prominent wide image suitable for high-impact vi
 
 You can add images through the Braze Media Library or by pasting in a URL that hosts a JPEG or PNG file. You can also specify the on-click behavior of the image to redirect users who click it to a specific URL.
 
-Braze automatically handles all of the image upload requirements of KakaoTalk, meaning that you **do not** need to upload images to KakaoTalk providers before sending messages. Just upload images and send the message directly from Braze!
+Braze automatically handles all of the image upload requirements of KakaoTalk, meaning that you don't need to upload images to KakaoTalk providers before sending messages. Just upload images and send the message directly from Braze!
 
 ![Section with selected icons to add narrow image.](https://www.braze.com/docs/assets/img/kakaotalk/add_image.png?31642f6e448c8d83da8af1d053c28bb6)
 
@@ -137,13 +136,55 @@ List item messages consist of a header, an item list section, and an optional bu
 | Area | Specifications |
 | --- | --- |
 | Item count | Requires at least 2 or 3 items |
-| Buttons | Up to 5 optional buttons |
 | Header | Up to 250 characters |
 | Item title | Up to 25 characters |
-| Website URL (per item)| Up to 250 characters |
+| Website URL (per item, row tap) | Required. Up to 250 characters. Opens when a user taps that item's image or title. |
+| Buttons (message-level) | Up to 5 optional buttons with their own URLs or actions |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Specifications" }
 
 ![A KakaoTalk list item message.](https://www.braze.com/docs/assets/img/kakaotalk/item_list.png?0b33c78fb988fdca71c1151aaa799c8d)
+
+
+
+
+A KakaoTalk carousel message includes up to six scrollable cards. Each card has an image, header, message, optional **Website URL**, and at least one button.
+
+Both the card and its buttons use a field labeled **Website URL** in the composer, but they apply to different tap targets:
+
+- **Card Website URL:** (Optional) Opens when a user taps the card image. If you leave this blank, the image isn't tappable.
+- **Button Website URL:** Opens when a user taps that button. Each web button requires its own URL and can point to a different destination than the card image.
+
+Card and button URLs are shortened and tracked independently when click tracking is on.
+
+Braze automatically uploads card images to KakaoTalk servers when you send the message, similar to image messages.
+
+**Note:**
+
+
+The **Carousel** message type may not appear in your workspace until it is enabled for your account.
+
+
+
+### Specifications
+
+| Area | Specifications |
+| --- | --- |
+| Cards | 2–6 scrollable cards |
+| Header (per card) | Up to 20 characters |
+| Message (per card) | Up to 180 characters |
+| Image (per card) | Required |
+| Accepted file formats | JPG or PNG |
+| Minimum width | 500px |
+| Aspect ratio | 2:1, 16:10, 3:2, 4:3, 1:1, or 3:4 |
+| Website URL (per card, image tap) | (Optional) Up to 250 characters. Opens when a user taps the card image. |
+| Buttons (per card) | At least 1, up to 2 |
+| Button text (per card) | Up to 8 characters |
+| Button types | Open web URL, app link, or text reply |
+| Button website URL (per **Open web URL** button) | Required. Up to 500 characters. Opens when a user taps that button. |
+| Personalization | Liquid supported in card fields and URLs |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Specifications" }
+
+![A KakaoTalk carousel message.](https://www.braze.com/docs/assets/img/kakaotalk/carousel_message.png?5461bc9b4de18bb65100a1378c50fb04)
 
 
 
@@ -153,9 +194,9 @@ List item messages consist of a header, an item list section, and an optional bu
 
 When KakaoTalk click tracking is turned on, Braze automatically shortens your URLs, adds tracking mechanisms, and records clicks in real time. This data empowers you to create more targeted segmentation and retargeting strategies, such as segmenting users based on click behavior and triggering messages in response to specific clicks.
 
-Click tracking is supported for text, image, and list item messages. It supports links within buttons and image on-click actions. You can also personalize URLs using Liquid and custom domains.
+Click tracking is supported for text, image, list item, and carousel messages. It supports links within buttons and image on-click actions. You can also personalize URLs using Liquid and custom domains.
 
-To enable click tracking, check **Click Tracking** in the **Link options** section of the composer. URLs will be shortened using the default Braze domain (`https://brz.ai`) or the custom domain specified for the subscription group, and personalized for the user.
+To enable click tracking, check **Click Tracking** in the **Link options** section of the composer. URLs are shortened using the default Braze domain (`https://brz.ai`) or the custom domain specified for the subscription group, and personalized for the user.
 
 For full details on click tracking, custom domains, Liquid personalization in URLs, reporting, and retargeting, refer to [KakaoTalk click tracking](https://www.braze.com/docs/kakaotalk_click_tracking).
 

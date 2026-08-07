@@ -175,6 +175,8 @@ When clearing or unsetting a custom attribute, the behavior differs depending on
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Blank strings versus null values" }
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Blank strings versus null values" }
 
+This behavior also affects segmentation. For custom attributes, the **IS NOT BLANK** filter checks for a non-empty value. This means a blank string (`""`) doesn't match, even though the attribute remains visible on the profile. A `null` value also doesn't match, because the attribute is removed from the profile.
+
 **Important:**
 
 
