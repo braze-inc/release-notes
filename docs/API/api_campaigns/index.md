@@ -11,6 +11,8 @@ Send that information to your development team to use in the API request, along 
 
 After the campaign begins, you can view the results in the dashboard. API campaigns use the Braze [messaging APIs](https://www.braze.com/docs/api/endpoints/messaging), which have the same detailed reporting and retargeting options as campaigns created completely through the dashboard.
 
+Because API campaigns always include a `campaign_id`, their sends are reflected in dashboard stats. If you call [`/messages/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages) without a `campaign_id`, Braze doesn't increment those metrics—sends still appear in the [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log), but not in email performance metrics in the dashboard.
+
 **Warning:**
 
 

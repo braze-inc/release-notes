@@ -31,7 +31,7 @@ The following Braze metrics can be affected by bot clicks:
 - Heatmap
 - Certain segment filters
 
-[Braze Intelligence features](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite) that leverage click data on top of our detection systems may be impacted. Turning on the setting has the potential to disrupt our detection systems temporarily, which may result in a decrease in the metric or input due to this exclusion of suspected bot clicks:
+When bot filtering is turned on, suspected bot clicks are excluded from click data. The following [Braze Intelligence features](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite) may reflect lower click-related volumes as a result:
 
 - Intelligent Selection
 - Intelligent Channel
