@@ -94,13 +94,6 @@ Your MCP client references these tools to interact with the Braze MCP server.
 | `create_media_library_asset` | [`/media_library/create`](https://www.braze.com/docs/api/endpoints/media_library/manage_assets/create) | create | Upload an asset to the Braze media library through external URL or base64 file content. Exactly one upload mode must be provided. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Media library" }
 
-### Messages
-
-| Tool | API endpoint | Access | Description |
-| --- | --- | --- | --- |
-| `get_scheduled_broadcasts` | [`/messages/scheduled_broadcasts`](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled) | read | List scheduled campaigns and entry Canvases between now and a designated `end_time`. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Messages" }
-
 ### Purchases
 
 | Tool | API endpoint | Access | Description |
@@ -109,13 +102,6 @@ Your MCP client references these tools to interact with the Braze MCP server.
 | `get_quantity_series` | [`/purchases/quantity_series`](https://www.braze.com/docs/api/endpoints/export/purchases/get_number_of_purchases) | read | Total number of purchases in your app over a time range. |
 | `get_revenue_series` | [`/purchases/revenue_series`](https://www.braze.com/docs/api/endpoints/export/purchases/get_revenue_series) | read | Total money spent in your app over a time range. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Purchases" }
-
-### SDK authentication
-
-| Tool | API endpoint | Access | Description |
-| --- | --- | --- | --- |
-| `get_sdk_authentication_keys` | [`/app_group/sdk_authentication/keys`](https://www.braze.com/docs/api/endpoints/sdk_authentication/get_sdk_authentication_keys) | read | Retrieve all SDK authentication keys for an app. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="SDK authentication" }
 
 ### Segments
 
