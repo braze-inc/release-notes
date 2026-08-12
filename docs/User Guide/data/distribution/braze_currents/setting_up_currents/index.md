@@ -63,6 +63,9 @@ Add a partner, sometimes called a "Currents connector," by selecting the dropdow
 
 Each partner requires a different set of configuration steps. To enable each integration, refer to our list of [available partners](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/available_partners) and follow the instructions on their respective pages.
 
+Provide a contact email for integration error notifications. Braze sends notifications to this address if the integration encounters errors, such as credential issues or connectivity problems. To help ensure the right people receive alerts, use a distribution list or group email address.
+
+
 ### Step 4: Configure your events
 
 Choose the events you wish to pass to that partner by checking from the available options. You can find listings of these events in our [Customer Behavior Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events) and [Message Engagement Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events) libraries.

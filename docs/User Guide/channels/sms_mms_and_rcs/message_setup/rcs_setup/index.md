@@ -110,6 +110,13 @@ Add a User Update Step to your Canvas. In the step, open the **Advanced JSON Edi
 ```
 
 
+**Important:**
+
+
+When using `use_double_opt_in_logic`, a user profile must already exist for the subscription state to be updated. If no user profile is associated with the provided identifier, the subscription state isn't updated.
+
+
+
 !["User Update Object" that contains the previously stated JSON code.](https://www.braze.com/docs/assets/img/sms/user_update_object.png?7f77f604b020e6b203fca9cacf3f4fdc)
 
 ### Step 4: Test the Canvas
