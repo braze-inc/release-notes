@@ -63,6 +63,9 @@ Provide a name for your Blob Service Container. Other default settings will not 
 
 In Braze, navigate to **Currents > + Create Current > Azure Blob Data Export** and provide your integration name and contact email.
 
+Provide a contact email for integration error notifications. Braze sends notifications to this address if the integration encounters errors, such as credential issues or connectivity problems. To help ensure the right people receive alerts, use a distribution list or group email address.
+
+
 Next, provide your connection string, container name, and BlobStorage prefix (optional).
 
 ![The Microsoft Azure Blob storage Currents page in Braze. On this page exist fields for integration name, contact email, connection string, container name, and prefix.](https://www.braze.com/docs/assets/img/maz.png?bdb78bd42ba62f206f636b2351e5af76)
@@ -206,7 +209,12 @@ cat cert.pem key.pem > braze-currents.pem
 
 If you converted an existing `.pfx` in [Step 2](#cert-sp-2), you already have this `braze-currents.pem` file.
 
-In Braze, navigate to **Currents** > **+ Create Current** > **Azure Blob Data Export**, then provide your integration name and contact email. For **Credentials**, select **Certificate Service Principal** and provide the following:
+In Braze, navigate to **Currents** > **+ Create Current** > **Azure Blob Data Export**, then provide your integration name and contact email. 
+
+Provide a contact email for integration error notifications. Braze sends notifications to this address if the integration encounters errors, such as credential issues or connectivity problems. To help ensure the right people receive alerts, use a distribution list or group email address.
+
+
+For **Credentials**, select **Certificate Service Principal** and provide the following:
 
 | Field | Value |
 | ----- | ----- |

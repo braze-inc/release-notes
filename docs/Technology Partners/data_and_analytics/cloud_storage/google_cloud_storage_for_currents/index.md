@@ -86,6 +86,9 @@ At the bottom of the page, use the **Create Key** button to create a **JSON** pr
 
 In Braze, navigate to **Currents** > **+ Create Current** > **Google Cloud Storage Data Export** and provide your integration name and contact email.
 
+Provide a contact email for integration error notifications. Braze sends notifications to this address if the integration encounters errors, such as credential issues or connectivity problems. To help ensure the right people receive alerts, use a distribution list or group email address.
+
+
 Next, upload your JSON private key under **GCS JSON Credentials** and provide your GCS bucket name and GCS prefix (optional). Note that you must generate these credentials through Google Cloud Platform, as described in the previous steps.
 
 **Important:**
