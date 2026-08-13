@@ -1,12 +1,45 @@
-<div id='api_fijhwkrpylau' class='api_div' data-search-keywords='prerequisites asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
+<div id='api_mcplussievzy' class='api_div' data-search-keywords='supported file types asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
 <h1 id="upload-an-asset-to-the-media-library">Upload an asset to the media library</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/media_library/create</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to add an asset to the <a href="/docs/user_guide/engagement_tools/templates_and_media/media_library">Braze media library</a> using either an externally hosted URL (<code class="language-plaintext highlighter-rouge">asset_url</code>) or binary file data sent in the request body (<code class="language-plaintext highlighter-rouge">asset_file</code>). This endpoint supports images and ZIP files that contain images.</p>
+  <p>Use this endpoint to add an asset to the <a href="/docs/user_guide/messaging/design_and_edit/media_library">Braze media library</a> using either an externally hosted URL (<code class="language-plaintext highlighter-rouge">asset_url</code>) or binary file data sent in the request body (<code class="language-plaintext highlighter-rouge">asset_file</code>).</p>
 </blockquote>
+
+<h2 id="supported-file-types">Supported file types</h2>
+
+<p>This endpoint supports the following file types:</p>
+
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Supported file types">
+  <thead>
+    <tr>
+      <th>File Type</th>
+      <th>Formats</th>
+      <th>Maximum Size</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Images</td>
+      <td>PNG, JPEG, GIF, SVG, WebP</td>
+      <td>5 MB</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>ZIP files</td>
+      <td>.zip</td>
+      <td>50 MB total; 5 MB per file within the ZIP</td>
+      <td>Must contain only images or SVGs; all files must be in the root of the ZIP (no subdirectories)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Note:</strong></p>
+
+<p>Virtual Contact Files (.vcf) and video files can be uploaded to the media library, but only through the dashboard UI (<strong>Content</strong> &gt; <strong>Media Library</strong>), not through this API endpoint.</p>
 
 <p><strong>Tip:</strong></p>
 
