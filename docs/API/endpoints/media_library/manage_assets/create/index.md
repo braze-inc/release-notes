@@ -1,41 +1,52 @@
-<div id='api_mcplussievzy' class='api_div' data-search-keywords='supported file types asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
+<div id='api_gavnvvnqbhan' class='api_div' data-search-keywords='supported file types asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
 <h1 id="upload-an-asset-to-the-media-library">Upload an asset to the media library</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/media_library/create</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to add an asset to the <a href="/docs/user_guide/messaging/design_and_edit/media_library">Braze media library</a> using either an externally hosted URL (<code class="language-plaintext highlighter-rouge">asset_url</code>) or binary file data sent in the request body (<code class="language-plaintext highlighter-rouge">asset_file</code>).</p>
+  <p>Use this endpoint to add an asset to the <a href="/docs/user_guide/messaging/design_and_edit/media_library">Braze media library</a> using either an externally hosted URL (<code class="language-plaintext highlighter-rouge">asset_url</code>) or binary file data sent in the request body (<code class="language-plaintext highlighter-rouge">asset_file</code>). This endpoint supports images, documents, and ZIP files that contain them. For the full list, refer to <a href="#supported-file-types">Supported file types</a>.</p>
 </blockquote>
 
 <h2 id="supported-file-types">Supported file types</h2>
 
-<p>This endpoint supports the following file types:</p>
+<p>This endpoint accepts the following file types, whether you upload them through <code class="language-plaintext highlighter-rouge">asset_url</code> or <code class="language-plaintext highlighter-rouge">asset_file</code>.</p>
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Supported file types">
+<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" style="table-layout: fixed; width: 100%;" aria-label="Supported file types">
   <thead>
     <tr>
-      <th>File Type</th>
-      <th>Formats</th>
-      <th>Maximum Size</th>
-      <th>Notes</th>
+      <th>Asset type</th>
+      <th>Supported file types</th>
+      <th>Maximum size</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Images</td>
-      <td>PNG, JPEG, GIF, SVG, WebP</td>
-      <td>5 MB</td>
-      <td> </td>
+      <td>Image</td>
+      <td>GIF, ICO, JPEG, JPG, PNG, WebP</td>
+      <td>5 MB</td>
     </tr>
     <tr>
-      <td>ZIP files</td>
-      <td>.zip</td>
-      <td>50 MB total; 5 MB per file within the ZIP</td>
-      <td>Must contain only images or SVGs; all files must be in the root of the ZIP (no subdirectories)</td>
+      <td>Vector image</td>
+      <td>SVG</td>
+      <td>5 MB</td>
+    </tr>
+    <tr>
+      <td>Document</td>
+      <td>DOC, DOCX, PDF, PPT, PPTX, XLS, XLSX</td>
+      <td>5 MB</td>
+    </tr>
+    <tr>
+      <td>Archive</td>
+      <td>ZIP</td>
+      <td>50 MB total, 5 MB per file within the ZIP</td>
     </tr>
   </tbody>
 </table>
+
+<p>If you upload a file type that isn’t listed here, the endpoint returns an <code class="language-plaintext highlighter-rouge">UNSUPPORTED_FILE_TYPE</code> error.</p>
+
+<p>For ZIP files, each file inside the archive must also be one of the supported file types listed here, and all files must be in the root of the ZIP file (no subdirectories). Any file that isn’t supported is skipped and returned in the <code class="language-plaintext highlighter-rouge">errors</code> array of the response, and the rest of the archive is still uploaded.</p>
 
 <p><strong>Note:</strong></p>
 
@@ -273,12 +284,12 @@
     <tr>
       <td><code class="language-plaintext highlighter-rouge">UNSUPPORTED_FILE_TYPE</code></td>
       <td>400</td>
-      <td>The uploaded file type is not supported. The <code class="language-plaintext highlighter-rouge">meta</code> object includes the <code class="language-plaintext highlighter-rouge">file_type</code> that was rejected.</td>
+      <td>The uploaded file type is not supported. Refer to <a href="#supported-file-types">Supported file types</a>. The <code class="language-plaintext highlighter-rouge">meta</code> object includes the <code class="language-plaintext highlighter-rouge">file_type</code> that was rejected.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">ASSET_SIZE_EXCEEDS_LIMIT</code></td>
       <td>400</td>
-      <td>The file exceeds the maximum allowed size. Images have a 5 MB limit.</td>
+      <td>The file exceeds the maximum allowed size of 5 MB.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">MEDIA_LIBRARY_LIMIT_REACHED</code></td>
@@ -303,7 +314,7 @@
     <tr>
       <td><code class="language-plaintext highlighter-rouge">ZIP_FILE_TOO_LARGE</code></td>
       <td>400</td>
-      <td>The total uncompressed size of the ZIP file exceeds the 5 MB limit. The <code class="language-plaintext highlighter-rouge">meta</code> object includes the <code class="language-plaintext highlighter-rouge">zip_file_name</code> and <code class="language-plaintext highlighter-rouge">zip_file_size</code>.</td>
+      <td>The total uncompressed size of the ZIP file exceeds the 50 MB limit. The <code class="language-plaintext highlighter-rouge">meta</code> object includes the <code class="language-plaintext highlighter-rouge">zip_file_name</code> and <code class="language-plaintext highlighter-rouge">zip_file_size</code>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">ZIPPED_ENTITY_HAS_NO_NAME</code></td>

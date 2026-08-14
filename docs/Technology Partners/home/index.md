@@ -18,6 +18,7 @@ Welcome to the Braze Alloys Technology Partners documentation. Browse partners a
 - [Airbyte](https://www.braze.com/docs/partners/data_and_analytics/workflow_automation/airbyte)
 - [Algolia](https://www.braze.com/docs/partners/ecommerce/product_search_recommendations/algolia)
 - [Alpaco](https://www.braze.com/docs/partners/message_orchestration/templates/alpaco)
+- [Amazon Bedrock](https://www.braze.com/docs/partners/ai_model_providers/amazon_bedrock)
 - [Amazon Personalize](https://www.braze.com/docs/partners/message_personalization/dynamic_content/personalized_recommendations/amazon_personalize)
 - [Amazon S3](https://www.braze.com/docs/partners/data_and_analytics/cloud_storage/amazon_s3)
 - [Amperity](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/amperity)
