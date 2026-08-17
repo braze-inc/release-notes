@@ -216,7 +216,11 @@ The following specifications apply to all media in WhatsApp template headers, re
 
 
 
+
+
 ### Video
+
+
 
 
 

@@ -24,6 +24,8 @@ This message type is available in both the [drag-and-drop](https://www.braze.com
 
 
 
+
+
 ## Larger screens
 
 On a tablet or desktop browser, a modal in-app message will still sit in the center of the app screen as shown in the following screenshot.

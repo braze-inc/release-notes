@@ -119,7 +119,7 @@ For more information, refer to [Funnel reports](https://www.braze.com/docs/user_
 **Note:**
 
 
-Dashboard click metrics such as **Total Clicks** exclude suspected bot activity. For affected metrics, segmentation, orchestration, and Currents reconciliation fields (`is_suspected_bot_click`, `suspected_bot_click_reason`), see [Bot click filtering for SMS/RCS links](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/bot_click_filtering).
+Dashboard click metrics such as *Total Clicks* exclude suspected bot activity, but Currents still exports all click events with `is_suspected_bot_click` and `suspected_bot_click_reason` for warehouse reconciliation. For affected dashboard metrics, segmentation, and orchestration, see [Bot click filtering for SMS/RCS links](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/bot_click_filtering).
 
 
 
@@ -333,6 +333,17 @@ This table reflects Braze billing, not your provider's billing. Outcomes that ar
 
 
 **Sends to Carrier** is deprecated for new dashboards. Use **Sent**, **Confirmed Delivery**, **Delivery Failed**, and **Rejections** for current reporting. See the [Report Metrics Glossary](https://www.braze.com/docs/user_guide/data/report_metrics/) for definitions.
+
+
+
+## RCS and SMS fallback reporting
+
+For RCS SMS fallback event behavior (including `IS_SMS_FALLBACK=TRUE`), see [How SMS fallback works with events and segmentation](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup#how-sms-fallback-works-with-events-and-segmentation).
+
+**Note:**
+
+
+Dashboard campaign analytics and Snowflake exports can differ slightly in timing and aggregation. For warehouse reconciliation, treat Snowflake or Currents event streams as the more granular source when metrics do not match the dashboard exactly.
 
 
 

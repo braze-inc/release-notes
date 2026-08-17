@@ -108,6 +108,6 @@ A personalized integration allows for customized communication that is relevant 
 **Important:**
 
 
-Braze will ban or block users with over 5,000,000 sessions ("dummy users") and will no longer ingest their SDK events. For more information, refer to <a href="/docs/user_archival#spam-blocking">Spam blocking</a>.
+Braze blocks user profiles ("dummy users") with more than 5,000,000 sessions, more than 20,000 distinct custom event names, or more than 20,000 distinct product names in purchases, and stops ingesting all inbound data for that profile from both the SDKs and the REST API. For more information, see [Spam blocking](https://www.braze.com/docs/user_archival).
 
 
