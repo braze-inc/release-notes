@@ -133,11 +133,23 @@ Enter your message body, then upload a PNG, JPEG, or GIF image from the [media l
 
 ### Image specifications
 
-| Property | Recommendation |
-| --- | --- |
-| Size | Up to 600&nbsp;KB |
-| File types | PNG, JPEG, GIF |
-{: .reset-td-br-1 .reset-td-br-2 aria-label="Image specifications" }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Contact cards
 

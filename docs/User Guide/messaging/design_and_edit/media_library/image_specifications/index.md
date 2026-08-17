@@ -22,6 +22,8 @@ You should always [preview and test your messages](https://www.braze.com/docs/us
 
 
 
+
+
 ## Video
 
 Videos uploaded to the media library can only be used in WhatsApp messages. For more information, refer to [Creating a WhatsApp message](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message#outbound-messages).
@@ -64,7 +66,11 @@ GIFs are supported in iOS push, in-app messages, email, Content Cards, and MMS o
 
 
 
+
+
 ### Email
+
+
 
 
 
@@ -100,6 +106,8 @@ GIFs are supported in iOS push, in-app messages, email, Content Cards, and MMS o
 
 
 
+
+
 **Tip:**
 
  Create assets with confidence! Our in-app message image templates and safe-zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP](https://www.braze.com/docs/assets/download_file/Braze-In-App-Message-Design-Templates.zip?50a8730464ef2e32295ac3cd13cc6c05). 
@@ -112,6 +120,10 @@ For more information, refer to [In-app message creative details](https://www.bra
 Braze supports using [Font Awesome v4.3.0](https://fontawesome.com/v4.7.0/cheatsheet/) for modal in-app message icons.
 
 ### Push notifications
+
+
+
+
 
 
 
@@ -231,4 +243,26 @@ Large image notifications display best when using an image of at least 600 x 300
 
 
 For additional resources, see [Push image and text specifications](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats).
+
+### SMS and MMS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For composing MMS messages, refer to [Create an SMS, MMS, or RCS message](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/create).
 

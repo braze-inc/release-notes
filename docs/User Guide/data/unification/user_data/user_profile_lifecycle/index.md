@@ -136,6 +136,12 @@ All user IDs can be used to find and identify users within your dashboard for te
 **Important:**
 
 
-Braze will ban or block users with over 5,000,000 sessions ("dummy users") and will no longer ingest their SDK events, as these users are generally the result of misintegration. If you find that this has happened to a legitimate user, contact your Braze account manager.
+Braze blocks user profiles that grow abnormally large ("dummy users"), as these profiles are generally the result of a misintegration. A profile is blocked when it exceeds any of the following thresholds:
+
+- More than 5,000,000 sessions
+- More than 20,000 distinct custom event names
+- More than 20,000 distinct product names in purchases
+
+After a profile is blocked, Braze stops ingesting all inbound data for that profile, from both the SDKs and the REST API. If you find that this has happened to a legitimate user, contact your Braze account manager. To learn more, refer to [Spam blocking](https://www.braze.com/docs/user_archival).
 
 

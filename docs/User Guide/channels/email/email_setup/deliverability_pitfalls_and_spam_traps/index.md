@@ -48,3 +48,7 @@ You can remove bounced emails and emails on your Braze spam list with the follow
 ## Improve email deliverability
 
 For more information, see [Improve email deliverability](https://www.braze.com/docs/user_guide/channels/email/best_practices/improve_deliverability).
+
+## BIMI
+
+For BIMI (Brand Indicators for Message Identification), see [Email authentication](https://www.braze.com/docs/user_guide/channels/email/email_setup/authentication).

@@ -4,13 +4,13 @@
 
 ## Requirements
 
-Upon setup, you will be asked to provide an Assertion Consumer Service (ACS) URL.  
+Upon setup, you are asked to provide an Assertion Consumer Service (ACS) URL.  
 
 | Requirement | Details |
 |---|---|
 | Assertion Consumer Service (ACS) URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br> For some identity providers, this can also be referred to as the Reply URL, Audience URL, or Audience URI. |
 | Entity ID | `braze_dashboard`|
-| RelayState API key | To enable identity provider login, go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions. |
+| RelayState API key | To enable identity provider login, go to **Settings** > **Setup and Testing** > **APIs and Identifiers**, select the **API Keys** tab, and create an API key with `sso.saml.login` permissions. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Requirements" }
 
 ## Service Provider (SP) initiated login within Microsoft Entra SSO
@@ -56,7 +56,7 @@ Use the following attribute pairings:
 **Important:**
 
 
-It is critically important that the email field match what is set up for your users in Braze. In most cases, this will be the same as `user.userprincipalname` however, if you have a different configuration, work with your system administrator to ensure that these fields match exactly.
+The email field must match what is set up for your users in Braze. In most cases, this is the same as `user.userprincipalname`; however, if you have a different configuration, work with your system administrator to ensure that these fields match exactly.
 
 
 
@@ -76,7 +76,7 @@ Use the following claim name pairings:
 **Important:**
 
 
-It is critically important that the email field match what is set up for your users in Braze. In most cases, this will be the same as `user.userprincipalname` however, if you have a different configuration, work with your system administrator to ensure that these fields match exactly.
+The email field must match what is set up for your users in Braze. In most cases, this is the same as `user.userprincipalname`; however, if you have a different configuration, work with your system administrator to ensure that these fields match exactly.
 
 
 
@@ -91,11 +91,11 @@ You can manage these user claims and values from the **Manage claim** section.
 
 ### Step 3: Configure Microsoft Entra SSO within Braze {#step-3}
 
-After you've set up Braze within Microsoft Entra admin center, Microsoft Entra will provide a target URL (login URL) and **x.509** certificate which you will input into your Braze account.
+After you've set up Braze within Microsoft Entra admin center, Microsoft Entra provides a target URL (login URL) and **x.509** certificate, which you input into your Braze account.
 
 After your account manager has enabled SAML SSO for your account, do the following:
 
-1. Go to **Settings** > **Admin Settings** > **Security Settings** and toggle the SAML SSO section to **ON**.
+1. Go to **Settings** > **Company Settings** > **Admin Settings** > **Security Settings** and toggle the SAML SSO section to **ON**.
 2. On the same page, add the following:
 
 | Requirement | Details |
@@ -108,6 +108,6 @@ After your account manager has enabled SAML SSO for your account, do the followi
 **Tip:**
 
 
-If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication](https://www.braze.com/docs/user_guide/administer/global/saml_single_sign_on/saml_sso_setup#restriction) from the **Company Settings** page.
+If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication](https://www.braze.com/docs/user_guide/administer/global/saml_single_sign_on/saml_sso_setup#restriction) on the **Security Settings** page under **Authentication Rules**.
 
 

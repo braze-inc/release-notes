@@ -1506,6 +1506,14 @@ AppboyBinding.SetCustomUserAttribute("custom float attribute key", 'float value'
 
 
 ```csharp
+AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double value');
+```
+
+
+
+
+
+```csharp
 AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean value');
 ```
 
