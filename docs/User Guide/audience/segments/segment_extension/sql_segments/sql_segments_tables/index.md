@@ -32,6 +32,8 @@ Table | Description
 [USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED](#USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED) | Historical default profile attributes with effective date ranges
 [USER_DEFAULT_ATTRIBUTES_VIEW_SHARED](#USER_DEFAULT_ATTRIBUTES_VIEW_SHARED) | Periodic snapshot of default profile attributes per user
 [USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED](#USER_LATEST_STATE_DEFAULT_ATTRIBUTES_VIEW_SHARED) | Near real-time default profile attributes per user
+[USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED](#USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED) | Historical custom profile attributes with effective date ranges (**Snowflake Data Sharing only**)
+[USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED](#USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED) | Near real-time custom profile attributes per user (**Snowflake Data Sharing only**)
 [CATALOGS_ITEMS_SHARED](#CATALOGS_ITEMS_SHARED) | Non-deleted catalog items
 [CHANGELOGS_CAMPAIGN_SHARED](#CHANGELOGS_CAMPAIGN_SHARED) | When a campaign is changed (**Snowflake Data Sharing only**)
 [CHANGELOGS_CANVAS_SHARED](#CHANGELOGS_CANVAS_SHARED) | When a Canvas is changed (**Snowflake Data Sharing only**)
@@ -315,6 +317,36 @@ Field | Type | Description
 `TIME_ZONE` | `string` | [PII] Time zone
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="USERLATESTSTATEDEFAULTATTRIBUTESVIEWSHARED #USERLATESTSTATEDEFAULTATTRIBUTESVIEWSHARED" }
 
+### USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED {#USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED}
+
+**Note:**
+
+
+This table is available only through [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). It is not accessible in Query Builder or SQL Segment Extensions.
+
+
+
+
+
+
+
+For usage guidance and example queries, see [Snowflake user attributes](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/user_attributes#historical-change-logs).
+
+### USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED {#USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED}
+
+**Note:**
+
+
+This table is available only through [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). It is not accessible in Query Builder or SQL Segment Extensions.
+
+
+
+
+
+
+
+For usage guidance and example queries, see [Snowflake user attributes](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/user_attributes#real-time-user-profile-views).
+
 ## Catalogs
 
 ### CATALOGS_ITEMS_SHARED {#CATALOGS_ITEMS_SHARED}
@@ -350,7 +382,8 @@ Field | Type | Description
 **Note:**
 
 
-This table is available in Snowflake Data Sharing only.
+This table is available only through [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). It is not accessible in Query Builder or SQL Segment Extensions.
+
 
 
 
@@ -370,7 +403,8 @@ Field | Type | Description
 **Note:**
 
 
-This table is available in Snowflake Data Sharing only.
+This table is available only through [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). It is not accessible in Query Builder or SQL Segment Extensions.
+
 
 
 
@@ -1716,7 +1750,8 @@ Field | Type | Description
 **Note:**
 
 
-This table is available in Snowflake Data Sharing only.
+This table is available only through [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). It is not accessible in Query Builder or SQL Segment Extensions.
+
 
 
 
@@ -2047,7 +2082,8 @@ Field | Type | Description
 **Note:**
 
 
-This table is available in Snowflake Data Sharing only.
+This table is available only through [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). It is not accessible in Query Builder or SQL Segment Extensions.
+
 
 
 
@@ -2915,7 +2951,8 @@ Field | Type | Description
 **Note:**
 
 
-This table is available in Snowflake Data Sharing only.
+This table is available only through [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). It is not accessible in Query Builder or SQL Segment Extensions.
+
 
 
 
@@ -3046,7 +3083,8 @@ Field | Type | Description
 **Note:**
 
 
-This table is available in Snowflake Data Sharing only.
+This table is available only through [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). It is not accessible in Query Builder or SQL Segment Extensions.
+
 
 
 
@@ -3304,7 +3342,8 @@ Field | Type | Description
 **Note:**
 
 
-This table is available in Snowflake Data Sharing only.
+This table is available only through [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). It is not accessible in Query Builder or SQL Segment Extensions.
+
 
 
 

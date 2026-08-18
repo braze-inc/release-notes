@@ -1,4 +1,4 @@
-<div id='api_dypufgqwqlqr' class='api_div' data-search-keywords='prerequisites phone_numbers'>
+<div id='api_hvpjxqconusl' class='api_div' data-search-keywords='prerequisites phone_numbers'>
 <h1 id="remove-invalid-phone-numbers">Remove invalid phone numbers</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/sms/invalid_phone_numbers/remove</p>
@@ -55,7 +55,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">phone_number</code></td>
+      <td><code class="language-plaintext highlighter-rouge">phone_numbers</code></td>
       <td>Required</td>
       <td>Array of strings in e.164 format</td>
       <td>An array of up to 50 phone numbers to modify.</td>

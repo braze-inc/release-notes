@@ -10,6 +10,14 @@ You can keep the conversation going with follow-ups. Operator remembers earlier 
 
 Operator has the same permissions you do, so certain actions require the relevant permission for that surface. For example, generating an image requires *Edit Media Library Assets*. If you don't see an entry point, check your permissions with your admin. For more information, see [List of permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#list-of-permissions).
 
+## Navigate the dashboard {#navigate-the-dashboard}
+
+Operator isn't limited to acting only on the page you're currently viewing. When a prompt needs a different part of the dashboard, Operator identifies the destination, proposes the navigation, and takes you there before continuing its work.
+
+This means Operator can chain multi-step work together from a single prompt. For example, if you ask Operator from the home page to help set up your drag-and-drop editor settings to match your brand guidelines, it navigates you to the relevant email settings and continues helping you from there. Describe the outcome you want in plain language, and Operator can take you to the relevant settings or feature to begin work.
+
+By default, Operator asks you to approve a proposed navigation before it moves you to a new page, the same as it does for other proposed actions. To let Operator navigate without waiting for your approval each time, turn on [Auto-approve actions](https://www.braze.com/docs/user_guide/brazeai/operator/reviewing_actions#auto-approve-actions).
+
 ## What Operator can create {#what-operator-can-create}
 
 Beyond generating copy and Liquid, Operator can help you build several other objects across the dashboard, including but not limited to:
@@ -17,8 +25,12 @@ Beyond generating copy and Liquid, Operator can help you build several other obj
 - Campaigns
 - Content Blocks
 - Custom agents
+- Custom attributes and custom events
+- Dashboards
 - Images
 - Messages and message templates (see [Generate messages](#generate-messages) and [Create message templates](#create-message-templates))
+- Predictions
+- Reports
 - Segments
 - Segment Extensions
 
@@ -40,7 +52,8 @@ To get started, look for the **Create with Operator** option when you create a c
 - **Create and edit campaigns:** When you start a campaign, Operator can help you draft it end-to-end from a single natural-language brief. This includes audience, content, and delivery settings. You can also ask Operator to help you edit an existing campaign, such as adjusting targeting or refreshing the message content.
 - **Go from brief to campaign:** Describe a full campaign brief, and Operator helps you build a draft that includes copy, images, personalization, targeting, and send-time recommendations. Review the draft in the campaign composer and refine it with follow-up prompts before you launch it.
 - **Create and edit segments:** When you start a segment, describe the audience you want and Operator helps you build the filter logic, including attribute conditions, event history, and catalog lookups. Operator can also help you edit an existing segment's filters when your targeting strategy needs changes.
-- **Create Segment Extensions:** Operator can help you build a SQL-defined [Segment Extension](https://www.braze.com/docs/user_guide/audience/segments/segment_extension) by writing the query that defines it. Describe the audience logic you want, and Operator drafts the query for you to review before you save it. For more on Operator and SQL, see [Write SQL queries](#write-sql-queries).
+- **Create Segment Extensions:** Operator can help you build a SQL-defined [Segment Extension](https://www.braze.com/docs/user_guide/audience/segments/segment_extension) by writing the query that defines it. Describe the audience logic you want, and Operator drafts the query for you to review before you save it. You can also ask Operator for help from the Segment Extensions overview. For more on Operator and SQL, see [Write SQL queries](#write-sql-queries).
+- **Import and manage users:** On supported audience pages, Operator can help you [import users](https://www.braze.com/docs/user_guide/audience/manage_audience/import_users), [delete users](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles/delete_users), and [merge duplicate profiles](https://www.braze.com/docs/user_guide/audience/manage_audience/merge_duplicate_users). Review each proposed action before it's saved.
 
 ## Agents {#agents}
 
@@ -54,7 +67,7 @@ Operator can help you build and refine agents in [Agent Console](https://www.bra
 
 ## Content and creative {#content-and-creative}
 
-Operator can generate and review the content in your messages, including copy, message HTML, Liquid, and images, and applies your brand guidelines automatically wherever they're configured.
+Operator can generate and review the content in your messages, including copy, message HTML, Liquid, and images, and apply your brand guidelines automatically wherever they're configured. You can also ask Operator for help from the template library and overview pages. For example, you can create or update [email templates](https://www.braze.com/docs/user_guide/messaging/templates/email_templates) or Content Blocks from their list pages, schedule work on the [Content Calendar](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/campaign_calendar), create [in-app message color profile templates](https://www.braze.com/docs/user_guide/messaging/templates/in_app_message_templates/in_app_message_template#reusable-color-profiles), or configure [Banner placements](https://www.braze.com/docs/developer_guide/banners/placements).
 
 ### Apply brand guidelines {#apply-brand-guidelines}
 
@@ -99,7 +112,7 @@ Operator creates Content Blocks one at a time in the dashboard. To create Conten
 
 ### Create message templates {#create-message-templates}
 
-Operator can help you create reusable [message templates](https://www.braze.com/docs/user_guide/messaging/templates) that you can apply across campaigns. Describe the template you want, and Operator drafts it for you to review before you save it. Generating a template works much like generating a message, so see [Generate messages](#generate-messages) for the supported channels and editors.
+Operator can help you create reusable [message templates](https://www.braze.com/docs/user_guide/messaging/templates) that you can apply across campaigns. Describe the template you want, and Operator drafts it for you to review before you save it. You can start from anywhere in Braze. Generating a template works much like generating a message, so see [Generate messages](#generate-messages) for the supported channels and editors.
 
 ### Generate Liquid {#generate-liquid}
 
@@ -190,9 +203,20 @@ Operator can reference the following to answer questions or ground the content i
 
 Ask Operator directly if you're not sure whether it can look up a specific piece of information.
 
+
 ### Analyze performance data {#analyze-performance-data}
 
 Ask Operator plain-language questions about your campaign and Canvas performance, and it returns charts, comparisons, and short insights pulled from your workspace data. Unlike Operator's page-aware features, which need context from the page you're on, Analyze answers from anywhere in the dashboard. For more information, see [Operator Analyze](https://www.braze.com/docs/user_guide/brazeai/operator/analyze).
+
+### Build reports and dashboards {#build-reports-and-dashboards}
+
+Operator can help you build [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder) reports and [Dashboard Builder](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder) dashboards from a natural-language brief. Describe the metrics, channels, and date range you want, and Operator drafts the report or dashboard for you to review before you save it.
+
+For example, ask: "Build me a report that shows my workspace SMS engagement over the last 30 days."
+
+### Create predictions {#create-predictions}
+
+Operator can help you view and create [Predictive Churn](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_churn) predictions and [AI Item Recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai). Describe the outcome you want, and Operator proposes the prediction or recommendation for you to review.
 
 ### Write SQL queries {#write-sql-queries}
 
@@ -210,8 +234,12 @@ Operator can review and update settings across several workspace configuration p
 - [Push settings](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/push_settings)
 - [Messaging rate limits](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/messaging_rate_limits)
 - [Approval workflows](https://www.braze.com/docs/user_guide/messaging/governance/approvals), including [messaging rules](https://www.braze.com/docs/user_guide/messaging/governance/approvals/messaging_rules) and always-on approval
-- [APIs and identifiers](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers), including [other identifiers](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers#other-identifiers) and API limits
+- [APIs and identifiers](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers), including [other identifiers](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers#other-identifiers), API limits, and [API usage alerts](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/api_usage_alerts)
 - [Admin settings contact information](https://www.braze.com/docs/user_guide/administer/global/admin_settings/contact_information)
+- [Security settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings) and [SCIM provisioning](https://www.braze.com/docs/user_guide/administer/global/user_management/automated_user_provisioning)
+- [Roles](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#creating-a-role) and [permission sets](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#create-a-permission-set)
+- [Exports log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/exports_log)
+- Message prioritization categories
 
 **Note:**
 
