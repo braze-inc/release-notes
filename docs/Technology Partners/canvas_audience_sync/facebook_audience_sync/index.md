@@ -99,9 +99,11 @@ Select the desired Facebook ad account. Under the **Choose a New or Existing Aud
 
 ![Audience sync setup for an audience with the email, phone, first name, and last name information to match.](https://www.braze.com/docs/assets/img/audience_sync/fb_sync.png?1dc630b57389bf7e320162a230fa2d6e)
 
-You'll be notified at the top of the step editor if the audience is created successfully or if an error occurs during this process. You can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
+You're notified at the top of the step editor if the audience is created successfully or if an error occurs during this process. You can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
-When you launch a Canvas with a new audience, Braze will create the new custom audience upon launching the Canvas and subsequently sync users in near real-time as they enter the Audience Sync step.
+When you launch a Canvas with a new audience, Braze creates the new custom audience upon launching the Canvas and subsequently sync users in near real-time as they enter the Audience Sync step.
+
+Each Audience Sync step maps to the Facebook audience configured on that step. When the Canvas runs again (for example, on a recurring schedule), Braze syncs eligible users to that same audience—it doesn't create a new Facebook audience for every Canvas run.
 
 
 
@@ -364,4 +366,3 @@ As another troubleshooting step, we recommend that a different admin user try to
 
 1. Disconnect the current integration.
 2. A separate user with admin permissions connects their Facebook user account.
-

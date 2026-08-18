@@ -135,7 +135,7 @@ Liquid personalization and shortened URLs are templated in the **Test** tab afte
 
 ## Click tracking
 
-When link shortening is turned on, the **SMS/MMS/RCS Performance** table includes a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on metrics, see [Message performance](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/reporting/).
+When link shortening is turned on, the **SMS/MMS/RCS Performance** table includes a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. **Total Clicks** excludes suspected bot clicks from dashboard counts. For more details on metrics, see [Message performance](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/reporting/) and [Bot click filtering](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/bot_click_filtering).
 
 ![SMS and MMS performance metrics table.](https://www.braze.com/docs/assets/img/link_shortening/shortening4.png?6ed26714edeecd623530764fcc136833)
 

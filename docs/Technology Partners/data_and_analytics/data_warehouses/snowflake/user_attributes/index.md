@@ -212,6 +212,8 @@ These views provide near real-time updates on user profile attributes, with data
 
 ### `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED` schema
 
+
+
 | Column name     | Data type     | Description |
 |-----------------|---------------|-------------|
 | `APP_GROUP_ID` | VARCHAR | Your Braze workspace identifier |
@@ -230,6 +232,9 @@ These views provide near real-time updates on user profile attributes, with data
 
 
 This view uses `OBJECT` type for `CUSTOM_ATTRIBUTES` instead of `VARIANT`. Use the same JSON accessor syntax (`:attribute_name::TYPE`) to query individual attributes.
+
+
+
 
 
 
@@ -283,6 +288,8 @@ These views store historical change logs of user attributes, capturing changes w
 
 ### `USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED` schema
 
+
+
 | Column name     | Data type     | Description |
 |-----------------|---------------|-------------|
 | `APP_GROUP_ID` | VARCHAR | Your Braze workspace identifier |
@@ -298,6 +305,9 @@ These views store historical change logs of user attributes, capturing changes w
 | `EFF_DT` | TIMESTAMP_NTZ | Effective date: when this attribute state began |
 | `END_DT` | TIMESTAMP_NTZ | End date: when this attribute state ended (NULL for current state) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="USERCUSTOMATTRIBUTESHISTORYVIEWSHARED schema" }
+
+
+
 
 ## Common use cases
 

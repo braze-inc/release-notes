@@ -40,7 +40,7 @@ Braze uses Google's [libphonenumber](https://github.com/google/libphonenumber) l
 
 ### Handling invalid phone numbers
 
-When a phone number is deemed invalid, Braze will mark the user's phone number as invalid and will not attempt to send further communications to that phone number. An invalid phone number is marked in the **Engagement Tab** of a user profile.
+When a phone number is deemed invalid, Braze marks the user's phone number as invalid and does not attempt to send further communications to that phone number. An invalid phone number is marked in the **Engagement Tab** of a user profile.
 
 ![Example error message for invalid phone numbers in Braze.](https://www.braze.com/docs/assets/img/sms/invalid_banner.png?acd136e17bd69df65880b93bb7d0dd74){: style="max-width:50%;border: 0;"}
 
@@ -65,7 +65,7 @@ You can also include or exclude any users with invalid phone numbers when [creat
 **Important:**
 
 
-SMS rejections are charged toward your SMS allotment.
+SMS rejections may count toward your SMS allotment depending on your Braze contract and SMS provider. For billing outcomes, see [Reporting](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/reporting).
 
 
 

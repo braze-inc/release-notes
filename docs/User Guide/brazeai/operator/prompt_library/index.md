@@ -67,6 +67,16 @@
 </div>
 
 
+<div class="copy-block">
+  <p class="copy-block-text">Build me a report which shows my workspace SMS engagement over the last 30 days.</p>
+  <p class="copy-block-available">Works best in: Report Builder</p>
+  <span class="copy-feedback"></span>
+  <button class="btn copy-block-btn" data-clipboard-text="Build me a report which shows my workspace SMS engagement over the last 30 days." title="Copy to clipboard" aria-label="Copy to clipboard">
+    <i class="fas fa-copy" aria-hidden="true"></i>
+  </button>
+</div>
+
+
 
 
 

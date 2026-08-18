@@ -8,6 +8,17 @@ Because the Query Builder allows direct access to some customer data, you can on
 
 Query Builder uses the same Snowflake SQL tables as [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments) and [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). For a complete list of available tables and their columns, refer to the [SQL table reference](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables).
 
+### User profile attribute views
+
+Query Builder and SQL Segment Extensions include most [user profile attribute views](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#user-profile-attribute-views), such as periodic snapshots and default-attribute history.
+
+Two views of custom attribute are available only through [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/user_attributes):
+
+- `USER_CUSTOM_ATTRIBUTES_HISTORY_VIEW_SHARED`
+- `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED`
+
+Braze excludes these views from Query Builder and SQL Segment Extensions because they are slow to query at workspace scale and often time out. Use `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED` for custom attribute snapshots in Query Builder. If you need historical or near-real-time custom attribute data, query the excluded views through Snowflake Data Sharing instead.
+
 ## Running reports in the Query Builder
 
 To run a Query Builder report:

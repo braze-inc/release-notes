@@ -63,10 +63,10 @@ After you set up your link templates, you can apply them in your email.
 
 To apply a link template in the HTML editor or the drag-and-drop editor, follow these steps:
 
-**Important:**
+**Note:**
 
 
-To access the **Link Management** tab in the updated HTML editor or the drag-and-drop editor, you must have link aliasing turned on. To turn on link aliasing, contact your account manager. For more information, see [Link aliasing](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing).
+If email link templates or [link aliasing](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing) are enabled for your workspace, you can access the **Link Management** tab in the updated HTML editor and drag-and-drop editor.
 
 
 

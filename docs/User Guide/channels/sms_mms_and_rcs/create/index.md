@@ -252,6 +252,7 @@ RCS media messages allow you to use engaging media formats that aren't possible 
 - Image files (JPEG, PNG) uploaded from the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library).
 - Video files (MP4, MPEG, MV4) added by URL in the message composer.
 - Document files (PDF) added by URL in the message composer.
+- Audio files added by URL in the message composer (for example, pre-recorded voicemails).
 
 ![RCS composer with an option to upload a media file.](https://www.braze.com/docs/assets/img/rcs/rcs_media_type.png?3d6df844757b95f71f69f24708d65a3c)
 
@@ -263,6 +264,7 @@ RCS media messages allow you to use engaging media formats that aren't possible 
 | Image | Supported formats: JPG, JPEG, GIF |
 | Video | Supported formats: H263, M4V, MP4, MPEG-4, MPEG, WEBM |
 | Document | Supported format: PDF |
+| Audio | Supported formats: AAC, MP3, MPEG, MP4, 3GPP, OGG (varies by SMS service provider) |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Inbound MMS and personalization" }
 
 **Considerations:**
