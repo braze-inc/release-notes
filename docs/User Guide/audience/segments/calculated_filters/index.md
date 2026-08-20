@@ -126,7 +126,7 @@ Open a calculated filter's row menu to edit, archive, refresh the audience, or v
 **Note:**
 
 
-Your workspace can have up to 500 activated calculated filters at a time. Contact your Braze account manager if you need to increase this limit.
+Your workspace can have up to 100 activated calculated filters at a time. Contact your Braze account manager if you need to increase this limit.
 
 
 

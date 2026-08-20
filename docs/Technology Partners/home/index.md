@@ -41,6 +41,7 @@ Welcome to the Braze Alloys Technology Partners documentation. Browse partners a
 - [BlueConic](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/blueconic)
 - [Bluedot](https://www.braze.com/docs/partners/message_personalization/location/bluedot)
 - [Branch](https://www.braze.com/docs/partners/message_orchestration/deeplinking/branch_for_deeplinking)
+- [Bynder](https://www.braze.com/docs/partners/message_orchestration/cms_dam/bynder)
 
 </div>
 

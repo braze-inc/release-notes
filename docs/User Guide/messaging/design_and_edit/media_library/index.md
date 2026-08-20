@@ -16,7 +16,7 @@ For more information, see [User permissions](https://www.braze.com/docs/user_gui
 
 ## Media library versus CDN
 
-Using the media library instead of a Content Delivery Network (CDN) provides better caching and performance for in-app messages. All media library assets found in an in-app message will be pre-cached for faster display and will be available for offline display. Additionally, the media library is integrated with Braze composers, allowing marketers to select or tag images instead of copying and pasting image URLs.
+Using the media library instead of a Content Delivery Network (CDN) provides better caching and performance for in-app messages. All media library assets found in an in-app message are pre-cached for faster display and are available for offline display. Additionally, the media library is integrated with Braze composers, allowing you to select or tag images instead of copying and pasting image URLs.
 
 ## Accessing the media library
 
@@ -74,7 +74,9 @@ To replace an asset, you must have the "Replace Media Library Assets" permission
 
 ### Channels with processed image copies
 
-Some channels create an optimized copy of the image when the message is set up, resulting in a separate URL. Replacing the original media library asset does not update what consumers see for messages created using those channels, including in-app messages, Content Cards, push notifications, and banners.
+Some channels create an optimized copy of the image when the message is set up, resulting in a separate URL. This applies whether the image was added from the media library or through an external URL (for example, from an S3 bucket). Replacing the original media library asset does not update what consumers see for messages created using those channels, including Content Cards, push notifications, and banners.
+
+Traditional in-app messages (modal, slideup, and fullscreen) also follow this behavior. However, HTML in-app messages and drag-and-drop in-app messages do not. For those types, Braze does not cache the image, so changing or removing the original image URL breaks the image in live campaigns.
 
 You can also replace an asset programmatically using the [`PUT /media_library/replace_file`](https://www.braze.com/docs/api/endpoints/media_library/manage_assets/replace_file) endpoint.
 
@@ -91,7 +93,7 @@ GIFs with very elongated shapes (for example, 3000 x 2 pixels) or 300 or more fr
 
 ## Generating images with BrazeAI<sup>TM</sup> {#generate-ai}
 
-You can generate images for your own media library using [GPT Image 2.0](https://openai.com/index/introducing-chatgpt-images-2-0/), an AI system from OpenAI and a Braze third-party provider. This let's you create realistic images and art from a description in natural language. Each request generates four variations of your prompt, and your company can generate images 10 times per day. This total applies to all users in your company.
+You can generate images for your own media library using [GPT Image 2.0](https://openai.com/index/introducing-chatgpt-images-2-0/), an AI system from OpenAI and a Braze third-party provider. This lets you create realistic images and art from a description in natural language. Each request generates four variations of your prompt, and your company can generate images 10 times per day. This total applies to all users in your company.
 
 **Important:**
 
@@ -100,4 +102,4 @@ Before using this feature, review [how your data is used and sent to OpenAI](htt
 
 
 
-If you don't see **AI Image Generator** on the **Media Library** page, confirm you have **Edit Media Library Assets** permission. If the option is still missing, contact your Braze customer team to confirm your workspace has access to BrazeAI image generation. If generation fails, review the [OpenAI content policy](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#data-privacy-and-security).
+If you don't see **Generate with Operator** on the **Media Library** page, confirm you have "Edit Media Library Assets" permission. If the option is still missing, contact your Braze account team to confirm your workspace has access to BrazeAI image generation. If generation fails, review the [OpenAI content policy](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#data-privacy-and-security).

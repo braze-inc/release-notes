@@ -70,6 +70,13 @@ A purchase object is an object that gets passed through the API when a purchase 
 }
 ```
 
+**Note:**
+
+
+Purchases with timestamps in the future default to the current time. This ensures that purchase events are recorded with accurate timing.
+
+
+
 - [External user ID](https://www.braze.com/docs/api/basics#user-ids)
 - [App identifier](https://www.braze.com/docs/api/identifier_types)
 - [ISO 4217 Currency Code Wiki](http://en.wikipedia.org/wiki/ISO_4217)
@@ -149,7 +156,7 @@ For a consolidated reference of data types across custom attributes, event prope
 
 [Purchase properties](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/purchase_events#purchase-properties) can be used to trigger messages and for personalization using Liquid, also allowing you to segment based on these properties.
 
-<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon'><div class='alert-msg'><span class='alert-label' role='heading' aria-level='6'>note</span><br />
+<div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon' width='70' height='70'><div class='alert-msg'><span class='alert-label' role='heading' aria-level='6'>note</span><br />
 <p>When you view segmentable purchase properties in <strong>Data Settings</strong> &gt; <strong>Products</strong>, the list displays property keys (names such as “color” or “brand”), not the actual property values (such as “red” or “Nike”).</p>
 </div></div>
 

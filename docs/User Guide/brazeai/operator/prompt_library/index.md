@@ -1,6 +1,6 @@
 # Prompt library for BrazeAI Operator
 
-> Browse a curated collection of example Operator prompts, compiled by Braze experts. Select a goal to find relevant prompts. For more information, see [Leverage page-aware context](https://www.braze.com/docs/user_guide/brazeai/operator#leverage-page-aware-context).
+> Browse a curated collection of example Operator prompts, compiled by Braze experts. Select a goal to find relevant prompts. You can start from anywhere in Braze. If Operator needs a different part of the dashboard, it [navigates there](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#navigate-the-dashboard). For more information, see [Leverage page-aware context](https://www.braze.com/docs/user_guide/brazeai/operator#leverage-page-aware-context).
 
 
 <div class="prompt-library-tabs">
@@ -62,16 +62,6 @@
   <p class="copy-block-available">Works best in: Campaigns</p>
   <span class="copy-feedback"></span>
   <button class="btn copy-block-btn" data-clipboard-text="Summarize this Campaign Digest in 5 bullets: biggest wins, biggest issues, and what changed versus the prior period." title="Copy to clipboard" aria-label="Copy to clipboard">
-    <i class="fas fa-copy" aria-hidden="true"></i>
-  </button>
-</div>
-
-
-<div class="copy-block">
-  <p class="copy-block-text">Build me a report which shows my workspace SMS engagement over the last 30 days.</p>
-  <p class="copy-block-available">Works best in: Report Builder</p>
-  <span class="copy-feedback"></span>
-  <button class="btn copy-block-btn" data-clipboard-text="Build me a report which shows my workspace SMS engagement over the last 30 days." title="Copy to clipboard" aria-label="Copy to clipboard">
     <i class="fas fa-copy" aria-hidden="true"></i>
   </button>
 </div>
@@ -155,6 +145,49 @@
   <p class="copy-block-available">Works best in: Report Builder</p>
   <span class="copy-feedback"></span>
   <button class="btn copy-block-btn" data-clipboard-text="What are 3 high-impact reports we should create here to monitor weekly campaign and Canvas health and catch issues early?" title="Copy to clipboard" aria-label="Copy to clipboard">
+    <i class="fas fa-copy" aria-hidden="true"></i>
+  </button>
+</div>
+
+
+
+
+
+<div class="copy-block">
+  <p class="copy-block-text">Create a Canvas that waits 1 hour after cart abandonment, sends an email reminder, then a push after 24 hours if the user still hasn&#39;t purchased.</p>
+  
+  <span class="copy-feedback"></span>
+  <button class="btn copy-block-btn" data-clipboard-text="Create a Canvas that waits 1 hour after cart abandonment, sends an email reminder, then a push after 24 hours if the user still hasn&#39;t purchased." title="Copy to clipboard" aria-label="Copy to clipboard">
+    <i class="fas fa-copy" aria-hidden="true"></i>
+  </button>
+</div>
+
+
+<div class="copy-block">
+  <p class="copy-block-text">Update my abandoned cart Canvas to add a push message after the email reminder.</p>
+  
+  <span class="copy-feedback"></span>
+  <button class="btn copy-block-btn" data-clipboard-text="Update my abandoned cart Canvas to add a push message after the email reminder." title="Copy to clipboard" aria-label="Copy to clipboard">
+    <i class="fas fa-copy" aria-hidden="true"></i>
+  </button>
+</div>
+
+
+<div class="copy-block">
+  <p class="copy-block-text">Build a segment of users who made a purchase in the last 30 days but haven&#39;t opened the app in the last 7 days.</p>
+  
+  <span class="copy-feedback"></span>
+  <button class="btn copy-block-btn" data-clipboard-text="Build a segment of users who made a purchase in the last 30 days but haven&#39;t opened the app in the last 7 days." title="Copy to clipboard" aria-label="Copy to clipboard">
+    <i class="fas fa-copy" aria-hidden="true"></i>
+  </button>
+</div>
+
+
+<div class="copy-block">
+  <p class="copy-block-text">Build me a report which shows my workspace SMS engagement over the last 30 days.</p>
+  
+  <span class="copy-feedback"></span>
+  <button class="btn copy-block-btn" data-clipboard-text="Build me a report which shows my workspace SMS engagement over the last 30 days." title="Copy to clipboard" aria-label="Copy to clipboard">
     <i class="fas fa-copy" aria-hidden="true"></i>
   </button>
 </div>
@@ -503,16 +536,6 @@
 
 
 
-
-
-<div class="copy-block">
-  <p class="copy-block-text">Build a segment of users who made a purchase in the last 30 days but haven&#39;t opened the app in the last 7 days.</p>
-  <p class="copy-block-available">Works best in: Segments</p>
-  <span class="copy-feedback"></span>
-  <button class="btn copy-block-btn" data-clipboard-text="Build a segment of users who made a purchase in the last 30 days but haven&#39;t opened the app in the last 7 days." title="Copy to clipboard" aria-label="Copy to clipboard">
-    <i class="fas fa-copy" aria-hidden="true"></i>
-  </button>
-</div>
 
 
 <div class="copy-block">

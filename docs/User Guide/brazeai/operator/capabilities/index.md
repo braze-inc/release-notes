@@ -2,7 +2,7 @@
 
 > [BrazeAI Operator™](https://www.braze.com/docs/user_guide/brazeai/operator) is an AI assistant built into the Braze dashboard. It answers questions, composes messages, and acts across supported pages—describe what you want in natural language and Operator handles it in context.
 
-Because Operator understands your workspace—your brand guidelines, custom attributes, Connected Content, and the page you're working on—its output is more context-aware than what standalone assistants can produce. When Operator proposes a change to a campaign, segment, or other object, it shows the change as a visual diff in an [action card](https://www.braze.com/docs/user_guide/brazeai/operator/reviewing_actions) that you review and approve before anything is saved.
+Because Operator understands your workspace—your brand guidelines, custom attributes, Connected Content, and the page you're working on—its output is more context-aware than what standalone assistants can produce. When Operator proposes a change to a campaign, Canvas, segment, or other object, it shows the change as a visual diff in an [action card](https://www.braze.com/docs/user_guide/brazeai/operator/reviewing_actions) that you review and approve before anything is saved.
 
 You can keep the conversation going with follow-ups. Operator remembers earlier messages until you clear your chat history.
 
@@ -23,6 +23,7 @@ By default, Operator asks you to approve a proposed navigation before it moves y
 Beyond generating copy and Liquid, Operator can help you build several other objects across the dashboard, including but not limited to:
 
 - Campaigns
+- Canvases
 - Content Blocks
 - Custom agents
 - Custom attributes and custom events
@@ -54,6 +55,16 @@ To get started, look for the **Create with Operator** option when you create a c
 - **Create and edit segments:** When you start a segment, describe the audience you want and Operator helps you build the filter logic, including attribute conditions, event history, and catalog lookups. Operator can also help you edit an existing segment's filters when your targeting strategy needs changes.
 - **Create Segment Extensions:** Operator can help you build a SQL-defined [Segment Extension](https://www.braze.com/docs/user_guide/audience/segments/segment_extension) by writing the query that defines it. Describe the audience logic you want, and Operator drafts the query for you to review before you save it. You can also ask Operator for help from the Segment Extensions overview. For more on Operator and SQL, see [Write SQL queries](#write-sql-queries).
 - **Import and manage users:** On supported audience pages, Operator can help you [import users](https://www.braze.com/docs/user_guide/audience/manage_audience/import_users), [delete users](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles/delete_users), and [merge duplicate profiles](https://www.braze.com/docs/user_guide/audience/manage_audience/merge_duplicate_users). Review each proposed action before it's saved.
+
+## Canvases {#canvases}
+
+Operator can help you go from a journey idea to a drafted [Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas), and refine an existing Canvas. Any changes Operator proposes appear as an action card you review before they're saved.
+
+Describe the journey in natural language. Operator assembles a draft that can include entry criteria, steps, delays, and messages. You can also ask Operator to edit an existing Canvas, such as adding a step or updating message content. Review the draft in the Canvas builder and refine it with follow-up prompts before you launch it.
+
+For example, ask Operator to build an abandoned cart journey that waits one hour after cart abandonment, sends an email reminder, then a push after 24 hours if the user still hasn't purchased.
+
+You can start this from any dashboard page. If you aren't already on Canvas, Operator [navigates](#navigate-the-dashboard) there to complete the request.
 
 ## Agents {#agents}
 
@@ -161,7 +172,7 @@ In the [media library](https://www.braze.com/docs/user_guide/messaging/design_an
 
 - Describe the subject, style, mood, and colors specifically. The more detail you include, the better the result. Uploading a reference image is not supported.
 - When you apply [brand guidelines](#apply-brand-guidelines) as context in your Operator prompt, Operator applies them directly to the generated image, so the result reflects your brand's visual style.
-- Image generations count toward your daily Operator usage limit. For more information, see [Limitations](#limitations).
+- Image generations count toward the company-wide daily Operator usage limit, along with other Operator actions. For more information, see [Limitations](#limitations).
 
 ### Review content quality {#review-content-quality}
 
@@ -259,11 +270,11 @@ Operator's coverage changes frequently. If you're not sure whether a specific sc
 
 Operator's dashboard support is broad, but it has boundaries.
 
-- **Canvases:** Operator can't create or edit [Canvases](https://www.braze.com/docs/user_guide/messaging/canvas), but it can reference an existing Canvas's configuration, such as targeting and delivery settings, to answer questions and ground its output.
+- **Canvases:** Operator can [create and edit Canvases](#canvases) in the current Canvas editor. It doesn't support the [original Canvas editor](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas), starting a Canvas from the template selection page, or using **Preview as User** while building Canvases. Operator can still reference an existing Canvas's configuration, such as targeting and delivery settings, to answer questions and ground its output.
 - **Campaign duplication:** Operator can't duplicate an existing campaign from the campaigns list view. To create a similar campaign, ask Operator to build a new one from scratch, or duplicate the campaign manually from the list view's **More Actions** menu.
 - **Drag-and-drop editors:** Operator can't generate or insert a message design directly in a drag-and-drop editor, such as the ones for [email](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop), [Banners](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner#compose-a-banner), and [in-app messages](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop). Switch to the corresponding HTML editor to use Operator, or ask Operator to generate content, such as copy, that you can paste in manually. See [Generate messages](#generate-messages) for supported channels and editors.
 - **Screen visibility:** Operator uses page-aware context to understand what you're looking at, including content inside supported previews and editors. When part of a page falls outside what Operator can read, it tells you instead of guessing, so you know to describe that content yourself.
-- **Usage limits:** Operator has a company-wide daily usage limit that resets every 24 hours. Image generations count toward this limit. If the limit is reached, a "Daily usage limit exceeded" message appears and no further requests can be made until it resets. For troubleshooting steps, see [Troubleshooting](https://www.braze.com/docs/user_guide/brazeai/operator/troubleshooting).
+- **Usage limits:** Operator has a company-wide daily usage limit that resets every 24 hours. All Operator actions count toward this limit, and usage scales with how much Operator has to read and produce. Asking questions, looking up information, and [filing a support ticket](https://www.braze.com/docs/user_guide/brazeai/operator/support_tickets) are lighter usage. Creating or editing objects such as campaigns and segments is heavier usage. [Image generations](#generate-images) also count toward this limit. If the limit is reached, a "Daily limit reached" message appears and Operator doesn't process further requests until the limit resets. For troubleshooting steps, see [Troubleshooting](https://www.braze.com/docs/user_guide/brazeai/operator/troubleshooting).
 
 ## Legacy assistants {#legacy-assistants}
 
@@ -286,3 +297,4 @@ Operator integrates with OpenAI to generate output. For more information about w
 - [Prompt library](https://www.braze.com/docs/user_guide/brazeai/operator/prompt_library): Browse ready-to-use example prompts
 - [Review actions](https://www.braze.com/docs/user_guide/brazeai/operator/reviewing_actions): Review and approve Operator's proposed changes
 - [Troubleshooting](https://www.braze.com/docs/user_guide/brazeai/operator/troubleshooting): Reference common issues and solutions
+

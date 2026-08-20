@@ -4,6 +4,15 @@
 
 To access the sync logs, go to **Data Settings** > **Cloud Data Ingestion** and select the **Sync Log** tab.
 
+<!-- support-analyzer-phase2:cdi_updated_at_row_sync -->
+**Note:**
+
+
+If warehouse row counts do not match **Rows Synced** or you see **Partial Success** runs, open the **Run ID** in Sync Log and review row-level **Error reason** values. CDI selects rows using `UPDATED_AT`—rows with timestamps already processed, unchanged `UPDATED_AT` after edits, or writes during an active sync may be skipped. For common cases, see [Why doesn't "Rows Synced" match the number in my warehouse?](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/faqs/#why-doesnt-rows-synced-match-the-number-in-my-warehouse) and [Cloud Data Ingestion FAQ](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/faqs/).
+
+
+
+
 ## Understanding the Sync Log dashboard
 
 The main **Sync Log** page provides a high-level overview of all your sync runs, including an overview of recent syncs by their current or final status.
