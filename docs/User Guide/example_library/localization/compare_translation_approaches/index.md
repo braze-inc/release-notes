@@ -4,7 +4,7 @@
 
 ## About this example
 
-Kitchenerie, a kitchenware retailer, sends email, push, and in-app messages in English, French, and German. Marketing and engineering need a repeatable, scalable way to manage translations across campaigns.
+Kitchenerie, a fictional kitchenware retailer, sends email, push, and in-app messages in English, French, and German. Marketing and engineering need a repeatable, scalable way to manage translations across campaigns.
 
 Braze supports several localization patterns:
 

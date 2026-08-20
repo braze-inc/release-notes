@@ -1,6 +1,6 @@
 # Create a Canvas
 
-> This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup). You can also start from a [Braze Canvas template](https://www.braze.com/docs/user_guide/messaging/templates/canvas_templates/braze_templates) to speed up your setup. For more information, see [Canvas templates](https://www.braze.com/docs/user_guide/messaging/templates/canvas_templates).
+> This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup). You can also start from a [Braze Canvas template](https://www.braze.com/docs/user_guide/messaging/templates/canvas_templates/braze_templates) to speed up your setup. For more information, see [Canvas templates](https://www.braze.com/docs/user_guide/messaging/templates/canvas_templates). To draft a Canvas from a natural-language description, ask [Operator](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#canvases).
 
 **Expand for original Canvas editor details**
 

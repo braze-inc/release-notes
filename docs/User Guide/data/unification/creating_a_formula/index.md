@@ -16,7 +16,7 @@ The following are some examples of the kinds of behavior patterns that can be de
 
 ## Creating formulas
 
-Formulas can be accessed in the statistics panels on the [Home](https://www.braze.com/docs/user_guide/analytics/dashboards/home), [Revenue Report](https://www.braze.com/docs/user_guide/analytics/reports/revenue_report), and [Custom Events Report](https://www.braze.com/docs/user_guide/data/activation/events/custom_events) pages in the dashboard. To view this panel, go to the **Performance Over Time** chart, change the **Statistics For** dropdown to **KPI Formulas**, and then select at least one KPI formula to populate the chart.
+Formulas can be accessed on the [Home](https://www.braze.com/docs/user_guide/analytics/dashboards/home), [Revenue Report](https://www.braze.com/docs/user_guide/analytics/reports/revenue_report), and [Custom events report](https://www.braze.com/docs/user_guide/analytics/reports/custom_events_report) pages in the dashboard. On **Home** and **Revenue Report**, open the **Performance Over Time** chart, set **Statistics For** to **KPI Formulas**, and select at least one formula. On the **Custom Events Report** page, open **Filters**, select one or more **KPI formula** options, and select **Apply**.
 
 ![View statistics for KPI formulas in the Braze dashboard](https://www.braze.com/docs/assets/img_archive/kpi_forms.png?4b5a22951b04ebb79db7b12936b9d9c2)
 

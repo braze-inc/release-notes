@@ -23,7 +23,7 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
     - **Custom event for unsubscribing** is the Braze custom event that will be used to unsubscribe a user from back-in-stock notifications. This event is optional. If the user doesn't perform this event, they'll be unsubscribed after 90 days or when the back-in-stock event triggers, whichever occurs first.
     - **Item ID event property** is the property on the earlier in this section custom event that will be used to determine the item for a back-in-stock subscription or unsubscription. This property on the custom event should contain an item ID (`id`) that is present in a catalog. The item ID must be sent as a string so that it matches the `id` data type stored in the target catalog. The custom event should also contain a `catalog_name` property to specify which catalog this item is in.
     
-    - A sample custom event would look like:
+    - The following example shows a sample custom event sent through the REST API:
     
 ```json
 {
@@ -41,6 +41,53 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
     ]
 }
 ```
+
+To track the same subscription event using the Braze SDKs, use the following code:
+
+
+
+
+```javascript
+import { logCustomEvent } from "@braze/web-sdk";
+
+logCustomEvent("subscription", {
+  id: "shirt-xl",
+  catalog_name: "on_sale_products",
+  type: ["back_in_stock"]
+});
+```
+
+
+
+
+```swift
+AppDelegate.braze?.logCustomEvent(
+  name: "subscription",
+  properties: [
+    "id": "shirt-xl",
+    "catalog_name": "on_sale_products",
+    "type": ["back_in_stock"]
+  ]
+)
+```
+
+
+
+
+```kotlin
+Braze.getInstance(context).logCustomEvent(
+  "subscription",
+  BrazeProperties(
+    JSONObject()
+      .put("id", "shirt-xl")
+      .put("catalog_name", "on_sale_products")
+      .put("type", JSONArray().put("back_in_stock")),
+  ),
+)
+```
+
+
+
 
 **Note:**
 
