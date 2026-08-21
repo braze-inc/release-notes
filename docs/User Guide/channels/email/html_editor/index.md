@@ -150,6 +150,8 @@ After you finish designing and building your email message, add your sending inf
 
 
 
+
+
 A preview in the right-hand panel will populate with the sending information you've added. This information can also be updated by going to **Settings** > **Email Preferences** > **Sending Configuration**.
 
 #### Advanced

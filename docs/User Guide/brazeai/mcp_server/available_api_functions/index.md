@@ -126,14 +126,6 @@ Your MCP client references these tools to interact with the Braze MCP server.
 | `get_session_data_series` | [`/sessions/data_series`](https://www.braze.com/docs/api/endpoints/export/sessions/get_sessions_analytics) | read | Number of sessions for your app over a designated time period. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Sessions" }
 
-### Subscription groups
-
-| Tool | API endpoint | Access | Description |
-| --- | --- | --- | --- |
-| `get_subscription_group_status` | [`/subscription/status/get`](https://www.braze.com/docs/api/endpoints/subscription_groups/get_list_user_subscription_group_status) | read | Subscription state of a user in a subscription group. |
-| `get_user_subscription_groups` | [`/subscription/user/status`](https://www.braze.com/docs/api/endpoints/subscription_groups/get_list_user_subscription_groups) | read | List a user's subscription groups. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Subscription groups" }
-
 ### Templates
 
 | Tool | API endpoint | Access | Description |

@@ -180,6 +180,8 @@ Use the Liquid tag ``{% catalog_items <name_of_your_catalog> {{context.${catalog
 
 
 
+
+
 ## Considerations
 
 - Users are only subscribed for 90 days. If the item isn't back in stock in 90 days, the user is unsubscribed.

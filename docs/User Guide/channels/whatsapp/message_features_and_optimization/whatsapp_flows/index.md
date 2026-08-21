@@ -11,6 +11,13 @@
 
 ![WhatsApp Manager with a page to create a Flows template.](https://www.braze.com/docs/assets/img/whatsapp/flows/create_flows_template.png?dce9989e22d0747fb83739827dcd21f4)
 
+**Tip:**
+
+
+You can also create a Marketing or Utility Flow template in Braze with the [WhatsApp Template Builder](https://www.braze.com/docs/user_guide/channels/whatsapp/message_features_and_optimization/template_builder). Create and manage the Flow itself in Meta's WhatsApp Manager, then select that Flow when you build the template in Braze.
+
+
+
 {: start="3"}  
 3. Select an existing Flow or create one. If creating a Flow, choose from two options:
   - **Custom Form:** For specific requirements

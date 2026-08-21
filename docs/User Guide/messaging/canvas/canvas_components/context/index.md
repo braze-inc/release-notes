@@ -63,6 +63,8 @@ For more details and advanced usage, see [Context variables reference](https://w
 
 
 
+
+
 ### Step 1: Add a step
 
 Add a step to your Canvas, then drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button and select **Context**.
