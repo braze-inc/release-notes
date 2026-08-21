@@ -89,6 +89,8 @@ Regardless of the encoding type, each SMS message sent out by Braze has a limit 
 
 
 
+
+
 ## RCS message billing
 
 RCS messages are billed based on their content and the country the message is delivered in. To accurately estimate costs, it's essential to understand the different message types and how they are billed.

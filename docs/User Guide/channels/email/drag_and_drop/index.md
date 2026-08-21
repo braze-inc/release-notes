@@ -150,6 +150,8 @@ Once you've finished designing and building your email message, it's time to add
 
 
 
+
+
 A preview in the right-hand panel will populate with the sending information you've added. This information can also be updated by navigating to **Settings** > **Email Preferences** > **Sending Configuration**.
 
 #### Add email attachments

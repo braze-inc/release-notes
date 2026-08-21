@@ -2,6 +2,18 @@
 
 > Using the drag-and-drop editor, you can create and customize a preference center to help manage which users receive certain types of communication. You can have up to 100 preference centers per workspace.
 
+
+
+
+
+
+
+
+
+
+
+
+
 You can manage existing drag-and-drop preference centers from **Audience** > **Email Preference Centers**:
 
 - To change a preference center's name or content, open the preference center from the dashboard.
