@@ -257,3 +257,13 @@ For the update and remove operations, `identifier` is a required key. If add, up
 
 
 
+## Troubleshooting
+
+### I see "[Braze Deduplication]: Duplicate user detected, the user is dropped" in RudderStack logs
+
+This message comes from RudderStack when **Deduplicate Traits** is enabled and RudderStack drops unchanged user traits before forwarding to Braze. It is not a Braze error.
+
+RudderStack compares incoming `identify` and `track` traits to the user profile and skips attributes with no delta to reduce Braze data point usage. For details, see RudderStack's [User Trait Deduplication in Braze](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/trait-deduplication/) guide.
+
+If you need every trait sent on each call, turn off **Deduplicate Traits** in your RudderStack Braze destination settings. Be aware this can increase Braze data point consumption.
+

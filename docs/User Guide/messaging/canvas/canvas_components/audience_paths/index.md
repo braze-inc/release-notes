@@ -34,6 +34,10 @@ Audience Paths evaluate based on a user's current attributes, filters, and segme
 
 
 
+Users aren't re-evaluated against their audience group after they move down a path. If the message that follows is delayed by a Delay step, Quiet Hours, Intelligent Timing, rate limiting, or local time zone delivery, a user's profile can change before that message sends.
+
+To confirm that users still meet segment and filter criteria before the Message step sends, turn on **Validate audience at message send** in the Message step's [delivery validations](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#delivery-validations). Delivery validations check only the segments and filters you add to that Message step, so they don't reuse the criteria from your Audience Path. For in-app messages, delivery validations are checked when a user enters the Message step, not when the message displays.
+
 ### Allowing time for user evaluations
 
 Because evaluation is immediate, it's important to add a delay before the Audience Path if the path criteria depend on a user interaction with a previous step.
