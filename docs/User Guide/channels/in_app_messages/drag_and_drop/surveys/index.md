@@ -1,20 +1,10 @@
 # In-app message surveys
 
-> Braze surveys collect feedback in in-app messages that you can analyze and use in follow-up messaging. During beta, surveys are built in the [drag-and-drop editor](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop).
+> Braze surveys collect feedback in in-app messages that you can analyze and use in follow-up messaging. Surveys are built in the [drag-and-drop editor](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop).
 
 
 
-
-
-
-**Important:**
-
-
- is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-
-
-
-
+For an overview of Surveys and the capabilities shared across channels, see [Surveys](https://www.braze.com/docs/user_guide/messaging/surveys).
 
 ## Prerequisites
 
@@ -27,7 +17,7 @@ Before creating a survey, you must:
 
 ## Create a survey
 
-During early access, surveys are built inside your existing message composition flow.
+Surveys are built inside your existing message composition flow.
 
 
 1. Go to **Messaging** > **Landing Pages**, or create an [in-app message](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop/) in a campaign or Canvas.
@@ -57,39 +47,19 @@ You can add the following form blocks to surveys:
 - Single checkbox
 - Checkbox group
 - Rating scale
+- NPS
 
 ### Randomize answer choices
 
-Radio button group, checkbox group, and dropdown blocks support randomized answer choices. Turn on **Randomize choice order** to shuffle the choices each time the survey loads. Use this setting to reduce order bias when the same first option could skew responses.
-
-Randomization changes only the display order for each survey respondent. Reporting labels and values remain mapped to the choices you configured, so analytics, CSV exports, and segmentation use the same response data.
+Radio button group, checkbox group, and dropdown blocks support randomized answer choices. Turn on **Randomize choice order** to shuffle the choices each time the survey loads. For more information, see [Randomized choice order](https://www.braze.com/docs/user_guide/messaging/surveys#randomized-choice-order).
 
 ### Long text capture
 
-Long text capture is useful for qualitative feedback.
-
-You can configure:
-
-- Minimum and maximum character counts (up to 1,000)
-- Whether to show character limits during composition
-- Text area height (rows)
-- Placeholder text
-
-During early access, long text responses are available in reporting and exports, but they can't be logged as user profile custom attributes.
-
-![Long text capture block settings.](https://www.braze.com/docs/assets/img/surveys/long-form-surveys.png?92db595db8a8cbd42cf1afbf62b4aabd){: style="max-width:40%;"}
+Long text capture is useful for qualitative feedback, up to 1,000 characters. For more information, see [Long-form text capture](https://www.braze.com/docs/user_guide/messaging/surveys#long-form-text-capture).
 
 ### Rating scale
 
-Rating scale is useful for capturing sentiment, satisfaction, or likelihood to recommend as a single number.
-
-In the settings panel, select a scale from the dropdown:
-
-- **1–10**
-- **1–5**
-- **0–10** (standard Net Promoter Score (NPS) range)
-
-You can collect a rating as a survey response, log it as an integer custom attribute, or both. Pair a rating scale block with a [long text capture](#long-text-capture) block to collect a numeric score alongside qualitative feedback in the same survey.
+Rating scale (also called a number scale question) is useful for capturing sentiment, satisfaction, or likelihood to recommend as a single number. For more information, see [Number scale questions](https://www.braze.com/docs/user_guide/messaging/surveys#number-scale-questions).
 
 
 ![Rating scale to give likelihood of recommending product to a friend from 1 to 10.](https://www.braze.com/docs/assets/img/surveys/landing_page_rating_scale_example.png?eeb3565e4c7192a17a872ad702c884ea){: style="max-width:70%;"}
@@ -99,7 +69,7 @@ You can collect a rating as a survey response, log it as an integer custom attri
 
 For each form block, enter an **Identifier for Reporting** in the right-side settings panel. This identifier appears in survey reporting and CSV exports.
 
-During early access:
+Keep in mind:
 
 - You can log most survey responses to user profile custom attributes.
 - Long text responses can't be logged as custom attributes.
@@ -116,35 +86,15 @@ After launch, review results in:
 - The landing page analytics view for landing page surveys
 
 
-Top-level analytics include:
-
-- **All responses:** Total complete and incomplete responses
-- **Completed:** Users who completed all required questions
-- **Partially complete:** Users who submitted some data, but did not complete all required questions
-- **Unique impressions:** Total page views
+For definitions of the top-level analytics available for every survey (all responses, completed, partially complete, and unique impressions), see [Analytics](https://www.braze.com/docs/user_guide/messaging/surveys#analytics).
 
 
 
-You can also review per-question response breakdowns and export data as CSV.
-
-### Choose a chart type
-
-For radio button, dropdown, and checkbox form blocks, you can choose among three chart types in the survey analytics view. This gives you more flexibility to interpret and share insights without exporting to a third-party tool.
-
-| Chart type | Best for |
-| --- | --- |
-| Bar chart | The default horizontal view of response counts and percentages. |
-| Column chart | A vertical view of response counts and percentages. Use this chart to compare responses side-by-side, especially for multi-select questions or questions with more answer options. |
-| Pie chart | A proportional breakdown of responses. Use this chart for single-select questions when you want to see how responses are distributed across options. |
-{: .reset-td-br-1 .reset-td-br-2 aria-label="Survey chart types" }
-
-Each chart updates in real time as responses come in. You can switch chart types at any time without affecting the underlying data.
-
-![Survey question-level breakdown using a bar chart.](https://www.braze.com/docs/assets/img/surveys/bar-charts-1.png?7b179c4e582b7a8e489b618dc5746236)
+You can also review per-question response breakdowns, choose among three chart types, and export data as CSV. For more information, see [Chart types](https://www.braze.com/docs/user_guide/messaging/surveys#chart-types).
 
 ## Retarget and trigger
 
-During early access, you can:
+You can:
 
 - Segment users by survey responses that are logged as user attributes.
 - Segment users by survey completion status.
@@ -163,7 +113,7 @@ During early access, you can:
 
 ### Limitations
 
-During early access, you are restricted by the following:
+You're restricted by the following:
 
 - You can't segment users by long-form text responses.
 - Question-and-answer triggering that does not rely on logged user attributes is not available.

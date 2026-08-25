@@ -79,7 +79,7 @@ This option opens a web page inside a modal WebView within your app. It's handle
 **Important:**
 
 
-If you send emails through Braze, your ESP (SendGrid, SparkPost, or Amazon SES) wraps links in a click-tracking domain. You must host the AASA file on your click-tracking domain as well, not only on your primary domain. For complete setup, see [Universal links and App Links](https://www.braze.com/docs/user_guide/channels/email/customize/universal_links_and_app_links).
+If you send emails through Braze, your ESP (SendGrid, SparkPost, or Amazon SES) wraps links in a click-tracking domain. You must host the AASA file on your click-tracking domain as well, not only on your primary domain. For complete setup, see [Universal links and App Links](https://www.braze.com/docs/user_guide/channels/email/customize/universal_links_and_app_links). If every email link opens the app, see [Every email link opens the app](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking_troubleshooting#every-email-link-opens-the-app).
 
 
 
@@ -108,7 +108,7 @@ You don't need an AASA file when:
 - You only use custom scheme deep links (for example, `myapp://`) from push, in-app messages, or Content Cards.
 - You use the **Open Web URL Inside App** option.
 
-For AASA setup instructions, see [Universal links and App Links](https://www.braze.com/docs/user_guide/message_building_by_channel/email/universal_links#setting-up-universal-links-and-app-links).
+For AASA setup instructions, see [Universal links and App Links](https://www.braze.com/docs/user_guide/channels/email/customize/universal_links_and_app_links).
 
 ## When you need app code to handle links {#when-app-code}
 
@@ -138,3 +138,4 @@ If you use [Branch](https://www.braze.com/docs/partners/message_orchestration/de
 4. **Forward universal links**: Set `configuration.forwardUniversalLinks = true` in your Braze SDK configuration.
 
 For implementation details and debugging guidance, see [Branch for deep linking](https://www.braze.com/docs/partners/message_orchestration/deeplinking/branch_for_deeplinking).
+
