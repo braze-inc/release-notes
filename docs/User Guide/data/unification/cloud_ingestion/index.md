@@ -6,6 +6,8 @@
 
 With Braze Cloud Data Ingestion (CDI), you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. If you need syncs to occur more frequently than 15 minutes, contact your customer success manager or consider using REST API calls for real-time data ingestion.
 
+Amazon S3 file storage integrations are event-driven. Braze ingests new files when S3/SQS notifications arrive. For setup details, see [File storage integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations).
+
 **Note:**
 
 

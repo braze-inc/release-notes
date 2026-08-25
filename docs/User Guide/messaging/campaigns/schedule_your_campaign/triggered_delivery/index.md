@@ -71,7 +71,9 @@ In addition, triggered in-app messages still abide by in-app message delivery ru
 
 ### Step 2: Select delay length
 
-Select how long to wait before sending the campaign after the trigger criteria are met. If the delay length chosen is longer than the message's duration for sending, no users will receive the campaign. 
+Select how long to wait before sending the campaign after the trigger criteria are met. If the delay length chosen is longer than the message's duration for sending, no users will receive the campaign.
+
+In-app message campaigns can delay delivery after the trigger event by up to two hours (7,200 seconds). The delay options are **Immediately** and **After a delay**. For a longer wait, add a [Delay](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/delay_step) step before an in-app message step in a Canvas.
 
 **Important:**
 
@@ -143,6 +145,10 @@ Transactional campaigns include messages sent after the user completes a purchas
 In addition, when creating welcome campaigns, you can trigger messages to send after the user registers or sets up an account. Staggering messages to be sent on different days following registration will allow you to create a thorough onboarding process.
 
 ## Frequently asked questions
+
+### What is the maximum delay after a trigger for in-app message campaigns?
+
+In-app message campaigns can delay delivery after the trigger event by up to two hours (7,200 seconds). The delay options are **Immediately** and **After a delay**. For a longer wait, add a [Delay](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/delay_step) step before an in-app message step in a Canvas.
 
 ### Why did a user not receive my triggered campaign?
 

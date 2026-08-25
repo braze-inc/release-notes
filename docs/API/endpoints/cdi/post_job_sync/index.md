@@ -1,4 +1,4 @@
-<div id='api_jqwtwryrkxni' class='api_div' data-search-keywords='rate limit message'>
+<div id='api_gksuyiqxlxfw' class='api_div' data-search-keywords='trigger a sync message'>
 <h1 id="trigger-a-sync">Trigger a sync</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/cdi/integrations/{integration_id}/sync</p>
