@@ -199,7 +199,7 @@ HTTP headers will be returned in all lowercase characters. This behavior aligns 
 
 
 
-If you have questions about API limits, contact your customer success manager or open a [support ticket](https://www.braze.com/docs/braze_support).
+If you have questions about API limits, contact your customer success manager or open a [support ticket](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
 
 **Tip:**
 

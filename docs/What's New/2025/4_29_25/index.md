@@ -54,11 +54,11 @@ Braze Canvas offers several [pre-built templates](https://www.braze.com/docs/use
 
 
 
-[WhatsApp video files](https://www.braze.com/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#outbound-messages) can now be hosted through either a URL or in the Braze media library.
+[WhatsApp video files](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message#outbound-messages) can now be hosted through either a URL or in the Braze media library.
 
 ### WhatsApp list messages
 
-[List messages](https://www.braze.com/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages#list-messages/) appear as a body message with a list of clickable options. Each list can have multiple sections, and each list can have up to 10 rows.
+[List messages](https://www.braze.com/docs/user_guide/channels/whatsapp/message_processing/messaging_users#list-messages) appear as a body message with a list of clickable options. Each list can have multiple sections, and each list can have up to 10 rows.
 
 ### Copy preview link
 

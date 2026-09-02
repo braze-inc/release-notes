@@ -2,6 +2,13 @@
 
 > Okta connects any person with any application on any device. It's an enterprise-grade, identity management service, built for the cloud, but compatible with many on-premises applications. With Okta, your IT team can manage any employee's access to any application or device.
 
+**Note:**
+
+
+The pre-built Braze Okta marketplace app uses the shared Entity ID `braze_dashboard`. If you need a unique Entity ID for this dashboard—for example, to connect multiple Braze dashboards through Okta—set up a custom SAML app instead of the marketplace app, then follow [Using a custom Entity ID](https://www.braze.com/docs/user_guide/administer/global/saml_single_sign_on/saml_sso_setup#using-a-custom-entity-id).
+
+
+
 ## Requirements
 
 | Requirement | Details |

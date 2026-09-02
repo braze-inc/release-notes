@@ -8,13 +8,15 @@ Create and manage brand guidelines from **Content** > **Brand Guidelines**.
 
 ### Step 1: Create a brand guideline
 
-On the **Brand Guidelines** page, select **Create new**. If you want this brand guideline to be the default for the workspace, check **Use as default brand guideline**. You can have one default per workspace.
+On the **Brand Guidelines** page, select **Create new**. If you want this brand guideline to be the default for the workspace, select **Use as default brand guideline**. You can have one default per workspace.
 
 ### Step 2: Describe your brand personality
 
-For **Brand personality**, think about what makes your brand unique. Include traits, values, voice, and any archetypes that define your brand. Here are some characteristics to consider:
+For **Brand personality**, think about what makes your brand unique. Include traits, values, voice, and any archetypes that define your brand. Keep this field to 10,000 or fewer characters. If you generate this text with an LLM, include that character limit in your prompt so the output fits the field.
 
-| **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
+Here are some characteristics to consider:
+
+| Characteristic       | Definition                                                                       | Example                                                       |
 |--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | Reputation               | How you want your brand to be perceived in the market.                               | We are known for being the most reliable and customer-focused brand in our industry. |
 | Personality traits       | Human-like characteristics that describe your brand's character.                     | Our brand is friendly, approachable, and always upbeat.          |
@@ -26,7 +28,7 @@ For **Brand personality**, think about what makes your brand unique. Include tra
 
 ### Step 3: Define language that should be avoided (optional)
 
-For **Exclusions**, list any language or style that doesn't align with your brand. For example, you might want to avoid "sarcasm," "negative attitudes," or "condescending" tones.
+For **Exclusions**, list any language or style that doesn't align with your brand. For example, you might want to avoid "sarcasm," "negative attitudes," or "condescending" tones. Keep this field to 300 or fewer characters.
 
 ![The "Create brand guideline" window with fields to enter the name, description, personality, exclusions, and tone.](https://www.braze.com/docs/assets/img/guidelines_create.png?ab1f30787cb77744c0a1c1d4f8ea9665)
 
@@ -51,9 +53,11 @@ You can edit brand guidelines by selecting them on the **Brand Guidelines** page
 
 ## Using brand guidelines
 
-When composing a message, open Operator to [generate copy](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#generate-copy) and select your brand guideline in the **Apply brand guideline** dropdown. If you designate a specific brand guideline as the default, Braze automatically selects it in the dropdown, but you can choose a different guideline.
+In the Operator chat panel, select <i class="fa-regular fa-plus"></i>&nbsp;**Add context for Operator**, then choose one or more guidelines under **Brand guidelines**. Operator applies the guidelines you select to generated copy, templates, and images. By default, nothing is selected. 
 
-!["Operator with "Important Alerts!!" selected as the brand guideline.](https://www.braze.com/docs/assets/img/guidelines_ai_assistant.png?7ebf178e679c7f40f544b50c31fde2d3)
+![Selecting brand guidelines in the Operator chat panel.](https://www.braze.com/docs/assets/img/operator/operator_brand_guidelines.png?78d153640e7d6abf2a41f74aee13870d)
+
+When you configure an agent, select brand guidelines under [Add context](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents#add-resources) so the agent follows that voice and style. Agent Console selects the workspace default for you.
 
 ## How is my data used and sent to OpenAI? {#ai-policy} 
 <!-- Braze Legal must approve any changes to this content. -->

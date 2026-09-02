@@ -2,28 +2,17 @@
 
 > Use the Connected Content Debugger to view the live request and response for each Connected Content call, so you can verify your endpoint, headers, and Liquid tags before you launch a campaign or Canvas.
 
-
-
-
-**Important:**
-
-
- is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-
-
-
-
-
 ## About the debugger
 
 Connected Content lets you enrich messages with real-time data by making an HTTP call to an external API at render time, then inserting the response into your message with Liquid. Because that call happens outside Braze, it can be difficult to see exactly what request Braze sent, what the endpoint returned, or why a call failed, before a campaign or Canvas is live.
 
 The Connected Content Debugger helps to troubleshoot those issues prior to launching. It shows you the live request and response for every Connected Content call in your message in the **Preview & Test** section. This way, you can confirm your endpoint, headers, and Liquid tags are configured correctly all within the Braze dashboard.
 
-### Supported channels
+### Supported areas
 
-The Connected Content Debugger is available for the following channels:
+The Connected Content Debugger is available for the following areas:
 
+- Canvas Context steps
 - Content Cards
 - Email
     - Includes templates
@@ -38,7 +27,7 @@ The Connected Content Debugger is available for the following channels:
 **Note:**
 
 
-During early access, the debugger is available for most channels, but not yet for KakaoTalk, LINE, Banners, or non-channel-specific composition surfaces (such as Content Blocks, Canvas User Update step, and Context step). If you don't see the debugger, Connected Content debugging may not yet be supported for that feature.
+The debugger is available for most channels, but not yet for KakaoTalk, LINE, Banners, or non-channel-specific composition surfaces (such as Content Blocks and Canvas User Update step). If you don't see the debugger, Connected Content debugging may not yet be supported for that feature.
 
 
 
@@ -64,7 +53,7 @@ Each time you run a preview, Braze automatically renders the Connected Content c
 {:start="5"}
 5. Review the results, adjust your tag, headers, or endpoint as needed. Then, generate a new preview to confirm the fix.
 
-If your template contains more than one `{% connected_content %}` tag, the debugger lists every call that was made. For channels that render multiple message bodies from one template (for example, email, which renders separate HTML, plaintext, and AMP bodies or Quick Push which renders separate device specific bodies), the debugger shows every Connected Content call made across all bodies, not only the one you're actively previewing.
+If your template contains more than one `{% connected_content %}` tag, the debugger lists every call that was made. For channels that render multiple message bodies from one template (for example, email, which renders separate HTML, plaintext, and AMP bodies, or Quick Push, which renders separate device-specific bodies), the debugger shows every Connected Content call made across all bodies, not only the one you're actively previewing.
 
 ## Understand the debug output
 
@@ -92,9 +81,34 @@ Each Connected Content call appears with its own **Response** and **Request** ta
 
 | Field | Description |
 | --- | --- |
-| Headers | The request headers Braze sent, including any set with `:headers`. |
+| Headers | Headers from your Connected Content tag (`:headers`, credentials, and options such as `:content_type`). |
 | Body | The request body sent, if any (POST requests). |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Request tab" }
+
+## Which request headers appear in the debugger
+
+The **Request** tab lists headers from your Connected Content tag: custom `:headers`, stored credentials, and headers set by tag options such as `:content_type` and `:basic_auth`. Braze also adds standard headers on the outgoing request to your endpoint (for example, `User-Agent` and `Host`). Those Braze-added headers appear in the debugger when you set them in `:headers`.
+
+**Note:**
+
+
+To send a consistent `User-Agent`, set it in `:headers`. Braze uses your value, and the debugger shows that header.
+
+
+
+Braze adds the following headers to outgoing Connected Content requests. Most are set only when you have not already provided them in the tag. Headers you supply with `:headers`, credentials, or tag options are sent as provided.
+
+| Header | When Braze sets it |
+| --- | --- |
+| `User-Agent` | If you have not already set it, Braze sends `Braze Sender <version>`. The version string can change. If you filter traffic by `User-Agent`, allow all values that start with `Braze Sender`. To send a consistent value, set `User-Agent` in `:headers`. |
+| `X-Braze-Sender-Version` | Always set to the Connected Content sender version. |
+| `Accept-Encoding` | If you have not already set it, Braze sends `gzip`. |
+| `Authorization` | If the URL includes a username and password (`user:pass@host`), Braze adds a Basic `Authorization` header derived from those credentials. An explicit `Authorization` header overrides it. Prefer [`:basic_auth`](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call#using-basic-authentication) or `:headers` instead of putting credentials in the URL. |
+| `Host` | Hostname from the request URL (for example, `www.example.com` for `https://www.example.com/abc/123`), unless you set a `Host` header. |
+| `Content-Length` | Size of the request body in bytes when a body is present. |
+| `BrazeToBraze` | Set to `true` only for requests to Braze REST endpoints. Omitted for other destinations. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Outgoing request headers Braze adds to Connected Content" }
+
 
 ## Credential redaction
 
@@ -112,7 +126,7 @@ If you see [response codes](https://www.braze.com/docs/user_guide/messaging/desi
 
 ### Endpoint returned an unexpected status code
 
-Use the **Request** tab to confirm the exact URL, headers, and body Braze sent. A common cause of unexpected `4XX` responses is a Liquid tag inside the URL, headers, or body that didn't resolve the way you expected. Check that any `{{ }}` references point to fields that exist for the user or context you're previewing with.
+Use the **Request** tab to confirm the URL, headers from your tag, and body. A common cause of unexpected `4XX` responses is a Liquid tag inside the URL, headers, or body that didn't resolve the way you expected. Check that any `{{ }}` references point to fields that exist for the user or context you're previewing with.
 
 ### Response looks stale
 
@@ -122,4 +136,5 @@ Check **Served from cache** on the **Response** tab. If it shows `Yes`, the debu
 
 - [Connected Content reference](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content)
 - [Make a Connected Content API call](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call)
+- [Outgoing request headers](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call#outgoing-request-headers)
 - [Troubleshoot webhook and Connected Content requests](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/troubleshooting_webhooks_and_connected_content)

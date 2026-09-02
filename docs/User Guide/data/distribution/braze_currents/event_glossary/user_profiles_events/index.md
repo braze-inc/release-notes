@@ -1,20 +1,13 @@
 <div class="api-glossary-preamble" markdown="1">
 
-**Important:**
-
-
-User profile events are in beta. Contact your customer success manager or account manager for access.
-
-
-
 **Tip:**
 
 
-These events are also available as SQL tables in the [Query Builder](https://www.braze.com/docs/user_guide/analytics/query_builder), [SQL Segment Extensions](https://www.braze.com/docs/user_guide/engagement_tools/segments/sql_segments), and [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). For SQL table schemas and column details, refer to the [SQL table reference](https://www.braze.com/docs/user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables). For Snowflake Data Sharing schemas for user profile attribute views, refer to [User profile attributes](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/user_attributes).
+These events are also available as SQL tables in the [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/), [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/), and [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). For SQL table schemas and column details, refer to the [SQL table reference](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/). For Snowflake Data Sharing schemas for user profile attribute views, refer to [User profile attributes](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/user_attributes).
 
 
 
-Contact your Braze representative or open a [support ticket](https://www.braze.com/docs/braze_support) if you need access to additional event entitlements. If you can't find what you need on this page, see the [Customer Behavior Events Library](https://www.braze.com/docs/user_guide/data/braze_currents/event_glossary/customer_behavior_events), [Message Engagement Events Library](https://www.braze.com/docs/user_guide/data/braze_currents/event_glossary/message_engagement_events), or [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
+Contact your Braze representative or open a [support ticket](https://www.braze.com/docs/braze_support) if you need access to additional event entitlements. If you can't find what you need on this page, see the [Customer Behavior Events Library](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/), [Message Engagement Events Library](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/), or [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 **Explanation of user profile update event structure**
 
@@ -27,7 +20,7 @@ This customer behavior and user events breakdown shows what type of information 
 **Important:**
 
 
-Storage schemas apply to flat file event data sent to data warehouse storage partners, such as Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage. Some event and destination combinations listed here are not yet generally available. For information about supported events by partner, see [available partners](https://www.braze.com/docs/user_guide/data/braze_currents/available_partners) and the related partner pages.
+Storage schemas apply to flat file event data sent to data warehouse storage partners, such as Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage. Some event and destination combinations listed here are not yet generally available. For information about supported events by partner, see [available partners](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/available_partners/) and the related partner pages.
 
 Currents drops events with payloads larger than 900 KB.
 
@@ -40,7 +33,8 @@ Currents drops events with payloads larger than 900 KB.
 
 <!--overview-end-->
 
-<div id='api_gsgcgovwojwf' class='api_div' data-search-keywords='user delete request events user delete request when a user is deleted by customer request app_group_id id time user_id'>
+
+<div id='api_nwvrizcppoam' class='api_div' data-search-keywords='user delete request events user delete request when a user is deleted by customer request app_group_id id time user_id event_type properties user'>
 <h2 id="user-delete-request-events">User Delete Request events</h2>
 
 <div class="api_tags" data-tags="User Delete Request" data-tags-lower="user delete request"></div>
@@ -65,9 +59,37 @@ Currents drops events with payloads larger than 900 KB.
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.UserDeleteRequest</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
 </div>
 
-<div id='api_vrugbfonlovn' class='api_div' data-search-keywords='user orphan events user orphan when a user is orphaned, meaning the user is merged with another user’s profile app_group_id app_id device_id external_user_id id orphaned_by_id time user_id'>
+<div id='api_pmpksnzskpar' class='api_div' data-search-keywords='user orphan events user orphan when a user is orphaned, meaning the user is merged with another user’s profile app_group_id app_id device_id external_user_id id orphaned_by_id time user_id event_type properties user'>
 <h2 id="user-orphan-events">User Orphan events</h2>
 
 <div class="api_tags" data-tags="User Orphan" data-tags-lower="user orphan"></div>
@@ -100,14 +122,54 @@ Currents drops events with payloads larger than 900 KB.
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.UserOrphan</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"orphaned_by_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) BSON ID of the user whose profile was merged with the orphaned user's profile"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
 </div>
 
-<div id='api_puijhlsynsyz' class='api_div' data-search-keywords='user profile update events profile this represents the profile updates for a user. app_group_id app_id archived country custom_attributes dob email_address external_user_id first_name gender home_city id language last_name phone_number time time_ms timezone update_source user_id event_type properties user'>
+<div id='api_puiwroznhpsj' class='api_div' data-search-keywords='user profile update events profile this represents the profile updates for a user. app_group_id app_id archived country custom_attributes dob email_address external_user_id first_name gender home_city id language last_name phone_number time time_ms timezone update_source user_id event_type properties user'>
 <h2 id="user-profile-update-events">User Profile Update events</h2>
 
 <div class="api_tags" data-tags="Profile" data-tags-lower="profile"></div>
 
 <p>This represents the profile updates for a user.</p>
+
+<p><strong>Important:</strong></p>
+
+<p>The user profile update event is in beta. Contact your customer success manager or account manager for access.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2

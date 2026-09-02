@@ -1,4 +1,4 @@
-<div id='api_kwolstmqkpey' class='api_div' data-search-keywords='send messages immediately using the api only broadcast external_user_ids user_aliases segment_id audience campaign_id send_id override_frequency_capping recipient_subscription_state messages android_push apple_push content_card email kindle_push web_push webhook whats_app sms'>
+<div id='api_wsjmncbrnqur' class='api_div' data-search-keywords='send messages immediately using the api only broadcast external_user_ids user_aliases segment_id audience campaign_id send_id override_frequency_capping recipient_subscription_state messages android_push apple_push content_card email kindle_push web_push webhook whats_app sms'>
 <h1 id="send-messages-immediately-using-the-api-only">Send messages immediately using the API only</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/send</p>
@@ -158,7 +158,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">campaign_id</code></td>
       <td>Optional*</td>
       <td>String</td>
-      <td>See <a href="/docs/api/identifier_types#campaign-identifier">campaign identifier</a> for more information. <br /><br />*Required to track campaign metrics (such as <em>Sends</em>, <em>Clicks</em>, or <em>Bounces</em>) on the Braze dashboard, or to see events associated with this message in the user profile <a href="/docs/user_guide/engagement_tools/segments/user_profiles#messaging-history-tab">Message History tab</a>. Without a <code class="language-plaintext highlighter-rouge">campaign_id</code>, Braze doesn’t increment dashboard deliverability stats. Sends still appear in the <a href="/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log">Message Activity Log</a>, but not in email performance metrics in the dashboard.</td>
+      <td>See <a href="/docs/api/identifier_types#campaign-identifier">campaign identifier</a> for more information. <br /><br />*Required to track campaign metrics (such as <em>Sends</em>, <em>Clicks</em>, or <em>Bounces</em>) on the Braze dashboard, or to see events associated with this message in the user profile <a href="/docs/user_guide/audience/manage_audience/user_profiles">Message History tab</a>. Without a <code class="language-plaintext highlighter-rouge">campaign_id</code>, Braze doesn’t increment dashboard deliverability stats. Sends still appear in the <a href="/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log">Message Activity Log</a>, but not in email performance metrics in the dashboard.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">send_id</code></td>

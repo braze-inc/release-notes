@@ -29,7 +29,7 @@ When `send_to_existing_only` is `false`, you must include an `attributes` object
 That profile must still meet the message's audience and channel eligibility rules before Braze sends.
 
 - [Braze ID](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle)
-- [User aliases](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases)
+- [User aliases](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle#user-aliases)
 - [External user ID](https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields)
 - [Prioritization](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify#identifying-users-by-email-addresses-and-phone-numbers)
 - [User attributes object](https://www.braze.com/docs/api/objects_filters/user_attributes_object)

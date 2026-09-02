@@ -57,6 +57,26 @@ If you want to add query parameters after a URL in your email message:
 
 ![Template Position, Query Parameters, and Template Preview fields for the link template insertion process after a URL.](https://www.braze.com/docs/assets/img_archive/link_template_postappend.png?7e78ad7fe951fc6687d981c9aba180e5){: style="max-width:90%;"}
 
+#### Liquid tags for `utm_campaign`
+
+Liquid tags for `utm_campaign` differ between campaigns and Canvases.
+
+In campaigns, use:
+
+
+- `{{campaign.${name}}}` to pull the campaign name
+- `{{campaign.${message_name}}}` to pull the message variant name
+
+
+In Canvases, use:
+
+
+- `{{canvas.${name}}}` to pull the Canvas name
+- `{{campaign.${name}}}` to pull the Canvas step name (Message steps only)
+
+
+For a full comparison of these attributes in Liquid, the REST API, and Currents, see [Campaign and Canvas attributes across sources](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/campaign_and_canvas_attributes_across_sources). For URL encoding guidance, see [Campaign names in URLs](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags#campaign-names-in-urls).
+
 ## Using link templates in email campaigns
 
 After you set up your link templates, you can apply them in your email.

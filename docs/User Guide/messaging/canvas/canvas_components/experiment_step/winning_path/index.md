@@ -1,6 +1,6 @@
 # Winning Path in Experiment Paths
 
-> Winning Path is similar to [Winning Variant](https://www.braze.com/docs/user_guide/messaging/ab_testing/optimizations) in campaigns, and lets you automate your A/B tests.
+> Winning Path automatically tests Canvas paths and sends subsequent users down the best-performing path.
 
 When Winning Path is turned on in an Experiment Path step, after a specified period of time, all subsequent users are sent down the path with the highest conversion rate.
 
@@ -72,4 +72,4 @@ Alternatively, if you wish to use local delivery, use an experiment window of 24
 
 ### Variants based on clicks
 
-If you're setting up a Winning Path variant based on clicks, note that the definitions for opens and clicks differ by channel. For specific metrics and definitions by channel, refer to [Report metrics glossary](https://www.braze.com/docs/user_guide/analytics/reporting/report_metrics) and [Email report metrics glossary](https://www.braze.com/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary).
+If you're setting up a Winning Path variant based on clicks, note that the definitions for opens and clicks differ by channel. For specific metrics and definitions by channel, refer to [Report metrics glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary/) and [Email report metrics glossary](https://www.braze.com/docs/user_guide/channels/email/reporting/analytics_glossary/).

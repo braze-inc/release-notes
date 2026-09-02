@@ -49,7 +49,6 @@ Braze uses different data storage systems for various features. Understanding wh
 #### Snowflake-powered features
 - [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments)
 - [Prediction Suite](https://www.braze.com/docs/user_guide/brazeai)
-- [Personalized Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step/personalized_paths) and [Personalized Variant](https://www.braze.com/docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations#personalized-variant)
 - [AI Personalized Item Recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai)
 - [Estimated Real Open Rate](https://www.braze.com/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#estimated-real-open-rate) (does not use custom events)
 

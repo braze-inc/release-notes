@@ -768,6 +768,13 @@ If you still want to collect IDFV separately, you can use [`set(identifierforven
 **Note:**
 
 
+Apple is responsible for creating IDFV, and IDFV is Apple-managed. Braze does not transform or change IDFVs, and Apple makes no guarantees about casing or format.
+
+
+
+**Note:**
+
+
 Reading `braze.deviceId` blocks the calling thread until the SDK has completed its post-initialization operations. For main-thread or latency-sensitive contexts, use the non-blocking alternatives instead.
 
 

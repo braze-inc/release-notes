@@ -16,7 +16,7 @@ Remove previously selected countries by clearing the respective boxes next to th
 
 ### Saving your changes
 
-Changes will take effect after you save. Removing countries from your allowlist will prevent all SMS, MMS, and RCS messages from being sent to phone numbers with those countries' dialing codes.
+Changes take effect after you save. Removing countries from your allowlist prevents all SMS, MMS, and RCS messages from being sent to phone numbers with those countries' dialing codes.
 
 ![Warning modal confirming the countries that will be deleted from the allowlist.](https://www.braze.com/docs/assets/img/sms/delete_allowlist_warning.png?99e4c6af954e64752cee284da48189fc){: style="max-width:70%;"}
 
@@ -31,7 +31,7 @@ If you allow sending in these countries, you must first acknowledge the risk of 
 **Note:**
 
 
-Limit the countries on your allowlist to only those required to support your business needs. This will minimize your potential for fraudulent traffic. For more guidance on preventing SMS, MMS, and RCS traffic pumping, view [SMS traffic pumping fraud FAQs](https://www.braze.com/docs/sms_traffic_pumping_fraud).
+Limit the countries on your allowlist to only those required to support your business needs. This minimizes your potential for fraudulent traffic. For more guidance on preventing SMS, MMS, and RCS traffic pumping, view [SMS traffic pumping fraud FAQs](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/sms_traffic_pumping_fraud/).
 
 
 
@@ -57,8 +57,8 @@ Furthermore, system routing restrictions are enforced based on destination count
 
 ### Customer responsibility and financial liability 
 
-The customer is responsible for and will be invoiced for all Mobile Messages sent through the Services on its behalf, including any messages resulting from SMS, MMS, and RCS traffic pumping. Platform safeguards, such as the Country Allowlist, will assist you in restricting delivery to trusted regions. Ultimately, however, securing your external-facing endpoints and preventing devastating financial harm remains the sole responsibility of the customer.
+The customer is responsible for and will be invoiced for all Mobile Messages sent through the Services on its behalf, including any messages resulting from SMS, MMS, and RCS traffic pumping. Platform safeguards, such as the Country Allowlist, assist you in restricting delivery to trusted regions. Ultimately, however, securing your external-facing endpoints and preventing devastating financial harm remains the sole responsibility of the customer.
 
 ### How to prevent traffic pumping 
 
-Failure to limit your message distribution strictly to the geographic regions where your actual customers reside creates immediate vulnerability to fraud and severe financial harm. To protect your company, you must proactively restrict your delivery regions using the Country Allowlist. In addition, and most importantly, you should secure any online phone number request form or API endpoint that triggers SMS, MMS, and RCS sends in accordance with industry best practices, as described in [Understanding and preventing SMS, MMS, and RCS traffic pumping fraud](https://www.braze.com/docs/sms_traffic_pumping_fraud).
+Failure to limit your message distribution strictly to the geographic regions where your actual customers reside creates immediate vulnerability to fraud and severe financial harm. To protect your company, you must proactively restrict your delivery regions using the Country Allowlist. In addition, and most importantly, you should secure any online phone number request form or API endpoint that triggers SMS, MMS, and RCS sends in accordance with industry best practices, as described in [Understanding and preventing SMS, MMS, and RCS traffic pumping fraud](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/sms_traffic_pumping_fraud/).

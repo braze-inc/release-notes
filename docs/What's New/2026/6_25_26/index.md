@@ -114,11 +114,11 @@ When re-eligibility is enabled for Banner campaigns, users who dismiss a Banner 
 
 Quick Push A/B Testing now supports multi-platform push campaigns and Canvas steps through variant groups, so you can test aligned iOS and Android message variations in one workflow. For more information, refer to [Multiple platform push messages](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/multiple_platform_push/#use-cases).
 
-### BrazeAI™ Variant Selection
+### Optimize with BrazeAI™
 
 
 
-BrazeAI™ Variant Selection automatically turns on when you add multiple push variants, applies recommended experiment defaults, and optimizes toward the highest-performing variant to improve engagement. You can turn it off if you need to send immediately. For more information, refer to [BrazeAI™ Variant Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection/).
+**Optimize with BrazeAI™** automatically turns on when you add multiple push variants, applies recommended experiment defaults, and optimizes toward the highest-performing variant. You can turn it off if you need to send immediately. For more information, see [Optimizing A/B tests with BrazeAI](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection).
 
 ### WhatsApp test send results
 

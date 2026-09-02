@@ -1,4 +1,4 @@
-<div id='api_snpxzpyxbwcm' class='api_div' data-search-keywords='list sdk authentication keys keys id rsa_public_key description is_primary'>
+<div id='api_yynmadyxgqig' class='api_div' data-search-keywords='list sdk authentication keys keys id rsa_public_key description is_primary'>
 <h1 id="list-sdk-authentication-keys">List SDK Authentication keys</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/app_group/sdk_authentication/keys</p>

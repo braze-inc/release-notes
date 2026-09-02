@@ -318,7 +318,7 @@ Braze allows you to track [conversion events](https://www.braze.com/docs/user_gu
 
 
 
-If you haven't done so already, complete the remaining sections of your Canvas component. For further details on how build out the rest of your Canvas, implement [multivariate testing](https://www.braze.com/docs/user_guide/messaging/ab_testing) and [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_selection), and more, refer to the [Build your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#step-2-build-your-canvas) step of our Canvas documentation.
+If you haven't done so already, complete the remaining sections of your Canvas component. For details about building the rest of your Canvas, including multivariate testing and [Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#optimize-canvas-variants-with-brazeai), see [Build your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#step-2-build-your-canvas).
 
 To control re-eligibility for Canvas Banner steps, use the Canvas re-entry settings. For more information, see [Re-eligibility for campaigns and Canvas](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/re_eligibility).
 

@@ -62,7 +62,7 @@ After [adding locales](https://www.braze.com/docs/locales_in_messages/) to your 
 
 ### Amazon SES as an Email Sending Provider (ESP)
 
-You can now use Amazon SES as an ESP, similar to how you would use SendGrid and SparkPost. Refer to [SSL at Braze](https://www.braze.com/docs/user_guide/message_building_by_channel/email/email_setup/ssl#what-is-a-cdn-and-why-do-i-need-it) and [Universal Links and App Links](https://www.braze.com/docs/user_guide/message_building_by_channel/email/universal_links#turning-off-click-tracking-on-a-link-to-link-basis) for nuances in SSL set up and click-tracking on a link-to-link basis.
+You can now use Amazon SES as an ESP, similar to how you would use SendGrid and SparkPost. Refer to [SSL at Braze](https://www.braze.com/docs/user_guide/channels/email/email_setup/ssl#what-is-a-cdn-and-why-do-i-need-it) and [Universal Links and App Links](https://www.braze.com/docs/user_guide/channels/email/customize/universal_links_and_app_links#turning-off-click-tracking-on-a-link-to-link-basis) for nuances in SSL set up and click-tracking on a link-to-link basis.
 
 ## New Braze partnerships
 

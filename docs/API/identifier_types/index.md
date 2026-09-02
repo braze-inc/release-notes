@@ -1,6 +1,6 @@
 # API identifier types
 
-> This reference guide touches on the different types of API identifiers that can be found within the Braze dashboard, their purpose, where you can find them, and how they are typically used. For information on REST API keys or workspace API keys, refer to the [API overview](https://www.braze.com/docs/api/api_key).
+> This reference guide touches on the different types of API identifiers that can be found within the Braze dashboard, their purpose, where you can find them, and how they are typically used. For information on REST API keys or workspace API keys, refer to the [API overview](https://www.braze.com/docs/api/basics).
 
 The following identifiers can be used to access your template, Canvas, campaign, or segment from the Braze external API. All messages should follow [UTF-8](https://en.wikipedia.org/wiki/UTF-8) encoding.
 
@@ -123,7 +123,7 @@ Go to **Settings** > **APIs and Identifiers**. Here, Braze offers an **Additiona
 - Grab details on a specific campaign
 - With Currents to bring in user-level data for a "bigger picture" approach to campaigns
 - With API-triggered delivery to collect statistics for transactional messages
-- To [search for a specific campaign](https://www.braze.com/docs/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns#search-syntax) on the **Campaigns** page using the filter `api_id:YOUR_API_ID`
+- To [search for a specific campaign](https://www.braze.com/docs/user_guide/messaging/campaigns/manage_campaigns/search_campaigns) on the **Campaigns** page using the filter `api_id:YOUR_API_ID`
 
 ## Segment identifier
 

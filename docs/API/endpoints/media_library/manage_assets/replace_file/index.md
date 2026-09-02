@@ -1,11 +1,11 @@
-<div id='api_xhmsnsfxajno' class='api_div' data-search-keywords='replace an asset in the media library asset_id asset_url asset_file message error_code meta info new_image_asset name size url ext'>
+<div id='api_smropnodsdxt' class='api_div' data-search-keywords='replace an asset in the media library asset_id asset_url asset_file message error_code meta info new_image_asset name size url ext'>
 <h1 id="replace-an-asset-in-the-media-library">Replace an asset in the media library</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/media_library/replace_file</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to replace the file of an existing asset in the <a href="/docs/user_guide/engagement_tools/templates_and_media/media_library">Braze media library</a> while preserving its asset ID and URL. You can provide the replacement file using either an externally hosted URL (<code class="language-plaintext highlighter-rouge">asset_url</code>) or binary file data sent in the request body (<code class="language-plaintext highlighter-rouge">asset_file</code>).</p>
+  <p>Use this endpoint to replace the file of an existing asset in the <a href="/docs/user_guide/messaging/design_and_edit/media_library/image_specifications">Braze media library</a> while preserving its asset ID and URL. You can provide the replacement file using either an externally hosted URL (<code class="language-plaintext highlighter-rouge">asset_url</code>) or binary file data sent in the request body (<code class="language-plaintext highlighter-rouge">asset_file</code>).</p>
 </blockquote>
 
 <h2 id="prerequisites">Prerequisites</h2>

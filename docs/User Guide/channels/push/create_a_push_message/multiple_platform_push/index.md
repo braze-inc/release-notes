@@ -31,7 +31,9 @@ To create a campaign targeting multiple platforms and devices:
 
 ## Running a multi-platform, multivariate test
 
-Multivariate testing is supported on multi-platform campaigns, simply select the plus icon beside the variant name as you normally would for single platform campaigns. We recommend you [read our guide](https://www.braze.com/docs/user_guide/messaging/ab_testing/create_tests) to creating multivariate tests and utilize [BrazeAI™ Variant Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection) to automate and maximize your engagement.
+Multivariate testing is supported on multi-platform campaigns. Select the plus icon beside the variant name as you would for a single-platform campaign. For setup steps, see [Create multivariate and A/B tests](https://www.braze.com/docs/user_guide/messaging/ab_testing/create_tests).
+
+To automatically optimize your variants, see [Optimizing A/B tests with BrazeAI™](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection).
 
 ![Easy multi-platform, multivariate tests](https://www.braze.com/docs/assets/img_archive/push_multiple_platform_message_composer_multivariate.png?2fddeeea79a6505155b0784138a52ea0)
 

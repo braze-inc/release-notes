@@ -69,6 +69,12 @@ Not all data is merged from the anonymous profile. Push tokens and messaging his
 
 For information on how to set an `external_id` against a user profile, see our documentation ([iOS](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids?tab=swift), [Android](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids?tab=android), [Web](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids?tab=web)).
 
+### Reporting and merged profiles
+
+When anonymous and identified profiles merge after a send, dashboard campaign summaries attribute that send to the surviving (identified) profile. [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents), [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder), and the [Messaging History](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles#messaging-history-tab) tab still attribute the send to the orphaned profile's user ID—the ID at send time. This is expected. For the full list of fields that transfer, see [merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#merge-behavior).
+
+To find that send in Currents, Query Builder, or Messaging History, look up the orphaned profile's `braze_id`. A query that uses only the identified user's `braze_id` does not return the pre-merge send.
+
 **Note:**
 
 
@@ -88,7 +94,7 @@ Each alias functions as a key-value pair that consists of two parts: an `alias_l
 
 ### Updating user aliases
 
-An alias can be updated with a new name for a given label after it's set either by using our [User Data endpoints](https://www.braze.com/docs/developer_guide/rest_api/user_data#new-user-alias-endpoint) or passing a new name through the SDK. The user alias will then be visible when exporting that user's data.
+An alias can be updated with a new name for a given label after it's set either by using our [User Data endpoints](https://www.braze.com/docs/api/endpoints/user_data) or passing a new name through the SDK. The user alias will then be visible when exporting that user's data.
 
 ![Two different user profiles for separate users with the same user alias label but different alias names](https://www.braze.com/docs/assets/img_archive/Braze_User_aliases.png?288b845d18837aec6a7774c1a51994bc)
 
@@ -110,7 +116,7 @@ If you don't know this information, you can call the [`Export user profile by id
 
 A user alias can also be set on a known user profile to reference a known user by another externally known ID. For example, a user may have a business intelligence tool ID (like an Amplitude ID) that you wish to reference within Braze.
 
-For information on how to set a user alias, see our documentation for each platform ([iOS](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids#aliasing-users), [Android](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/setting_user_ids#aliasing-users), [Web](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#aliasing-users)).
+For information on how to set a user alias, see our documentation for each platform ([iOS](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids?tab=swift), [Android](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids?tab=android), [Web](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids?tab=web)).
 
 ![A flow chart of a user profile's lifecycle in Braze. When changeUser() is called for an anonymous user, that user becomes an Identified User and data is migrated to their identified user profile. The Identified User has a Braze ID and external ID. At this point, if a second anonymous user has changeUser() called, user data fields that do not already exist on the Identified User will be merged. If the Identified User has an alias added to their existing user profile, no data will be affected but they will become an Identified User with alias. If a third anonymous user with the same alias label as the Identified User but a different alias name then has changeUser() called, any fields that do not exist on the Identified User will be merged and the alias label on the Identified User profile is maintained.](https://www.braze.com/docs/assets/img_archive/Braze_User_flowchart.png?d3e62f86ff04de4b3a272769f361f4cf)
 
@@ -123,7 +129,7 @@ Having trouble picturing how this may look for the user profile lifecycle of you
 
 ## Advanced use case
 
-You can set a new user alias for existing identified user profiles through our SDK and our API using the [User Data endpoints](https://www.braze.com/docs/developer_guide/rest_api/user_data#new-user-alias-endpoint). However, user aliases can't be set through the API for an existing unknown user profile.
+You can set a new user alias for existing identified user profiles through our SDK and our API using the [User Data endpoints](https://www.braze.com/docs/api/endpoints/user_data). However, user aliases can't be set through the API for an existing unknown user profile.
 
 The user aliases are also merged in the process. However, if both the user to be orphaned and the target user have an alias with the same label, only the alias from the target user is maintained.
 

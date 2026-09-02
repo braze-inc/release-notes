@@ -163,7 +163,7 @@ We recommend careful use of Connected Content Liquid personalization in User Upd
 
 ## Advanced JSON editor
 
-Add an attribute, event, or purchase JSON object up to 65,536 characters to the JSON editor. A user's [global subscription](https://www.braze.com/docs/user_guide/channels/email/subscriptions#subscription-states) and [subscription group](https://www.braze.com/docs/user_guide/channels/email/subscriptions#subscription-groups) state can also be set.
+Add an attribute, event, or purchase JSON object up to 65,536 characters to the JSON editor. A user's [global subscription](https://www.braze.com/docs/user_guide/channels/email/subscriptions#subscription-states) and [subscription group](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups) state can also be set.
 
 ![Add an attribute, event, or purchase JSON object up to 65,536 characters to the JSON editor. A user's global subscription and subscription group state can also be set.](https://www.braze.com/docs/assets/img_archive/canvas_user_update_composer.png?368874b2759a3171237b3acfaa0ab76f){: style="max-width:90%;"}
 

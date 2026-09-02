@@ -206,7 +206,7 @@ Braze allows you to track how often users perform specific actions, [conversion 
 
 
 
-If you haven't done so already, complete the remaining sections of your Canvas component. For further details on how to build out the rest of your Canvas, implement [multivariate testing](https://www.braze.com/docs/user_guide/messaging/ab_testing) and [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_selection), and more, see the [Build your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#step-2-build-your-canvas) step of our Canvas documentation.
+If you haven't done so already, complete the remaining sections of your Canvas component. For details about building the rest of your Canvas, including multivariate testing and [Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#optimize-canvas-variants-with-brazeai), see [Build your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#step-2-build-your-canvas).
 
 
 

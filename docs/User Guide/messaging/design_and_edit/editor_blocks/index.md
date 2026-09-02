@@ -16,7 +16,7 @@ For more information about creating emails in the **Drag-And-Drop Editor**, see 
 **Tip:**
 
 
-You can also add [custom attributes](https://www.braze.com/docs/user_guide/data/activation/custom_data/custom_attributes/) to any URL within the `Image`, `Button`, or `Text` editor blocks.
+You can also add [custom attributes](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types/) to any URL within the `Image`, `Button`, or `Text` editor blocks.
 
 
 
@@ -934,7 +934,7 @@ Users pick multiple options; values set or append to a defined [array custom att
 
 ### Manage subscriptions
 
-Adds a checklist of [email subscription groups](https://www.braze.com/docs/user_guide/channels/email/subscriptions/#subscription-groups) so visitors can opt in to or manage their subscriptions when they submit the form. Configure it after you add subscription groups to the block. This block only supports email subscription groups; it doesn't support SMS, RCS, or WhatsApp subscription groups.
+Adds a checklist of [email subscription groups](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups#email-subscription-groups) so visitors can opt in to or manage their subscriptions when they submit the form. Configure it after you add subscription groups to the block. This block only supports email subscription groups; it doesn't support SMS, RCS, or WhatsApp subscription groups.
 
 For identified users who open the page through the landing page's [Liquid tag](https://www.braze.com/docs/user_guide/messaging/landing_pages/tracking_users/), the block pre-fills each checkbox with the user's current subscription state, so it can also serve as a preference management page.
 

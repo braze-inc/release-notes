@@ -1,4 +1,4 @@
-<div id='api_gbpggzzuqrtk' class='api_div' data-search-keywords='change email subscription status email subscription_state'>
+<div id='api_xxikbazvhgab' class='api_div' data-search-keywords='change email subscription status email subscription_state'>
 <h1 id="change-email-subscription-status">Change email subscription status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/status</p>
@@ -12,7 +12,7 @@
 
 <p><strong>Note:</strong></p>
 
-<p>This endpoint updates the user’s global email subscription state, which is different from subscription group status. The global subscription state applies across all emails, while <a href="/docs/user_guide/channels/email/subscriptions#subscription-groups">subscription groups</a> allow more granular control over specific types of emails. When a user is globally unsubscribed, they won’t receive emails regardless of their subscription group status. To query subscription group status, use the <a href="/docs/api/endpoints/subscription_groups/get_list_user_subscription_group_status">List user’s subscription group status endpoint</a>.</p>
+<p>This endpoint updates the user’s global email subscription state, which is different from subscription group status. The global subscription state applies across all emails, while <a href="/docs/user_guide/audience/subscription_preferences/subscription_groups">subscription groups</a> allow more granular control over specific types of emails. When a user is globally unsubscribed, they won’t receive emails regardless of their subscription group status. To query subscription group status, use the <a href="/docs/api/endpoints/subscription_groups/get_list_user_subscription_group_status">List user’s subscription group status endpoint</a>.</p>
 
 <p>You can set the email subscription state for an email address that is not yet associated with any of your users within Braze. When that email address is subsequently associated with a user, the email subscription state that you uploaded is automatically set.</p>
 

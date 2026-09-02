@@ -1,6 +1,6 @@
 # Set user IDs
 
-> Learn how to set user IDs through the Braze SDK. These are unique identifiers that let you track users across devices and platforms, import their data through the [user data API](https://www.braze.com/docs/developer_guide/rest_api/user_data#user-data), and send targeted messages through the [messaging API](https://www.braze.com/docs/api/endpoints/messaging). If you don't assign a unique ID to a user, Braze assigns them an anonymous ID instead; however, you can't use these features until you do.
+> Learn how to set user IDs through the Braze SDK. These are unique identifiers that let you track users across devices and platforms, import their data through the [user data API](https://www.braze.com/docs/api/endpoints/user_data), and send targeted messages through the [messaging API](https://www.braze.com/docs/api/endpoints/messaging). If you don't assign a unique ID to a user, Braze assigns them an anonymous ID instead; however, you can't use these features until you do.
 
 **Note:**
 

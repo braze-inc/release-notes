@@ -341,7 +341,7 @@ Note that we currently do not support the display of custom HTML in-app messages
 
 [`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) in-app messages do not contain a UI component and are used primarily for analytics purposes. This type is used to verify receipt of an in-app message sent to a control group.
 
-For further details about Intelligent Selection and control groups, refer to [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence/intelligent_selection/).
+For details about automatic variant optimization and control groups, see [Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection).
 
 
 
@@ -530,7 +530,7 @@ Note that we currently do not support the display of custom HTML in-app messages
 
 [`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) in-app messages do not contain a UI component and are used primarily for analytics purposes. This type is used to verify receipt of an in-app message sent to a control group.
 
-For further details about Intelligent Selection and control groups, refer to [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence/intelligent_selection/).
+For details about automatic variant optimization and control groups, see [Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection).
 
 
 
@@ -676,7 +676,7 @@ Note that we currently do not support the display of custom HTML in-app messages
 
 [`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) in-app messages do not contain a UI component and are used primarily for analytics purposes. This type is used to verify receipt of an in-app message sent to a control group.
 
-For further details about Intelligent Selection and control groups, refer to [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence/intelligent_selection/).
+For details about automatic variant optimization and control groups, see [Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection).
 
 
 
@@ -921,7 +921,7 @@ Note that we currently do not support the display of custom HTML in-app messages
 
 [`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) in-app messages do not contain a UI component and are used primarily for analytics purposes. This type is used to verify receipt of an in-app message sent to a control group.
 
-For further details about Intelligent Selection and control groups, refer to [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence/intelligent_selection/).
+For details about automatic variant optimization and control groups, see [Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection).
 
 
 
@@ -1114,7 +1114,7 @@ Note that we currently do not support the display of custom HTML in-app messages
 
 [`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) in-app messages do not contain a UI component and are used primarily for analytics purposes. This type is used to verify receipt of an in-app message sent to a control group.
 
-For further details about Intelligent Selection and control groups, refer to [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence/intelligent_selection/).
+For details about automatic variant optimization and control groups, see [Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection).
 
 
 
@@ -1378,7 +1378,7 @@ Note that we currently do not support the display of custom HTML in-app messages
 
 [`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) in-app messages do not contain a UI component and are used primarily for analytics purposes. This type is used to verify receipt of an in-app message sent to a control group.
 
-For further details about Intelligent Selection and control groups, refer to [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence/intelligent_selection/).
+For details about automatic variant optimization and control groups, see [Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection).
 
 
 
@@ -1524,7 +1524,7 @@ Note that we currently do not support the display of custom HTML in-app messages
 
 [`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) in-app messages do not contain a UI component and are used primarily for analytics purposes. This type is used to verify receipt of an in-app message sent to a control group.
 
-For further details about Intelligent Selection and control groups, refer to [Intelligent Selection](https://www.braze.com/docs/user_guide/brazeai/intelligence/intelligent_selection/).
+For details about automatic variant optimization and control groups, see [Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection).
 
 
 

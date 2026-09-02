@@ -5,8 +5,15 @@
 **Important:**
 
 
-The remote Braze MCP server is in Early Access. The locally hosted Braze MCP server (beta) is deprecated, remains available for now, and will not receive additional updates.
+The locally hosted Braze MCP server (beta) is deprecated and doesn't receive additional updates.
 
+
+
+
+**Note:**
+
+
+The Braze MCP server includes tools that are only available to customers participating in beta programs. If you try to access a tool that is part of a beta program and your account does not have the feature enabled, you may receive an error response. To join a beta program, contact your account manager.
 
 
 
@@ -32,7 +39,26 @@ Your MCP client references these tools to interact with the Braze MCP server.
 | `get_campaign_list` | [`/campaigns/list`](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaigns) | read | Export a list of campaigns with name, campaign API identifier, API-campaign flag, and tags. |
 | `get_campaign_details` | [`/campaigns/details`](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_details) | read | Retrieve relevant information on a specified campaign by `campaign_id`. |
 | `get_campaign_dataseries` | [`/campaigns/data_series`](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_analytics) | read | Daily series of campaign stats over time (sends, opens, clicks, conversions by channel). |
+| `duplicate_campaign` | [`/campaigns/duplicate`](https://www.braze.com/docs/api/endpoints/messaging/duplicate_messages/post_duplicate_campaigns) | create | Duplicate an existing campaign. |
+| `create_campaign`<sup>*</sup> | N/A | create | Create a new campaign. |
+| `edit_campaign`<sup>*</sup> | N/A | update | Edit an existing campaign. |
+| `launch_campaign`<sup>*</sup> | N/A | update | Launch a campaign. |
+| `stop_campaign`<sup>*</sup> | N/A | update | Stop a running campaign. |
+| `archive_campaign`<sup>*</sup> | N/A | update | Archive a campaign. |
+| `unarchive_campaign`<sup>*</sup> | N/A | update | Unarchive a campaign. |
+| `get_campaign_draft`<sup>*</sup> | N/A | read | Retrieve draft campaign details. |
+| `get_campaign_live_details`<sup>*</sup> | N/A | read | Retrieve live campaign details. |
+| `create_campaign_message`<sup>*</sup> | N/A | create | Create a message within a campaign. |
+| `update_campaign_message`<sup>*</sup> | N/A | update | Update a campaign message. |
+| `delete_campaign_message`<sup>*</sup> | N/A | delete | Delete a campaign message. |
+| `create_campaign_message_variation`<sup>*</sup> | N/A | create | Create a message variation within a campaign. |
+| `update_campaign_message_variation`<sup>*</sup> | N/A | update | Update a campaign message variation. |
+| `delete_campaign_message_variation`<sup>*</sup> | N/A | delete | Delete a campaign message variation. |
+| `update_campaign_distribution`<sup>*</sup> | N/A | update | Update campaign distribution settings. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Campaigns" }
+
+<sup>*</sup> This tool is only available to customers participating in the campaign APIs beta program. If your account does not have this feature enabled, you may receive an error when attempting to use it. To join the beta program, contact your account manager.
+{: .reset-td-br-1 }
 
 ### Canvases
 
@@ -51,6 +77,16 @@ Your MCP client references these tools to interact with the Braze MCP server.
 | `get_catalogs` | [`/catalogs`](https://www.braze.com/docs/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs) | read | List catalogs in a workspace. |
 | `get_catalog_items` | [`/catalogs/{catalog_name}/items`](https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk) | read | Return multiple catalog items and their content. |
 | `get_catalog_item` | [`/catalogs/{catalog_name}/items/{item_id}`](https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details) | read | Return a single catalog item and its content. |
+| `create_catalog` | [`/catalogs`](https://www.braze.com/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog) | create | Create a catalog. |
+| `delete_catalog` | [`/catalogs/{catalog_name}`](https://www.braze.com/docs/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog) | delete | Delete a catalog. |
+| `create_catalog_fields` | [`/catalogs/{catalog_name}/fields`](https://www.braze.com/docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields) | create | Create multiple fields in a catalog. |
+| `delete_catalog_field` | [`/catalogs/{catalog_name}/fields/{field_name}`](https://www.braze.com/docs/api/endpoints/catalogs/catalog_fields/asynchronous/delete_catalog_field) | delete | Delete a catalog field. |
+| `create_catalog_items` | [`/catalogs/{catalog_name}/items`](https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk) | create | Create multiple items in a catalog. Up to 50 items per request. |
+| `edit_catalog_items` | [`/catalogs/{catalog_name}/items`](https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk) | update | Edit multiple existing items in a catalog. Up to 50 items per request. |
+| `replace_catalog_items` | [`/catalogs/{catalog_name}/items`](https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items) | update | Replace multiple items in a catalog. Creates items if they don't exist. Up to 50 items per request. |
+| `delete_catalog_items` | [`/catalogs/{catalog_name}/items`](https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk) | delete | Delete multiple items in a catalog. Up to 50 items per request. |
+| `create_catalog_selection` | [`/catalogs/{catalog_name}/selections`](https://www.braze.com/docs/api/endpoints/catalogs/catalog_selections/asynchronous/post_create_catalog_selections) | create | Create a selection in a catalog. |
+| `delete_catalog_selection` | [`/catalogs/{catalog_name}/selections/{selection_name}`](https://www.braze.com/docs/api/endpoints/catalogs/catalog_selections/asynchronous/delete_catalog_selection) | delete | Delete a catalog selection. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Catalogs" }
 
 ### Custom attributes
@@ -75,6 +111,7 @@ Your MCP client references these tools to interact with the Braze MCP server.
 | --- | --- | --- | --- |
 | `list_integrations` | [`/cdi/integrations`](https://www.braze.com/docs/api/endpoints/cdi/get_integration_list) | read | List existing Cloud Data Ingestion integrations, 10 per call. |
 | `get_integration_job_sync_status` | [`/cdi/integrations/{integration_id}/job_sync_status`](https://www.braze.com/docs/api/endpoints/cdi/get_job_sync_status) | read | Past sync statuses for a given CDI integration, 10 per call. |
+| `trigger_integration_sync` | [`/cdi/integrations/{integration_id}/sync`](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) | write | Trigger a sync for a given CDI integration. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="CDI integrations" }
 
 ### KPI
@@ -110,7 +147,13 @@ Your MCP client references these tools to interact with the Braze MCP server.
 | `get_segment_list` | [`/segments/list`](https://www.braze.com/docs/api/endpoints/export/segments/get_segment) | read | Export segments with name, Segment API identifier, and analytics-tracking flag. |
 | `get_segment_details` | [`/segments/details`](https://www.braze.com/docs/api/endpoints/export/segments/get_segment_details) | read | Retrieve relevant information on a segment by `segment_id`. |
 | `get_segment_data_series` | [`/segments/data_series`](https://www.braze.com/docs/api/endpoints/export/segments/get_segment_analytics) | read | Daily series of a segment's estimated size over time. |
+| `get_segment_filters`<sup>*</sup> | N/A | read | Retrieve segment filter definitions. |
+| `create_segment`<sup>*</sup> | N/A | create | Create a new segment. |
+| `edit_segment`<sup>*</sup> | N/A | update | Edit an existing segment. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Segments" }
+
+<sup>*</sup> This tool is only available to customers participating in the segment APIs beta program. If your account does not have this feature enabled, you may receive an error when attempting to use it. To join the beta program, contact your account manager.
+{: .reset-td-br-1 }
 
 ### Sends
 
@@ -145,6 +188,22 @@ Your MCP client references these tools to interact with the Braze MCP server.
 | `create_content_block` | [`/content_blocks/create`](https://www.braze.com/docs/api/endpoints/templates/content_blocks_templates/post_create_email_content_block) | create | Create a content block. |
 | `update_content_block` | [`/content_blocks/update`](https://www.braze.com/docs/api/endpoints/templates/content_blocks_templates/post_update_content_block) | update | Update a content block. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Content blocks" }
+
+### Operator
+
+| Tool | API endpoint | Access | Description |
+| --- | --- | --- | --- |
+| `send_operator_prompt` | N/A | update | Send a natural-language prompt to the BrazeAI Operator. Submits a background job and returns a job_id. |
+| `get_operator_result` | N/A | read | Poll for the result of a submitted Operator job using its job_id. |
+| `cancel_operator_job` | N/A | update | Cancel a running Operator job. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Operator" }
+
+**Important:**
+
+
+These tools are only available to customers participating in the Operator beta program. If your account does not have this feature enabled, you may receive an error when attempting to use it. To join the beta program, contact your account manager.
+
+
 
 ## Legal disclaimer
 <!-- Braze Legal must approve any changes to this content. -->

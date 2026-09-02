@@ -1,4 +1,4 @@
-<div id='api_anydacbgzjed' class='api_div' data-search-keywords='start live activity app_id activity_id activity_attributes_type activity_attributes content_state stale_date notification external_user_ids custom_audience segment_id message error'>
+<div id='api_twzuaddtchfg' class='api_div' data-search-keywords='start live activity app_id activity_id activity_attributes_type activity_attributes content_state stale_date notification external_user_ids user_aliases custom_audience segment_id message error'>
 <h1 id="start-live-activity">Start Live Activity</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/live_activity/start</p>
@@ -8,9 +8,9 @@
   <p>Use this endpoint to remotely start <a href="/docs/developer_guide/push_notifications/live_notifications?sdktab=swift">Live Activities</a> displayed in your iOS app. This endpoint requires additional setup.</p>
 </blockquote>
 
-<p>After you create a Live Activity, you can make a POST request to remotely start your activity for a segment, a connected audience, or specific external user IDs. For more information about Apple’s Live Activities, see <a href="https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications">Starting and updating Live Activities with ActivityKit push notifications</a>.</p>
+<p>After you create a Live Activity, make a POST request to target a segment, a connected audience, or specific users. Identify specific users by external user ID, user alias, or both. For more information about Apple’s Live Activities, see <a href="https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications">Starting and updating Live Activities with ActivityKit push notifications</a>.</p>
 
-<p>If <code class="language-plaintext highlighter-rouge">content-available</code> isn’t set, the default Apple Push Notification service (APNs) priority is 10. If <code class="language-plaintext highlighter-rouge">content-available</code> is set, this priority is 5. Refer to <a href="/docs/api/objects_filters/messaging/apple_object">Apple push object</a> for more details.</p>
+<p>If <code class="language-plaintext highlighter-rouge">content-available</code> isn’t set, the default Apple Push Notification service (APNs) priority is 10. If <code class="language-plaintext highlighter-rouge">content-available</code> is set, this priority is 5. For more information, see <a href="/docs/api/objects_filters/messaging/apple_object">Apple push object</a>.</p>
 
 <p><strong>Tip:</strong></p>
 
@@ -25,14 +25,14 @@
   <li>Store that <code class="language-plaintext highlighter-rouge">activity_id</code> and your target end time in your backend scheduler.</li>
   <li>At the target end time, send a <code class="language-plaintext highlighter-rouge">/messages/live_activity/update</code> request with <code class="language-plaintext highlighter-rouge">end_activity</code> set to <code class="language-plaintext highlighter-rouge">true</code>.</li>
   <li>Configure dismissal behavior in the same update request. For details, see the <a href="/docs/api/endpoints/messaging/live_activity/update"><code class="language-plaintext highlighter-rouge">/messages/live_activity/update</code></a> endpoint.</li>
-  <li>Verify send and outcome events in the <a href="/docs/user_guide/administrative/app_settings/message_activity_log_tab">Message Activity Log</a>.</li>
+  <li>Verify send and outcome events in the <a href="/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log">Message Activity Log</a>.</li>
 </ol>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need to complete the following:</p>
+<p>To use this endpoint, complete the following prerequisites:</p>
 
 <ul>
   <li>Generate an API key with the <code class="language-plaintext highlighter-rouge">messages.live_activity.start</code> permission.</li>
@@ -42,6 +42,10 @@
 <p><strong>Important:</strong></p>
 
 <p>If the final rendered payload is larger than the corresponding service’s maximum allowed size, the send won’t be successful.</p>
+
+<p><strong>Important:</strong></p>
+
+<p>When you target specific users, Braze starts a Live Activity only for <code class="language-plaintext highlighter-rouge">external_user_ids</code> and <code class="language-plaintext highlighter-rouge">user_aliases</code> that resolve to existing users.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -68,16 +72,24 @@
 11
 12
 13
+14
+15
+16
+17
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"app_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) App API identifier retrieved from the Developer Console."</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"activity_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Define a custom string as your `activity_id`. You will use this ID when you wish to send update or end events to your Live Activity."</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"activity_attributes_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The activity attributes type you define within `liveActivities.registerPushToStart` in your app"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"activity_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Define a custom string as your `activity_id`. Use this ID to send update or end events to your Live Activity."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"activity_attributes_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The activity attributes type you define within `liveActivities.registerPushToStart` in your app."</span><span class="p">,</span><span class="w">
   </span><span class="nl">"activity_attributes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, object) The static attribute values for the activity type (such as the sports team names, which don't change)"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"content_state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, object) You define the ContentState parameters when you create your Live Activity. Pass the updated values for your ContentState using this object. The format of this request must match the shape you initially defined."</span><span class="p">,</span><span class="w">
   </span><span class="nl">"stale_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, datetime in ISO-8601 format) The time the Live Activity content is marked as outdated in the user’s UI."</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"notification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, object) Include an `apple_push` object to define a push notification that creates an alert for the user, displayed on paired watchOS devices. Should include `notification.alert.title` and `notification.alert.body`"</span><span class="p">,</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">One</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">following:</span><span class="w">
-  </span><span class="nl">"external_user_ids"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, array of strings) see external user identifier, maximum 50"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"notification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, object) Include an `apple_push` object to define a push notification that creates an alert for the user, displayed on paired watchOS devices. Include `notification.alert.title` and `notification.alert.body`."</span><span class="p">,</span><span class="w">
+  </span><span class="err">//</span><span class="w"> </span><span class="err">Include</span><span class="w"> </span><span class="err">one</span><span class="w"> </span><span class="err">targeting</span><span class="w"> </span><span class="err">method:</span><span class="w">
+  </span><span class="err">//</span><span class="w"> </span><span class="mi">1</span><span class="err">.</span><span class="w"> </span><span class="s2">"external_user_ids"</span><span class="p">,</span><span class="w"> </span><span class="s2">"user_aliases"</span><span class="p">,</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">both</span><span class="w"> </span><span class="err">(combined</span><span class="w"> </span><span class="err">maximum</span><span class="w"> </span><span class="mi">50</span><span class="err">)</span><span class="w">
+  </span><span class="err">//</span><span class="w"> </span><span class="mi">2</span><span class="err">.</span><span class="w"> </span><span class="s2">"custom_audience"</span><span class="w">
+  </span><span class="err">//</span><span class="w"> </span><span class="mi">3</span><span class="err">.</span><span class="w"> </span><span class="s2">"segment_id"</span><span class="w">
+  </span><span class="nl">"external_user_ids"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, array of strings) see external user identifier"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_aliases"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, array of user alias objects) see user alias object"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"custom_audience"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, connected audience object) see connected audience"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"segment_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) see segment identifier"</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -105,7 +117,7 @@
       <td><code class="language-plaintext highlighter-rouge">activity_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>Define a custom string as your <code class="language-plaintext highlighter-rouge">activity_id</code>. You will use this ID when you wish to send update or end events to your Live Activity.</td>
+      <td>Define a custom string as your <code class="language-plaintext highlighter-rouge">activity_id</code>. Use this ID to send update or end events to your Live Activity.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">activity_attributes_type</code></td>
@@ -135,30 +147,38 @@
       <td><code class="language-plaintext highlighter-rouge">notification</code></td>
       <td>Required</td>
       <td>Object</td>
-      <td>Include an <a href="/docs/api/objects_filters/messaging/apple_object"><code class="language-plaintext highlighter-rouge">apple_push</code></a> object to define a push notification. The behavior of this push notification depends on if the user is active or if the user is using a proxy device. <ul><li>If a <code>notification</code> is included and the user is active on their iPhone when the update is delivered, the updated Live Activity UI will slide down and display like a push notification.</li><li>If a <code>notification</code> is included and the user is not active on their iPhone, their screen will light up to display the updated Live Activity UI on their lock screen.</li><li>The <code>notification alert</code> will not display as a standard push notification. Additionally, if a user has a proxy device, like an Apple Watch, the <code>alert</code> will be displayed there.</li></ul></td>
+      <td>Include an <a href="/docs/api/objects_filters/messaging/apple_object"><code class="language-plaintext highlighter-rouge">apple_push</code></a> object to define a push notification. The behavior of this push notification depends on if the user is active or if the user is using a proxy device. <ul><li>If a <code>notification</code> is included and the user is active on their iPhone when the update is delivered, the updated Live Activity UI slides down and displays like a push notification.</li><li>If a <code>notification</code> is included and the user is not active on their iPhone, their screen lights up to display the updated Live Activity UI on their lock screen.</li><li>The <code>notification alert</code> does not display as a standard push notification. Additionally, if a user has a proxy device, like an Apple Watch, the <code>alert</code> displays there.</li></ul></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">external_user_ids</code></td>
-      <td>Optional if <code class="language-plaintext highlighter-rouge">segment_id</code> or <code class="language-plaintext highlighter-rouge">custom_audience</code> is provided</td>
+      <td>Optional if <code class="language-plaintext highlighter-rouge">user_aliases</code>, <code class="language-plaintext highlighter-rouge">segment_id</code>, or <code class="language-plaintext highlighter-rouge">custom_audience</code> is provided</td>
       <td>Array of strings</td>
-      <td>See <a href="/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields">external user ID</a>. Maximum 50 external user IDs.</td>
+      <td>See <a href="/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields">external user ID</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">user_aliases</code></td>
+      <td>Optional if <code class="language-plaintext highlighter-rouge">external_user_ids</code>, <code class="language-plaintext highlighter-rouge">segment_id</code>, or <code class="language-plaintext highlighter-rouge">custom_audience</code> is provided</td>
+      <td>Array of user alias objects</td>
+      <td>See <a href="/docs/api/objects_filters/user_alias_object">user alias object</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">segment_id</code></td>
-      <td>Optional if <code class="language-plaintext highlighter-rouge">external_user_ids</code> or <code class="language-plaintext highlighter-rouge">custom_audience</code> is provided</td>
+      <td>Optional if <code class="language-plaintext highlighter-rouge">external_user_ids</code>, <code class="language-plaintext highlighter-rouge">user_aliases</code>, or <code class="language-plaintext highlighter-rouge">custom_audience</code> is provided</td>
       <td>String</td>
       <td>See <a href="/docs/api/identifier_types">segment identifier</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">custom_audience</code></td>
-      <td>Optional if <code class="language-plaintext highlighter-rouge">external_user_ids</code> or <code class="language-plaintext highlighter-rouge">segment_id</code> is provided</td>
+      <td>Optional if <code class="language-plaintext highlighter-rouge">external_user_ids</code>, <code class="language-plaintext highlighter-rouge">user_aliases</code>, or <code class="language-plaintext highlighter-rouge">segment_id</code> is provided</td>
       <td>Connected audience object</td>
       <td>See <a href="/docs/api/objects_filters/connected_audience">connected audience</a>.</td>
     </tr>
   </tbody>
 </table>
 
-<p>On this endpoint, pass connected audience filters in <code class="language-plaintext highlighter-rouge">custom_audience</code>.</p>
+<p>You can include <code class="language-plaintext highlighter-rouge">external_user_ids</code> and <code class="language-plaintext highlighter-rouge">user_aliases</code> in the same request. Their combined array length can’t exceed 50. Braze targets users who match either parameter and sends only once when multiple identifiers resolve to the same user.</p>
+
+<p>Don’t combine <code class="language-plaintext highlighter-rouge">external_user_ids</code> or <code class="language-plaintext highlighter-rouge">user_aliases</code> with <code class="language-plaintext highlighter-rouge">segment_id</code> or <code class="language-plaintext highlighter-rouge">custom_audience</code>. On this endpoint, use <code class="language-plaintext highlighter-rouge">custom_audience</code> to pass connected audience filters.</p>
 
 <h2 id="example-request">Example request</h2>
 
@@ -189,32 +209,38 @@
 25
 26
 27
+28
+29
+30
 </pre></td><td class="rouge-code"><pre>curl <span class="nt">--location</span> <span class="nt">--request</span> POST <span class="s1">'https://rest.iad-01.braze.com/messages/live_activity/start'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
-<span class="nt">--header</span> <span class="s1">'Authorization: Bearer {YOUR-REST-API-KEY}'</span> <span class="se">\</span>
+<span class="nt">--header</span> <span class="s1">'Authorization: Bearer {YOUR_REST_API_KEY}'</span> <span class="se">\</span>
 <span class="nt">--data-raw</span> <span class="s1">'{
-    "app_id": "{YOUR-APP-API-IDENTIFIER}",
-    "activity_id": "football-chiefs-bills-2024-01-21",
-    "content_state": {
-        "teamOneScore": 0,
-        "teamTwoScore": 0
-    },
-    "activity_attributes_type": "FootballActivity",
-    "activity_attributes": {
-        "team1Name": "Chiefs",
-        "team2Name": "Bills"
-    },
-    "stale_date": "2024-01-22T16:55:49+0000",
-    "notification": {
-        "alert": {
-            "body": "The game is starting! Tune in soon!",
-            "title": "Chiefs v. Bills"
-        }
-    },
-    // One of the following required:
-    "segment_id": "{YOUR-SEGMENT-API-IDENTIFIER}", // Optional
-    "custom_audience": {...}, // Optional
-    "external_user_ids": ["user-id1", "user-id2"], // Optional
+  "app_id": "{YOUR_APP_API_IDENTIFIER}",
+  "activity_id": "football-chiefs-bills-2024-01-21",
+  "content_state": {
+    "teamOneScore": 0,
+    "teamTwoScore": 0
+  },
+  "activity_attributes_type": "FootballActivity",
+  "activity_attributes": {
+    "team1Name": "Chiefs",
+    "team2Name": "Bills"
+  },
+  "stale_date": "2024-01-22T16:55:49+0000",
+  "notification": {
+    "alert": {
+      "body": "The game is starting! Tune in soon!",
+      "title": "Chiefs v. Bills"
+    }
+  },
+  "external_user_ids": ["user-id1", "user-id2"],
+  "user_aliases": [
+    {
+      "alias_name": "user-name",
+      "alias_label": "user-label"
+    }
+  ]
 }'</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -224,7 +250,7 @@
 
 <h3 id="example-success-response">Example success response</h3>
 
-<p>A <code class="language-plaintext highlighter-rouge">201</code> status code is returned if the request was formatted correctly and we received the request. The status code <code class="language-plaintext highlighter-rouge">201</code> could return the following response body.</p>
+<p>A <code class="language-plaintext highlighter-rouge">201</code> status code returns if the request is formatted correctly and Braze receives it. The status code <code class="language-plaintext highlighter-rouge">201</code> can return the following response body.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2

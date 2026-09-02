@@ -25,7 +25,7 @@ Transactional email is designed for sending non-promotional, service-triggered m
 
 ## How transactional email differs from marketing email
 
-Transactional emails are sent through a dedicated Braze [transactional HTTP API](https://www.braze.com/docs/api/api_campaigns/transactional_api_campaign), which is optimized for speed and reliability. Unlike marketing emails, transactional emails:
+Transactional emails are sent through a dedicated Braze [transactional HTTP API](https://www.braze.com/docs/user_guide/channels/transactional_email/create_a_transactional_email/), which is optimized for speed and reliability. Unlike marketing emails, transactional emails:
 
 - Don't require a user to be opted in to marketing communications
 - Are triggered by API calls rather than scheduled or action-based triggers

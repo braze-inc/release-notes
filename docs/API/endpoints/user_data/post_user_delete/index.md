@@ -1,4 +1,4 @@
-<div id='api_bpfgmprrzuie' class='api_div' data-search-keywords='delete users external_ids user_aliases braze_ids email_addresses phone_numbers deleted'>
+<div id='api_ddtvabkeoopw' class='api_div' data-search-keywords='delete users external_ids user_aliases braze_ids email_addresses phone_numbers deleted'>
 <h1 id="delete-users">Delete users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/delete</p>
@@ -20,7 +20,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.delete</code> permission.</p>
+<p>To use this endpoint, you need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">users.delete</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

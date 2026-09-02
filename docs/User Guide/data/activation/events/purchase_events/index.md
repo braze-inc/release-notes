@@ -49,7 +49,7 @@ You can log purchases by passing a [purchase object](https://www.braze.com/docs/
 **Note:**
 
 
-Purchase event properties use the same data types as [custom event properties](https://www.braze.com/docs/user_guide/data/activation/custom_data/custom_events#expected-format).
+Purchase event properties use the same data types as [custom event properties](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/custom_event_properties#expected-format).
 
 
 
