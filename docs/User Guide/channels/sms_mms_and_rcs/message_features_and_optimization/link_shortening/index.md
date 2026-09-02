@@ -14,7 +14,7 @@ Braze is gradually rolling out [unified link shortening](https://www.braze.com/d
 
 Link shortening and click tracking allow you to automatically shorten URLs contained in SMS or RCS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how users are engaging with your campaigns.
 
-Link shortening and click tracking can be turned on at the [message variant-level](https://www.braze.com/docs/user_guide/messaging/ab_testing/create_tests/#step-1-create-your-campaign) in both campaigns and Canvases. 
+Link shortening and click tracking can be turned on at the [message variant-level](https://www.braze.com/docs/user_guide/messaging/ab_testing/create_tests#step-1-create-your-campaign) in both campaigns and Canvases.
 
 **Note:**
 
@@ -26,7 +26,7 @@ For RCS messages, link shortening and URL-level click tracking are supported for
 
 The length of the URL is determined by the type of tracking that is turned on:
 - **Basic tracking** enables campaign-level click tracking. Static URLs have a length of 20 characters, and personalized URLs have a length of 25 characters.
-- **Advanced tracking** enables campaign-level and user-level click tracking, and enables use of segmentation and retargeting capabilities which rely on clicks. Clicks also generate an [SMS click event](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/) sent through Currents. Static URLs with advanced tracking have a length of 27-28 characters, allowing you to create segments of users who have clicked on URLs. Personalized URLs have a length of 32-33 characters.
+- **Advanced tracking** enables campaign-level and user-level click tracking, and enables use of segmentation and retargeting capabilities which rely on clicks. Clicks also generate an [SMS click event](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events) sent through Currents. Static URLs with advanced tracking have a length of 27-28 characters, allowing you to create segments of users who have clicked on URLs. Personalized URLs have a length of 32-33 characters.
 
 Links are shortened using our shared short domain (`brz.ai`) or your custom link shortening domain. An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/p/8jshX/2dj8d` (advanced, personalized). Refer to [Testing](#legacy_testing) for more information.
 
@@ -52,7 +52,7 @@ Braze recognizes only URLs that start with `http://` or `https://`. When a URL i
 **Note:**
 
 
-If you plan to use the BrazeAI<sup>TM</sup> [Intelligent Channel filter](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_channel/) and want the SMS and RCS channels to be selectable, turn on link shortening with advanced tracking.
+If you plan to use the BrazeAI<sup>TM</sup> [Intelligent Channel filter](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_channel) and want the SMS and RCS channels to be selectable, turn on link shortening with advanced tracking.
 
 
 
@@ -70,7 +70,7 @@ You can dynamically construct your URL directly within the Braze composer, allow
 
 ### Create a URL with supported Liquid personalization tags
 
-URLs can be dynamically generated through the use of any [supported Liquid personalization tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/).
+URLs can be dynamically generated through the use of any [supported Liquid personalization tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags).
 
 
 ```liquid
@@ -97,7 +97,7 @@ Braze shortens URLs that are rendered by Liquid, even those included in API-trig
 
 ### Shorten URLs in `/messages/send` endpoint
 
-Link shortening is also turned on for API-only messages through the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages/). To also turn on basic or advanced tracking, use the `link_shortening_enabled` or `user_click_tracking_enabled` request parameters.
+Link shortening is also turned on for API-only messages through the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages). To also turn on basic or advanced tracking, use the `link_shortening_enabled` or `user_click_tracking_enabled` request parameters.
 
 | Parameter | Required | Data type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -105,13 +105,13 @@ Link shortening is also turned on for API-only messages through the [`/messages/
 |`user_click_tracking_enabled`| Optional | Boolean | Set `user_click_tracking_enabled` to `true` to turn on link shortening, and campaign-level and user-level click tracking. You can use the tracked data to create segments of users who clicked URLs.<br><br> To use this parameter, `link_shortening_enabled` must be `true`, and a `campaign_id` and `message_variation_id` must be present. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Shorten URLs in /messages/send endpoint" }
 
-For a full list of request parameters, go to [request parameters](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages/#request-parameters).
+For a full list of request parameters, go to [request parameters](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages#request-parameters).
 
 ## Testing
 
 Before launching your campaign or Canvas, it's best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send an SMS or RCS message to [content test groups](https://www.braze.com/docs/user_guide/administer/global/user_management/internal_groups#content-test-groups) or an individual user. 
 
-This preview updates with relevant personalization and the shortened URL. The number of characters and [billable segments](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator/) also update to reflect the rendered personalization and the shortened URL.
+This preview updates with relevant personalization and the shortened URL. The number of characters and [billable segments](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator) also update to reflect the rendered personalization and the shortened URL.
 
 Make sure to save the campaign or Canvas before sending a test message to receive a representation of the shortened URL that is dispatched in your message. If the campaign or Canvas isn't saved before a test send, the test send includes a placeholder URL.
 
@@ -135,7 +135,7 @@ Liquid personalization and shortened URLs are templated in the **Test** tab afte
 
 ## Click tracking
 
-When link shortening is turned on, the **SMS/MMS/RCS Performance** table includes a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. **Total Clicks** excludes suspected bot clicks from dashboard counts. For more details on metrics, see [Message performance](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/reporting/) and [Bot click filtering](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/bot_click_filtering).
+When link shortening is turned on, the **SMS/MMS/RCS Performance** table includes a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. **Total Clicks** excludes suspected bot clicks from dashboard counts. For more details on metrics, see [Message performance](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/reporting) and [Bot click filtering](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/bot_click_filtering).
 
 ![SMS and MMS performance metrics table.](https://www.braze.com/docs/assets/img/link_shortening/shortening4.png?6ed26714edeecd623530764fcc136833)
 
@@ -143,7 +143,7 @@ The **Historical Performance** and **SMS/MMS/RCS Performance** tables also inclu
 
 ## Retargeting users
 
-For guidance on retargeting, visit [Retargeting](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting/#filter-by-advanced-tracking-links).
+For guidance on retargeting, visit [Retargeting](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting#filter-by-advanced-tracking-links).
 
 
 
@@ -159,7 +159,7 @@ For guidance on retargeting, visit [Retargeting](https://www.braze.com/docs/user
 
 ### Do I know which individual users are clicking on a URL?
 
-Yes. When **Advanced Tracking** is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting/) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent by Currents.
+Yes. When **Advanced Tracking** is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent by Currents.
 
 ### Does link shortening work with deep links or universal links?
 
@@ -191,7 +191,7 @@ WHERE s.send_id IS NOT NULL;
 
 Link shortening allows you to automatically shorten URLs contained in SMS or RCS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how users are engaging with your campaigns.
 
-Link shortening can be turned on at the [message variant-level](https://www.braze.com/docs/user_guide/messaging/ab_testing/create_tests/#step-1-create-your-campaign) in both campaigns and Canvases. When link shortening is turned on, clicks will generate an [SMS click event](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/) sent through Currents.
+Link shortening can be turned on at the [message variant-level](https://www.braze.com/docs/user_guide/messaging/ab_testing/create_tests#step-1-create-your-campaign) in both campaigns and Canvases. When link shortening is turned on, clicks will generate an [SMS click event](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events) sent through Currents.
 
 **Note:**
 
@@ -234,13 +234,13 @@ Braze recognizes only URLs that start with `http://` or `https://`. When a URL i
 
 ## Liquid personalization in URLs
 
-For information on how to dynamically construct URLs directly within the Braze composer, allowing you to add dynamic UTM parameters to your URLs or send users unique links, see [Use Liquid personalization in URLs](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls/#use-liquid-personalization-in-urls).
+For information on how to dynamically construct URLs directly within the Braze composer, allowing you to add dynamic UTM parameters to your URLs or send users unique links, see [Use Liquid personalization in URLs](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls#use-liquid-personalization-in-urls).
 
 ## Testing
 
 Before launching your campaign or Canvas, it's best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send an SMS or RCS message to [content test groups](https://www.braze.com/docs/user_guide/administer/global/user_management/internal_groups#content-test-groups) or an individual user. 
 
-This preview updates with relevant personalization and the shortened URL. The number of characters and [billable segments](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator/) also update to reflect the rendered personalization and the shortened URL.
+This preview updates with relevant personalization and the shortened URL. The number of characters and [billable segments](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator) also update to reflect the rendered personalization and the shortened URL.
 
 Make sure to save the campaign or Canvas before sending a test message to receive a representation of the shortened URL that is dispatched in your message. If the campaign or Canvas isn't saved before a test send, the test send includes a placeholder URL.
 
@@ -262,7 +262,7 @@ Liquid personalization and shortened URLs are templated in the **Test** tab afte
 
 ## Click tracking
 
-When link shortening is turned on, the **SMS/MMS/RCS Performance** table includes a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on metrics, see [Message performance](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/reporting/).
+When link shortening is turned on, the **SMS/MMS/RCS Performance** table includes a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on metrics, see [Message performance](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/reporting).
 
 ![SMS and MMS performance metrics table.](https://www.braze.com/docs/assets/img/link_shortening/shortening4.png?6ed26714edeecd623530764fcc136833)
 
@@ -270,7 +270,7 @@ The **Historical Performance** and **SMS/MMS/RCS Performance** tables also inclu
 
 ## Retargeting users
 
-For guidance on retargeting, visit [Retargeting](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting/#filter-by-advanced-tracking-links).
+For guidance on retargeting, visit [Retargeting](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting#filter-by-advanced-tracking-links).
 
 
 
@@ -286,7 +286,7 @@ For guidance on retargeting, visit [Retargeting](https://www.braze.com/docs/user
 
 ### Do I know which individual users are clicking on a URL?
 
-Yes. You can retarget users who have clicked URLs by using the [SMS retargeting filters](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting/) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent by Currents.
+Yes. You can retarget users who have clicked URLs by using the [SMS retargeting filters](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent by Currents.
 
 ### Does link shortening work with deep links or universal links?
 

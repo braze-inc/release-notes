@@ -4,7 +4,7 @@
 
 
 
-If you're participating in the [Canvas Context step early access](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context/), all timestamps with a datetime type from trigger event properties in action-based Canvases will always be normalized to [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). To learn more about this, refer to [Time zone consistency standardization](https://www.braze.com/docs/user_guide/engagement_tools/canvas/canvas_components/context#time-zone-consistency-standardization).
+If you're participating in the [Canvas Context step early access](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context/), all timestamps with a datetime type from trigger event properties in action-based Canvases will always be normalized to [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). To learn more about this, refer to [Time zone consistency standardization](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context#time-zone-consistency-standardization).
 
 ## Data flexibility
 
@@ -27,7 +27,7 @@ The `messages` response for push notifications now includes two new fields:
 
 ### Defining PII fields
 
-Selecting and [defining certain fields as PII fields](https://www.braze.com/docs/user_guide/administrative/app_settings/company_settings/security_settings#view-pii) only affects what Users can view on the Braze dashboard and does not impact how the End User data in such PII fields is handled.
+Selecting and [defining certain fields as PII fields](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#view-pii) only affects what Users can view on the Braze dashboard and does not impact how the End User data in such PII fields is handled.
 
 Consult your legal team to align your dashboard’s settings with any privacy regulations and policies applicable to your company, including those related to [data retention](https://www.braze.com/docs/api/data_retention/).
 

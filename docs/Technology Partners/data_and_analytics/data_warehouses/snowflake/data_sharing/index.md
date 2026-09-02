@@ -11,6 +11,19 @@ Snowflake Data Sharing is part of Braze Data Distribution. For a full overview o
 
 
 
+## Data Distribution entitlements
+
+Your Data Distribution entitlement determines which event types are available in your data share. Braze organizes events into the following categories:
+
+| Entitlement | Event category | Description | Event glossary reference |
+|------------|----------------|-------------|--------------------------|
+| **Engagement Events** | Message engagement events | Events related to message sends, deliveries, opens, clicks, bounces, and other messaging channel interactions | [Message engagement events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events) |
+| **Customer Behavior Events** | Message engagement events and customer behavior events | Includes all Message Engagement Events, plus events related to purchases, custom events, sessions, attribution, and in-app user actions | [Message engagement events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events), [Customer behavior and user events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events) |
+| **User Profiles and Attributes** | Message engagement events, customer behavior events, and user profile events | Includes Message Engagement Events and Customer Behavior Events, plus events related to changes in user profiles and attributes | [Message engagement events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events), [Customer behavior and user events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events), [User profile events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/user_profiles_events) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Data Distribution entitlements" }
+
+For questions about which events are included in your entitlement, contact your Braze account or customer success manager.
+
 ## About Secure Data Sharing
 
 With data sharing, no actual data is copied or transferred between accounts. All sharing is accomplished through Snowflake's unique services layer and metadata store. This is an important concept because shared data does not take up any storage in your account and, therefore, does not contribute to your monthly data storage charges. The **only** charges are for the computing resources (such as virtual warehouses) used to query the shared data.

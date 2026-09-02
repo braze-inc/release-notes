@@ -30,7 +30,7 @@ Cloud Data Ingestion (CDI) has a new design that separates sources and syncs, so
 
 
 
-After adding locales to your workspace, use [multi-language translations](https://www.braze.com/docs/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) to target users in different languages all within a single push, email, Banner, in-app message, or Content Block.
+After adding locales to your workspace, use [multi-language translations](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages) to target users in different languages all within a single push, email, Banner, in-app message, or Content Block.
 
 ![Locale previews](https://www.braze.com/docs/assets/img/multi-language_support/multi_language_user_preview.png?9e121697c3c1da2d351296be4d572a57){: style="max-width:70%;"}
 
@@ -43,7 +43,7 @@ In Canvas, you can now reference context variables to set:
 - An [expiration](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#set-an-expiration) for Banners and in-app messages in a Message step
 - A [personalized delays](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#action-path-delays) for Action Paths steps
 
-In the Context variable name field, you can also enter the context variable name or select it from the dropdown in the step editor. For more details, see [Context](https://www.braze.com/docs/user_guide/engagement_tools/canvas/canvas_components/context) and [Context variables](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_variables).
+In the Context variable name field, you can also enter the context variable name or select it from the dropdown in the step editor. For more details, see [Context](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context) and [Context variables](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables).
 
 ## Channels & Touchpoints
 
@@ -59,7 +59,7 @@ In the Context variable name field, you can also enter the context variable name
 
 
 
-You can use [Banners](https://www.braze.com/docs/user_guide/message_building_by_channel/banners/) as a messaging channel in Canvas [Message steps](https://www.braze.com/docs/user_guide/engagement_tools/canvas/canvas_components/message_step). Banners allow you to personalize app or website content dynamically, reflecting real-time user eligibility and behavior.
+You can use [Banners](https://www.braze.com/docs/user_guide/channels/banners) as a messaging channel in Canvas [Message steps](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step). Banners allow you to personalize app or website content dynamically, reflecting real-time user eligibility and behavior.
 
 ## Partnerships
 

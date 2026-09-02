@@ -1,6 +1,6 @@
 # LINE subscription groups
 
-> There are two subscription states for LINE users: subscribed and unsubscribed. LINE can have up to 100 subscription groups per workspace, with each subscription group connected to its own LINE channel.
+> There are two subscription states for LINE users: subscribed and unsubscribed. Each subscription group is connected to its own LINE channel. For a cross-channel overview of subscription groups, see [Subscription groups](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups).
 
 | State | Definition |
 | --- | --- |
@@ -24,4 +24,4 @@ LINE subscription groups can't be moved between workspaces. If you re-integrate 
 - **Standard archive:** If you archive a LINE subscription group and don't re-integrate the channel in another workspace, you can unarchive the subscription group later.
 - **Permanent archive:** If you re-integrate the LINE channel in a different workspace after archiving its subscription group, the original subscription group is permanently archived and can't be unarchived through the dashboard.
 
-For channel re-integration steps, refer to [LINE setup](https://www.braze.com/docs/user_guide/channels/line/line_setup/#re-integrate-a-line-channel-in-another-workspace).
+For channel re-integration steps, refer to [LINE setup](https://www.braze.com/docs/user_guide/channels/line/line_setup#re-integrate-a-line-channel-in-another-workspace).

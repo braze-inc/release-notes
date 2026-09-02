@@ -10,7 +10,7 @@ After creating a [catalog](https://www.braze.com/docs/user_guide/data/activation
 
 - You can create up to 30 selections per catalog.
 - You can add up to 10 filters per selection.
-- Selections are great for refining recommendations from Braze catalog data. If you're looking for inspiration, check out [About item recommendations](https://www.braze.com/docs/user_guide/brazeai/recommendations) for example use cases.
+- Selections are great for refining recommendations from Braze catalog data. If you're looking for inspiration, check out [About item recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/) for example use cases.
 
 ## Geolocation filters
 

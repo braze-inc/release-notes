@@ -149,9 +149,9 @@ The following lists methods across various platforms that are used to set custom
 - [Android and FireOS](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes?sdktab=android)
 - [iOS](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes?sdktab=swift)
 - [Web](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes?sdktab=web)
-- [React Native](https://www.braze.com/docs/developer_guide/platform_integration_guides/react_native/analytics#logging-custom-attributes)
+- [React Native](https://www.braze.com/docs/developer_guide/analytics)
 - [Unity](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes?sdktab=unity)
-- [.NET MAUI (formerly Xamarin)](https://www.braze.com/docs/developer_guide/platform_integration_guides/xamarin/analytics#setting-custom-attributes)
+- [.NET MAUI (formerly Xamarin)](https://www.braze.com/docs/developer_guide/analytics?sdktab=xamarin)
 - [Roku](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes)
 
 

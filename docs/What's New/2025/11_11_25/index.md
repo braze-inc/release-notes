@@ -72,9 +72,9 @@ You can [edit individual fields from a random or existing user](https://www.braz
 
 You can now set up your integration with [BrazeAI Decisioning Studio™ Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/) by referencing these configuration articles for:
 
-- [Braze](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/)
-- [Klaviyo](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/)
-- [Salesforce Marketing Cloud](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/)
+- [Braze](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/setup)
+- [Klaviyo](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/setup)
+- [Salesforce Marketing Cloud](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/setup)
 
 ### New features for Braze Agents
 

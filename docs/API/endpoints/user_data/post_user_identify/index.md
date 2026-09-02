@@ -1,4 +1,4 @@
-<div id='api_xwhbqxrgfeky' class='api_div' data-search-keywords='identify users aliases_to_identify emails_to_identify phone_numbers_to_identify aliases_processed message'>
+<div id='api_eoeiumwyyaaa' class='api_div' data-search-keywords='identify users aliases_to_identify emails_to_identify phone_numbers_to_identify aliases_processed message'>
 <h1 id="identify-users">Identify users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/identify</p>
@@ -26,7 +26,7 @@
 
 <p><strong>Tip:</strong></p>
 
-<p>To prevent unexpected loss of data when identifying users, we highly recommend that you first refer to <a href="/docs/user_guide/data_and_analytics/user_data_collection/best_practices#capturing-user-data-when-alias-only-user-info-is-already-present">data collection best practices</a> to learn about capturing user data when alias-only user information is already present.</p>
+<p>To prevent unexpected loss of data when identifying users, we highly recommend that you first refer to <a href="/docs/user_guide/data/unification/user_data/best_practices">data collection best practices</a> to learn about capturing user data when alias-only user information is already present.</p>
 
 <h3 id="merging-behavior">Merging behavior</h3>
 
@@ -81,7 +81,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.identify</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">users.identify</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 
@@ -230,7 +230,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <p><strong>Tip:</strong></p>
 
-<p>For more information on <code class="language-plaintext highlighter-rouge">alias_name</code> and <code class="language-plaintext highlighter-rouge">alias_label</code>, check out our <a href="/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases">user aliases</a> documentation.</p>
+<p>For more information on <code class="language-plaintext highlighter-rouge">alias_name</code> and <code class="language-plaintext highlighter-rouge">alias_label</code>, check out our <a href="/docs/user_guide/data/unification/user_data/user_profile_lifecycle">user aliases</a> documentation.</p>
 
 <h3 id="why-does-my-identify-request-return-success-but-the-profile-did-not-merge">Why does my identify request return success but the profile did not merge?</h3>
 

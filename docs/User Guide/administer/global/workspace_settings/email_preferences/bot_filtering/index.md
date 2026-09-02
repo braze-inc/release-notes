@@ -33,16 +33,13 @@ The following Braze metrics can be affected by bot clicks:
 
 When bot filtering is turned on, suspected bot clicks are excluded from click data. The following [Braze Intelligence features](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite) may reflect lower click-related volumes as a result:
 
-- Intelligent Selection
 - Intelligent Channel
 - Intelligent Timing
 - Experiment Step
     - Winning Path
-    - Personalized Path
-- Campaign
-    - Winning Variant
-    - Personalized Variant
 - Estimated real open rate
+
+[Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection) may also reflect lower click-related volumes when you optimize for a click-based goal.
 
 Unsubscribes from suspected bot clicks will not be affected. Braze will continue to process all unsubscribe requests as usual. 
 

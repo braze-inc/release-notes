@@ -20,7 +20,7 @@ Before using these endpoints, you must [add your locales](https://www.braze.com/
 
 ### How to test your translations
 
-There are two ways you can validate translation support using the API and the Braze dashboard across campaigns, Canvases (including individual steps), Content Blocks, and email templates:
+There are two ways you can validate translation support using the API and the Braze dashboard across campaigns, Canvases (including individual steps), Content Blocks, email templates, and webhook templates:
 
 - During composition (before launch)
 - After launch (using post-launch drafts)

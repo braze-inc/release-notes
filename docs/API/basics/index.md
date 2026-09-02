@@ -26,7 +26,7 @@ The following is an overview of terms you may see in the Braze REST API document
 
 ### Endpoints
 
-Braze manages a number of different instances for our dashboard and REST endpoints. When your account is provisioned, you log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket](https://www.braze.com/docs/braze_support) or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
+Braze manages a number of different instances for our dashboard and REST endpoints. When your account is provisioned, you log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket](https://www.braze.com/docs/user_guide/administer/personal/braze_support) or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
 
 To find your REST endpoint in Braze:
 
@@ -369,7 +369,7 @@ Given that REST API keys allow access to potentially sensitive REST API endpoint
 
 
 
-If you accidentally expose a key, you can delete it from the Developer Console. For help with this process, open a [support ticket](https://www.braze.com/docs/braze_support).
+If you accidentally expose a key, you can delete it from the Developer Console. For help with this process, open a [support ticket](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
 
 ### Security of REST API keys and SDK API keys
 
@@ -393,7 +393,7 @@ If you don't specify any, requests can be sent from any IP address.
 **Tip:**
 
 
-If you're making a Braze-to-Braze webhook and using allowlisting, see the list of [IPs to whitelist](https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook#ip-whitelisting).
+If you're making a Braze-to-Braze webhook and using allowlisting, see the list of [IPs to whitelist](https://www.braze.com/docs/user_guide/channels/webhooks/create_a_webhook).
 
 
 

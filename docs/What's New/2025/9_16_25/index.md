@@ -20,7 +20,7 @@ You can use custom properties from your Banner campaign to retrieve key–value 
 
 
 
-When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. Braze can store credentials that hold [token authentication header values](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call#using-token-authentication).
+When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. Braze can store credentials that hold [token authentication header values](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call#using-token-authentication).
 
 ### Promotion codes
 

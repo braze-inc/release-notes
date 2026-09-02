@@ -1,4 +1,4 @@
-<div id='api_hcanyztvrkwz' class='api_div' data-search-keywords='list user’s subscription group status status message'>
+<div id='api_ijordazishpx' class='api_div' data-search-keywords='list user’s subscription group status status message'>
 <h1 id="list-users-subscription-group-status">List user’s subscription group status</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/subscription/status/get</p>
@@ -9,6 +9,8 @@
 </blockquote>
 
 <p>These groups will be available on the <strong>Subscription Group</strong> page. The response from this endpoint will include the external ID and either subscribed, unsubscribed, or unknown for the specific subscription group requested in the API call. This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.</p>
+
+<p>If you collect email through a custom form and then set subscription group membership through the REST API, call this endpoint first to check whether a profile already exists. If no matching profile exists, create or subscribe the user with the <a href="/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status">Update user’s subscription group status</a> endpoint. Otherwise, update the existing profile instead of creating a duplicate. For other collection patterns, see <a href="/docs/user_guide/data/unification/user_data/best_practices">Collection best practices</a>.</p>
 
 <p>If you want to see examples or test this endpoint for <strong>Email Subscription Groups</strong>:</p>
 

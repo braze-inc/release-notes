@@ -1,4 +1,4 @@
-<div id='api_yysbtmzrtlfc' class='api_div' data-search-keywords='update user alias alias_updates alias_label old_alias_name new_alias_name'>
+<div id='api_kblfqpocqulo' class='api_div' data-search-keywords='update user alias alias_updates alias_label old_alias_name new_alias_name'>
 <h1 id="update-user-alias">Update user alias</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/alias/update</p>
@@ -64,7 +64,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       <td><code class="language-plaintext highlighter-rouge">alias_updates</code></td>
       <td>Required</td>
       <td>Array of update user alias objects</td>
-      <td>See <a href="/docs/api/objects_filters/user_alias_object">user alias object</a>.<br /><br /> For more information on <code class="language-plaintext highlighter-rouge">old_alias_name</code>, <code class="language-plaintext highlighter-rouge">new_alias_name</code>, and <code class="language-plaintext highlighter-rouge">alias_label</code>, refer to <a href="/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases">User aliases</a>.</td>
+      <td>See <a href="/docs/api/objects_filters/user_alias_object">user alias object</a>.<br /><br /> For more information on <code class="language-plaintext highlighter-rouge">old_alias_name</code>, <code class="language-plaintext highlighter-rouge">new_alias_name</code>, and <code class="language-plaintext highlighter-rouge">alias_label</code>, refer to <a href="/docs/user_guide/data/unification/user_data/user_profile_lifecycle#user-aliases">User aliases</a>.</td>
     </tr>
   </tbody>
 </table>

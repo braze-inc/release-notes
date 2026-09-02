@@ -43,7 +43,7 @@ Within this flow, you will:
 2. Create your WhatsApp Business profile.
 3. Verify your WhatsApp Business number.<br><br>
 
-After the setup is complete, a dedicated WhatsApp subscription group will be created for your users.
+After the setup is complete, a dedicated [WhatsApp subscription group](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups#whatsapp-subscription-groups) is created for your users.
 
 ### Step 3: Create WhatsApp templates
 

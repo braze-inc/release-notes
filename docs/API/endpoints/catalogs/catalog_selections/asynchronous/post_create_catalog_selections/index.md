@@ -1,4 +1,4 @@
-<div id='api_pgtrqvrgxlmy' class='api_div' data-search-keywords='create catalog selection message errors id parameters parameter_values'>
+<div id='api_tsehjbtcutgy' class='api_div' data-search-keywords='create catalog selection message errors id parameters parameter_values'>
 <h1 id="create-catalog-selection">Create catalog selection</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/catalogs/{catalog_name}/selections</p>
@@ -90,25 +90,25 @@
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">external_id</code></td>
-      <td>Required</td>
+      <td>Optional</td>
       <td>String</td>
       <td>A unique identifier for the selection.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">source</code></td>
-      <td>Required</td>
+      <td>Optional</td>
       <td>String</td>
-      <td>The source of the catalog data. For Shopify catalogs, use <code class="language-plaintext highlighter-rouge">"Shopify"</code>. For custom catalogs, use <code class="language-plaintext highlighter-rouge">"custom"</code>.</td>
+      <td>The source of the catalog data. For Shopify catalogs, set this to <code class="language-plaintext highlighter-rouge">"Shopify"</code>. Accepted values are <code class="language-plaintext highlighter-rouge">"Shopify"</code> and <code class="language-plaintext highlighter-rouge">"Braze"</code>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">filters</code></td>
-      <td>Optional</td>
+      <td>Required</td>
       <td>Array</td>
-      <td>An array of filter objects to apply to the catalog items. You can specify up to four filters per request. If no filters are provided, all items from the catalog are included.</td>
+      <td>An array of filter objects to apply to the catalog items. You can specify up to ten filters per request. If an empty array of filters is provided, all items from the catalog are included.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">results_limit</code></td>
-      <td>Optional</td>
+      <td>Required</td>
       <td>Integer</td>
       <td>The maximum number of results to return. Must be a number between 1 and 50.</td>
     </tr>
@@ -167,7 +167,7 @@
     "name": "favorite-restaurants",
     "description": "Favorite restaurants in NYC",
     "external_id": "favorite-nyc-restaurants",
-    "source": "custom",
+    "source": "Braze",
     "filters": [
       {
         "field": "City",
@@ -226,7 +226,7 @@
 
 <p><strong>Note:</strong></p>
 
-<p>The API supports a maximum of four filters per selection request. In the Braze dashboard, you can add up to 10 filters per selection. Filters are applied in the order they appear in the array.</p>
+<p>The API supports a maximum of ten filters per selection request. Filters are applied in the order they appear in the array.</p>
 
 <p><strong>Note:</strong></p>
 

@@ -16,7 +16,7 @@ Because API campaigns always include a `campaign_id`, their sends are reflected 
 **Warning:**
 
 
-Because API campaigns are typically transactional, all users are eligible for API campaigns, even those in your Global Control Group. A [one-click list-unsubscribe](https://www.braze.com/docs/user_guide/administrative/app_settings/email_settings#list-unsubscribe) header is not added to these sends by default. To add a one-click list-unsubscribe header to an API campaign, see [Add one-click list-unsubscribe to API campaigns](#add-one-click-list-unsubscribe-to-api-campaigns). To add a one-click list-unsubscribe header to all API campaigns, contact your customer success manager.
+Because API campaigns are typically transactional, all users are eligible for API campaigns, even those in your Global Control Group. A [one-click list-unsubscribe](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/email_preferences) header is not added to these sends by default. To add a one-click list-unsubscribe header to an API campaign, see [Add one-click list-unsubscribe to API campaigns](#add-one-click-list-unsubscribe-to-api-campaigns). To add a one-click list-unsubscribe header to all API campaigns, contact your customer success manager.
 
 
 

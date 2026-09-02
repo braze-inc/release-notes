@@ -2283,6 +2283,10 @@ public void onCreate() {
 
 After creating the channel in your Android code, use the channel ID when sending push notifications from the Braze dashboard. For more information on notification channels, see [Android notification channels](https://www.braze.com/docs/user_guide/message_building_by_channel/push/android/notification_channels/).
 
+## Troubleshooting iOS builds after upgrading the plugin
+
+Cordova Braze SDK 9.0.0 and later use Swift SDK 9.0.0 or later. Starting with Swift SDK 8.0.0, that native SDK is compiled with **Xcode 15.2**. If your iOS build fails after you upgrade the Cordova plugin to 9.0.0 or later, update Xcode to 15.2 or newer and confirm it matches the [Swift SDK changelog](https://www.braze.com/docs/developer_guide/changelogs/?sdktab=swift) for the native iOS version your plugin uses.
+
 
 
 
@@ -3648,6 +3652,10 @@ In the Braze dashboard, go to [User Search](https://www.braze.com/docs/user_guid
 
 
 
+## Testing with Jest
+
+React Native unit tests that import the Braze SDK need mocks for native modules and the Braze Turbo Module. The [Braze React Native SDK repository](https://github.com/braze-inc/braze-react-native-sdk) ships a reference Jest setup in [`__tests__/jest.setup.js`](https://github.com/braze-inc/braze-react-native-sdk/blob/master/__tests__/jest.setup.js). Add that file (or an adapted copy) to `setupFiles` in your Jest configuration so `NativeEventEmitter`, `TurboModuleRegistry`, and `BrazeReactBridge` are mocked when you test components that call Braze APIs.
+
 ## Next steps
 
 After integrating the Braze SDK, you can start implementing common messaging features:
@@ -3691,7 +3699,7 @@ config[config_fields.HEARTBEAT_FREQ_IN_SECONDS] = 5
 globalNode.addFields({brazeConfig: config})
 ```
 
-You can find your [SDK endpoint](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints/) and API key within the Braze dashboard.
+You can find your [SDK endpoint](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints) and API key within the Braze dashboard.
 
 ### Step 4: Initialize Braze
 

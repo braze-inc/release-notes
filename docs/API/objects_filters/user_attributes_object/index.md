@@ -40,7 +40,7 @@ Use Braze user profile field names (listed as follows or any listed in the secti
 ```
 
 - [External user ID](https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields)
-- [User aliases](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases)
+- [User aliases](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle)
 
 **Note:**
 

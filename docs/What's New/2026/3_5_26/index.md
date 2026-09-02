@@ -71,7 +71,7 @@ The [Messaging Diagnostics dashboard](https://www.braze.com/docs/user_guide/anal
 
 
 
-Braze is introducing [granular permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/), a more flexible way to manage user access. Refer to [Migrating to granular permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/granular_permissions_migration/) to learn about the migration process, including how legacy permissions map to granular permissions.
+Braze is introducing [granular permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/), a more flexible way to manage user access. Refer to [Migrating to granular permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) to learn about the migration process, including how legacy permissions map to granular permissions.
 
 ### Channel-based rate limiting
 

@@ -52,7 +52,7 @@ Compose [multi-language messages](https://www.braze.com/docs/user_guide/messagin
 
 
 
-Managing who can access your account and perform specific actions is critical for both security and operational efficiency. To give you more control, Braze is introducing [granular permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/granular_permissions_migration/), a more flexible and precise way to manage user access across your account.
+Managing who can access your account and perform specific actions is critical for both security and operational efficiency. To give you more control, Braze is introducing [granular permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions), a more flexible and precise way to manage user access across your account.
 
 ### Send to Destination Canvas component
 

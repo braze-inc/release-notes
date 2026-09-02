@@ -154,7 +154,7 @@ For a consolidated reference of data types across custom attributes, event prope
 
 ### Purchase properties
 
-[Purchase properties](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/purchase_events#purchase-properties) can be used to trigger messages and for personalization using Liquid, also allowing you to segment based on these properties.
+[Purchase properties](https://www.braze.com/docs/user_guide/data/activation/events/purchase_events) can be used to trigger messages and for personalization using Liquid, also allowing you to segment based on these properties.
 
 <div class='alert alert-note' role='alert'><img src='/docs/assets/img/message-note.png' alt='' class='alert-icon' width='70' height='70'><div class='alert-msg'><span class='alert-label' role='heading' aria-level='6'>note</span><br />
 <p>When you view segmentable purchase properties in <strong>Data Settings</strong> &gt; <strong>Products</strong>, the list displays property keys (names such as “color” or “brand”), not the actual property values (such as “red” or “Nike”).</p>
@@ -226,7 +226,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Purchase objects, event objects, and webhooks
 
-Using the example provided, we can see that someone bought a backpack with the properties: color, monogram, checkout duration, size, and brand. We can then create segments with these properties by using [purchase event properties](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/purchase_events#purchase-properties) or send custom messages through a channel using Liquid. For example, "Hello **Ann F.**, Thanks for purchasing that **red, medium backpack** for **$40.00**! Thanks for shopping at **Backpack Locker**!"
+Using the example provided, we can see that someone bought a backpack with the properties: color, monogram, checkout duration, size, and brand. We can then create segments with these properties by using [purchase event properties](https://www.braze.com/docs/user_guide/data/activation/events/purchase_events) or send custom messages through a channel using Liquid. For example, "Hello **Ann F.**, Thanks for purchasing that **red, medium backpack** for **$40.00**! Thanks for shopping at **Backpack Locker**!"
 
 If you do want to save, store and track properties to segment with, you need to set them up as custom attributes. This can be done using [Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension), which allow you to target users based on custom event or purchase behavior stored for the lifetime of that user profile.
 

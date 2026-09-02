@@ -67,7 +67,7 @@ Authorize the connection with your Braze API credentials:
 ![Crowdin Braze Campaigns & Canvas connection form with REST API key, REST endpoint, and Log in with Braze Campaigns & Canvas.](https://www.braze.com/docs/assets/img/crowdin/crowdin_campaigns_canvas_login.png?527460c453e904b00a53e8864a0adc3d)
 
 - **Braze REST API key:** Create this in Braze under **Settings** > **APIs and Identifiers** > **API Keys**. Grant the permissions this integration needs (campaigns, Canvas, Content Blocks, and custom attributes).
-- **Braze REST endpoint:** Enter the URL for your Braze instance (for example, `https://rest.iad-03.braze.com`). For more information, see [REST API endpoints](https://www.braze.com/docs/api/basics/#endpoints).
+- **Braze REST endpoint:** Enter the URL for your Braze instance (for example, `https://rest.iad-03.braze.com`). For more information, see [REST API endpoints](https://www.braze.com/docs/api/basics#endpoints).
 
 ![Braze REST API Keys page with Create API Key and the REST Endpoint copy control.](https://www.braze.com/docs/assets/img/crowdin/braze_rest_api_keys.png?0fbc73dd25c0997b647dff5f4eb1f5ed)
 
@@ -100,7 +100,7 @@ Crowdin reads the same Liquid **translation tags** Braze uses for multi-language
 
 `{% translation greeting %}Hello!{% endtranslation %}`
 
-For HTML, Liquid in links, and other patterns, follow the same rules as in [Translating locales](https://www.braze.com/docs/user_guide/engagement_tools/messaging_fundamentals/localization/locales) (for example, keep tags around the smallest segments possible, and wrap only language-specific parts of URLs when localizing links).
+For HTML, Liquid in links, and other patterns, follow the same rules as in [Translating locales](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages) (for example, keep tags around the smallest segments possible, and wrap only language-specific parts of URLs when localizing links).
 
 Save your Braze message as a **Draft** before Crowdin can detect and pull the content.
 

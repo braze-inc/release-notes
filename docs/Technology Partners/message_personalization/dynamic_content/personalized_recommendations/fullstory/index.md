@@ -151,7 +151,7 @@ At this stage, the Canvas can access the response to the Connected Content call,
 
 
 
-You can leverage any of the data available in the preceding object using the context Liquid tag later in the user's Canvas journey. The following steps show how you can use this data in an [Agent](https://www.braze.com/docs/user_guide/engagement_tools/canvas/canvas_components/agent_step) step.
+You can leverage any of the data available in the preceding object using the context Liquid tag later in the user's Canvas journey. The following steps show how you can use this data in an [Agent](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/agent_step) step.
 
 **Note:**
 

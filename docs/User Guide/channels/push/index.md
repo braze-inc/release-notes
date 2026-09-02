@@ -1,6 +1,6 @@
 # Push
 
-> Push notifications are a tried-and-true way to send time-sensitive calls to action through mobile or web, as well as re-engage users who haven't come into the app in a while. They lead the user directly to content and demonstrate the value of your application.
+> Push notifications send time-sensitive calls to action to mobile and web devices and re-engage users who have not opened your app recently. They open directly to relevant content and demonstrate ongoing value from your product. This hub covers push integration, opt-in strategy, message types, best practices, and platform-specific settings for iOS, Android, and Web. Consider [push primer messages](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages) before you request system permission. See the integration guides for [iOS](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift), [Android](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android), and [Web](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=web) to get started.
 
 [![Braze Learning course](https://www.braze.com/docs/assets/img/bl_icon3.png?5f6465f63e399dec15d7020b6f4d2452)](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"}
 

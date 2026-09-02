@@ -7,7 +7,7 @@ The Braze and Tealium integration leverages AudienceStream visitor profiles. Sha
 **Important:**
 
 
-Tealium AudienceStreams and EventStreams offer both batch and non-batch connector actions. The non-batch connector should be used when real-time requests are important to the use case and there are no concerns about hitting the Braze API rate limit specifications. Contact Braze [Support](https://www.braze.com/docs/braze_support/) or your customer success manager if you have any questions. 
+Tealium AudienceStreams and EventStreams offer both batch and non-batch connector actions. The non-batch connector should be used when real-time requests are important to the use case and there are no concerns about hitting the Braze API rate limit specifications. Contact Braze [Support](https://www.braze.com/docs/braze_support) or your customer success manager if you have any questions. 
 
 
 
@@ -17,7 +17,7 @@ Tealium AudienceStreams and EventStreams offer both batch and non-batch connecto
 | ---- | ----------- |
 | Tealium account | A [Tealium account](https://my.tealiumiq.com/) with server-side access is required. We recommend also using the client-side integrations to take advantage of this partnership. |
 | REST API key | A Braze REST API key with `users.track`, `users.delete`, and `subscription.status.set` permissions.<br><br>This can be created within **Braze dashboard > Developer Console > REST API Key > Create New API Key**|
-| [Braze REST endpoint](https://www.braze.com/docs/api/basics/#endpoints) | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance](https://www.braze.com/docs/api/basics/#endpoints). |
+| [Braze REST endpoint](https://www.braze.com/docs/api/basics#endpoints) | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance](https://www.braze.com/docs/api/basics#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Integration

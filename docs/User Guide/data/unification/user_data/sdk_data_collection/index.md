@@ -48,7 +48,7 @@ Calculated metrics include channel-based metrics (listed in the [Report metrics 
 | Uninstalled                                    | Boolean and time                                                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Calculated metrics" }
 
-Minimum integration means you only collect the required data listed in [Minimum integration](#minimum-integration) and opt out of [optional data collected by default](#optional-data-collected-by-default) by [blocking optional SDK data collection](https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_primer#blocking-data-collection).
+Minimum integration means you only collect the required data listed in [Minimum integration](#minimum-integration) and opt out of [optional data collected by default](#optional-data-collected-by-default) by [blocking optional SDK data collection](https://www.braze.com/docs/developer_guide/getting_started/sdk_overview).
 
 **Important:**
 
@@ -61,7 +61,7 @@ If you want a minimum integration and use mParticle, Segment, Tealium, or GTM, n
 
 ## Optional data collected by default
 
-In addition to the minimum integration data, the following attributes are automatically captured by Braze when you initialize the SDK integration. You can [opt-out](https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_primer#blocking-data-collection) of collecting these attributes to allow for a minimum integration.
+In addition to the minimum integration data, the following attributes are automatically captured by Braze when you initialize the SDK integration. You can [opt-out](https://www.braze.com/docs/developer_guide/getting_started/sdk_overview) of collecting these attributes to allow for a minimum integration.
 
 | Attribute               | Platform          | Description                                                                        | Why it's collected                                                                                                                                                      |
 |-------------------------|-------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

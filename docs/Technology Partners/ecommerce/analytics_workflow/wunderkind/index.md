@@ -38,7 +38,7 @@ In your Braze dashboard:
 **Note:**
 
 
-For Wunderkind Signals, Braze [REST API](https://www.braze.com/docs/api/basics/) requests are authenticated with a REST API key, not with OAuth tokens. Create a dedicated API key in the dashboard and provide that key to Wunderkind.
+For Wunderkind Signals, Braze [REST API](https://www.braze.com/docs/api/basics) requests are authenticated with a REST API key, not with OAuth tokens. Create a dedicated API key in the dashboard and provide that key to Wunderkind.
 
 
 
@@ -71,7 +71,7 @@ For each Signals Canvas, build your email templates using Braze's drag-and-drop 
 
 For each Signals Canvas, go to the **Target Audience** settings to review Wunderkind's default entry audience and exit criteria.
 
-- To ensure that you are not messaging your users too often, see [User-centric rate limiting](https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/).
+- To ensure that you are not messaging your users too often, see [User-centric rate limiting](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#user-centric-rate-limiting).
 - Adjust settings to prevent users from continuing to receive Canvas messages after they make a purchase. For example, add the exception **Make Purchase**.
 - Certain Signals Canvases are pre-configured with custom attribute filters for users to receive the highest-intent message possible.
 - See [Review Canvas eligibility](https://support.wunderkind.co/hc/en-us/articles/47156586245787-Review-Canvas-Eligibility) in the Wunderkind Help Center for details on Canvas eligibility and priority.
@@ -402,7 +402,7 @@ If you trigger the Canvas with Braze's `email` field instead of `user_alias`, th
 
 ### Example Liquid usage
 
-When Wunderkind calls `/canvas/trigger/send`, the keys and values you pass in each recipient's `context` object become Canvas entry data. In Message steps, reference them with the `context` Liquid namespace. An example is `{{context.${WkPurpose}}}` as described in [Canvas context object](https://www.braze.com/docs/api/objects_filters/context_object/) and [Message](https://www.braze.com/docs/user_guide/engagement_tools/canvas/canvas_components/message_step/). No extra configuration is required beyond using the correct Liquid syntax.
+When Wunderkind calls `/canvas/trigger/send`, the keys and values you pass in each recipient's `context` object become Canvas entry data. In Message steps, reference them with the `context` Liquid namespace. An example is `{{context.${WkPurpose}}}` as described in [Canvas context object](https://www.braze.com/docs/api/objects_filters/context_object/) and [Message](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step). No extra configuration is required beyond using the correct Liquid syntax.
 
 Do not nest Braze output tags inside the `for` tag condition. Assign the `Items` array from `context` to a variable first, then loop, as described in [Using Liquid](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#use-a-filter-result-in-a-for-loop). The `assign` line uses Braze's Canvas entry form `{{context.${Items}}}` (see [Supported personalization tags](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#summary-of-supported-tags)).
 

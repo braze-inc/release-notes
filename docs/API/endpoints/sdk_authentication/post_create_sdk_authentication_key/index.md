@@ -1,4 +1,4 @@
-<div id='api_sazxnrygdzwp' class='api_div' data-search-keywords='create sdk authentication key app_id rsa_public_key_str description make_primary id'>
+<div id='api_xpajubssbmfx' class='api_div' data-search-keywords='create sdk authentication key app_id rsa_public_key_str description make_primary id'>
 <h1 id="create-sdk-authentication-key">Create SDK Authentication key</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/app_group/sdk_authentication/create</p>

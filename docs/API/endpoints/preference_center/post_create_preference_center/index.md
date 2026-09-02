@@ -1,4 +1,4 @@
-<div id='api_rtsuenjvzzoe' class='api_div' data-search-keywords='create preference center name preference_center_title preference_center_page_html confirmation_page_html state options rel type sizes color href'>
+<div id='api_ognpltdyzlur' class='api_div' data-search-keywords='create preference center name preference_center_title preference_center_page_html confirmation_page_html state options rel type sizes color href'>
 <h1 id="create-preference-center">Create preference center</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/preference_center/v1</p>
@@ -419,7 +419,7 @@ Authorization: Bearer YOUR-REST-API-KEY
         background-color: #fff;
         color: #333335;
         font-family:
-          Sailec W00 Medium,
+          Aribau Grotesk Regular,
           helvetica,
           arial,
           sans-serif;
