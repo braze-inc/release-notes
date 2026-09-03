@@ -25,7 +25,7 @@ Regardless of the delivery type or **Card Creation** setting, a Content Card cam
 
 ## Viewing analytics
 
-Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For sent in Canvas, refer to [Canvas analytics](https://www.braze.com/docs/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).
+Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For sent in Canvas, refer to [Canvas analytics](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).
 
 **Tip:**
 
@@ -112,7 +112,7 @@ The **Conversion Event Details** panel shows you the performance of your convers
 
 ### Conversion correlation
 
-The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion correlation](https://www.braze.com/docs/user_guide/engagement_tools/testing/conversion_correlation/).
+The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion correlation](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/conversion_correlation/).
 
 ![The Conversion Correlation panel with an analysis on user attributes and behavior from the Primary Conversion Event - A.](https://www.braze.com/docs/assets/img/convcorr.png?9322bf2817e7a5fbecd4ceb3b850875f)
 
@@ -126,13 +126,13 @@ The **Conversion Correlation** panel gives you insight into what user attributes
 
 ## Retention report
 
-Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention reports](https://www.braze.com/docs/user_guide/analytics/reporting/retention_reports/).
+Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention reports](https://www.braze.com/docs/user_guide/analytics/reports/retention_reports/).
 
 ## Funnel report
 
 Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. If your campaign or Canvas uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
 
-For more information, refer to [Funnel reports](https://www.braze.com/docs/user_guide/analytics/reporting/funnel_reports/).
+For more information, refer to [Funnel reports](https://www.braze.com/docs/user_guide/analytics/reports/funnel_reports/).
 
 
 

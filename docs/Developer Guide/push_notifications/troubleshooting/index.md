@@ -25,7 +25,7 @@ Use this workflow for every push notification incident. Start at step 1.
 2. In the dashboard, confirm the test user matches the campaign or Canvas [segment](https://www.braze.com/docs/user_guide/channels/push/troubleshooting#segment) and is not in the [control group](https://www.braze.com/docs/user_guide/channels/push/troubleshooting#control-group-status).
 3. Send a [test push](https://www.braze.com/docs/developer_guide/push_notifications/sending_test_messages) to the test device.
 4. [Enable verbose logging](https://www.braze.com/docs/developer_guide/sdk_integration/verbose_logging), reproduce the issue, and review platform-specific guidance in your [SDK tab](#platform-specific-troubleshooting).
-5. If the issue persists, contact [Braze Support](https://www.braze.com/docs/braze_support) with verbose logs, platform, SDK version, and campaign or Canvas ID.
+5. If the issue persists, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) with verbose logs, platform, SDK version, and campaign or Canvas ID.
 
 ## Platform-specific troubleshooting
 
@@ -125,7 +125,7 @@ Your push messages might not be sending because of the following situations:
 - Your credentials have the wrong permission scope.
 - You uploaded wrong credentials to the wrong Braze workspace (wrong sender ID).
 
-For other issues that may prevent you from sending a push message, refer to [User Guide: Troubleshooting Push Notifications](https://www.braze.com/docs/user_guide/message_building_by_channel/push/troubleshooting/).
+For other issues that may prevent you from sending a push message, refer to [User Guide: Troubleshooting Push Notifications](https://www.braze.com/docs/user_guide/channels/push/troubleshooting/).
 
 ### No "push registered" users showing in the Braze dashboard (prior to sending messages)
 
@@ -529,7 +529,7 @@ Your push messages might not be sending because of the following situations:
 - Your credentials have the wrong permission scope.
 - You uploaded wrong credentials to the wrong Braze workspace (wrong sender ID).
 
-For other issues that may prevent you from sending a push message, refer to [User Guide: Troubleshooting Push Notifications](https://www.braze.com/docs/user_guide/message_building_by_channel/push/troubleshooting/).
+For other issues that may prevent you from sending a push message, refer to [User Guide: Troubleshooting Push Notifications](https://www.braze.com/docs/user_guide/channels/push/troubleshooting/).
 
 ### No "push registered" users showing in the Braze dashboard (prior to sending messages)
 
@@ -707,5 +707,5 @@ Custom notification factories (and all delegates) must extend [`Java.Lang.Object
 
 ## Line breaks in push notifications {#push-linebreaks}
 
-When composing push notifications with Liquid tags, line breaks adjacent to Liquid tags are automatically removed before the message is sent. In the [push notification composer](https://www.braze.com/docs/user_guide/message_building_by_channel/push/creating_a_push_message), these line breaks are re-added so your message remains readable while editing. If you notice line breaks around Liquid tags when saving your message, this is expected behavior.
+When composing push notifications with Liquid tags, line breaks adjacent to Liquid tags are automatically removed before the message is sent. In the [push notification composer](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message), these line breaks are re-added so your message remains readable while editing. If you notice line breaks around Liquid tags when saving your message, this is expected behavior.
 

@@ -30,7 +30,7 @@ Videos uploaded to the media library can only be used in WhatsApp messages. For 
 
 ## GIFs
 
-GIFs are supported in iOS push, in-app messages, email, Content Cards, and MMS or RCS messages. GIFs with very elongated shapes (for example, 3000 x 2 pixels) or 300 or more frames may fail to upload, even if the total file size is small.
+GIFs are supported in iOS push, in-app messages, email, Content Cards, and MMS or RCS messages. GIFs with very elongated shapes (for example, 3000 x 2 pixels) or 300 or more frames may fail to upload, even if the total file size is small. For RCS-specific GIF behavior on iOS, refer to [RCS](#rcs).
 
 
 
@@ -265,4 +265,10 @@ For additional resources, see [Push image and text specifications](https://www.b
 
 
 For composing MMS messages, refer to [Create an SMS, MMS, or RCS message](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/create).
+
+### RCS
+
+RCS media messages support JPG, JPEG, and GIF images. For file size and format details, refer to [Create an SMS, MMS, or RCS message](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/create).
+
+On iOS, GIFs in RCS rich cards display as static images. On Android, they animate as expected. For details, refer to [Why do GIFs in RCS rich cards appear static on iOS?](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/faqs#why-do-gifs-in-rcs-rich-cards-appear-static-on-ios).
 

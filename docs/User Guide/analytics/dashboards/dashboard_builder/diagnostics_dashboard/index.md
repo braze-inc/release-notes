@@ -180,7 +180,7 @@ If a user fails this single bundled check, they are dropped immediately. This bu
 
 ### What does an "other" abort outcome mean?
 
-These are aborts that don’t fall into existing dashboard categories. If you still notice a large proportion of aborts with "Other", contact [Braze Support](https://www.braze.com/docs/braze_support) for further assistance.
+These are aborts that don’t fall into existing dashboard categories. If you still notice a large proportion of aborts with "Other", contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) for further assistance.
 
 ### Why is the sum of _Not Sent_ and _Sent_ lower than my expected audience size?
 

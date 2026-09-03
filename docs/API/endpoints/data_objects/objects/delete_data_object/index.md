@@ -1,4 +1,4 @@
-<div id='api_pjfxfllrfqpe' class='api_div' data-search-keywords='delete data object type_name external_id deleted'>
+<div id='api_xsdjnudnsucr' class='api_div' data-search-keywords='delete data object type_name external_id deleted'>
 <h1 id="delete-data-object">Delete data object</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/data_objects/objects/{type_name}/{external_id}</p>

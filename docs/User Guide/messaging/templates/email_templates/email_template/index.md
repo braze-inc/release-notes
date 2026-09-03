@@ -10,7 +10,7 @@ In the Braze dashboard, go to **Content** > **Email**.
 
 Select between **Drag-and-drop Editor** or **HTML code editor** for your editing experience. 
 
-You can also choose from predesigned Braze templates, create a new template, or edit an existing template (plain or [mobile responsive](https://www.braze.com/docs/help/release_notes/2018/may#mobile-responsive-email-templates)).
+You can also choose from predesigned Braze templates, create a new template, or edit an existing template (plain or [mobile responsive](https://www.braze.com/docs/releases/2018/may#mobile-responsive-email-templates)).
 
 ![An email template for a company's spring sale with options to select the drag-and-drop editor or HTML editor, or to select from Braze templates.](https://www.braze.com/docs/assets/img/email_templates/template2.png?d05cabb839e9e85dd61301372e3025fa)
 

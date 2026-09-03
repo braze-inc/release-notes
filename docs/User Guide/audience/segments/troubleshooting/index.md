@@ -27,7 +27,7 @@ Use this workflow when a user should be in a segment but isn't, or when a segmen
 3. **Calculate exact statistics:** If the segment estimate shows 0 users or seems wrong, select **Calculate exact stats** in the **Reachable users** panel. Save your segment before calculating. If a calculation is already running, wait for it to finish; stale numbers may display until the new calculation completes. For details, see [Calculating exact statistics](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size#calculating-exact-statistics).
 4. **Check filter values:** Look for typos, data type mismatches, stale Canvas step references, and [negative filter + OR logic](#segment-is-much-larger-than-expected).
 5. **Check complexity:** If launch is blocked, see [Target audience is too complex to launch](#target-audience-is-too-complex-to-launch).
-6. **Contact Support:** If you're still blocked, contact [Braze Support](https://www.braze.com/docs/braze_support).
+6. **Contact Support:** If you're still blocked, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
 
 ## Segment shows zero users
 
@@ -59,7 +59,7 @@ Your dashboard will display an error when a campaign, Canvas, or segment exceeds
 - Segments that are just lists of user IDs or emails (which often use a regex filter) can be converted to a [CSV import](https://www.braze.com/docs/user_guide/audience/manage_audience/import_users/csv_import) and be simplified into a single CSV filter.
 - If you have CDI, you may be able to create a CDI segment that pulls the group directly from your data warehouse.
 
-You can also [contact Support](https://www.braze.com/docs/braze_support) for further assistance with filter optimization.
+You can also [contact Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) for further assistance with filter optimization.
 
 **Note:**
 

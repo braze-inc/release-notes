@@ -85,7 +85,7 @@ To stop tracking a specific custom attribute, event, or product, follow these st
 
 ![Multiple selected custom attributes that are blocklisted on the Custom Attributes page.](https://www.braze.com/docs/assets/img_archive/blocklist_custom_attr.png?25228d70e3157dcc9b0e340209d7dacd)
 
-You can blocklist up to 300 custom attributes and 300 custom events. To prevent collecting certain device attributes, see our [SDK guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_primer#blocking-data-collection). 
+You can blocklist up to 300 custom attributes and 300 custom events. To prevent collecting certain device attributes, see our [SDK guide](https://www.braze.com/docs/developer_guide/getting_started/sdk_overview#blocking-data-collection). 
 
 **Important:**
 

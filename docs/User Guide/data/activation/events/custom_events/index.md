@@ -95,9 +95,9 @@ Custom events require additional setup. Refer to the following platform document
 - [Android and FireOS](https://www.braze.com/docs/developer_guide/analytics/logging_events?tab=android)
 - [iOS](https://www.braze.com/docs/developer_guide/analytics/logging_events?tab=swift)
 - [Web](https://www.braze.com/docs/developer_guide/analytics/logging_events?tab=web)
-- [React Native](https://www.braze.com/docs/developer_guide/platform_integration_guides/react_native/analytics#logging-custom-events)
+- [React Native](https://www.braze.com/docs/developer_guide/analytics#custom-events)
 - [Unity](https://www.braze.com/docs/developer_guide/analytics/logging_events?tab=unity)
-- [.NET MAUI (formerly Xamarin)](https://www.braze.com/docs/developer_guide/platform_integration_guides/xamarin/analytics#tracking-custom-events)
+- [.NET MAUI (formerly Xamarin)](https://www.braze.com/docs/developer_guide/analytics?sdktab=xamarin#custom-events)
 - [Roku](https://www.braze.com/docs/developer_guide/analytics/logging_events?tab=roku)
 
 

@@ -16,7 +16,7 @@ Our translation endpoints work with [multi-language composition](https://www.bra
 
 ### Prerequisites
 
-Before using these endpoints, you must [add your locales](https://www.braze.com/docs/user_guide/administrative/app_settings/multi_language_settings#add-a-locale).
+Before using these endpoints, you must [add your locales](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/multi_language_settings#add-a-locale).
 
 ### How to test your translations
 
@@ -27,7 +27,7 @@ There are two ways you can validate translation support using the API and the Br
 
 Before testing updating translations, you must:
 
-1. [Add your locales](https://www.braze.com/docs/user_guide/administrative/app_settings/multi_language_settings#add-a-locale).
+1. [Add your locales](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/multi_language_settings#add-a-locale).
 2. Create a message and use translation tags where appropriate.
 3. Save the message.
 4. Select the locales to be included.

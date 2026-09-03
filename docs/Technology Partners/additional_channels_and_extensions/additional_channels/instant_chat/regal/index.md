@@ -14,7 +14,7 @@ Use Braze data to shape what your AI agents say, how they respond, and when to e
 | ----------- | ----------- |
 | Regal account | A Regal account is required to take advantage of this partnership. |
 | Regal API key | A Regal API key allows you to send events from Braze to Regal.<br><br>Email [support@regal.io](mailto:support@regal.io) to get this key. |
-| Braze Data Transformation | A [Data Transformation](https://www.braze.com/docs/data_transformation) is required to receive data from Regal. |
+| Braze Data Transformation | A [Data Transformation](https://www.braze.com/docs/user_guide/data/unification/data_transformation) is required to receive data from Regal. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Integration: Sending data from Braze to Regal
@@ -288,7 +288,7 @@ For the complete list of reporting events, property definitions, and sample payl
 
 ### Step 3: Transform Regal events into Braze events
 
-The Braze [Data Transformation](https://www.braze.com/docs/data_transformation) feature allows you to map incoming Regal events into the format necessary to be added as attributes, events, or purchases in Braze.
+The Braze [Data Transformation](https://www.braze.com/docs/user_guide/data/unification/data_transformation) feature allows you to map incoming Regal events into the format necessary to be added as attributes, events, or purchases in Braze.
 
 1. Name your Data Transformation. It is recommended to set up a Data Transformation per event webhook.
 

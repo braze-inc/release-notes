@@ -44,7 +44,7 @@ Due to file size restrictions, your export may fail if the estimated size of you
 
 
 
-If you've linked your [Amazon S3 credentials](https://www.braze.com/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3#amazon-s3-integration) to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. You must be logged into the dashboard to access the download link emailed to you.
+If you've linked your [Amazon S3 credentials](https://www.braze.com/docs/partners/data_and_analytics/cloud_storage/amazon_s3#integration) to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. You must be logged into the dashboard to access the download link emailed to you.
 
 
 
@@ -189,7 +189,7 @@ You can also leverage the following endpoints to export user data for a specific
 - [`/users/export/segment`](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment)
 - [`/users/export/global_control_group`](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_global_control_group)
 
-If you've connected [Amazon S3 credentials](https://www.braze.com/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3#amazon-s3-integration), large exports can be delivered to your bucket in addition to the emailed download link, as described in [Segment CSV export details](#segment-csv-export-details).
+If you've connected [Amazon S3 credentials](https://www.braze.com/docs/partners/data_and_analytics/cloud_storage/amazon_s3#integration), large exports can be delivered to your bucket in addition to the emailed download link, as described in [Segment CSV export details](#segment-csv-export-details).
 
 
 

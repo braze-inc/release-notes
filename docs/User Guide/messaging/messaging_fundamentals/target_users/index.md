@@ -98,6 +98,8 @@ Braze provides detailed audience statistics of the targeted channels in the foot
 
 
 
+
+
 ![The "Total Population" section with estimated counts for reachable users in each targeted channel.](https://www.braze.com/docs/assets/img_archive/multi_channel_footer.png?2b9386524cbc587df0506337fac379db)
 
 **Note:**

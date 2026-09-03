@@ -21,32 +21,35 @@ Before creating your first CDI Segment Extension, set up a new connected source 
 
 ### Step 2: Create a segment
 
-First, create a new [Segment Extension](https://www.braze.com/docs/user_guide/audience/segments/segment_extension), then select **Full refresh**.
+1. Go to **Audience** > **Segment Extensions**, then select **Create New Extension**.
+2. In the **Select your Segment Extension creation experience** menu, select **Full refresh (including CDI Segments)**.
 
-![Content Card modal placement example.](https://www.braze.com/docs/assets/img/segment/segment_extension_modal.png?389f8fd34f15bb22810ef986bbc258c0){: style="max-width:60%;"}
+![The "Select your Segment Extension creation experience" menu with creation options.](https://www.braze.com/docs/assets/img/segment/segment_extension_modal.png?389f8fd34f15bb22810ef986bbc258c0){: style="max-width:60%;"}
 
-For your data source, choose **CDI Data Tables**.
+{: start="3"}
+3. In the **Select the data source for this Segment Extension** menu, choose **CDI Data Tables**. This menu appears only after you have set up at least one [connected source](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/connected_sources).
 
-![Screenshot related to step 2: create a segment.](https://www.braze.com/docs/assets/img/segment/cdi_data_tables.png?33da447f7b1659144c832e17d978c14d){: style="max-width:60%;"}
+![The "Select the data source for this Segment Extension" menu with the CDI Data Tables option.](https://www.braze.com/docs/assets/img/segment/cdi_data_tables.png?33da447f7b1659144c832e17d978c14d){: style="max-width:60%;"}
 
-As part of your CDI setup, you can select from different connections to use in CDI Segment Extensions. Each connection has a specific set of data tables. Your development team can configure your connections and data tables during CDI setup.
+{: start="4"}
+4. Select a connection to use, then write your query. Each connection has a specific set of data tables. Your development team can configure your connections and data tables during CDI setup.
+5. View the available data tables, including their schema and any available descriptions, by selecting **Source Explorer**.
 
-To view the available data tables, including their schema and any available descriptions, select **Reference**. When you're ready, select a connection.
+![The Source Explorer showing the available data tables, including their schema and any available descriptions.](https://www.braze.com/docs/assets/img/segment/connection_schema_with_descriptions.png?242ac24afefc400186610bd05f249137){: style="max-width:100%;"}
 
-![To view the available data tables, including their schema and any available descriptions, select Reference. When you're ready, select a connection.](https://www.braze.com/docs/assets/img/segment/connection_schema_with_descriptions.png?242ac24afefc400186610bd05f249137){: style="max-width:100%;"}
-
-Next, write the SQL for your segment using [the Braze SQL syntax](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#step-2-write-your-sql).
-
-Keep in mind, all CDI Segment Extensions must use `external_user_id` as the selected column, and your `external_user_id` should match the one set in Braze for users.
+{: start="6"}
+6. Write the SQL for your segment using [the Braze SQL syntax](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#step-2-write-your-sql). Keep in mind, all CDI Segment Extensions must use `external_user_id` as the selected column, and your `external_user_id` should match the one set in Braze for users.<br><br>
+If your query results include users that don't exist in Braze, those users are ignored. Braze doesn't create new users based on the output of your CDI Segment Extension.
 
 **Important:**
 
 
-`external_user_id` must be a **string** value. If your source ID is stored as a number (for example, `client_id` as an integer), [cast it to a string in your SQL](https://www.w3schools.com/sql/func_sqlserver_cast.asp) so it matches the `external_id` type in Braze.
+`external_user_id` must be a string value. If your source ID is stored as a number (for example, `client_id` as an integer), [cast it to a string in your SQL](https://www.w3schools.com/sql/func_sqlserver_cast.asp) so it matches the `external_id` type in Braze.
 
 
 
-If your query results include users that don't exist in Braze, those users are ignored. Braze does not create new users based on the output of your CDI Segment Extension.
+{: start="7"}
+7. [Use this Segment Extension](https://www.braze.com/docs/user_guide/audience/segments/segment_extension#step-6-use-your-extension-in-a-segment) within a Braze segment to send a campaign or Canvas to this audience.
 
 **Tip:**
 
@@ -54,8 +57,6 @@ If your query results include users that don't exist in Braze, those users are i
 To learn how you can preview your Segment Extensions, manage your Segment Extensions, and run automated membership refreshes, see [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments).
 
 
-
-Finally, you can [use this Segment Extension](https://www.braze.com/docs/user_guide/audience/segments/segment_extension#step-6-use-your-extension-in-a-segment) within a Braze segment to send a campaign or Canvas to this audience.
 
 ## Considerations
 

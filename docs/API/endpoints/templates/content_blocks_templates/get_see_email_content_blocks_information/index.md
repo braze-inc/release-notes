@@ -1,4 +1,4 @@
-<div id='api_bhbkswtpgfph' class='api_div' data-search-keywords='see content block information content_block_id name content description content_type tags created_at last_edited inclusion_count inclusion_data message'>
+<div id='api_mdrzqhctwlzo' class='api_div' data-search-keywords='see content block information content_block_id name content description content_type tags created_at last_edited inclusion_count inclusion_data message'>
 <h1 id="see-content-block-information">See Content Block information</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/content_blocks/info</p>
@@ -11,7 +11,7 @@
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.info</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.info</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

@@ -4,7 +4,7 @@
 
 ## Platforms and features
 
-The following table summarizes messaging channel support for common TV and OTT platforms. All platforms also support data and analytics, Canvas, and Feature Flags. For Kindle Fire, use the same guidance as Amazon Fire TV. For Apple Vision Pro, see [visionOS support](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/visionos).
+The following table summarizes messaging channel support for common TV and OTT platforms. All platforms also support data and analytics, Canvas, and Feature Flags. For Kindle Fire, use the same guidance as Amazon Fire TV. For Apple Vision Pro, see [visionOS support](https://www.braze.com/docs/developer_guide/platforms/swift/visionos).
 
 <style>
 #tv-feature-table td,
@@ -238,7 +238,7 @@ For more information, visit the [iOS Swift SDK integration guide](https://github
 **Important:**
 
 
-Some iOS features are partially-supported or unsupported. For the full list, see [visionOS support](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/visionos).
+Some iOS features are partially-supported or unsupported. For the full list, see [visionOS support](https://www.braze.com/docs/developer_guide/platforms/swift/visionos).
 
 
 

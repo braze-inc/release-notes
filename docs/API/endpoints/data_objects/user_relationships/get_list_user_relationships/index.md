@@ -1,4 +1,4 @@
-<div id='api_kpkgpehjyigl' class='api_div' data-search-keywords='list user relationships type_name external_id rel_kind limit offset items user braze_id attributes role total_count has_more next_offset'>
+<div id='api_qldjojbtsgua' class='api_div' data-search-keywords='list user relationships type_name external_id rel_kind limit offset items user braze_id attributes role total_count has_more next_offset'>
 <h1 id="list-user-relationships">List user relationships</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/data_objects/objects/{type_name}/{external_id}/user_relationships</p>

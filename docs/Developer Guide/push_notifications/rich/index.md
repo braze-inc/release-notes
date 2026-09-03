@@ -14,7 +14,7 @@ Before you can use this feature, you'll need to [integrate the Swift Braze SDK](
 
 To create a [notification service extension](https://developer.apple.com/reference/usernotifications/unnotificationserviceextension), navigate to **File > New > Target** in Xcode and select **Notification Service Extension**.
 
-![Xcode target picker creating a Notification Service Extension for rich push.](https://www.braze.com/docs/assets/img_archive/ios10_se_at.png?ad077697c9a4c7c7bc3ca07a6405c05d){: style="max-width:90%"}
+![Xcode target picker creating a Notification Service Extension for rich push.](https://www.braze.com/docs/assets/img_archive/ios10_se_at.png?ad077697c9a4c7c7bc3ca07a6405c05d){: width="1442" height="1030" style="max-width:90%"}
 
 Ensure that **Embed In Application** is set to embed the extension in your application.
 
@@ -50,9 +50,9 @@ To see a sample, refer to the usage in [`NotificationService`](https://github.co
 
 After following the [Swift Package Manager integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager/), add `BrazeNotificationService` to your `Notification Service Extension` by doing the following:
 
-1. In Xcode, under frameworks and libraries, select the <i class="fas fa-plus"></i> add icon to add a framework. <br><br>![The plus icon is located under frameworks and libraries in Xcode.](https://www.braze.com/docs/assets/img_archive/rich_notification.png?aacc2bc0878ec1e3bf74e346f2cd7132)<br><br>
+1. In Xcode, under frameworks and libraries, select the <i class="fas fa-plus"></i> add icon to add a framework. <br><br>![The plus icon is located under frameworks and libraries in Xcode.](https://www.braze.com/docs/assets/img_archive/rich_notification.png?aacc2bc0878ec1e3bf74e346f2cd7132){: width="1930" height="446"}<br><br>
 
-2. Select the "BrazeNotificationService" framework. <br><br>![The "BrazeNotificationService framework can be selected in the modal that opens.](https://www.braze.com/docs/assets/img_archive/rich_notification2.png?13b077cd5a0a9723eff10fc48a6bc70c)
+2. Select the "BrazeNotificationService" framework. <br><br>![The "BrazeNotificationService framework can be selected in the modal that opens.](https://www.braze.com/docs/assets/img_archive/rich_notification2.png?13b077cd5a0a9723eff10fc48a6bc70c){: width="2248" height="1102"}
 
 
 
@@ -91,7 +91,7 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 
 To add `BrazeNotificationService.xcframework` to your `Notification Service Extension`, see [Manual integration](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/sdk_integration?tab=manual/).
 
-![Xcode project with BrazeNotificationService.xcframework added to the notification service extension.](https://www.braze.com/docs/assets/img/swift/rich_push/manual1.png?43f3a21a35ff7bd8ba2e787947a860b3)
+![Xcode project with BrazeNotificationService.xcframework added to the notification service extension.](https://www.braze.com/docs/assets/img/swift/rich_push/manual1.png?43f3a21a35ff7bd8ba2e787947a860b3){: width="1069" height="170"}
 
 
 

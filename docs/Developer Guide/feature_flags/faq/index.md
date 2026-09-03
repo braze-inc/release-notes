@@ -117,7 +117,7 @@ To control this, [listen for updates](https://www.braze.com/docs/developer_guide
 
 ### Why aren't users in my Global Control Group receiving feature flags experiments?
 
-You can't enable feature flags for users in your [Global Control Group](https://www.braze.com/docs/user_guide/engagement_tools/testing/global_control_group/). This means users in your Global Control Group also can't be part of Feature Flag experiments.
+You can't enable feature flags for users in your [Global Control Group](https://www.braze.com/docs/user_guide/audience/global_control_group/). This means users in your Global Control Group also can't be part of Feature Flag experiments.
 
 ## Additional questions?
 

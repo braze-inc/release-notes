@@ -1,11 +1,11 @@
-<div id='api_twzuaddtchfg' class='api_div' data-search-keywords='start live activity app_id activity_id activity_attributes_type activity_attributes content_state stale_date notification external_user_ids user_aliases custom_audience segment_id message error'>
+<div id='api_hyevtqnkmzrk' class='api_div' data-search-keywords='start live activity app_id activity_id activity_attributes_type activity_attributes content_state stale_date notification external_user_ids user_aliases custom_audience segment_id message error'>
 <h1 id="start-live-activity">Start Live Activity</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/live_activity/start</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to remotely start <a href="/docs/developer_guide/push_notifications/live_notifications?sdktab=swift">Live Activities</a> displayed in your iOS app. This endpoint requires additional setup.</p>
+  <p>Use this endpoint to remotely start <a href="/docs/developer_guide/live_notifications?sdktab=swift">Live Activities</a> displayed in your iOS app. This endpoint requires additional setup.</p>
 </blockquote>
 
 <p>After you create a Live Activity, make a POST request to target a segment, a connected audience, or specific users. Identify specific users by external user ID, user alias, or both. For more information about Apple’s Live Activities, see <a href="https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications">Starting and updating Live Activities with ActivityKit push notifications</a>.</p>
@@ -36,7 +36,7 @@
 
 <ul>
   <li>Generate an API key with the <code class="language-plaintext highlighter-rouge">messages.live_activity.start</code> permission.</li>
-  <li><a href="/docs/developer_guide/push_notifications/live_notifications?tab=local&amp;sdktab=swift#swift_create-an-activity">Create a Live Activity</a> using the Braze Swift SDK.</li>
+  <li><a href="/docs/developer_guide/live_notifications/live_activities?tab=local&amp;sdktab=swift#create-an-activity">Create a Live Activity</a> using the Braze Swift SDK.</li>
 </ul>
 
 <p><strong>Important:</strong></p>

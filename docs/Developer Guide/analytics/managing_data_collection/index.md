@@ -445,7 +445,7 @@ The following Braze SDK version is required to implement this feature:
 
 ### Step 1: Review your current policies
 
-Review your Braze SDK's current data-collection policies with your legal team to determine whether your app collects tracking data [as defined by Apple](#what-is-tracking-data). If you're not collecting any tracking data, you don't need to customize your privacy manifest for the Braze SDK at this time. For more information about the Braze SDK's data-collection policies, see [SDK data collection](https://www.braze.com/docs/user_guide/data/user_data_collection/sdk_data_collection/).
+Review your Braze SDK's current data-collection policies with your legal team to determine whether your app collects tracking data [as defined by Apple](#what-is-tracking-data). If you're not collecting any tracking data, you don't need to customize your privacy manifest for the Braze SDK at this time. For more information about the Braze SDK's data-collection policies, see [SDK data collection](https://www.braze.com/docs/user_guide/data/unification/user_data/sdk_data_collection/).
 
 **Important:**
 
@@ -893,7 +893,7 @@ Braze.updateTrackingPropertyAllowList({
 });
 ```
 
-For more information, refer to [Privacy Manifest](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/privacy_manifest/).
+For more information, refer to [Privacy Manifest](https://www.braze.com/docs/developer_guide/analytics/managing_data_collection?sdktab=swift#swift_privacy-manifest).
 
 ## Logout and Unregister Push
 

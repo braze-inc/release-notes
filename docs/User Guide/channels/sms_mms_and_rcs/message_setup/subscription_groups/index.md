@@ -16,7 +16,9 @@
 
 
 
+<a id="subscription-group-states"></a>
 ## Subscription group states
+{: #sms-subscription-states}
 
 There are two subscription states for SMS and RCS users: `subscribed` and `unsubscribed`. A user's subscription state resides at the subscription group level and is not shared across subscription groups, meaning a user can be `subscribed` to a transactional subscription group but `unsubscribed` to a promotional one. For brands, this separation of states ensures that they can continue to send relevant SMS and RCS messages to their users.
 
@@ -69,7 +71,7 @@ To check a user's subscription group, use one of the following methods:
 
 To launch an SMS or RCS campaign through Braze, select a subscription group from the **SMS/MMS/RCS Variants** dropdown. After it's selected, an audience filter is added to your campaign or Canvas automatically, ensuring that only users `subscribed` to the selected subscription group are in the target audience.
 
-Before users can receive messages from a campaign or Canvas, they must be subscribed to the selected subscription group. If sends fail for otherwise valid users, confirm they are subscribed using one of the methods in [Set a user's state](#set-a-users-state). For double opt-in requirements, see [Subscription group states](#subscription-group-states).
+Before users can receive messages from a campaign or Canvas, they must be subscribed to the selected subscription group. If sends fail for otherwise valid users, confirm they are subscribed using one of the methods in [Set a user's state](#set-a-users-state). For double opt-in requirements, see [Subscription group states](#sms-subscription-states).
 
 **Important:**
 

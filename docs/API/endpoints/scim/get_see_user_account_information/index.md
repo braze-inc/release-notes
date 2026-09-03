@@ -1,4 +1,4 @@
-<div id='api_grsxymgdmttm' class='api_div' data-search-keywords='look up an existing dashboard user account by resource id schemas id name department permissions roles team status detail'>
+<div id='api_hltxdvrgbyxp' class='api_div' data-search-keywords='look up an existing dashboard user account by resource id schemas id name department permissions roles team status detail'>
 <h1 id="look-up-an-existing-dashboard-user-account-by-resource-id">Look up an existing dashboard user account by resource ID</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/scim/v2/Users/{id}</p>
@@ -218,7 +218,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
     <tr>
       <td><code class="language-plaintext highlighter-rouge">permissions</code></td>
       <td>Object</td>
-      <td>Company, workspace, team, and role permissions for the user. See the <a href="/docs/scim_api_appendix">permissions object</a>.</td>
+      <td>Company, workspace, team, and role permissions for the user. See the <a href="/docs/api/objects_filters/scim_api_appendix">permissions object</a>.</td>
     </tr>
   </tbody>
 </table>

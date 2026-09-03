@@ -7,7 +7,7 @@ The Braze and Tealium integration leverages AudienceStream visitor profiles. Sha
 **Important:**
 
 
-Tealium AudienceStreams and EventStreams offer both batch and non-batch connector actions. The non-batch connector should be used when real-time requests are important to the use case and there are no concerns about hitting the Braze API rate limit specifications. Contact Braze [Support](https://www.braze.com/docs/braze_support) or your customer success manager if you have any questions. 
+Tealium AudienceStreams and EventStreams offer both batch and non-batch connector actions. The non-batch connector should be used when real-time requests are important to the use case and there are no concerns about hitting the Braze API rate limit specifications. Contact Braze [Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) or your customer success manager if you have any questions. 
 
 
 

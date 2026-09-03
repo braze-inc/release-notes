@@ -622,7 +622,7 @@ You only need to define action buttons on the Braze dashboard for behaviors that
 
 
 
-1. In the Braze dashboard, select **Messaging** > **Push Notifications**, then choose your iOS [push campaign](https://www.braze.com/docs/user_guide/message_building_by_channel/push/creating_a_push_message).
+1. In the Braze dashboard, select **Messaging** > **Push Notifications**, then choose your iOS [push campaign](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/).
 2. Under **Compose push notification**, turn on **Action Buttons**.
 3. In the **iOS Notification Category** dropdown, select **Enter pre-registered custom iOS Category**.
 4. Finally, enter one of the categories you created earlier. The following example, uses the custom category: `LIKE_CATEGORY`.

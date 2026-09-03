@@ -7,7 +7,7 @@ These events are also available as SQL tables in the [Query Builder](https://www
 
 
 
-Contact your Braze representative or open a [support ticket](https://www.braze.com/docs/braze_support) if you need access to additional event entitlements. If you can't find what you need on this page, see the [Customer Behavior Events Library](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/), [Message Engagement Events Library](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/), or [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
+Contact your Braze representative or open a [support ticket](https://www.braze.com/docs/user_guide/administer/personal/braze_support) if you need access to additional event entitlements. If you can't find what you need on this page, see the [Customer Behavior Events Library](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/), [Message Engagement Events Library](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/), or [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 **Explanation of user profile update event structure**
 
@@ -34,7 +34,7 @@ Currents drops events with payloads larger than 900 KB.
 <!--overview-end-->
 
 
-<div id='api_nwvrizcppoam' class='api_div' data-search-keywords='user delete request events user delete request when a user is deleted by customer request app_group_id id time user_id event_type properties user'>
+<div id='api_kdgkapvurzxd' class='api_div' data-search-keywords='user delete request events user delete request when a user is deleted by customer request app_group_id id time user_id event_type properties user'>
 <h2 id="user-delete-request-events">User Delete Request events</h2>
 
 <div class="api_tags" data-tags="User Delete Request" data-tags-lower="user delete request"></div>
@@ -89,7 +89,7 @@ Currents drops events with payloads larger than 900 KB.
 
 </div>
 
-<div id='api_pmpksnzskpar' class='api_div' data-search-keywords='user orphan events user orphan when a user is orphaned, meaning the user is merged with another user’s profile app_group_id app_id device_id external_user_id id orphaned_by_id time user_id event_type properties user'>
+<div id='api_uvnahhjqpvfs' class='api_div' data-search-keywords='user orphan events user orphan when a user is orphaned, meaning the user is merged with another user’s profile app_group_id app_id device_id external_user_id id orphaned_by_id time user_id event_type properties user'>
 <h2 id="user-orphan-events">User Orphan events</h2>
 
 <div class="api_tags" data-tags="User Orphan" data-tags-lower="user orphan"></div>
@@ -160,7 +160,7 @@ Currents drops events with payloads larger than 900 KB.
 
 </div>
 
-<div id='api_puiwroznhpsj' class='api_div' data-search-keywords='user profile update events profile this represents the profile updates for a user. app_group_id app_id archived country custom_attributes dob email_address external_user_id first_name gender home_city id language last_name phone_number time time_ms timezone update_source user_id event_type properties user'>
+<div id='api_obpfsrgsdmro' class='api_div' data-search-keywords='user profile update events profile this represents the profile updates for a user. app_group_id app_id archived country custom_attributes dob email_address external_user_id first_name gender home_city id language last_name phone_number time time_ms timezone update_source user_id event_type properties user'>
 <h2 id="user-profile-update-events">User Profile Update events</h2>
 
 <div class="api_tags" data-tags="Profile" data-tags-lower="profile"></div>

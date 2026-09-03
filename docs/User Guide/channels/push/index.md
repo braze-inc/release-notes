@@ -8,7 +8,7 @@
 
 Before you start, make sure you have the following:
 
-- **Push integrated into your app or website.** Work with your developers to set this up. For detailed steps, refer to the integration guides for [iOS](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift), [Android](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications?tab=android), and [Web](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=web).
+- **Push integrated into your app or website.** Work with your developers to set this up. For detailed steps, refer to the integration guides for [iOS](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift), [Android](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android), and [Web](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=web).
 - **A push opt-in strategy.** Users must grant push permission on their device. Consider using [push primer messages](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages) to explain the value before prompting.
 
 ## Use cases

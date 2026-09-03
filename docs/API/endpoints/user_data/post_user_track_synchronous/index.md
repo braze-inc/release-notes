@@ -1,4 +1,4 @@
-<div id='api_rvrzqmjncubl' class='api_div' data-search-keywords='create and update users (synchronous) attributes events purchases users custom_attributes custom_events purchase_events message errors'>
+<div id='api_noukpysbtfno' class='api_div' data-search-keywords='create and update users (synchronous) attributes events purchases users custom_attributes custom_events purchase_events message errors'>
 <h1 id="create-and-update-users-synchronous">Create and update users (synchronous)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track/sync</p>
@@ -24,7 +24,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.track.sync</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">users.track.sync</code> permission.</p>
 
 <p>Customers using the API for server-to-server calls may need to allowlist <code class="language-plaintext highlighter-rouge">rest.iad-01.braze.com</code> if they’re behind a firewall.</p>
 

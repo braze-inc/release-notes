@@ -4,7 +4,7 @@
 
 ## Key-value pairs
 
-Braze enables you to send extra data payloads through Content Cards to user devices using key-value pairs. These can help you track internal metrics, update app content, and customize properties. [Add key-value pairs using the dashboard](https://www.braze.com/docs/user_guide/message_building_by_channel/content_cards/create#step-4-configure-additional-settings-optional). 
+Braze enables you to send extra data payloads through Content Cards to user devices using key-value pairs. These can help you track internal metrics, update app content, and customize properties. [Add key-value pairs using the dashboard](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card#step-4-configure-additional-settings-optional). 
  
 **Note:**
 
@@ -57,7 +57,7 @@ The accompanying example shows a feed with a hybrid list of items that are popul
 
 Content Cards can be leveraged to create dynamic and interactive experiences for your users. In the accompanying example, a Content Card pop-up appears at checkout to provide users with last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
 
-The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs allow you to filter and display type-specific Content Cards on the checkout screen. For more information on using key-value pairs to manage multiple feeds, see [Customizing the default Content Card feed](https://www.braze.com/docs/developer_guide/customization_guides/content_cards/customizing_feed#multiple-feeds). 
+The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs allow you to filter and display type-specific Content Cards on the checkout screen. For more information on using key-value pairs to manage multiple feeds, see [Customizing the default Content Card feed](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/feed#implementing-multiple-feeds). 
 <br>
 <br>
 

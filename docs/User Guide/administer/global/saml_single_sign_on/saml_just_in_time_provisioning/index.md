@@ -6,7 +6,7 @@ As a security measure, SAML just-in-time provisioning (JITP) only works for user
 
 For example, let's say the account ```jon.smith@decorumsoft.com``` can use JITP to log into Decorumsoft. The account ```jane.smith@decorumsoft.com``` has the same domain and can also be allowed provisioning. However, if you try to use JITP with ```jon.smith@decorumsoft.eu```, provisioning won't be allowed because there isn't a ```decorumsoft.eu``` account within the Decorumsoft Braze dashboard. 
 
-To make an exception for a company, contact [Support](https://www.braze.com/docs/braze_support).
+To make an exception for a company, contact [Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ SAML JITP requires that SAML SSO is set up and integrated. It is not compatible 
 **Important:**
 
 
-SAML just-in-time provisioning must be enabled for your company by Braze. Contact your account manager or [Braze Support](https://www.braze.com/docs/braze_support) if the **Automatic user provisioning** toggle isn't available.
+SAML just-in-time provisioning must be enabled for your company by Braze. Contact your account manager or [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) if the **Automatic user provisioning** toggle isn't available.
 
 
 
@@ -62,7 +62,7 @@ If your company uses granular permissions, review the default permission set aft
 
 ### How do I disable SAML JITP?
 
-After setting up JITP, you must [contact Support](https://www.braze.com/docs/braze_support) to have it turned off.
+After setting up JITP, you must [contact Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) to have it turned off.
 
 ### Can JITP assign different permissions per user?
 

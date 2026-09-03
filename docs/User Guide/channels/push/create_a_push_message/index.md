@@ -89,7 +89,7 @@ For more information on platform-specific notification options, see [iOS Notific
 
 ### Language
 
-Add copy in multiple languages using the **Add Languages** button. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/localization#languages-supported).
+Add copy in multiple languages using the **Add Languages** button. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported](https://www.braze.com/docs/developer_guide/localization?tab=android).
 
 If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages).
 

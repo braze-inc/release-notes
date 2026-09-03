@@ -97,7 +97,7 @@ The default **Prevent Cross-Site Tracking** setting in Safari can prevent in-app
 
 ### Step 2: Initialize the SDK
 
-After the Braze Web SDK is added to your website, initialize the library with the API key and [SDK endpoint URL](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard. For a complete list of options for `braze.initialize()`, along with our other JavaScript methods, see [Braze JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
+After the Braze Web SDK is added to your website, initialize the library with the API key and [SDK endpoint URL](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints/) found in **Settings** > **App Settings** within your Braze dashboard. For a complete list of options for `braze.initialize()`, along with our other JavaScript methods, see [Braze JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
 
 **Note:**
 
@@ -834,7 +834,7 @@ As of December 2019, custom endpoints are no longer given out, if you have a pre
 
 Create a `braze.xml` file in your project's `res/values` folder. If you are on a specific data cluster or have a pre-existing custom endpoint, you need to specify the endpoint in your `braze.xml` file as well. 
 
-The contents of that file should resemble the following code snippet. Make sure to substitute `YOUR_APP_IDENTIFIER_API_KEY` with the identifier found in the **Manage Settings** page of the Braze dashboard. Log in at [dashboard.braze.com](https://dashboard.braze.com) to find your [cluster address](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints). 
+The contents of that file should resemble the following code snippet. Make sure to substitute `YOUR_APP_IDENTIFIER_API_KEY` with the identifier found in the **Manage Settings** page of the Braze dashboard. Log in at [dashboard.braze.com](https://dashboard.braze.com) to find your [cluster address](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints/). 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -2281,7 +2281,7 @@ public void onCreate() {
 
 
 
-After creating the channel in your Android code, use the channel ID when sending push notifications from the Braze dashboard. For more information on notification channels, see [Android notification channels](https://www.braze.com/docs/user_guide/message_building_by_channel/push/android/notification_channels/).
+After creating the channel in your Android code, use the channel ID when sending push notifications from the Braze dashboard. For more information on notification channels, see [Android notification channels](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/notification_channels/).
 
 ## Troubleshooting iOS builds after upgrading the plugin
 
@@ -4416,7 +4416,7 @@ import { initialize, changeUser, openSession } from "@braze/vega-sdk";
 
 ### Step 2: Initialize the SDK
 
-After the Braze Vega SDK is added to your project, initialize the library with the API key and [SDK endpoint URL](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard.
+After the Braze Vega SDK is added to your project, initialize the library with the API key and [SDK endpoint URL](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints/) found in **Settings** > **App Settings** within your Braze dashboard.
 
 **Important:**
 

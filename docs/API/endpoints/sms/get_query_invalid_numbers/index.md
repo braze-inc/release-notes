@@ -1,11 +1,11 @@
-<div id='api_rfhueffmheiz' class='api_div' data-search-keywords='query invalid phone numbers sms phone invalid_detected_at reason message'>
+<div id='api_otkbkyutabio' class='api_div' data-search-keywords='query invalid phone numbers sms phone invalid_detected_at reason message'>
 <h1 id="query-invalid-phone-numbers">Query invalid phone numbers</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/sms/invalid_phone_numbers</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to pull a list of phone numbers that have been marked “invalid” within a certain time frame. See <a href="/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers#handling-invalid-phone-numbers">Invalid Phone Number Handling</a> documentation for more information.</p>
+  <p>Use this endpoint to pull a list of phone numbers that have been marked “invalid” within a certain time frame. See <a href="/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers#handling-invalid-phone-numbers">Invalid Phone Number Handling</a> documentation for more information.</p>
 </blockquote>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81ceae19-15d1-4ac1-ad22-a6b86a92456d" class="seeme">See me in Postman</a></div>

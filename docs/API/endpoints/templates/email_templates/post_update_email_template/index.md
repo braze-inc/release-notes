@@ -1,4 +1,4 @@
-<div id='api_ryayzkwkybro' class='api_div' data-search-keywords='update existing email templates email_template_id template_name subject body plaintext_body preheader tags should_inline_css'>
+<div id='api_dwzihpvsyvqg' class='api_div' data-search-keywords='update existing email templates email_template_id template_name subject body plaintext_body preheader tags should_inline_css'>
 <h1 id="update-existing-email-templates">Update existing email templates</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/templates/email/update</p>
@@ -19,7 +19,7 @@
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#afb25494-3350-458d-932d-5bf4220049fa" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.email.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.email.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

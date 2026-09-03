@@ -9,7 +9,7 @@
 
 The classic card is great for standard messaging and notifications or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.
 
-![Image of a classic card with recommended details and a classic card example](https://www.braze.com/docs/assets/img/content_card_classic.png?001e6e05a42a76f3075939a1d7a26dd3){: style="max-width:45%;border:0;"}
+![Image of a classic card with recommended details and a classic card example](https://www.braze.com/docs/assets/img/content_card_classic.png?001e6e05a42a76f3075939a1d7a26dd3){: width="1358" height="2871" style="max-width:45%;border:0;"}
 
 | Card Capability | Details |
 | --- | ---|
@@ -24,7 +24,7 @@ The classic card is great for standard messaging and notifications or even visua
 
 The Captioned Image card is a great way to show off and attract attention to important content, like a big sale or a new app feature.
 
-![Image of a Captioned Image card with recommended details and a Captioned Image card example](https://www.braze.com/docs/assets/img/content_card_captioned.png?d229ddef1318907cc21ad492ffc7f846){: style="max-width:90%;border:0;"}
+![Image of a Captioned Image card with recommended details and a Captioned Image card example](https://www.braze.com/docs/assets/img/content_card_captioned.png?d229ddef1318907cc21ad492ffc7f846){: width="2880" height="2877" style="max-width:90%;border:0;"}
 
 | Card Capability | Details |
 | --- | ---|
@@ -39,7 +39,7 @@ The Captioned Image card is a great way to show off and attract attention to imp
 
 If you want more creative control, the image-only card is for you. Create your image using any tooling you like and upload the image to this card type.
 
-![Image of an image-only Content Card with recommended details and an image-only example](https://www.braze.com/docs/assets/img/content_card_banner.png?a239046695d117ad96ecdcdf25e91ad0){: style="max-width:45%;border:0;"}
+![Image of an image-only Content Card with recommended details and an image-only example](https://www.braze.com/docs/assets/img/content_card_banner.png?a239046695d117ad96ecdcdf25e91ad0){: width="1358" height="2871" style="max-width:45%;border:0;"}
 
 | Card Capability | Details |
 | --- | ---|
@@ -58,11 +58,11 @@ Content Cards support text and images, including GIFs, out of the box. At this t
 
 For a user to dismiss a card, they can either swipe it away on mobile, or use a `close X` function, as shown in the following screenshot. The `x` will appear on hover for the Web SDK only.
 
-![Image that shows swipe or close dismissal behaviors for a card](https://www.braze.com/docs/assets/img/dismissal-cc.png?4d7829ce202c6fe6570d4e74950a0e27)
+![Image that shows swipe or close dismissal behaviors for a card](https://www.braze.com/docs/assets/img/dismissal-cc.png?4d7829ce202c6fe6570d4e74950a0e27){: width="1800" height="504"}
 
 If a user has dismissed all of their cards or you haven't pushed out any new updates, the user's feed will usually look something like this:
 
-![Image of an empty Content Card feed](https://www.braze.com/docs/assets/img/empty-cc.png?cad1708e15acb232624b018cadef6685){: style="max-width:45%"}
+![Image of an empty Content Card feed](https://www.braze.com/docs/assets/img/empty-cc.png?cad1708e15acb232624b018cadef6685){: width="832" height="1478" style="max-width:45%"}
 
 **Tip:**
 

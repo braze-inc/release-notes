@@ -293,7 +293,7 @@ Note that variation assignment occurs at Canvas entry. If a user hasn't entered 
 
 ### How do I convert an existing Canvas from the original editor to the current editor?
 
-You can [clone your Canvas](https://www.braze.com/docs/cloning_canvases). This creates a copy of your original Canvas in the most current Canvas workflow.
+You can [clone your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases). This creates a copy of your original Canvas in the most current Canvas workflow.
 
 ### What are the main differences between the current and original Canvas editors?
 
@@ -344,7 +344,7 @@ Exception events are created using Action Paths. Action Paths only support "afte
 
 ### What should I include when submitting a support ticket for a "Request Timed Out" error?
 
-If you encounter a "Request Timed Out" error while editing a Canvas and need to contact [Braze Support](https://www.braze.com/docs/braze_support), include the following information to help speed up resolution:
+If you encounter a "Request Timed Out" error while editing a Canvas and need to contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support), include the following information to help speed up resolution:
 
 - **Screen recording:** A recording of the steps you took before seeing the error, including any page transitions.
 - **Timestamp and time zone:** The exact time the error occurred and your time zone.
@@ -382,7 +382,7 @@ Braze hosts a `spacer.gif` placeholder image on `cdn.braze.com` and `braze-image
 
 ### Why won't my Canvas load with an "invalid next-step-id" error?
 
-This console error means at least one step points to a missing or invalid next step—for example, after a partial delete, clone, or import. Open the Canvas in the editor, reconnect orphaned steps, or remove steps that no longer have a valid downstream path. If the Canvas still won't load, contact [Braze Support](https://www.braze.com/docs/braze_support) with the Canvas ID and a screenshot of the console error.
+This console error means at least one step points to a missing or invalid next step—for example, after a partial delete, clone, or import. Open the Canvas in the editor, reconnect orphaned steps, or remove steps that no longer have a valid downstream path. If the Canvas still won't load, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) with the Canvas ID and a screenshot of the console error.
 
 ### Why does a Canvas conversion timestamp in Currents differ from my Canvas analytics?
 
@@ -438,4 +438,4 @@ Action groups that use email interactivity triggers (for example, **Click alias 
 
 ### How do historical custom event timestamps affect action-based Canvases and campaigns?
 
-Braze evaluates action-based journeys when qualifying events are ingested and the user meets your audience rules. If an event lands on the profile outside the window when your Canvas or campaign was active, or before the user matched your audience, entry or downstream sends may not occur as expected. Compare event timestamps to go-live times and segment membership using the user profile activity log and the troubleshooting steps in [Troubleshooting custom events](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/#troubleshooting-custom-events). If behavior still does not match expectations, contact [Braze Support](https://www.braze.com/docs/braze_support).
+Braze evaluates action-based journeys when qualifying events are ingested and the user meets your audience rules. If an event lands on the profile outside the window when your Canvas or campaign was active, or before the user matched your audience, entry or downstream sends may not occur as expected. Compare event timestamps to go-live times and segment membership using the user profile activity log and the troubleshooting steps in [Troubleshooting custom events](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/#troubleshooting-custom-events). If behavior still does not match expectations, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support).

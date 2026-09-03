@@ -350,7 +350,7 @@ If you find yourself caught in a loop after successfully entering your phone num
 3. Restart your PC or laptop.
 4. Attempt to set up 2FA again.
 
-If the problem persists after these steps, contact [Support](https://www.braze.com/docs/braze_support) for assistance.
+If the problem persists after these steps, contact [Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) for assistance.
 
 ### Can't enable two-factor authentication (2FA)
 

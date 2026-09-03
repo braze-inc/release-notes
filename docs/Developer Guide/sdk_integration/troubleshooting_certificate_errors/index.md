@@ -20,7 +20,7 @@ This is generally a network or certificate trust configuration issue in your env
 ## Troubleshooting steps
 
 1. Confirm your SDK endpoint and network access.
-   - Verify you are using the correct [SDK endpoint](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) for your workspace.
+   - Verify you are using the correct [SDK endpoint](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints) for your workspace.
    - Verify your environment can reach that endpoint over HTTPS.
 2. Compare behavior across networks.
    - Test on a different network (for example, mobile data instead of corporate Wi-Fi).

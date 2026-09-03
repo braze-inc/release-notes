@@ -1,4 +1,4 @@
-<div id='api_crzhfpsdmcbf' class='api_div' data-search-keywords='create content block name description content state tags content_block_id liquid_tag created_at message'>
+<div id='api_hyagtabmyhcr' class='api_div' data-search-keywords='create content block name description content state tags content_block_id liquid_tag created_at message'>
 <h1 id="create-content-block">Create Content Block</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/content_blocks/create</p>
@@ -15,7 +15,7 @@
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.create</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.create</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

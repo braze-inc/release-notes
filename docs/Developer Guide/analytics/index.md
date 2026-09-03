@@ -197,7 +197,7 @@ Numeric attributes have a wide variety of use cases. Incrementing number custom 
 **Note:**
 
 
-Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods](https://www.braze.com/docs/developer_guide/platform_wide/analytics_overview#purchase-events--revenue-tracking).
+Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods](https://www.braze.com/docs/developer_guide/analytics#purchase-events--revenue-tracking).
 
 
 

@@ -9,7 +9,7 @@ Setting up an API-triggered campaign takes a few steps. First, create a new mult
 **Note:**
 
 
-An API-triggered campaign is different from an [API campaign](https://www.braze.com/docs/developer_guide/rest_api/api_campaigns#api-campaigns).
+An API-triggered campaign is different from an [API campaign](https://www.braze.com/docs/api/api_campaigns).
 
 
 

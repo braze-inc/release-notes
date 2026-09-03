@@ -214,8 +214,8 @@ The following features are built into the Braze Android SDK. To use any other pu
 
 |Feature|Description|
 |-------|-----------|
-|Push Stories|Android Push Stories are built into the Braze Android SDK by default. To learn more, see [Push Stories](https://www.braze.com/docs/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/).|
-|Push Primers|Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer](https://www.braze.com/docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).|
+|Push Stories|Android Push Stories are built into the Braze Android SDK by default. To learn more, see [Push Stories](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/push_stories/).|
+|Push Primers|Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/).|
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Built-in features" }
 
 ## About the push notification lifecycle {#push-notification-lifecycle}
@@ -950,7 +950,7 @@ See the equivalent configuration for your `braze.xml`. Note that the class name 
 
 ### Step 5: Define notification channels
 
-The Braze Android SDK supports [Android notification channels](https://developer.android.com/preview/features/notification-channels.html). If a Braze notification does not contain the ID for a notification channel or that a Braze notification contains an invalid channel ID, Braze will display the notification with the default notification channel defined in the SDK. Company users use [Android Notification Channels](https://www.braze.com/docs/user_guide/message_building_by_channel/push/android/notification_channels/) within the platform to group notifications.
+The Braze Android SDK supports [Android notification channels](https://developer.android.com/preview/features/notification-channels.html). If a Braze notification does not contain the ID for a notification channel or that a Braze notification contains an invalid channel ID, Braze will display the notification with the default notification channel defined in the SDK. Company users use [Android Notification Channels](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/notification_channels/) within the platform to group notifications.
 
 To set the user facing name of the default Braze notification channel, use [`BrazeConfig.setDefaultNotificationChannelName()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html).
 
@@ -979,7 +979,7 @@ For issues related to push display, see our [troubleshooting guide](https://www.
 
 #### Testing analytics
 
-At this point, you should also have analytics logging for push notification opens. Clicking on the notification when it arrives should result in the **Direct Opens** on your campaign results page to increase by 1. Check out our [push reporting](https://www.braze.com/docs/user_guide/message_building_by_channel/push/push_reporting/) article for a break down on push analytics.
+At this point, you should also have analytics logging for push notification opens. Clicking on the notification when it arrives should result in the **Direct Opens** on your campaign results page to increase by 1. Check out our [push reporting](https://www.braze.com/docs/user_guide/channels/push/reporting/) article for a break down on push analytics.
 
 For issues related to push analytics, see our [troubleshooting guide](https://www.braze.com/docs/developer_guide/push_notifications/troubleshooting/?sdktab=android).
 
@@ -1043,7 +1043,7 @@ To request a rate limit increase from FCM, you can contact [Firebase Support](ht
 
 #### Apply a workspace rate limit
 
-You can apply a workspace rate limit for Android push notifications. This can help regulate the delivery rate of your outgoing messages. For more details, see [Workspace messaging rate limits](https://www.braze.com/docs/user_guide/administrative/app_settings/messaging_rate_limits).
+You can apply a workspace rate limit for Android push notifications. This can help regulate the delivery rate of your outgoing messages. For more details, see [Workspace messaging rate limits](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/messaging_rate_limits/).
 
 
 
@@ -1169,7 +1169,7 @@ Add the following code to the `application:didFinishLaunchingWithOptions:` metho
 **Note:**
 
 
-The following code sample includes integration for provisional push authentication (lines 5 and 6). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options.<br>Visit [iOS notification options](https://www.braze.com/docs/user_guide/message_building_by_channel/push/ios/notification_options/) to learn more about push provisional authentication.
+The following code sample includes integration for provisional push authentication (lines 5 and 6). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options.<br>Visit [iOS notification options](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/notification_options/) to learn more about push provisional authentication.
 
 
 
@@ -1488,7 +1488,7 @@ For a complete example, see the [push notifications manual integration sample](h
 
 ## Push primers {#push-primers}
 
-Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer](https://www.braze.com/docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
+Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/).
 
 ## Dynamic APNs gateway management
 
@@ -1529,7 +1529,7 @@ This feature improves delivery rates by always routing push tokens to the correc
 
 #### Can I disable this feature?
 
-Dynamic APNs Gateway Management is turned on by default and provides reliability improvements. If you have specific use cases that require manual gateway selection, contact [Braze Support](https://www.braze.com/docs/user_guide/administrative/access_braze/support/).
+Dynamic APNs Gateway Management is turned on by default and provides reliability improvements. If you have specific use cases that require manual gateway selection, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support/).
 
 
 
@@ -2455,7 +2455,7 @@ If deep links from push notifications stop opening after a migration, check the 
 3. If you're using the Braze Expo plugin, verify `androidHandlePushDeepLinksAutomatically` is set correctly for your implementation.
 4. Review recently added dependencies for overrides to notification handling or app delegate behavior.
 
-If you've completed these checks and the issue persists, [open a support ticket](https://www.braze.com/docs/user_guide/administrative/access_braze/support/) and include SDK logs plus reproduction steps.
+If you've completed these checks and the issue persists, [open a support ticket](https://www.braze.com/docs/user_guide/administer/personal/braze_support/) and include SDK logs plus reproduction steps.
 
 
 
@@ -2507,7 +2507,7 @@ Popular browsers (such as Safari, Chrome, FireFox, and Edge) all support web pus
 ![An iPhone showing options to bookmark a website and save to the home screen](https://www.braze.com/docs/assets/img/push_implementation_guide/add-to-homescreen.png?f05fb625cce85d8d4b4816deae375bf8){: style="max-width:40%"}
 
 ### Step 5: Show the native push prompt {#push-prompt}
-After the app has been added to your home screen you can now request push permission when the user takes an action (such as clicking a button). This can be done using the [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) method, or with a [no-code push primer in-app message](https://www.braze.com/docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
+After the app has been added to your home screen you can now request push permission when the user takes an action (such as clicking a button). This can be done using the [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) method, or with a [no-code push primer in-app message](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/).
 
 **Note:**
 
@@ -2534,7 +2534,7 @@ button.onclick = function(){
 
 ## Next steps
 
-Next, send yourself a [test message](https://www.braze.com/docs/developer_guide/in_app_messages/sending_test_messages/) to validate the integration. After your integration is complete, you can use our [no-code push primer messages](https://www.braze.com/docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) to optimize your push opt-in rates.
+Next, send yourself a [test message](https://www.braze.com/docs/developer_guide/in_app_messages/sending_test_messages/) to validate the integration. After your integration is complete, you can use our [no-code push primer messages](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/) to optimize your push opt-in rates.
 
 
 

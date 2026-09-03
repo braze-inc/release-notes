@@ -615,7 +615,7 @@ If you need advanced native-layer link handling (such as custom `IBrazeDeeplinkH
 3. Set the key to `FlutterDeepLinkingEnabled`.
 4. Set the type to `Boolean`.
 5. Set the value to `YES`.
-    ![An example project's `Info.plist` file with the added key-value pair.](https://www.braze.com/docs/assets/img/flutter/flutter-ios-deep-link-info-plist.png?a14c27fd33268008de35220161f94242 "Xcode Project Info.plist File")
+    ![An example project's `Info.plist` file with the added key-value pair.](https://www.braze.com/docs/assets/img/flutter/flutter-ios-deep-link-info-plist.png?a14c27fd33268008de35220161f94242 "Xcode Project Info.plist File"){: width="501" height="118"}
 
 
 

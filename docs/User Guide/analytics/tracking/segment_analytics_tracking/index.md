@@ -15,7 +15,7 @@ A workspace can have tracking turned on for up to 25 segments. Braze recommends 
 **Note:**
 
 
-After enabling analytics tracking, expect a delay before the segment data populates in your reports. If the data doesn't populate within 24 hours, [contact Support](https://www.braze.com/docs/braze_support).
+After enabling analytics tracking, expect a delay before the segment data populates in your reports. If the data doesn't populate within 24 hours, [contact Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
 
 
 
@@ -51,5 +51,5 @@ When analytics tracking is turned on, you can use Query Builder report templates
 
 ### What should I check if analytics tracking looks wrong or empty?
 
-Confirm **Analytics Tracking** is still enabled in **Segment Details**, you have not exceeded the per-workspace limit (25 segments with tracking), and wait up to 24 hours for data to populate after you first enable tracking. If issues continue, verify the segment definition and report date range, then [contact Support](https://www.braze.com/docs/braze_support).
+Confirm **Analytics Tracking** is still enabled in **Segment Details**, you have not exceeded the per-workspace limit (25 segments with tracking), and wait up to 24 hours for data to populate after you first enable tracking. If issues continue, verify the segment definition and report date range, then [contact Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
 

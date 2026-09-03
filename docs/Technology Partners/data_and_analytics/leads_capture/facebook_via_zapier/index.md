@@ -153,7 +153,7 @@ To use this integration, you must have a <a href="https://zapier.com/app/pricing
 **Why am I seeing duplicate user profiles with the same email?**
 
 
-There are unique ways of creating and managing user profiles in Braze based on their [user profile lifecycle](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-profile-lifecycle).
+There are unique ways of creating and managing user profiles in Braze based on their [user profile lifecycle](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle).
 
 Depending on your internal processes and when you are triggering customers to be created within Braze, you may encounter duplicate user profiles due to a race condition of the user profile being created by the integration and when the user is created from your system. You can [merge user profiles](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge/) in Braze.
 

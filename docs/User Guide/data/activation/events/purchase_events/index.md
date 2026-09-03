@@ -58,9 +58,9 @@ The following lists methods used across various platforms to log purchases. With
 - [Android and FireOS](https://www.braze.com/docs/developer_guide/analytics/logging_purchases?tab=android)
 - [iOS](https://www.braze.com/docs/developer_guide/analytics/logging_purchases?tab=swift)
 - [Web](https://www.braze.com/docs/developer_guide/analytics/logging_purchases?tab=web)
-- [React Native](https://www.braze.com/docs/developer_guide/platform_integration_guides/react_native/analytics#logging-purchases)
+- [React Native](https://www.braze.com/docs/developer_guide/analytics#purchase-events--revenue-tracking)
 - [Unity](https://www.braze.com/docs/developer_guide/analytics/logging_purchases?tab=unity)
-- [.NET MAUI (formerly Xamarin)](https://www.braze.com/docs/developer_guide/platform_integration_guides/xamarin/analytics#logging-purchases)
+- [.NET MAUI (formerly Xamarin)](https://www.braze.com/docs/developer_guide/analytics?sdktab=xamarin#purchase-events--revenue-tracking)
 - [Roku](https://www.braze.com/docs/developer_guide/analytics/logging_purchases?tab=roku)
 
 ## View purchase data
@@ -100,7 +100,7 @@ For details on each filter, refer to the [Segmentation filters](https://www.braz
 **Tip:**
 
  
-To segment on the number of times a specific purchase has occurred, record that purchase individually as an [incrementing custom attribute](https://www.braze.com/docs/developer_guide/platform_wide/analytics_overview#custom-attribute-storage).
+To segment on the number of times a specific purchase has occurred, record that purchase individually as an [incrementing custom attribute](https://www.braze.com/docs/developer_guide/analytics#custom-attribute-storage).
 
 
 
@@ -1055,7 +1055,7 @@ You can no longer create or duplicate Canvases using the original editor. This s
 
 
 
-Refer to [Canvas entry properties and event properties](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) for more information and examples.
+Refer to [Canvas entry properties and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/) for more information and examples.
 
 ### Log purchases at the order level
 

@@ -249,7 +249,7 @@ If you want a particular campaign to override frequency capping rules, you can s
 
 After this, you will be asked if you still want this campaign to count toward your frequency cap. Messages that count toward frequency capping are included in calculations for the Intelligent Channel filter. 
 
-When sending [API campaigns](https://www.braze.com/docs/developer_guide/rest_api/messaging#messaging), which are often transactional, you'll have the ability to specify that a campaign should ignore frequency capping rules by setting `override_frequency_capping` to `true` in the API request.
+When sending [API campaigns](https://www.braze.com/docs/api/endpoints/messaging), which are often transactional, you'll have the ability to specify that a campaign should ignore frequency capping rules by setting `override_frequency_capping` to `true` in the API request.
 
 By default, new campaigns and Canvases that do not obey frequency caps will also not count toward them. This is configurable for each campaign and Canvas.
 

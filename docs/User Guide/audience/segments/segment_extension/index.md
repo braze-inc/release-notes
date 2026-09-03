@@ -103,6 +103,8 @@ You don't need Segment Extensions to use event properties or nested custom attri
 
 
 
+
+
 ### Step 5: Save your Segment Extension
 
 After you select **Save**, your Segment Extension will begin processing. The length of time it takes to generate your Segment Extension depends on how many users you have, how many custom events or purchase events you're capturing, and how many days you're looking back in history.

@@ -12,7 +12,7 @@ To use feature flags, ensure your SDKs are up to date with at least these minimu
 
 ### Braze permissions
 
-To manage feature flags in the dashboard, you'll either need to be an Administrator, or have the following [permissions](https://www.braze.com/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/):
+To manage feature flags in the dashboard, you'll either need to be an Administrator, or have the following [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/):
 
 | Permission                                                                    | What you can do                           |
 |-------------------------------------------------------------------------------|-------------------------------------------|
@@ -73,7 +73,7 @@ There is no limit to the number of properties you can add. However, a feature fl
 
 ### Step 4: Choose segments to target
 
-Before rolling out a feature flag, you need to choose a [segment](https://www.braze.com/docs/user_guide/engagement_tools/segments/) of users to target. Select **Add Rule** on your newly created flag and then use the filter group and segment dropdown menus to filter users out of your target audience. Add multiple filters to further narrow your audience.
+Before rolling out a feature flag, you need to choose a [segment](https://www.braze.com/docs/user_guide/audience/segments/) of users to target. Select **Add Rule** on your newly created flag and then use the filter group and segment dropdown menus to filter users out of your target audience. Add multiple filters to further narrow your audience.
 
 ![A textbox labeled Rollout Traffic with the ability to add segments and filters.](https://www.braze.com/docs/assets/img/feature_flags/segmentation_ff.png?32d97ed8745dd0fa1a0e3be1b416dc65){: style="max-width:75%;"}
 
@@ -920,7 +920,7 @@ Here, you can review when a change happened, who made the change, which category
 
 ## Segmenting with feature flags {#segmentation}
 
-Braze automatically keeps track of which users are currently enabled for a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter](https://www.braze.com/docs/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). For more information about filtering on segments, see [Creating a segment](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/).
+Braze automatically keeps track of which users are currently enabled for a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter](https://www.braze.com/docs/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). For more information about filtering on segments, see [Creating a segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/).
 
 ![The "Filters" section with "Feature Flag" typed into the filter search bar.](https://www.braze.com/docs/assets/img/feature_flags/feature-flags-filter-name.png?ad7d0b8534a8f300591cbb11fd2d9f10){: style="max-width:75%;"}
 

@@ -1,4 +1,4 @@
-<div id='api_kblfqpocqulo' class='api_div' data-search-keywords='update user alias alias_updates alias_label old_alias_name new_alias_name'>
+<div id='api_agebsmiykbxg' class='api_div' data-search-keywords='update user alias alias_updates alias_label old_alias_name new_alias_name'>
 <h1 id="update-user-alias">Update user alias</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/alias/update</p>
@@ -20,7 +20,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.alias.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">users.alias.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

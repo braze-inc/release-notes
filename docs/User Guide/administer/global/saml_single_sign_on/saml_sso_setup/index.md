@@ -235,7 +235,7 @@ If you're getting the error `ERROR_CODE_SSO_INVALID_RELAY_STATE`, your RelayStat
 
 This can occur when RelayState isn't configured correctly. Confirm you created an API key (in **Settings** > **Setup and Testing** > **APIs and Identifiers**) for IdP sign-in and set that API key as the `RelayState` parameter in your IdP. RelayState identifies which company account you're signing into. For step-by-step instructions, see [Setting up your RelayState](#setting-up-your-relaystate).
 
-If you still can't sign in, [contact Braze Support](https://www.braze.com/docs/braze_support) with a SAML trace if possible. For help capturing a trace, see [Obtaining a SAML trace](#obtaining-a-saml-trace).
+If you still can't sign in, [contact Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) with a SAML trace if possible. For help capturing a trace, see [Obtaining a SAML trace](#obtaining-a-saml-trace).
 
 ### Is the user stuck in a sign-in loop between Okta and Braze?
 
