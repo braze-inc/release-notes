@@ -89,7 +89,7 @@ Go to your [Comm.One dashboard](https://ums.cjmplace.com/) and gather the follow
 **Important:**
 
 
-You can integrate a KakaoTalk Sender Key into only one workspace at a time. To use the same Sender Key in a different workspace, you must first archive the KakaoTalk subscription group in the original workspace, then contact [Braze Support](https://www.braze.com/docs/braze_support) to remove the integration. After Braze removes the integration, you can set up the integration in the new workspace.
+You can integrate a KakaoTalk Sender Key into only one workspace at a time. To use the same Sender Key in a different workspace, you must first archive the KakaoTalk subscription group in the original workspace, then contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) to remove the integration. After Braze removes the integration, you can set up the integration in the new workspace.
 
 
 

@@ -1,4 +1,4 @@
-<div id='api_mxabwtuhwuhb' class='api_div' data-search-keywords='create new dashboard user account schemas id name department permissions roles team'>
+<div id='api_xzbabpwcamjy' class='api_div' data-search-keywords='create new dashboard user account schemas id name department permissions roles team'>
 <h1 id="create-new-dashboard-user-account">Create new dashboard user account</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/scim/v2/Users</p>
@@ -148,13 +148,13 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
       <td><code class="language-plaintext highlighter-rouge">department</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>Valid department string from the <a href="/docs/scim_api_appendix#department-strings">department string documentation</a>.</td>
+      <td>Valid department string from the <a href="/docs/api/objects_filters/scim_api_appendix">department string documentation</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">permissions</code></td>
       <td>Optional</td>
       <td>JSON object</td>
-      <td>Permissions object as described in the <a href="/docs/scim_api_appendix#permissions-object">permissions object documentation</a>.</td>
+      <td>Permissions object as described in the <a href="/docs/api/objects_filters/scim_api_appendix">permissions object documentation</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -412,12 +412,12 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
     <tr>
       <td><code class="language-plaintext highlighter-rouge">department</code></td>
       <td>String</td>
-      <td>Valid department string from the <a href="/docs/scim_api_appendix#department-strings">department string documentation</a>.</td>
+      <td>Valid department string from the <a href="/docs/api/objects_filters/scim_api_appendix">department string documentation</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">permissions</code></td>
       <td>JSON object</td>
-      <td>Permissions object as described in the <a href="/docs/scim_api_appendix#permissions-object">permissions object documentation</a>.</td>
+      <td>Permissions object as described in the <a href="/docs/api/objects_filters/scim_api_appendix">permissions object documentation</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">id</code></td>

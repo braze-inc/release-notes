@@ -1,4 +1,4 @@
-<div id='api_ywgythouanvk' class='api_div' data-search-keywords='update content block content_block_id name description content state tags liquid_tag created_at message'>
+<div id='api_exliltmaumfq' class='api_div' data-search-keywords='update content block content_block_id name description content state tags liquid_tag created_at message'>
 <h1 id="update-content-block">Update Content Block</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/content_blocks/update</p>
@@ -15,7 +15,7 @@
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d" class="seeme">See me in Postman</a></div>
 
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To use this endpoint, you’ll need an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.update</code> permission.</p>
+<p>To use this endpoint, you’ll need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.update</code> permission.</p>
 
 <h2 id="rate-limit">Rate limit</h2>
 

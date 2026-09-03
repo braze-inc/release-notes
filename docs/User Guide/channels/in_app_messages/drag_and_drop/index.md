@@ -171,7 +171,7 @@ Consider the following questions as you test your in-app message:
 
 ### Why are body clicks not appearing on my analytics page?
 
-Body clicks are not automatically collected for in-app messages created with the drag-and-drop editor. For more details, refer to the SDK changelogs for [iOS](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/changelog#1100).
+Body clicks are not automatically collected for in-app messages created with the drag-and-drop editor. For more details, refer to the SDK changelogs for [iOS](https://www.braze.com/docs/developer_guide/platforms/legacy_sdks/ios/changelog/objc_changelog) and [Android](https://www.braze.com/docs/developer_guide/changelogs?sdktab=android).
 
 ### Can I segment based on button clicks?
 

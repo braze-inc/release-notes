@@ -24,11 +24,11 @@ These customer data platforms collect and route information from multiple source
 
 * [mParticle](https://www.braze.com/docs/partners/mparticle_for_currents)
 * [Segment](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/segment/segment_for_currents)
-* [Tealium](https://www.braze.com/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents#tealium-for-currents)
+* [Tealium](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/tealium/tealium_for_currents)
 * [Treasure Data](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/treasure_data/treasure_data_for_currents)
 * [RudderStack](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/rudderstack/rudderstack_for_currents)
 * [Adobe](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/adobe/adobe_for_currents)
-* [Amperity](https://www.braze.com/docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity#using-amperity-with-braze-currents)
+* [Amperity](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/amperity#using-amperity-with-braze-currents)
 
 ## Behavioral analytics
 

@@ -1,4 +1,4 @@
-<div id='api_vxgapgcglulq' class='api_div' data-search-keywords='export segment analytics message data time size'>
+<div id='api_qvdoktlcypfy' class='api_div' data-search-keywords='export segment analytics message data time size'>
 <h1 id="export-segment-analytics">Export segment analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/segments/data_series</p>

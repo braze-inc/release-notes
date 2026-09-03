@@ -1,4 +1,4 @@
-<div id='api_joygfpuajeub' class='api_div' data-search-keywords='create and update users (bulk) attributes events purchases message attributes_processed events_processed purchases_processed errors'>
+<div id='api_umzbpxmptapw' class='api_div' data-search-keywords='create and update users (bulk) attributes events purchases message attributes_processed events_processed purchases_processed errors'>
 <h1 id="create-and-update-users-bulk">Create and update users (bulk)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track/bulk</p>
@@ -27,7 +27,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>To use this endpoint, you must have an <a href="/docs/api/api_key">API key</a> with the <code class="language-plaintext highlighter-rouge">users.track.bulk</code> permission.</p>
+<p>To use this endpoint, you must have an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">users.track.bulk</code> permission.</p>
 
 <p>If you’re making server-to-server calls behind a firewall, you may need to allowlist your Braze REST endpoint (for example, <code class="language-plaintext highlighter-rouge">rest.iad-01.braze.com</code>). For more information, see <a href="/docs/api/basics#api-definitions">API endpoints</a>.</p>
 

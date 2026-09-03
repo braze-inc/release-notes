@@ -155,7 +155,7 @@ The custom attribute's data type determines the comparisons that are valid for a
 | Comparison | Additional considerations |
 | --- | --- |
 | `value` | The `value` is not required when using the `exists` or `does_not_exist` comparisons. `value` must be an ISO 8601 datetime string when using the `before` and `after` comparisons. |
-|`matches_regex` | When using the `matches_regex` comparison, the value passed must be a string. To read more about using regular expressions with Braze, refer to [Regular expressions](https://www.braze.com/docs/user_guide/engagement_tools/segments/regex#regex-with-braze) and [Custom attribute data types](https://www.braze.com/docs/developer_guide/platform_wide/analytics_overview#custom-attribute-data-types). |
+|`matches_regex` | When using the `matches_regex` comparison, the value passed must be a string. To read more about using regular expressions with Braze, refer to [Regular expressions](https://www.braze.com/docs/user_guide/audience/segments/regex) and [Custom attribute data types](https://www.braze.com/docs/developer_guide/analytics#custom-attribute-data-types). |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Attribute comparison caveats" }
 
 #### Multi-value comparisons

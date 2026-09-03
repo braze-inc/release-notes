@@ -43,11 +43,11 @@ Braze shortened links always include the `https://` protocol and can't be config
 
 To use link shortening, make sure the link shortening toggle in the message composer is turned on. Then, choose to use either basic or advanced tracking.
 
-![Message composer with a toggle for link shortening.](https://www.braze.com/docs/assets/img/link_shortening/legacy/temp_shortening1.png?be457578e79e42a4ef2102d3c3b41f99)
+![Message composer with a toggle for link shortening.](https://www.braze.com/docs/assets/img/link_shortening/legacy/temp_shortening1.png?be457578e79e42a4ef2102d3c3b41f99){: width="1614" height="994"}
 
 Braze recognizes only URLs that start with `http://` or `https://`. When a URL is recognized, the **Preview** section updates with a placeholder URL. Braze estimates the length of the URL after shortening, but a warning prompts you to select a test user and save the message as a draft for a more accurate estimate.
 
-![Message composer with a long URL in the "Message" box and a generated shortened link in the preview.](https://www.braze.com/docs/assets/img/link_shortening/legacy/temp_shortening3.png?03776a66d5c75963bb43a58f878b8415)
+![Message composer with a long URL in the "Message" box and a generated shortened link in the preview.](https://www.braze.com/docs/assets/img/link_shortening/legacy/temp_shortening3.png?03776a66d5c75963bb43a58f878b8415){: width="1569" height="516"}
 
 **Note:**
 
@@ -124,7 +124,7 @@ If a draft is created within an active Canvas, a shortened URL won't be generate
 
 
 
-![Message "Test" tab with fields for selecting test recipients.](https://www.braze.com/docs/assets/img/link_shortening/legacy/temp_shortening2.png?85b18ea250961f852eed90f22678cc88)
+![Message "Test" tab with fields for selecting test recipients.](https://www.braze.com/docs/assets/img/link_shortening/legacy/temp_shortening2.png?85b18ea250961f852eed90f22678cc88){: width="1569" height="947"}
 
 **Note:**
 
@@ -137,7 +137,7 @@ Liquid personalization and shortened URLs are templated in the **Test** tab afte
 
 When link shortening is turned on, the **SMS/MMS/RCS Performance** table includes a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. **Total Clicks** excludes suspected bot clicks from dashboard counts. For more details on metrics, see [Message performance](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/reporting) and [Bot click filtering](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/bot_click_filtering).
 
-![SMS and MMS performance metrics table.](https://www.braze.com/docs/assets/img/link_shortening/shortening4.png?6ed26714edeecd623530764fcc136833)
+![SMS and MMS performance metrics table.](https://www.braze.com/docs/assets/img/link_shortening/shortening4.png?6ed26714edeecd623530764fcc136833){: width="1586" height="191"}
 
 The **Historical Performance** and **SMS/MMS/RCS Performance** tables also include an option for **Total Clicks** and show a daily time series of click events. Clicks are incremented on redirect (such as when a user visits a link), and may be incremented more than once per user.
 
@@ -210,19 +210,19 @@ To use link shortening, make sure the link shortening checkbox in the message co
 
 
 
-![SMS message composer with a checkbox selected for link shortening.](https://www.braze.com/docs/assets/img/link_shortening/shortening1.png?15346df93154828058d325833061e638)
+![SMS message composer with a checkbox selected for link shortening.](https://www.braze.com/docs/assets/img/link_shortening/shortening1.png?15346df93154828058d325833061e638){: width="1562" height="1068"}
 
 
 
 
-![RCS message composer with a checkbox selected for link shortening.](https://www.braze.com/docs/assets/img/link_shortening/shortening1_rcs.png?bd21c7dc53e0a43939fef7744ad14101)
+![RCS message composer with a checkbox selected for link shortening.](https://www.braze.com/docs/assets/img/link_shortening/shortening1_rcs.png?bd21c7dc53e0a43939fef7744ad14101){: width="1476" height="1222"}
 
 
 
 
 Braze recognizes only URLs that start with `http://` or `https://`. When a URL is recognized, the **Preview** section updates with a placeholder URL. Braze estimates the length of the message after shortening, but a warning prompts you to select a test user and save the message as a draft for a more accurate estimate.
 
-![Message composer with a long URL in the "Message" box and a generated shortened link in the preview.](https://www.braze.com/docs/assets/img/link_shortening/shortening3.png?a1d70223e31be6315b46ef3f3601ad50)
+![Message composer with a long URL in the "Message" box and a generated shortened link in the preview.](https://www.braze.com/docs/assets/img/link_shortening/shortening3.png?a1d70223e31be6315b46ef3f3601ad50){: width="1552" height="612"}
 
 ### Adding UTM parameters
 
@@ -251,7 +251,7 @@ If a draft is created within an active Canvas, a shortened URL won't be generate
 
 
 
-![Message "Test" tab with fields for selecting test recipients.](https://www.braze.com/docs/assets/img/link_shortening/shortening2.png?b7abf65464ddd0af1e65ef38701d5e34)
+![Message "Test" tab with fields for selecting test recipients.](https://www.braze.com/docs/assets/img/link_shortening/shortening2.png?b7abf65464ddd0af1e65ef38701d5e34){: width="1544" height="1140"}
 
 **Note:**
 
@@ -264,7 +264,7 @@ Liquid personalization and shortened URLs are templated in the **Test** tab afte
 
 When link shortening is turned on, the **SMS/MMS/RCS Performance** table includes a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on metrics, see [Message performance](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/reporting).
 
-![SMS and MMS performance metrics table.](https://www.braze.com/docs/assets/img/link_shortening/shortening4.png?6ed26714edeecd623530764fcc136833)
+![SMS and MMS performance metrics table.](https://www.braze.com/docs/assets/img/link_shortening/shortening4.png?6ed26714edeecd623530764fcc136833){: width="1586" height="191"}
 
 The **Historical Performance** and **SMS/MMS/RCS Performance** tables also include an option for **Total Clicks** and show a daily time series of click events. Clicks are incremented on redirect (such as when a user visits a link), and may be incremented more than once per user.
 

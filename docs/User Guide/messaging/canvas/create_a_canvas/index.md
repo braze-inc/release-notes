@@ -218,6 +218,8 @@ To view additional statistics, such as the average lifetime revenue for targeted
 
 
 
+
+
 ### Step 1.4: Select your send settings
 
 Select **Send Settings** to edit your subscription settings, turn on rate limiting, and to turn on [quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours). By turning on [rate limiting](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#about-rate-limiting) or [frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#about-frequency-capping), you can ease the marketing pressure placed on your users and ensure you aren't over-messaging them.

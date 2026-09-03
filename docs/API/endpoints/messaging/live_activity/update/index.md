@@ -1,11 +1,11 @@
-<div id='api_pvoblenknvog' class='api_div' data-search-keywords='update live activity app_id activity_id content_state end_activity dismissal_date stale_date notification message error'>
+<div id='api_jzpsmaegwanw' class='api_div' data-search-keywords='update live activity app_id activity_id content_state end_activity dismissal_date stale_date notification message error'>
 <h1 id="update-live-activity">Update Live Activity</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/live_activity/update</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to update and end <a href="/docs/developer_guide/push_notifications/live_notifications?sdktab=swift">Live Activities</a> displayed by your iOS app. This endpoint requires additional setup.</p>
+  <p>Use this endpoint to update and end <a href="/docs/developer_guide/live_notifications?sdktab=swift">Live Activities</a> displayed by your iOS app. This endpoint requires additional setup.</p>
 </blockquote>
 
 <p>After you register a Live Activity, you can pass a JSON payload to update your Apple Push Notification service (APNs). See Apple’s documentation on <a href="https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications">updating your Live Activity with push notification payloads</a> for more information.</p>
@@ -20,7 +20,7 @@
 
 <ul>
   <li>Generate an API key with the <code class="language-plaintext highlighter-rouge">messages.live_activity.update</code> permission.</li>
-  <li>Register a Live Activity <a href="/docs/developer_guide/push_notifications/live_notifications?tab=remote&amp;sdktab=swift">remotely</a> or <a href="/docs/developer_guide/push_notifications/live_notifications?tab=local&amp;sdktab=swift">locally</a> using the Braze Swift SDK.</li>
+  <li>Register a Live Activity <a href="/docs/developer_guide/live_notifications?tab=remote&amp;sdktab=swift">remotely</a> or <a href="/docs/developer_guide/live_notifications?tab=local&amp;sdktab=swift">locally</a> using the Braze Swift SDK.</li>
 </ul>
 
 <p><strong>Important:</strong></p>

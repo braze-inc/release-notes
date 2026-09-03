@@ -5,7 +5,7 @@
 **Important:**
 
 
-Braze Transactional Email is only available as part of select Braze packages. Contact your Braze customer success manager or open a [support ticket](https://www.braze.com/docs/braze_support) for more details.
+Braze Transactional Email is only available as part of select Braze packages. Contact your Braze customer success manager or open a [support ticket](https://www.braze.com/docs/user_guide/administer/personal/braze_support) for more details.
 
 
 

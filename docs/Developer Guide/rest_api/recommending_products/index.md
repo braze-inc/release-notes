@@ -1,6 +1,6 @@
 # Recommending products to users
 
-> Use the Braze REST API alongside [catalogs](https://www.braze.com/docs/user_guide/data/activation/catalogs/create) or [Connected Content](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content) to surface personalized product recommendations in your messages. This approach lets you plug your own recommendation engine into the Braze messaging ecosystem, so non-technical users can own the content and messaging surrounding each recommendation.
+> Use the Braze REST API alongside [catalogs](https://www.braze.com/docs/user_guide/data/activation/catalogs/create) or [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content) to surface personalized product recommendations in your messages. This approach lets you plug your own recommendation engine into the Braze messaging ecosystem, so non-technical users can own the content and messaging surrounding each recommendation.
 
 With this approach, you can:
 
@@ -16,7 +16,7 @@ To complete this guide, you need:
 | --- | --- |
 | Braze REST API key | A key with the `users.track` permission and, if managing catalogs via API, the relevant catalogs permissions. To create one, go to **Settings** > **API Keys**. |
 | Braze catalog | A catalog containing your product metadata (such as name, category, price, and image URL). To create one, see [Create a catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs/create). |
-| Liquid knowledge | Intermediate familiarity with [Liquid](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid) for templating personalized variables and using Connected Content. |
+| Liquid knowledge | Intermediate familiarity with [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) for templating personalized variables and using Connected Content. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Step 1: Store recommendations on user profiles
@@ -107,7 +107,7 @@ Hi {{${first_name}}}, check out our pick for you:
 
 ### Option B: Connected Content
 
-If your product metadata lives in an external service rather than a Braze catalog, use [Connected Content](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) to fetch it at send time.
+If your product metadata lives in an external service rather than a Braze catalog, use [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call) to fetch it at send time.
 
 
 For example, if your internal API returns product details by ID:
@@ -120,7 +120,7 @@ Hi {{${first_name}}}, we think you'll love:
 ```
 
 
-For more details on making API calls from your messages, see [Making an API call](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call).
+For more details on making API calls from your messages, see [Making an API call](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call).
 
 **Warning:**
 
@@ -141,5 +141,5 @@ After completing the setup, verify your integration:
 ## Considerations
 
 - Keep recommendation data accurate by updating custom attributes regularly as your recommendation engine produces new results.
-- Use Braze [personalization features](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content) to further tailor messages, such as incorporating user-specific data alongside product details.
-- Consider using [API-triggered delivery](https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery) to trigger messages from your backend using templates defined in the Braze dashboard.
+- Use Braze [personalization features](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize) to further tailor messages, such as incorporating user-specific data alongside product details.
+- Consider using [API-triggered delivery](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery) to trigger messages from your backend using templates defined in the Braze dashboard.

@@ -50,7 +50,7 @@ Braze uses different data storage systems for various features. Understanding wh
 - [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments)
 - [Prediction Suite](https://www.braze.com/docs/user_guide/brazeai)
 - [AI Personalized Item Recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai)
-- [Estimated Real Open Rate](https://www.braze.com/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#estimated-real-open-rate) (does not use custom events)
+- [Estimated Real Open Rate](https://www.braze.com/docs/user_guide/channels/email/reporting#estimated-real-open-rate) (does not use custom events)
 
 **Important:**
 

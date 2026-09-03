@@ -19,7 +19,7 @@ Alternatively, if you would like to include special custom handling, instead of 
 **Tip:**
 
 
-This can be done without SDK customization using our new [no code push primer](https://www.braze.com/docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/). 
+This can be done without SDK customization using our new [no code push primer](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/). 
 
 
 

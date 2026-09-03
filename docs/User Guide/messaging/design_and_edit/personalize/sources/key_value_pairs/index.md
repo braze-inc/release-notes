@@ -103,7 +103,7 @@ In addition to the ```aps``` library payload values, you may send custom key-val
 
 ![Screenshot related to custom key-value pairs.](https://www.braze.com/docs/assets/img_archive/keyvalue_enterpairs.png?47dd160570c7dc29da8533f4a5307e00)
 
-Use cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface. Braze allows you to send additional key-value pairs along with a push notification to be used through your application within the [extras key](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings#extracting-data-from-push-key-value-pairs). If you prefer to use another key, confirm that your app can handle this custom key.
+Use cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface. Braze allows you to send additional key-value pairs along with a push notification to be used through your application within the [extras key](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=swift#swift_settings). If you prefer to use another key, confirm that your app can handle this custom key.
 
 **Warning:**
 
@@ -148,7 +148,7 @@ Braze allows you to send custom-defined string key-value pairs, known as `extras
 
 ##### FCM messaging options
 
-Android push notifications can be further customized with FCM message options. These include [notification priority](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority), [sound](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#sounds), delay, lifespan, and collapsibility. These values can be specified in the **Settings** tab when creating a push message. Refer to [Advanced push notification settings](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=android#android_settings) for further instructions on how to set these options in the Braze message composer.
+Android push notifications can be further customized with FCM message options. These include [notification priority](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=android#android_settings), [sound](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=android#android_settings), delay, lifespan, and collapsibility. These values can be specified in the **Settings** tab when creating a push message. Refer to [Advanced push notification settings](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=android#android_settings) for further instructions on how to set these options in the Braze message composer.
 
 ![Screenshot related to fcm messaging options.](https://www.braze.com/docs/assets/img_archive/keyvalue_androidkeys.png?665cbb5f8189cc128ed14840f14aa398)
 
@@ -156,7 +156,7 @@ Android push notifications can be further customized with FCM message options. T
 
 A silent push notification is a push notification containing no alert message or sound, used to update your app's interface or content in the background. These notifications make use of key-value pairs to trigger these background app actions. Silent push notifications also power our [uninstall tracking](https://www.braze.com/docs/user_guide/analytics/tracking/uninstall_tracking).
 
-Marketers should test that silent push notifications trigger expected behavior before sending them to their app's users. After you compose your [iOS](https://www.braze.com/docs/developer_guide/push_notifications/silent?sdktab=swift) or [Android](https://www.braze.com/docs/developer_guide/push_notifications/silent?sdktab=android) silent push notification, ensure that you only target a test user by filtering on [external user ID](https://www.braze.com/docs/developer_guide/rest_api/messaging#external-user-id) or [email address](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment).
+Marketers should test that silent push notifications trigger expected behavior before sending them to their app's users. After you compose your [iOS](https://www.braze.com/docs/developer_guide/push_notifications/silent?sdktab=swift) or [Android](https://www.braze.com/docs/developer_guide/push_notifications/silent?sdktab=android) silent push notification, ensure that you only target a test user by filtering on [external user ID](https://www.braze.com/docs/api/endpoints/messaging#external-user-id) or [email address](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment).
 
 Upon campaign launch, you should check that you have not received any visible push notification on your test device.
 

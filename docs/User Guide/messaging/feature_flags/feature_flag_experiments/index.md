@@ -80,7 +80,7 @@ To edit, add, or remove additional default properties, edit the feature flag its
 
 ### Step 4: Choose users to target
 
-Use one of your segments or filters to choose your [target users](https://www.braze.com/docs/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). For example, you can use the **Received Feature Flag Variant** filter to retarget users who have already received an A/B test.
+Use one of your segments or filters to choose your [target users](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/target_users/). For example, you can use the **Received Feature Flag Variant** filter to retarget users who have already received an A/B test.
 
 ![The 'Target' page in a feature flag experiment with 'Received Feature Flag Variant' highlighted in the filter group search bar.](https://www.braze.com/docs/assets/img/feature_flags/variant-filter-dropdown.png?f937119488b7aa7ef186d1e82b125a96){: style="max-width:70%"}
 
@@ -97,7 +97,7 @@ Choose the percentage distribution for your experiment. As a best practice, you 
 
 ### Step 6: Assign conversions
 
-Braze lets you to track how often users perform specific actions, [conversion events](https://www.braze.com/docs/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. Specify up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze lets you to track how often users perform specific actions, [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events/), after receiving a campaign. Specify up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 ### Step 7: Review and launch
 

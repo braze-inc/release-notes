@@ -1,4 +1,4 @@
-<div id='api_ijordazishpx' class='api_div' data-search-keywords='list user’s subscription group status status message'>
+<div id='api_hcwacqrxabof' class='api_div' data-search-keywords='list user’s subscription group status status message'>
 <h1 id="list-users-subscription-group-status">List user’s subscription group status</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/subscription/status/get</p>

@@ -1,4 +1,4 @@
-<div id='api_fhavjmdfepam' class='api_div' data-search-keywords='delete object relationship rel_kind related_type_name related_external_id anchor deleted'>
+<div id='api_erhwsxvojmho' class='api_div' data-search-keywords='delete object relationship rel_kind related_type_name related_external_id anchor deleted'>
 <h1 id="delete-object-relationship">Delete object relationship</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/data_objects/objects/{type_name}/{external_id}/object_relationships</p>

@@ -17,6 +17,7 @@
 
 
 ## WhatsApp subscription states
+{: #whatsapp-subscription-states}
 
 For WhatsApp subscription state definitions and how they relate to Meta opt-in requirements, see [Subscription status](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_status#whatsapp).
 

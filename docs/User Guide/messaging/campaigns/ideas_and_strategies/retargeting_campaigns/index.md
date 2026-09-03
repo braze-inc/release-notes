@@ -76,6 +76,8 @@ Use this filter to find users who last received a specific campaign before or af
 
 
 
+
+
 ![Last received message from specific campaign filter with date options.](https://www.braze.com/docs/assets/img_archive/last_received_specific_campaign.png?0a0da03b8b03466c13edecd82211a941)
 
 ### Last received message from campaign or Canvas with tag 
@@ -87,6 +89,8 @@ Use this filter to find users who last received a campaign or Canvas with a give
 ### Received message from campaign 
 
 Use this filter to find users who have or have not received your target campaign.
+
+
 
 
 

@@ -40,7 +40,7 @@ Deploy the Merkury tag on your website to make the Merkury identity connector av
 
 ### Step 3: Create custom attributes
 
-The Merkury identity connector populates the following fields, which you must create in Braze as [custom attributes](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes).
+The Merkury identity connector populates the following fields, which you must create in Braze as [custom attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes).
 
 | Attribute name | Data type | Description |
 | --- | --- | --- |

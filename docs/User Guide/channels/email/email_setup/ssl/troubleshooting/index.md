@@ -22,7 +22,7 @@
 3. Send a test email using the [click tracking troubleshooting template](#click-tracking-issues). Compare tracked versus untracked URLs.
 4. If tracked links fail with 403, review CDN and WAF rules (user agents, query strings, redirect patterns).
 5. If setup is complete but links remain HTTP, contact your Braze customer success manager to confirm Braze enabled SSL.
-6. For persistent issues, coordinate with your CDN or IT team and contact [Braze Support](https://www.braze.com/docs/braze_support) with error codes and any details from your CDN or domain provider.
+6. For persistent issues, coordinate with your CDN or IT team and contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) with error codes and any details from your CDN or domain provider.
 
 ## Key concepts
 

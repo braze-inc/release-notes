@@ -1,4 +1,4 @@
-<div id='api_ubyprcaflcho' class='api_div' data-search-keywords='export user profile by global control group callback_endpoint fields_to_export output_format message object_prefix url created_at external_id user_aliases alias_name alias_label braze_id first_name last_name email dob home_city country phone language time_zone last_coordinates gender total_revenue attributed_campaign attributed_source attributed_adgroup attributed_ad custom_attributes custom_events name first last count purchases devices model os carrier idfv idfa google_ad_id roku_ad_id ad_tracking_enabled apps platform version sessions first_used last_used random_bucket device_id'>
+<div id='api_xomngykjcxdk' class='api_div' data-search-keywords='export user profile by global control group callback_endpoint fields_to_export output_format message object_prefix url created_at external_id user_aliases alias_name alias_label braze_id first_name last_name email dob home_city country phone language time_zone last_coordinates gender total_revenue attributed_campaign attributed_source attributed_adgroup attributed_ad custom_attributes custom_events name first last count purchases devices model os carrier idfv idfa google_ad_id roku_ad_id ad_tracking_enabled apps platform version sessions first_used last_used random_bucket device_id'>
 <h1 id="export-user-profile-by-global-control-group">Export user profile by Global Control Group</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/export/global_control_group</p>
@@ -303,7 +303,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     <tr>
       <td><code class="language-plaintext highlighter-rouge">random_bucket</code></td>
       <td>Integer</td>
-      <td>User’s <a href="/docs/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event">random bucket number</a>, used to create uniformly distributed segments of random users.</td>
+      <td>User’s <a href="/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-update-events">random bucket number</a>, used to create uniformly distributed segments of random users.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">time_zone</code></td>

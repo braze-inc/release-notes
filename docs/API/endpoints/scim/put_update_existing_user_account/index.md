@@ -1,4 +1,4 @@
-<div id='api_vfcemheihsyi' class='api_div' data-search-keywords='update dashboard user account schemas name department permissions roles team id'>
+<div id='api_uwgrdibkearw' class='api_div' data-search-keywords='update dashboard user account schemas name department permissions roles team id'>
 <h1 id="update-dashboard-user-account">Update dashboard user account</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/scim/v2/Users/{id}</p>
@@ -165,13 +165,13 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
       <td><code class="language-plaintext highlighter-rouge">department</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>Valid department string from the <a href="/docs/scim_api_appendix#department-strings">department string documentation</a>.</td>
+      <td>Valid department string from the <a href="/docs/api/objects_filters/scim_api_appendix">department string documentation</a>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">permissions</code></td>
       <td>Required</td>
       <td>JSON object</td>
-      <td>Permissions object as described in the <a href="/docs/scim_api_appendix#permissions-object">permissions object documentation</a>.</td>
+      <td>Permissions object as described in the <a href="/docs/api/objects_filters/scim_api_appendix">permissions object documentation</a>.</td>
     </tr>
   </tbody>
 </table>

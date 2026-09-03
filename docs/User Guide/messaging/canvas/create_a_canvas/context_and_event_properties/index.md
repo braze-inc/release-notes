@@ -97,7 +97,7 @@ Audience eligibility is evaluated once at Canvas entry. If a user is merged duri
 
 
 
-### Timestamps for triggers
+### Timestamps
 
 If you're using timestamps with a [datetime type](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/custom_event_properties) from events that trigger action-based Canvases, which are referenced using [context](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties), timestamps are normalized to UTC.
 

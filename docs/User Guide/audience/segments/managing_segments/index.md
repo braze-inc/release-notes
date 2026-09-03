@@ -87,3 +87,13 @@ All terms and strings entered in this field will be searched for. For example, s
 To search for all segment references, including those in other segments, campaigns, or Canvases, go to a segment's [Messaging Use](#messaging-use) section. The **Target segment** filter on the **Canvas** page searches only Canvas Audience segments. 
 
 ![Target segment filter on the Canvas page.](https://www.braze.com/docs/assets/img/segment/target_segment.png?c2f0aa16591656bc5de7e70af7820252){: style="max-width:45%;"}
+
+## Troubleshooting
+
+
+
+
+
+
+
+

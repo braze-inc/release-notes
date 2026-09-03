@@ -246,7 +246,7 @@ If the issue occurs on all browsers, try the following:
 - **Check your network connection:** Try turning off your VPN, if possible, or disable and re-enable your network connection.
 - **Restart your device:** Try logging into your Braze dashboard after restarting your device.
 
-If you've solved the prior issues and your dashboard still won't load or work as expected, contact [Support](https://www.braze.com/docs/braze_support).
+If you've solved the prior issues and your dashboard still won't load or work as expected, contact [Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
 
 ### The user belongs to no workspace
 
@@ -277,7 +277,7 @@ If you continue to have trouble after trying these steps:
 - Reset 2FA: Your admin can reset 2FA for your user account in the settings.
 - Re-add user: If issues persist, the admin can delete your user account from the dashboard and re-add you. This allows for the creation of the user with the same details.
 
-If problems continue after these steps, contact [Support](https://www.braze.com/docs/braze_support) for further assistance.
+If problems continue after these steps, contact [Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) for further assistance.
 
 ## Next steps
 
