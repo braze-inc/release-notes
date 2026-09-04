@@ -56,5 +56,4 @@ Set up short codes, long codes, or alphanumeric sender IDs in Braze before you l
 
 ## Next steps
 
-- [Message setup](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup)
-- [Create a message](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/create)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/channels/sms_mms_and_rcs/message_setup"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Message setup</span><span class="guide_tile_description">Configure sender numbers, compliance settings, and channel prerequisites before you send.</span></span></div></a></li><li><a href="/docs/user_guide/channels/sms_mms_and_rcs/create"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Create a message</span><span class="guide_tile_description">Build and launch SMS, MMS, or RCS campaigns in Braze.</span></span></div></a></li></ul>

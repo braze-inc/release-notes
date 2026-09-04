@@ -1,4 +1,4 @@
-<div id='api_cymnrppkofqw' class='api_div' data-search-keywords='replace user relationship braze_id rel_kind attributes role user_relationship type_name external_id user'>
+<div id='api_cckisjpcgcth' class='api_div' data-search-keywords='replace user relationship braze_id rel_kind attributes role user_relationship type_name external_id user'>
 <h1 id="replace-user-relationship">Replace user relationship</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/data_objects/objects/{type_name}/{external_id}/users</p>

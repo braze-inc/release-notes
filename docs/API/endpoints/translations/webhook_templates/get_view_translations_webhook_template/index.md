@@ -1,4 +1,4 @@
-<div id='api_tfgvxzbluyvz' class='api_div' data-search-keywords='view translations for a webhook template translations translation_map id_0 id_1 locale uuid name country language locale_key message'>
+<div id='api_pvdnhkflrctg' class='api_div' data-search-keywords='view translations for a webhook template translations translation_map id_0 id_1 locale uuid name country language locale_key message'>
 <h1 id="view-translations-for-a-webhook-template">View translations for a webhook template</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/webhook/translations</p>

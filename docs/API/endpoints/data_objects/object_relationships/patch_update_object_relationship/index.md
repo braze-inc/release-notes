@@ -1,4 +1,4 @@
-<div id='api_asnqhtthjrug' class='api_div' data-search-keywords='update object relationship rel_kind related_type_name related_external_id anchor attributes object_relationship to_data_object type_name external_id name'>
+<div id='api_wlhpjsgxfvul' class='api_div' data-search-keywords='update object relationship rel_kind related_type_name related_external_id anchor attributes object_relationship to_data_object type_name external_id name'>
 <h1 id="update-object-relationship">Update object relationship</h1>
 <div class="api_type"><div class="method patch ">patch</div>
 <p>/data_objects/objects/{type_name}/{external_id}/object_relationships</p>

@@ -64,8 +64,7 @@ For how templated delivery at display time affects **abort** logging, see [In-Ap
 
 ## Next steps
 
-- [Create an in-app message with the drag-and-drop editor](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop)
-- [Create an in-app message with the traditional editor](https://www.braze.com/docs/user_guide/channels/in_app_messages/traditional)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/channels/in_app_messages/drag_and_drop"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create an in-app message with the drag-and-drop editor</span></span></div></a></li><li><a href="/docs/user_guide/channels/in_app_messages/traditional"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create an in-app message with the traditional editor</span></span></div></a></li></ul>
 
 
 

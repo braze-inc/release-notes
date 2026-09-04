@@ -133,4 +133,4 @@ This guide explains the most common integration patterns. Information Security w
 
 After connecting your data sources, proceed to set up orchestration:
 
-- [Set up orchestration](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/orchestration_setup)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/brazeai/decisioning_studio/orchestration_setup"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Set up orchestration</span></span></div></a></li></ul>

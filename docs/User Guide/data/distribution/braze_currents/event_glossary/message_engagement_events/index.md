@@ -82,7 +82,8 @@ Certain events return a `platform` value that specifies the platform of the user
 
 <!--overview-end-->
 
-<div id='api_uhjgvdmgisbo' class='api_div' data-search-keywords='agent executed events agent this is the kafka record schema for when an agent console agent is executed. agent_id agent_name cache_hit cache_tokens canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name completion_tokens duration error external_user_id id input invocation_id invocation_source is_error llm_owned_by_customer model_name model_provider output prompt_tokens provider_request_id reasoning_tokens request_id thinking_level time total_tokens user_id event_type properties user'>
+
+<div id='api_xuhfxyvbsvoc' class='api_div' data-search-keywords='agent executed events agent this is the kafka record schema for when an agent console agent is executed. agent_id agent_name cache_hit cache_tokens canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name completion_tokens duration error external_user_id id input invocation_id invocation_source is_error llm_owned_by_customer model_name model_provider output prompt_tokens provider_request_id reasoning_tokens request_id thinking_level time total_tokens user_id event_type properties user'>
 <h2 id="agent-executed-events">Agent executed events</h2>
 
 <div class="api_tags" data-tags="Agent" data-tags-lower="agent"></div>
@@ -245,7 +246,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_nfklfwmsflaf' class='api_div' data-search-keywords='tool invocation events agent this is the kafka record schema for when a tool is executed. a tool is a function given to an llm to fulfill an objective. agent_id agent_name duration id invocation_source is_error request_id time tool_arguments tool_call_id tool_name event_type properties user'>
+<div id='api_tnwkcdnzahiq' class='api_div' data-search-keywords='tool invocation events agent this is the kafka record schema for when a tool is executed. a tool is a function given to an llm to fulfill an objective. agent_id agent_name duration id invocation_source is_error request_id time tool_arguments tool_call_id tool_name event_type properties user'>
 <h2 id="tool-invocation-events">Tool invocation events</h2>
 
 <div class="api_tags" data-tags="Agent" data-tags-lower="agent"></div>
@@ -326,7 +327,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_vpxrsseixbab' class='api_div' data-search-keywords='content optimizer component store update events content optimizer updates to the component store app_group_id combination_token content content_optimizer_step_id external_user_id id is_active time event_properties event_type insert_id library user_id properties user context device traits event timestamp type'>
+<div id='api_romxrmquwplr' class='api_div' data-search-keywords='content optimizer component store update events content optimizer updates to the component store app_group_id combination_token content content_optimizer_step_id external_user_id id is_active time event_properties event_type insert_id library user_id properties user context device traits event timestamp type'>
 <h2 id="content-optimizer-component-store-update-events">Content Optimizer Component Store Update events</h2>
 
 <div class="api_tags" data-tags="Content Optimizer" data-tags-lower="content optimizer"></div>
@@ -473,7 +474,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_vayitytobsyw' class='api_div' data-search-keywords='uninstall events uninstall this event occurs when a user uninstalls an app. use this data to track when users uninstall an app. while this is currently a message engagement event, this will be changed to a user behavior event in the future. app_group_id app_id device_id external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_ssjhsvujpliu' class='api_div' data-search-keywords='uninstall events uninstall this event occurs when a user uninstalls an app. use this data to track when users uninstall an app. while this is currently a message engagement event, this will be changed to a user behavior event in the future. app_group_id app_id device_id external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="uninstall-events">Uninstall events</h2>
 
 <div class="api_tags" data-tags="Uninstall" data-tags-lower="uninstall"></div>
@@ -704,7 +705,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_bopykdlfzcvn' class='api_div' data-search-keywords='global subscription state change events subscription this event occurs when braze receives a request to update the global subscription state of the user. app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name channel channel_identifier email_address external_user_id id message_variation_id send_id state_change_source subscription_status time timezone user_id event_properties message_variation_name event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_cfhoyvotelrw' class='api_div' data-search-keywords='global subscription state change events subscription this event occurs when braze receives a request to update the global subscription state of the user. app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name channel channel_identifier email_address external_user_id id message_variation_id send_id state_change_source subscription_status time timezone user_id event_properties message_variation_name event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="global-subscription-state-change-events">Global Subscription State Change events</h2>
 
 <div class="api_tags" data-tags="Subscription" data-tags-lower="subscription"></div>
@@ -1186,7 +1187,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_wxceipqeddsc' class='api_div' data-search-keywords='subscription group state change events subscription this event occurs when the subscription state of a user in a subscription group changes. app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name channel channel_identifier dispatch_id email_address external_user_id id message_variation_id message_variation_name phone_number send_id state_change_source subscription_group_id subscription_status time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_dasrlbdszwud' class='api_div' data-search-keywords='subscription group state change events subscription this event occurs when the subscription state of a user in a subscription group changes. app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name channel channel_identifier dispatch_id email_address external_user_id id message_variation_id message_variation_name phone_number send_id state_change_source subscription_group_id subscription_status time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="subscription-group-state-change-events">Subscription Group State Change events</h2>
 
 <div class="api_tags" data-tags="Subscription" data-tags-lower="subscription"></div>
@@ -1670,20 +1671,20 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_eiimmiefpgnn' class='api_div' data-search-keywords='campaign conversion events campaign, conversion this event occurs when a user does an action that has been set as a conversion event in a campaign. app_group_id app_id campaign_id campaign_name conversion_behavior conversion_behavior_index external_user_id id message_variation_id message_variation_name send_id time timezone user_id device_id event_properties dispatch_id event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_oukogoprfinf' class='api_div' data-search-keywords='campaign conversion events campaign, conversion this event occurs when a user does an action that has been set as a conversion event in a campaign. app_group_id app_id campaign_id campaign_name conversion_behavior conversion_behavior_index external_user_id id message_variation_id message_variation_name send_id time timezone user_id device_id event_properties dispatch_id event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="campaign-conversion-events">Campaign Conversion events</h2>
 
 <div class="api_tags" data-tags="Campaign, Conversion" data-tags-lower="campaign, conversion"></div>
 
 <p>This event occurs when a user does an action that has been set as a conversion event in a campaign.</p>
 
+<p><strong>Note:</strong></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">message_extras</code> field is only available in send events (for example, Email Send, Push Send). It is not included in conversion events. To associate <code class="language-plaintext highlighter-rouge">message_extras</code> data with downstream engagement, use <code class="language-plaintext highlighter-rouge">dispatch_id</code> or <code class="language-plaintext highlighter-rouge">send_id</code> to join send events with conversion events in your data warehouse. For evaluating copy effectiveness by conversion rate, consider using <a href="/docs/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign">campaign variants</a> instead.</p>
+
 <p><strong>Important:</strong></p>
 
 <p>Note that the conversion event is encoded in the <code class="language-plaintext highlighter-rouge">conversion_behavior</code> field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The <code class="language-plaintext highlighter-rouge">conversion_behavior_index</code> field represents which conversion event, such as 0 = A, 1 = B, 2 = C, 3 = D.</p>
-
-<p><strong>Note:</strong></p>
-
-<p>The <code class="language-plaintext highlighter-rouge">message_extras</code> field is only available in send events (for example, Email Send, Push Send). It is not included in conversion events. To associate <code class="language-plaintext highlighter-rouge">message_extras</code> data with downstream engagement, use <code class="language-plaintext highlighter-rouge">dispatch_id</code> or <code class="language-plaintext highlighter-rouge">send_id</code> to join send events with conversion events in your data warehouse. For evaluating copy effectiveness by conversion rate, consider using <a href="/docs/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/">campaign variants</a> instead.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -2003,7 +2004,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_qkszqkhxhfff' class='api_div' data-search-keywords='campaign control group enrollment events campaign, entry this event occurs when a user is enrolled in a control variant set on a multi-variant campaign. this event is generated as there will be no channel send event for this user. app_group_id app_id campaign_id campaign_name external_user_id id message_variation_id message_variation_name send_id time timezone user_id device_id event_properties dispatch_id event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_qbwvhfemytos' class='api_div' data-search-keywords='campaign control group enrollment events campaign, entry this event occurs when a user is enrolled in a control variant set on a multi-variant campaign. this event is generated as there will be no channel send event for this user. app_group_id app_id campaign_id campaign_name external_user_id id message_variation_id message_variation_name send_id time timezone user_id device_id event_properties dispatch_id event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="campaign-control-group-enrollment-events">Campaign Control Group Enrollment events</h2>
 
 <div class="api_tags" data-tags="Campaign, Entry" data-tags-lower="campaign, entry"></div>
@@ -2304,20 +2305,20 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_bkfefiqxiroh' class='api_div' data-search-keywords='canvas conversion events canvas, conversion this event occurs when a user does an action that has been set as a conversion event in canvas. app_group_id app_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name conversion_behavior conversion_behavior_index external_user_id id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_ijtxjslrzhzi' class='api_div' data-search-keywords='canvas conversion events canvas, conversion this event occurs when a user does an action that has been set as a conversion event in canvas. app_group_id app_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name conversion_behavior conversion_behavior_index external_user_id id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="canvas-conversion-events">Canvas Conversion events</h2>
 
 <div class="api_tags" data-tags="Canvas, Conversion" data-tags-lower="canvas, conversion"></div>
 
 <p>This event occurs when a user does an action that has been set as a conversion event in Canvas.</p>
 
-<p><strong>Important:</strong></p>
-
-<p>Note that the conversion event is encoded in the <code class="language-plaintext highlighter-rouge">conversion_behavior</code> field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The <code class="language-plaintext highlighter-rouge">conversion_behavior_index</code> field represents which conversion event, such as 0 = A, 1 = B, 2 = C, 3 = D.</p>
-
 <p><strong>Note:</strong></p>
 
 <p>The <code class="language-plaintext highlighter-rouge">message_extras</code> field is only available in send events (for example, Email Send, Push Send). It is not included in conversion events. To associate <code class="language-plaintext highlighter-rouge">message_extras</code> data with downstream engagement, use <code class="language-plaintext highlighter-rouge">send_id</code> to join send events with conversion events in your data warehouse. For evaluating copy effectiveness by conversion rate, consider using <a href="/docs/user_guide/messaging/ab_testing/create_tests">Canvas variants</a> instead.</p>
+
+<p><strong>Important:</strong></p>
+
+<p>Note that the conversion event is encoded in the <code class="language-plaintext highlighter-rouge">conversion_behavior</code> field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The <code class="language-plaintext highlighter-rouge">conversion_behavior_index</code> field represents which conversion event, such as 0 = A, 1 = B, 2 = C, 3 = D.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -2639,7 +2640,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_rgeitnyngtxy' class='api_div' data-search-keywords='canvas entry events canvas, entry this event occurs when a user enters into the canvas. this event tells you which variant the user entered into. app_group_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id in_control_group time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_mypdjbwsjebq' class='api_div' data-search-keywords='canvas entry events canvas, entry this event occurs when a user enters into the canvas. this event tells you which variant the user entered into. app_group_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id in_control_group time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="canvas-entry-events">Canvas Entry events</h2>
 
 <div class="api_tags" data-tags="Canvas, Entry" data-tags-lower="canvas, entry"></div>
@@ -2944,7 +2945,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_fqngcqpjuglc' class='api_div' data-search-keywords='canvas content optimizer step conversion events canvas, content optimizer, conversion conversion events for content optimizer canvas step app_group_id channel combination_token conversion_type dispatch_id external_user_id id time user_id event_properties braze_user_id event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_swkepfsmmhzq' class='api_div' data-search-keywords='canvas content optimizer step conversion events canvas, content optimizer, conversion conversion events for content optimizer canvas step app_group_id channel combination_token conversion_type dispatch_id external_user_id id time user_id event_properties braze_user_id event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="canvas-content-optimizer-step-conversion-events">Canvas Content Optimizer Step Conversion events</h2>
 
 <div class="api_tags" data-tags="Canvas, Content Optimizer, Conversion" data-tags-lower="canvas, content optimizer, conversion"></div>
@@ -3201,7 +3202,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_esdzhdgrvklo' class='api_div' data-search-keywords='canvas content optimizer step send events canvas, content optimizer, sends the canvas sends for content optimization canvas step app_group_id canvas_variation_id channel combination_token content_optimizer_step_id dispatch_id external_user_id id time user_id event_properties braze_user_id event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_pwybafiritjf' class='api_div' data-search-keywords='canvas content optimizer step send events canvas, content optimizer, sends the canvas sends for content optimization canvas step app_group_id canvas_variation_id channel combination_token content_optimizer_step_id dispatch_id external_user_id id time user_id event_properties braze_user_id event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="canvas-content-optimizer-step-send-events">Canvas Content Optimizer Step Send events</h2>
 
 <div class="api_tags" data-tags="Canvas, Content Optimizer, Sends" data-tags-lower="canvas, content optimizer, sends"></div>
@@ -3470,7 +3471,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_nhzjfvkspjkv' class='api_div' data-search-keywords='exit match audience events exit, canvas this event occurs when a user has exited a canvas by matching an audience. app_group_api_id app_group_id canvas_api_id canvas_id canvas_name canvas_step_api_id canvas_step_id canvas_step_name canvas_variation_api_id canvas_variation_id canvas_variation_name external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_kjtlggptpbye' class='api_div' data-search-keywords='exit match audience events exit, canvas this event occurs when a user has exited a canvas by matching an audience. app_group_api_id app_group_id canvas_api_id canvas_id canvas_name canvas_step_api_id canvas_step_id canvas_step_name canvas_variation_api_id canvas_variation_id canvas_variation_name external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="exit-match-audience-events">Exit Match Audience events</h2>
 
 <div class="api_tags" data-tags="Exit, Canvas" data-tags-lower="exit, canvas"></div>
@@ -3753,7 +3754,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_ufnbwvsoyiou' class='api_div' data-search-keywords='exit perform event events exit, canvas this event occurs when a user has exited a canvas by performing an event. app_group_api_id app_group_id canvas_api_id canvas_id canvas_name canvas_step_api_id canvas_step_id canvas_step_name canvas_variation_api_id canvas_variation_id canvas_variation_name external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_igbsexexenot' class='api_div' data-search-keywords='exit perform event events exit, canvas this event occurs when a user has exited a canvas by performing an event. app_group_api_id app_group_id canvas_api_id canvas_id canvas_name canvas_step_api_id canvas_step_id canvas_step_name canvas_variation_api_id canvas_variation_id canvas_variation_name external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="exit-perform-event-events">Exit Perform Event events</h2>
 
 <div class="api_tags" data-tags="Exit, Canvas" data-tags-lower="exit, canvas"></div>
@@ -4036,7 +4037,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_wwzskqvftbtt' class='api_div' data-search-keywords='experiment step conversion events canvas, conversion this event occurs when a user converts for a canvas experiment step. app_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name conversion_behavior conversion_behavior_index experiment_split_id experiment_split_name experiment_step_id external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_aiizfyfihlyz' class='api_div' data-search-keywords='experiment step conversion events canvas, conversion this event occurs when a user converts for a canvas experiment step. app_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name conversion_behavior conversion_behavior_index experiment_split_id experiment_split_name experiment_step_id external_user_id id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="experiment-step-conversion-events">Experiment Step Conversion events</h2>
 
 <div class="api_tags" data-tags="Canvas, Conversion" data-tags-lower="canvas, conversion"></div>
@@ -4369,7 +4370,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_dvhfcwwqvglo' class='api_div' data-search-keywords='experiment split entry events canvas, entry this event occurs when a user enters a canvas experiment step path. canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name experiment_split_id experiment_split_name experiment_step_id external_user_id id in_control_group time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_xpgsajqrkdgk' class='api_div' data-search-keywords='experiment split entry events canvas, entry this event occurs when a user enters a canvas experiment step path. canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name experiment_split_id experiment_split_name experiment_step_id external_user_id id in_control_group time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="experiment-split-entry-events">Experiment Split Entry events</h2>
 
 <div class="api_tags" data-tags="Canvas, Entry" data-tags-lower="canvas, entry"></div>
@@ -4680,7 +4681,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_vaueglkbvomc' class='api_div' data-search-keywords='canvas step progression events canvas, progression this event occurs when a user progresses through a step in a canvas with some outcome. note that this event doesn’t occur when steps are entered or exited. currently, only split steps (audience paths, decision split, action paths, experiment) and advance outcomes generate step progression events. app_group_id canvas_entry_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id exit_reason external_user_id id is_canvas_entry next_step_id progression_type time user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_wvbafympnysv' class='api_div' data-search-keywords='canvas step progression events canvas, progression this event occurs when a user progresses through a step in a canvas with some outcome. note that this event doesn’t occur when steps are entered or exited. currently, only split steps (audience paths, decision split, action paths, experiment) and advance outcomes generate step progression events. app_group_id canvas_entry_id canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id exit_reason external_user_id id is_canvas_entry next_step_id progression_type time user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="canvas-step-progression-events">Canvas Step Progression events</h2>
 
 <div class="api_tags" data-tags="Canvas, Progression" data-tags-lower="canvas, progression"></div>
@@ -5031,7 +5032,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_hwlfaoxdnstk' class='api_div' data-search-keywords='banner abort events banner, abort this event occurs when an originally scheduled banner message was aborted for some reason. abort_log abort_type ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
+<div id='api_bzyjbgbbndza' class='api_div' data-search-keywords='banner abort events banner, abort this event occurs when an originally scheduled banner message was aborted for some reason. abort_log abort_type ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
 <h2 id="banner-abort-events">Banner Abort events</h2>
 
 <div class="api_tags" data-tags="Banner, Abort" data-tags-lower="banner, abort"></div>
@@ -5544,7 +5545,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_ddnavuxcrlun' class='api_div' data-search-keywords='banner click events banner, clicks this event occurs when a user clicks a banner. ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser button_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id is_unique language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
+<div id='api_qkmunhziqqha' class='api_div' data-search-keywords='banner click events banner, clicks this event occurs when a user clicks a banner. ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser button_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id is_unique language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
 <h2 id="banner-click-events">Banner Click events</h2>
 
 <div class="api_tags" data-tags="Banner, Clicks" data-tags-lower="banner, clicks"></div>
@@ -6049,7 +6050,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_spzwwnxdsxtv' class='api_div' data-search-keywords='banner dismissal events banner, dismissal this event occurs when a user dismisses a banner. ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser button_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id is_unique language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties braze_user_id canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
+<div id='api_mdvignlzjchx' class='api_div' data-search-keywords='banner dismissal events banner, dismissal this event occurs when a user dismisses a banner. ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser button_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id is_unique language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties braze_user_id canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
 <h2 id="banner-dismissal-events">Banner Dismissal events</h2>
 
 <div class="api_tags" data-tags="Banner, Dismissal" data-tags-lower="banner, dismissal"></div>
@@ -6632,7 +6633,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_bmzikpwyxqtj' class='api_div' data-search-keywords='banner impression events banner, impressions this event occurs when a user views a banner. ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id is_unique language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
+<div id='api_mqwizpfwuult' class='api_div' data-search-keywords='banner impression events banner, impressions this event occurs when a user views a banner. ad_id ad_id_type ad_tracking_enabled app_group_id app_id banner_placement_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id is_unique language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id adid event_properties canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
 <h2 id="banner-impression-events">Banner Impression events</h2>
 
 <div class="api_tags" data-tags="Banner, Impressions" data-tags-lower="banner, impressions"></div>
@@ -7125,7 +7126,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_rvikmhpafnau' class='api_div' data-search-keywords='content card abort events abort, content cards this event occurs if a content card message was aborted based on liquid aborts, etc. abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_imtgdzzsusyc' class='api_div' data-search-keywords='content card abort events abort, content cards this event occurs if a content card message was aborted based on liquid aborts, etc. abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="content-card-abort-events">Content Card Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Content Cards" data-tags-lower="abort, content cards"></div>
@@ -7527,7 +7528,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_kjjhxpfvyxhm' class='api_div' data-search-keywords='content card click events content cards, clicks this event occurs when a user clicks a content card. ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id device_model external_user_id id is_unique message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties card_id dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_xkdofyghfycl' class='api_div' data-search-keywords='content card click events content cards, clicks this event occurs when a user clicks a content card. ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id device_model external_user_id id is_unique message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties card_id dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="content-card-click-events">Content Card Click events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Clicks" data-tags-lower="content cards, clicks"></div>
@@ -8013,7 +8014,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_klrgahtzlext' class='api_div' data-search-keywords='content card dismiss events content cards, dismissal this event occurs when a user dismisses a content card. ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id device_model external_user_id id is_unique message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties card_id dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_wygjokxzlyjj' class='api_div' data-search-keywords='content card dismiss events content cards, dismissal this event occurs when a user dismisses a content card. ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id device_model external_user_id id is_unique message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties card_id dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="content-card-dismiss-events">Content Card Dismiss events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Dismissal" data-tags-lower="content cards, dismissal"></div>
@@ -8499,7 +8500,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_mseawxyuxxkj' class='api_div' data-search-keywords='content card impression events content cards, impressions this event occurs when a user views a content card. ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id device_model external_user_id id is_unique message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties card_id dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_ykxogsvimfot' class='api_div' data-search-keywords='content card impression events content cards, impressions this event occurs when a user views a content card. ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id device_model external_user_id id is_unique message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties card_id dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="content-card-impression-events">Content Card Impression events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Impressions" data-tags-lower="content cards, impressions"></div>
@@ -8985,7 +8986,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_tsinzgitlsyi' class='api_div' data-search-keywords='content card send events content cards, sends this event occurs when a content card gets sent to a user. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id external_user_id id message_extras message_variation_id message_variation_name send_id time timezone user_id event_properties card_id dispatch_id event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_xxqggulokoib' class='api_div' data-search-keywords='content card send events content cards, sends this event occurs when a content card gets sent to a user. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name content_card_id device_id external_user_id id message_extras message_variation_id message_variation_name send_id time timezone user_id event_properties card_id dispatch_id event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="content-card-send-events">Content Card Send events</h2>
 
 <div class="api_tags" data-tags="Content Cards, Sends" data-tags-lower="content cards, sends"></div>
@@ -9380,7 +9381,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_takzhqrzuefa' class='api_div' data-search-keywords='email abort events abort, email this event occurs if an email message was aborted based on liquid aborts, etc. abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id email_address external_user_id id ip_pool message_variation_id message_variation_name send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_ftebikjscbpl' class='api_div' data-search-keywords='email abort events abort, email this event occurs if an email message was aborted based on liquid aborts, etc. abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id email_address external_user_id id ip_pool message_extras message_variation_id message_variation_name send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-abort-events">Email Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Email" data-tags-lower="abort, email"></div>
@@ -9415,6 +9416,7 @@ Certain events return a `platform` value that specifies the platform of the user
 26
 27
 28
+29
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -9436,6 +9438,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
@@ -9474,6 +9477,7 @@ Certain events return a `platform` value that specifies the platform of the user
 27
 28
 29
+30
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Abort</span><span class="w"> </span><span class="err">(users.messages.email.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -9493,6 +9497,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
@@ -9537,6 +9542,7 @@ Certain events return a `platform` value that specifies the platform of the user
 30
 31
 32
+33
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -9557,6 +9563,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
@@ -9601,6 +9608,7 @@ Certain events return a `platform` value that specifies the platform of the user
 28
 29
 30
+31
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Abort</span><span class="w"> </span><span class="err">(users.messages.email.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -9624,451 +9632,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"$insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Mixpanel API token"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Aborts</span><span class="w"> </span><span class="err">(users.messages.email.Abort)</span><span class="w">
-
-</span><span class="p">{</span><span class="w">
-  </span><span class="nl">"device_info"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"ios_idfv"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"environment"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The mParticle environment (either 'development' or 'production')"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"events"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"custom_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"source_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"custom_event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"event_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to mParticle"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"source_message_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"timestamp_unixtime_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) mParticle event type (either 'uninstall' or 'custom_event')"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nl">"schema_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"user_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"user_identities"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"customerid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Aborted</span><span class="w"> </span><span class="err">(users.messages.email.Abort)</span><span class="w">
-
-</span><span class="p">{</span><span class="w">
-  </span><span class="nl">"anonymousId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"context"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"device"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"traits"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"event"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Segment"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"messageId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"timestamp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"track"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"userId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-
-<h3 id="property-details">Property details</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
-  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#abort-types">Abort types</a>.</li>
-  <li><code class="language-plaintext highlighter-rouge">abort_type</code> will be <code class="language-plaintext highlighter-rouge">frequency_capped</code> if the message was aborted due to a global frequency cap rule.</li>
-  <li><code class="language-plaintext highlighter-rouge">abort_log</code> includes information about the specific rule that triggered the abort. An example is: <code class="language-plaintext highlighter-rouge">Frequency cap rule: 5 email messages every 1 week</code></li>
-  <li><code class="language-plaintext highlighter-rouge">message_extras</code> is populated only when an abort occurs after the <code class="language-plaintext highlighter-rouge">{% message_extras %}</code> tag runs during rendering.</li>
-</ul>
-
-</div>
-
-<div id='api_yegzlylgjyba' class='api_div' data-search-keywords='email bounce events email, bounce this event occurs when an internet service provider returns a hard bounce. a hard bounce signifies a permanent deliverability failure. app_group_id bounce_reason campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool is_drop message_variation_id message_variation_name send_id sending_ip time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
-<h2 id="email-bounce-events">Email Bounce events</h2>
-
-<div class="api_tags" data-tags="Email, Bounce" data-tags-lower="email, bounce"></div>
-
-<p>This event occurs when an Internet Service Provider returns a hard bounce. A hard bounce signifies a permanent deliverability failure.</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Bounce</span><span class="w">
-
-</span><span class="p">{</span><span class="w">
-  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"bounce_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"is_drop"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this event counts as a drop event"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"sending_ip"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP address from which the email send was made"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Bounce</span><span class="w"> </span><span class="err">(users.messages.email.Bounce)</span><span class="w">
-
-</span><span class="p">{</span><span class="w">
-  </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"event_properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"bounce_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"is_drop"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this event counts as a drop event"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Amplitude"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Bounce</span><span class="w">
-
-</span><span class="p">{</span><span class="w">
-  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"bounce_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"is_drop"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this event counts as a drop event"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"sending_ip"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP address from which the email send was made"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Bounce</span><span class="w"> </span><span class="err">(users.messages.email.Bounce)</span><span class="w">
-
-</span><span class="p">{</span><span class="w">
-  </span><span class="nl">"event"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Mixpanel"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"$partner_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"braze"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"bounce_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"distinct_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"$insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"is_drop"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this event counts as a drop event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
@@ -10124,8 +9688,7 @@ Certain events return a `platform` value that specifies the platform of the user
 44
 45
 46
-47
-</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Bounces</span><span class="w"> </span><span class="err">(users.messages.email.Bounce)</span><span class="w">
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Aborts</span><span class="w"> </span><span class="err">(users.messages.email.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"device_info"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -10136,8 +9699,9 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="p">{</span><span class="w">
       </span><span class="nl">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"custom_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"bounce_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
@@ -10148,10 +9712,8 @@ Certain events return a `platform` value that specifies the platform of the user
           </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"is_drop"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this event counts as a drop event"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
@@ -10210,7 +9772,469 @@ Certain events return a `platform` value that specifies the platform of the user
 34
 35
 36
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Aborted</span><span class="w"> </span><span class="err">(users.messages.email.Abort)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"anonymousId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"context"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"traits"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"event"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Segment"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"messageId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"abort_log"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Log message describing abort details (up to 128 chars)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"abort_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type of abort"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"timestamp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"track"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"userId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="property-details">Property details</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code class="language-plaintext highlighter-rouge">dispatch_id</code>. Use <code class="language-plaintext highlighter-rouge">dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
+  <li>The <code class="language-plaintext highlighter-rouge">abort_type</code> field describes the reason the message was aborted. For a full list of values, see <a href="/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#abort-types">Abort types</a>.</li>
+  <li><code class="language-plaintext highlighter-rouge">abort_type</code> will be <code class="language-plaintext highlighter-rouge">frequency_capped</code> if the message was aborted due to a global frequency cap rule.</li>
+  <li><code class="language-plaintext highlighter-rouge">abort_log</code> includes information about the specific rule that triggered the abort. An example is: <code class="language-plaintext highlighter-rouge">Frequency cap rule: 5 email messages every 1 week</code></li>
+  <li><code class="language-plaintext highlighter-rouge">message_extras</code> is populated only when an abort occurs after the <code class="language-plaintext highlighter-rouge">{% message_extras %}</code> tag runs during rendering.</li>
+</ul>
+
+</div>
+
+<div id='api_algtsekssqqt' class='api_div' data-search-keywords='email bounce events email, bounce this event occurs when an internet service provider returns a hard bounce. a hard bounce signifies a permanent deliverability failure. app_group_id bounce_reason campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool is_drop message_variation_id message_variation_name send_id send_time sending_ip time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<h2 id="email-bounce-events">Email Bounce events</h2>
+
+<div class="api_tags" data-tags="Email, Bounce" data-tags-lower="email, bounce"></div>
+
+<p>This event occurs when an Internet Service Provider returns a hard bounce. A hard bounce signifies a permanent deliverability failure.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Bounce</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bounce_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"is_drop"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this event counts as a drop event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"sending_ip"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP address from which the email send was made"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Bounce</span><span class="w"> </span><span class="err">(users.messages.email.Bounce)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"event_properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bounce_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_drop"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this event counts as a drop event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Amplitude"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Bounce</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bounce_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_drop"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this event counts as a drop event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sending_ip"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP address from which the email send was made"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Bounce</span><span class="w"> </span><span class="err">(users.messages.email.Bounce)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Mixpanel"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"$partner_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"braze"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bounce_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"distinct_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"$insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_drop"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this event counts as a drop event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Mixpanel API token"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
 37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Bounces</span><span class="w"> </span><span class="err">(users.messages.email.Bounce)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"device_info"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ios_idfv"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"environment"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The mParticle environment (either 'development' or 'production')"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"events"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"custom_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"bounce_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the campaign this event belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"campaign_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the campaign"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"canvas_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas this event belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"canvas_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"canvas_step_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas step this event belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"is_drop"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this event counts as a drop event"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"source_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"custom_event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"event_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to mParticle"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"source_message_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"timestamp_unixtime_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) mParticle event type (either 'uninstall' or 'custom_event')"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"schema_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"user_identities"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"customerid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Bounced</span><span class="w"> </span><span class="err">(users.messages.email.Bounce)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -10242,7 +10266,8 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"is_drop"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this event counts as a drop event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"timestamp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"track"</span><span class="p">,</span><span class="w">
@@ -10262,7 +10287,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_vnsqoevoucvr' class='api_div' data-search-keywords='email click events email, clicks this event occurs when a user clicks an email. multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email. app_group_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_class device_model device_os dispatch_id email_address esp external_user_id from_domain id ip_pool is_amp is_suspected_bot_click link_alias link_id mailbox_provider message_variation_id message_variation_name send_id suspected_bot_click_reason time timezone url user_agent user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device model traits link_url timestamp type asset_id asset_type click_id click_id_type email_sha256 event_id event_time'>
+<div id='api_rqawclidvtwc' class='api_div' data-search-keywords='email click events email, clicks this event occurs when a user clicks an email. multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email. app_group_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_class device_model device_os dispatch_id email_address esp external_user_id from_domain has_url_parameters id ip_pool is_amp is_suspected_bot_click link_alias link_aliasing_enabled link_id mailbox_provider message_variation_id message_variation_name send_id send_time suspected_bot_click_reason time timezone url user_agent user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device model traits link_url timestamp type asset_id asset_type click_id click_id_type email_sha256 event_id event_time'>
 <h2 id="email-click-events">Email Click events</h2>
 
 <div class="api_tags" data-tags="Email, Clicks" data-tags-lower="email, clicks"></div>
@@ -10307,6 +10332,9 @@ Certain events return a `platform` value that specifies the platform of the user
 36
 37
 38
+39
+40
+41
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Click</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -10328,16 +10356,19 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"has_url_parameters"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether the clicked URL contained query parameters"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"is_amp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is an AMP event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"is_suspected_bot_click"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is a suspected bot click. Will only populate when Bot Filtering setting is enabled"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"link_alias"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Alias associated with this link ID"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"link_aliasing_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether link aliasing was enabled for the workspace when this click was processed"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"link_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Unique ID for the link which was clicked, as created by Braze"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"mailbox_provider"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Mailbox provider value returned by the esp for this event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time in seconds of the corresponding Send Event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"suspected_bot_click_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled."</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
@@ -10388,6 +10419,9 @@ Certain events return a `platform` value that specifies the platform of the user
 39
 40
 41
+42
+43
+44
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Click</span><span class="w"> </span><span class="err">(users.messages.email.Click)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -10410,15 +10444,18 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"has_url_parameters"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether the clicked URL contained query parameters"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"is_amp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is an AMP event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"is_suspected_bot_click"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is a suspected bot click. Will only populate when Bot Filtering setting is enabled"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"link_alias"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Alias associated with this link ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"link_aliasing_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether link aliasing was enabled for the workspace when this click was processed"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"link_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Unique ID for the link which was clicked, as created by Braze"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"mailbox_provider"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Mailbox provider value returned by the esp for this event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time in seconds of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"suspected_bot_click_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) URL that the user clicked on"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the click occurred"</span><span class="w">
@@ -10475,6 +10512,9 @@ Certain events return a `platform` value that specifies the platform of the user
 42
 43
 44
+45
+46
+47
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Click</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -10498,15 +10538,18 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"has_url_parameters"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether the clicked URL contained query parameters"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"is_amp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is an AMP event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"is_suspected_bot_click"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is a suspected bot click. Will only populate when Bot Filtering setting is enabled"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"link_alias"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Alias associated with this link ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"link_aliasing_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether link aliasing was enabled for the workspace when this click was processed"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"link_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Unique ID for the link which was clicked, as created by Braze"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"mailbox_provider"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Mailbox provider value returned by the esp for this event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time in seconds of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"suspected_bot_click_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) URL that the user clicked on"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the click occurred"</span><span class="w">
@@ -10563,6 +10606,9 @@ Certain events return a `platform` value that specifies the platform of the user
 40
 41
 42
+43
+44
+45
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Click</span><span class="w"> </span><span class="err">(users.messages.email.Click)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -10588,16 +10634,19 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"email_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Email address of the user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"has_url_parameters"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether the clicked URL contained query parameters"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"$insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"is_amp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is an AMP event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"is_suspected_bot_click"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is a suspected bot click. Will only populate when Bot Filtering setting is enabled"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"link_alias"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Alias associated with this link ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"link_aliasing_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether link aliasing was enabled for the workspace when this click was processed"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"link_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Unique ID for the link which was clicked, as created by Braze"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"mailbox_provider"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Mailbox provider value returned by the esp for this event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time in seconds of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"suspected_bot_click_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Mixpanel API token"</span><span class="p">,</span><span class="w">
@@ -10663,6 +10712,9 @@ Certain events return a `platform` value that specifies the platform of the user
 54
 55
 56
+57
+58
+59
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Clicks</span><span class="w"> </span><span class="err">(users.messages.email.Click)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -10691,15 +10743,18 @@ Certain events return a `platform` value that specifies the platform of the user
           </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"has_url_parameters"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether the clicked URL contained query parameters"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"is_amp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is an AMP event"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"is_suspected_bot_click"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is a suspected bot click. Will only populate when Bot Filtering setting is enabled"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"link_alias"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Alias associated with this link ID"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"link_aliasing_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether link aliasing was enabled for the workspace when this click was processed"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"link_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Unique ID for the link which was clicked, as created by Braze"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"mailbox_provider"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Mailbox provider value returned by the esp for this event"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time in seconds of the corresponding Send Event"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"source_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) URL that the user clicked on"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the click occurred"</span><span class="w">
@@ -10769,6 +10824,9 @@ Certain events return a `platform` value that specifies the platform of the user
 46
 47
 48
+49
+50
+51
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Link</span><span class="w"> </span><span class="err">Clicked</span><span class="w"> </span><span class="err">(users.messages.email.Click)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -10800,16 +10858,19 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"esp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"from_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Sending domain for the email"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"has_url_parameters"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether the clicked URL contained query parameters"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"is_amp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is an AMP event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"is_suspected_bot_click"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Indicates that this is a suspected bot click. Will only populate when Bot Filtering setting is enabled"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"link_alias"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Alias associated with this link ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"link_aliasing_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether link aliasing was enabled for the workspace when this click was processed"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"link_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Unique ID for the link which was clicked, as created by Braze"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"link_url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) URL that the user clicked on"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"mailbox_provider"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Mailbox provider value returned by the esp for this event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time in seconds of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"suspected_bot_click_reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the click occurred"</span><span class="w">
   </span><span class="p">},</span><span class="w">
@@ -10835,6 +10896,9 @@ Certain events return a `platform` value that specifies the platform of the user
 14
 15
 16
+17
+18
+19
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Click</span><span class="w"> </span><span class="err">(users.messages.email.Click)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -10849,7 +10913,10 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"event_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"event_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify event type name (e.g. email_sent, sms_sent)"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"has_url_parameters"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether the clicked URL contained query parameters"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"link_aliasing_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether link aliasing was enabled for the workspace when this click was processed"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time in seconds of the corresponding Send Event"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -10865,7 +10932,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_sjmdxrkcemla' class='api_div' data-search-keywords='email deferral events email, deferral this event occurs when an internet service provider does not immediately deliver the email to a non-hard bounced email address and braze retries the email for up to 72 hours. typical reasons for deferrals include reputation-based email volume rate-limiting from the inbox provider, temporary connectivity issues, recipient’s mailbox is full, or dns errors. app_group_id attempt_count campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name deferral_reason dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name recipient_domain send_id sending_ip time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_gezrqkvyoiba' class='api_div' data-search-keywords='email deferral events email, deferral this event occurs when an internet service provider does not immediately deliver the email to a non-hard bounced email address and braze retries the email for up to 72 hours. typical reasons for deferrals include reputation-based email volume rate-limiting from the inbox provider, temporary connectivity issues, recipient’s mailbox is full, or dns errors. app_group_id attempt_count campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name deferral_reason dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name recipient_domain send_id send_time sending_ip time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-deferral-events">Email Deferral events</h2>
 
 <div class="api_tags" data-tags="Email, Deferral" data-tags-lower="email, deferral"></div>
@@ -10903,6 +10970,7 @@ Certain events return a `platform` value that specifies the platform of the user
 29
 30
 31
+32
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Deferral</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -10929,6 +10997,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"recipient_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Recipient's email domain"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"sending_ip"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP address from which the email send was made"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
@@ -10968,6 +11037,7 @@ Certain events return a `platform` value that specifies the platform of the user
 30
 31
 32
+33
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Deferral</span><span class="w"> </span><span class="err">(users.messages.email.Deferral)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -10992,6 +11062,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"recipient_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Recipient's email domain"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Amplitude"</span><span class="p">,</span><span class="w">
@@ -11037,6 +11108,7 @@ Certain events return a `platform` value that specifies the platform of the user
 33
 34
 35
+36
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Deferral</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -11063,6 +11135,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"recipient_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Recipient's email domain"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"sending_ip"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP address from which the email send was made"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
@@ -11106,6 +11179,7 @@ Certain events return a `platform` value that specifies the platform of the user
 30
 31
 32
+33
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Deferral</span><span class="w"> </span><span class="err">(users.messages.email.Deferral)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -11134,6 +11208,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"recipient_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Recipient's email domain"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Mixpanel API token"</span><span class="w">
   </span><span class="p">}</span><span class="w">
@@ -11185,6 +11260,7 @@ Certain events return a `platform` value that specifies the platform of the user
 43
 44
 45
+46
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Deferrals</span><span class="w"> </span><span class="err">(users.messages.email.Deferral)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -11213,6 +11289,7 @@ Certain events return a `platform` value that specifies the platform of the user
           </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"recipient_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Recipient's email domain"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"source_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nl">"custom_event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')"</span><span class="p">,</span><span class="w">
@@ -11269,6 +11346,7 @@ Certain events return a `platform` value that specifies the platform of the user
 35
 36
 37
+38
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Deferred</span><span class="w"> </span><span class="err">(users.messages.email.Deferral)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -11300,7 +11378,8 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"recipient_domain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Recipient's email domain"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"timestamp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"track"</span><span class="p">,</span><span class="w">
@@ -11320,7 +11399,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_pcmksrqruhid' class='api_div' data-search-keywords='email delivery events email, delivery this event occurs when an email sent made it successfully to the end-users inbox. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name send_id sending_ip time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_xolpimafkijz' class='api_div' data-search-keywords='email delivery events email, delivery this event occurs when an email sent made it successfully to the end-users inbox. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name send_id send_time sending_ip time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-delivery-events">Email Delivery events</h2>
 
 <div class="api_tags" data-tags="Email, Delivery" data-tags-lower="email, delivery"></div>
@@ -11354,6 +11433,7 @@ Certain events return a `platform` value that specifies the platform of the user
 25
 26
 27
+28
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Delivery</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -11376,6 +11456,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"sending_ip"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP address from which the email send was made"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
@@ -11412,6 +11493,7 @@ Certain events return a `platform` value that specifies the platform of the user
 27
 28
 29
+30
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Delivery</span><span class="w"> </span><span class="err">(users.messages.email.Delivery)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -11433,7 +11515,8 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Amplitude"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
@@ -11476,6 +11559,7 @@ Certain events return a `platform` value that specifies the platform of the user
 31
 32
 33
+34
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Delivery</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -11499,6 +11583,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"sending_ip"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP address from which the email send was made"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
@@ -11541,6 +11626,7 @@ Certain events return a `platform` value that specifies the platform of the user
 28
 29
 30
+31
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Delivery</span><span class="w"> </span><span class="err">(users.messages.email.Delivery)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -11567,6 +11653,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Mixpanel API token"</span><span class="w">
   </span><span class="p">}</span><span class="w">
@@ -11618,6 +11705,7 @@ Certain events return a `platform` value that specifies the platform of the user
 43
 44
 45
+46
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Deliveries</span><span class="w"> </span><span class="err">(users.messages.email.Delivery)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -11646,6 +11734,7 @@ Certain events return a `platform` value that specifies the platform of the user
           </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"source_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nl">"custom_event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')"</span><span class="p">,</span><span class="w">
@@ -11700,6 +11789,7 @@ Certain events return a `platform` value that specifies the platform of the user
 33
 34
 35
+36
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Delivered</span><span class="w"> </span><span class="err">(users.messages.email.Delivery)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -11729,7 +11819,8 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"timestamp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"track"</span><span class="p">,</span><span class="w">
@@ -11749,7 +11840,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_kiirbmyshwee' class='api_div' data-search-keywords='email mark as spam events email, spam this event occurs when the end-user hits the “spam” button on the email. note that this does not represent the fact the email went into the spam folder as braze does not track this. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name send_id time timezone user_agent user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_fluijjwiucnc' class='api_div' data-search-keywords='email mark as spam events email, spam this event occurs when the end-user hits the “spam” button on the email. note that this does not represent the fact the email went into the spam folder as braze does not track this. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name send_id send_time time timezone user_agent user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-mark-as-spam-events">Email Mark As Spam events</h2>
 
 <div class="api_tags" data-tags="Email, Spam" data-tags-lower="email, spam"></div>
@@ -11783,6 +11874,7 @@ Certain events return a `platform` value that specifies the platform of the user
 25
 26
 27
+28
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.MarkAsSpam</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -11805,6 +11897,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the spam report occurred"</span><span class="p">,</span><span class="w">
@@ -11842,6 +11935,7 @@ Certain events return a `platform` value that specifies the platform of the user
 28
 29
 30
+31
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Mark</span><span class="w"> </span><span class="err">As</span><span class="w"> </span><span class="err">Spam</span><span class="w"> </span><span class="err">(users.messages.email.MarkAsSpam)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -11864,6 +11958,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the spam report occurred"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Amplitude"</span><span class="p">,</span><span class="w">
@@ -11907,6 +12002,7 @@ Certain events return a `platform` value that specifies the platform of the user
 31
 32
 33
+34
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.MarkAsSpam</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -11930,6 +12026,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the spam report occurred"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
@@ -11973,6 +12070,7 @@ Certain events return a `platform` value that specifies the platform of the user
 29
 30
 31
+32
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Mark</span><span class="w"> </span><span class="err">As</span><span class="w"> </span><span class="err">Spam</span><span class="w"> </span><span class="err">(users.messages.email.MarkAsSpam)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -11999,6 +12097,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Mixpanel API token"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the spam report occurred"</span><span class="w">
@@ -12052,6 +12151,7 @@ Certain events return a `platform` value that specifies the platform of the user
 44
 45
 46
+47
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Marks</span><span class="w"> </span><span class="err">As</span><span class="w"> </span><span class="err">Spam</span><span class="w"> </span><span class="err">(users.messages.email.MarkAsSpam)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -12080,6 +12180,7 @@ Certain events return a `platform` value that specifies the platform of the user
           </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"source_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the spam report occurred"</span><span class="w">
         </span><span class="p">},</span><span class="w">
@@ -12136,6 +12237,7 @@ Certain events return a `platform` value that specifies the platform of the user
 34
 35
 36
+37
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Marked</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">Spam</span><span class="w"> </span><span class="err">(users.messages.email.MarkAsSpam)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -12166,6 +12268,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the spam report occurred"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"timestamp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
@@ -12186,7 +12289,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_elygtqutpwqm' class='api_div' data-search-keywords='email open events email, opens this event occurs when a user opens an email. multiple events may be generated for the same campaign if a user opens the email multiple times. app_group_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_class device_model device_os dispatch_id email_address esp external_user_id from_domain id ip_pool is_amp machine_open mailbox_provider message_variation_id message_variation_name send_id time timezone user_agent user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device model traits timestamp type asset_id asset_type email_sha256 event_id event_time'>
+<div id='api_pgasiprbgqlg' class='api_div' data-search-keywords='email open events email, opens this event occurs when a user opens an email. multiple events may be generated for the same campaign if a user opens the email multiple times. app_group_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_class device_model device_os dispatch_id email_address esp external_user_id from_domain id ip_pool is_amp machine_open mailbox_provider message_variation_id message_variation_name send_id send_time time timezone user_agent user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device model traits timestamp type asset_id asset_type email_sha256 event_id event_time'>
 <h2 id="email-open-events">Email Open events</h2>
 
 <div class="api_tags" data-tags="Email, Opens" data-tags-lower="email, opens"></div>
@@ -12231,6 +12334,7 @@ Certain events return a `platform` value that specifies the platform of the user
 32
 33
 34
+35
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Open</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -12260,6 +12364,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the open occurred"</span><span class="p">,</span><span class="w">
@@ -12304,6 +12409,7 @@ Certain events return a `platform` value that specifies the platform of the user
 35
 36
 37
+38
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Open</span><span class="w"> </span><span class="err">(users.messages.email.Open)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -12333,6 +12439,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the open occurred"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Amplitude"</span><span class="p">,</span><span class="w">
@@ -12383,6 +12490,7 @@ Certain events return a `platform` value that specifies the platform of the user
 38
 39
 40
+41
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.Open</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -12413,6 +12521,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the open occurred"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
@@ -12463,6 +12572,7 @@ Certain events return a `platform` value that specifies the platform of the user
 36
 37
 38
+39
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Open</span><span class="w"> </span><span class="err">(users.messages.email.Open)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -12496,6 +12606,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Mixpanel API token"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the open occurred"</span><span class="w">
@@ -12556,6 +12667,7 @@ Certain events return a `platform` value that specifies the platform of the user
 51
 52
 53
+54
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Opens</span><span class="w"> </span><span class="err">(users.messages.email.Open)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -12591,6 +12703,7 @@ Certain events return a `platform` value that specifies the platform of the user
           </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"source_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the open occurred"</span><span class="w">
         </span><span class="p">},</span><span class="w">
@@ -12655,6 +12768,7 @@ Certain events return a `platform` value that specifies the platform of the user
 42
 43
 44
+45
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Opened</span><span class="w"> </span><span class="err">(users.messages.email.Open)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -12693,6 +12807,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"user_agent"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) User agent on which the open occurred"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"timestamp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
@@ -12715,6 +12830,7 @@ Certain events return a `platform` value that specifies the platform of the user
 12
 13
 14
+15
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Open</span><span class="w"> </span><span class="err">(users.messages.email.Open)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -12727,7 +12843,8 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"event_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"event_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Shopify event type name (e.g. email_sent, sms_sent)"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="w">
+  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -12743,7 +12860,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_bvbypzsceonq' class='api_div' data-search-keywords='email retry events email, retry this event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. this is only available for message prioritization beta customers. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name country device_id dispatch_id email_address external_user_id gender id ip_pool language message_variation_id message_variation_name retry_log retry_type send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_csagbfiaibyz' class='api_div' data-search-keywords='email retry events email, retry this event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. this is only available for message prioritization beta customers. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name country device_id dispatch_id email_address external_user_id gender id ip_pool language message_variation_id message_variation_name retry_log retry_type send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-retry-events">Email Retry events</h2>
 
 <div class="api_tags" data-tags="Email, Retry" data-tags-lower="email, retry"></div>
@@ -13170,7 +13287,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_hmxxcumblcsh' class='api_div' data-search-keywords='email send events email, sends this event occurs when an email send request was successfully communicated between braze and sendgrid. however, this does not mean the email was received in the user’s inbox. braze does not log events to user profiles or any currents destination (such as snowflake) if the event cannot be matched to both the email and user id associated with the email event. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address external_user_id from_domain id ip_pool message_extras message_variation_id message_variation_name send_id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes esp source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type asset_id asset_type email_sha256 event_id event_time'>
+<div id='api_gyfapxpulull' class='api_div' data-search-keywords='email send events email, sends this event occurs when an email send request was successfully communicated between braze and sendgrid. however, this does not mean the email was received in the user’s inbox. braze does not log events to user profiles or any currents destination (such as snowflake) if the event cannot be matched to both the email and user id associated with the email event. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address external_user_id from_domain id ip_pool message_extras message_variation_id message_variation_name send_id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes esp source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type asset_id asset_type email_sha256 event_id event_time'>
 <h2 id="email-send-events">Email Send events</h2>
 
 <div class="api_tags" data-tags="Email, Sends" data-tags-lower="email, sends"></div>
@@ -13624,7 +13741,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_rvrifhcffvig' class='api_div' data-search-keywords='email soft bounce events email, bounce this event occurs when an internet service provider returns a soft bounce. a soft bounce signifies that an email could not be delivered because of a temporary deliverability failure. app_group_id bounce_reason campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name send_id sending_ip time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_rglfwsjsmjcl' class='api_div' data-search-keywords='email soft bounce events email, bounce this event occurs when an internet service provider returns a soft bounce. a soft bounce signifies that an email could not be delivered because of a temporary deliverability failure. app_group_id bounce_reason campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address esp external_user_id from_domain id ip_pool message_variation_id message_variation_name send_id send_time sending_ip time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-soft-bounce-events">Email Soft Bounce events</h2>
 
 <div class="api_tags" data-tags="Email, Bounce" data-tags-lower="email, bounce"></div>
@@ -13659,6 +13776,7 @@ Certain events return a `platform` value that specifies the platform of the user
 26
 27
 28
+29
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.SoftBounce</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -13682,6 +13800,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"sending_ip"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP address from which the email send was made"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
@@ -13719,6 +13838,7 @@ Certain events return a `platform` value that specifies the platform of the user
 28
 29
 30
+31
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Soft</span><span class="w"> </span><span class="err">Bounce</span><span class="w"> </span><span class="err">(users.messages.email.SoftBounce)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -13741,7 +13861,8 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Amplitude"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
@@ -13785,6 +13906,7 @@ Certain events return a `platform` value that specifies the platform of the user
 32
 33
 34
+35
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.email.SoftBounce</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -13809,6 +13931,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"sending_ip"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP address from which the email send was made"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
@@ -13852,6 +13975,7 @@ Certain events return a `platform` value that specifies the platform of the user
 29
 30
 31
+32
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Soft</span><span class="w"> </span><span class="err">Bounce</span><span class="w"> </span><span class="err">(users.messages.email.SoftBounce)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -13879,6 +14003,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Mixpanel API token"</span><span class="w">
   </span><span class="p">}</span><span class="w">
@@ -13931,6 +14056,7 @@ Certain events return a `platform` value that specifies the platform of the user
 44
 45
 46
+47
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Soft</span><span class="w"> </span><span class="err">Bounces</span><span class="w"> </span><span class="err">(users.messages.email.SoftBounce)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -13960,6 +14086,7 @@ Certain events return a `platform` value that specifies the platform of the user
           </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"source_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nl">"custom_event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')"</span><span class="p">,</span><span class="w">
@@ -14015,6 +14142,7 @@ Certain events return a `platform` value that specifies the platform of the user
 34
 35
 36
+37
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">Soft</span><span class="w"> </span><span class="err">Bounced</span><span class="w"> </span><span class="err">(users.messages.email.SoftBounce)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -14045,7 +14173,8 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"ip_pool"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) IP pool from which the email send was made"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
+    </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"send_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Time of the corresponding Send Event"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"timestamp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"track"</span><span class="p">,</span><span class="w">
@@ -14065,7 +14194,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_xnvrrfrqhbna' class='api_div' data-search-keywords='email unsubscribe events email, subscription this event occurs when the end-user has clicked “unsubscribe” from the email. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address external_user_id id ip_pool message_variation_id message_variation_name send_id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
+<div id='api_utewphkyafyh' class='api_div' data-search-keywords='email unsubscribe events email, subscription this event occurs when the end-user has clicked “unsubscribe” from the email. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id email_address external_user_id id ip_pool message_variation_id message_variation_name send_id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid email context device traits timestamp type'>
 <h2 id="email-unsubscribe-events">Email Unsubscribe events</h2>
 
 <div class="api_tags" data-tags="Email, Subscription" data-tags-lower="email, subscription"></div>
@@ -14470,7 +14599,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_nxlxoducnvpo' class='api_div' data-search-keywords='feature flag experiment impression events feature flags, impressions this event occurs whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an a/b test). app_group_id app_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id feature_flag_id_name gender id is_unique language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_brtztrdknehc' class='api_div' data-search-keywords='feature flag experiment impression events feature flags, impressions this event occurs whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an a/b test). app_group_id app_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id feature_flag_id_name gender id is_unique language message_variation_id message_variation_name os_version platform resolution sdk_version time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="feature-flag-experiment-impression-events">Feature Flag Experiment Impression events</h2>
 
 <div class="api_tags" data-tags="Feature Flags, Impressions" data-tags-lower="feature flags, impressions"></div>
@@ -14913,7 +15042,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_grpxutaytpsl' class='api_div' data-search-keywords='in-app message abort events in-app messages, abort this event occurs when an originally scheduled in-app message was aborted. abort_log abort_type ad_id ad_id_type ad_tracking_enabled app_group_id app_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name card_id carrier device_id device_model dispatch_id external_user_id id message_variation_id message_variation_name os_version platform resolution send_id time timezone user_id version adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_rayisbfpsdxq' class='api_div' data-search-keywords='in-app message abort events in-app messages, abort this event occurs when an originally scheduled in-app message was aborted. abort_log abort_type ad_id ad_id_type ad_tracking_enabled app_group_id app_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name card_id carrier device_id device_model dispatch_id external_user_id id message_variation_id message_variation_name os_version platform resolution send_id time timezone user_id version adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="in-app-message-abort-events">In-App Message Abort events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Abort" data-tags-lower="in-app messages, abort"></div>
@@ -15424,7 +15553,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_vkavqwmpcbvp' class='api_div' data-search-keywords='in-app message click events in-app messages, clicks this event occurs when a user clicks an in-app message. ad_id ad_id_type ad_tracking_enabled app_group_id app_id button_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name card_id device_id device_model external_user_id id message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_grhbywcwurqx' class='api_div' data-search-keywords='in-app message click events in-app messages, clicks this event occurs when a user clicks an in-app message. ad_id ad_id_type ad_tracking_enabled app_group_id app_id button_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name card_id device_id device_model external_user_id id message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="in-app-message-click-events">In-App Message Click events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Clicks" data-tags-lower="in-app messages, clicks"></div>
@@ -15914,7 +16043,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_obeshnfsgcaz' class='api_div' data-search-keywords='in-app message impression events in-app messages, impressions this event occurs when a user views an in-app message. ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name card_id device_id device_model external_user_id id locale_key message_extras message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_umekyahjgqoa' class='api_div' data-search-keywords='in-app message impression events in-app messages, impressions this event occurs when a user views an in-app message. ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name card_id device_id device_model external_user_id id locale_key message_extras message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties dispatch_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="in-app-message-impression-events">In-App Message Impression events</h2>
 
 <div class="api_tags" data-tags="In-App Messages, Impressions" data-tags-lower="in-app messages, impressions"></div>
@@ -16416,7 +16545,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_sqxkeiytkdlq' class='api_div' data-search-keywords='landing page click events landing pages, clicks this event occurs when an end-user clicks on select elements and form fields on a landing page app_group_id external_user_id id landing_page_api_id landing_page_name target time user_id event_properties braze_user_id event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_tkhqrqsozwbp' class='api_div' data-search-keywords='landing page click events landing pages, clicks this event occurs when an end-user clicks on select elements and form fields on a landing page app_group_id external_user_id id landing_page_api_id landing_page_name target time user_id event_properties braze_user_id event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="landing-page-click-events">Landing Page Click events</h2>
 
 <div class="api_tags" data-tags="Landing Pages, Clicks" data-tags-lower="landing pages, clicks"></div>
@@ -16661,7 +16790,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_cgitmvpqujuy' class='api_div' data-search-keywords='landing page form submission events landing pages, form submissions this event occurs when an end-user completes a form on a landing page and clicks on the button to submit the information app_group_id external_user_id id landing_page_api_id landing_page_name time user_id event_properties braze_user_id event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_einnyurdokvt' class='api_div' data-search-keywords='landing page form submission events landing pages, form submissions this event occurs when an end-user completes a form on a landing page and clicks on the button to submit the information app_group_id external_user_id id landing_page_api_id landing_page_name time user_id event_properties braze_user_id event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="landing-page-form-submission-events">Landing Page Form Submission events</h2>
 
 <div class="api_tags" data-tags="Landing Pages, Form Submissions" data-tags-lower="landing pages, form submissions"></div>
@@ -16894,7 +17023,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_pyrxstdbvkkh' class='api_div' data-search-keywords='landing page impression events landing pages, impressions this event occurs when an end-user’s browser loads and displays a landing page app_group_id external_user_id id landing_page_api_id landing_page_name liquid_enabled time user_id event_properties braze_user_id event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_cvkzzvsbpqqd' class='api_div' data-search-keywords='landing page impression events landing pages, impressions this event occurs when an end-user’s browser loads and displays a landing page app_group_id external_user_id id landing_page_api_id landing_page_name liquid_enabled time user_id event_properties braze_user_id event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="landing-page-impression-events">Landing Page Impression events</h2>
 
 <div class="api_tags" data-tags="Landing Pages, Impressions" data-tags-lower="landing pages, impressions"></div>
@@ -17139,7 +17268,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_bwbnchugynov' class='api_div' data-search-keywords='line abort events line, abort this event occurs when a scheduled line message cannot be delivered, before sending to line. abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name message_variation_id native_line_id send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_krrrgquemchn' class='api_div' data-search-keywords='line abort events line, abort this event occurs when a scheduled line message cannot be delivered, before sending to line. abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name message_extras message_variation_id native_line_id send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="line-abort-events">LINE Abort events</h2>
 
 <div class="api_tags" data-tags="LINE, Abort" data-tags-lower="line, abort"></div>
@@ -17173,6 +17302,7 @@ Certain events return a `platform` value that specifies the platform of the user
 25
 26
 27
+28
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.line.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -17192,6 +17322,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"line_channel_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel ID the message was sent to or received from"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"line_channel_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel Name the message was sent to or received from"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"native_line_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's Line ID from which the message was sent to or received from"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
@@ -17231,6 +17362,7 @@ Certain events return a `platform` value that specifies the platform of the user
 27
 28
 29
+30
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Abort</span><span class="w"> </span><span class="err">(users.messages.line.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -17248,6 +17380,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"line_channel_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel ID the message was sent to or received from"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"line_channel_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel Name the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"native_line_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's Line ID from which the message was sent to or received from"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
@@ -17293,6 +17426,7 @@ Certain events return a `platform` value that specifies the platform of the user
 29
 30
 31
+32
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.line.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -17311,6 +17445,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"line_channel_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel ID the message was sent to or received from"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"line_channel_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel Name the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"native_line_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's Line ID from which the message was sent to or received from"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
@@ -17355,6 +17490,7 @@ Certain events return a `platform` value that specifies the platform of the user
 27
 28
 29
+30
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Abort</span><span class="w"> </span><span class="err">(users.messages.line.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -17376,6 +17512,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"$insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"line_channel_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel ID the message was sent to or received from"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"line_channel_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel Name the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"native_line_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's Line ID from which the message was sent to or received from"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
@@ -17430,6 +17567,7 @@ Certain events return a `platform` value that specifies the platform of the user
 42
 43
 44
+45
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Aborts</span><span class="w"> </span><span class="err">(users.messages.line.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -17454,6 +17592,7 @@ Certain events return a `platform` value that specifies the platform of the user
           </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"line_channel_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel ID the message was sent to or received from"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"line_channel_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel Name the message was sent to or received from"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"native_line_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's Line ID from which the message was sent to or received from"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
@@ -17509,6 +17648,7 @@ Certain events return a `platform` value that specifies the platform of the user
 31
 32
 33
+34
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Aborted</span><span class="w"> </span><span class="err">(users.messages.line.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -17533,6 +17673,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"line_channel_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel ID the message was sent to or received from"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"line_channel_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The LINE Channel Name the message was sent to or received from"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"native_line_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] The user's Line ID from which the message was sent to or received from"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
@@ -17556,7 +17697,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_acsmytiiwoxm' class='api_div' data-search-keywords='line click events line, clicks this event occurs when a user clicks a link in a line message where the link’s domain matches the click tracking domain. app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id is_suspected_bot_click line_channel_id line_channel_name message_variation_id native_line_id send_id short_url subscription_group_id time timezone url user_agent user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_dghwrugipsyz' class='api_div' data-search-keywords='line click events line, clicks this event occurs when a user clicks a link in a line message where the link’s domain matches the click tracking domain. app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id is_suspected_bot_click line_channel_id line_channel_name message_variation_id native_line_id send_id short_url subscription_group_id time timezone url user_agent user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="line-click-events">LINE Click events</h2>
 
 <div class="api_tags" data-tags="LINE, Clicks" data-tags-lower="line, clicks"></div>
@@ -17991,7 +18132,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_wbqkfqyargdq' class='api_div' data-search-keywords='line inbound receive events line, inbound received this event occurs when a line message is received from a user. app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name media_id message_body message_variation_id native_line_id send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_fmaqwlzbktzw' class='api_div' data-search-keywords='line inbound receive events line, inbound received this event occurs when a line message is received from a user. app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name media_id message_body message_variation_id native_line_id send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="line-inbound-receive-events">LINE Inbound Receive events</h2>
 
 <div class="api_tags" data-tags="LINE, Inbound Received" data-tags-lower="line, inbound received"></div>
@@ -18404,7 +18545,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_wgdqgpysoemu' class='api_div' data-search-keywords='line retry events line, retry this event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. this is only available for message prioritization beta customers. app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name message_variation_id native_line_id retry_log retry_type send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_mdcmavtffpnj' class='api_div' data-search-keywords='line retry events line, retry this event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. this is only available for message prioritization beta customers. app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name message_variation_id native_line_id retry_log retry_type send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="line-retry-events">LINE Retry events</h2>
 
 <div class="api_tags" data-tags="LINE, Retry" data-tags-lower="line, retry"></div>
@@ -18811,7 +18952,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_xykfxtporrvm' class='api_div' data-search-keywords='line send events line, sends this event occurs when a line message is sent to line. app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name message_extras message_variation_id native_line_id send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_lriznzcgnsou' class='api_div' data-search-keywords='line send events line, sends this event occurs when a line message is sent to line. app_group_id campaign_id campaign_name canvas_id canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id id line_channel_id line_channel_name message_extras message_variation_id native_line_id send_id subscription_group_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="line-send-events">LINE Send events</h2>
 
 <div class="api_tags" data-tags="LINE, Sends" data-tags-lower="line, sends"></div>
@@ -19212,7 +19353,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_xtlokhshjcwb' class='api_div' data-search-keywords='live activity outcome events live activity, outcome this event occurs when braze receives a response from a third party provider (e.g. apns) after the live activity send activity_attributes_type activity_id app_group_id app_id external_user_id id live_activity_event_outcome live_activity_event_type push_to_start_token time update_token user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_ldnatibfmllb' class='api_div' data-search-keywords='live activity outcome events live activity, outcome this event occurs when braze receives a response from a third party provider (e.g. apns) after the live activity send activity_attributes_type activity_id app_group_id app_id external_user_id id live_activity_event_outcome live_activity_event_type push_to_start_token time update_token user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="live-activity-outcome-events">Live Activity Outcome events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Outcome" data-tags-lower="live activity, outcome"></div>
@@ -19499,7 +19640,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_scqtyonbqqde' class='api_div' data-search-keywords='live activity send events live activity, sends this event occurs when the braze system makes a request to its provider regarding live activity. activity_attributes_type activity_id app_group_id app_id external_user_id id live_activity_event_type push_to_start_token time update_token user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_jyvyoxvrbqit' class='api_div' data-search-keywords='live activity send events live activity, sends this event occurs when the braze system makes a request to its provider regarding live activity. activity_attributes_type activity_id app_group_id app_id external_user_id id live_activity_event_type push_to_start_token time update_token user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="live-activity-send-events">Live Activity Send events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Sends" data-tags-lower="live activity, sends"></div>
@@ -19774,7 +19915,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_gemxdantbycd' class='api_div' data-search-keywords='push notification abort events abort, push this event occurs if a push notification message was aborted based on liquid aborts, etc. abort_log abort_type app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name platform send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_ukjahzknahdr' class='api_div' data-search-keywords='push notification abort events abort, push this event occurs if a push notification message was aborted based on liquid aborts, etc. abort_log abort_type app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_extras message_variation_id message_variation_name platform send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="push-notification-abort-events">Push Notification Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Push" data-tags-lower="abort, push"></div>
@@ -19809,6 +19950,7 @@ Certain events return a `platform` value that specifies the platform of the user
 26
 27
 28
+29
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.pushnotification.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -19829,6 +19971,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Platform of the device"</span><span class="p">,</span><span class="w">
@@ -19868,6 +20011,7 @@ Certain events return a `platform` value that specifies the platform of the user
 27
 28
 29
+30
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Push</span><span class="w"> </span><span class="err">Notification</span><span class="w"> </span><span class="err">Abort</span><span class="w"> </span><span class="err">(users.messages.pushnotification.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -19886,6 +20030,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
@@ -19931,6 +20076,7 @@ Certain events return a `platform` value that specifies the platform of the user
 30
 31
 32
+33
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.pushnotification.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -19950,6 +20096,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
@@ -19995,6 +20142,7 @@ Certain events return a `platform` value that specifies the platform of the user
 28
 29
 30
+31
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Push</span><span class="w"> </span><span class="err">Notification</span><span class="w"> </span><span class="err">Abort</span><span class="w"> </span><span class="err">(users.messages.pushnotification.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -20017,6 +20165,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"distinct_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"$insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
@@ -20072,6 +20221,7 @@ Certain events return a `platform` value that specifies the platform of the user
 43
 44
 45
+46
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Push</span><span class="w"> </span><span class="err">Notification</span><span class="w"> </span><span class="err">Aborts</span><span class="w"> </span><span class="err">(users.messages.pushnotification.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -20098,6 +20248,7 @@ Certain events return a `platform` value that specifies the platform of the user
           </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
@@ -20153,6 +20304,7 @@ Certain events return a `platform` value that specifies the platform of the user
 32
 33
 34
+35
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Push</span><span class="w"> </span><span class="err">Notification</span><span class="w"> </span><span class="err">Aborted</span><span class="w"> </span><span class="err">(users.messages.pushnotification.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -20178,6 +20330,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Platform of the device"</span><span class="p">,</span><span class="w">
@@ -20201,7 +20354,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_kjsqtkmuqevv' class='api_div' data-search-keywords='push notification bounce events push, bounce this event occurs when an error is received from either apple push notification service or fire cloud messaging. this means that the push message was bounced, and therefore not delivered to the user’s device. ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name platform push_token send_id time timezone user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_qubgloowllgu' class='api_div' data-search-keywords='push notification bounce events push, bounce this event occurs when an error is received from either apple push notification service or fire cloud messaging. this means that the push message was bounced, and therefore not delivered to the user’s device. ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name platform push_token send_id time timezone user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="push-notification-bounce-events">Push Notification Bounce events</h2>
 
 <div class="api_tags" data-tags="Push, Bounce" data-tags-lower="push, bounce"></div>
@@ -20655,7 +20808,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_subgtbplksxu' class='api_div' data-search-keywords='push notification ios foreground open events push, ios, opens this event is not supported by our swift sdk and is now deprecated using our obj-c sdk. ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name platform send_id time timezone user_id adid event_properties device_model os_version event_type idfa insert_id library properties user event distinct_id token context device model type traits timestamp'>
+<div id='api_sgmdisnqvqok' class='api_div' data-search-keywords='push notification ios foreground open events push, ios, opens this event is not supported by our swift sdk and is now deprecated using our obj-c sdk. ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name platform send_id time timezone user_id adid event_properties device_model os_version event_type idfa insert_id library properties user event distinct_id token context device model type traits timestamp'>
 <h2 id="push-notification-ios-foreground-open-events">Push Notification iOS Foreground Open events</h2>
 
 <div class="api_tags" data-tags="Push, iOS, Opens" data-tags-lower="push, ios, opens"></div>
@@ -21016,7 +21169,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_ptokwfzzbrtg' class='api_div' data-search-keywords='push notification open events push, opens this event occurs when a user directly clicks on the push notification to open the application. currently, push open events refer specifically to “direct opens” rather than “total opens”. this does not include statistics shown at the campaign level of “influenced opens” as these are not attributed at the user level. ad_id ad_id_type ad_tracking_enabled app_group_id app_id button_action_type button_string campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id device_model dispatch_id external_user_id id message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
+<div id='api_yhekofjxktqf' class='api_div' data-search-keywords='push notification open events push, opens this event occurs when a user directly clicks on the push notification to open the application. currently, push open events refer specifically to “direct opens” rather than “total opens”. this does not include statistics shown at the campaign level of “influenced opens” as these are not attributed at the user level. ad_id ad_id_type ad_tracking_enabled app_group_id app_id button_action_type button_string campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id device_model dispatch_id external_user_id id message_variation_id message_variation_name os_version platform send_id time timezone user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model type traits timestamp'>
 <h2 id="push-notification-open-events">Push Notification Open events</h2>
 
 <div class="api_tags" data-tags="Push, Opens" data-tags-lower="push, opens"></div>
@@ -21499,7 +21652,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_otidkgywwrgl' class='api_div' data-search-keywords='push notification retry events push, retry this event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. this is only available for message prioritization beta customers. app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name country device_id dispatch_id external_user_id gender id language message_variation_id message_variation_name platform retry_log retry_type send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_escukotelqqj' class='api_div' data-search-keywords='push notification retry events push, retry this event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. this is only available for message prioritization beta customers. app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name country device_id dispatch_id external_user_id gender id language message_variation_id message_variation_name platform retry_log retry_type send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="push-notification-retry-events">Push Notification Retry events</h2>
 
 <div class="api_tags" data-tags="Push, Retry" data-tags-lower="push, retry"></div>
@@ -21922,7 +22075,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_qwmrsvshlnjb' class='api_div' data-search-keywords='push notification send events push, sends this event occurs when braze processes a push message for a user, communicating this to apple push notification service or fire cloud messaging. this does not mean the push was delivered to the device, just that a message was sent. ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id locale_key message_extras message_variation_id message_variation_name platform push_token send_id time timezone user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_qhexbazhwnuq' class='api_div' data-search-keywords='push notification send events push, sends this event occurs when braze processes a push message for a user, communicating this to apple push notification service or fire cloud messaging. this does not mean the push was delivered to the device, just that a message was sent. ad_id ad_id_type ad_tracking_enabled app_group_id app_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id locale_key message_extras message_variation_id message_variation_name platform push_token send_id time timezone user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="push-notification-send-events">Push Notification Send events</h2>
 
 <div class="api_tags" data-tags="Push, Sends" data-tags-lower="push, sends"></div>
@@ -22402,7 +22555,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_jzdepmncaegw' class='api_div' data-search-keywords='rcs abort events rcs, abort this event is created when an rcs send is interrupted due to an error detected within braze, and the message is dropped. abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_variation_id message_variation_name subscription_group_id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_yzrpqsssride' class='api_div' data-search-keywords='rcs abort events rcs, abort this event is created when an rcs send is interrupted due to an error detected within braze, and the message is dropped. abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_extras message_variation_id message_variation_name subscription_group_id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="rcs-abort-events">RCS Abort events</h2>
 
 <div class="api_tags" data-tags="RCS, Abort" data-tags-lower="rcs, abort"></div>
@@ -22432,6 +22585,7 @@ Certain events return a `platform` value that specifies the platform of the user
 21
 22
 23
+24
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.rcs.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -22449,6 +22603,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
@@ -22482,6 +22637,7 @@ Certain events return a `platform` value that specifies the platform of the user
 23
 24
 25
+26
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Abort</span><span class="w">  </span><span class="err">(users.messages.rcs.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -22497,6 +22653,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="w">
@@ -22536,6 +22693,7 @@ Certain events return a `platform` value that specifies the platform of the user
 25
 26
 27
+28
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.rcs.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -22553,6 +22711,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="w">
@@ -22591,6 +22750,7 @@ Certain events return a `platform` value that specifies the platform of the user
 24
 25
 26
+27
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Abort</span><span class="w">  </span><span class="err">(users.messages.rcs.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -22610,6 +22770,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"distinct_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"$insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
@@ -22658,6 +22819,7 @@ Certain events return a `platform` value that specifies the platform of the user
 37
 38
 39
+40
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Aborts</span><span class="w"> </span><span class="err">(users.messages.rcs.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -22678,6 +22840,7 @@ Certain events return a `platform` value that specifies the platform of the user
           </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"source_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
@@ -22729,6 +22892,7 @@ Certain events return a `platform` value that specifies the platform of the user
 28
 29
 30
+31
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Aborted</span><span class="w"> </span><span class="err">(users.messages.rcs.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -22751,6 +22915,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="w">
@@ -22771,7 +22936,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_rfapzxfikmeu' class='api_div' data-search-keywords='rcs click events rcs, clicks an event that is created when the user interacts with an rcs message in a way that involves tapping or clicking on a ui element. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id element_label element_type external_user_id id interaction_type is_suspected_bot_click message_variation_id message_variation_name send_id short_url subscription_group_id suspected_bot_click_reason time url user_agent user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_ojdvtbgilcdi' class='api_div' data-search-keywords='rcs click events rcs, clicks an event that is created when the user interacts with an rcs message in a way that involves tapping or clicking on a ui element. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id element_label element_type external_user_id id interaction_type is_suspected_bot_click message_variation_id message_variation_name send_id short_url subscription_group_id suspected_bot_click_reason time url user_agent user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="rcs-click-events">RCS Click events</h2>
 
 <div class="api_tags" data-tags="RCS, Clicks" data-tags-lower="rcs, clicks"></div>
@@ -23244,7 +23409,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_rjndhxoipvbc' class='api_div' data-search-keywords='rcs delivery events rcs, delivery this event is created when an rcs message is successfully delivered to a user’s mobile device. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id from_rcs_sender id message_variation_id message_variation_name send_id subscription_group_id time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_owbkvywlfemt' class='api_div' data-search-keywords='rcs delivery events rcs, delivery this event is created when an rcs message is successfully delivered to a user’s mobile device. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id from_rcs_sender id message_variation_id message_variation_name send_id subscription_group_id time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="rcs-delivery-events">RCS Delivery events</h2>
 
 <div class="api_tags" data-tags="RCS, Delivery" data-tags-lower="rcs, delivery"></div>
@@ -23655,7 +23820,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_njbikqpukkiw' class='api_div' data-search-keywords='rcs inbound received events rcs, inbound received this event is created when braze receives an rcs message that originates from the user. action app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id media_urls message_body message_variation_id message_variation_name send_id subscription_group_id time to_rcs_sender user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_xeamaibqvmko' class='api_div' data-search-keywords='rcs inbound received events rcs, inbound received this event is created when braze receives an rcs message that originates from the user. action app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id media_urls message_body message_variation_id message_variation_name send_id subscription_group_id time to_rcs_sender user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="rcs-inbound-received-events">RCS Inbound Received events</h2>
 
 <div class="api_tags" data-tags="RCS, Inbound Received" data-tags-lower="rcs, inbound received"></div>
@@ -24066,7 +24231,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_xnwzvdjdgwsw' class='api_div' data-search-keywords='rcs read events rcs, read this event is created when a user opens an rcs message on their device, indicating that they have seen or read the message content. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_variation_id message_variation_name time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_ysohcbtedhpi' class='api_div' data-search-keywords='rcs read events rcs, read this event is created when a user opens an rcs message on their device, indicating that they have seen or read the message content. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_variation_id message_variation_name time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="rcs-read-events">RCS Read events</h2>
 
 <div class="api_tags" data-tags="RCS, Read" data-tags-lower="rcs, read"></div>
@@ -24407,7 +24572,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_hzxhozkkjfdi' class='api_div' data-search-keywords='rcs rejection events rcs, rejection an event that is created when an rcs message fails to be delivered to a user’s mobile device due to intervention by the carrier. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id error external_user_id from_rcs_sender id is_sms_fallback message_variation_id message_variation_name provider_error_code send_id subscription_group_id time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_axexrcdgunob' class='api_div' data-search-keywords='rcs rejection events rcs, rejection an event that is created when an rcs message fails to be delivered to a user’s mobile device due to intervention by the carrier. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id error external_user_id from_rcs_sender id is_sms_fallback message_variation_id message_variation_name provider_error_code send_id subscription_group_id time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="rcs-rejection-events">RCS Rejection events</h2>
 
 <div class="api_tags" data-tags="RCS, Rejection" data-tags-lower="rcs, rejection"></div>
@@ -24848,7 +25013,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_qbnvfhfxyerp' class='api_div' data-search-keywords='rcs send events rcs, sends this event is created when an rcs message is sent out of braze to our last-mile delivery partners. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name category device_id dispatch_id external_user_id from_rcs_sender id message_extras message_variation_id message_variation_name send_id subscription_group_id time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_klpkfsbcssxd' class='api_div' data-search-keywords='rcs send events rcs, sends this event is created when an rcs message is sent out of braze to our last-mile delivery partners. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name category device_id dispatch_id external_user_id from_rcs_sender id message_extras message_variation_id message_variation_name send_id subscription_group_id time to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="rcs-send-events">RCS Send events</h2>
 
 <div class="api_tags" data-tags="RCS, Sends" data-tags-lower="rcs, sends"></div>
@@ -25283,7 +25448,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_gpbaiohozean' class='api_div' data-search-keywords='sms abort events abort, sms this event occurs if an sms message was aborted based on liquid aborts, etc. abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_variation_id message_variation_name subscription_group_id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_xokhwfqdlqbm' class='api_div' data-search-keywords='sms abort events abort, sms this event occurs if an sms message was aborted based on liquid aborts, etc. abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_extras message_variation_id message_variation_name subscription_group_id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="sms-abort-events">SMS Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, SMS" data-tags-lower="abort, sms"></div>
@@ -25313,6 +25478,7 @@ Certain events return a `platform` value that specifies the platform of the user
 21
 22
 23
+24
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.sms.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -25330,6 +25496,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
@@ -25363,6 +25530,7 @@ Certain events return a `platform` value that specifies the platform of the user
 23
 24
 25
+26
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">SMS</span><span class="w"> </span><span class="err">Abort</span><span class="w"> </span><span class="err">(users.messages.sms.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -25378,6 +25546,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="w">
@@ -25417,6 +25586,7 @@ Certain events return a `platform` value that specifies the platform of the user
 25
 26
 27
+28
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.sms.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -25434,6 +25604,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="w">
@@ -25472,6 +25643,7 @@ Certain events return a `platform` value that specifies the platform of the user
 24
 25
 26
+27
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">SMS</span><span class="w"> </span><span class="err">Abort</span><span class="w"> </span><span class="err">(users.messages.sms.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -25491,6 +25663,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"distinct_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"$insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
@@ -25539,6 +25712,7 @@ Certain events return a `platform` value that specifies the platform of the user
 37
 38
 39
+40
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">SMS</span><span class="w"> </span><span class="err">Aborts</span><span class="w"> </span><span class="err">(users.messages.sms.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -25559,6 +25733,7 @@ Certain events return a `platform` value that specifies the platform of the user
           </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"source_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
@@ -25610,6 +25785,7 @@ Certain events return a `platform` value that specifies the platform of the user
 28
 29
 30
+31
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">SMS</span><span class="w"> </span><span class="err">Aborted</span><span class="w"> </span><span class="err">(users.messages.sms.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -25632,6 +25808,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_step_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas step"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="w">
@@ -25653,7 +25830,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_xsfktfyzxxgu' class='api_div' data-search-keywords='sms carrier send events sms, sends this event occurs when an sms is sent to the carrier. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id external_user_id from_phone_number id message_variation_id message_variation_name send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_ismgnglwhjcs' class='api_div' data-search-keywords='sms carrier send events sms, sends this event occurs when an sms is sent to the carrier. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id external_user_id from_phone_number id message_variation_id message_variation_name send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="sms-carrier-send-events">SMS Carrier Send events</h2>
 
 <div class="api_tags" data-tags="SMS, Sends" data-tags-lower="sms, sends"></div>
@@ -26068,7 +26245,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_nkqvukbtdphh' class='api_div' data-search-keywords='sms delivery events sms, delivery this event occurs when an sms was successfully delivered to the user’s mobile phone. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id external_user_id from_phone_number id is_sms_fallback message_variation_id message_variation_name send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_fcgeckgowqpd' class='api_div' data-search-keywords='sms delivery events sms, delivery this event occurs when an sms was successfully delivered to the user’s mobile phone. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id external_user_id from_phone_number id is_sms_fallback message_variation_id message_variation_name send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="sms-delivery-events">SMS Delivery events</h2>
 
 <div class="api_tags" data-tags="SMS, Delivery" data-tags-lower="sms, delivery"></div>
@@ -26491,7 +26668,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_qjnngoejfepf' class='api_div' data-search-keywords='sms delivery failure events sms, delivery, failure this event occurs when an sms experiences delivery failure. use this event and the provided error codes to help troubleshoot issues with sms delivery. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id error external_user_id id is_sms_fallback message_variation_id message_variation_name provider_error_code send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_iamirkybolgk' class='api_div' data-search-keywords='sms delivery failure events sms, delivery, failure this event occurs when an sms experiences delivery failure. use this event and the provided error codes to help troubleshoot issues with sms delivery. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id error external_user_id id is_sms_fallback message_variation_id message_variation_name provider_error_code send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="sms-delivery-failure-events">SMS Delivery Failure events</h2>
 
 <div class="api_tags" data-tags="SMS, Delivery, Failure" data-tags-lower="sms, delivery, failure"></div>
@@ -26926,7 +27103,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_rakhlhtbwepc' class='api_div' data-search-keywords='sms inbound received events sms, inbound received this event occurs when one of your users sends an sms to a phone number in one of your braze sms subscription groups. action app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id inbound_phone_number media_urls message_body message_variation_id message_variation_name subscription_group_id time user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_qhqzcopfxgpf' class='api_div' data-search-keywords='sms inbound received events sms, inbound received this event occurs when one of your users sends an sms to a phone number in one of your braze sms subscription groups. action app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id inbound_phone_number media_urls message_body message_variation_id message_variation_name subscription_group_id time user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="sms-inbound-received-events">SMS Inbound Received events</h2>
 
 <div class="api_tags" data-tags="SMS, Inbound Received" data-tags-lower="sms, inbound received"></div>
@@ -27327,7 +27504,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_hurnxjvjibfb' class='api_div' data-search-keywords='sms rejection events sms, rejection this event occurs when an sms send gets rejected by the carrier. this can happen for several reasons. use this event and the provided error codes to help troubleshoot issues with sms delivery. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id error external_user_id from_phone_number id is_sms_fallback message_variation_id message_variation_name provider_error_code send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_ymweazxepqug' class='api_div' data-search-keywords='sms rejection events sms, rejection this event occurs when an sms send gets rejected by the carrier. this can happen for several reasons. use this event and the provided error codes to help troubleshoot issues with sms delivery. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id error external_user_id from_phone_number id is_sms_fallback message_variation_id message_variation_name provider_error_code send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="sms-rejection-events">SMS Rejection events</h2>
 
 <div class="api_tags" data-tags="SMS, Rejection" data-tags-lower="sms, rejection"></div>
@@ -27778,7 +27955,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_tvsikzkiaucp' class='api_div' data-search-keywords='sms retry events sms, retry this event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. this is only available for message prioritization beta customers. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_variation_id message_variation_name retry_log retry_type subscription_group_id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_epvywbcwrrun' class='api_div' data-search-keywords='sms retry events sms, retry this event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. this is only available for message prioritization beta customers. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id message_variation_id message_variation_name retry_log retry_type subscription_group_id time user_id event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="sms-retry-events">SMS Retry events</h2>
 
 <div class="api_tags" data-tags="SMS, Retry" data-tags-lower="sms, retry"></div>
@@ -28139,7 +28316,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_ifqlrdqgyoja' class='api_div' data-search-keywords='sms send events sms, sends this event occurs when a user sends an sms. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name category dispatch_id external_user_id id message_extras message_variation_id message_variation_name send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type asset_id asset_type event_id event_time phone_sha256'>
+<div id='api_qmuafzwaykmb' class='api_div' data-search-keywords='sms send events sms, sends this event occurs when a user sends an sms. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name category dispatch_id external_user_id id message_extras message_variation_id message_variation_name send_id subscription_group_id time timezone to_phone_number user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type asset_id asset_type event_id event_time phone_sha256'>
 <h2 id="sms-send-events">SMS Send events</h2>
 
 <div class="api_tags" data-tags="SMS, Sends" data-tags-lower="sms, sends"></div>
@@ -28593,7 +28770,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_jxxvyrclhezb' class='api_div' data-search-keywords='sms short link click events sms, clicks this event occurs when a user clicks an sms short link. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id is_suspected_bot_click message_variation_id message_variation_name short_url suspected_bot_click_reason time timezone url user_agent user_id user_phone_number device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type asset_id asset_type event_id event_time phone_sha256'>
+<div id='api_odywjaiqcalk' class='api_div' data-search-keywords='sms short link click events sms, clicks this event occurs when a user clicks an sms short link. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name external_user_id id is_suspected_bot_click message_variation_id message_variation_name short_url suspected_bot_click_reason time timezone url user_agent user_id user_phone_number device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type asset_id asset_type event_id event_time phone_sha256'>
 <h2 id="sms-short-link-click-events">SMS Short Link Click events</h2>
 
 <div class="api_tags" data-tags="SMS, Clicks" data-tags-lower="sms, clicks"></div>
@@ -29038,7 +29215,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_lleamzzwdyhx' class='api_div' data-search-keywords='survey response events surveys, responses survey responses submitted by end users ad_id ad_id_type ad_tracking_enabled answer_long_string answer_multiple_strings answer_single_boolean answer_single_number answer_single_string answer_type app_group_id app_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id landing_page_api_id landing_page_name message_extras message_variation_id message_variation_name os_version platform question_id question_reporting_id response_id sdk_version survey_completion_status survey_id survey_session_id time timezone user_id adid event_properties braze_user_id canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
+<div id='api_svzouzekcvgm' class='api_div' data-search-keywords='survey response events surveys, responses survey responses submitted by end users ad_id ad_id_type ad_tracking_enabled answer_long_string answer_multiple_strings answer_single_boolean answer_single_number answer_single_string answer_type app_group_id app_id browser campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name carrier country device_id device_model external_user_id gender id landing_page_api_id landing_page_name message_extras message_variation_id message_variation_name os_version platform question_id question_reporting_id response_id sdk_version survey_completion_status survey_id survey_session_id time timezone user_id adid event_properties braze_user_id canvas_step_message_variation_api_id event_type idfa insert_id library properties user event distinct_id token device_info android_advertising_id ios_advertising_id ios_idfv limit_ad_tracking microsoft_advertising_id roku_advertising_id environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device model traits timestamp type'>
 <h2 id="survey-response-events">Survey Response events</h2>
 
 <div class="api_tags" data-tags="Surveys, Responses" data-tags-lower="surveys, responses"></div>
@@ -29741,7 +29918,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_saedzzzhcxeu' class='api_div' data-search-keywords='webhook abort events abort, webhooks this event occurs if a webhook message was aborted based on liquid aborts, etc. abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_ueuvsotvumzg' class='api_div' data-search-keywords='webhook abort events abort, webhooks this event occurs if a webhook message was aborted based on liquid aborts, etc. abort_log abort_type app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_extras message_variation_id message_variation_name send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="webhook-abort-events">Webhook Abort events</h2>
 
 <div class="api_tags" data-tags="Abort, Webhooks" data-tags-lower="abort, webhooks"></div>
@@ -29774,6 +29951,7 @@ Certain events return a `platform` value that specifies the platform of the user
 24
 25
 26
+27
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.webhook.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -29793,6 +29971,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
@@ -29829,6 +30008,7 @@ Certain events return a `platform` value that specifies the platform of the user
 25
 26
 27
+28
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Webhook</span><span class="w"> </span><span class="err">Abort</span><span class="w"> </span><span class="err">(users.messages.webhook.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -29846,6 +30026,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
@@ -29888,6 +30069,7 @@ Certain events return a `platform` value that specifies the platform of the user
 28
 29
 30
+31
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.webhook.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -29906,6 +30088,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
@@ -29948,6 +30131,7 @@ Certain events return a `platform` value that specifies the platform of the user
 26
 27
 28
+29
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Webhook</span><span class="w"> </span><span class="err">Abort</span><span class="w"> </span><span class="err">(users.messages.webhook.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -29969,6 +30153,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"distinct_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"$insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
@@ -30021,6 +30206,7 @@ Certain events return a `platform` value that specifies the platform of the user
 41
 42
 43
+44
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Webhook</span><span class="w"> </span><span class="err">Aborts</span><span class="w"> </span><span class="err">(users.messages.webhook.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -30045,6 +30231,7 @@ Certain events return a `platform` value that specifies the platform of the user
           </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="p">,</span><span class="w">
@@ -30098,6 +30285,7 @@ Certain events return a `platform` value that specifies the platform of the user
 30
 31
 32
+33
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">Webhook</span><span class="w"> </span><span class="err">Aborted</span><span class="w"> </span><span class="err">(users.messages.webhook.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -30122,6 +30310,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"send_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Message send ID this message belongs to"</span><span class="w">
@@ -30144,7 +30333,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_emkyiauqcbdr' class='api_div' data-search-keywords='webhook failure events failure, webhooks this event occurs if a webhook message was delivered but failed with an error response from the endpoint. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name content_length dispatch_id endpoint_url external_user_id host http_status_code id is_terminal message_variation_id message_variation_name raw_response retry_count send_id time url_path user_id webhook_duration webhook_failure_source event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_gvtnrrlimlep' class='api_div' data-search-keywords='webhook failure events failure, webhooks this event occurs if a webhook message was delivered but failed with an error response from the endpoint. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name content_length dispatch_id endpoint_url external_user_id host http_status_code id is_terminal message_variation_id message_variation_name raw_response retry_count send_id time url_path user_id webhook_duration webhook_failure_source event_properties event_type insert_id library properties user event distinct_id token device_info environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="webhook-failure-events">Webhook Failure events</h2>
 
 <div class="api_tags" data-tags="Failure, Webhooks" data-tags-lower="failure, webhooks"></div>
@@ -30619,7 +30808,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_jhsvjsndvhaa' class='api_div' data-search-keywords='webhook retry events webhooks, retry this event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. this is only available for message prioritization beta customers. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name country device_id dispatch_id external_user_id gender id language message_variation_id message_variation_name retry_log retry_type send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_lteqkbhcjxbq' class='api_div' data-search-keywords='webhook retry events webhooks, retry this event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. this is only available for message prioritization beta customers. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name country device_id dispatch_id external_user_id gender id language message_variation_id message_variation_name retry_log retry_type send_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="webhook-retry-events">Webhook Retry events</h2>
 
 <div class="api_tags" data-tags="Webhooks, Retry" data-tags-lower="webhooks, retry"></div>
@@ -31020,7 +31209,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_hctspzelwwdd' class='api_div' data-search-keywords='webhook send events webhooks, sends this event occurs when a webhook was processed and sent to the third party specified in that webhook. note that this does not signify whether or not the request was received. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id external_user_id id message_extras message_variation_id message_variation_name send_id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
+<div id='api_prguqsjaxfsy' class='api_div' data-search-keywords='webhook send events webhooks, sends this event occurs when a webhook was processed and sent to the third party specified in that webhook. note that this does not signify whether or not the request was received. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_name canvas_variation_id canvas_variation_name dispatch_id external_user_id id message_extras message_variation_id message_variation_name send_id time timezone user_id device_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits timestamp type'>
 <h2 id="webhook-send-events">Webhook Send events</h2>
 
 <div class="api_tags" data-tags="Webhooks, Sends" data-tags-lower="webhooks, sends"></div>
@@ -31404,7 +31593,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_sijmtlidrwtw' class='api_div' data-search-keywords='whatsapp abort events whatsapp, abort this event occurs if a whatsapp message was aborted based on liquid aborts, etc. abort_log abort_type app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name subscription_group_id time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_xskkbrwzzewn' class='api_div' data-search-keywords='whatsapp abort events whatsapp, abort this event occurs if a whatsapp message was aborted based on liquid aborts, etc. abort_log abort_type app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_extras message_variation_id message_variation_name subscription_group_id time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-abort-events">WhatsApp Abort events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Abort" data-tags-lower="whatsapp, abort"></div>
@@ -31439,6 +31628,7 @@ Certain events return a `platform` value that specifies the platform of the user
 26
 27
 28
+29
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -31459,6 +31649,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
@@ -31498,6 +31689,7 @@ Certain events return a `platform` value that specifies the platform of the user
 27
 28
 29
+30
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Abort</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -31516,6 +31708,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
@@ -31561,6 +31754,7 @@ Certain events return a `platform` value that specifies the platform of the user
 30
 31
 32
+33
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.messages.whatsapp.Abort</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -31580,6 +31774,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the Canvas variation this event belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
@@ -31625,6 +31820,7 @@ Certain events return a `platform` value that specifies the platform of the user
 28
 29
 30
+31
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Abort</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -31647,6 +31843,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"distinct_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] External ID of the user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"$insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="p">,</span><span class="w">
@@ -31703,6 +31900,7 @@ Certain events return a `platform` value that specifies the platform of the user
 44
 45
 46
+47
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Aborts</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -31728,6 +31926,7 @@ Certain events return a `platform` value that specifies the platform of the user
           </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"source_request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
@@ -31786,6 +31985,7 @@ Certain events return a `platform` value that specifies the platform of the user
 33
 34
 35
+36
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">WhatsApp</span><span class="w"> </span><span class="err">Aborted</span><span class="w"> </span><span class="err">(users.messages.whatsapp.Abort)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -31813,6 +32013,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"canvas_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the Canvas variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"dispatch_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the dispatch this message belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message_extras"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the message variation this user received"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"message_variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name of the message variation"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"subscription_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Subscription group API ID"</span><span class="w">
@@ -31835,7 +32036,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_eetovdrpqwgq' class='api_div' data-search-keywords='whatsapp tracked link click events whatsapp, clicks this event occurs when a user clicks a link or button in a whatsapp message where the link’s domain matches the click tracking domain. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id external_user_id id message_variation_id message_variation_name short_url time timezone url user_agent user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_qoykzklzpivv' class='api_div' data-search-keywords='whatsapp tracked link click events whatsapp, clicks this event occurs when a user clicks a link or button in a whatsapp message where the link’s domain matches the click tracking domain. app_group_id campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id external_user_id id message_variation_id message_variation_name short_url time timezone url user_agent user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-tracked-link-click-events">WhatsApp Tracked Link Click events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Clicks" data-tags-lower="whatsapp, clicks"></div>
@@ -32232,7 +32433,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_loyhzgrvfidb' class='api_div' data-search-keywords='whatsapp delivery events whatsapp, delivery this event occurs when an whatsapp message sent made it successfully to the user’s device. app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id flow_id from_phone_number id message_id message_variation_id message_variation_name send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_mbdjdeugdbfg' class='api_div' data-search-keywords='whatsapp delivery events whatsapp, delivery this event occurs when an whatsapp message sent made it successfully to the user’s device. app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id flow_id from_phone_number id message_id message_variation_id message_variation_name send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-delivery-events">WhatsApp Delivery events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Delivery" data-tags-lower="whatsapp, delivery"></div>
@@ -32695,7 +32896,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_egtyrdkqaqqb' class='api_div' data-search-keywords='whatsapp failure events whatsapp, failure this event occurs when whatsapp cannot deliver the message to the user. a hard bounce signifies a permanent deliverability failure. app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id flow_id from_phone_number id message_id message_variation_id message_variation_name provider_error_code provider_error_title send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_omtmqadmypkd' class='api_div' data-search-keywords='whatsapp failure events whatsapp, failure this event occurs when whatsapp cannot deliver the message to the user. a hard bounce signifies a permanent deliverability failure. app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id flow_id from_phone_number id message_id message_variation_id message_variation_name provider_error_code provider_error_title send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-failure-events">WhatsApp Failure events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Failure" data-tags-lower="whatsapp, failure"></div>
@@ -33182,7 +33383,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_wkjeswoasxrw' class='api_div' data-search-keywords='whatsapp inbound received events whatsapp, inbound received this event occurs when one of your users sends a whatsapp message to a phone number in one of your braze whatsapp subscription groups. action app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name catalog_id device_id external_user_id flow_id flow_response_json id in_reply_to inbound_phone_number media_urls message_body message_id message_variation_id message_variation_name product_id quick_reply_text subscription_group_id time timezone user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_ozhtrcljness' class='api_div' data-search-keywords='whatsapp inbound received events whatsapp, inbound received this event occurs when one of your users sends a whatsapp message to a phone number in one of your braze whatsapp subscription groups. action app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name catalog_id device_id external_user_id flow_id flow_response_json id in_reply_to inbound_phone_number media_urls message_body message_id message_variation_id message_variation_name product_id quick_reply_text subscription_group_id time timezone user_id user_phone_number event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-inbound-received-events">WhatsApp Inbound Received events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Inbound Received" data-tags-lower="whatsapp, inbound received"></div>
@@ -33697,7 +33898,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_lsqbqifcxhsn' class='api_div' data-search-keywords='whatsapp read events whatsapp, read this event occurs when an whatsapp message is read by the user. app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id flow_id from_phone_number id message_id message_variation_id message_variation_name send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_kqlbeflkupte' class='api_div' data-search-keywords='whatsapp read events whatsapp, read this event occurs when an whatsapp message is read by the user. app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id flow_id from_phone_number id message_id message_variation_id message_variation_name send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-read-events">WhatsApp Read events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Read" data-tags-lower="whatsapp, read"></div>
@@ -34160,7 +34361,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_lufhetgsxmyc' class='api_div' data-search-keywords='whatsapp retry events whatsapp, retry this event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. this is only available for message prioritization beta customers. app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name retry_log retry_type subscription_group_id time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_dndcgzlchpys' class='api_div' data-search-keywords='whatsapp retry events whatsapp, retry this event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. this is only available for message prioritization beta customers. app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id canvas_variation_name device_id dispatch_id external_user_id id message_variation_id message_variation_name retry_log retry_type subscription_group_id time timezone to_phone_number user_id event_properties event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-retry-events">WhatsApp Retry events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Retry" data-tags-lower="whatsapp, retry"></div>
@@ -34583,7 +34784,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_bgstiiomnwjh' class='api_div' data-search-keywords='whatsapp send events whatsapp, sends this event occurs when a send request was successfully communicated between braze and whatsapp. though, this does not mean the message was received by the user. app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id flow_id from_phone_number id message_extras message_id message_variation_id message_variation_name send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties canvas_variation_name event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
+<div id='api_hnwgqauxjeox' class='api_div' data-search-keywords='whatsapp send events whatsapp, sends this event occurs when a send request was successfully communicated between braze and whatsapp. though, this does not mean the message was received by the user. app_group_id bsuid campaign_id campaign_name canvas_id canvas_name canvas_step_id canvas_step_message_variation_id canvas_step_name canvas_variation_id device_id dispatch_id external_user_id flow_id from_phone_number id message_extras message_id message_variation_id message_variation_name send_id subscription_group_id template_name time timezone to_phone_number user_id event_properties canvas_variation_name event_type insert_id library properties user event distinct_id token device_info ios_idfv environment events data custom_attributes source_request_id custom_event_type event_name source_message_id timestamp_unixtime_ms schema_version user_attributes user_identities customerid context device traits phone timestamp type'>
 <h2 id="whatsapp-send-events">WhatsApp Send events</h2>
 
 <div class="api_tags" data-tags="WhatsApp, Sends" data-tags-lower="whatsapp, sends"></div>

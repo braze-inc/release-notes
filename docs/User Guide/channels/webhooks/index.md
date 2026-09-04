@@ -44,5 +44,4 @@ Check out:
 
 ## Next steps
 
-- [Create a webhook](https://www.braze.com/docs/user_guide/channels/webhooks/create_a_webhook)
-- [Create a Braze-to-Braze webhook](https://www.braze.com/docs/user_guide/channels/webhooks/use_case_create_a_braze_to_braze_webhook)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/channels/webhooks/create_a_webhook"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Create a webhook</span><span class="guide_tile_description">Set up webhooks triggered by custom events and send data to external endpoints.</span></span></div></a></li><li><a href="/docs/user_guide/channels/webhooks/use_case_create_a_braze_to_braze_webhook"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Create a Braze-to-Braze webhook</span><span class="guide_tile_description">Post to Braze APIs from campaigns and Canvases.</span></span></div></a></li></ul>

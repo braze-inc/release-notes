@@ -283,5 +283,4 @@ If problems continue after these steps, contact [Support](https://www.braze.com/
 
 After you access your account, explore these resources:
 
-- [The Braze dashboard](https://www.braze.com/docs/user_guide/administer/personal/the_braze_dashboard) to learn how to navigate key features and tools.
-- [Language settings](https://www.braze.com/docs/user_guide/administer/personal/language_settings) to set your preferred dashboard language.
+<ul class="guide_tiles"><li><a href="/docs/user_guide/administer/personal/the_braze_dashboard"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">The Braze dashboard</span></span></div></a></li><li><a href="/docs/user_guide/administer/personal/language_settings"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Language settings</span></span></div></a></li></ul>

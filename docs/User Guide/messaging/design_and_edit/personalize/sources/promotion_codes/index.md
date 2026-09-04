@@ -44,9 +44,7 @@ Promotion codes are available in in-app message campaigns as an early access fea
 
 Looking for next steps? Start here:
 
-- [Creating a promotion code list](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes/create)
-- [Using promotion codes](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes/manage#using-promotion-codes)
-- [Viewing promotion code usage](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes/manage#viewing-promotion-code-usage)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes/create"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Creating a promotion code list</span></span></div></a></li><li><a href="/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes/manage#using-promotion-codes"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Using promotion codes</span></span></div></a></li><li><a href="/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes/manage#viewing-promotion-code-usage"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Viewing promotion code usage</span></span></div></a></li></ul>
 
 ## Frequently asked questions
 

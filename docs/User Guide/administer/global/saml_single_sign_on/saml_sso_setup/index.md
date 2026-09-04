@@ -265,5 +265,4 @@ If some users can't sign in with Google SSO, check the following:
 
 After setting up SAML SSO, you can:
 
-- [Enforce SSO-only login](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#single-sign-on-sso-authentication) in your security settings to restrict users from logging in with a password.
-- [Set up SAML just-in-time provisioning](https://www.braze.com/docs/user_guide/administer/global/saml_single_sign_on/saml_just_in_time_provisioning) so new users automatically create Braze accounts on their first SSO sign-in.
+<ul class="guide_tiles"><li><a href="/docs/user_guide/administer/global/admin_settings/security_settings#single-sign-on-sso-authentication"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Enforce SSO-only login</span></span></div></a></li><li><a href="/docs/user_guide/administer/global/saml_single_sign_on/saml_just_in_time_provisioning"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Set up SAML just-in-time provisioning</span></span></div></a></li></ul>

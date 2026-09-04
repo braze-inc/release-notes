@@ -1,4 +1,4 @@
-<div id='api_wxfyaqihhjdx' class='api_div' data-search-keywords='replace an asset in the media library asset_id asset_url asset_file message error_code meta info new_image_asset name size url ext'>
+<div id='api_aghgwornokvh' class='api_div' data-search-keywords='replace an asset in the media library asset_id asset_url asset_file message error_code meta info new_image_asset name size url ext'>
 <h1 id="replace-an-asset-in-the-media-library">Replace an asset in the media library</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/media_library/replace_file</p>

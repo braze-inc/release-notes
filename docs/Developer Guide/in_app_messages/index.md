@@ -1539,6 +1539,4 @@ For details about automatic variant optimization and control groups, see [Optimi
 
 Ready to dive deeper? Check out these step-by-step tutorials:
 
-- Fine-tune message delivery timing by [deferring and restoring triggered messages](https://www.braze.com/docs/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).  
-- Refine message targeting by [setting conditional display rules](https://www.braze.com/docs/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages).  
-- Match your brand’s look by [customizing message styling with key-value pairs](https://www.braze.com/docs/developer_guide/in_app_messages/tutorials/customizing_message_styling).
+<ul class="guide_tiles"><li><a href="/docs/developer_guide/in_app_messages/tutorials/deferring_triggered_messages"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Deferring and restoring triggered messages</span></span></div></a></li><li><a href="/docs/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Setting conditional display rules</span></span></div></a></li><li><a href="/docs/developer_guide/in_app_messages/tutorials/customizing_message_styling"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Customizing message styling with key-value pairs</span></span></div></a></li></ul>

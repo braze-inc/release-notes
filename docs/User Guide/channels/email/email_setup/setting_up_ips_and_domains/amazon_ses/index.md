@@ -69,4 +69,4 @@ This is based on the rule that the click tracking domain needs to match at least
 
 ## Next steps
 
-- [Set up SSL](https://www.braze.com/docs/user_guide/channels/email/email_setup/ssl)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/channels/email/email_setup/ssl"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Set up SSL</span></span></div></a></li></ul>
