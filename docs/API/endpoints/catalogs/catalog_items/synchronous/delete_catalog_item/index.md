@@ -1,4 +1,4 @@
-<div id='api_ghnxgcvkcbjn' class='api_div' data-search-keywords='delete a catalog item message errors id parameters parameter_values'>
+<div id='api_habgdejonycv' class='api_div' data-search-keywords='delete a catalog item message errors id parameters parameter_values'>
 <h1 id="delete-a-catalog-item">Delete a catalog item</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/catalogs/{catalog_name}/items/{item_id}</p>

@@ -98,5 +98,4 @@ If you don't receive the message activation in your inbox when using `testing+01
 
 After adding users, manage their access:
 
-- [Permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) to configure what each user can do in the dashboard.
-- [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams) to organize users into groups with shared access to specific dashboard objects.
+<ul class="guide_tiles"><li><a href="/docs/user_guide/administer/global/user_management/permissions"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Permissions</span><span class="guide_tile_description">Configure what each user can do in the dashboard.</span></span></div></a></li><li><a href="/docs/user_guide/administer/global/user_management/teams"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Teams</span><span class="guide_tile_description">Organize users into groups with shared access to specific dashboard objects.</span></span></div></a></li></ul>

@@ -92,9 +92,11 @@ When an IP pool contains multiple dedicated IP addresses, Braze and your email s
 
 ### Next steps
 
-After your sender verification is complete, Braze recommends IP warming so that your messages reach their destination inboxes at a consistently high rate. Use [automated IP warming](https://www.braze.com/docs/user_guide/channels/email/email_setup/ip_warming/automated_ip_warming) to help you set up and monitor your warm-up schedule.
+After your sender verification is complete, Braze recommends IP warming so that your messages reach their destination inboxes at a consistently high rate.
 
-After completing this setup, consult with the Braze Onboarding team to confirm whether your domains and [IP warming](https://www.braze.com/docs/user_guide/channels/email/email_setup/ip_warming) are working.
+<ul class="guide_tiles"><li><a href="/docs/user_guide/channels/email/email_setup/ip_warming/automated_ip_warming"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Automated IP warming</span></span></div></a></li><li><a href="/docs/user_guide/channels/email/email_setup/ip_warming"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">IP warming</span></span></div></a></li></ul>
+
+After completing this setup, consult with the Braze Onboarding team to confirm whether your domains and IP warming are working.
 
 ## Method 2: Verified domains
 

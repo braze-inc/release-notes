@@ -29,5 +29,4 @@ For a full walkthrough, refer to [LINE setup](https://www.braze.com/docs/user_gu
 
 ## Next steps
 
-- [LINE setup](https://www.braze.com/docs/user_guide/channels/line/line_setup)
-- [Create a LINE message](https://www.braze.com/docs/user_guide/channels/line/create_a_line_message)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/channels/line/line_setup"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">LINE setup</span></span></div></a></li><li><a href="/docs/user_guide/channels/line/create_a_line_message"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create a LINE message</span></span></div></a></li></ul>

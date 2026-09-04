@@ -1,4 +1,4 @@
-<div id='api_gnlmtnvnksmf' class='api_div' data-search-keywords='delete scheduled messages schedule_id'>
+<div id='api_gpzofxbwsmsv' class='api_div' data-search-keywords='delete scheduled messages schedule_id'>
 <h1 id="delete-scheduled-messages">Delete scheduled messages</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/schedule/delete</p>

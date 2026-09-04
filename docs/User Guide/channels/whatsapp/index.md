@@ -40,5 +40,4 @@ Yes. Users must opt in before you send promotional or recurring WhatsApp message
 
 ## Next steps
 
-- [WhatsApp setup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup)
-- [Create a WhatsApp message](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/channels/whatsapp/whatsapp_setup"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">WhatsApp setup</span></span></div></a></li><li><a href="/docs/user_guide/channels/whatsapp/create_a_whatsapp_message"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create a WhatsApp message</span></span></div></a></li></ul>

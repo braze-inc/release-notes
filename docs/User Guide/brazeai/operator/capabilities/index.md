@@ -293,8 +293,5 @@ Operator integrates with OpenAI to generate output. For more information about w
 
 ## Next steps {#next-steps}
 
-- [Get started with Operator](https://www.braze.com/docs/user_guide/brazeai/operator): Access and use Operator
-- [Prompt library](https://www.braze.com/docs/user_guide/brazeai/operator/prompt_library): Browse ready-to-use example prompts
-- [Review actions](https://www.braze.com/docs/user_guide/brazeai/operator/reviewing_actions): Review and approve Operator's proposed changes
-- [Troubleshooting](https://www.braze.com/docs/user_guide/brazeai/operator/troubleshooting): Reference common issues and solutions
+<ul class="guide_tiles"><li><a href="/docs/user_guide/brazeai/operator"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Get started with Operator</span><span class="guide_tile_description">Access and use Operator in the Braze dashboard.</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/prompt_library"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Prompt library</span><span class="guide_tile_description">Browse ready-to-use example prompts.</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/reviewing_actions"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Review actions</span><span class="guide_tile_description">Review and approve Operator&#39;s proposed changes.</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/troubleshooting"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Troubleshooting</span><span class="guide_tile_description">Reference common issues and solutions.</span></span></div></a></li></ul>
 

@@ -48,6 +48,4 @@ Decisioning Studio Pro adds:
 
 ## Next steps
 
-- [Set up your Decisioning Studio Go agent](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/setup/) and configure audience, schedule, creatives, and constraints
-- [Review examples for Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/examples/) to confirm your program is a good fit
-- See the [FAQ](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/faq/) for common questions
+<ul class="guide_tiles"><li><a href="/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/setup/"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Set up your Decisioning Studio Go agent</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/examples/"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Review examples for Decisioning Studio Go</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/faq/"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">FAQ</span></span></div></a></li></ul>

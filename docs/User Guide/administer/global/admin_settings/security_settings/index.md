@@ -374,5 +374,4 @@ If issues persist, delete the old profile in the Authy app and scan the QR code 
 
 For more information about authentication and access, see:
 
-- [SAML & single sign-on](https://www.braze.com/docs/user_guide/administer/global/saml_single_sign_on) to set up SSO with your identity provider.
-- [Permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) to control what actions users can perform in the dashboard.
+<ul class="guide_tiles"><li><a href="/docs/user_guide/administer/global/saml_single_sign_on"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">SAML &amp; single sign-on</span></span></div></a></li><li><a href="/docs/user_guide/administer/global/user_management/permissions"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Permissions</span></span></div></a></li></ul>

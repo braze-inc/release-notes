@@ -48,5 +48,4 @@ Braze typically logs a **Send** once the message is dispatched from Braze toward
 
 ## Next steps
 
-- [Push setup](https://www.braze.com/docs/user_guide/channels/push/push_setup)
-- [Create a push message](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/channels/push/push_setup"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Push setup</span><span class="guide_tile_description">Integrate push and configure platform settings for iOS, Android, and Web.</span></span></div></a></li><li><a href="/docs/user_guide/channels/push/create_a_push_message"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Create a push message</span><span class="guide_tile_description">Build and send push campaigns and Canvases.</span></span></div></a></li></ul>

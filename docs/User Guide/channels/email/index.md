@@ -68,6 +68,4 @@ Use [seed groups](https://www.braze.com/docs/user_guide/administer/global/user_m
 
 ## Next steps
 
-- [Email setup](https://www.braze.com/docs/user_guide/channels/email/email_setup)
-- [Create an email with the drag-and-drop editor](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop)
-- [Create an email with the HTML editor](https://www.braze.com/docs/user_guide/channels/email/html_editor)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/channels/email/email_setup"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Email setup</span></span></div></a></li><li><a href="/docs/user_guide/channels/email/drag_and_drop"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create an email with the drag-and-drop editor</span></span></div></a></li><li><a href="/docs/user_guide/channels/email/html_editor"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create an email with the HTML editor</span></span></div></a></li></ul>

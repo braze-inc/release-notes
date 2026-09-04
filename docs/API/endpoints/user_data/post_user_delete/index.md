@@ -1,4 +1,4 @@
-<div id='api_xfeoqfzhmcke' class='api_div' data-search-keywords='delete users external_ids user_aliases braze_ids email_addresses phone_numbers deleted'>
+<div id='api_mcakxajfkqei' class='api_div' data-search-keywords='delete users external_ids user_aliases braze_ids email_addresses phone_numbers deleted'>
 <h1 id="delete-users">Delete users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/delete</p>

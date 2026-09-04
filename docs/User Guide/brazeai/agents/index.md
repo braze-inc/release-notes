@@ -94,5 +94,4 @@ The Braze-provided LLM for Braze Agents, identified as “Auto”, uses Google G
 
 Now that you know about Braze Agents, you’re ready for the next steps:
 
-- [Create custom agents](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents)
-- [Deploy custom agents](https://www.braze.com/docs/user_guide/brazeai/agents/deploying_agents)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/brazeai/agents/creating_agents"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create custom agents</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/agents/deploying_agents"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Deploy custom agents</span></span></div></a></li></ul>

@@ -1,4 +1,4 @@
-<div id='api_mhibebzgolno' class='api_div' data-search-keywords='delete sdk authentication key app_id key_id keys id rsa_public_key description is_primary'>
+<div id='api_fjickexupnym' class='api_div' data-search-keywords='delete sdk authentication key app_id key_id keys id rsa_public_key description is_primary'>
 <h1 id="delete-sdk-authentication-key">Delete SDK Authentication key</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/app_group/sdk_authentication/delete</p>
