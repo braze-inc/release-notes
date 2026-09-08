@@ -29,7 +29,27 @@ The `trigger_properties` object supports strings, numbers, booleans, dates, obje
         "country" : "US"
       }
     },
-    "related_skus": ["123", "456", "789"]
+    "related_skus": ["123", "456", "789"],
+    "line_items": [
+      {
+        "sku": "WH-9000",
+        "name": "Wireless Headphones",
+        "quantity": 1,
+        "pricing": {
+          "amount": 79.99,
+          "currency": "USD"
+        }
+      },
+      {
+        "sku": "RS-450",
+        "name": "Running Shoes",
+        "quantity": 2,
+        "pricing": {
+          "amount": 129.99,
+          "currency": "USD"
+        }
+      }
+    ]
   }
 }
 ```
@@ -42,5 +62,6 @@ Reference trigger properties in your message templates using the `api_trigger_pr
 - Numbers: `{{api_trigger_properties.${product_price}}}` returns `79.99`
 - Nested objects: `{{api_trigger_properties.${details}.${color}}}` returns `"red"`
 - Array elements: `{{api_trigger_properties.${related_skus}[0]}}` returns `"123"`
+- Complex object arrays: `{{api_trigger_properties.${line_items}[0]}}` returns the first line item object
 
 

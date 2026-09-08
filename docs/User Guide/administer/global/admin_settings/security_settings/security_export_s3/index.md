@@ -2,10 +2,10 @@
 
 > You can automatically export security events to Amazon S3, a cloud storage provider, with a daily job that runs at midnight UTC. After setting up, you don't need to manually export security events from the dashboard. The job exports the security events for the past 24 hours in CSV format to your configured S3 storage. The CSV file uses the same columns as a manually exported report, plus a `Version` column.
 
-**Note:**
+**Important:**
 
 
-The 10,000-row limit applies only to the manual CSV report download from the dashboard. Security event exports to S3 aren't subject to this row limit.
+Security event export with Amazon S3 availability depends on your platform edition. If this feature isn't in your workspace, contact your customer success manager for information.
 
 
 
@@ -13,6 +13,13 @@ Braze supports two different S3 authentication and authorization methods for set
 
 - AWS secret access key method
 - AWS role ARN method
+
+**Note:**
+
+
+Security event exports to S3 aren't subject to the 10,000-row limit that applies to manual CSV report downloads from the dashboard.
+
+
 
 ## AWS secret access key method
 
