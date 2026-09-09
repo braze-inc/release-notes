@@ -1,6 +1,6 @@
 # User retargeting
 
-> In addition to changing the user's subscription state and sending auto-responses based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages.<br><br>These filters and triggers allow you to filter actions based on users who have been sent or have responded to SMS, MMS, and RCS campaigns, or further engage with users who have clicked shorted URLs.
+> In addition to changing the user's subscription state and sending auto-responses based on incoming keywords, Braze also records interactions to the user profile for filtering and triggering messages.<br><br>These filters and triggers allow you to filter actions based on users who have been sent or have responded to SMS, MMS, and RCS campaigns, or further engage with users who have clicked shortened URLs.
 
 **Tip:**
 
@@ -41,7 +41,7 @@ Filters users who have received a message from a specific campaign. With this fi
 
 ### Trigger messages as users receive SMS, MMS, or RCS {#trigger-messages}
 
-To trigger messages as users receive SMS, MMS, or RCS messages from a specific campaign, select **Interact with Campaign** as the trigger action for an action-based campaign. Next, select **Receive SMS** and the SMS, MMS, or RCS campaign you would like to use.
+To trigger messages as users receive SMS, MMS, or RCS messages from a specific campaign, select **Interact with Campaign** as the trigger action for an action-based campaign. Next, select **Receive SMS** and the campaign you want to use.
 
 ![To trigger messages as users receive SMS, MMS, or RCS messages from a specific campaign, select Interact with Campaign as the trigger action for an action-based campaign. Next, select Receive SMS and the SMS, MMS, or RCS campaign you would like to use.](https://www.braze.com/docs/assets/img/sms/trigger.png?ad1574286a26c3b5625028d78a6c3488)
 
@@ -80,9 +80,16 @@ Filter for the recency of a user responding to your SMS, MMS, or RCS program. Th
 
 Filter for users who have replied to a specific SMS, MMS, or RCS campaign or Canvas component, keyword category, or tag.
 
+**Note:**
+
+
+These filters use [messaging interaction data](https://www.braze.com/docs/messaging_interaction_data). For stopped campaigns and Canvases, that data expires after three months unless it's used in an active retargeting filter. Expired data can be restored. Your workspace retention window may differ from the default.
+
+
+
 #### Filter by replied to a specific campaign with keyword category
 
-![Campaign with the filter "Has replied to SMS" for campaign "SMS-283" "Promotion". Under the filter the feature mentions "This filter will expire 25 months after the last message is sent from "Promotion" if it is not being used in any active campaign."](https://www.braze.com/docs/assets/img/sms/clicked_opened_campaign.png?e66ec315ef60641e41c3e54a2ab5065a)
+![Campaign with the filter "Has replied to SMS" for campaign "SMS-283" "Promotion".](https://www.braze.com/docs/assets/img/sms/clicked_opened_campaign.png?e66ec315ef60641e41c3e54a2ab5065a)
 
 #### Filter by replied to a campaign or Canvas with a specific tag
 
@@ -136,6 +143,3 @@ Want to receive a specific deal? Just text us the category you're interested in.
 ```
 
 
-
-[16]: /docs/assets/img/keyword_example1.jpg?c5399d5e1558e4a977928534d5846662
-[16]: /docs/assets/img/sms/retargeting4.png?31efe1da5d62d5145e9c4828d9b18b81

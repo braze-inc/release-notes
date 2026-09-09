@@ -1,4 +1,4 @@
-<div id='api_zjtjxxtjsjwq' class='api_div' data-search-keywords='export canvas details created_at updated_at name description archived draft enabled has_post_launch_draft schedule_type first_entry last_entry channels variants id first_step_ids first_step_id tags teams steps next_step_ids next_paths next_step_id messages message_variation_id channel has_translatable_content message type message_1 subject body message_2 title message_3 message_4 header'>
+<div id='api_hddendngkdky' class='api_div' data-search-keywords='export canvas details created_at updated_at name description archived draft enabled has_post_launch_draft schedule_type first_entry last_entry channels variants id first_step_ids first_step_id tags teams steps next_step_ids next_paths next_step_id messages message_variation_id channel has_translatable_content message type message_1 subject body message_2 title message_3 message_4 header'>
 <h1 id="export-canvas-details">Export Canvas details</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/details</p>
@@ -279,14 +279,6 @@
 98
 99
 100
-101
-102
-103
-104
-105
-106
-107
-108
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-01-01T12:00:00Z"</span><span class="p">,</span><span class="w">
@@ -327,9 +319,7 @@
         </span><span class="nl">"message_1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nl">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome to Kitchenerie!"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;html&gt;&lt;body&gt;Welcome to the Kitchenerie family, !&lt;/body&gt;&lt;/html&gt;"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-01-01T12:00:00Z"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-01-01T12:00:00Z"</span><span class="w">
+          </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;html&gt;&lt;body&gt;Welcome to the Kitchenerie family, !&lt;/body&gt;&lt;/html&gt;"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
@@ -349,9 +339,7 @@
         </span><span class="nl">"message_2"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nl">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"push"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Don't Forget to Complete Your Kitchenerie Profile"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Complete your Kitchenerie profile for access to special offers and local events."</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-01-02T12:00:00Z"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-01-02T12:00:00Z"</span><span class="w">
+          </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Complete your Kitchenerie profile for access to special offers and local events."</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
@@ -370,9 +358,7 @@
       </span><span class="nl">"messages"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"message_3"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nl">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sms"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hi , remember to complete Kitchenerie your profile!"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-01-03T12:00:00Z"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-01-03T12:00:00Z"</span><span class="w">
+          </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hi , remember to complete Kitchenerie your profile!"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
@@ -387,9 +373,7 @@
         </span><span class="nl">"message_4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nl">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in_app_message"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"header"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Complete Your Kitchenerie Profile"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Complete your Kitchenerie profile to unlock access to savings and local events!"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-01-04T12:00:00Z"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-01-04T12:00:00Z"</span><span class="w">
+          </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Complete your Kitchenerie profile to unlock access to savings and local events!"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
