@@ -244,7 +244,7 @@ When the webhook request is sent, the receiving server will return a response co
 **Note:**
 
 
-Braze retries the earlier in this section status codes up to five times within 30 minutes using exponential backoff. If we can't reach your endpoint, retries may be spread over a 24-hour period.<br><br>Each webhook is allowed 90 seconds before it times out.
+Braze retries the retriable status codes in this section for up to five total attempts (the initial request plus four retries), with increasing delay between attempts. If Braze can't reach your endpoint, retries can continue for up to 24 hours.<br><br>Each webhook request is allowed 120 seconds before it times out.
 
 
 

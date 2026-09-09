@@ -14,11 +14,11 @@ Before you start, you'll need the following:
 
 ## Use cases
 
-Kameleoon sends custom events to Braze to identify users participating in experimentation and personalization campaigns, enabling more precise targeting and personalized messaging.
+Kameleoon sends custom events to Braze to identify users participating in experiments and personalization campaigns, enabling more precise targeting and personalized messaging.
 
 ## Integrating Kameleoon
 
-This integration runs as a JavaScript tracker through Kameleoon’s engine.js. It can be quickly enabled from within Kameleoon’s platform.
+This integration runs as a JavaScript tracker through Kameleoon’s engine.js. It can be enabled from within Kameleoon’s platform.
 
 ### Step 1: Go to the Kameleoon Integrations page
 
@@ -30,30 +30,23 @@ In your Kameleoon app, select **Admin** and then **Integrations** on the sidebar
 
 By default, the Braze tool isn't installed. Look for the Braze icon, then select **Install the tool**. ![A grey square with a downward-pointing arrow.](https://www.braze.com/docs/assets/img/kameleoon/img_2.png?1708de84dd1cad3a87a8eda96a967017)
 
-Select the projects for which you want to activate the Braze tool, so that Kameleoon data will correctly report to Braze.
+Select the projects for which you want to activate the Braze tool, so that Kameleoon data correctly reports to Braze.
 
 ![The Braze tool icon in Kameloon.](https://www.braze.com/docs/assets/img/kameleoon/img_3.png?6ba54f10d5badc9255b93047aa1c124b)
 
-After configuring the tool, select **Validate**, which will close the configuration panel. You will then see an **ON** toggle next to the Braze tool’s icon, including the number of projects the tool is configured on.
+After configuring the tool, select **Validate**, which closes the configuration panel. An **ON** toggle appears next to the Braze tool’s icon, including the number of projects the tool is configured on.
 
 ![The Braze tool toggled "On" in Kameleoon.](https://www.braze.com/docs/assets/img/kameleoon/img_4.png?af7dcb381df31ee9fa7fa202c620d85a)
 
-**Important:**
-
-  
-This feature is in beta. Join the [Kameleoon Beta Program](https://help.kameleoon.com/account-and-team-management/join-beta-program/) to start using this integration.  
-
-  
-    
 ### Step 3: Associate Braze with Kameleoon campaigns
 
 #### In the Graphic/Code editor
 
-To finalize your experiment, select the **Integrations** step to configure Braze as a tracking tool, then select **Braze**.
+To complete your experiment, select the **Integrations** step to configure Braze as a tracking tool, then select **Braze**.
 
 ![The Integrations dashboard in Kameleoon showing all available integrations, including the active integration Braze.](https://www.braze.com/docs/assets/img/kameleoon/img_5.png?fb0a49eeb0a0fce5040d4129fea4e01a)
 
-Braze will be mentioned in the summary before going live. Kameleoon will automatically transmit the data to Braze, and you'll be able to use it for analysis and segmentation directly in Braze.
+Braze is mentioned in the summary before going live. Kameleoon automatically transmits the data to Braze, and you can use it for analysis and segmentation directly in Braze.
 
 ##### Personalization creation
 
@@ -80,17 +73,17 @@ This integration requires a [hybrid implementation](https://developers.braze-pre
 
 ![The side panel of the results page in Kameleoon.](https://www.braze.com/docs/assets/img/kameleoon/img_8.png?4e6ee7672f8e6cae32089d39b343be00){: style="max-width:50%;" }
 
-The reporting tools associated with the experiment will display. Select **Edit** to edit this selection.
+The reporting tools associated with the experiment appear. Select **Edit** to edit this selection.
 
 ### Step 4: Analyze and Leverage Your Kameleoon Data in Braze
 
-After the integration is set up, Kameleoon will send custom events called `kameleoon_exposure` with properties such as **Experiment name**, **Experiment ID**, **Variation name**, **Variation ID** to Braze.
+After the integration is set up, Kameleoon sends custom events called `kameleoon_exposure` with properties such as **Experiment name**, **Experiment ID**, **Variation name**, **Variation ID** to Braze.
 
 ![The custom event user log in Braze, showing an example payload of the event that has been received by Braze from Kameleoon.](https://www.braze.com/docs/assets/img/kameleoon/img_9.png?ee1e7e16ec476d65fd9d2e72af2e4552)
 
-You can then view this data in the Custom Events, create custom event reports to identify Kameleoon campaign exposure, and enable segmentation based on event properties. You can use custom events when creating subsequent or linked campaigns and Canvases through [Action Paths](https://www.braze.com/docs/user_guide/engagement_tools/canvas/canvas_components/action_paths/#action-groups), [action-based triggers](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/) or creating [segments](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/)
+You can then view this data in the Custom Events, create custom event reports to identify Kameleoon campaign exposure, and enable segmentation based on event properties. You can use custom events when creating subsequent or linked campaigns and Canvases through [Action Paths](https://www.braze.com/docs/user_guide/engagement_tools/canvas/canvas_components/action_paths/#action-groups), [action-based triggers](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/) or creating [segments](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/).
 
-Furthermore, these events will be accessible through [Currents custom event objects](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/) to allow for comprehensive reporting and analysis.
+In addition, these events are accessible through [Currents custom event objects](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/) to allow for comprehensive reporting and analysis.
 
 ## Considerations
 

@@ -47,6 +47,23 @@ To dynamically show up-to-date Content Cards without manually refreshing, select
 
 
 
+### Real-time delivery
+
+Braze also sends Content Card updates to the device as soon as they happen, over a live connection that the SDK maintains during the session. Users don't need to start a new session or wait for a refresh to see the change.
+
+Real-time delivery covers the following updates:
+
+- A user becomes eligible for a Content Card campaign during a session.
+- A user advances to a Content Card step in a Canvas.
+- A card is removed from a user's feed.
+- A card is sent through the API, such as with the [`/messages/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages), [`/campaigns/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns), or [`/canvas/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases) endpoint.
+
+Real-time delivery requires the following minimum SDK versions:
+
+<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1800' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 18.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#6120' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.12.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#4311' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 43.1.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+
+On earlier SDK versions, cards continue to arrive at session start and on refresh.
+
 ### Manual refresh
 
 To manually refresh the feed at a specific time:

@@ -1,11 +1,11 @@
-<div id='api_hqkbrhfsmasc' class='api_div' data-search-keywords='query invalid phone numbers sms phone invalid_detected_at reason message'>
+<div id='api_lkquyzlcgszb' class='api_div' data-search-keywords='query invalid phone numbers sms phone invalid_detected_at reason message'>
 <h1 id="query-invalid-phone-numbers">Query invalid phone numbers</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/sms/invalid_phone_numbers</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to pull a list of phone numbers that have been marked “invalid” within a certain time frame. See <a href="/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers#handling-invalid-phone-numbers">Invalid Phone Number Handling</a> documentation for more information.</p>
+  <p>Use this endpoint to pull a list of phone numbers that have been marked “invalid” within a certain time frame. See <a href="/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers#handling-invalid-phone-numbers">Handling invalid phone numbers</a> for more information.</p>
 </blockquote>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81ceae19-15d1-4ac1-ad22-a6b86a92456d" class="seeme">See me in Postman</a></div>
@@ -46,7 +46,7 @@
       <td><code class="language-plaintext highlighter-rouge">end_date</code></td>
       <td>Optional <br />(see note)</td>
       <td>String in YYYY-MM-DD format</td>
-      <td>End date of the range to retrieve invalid phone numbers. This is treated as midnight in UTC time by the API.</td>
+      <td>End date of the range to retrieve invalid phone numbers. This is treated as midnight in UTC time by the API. Results include invalid numbers detected through the end of this calendar day in UTC (inclusive).</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">limit</code></td>
@@ -64,13 +64,13 @@
       <td><code class="language-plaintext highlighter-rouge">phone_numbers</code></td>
       <td>Optional <br />(see note)</td>
       <td>Array of Strings in e.164 format</td>
-      <td>If provided, we will return the phone number if it has been found to be invalid.</td>
+      <td>If provided, Braze returns the phone number if it has been found to be invalid.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">reason</code></td>
       <td>Optional <br />(see note)</td>
       <td>String</td>
-      <td>Available values are “provider_error” (provider error indicates phone cannot receive SMS) or “deactivated” (phone number has been deactivated). If omitted, all reasons are returned.</td>
+      <td>Available values are <code class="language-plaintext highlighter-rouge">provider_error</code> (the provider indicates the phone cannot receive SMS), <code class="language-plaintext highlighter-rouge">deactivated</code> (the phone number has been deactivated), or <code class="language-plaintext highlighter-rouge">invalid_format</code> (the number failed formatting validation, such as a non-E.164 value). If omitted, all reasons are returned.</td>
     </tr>
   </tbody>
 </table>
@@ -126,7 +126,7 @@
     </span><span class="p">{</span><span class="w">
       </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">phone</span><span class="w"> </span><span class="err">number</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">e.</span><span class="mi">164</span><span class="w"> </span><span class="err">format</span><span class="p">,</span><span class="w">
       </span><span class="nl">"invalid_detected_at"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">time</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">invalid</span><span class="w"> </span><span class="err">number</span><span class="w"> </span><span class="err">was</span><span class="w"> </span><span class="err">detected</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">ISO</span><span class="w"> </span><span class="mi">8601</span><span class="w">
-      </span><span class="nl">"reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"provider_error"</span><span class="w">
+      </span><span class="nl">"reason"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"invalid_format"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
