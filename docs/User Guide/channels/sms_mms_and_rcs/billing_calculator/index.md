@@ -142,7 +142,7 @@ Rich messages are text-only messages with or without buttons. They are billed pe
 
 
 
-Rich media messages include a media file (image, video) or a Rich Card and are billed as a single message.
+Rich media messages include standalone **Media** messages and **Card** messages, and are billed as a single message. For Card layouts and provider-specific limits, see [RCS message types](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/create#rcs-message-types).
 
 
 

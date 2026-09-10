@@ -1,8 +1,8 @@
 # Revenue report
 
-> The **Revenue Report** page allows you to view data on revenue over specific periods of time, a specific product revenue, and your app’s total revenue.
+> The **Revenue Report** page allows you to view data on revenue over specific periods of time, a specific product revenue, and your app's total revenue.
 
-To view a report for your revenue from the dashboard, go to **Analytics** > **Revenue Report**. 
+View your revenue report in the Braze dashboard by going to **Analytics** > **Reports** > **Revenue Report**.
 
 ## Customizing your revenue report
 

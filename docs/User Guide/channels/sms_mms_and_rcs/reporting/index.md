@@ -336,6 +336,14 @@ This table reflects Braze billing, not your provider's billing. Outcomes that ar
 
 
 
+## RCS Card message reporting
+
+For Card RCS messages, *Total Clicks* in campaign and Canvas analytics includes card button taps (such as **Message reply** and **Open URL**) and suggestion interactions. The metric may increment more than once if a user taps the same control multiple times.
+
+Card button and suggestion clicks aren't tracked through [link shortening](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening) or advanced tracking settings for shortened URLs. [User retargeting](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting#filter-by-advanced-tracking-links) filters that reference shortened SMS links don't apply to card button interactions.
+
+For user-level interaction data, export [RCS Click events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events#rcs-click-events) (`users.messages.rcs.Click`) through Currents. These events include fields such as `interaction_type` and `element_type` to distinguish button taps from suggestions.
+
 ## RCS and SMS fallback reporting
 
 For RCS SMS fallback event behavior (including `IS_SMS_FALLBACK=TRUE`), see [How SMS fallback works with events and segmentation](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup#how-sms-fallback-works-with-events-and-segmentation).

@@ -1,8 +1,8 @@
-# API keys
+# APIs and identifiers
 
 > The **APIs and Identifiers** page is your centralized hub for managing all your REST API keys in one place. Here, you can access each workspace's set of API keys and app identifiers.
 
-You can find the **APIs and Identifiers** page under **Settings**.
+You can find **APIs and Identifiers** under **Settings** > **Setup and Testing** > **APIs and Identifiers**.
 
 ## API keys
 
@@ -10,9 +10,9 @@ This section provides your workspace REST API keys, the unique identifiers that 
 
 ### API IP allowlisting
 
-For additional security, you can specify a list of IP addresses and subnets allowed to make REST API requests for a given REST API Key. This is referred to as allowlisting, or whitelisting. To allow specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API Key: 
+For additional security, you can specify a list of IP addresses and subnets allowed to make REST API requests for a given REST API key. This is referred to as IP allowlisting. To allow specific IP addresses or subnets, add them to the **Allowlist IPs** section when creating a new REST API key: 
 
-![API IP Whitelisting section of creating a new API key](https://www.braze.com/docs/assets/img_archive/api-key-ip-whitelisting.png?9e81e44f59fa09114e2d2e5da165f57d)
+![API IP allowlisting section of creating a new REST API key](https://www.braze.com/docs/assets/img_archive/api-key-ip-whitelisting.png?9e81e44f59fa09114e2d2e5da165f57d)
 
 If you don't specify any, requests can be sent from any IP address.
 

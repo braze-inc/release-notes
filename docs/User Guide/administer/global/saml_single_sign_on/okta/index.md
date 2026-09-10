@@ -16,7 +16,7 @@ The pre-built Braze Okta marketplace app uses the shared Entity ID `braze_dashbo
 | Okta turned on for your account | Contact your Braze account manager to have this turned on for your account. |
 | Okta admin privileges | Make sure you have admin privileges before setting up Okta. |
 | Braze admin privileges | Make sure you have admin privileges before setting up Okta. |
-| RelayState API key | To enable IdP login, go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions. |
+| RelayState API key | To enable IdP login, go to **Settings** > **Setup and Testing** > **APIs and Identifiers**, open the **API Keys** tab, and create an API key with `sso.saml.login` permissions. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Requirements" }
 
 ## Step 1: Configure Braze
@@ -42,6 +42,13 @@ From your Okta Admin dashboard, Okta provides you with a target URL (login URL) 
 
 Select **Save Changes** at the bottom of the page when completed.
 
+**Note:**
+
+
+If your identity provider requires a company-specific SAML Entity ID and your account supports it, enable **Custom Entity ID** in **Security Settings** and configure Okta with `braze_dashboard_<companyID>`. The default Entity ID is `braze_dashboard`. The **Custom Entity ID** setting isn't available for all companies. For more information, see [SAML SSO setup](https://www.braze.com/docs/user_guide/administer/global/saml_single_sign_on/saml_sso_setup#requirements).
+
+
+
 ## Step 2: Configure Okta
 
 In Okta, select the **Sign On** tab for the Braze SAML app, then click **Edit**. 
@@ -55,7 +62,7 @@ Make sure to save these new settings.
 **Tip:**
 
 
-If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication](https://www.braze.com/docs/user_guide/administer/global/saml_single_sign_on/saml_sso_setup#restriction) from the **Company Settings** page.
+If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication](https://www.braze.com/docs/user_guide/administer/global/saml_single_sign_on/saml_sso_setup#restriction) from **Settings** > **Company Settings** > **Admin Settings** > **Security Settings**.
 
 
 
