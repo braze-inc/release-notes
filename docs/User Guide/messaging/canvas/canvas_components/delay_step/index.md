@@ -103,18 +103,6 @@ If you add a Delay component to your Canvas and there are no subsequent steps, a
 
 ### Personalized delays
 
-
-
-
-**Important:**
-
-
- is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-
-
-
-
-
 Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context) to select the context variable to delay by. This overrides the time of day set in the selected attribute or property. This is useful when applying an offset in days or weeks, and you want users to move forward at a specific time. The time zone comes from the attribute or property, or uses the fallback if none is available. 
 
 #### Time zone behavior for "At a specific time"

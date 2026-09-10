@@ -1,4 +1,4 @@
-<div id='api_mjixhysvwsfh' class='api_div' data-search-keywords='remove dashboard user account'>
+<div id='api_chroeoqwnpwr' class='api_div' data-search-keywords='remove dashboard user account schemas detail status'>
 <h1 id="remove-dashboard-user-account">Remove dashboard user account</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/scim/v2/Users/{id}</p>
@@ -54,7 +54,7 @@
 3
 </pre></td><td class="rouge-code"><pre><span class="err">Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h2 id="example-request">Example request</h2>
@@ -70,15 +70,17 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <h2 id="response">Response</h2>
 
-<h3 id="example-error-response">Example error response</h3>
+<h3 id="example-success-response">Example success response</h3>
+
+<p>When the user is permanently deleted, the endpoint returns:</p>
 
 <div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">204</span> <span class="ne">Not Found</span>
-<span class="na">Content-Type</span><span class="p">:</span> <span class="s">text/html; charset=UTF-8</span>
+</pre></td><td class="rouge-code"><pre><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">204</span> <span class="ne">No Content</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
-<p>If a developer with this ID doesn’t exist in Braze, the endpoint will respond with:</p>
+<h3 id="example-error-responses">Example error responses</h3>
+
+<p>If a developer with this ID doesn’t exist in Braze, the endpoint responds with:</p>
 <div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -96,4 +98,25 @@ Authorization: Bearer YOUR-REST-API-KEY
     "status": 404
 }
 </pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>If you attempt to delete the last remaining company user, the endpoint returns a <code class="language-plaintext highlighter-rouge">500 Internal Server Error</code> response and doesn’t delete the user:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">500</span> <span class="ne">Internal Server Error</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="nl">"schemas"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"urn:ietf:params:scim:api:messages:2.0:Error"</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Failed to delete user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
 </div>

@@ -93,15 +93,6 @@ Every block has its settings, such as granular control on padding. The right-sid
 
 As you build your in-app message, you can select a mobile, tablet, or desktop view in the toolbar to preview how your in-app message looks for your user groups. This ensures that your content is responsive, and you can make any necessary adjustments along the way.
 
-
-
-
-
- Hide rows and blocks by device
-
-To tailor your layout for desktop versus tablet and mobile, select a row or block on the canvas, then use the **Hide on** toggle in the properties panel to hide it on **Desktop** or **Tablet and smaller devices**. A hidden row or block won't appear for that device type, either when previewing  in the drag-and-drop editor or .
-
-
 ## Creative details
 
 ### Fullscreen on larger screens {#fullscreen}

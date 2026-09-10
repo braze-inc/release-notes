@@ -4,7 +4,7 @@
 
 Teams can be set up across customer base location, language, and custom attributes so that Team members and non-Team members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools. There is no limit on how many teams you can create in your workspace.
 
-Teams are not available on all Braze contracts. To access this feature, contact your Braze account manager or [contact us](mailto:success@braze.com) for a consultation.
+Teams aren't available on all Braze contracts. The **Internal Teams** page appears only when the Teams feature is enabled for your company. To create or edit teams, users need the "Edit Teams" permission. To enable Teams, contact your Braze account manager or [contact us](mailto:success@braze.com) for a consultation.
 
 ## How do Teams differ from permission sets and roles?
 
@@ -12,7 +12,7 @@ Teams are not available on all Braze contracts. To access this feature, contact 
 
 ## Create Teams {#creating-teams}
 
-Go to **Settings** > **Internal Teams** and select <i class="fas fa-plus"></i> **Add Team**.
+Go to **Settings** > **Internal Teams** and select <i class="fas fa-plus"></i> **Add Team**. You need the **Edit Teams** workspace permission to create a team.
 
 ![Window to add a new Team.](https://www.braze.com/docs/assets/img_archive/adding_a_team.png?c7e9f1259a0d556d24f6a39ef149e4b8)
 
@@ -28,11 +28,11 @@ Braze administrators and limited users with the company-level permission "Can Ma
 
 To stop a company user from signing in while preserving their account, [suspend the user](https://www.braze.com/docs/user_guide/administer/global/user_management/manage_company_users#suspending-company-users) instead. Suspending puts the account in an inactive state where the user can't log in.
 
-If the user should remain able to sign in with limited capabilities, go to **Settings** > **Company Users**, select the user, and edit their permissions. Remove workspace-level permissions for campaigns, Canvases, segments, and user data, and leave only minimal access—for example, "View Media Library Assets". For more information, see [Edit a user's permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#edit-a-users-permissions).
+If the user should remain able to sign in with limited capabilities, go to **Settings** > **Company Settings** > **User Management** > **Company Users**, select the user, and edit their permissions. Remove workspace-level permissions for campaigns, Canvases, segments, and user data, and leave only minimal access—for example, "View Media Library Assets". For more information, see [Edit a user's permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#edit-a-users-permissions).
 
 Team permissions work on top of workspace permissions. If you assign the user to a Team, grant only the minimum team-level permissions they need, and don't grant permissions for campaigns, Canvases, segments, or user profiles. They remain in the workspace and can sign in, but they can't perform most messaging or audience actions.
 
-To assign a user to a Team, navigate to **Settings** > **Company Users** and select a user you'd like to add to your Team.
+To assign a user to a Team, go to **Settings** > **Company Settings** > **User Management** > **Company Users** and select a user you'd like to add to your Team.
 
 Then perform the following steps:
 
@@ -140,7 +140,7 @@ In this scenario, Michelle is still a member of the Development Team, but she al
 
 ![Custom permissions with one workspace-level permission and 15 team-based permissions.](https://www.braze.com/docs/assets/img_archive/scenario2.png?2d53682f32c30f94c7be1bd4ca9bb7ca)
 
-Because Michelle has the workspace-level permission of "Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, and Preference Centers", she can view and assign other Team filters to the campaign she creates.
+Because Michelle has workspace-level permissions such as "View Campaigns" and "Edit Campaigns", she can view and assign other Team filters to the campaign she creates.
 
 ![Campaign Team tag dropdown with multiple Team tags](https://www.braze.com/docs/assets/img_archive/team_permissions_scenario2.gif?09d109293fe04362d5843c4a4c4ad2cb)
 
