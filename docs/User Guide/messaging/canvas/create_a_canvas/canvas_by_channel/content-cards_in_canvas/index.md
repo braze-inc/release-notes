@@ -50,6 +50,8 @@ After a Content Card expires, it will automatically be removed from the user's f
 
 Content Cards can be removed when users complete a purchase or perform a custom event. You can select one of the following as the removal event: **Perform Custom Event** and **Place Order**. Then, select **Add Trigger**.
 
+**Place Order** removal events accept [property filters](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events#property-filters), so you can remove a card only when the order matches, such as an order containing a particular product category.
+
 !["Remove cards when users complete a purchase or perform a custom event." selected with the trigger to remove cards for users who place a specific order.](https://www.braze.com/docs/assets/img_archive/content-cards-in-canvas-removal-event.png?53f146e9d5efad17e17ca8b00a16bc74)
 
 ## Reporting and analytics

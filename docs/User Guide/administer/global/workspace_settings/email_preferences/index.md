@@ -131,6 +131,8 @@ BCC addresses are available for Amazon SES, SendGrid, and SparkPost. As an alter
 
 
 
+
+
 After you add an address, the address is made available to select when composing an email in either campaigns or Canvas steps. Select **Make Default** next to an address to set this address to be selected by default when launching a new email campaign or Canvas component. To override this at the message level, you can select **No BCC** when setting up your message.
 
 If you require that all email messages sent from Braze have a BCC address included, you can select the **Require a BCC address for all your email campaigns** toggle. This requires you to select a default address, which is automatically selected on new email campaigns or Canvas steps. The default address is also automatically added to all messages triggered through our REST API. There is no need to change the existing API request to include the address.
@@ -416,6 +418,10 @@ For email list management best practices, see [Email subscriptions](https://www.
 When in the **Preview** section for a subscription page or footer, select **Copy preview link** to generate and copy a shareable preview link that shows what the email footer, unsubscribe page, or opt-in page looks like for a random user. For more information, see [Shareable preview](https://www.braze.com/docs/user_guide/messaging/governance/shareable_preview).
 
 
+
+## Link aliasing settings
+
+The **Link Aliasing Settings** tab lists every link alias tracked in your workspace, so you can search them and turn off tracking in bulk. You need the "View Email Settings" permission to open **Email Preferences**. If you can open that page, this tab appears only when link aliasing is on for your company. For details, see [Managing link aliases](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing#managing-link-aliases).
 
 ## Frequently asked questions
 

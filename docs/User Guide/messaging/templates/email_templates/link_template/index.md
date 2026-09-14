@@ -2,12 +2,11 @@
 
 > With link templates, you can create dynamic and reusable links for your email campaigns by appending parameters or prepending URLs. This can create consistency in the URLs across your campaigns and messages. 
 
-**Note:**
+## Turn on link templates
 
+Link templates are an optional feature that Braze turns on for your whole company, not in the dashboard. To request it, contact your Braze account manager. If [link aliasing](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing) is already on for your company, link templates are on too.
 
-Link templates are an optional feature. If **Email Link Templates** is missing from the **Templates** section, contact your account manager to turn on the feature.
-
-
+When link templates are on, **Email Link** appears under **Templates** in the dashboard navigation, and the page it opens is titled **Email Link Templates**. Creating and editing templates requires the "View Email Link Templates" and "Edit Email Link Templates" permissions. If **Email Link** is missing, see [A link management page or setting is missing](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing#a-link-management-page-or-setting-is-missing). To learn more about these permissions, see [Company user permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions).
 
 ## How it works
 
@@ -18,11 +17,11 @@ Link templates are most often used in these following use cases:
 
 Let's say you're running a promotional email campaign for a new product launch. You can use a link template that directs users to the product page and personalize the link to include your user's name or a specific promotional code. This can allow you to track how many users have clicked on the link and have made a purchase. This way, you can create consistency across your links and better track your analytics.
 
-## Creating a link template
+## Create a link template
 
 You can create an unlimited number of link templates to support your various needs. To create a link template, do the following:
 
-1. Go to **Content** > **Email Link**.
+1. Go to **Templates** > **Email Link**.
 2. Select **Create email link template**.
 3. Give your link template a name.
 4. (Optional) Add a description, team, or tag to add details about the link template.
@@ -79,19 +78,13 @@ For a full comparison of these attributes in Liquid, the REST API, and Currents,
 
 ## Using link templates in email campaigns
 
-After you set up your link templates, you can apply them in your email.
+After you set up your link templates, you can apply them in your email. Opening **Link Management** uses the same composer sidebar as [Create a link alias](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing#create-a-link-alias). The steps are the same in the HTML editor and the drag-and-drop editor.
 
-To apply a link template in the HTML editor or the drag-and-drop editor, follow these steps:
+1. Open your email body in the campaign or Canvas component.
+2. In the composer sidebar, select **Content**, and then select **Link Management** under **Design and Build**.
+3. Select **Add a Link Template**, choose your link template, and then select **Add**.
 
-**Note:**
-
-
-If email link templates or [link aliasing](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing) are enabled for your workspace, you can access the **Link Management** tab in the updated HTML editor and drag-and-drop editor.
-
-
-
-- **Updated HTML editor:** On the **Content** tab, select **Link Management**, select **Add a Link Template**, choose your link template, and then select **Add**.
-- **Drag-and-drop editor:** On the **Content** tab, select **Link Management**, select **Add a Link Template**, choose your link template, and then select **Add**.
+If **Link Management** is missing from the sidebar, see [A link management page or setting is missing](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing#a-link-management-page-or-setting-is-missing).
 
 ![Link Management tab in the drag-and-drop editor with an example list of link templates.](https://www.braze.com/docs/assets/img_archive/link_template_messagecomposer2.png?daafe639c906bd6915e4222e5e3c9d92)
 
@@ -126,7 +119,7 @@ Archiving templates is not currently available for link templates.
 
 ### Missing UTM parameters
 
-Link templates aren't applied to links in standard HTML comments (`<!-- ... -->`). For Outlook conditional comments (for example, `<!--[if mso]>`), link templates are applied when link aliasing is enabled for your workspace. Workspaces without link aliasing enabled still skip conditional comments.
+Link templates aren't applied to links in standard HTML comments (`<!-- ... -->`). For Outlook conditional comments (for example, `<!--[if mso]>`), link templates are applied when link aliasing is turned on for your company. If link aliasing isn't on for your company, Braze still skips conditional comments.
 
 ### UTM parameters present in browser but missing from links
 

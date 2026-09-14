@@ -6,13 +6,6 @@
 
 _This integration is maintained by Future Anthem._
 
-**Important:**
-
-
-This feature is currently in early access. Contact the Future Anthem Customer Success team to get started.
-
-
-
 ## Prerequisites
 
 | Requirement | Description |

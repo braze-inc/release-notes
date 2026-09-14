@@ -48,6 +48,8 @@ Because these events follow a defined schema, each supported feature can read th
 
 
 
+
+
 ### How eCommerce events work
 
 eCommerce events are custom events with predefined names and property schemas. You send them using the [Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events), the [`/users/track` REST API endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track), or [Cloud Data Ingestion (CDI)](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion), and Braze validates each event against its schema on ingestion. When validation passes, Braze automatically applies post-processing specific to that event type, such as calculating revenue fields and managing cart state on user profiles.
@@ -744,7 +746,7 @@ The event is not processed as a recommended event. Specifically:
 - Downstream recommended-event features do not run, including:  
   - Revenue tracking (revenue reporting, user calculated fields like `total_revenue`)  
   - Cart object updates on the user profile  
-  - "Perform Cart Updated Event" or “Placed Order” triggers in Canvas and campaigns
+  - **Update Cart** or **Place Order** triggers in Canvas and campaigns
 
 How errors are reported depends on the ingestion path:
 

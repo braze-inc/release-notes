@@ -162,6 +162,8 @@ Inserts an image from the [media library](https://www.braze.com/docs/user_guide/
 
 
 
+
+
 | Property | Description |
 |---|---|
 | Auto width | Modifies the width of the image in pixels. |
@@ -382,6 +384,8 @@ Adds a list of options from which users can select one. When submitted, the user
 ### Image
 
 Inserts an image from the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/).
+
+
 
 
 
@@ -712,6 +716,8 @@ Adds a list of options from which users can select one. Use the properties panel
 ### Image
 
 Displays an image from an upload or external URL.
+
+
 
 
 
@@ -1086,6 +1092,8 @@ Displays an image from a hosted URL. Configure display options in the properties
 
 
 
+
+
 | Property | Description |
 | --- | --- |
 | URL | The hosted address for the image. |
@@ -1258,6 +1266,8 @@ Adds a clickable button (for example **Save** or navigation).
 ### Image
 
 Displays an image from the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/) or a URL.
+
+
 
 
 

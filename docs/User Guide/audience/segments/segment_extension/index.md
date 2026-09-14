@@ -56,6 +56,8 @@ Name your Segment Extension by describing the type of users you intend to filter
 
 Select between purchase, message engagement, eCommerce recommended event, or custom event criteria for targeting. After you've selected the desired event type criteria, choose which purchased item, message interaction, eCommerce recommended event, or custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and the time period—for Segment Extensions specifically, you can go back up to the past 730 days (2 years).
 
+For recent message interaction data only, see [Calculated filters](https://www.braze.com/docs/user_guide/audience/segments/calculated_filters#message-channel-interactions).
+
 Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range to select the past X number of days, a start date, an end date, or an exact date range (date A to date B).
 
 ![Segmentation criteria for users who performed a custom event more than 2 times in the date range of March 1st, 2025 through March 31st, 2025.](https://www.braze.com/docs/assets/img/segment/segment_extension1.png?b476a6cc8ad0600ed27851358a2dcba7)

@@ -76,7 +76,7 @@ First, select the general type of event you'd like to use:
 |-------------------------|----------------------------|
 | **Starts Session**      | A user is counted as having converted when they open any one of the apps that you specify (defaults to all apps in the workspace).|
 | **Makes Purchase**      | A user is counted as having converted when they record a [Purchase event](https://www.braze.com/docs/api/objects_filters/purchase_object). This tracks any purchase by default, or you can specify a particular product.|
-| **Places Order**        | A user is counted as having converted when they trigger the [Order Placed eCommerce recommended event](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events#ecommerce-recommended-events?tab=ecommerce.order_placed). This tracks any order by default, or you can filter by a specific product.<br><br>The "Places Order" event is currently in early access. Contact your Braze account manager if you’re interested in participating in this early access. |
+| **Places Order**        | A user is counted as having converted when they trigger the [Order Placed eCommerce recommended event](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events#ecommerce-recommended-events?tab=ecommerce.order_placed). This tracks any order by default, or you can narrow it with [property filters](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events#property-filters) on the order, including nested filters such as `products[].product_id` to scope the conversion to a specific product.<br><br>The "Places Order" event is currently in early access. Contact your Braze account manager if you’re interested in participating in this early access. |
 | **Performs Custom Event**| A user is counted as having converted when they perform one of your existing custom events (no default, you must specify the event).|
 | **Upgrade App**         | A user is counted as having converted when they upgrade the app version on any one of the apps that you specify (defaults to all apps in the workspace). Braze performs a best-efforts numerical comparison to determine if the change was an upgrade. Non-numeric versions are counted as conversions if the version changes.|
 | **Opens email**         | A user is counted as having converted when they open the email (only for email campaigns).|
@@ -86,7 +86,9 @@ First, select the general type of event you'd like to use:
 **Important:**
 
 
-**Nested properties are not supported in conversion events**. You cannot use nested properties in conversion events. For example, if `product_code` or `product_name` are nested properties within a `products` array (such as `products[].product_code`), you cannot use them to check if a specific product purchase has been made in a conversion event.
+Nested properties are supported only on the **Places Order** conversion event. You can filter on nested properties such as `products[].product_id` or `products[].metadata.category`, and the conversion counts only when an order satisfies the filter.
+
+Nested properties aren't supported for **Makes Purchase**, **Performs Custom Event**, or the other eCommerce conversion events that use a custom event, such as **Update Cart**. If `product_code` or `product_name` are nested within a `products` array (such as `products[].product_code`), you can't use them to check whether a specific product was purchased.
 
 
 

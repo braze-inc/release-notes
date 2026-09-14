@@ -67,11 +67,67 @@ Segment Extensions for eCommerce recommended events are a paid feature and in ea
 
 ### Triggering
 
-You can use performed custom event triggers with eCommerce events throughout Braze, just like with other custom events. For abandoned cart flows, use the **Perform Cart Updated Event** trigger to properly capture cart updates.
+You can use performed custom event triggers with eCommerce events throughout Braze, just like with other custom events. For abandoned cart flows, use the **Update Cart** trigger to properly capture cart updates.
 
-Additionally, Braze offers a dedicated **Places Order** trigger, which lets you start journeys or take actions based on any placed order, or on orders that include a specific product. You can filter this trigger by product name, `product_id`, or `variant_id` to target specific purchase scenarios. For more information, see [Action-based delivery](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery).
+Additionally, Braze offers a dedicated **Place Order** trigger, which lets you start journeys or take actions when a user places an order. For more information, see [Action-based delivery](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery).
 
-![Places Order trigger with a selected option to place any order.](https://www.braze.com/docs/assets/img/recommended_events/places_order_trigger.png?dbc7d7ccebf7deac6362c092e8dfc337)
+#### Property filters
+
+**Place Order** and **Update Cart** triggers can also filter on the properties carried by the event, so a trigger fires only for the orders or carts you care about:
+
+- **Basic properties** match a top-level property on the event, such as `total_value` or `currency`.
+- **Nested properties** look inside the `products` array. Because each product carries its own properties, `products[].metadata.category` matches when any product in the order or cart satisfies the condition.
+
+Nest custom product fields under `metadata` (for example, `products[].metadata.brand`). A product property that isn't part of the [event schema](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events#event-schemas) fails validation, so a filter on it never matches.
+
+For example, combining `total_value` is more than `1000` with `products[].metadata.category` equals `shoes` triggers only for high-value orders that contain footwear. Before property filters, you could trigger on an order being placed but not on what the order contained.
+
+Property filters are available on the following surfaces:
+
+- **Place Order:** Campaign and Canvas triggers, exception events, Canvas exit criteria, action paths, conversion events, and Content Card removal events. Basic and nested properties are supported.
+- **Update Cart:** Campaign and Canvas triggers, exception events, Canvas exit criteria, and action paths. Basic and nested properties are supported. On conversion events, Content Card removal events, and in-app message triggers, **Update Cart** is backed by the `ecommerce.cart_updated` custom event and supports basic properties only.
+
+**Note:**
+
+
+On a nested filter, **does not equal** matches when no item in the array matches. A cart filtered on `products[].metadata.category` does not equal `shoes` matches only once every pair of shoes has been removed from the cart, not when the cart also contains other categories.
+
+
+
+Nested properties aren't supported on in-app message triggers, which are evaluated on the device.
+
+#### Scoping an order to a specific product
+
+To trigger only when an order contains a specific product, add a nested property filter on the **Place Order** trigger:
+
+| Goal | Nested property filter |
+|---|---|
+| Product name | `products[].product_name` equals *value* |
+| Product ID | `products[].product_id` equals *value* |
+| Product variant ID | `products[].variant_id` equals *value* |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Scoping an order to a specific product" }
+
+##### Saved behaviors with product scope
+
+If you configured a **Place Order** behavior before property filters were available, it may still use **Place order for specific product** with a **Product Identifier** (product name, `product_id`, or `variant_id`). Those saved behaviors keep working and continue to match exactly as before, so existing campaigns and Canvases are unaffected.
+
+To switch a saved behavior to property filters, select **Place any order**. That replaces the product scope controls with property filters. Use the following table to recreate the same scope:
+
+| Previous **Product Identifier** | Equivalent nested property filter |
+|---|---|
+| Product name | `products[].product_name` equals *value* |
+| Product ID | `products[].product_id` equals *value* |
+| Product variant ID | `products[].variant_id` equals *value* |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Migrating product scope to property filters" }
+
+**Important:**
+
+
+Moving a behavior to **Place any order** can't be undone. If you still need it, re-create the scope as a nested property filter.
+
+
+
+![Place order trigger with property filters enabled and a basic property filter set to total_value more than 100.](https://www.braze.com/docs/assets/img/recommended_events/places_order_trigger.png?4d8e3ae937d4de108d54ef8014698240)
 
 ### Liquid personalization
 
@@ -170,7 +226,7 @@ eCommerce recommended events power the same revenue surfaces customers already u
 | Revenue Report                              | Total revenue, average daily revenue, daily purchases, and revenue per user over time across all sources for your selected date range and apps.                                                                                     |
 | Last Touch Attribution Revenue dashboard     | Revenue attributed to the last campaign or Canvas a user interacted with before placing an order. Touch events include email clicks, push opens, Content Card clicks, in-app message clicks, and SMS or WhatsApp short link clicks. |
 | Campaign and Canvas analytics                | Total revenue attributed to a specific campaign or Canvas within the primary conversion window.                                                                                   |
-| Conversions report                          | Revenue tied to conversion events on campaigns and Canvases.<br> **Note:** To count `ecommerce.order_placed` revenue, the campaign or Canvas must use the “Place Order” conversion event type as its conversion event.                                                                                    |
+| Conversions report                          | Revenue tied to conversion events on campaigns and Canvases.<br> **Note:** To count `ecommerce.order_placed` revenue, the campaign or Canvas must use the **Places Order** conversion event type.                                                                                    |
 | Segment Insights                            | Revenue comparisons across segments in the segment insights dashboard.                                                               |
 | Report Builder                              | Revenue metrics in custom reports built in Report Builder.                                                                                  |
 | Dashboard Builder                           | Revenue metrics in custom dashboards built in Dashboard Builder.                                                                                  |

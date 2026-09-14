@@ -153,6 +153,8 @@ To send business details that users can save to their device contacts, see [Cont
 
 
 
+
+
 MMS availability and rendering depend on the receiving carrier. When a carrier cannot accept MMS, the media becomes a link in the SMS body through the provider. Avoid sending MMS to Google Voice numbers because its limited MMS support can cause unreliable delivery.
 
 When a user sends inbound media, Braze exposes its URLs in [Currents SMS inbound events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events#sms-inbound-received-events) and through `{{sms.${inbound_media_urls}}}` in Liquid.
@@ -211,6 +213,8 @@ The composer accepts a media URL with up to 1,000 characters. Available formats 
 | Document | PDF. Available for **Media** messages, but not media cards. |
 | Audio | AAC, MP3, MPEG, MP4, 3GPP, OGG. Provider support varies. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="RCS media specifications" }
+
+
 
 
 

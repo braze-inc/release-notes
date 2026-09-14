@@ -83,6 +83,8 @@ New customers are provisioned on the latest Braze Web SDK and JavaScript SDK ver
 
 
 
+
+
 Now you’ll select the Shopify data you want to track.
 
 ![“Tracking Shopify data” section with a checkbox to track behavioral events and user attributes.](https://www.braze.com/docs/assets/img/shopify/tracking_shopify_data.png?17b975ab97f07c885e16ace136234fd0)
@@ -95,6 +97,8 @@ The following events will be enabled by default in the standard integration.
 {: .reset-td-br-1 .reset-td-br-2  .reset-td-br-3 aria-label="Standard data setup" }
 
 For more information on the data tracked through the integration, refer to [Shopify Data Features](https://www.braze.com/docs/shopify_data_features/).
+
+
 
 
 
@@ -326,26 +330,148 @@ You can sync all products from your Shopify store to a Braze catalog for deeper 
 
 ## Step 6: Activate Channels (optional)
 
-You can enable in-app messages without using a developer by configuring them in your setup.
+For Shopify standard integrations, you can enable in-app messages and Banners from your integration settings without additional development.
+
+
+
+
+### In-app messages
+
+In the **Activate Channels** step, select in-app messages as part of your integration settings to enable use cases like email and SMS capture forms, promotional pop-ups, and surveys. To learn how to build one, see [In-app messages](https://www.braze.com/docs/user_guide/channels/in_app_messages/).
 
 ![Setup step to activate channels, with the available option being in-browser messaging.](https://www.braze.com/docs/assets/img/shopify/activate_channels_standard.png?0f683403b09e41de0b7cff29a9d96a7d)
 
 **Note:**
 
 
-Braze collects visitor information, such as email addresses and phone numbers, through in-browser messages. This information is sent to Shopify. This data enables merchants to recognize visitors to their store and create a more personalized shopping experience. For more details, refer to [Visitor API](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
+Braze collects visitor information, such as email addresses and phone numbers, through in-app messages. This information is sent to Shopify. This data enables merchants to recognize visitors to their store and create a more personalized shopping experience. For more details, see [Visitor API](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
 
 
 
-### Supporting additional SDK channels
 
-The Braze SDKs enable various messaging channels, including Content Cards.
 
-#### Content Cards and Feature Flags
 
-To add content cards or feature flags, you will need to collaborate with your developers to insert the necessary SDK code directly into your `theme.liquid` file. For detailed instructions, refer to [Integrating the Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/). 
+### Banners
 
-#### Web push notifications
+[Banners](https://www.braze.com/docs/user_guide/channels/banners/) show personalized content on your Shopify storefront, such as promotions, announcements, and targeted offers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Important:**
+
+
+Banners require a Shopify Online Store 2.0 theme and Braze SDK version `6.8.0` or later. During setup, Braze checks whether your store's published theme supports inline banner placements. Vintage themes don't support inline placements, so **Turn on banners and create banner placements** is disabled in **Activate Channels**. To use Banners, upgrade to an [Online Store 2.0 theme](https://help.shopify.com/en/manual/online-store/themes/managing-themes/versions) in your Shopify admin, then return to integration setup to enable Banners.
+
+
+
+#### Setup
+
+Select **Turn on banners and create banner placements** in **Activate Channels**, then save.
+
+![Activate Channels step with the Banners checkbox selected in the Shopify integration settings.](https://www.braze.com/docs/assets/img/shopify/shopify_banners_checkbox.png?c5cd25e603c7b84eb0969520761727a4)
+
+Braze automatically creates these Banner placements once per workspace, shared across all connected Shopify stores:
+- Global header
+- Home body
+- Global footer
+- Product info banner
+- Product body
+- Collection body
+- Cart body
+- Cart summary
+
+**Note:**
+
+
+If you connect multiple Shopify stores and enable Banners for each, Braze creates the same eight placements at the same time. The same placement IDs can be used across any or all of your connected stores simultaneously.
+
+
+
+If the default placement IDs don't fit your setup or you want to use additional ones, you need to manually [create the placements](https://www.braze.com/docs/developer_guide/banners/placements#create-a-placement). Each placement ID must match what is configured in the corresponding Shopify app block. If you change a placement ID after launch, update the app block to match or the banner stops rendering.
+
+#### Create a Banner 
+
+[Create your Banner](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner/) campaign or Canvas using the drag-and-drop editor, HTML, or a template.
+
+**Note:**
+
+
+The Braze editor preview shows only the Banner's content. To see where the Banner appears on your site, preview it in the Shopify theme editor.
+
+
+
+##### Step 1: Add your Banner to your Shopify theme
+
+1. Launch your campaign or Canvas to a small audience, such as a test segment containing only your account (for example, your own `external_id` or `device_id`), or a test group included in your targeting. This lets you verify the Banner on your live site without exposing it to shoppers.
+2. In the Shopify theme editor, open the page where you want the Banner, then select **Apps** > **Add Block** > **Apps** > **Braze** in the menu.
+
+![Shopify theme editor with the Apps menu open and the Braze app block selected to add a Banner.](https://www.braze.com/docs/assets/img/shopify/shopify_banner.png?e95b1b5309fc2d173e78ff6361f2b54e)
+
+{: start="3"}
+3. In the app block settings, enter the `placement_id` for your chosen placement (for example, `global_header`) from your Banner placements.
+
+![Braze Banner app block settings in the Shopify theme editor with the placement_id field.](https://www.braze.com/docs/assets/img/shopify/braze_placement_id.png?4569b876db168969a6f1055b677354fd){: style="max-width:40%;"}
+
+{: start="4"}
+4. (Optional) Adjust the app block's width (`%` of the container) and add a fixed height in pixels. By default, the max height adjusts to your banner’s content. Set a fixed height if your theme needs a capped slot, such as preventing a tall banner from pushing down page content.
+
+##### Step 2: Test and launch
+
+Visit your store as a test user to confirm the Banner renders in the right placement and looks as expected. Then, edit your campaign or Canvas targeting to reach your full audience. To measure performance, see [Banner analytics](https://www.braze.com/docs/user_guide/channels/banners/reporting/).
+
+**Important:**
+
+
+Banners currently aren't supported on thank you, order status, or customer account pages. If you are interested in these specific placements, make a request through your Braze account team. 
+
+
+
+
+
+
+### Content Cards and Feature Flags
+
+To add content cards or feature flags, collaborate with your developers to insert the necessary SDK code directly into your `theme.liquid` file. For detailed instructions, see [Integrating the Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/). 
+
+### Web push notifications
 
 Web push currently is not supported for the Shopify integration. 
 
