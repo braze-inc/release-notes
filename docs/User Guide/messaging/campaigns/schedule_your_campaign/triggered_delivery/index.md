@@ -10,9 +10,13 @@ Select a trigger event. Events are organized by category and are available depen
 
 - **eCommerce**
     - **Place Order**
-    - **Perform Cart Updated Event**
-    - **Perform Checkout Started Event**
-    - **Perform Checkout Completed Event**
+    - **Update Cart**
+    - **Perform Back in Stock Event**
+    - **Perform Price Drop Event**
+    - **Start Checkout**
+    - **View Product**
+    - **Cancel Order**
+    - **Refund Order**
     - **Make Purchase**
 - **General activity**
     - **Interact With Campaign**
@@ -35,7 +39,9 @@ Select a trigger event. Events are organized by category and are available depen
     - **Update Subscription Status**
     - **Update Subscription Group Status**
 
-The **eCommerce** group also lists recommended eCommerce events, such as **Perform Product Viewed Event**, **Perform Order Cancelled Event**, and **Perform Order Refunded Event**. These options use **Perform Custom Event** with the event name pre-filled.
+**Start Checkout**, **View Product**, **Cancel Order**, and **Refund Order** are recommended eCommerce events that use **Perform Custom Event** with the event name pre-filled.
+
+**Place Order** and **Update Cart** accept property filters, so a trigger fires only for the orders or carts you want. Basic filters match a top-level property such as `total_value`; nested filters look inside the `products` array, so `products[].metadata.category` matches when any product qualifies. For details, see [Property filters](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events#property-filters).
 
 In-app message campaigns support a smaller set of triggers: **Make Purchase**, **Place Order**, **Start Session**, **Perform Custom Event**, and **Interact With Campaign**. For in-app message campaigns, **Interact With Campaign** only covers opening a push from any campaign or a specific campaign. It does not include the following campaign interaction list.
 

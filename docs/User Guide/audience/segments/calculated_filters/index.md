@@ -1,6 +1,6 @@
 # Calculated filters
 
-> Calculated filters allow you to build very precise segments over an extended period of a user's history. For example, use calculated filters to target users who have purchased a particular product in the last 16 months or have spent a certain amount of money with your service. Refine this audience by using event properties to make targeting even more granular.
+> Calculated filters allow you to build very precise segments over an extended period of a user's history. For example, use calculated filters to target users who purchased a particular product a certain number of times in the last 16 months, or who completed an eCommerce event that matches specific property values. Refine this audience by using event properties to make targeting even more granular.
 
 **Important:**
 
@@ -24,7 +24,7 @@ For example, Braze default segmentation finds users that fit specific criteria y
 | How you define the audience | Choose purchases or eCommerce recommended events, and counts, time windows, and optional property filters | Write SQL against your Snowflake connection; use templates, incremental refresh, or full refresh |
 | Where the logic runs | Criteria and refresh are managed in Braze as calculated filters | Query runs in your warehouse context according to your extension configuration |
 | Filter list page | A shared list for user activity and data object filters, the **Segments** column shows how many segments use each filter, and processing statuses reflect generation state | Includes a **Type** column and filters that vary by extension type |
-| Typical use cases | Purchase frequency, total spend, and property-based rules over your selected window | Warehouse-backed logic, joins across tables, and historical windows or aggregations beyond the calculated filter form |
+| Typical use cases | Purchase frequency and property-based rules over your selected window | Warehouse-backed logic, joins across tables, spend aggregations, and historical windows beyond the calculated filter form |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Calculated filters and SQL Segment Extensions" }
 
 ### When to use calculated filters
@@ -33,7 +33,7 @@ Use calculated filters when dashboard-guided user activity or data object rules 
 
 ### When to use other segment extension types
 
-Use [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/) when you need full SQL, Snowflake-backed data, templates, or refresh modes designed for large or complex warehouse queries. Use [CDI Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/cdi_segments/) when you need SQL that directly queries your data warehouse using data from [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/) connections.
+Use [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/) when you need full SQL, Snowflake-backed data, templates, or refresh modes designed for large or complex warehouse queries. Use [CDI Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/cdi_segments/) when you need SQL that directly queries your data warehouse using data from [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/) connections. Use [Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/) (simple extension) for message channel interaction criteria when you need to look back beyond recent interaction data.
 
 ### Use calculated filters and Segment Extensions together
 
@@ -179,6 +179,23 @@ Wait until processing finishes before you unarchive a filter that shows **Proces
 #### Save versus activate
 
 You can save a calculated filter without activating it. Inactive filters remain in your workspace but cannot be added to segments until you activate them. Select **Activate filter** to use the filter in segmentation.
+
+## Considerations {#considerations}
+
+Calculated filters evaluate how many times a user completed an event within your selected window. They don't sum values across events, such as total revenue or lifetime spend. For spend thresholds or other aggregations across purchases, use [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/).
+
+### Property-based purchase and eCommerce rules
+
+When purchase or eCommerce events include the properties you need—such as product category, store ID, or promo code—you can target users with event property filters. Examples include users who used a specific promo code during a date range, purchased a product category in the last 12 months, or shopped at a particular store. Lapsed-buyer patterns (for example, purchased in one window but not another) work by combining calculated filters in a segment.
+
+### Profile attributes and location-based targeting
+
+- **Profile attributes:** Target loyalty points, tiers, or other values stored on the user profile with default [segment](https://www.braze.com/docs/user_guide/audience/segments/) filters, not calculated filters.
+- **Distance or proximity:** Braze doesn't calculate geographic distance in calculated filters. Precompute distances in your own service, store the result on the user profile, then segment on that attribute.
+
+### Message channel interactions {#message-channel-interactions}
+
+For message engagement criteria (such as email opens or push interactions), use [Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/) when you need to look back beyond recent interaction data. Calculated filters with message channel interaction criteria (when available in your workspace) evaluate recent message interaction data. They don't use the same two-year data backfill as purchase and eCommerce criteria.
 
 ## Frequently asked questions
 

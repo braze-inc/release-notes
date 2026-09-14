@@ -115,6 +115,8 @@ If you use Liquid, include default values for personalization fields. Messages w
 
 
 
+
+
 ### Response messages
 
 Use response messages to reply to inbound user messages during the active 24-hour conversation window. These messages are built in Braze and can be edited at any time.
@@ -192,6 +194,8 @@ The following features are supported for outbound WhatsApp messages you send thr
 | Videos | Videos can be embedded within body text. Files must be hosted through URL or in the [Braze media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library). | < 16 MB | `.3gp`, `.mp4` |
 | Audio | Audio is only supported through response messaging. Files must be hosted through URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Outbound messages" }
+
+
 
 
 

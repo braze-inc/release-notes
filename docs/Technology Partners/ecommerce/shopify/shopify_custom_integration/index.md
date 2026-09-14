@@ -441,6 +441,8 @@ async function loadCriticalData({context, params, request}) {
 
 
 
+
+
 1. Define functions for tracking the `cart_updated` event and setting the cart token:
 
 ```java
@@ -815,11 +817,11 @@ You can sync all products from your Shopify store to a Braze catalog for deeper 
 
 ### Step 8: Activate channels
 
-To activate in-app messages, Content Cards, and Feature Flags using the Shopify direct integration, add each channel to your SDK. Follow the documentation links provided for each channel:
+To activate in-app messages, Banners, and Feature Flags using the Shopify direct integration, add each channel to your SDK. Follow the documentation links provided for each channel:
 
-- **In-app messages:** For enabling in-app messages for lead capture form use cases, refer to [In-app messages](https://www.braze.com/docs/developer_guide/in_app_messages/).
-- **Content Cards:** For enabling Content Cards for inbox or website banner use cases, refer to [Content Cards](https://www.braze.com/docs/developer_guide/content_cards/).
-- **Feature flags:** For enabling Feature Flags for site experimentation use cases, refer to [Feature flags](https://www.braze.com/docs/developer_guide/feature_flags/).
+- **In-app messages:** To enable in-app messages for lead capture form use cases, see [In-app messages](https://www.braze.com/docs/developer_guide/in_app_messages/).
+- **Banners:** To enable Banners for Shopify storefront personalization use cases, see [Banners](https://www.braze.com/docs/developer_guide/banners/).
+- **Feature flags:** To enable Feature Flags for Shopify storefront experimentation use cases, see [Feature flags](https://www.braze.com/docs/developer_guide/feature_flags/).
 
 ### Step 9: Finish setup
 

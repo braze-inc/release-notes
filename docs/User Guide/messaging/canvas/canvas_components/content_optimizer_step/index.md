@@ -31,41 +31,23 @@ During the beta period, the supported channels are email, push notifications, an
 
 
 
-From the **Messaging Channels** tab, select **Email** and create your base email message. Refer to our dedicated [Email](https://www.braze.com/docs/user_guide/channels/email) section for help. 
+From the **Messaging Channels** tab, select **Email** and create your base email message. For help, see the [Email](https://www.braze.com/docs/user_guide/channels/email) section. 
 
 Content Optimizer uses the send settings (such as the email domain and reply-to address) specified in this variant to send all messages. You can either start with a new design or select an existing template for this message. At this step, consider which components of the message you want to optimize for. You define these in [step 4](#step-4).
 
-Supported components to optimize include:
-
-- Subject
-- Body Header
-- Body Content
-- Primary CTA
 
 
 
-
-From the **Messaging Channels** tab, select **Push notifications** and create your base push notification. Refer to our dedicated [Push](https://www.braze.com/docs/user_guide/channels/push) section for help. 
+From the **Messaging Channels** tab, select **Push notifications** and create your base push notification. For help, see the [Push](https://www.braze.com/docs/user_guide/channels/push) section. 
 
 Content Optimizer uses the selected push platforms specified in this variant to send all messages. You can either start with a new design or select an existing template for this message. At this step, consider which components of the message you want to optimize for. You define these in [step 4](#step-4).
 
-Supported components to optimize include:
-
-- Title
-- Message
 
 
 
-
-From the **Messaging Channels** tab, select **SMS/MMS/RCS** and create your base message. Refer to our dedicated [SMS/MMS/RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs) section for help. 
+From the **Messaging Channels** tab, select **SMS/MMS/RCS** and create your base message. For help, see the [SMS/MMS/RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs) section. 
 
 Content Optimizer uses the **Content** and **Message** details specified in this variant to send all messages. You can either start with a new design or select an existing template for this message. At this step, consider which components of the message you want to optimize for. You define these in [step 4](#step-4).
-
-Supported components to optimize include:
-
-- Hook
-- Body
-- CTA
 
 
 
@@ -78,13 +60,11 @@ In the **Delivery Settings** tab, you can specify if the step should use Intelli
 
 Content components are the individual elements of your message that you want to test, such as different subject lines or titles. These components allow you to generate multiple versions of a message and automatically optimize based on performance over time.
 
-- **Email:** You can add up to three content components per step and up to five variants per component, for a total of 125 unique content combinations.
+- **Email:** You can add up to four content components per step and up to five variants per component, for a total of 625 unique content combinations.
 - **Push notifications:** You can add up to two components per step and up to five variants per component, for a total of 25 unique content combinations.
-- **SMS/MMS/RCS:** You can add up to two content components per step, and up to five variants per component, for a total of 25 unique content combinations.
+- **SMS/MMS/RCS:** You can add up to three content components per step, and up to five variants per component, for a total of 125 unique content combinations.
 
 When you use **Generate AI suggestions**, Braze sends content to OpenAI to generate variant ideas. Send-time traffic allocation does not use OpenAI. For details on what data is sent and how it is used, see [OpenAI and Content Optimizer](https://www.braze.com/docs/user_guide/brazeai/content_optimizer#openai-and-content-optimizer).
-
-![Options for adding and configuring content components in the Content Optimizer interface. The interface displays selectable components such as Subject, Body Header, Body Content, and Primary CTA, each with fields to enter different variants.](https://www.braze.com/docs/assets/img/content_optimizer/add_content_components.png?65d8471a7b1a4ecd999faa9bb4543cc0)
 
 #### Step 4.1: Configure content components
 
@@ -96,13 +76,17 @@ To configure components, go to the **Content Optimizer Settings** tab.
 Choose which components you want to optimize for email messages. Supported options are:
 
 - Subject
+- Preheader
+- Sender Name
 - Body Header
 - Body Content
 - Primary CTA
+- Image
 
 For each selected component, define a set of alternative versions of that content (variants). Use clear, distinct variants that differ in tone, structure, or content. This helps Content Optimizer identify top performers more effectively. You can:
-  - Write your own variants manually.
-  - Use AI-generated suggestions to explore new options quickly.
+
+- Write your own variants manually.
+- Use AI-generated suggestions to explore new options quickly.
 
 ![Content Optimizer Settings interface showing options to add and configure content components for email optimization. Each component has input fields for entering different variants. Visible text includes component names and fields for entering variant text.](https://www.braze.com/docs/assets/img/content_optimizer/content_optimizer_settings.png?eaa39a50d886c9f7df176a4de208a463)
 
@@ -110,12 +94,14 @@ For each selected component, define a set of alternative versions of that conten
 
 
 Choose which components you want to optimize for push notifications. Supported options are:
+
 - Title
 - Message
 
 For each selected component, define a set of alternative versions of that content (variants). Use clear, distinct variants that differ in tone, structure, or content. This helps Content Optimizer identify top performers more effectively. You can:
-  - Write your own variants manually.
-  - Use AI-generated suggestions to explore new options quickly.
+
+- Write your own variants manually.
+- Use AI-generated suggestions to explore new options quickly.
 
 ![Content Optimizer settings showing options to add and configure content components for push optimization.](https://www.braze.com/docs/assets/img/content_optimizer/add_content_components_push.png?c489d481025b66d6838d9f275a8bb796)
 
@@ -123,18 +109,22 @@ For each selected component, define a set of alternative versions of that conten
 
 
 After selecting your subscription group and message type (if applicable), choose which components you want to optimize for SMS/MMS/RCS. Supported options are:
+
 - Hook
 - Body
 - CTA
+
 **Note:**
 
 
 After an SMS/MMS/RCS Content Optimizer step is launched, you cannot update the subscription group or message type. 
 
 
+
 For each selected component, define a set of alternative versions of that content (variants). Use clear, distinct variants that differ in tone, structure, or content. This helps Content Optimizer identify top performers more effectively. You can:
-  - Write your own variants manually.
-  - Use AI-generated suggestions to explore new options quickly.
+
+- Write your own variants manually.
+- Use AI-generated suggestions to explore new options quickly.
 
 ![Content Optimizer settings showing options to add and configure content components for push optimization.](https://www.braze.com/docs/assets/img/content_optimizer/add_content_components_sms_rcs_mms.png?0e81611c4894b947eb86320ed6d35dd8)
 
@@ -159,9 +149,12 @@ As the Canvas runs, Content Optimizer mixes and matches variants across componen
 | Channel | Component | Liquid snippet |
 | --- | --- | --- |
 | Email | Subject | `{% message_component "Subject" %}` |
+| Email | Preheader | `{% message_component "Preheader" %}` |
+| Email | Sender Name | `{% message_component "Sender Name" %}` |
 | Email | Body Header | `{% message_component "Body Header" %}` |
 | Email | Body Content | `{% message_component "Body Content" %}` | 
 | Email | Primary CTA | `{% message_component "Primary CTA" %}` | 
+| Email | Image | `{% message_component "Image" %}` | 
 | Push | Title | `{% message_component "Title" %}` | 
 | Push | Message | `{% message_component "Message" %}` | 
 | SMS/MMS/RCS | Hook | `{% message_component "Hook" %}` |
@@ -169,67 +162,22 @@ As the Canvas runs, Content Optimizer mixes and matches variants across componen
 | SMS/MMS/RCS | CTA | `{% message_component "CTA" %}` |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Liquid references" }
 
-#### Combination token
-
-Use the combination token to record which combination of variants a user received. Add the `{{component_combination_token}}` Liquid tag to a link in your base message, then use the value in your own analytics tools to attribute downstream behavior to a specific combination.
-
-For example, add the token to a link as a UTM parameter:
-
-
-```liquid
-https://www.example.com/summer-sale?utm_content={{component_combination_token}}
-```
-
-
-The tag renders a string of numbers separated by underscores, such as `3_2_8`:
-
-- Each position corresponds to one content component, in the order the components appear in the **Content Optimizer Settings** tab.
-- Each number is the index of the variant the user received for that component. Indexes start at 0, so `0` is the first variant created for that component, `1` is the second, and so on.
-
-Braze assigns an index to a variant when you create it and keeps that index for the lifetime of the step. You can deactivate a variant, but you can’t delete one, and indexes are never reused or renumbered. An index doesn’t reflect the variant’s position among the currently active variants.
-
-Because of this, indexes can climb higher than the five-variant limit per component suggests. That limit applies to active variants only, so if you deactivate several variants and add new ones, the new variants can have indexes such as 5, 6, 7, and 8.
-
-For example, an email step optimizes a subject line and a primary CTA. The subject component launched with five variants. Three were later deactivated and three new ones were added:
-
-| Subject variant | Index | Status |
-| --- | --- | --- |
-| Your summer sale starts now | 0 | Deactivated |
-| Summer sale: 20% off | 1 | Deactivated |
-| 20% off, this week only | 2 | Deactivated |
-| Save 20% on summer picks | 3 | Active |
-| Your 20% off code is inside | 4 | Active |
-| Summer picks, 20% off | 5 | Active |
-| Don’t miss 20% off | 6 | Active |
-| Last chance: 20% off summer | 7 | Active |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Subject variant indexes" }
-
-The primary CTA component has two variants, with indexes 0 and 1. In this step, a token of `6_1` means the user received the subject variant with index 6 (“Don’t miss 20% off”) and the primary CTA variant with index 1.
-
 ### Step 5: Select optimization event
 
 The optimization event determines how Content Optimizer evaluates performance and allocates traffic to content combinations over time.
 
-Your selected optimization event applies to all content components in this step.
+Your selected optimization event applies to all content components in this step. Content Optimizer uses qualifying unique events for your selected optimization event (opens, clicks, or reads) that are registered within seven days of sending a message to shift delivery toward higher-performing content combinations.
 
 
 
 
-For email, you can optimize for one of the following events. Content Optimizer uses opens and clicks that are registered within 7 days of sending a message to shift delivery toward higher-performing content combinations.
+For email, you can optimize for one of the following events.
 
 | Event | Description | Use cases |
 | --- | --- | --- |
 | Opens | Optimizes for combinations that get recipients to open the email. | Testing subject lines or aiming to increase visibility |
 | Clicks | Optimizes for combinations that drive engagement with links. Does not include bot clicks or Braze-recognized unsubscribe clicks. | Driving traffic, engagement, or conversion from links |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Step 5: Select optimization event" }
-
-#### Exclude links from optimization
-
-When you optimize for clicks, you can exclude one or more links from optimization. Use this for links that don’t signal engagement with the content you’re testing, such as a preference center or a store locator.
-
-To exclude a link, go to the **Content Optimizer Settings** tab and add the link’s URL. Braze matches on the prefix, so a click on any URL in your message that begins with the URL you specify is excluded.
-
-Excluded clicks don’t count toward the optimization event, so they don’t influence which combinations Content Optimizer favors. They’re still counted in the step’s total analytics, and they aren’t counted in the [Performance by component](#performance-by-component) or [Performance by combination](#performance-by-combination) tables.
 
 
 
@@ -302,7 +250,7 @@ For SMS/MMS/RCS steps, the subscription group and message type also cannot be ch
 
 ## Best practices
 
-- In general, test more components rather than fewer for the Content Optimizer step. For example, instead of testing two components for email, test three.
+- In general, test more components rather than fewer for the Content Optimizer step. For example, instead of testing two components for email, test four.
 - Testing at least 10 total combinations generally yields better results.
 - For email, steps that optimize for clicks tend to outperform steps that optimize for opens. Where clicks fit your use case, choose clicks as your optimization event.
 - If this is your first time using Content Optimizer, consider using an [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step) step so only part of your audience enters the branch that contains the Content Optimizer step. For example, you could send half your users down a path with the Content Optimizer step and send the other half of your users down a control path that sends the Message Step with your current business-as-usual content. Then, gather data for 2-3 weeks and compare any key performance indicators (KPIs) or counter-metrics before you increase traffic to the paths with Content Optimizer steps. 
@@ -367,8 +315,7 @@ Reasons that analytics in the Content Optimizer step differ from the **Analytics
 
 - Push sends are de-duplicated for sends to the same user on different devices.
 - In general, clicks and opens are de-duplicated to be unique for each user. 
-- Only clicks and opens that happen within seven days of sending a message are counted in the Content Optimizer step. 
-- Excluded link clicks are counted in the step's total analytics but aren't counted in the **Performance by component** or **Performance by combination** tables. For more information, see [Exclude links from optimization](#exclude-links-from-optimization).
+- Only clicks and opens that happen within seven days of sending a message are counted in the Content Optimizer step.
 
 ### View variants on a user profile
 

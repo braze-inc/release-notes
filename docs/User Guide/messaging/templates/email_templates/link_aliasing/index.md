@@ -16,44 +16,40 @@ With link aliasing, you can:
 
 Braze uniquely identifies links within emails by appending an extra parameter called the `lid` (also known as the link identifier) to every link URL. This `lid` value allows Braze to track, monitor, and aggregate user interactions with the link even if the rest of the URL parameters may differ. This helps to provide insights into how users engage with the content in your email campaigns.
 
-Link identifiers will also be updated if an email campaign, Canvas with an email message, or Content Block is duplicated.
+Link identifiers are also updated if an email campaign, Canvas with an email message, or Content Block is duplicated.
 
-## Creating a link alias
+## Turn on link aliasing
 
-**Important:**
+Link aliasing is turned on for your whole company by Braze, not in the dashboard. To request it, contact your Braze account manager. Turning on link aliasing also turns on [link templates](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_template) for your company. Only Braze can turn link aliasing on or off for your company.
 
+To check whether link aliasing is already on, go to the **Link Aliasing Settings** tab at **Settings** > **Email Preferences**. If you can't open **Email Preferences**, you don't have the "View Email Settings" permission. If you can open the page but the tab isn't there, link aliasing isn't on for your company. For other missing pages or settings, see [A link management page or setting is missing](#a-link-management-page-or-setting-is-missing).
 
-**Link Management** appears in the campaign or Canvas email composer when Braze enables link management for your account. To create and edit **link aliases**, link aliasing must be turned on. If **Link Management** is missing, contact your account manager to turn on link aliasing.
+After link aliasing is on, you can do the following in the dashboard:
 
+| Task | Where to go | What you need |
+|------|-------------|---------------|
+| Name link aliases, and track or untrack them in a message | Email composer > **Content** > **Link Management** | Access to the campaign or Canvas |
+| Review every tracked alias in the workspace, and turn off tracking in bulk | **Settings** > **Email Preferences** > **Link Aliasing Settings** | "View Email Settings" to view, "Edit Email Settings" to edit |
+| Create and apply link templates | **Templates** > **Email Link** | "View Email Link Templates" and "Edit Email Link Templates" |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Self-service link aliasing tasks" }
 
+For what changes when aliasing is turned off, see [Destinations that don't accept the `lid` parameter](#destinations-that-dont-accept-the-lid-parameter). To learn more about the permissions in this table, see [Company user permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions).
 
-To create a link alias, open your email body in the campaign or Canvas component, then open **Link Management** from the **Content** area. The drag-and-drop and HTML composers use the same sidebar layout:
+## Create a link alias
 
-### Drag-and-drop editor
+The drag-and-drop and HTML editors use the same composer sidebar, so the steps are the same in both.
 
-1. Select **Edit Email Body** to open the drag-and-drop composer.
+1. Open your email body in the campaign or Canvas component. In the drag-and-drop editor, select **Edit Email Body**.
 2. In the composer sidebar, select **Content** (alongside **Sending Settings** and **Preview & Test**). For more on this layout, see [Create an email with drag-and-drop](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop).
-3. In the **Content** submenu, select **Link Management** (it appears under **Design and Build**). If the submenu is collapsed, expand it using the arrow control on the sidebar.
+3. In the **Content** submenu, select **Link Management** under **Design and Build**. If the submenu is collapsed, expand it using the arrow control on the sidebar.
+4. Give each alias a name. Braze generates a unique default alias for every link, and aliases must be uniquely named per email campaign variant or Canvas component.
 
-### HTML editor
-
-1. Go to your email body in the composer.
-2. In the composer sidebar, select **Content**.
-3. In the **Content** submenu, select **Link Management** under **Design and Build**.
-
-In **Link Management**:
-
-1. Braze automatically generates unique default link aliases for each of your links.
-2. Give the alias a name. Aliases must be uniquely named per email campaign variant or Canvas component.
-
-You can also set an alias that will be used to reference a specific link when dealing with reporting or segmentation.
-
-![Link Management page with four link aliases.](https://www.braze.com/docs/assets/img/link_aliasing_composer.png?f2c43a0aa2a35a4d686736e1b22f54ea)
+Use the alias to reference a specific link in reporting and segmentation.
 
 **Note:**
 
 
-Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It's best practice to include a question mark (?) at the end of your link so that Braze can easily append the `lid` value. Without appending the `lid` value, Braze will not recognize the URL for link aliasing.
+Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It's best practice to include a question mark (?) at the end of your link so that Braze can easily append the `lid` value. Without appending the `lid` value, Braze does not recognize the URL for link aliasing.
 
 
 
@@ -73,8 +69,6 @@ To view all of your tracked link aliases, do the following:
 
 Here, you can sort, search, and turn off tracking for link aliases.
 
-![Tracked Link Aliases page that shows active and inactive link aliases associated with various campaigns.](https://www.braze.com/docs/assets/img/tracked_aliases.png?0d96912ea5f07a7b2403ac05d7fb3dbe)
-
 **Tip:**
 
 
@@ -84,7 +78,7 @@ Use the [List link alias for campaign](https://www.braze.com/docs/get_campaign_l
 
 Braze recommends evaluating the links within the email, adding link templates, and providing a naming convention that works for segmentation and reporting purposes. This helps you keep track of all links.
 
-When link aliasing is turned on, messages, Content Blocks, and link templates are not modified. Any existing messages using link templates or Content Blocks will be the same. However, when you update a message, link alias markup will apply to all of the links, so you'll need to reapply the link templates for the links to be visible.
+When link aliasing is turned on, messages, Content Blocks, and link templates are not modified. Existing messages that use link templates or Content Blocks stay the same. However, when you update a message, link alias markup applies to all of the links, so reapply the link templates for the links to be visible.
 
 ## How links are updated with link aliasing
 
@@ -148,18 +142,9 @@ To track link engagement metrics, make sure your link precedes with either HTTP 
 
 Braze allows you to select unlimited links to track, though you may only retarget users on the most recent links they have opened. User profiles include their 100 most recently clicked links. For example, if you track 500 links and a user clicks on all 500 of them, you can retarget or create segments based on the 100 most recently clicked links.
 
-![The Link Management tab with two selected links.](https://www.braze.com/docs/assets/img/link_management_dnd.png?cf4a290c4e08c9b5aa7d57c23f20c221)
-
-**Note:**
-
-
-Braze only tracks up to the last 100 clicked link aliases at the profile level. 
-
-
-
 ### Action-based filters
 
-When link aliasing is enabled for your workspace, you can create action-based messages targeting any link (tracked or not tracked) or retarget users based on whether they clicked an alias across any email campaign or Canvas component.
+When link aliasing is turned on for your company, you can create action-based messages targeting any link (tracked or not tracked) or retarget users based on whether they clicked an alias across any email campaign or Canvas component.
 
 ![Action-Based Options to target users who have clicked an alias in a Canvas component or interacted with a campaign.](https://www.braze.com/docs/assets/img/link_aliasing_action_based_filters.png?b0b5cd8c547e577641e1c18b1a3edb00)
 
@@ -167,7 +152,7 @@ When link aliasing is enabled for your workspace, you can create action-based me
 - If a link has tracking turned on and was clicked in a campaign, you can find the campaign as an available option in the segment filter, even if link tracking has since been turned off, as long as at least one link on that message is still tracked.
 - You can only select a tracked link as a filter if it's in an active (launched) Canvas, using the **Clicked Alias in Canvas Step** filter dropdown. If the link is being tracked in a Canvas draft, you can't select the tracked link as a filter.
 
-To set links as untracked, go to **Settings** > **Email Preferences** > **Link Aliasing Settings**.
+To set links as untracked, see [Managing link aliases](#managing-link-aliases).
 
 ### Segmentation filters
 
@@ -276,9 +261,7 @@ https://example.com/campaign/to/abc123?#user_id={{${user_id}}}&source=email
 ```
 
 
-In the previous example, the `?` before `#` gives Braze a query segment to append `lid`. Without it, the link may not appear in **Link Management**.
-
-Without identifying where to append query parameters, link aliasing does not recognize these URLs and link templates do not apply. If you see errors such as **Failed to be assigned an LID** for a dynamic URL, confirm the `href` uses the `?` or `&` pattern shown in the examples in this section.
+In the previous example, the `?` before `#` gives Braze a query segment to append `lid`. If you see errors such as "failed to be assigned an LID" for a dynamic URL, confirm the `href` uses the `?` or `&` pattern shown in the examples in this section.
 
 ### Drag-and-drop editor considerations
 
@@ -366,15 +349,28 @@ Alternatively, you can capture the URL into one variable:
 
 ## Troubleshooting
 
+### A link management page or setting is missing
+
+If the dashboard doesn't match the navigation in this article, use the following table to find out why.
+
+| What's missing | Why | What to do |
+|----------------|-----|------------|
+| **Link Management** in the email composer sidebar | Neither link aliasing nor link templates is turned on for your company. | Contact your Braze account manager. If Braze has turned on link templates without link aliasing, **Link Management** appears so you can apply templates, but you can't name or track aliases. |
+| **Link Management** in a Content Block | The **Link Management** sidebar appears only in campaign and Canvas email composers. | Add and name your aliases in the campaign or Canvas that uses the Content Block. See [Link aliasing in Content Blocks](#link-aliasing-in-content-blocks). |
+| **Link Aliasing Settings** tab in **Settings** > **Email Preferences** | You don't have the "View Email Settings" permission, so you can't open **Email Preferences**, or you can open the page and link aliasing isn't on for your company. | Ask a workspace admin for the "View Email Settings" permission. If you can open **Email Preferences** and the tab is still missing, contact your Braze account manager to turn on link aliasing. |
+| **Email Link** under **Templates** | Link templates aren't turned on for your company, or you don't have link template permissions. | See [Link templates](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_template). |
+| A specific link in **Link Management** | Braze couldn't find a safe place to append the `lid` parameter. | See [Link aliasing for URLs generated by Liquid](#link-aliasing-for-urls-generated-by-liquid). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Missing link management pages and settings" }
+
 ### Destinations that don't accept the `lid` parameter
 
 When you send a test message from the email editor, Braze appends `lid={{placeholder}}` to your links (the placeholder becomes a unique value at send time). If the destination site or API doesn't tolerate extra query parameters, the link can work in the editor, but fail when opened from the email.
 
 Without the `lid` value, Braze doesn't treat the URL as link-aliased for tracking and segmentation. We recommend updating your backend or site so it ignores the `lid` query parameter when present. That preserves link aliasing, reporting, and segment use cases described in this article.
 
-Alternatively, you can turn off link aliasing in the dashboard while you plan a backend change. Go to **Settings** > **Email Preferences** > **Link Aliasing Settings**. 
+While you plan a backend change, you can turn off tracking for the affected aliases at **Settings** > **Email Preferences** > **Link Aliasing Settings**. Untracking does not remove the `lid` parameter. For how untracking affects segments and filters, see [Untracking links](#untracking-links).
 
-If you can't change your destination systems, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) to disable link aliasing for your workspace. Note the following considerations if link aliasing is turned off for your workspace:
+To stop Braze from appending `lid`, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) to turn off link aliasing for your company. Note the following considerations if link aliasing is turned off:
 
 - New email messages and Content Blocks typically won't receive new link-alias markup (such as the `lid` query parameter).
 - Existing messages that were created while link aliasing was on can still contain link-alias markup in the HTML. You may need to manually remove leftover `lid` parameters where you no longer want them.

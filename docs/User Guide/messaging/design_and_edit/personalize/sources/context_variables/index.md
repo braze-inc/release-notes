@@ -248,6 +248,8 @@ Use the same data type for your context variable and comparison. For example, if
 
 
 
+
+
 #### Comparing to context variables or custom attributes
 
 By selecting the **Compare to a context variable or custom attribute** toggle, you can construct context variable filters that compare against previously-defined context variables or user custom attributes. This can be useful for performing comparisons that are dynamic per user, like API-triggered `context`, or to condense complex comparison logic defined across context variables.

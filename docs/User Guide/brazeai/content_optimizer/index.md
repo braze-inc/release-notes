@@ -13,11 +13,11 @@ Content Optimizer is currently in beta and only available for these channels: em
 
 Content Optimizer runs in a Canvas step. It helps you define message components to test, generate variants using Generative AI or manual input, and automatically optimize which content combinations are sent to users. This feature helps you to:
 
-- Optimize subject lines, body header, body content, or primary CTA for emails.
+- Optimize subject lines, preheaders, sender names, body headers, body content, primary CTAs, and images for emails.
 - Optimize titles and messages for push notifications.
 - Optimize hooks, bodies, and CTAs for SMS, MMS, and RCS messages.
 - Continuously improve message performance without manual A/B test setup.
-- Test high volumes of content variants quickly, leveraging AI for ideation.
+- Test high volumes of content variants, leveraging AI for ideation.
 - Automatically phase out underperforming content and scale up winners.
 
 Learn how to create a [Content Optimizer step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/content_optimizer_step).
@@ -81,8 +81,6 @@ Content Optimizer is similar to the Message step in Canvas, with features like q
 
 Each user receives one message per entry into the Content Optimizer step. Re-entries are treated as new, with no memory of previous variants.
 
-To attribute downstream behavior in your own analytics tools, add a Liquid tag to your message that records which combination each user received. For more information, see [Combination token](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/content_optimizer_step#combination-token).
-
 ## Canvas entry setup
 
 For best results, use Content Optimizer in Canvases where users enter the step gradually and regularly over time, such as in recurring or always-on Canvases with consistent daily volume. If all users enter the step at once, Content Optimizer won’t have time to learn from early results. The step will behave more like a static A/B test than a live optimization engine.
@@ -103,15 +101,15 @@ The best fit for Content Optimizer is in daily recurring entry Canvases, as well
 ## Considerations
 
 - Content Optimizer is currently in beta and only available for these channels: email, push notifications, and SMS/MMS/RCS messages.
-- For email, Content Optimizer can generate up to 125 combinations per step:
-   - Up to 3 components per step
-   - Up to 5 variants for each component
+- For email, Content Optimizer can generate up to 625 combinations per step:
+   - Up to four components per step
+   - Up to five variants for each component
 - For push notifications, Content Optimizer can generate up to 25 combinations per step:
-   - Up to 2 components per step
-   - Up to 5 variants for each component
-- For SMS, MMS, and RCS messages, Content Optimizer can generate up to 25 combinations per step:
-   - Up to 2 components per step
-   - Up to 5 variants for each component
+   - Up to two components per step
+   - Up to five variants for each component
+- For SMS, MMS, and RCS messages, Content Optimizer can generate up to 125 combinations per step:
+   - Up to three components per step
+   - Up to five variants for each component
 - Only one message is sent per user per entry. There is no memory of previous sends for re-entries.
 - Marketers must manually insert Liquid tags for each component in the message composer where the defined content component variants should render.
 

@@ -44,6 +44,8 @@ The Braze and Microsoft Foundry integration lets you use generative AI models ma
 
 
 
+
+
 ## Prerequisites
 
 | Requirements | Description |

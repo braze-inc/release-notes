@@ -48,6 +48,8 @@ The Shopify integration uses [eCommerce recommended events](https://www.braze.co
 
 
 
+
+
 ```json
 {
     "name": "ecommerce.product_viewed",
@@ -959,6 +961,14 @@ If you're an existing Braze customer with active campaigns or Canvases, review h
 2. After you complete your integration setup, Braze will begin the initial data sync. You can monitor progress on the **Shopify Data** tab of your integration settings. 
 
 ![The Shopify Integration Settings page with a spinner showing that events are actively syncing.](https://www.braze.com/docs/assets/img/shopify/historical_data_backfill_syncing.png?71507a82e5a764cf08084c54aaf93d6e)
+
+### Backfill sync rate and timing
+
+Historical backfill is performed by Braze's Shopify integration—not the Braze SDK—and starts automatically when you complete integration setup.
+
+After you enable historical backfill, Braze imports order events and customer profiles from Shopify in batches. Order events and customer profiles sync on separate timelines, so one may finish before the other.
+
+Sync time depends on how much historical data is in your store. Stores with high order volume or large customer bases may take longer to complete backfill. You can't change the backfill speed or request a faster sync.
 
 ### Synced data
 

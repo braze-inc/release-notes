@@ -18,13 +18,16 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
 2. Select the **Back in stock** toggle.
 3. If the global back-in-stock settings have not been configured, you will be prompted to set up the custom events and properties that will be used to trigger back-in-stock notifications:
     <br> ![Catalog settings drawer.](https://www.braze.com/docs/assets/img/catalog_settings_drawer.png?8775488f564715e97298bf8f2b6d2ab1){: style="max-width:70%;"}
-    - **Fallback Catalog** This is the catalog that will be used for the back-in-stock subscription, if there is no `catalog_name` property present on the custom event.
-    - **Custom event for subscriptions** is the Braze custom event that will be used to subscribe a user to back-in-stock notifications. When this event occurs, the user who performed the event will be subscribed.
+    - **Fallback Catalog** This is the catalog used for the back-in-stock subscription if there is no `catalog_name` property present on the custom event.
+    - **Custom event for subscriptions** is the Braze custom event that is used to subscribe a user to back-in-stock notifications. When this event occurs, the user who performed the event is subscribed.
     - **Custom event for unsubscribing** is the Braze custom event that will be used to unsubscribe a user from back-in-stock notifications. This event is optional. If the user doesn't perform this event, they'll be unsubscribed after 90 days or when the back-in-stock event triggers, whichever occurs first.
-    - **Item ID event property** is the property on the earlier in this section custom event that will be used to determine the item for a back-in-stock subscription or unsubscription. This property on the custom event should contain an item ID (`id`) that is present in a catalog. The item ID must be sent as a string so that it matches the `id` data type stored in the target catalog. The custom event should also contain a `catalog_name` property to specify which catalog this item is in.
+    - **Item ID event property** is the property on the earlier in this section custom event that is used to determine the item for a back-in-stock subscription or unsubscription. This property on the custom event should contain an item ID (`id`) that is present in a catalog. The item ID must be sent as a string so that it matches the `id` data type stored in the target catalog. The custom event should also contain a `catalog_name` property to specify which catalog this item is in.
     
-    - The following example shows a sample custom event sent through the REST API:
-    
+    - A sample custom event looks like:
+
+
+
+This sample sends a `subscription` custom event through `/users/track` with the item ID, catalog name, and back-in-stock subscription type.
 ```json
 {
     "events": [
@@ -42,15 +45,11 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
 }
 ```
 
-To track the same subscription event using the Braze SDKs, use the following code:
 
-
-
+This sample logs the same `subscription` custom event from your website using the Braze Web SDK.
 
 ```javascript
-import { logCustomEvent } from "@braze/web-sdk";
-
-logCustomEvent("subscription", {
+braze.logCustomEvent("subscription", {
   id: "shirt-xl",
   catalog_name: "on_sale_products",
   type: ["back_in_stock"]
@@ -58,9 +57,40 @@ logCustomEvent("subscription", {
 ```
 
 
+This Kotlin sample logs a `subscription` custom event from an Android app with the required catalog subscription properties.
 
+```kotlin
+// Kotlin
+Braze.getInstance(context).logCustomEvent(
+  "subscription",
+  BrazeProperties(
+    JSONObject()
+      .put("id", "shirt-xl")
+      .put("catalog_name", "on_sale_products")
+      .put("type", JSONArray().put("back_in_stock"))
+  )
+)
+```
+
+This Java sample logs the same `subscription` custom event from an Android app.
+
+```java
+// Java
+Braze.getInstance(context).logCustomEvent(
+  "subscription",
+  new BrazeProperties(new JSONObject()
+    .put("id", "shirt-xl")
+    .put("catalog_name", "on_sale_products")
+    .put("type", new JSONArray().put("back_in_stock"))
+  )
+);
+```
+
+
+This Swift sample logs a `subscription` custom event from an iOS app with the required catalog subscription properties.
 
 ```swift
+// Swift
 AppDelegate.braze?.logCustomEvent(
   name: "subscription",
   properties: [
@@ -71,21 +101,17 @@ AppDelegate.braze?.logCustomEvent(
 )
 ```
 
+This Objective-C sample logs the same `subscription` custom event from an iOS app.
 
-
-
-```kotlin
-Braze.getInstance(context).logCustomEvent(
-  "subscription",
-  BrazeProperties(
-    JSONObject()
-      .put("id", "shirt-xl")
-      .put("catalog_name", "on_sale_products")
-      .put("type", JSONArray().put("back_in_stock")),
-  ),
-)
+```objc
+// Objective-C
+[AppDelegate.braze logCustomEvent:@"subscription"
+                       properties:@{
+  @"id": @"shirt-xl",
+  @"catalog_name": @"on_sale_products",
+  @"type": @[@"back_in_stock"]
+}];
 ```
-
 
 
 
@@ -131,6 +157,8 @@ To template in details about the catalog item that's back in stock, you can use 
 Using ``{{context.${catalog_update}.item_id}}`` will return the ID of the item that came back in stock. ``{{context.${catalog_update}.previous_value}}`` will return the inventory value of the item prior to the update, and ``{{context.${catalog_update}.new_value}}`` will return the new inventory value after the update.
 
 Use the Liquid tag ``{% catalog_items <name_of_your_catalog> {{context.${catalog_update}.item_id}} %}`` at the top of your message, then use ``{{ items[0].<field_name> }}`` to access data about that item throughout the message.
+
+
 
 
 
