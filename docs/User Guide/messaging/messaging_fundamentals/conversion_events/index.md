@@ -127,4 +127,4 @@ The following scenarios can also cause this discrepancy:
 - **User exits Canvas before receiving any step.** If a user enters the Canvas but exits (for example, due to a filter or audience mismatch) before any message is sent, a conversion they perform still counts at the variant level but doesn't count at any step level.
 - **Step targets a subset of users.** If a step is configured to send only to a specific platform (such as mobile), users on other platforms (such as web) can still enter the Canvas and convert. Because those users never receive the step message, the conversion doesn't count at the step level — only at the variant level.
 
-For more information on Canvas analytics, see [Measuring and testing with Canvas analytics](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).
+For more information on Canvas analytics, see [Canvas analytics](https://www.braze.com/docs/user_guide/analytics/reports/canvas_analytics).

@@ -60,8 +60,6 @@ Braze uses Amazon Bedrock's `bedrock-mantle` endpoint for this integration. Amaz
 
 
 
-
-
 ## Prerequisites
 
 | Requirements | Description |

@@ -74,7 +74,7 @@ To prevent experiment contamination, updating an active Canvas with an in-progre
 
 From the **Canvas Analytics** page, select the Experiment Path to open a [detailed table](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/change_your_canvas_after_launch) identical to the **Analyze Variants** tab to compare detailed performance and conversion statistics across paths. You can also export the table via CSV and compare percent changes for metrics of interest relative to the path or control you select.
 
-Each step in each path displays statistics in the [Canvas Analytics](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics) view, just like any Canvas step. However, keep in mind that individual step analytics and Experiment Path analytics measure conversions differently:
+Each step in each path displays statistics in the [Canvas Analytics](https://www.braze.com/docs/user_guide/analytics/reports/canvas_analytics) view, just like any Canvas step. However, keep in mind that individual step analytics and Experiment Path analytics measure conversions differently:
 
 - **Experiment Path analytics** track conversions starting from when the user enters the Experiment Path step. This is the recommended view for comparing performance across paths because all paths share the same starting point.
 - **Individual step analytics** (such as Message step analytics) track conversions starting from when the user receives that specific step (for example, when the message sends).

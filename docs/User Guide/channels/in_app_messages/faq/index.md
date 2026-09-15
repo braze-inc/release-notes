@@ -68,7 +68,7 @@ To control the display order within a priority bucket, go to the delivery settin
 
 ## How are in-app message impressions and clicks logged?
 
-See [In-app message reporting](https://www.braze.com/docs/user_guide/channels/in_app_messages/reporting/) for how impressions and clicks are logged by user action. For examples specific to fullscreen messages created with the traditional editor, refer to [Fullscreen message metrics by user action](https://www.braze.com/docs/user_guide/channels/in_app_messages/reporting/#fullscreen-metrics-by-user-action).
+See [In-app message reporting](https://www.braze.com/docs/user_guide/channels/in_app_messages/reporting/) for how impressions and clicks are logged by user action. For examples specific to fullscreen messages created with the traditional editor, refer to [Fullscreen message metrics by user action](https://www.braze.com/docs/user_guide/channels/in_app_messages/reporting#fullscreen-metrics-by-user-action).
 
 ## How does Braze calculate an in-app message expiration set to "after 1 day(s)"?
 

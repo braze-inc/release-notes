@@ -81,6 +81,16 @@ Adjust the tile size by dragging the resize handle, and adjust the tile position
 2. Select the dashboard you’re interested in.
 3. Select **Run Dashboard** to load the respective dashboard using that dashboard.
 
+### Date range {#date-range}
+
+Date range behavior when you run a dashboard depends on the tile type:
+
+| Tile type | Date range behavior |
+| --- | --- |
+| Report Builder | The dashboard-level date range applies to every Report Builder tile in that run and overrides the date range configured on each underlying report. |
+| Query Builder | Date filtering comes from [SQL variables](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/sql_variables/) in the query SQL (such as `start_date`, `end_date`, or `date_range`); define default dates in each variable's Liquid definition.  |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Tile type and date range behavior" }
+
 ### Available dashboards
 
 Braze provides pre-built dashboards for frequent use cases. Use the following table as the single reference for currently documented dashboards and where to access each one.

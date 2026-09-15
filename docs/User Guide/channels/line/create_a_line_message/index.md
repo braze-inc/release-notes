@@ -128,8 +128,6 @@ Use [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/per
 
 
 
-
-
 For languages written from right to left, see [Creating right-to-left messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages).
 
 ### Step 4: Configure click tracking

@@ -818,7 +818,7 @@ Looking for more ways to get revenue data? Try adding purchase behavior (as well
 
 
 
-You can also view revenue statistics on a case-by-case basis on the [Campaign Analytics](https://www.braze.com/docs/user_guide/analytics/reports/campaign_analytics) or [Canvas Analytics](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics) pages.
+You can also view revenue statistics on a case-by-case basis on the [Campaign Analytics](https://www.braze.com/docs/user_guide/analytics/reports/campaign_analytics) or [Canvas Analytics](https://www.braze.com/docs/user_guide/analytics/reports/canvas_analytics) pages.
 
 **Tip:**
 

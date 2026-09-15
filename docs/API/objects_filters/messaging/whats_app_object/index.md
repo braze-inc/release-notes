@@ -9,7 +9,7 @@
   "app_id": (required, string) see App Identifier,
   "subscription_group_id": (required, string) the ID of your subscription group,
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
-  "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message | list_response_message | flow_response_message),
+  "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message | list_response_message | flow_response_message | carousel_response_message),
   "message": (required, object) The message object that must include the required fields based on the selected `message_type`. Below are the specific message structures for each type. Refer to the relevant message type for the required fields and their format.
 }
 ```
@@ -27,16 +27,67 @@
   "header_variables": (optional, header variables object) an object to specify header variable values for specified template_name, required if the header has variables; see object specification below,
   "body_variables": (optional, body variable object) an object to specify body variable values for specified template_name, required if the body has variables; see object specification below,
   "button_variables": (optional, button variables object) an object to specify button variable values for specified template_name, required if buttons have variables; see object specification below,
-  "header_media_uri": (optional, string) URI to the header media, if the header is of type IMAGE in specified template_name. Only IMAGE and TEXT header types are supported by the messages/send API.
+  "header_media_uri": (optional, string) URI to the header media, if the header is of type IMAGE in specified template_name. Only IMAGE and TEXT header types are supported by the messages/send API,
+  "carousel_cards": (optional, array) an array of carousel card objects, required if the specified template_name is a carousel template; see object specification below
 }
 ```
 
 **Important:**
 
 
-**Media send limitations:** Media sends (documents, videos, and other media types) are not supported by the `messages/send` API. Only TEXT and IMAGE header types are supported for template messages sent through the API. If your WhatsApp template uses a DOCUMENT, VIDEO, or other media type header, you cannot send it using the `messages/send` API. Use the [Campaigns Triggered API](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns) or the Braze dashboard to send templates with media headers.
+Media sends (documents, videos, and other media types) aren't supported by the `messages/send` API. Only `TEXT` and `IMAGE` header types are supported for template messages sent through the API. If your WhatsApp template uses a `DOCUMENT`, `VIDEO`, or other media type header, you can't send it using the `messages/send` API. Use the [Campaigns Triggered API](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns) or the Braze dashboard to send templates with media headers. This applies to the template's main header only; carousel card media supports both image and video.
 
 
+
+##### Carousel card object
+
+Each carousel card fills one card of an approved carousel template, in order. The card at index `0` fills the template's first card.
+
+```json
+{
+  "header_media_uri": (required, string) URI to the card's header media; must be Braze-hosted media,
+  "header_media_type": (required, string) The type of the card's header media (image | video),
+  "body_variables": (optional, body variables object) Values for the card's body variables, in the same format as the template-level body_variables,
+  "button_variables": (optional, button variables object) Values for the card's button variables, in the same format as the template-level button_variables
+}
+```
+
+##### Constraints
+
+- `carousel_cards`: Must contain between 2 and 10 cards, matching the card count of the approved template.
+- `header_media_uri`: Must refer to media hosted in the Braze media library.
+- `header_media_type`: All cards must use the same media type, matching the approved template.
+
+###### Example
+
+```json
+{
+  "template_name": "weekly_picks",
+  "template_language_code": "en",
+  "body_variables": {
+    "0": "Jane"
+  },
+  "carousel_cards": [
+    {
+      "header_media_uri": "https://braze-images.com/card1.png",
+      "header_media_type": "image",
+      "body_variables": {
+        "0": "Runner X"
+      }
+    },
+    {
+      "header_media_uri": "https://braze-images.com/card2.png",
+      "header_media_type": "image",
+      "body_variables": {
+        "0": "Trail Pro"
+      },
+      "button_variables": {
+        "0": "/promo/123"
+      }
+    }
+  ]
+}
+```
 
 ##### Header variables object
 
@@ -215,9 +266,9 @@ The `list_response_message` type allows you to send a list-based message in What
 
 ##### Constraints
 
-- **list_sections**: Must have at least one section.
-- **list_rows**: A maximum of 10 rows can be included across all sections.
-- **row_description**: Optional for each row.
+- `list_sections`: Must have at least one section.
+- `list_rows`: A maximum of 10 rows can be included across all sections.
+- `row_description`: Optional for each row.
 
 ##### Example
 
@@ -285,9 +336,9 @@ The `flow_response_message` type allows you to send a flow-based message in What
 
 ##### Constraints
 
-- **flow_button**: Must include both caption and `flow_id`.
-- **caption**: Maximum 20 characters.
-- **flow_id**: Must be a valid published Flow ID.
+- `flow_button`: Must include both `caption` and `flow_id`.
+- `caption`: Maximum 20 characters.
+- `flow_id`: Must be a valid published Flow ID.
 
 ##### Example
 
@@ -299,5 +350,91 @@ The `flow_response_message` type allows you to send a flow-based message in What
     "flow_id": "594425479261596"
   },
   "generate_custom_attribute": true
+}
+```
+
+#### carousel_response_message
+
+The `carousel_response_message` type allows you to send an interactive carousel of media cards that users can swipe through as a response message. Each card has media, optional body text, and either quick reply buttons or a website button.
+
+```json
+{
+  "body": (required, string) the body of the message to send,
+  "carousel_button_type": (required, string) the button type used by every card (quick_reply | url),
+  "cards": (required, array) an array of Card objects. Cards render in the carousel in array order.
+}
+```
+
+##### Card object
+
+```json
+{
+  "media_uri": (required, string) the URI of the card's media,
+  "media_type": (required, string) the type of the card's media (image | video),
+  "body_text": (optional, string) the body text of the card,
+  "buttons": (required for quick_reply, array) an array of button label strings,
+  "cta_url_button": (required for url, object) the website button object that contains:
+    "display_text": (required, string) the text displayed on the button,
+    "url": (required, string) the URL the button opens
+}
+```
+
+##### Constraints
+
+- `cards`: Must contain between 2 and 10 cards.
+- `media_type`: All cards must use the same media type.
+- `body_text`: Maximum 160 characters per card.
+- `buttons`: For `quick_reply`, every card must have the same number of buttons, with a maximum of two per card.
+- `cta_url_button`: For `url`, every card must include a `cta_url_button`.
+
+##### Example with quick reply buttons
+
+```json
+{
+  "body": "Check out this week's picks!",
+  "carousel_button_type": "quick_reply",
+  "cards": [
+    {
+      "media_uri": "https://example.com/card1.png",
+      "media_type": "image",
+      "body_text": "Runner X - now 20% off",
+      "buttons": ["Shop now", "Not for me"]
+    },
+    {
+      "media_uri": "https://example.com/card2.png",
+      "media_type": "image",
+      "body_text": "Trail Pro - back in stock",
+      "buttons": ["Shop now", "Not for me"]
+    }
+  ]
+}
+```
+
+##### Example with website buttons
+
+```json
+{
+  "body": "Check out this week's picks!",
+  "carousel_button_type": "url",
+  "cards": [
+    {
+      "media_uri": "https://example.com/card1.png",
+      "media_type": "image",
+      "body_text": "Runner X - now 20% off",
+      "cta_url_button": {
+        "display_text": "Visit",
+        "url": "https://example.com/runner-x"
+      }
+    },
+    {
+      "media_uri": "https://example.com/card2.png",
+      "media_type": "image",
+      "body_text": "Trail Pro - back in stock",
+      "cta_url_button": {
+        "display_text": "Visit",
+        "url": "https://example.com/trail-pro"
+      }
+    }
+  ]
 }
 ```

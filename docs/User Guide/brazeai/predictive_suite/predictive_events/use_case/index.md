@@ -102,7 +102,7 @@ These users show minimal engagement overall. They’re unlikely to upgrade witho
 
 ## Step 4: Measure results and optimize your strategy
 
-After the campaign runs, Jordan reviews performance in [Canvas Analytics](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics) to understand how well the personalized paths performed—and whether combining predictive intent with behavioral signals improved upgrade rates.
+After the campaign runs, Jordan reviews performance in [Canvas Analytics](https://www.braze.com/docs/user_guide/analytics/reports/canvas_analytics) to understand how well the personalized paths performed—and whether combining predictive intent with behavioral signals improved upgrade rates.
 
 Email performance by path:
 

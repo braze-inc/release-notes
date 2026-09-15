@@ -37,7 +37,7 @@ Determine the impact of your Canvas messaging by incorporating control groups. T
 - Name each step of your Canvas to identify your user journey.
 - Leverage the [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step) component in your user journey to randomly assign users to different paths you create. 
 - Diversify your user journeys with Delay and Message steps to help uncover what path is most effective.
-- Check [Canvas analytics](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics) to see the performance of each component in your user journey.
+- Check [Canvas analytics](https://www.braze.com/docs/user_guide/analytics/reports/canvas_analytics) to see the performance of each component in your user journey.
 - [Edit your Canvas](https://www.braze.com/docs/post-launch_edits) after the initial launch.
 
 ## Scheduling your Canvases

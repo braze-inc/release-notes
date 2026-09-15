@@ -40,8 +40,6 @@
 
 
 
-
-
 _This integration is maintained by Google._
 
 ## About the integration

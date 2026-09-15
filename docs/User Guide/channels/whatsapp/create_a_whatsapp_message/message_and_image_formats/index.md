@@ -198,8 +198,6 @@ The following specifications apply to all media in WhatsApp template headers, re
 
 
 
-
-
 ### Images
 
 
@@ -314,8 +312,6 @@ The following specifications apply to standard audio file sharing (music clips, 
 
 
 
-
-
 - No caption support for audio messages.
 - A common error is mismatched MIME types. Verify your file's MIME type matches its extension before sending.
 
@@ -333,8 +329,6 @@ The following specifications apply to template headers (document format), respon
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Documents" }
 
 #### Considerations
-
-
 
 
 

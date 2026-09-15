@@ -28,7 +28,7 @@ You can create new workspaces or switch between existing workspaces from the wor
 
 1. Select the workspace dropdown, then select <i class="fa-solid fa-square-plus" style="color: #0b8294;" aria-hidden="true"></i> **Create workspace**.
 
-![The workspace dropdown with the "Create workspace" button.](https://www.braze.com/docs/assets/img/workspaces/workspace_create.png?66547b3dd6b2de885772333b2ea81d69){: style="max-width:60%;"}
+![The workspace dropdown with the "Create workspace" button.](https://www.braze.com/docs/assets/img/workspaces/workspace_create.png?66547b3dd6b2de885772333b2ea81d69){: style="max-width:60%;height:auto;"}
 
 {:start="2"}
 2. Give your workspace a name.
@@ -43,9 +43,9 @@ You might want to adopt a naming convention so that others in your company can e
 {:start="3"}
 3. Select **Create**. It may take a few seconds for Braze to create your workspace.
 
-!["Create Workspace" modal with the name "Upon Voyage US - Staging".](https://www.braze.com/docs/assets/img/workspaces/workspace_name.png?5cdbe3d8e582bec556837029b19616e2){: style="max-width:60%" }
+!["Create Workspace" modal with the name "Upon Voyage US - Staging".](https://www.braze.com/docs/assets/img/workspaces/workspace_name.png?5cdbe3d8e582bec556837029b19616e2){: style="max-width:60%;height:auto;"}
 
-You will be taken to the **App Settings** page to begin adding your app instances. You can access this page at any time from **Settings** > **App Settings**.
+You are taken to the **App Settings** page to begin adding your app instances. You can access this page at any time from **Settings** > **App Settings**.
 
 !["App Settings" page for the Upon Voyage US - Staging workspace with a button for adding an app.](https://www.braze.com/docs/assets/img/workspaces/workspace_empty_state.png?61db5e223e59a4fbf03bf4f9bff3a00f)
 
@@ -54,9 +54,9 @@ You will be taken to the **App Settings** page to begin adding your app instance
 We refer to the different sites and apps that are collected within a workspace as "app instances".
 
 1. From the **App Settings** page, select **+ Add app**.
-2. Give your app instance a name and select what platform or platforms this app instance is on. If you select multiple platforms, Braze will create one app instance for each platform.
+2. Give your app instance a name and select what platform or platforms this app instance is on. If you select multiple platforms, Braze creates one app instance for each platform.
 
-!["Add New App to Upon Voyage US - Staging" modal with options to select app details.](https://www.braze.com/docs/assets/img/workspaces/workspace_add_app.png?845c3f0686f74be6dcfc251b26d6096a){: style="max-width:60%" }
+!["Add New App to Upon Voyage US - Staging" modal with options to select app details.](https://www.braze.com/docs/assets/img/workspaces/workspace_add_app.png?845c3f0686f74be6dcfc251b26d6096a){: style="max-width:60%;height:auto;"}
 
 {:start="3"}
 3. Select **Add app** to confirm.
@@ -99,7 +99,7 @@ Repeat steps 2 and 3 to set up as many workspaces as your plan requires. As a be
 
 You can add favorite workspaces to access the workspaces you use the most even faster.
 
-![Workspace dropdown with the tab for "Favorite workspaces".](https://www.braze.com/docs/assets/img/workspaces/workspace_favorites.png?1b03f963119d1af5bcf5a155d474a8d0){: style="max-width:50%;"}
+![Workspace dropdown with the tab for "Favorite workspaces".](https://www.braze.com/docs/assets/img/workspaces/workspace_favorites.png?1b03f963119d1af5bcf5a155d474a8d0){: style="max-width:50%;height:auto;"}
 
 To add favorite workspaces:
 
@@ -118,7 +118,7 @@ To rename your workspace:
 2. Hover over your workspace’s name and select <i class="fa-solid fa-pencil" style="color: #0b8294;" aria-hidden="true"></i> **Edit**.
 3. Give your workspace a new name, then select <i class="fa-solid fa-square-check" style="color: #0b8294;" aria-hidden="true"></i> **Save**.
 
-![The pencil icon appearing next to the workspace name.](https://www.braze.com/docs/assets/img/workspaces/workspace_rename.gif?c8a8602ae51694e76c4606494496041d){: style="max-width:50%;"}
+![The pencil icon appearing next to the workspace name.](https://www.braze.com/docs/assets/img/workspaces/workspace_rename.gif?c8a8602ae51694e76c4606494496041d){: style="max-width:50%;height:auto;"}
 
 ### Deleting workspaces and app instances
 
