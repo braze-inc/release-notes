@@ -7,7 +7,7 @@
   }
 </style>
 
-<div id='api_rgrtsrzmtten' class='api_div' data-search-keywords='count'>
+<div id='api_zwjsuuawmvma' class='api_div' data-search-keywords='count'>
 <h3 id="variation">Variation</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -18,7 +18,7 @@
 
 </div>
 
-<div id='api_mhmnvgbterct' class='api_div' data-search-keywords='count'>
+<div id='api_hmalrjkvppdr' class='api_div' data-search-keywords='count'>
 <h3 id="emailable">Emailable</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -29,7 +29,7 @@
 
 </div>
 
-<div id='api_jmqgczaatqvo' class='api_div' data-search-keywords='percentage'>
+<div id='api_ajjoiubxumia' class='api_div' data-search-keywords='percentage'>
 <h3 id="audience-">Audience %</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -40,7 +40,7 @@
 
 </div>
 
-<div id='api_yqjdenaustuq' class='api_div' data-search-keywords='count'>
+<div id='api_aklszqkxflgk' class='api_div' data-search-keywords='count'>
 <h3 id="unique-recipients">Unique Recipients</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -53,7 +53,7 @@
 
 </div>
 
-<div id='api_pkioohclgttc' class='api_div' data-search-keywords='count'>
+<div id='api_wjcnykypiyhj' class='api_div' data-search-keywords='count'>
 <h3 id="sends">Sends</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -66,7 +66,7 @@
 
 </div>
 
-<div id='api_mfxoxgqvesox' class='api_div' data-search-keywords='count'>
+<div id='api_prxdvxrcznka' class='api_div' data-search-keywords='count'>
 <h3 id="messages-sent">Messages Sent</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -79,7 +79,7 @@
 
 </div>
 
-<div id='api_onwmzmzjmqty' class='api_div' data-search-keywords='count'>
+<div id='api_tqzdhlvrehuq' class='api_div' data-search-keywords='count'>
 <h3 id="deliveries">Deliveries</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -96,7 +96,7 @@
 
 </div>
 
-<div id='api_wpsbgnwruogo' class='api_div' data-search-keywords='percentage'>
+<div id='api_aeitlhzxbjbs' class='api_div' data-search-keywords='percentage'>
 <h3 id="deliveries-">Deliveries %</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -107,7 +107,7 @@
 
 </div>
 
-<div id='api_rbixdiszrhiv' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_fmhrdntnfxfm' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="bounces">Bounces</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -132,7 +132,7 @@
 
 </div>
 
-<div id='api_ogkvyktzwggn' class='api_div' data-search-keywords='count'>
+<div id='api_jyevbgucnsuw' class='api_div' data-search-keywords='count'>
 <h3 id="hard-bounce">Hard Bounce</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -145,7 +145,7 @@
 
 </div>
 
-<div id='api_tamttcvkmtzb' class='api_div' data-search-keywords='count'>
+<div id='api_cqabapaehchc' class='api_div' data-search-keywords='count'>
 <h3 id="soft-bounce">Soft Bounce</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -160,7 +160,7 @@
 
 </div>
 
-<div id='api_cjltadgxrvbw' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_qfehmajdpolp' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="spam">Spam</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -177,7 +177,7 @@
 
 </div>
 
-<div id='api_epiheyucpjee' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_usbiriztaxat' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="unique-opens">Unique Opens</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -196,7 +196,7 @@
 
 </div>
 
-<div id='api_wavkckoqnuhi' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_lqiurbiapkhi' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="unique-clicks">Unique Clicks</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -221,7 +221,7 @@
 
 </div>
 
-<div id='api_dwwuwkaobzbq' class='api_div' data-search-keywords='count, percentage total clicks is the total number of times users clicked links in the delivered email, including multiple clicks by the same user. this includes clicks on braze unsubscribe links and tracked custom unsubscribe urls.'>
+<div id='api_aimzkdbmryxz' class='api_div' data-search-keywords='count, percentage total clicks is the total number of times users clicked links in the delivered email, including multiple clicks by the same user. this includes clicks on braze unsubscribe links and tracked custom unsubscribe urls.'>
 <h3 id="total-clicks">Total Clicks</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -232,7 +232,7 @@
 
 </div>
 
-<div id='api_bkyqmcgcrvzc' class='api_div' data-search-keywords='count, percentage unsubscribes reflect the standard unsubscribe link for braze. custom unsubscribe pages won’t increment this metric unless you update users using the api. subscription group timeseries still reflects api-driven changes.'>
+<div id='api_fmnqaoqrdurm' class='api_div' data-search-keywords='count, percentage unsubscribes reflect the standard unsubscribe link for braze. custom unsubscribe pages won’t increment this metric unless you update users using the api. subscription group timeseries still reflects api-driven changes.'>
 <h3 id="unsubscribers-or-unsub">Unsubscribers or Unsub</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -262,7 +262,7 @@
 
 </div>
 
-<div id='api_akqmizssjdns' class='api_div' data-search-keywords='count'>
+<div id='api_jiqualcomtln' class='api_div' data-search-keywords='count'>
 <h3 id="revenue">Revenue</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -273,7 +273,7 @@
 
 </div>
 
-<div id='api_ptegeuxslnzw' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_jacqtyvzvtpj' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="primary-conversions-a-or-primary-conversion-event">Primary Conversions (A) or Primary Conversion Event</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -292,7 +292,7 @@
 
 </div>
 
-<div id='api_tfohaoslmmpm' class='api_div' data-search-keywords='count'>
+<div id='api_zbxsndxgcifg' class='api_div' data-search-keywords='count'>
 <h3 id="confidence">Confidence</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -301,7 +301,7 @@
 
 </div>
 
-<div id='api_fisfeldtshmp' class='api_div' data-search-keywords=''>
+<div id='api_nbxtyaugrwyy' class='api_div' data-search-keywords=''>
 <h3 id="machine-opens">Machine Opens</h3>
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
@@ -312,7 +312,7 @@
 
 </div>
 
-<div id='api_isytbfwxekxa' class='api_div' data-search-keywords='count'>
+<div id='api_fuhqzehczmof' class='api_div' data-search-keywords='count'>
 <h3 id="other-opens">Other Opens</h3>
 
 <div class="api_tags" data-tags="Count" data-tags-lower="count"></div>
@@ -325,7 +325,7 @@
 
 </div>
 
-<div id='api_zzgicjcdbtht' class='api_div' data-search-keywords='count, percentage'>
+<div id='api_esrnfpsnzvgz' class='api_div' data-search-keywords='count, percentage'>
 <h3 id="estimated-real-opens">Estimated Real Opens</h3>
 
 <div class="api_tags" data-tags="Count, Percentage" data-tags-lower="count, percentage"></div>
@@ -336,7 +336,7 @@
 
 </div>
 
-<div id='api_lareqbappccr' class='api_div' data-search-keywords='percentage'>
+<div id='api_rfyzlsmnluqb' class='api_div' data-search-keywords='percentage'>
 <h3 id="click-to-open-rate">Click-to-Open Rate</h3>
 
 <div class="api_tags" data-tags="Percentage" data-tags-lower="percentage"></div>
@@ -369,7 +369,7 @@ Changes to your [custom unsubscribe page](https://www.braze.com/docs/user_guide/
 
 An over-quota or mailbox-full bounce means the recipient's mailbox cannot accept new mail. You may see these addresses among new sign-ups with invalid or risky addresses, or among long-inactive profiles whose inboxes filled while they were dormant.
 
-Review bounce rates by segment and source, remove or sunset addresses that repeatedly hard-bounce, and use confirmed or double opt-in for new subscribers. For list hygiene practices, see [Deliverability pitfalls and spam traps](https://www.braze.com/docs/user_guide/channels/email/email_setup/deliverability_pitfalls_and_spam_traps) and [Email reporting](https://www.braze.com/docs/user_guide/channels/email/reporting#troubleshooting).
+Review bounce rates by segment and source, remove or sunset addresses that repeatedly hard-bounce, and use confirmed or double opt-in for new subscribers. For list hygiene practices, see [Deliverability pitfalls and spam traps](https://www.braze.com/docs/user_guide/channels/email/email_setup/deliverability_pitfalls_and_spam_traps) and [Email reporting](https://www.braze.com/docs/user_guide/channels/email/reporting#email-troubleshooting).
 
 ### 550 5.7.1 unsolicited mail
 

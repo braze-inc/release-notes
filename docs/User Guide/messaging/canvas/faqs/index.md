@@ -97,7 +97,7 @@ This message appears when personalization references fields that in-app messages
 
 ### Where can I find button clicks for drag-and-drop in-app messages in Canvas?
 
-Button-level metrics for drag-and-drop in-app messages appear on the **Message** step analytics card in **Canvas Details**, not only the high-level Canvas summary. Open the Canvas, select the Message step, and review in-app engagement there. For reporting concepts, see [Measuring and testing with Canvas analytics](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).
+Button-level metrics for drag-and-drop in-app messages appear on the **Message** step analytics card in **Canvas Details**, not only the high-level Canvas summary. Open the Canvas, select the Message step, and review in-app engagement there. For reporting concepts, see [Canvas analytics](https://www.braze.com/docs/user_guide/analytics/reports/canvas_analytics).
 
 ### Can I schedule different send times for each variant in the same Canvas Message step or multivariate send?
 
@@ -238,7 +238,7 @@ When a [tag](https://www.braze.com/docs/user_guide/messaging/governance/tags/) i
 
 ### How can I view analytics for each of my Canvas components?
 
-To view the analytics of a Canvas component, go to your Canvas and scroll down the **Canvas Details** page. Here, you can view each component's analytics. Check out [Canvas analytics](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics) for more details.
+To view the analytics of a Canvas component, go to your Canvas and scroll down the **Canvas Details** page. Here, you can view each component's analytics. Check out [Canvas analytics](https://www.braze.com/docs/user_guide/analytics/reports/canvas_analytics) for more details.
 
 ### When is engagement from a Canvas step visible on a user profile?
 

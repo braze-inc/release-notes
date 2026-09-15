@@ -144,8 +144,6 @@ For filter setup, comparison logic, and advanced examples, see [Context variable
 
 
 
-
-
 ## Previewing user paths
 
 We recommend testing and [previewing your user paths](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.

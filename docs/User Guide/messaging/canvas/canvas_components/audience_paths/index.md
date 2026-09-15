@@ -87,7 +87,7 @@ For example, let's say you wanted to send a group of users ads for new products.
 
 When users enter this Audience Paths component, they'll first be evaluated for Audience Group 1 "Likes Big Brand Shoes"—the first path in the list. If so, they'll continue to the next component defined in your Canvas. If they don't "Like Big Brand Shoes", they will then be evaluated for the next audience group, Audience Group 2 "Likes Big Brand Bags", and will continue to the next step if the criteria are met. Lastly, users who don't fall into the previous groups would fall into the "Everybody Else" group and also continue to the next Canvas step you define for that path.
 
-You can also see the performance of this step using [Canvas analytics](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics#performance-visualization).
+You can also see the performance of this step using [Canvas analytics](https://www.braze.com/docs/user_guide/analytics/reports/canvas_analytics#performance-visualization).
 
 ### Segmenting Audience Paths with random bucket numbers
 

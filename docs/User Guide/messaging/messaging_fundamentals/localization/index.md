@@ -48,7 +48,7 @@ This approach separates templating into different sending locales. After sending
 
 In this approach, localization is handled within [Canvas basics](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_basics#building-the-customer-journey) and Liquid to define messaging for each user. 
 
-After a Canvas is sent, the dashboard provides aggregated [Canvas Analytics](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics), whereas the user level engagement can be measured via custom [segment funnels](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size), such as combining [**Country**](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#country) and [**Received Canvas Step**](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#received-message-from-canvas-step) filters.
+After a Canvas is sent, the dashboard provides aggregated [Canvas Analytics](https://www.braze.com/docs/user_guide/analytics/reports/canvas_analytics), whereas the user level engagement can be measured via custom [segment funnels](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size), such as combining [**Country**](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#country) and [**Received Canvas Step**](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#received-message-from-canvas-step) filters.
 
 | Advantages | Considerations |
 | --- | --- |

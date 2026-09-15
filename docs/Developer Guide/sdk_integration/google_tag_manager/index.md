@@ -75,6 +75,45 @@ window.braze.logCustomEvent("my_custom_event", {"property_key": "property_value"
 </script>
 ```
 
+## Strict CSP (nonce-based) environments {#strict-csp}
+
+The Braze Initialization tag does not currently support passing `contentSecurityNonce` to `braze.initialize()`. If your site enforces a strict nonce-based CSP, use a **Custom HTML** tag instead of the Braze Initialization tag.
+
+1. Pause or remove the Braze Initialization tag from your GTM container if you have already set it up.
+2. Push your server-generated nonce to `dataLayer` before the GTM snippet in your site HTML:
+    
+    ```html
+    <script nonce="SERVER_GENERATED_NONCE">
+      dataLayer = window.dataLayer || [];
+      dataLayer.push({ cspNonce: 'SERVER_GENERATED_NONCE' });
+    </script>
+    ```
+    
+3. In GTM, create a **Data Layer Variable** mapped to `cspNonce` (for example, `DLV - cspNonce`).
+4. Create a **Custom HTML** tag with the trigger set to **Initialization - All Pages**:
+    
+    Customize the following template for your environment.
+    
+    
+    ```html
+    <script nonce="{{DLV - cspNonce}}">
+      var s = document.createElement('script');
+      s.src = 'https://js.appboycdn.com/web-sdk/YOUR_SDK_VERSION/braze.min.js';
+      s.setAttribute('nonce', '{{DLV - cspNonce}}');
+      s.onload = function() {
+        braze.initialize('YOUR_API_KEY', {
+          baseUrl: 'YOUR_SDK_ENDPOINT',
+          contentSecurityNonce: '{{DLV - cspNonce}}'
+        });
+        braze.openSession();
+      };
+      document.head.appendChild(s);
+    </script>
+    ```
+    
+    
+5. For the Braze Actions tag or any **Custom HTML** tags that call Braze methods, configure [tag sequencing](#web_tag-sequencing-for-braze-action-tags) to fire after this **Custom HTML** tag.
+
 ## Google's EU User Consent Policy
 
 **Important:**

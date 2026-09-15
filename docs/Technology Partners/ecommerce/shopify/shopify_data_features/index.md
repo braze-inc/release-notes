@@ -1,12 +1,10 @@
 # Shopify data features
 
-> This article provides an overview of our Shopify features, including what Shopify data is tracked and example payloads, historical backfill, and product syncs.
+> This article provides an overview of Braze Shopify features, including what Shopify data is tracked and example payloads, historical backfill, and product syncs.
 
 ## Tracked Shopify events
 
 The Shopify integration uses [eCommerce recommended events](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/) to capture key shopping behaviors. For implementation examples and marketing strategies using these events, refer to [eCommerce use cases](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/ecommerce_use_cases/).
-
-
 
 
 
@@ -933,14 +931,14 @@ For more information on what data is collected by the Braze SDKs, see [SDK data 
 
 > Historical Shopify data is imported from before you connect Braze—order events from the past 90 days and customer data from the past year. Both timeframes are counted back from the date you complete your integration.
 
-Through the [Shopify standard integration setup](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_standard_integration/) or [Shopify custom integration setup](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_custom_integration/), you can turn on historical backfill to target past customers. This imports your Shopify orders (order-related events) from the past 90 days and user profiles from the past year. Both timeframes are counted back from the date you complete your integration.
+Through the [Shopify standard integration setup](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_standard_integration/) or [Shopify custom integration setup](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_custom_integration/), you can turn on historical backfill to include past customers and orders in [segments](https://www.braze.com/docs/user_guide/audience/segments/), [campaigns](https://www.braze.com/docs/user_guide/messaging/campaigns), and [Canvases](https://www.braze.com/docs/user_guide/messaging/canvas). This imports your Shopify orders (order-related events) from the past 90 days and user profiles from the past year. Both timeframes are counted back from the date you complete your integration.
 
-When Braze imports your Shopify customers, we assign the `external_id` type that you chose in your configuration settings.
+When Braze imports your Shopify customers, it assigns the `external_id` type that you chose in your configuration settings.
 
 **Note:**
 
 
-If you're an existing Braze customer with active campaigns or Canvases, review how imported customers and order events affect your segments and journeys before you enable historical backfill.
+If you're an existing Braze customer with active campaigns or Canvases, review how imported customers and order events affect your segments and journeys before you enable historical backfill. Historical backfill doesn't retroactively update users who are already in active campaigns or Canvases.
 
 
 
@@ -949,6 +947,18 @@ If you're an existing Braze customer with active campaigns or Canvases, review h
 
 
 
+
+### How Braze selects historical data
+
+Braze uses these Shopify date fields when the initial load runs:
+
+| Data | Window | Shopify date field |
+| --- | --- | --- |
+| Order events | Past 90 days | Order created date |
+| User profiles | Past year | Customer updated date |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Historical backfill date fields" }
+
+If you migrate historical orders into Shopify and keep their original created dates, Braze imports only orders created in the past 90 days.
 
 ### Setting up Shopify historical backfill
 
@@ -972,7 +982,7 @@ Sync time depends on how much historical data is in your store. Stores with high
 
 ### Synced data
 
-For the initial data sync, Braze imports order events from the past 90 days and user profiles from the past year, each counted back from the date you complete your integration. When Braze imports your Shopify customers, it assigns the `external_id` type that you chose in your configuration settings.
+For the initial data sync, Braze imports the order events and user profiles described in [How Braze selects historical data](#how-braze-selects-historical-data). When Braze imports your Shopify customers, it assigns the `external_id` type that you chose in your configuration settings.
 
 The following table summarizes the data included in that initial load.
 

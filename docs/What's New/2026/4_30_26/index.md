@@ -46,7 +46,7 @@ For more information, see [Currents changelog](https://www.braze.com/docs/user_g
 
 
 
-Compose [multi-language messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/) with quick, one-time locale setup that doesn’t require complex code and enables you send to all of your markets with confidence.
+Compose [multi-language messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/) with quick, one-time locale setup that doesn't require complex code and enables you to send to all of your markets with confidence.
 
 ### Granular permissions migration
 
@@ -103,7 +103,7 @@ You can now [sync Shopify product tags, collections, and metafields](https://www
 
 
 
-[GRAVTY®](https://www.lji.io/) is an enterprise-grade loyalty platform from Loyalty Juggernaut Inc. (LJI) that enables brands across retail, travel, restaurants (including quick-service restaurants), and financial services to design, manage, and scale next-generation programs—driving measurable growth in engagement, retention, and customer lifetime value through personalized, data-led experiences.
+[GRAVTY®](https://www.braze.com/docs/partners/data_and_analytics/loyalty/lji) is an enterprise-grade loyalty platform from Loyalty Juggernaut Inc. (LJI) that enables brands across retail, travel, restaurants (including quick-service restaurants), and financial services to design, manage, and scale next-generation programs—driving measurable growth in engagement, retention, and customer lifetime value through personalized, data-led experiences.
 
 <!-- Use this section to list any new SDKs or SDK updates that are already released. -->
 ## SDK

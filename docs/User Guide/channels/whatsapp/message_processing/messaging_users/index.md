@@ -174,6 +174,12 @@ sequenceDiagram
 - The 24-hour customer service window is different from Canvas [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events), which can use a window of up to 30 days. Conversion windows control attribution; they don't affect whether a response message can send.
 - For billing, see [Are WhatsApp response messages free?](https://www.braze.com/docs/user_guide/channels/whatsapp/faq#are-whatsapp-response-messages-free).
 
+### Inbound message attribution to campaigns and Canvases
+
+When Braze receives an inbound WhatsApp message, it tries to associate that message with a campaign or Canvas step. By default, Braze attributes the inbound message to the most recent outbound WhatsApp the user received within the prior four hours, measured from the inbound message timestamp to the user's last received WhatsApp message timestamp on that campaign or Canvas step.
+
+If an inbound message arrives more than four hours after the user last received an outbound WhatsApp from that campaign or Canvas step, the inbound message isn't associated with a `canvas_id` or `campaign_id`. This can affect analytics and event data attribution when users respond outside that window.
+
 ### Filtering by a custom time attribute
 
 If your action-based WhatsApp campaign or Canvas audience depends on a custom time attribute falling within a relative window (for example, between now and the next 24 hours), combine two filters as described in [Time](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types).

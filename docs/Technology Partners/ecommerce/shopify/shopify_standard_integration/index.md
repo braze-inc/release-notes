@@ -83,8 +83,6 @@ New customers are provisioned on the latest Braze Web SDK and JavaScript SDK ver
 
 
 
-
-
 Now you’ll select the Shopify data you want to track.
 
 ![“Tracking Shopify data” section with a checkbox to track behavioral events and user attributes.](https://www.braze.com/docs/assets/img/shopify/tracking_shopify_data.png?17b975ab97f07c885e16ace136234fd0)
@@ -97,8 +95,6 @@ The following events will be enabled by default in the standard integration.
 {: .reset-td-br-1 .reset-td-br-2  .reset-td-br-3 aria-label="Standard data setup" }
 
 For more information on the data tracked through the integration, refer to [Shopify Data Features](https://www.braze.com/docs/shopify_data_features/).
-
-
 
 
 
@@ -354,8 +350,6 @@ Braze collects visitor information, such as email addresses and phone numbers, t
 ### Banners
 
 [Banners](https://www.braze.com/docs/user_guide/channels/banners/) show personalized content on your Shopify storefront, such as promotions, announcements, and targeted offers.
-
-
 
 
 

@@ -117,8 +117,6 @@ Each message type and platform may have its own suggested proportions and requir
 
 
 
-
-
 #### Pin to top
 
 Braze displays a pinned card at the top of a user's feed and the user can't dismiss it. If a user's feed has multiple pinned cards, Braze orders them chronologically. When Braze delivers a Content Card, it is either pinned or unpinned, and that status does not change for the lifetime of the card. If you change the pinned setting on a campaign, the update applies only to cards sent after the modification. It does not change the pinned status of cards already in a user's feed.

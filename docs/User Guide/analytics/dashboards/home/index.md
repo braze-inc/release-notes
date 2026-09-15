@@ -95,12 +95,12 @@ $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of d
 
 MAU calculations follow specific rules to ensure accurate and consistent billing:
 
-- **Calculation timing**: Calculated once per day at 12:05 UTC as a 30-day snapshot; counts never change retroactively.
-- **Anonymous profiles**: Count **only** when at least one session is logged.
+- **Calculation timing**: Calculated once per day at 00:05 UTC as a 30-day snapshot; counts never change retroactively.
+- **Anonymous profiles**: Count **only** when at least one session is logged, including alias-only users with session data.
 - **Identified profiles**: Count only when `date_of_last_session` is within the rolling 30-day window.
 - **Orphaned profiles**: Duplicates merged into another user are **not** counted.
-- **CSV uploads and REST API imports**: Users uploaded through CSV or the REST API count toward MAU when you supply `date_of_last_session` within the rolling 30-day window, or when they later log a session. Supplying only `date_of_first_session` does not affect MAU.
-- **API deletions**: Deleting a user via API does not update MAU immediately; the count self-corrects in the next monthly cycle.
+- **CSV uploads and REST API imports**: Users uploaded through CSV or the REST API count toward MAU when you supply `date_of_last_session` within the rolling 30-day window, or when they later log a session through the SDK.
+- **API deletions and merges**: Deleting a user through the API does not update MAU immediately. Snapshots already taken never change. Once the deletion is processed, all later snapshots exclude that user. For merged users, the merged profile is deleted and follows the same behavior.
 
 **Note:**
 
@@ -121,7 +121,9 @@ The following example demonstrates how MAU calculations work through different u
 | 4 | Identify **Anonymous User 2** as the **same person** as User 1 (User 2 becomes orphaned) | –1 | 1 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="MAU calculation example" }
 
-MAU snapshots are calculated once per day and never change retroactively. In this example, the MAU count for the day after step 3 permanently remains 2, even though User 2 later becomes orphaned. However, the MAU count for subsequent days reflects only the non-orphaned user. Within any 30-day window, this flow ultimately consumes 1 MAU since only one distinct, non-orphaned user remains.
+MAU snapshots are calculated once per day at 00:05 UTC and never change retroactively. In this example, the snapshot labeled day X (taken at 00:05 UTC for the prior day) remains 2, even after User 2 later becomes orphaned. The snapshots for days between X and Y also remain 2. Starting with day Y, snapshots reflect only the non-orphaned user. Within any 30-day window, this flow ultimately consumes 1 MAU since only one distinct, non-orphaned user remains.
+
+If step 3 occurs on day X and step 4 occurs on day Y, day X remains 2 MAU, and days between X and Y also remain 2 MAU. Day Y reflects 1 MAU because the snapshot on day Y occurs after User 2 is orphaned.
 
 ##### MAU count considerations
 

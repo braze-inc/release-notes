@@ -147,8 +147,6 @@ Use the Liquid tag ``{% catalog_items <name_of_your_catalog> {{context.${catalog
 
 
 
-
-
 ## Considerations
 
 - Users are subscribed for 90 days. If an item does not drop in price in 90 days, the user is removed from the subscription.

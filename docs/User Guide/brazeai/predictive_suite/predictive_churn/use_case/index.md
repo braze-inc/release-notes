@@ -67,7 +67,7 @@ This ensures that each week, MovieCanon reaches only the users who need a nudgeâ
 
 ## Step 4: Measure performance
 
-After a few weeks, Camila checks her [campaign analytics](https://www.braze.com/docs/user_guide/channels/email/reporting) to evaluate how well the strategy is performing. 
+After a few weeks, Camila checks her [campaign analytics](https://www.braze.com/docs/user_guide/analytics/reports/campaign_analytics) to evaluate how well the strategy is performing. 
 
 She sees:
 
