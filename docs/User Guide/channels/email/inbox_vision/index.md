@@ -42,7 +42,7 @@ To test your email message in Inbox Vision:
 **Note:**
 
 
-Inbox Vision doesn't support email messages that include [abort logic](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages) because these emails render as static content.
+Inbox Vision doesn't support email messages that include [abort logic](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages). If abort logic is triggered during templated preview, Inbox Vision, Spam Testing, and Accessibility Testing cannot run until the message renders successfully for the selected preview user.
 
 
 

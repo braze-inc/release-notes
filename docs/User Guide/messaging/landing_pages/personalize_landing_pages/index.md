@@ -5,7 +5,7 @@
 **Important:**
 
 
-Liquid personalization for landing pages is only available on the Pro tier of landing pages. Currently, [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content), [multi-language](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/multi_language_settings), and [promotion codes](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes) are not supported with Liquid personalization in landing pages.
+Liquid personalization for landing pages is only available on the [Landing Pages Pro tier](https://www.braze.com/docs/user_guide/messaging/landing_pages#plan-tiers). Currently, [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content), [multi-language](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/multi_language_settings), and [promotion codes](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes) are not supported with Liquid personalization in landing pages.
 
 
 
@@ -145,10 +145,8 @@ When fetching external data in landing pages:
 **Warning:**
 
 
-For Liquid-personalized landing pages, Braze processes `{{` and `{%` delimiters anywhere they appear in the landing page HTML—including inside JavaScript strings, comments, and regular expressions. This applies to the entire page, but **Custom Code** blocks are the most likely place to include these sequences accidentally.
-
-If these sequences appear without matching closing tags (for example, `/* version {{ 2.0 */`), Braze treats them as open Liquid tags. Other valid Liquid tags on the page may fail to render, or Liquid rendering may break elsewhere in the same block. In severe cases, broken Liquid can prevent the page from publishing or cause it to be unpublished (see [Fallback pages](#fallback-pages)).
-
+For Liquid-personalized landing pages, Braze processes `{{` and `{%` delimiters anywhere they appear in the landing page HTML—including inside JavaScript strings, comments, and regular expressions. This applies to the entire page, but **Custom Code** blocks are the most likely place to include these sequences accidentally.<br><br>
+If these sequences appear without matching closing tags (for example, `/* version {{ 2.0 */`), Braze treats them as open Liquid tags. Other valid Liquid tags on the page may fail to render, or Liquid rendering may break elsewhere in the same block. In severe cases, broken Liquid can prevent the page from publishing or cause it to be unpublished (see [Fallback pages](#fallback-pages)).<br><br> 
 To avoid this, escape or remove `{{` and `{%` from non-Liquid contexts, split the sequences in JavaScript (for example, `'{' + '{'`). Liquid runs server-side before the script executes. You can also wrap larger non-Liquid sections in `&#123;% raw %&#125;...&#123;% endraw %&#125;` tags.
 
 

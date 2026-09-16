@@ -323,7 +323,7 @@ If you are testing campaigns that populate user data or use custom event propert
 
 ### Testing campaigns personalized with user attributes
 
-If you are using [personalization](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/) in your message, you'll need to take additional steps to properly preview your campaign and check that user data is properly populating the content.
+If you are using [personalization](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/) in your message, you'll need to take additional steps to properly preview your campaign and check that user data is properly populating the content. For preview limitations across the composer, Inbox Vision, and Canvas, see [Preview personalization](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/preview_personalization).
 
 When sending a test message, make sure to choose either the option to **Select Existing User** or preview as a **Custom User**.
 

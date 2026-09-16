@@ -1,4 +1,4 @@
-<div id='api_tmgrvudqhgbb' class='api_div' data-search-keywords='update translations for a webhook template message'>
+<div id='api_dfzrifzzrqux' class='api_div' data-search-keywords='update translations for a webhook template message'>
 <h1 id="update-translations-for-a-webhook-template">Update translations for a webhook template</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/templates/webhook/translations</p>
