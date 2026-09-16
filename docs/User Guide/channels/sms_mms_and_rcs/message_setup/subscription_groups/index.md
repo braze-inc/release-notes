@@ -82,6 +82,10 @@ In adherence with international [telecommunication compliance and guidelines](ht
 
 ![SMS composer with the subscription group dropdown open and "Messaging Service A for SMS" highlighted by the user.](https://www.braze.com/docs/assets/img/sms/sms_subgroup_select.png?d56eadf2321657d90f11a3406b509477)
 
+## Link shortening domains
+
+Each SMS, MMS, and RCS subscription group can use a link shortening domain for shortened URLs when [link shortening](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening) is turned on. To assign a Braze shared short domain or a custom domain, see [Self-serve custom domains](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/custom_domains).
+
 ## SMS subscription group best practices
 
 Design separate SMS subscription groups for each messaging purpose (for example, transactional versus marketing) and for each workspace. When you operate in multiple countries, consider separate groups by region to support local compliance rules—for example, Brazil's restrictions on promotional send windows.

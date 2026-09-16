@@ -1,6 +1,6 @@
 # Self-serve custom domains
 
-> This page covers how to set up your own custom domains in the Braze dashboard. Custom domains allow you to use a branded shortened link that reflects your brand’s identity instead of a generic shortened link or the Braze domain (`brz.ai`)—improving user trust and campaign engagement with SMS links.
+> This page covers how to set up your own custom domains in the Braze dashboard. Custom domains allow you to use a branded shortened link that reflects your brand's identity instead of a generic shortened link or a Braze-managed domain—improving user trust and campaign engagement with SMS links.
 
 With self-serve custom domains, you can configure and manage your own custom domains for SMS, RCS, and WhatsApp—directly from your Braze dashboard. You can easily add, monitor, and manage up to 10 custom domains in one place.
 
@@ -69,11 +69,11 @@ After they're configured, custom domains can be assigned to one or multiple SMS,
 
 1. Go to **Audience** > **Subscription Group Management**.
 2. Find and select your subscription group in the list.
-3. Under **Subscription Group Details**, select your custom domain in the **Link Shortening Domain** dropdown.
+3. Under **Subscription Group Details**, select a domain in the **Link Shortening Domain** dropdown. The dropdown organizes domains into two groups:
+   - **Custom domains** (tagged as "Recommended"): Your configured custom domains
+   - **Braze domains:** Braze-managed short domains (`brz.ai`, `brz.is`, `brz.sh`, `brz.so`)
 
 Campaigns sent with link shortening turned on use the assigned domain associated with your SMS, RCS, or WhatsApp subscription group.
-
-![SMS message composer preview with a shortened link domain that is different from the domain in the "Message" box.](https://www.braze.com/docs/assets/img/custom_domain2.png?e278f104360b65e166cbc3dd8fc98a82)
 
 ## Frequently asked questions
 

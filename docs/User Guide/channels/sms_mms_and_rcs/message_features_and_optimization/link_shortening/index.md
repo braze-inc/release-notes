@@ -28,7 +28,7 @@ The length of the URL is determined by the type of tracking that is turned on:
 - **Basic tracking** enables campaign-level click tracking. Static URLs have a length of 20 characters, and personalized URLs have a length of 25 characters.
 - **Advanced tracking** enables campaign-level and user-level click tracking, and enables use of segmentation and retargeting capabilities which rely on clicks. Clicks also generate an [SMS click event](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events) sent through Currents. Static URLs with advanced tracking have a length of 27-28 characters, allowing you to create segments of users who have clicked on URLs. Personalized URLs have a length of 32-33 characters.
 
-Links are shortened using our shared short domain (`brz.ai`) or your custom link shortening domain. An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/p/8jshX/2dj8d` (advanced, personalized). Refer to [Testing](#legacy_testing) for more information.
+Links are shortened using the Braze shared short domain or custom link shortening domain assigned to your subscription group. For available domains and how to assign them, see [Self-serve custom domains](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/custom_domains). An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/p/8jshX/2dj8d` (advanced, personalized). Refer to [Testing](#legacy_testing) for more information.
 
 Any static URLs that start with `http://` or `https://` are shortened. Static shortened URLs are valid for one year from the date they were created. Shortened URLs that contain Liquid personalization are valid for two months. 
 
@@ -201,7 +201,7 @@ For RCS messages, link shortening and URL-level click tracking are supported for
 
 
 
-Links are shortened using our shared short domain (`brz.ai`) or your custom link shortening domain, and are valid for 9 weeks from the date they were created. An example URL may look something like `https://brz.ai/8jshX2dj`.
+Links are shortened using one of the Braze shared short domains (`brz.ai`, `brz.is`, `brz.sh`, `brz.so`) or your custom link shortening domain, and are valid for 9 weeks from the date they were created. An example URL may look something like `https://brz.ai/8jshX2dj`.
 
 ## Using link shortening
 

@@ -89,7 +89,6 @@ Adjust the span properties to update your text styling, which includes:
 
 
 
-
 You can use these blocks to create a form that links user-submitted data to their profile in Braze. Keep in mind, if you use form blocks, you'll also need to create an additional landing page for the confirmation state.
 
 ![A form block that registers a new customer and sends a discount code to their email.](https://www.braze.com/docs/assets/img/landing_pages/form.png?b13f9c730db6ff88091d8f5213c4a0c4){: style="max-width:70%;"}
@@ -198,6 +197,7 @@ In the editor, you can also select **Copy preview link** to share the page with 
 
 - If your landing page doesn't use Liquid, this link is the same as the direct URL from **Copy URL**, opened in preview mode.
 - If your landing page uses Liquid and you have the Landing Pages Pro entitlement, the link instead renders the live page on demand and reflects your current changes rather than a snapshot from when you generated the link. Content is personalized per user. The preview displays the Braze favicon and cannot be changed.
+    - If you add Liquid to a landing page without the Pro tier, the Liquid tags don't evaluate and appear as raw text to visitors on the published page. 
 
 For preview links on other channels, see [shareable preview](https://www.braze.com/docs/user_guide/messaging/governance/shareable_preview).
 

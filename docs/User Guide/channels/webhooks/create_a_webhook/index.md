@@ -24,9 +24,9 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 2. Select **Webhook**, or, for campaigns targeting multiple channels, select **Multichannel**.
 3. Name your campaign something clear and meaningful.
 4. (Optional) Add a description to describe how this campaign will be used.
-4. Add [teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams) and [tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags) as needed.
+5. Add [teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams) and [tags](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags) as needed.
    * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder), you can filter by particular tags.
-5. Add and name as many variants as you need for your campaign. You can choose different webhook templates for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing](https://www.braze.com/docs/user_guide/messaging/ab_testing).
+6. Add and name as many variants as you need for your campaign. You can choose different webhook templates for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing](https://www.braze.com/docs/user_guide/messaging/ab_testing).
 
 **Tip:**
 
@@ -57,20 +57,48 @@ You can choose to create a webhook from scratch, use an existing template, or us
 
 The **Compose** tab consists of the following fields:
 
-- Language
+- Languages
 - Webhook URL
 - HTTP method
 - Request body
 
 ![The "Compose" tab with an example webhook template.](https://www.braze.com/docs/assets/img_archive/webhook_compose.png?50ea81f106ae80aeeab8889296098081)
 
-### Language {#internationalization}
+### Languages {#internationalization}
 
-[Internationalization](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization) is supported in the URL and the request body. To internationalize your message, select **Add languages** and fill out the required fields. 
+You can send one webhook to users across multiple markets using [multi-language messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages). Translation is supported in the request body and the webhook URL.
 
-We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported](https://www.braze.com/docs/developer_guide/localization?tab=android).
+To localize a webhook:
 
-If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages).
+1. [Create the locales](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/multi_language_settings) you want to support in your workspace.
+2. In the **Compose** tab, wrap only text you want translated with translation tags. For example, `{% translation greeting %}Hello!{% endtranslation %}`.
+3. Select **Manage languages**, choose your locales, then add translations by uploading a CSV or using the [translations API](https://www.braze.com/docs/api/endpoints/translations).
+4. Select **Multi-Language User** from the **Preview as User** dropdown to preview each locale before sending.
+
+**Important:**
+
+
+Wrap only human-readable values in translation tags. Never JSON keys, brackets, commas, or other structure. Translators may alter or remove special characters, which can produce a malformed request body that your endpoint rejects.
+
+
+
+For a request body built with **JSON key-value pairs**, tag the value only:
+
+
+```json
+{
+  "message_body": "{% translation order_ready %}Your order just arrived!{% endtranslation %}"
+}
+```
+
+
+#### Localize the URL
+
+If your endpoint differs by market, you can wrap part of the URL in translation tags. Keep the protocol (`https://`) outside the tags and don't include query parameters inside them. For details, see [Localize URLs](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages#localize-urls).
+
+#### Webhook templates
+
+Webhook templates support saved translations, so you can localize a template once and reuse it across campaigns and Canvas steps. You need the **Edit Webhook Templates** permission to add locales and translations to a template. See [Webhook templates](https://www.braze.com/docs/user_guide/messaging/templates/webhook_templates).
 
 ### Webhook URL
 
@@ -112,7 +140,7 @@ You can personalize your key-value pairs using Liquid, such as including any use
 
 The raw text option gives you the flexibility to write a request for an endpoint that expects a body of any format. For example, you might use this to write a request for an endpoint that expects your request to be in XML format. 
 
-Both [personalization](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) and [internationalization](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization) using Liquid is supported in raw text.
+Both [personalization](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid) and [translation tags](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages) are supported in raw text.
 
 ![An example of a request body with raw text using Liquid.](https://www.braze.com/docs/assets/img_archive/webhook_rawtext.png?bf17237fbbf1ba70de38934d6c262d4f)
 

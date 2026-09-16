@@ -110,6 +110,26 @@ This table shows which Shopify marketing opt-in states correlate with the status
 | SMS unsubscribed | Unsubscribed |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Syncing Shopify email and SMS marketing opt-ins" }
 
+#### SMS double opt-in
+
+Use SMS double opt-in to send your branded confirmation text through Braze instead of Shopify's confirmation email. To turn on SMS double opt-in, do the following:
+
+1. In the Shopify admin, go to **Settings** > **Notifications** > **Customer notifications**.
+2. Turn off marketing double opt-in for SMS.
+    - If Shopify's double opt-in stays on, Shopify sends its own pending status or an email confirmation, and shoppers don't receive the Braze SMS confirmation.
+3. Set checkout SMS to single opt-in. 
+4. In your Braze SMS settings, select **Use Braze SMS double opt-in**.
+
+![The "Use Braze SMS double opt-in" checkbox, a warning to turn off Shopify's SMS double opt-in first, and the confirmation checkbox.](https://www.braze.com/docs/assets/img/shopify/shopify_sms_double_opt_in.png?72f3a72dad6a0c0a549096ec14f8e896){: style="max-width:80%;"}
+
+When a shopper subscribes to SMS at checkout or through a form, the following happens:
+1. Shopify sends the subscribe to Braze.
+2. Braze sets the shopper to pending and sends your confirmation text.
+3. The shopper replies with your confirmation keyword and becomes subscribed.
+4. If they don't reply before the confirmation window ends, they stay pending.
+
+For more information on Braze SMS double opt-in, see [SMS double opt-in](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in).
+
 ### Sign-up forms
 
 #### Shopify newsletter footer

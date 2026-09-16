@@ -4,7 +4,7 @@
 
 ## How it works
 
-![A delivery tracker live activity on an iPhone lockscreen. A status bar with a car is almost half-way filled up. Text reads "2 min until pickup"](https://www.braze.com/docs/assets/img/swift/live_activities/example_2.png?3675f3043731a76345f8790b4417a5dd){: style="max-width:40%;float:right;margin-left:15px;"}
+![A delivery tracker live activity on an iPhone lockscreen. A status bar with a car is almost half-way filled up. Text reads "2 min until pickup"](https://www.braze.com/docs/assets/img/swift/live_activities/example_2.png?3675f3043731a76345f8790b4417a5dd){: width="784" height="619" style="max-width:40%;float:right;margin-left:15px;height:auto;"}
 
 Live Activities present a combination of static information and dynamic information that you update. For example, you can create a Live Activity that provides a status tracker for a delivery. This Live Activity includes your company's name as static information, as well as a dynamic "Time to delivery" that updates as the delivery driver approaches its destination.
 
@@ -140,7 +140,7 @@ To remotely register a Live Activity, iOS 17.2 or later is required.
 
 In your Xcode project, select your app name, then **General**. Under **Frameworks and Libraries**, confirm `BrazeKit` is listed.
 
-![The BrazeKit framework under Frameworks and Libraries in a sample Xcode project.](https://www.braze.com/docs/assets/img/swift/live_activities/xcode_frameworks_and_libraries.png?cec8b144f4f7f25ba4df574c272bd622)
+![The BrazeKit framework under Frameworks and Libraries in a sample Xcode project.](https://www.braze.com/docs/assets/img/swift/live_activities/xcode_frameworks_and_libraries.png?cec8b144f4f7f25ba4df574c272bd622){: width="774" height="164"}
 
 #### Step 2.2: Add the BrazeLiveActivityAttributes protocol {#brazeActivityAttributes}
 
@@ -263,7 +263,7 @@ class LiveActivityManager {
 
 Your Live Activity widget displays this initial content to your users.
 
-![A live activity on an iPhone lockscreen with two team's scores. Both the Wild Bird Fund and the Owl Rehab teams have scores of 0.](https://www.braze.com/docs/assets/img/swift/live_activities/example_1_1.png?b9615bf4d416a7865420f5364951ccd6){: style="max-width:40%;"}
+![A live activity on an iPhone lockscreen with two team's scores. Both the Wild Bird Fund and the Owl Rehab teams have scores of 0.](https://www.braze.com/docs/assets/img/swift/live_activities/example_1_1.png?b9615bf4d416a7865420f5364951ccd6){: width="784" height="606" style="max-width:40%;height:auto;"}
 
 
 
@@ -310,7 +310,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ### Step 4: Update the activity {#update-the-activity}
 
-![A live activity on an iPhone lock screen with two team's scores. Both the Wild Bird Fund has 2 points and the Owl Rehab has 4 points.](https://www.braze.com/docs/assets/img/swift/live_activities/example_1_2.png?c9ac24cf3bad2d8d1cc815a44699160e){: style="max-width:40%;float:right;margin-left:15px;"}
+![A live activity on an iPhone lock screen with two team's scores. Both the Wild Bird Fund has 2 points and the Owl Rehab has 4 points.](https://www.braze.com/docs/assets/img/swift/live_activities/example_1_2.png?c9ac24cf3bad2d8d1cc815a44699160e){: width="784" height="620" style="max-width:40%;float:right;margin-left:15px;height:auto;"}
 
 The [`/messages/live_activity/update`](https://www.braze.com/docs/api/endpoints/messaging/live_activity/update) endpoint allows you to update a Live Activity through push notifications passed through the Braze REST API. Use this endpoint to update your Live Activity's `ContentState`.
 
@@ -665,7 +665,7 @@ Currently, Live Activities are a feature specific to iOS and iPadOS. By default,
 
 Braze does not currently provide native Live Activities support on Android. For Android, you can build live-update experiences through Braze push notifications and custom notification rendering.
 
-![A screenshot of a macOS menu bar displaying a Live Activity as an alert.](https://www.braze.com/docs/assets/img/live-activity-macos.png?ae4757435bb769d2eb1ea1d297477a1c){: style="max-width:60%;"}
+![A screenshot of a macOS menu bar displaying a Live Activity as an alert.](https://www.braze.com/docs/assets/img/live-activity-macos.png?ae4757435bb769d2eb1ea1d297477a1c){: width="783" height="198" style="max-width:60%;height:auto;"}
 
 The Live Activities article covers the [prerequisites](https://www.braze.com/docs/developer_guide/live_notifications/live_activities#implementing-a-live-activity) for managing Live Activities through the Braze Swift SDK.
 
@@ -683,7 +683,7 @@ No, this is not currently supported.
 
 #### What happens if a push notification is sent while a Live Activity is active?
 
-![A phone screen with a Bulls versus Bears sports game live activity toward the middle of the screen and push notification lorem ipsum text at the bottom of the screen.](https://www.braze.com/docs/assets/img/push-vs-live-activities.png?e6bf39f47386b7741f04078c5b0f55fc){: style="max-width:30%;float:right;margin-left:15px;"}
+![A phone screen with a Bulls versus Bears sports game live activity toward the middle of the screen and push notification lorem ipsum text at the bottom of the screen.](https://www.braze.com/docs/assets/img/push-vs-live-activities.png?e6bf39f47386b7741f04078c5b0f55fc){: width="1170" height="2532" style="max-width:30%;float:right;margin-left:15px;height:auto;"}
 
 Live Activities and push notifications occupy different screen real estate and won't conflict on a user's screen.
 
