@@ -82,7 +82,7 @@ Once WhatsApp templates have been approved, you can move over to the dashboard t
 **Note:**
 
 
-After your WhatsApp Business Account is created, Meta will determine your starting messaging limit. To learn more, check out [throughput](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc#throughput).
+After your WhatsApp Business Account is created, Meta determines your starting messaging limit. To learn more, check out [throughput](https://www.braze.com/docs/user_guide/channels/whatsapp/message_processing/quality_rating_and_messaging_limits#throughput).
 
 
 

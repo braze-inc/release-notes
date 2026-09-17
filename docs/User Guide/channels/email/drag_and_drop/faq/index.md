@@ -91,6 +91,14 @@ Layout issues are often caused by **custom HTML or CSS** that conflicts with the
 3. In **Row Properties**, review column padding and widths.
 4. When you add custom HTML, prefer table-based layouts, fluid images, and total table widths that fit your email width—fixed pixel images or non-table structures often break in Outlook and other clients.
 
+## How does Gmail Translate affect drag-and-drop emails?
+
+When a recipient uses Gmail's translation feature, Gmail strips the `<style>` block from the email HTML during the translation process. Gmail may also remove `<style>` blocks for other reasons. See [Gmail CSS limitations](https://www.braze.com/docs/user_guide/channels/email/html_editor/css_inline#gmail-css-limitations). 
+
+The drag-and-drop editor relies on CSS inside that `<style>` block to control responsive row and container widths. Removing it causes row backgrounds and containers to render at the template's fixed pixel width (often 600&nbsp;pixels) instead of filling the full container width. This behavior occurs on both iOS and Android.
+
+If responsive rendering under Gmail Translate is required, use the [HTML editor](https://www.braze.com/docs/user_guide/channels/email/html_editor) to build a custom HTML email instead of the drag-and-drop editor.
+
 ## Why doesn't my Content Block render in email preview?
 
 If a Content Block doesn't render in email preview, check for unclosed anchor tags. For Connected Content URLs, use the `replace` filter to convert double-encoded ampersands (`&amp;amp;`) to a single encoded ampersand (`&amp;`). Limit Content Block nesting to two levels.

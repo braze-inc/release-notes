@@ -266,6 +266,14 @@ This behavior changes the default behavior when you turn off frequency capping f
 
 Frequency capping applies per dispatch: each time Braze sends a campaign or Canvas component to a user counts toward your caps—not each message variant or platform inside that send. For example, if users are capped at five push campaigns per week, they don't receive any push campaigns after the fifth dispatch until the cap resets.
 
+##### When frequency capping is checked
+
+Braze checks the cap when a campaign sends or a user reaches a Canvas Message step, before quiet hours. If the user is already at cap, Braze skips the send and does not hold it for quiet hours. Otherwise, quiet hours may hold or abort the message, and Braze checks the cap again at the delayed send.
+
+Because caps use the user's local calendar, a hold that crosses midnight may change whether the user is still under the cap.
+
+For example, quiet hours run from 11 pm to 8 am. A user enters an email campaign at 11 pm. If they have already hit a one-email-per-day cap, Braze skips the send at 11 pm and does not hold it. If they have not hit the cap, Braze holds the send until 8 am the next day, then checks the cap again at 8 am. Because frequency capping is calculated by calendar day, that 8 am send is evaluated against the new day's cap, not 11 pm.
+
 ##### Multichannel sends
 
 When a single dispatch uses multiple channels, that dispatch counts at most once per frequency capping rule that applies. For example, if you create a multichannel campaign that sends email, iOS push, and Android push in one delivery and your workspace has rules for push and email, and a rule that applies to all channels, that delivery counts once toward the push rule, once toward the email rule, and once toward the all-channel rule—it does not count once per push platform or per message inside the send. If users are capped to one push and one email campaign per day and they receive this multichannel campaign, they aren't eligible for additional push or email campaigns for the rest of the day unless a campaign ignores frequency capping rules.
