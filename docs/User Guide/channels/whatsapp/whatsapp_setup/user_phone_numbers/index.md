@@ -38,6 +38,19 @@ For a customer to receive an WhatsApp message, they must have a valid phone numb
 
 ### Multiple users with the same phone number
 
-If multiple users have the same phone number within a segment of a single campaign or Canvas step, Braze will deduplicate the sending and send only one message to that one phone number. 
+#### Outbound sends
+
+If multiple users have the same phone number within a segment of a single campaign or Canvas step, Braze deduplicates the sending and sends only one message to that phone number.
+
+#### Inbound messages
+
+When multiple user profiles share the same phone number, Braze uses the following tiebreak logic to determine which profile receives attribution for an inbound WhatsApp message:
+
+1. If the message is attributed to a campaign, Braze attributes the inbound WhatsApp message to the profile that most recently received that campaign on WhatsApp. If no profile received that campaign on WhatsApp, Braze uses the profile that most recently received that same campaign on another channel (such as email or SMS).
+2. Otherwise, Braze attributes the message to the profile that most recently received a campaign from the associated WhatsApp subscription group that sent anything in the last seven days on WhatsApp. If no profile received one of those campaigns on WhatsApp, Braze uses the profile that most recently received one of those same campaigns on another channel.
+3. Otherwise, Braze attributes the message to the profile with the `phone` user alias for the sender's phone number—the first profile to have sent an inbound WhatsApp message from that number.
+4. Otherwise, Braze attributes the message to the first matching profile Braze finds. This choice may not be consistent across inbound WhatsApp messages from the same phone number.
+
+To prevent duplicate profiles from forming when users share phone numbers, use the [users/merge endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge) to consolidate user data.
 
 

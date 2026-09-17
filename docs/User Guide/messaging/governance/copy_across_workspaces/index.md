@@ -54,6 +54,13 @@ To copy a landing page to a different workspace:
 3. Select **Copy to workspace**.
 4. Review and test your landing page to confirm that all fields work properly.
 
+**Important:**
+
+
+Copying a landing page across workspaces clears its subscription group selections. This includes the subscription group set on a [Phone Capture](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks?sdktab=landing%20pages) block and the groups added to a [Manage Subscriptions](https://www.braze.com/docs/user_guide/messaging/landing_pages/manage_subscriptions/) block (email, SMS, or WhatsApp). Reselect the subscription groups in the destination workspace before publishing the copied page.
+
+
+
 
 
 
@@ -69,6 +76,13 @@ You can copy a campaign or Canvas to another workspace at any point in its lifec
 Note that the following tables cover campaign and Canvas fields, and are not a comprehensive list of what is copied across workspaces and what is omitted. As a best practice, check the campaign, Canvas, and landing page details and test to confirm your message works as expected. 
 
 Landing pages are copied as drafts. Before publishing a copied landing page, review its page URL, custom domain settings, form submission handling, and any Liquid or workspace-specific references.
+
+**Note:**
+
+
+Subscription groups aren't copied with a landing page. This clears the subscription group on any [Phone Capture](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks?sdktab=landing%20pages) block and the selected groups on any [Manage Subscriptions](https://www.braze.com/docs/user_guide/messaging/landing_pages/manage_subscriptions/) block (email, SMS, or WhatsApp). Reselect the appropriate subscription groups for the destination workspace before publishing.
+
+
 
 **Note:**
 
