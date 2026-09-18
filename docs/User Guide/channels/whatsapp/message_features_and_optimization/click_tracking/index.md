@@ -19,11 +19,11 @@ Click tracking doesn’t work with deep links. You can shorten universal links f
 
 To set up click tracking for response messages:
 1. Create a response message that includes a call-to-action (CTA) button with a website URL.
-2. Enable click tracking by clicking the designated button in the interface.
+2. Turn on **Click tracking**.
 
-The link will be shortened to the Braze domain, or the custom domain specified for the subscription group, and personalized for the user.
+Braze shortens the link to the Braze domain, or the custom domain specified for the subscription group, and personalizes it for the user.
 
-Any static URLs that start with `http://` or `https://` will be shortened. Shortened URLs that contain Liquid personalization (such as user-level tracking targeting) will be valid for two months.
+Braze shortens any static URLs that start with `http://` or `https://`. Shortened URLs that contain Liquid personalization (such as user-level tracking targeting) are valid for two months.
 
 ![WhatsApp message composer with content body and a button.](https://www.braze.com/docs/assets/img/whatsapp/click_tracking/message_composer.png?52b6d3b215bd5e3616c095e1e7c3ca12)
 
@@ -32,6 +32,19 @@ Any static URLs that start with `http://` or `https://` will be shortened. Short
 We recommend enabling click tracking for template messages through the **WhatsApp Template Builder** in Braze. This enablement method automatically handles the URL formatting requirements, so you don't need to manually configure anything in WhatsApp Business Manager.
 
 If you're creating templates directly in WhatsApp Business Manager instead, see [Configuring click tracking from WhatsApp Business Manager](#configuring-click-tracking-from-whatsapp-business-manager).
+
+#### How click tracking works in templates
+
+**Important:**
+
+
+Click tracking only works when the template includes a trackable link structure—URLs in the body or CTAs formatted with your tracking domain. 
+
+
+
+When you submit a template to Meta for approval, Braze rewrites the link into a tracked format inside the template. Liquid in the query parameters resolves for each recipient. 
+
+A link passed entirely through a template variable can't be shortened because the approved template only contains the variable placeholder—there is no link in the template for Braze to rewrite, and Meta doesn't allow changes to approved template text.
 
 #### Use the Template Builder
 

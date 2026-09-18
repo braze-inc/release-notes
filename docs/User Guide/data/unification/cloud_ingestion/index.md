@@ -35,12 +35,17 @@ In addition, [Connected Sources](https://www.braze.com/docs/user_guide/data/unif
 
 Cloud Data Ingestion can sync data from:
 
-   - Amazon Redshift
-   - Databricks 
-   - Google BigQuery
-   - Microsoft Fabric
-   - Snowflake
-   - Amazon S3
+**Cloud Data Warehouse:**
+- Amazon Redshift
+- Databricks
+- Google BigQuery
+- Microsoft Fabric
+- Snowflake
+
+**Cloud Data Storage:**
+- Amazon S3
+- Azure Blob Storage
+- Google Cloud Storage
 
 ## Supported data types 
 

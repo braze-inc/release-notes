@@ -1,6 +1,6 @@
 # In-app messages
 
-> In-app messages deliver content inside your app or website without interrupting users with a push notification. Customized in-app messages enhance the user experience and help your audience get more value from your product through layouts, personalization, and targeting tools. This hub covers message types, the drag-and-drop editor, prerequisites, and common use cases such as onboarding and promotions. Integrate the [Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web) before you create your first in-app message, then choose a standard or custom layout for your campaign.
+> In-app messages deliver content inside your app or website without interrupting users with a push notification. Customized in-app messages enhance the user experience and help your audience get more value from your product through layouts, personalization, and targeting tools. This hub covers message types, the drag-and-drop editor, prerequisites, and common use cases such as onboarding and promotions. 
 
 ## Prerequisites
 
@@ -60,46 +60,53 @@ Fullscreen messages are exactly what you'd expect—they take up the whole scree
 
 In addition to these default message templates, you can also further customize your messaging using custom HTML in-app messages, web modals with CSS, or web email capture forms. For more information, refer to [Customization](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize).
 
-For how templated delivery at display time affects **abort** logging, see [In-App Message FAQ](https://www.braze.com/docs/user_guide/channels/in_app_messages/faq).
+## Choose an editor
+
+For most in-app messages, use the [drag-and-drop editor](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop). It supports modal and fullscreen messages with the same core layouts as the traditional editor, plus rows, Content Blocks, templates, multi-page flows, and ongoing feature updates.
+
+Use the [traditional editor](https://www.braze.com/docs/user_guide/channels/in_app_messages/traditional) when you need slideup messages or custom HTML.
+
+
+For how templated delivery at display time affects abort logging, see [In-App Message FAQ](https://www.braze.com/docs/user_guide/channels/in_app_messages/faq).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Next steps
 
 <ul class="guide_tiles"><li><a href="/docs/user_guide/channels/in_app_messages/drag_and_drop"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create an in-app message with the drag-and-drop editor</span></span></div></a></li><li><a href="/docs/user_guide/channels/in_app_messages/traditional"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create an in-app message with the traditional editor</span></span></div></a></li></ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
