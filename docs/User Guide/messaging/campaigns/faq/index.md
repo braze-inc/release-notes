@@ -254,6 +254,7 @@ To avoid misalignment, set the maximum recipient limit before launching the camp
 
 Several factors can cause the number of sends to be lower than the estimated audience size:
 
+- **Segment size estimates:** Segment counts are approximations until Braze evaluates membership at send time. See [Measure segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size/) for how estimates are calculated and when exact counts run.
 - **Action-based delivery:** Users only generate sends after they perform the trigger, so sends accumulate over time and can trail the upfront estimate shown when you first built the campaign.
 - **Audience edits after launch:** Changing entry or target filters after launch can leave the **Estimated audience** snapshot out of sync with who still qualifies on later sends (for example, when users aren't eligible to re-enter).
 - **Audience Paths step:** For Canvas, an [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths) step only messages users who match the highest-priority branch they qualify for, which can reduce sends versus a flat segment count.
@@ -271,6 +272,8 @@ Several factors can cause the number of sends to be lower than the estimated aud
 - **Segment re-evaluation:** For action-based or scheduled campaigns that re-evaluate at send time, users who were in the segment when the campaign was enqueued may no longer qualify when the message is actually sent.
 - **Send caps:** A Maximum number of users (or similar cap) in **Target Audiences** stops delivery when the cap is hit.
 - **Strict device or browser filters:** Filters that only match the newest app versions or browsers shrink the reachable set at send time compared to a broad segment preview.
+
+To see why a specific user was skipped at send time, check the [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log).
 
 ### Where are frequently asked questions about global frequency capping?
 

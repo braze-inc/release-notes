@@ -201,17 +201,19 @@ You can, however, set up a campaign that triggers when a user responds with an o
 
 No. Braze doesn't offer a native WhatsApp-to-SMS fallback path. To retry on another channel, segment users with failed WhatsApp sends (for example, through Currents failure events) and target an SMS or email campaign.
 
-#### Are WhatsApp response messages free? {#are-whatsapp-response-messages-free}
+#### How are WhatsApp response messages billed? {#how-are-whatsapp-response-messages-billed}
 
-Response messages composed in the Braze campaign or Canvas editor (not approved WhatsApp templates) are treated as service messages by Meta. Through September 30, 2026, service messages sent through Braze's native WhatsApp integration don't consume Action Credits when they're sent as [response messages](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message#response-messages) within an open customer service window.
+<a id="are-whatsapp-response-messages-free"></a>
 
-Starting October 1, 2026, service messages consume Action Credits per delivered message. This classification depends on the message itself: A non-templated response is a service message, even when the conversation started with a template. If you respond with an approved marketing, utility, or authentication template, the message is billed according to its template category.
+Response messages composed in the Braze campaign or Canvas editor (not approved WhatsApp templates) are treated as service messages by Meta. Starting October 1, 2026, service messages sent through Braze's native WhatsApp integration consume Action Credits per delivered message when sent as [response messages](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message#response-messages) within an open customer service window.
+
+This classification depends on the message itself: A non-templated response is a service message, even when the conversation started with a template. If you respond with an approved marketing, utility, or authentication template, the message is billed according to its template category.
 
 | Message type | Action Credits | Notes |
 |---|---|---|
-| Response message (inbound reply) | Not consumed through September 30, 2026; consumed starting October 1, 2026 | Composed in Braze; not a Meta-approved template. Meta classifies it as a service message. |
+| Response message (inbound reply) | Consumed starting October 1, 2026 | Composed in Braze; not a Meta-approved template. Meta classifies it as a service message. |
 | Template message | Consumed | Marketing, utility, authentication, and limited time offer templates are billed per send. |
-| Utility template in service window | Not charged by Meta through September 30, 2026; charged starting October 1, 2026 | Action Credit consumption follows your contract. |
+| Utility template in service window | Charged by Meta | Action Credit consumption follows your contract. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Response message Action Credits" }
 
 For Canvas flows where users tap quick replies after the original 24-hour window, see [Quick replies and inbound messages outside the 24-hour window](https://www.braze.com/docs/user_guide/channels/whatsapp/message_processing/messaging_users#quick-replies-and-inbound-messages-outside-the-24-hour-window).
@@ -223,7 +225,7 @@ A new 24-hour customer service window opens. See [Quick replies and inbound mess
 No. The default Action Path duration is sufficient. See [Quick replies and inbound messages outside the 24-hour window](https://www.braze.com/docs/user_guide/channels/whatsapp/message_processing/messaging_users#quick-replies-and-inbound-messages-outside-the-24-hour-window).
 
 #### Can I see how many WhatsApp credits a specific campaign or Canvas consumed?
-Not in the Braze dashboard today. Campaign and Canvas analytics show sends, deliveries, and failures, but not credit consumption per message. Send counts do not align one-to-one with credit usage because template category and message type affect billing differently. For billing details, see [Are WhatsApp response messages free?](#are-whatsapp-response-messages-free).
+Not in the Braze dashboard today. Campaign and Canvas analytics show sends, deliveries, and failures, but not credit consumption per message. Send counts do not align one-to-one with credit usage because template category and message type affect billing differently. For billing details, see [How are WhatsApp response messages billed?](#how-are-whatsapp-response-messages-billed).
 
 ### Integrations, data, and reporting
 

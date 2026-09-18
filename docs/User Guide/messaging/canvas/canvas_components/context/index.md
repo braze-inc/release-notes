@@ -195,14 +195,14 @@ All users in a batch are processed before any users advance. After batch process
 
 #### Retry behavior
 
-In Canvas steps (including Context steps), Braze uses Canvas-specific retry mechanisms rather than the standard Connected Content retry behavior. If a Connected Content call fails:
+Connected Content calls in a Canvas retry only when the call includes `:retry`.
 
- - For Message steps, Connected Content calls can retry up to five times. 
- - For all other steps, Braze retries the step approximately 13 times with exponential backoff. 
+- **Context and User Update steps:** Braze retries the Connected Content call at the step level (up to five times). If every retry fails, the user exits the Canvas.
+- **Message steps:** Connected Content with `:retry` still uses the messaging pipeline. Recipients are delayed on the send queue while Braze retries the call up to five times. If every retry fails, the message is aborted and the user advances to the next step.
 
-If all retries fail, the user exits the Canvas.
+For Context and User Update steps, certain retryable step errors—such as a failed promo code fetch or an unexpected step error—can trigger additional step-level retries with exponential backoff (approximately 13 times) before Braze exits the user from the Canvas.
 
-The `:retry` tag used in standard Connected Content doesn't apply to Connected Content calls made within Canvas steps. Canvas steps have their own retry logic optimized for Canvas workflows.
+For more information about the `:retry` tag, see [Connected Content retries](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/connected_content_retries).
 
 The time it takes to process all users through a Context step depends on:
 

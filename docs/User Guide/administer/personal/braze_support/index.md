@@ -6,7 +6,7 @@
 
 To contact the Braze Support team, go to **Support** > **Get help with Operator** to open BrazeAI Operator<sup>TM</sup>.
 
-Operator can troubleshoot your issue using context from your conversation and the current screen. If Operator can't resolve your issue, ask it to draft a support ticket based on your conversation and submit the ticket in the Braze Support Portal (if you are a designated support contact). You can also select <i class="fa-regular fa-circle-question"></i> **Contact Support** inside Operator to file a ticket directly.
+Operator can troubleshoot your issue using context from your conversation and the current screen. If Operator can't resolve your issue, ask it to draft a support ticket based on your conversation and submit the ticket in the Braze Support Portal (if you are a designated support contact). You can also select <i class="fa-regular fa-circle-question"></i> **File a support ticket** inside Operator to file a ticket directly.
 
 For more information, see [file support tickets with BrazeAI Operator](https://www.braze.com/docs/user_guide/brazeai/operator/support_tickets). If you're unsure whether you are a Braze support contact, contact your company's Braze administrator, Braze success manager, or account owner.
 
@@ -14,7 +14,7 @@ For more information, see [file support tickets with BrazeAI Operator](https://w
 
 Designated support contacts can access all support cases for your company, regardless of who submitted them. You can set users as designated support contacts directly from the **Edit user** page. 
 
-1. Go to **Settings** > **Company Users**, then search for the user by their name or email address.
+1. Go to **Settings** > **User Management**, then search for the user by their name or email address.
 2. Either select the user name or hover over the user name row to display a menu. 
 3. In the menu, select **Edit** to be redirected to the **Edit user** page.
 4. Check the checkbox for **Set this user as a Designated Support Contact for Braze Support Portal**.

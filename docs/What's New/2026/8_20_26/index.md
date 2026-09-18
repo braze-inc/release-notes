@@ -81,11 +81,11 @@ For setup details, see [Content Optimizer step](https://www.braze.com/docs/user_
 
 Messages that would send during the window are held for later delivery or aborted, depending on the campaign type. Workspace quiet hours never modify message content.
 
-### Canvas threshold alerts
+### Custom Canvas alerts
 
 
 
-[Canvas threshold alerts](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/canvas_threshold_alerts) notify you when user entries or messages sent fall outside the volume you expect. Set a threshold, choose how often Braze checks it (every 3 to 12 hours, or every 24 hours), and get notified by email, webhook, or both when a rule is met. You can create multiple alerts for the same Canvas, including on drafts—the alert starts checking after the Canvas launches.
+[Custom Canvas alerts](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/custom_canvas_alerts) notify you when user entries or messages sent fall outside the volume you expect. Set a threshold, choose how often Braze checks it (every 3 to 12 hours, or every 24 hours), and get notified by email, webhook, or both when a rule is met. You can create multiple alerts for the same Canvas, including on drafts—the alert starts checking after the Canvas launches.
 
 ### Automatic Team assignment
 
