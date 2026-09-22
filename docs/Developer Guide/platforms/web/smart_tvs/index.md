@@ -11,7 +11,7 @@ For a complete technical reference, check out our [JavaScript Documentation](htt
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web).
+Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web).
 
 ## Configuring the Web Braze SDK
 

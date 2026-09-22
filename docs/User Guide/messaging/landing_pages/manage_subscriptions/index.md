@@ -34,6 +34,10 @@ The block is empty until you add subscription groups to it. To show groups for m
 With the **Manage Subscriptions** block selected, select **+ Add subscription groups** in the right-hand **Manage Subscriptions** panel. The **Add subscription groups** modal opens.
 
 1. On **Select channel**, choose **Email**, **WhatsApp**, or **SMS**. Each card shows how many subscription groups that channel has in your workspace. Each block supports one channel, so if a channel is already used by another **Manage Subscriptions** block on the page, its card is labeled **Added** and can't be selected.
+
+![Add subscription groups modal with Email, WhatsApp, and SMS channel cards in the landing page editor.](https://www.braze.com/docs/assets/img/landing_pages/add_subscription_groups.png?2dc102c3628e5790daed2ebb9c9195d7){: style="max-width:70%;"}
+
+{: start="2" }
 2. On **Select subscription groups**, select the groups to include. The list heading matches the channel (**Email subscription groups**, **SMS subscription groups**, or **WhatsApp subscription groups**).
 3. Select **Add selected**. This button stays disabled until you select at least one group.
 

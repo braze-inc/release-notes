@@ -301,7 +301,7 @@ Test the user experience before implementing link shortening with universal link
 
 ### Are `send_ids` associated with SMS click events?
 
-No. However, you can generally attribute `send_ids` with click events by using [Query Builder](https://www.braze.com/docs/query_builder/) to query Currents data with this query:
+No. However, you can generally attribute `send_ids` with click events by using [Query Builder](https://www.braze.com/docs/query_builder) to query Currents data with this query:
 
 ```sql
 SELECT c.*, s.send_id

@@ -1,6 +1,6 @@
 # Create an in-app message with drag-and-drop
 
-> With the drag-and-drop editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag-and-drop editing experience. For more on the building blocks available in the editor, refer to [Editor blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks?sdktab=in-app%20messages).
+> The drag-and-drop editor is the recommended way to create most in-app messages. Build modal and fullscreen messages with the same core layouts as the traditional editor, plus more customization through rows, Content Blocks, templates, and multi-page flows. For editor building blocks, refer to [Editor blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks?sdktab=in-app%20messages).
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/" title="Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed "></iframe>
@@ -9,7 +9,7 @@
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop editor.
 
-Not sure whether your in-app message should be sent using a campaign or a [Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas)? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys. After you've selected where to build your message, let's dive into the steps to create a drag-and-drop in-app message.
+Not sure whether your in-app message should be sent using a campaign or a [Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas)? Campaigns are better for single, targeted messages, while Canvases are better for multi-step user journeys. After you've selected where to build your message, let's dive into the steps to create a drag-and-drop in-app message.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Not sure whether your in-app message should be sent using a campaign or a [Canva
 
 
 
-Messages created using the drag-and-drop editor can only be sent to users on the minimum SDK versions (see the table in the previous section). If a user hasn't updated their application (that is, they're on an older SDK version), they will not receive the in-app message.
+Messages created using the drag-and-drop editor can only be sent to users on the minimum SDK versions (see the table in the previous section). If a user hasn't updated their application (that is, they're on an older SDK version), they don't receive the in-app message.
 
 To take advantage of all features available in the drag-and-drop editor, update your SDKs to the recommended SDK versions. This allows you to take advantage of the following additional features:
 
@@ -171,7 +171,7 @@ Consider the following questions as you test your in-app message:
 
 ### Why are body clicks not appearing on my analytics page?
 
-Body clicks are not automatically collected for in-app messages created with the drag-and-drop editor. For more details, refer to the SDK changelogs for [iOS](https://www.braze.com/docs/developer_guide/platforms/legacy_sdks/ios/changelog/objc_changelog) and [Android](https://www.braze.com/docs/developer_guide/changelogs?sdktab=android).
+Body clicks are not automatically collected for in-app messages created with the drag-and-drop editor. For more details, refer to the SDK changelogs for [iOS](https://www.braze.com/docs/developer_guide/platforms/legacy_sdks/ios/changelog/swift_changelog) and [Android](https://www.braze.com/docs/developer_guide/changelogs?sdktab=android).
 
 ### Can I segment based on button clicks?
 

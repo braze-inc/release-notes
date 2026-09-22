@@ -1,6 +1,6 @@
 # Log analytics
 
-> When building a custom UI for Content Cards, you must manually log analytics like impressions, clicks, and dismissals, as this is only handled automatically for default card models. Logging these events is a standard part of a Content Card integration and is essential for accurate campaign reporting and billing. To do this, populate your custom UI with data from the Braze data models and then manually log the events. Once you understand how to log analytics, you can see common ways Braze customers [create custom Content Cards](https://www.braze.com/docs/developer_guide/content_cards/creating_cards/). 
+> When building a custom UI for Content Cards, you must manually log analytics like impressions, clicks, and dismissals, as this is only handled automatically for default card models. Logging these events is a standard part of a Content Card integration and is essential for accurate campaign reporting and billing. To do this, populate your custom UI with data from the Braze data models and then manually log the events. Once you understand how to log analytics, you can see common ways Braze customers [create custom Content Cards](https://www.braze.com/docs/developer_guide/content_cards/creating_cards). 
 
 ## Logging analytics
 
@@ -11,7 +11,7 @@ To obtain the Content Card data models, subscribe to Content Card updates. There
 * **`id`**: Represents the Content Card ID string. This is the unique identifier used to log analytics from custom Content Cards.
 * **`extras`**: Encompasses all the key-value pairs from the Braze dashboard. 
 
-All properties outside of `id` and `extras` are optional to parse for custom Content Cards. For more information on the data model, see each platform's integration article: [Android](https://www.braze.com/docs/developer_guide/content_cards/?sdktab=android), [iOS](https://www.braze.com/docs/developer_guide/content_cards/?sdktab=swift), [Web](https://www.braze.com/docs/developer_guide/content_cards/?sdktab=web).
+All properties outside of `id` and `extras` are optional to parse for custom Content Cards. For more information on the data model, see each platform's integration article: [Android](https://www.braze.com/docs/developer_guide/content_cards?sdktab=android), [iOS](https://www.braze.com/docs/developer_guide/content_cards?sdktab=swift), [Web](https://www.braze.com/docs/developer_guide/content_cards?sdktab=web).
 
 
 
@@ -44,7 +44,7 @@ braze.openSession();
 **Note:**
 
 
-Content Cards will only refresh on session start if a subscribe request is called before `openSession()`. You can always choose to [manually refresh the feed](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/feed/) as well.
+Content Cards will only refresh on session start if a subscribe request is called before `openSession()`. You can always choose to [manually refresh the feed](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/feed) as well.
 
 
 
@@ -462,7 +462,7 @@ On-click behavior is handled automatically by the default Content Cards UI. For 
 
 
 
-When a user clicks a Content Card in a custom feed, the on-click behavior is not handled automatically. After logging the click with `Braze.logContentCardClicked(cardId)`, call `Braze.processContentCardClickAction(cardId)` to process deep links, URLs, and `brazeActions://` actions. For method reference, see [React Native Content Cards](https://www.braze.com/docs/developer_guide/content_cards/?sdktab=react%20native).
+When a user clicks a Content Card in a custom feed, the on-click behavior is not handled automatically. After logging the click with `Braze.logContentCardClicked(cardId)`, call `Braze.processContentCardClickAction(cardId)` to process deep links, URLs, and `brazeActions://` actions. For method reference, see [React Native Content Cards](https://www.braze.com/docs/developer_guide/content_cards?sdktab=react%20native).
 
 ```javascript
 import Braze from "@braze/react-native-sdk";

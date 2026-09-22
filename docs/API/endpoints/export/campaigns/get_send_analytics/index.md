@@ -1,4 +1,4 @@
-<div id='api_vnnoycitjlkb' class='api_div' data-search-keywords='export send analytics data time messages ios_push variation_name sent delivered undelivered delivery_failed direct_opens total_opens bounces body_clicks revenue unique_recipients conversions conversions_by_send_time conversions1 conversions1_by_send_time conversions2 conversions2_by_send_time conversions3 conversions3_by_send_time message'>
+<div id='api_dobdciagujka' class='api_div' data-search-keywords='export send analytics data time messages ios_push variation_name sent delivered undelivered delivery_failed direct_opens total_opens bounces body_clicks revenue unique_recipients conversions conversions_by_send_time conversions1 conversions1_by_send_time conversions2 conversions2_by_send_time conversions3 conversions3_by_send_time message'>
 <h1 id="export-send-analytics">Export send analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/sends/data_series</p>
@@ -12,7 +12,7 @@
 
 <p><strong>Note:</strong></p>
 
-<p>do not always match  or aggregates you build from <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> one-for-one. Dashboard metrics and API time series use different aggregation windows and definitions than raw Currents events. For common reconciliation notes, see <a href="/docs/user_guide/data/distribution/braze_currents/faq/">Currents FAQ</a>.</p>
+<p>do not always match  or aggregates you build from <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> one-for-one. Dashboard metrics and API time series use different aggregation windows and definitions than raw Currents events. For common reconciliation notes, see <a href="/docs/user_guide/data/distribution/braze_currents/faq">Currents FAQ</a>.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76f822a8-a13b-4bfb-b20e-72b5013dfe86" class="seeme">See me in Postman</a></div>
 

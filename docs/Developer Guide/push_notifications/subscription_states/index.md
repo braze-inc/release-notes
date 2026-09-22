@@ -31,7 +31,7 @@ Braze does not automatically change a user's push subscription state to `Unsubsc
 
 ### Push registration and reachable users
 
-Push subscription state reflects a user's preference, but whether they count as **reachable** for push in the dashboard also depends on [push registration](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_token_lifecycle/)—that is, a valid foreground push token on their profile. For how Braze calculates channel-level counts, see [Measure segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size/).
+Push subscription state reflects a user's preference, but whether they count as **reachable** for push in the dashboard also depends on [push registration](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_token_lifecycle)—that is, a valid foreground push token on their profile. For how Braze calculates channel-level counts, see [Measure segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size).
 
 - **Push campaigns and Canvases:** Users who aren't push registered aren't included in **Reachable users** for Android Push or iOS Push in audience statistics, even when their push subscription state is `Subscribed` or `Opted-In`.
 - **Other channels:** The same users can still count as reachable for other channels they qualify for (for example, email or in-app messages).
@@ -39,7 +39,7 @@ Push subscription state reflects a user's preference, but whether they count as 
 
 A user profile can show push subscription state `Subscribed` while no push token is assigned. Those users still don't count toward **Reachable users** for Android Push or iOS Push until Braze records a valid token.
 
-For filter definitions, see [Segmentation filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters/).
+For filter definitions, see [Segmentation filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters).
 
 ### Updating push subscription states {#update-push-subscription-state}
 
@@ -78,7 +78,7 @@ You can update a user's subscription state with the Braze SDK using the `setPush
 
 #### REST API
 
-You can update a user's subscription state with the Braze REST API using the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) to update their [`push_subscribe`](https://www.braze.com/docs/api/objects_filters/user_attributes_object) attribute.
+You can update a user's subscription state with the Braze REST API using the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) to update their [`push_subscribe`](https://www.braze.com/docs/api/objects_filters/user_attributes_object) attribute.
 
 ### Differences between push enablement and push subscription status
 
@@ -100,5 +100,5 @@ Review **Contact Settings** on the user's profile after import and again after t
 
 You can check a user's push subscription state with Braze in any of the following ways:
 
-* **User profile:** You can access individual user profiles through the Braze dashboard on the **[User Search](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles/)** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state.
-* **REST API export:** You can export individual user profiles in JSON format using the export [Users by segment](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment/) or [Users by identifier](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/) endpoints. Braze returns a push tokens object that contains push enablement information per device.
+* **User profile:** You can access individual user profiles through the Braze dashboard on the **[User Search](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles)** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state.
+* **REST API export:** You can export individual user profiles in JSON format using the export [Users by segment](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment) or [Users by identifier](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier) endpoints. Braze returns a push tokens object that contains push enablement information per device.

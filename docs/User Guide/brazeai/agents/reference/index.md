@@ -9,7 +9,7 @@ When you set up an agent, you can choose the model it uses to generate responses
 **Important:**
 
 
-The Braze-powered **Auto** model is optimized for models whose thinking capabilities are sufficient to perform tasks such as catalog search and segment membership. When using other models, we recommend testing to confirm your model works well for your use case. You may need to adjust your [instructions](#writing-instructions) to give different levels of detail or step-by-step thinking to models with different speeds and capabilities.
+The Braze-powered **Auto** model is optimized for models whose thinking capabilities are sufficient to perform tasks such as retrieving catalog data through knowledge sources and checking segment membership. When using other models, we recommend testing to confirm your model works well for your use case. You may need to adjust your [instructions](#writing-instructions) to give different levels of detail or step-by-step thinking to models with different speeds and capabilities.
 
 
 
@@ -174,11 +174,11 @@ Agent context is not open-ended conversational memory. Unlike a chat assistant, 
 Design each agent as a deliberate input-to-output pipeline. Wire every data point the agent needs using one or more of the following:
 
 1. **Liquid in instructions:** Template user attributes (`{{${first_name}}}`) and [Canvas context variables](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables) (`{{context.${variable_name}}}`) directly in the agent prompt.
-2. **+ Agent context:** Select catalogs, segment membership, brand guidelines, **All Canvas Context**, or user interaction data in Agent Console.
+2. **+ Agent context:** Select [knowledge sources](https://www.braze.com/docs/user_guide/brazeai/agents/knowledge_sources), segment membership, brand guidelines, **All Canvas Context**, or user interaction data in Agent Console.
 3. [Context steps](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context): Set or update `context.*` variables upstream in the Canvas before an Agent step runs.
 4. **Additional context on the Agent step:** Pass any additional Liquid-templated values not already specified using the other methods to the agent at send time from the step configuration.
 
-Make sure to either Liquid template these context variables in the agent instructions or select **Add All Canvas Context**. If a value is not passed through one of these channels, the agent does not receive it. List required inputs in your instructions or in [use case prerequisites](https://www.braze.com/docs/user_guide/brazeai/agents/examples), and verify inputs in **Agent Console** > **Logs** after testing.
+Make sure to either Liquid template these context variables in the agent instructions, attach [context files](#context-files) the agent should consult, or select **Add All Canvas Context**. If a value is not passed through one of these channels, the agent does not receive it. List required inputs in your instructions or in [use case prerequisites](https://www.braze.com/docs/user_guide/brazeai/agents/examples), and verify inputs in **Agent Console** > **Logs** after testing.
 
 ![The details for an agent that has Liquid in its instructions.](https://www.braze.com/docs/assets/img/ai_agent/using_liquid_example.png?7f3f7b313686fe11fcd0cf8d860600d5){: style="max-width:50%;"}
 
@@ -268,11 +268,11 @@ If you want to collect user feedback for their most recent dining experience at 
 
 
 
-## Catalogs and fields
+## Catalog context and fields {#catalogs-and-fields}
 
-Choose specific catalogs for an agent to reference and to give your agent the context it needs to understand your products and other non-user data when relevant. Agents use tools to find the relevant items only and send those to the LLM to minimize token use. For better catalog retrieval, create a [knowledge source](https://www.braze.com/docs/user_guide/brazeai/agents/knowledge_sources) and add it as agent context instead of attaching the catalog directly.
+To give a Canvas Step Agent access to catalog data, create a [knowledge source](https://www.braze.com/docs/user_guide/brazeai/agents/knowledge_sources) from the catalog and add it as **+ Agent context**. The agent queries the knowledge source to retrieve matching rows and sends only the relevant catalog data to the LLM, which minimizes token use and improves retrieval accuracy. Do not attach the catalog directly as agent context. Agents configured with the legacy **Add catalog fields** option before knowledge sources were available can continue using that context until you migrate them.
 
-![The "restaurants" catalog and "Loyalty_Program" column selected for the agent to search.](https://www.braze.com/docs/assets/img/ai_agent/search_catalog.png?22c9c43da8f153c8e064ca038154ea88){: style="max-width:75%;"}
+![A knowledge source "nyc_restaurants" that references the catalog "nyc_restaurants".](https://www.braze.com/docs/assets/img/ai_agent/knowledge_source_example2.png?cc739bb9fe00c6915ec6773f51215842){: style="max-width:75%;"}
 
 When you deploy a Catalog Agent to a catalog field, enable the required-input control and choose which selected columns are required to run before the agent invokes. The agent skips a row only when one of those required columns is blank or missing—for example, a `gender` field that has not been filled in yet. Selected columns start as required by default, but you can remove columns that may be empty without blocking the run. This prevents wasted tokens on incomplete data.
 
@@ -290,6 +290,22 @@ You can select up to five segments for the agent to cross-reference each user's 
 
 You can select [brand guidelines](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/brand_guidelines) for your agent to adhere to in its responses. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
 
+## Context files {#context-files}
+
+Upload reference documents so an agent can consult static material on every invocation—for example, a tone guide, policy document, or product specification. Context files are available for Canvas Step Agents and Catalog Agents.
+
+To attach files:
+
+1. In the **Instructions** step, select **+ Agent context** > **Upload files**.
+2. Add one or more files. Supported types are PDF, TXT, MD, and CSV.
+3. Save the agent. Files upload when you save. They remain staged in the browser and are included when you preview the agent.
+
+You can attach up to 10 files per agent. All attached files together can total up to 15 MB. When you attach context files, tell the agent in your instructions how to use them. For example, you can include: "Follow the tone and terminology in the attached style guide." An empty **Files** section counts toward the **needs setup** warning until you attach at least one file.
+
+Braze sends attached files with every agent invocation, including Agent Console previews. Because files are included on each run, larger attachments can increase token use and latency.
+
+Context files differ from [brand guidelines](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/brand_guidelines): brand guidelines are synthesized workspace settings, while context files are documents you upload directly to a single agent. For setup steps, see [Add context](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents#add-resources).
+
 ## User-specific interaction history {#user-history}
 
 A user's interaction data includes their recently received campaign and Canvas messages by channel, the contents of each message, and whether the user interacted with each message. You can include this as user-specific context for an agent to reference when it's invoked for a user in Canvas. User-specific interaction history can help influence an agent to write copy that resonates with each user when its job is to write personalized message copy.
@@ -302,7 +318,7 @@ Agent Console records a new version each time you save agent changes. The **Vers
 2. Select the **Version history** tab.
 3. Select a version to review its configuration.
 
-To inspect what changed in a version, select **View**. Braze displays a code-style inline diff that highlights additions and deletions. Deleted content appears with red strikethrough styling.
+To inspect what changed in a version, select **View**. Braze displays a code-style inline diff that highlights additions and deletions. Deleted content appears with red strikethrough styling. When you add or remove [context files](#context-files), the diff lists the attached file names.
 
 ![Agent Console version history with the Differences from previous version panel open, showing inline additions in green and deletions in red for agent instructions.](https://www.braze.com/docs/assets/img/ai_agent/instruction_differences.png?5e1f444f71a3844cf3f6fef2f9db6d94){: style="max-width:75%;"}
 
@@ -328,4 +344,3 @@ As you create more custom agents, you can organize the **Agent Management** page
 
 1. Hover over the agent's row and select the <i class="fas fa-ellipsis-vertical"></i> menu.
 2. Select **Archive**.
-

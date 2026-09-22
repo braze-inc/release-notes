@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android).
 
 ## Making an inbox with Content Cards for Android (Compose)
 
@@ -404,7 +404,7 @@ Impressions should only be logged once when a card is viewed by the user. Here, 
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift). You'll also need to [enable in-app messages for Swift](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=swift#swift_enabling-in-app-messages).
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift). You'll also need to [enable in-app messages for Swift](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=swift#swift_enabling-in-app-messages).
 
 ## Making an inbox with Content Cards for Swift
 
@@ -579,7 +579,7 @@ Impressions should only be logged once when viewed by the user. Here, a naive me
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web). However, no additional setup is required.
+Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web). However, no additional setup is required.
 
 ## Making an inbox with Content Cards for Web
 

@@ -76,7 +76,7 @@ If you want things like API-triggered launching and Connected Content, discuss t
 
 Work together with your engineer to make sure everything is working. Send [test messages](https://www.braze.com/docs/developer_guide/in_app_messages/sending_test_messages), use our [test apps for Android](https://www.braze.com/docs/developer_guide/references?tab=android) and [test apps for iOS](https://www.braze.com/docs/developer_guide/references?tab=swift), check every box before you start sending!
 
-We even have specific instructions for [testing your Android or FireOS integration](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android) and testing [push for iOS](https://www.braze.com/docs/developer_guide/platforms/legacy_sdks/ios/push_notifications/testing).
+We even have specific instructions for [testing your Android or FireOS integration](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android) and testing [push for iOS](https://www.braze.com/docs/developer_guide/push_notifications/sending_test_messages).
 
 ## After implementation
 

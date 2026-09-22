@@ -354,7 +354,7 @@ Adds a standard button with configurable styling, links, and analytics.
 | --- | --- |
 | Submit form when button is clicked | Submits the form and performs the selected on-click behavior. Turn this off to only perform the on-click behavior. |
 | Set separate behaviors for each platform | Customizes the behavior of the button for each platform separately. |
-| On-click behavior | Determines the action when the user clicks the button, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/). |
+| On-click behavior | Determines the action when the user clicks the button, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages). |
 | Log custom attributes or events | Determines whether clicking the button updates the user's profile with custom data. You can also select the identifier for reporting. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
@@ -440,7 +440,7 @@ For image specifications, refer to our [in-app message image specifications](htt
 | Alt text | The written copy that appears in place of an image if the image fails to load. Screen readers announce alt text to explain images, so use plain language to provide key information about an image. |
 | Submit form when image is clicked | Submits the form and performs the selected on-click behavior. Turn this off to only perform the on-click behavior. |
 | Set separate behaviors for each platform | Customizes the behavior of the image for each platform separately. |
-| On-click behavior | Determines the action when the user clicks the image, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/). |
+| On-click behavior | Determines the action when the user clicks the image, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages). |
 | Log custom attributes or events | Determines whether clicking the image updates the user's profile with custom data. You can also select the identifier for reporting. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
@@ -493,7 +493,7 @@ Inserts a form field for phone numbers. When submitted, the user is subscribed t
 
 | Property | Description |
 | --- | --- |
-| Subscription group | The [SMS](https://www.braze.com/docs/sms_rcs_subscription_groups/) or [WhatsApp](https://www.braze.com/docs/whatsapp_subscription_groups/) subscription group the user is subscribed to on submit. Includes an option to collect phone numbers from all countries. |
+| Subscription group | The [SMS](https://www.braze.com/docs/sms_rcs_subscription_groups) or [WhatsApp](https://www.braze.com/docs/whatsapp_subscription_groups) subscription group the user is subscribed to on submit. Includes an option to collect phone numbers from all countries. |
 | Text alignment | Moves the text to be aligned left, center, right, or justified. |
 | Placeholder text | A placeholder phone number to display. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
@@ -617,6 +617,37 @@ Multi-line text field for survey-style flows. If you don't see this block, conta
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
+### Rating
+
+Collects a numeric rating on a configurable scale as a form block. When a user submits the survey, their rating is saved as a survey response. This block is available only when **Message type** is set to **Survey**.
+
+| Property | Description |
+|---|---|
+| Required input field | When enabled, users must complete this field before submitting the form. |
+| Scale | The rating scale: 1–5, 1–10, or 0–10. |
+| Hide label | Hides the question label for the rating scale. |
+| Hide scale labels | Hides the low-end and high-end anchor labels. |
+| Identifier for reporting | A name to identify this question in your reports. |
+| Save to user profile | Saves the response as a custom attribute to build segments and personalize messages. |
+| Custom attribute name | The custom attribute that stores the response when **Save to user profile** is enabled. |
+| Pre-fill from user profile | Pre-populates the field with the user's saved value for this attribute. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Rating" }
+
+### NPS
+
+Adds an NPS (Net Promoter Score) rating scale of 0–10 as a form block. When a user submits the survey, their rating is saved as a survey response. This block is available only when **Message type** is set to **Survey**.
+
+| Property | Description |
+|---|---|
+| Required input field | When enabled, users must complete this field before submitting the form. |
+| Hide label | Hides the question label for the rating scale. |
+| Hide scale labels | Hides the "Not at all likely" and "Extremely likely" anchor labels. |
+| Identifier for reporting | A name to identify this question in your reports. |
+| Save to user profile | Saves the response as a custom attribute to build segments and personalize messages. |
+| Custom attribute name | The custom attribute that stores the response when **Save to user profile** is enabled. |
+| Pre-fill from user profile | Pre-populates the field with the user's saved value for this attribute. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="NPS" }
+
 <!-- Saved row is not yet released. Uncomment when available.
 ### Saved row
 
@@ -677,7 +708,7 @@ Adds a clickable element for actions such as opening a link or submitting a form
 | --- | --- |
 | Submit form when button is clicked | Submits the form and performs the selected on-click behavior. Turn this off to only perform the on-click behavior. |
 | Set separate behaviors for each platform | Customizes the behavior of the button for each platform separately. |
-| On-click behavior | Determines the action when the user clicks the button, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/). |
+| On-click behavior | Determines the action when the user clicks the button, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages). |
 | Log custom attributes or events | Determines whether clicking the button updates the user's profile with custom data. You can also select the identifier for reporting. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
@@ -768,7 +799,7 @@ Displays an image from an upload or external URL.
 | Alt text | The written copy that appears in place of an image if the image fails to load. Screen readers announce alt text to explain images, so use plain language to provide key information about an image. |
 | Submit form when image is clicked | Submits the form and performs the selected on-click behavior. Turn this off to only perform the on-click behavior. |
 | Set separate behaviors for each platform | Customizes the behavior of the image for each platform separately. |
-| On-click behavior | Determines the action when the user clicks the image, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/). |
+| On-click behavior | Determines the action when the user clicks the image, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages). |
 | Log custom attributes or events | Determines whether clicking the image updates the user's profile with custom data. You can also select the identifier for reporting. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
@@ -846,13 +877,13 @@ Adds a form field for phone numbers. On submit, subscribes the user to your sele
 
 | Property | Description |
 | --- | --- |
-| Subscription group | The [SMS](https://www.braze.com/docs/sms_rcs_subscription_groups/) or [WhatsApp](https://www.braze.com/docs/whatsapp_subscription_groups/) subscription group the user is subscribed to on submit. Includes an option to collect phone numbers from all countries. |
+| Subscription group | The [SMS](https://www.braze.com/docs/sms_rcs_subscription_groups) or [WhatsApp](https://www.braze.com/docs/whatsapp_subscription_groups) subscription group the user is subscribed to on submit. Includes an option to collect phone numbers from all countries. |
 | Text alignment | Moves the text to be aligned left, center, right, or justified. |
 | Placeholder text | A placeholder phone number to display. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
-### Input field
+### Short text
 
 Adds a form field for standard attributes (for example, first or last name) or a custom attribute string.
 
@@ -975,6 +1006,37 @@ Multi-line text field for survey-style flows. If you don't see this block, conta
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
+### Rating
+
+Collects a numeric rating on a configurable scale as a form block. When a visitor submits the survey, their rating is saved as a survey response. This block is available only when **Message type** is set to **Survey**.
+
+| Property | Description |
+|---|---|
+| Required input field | When enabled, visitors must complete this field before submitting the form. |
+| Scale | The rating scale: 1–5, 1–10, or 0–10. |
+| Hide label | Hides the question label for the rating scale. |
+| Hide scale labels | Hides the low-end and high-end anchor labels. |
+| Identifier for reporting | A name to identify this question in your reports. |
+| Save to user profile | Saves the response as a custom attribute to build segments and personalize messages. |
+| Custom attribute name | The custom attribute that stores the response when **Save to user profile** is enabled. |
+| Pre-fill from user profile | Pre-populates the field with the user's saved value for this attribute. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Rating" }
+
+### NPS
+
+Adds an NPS (Net Promoter Score) rating scale of 0–10 as a form block. When a visitor submits the survey, their rating is saved as a survey response. This block is available only when **Message type** is set to **Survey**.
+
+| Property | Description |
+|---|---|
+| Required input field | When enabled, visitors must complete this field before submitting the form. |
+| Hide label | Hides the question label for the rating scale. |
+| Hide scale labels | Hides the "Not at all likely" and "Extremely likely" anchor labels. |
+| Identifier for reporting | A name to identify this question in your reports. |
+| Save to user profile | Saves the response as a custom attribute to build segments and personalize messages. |
+| Custom attribute name | The custom attribute that stores the response when **Save to user profile** is enabled. |
+| Pre-fill from user profile | Pre-populates the field with the user's saved value for this attribute. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="NPS" }
+
 <!-- Saved row is not yet released. Uncomment when available.
 ### Saved row
 
@@ -1037,7 +1099,7 @@ Adds a clickable button. You can set links and analytics options in the properti
 | --- | --- |
 | Submit form when button is clicked | Submits the form and performs the selected on-click behavior. Turn this off to only perform the on-click behavior. |
 | Set separate behaviors for each platform | Customizes the behavior of the button for each platform separately. |
-| On-click behavior | Determines the action when the user clicks the button, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/). |
+| On-click behavior | Determines the action when the user clicks the button, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages). |
 | Log custom attributes or events | Determines whether clicking the button updates the user's profile with custom data. You can also select the identifier for reporting. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
@@ -1103,7 +1165,7 @@ Displays an image from a hosted URL. Configure display options in the properties
 | Alt text | The written copy that appears in place of an image if the image fails to load. Screen readers announce alt text to explain images, so use plain language to provide key information about an image. |
 | Submit form when image is clicked | Submits the form and performs the selected on-click behavior. Turn this off to only perform the on-click behavior. |
 | Set separate behaviors for each platform | Customizes the behavior of the image for each platform separately. |
-| On-click behavior | Determines the action when the user clicks the image, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/). |
+| On-click behavior | Determines the action when the user clicks the image, such as closing the message, opening a web URL, deep linking into a specific page of the app, going to another page, or [requesting push permission](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages). |
 | Log custom attributes or events | Determines whether clicking the image updates the user's profile with custom data. You can also select the identifier for reporting. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
@@ -1156,7 +1218,7 @@ Collects a phone number. On submit, subscribes the user to your selected [SMS](h
 
 | Property | Description |
 | --- | --- |
-| Subscription group | The [SMS](https://www.braze.com/docs/sms_rcs_subscription_groups/) or [WhatsApp](https://www.braze.com/docs/whatsapp_subscription_groups/) subscription group the user is subscribed to on submit. Includes an option to collect phone numbers from all countries. |
+| Subscription group | The [SMS](https://www.braze.com/docs/sms_rcs_subscription_groups) or [WhatsApp](https://www.braze.com/docs/whatsapp_subscription_groups) subscription group the user is subscribed to on submit. Includes an option to collect phone numbers from all countries. |
 | Text alignment | Moves the text to be aligned left, center, right, or justified. |
 | Placeholder text | A placeholder phone number to display. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
@@ -1304,6 +1366,19 @@ Displays an image from the [media library](https://www.braze.com/docs/user_guide
 | Background color | Modifies the color of the image's background. |
 | Border style | Determines the style of the image's border. |
 | Border radius | Determines how round the corners of the image are. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
+
+
+### Link
+
+Inserts a hyperlink that users can click to navigate to a specified URL. Can be embedded within text or standalone.
+
+| Property | Description |
+| --- | --- |
+| Font family | The font style for the text. |
+| Font weight | Determines the thickness of the text. |
+| Letter spacing | Modifies the distance in between each character. |
+| Text color | Modifies the color of the text. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 

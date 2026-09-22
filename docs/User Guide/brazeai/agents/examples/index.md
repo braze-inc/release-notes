@@ -55,7 +55,7 @@ Every example asks the model to return an `explanation` field alongside its outp
 
 <!--overview-end-->
 
-<div id='api_rvjjdpwrobxm' class='api_div' data-search-keywords='write personalized messaging based on a user’s context content generation, canvas step agent use this canvas step agent to generate coordinated email subject lines, preheaders, and push notification title and body copy for users who searched in the app but did not book. the goal is to retarget them in a canvas journey with localized, brand-safe messaging that drives checkout while respecting each channel’s character limits.'>
+<div id='api_getorsadrsli' class='api_div' data-search-keywords='write personalized messaging based on a user’s context content generation, canvas step agent use this canvas step agent to generate coordinated email subject lines, preheaders, and push notification title and body copy for users who searched in the app but did not book. the goal is to retarget them in a canvas journey with localized, brand-safe messaging that drives checkout while respecting each channel’s character limits.'>
 <h2 id="write-personalized-messaging-based-on-a-users-context">Write personalized messaging based on a user’s context</h2>
 
 <div class="api_tags" data-tags="Content generation, canvas step agent" data-tags-lower="content generation, canvas step agent"></div>
@@ -173,7 +173,7 @@ The user IS in the segment: “Logged multiple searches in the past 30D”.
 
 </div>
 
-<div id='api_idrajtemwixt' class='api_div' data-search-keywords='analyze user feedback to determine next steps data standardization, canvas step agent this example describes how a canvas step agent can analyze user feedback from post-trip surveys and categorize sentiment and topics. the goal of this agent is to determine the next steps for a separate crm platform.'>
+<div id='api_qmwctzdvtgxs' class='api_div' data-search-keywords='analyze user feedback to determine next steps data standardization, canvas step agent this example describes how a canvas step agent can analyze user feedback from post-trip surveys and categorize sentiment and topics. the goal of this agent is to determine the next steps for a separate crm platform.'>
 <h2 id="analyze-user-feedback-to-determine-next-steps">Analyze user feedback to determine next steps</h2>
 
 <div class="api_tags" data-tags="Data standardization, canvas step agent" data-tags-lower="data standardization, canvas step agent"></div>
@@ -267,7 +267,7 @@ Input &amp; Output Example:
 
 </div>
 
-<div id='api_ttestibtrcyi' class='api_div' data-search-keywords='categorize users into interest buckets from existing attributes affinity agent, canvas step agent this example describes how a canvas step agent can classify users into specific interest buckets based on existing custom attributes and high-intent behavioral signals, then recommend the single best next experience or item. the goal is to route users to precisely targeted experiences—such as cart recovery or category-specific recommendations—grounded only in verified data, without hallucinating attributes that aren’t present.'>
+<div id='api_utbvxmwwzjwd' class='api_div' data-search-keywords='categorize users into interest buckets from existing attributes affinity agent, canvas step agent this example describes how a canvas step agent can classify users into specific interest buckets based on existing custom attributes and high-intent behavioral signals, then recommend the single best next experience or item. the goal is to route users to precisely targeted experiences—such as cart recovery or category-specific recommendations—grounded only in verified data, without hallucinating attributes that aren’t present.'>
 <h2 id="categorize-users-into-interest-buckets-from-existing-attributes">Categorize users into interest buckets from existing attributes</h2>
 
 <div class="api_tags" data-tags="Affinity agent, canvas step agent" data-tags-lower="affinity agent, canvas step agent"></div>
@@ -386,7 +386,7 @@ Recent Search: "cordless drill"
 
 </div>
 
-<div id='api_fqfunoggpzls' class='api_div' data-search-keywords='route users to the most relevant canvas path from recent behavior affinity agent, canvas step agent this example describes how a canvas step agent can infer a user’s current motivation from recent behavior and context—such as recent favorites or search history—and return the single best route key for their next step. the goal is to send each user down the most relevant canvas path without manual segmentation.'>
+<div id='api_frxbyqongokw' class='api_div' data-search-keywords='route users to the most relevant canvas path from recent behavior affinity agent, canvas step agent this example describes how a canvas step agent can infer a user’s current motivation from recent behavior and context—such as recent favorites or search history—and return the single best route key for their next step. the goal is to send each user down the most relevant canvas path without manual segmentation.'>
 <h2 id="route-users-to-the-most-relevant-canvas-path-from-recent-behavior">Route users to the most relevant Canvas path from recent behavior</h2>
 
 <div class="api_tags" data-tags="Affinity agent, canvas step agent" data-tags-lower="affinity agent, canvas step agent"></div>
@@ -490,7 +490,7 @@ Recently Engaged Products: Drill bits
 
 </div>
 
-<div id='api_kgrhzkpzcfqq' class='api_div' data-search-keywords='assign users to interest categories from real-time high-intent actions affinity agent, canvas step agent this example describes how a canvas step agent can assign users to one to three interest categories based on recent high-intent actions and behavioral context (passed through canvas context), then recommend the single best next experience or item. the goal is to personalize the next step of a customer journey in real time using verified behavioral signals rather than assumptions.'>
+<div id='api_glftoctujmbn' class='api_div' data-search-keywords='assign users to interest categories from real-time high-intent actions affinity agent, canvas step agent this example describes how a canvas step agent can assign users to one to three interest categories based on recent high-intent actions and behavioral context (passed through canvas context), then recommend the single best next experience or item. the goal is to personalize the next step of a customer journey in real time using verified behavioral signals rather than assumptions.'>
 <h2 id="assign-users-to-interest-categories-from-real-time-high-intent-actions">Assign users to interest categories from real-time high-intent actions</h2>
 
 <div class="api_tags" data-tags="Affinity agent, canvas step agent" data-tags-lower="affinity agent, canvas step agent"></div>
@@ -614,7 +614,7 @@ Recent Search: "18v cordless drill"
 
 </div>
 
-<div id='api_bbgshjfzpbku' class='api_div' data-search-keywords='classify inbound messages for opt-out intent classification and routing, canvas step agent this example describes how a canvas step agent can evaluate one inbound customer message at a time and return whether it should be treated as a request to opt out of future messaging (for example, stop, unsubscribe, or revoke consent). the goal is to output a strict boolean so you can branch journeys conservatively, reducing the risk of messaging after revocation while avoiding false positives when the user is clearly asking a question or continuing to engage.'>
+<div id='api_jmflthyficez' class='api_div' data-search-keywords='classify inbound messages for opt-out intent classification and routing, canvas step agent this example describes how a canvas step agent can evaluate one inbound customer message at a time and return whether it should be treated as a request to opt out of future messaging (for example, stop, unsubscribe, or revoke consent). the goal is to output a strict boolean so you can branch journeys conservatively, reducing the risk of messaging after revocation while avoiding false positives when the user is clearly asking a question or continuing to engage.'>
 <h2 id="classify-inbound-messages-for-opt-out-intent">Classify inbound messages for opt-out intent</h2>
 
 <div class="api_tags" data-tags="Classification and routing, canvas step agent" data-tags-lower="classification and routing, canvas step agent"></div>
@@ -734,7 +734,7 @@ Input: “This sucks—what’s the promo code?” → false
 
 </div>
 
-<div id='api_maqevrzvbafy' class='api_div' data-search-keywords='standardize inbound messages into structured data for automation data standardization, canvas step agent this example describes how a canvas step agent can normalize messy, unstructured inbound sms or chat replies into a consistent structured format—classifying intent, extracting entities, and flagging compliance signals such as opt-outs and pii. the goal is to give downstream automation and internal notifications clean, machine-readable data for reliable routing.'>
+<div id='api_inmxmygeborp' class='api_div' data-search-keywords='standardize inbound messages into structured data for automation data standardization, canvas step agent this example describes how a canvas step agent can normalize messy, unstructured inbound sms or chat replies into a consistent structured format—classifying intent, extracting entities, and flagging compliance signals such as opt-outs and pii. the goal is to give downstream automation and internal notifications clean, machine-readable data for reliable routing.'>
 <h2 id="standardize-inbound-messages-into-structured-data-for-automation">Standardize inbound messages into structured data for automation</h2>
 
 <div class="api_tags" data-tags="Data standardization, canvas step agent" data-tags-lower="data standardization, canvas step agent"></div>
@@ -848,7 +848,7 @@ Raw message: "STOP sending me these texts!!!"
 
 </div>
 
-<div id='api_xdzjgepmoybb' class='api_div' data-search-keywords='write high-converting descriptions that align with brand guidelines content generation, catalog agent this example describes how a catalog agent can leverage user data and brand guidelines. the goal of this catalog agent is to use brand guidelines to generate short descriptions for each travel destination and explanations for how the agent generated them.'>
+<div id='api_qdcwsimphxbu' class='api_div' data-search-keywords='write high-converting descriptions that align with brand guidelines content generation, catalog agent this example describes how a catalog agent can leverage user data and brand guidelines. the goal of this catalog agent is to use brand guidelines to generate short descriptions for each travel destination and explanations for how the agent generated them.'>
 <h2 id="write-high-converting-descriptions-that-align-with-brand-guidelines">Write high-converting descriptions that align with brand guidelines</h2>
 
 <div class="api_tags" data-tags="Content generation, catalog agent" data-tags-lower="content generation, catalog agent"></div>
@@ -947,7 +947,7 @@ Price Tier: $$$
 
 </div>
 
-<div id='api_ksxlshnfnaxf' class='api_div' data-search-keywords='provide translations based on language used by region catalog enrichment, catalog agent this example describes how a catalog agent can translate english ui and marketing strings into each region’s target language using catalog rows that define locale, ui placement, and character limits. the goal is to produce localized text you map back to your catalog columns, with explanations when shortening, locale choices, or manual review apply.'>
+<div id='api_qacgtwivzatf' class='api_div' data-search-keywords='provide translations based on language used by region catalog enrichment, catalog agent this example describes how a catalog agent can translate english ui and marketing strings into each region’s target language using catalog rows that define locale, ui placement, and character limits. the goal is to produce localized text you map back to your catalog columns, with explanations when shortening, locale choices, or manual review apply.'>
 <h2 id="provide-translations-based-on-language-used-by-region">Provide translations based on language used by region</h2>
 
 <div class="api_tags" data-tags="Catalog enrichment, catalog agent" data-tags-lower="catalog enrichment, catalog agent"></div>
@@ -1063,7 +1063,7 @@ Max Characters: 20
 
 </div>
 
-<div id='api_plltywvfivqq' class='api_div' data-search-keywords='enrich catalog items with descriptions, categories, and tags catalog enrichment, catalog agent this example describes how a catalog agent can enhance existing catalog items by generating an improved product description (45–90 words), a standardized category, and a set of tags from the item’s existing data. the goal is to scale on-brand catalog enrichment across many products without manual copywriting, while avoiding hallucinated facts or prohibited claims.'>
+<div id='api_wswsmkhlfxbr' class='api_div' data-search-keywords='enrich catalog items with descriptions, categories, and tags catalog enrichment, catalog agent this example describes how a catalog agent can enhance existing catalog items by generating an improved product description (45–90 words), a standardized category, and a set of tags from the item’s existing data. the goal is to scale on-brand catalog enrichment across many products without manual copywriting, while avoiding hallucinated facts or prohibited claims.'>
 <h2 id="enrich-catalog-items-with-descriptions-categories-and-tags">Enrich catalog items with descriptions, categories, and tags</h2>
 
 <div class="api_tags" data-tags="Catalog enrichment, catalog agent" data-tags-lower="catalog enrichment, catalog agent"></div>
@@ -1166,12 +1166,12 @@ existing_category: "hydration"
 
 </div>
 
-<div id='api_jfavctojatrh' class='api_div' data-search-keywords='standardize unstructured input with approximate catalog matching data standardization, canvas step agent this example describes how a canvas step agent can process unstructured user input—such as manually typed text with typos or variations—and use llm-assisted matching against catalog search results to standardize it against known catalog items. the goal is to identify what the user actually meant from their imperfect input, which is especially useful when liquid lookups cannot handle approximate matches.'>
+<div id='api_jcmfcxtaumvb' class='api_div' data-search-keywords='standardize unstructured input with approximate catalog matching data standardization, canvas step agent this example describes how a canvas step agent can process unstructured user input—such as manually typed text with typos or variations—and use llm-assisted matching against knowledge source results to standardize it against known catalog items. the goal is to identify what the user actually meant from their imperfect input, which is especially useful when liquid lookups cannot handle approximate matches.'>
 <h2 id="standardize-unstructured-input-with-approximate-catalog-matching">Standardize unstructured input with approximate catalog matching</h2>
 
 <div class="api_tags" data-tags="Data standardization, canvas step agent" data-tags-lower="data standardization, canvas step agent"></div>
 
-<p>This example describes how a Canvas Step Agent can process unstructured user input—such as manually typed text with typos or variations—and use LLM-assisted matching against catalog search results to standardize it against known catalog items. The goal is to identify what the user actually meant from their imperfect input, which is especially useful when Liquid lookups cannot handle approximate matches.</p>
+<p>This example describes how a Canvas Step Agent can process unstructured user input—such as manually typed text with typos or variations—and use LLM-assisted matching against knowledge source results to standardize it against known catalog items. The goal is to identify what the user actually meant from their imperfect input, which is especially useful when Liquid lookups cannot handle approximate matches.</p>
 
 <p>These instructions assume the following information is available:</p>
 
@@ -1180,12 +1180,7 @@ existing_category: "hydration"
   <li>Context variable for the user’s manually entered text (for example, dream travel destination)</li>
   <li><strong>Agent context</strong> from the <a href="/docs/user_guide/brazeai/agents/creating_agents#add-resources">Agent Console instructions</a>:
     <ul>
-      <li><strong>Catalog fields:</strong>
-        <ul>
-          <li><strong>Catalog:</strong> <code class="language-plaintext highlighter-rouge">&lt;Destination Catalog name&gt;</code> which contains valid destination names</li>
-          <li><strong>Fields:</strong> <code class="language-plaintext highlighter-rouge">destination_name</code>, which is the searchable column containing the standardized destination names the agent can query</li>
-        </ul>
-      </li>
+      <li><strong>Knowledge source:</strong> A <a href="/docs/user_guide/brazeai/agents/knowledge_sources">knowledge source</a> created from your <code class="language-plaintext highlighter-rouge">&lt;Destination Catalog name&gt;</code> catalog, including at least the <code class="language-plaintext highlighter-rouge">destination_name</code> field—the column with standardized destination names the agent can query</li>
       <li><strong>All Canvas context:</strong> Passes any additional context variables to the agent that you didn’t already define in your agent instructions, in case they are helpful or relevant</li>
     </ul>
   </li>
@@ -1236,11 +1231,11 @@ You will get the following user-specific inputs:
 {{${first_name}}} - the user's first name
 {{context.${user_entered_destination}}} - the raw text the user typed for their dream destination
 
-You can search the configured Destination Catalog using the catalog search tool. Braze returns matching catalog rows—not the full catalog—so search for likely destination names before you decide on a match.
+Query your Destination Catalog knowledge source to find destinations that could match the user's input. Braze returns matching catalog rows—not the full catalog—so search for likely destination names before you decide on a match.
 
 Rules:
-- Search the catalog for destinations that could match the user's input. Use pattern-based queries (such as $regex) when exact matches fail, and account for common typos, extra letters, missing letters, and phonetic similarities (e.g., "Parisss" → "Paris", "Tokio" → "Tokyo", "Barselona" → "Barcelona").
-- Only return a standardized_destination value that appears in a catalog search result. Do not invent destinations.
+- Query the knowledge source with a natural-language search based on the user's input. Semantic search handles approximate matches for typos, extra letters, missing letters, and phonetic similarities (for example, "Parisss" → "Paris", "Tokio" → "Tokyo", "Barselona" → "Barcelona"). Use structured filters only when you need an exact constraint on a specific field.
+- Only return a standardized_destination value that appears in a knowledge source result. Do not invent destinations.
 - If multiple catalog destinations could match, choose the most likely match based on similarity to the user's input.
 - If the input is too ambiguous or doesn't closely match any catalog destination (such as nonsense text or very short incomplete input), set standardized_destination to "UNKNOWN" and explain why in the explanation field.
 - Be case-insensitive in matching (treat "paris", "Paris", and "PARIS" as the same).
@@ -1248,7 +1243,7 @@ Rules:
 
 Final Output Specification:
 You must return an object containing exactly three keys: "standardized_destination", "confidence", and "explanation".
-- standardized_destination: String. The exact destination name from a catalog search result, or "UNKNOWN" if no match can be made.
+- standardized_destination: String. The exact destination name from a knowledge source result, or "UNKNOWN" if no match can be made.
 - confidence: String (high, medium, low). Your confidence in the match.
 - explanation: String. Brief note on the matching logic, similarity detected, or reason for UNKNOWN.
 
@@ -1256,7 +1251,7 @@ Input &amp; Output Example:
 &lt;input_example&gt;
 {{${first_name}}}: Jane
 {{context.${user_entered_destination}}}: Parisss
-Catalog search for destinations similar to "Parisss" returns: {"destination_name": "Paris"}
+Knowledge source query for destinations similar to "Parisss" returns: {"destination_name": "Paris"}
 &lt;/input_example&gt;
 &lt;output_example&gt;
 {"standardized_destination": "Paris", "confidence": "high", "explanation": "User input 'Parisss' closely matches catalog result 'Paris' with extra letters; clear approximate match."}

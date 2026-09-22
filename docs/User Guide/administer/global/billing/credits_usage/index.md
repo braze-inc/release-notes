@@ -23,7 +23,6 @@ If you purchased WhatsApp but aren't on a credits contract, you'll still see cre
 
 Credits usage overview data is limited to the contract period, which is displayed in the **Credits contract overview**. You can't filter on a date range outside of the **Credits period**.
 
-
 ### Credits usage over contract
 
 The **Message credits usage over contract** graph shows your usage over the selected period of time. The granularity of this chart depends on your selected time frame. View export options by selecting the menu in the chart menu.
@@ -33,6 +32,20 @@ The **Message credits usage over contract** graph shows your usage over the sele
 ## Overview tab
 
 The **Overview Usage** tab shows credit usage across channels that are applicable to your company. For example, if you don't have WhatsApp, its tab won't appear.
+
+### Usage by campaign and Canvas
+
+When **Usage by campaign / Canvas** is enabled for your account, the **Overview** tab shows a table that ranks campaigns and Canvases by credit-related volume (for example, sends or impressions) for your selected date range. The section appears only after you choose a date range; empty results still show the table when the feature is on.
+
+This section also appears with channel-specific breakdowns on tabs for **Email**, **Banners**, **Content Cards**, **Webhooks**, **LINE**, and **SMS/MMS/RCS**. Metrics reflect usage volumes, not a separate credit estimate per row.
+
+### Usage alerts
+
+On the **Overview** tab, a banner alert appears when usage is at or above 90% of your credit allotment for the selected period.
+
+When message credit usage alerts are enabled for your company, Braze also emails users with **View Billing Details** after total Action Credit consumption newly crosses 50%, 75%, 90%, or 100% of your allotment for the current credits period (at most one email per threshold per period).
+
+For rollout, recipients, and FAQs, see [Usage alerts](https://www.braze.com/docs/user_guide/administer/global/billing/usage_alerts).
 
 ### Credits features
 
@@ -286,7 +299,7 @@ The **Credits Usage** dashboard excludes the end date of the selected range from
 
 When comparing Braze credits usage data with third-party providers (such as Infobip), keep in mind:
 
-- **Message segments versus messages**: Braze counts SMS messages by segments. A single SMS message that is split into multiple segments (for example, due to length) is counted as multiple segments in Braze. For more information, see [SMS and RCS billing calculators](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator/).
+- **Message segments versus messages**: Braze counts SMS messages by segments. A single SMS message that is split into multiple segments (for example, due to length) is counted as multiple segments in Braze. For more information, see [SMS and RCS billing calculators](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator).
 - **Credit versus non-credit based messages**: The dashboard includes both credit-based and non-credit-based messages. Third-party providers may count only credit-based messages, which can cause discrepancies in totals.
 - **Inbound versus outbound**: Ensure you're comparing the same message types. Some third-party dashboards include both inbound and outbound messages in their totals, while Braze allows you to filter by direction.
 - **Date range alignment**: Because the dashboard excludes the end date, day-by-day comparisons may align more closely than longer date ranges. If you're comparing data for a specific period, extend your Braze date range by one day to include the final day of your comparison period.

@@ -1,4 +1,4 @@
-<div id='api_gesfpuwduujh' class='api_div' data-search-keywords='look up an existing dashboard user account by resource id schemas id name department permissions roles team status detail'>
+<div id='api_amfkxtpwsfmn' class='api_div' data-search-keywords='look up an existing dashboard user account by resource id schemas id name department permissions roles team status detail'>
 <h1 id="look-up-an-existing-dashboard-user-account-by-resource-id">Look up an existing dashboard user account by resource ID</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/scim/v2/Users/{id}</p>
@@ -135,16 +135,16 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
         </span><span class="nl">"roles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"roleName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Another Test Role"</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"roleId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23125dad23dfaae7"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"roleId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b2c3d4e5-f6a7-4b1c-9d2e-4f5a6b7c8d9e"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"appGroup"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                     </span><span class="p">{</span><span class="w">
-                        </span><span class="nl">"appGroupId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"241adcd25adfabcded"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"appGroupId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c3d4e5f6-a7b8-4c1d-8e2f-5a6b7c8d9e0f"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"appGroupName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Production Workspace"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"appGroupPermissionSets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                             </span><span class="p">{</span><span class="w">
                                 </span><span class="nl">"appGroupPermissionSetName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Permission Set"</span><span class="p">,</span><span class="w">
-                                </span><span class="nl">"appGroupPermissionSetId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dfa385109bc38"</span><span class="p">,</span><span class="w">
-                                </span><span class="nl">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"basic_access"</span><span class="p">,</span><span class="s2">"publish_cards"</span><span class="p">]</span><span class="w">
+                                </span><span class="nl">"appGroupPermissionSetId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d4e5f6a7-b8c9-4d1e-9f2a-6b7c8d9e0f1a"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"view_campaigns"</span><span class="p">,</span><span class="s2">"edit_campaigns"</span><span class="p">,</span><span class="s2">"view_content_blocks"</span><span class="p">]</span><span class="w">
                             </span><span class="p">}</span><span class="w">
                         </span><span class="p">]</span><span class="w">
                     </span><span class="p">}</span><span class="w">
@@ -153,14 +153,14 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
         </span><span class="p">],</span><span class="w">
         </span><span class="nl">"appGroup"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
-                </span><span class="nl">"appGroupId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"241adcd25789fabcded"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"appGroupId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a1b2c3d4-e5f6-4a1b-8c2d-3e4f5a6b7c8d"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"appGroupName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test Workspace"</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"appGroupPermissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"basic_access"</span><span class="p">,</span><span class="s2">"send_campaigns_canvases"</span><span class="p">],</span><span class="w">
+                </span><span class="nl">"appGroupPermissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"view_campaigns"</span><span class="p">,</span><span class="s2">"view_canvases"</span><span class="p">],</span><span class="w">
                 </span><span class="nl">"team"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                     </span><span class="p">{</span><span class="w">
-                         </span><span class="nl">"teamId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"241adcd25789fabcded"</span><span class="p">,</span><span class="w">
+                         </span><span class="nl">"teamId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a1b2c3d4-e5f6-4a1b-8c2d-3e4f5a6b7c8d"</span><span class="p">,</span><span class="w">
                          </span><span class="nl">"teamName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test Team"</span><span class="p">,</span><span class="w">
-                         </span><span class="nl">"teamPermissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"admin"</span><span class="p">]</span><span class="w">
+                         </span><span class="nl">"teamPermissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"edit_campaigns"</span><span class="p">,</span><span class="s2">"launch_campaigns"</span><span class="p">,</span><span class="s2">"edit_canvases"</span><span class="p">,</span><span class="s2">"launch_canvases"</span><span class="p">]</span><span class="w">
                     </span><span class="p">}</span><span class="w">
                 </span><span class="p">]</span><span class="w">
             </span><span class="p">}</span><span class="w">

@@ -64,7 +64,7 @@ sequenceDiagram
 
 ### Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift). You'll also need to complete the following:
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift). You'll also need to complete the following:
 
 - Ensure that your project is targeting iOS 16.1 or later.
 - Add the `Push Notification` entitlement under **Signing & Capabilities** in your Xcode project.
@@ -360,7 +360,7 @@ If you need to confirm whether a workspace is sending iOS Live Activities, you c
 
 ### Message Activity Log
 
-Go to **Settings** > **Message Activity Log** and filter for Live Activity errors to see any Live Activity-related delivery outcomes during your expected timeframe. For more information, see [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/).
+Go to **Settings** > **Message Activity Log** and filter for Live Activity errors to see any Live Activity-related delivery outcomes during your expected timeframe. For more information, see [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log).
 
 ### Query Builder, Currents, or Snowflake Data Sharing
 
@@ -375,7 +375,7 @@ Optionally, you can also check for token availability signals:
 
 ### API usage dashboard
 
-Go to **Settings** > **APIs and Identifiers** > **Dashboard**, select **Filters**, and filter by **Endpoint** to see API responses. For example, select `/messages/live_activity/update` (or `/messages/live_activity/start`) and view the request volume over the last 30 days. API responses indicate that the API is being called and that iOS Live Activity notifications are being used in this workspace. For more information, see [API usage dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/api_usage/).
+Go to **Settings** > **APIs and Identifiers** > **Dashboard**, select **Filters**, and filter by **Endpoint** to see API responses. For example, select `/messages/live_activity/update` (or `/messages/live_activity/start`) and view the request volume over the last 30 days. API responses indicate that the API is being called and that iOS Live Activity notifications are being used in this workspace. For more information, see [API usage dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/api_usage).
 
 ## Observe Live Activity events (optional) {#observe-live-activity-events}
 

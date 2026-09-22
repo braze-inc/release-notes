@@ -21,7 +21,7 @@ This guide uses code samples from the Braze Web SDK 4.0.0+. To upgrade to the la
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web).
+Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web).
 
 ## Push protocols
 
@@ -46,7 +46,7 @@ Your web server must return a `Content-Type: application/javascript` when servin
 
 To immediately request push permissions from a user so their browser can receive push notifications, call `braze.requestPushPermission()`. To test if push is supported in their browser first, call `braze.isPushSupported()`.
 
-You can also [send a soft push prompt](https://www.braze.com/docs/developer_guide/push_notifications/soft_push_prompts/?sdktab=web) to the user before requesting push permission to show your own push-related UI.
+You can also [send a soft push prompt](https://www.braze.com/docs/developer_guide/push_notifications/soft_push_prompts?sdktab=web) to the user before requesting push permission to show your own push-related UI.
 
 **Important:**
 
@@ -206,7 +206,7 @@ While industry best practice is to make your whole site secure, customers who ca
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android).
 
 ## Built-in features
 
@@ -214,8 +214,8 @@ The following features are built into the Braze Android SDK. To use any other pu
 
 |Feature|Description|
 |-------|-----------|
-|Push Stories|Android Push Stories are built into the Braze Android SDK by default. To learn more, see [Push Stories](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/push_stories/).|
-|Push Primers|Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/).|
+|Push Stories|Android Push Stories are built into the Braze Android SDK by default. To learn more, see [Push Stories](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/push_stories).|
+|Push Primers|Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages).|
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Built-in features" }
 
 ## About the push notification lifecycle {#push-notification-lifecycle}
@@ -716,7 +716,7 @@ In your `braze.xml`, specify:
 <string name="com_braze_fallback_firebase_cloud_messaging_service_classpath">com.company.OurFirebaseMessagingService</string>
 ```
 
-or set via [runtime configuration:](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android#runtime-configuration)
+or set via [runtime configuration:](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android#android_runtime-configuration)
 
 
 
@@ -805,7 +805,7 @@ To enable Braze to automatically open your app and any deep links when a push no
 <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
-This flag can also be set via [runtime configuration](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android#runtime-configuration):
+This flag can also be set via [runtime configuration](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android#android_runtime-configuration):
 
 
 
@@ -898,11 +898,11 @@ If you want custom foreground behavior, such as suppressing the system notificat
 - Use `subscribeToPushNotificationEvents` to react to push events and handle deep links with the `BrazeNotificationUtils.routeUserWithNotificationOpenedIntent` method. For more information, see the [Firebase push sample](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseApplication.kt).
 - Build and post your own notification using a custom `IBrazeNotificationFactory`, or suppress the notification by not calling `notificationManager.notify` in your handling path.
 
-For more information on customizing notifications, see [Custom notification factory](https://www.braze.com/docs/developer_guide/push_notifications/customization/?sdktab=android#custom-notification-factory).
+For more information on customizing notifications, see [Custom notification factory](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=android#custom-notification-factory).
 
 #### Creating custom deep links
 
-Follow the instructions found within the [Android developer documentation](http://developer.android.com/training/app-indexing/deep-linking.html) on deep linking if you have not already added deep links to your app. To learn more about what deep links are, see our [FAQ article](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls/#what-is-deep-linking).
+Follow the instructions found within the [Android developer documentation](http://developer.android.com/training/app-indexing/deep-linking.html) on deep linking if you have not already added deep links to your app. To learn more about what deep links are, see our [FAQ article](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls#what-is-deep-linking).
 
 #### Adding deep links
 
@@ -914,7 +914,7 @@ The Braze dashboard supports setting deep links or web URLs in push notification
 
 The Android SDK, by default, will place your host app's main launcher activity in the back stack when following push deep links. Braze allows you to set a custom activity to open in the back stack in place of your main launcher activity or to disable the back stack altogether.
 
-For example, to set an activity called `YourMainActivity` as the back stack activity using [runtime configuration](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android#runtime-configuration):
+For example, to set an activity called `YourMainActivity` as the back stack activity using [runtime configuration](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android#android_runtime-configuration):
 
 
 
@@ -950,13 +950,13 @@ See the equivalent configuration for your `braze.xml`. Note that the class name 
 
 ### Step 5: Define notification channels
 
-The Braze Android SDK supports [Android notification channels](https://developer.android.com/preview/features/notification-channels.html). If a Braze notification does not contain the ID for a notification channel or that a Braze notification contains an invalid channel ID, Braze will display the notification with the default notification channel defined in the SDK. Company users use [Android Notification Channels](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/notification_channels/) within the platform to group notifications.
+The Braze Android SDK supports [Android notification channels](https://developer.android.com/preview/features/notification-channels.html). If a Braze notification does not contain the ID for a notification channel or that a Braze notification contains an invalid channel ID, Braze will display the notification with the default notification channel defined in the SDK. Company users use [Android Notification Channels](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/notification_channels) within the platform to group notifications.
 
 To set the user facing name of the default Braze notification channel, use [`BrazeConfig.setDefaultNotificationChannelName()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html).
 
 To set the user facing description of the default Braze notification channel, use [`BrazeConfig.setDefaultNotificationChannelDescription()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-description.html).
 
-Update any API campaigns with the [Android push object](https://www.braze.com/docs/api/objects_filters/messaging/android_object/) parameter to include the `notification_channel` field. If this field is not specified, Braze will send the notification payload with the [dashboard fallback](https://www.braze.com/docs/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel) channel ID.
+Update any API campaigns with the [Android push object](https://www.braze.com/docs/api/objects_filters/messaging/android_object) parameter to include the `notification_channel` field. If this field is not specified, Braze will send the notification payload with the [dashboard fallback](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/notification_channels#dashboard-fallback-channel) channel ID.
 
 Other than the default notification channel, Braze will not create any channels. All other channels must be programmatically defined by the host app and then entered into the Braze dashboard.
 
@@ -975,17 +975,17 @@ At this point, you should be able to see notifications sent from Braze. To test 
 
 ![The 'Test' tab of a push notification campaign in the Braze dashboard.](https://www.braze.com/docs/assets/img_archive/android_push_test.png?ee8f7372a8c3f7d77dc9ebd5e131a1f0 "Android Push Test")
 
-For issues related to push display, see our [troubleshooting guide](https://www.braze.com/docs/developer_guide/push_notifications/troubleshooting/?sdktab=android).
+For issues related to push display, see our [troubleshooting guide](https://www.braze.com/docs/developer_guide/push_notifications/troubleshooting?sdktab=android).
 
 #### Testing analytics
 
-At this point, you should also have analytics logging for push notification opens. Clicking on the notification when it arrives should result in the **Direct Opens** on your campaign results page to increase by 1. Check out our [push reporting](https://www.braze.com/docs/user_guide/channels/push/reporting/) article for a break down on push analytics.
+At this point, you should also have analytics logging for push notification opens. Clicking on the notification when it arrives should result in the **Direct Opens** on your campaign results page to increase by 1. Check out our [push reporting](https://www.braze.com/docs/user_guide/channels/push/reporting) article for a break down on push analytics.
 
-For issues related to push analytics, see our [troubleshooting guide](https://www.braze.com/docs/developer_guide/push_notifications/troubleshooting/?sdktab=android).
+For issues related to push analytics, see our [troubleshooting guide](https://www.braze.com/docs/developer_guide/push_notifications/troubleshooting?sdktab=android).
 
 #### Testing from command line
 
-If you'd like to test in-app and push notifications via the command-line interface, you can send a single notification through the terminal via cURL and the [messaging API](https://www.braze.com/docs/api/endpoints/messaging/). You will need to replace the following fields with the correct values for your test case:
+If you'd like to test in-app and push notifications via the command-line interface, you can send a single notification through the terminal via cURL and the [messaging API](https://www.braze.com/docs/api/endpoints/messaging). You will need to replace the following fields with the correct values for your test case:
 
 - `YOUR_API_KEY` (Go to **Settings** > **API Keys**.)
 - `YOUR_EXTERNAL_USER_ID` (Search for a profile on the **Search Users** page.)
@@ -1007,7 +1007,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 }' https://rest.iad-01.braze.com/messages/send
 ```
 
-This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint](https://www.braze.com/docs/api/basics/#endpoints).
+This example uses the `US-01` instance. If you are not on this instance, replace the `US-01` endpoint with [your endpoint](https://www.braze.com/docs/api/basics#endpoints).
 
 ## Conversation push notifications
 
@@ -1043,7 +1043,7 @@ To request a rate limit increase from FCM, you can contact [Firebase Support](ht
 
 #### Apply a workspace rate limit
 
-You can apply a workspace rate limit for Android push notifications. This can help regulate the delivery rate of your outgoing messages. For more details, see [Workspace messaging rate limits](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/messaging_rate_limits/).
+You can apply a workspace rate limit for Android push notifications. This can help regulate the delivery rate of your outgoing messages. For more details, see [Workspace messaging rate limits](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/messaging_rate_limits).
 
 
 
@@ -1118,7 +1118,7 @@ The automation steps performed by the SDK are compatible with pre-existing push 
 
 
 The SDK must be initialized on the main thread to enable push notification automation. SDK initialization must happen before the application has finished launching or in your AppDelegate [`application(_:didFinishLaunchingWithOptions:)`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) implementation.
-If your application requires additional setup before initializing the SDK, please refer to the [Delayed Initialization](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift#step-2-set-up-delayed-initialization-optional) documentation page.
+If your application requires additional setup before initializing the SDK, please refer to the [Delayed Initialization](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift#step-2-set-up-delayed-initialization-optional) documentation page.
 
 
 
@@ -1162,14 +1162,14 @@ If you rely on push notifications for additional behavior specific to your app, 
 
 Include the appropriate code sample within your app's [`application:didFinishLaunchingWithOptions:` delegate method](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) so that your users' devices can register with APNs. Ensure that you call all push integration code in your application's main thread.
 
-Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons](https://www.braze.com/docs/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories) for additional integration steps.
+Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=swift#swift_customizing-push-categories) for additional integration steps.
 
 Add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate. 
 
 **Note:**
 
 
-The following code sample includes integration for provisional push authentication (lines 5 and 6). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options.<br>Visit [iOS notification options](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/notification_options/) to learn more about push provisional authentication.
+The following code sample includes integration for provisional push authentication (lines 5 and 6). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options.<br>Visit [iOS notification options](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/notification_options) to learn more about push provisional authentication.
 
 
 
@@ -1367,14 +1367,14 @@ To enable foreground push notifications and let Braze recognize them when they'r
 
 ## Testing notifications {#push-testing}
 
-If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages/). You will need to replace the following fields with the correct values for your test case:
+If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages). You will need to replace the following fields with the correct values for your test case:
 
 - `YOUR_API_KEY` - available at **Settings** > **API Keys**.
-- `YOUR_EXTERNAL_USER_ID` - available on the **Search Users** page. See [assigning user IDs](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id) for more information.
+- `YOUR_EXTERNAL_USER_ID` - available on the **Search Users** page. See [assigning user IDs](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids#setting-a-user-id) for more information.
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
-In the following example, the `US-01` instance is being used. If you're not on this instance, refer to our [API documentation](https://www.braze.com/docs/api/basics/) to see which endpoint to make requests to.
+In the following example, the `US-01` instance is being used. If you're not on this instance, refer to our [API documentation](https://www.braze.com/docs/api/basics) to see which endpoint to make requests to.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
@@ -1488,7 +1488,7 @@ For a complete example, see the [push notifications manual integration sample](h
 
 ## Push primers {#push-primers}
 
-Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/).
+Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages).
 
 ## Dynamic APNs gateway management
 
@@ -1529,7 +1529,7 @@ This feature improves delivery rates by always routing push tokens to the correc
 
 #### Can I disable this feature?
 
-Dynamic APNs Gateway Management is turned on by default and provides reliability improvements. If you have specific use cases that require manual gateway selection, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support/).
+Dynamic APNs Gateway Management is turned on by default and provides reliability improvements. If you have specific use cases that require manual gateway selection, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
 
 
 
@@ -1544,8 +1544,8 @@ While not a native feature, Android TV push integration is made possible by leve
 
 To use this feature, you must complete the following:
 
-- [Integrate the Braze Android SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android)
-- [Set up push notifications for the Braze Android SDK](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=android)
+- [Integrate the Braze Android SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android)
+- [Set up push notifications for the Braze Android SDK](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android)
 
 ## Setting up push notifications
 
@@ -1580,7 +1580,7 @@ The delivered and clicked response returned by FCM follows the same convention a
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Cordova Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=cordova). After you integrate the SDK, basic push notification functionality is enabled by default. To use [rich push notifications](https://www.braze.com/docs/developer_guide/push_notifications/rich/?sdktab=cordova) and [push stories](https://www.braze.com/docs/developer_guide/push_notifications/push_stories/?sdktab=cordova), you'll need to set them up individually. To use iOS push messages, you also need to upload a valid push certificate.
+Before you can use this feature, you'll need to [integrate the Cordova Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=cordova). After you integrate the SDK, basic push notification functionality is enabled by default. To use [rich push notifications](https://www.braze.com/docs/developer_guide/push_notifications/rich?sdktab=cordova) and [push stories](https://www.braze.com/docs/developer_guide/push_notifications/push_stories?sdktab=cordova), you'll need to set them up individually. To use iOS push messages, you also need to upload a valid push certificate.
 
 **Warning:**
 
@@ -1610,7 +1610,7 @@ After you integrate the Braze Cordova SDK for iOS, basic push notification funct
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Flutter Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=flutter).
+Before you can use this feature, you'll need to [integrate the Flutter Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=flutter).
 
 ## Setting up push notifications
 
@@ -1620,13 +1620,13 @@ Before you can use this feature, you'll need to [integrate the Flutter Braze SDK
 
 #### Step 1.1: Register for push
 
-Register for push using Google’s Firebase Cloud Messaging (FCM) API. For a full walkthrough, refer to the following steps from the [Native Android push integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/):
+Register for push using Google’s Firebase Cloud Messaging (FCM) API. For a full walkthrough, refer to the following steps from the [Native Android push integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications?tab=android/):
 
-1. [Add Firebase to your project](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-1-add-firebase-to-your-project).
-2. [Add Cloud Messaging to your dependencies](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-2-add-cloud-messaging-to-your-dependencies).
-3. [Create a service account](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-3-create-a-service-account).
-4. [Generate JSON credentials](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-generate-json-credentials).
-5. [Upload your JSON credentials to Braze](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-5-upload-your-json-credentials-to-braze).
+1. [Add Firebase to your project](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android#android_step-1-add-firebase-to-your-project).
+2. [Add Cloud Messaging to your dependencies](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android#android_step-2-add-cloud-messaging-to-your-dependencies).
+3. [Create a service account](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android#android_service-account).
+4. [Generate JSON credentials](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android#android_json).
+5. [Upload your JSON credentials to Braze](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android#android_step-6-upload-your-json-credentials-to-braze).
 
 #### Step 1.2: Get your Google Sender ID
 
@@ -1652,11 +1652,11 @@ Add the following to your `braze.xml` file. Replace `FIREBASE_SENDER_ID` with th
 
 #### Step 1.1: Upload APNs certificates
 
-Generate an Apple Push Notification service (APNs) certificate and uploaded it to the Braze dashboard. For a full walkthrough, see [Uploading your APNs certificate](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-upload-your-apns-certificate).
+Generate an Apple Push Notification service (APNs) certificate and uploaded it to the Braze dashboard. For a full walkthrough, see [Uploading your APNs certificate](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#swift_step-1-upload-your-apns-token).
 
 #### Step 1.2: Add push notification support to your app
 
-Follow the [native iOS integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration).
+Follow the [native iOS integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration?tab=objective-c#automatic-push-integration).
 
 
 
@@ -1706,7 +1706,7 @@ For a full list of push notification fields, refer to the following table:
 | `summaryText`     | String    | Represents the summary text of the notification. This is mapped from `subtitle` on iOS. |
 | `badgeCount`      | Number   | Represents the badge count of the notification. |
 | `timestamp`        | Number | Represents the time at which the payload was received by the application. |
-| `isSilent`        | Boolean   | If `true`, the payload is received silently. For details on sending Android silent push notifications, refer to [Silent push notifications on Android](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=android). For details on sending iOS silent push notifications, refer to [Silent push notifications on iOS](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=swift). |
+| `isSilent`        | Boolean   | If `true`, the payload is received silently. For details on sending Android silent push notifications, refer to [Silent push notifications on Android](https://www.braze.com/docs/developer_guide/push_notifications/silent?sdktab=android). For details on sending iOS silent push notifications, refer to [Silent push notifications on iOS](https://www.braze.com/docs/developer_guide/push_notifications/silent?sdktab=swift). |
 | `isBrazeInternal`| Boolean   | This is `true` if a notification payload was sent for an internal SDK feature, such as Feature Flag sync or uninstall tracking. The payload is received silently for the user. |
 | `imageUrl`        | String    | Specifies the URL associated with the notification image. |
 | `brazeProperties` | Object    | Represents Braze properties associated with the campaign (key-value pairs). |
@@ -1754,14 +1754,14 @@ val brazeConfig = BrazeConfig.Builder()
 Braze.configure(this, brazeConfig)
 ```
 
-If you want to custom handle deep links instead, use the `subscribeToPushNotificationEvents()` listener described in Step 2 to route the `push_opened` event's `url` field yourself. For more information, see [Deep linking](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking/?sdktab=flutter).
+If you want to custom handle deep links instead, use the `subscribeToPushNotificationEvents()` listener described in Step 2 to route the `push_opened` event's `url` field yourself. For more information, see [Deep linking](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking?sdktab=flutter).
 
 
 
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android).
 
 ## Setting up push notifications
 
@@ -1850,7 +1850,7 @@ After adding your custom push service, add the following to your `AndroidManifes
 
 By default, when a push notification arrives while your app is in the foreground, Huawei displays it automatically. To have Braze process the push notification payload (for analytics tracking, deep link handling, and custom processing), route the incoming push data to Braze inside your `HmsMessageService.onMessageReceived` method.
 
-When you call `BrazeHuaweiPushHandler.handleHmsRemoteMessageData`, Braze determines if the payload is a Braze push notification and, if so, creates and displays the notification. For more information, see [Handling foreground notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications) in the Android push notifications documentation.
+When you call `BrazeHuaweiPushHandler.handleHmsRemoteMessageData`, Braze determines if the payload is a Braze push notification and, if so, creates and displays the notification. For more information, see [Handling foreground notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android#handling-foreground-notifications) in the Android push notifications documentation.
 
 For a complete example, see the [Huawei handler reference](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-huawei-push-handler/index.html) in the Braze Android SDK documentation.
 
@@ -1872,7 +1872,7 @@ Next, compose your push campaign with a title and message.
 
 #### Step 5.2: Send a test push
 
-In the **Test** tab, enter your user ID, which you've set in your app using the [`changeUser(USER_ID_STRING)` method](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id), and click **Send Test** to send a test push.
+In the **Test** tab, enter your user ID, which you've set in your app using the [`changeUser(USER_ID_STRING)` method](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids#setting-a-user-id), and click **Send Test** to send a test push.
 
 ![The test tab in the campaign creation composer shows you can send a test message to yourself by providing your user ID and entering it into the "Add Individual Users" field.](https://www.braze.com/docs/assets/img/huawei/huawei-test-send.png?42dce83b469c90564ae79d3f4d37c572)
 
@@ -1893,7 +1893,7 @@ Of course, if you want to send the same push to all Android push providers, you 
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native).
+Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=react%20native).
 
 ## Setting up push notifications {#setting-up-push-notifications}
 
@@ -1903,7 +1903,7 @@ Before you can use this feature, you'll need to [integrate the React Native Braz
 
 #### Prerequisites
 
-Before you can use Expo for push notifications, you'll need to [set up the Braze Expo plugin](https://www.braze.com/docs/developer_guide/platform_integration_guides/react_native/sdk_integration/?tab=expo).
+Before you can use Expo for push notifications, you'll need to [set up the Braze Expo plugin](https://www.braze.com/docs/developer_guide/platform_integration_guides/react_native/sdk_integration?tab=expo).
 
 #### Step 1.1: Update your `app.json` file
 
@@ -1959,15 +1959,15 @@ Note that you will need to use these settings instead of the native setup instru
 
 
 
-If you are not using the Braze Expo plugin, or would like to configure these settings natively instead, register for push by referring to the [Native Android push integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/).
+If you are not using the Braze Expo plugin, or would like to configure these settings natively instead, register for push by referring to the [Native Android push integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications?tab=android/).
 
 
 
-If you are not using the Braze Expo plugin, or would like to configure these settings natively instead, register for push by referring to the following steps from the [Native iOS push integration guide](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift):
+If you are not using the Braze Expo plugin, or would like to configure these settings natively instead, register for push by referring to the following steps from the [Native iOS push integration guide](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift):
 
 #### Step 1.1: Request for push permissions
 
-If you don't plan on requesting push permissions when the app is launched, omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate. Then, skip to [Step 2](#reactnative_step-2-request-push-notifications-permission). Otherwise, follow the [native iOS integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration).
+If you don't plan on requesting push permissions when the app is launched, omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate. Then, skip to [Step 2](#reactnative_step-2-request-push-notifications-permission). Otherwise, follow the [native iOS integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration?tab=objective-c#automatic-push-integration).
 
 #### Step 1.2 (Optional): Migrate your push key
 
@@ -2024,7 +2024,7 @@ For a full list of push notification fields, refer to the following table:
 | `summary_text`     | String    | Represents the summary text of the notification. This is mapped from `subtitle` on iOS. |
 | `badge_count`      | Number   | Represents the badge count of the notification. |
 | `timestamp`        | Number | Represents the time at which the payload was received by the application. |
-| `is_silent`        | Boolean   | If `true`, the payload is received silently. For details on sending Android silent push notifications, refer to [Silent push notifications on Android](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=android). For details on sending iOS silent push notifications, refer to [Silent push notifications on iOS](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=swift). |
+| `is_silent`        | Boolean   | If `true`, the payload is received silently. For details on sending Android silent push notifications, refer to [Silent push notifications on Android](https://www.braze.com/docs/developer_guide/push_notifications/silent?sdktab=android). For details on sending iOS silent push notifications, refer to [Silent push notifications on iOS](https://www.braze.com/docs/developer_guide/push_notifications/silent?sdktab=swift). |
 | `is_braze_internal`| Boolean   | This will be `true` if a notification payload was sent for an internal SDK feature, such as Feature Flag sync or uninstall tracking. The payload is received silently for the user. |
 | `image_url`        | String    | Specifies the URL associated with the notification image. |
 | `braze_properties` | Object    | Represents Braze properties associated with the campaign (key-value pairs). |
@@ -2036,7 +2036,7 @@ For a full list of push notification fields, refer to the following table:
 
 To enable Braze to handle deep links inside React components when a push notification is clicked, first implement the steps described in [React Native Linking](https://reactnative.dev/docs/linking) library, or with your solution of choice. Then, follow the additional steps.
 
-To learn more about what deep links are, see our [FAQ article](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls/#what-is-deep-linking).
+To learn more about what deep links are, see our [FAQ article](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls#what-is-deep-linking).
 
 **Important:**
 
@@ -2050,7 +2050,7 @@ If you're migrating an existing React Native push integration, re-test deep link
 
 
 
-If you're using the [Braze Expo plugin](https://www.braze.com/docs/developer_guide/platforms/react_native/sdk_integration/?tab=expo#step-2-choose-a-setup-option), you can handle push notification deep links automatically by setting `androidHandlePushDeepLinksAutomatically` to `true` in your `app.json`.
+If you're using the [Braze Expo plugin](https://www.braze.com/docs/developer_guide/platforms/react_native/sdk_integration?tab=expo#step-2-choose-a-setup-option), you can handle push notification deep links automatically by setting `androidHandlePushDeepLinksAutomatically` to `true` in your `app.json`.
 
 To handle deep links manually instead, refer to the native Android documentation: [Adding deep links](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking).
 
@@ -2103,7 +2103,7 @@ To handle deep links from push notifications on iOS, you must also configure lin
 
 
 
-This includes registering a custom URL scheme and implementing a URL handler in your `AppDelegate`. For full setup instructions, see [Handling deep links](https://www.braze.com/docs/developer_guide/platforms/swift/in_app_messages/deep_linking/?tab=objective-c) in the native iOS documentation.
+This includes registering a custom URL scheme and implementing a URL handler in your `AppDelegate`. For full setup instructions, see [Handling deep links](https://www.braze.com/docs/developer_guide/platforms/swift/in_app_messages/deep_linking?tab=objective-c) in the native iOS documentation.
 #### Step 3.1: Store the push notification payload on app launch {#step-3-1}
 **Note:**
 
@@ -2179,7 +2179,7 @@ This method requires the native setup in Step 3.1 for your platform. If you're u
 
 #### Step 3.3: Enable Universal Links (optional)
 
-To enable [universal linking](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking/?sdktab=swift#universal-links) support, implement a Braze delegate that determines whether to open a given URL, then register it with your Braze instance.
+To enable [universal linking](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking?sdktab=swift#universal-links) support, implement a Braze delegate that determines whether to open a given URL, then register it with your Braze instance.
 
 
 
@@ -2317,13 +2317,13 @@ Foreground notification handling works differently depending on your platform an
 
 For iOS, foreground notification handling is the same as the native Swift integration. Call `handleForegroundNotification(notification:)` inside your `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)` implementation.
 
-For complete details and code examples, see [Handling foreground notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift#handling-foreground-notifications) in the Swift push notifications documentation.
+For complete details and code examples, see [Handling foreground notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#handling-foreground-notifications) in the Swift push notifications documentation.
 
 
 
 For Android, foreground notification handling is the same as the native Android integration. Call `BrazeFirebaseMessagingService.handleBrazeRemoteMessage` inside your `FirebaseMessagingService.onMessageReceived` method.
 
-For complete details and code examples, see [Handling foreground notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications) in the Android push notifications documentation.
+For complete details and code examples, see [Handling foreground notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android#handling-foreground-notifications) in the Android push notifications documentation.
 
 
 
@@ -2455,14 +2455,14 @@ If deep links from push notifications stop opening after a migration, check the 
 3. If you're using the Braze Expo plugin, verify `androidHandlePushDeepLinksAutomatically` is set correctly for your implementation.
 4. Review recently added dependencies for overrides to notification handling or app delegate behavior.
 
-If you've completed these checks and the issue persists, [open a support ticket](https://www.braze.com/docs/user_guide/administer/personal/braze_support/) and include SDK logs plus reproduction steps.
+If you've completed these checks and the issue persists, [open a support ticket](https://www.braze.com/docs/user_guide/administer/personal/braze_support) and include SDK logs plus reproduction steps.
 
 
 
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=web) for the Web SDK. Note that you can only send push notifications to iOS and iPadOS users that are using [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) or later.
+Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=web) for the Web SDK. Note that you can only send push notifications to iOS and iPadOS users that are using [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) or later.
 
 ## Setting up Safari push for mobile
 
@@ -2498,7 +2498,7 @@ Add the following `<link>` tag to your website's `<head>` element pointing to wh
 
 ### Step 3: Add a service worker {#service-worker}
 
-Your website must have a service worker file that imports the Braze service-worker library, as described in our [web push integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-1-configure-your-sites-service-worker).
+Your website must have a service worker file that imports the Braze service-worker library, as described in our [web push integration guide](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=web#web_step-1-configure-your-service-worker).
 
 ### Step 4: Add to home screen {#add-to-homescreen}
 
@@ -2507,7 +2507,7 @@ Popular browsers (such as Safari, Chrome, FireFox, and Edge) all support web pus
 ![An iPhone showing options to bookmark a website and save to the home screen](https://www.braze.com/docs/assets/img/push_implementation_guide/add-to-homescreen.png?f05fb625cce85d8d4b4816deae375bf8){: style="max-width:40%"}
 
 ### Step 5: Show the native push prompt {#push-prompt}
-After the app has been added to your home screen you can now request push permission when the user takes an action (such as clicking a button). This can be done using the [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) method, or with a [no-code push primer in-app message](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/).
+After the app has been added to your home screen you can now request push permission when the user takes an action (such as clicking a button). This can be done using the [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) method, or with a [no-code push primer in-app message](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages).
 
 **Note:**
 
@@ -2534,14 +2534,14 @@ button.onclick = function(){
 
 ## Next steps
 
-Next, send yourself a [test message](https://www.braze.com/docs/developer_guide/in_app_messages/sending_test_messages/) to validate the integration. After your integration is complete, you can use our [no-code push primer messages](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/) to optimize your push opt-in rates.
+Next, send yourself a [test message](https://www.braze.com/docs/developer_guide/in_app_messages/sending_test_messages) to validate the integration. After your integration is complete, you can use our [no-code push primer messages](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages) to optimize your push opt-in rates.
 
 
 
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Unity Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=unity).
+Before you can use this feature, you'll need to [integrate the Unity Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=unity).
 
 ## Setting up push notification
 
@@ -2572,7 +2572,7 @@ In Braze, select your Android app on the **App Settings** page under **Manage Se
 
 #### Step 1.1: Verify integration method
 
-Braze provides a native Unity solution for automating iOS push integrations. If you you'd like to set up and manage your integration manually instead, see [Swift: Push Notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift).
+Braze provides a native Unity solution for automating iOS push integrations. If you you'd like to set up and manage your integration manually instead, see [Swift: Push Notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift).
 
 Otherwise, continue to the next step.
 
@@ -2884,7 +2884,7 @@ Do not add notification icon images under `Assets/Plugins/Android/res`. Unity [d
 
 To add push icons to your project, create an AAR plug-in or Android library that contains the icon image files under `res/drawable*` (or density-specific folders), then reference each icon in **Braze > Braze Configuration** using the full `@drawable/` resource name (see [Step 2.1: Configure push settings](#unity_step-21-configure-push-settings)). For Unity's packaging and import steps, see [Android Library Projects and Android Archive plug-ins](https://docs.unity3d.com/Manual/AndroidAARPlugins.html).
 
-For small icon artwork rules (alpha-only, no color), see [Android push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=android), Step 2: Conform small icons to design guidelines.
+For small icon artwork rules (alpha-only, no color), see [Android push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android), Step 2: Conform small icons to design guidelines.
 
 
 
@@ -2903,7 +2903,7 @@ There are no optional configurations for ADM at this time.
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the .NET MAUI Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=.net%20maui%20(xamarin)).
+Before you can use this feature, you'll need to [integrate the .NET MAUI Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=.net%20maui%20(xamarin)).
 
 ## Setting up push notifications
 
@@ -2916,7 +2916,7 @@ To see how namespaces change between Java and C#, check out our [Xample sample a
 
 
 
-To integrate push notifications for .NET MAUI (formerly Xamarin), you'll need to complete the steps for native Android push notifications. The following steps are only a summary. For a full walkthrough, see the [native push notification guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/).
+To integrate push notifications for .NET MAUI (formerly Xamarin), you'll need to complete the steps for native Android push notifications. The following steps are only a summary. For a full walkthrough, see the [native push notification guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications?tab=android/).
 
 ### Step 1: Update your project
 
@@ -2955,7 +2955,7 @@ To prevent Braze from triggering unnecessary network requests every time you sen
 
 ### Step 1: Complete the initial setup
 
-See the [Swift integration instructions](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift) for information about setting up your application with push and storing your credentials on our server. Refer to the [iOS MAUI](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp) sample application for more details.
+See the [Swift integration instructions](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift) for information about setting up your application with push and storing your credentials on our server. Refer to the [iOS MAUI](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp) sample application for more details.
 
 ### Step 2: Request push notifications permission
 

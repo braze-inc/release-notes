@@ -55,7 +55,7 @@ Don’t forget to also provide any discount code, offer, or other information pr
 
 ## Considerations
 
-Conversations that start from an Ad That Clicks to WhatsApp are free of charge if the following conditions are met:
+Conversations that start from an Ad That Clicks to WhatsApp follow Meta's [free entry point pricing](https://developers.facebook.com/docs/whatsapp/pricing#free-entry-point-conversations) when the following conditions are met:
 
-- If a user messages you through a [Free Entry Point](https://developers.facebook.com/docs/whatsapp/pricing#free-entry-point-conversations), such as an Ad That Clicks to WhatsApp, a 24-hour [customer service window](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-messages#customer-service-windows) opens in which you can send that user any type of message.
-- If you respond within the customer service window (within 24 hours), a free entry point opens for 72 hours, and all messages within the 72-hour window will be free of charge.
+- If a user messages you through a free entry point, such as an Ad That Clicks to WhatsApp, a 24-hour [customer service window](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-messages#customer-service-windows) opens in which you can send that user any type of message.
+- If you respond within the customer service window (within 24 hours), a free entry point opens for 72 hours. Within the 72-hour window, eligible message templates may be free of charge per Meta's pricing. Starting October 1, 2026, non-templated [response messages](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message#response-messages) consume Action Credits.

@@ -1,4 +1,4 @@
-<div id='api_ekvdfyzlyfrd' class='api_div' data-search-keywords='export campaign analytics message data time conversions_by_send_time conversions1_by_send_time conversions2_by_send_time conversions3_by_send_time conversions conversions1 conversions2 conversions3 unique_recipients revenue messages ios_push variation_api_id sent direct_opens total_opens bounces body_clicks android_push webhook errors email opens unique_opens clicks unique_clicks unsubscribes delivered reported_spam sms sent_to_carrier rejected delivery_failed opt_out help whats_app failed read content_cards total_clicks total_dismissals total_impressions unique_dismissals unique_impressions trigger_in_app_message variation_name impressions first_button_clicks second_button_clicks enrolled'>
+<div id='api_wjrcwerqipeh' class='api_div' data-search-keywords='export campaign analytics message data time conversions_by_send_time conversions1_by_send_time conversions2_by_send_time conversions3_by_send_time conversions conversions1 conversions2 conversions3 unique_recipients revenue messages ios_push variation_api_id sent direct_opens total_opens bounces body_clicks android_push webhook errors email opens unique_opens clicks unique_clicks unsubscribes delivered reported_spam sms sent_to_carrier rejected delivery_failed opt_out help whats_app failed read content_cards total_clicks total_dismissals total_impressions unique_dismissals unique_impressions trigger_in_app_message variation_name impressions first_button_clicks second_button_clicks enrolled'>
 <h1 id="export-campaign-analytics">Export campaign analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/campaigns/data_series</p>
@@ -12,7 +12,7 @@
 
 <p><strong>Note:</strong></p>
 
-<p>do not always match  or aggregates you build from <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> one-for-one. Dashboard metrics and API time series use different aggregation windows and definitions than raw Currents events. For common reconciliation notes, see <a href="/docs/user_guide/data/distribution/braze_currents/faq/">Currents FAQ</a>.</p>
+<p>do not always match  or aggregates you build from <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> one-for-one. Dashboard metrics and API time series use different aggregation windows and definitions than raw Currents events. For common reconciliation notes, see <a href="/docs/user_guide/data/distribution/braze_currents/faq">Currents FAQ</a>.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1" class="seeme">See me in Postman</a></div>
 

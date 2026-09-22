@@ -2,10 +2,9 @@
 
 > Braze surveys let you collect first-party feedback directly from your users and act on it in follow-up messaging, without leaving the Braze dashboard. Use surveys to understand user sentiment, capture preferences, and build segments and triggers from the responses you collect.
 
-
 ## Channel availability
 
-Surveys are available on two channels. Each channel page covers the channel-specific create flow, composition, and reporting location, while this page covers the concepts and capabilities that apply to both.
+Surveys are available on two channels. On either channel, select **Survey** as your message type on the message composition page before opening the editor to switch into survey mode. Each channel page covers the channel-specific create flow, composition, and reporting location, while this page covers the concepts and capabilities that apply to both.
 
 | Channel | Build surveys in |
 | --- | --- |
@@ -126,6 +125,16 @@ Braze exports individual survey answers to Currents through the **Survey Respons
 ## Landing page engagement funnel
 
 Landing page surveys also generate **Landing Page Impression** and **Landing Page Click** events for page views and tracked clicks. Completing a landing page survey writes a **Survey Response** event; it doesn't also fire the generic **Landing Page Form Submission** event, which is for standard (non-survey) landing page forms. For the full field reference for these events, see the [Currents event glossary](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events).
+
+## Frequently asked questions
+
+### How do I start a survey, including NPS or CSAT?
+
+On the message composition page for a landing page or in-app message, select **Survey** as your message type before you open the editor. NPS, CSAT, and other feedback surveys all use that same entry point into survey mode—there isn't a separate create flow per survey type. Then add the form blocks you need (for example, the [standalone NPS block](#standalone-nps-block)) in the editor.
+
+### Where do I find surveys across channels?
+
+Go to **Messaging** > **Surveys** to review surveys across landing pages, campaigns, and Canvases. If you don't see that page, contact your Braze account manager.
 
 ## Related articles
 

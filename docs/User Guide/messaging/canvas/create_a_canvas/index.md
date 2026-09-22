@@ -151,7 +151,7 @@ Only the users who match your defined criteria can enter the journey in the **Ta
 
 
 In workspaces with multiple apps, Canvas entry audience eligibility (including segments and filters) is evaluated only when users enter the Canvas, not at individual Message steps. If your workspace has multiple apps and you need to ensure message steps target only users of a specific app, use one of the following approaches in each Message step:
-- Turn on **Validate audience at message send** in the Message step [delivery validations](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#delivery-validations) and add app-specific segments or filters.
+- Turn on **Validate audience at message send** in the Message step [delivery validations](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#delivery-validations), then add a segment that has **Apps and websites targeted** set to **Users from specific apps** with only the intended apps selected. Filters such as **Has app** or **Foreground Push Enabled for App** don't restrict delivery because they check the user, not the app.
 - Use Liquid to check the targeted device or app at send time.
 
 Without these safeguards, users who qualified for the journey in one app may receive messages intended for another app if they also use other apps in your workspace.

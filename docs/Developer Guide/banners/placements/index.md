@@ -4,7 +4,7 @@
 
 ## About placement requests {#requests}
 
-When you [create placements in your app or website](https://www.braze.com/docs/developer_guide/banners/placements/#requestBannersRefresh), your app sends a request to Braze to fetch Banner messages for each placement.  
+When you [create placements in your app or website](https://www.braze.com/docs/developer_guide/banners/placements#requestBannersRefresh), your app sends a request to Braze to fetch Banner messages for each placement.  
 
 - You can request up to **10 placements per refresh request**.  
 - For each placement, Braze returns the **highest-priority Banner** the user is eligible to receive.  
@@ -47,7 +47,15 @@ Give your placement a name and assign a **Placement ID**. Be sure you consult ot
 
 ### Step 2: Refresh placements in your app {#requestBannersRefresh}
 
-To refresh placements, call the refresh method for your SDK (`requestBannersRefresh()` on Web and Android, or `requestRefresh()` on Swift).
+To refresh placements, call `requestBannersRefresh()` for your SDK.
+
+`requestBannersRefresh()` merges into the existing Banner cache. Only the placement IDs you pass in are added, updated, or removed:
+
+- If the server returns a Banner for a requested placement, the cached Banner for that placement is replaced.
+- If the server returns no Banner for a requested placement, that placement is dropped from the cache.
+- Cached Banners for placements you didn't request stay in the cache until expiration.
+
+For how many placements you can request per refresh, see [About placement requests](#requests). You can refresh different sets of placements over time (for example, placements on the current screen) and keep Banners for other placements in the cache.
 
 Banner refresh behavior has two paths:
 
@@ -83,19 +91,11 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 
 
 ```swift
-AppDelegate.braze?.banners.requestRefresh(placementIds: ["global_banner", "navigation_square_banner"])
+AppDelegate.braze?.banners.requestBannersRefresh(placementIds: ["global_banner", "navigation_square_banner"])
 ```
 
 
 
-
-`requestBannersRefresh()` merges into the existing Banner cache. Only the placement IDs you pass in are added, updated, or removed:
-
-- If the server returns a Banner for a requested placement, the cached Banner for that placement is replaced.
-- If the server returns no Banner for a requested placement, that placement is dropped from the cache.
-- Cached Banners for placements you didn't request stay in the cache and expire at their original expiry time.
-
-For how many placements you can request per refresh, see [About placement requests](#requests). You can refresh different sets of placements over time (for example, placements on the current screen) and keep Banners for other placements in the cache.
 
 
 
@@ -208,7 +208,7 @@ useEffect(() => {
 **Note:**
 
 
-Your banner update listener reflects the SDK's in-memory banner state. A single update can include placements that were already cached (for example, from an earlier refresh, another screen, or automatic SDK work), not only the placement IDs from your most recent `requestRefresh` call. If you care only about certain placements, check each banner's placement ID in your listener and skip the rest. When you've registered your listener, call `requestRefresh` for the placements you want to sync from Braze.
+Your banner update listener reflects the SDK's in-memory banner state. A single update can include placements that were already cached (for example, from an earlier refresh, another screen, or automatic SDK work), not only the placement IDs from your most recent `requestBannersRefresh` call. If you care only about certain placements, check each banner's placement ID in your listener and skip the rest. When you've registered your listener, call `requestBannersRefresh` for the placements you want to sync from Braze.
 
 
 
@@ -220,7 +220,7 @@ let cancellable = brazeClient.braze()?.banners.subscribeToUpdates { banners in
   }
 }
 // Always refresh after your subscriber is registered
-brazeClient.braze()?.banners.requestRefresh(placementIds: placementIds)
+brazeClient.braze()?.banners.requestBannersRefresh(placementIds: placementIds)
 ```
 
 
@@ -404,6 +404,8 @@ To track impressions, be sure to call `insertBanner` for `isControl`. You can th
 
 
 
+
+After a refresh, the SDK updates a `BannerUIView` or `BannerView` only when that placement's cached content changes (added, removed, or updated). Unchanged displayed Banners stay as-is. Calling `changeUser()` updates every registered Banner view.
 
 ```swift
 // To get access to the Banner model object:

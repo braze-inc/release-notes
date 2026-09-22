@@ -1,12 +1,12 @@
 # Knowledge sources
 
-> Knowledge sources help your AI agents interpret catalog data and retrieve the right information to meet your goals. For an introduction to Braze Agents, see [Braze Agents](https://www.braze.com/docs/user_guide/brazeai/agents). To add knowledge to an agent, see [Create custom agents](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents#add-resources).
+> Knowledge sources are how agents search and retrieve catalog data as agent context. They help agents interpret catalog content and return the right rows and fields to meet your goals. Catalog Agents also receive row data from the catalog field they are deployed to; knowledge sources add searchable catalog context in **+ Agent context**. For an introduction to Braze Agents, see [Braze Agents](https://www.braze.com/docs/user_guide/brazeai/agents). To add a knowledge source to an agent, see [Create custom agents](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents#add-resources).
 
 ## How it works
 
-Knowledge sources are a type of agent context. An AI agent can reference a knowledge source to retrieve data from the catalog more accurately than if the catalog is referenced directly in the agent's instructions. 
+A knowledge source is a curated view of a catalog that you add as **+ Agent context**. When you attach the knowledge source to an agent, you include only fields that support your use case. When an agent needs catalog information, it queries the knowledge source to retrieve matching rows. Braze returns only the relevant catalog data, not the full catalog, so the agent can work with focused, accurate context.
 
-Let's say you're building an agent to recommend restaurants in New York City based on a user's favorite cuisine, which is a custom attribute. This agent references the knowledge source for the "nyc_restaurants" catalog. When you create that knowledge source, you include only the fields the agent needs—such as restaurant name, location, and cuisine—and exclude other catalog columns that don't support recommendations.
+Let's say you're building an agent to recommend restaurants in New York City based on a user's favorite cuisine, which is a custom attribute. This agent references the knowledge source for the "nyc_restaurants" catalog. When you attach that knowledge source to the agent, you include only the fields the agent needs—such as restaurant name, location, and cuisine—and exclude other catalog columns that don't support recommendations.
 
 The agent's instructions clearly describe its role and constraints:
 
@@ -29,15 +29,12 @@ Here are some pizza recommendations for you:
 To create a knowledge source:
 
 1. Go to **Agent Console** > **Knowledge Sources**.
-2. Select **Add Knowledge Source**. In the dropdown, select **Catalog**.
+2. Select **Add knowledge source**. In the dropdown, select **Catalog**.
 3. Select the catalog from the dropdown.
-4. Review the catalog fields and deselect any that don't apply to your agent's use case. We recommend excluding catalog fields that aren't useful for retrieval or generation—limit the knowledge source to only the fields your agent needs.
-5. (optional) Add a description to describe what the knowledge source contains.
-6. Select **Add Knowledge Source**.
+4. (optional) Add a description to describe what the knowledge source contains.
+5. Select **Create knowledge source**.
 
-Including every catalog field can add unnecessary context and may reduce output quality. Deselecting fields that aren't relevant to your use case helps the agent focus on the data that matters.
-
-![A knowledge source "nyc_restaurants" that references the catalog "nyc_restaurants".](https://www.braze.com/docs/assets/img/ai_agent/knowledge_source_example.png?1a22dc9d0a85a5a432972a53c5f9cb3e)
+![A knowledge source "Offers_Cart_Abandonment" that references the catalog "Offers_Cart_Abandonment".](https://www.braze.com/docs/assets/img/ai_agent/knowledge_source_example.png?b1306aa4aa2a9059fdc423f0f7912265)
 
 You can also create a knowledge source as you're building an agent by going to the **Instructions** section of your agent. Select **Add knowledge** > **Create knowledge source**.
 
@@ -50,6 +47,9 @@ To use a knowledge source in your AI agent:
 1. Go to the **Instructions** section of your agent. 
 2. Select **+ Agent context** > **Add knowledge**. 
 3. From the dropdown, select the knowledge source.
+4. Select **Configure fields** for the knowledge source, then uncheck any catalog fields the agent shouldn't use when searching.
+
+Including every catalog field can add unnecessary context and may reduce output quality. Unchecking fields that aren't relevant to your use case helps the agent focus on the data that matters.
 
 Now, your agent can reference the knowledge source and retrieve the relevant catalog data.
 
@@ -61,12 +61,16 @@ Converting a catalog into a knowledge source helps Braze Agents understand the t
 
 ### When should I create a knowledge source?
 
-Create a knowledge source when you're setting up a custom agent (Canvas Step Agent or Catalog Agent) that needs catalog data as context. Knowledge sources help agents retrieve catalog data more accurately than referencing the catalog directly in the agent's instructions.
+Create a knowledge source when an agent needs to search or retrieve catalog data as agent context—for example, to look up destinations, products, or restaurants during a Canvas journey. Knowledge sources are the supported way to add that searchable catalog context. Catalog Agents that only enrich the row they are deployed to may not need a knowledge source unless they must reference additional catalog data at runtime.
+
+### Can I still attach a catalog directly as agent context?
+
+No. New agents use knowledge sources instead of the legacy **Add catalog fields** option. If an existing agent was configured with the legacy **Add catalog fields** option, you can keep using it while you migrate to an equivalent knowledge source.
 
 ### If an agent has been given a knowledge source as context, do I also need to assign the original catalog as context?
 
-No. The knowledge source replaces the catalog as agent context—you don't need to attach both. When you create the knowledge source, include only the catalog fields your agent needs.
+No. The knowledge source is the catalog reference for the agent—you don't need to attach both. When you attach the knowledge source to the agent, include only the catalog fields your agent needs.
 
 ### How should I evaluate the effectiveness of a knowledge source?
 
-Duplicate any existing agent you use that references a regular catalog, and switch it to reference the equivalent knowledge source instead. Run a few test invocations in Agent Console to ensure accuracy, and then consider either replacing the existing agent where it's being deployed, or A/B testing the old agent against the new agent (using Experiment Path step) to understand performance impact.
+Duplicate any existing agent that still attaches a catalog directly as context, and switch it to use the equivalent knowledge source instead. Run a few test invocations in Agent Console to ensure accuracy, and then consider either replacing the existing agent where it's being deployed, or A/B testing the old agent against the new agent (using Experiment Path step) to understand performance impact.

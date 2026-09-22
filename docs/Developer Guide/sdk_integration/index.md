@@ -37,12 +37,12 @@ This guide uses code samples from the Braze Web SDK 4.0.0+. To upgrade to the la
 You can integrate the Web Braze SDK using the following methods. For additional options, see [other integration methods](#web_other-integration-methods).
 
 - **Code-based integration:** Integrate the Web Braze SDK directly in your codebase using your preferred package manager or the Braze CDN. This gives you full control over how the SDK is loaded and configured.
-- **Google Tag Manager:** A no-code solution that lets you integrate the Web Braze SDK without modifying your site's code. For more information, see [Google Tag Manager with the Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/google_tag_manager/).
+- **Google Tag Manager:** A no-code solution that lets you integrate the Web Braze SDK without modifying your site's code. For more information, see [Google Tag Manager with the Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/google_tag_manager).
 
 **Important:**
 
 
-We recommend using the [NPM integration method](https://www.braze.com/docs/developer_guide/sdk_integration/?subtab=package%20manager&sdktab=web). Benefits include storing SDK libraries locally on your website, providing immunity from ad-blocker extensions, and contributing to faster load times as part of bundler support.
+We recommend using the [NPM integration method](https://www.braze.com/docs/developer_guide/sdk_integration?subtab=package%20manager&sdktab=web). Benefits include storing SDK libraries locally on your website, providing immunity from ad-blocker extensions, and contributing to faster load times as part of bundler support.
 
 
 
@@ -50,7 +50,7 @@ We recommend using the [NPM integration method](https://www.braze.com/docs/devel
 
 ### Step 1: Install the Braze library
 
-You can install the Braze library using one of the following methods. However, if your website uses a `Content-Security-Policy`, review the [Content Security Policy](https://www.braze.com/docs/developer_guide/platforms/web/content_security_policy/) before continuing.
+You can install the Braze library using one of the following methods. However, if your website uses a `Content-Security-Policy`, review the [Content Security Policy](https://www.braze.com/docs/developer_guide/platforms/web/content_security_policy) before continuing.
 
 **Important:**
 
@@ -97,7 +97,7 @@ The default **Prevent Cross-Site Tracking** setting in Safari can prevent in-app
 
 ### Step 2: Initialize the SDK
 
-After the Braze Web SDK is added to your website, initialize the library with the API key and [SDK endpoint URL](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints/) found in **Settings** > **App Settings** within your Braze dashboard. For a complete list of options for `braze.initialize()`, along with our other JavaScript methods, see [Braze JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
+After the Braze Web SDK is added to your website, initialize the library with the API key and [SDK endpoint URL](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard. For a complete list of options for `braze.initialize()`, along with our other JavaScript methods, see [Braze JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
 
 **Note:**
 
@@ -148,12 +148,12 @@ If you're seeing "Session missing" behavior, or you're not able to track the ses
 - **Cause:** The implementation doesn't call `braze.openSession()`.
 - **Resolution:** Always call `braze.openSession()` after initialization (and after `braze.changeUser()` if you set an external ID).
 
-For more information, see [Step 2: Initialize the SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web&tab=code-based%20integration#step-2-initialize-the-sdk).
+For more information, see [Step 2: Initialize the SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web&tab=code-based%20integration#step-2-initialize-the-sdk).
 
 **Important:**
 
 
-Anonymous users on mobile or web devices may be counted towards your [MAU](https://www.braze.com/docs/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
+Anonymous users on mobile or web devices may be counted towards your [MAU](https://www.braze.com/docs/user_guide/analytics/dashboards/home#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 
 
 
@@ -193,9 +193,9 @@ Enter the minimum required information:
 
 | Field         | Description |
 | ------------- | ----------- |
-| **API Key**   | Your [Braze API Key](https://www.braze.com/docs/api/basics/#about-rest-api-keys), found in the Braze dashboard under **Settings** > **App Settings**. |
-| **API Endpoint** | Your REST endpoint URL. Your endpoint will depend on the Braze URL for [your instance](https://www.braze.com/docs/api/basics/#endpoints). |
-| **SDK Version**  | The most recent `MAJOR.MINOR` version of the Web Braze SDK listed in the [changelog](https://www.braze.com/docs/developer_guide/changelogs/?sdktab=web). For example, if the latest version is `4.1.2`, enter `4.1`. For more information, see [About SDK version management](https://www.braze.com/docs/developer_guide/sdk_integration/version_management/). |
+| **API Key**   | Your [Braze API Key](https://www.braze.com/docs/api/basics#about-rest-api-keys), found in the Braze dashboard under **Settings** > **App Settings**. |
+| **API Endpoint** | Your REST endpoint URL. Your endpoint will depend on the Braze URL for [your instance](https://www.braze.com/docs/api/basics#endpoints). |
+| **SDK Version**  | The most recent `MAJOR.MINOR` version of the Web Braze SDK listed in the [changelog](https://www.braze.com/docs/developer_guide/changelogs?sdktab=web). For example, if the latest version is `4.1.2`, enter `4.1`. For more information, see [About SDK version management](https://www.braze.com/docs/developer_guide/sdk_integration/version_management). |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Step 3: Configure the tag" }
 
 For additional initialization settings, select **Braze Initialization Options** and choose any options you need.
@@ -208,7 +208,7 @@ The Braze Initialization Tag exposes the following options. Most of these map di
 
 | GTM option | Web SDK configuration or method | Description |
 | --- | --- | --- |
-| **Allow HTML In-App Messages** | `allowUserSuppliedJavascript` | Enables HTML in-app messages, Banners, and user-supplied JavaScript click actions. Required for [HTML in-app messages](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/custom_html/) and [Banners](https://www.braze.com/docs/developer_guide/banners/placements/?sdktab=web) that use custom HTML. Only enable this when you trust the HTML and JavaScript content, as it allows user-supplied JavaScript execution. |
+| **Allow HTML In-App Messages** | `allowUserSuppliedJavascript` | Enables HTML in-app messages, Banners, and user-supplied JavaScript click actions. Required for [HTML in-app messages](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/custom_html) and [Banners](https://www.braze.com/docs/developer_guide/banners/placements?sdktab=web) that use custom HTML. Only enable this when you trust the HTML and JavaScript content, as it allows user-supplied JavaScript execution. |
 | **App Version Number** | `appVersion`, `appVersionNumber` | App version for segmentation (for example, `1.2.3.4`). |
 | **Automatically Open New Session** | `braze.openSession()` | Opens a new session after the SDK is initialized by calling this method for you. |
 | **Automatically show new in app messages** | `braze.automaticallyShowInAppMessages()` | Automatically displays new in-app messages when they arrive from the server by calling this method after initialization. |
@@ -216,7 +216,7 @@ The Braze Initialization Tag exposes the following options. Most of these map di
 | **Disable Automatic Service Worker Registration** | `manageServiceWorkerExternally` | Use if you register and control the service worker yourself. |
 | **Disable Cookies** | `noCookies` | Uses localStorage instead of cookies for user/session data. Prevents cross-subdomain recognition. |
 | **Disable Font Awesome** | `doNotLoadFontAwesome` | Prevents the SDK from loading Font Awesome from the CDN. Use if your site has its own Font Awesome. |
-| **Enable SDK Authentication** | `enableSdkAuthentication` | Enables [SDK Authentication](https://www.braze.com/docs/developer_guide/sdk_integration/authentication/). |
+| **Enable SDK Authentication** | `enableSdkAuthentication` | Enables [SDK Authentication](https://www.braze.com/docs/developer_guide/sdk_integration/authentication). |
 | **Enable Web SDK Logging** | `enableLogging` | Enables console logging for debugging. Remove before production. |
 | **Minimum Interval Between Triggered Messages** | `minimumIntervalBetweenTriggerActionsInSeconds` | Minimum seconds between trigger actions (default: 30). |
 | **Open Cards in New Tab** | `openCardsInNewTab` | Opens Content Card links in a new tab when using the default Feed UI. |
@@ -227,11 +227,11 @@ The Braze Initialization Tag exposes the following options. Most of these map di
 **Note:**
 
 
-To enable [Custom HTML in-app messages](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/custom_html/) when using the Google Tag Manager Braze Initialization Tag, select **Allow HTML In-App Messages** in **Braze Initialization Options**. This checkbox maps to the `allowUserSuppliedJavascript` initialization option in `braze.initialize()` and sets it to `true`. The Google Tag Manager Braze Initialization Tag uses this label instead of the option name.
+To enable [Custom HTML in-app messages](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/custom_html) when using the Google Tag Manager Braze Initialization Tag, select **Allow HTML In-App Messages** in **Braze Initialization Options**. This checkbox maps to the `allowUserSuppliedJavascript` initialization option in `braze.initialize()` and sets it to `true`. The Google Tag Manager Braze Initialization Tag uses this label instead of the option name.
 
 
 
-For options not exposed in the GTM template (such as `contentSecurityNonce`, `localization`, or `devicePropertyAllowlist`), use [runtime initialization](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web) instead.
+For options not exposed in the GTM template (such as `contentSecurityNonce`, `localization`, or `devicePropertyAllowlist`), use [runtime initialization](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web) instead.
 
 ### Step 5: Set to Trigger on *all pages*
 
@@ -240,7 +240,7 @@ The initialization tag should be run on all pages of your site. This allows you 
 **Important:**
 
 
-**Tag sequencing:** The Braze Initialization tag must fire before any other tags that call Braze SDK methods (such as `braze.getUser()` or `braze.logCustomEvent()`). If custom events, user attributes, or other Braze method calls fire before the SDK is initialized, you may encounter errors like `Uncaught TypeError: Cannot read properties of undefined (reading 'getUser')`. To ensure proper sequencing, configure your Braze Initialization tag as a setup tag or use GTM's tag sequencing feature to guarantee it fires first. For more information, see [Tag sequencing for Braze action tags](https://www.braze.com/docs/developer_guide/sdk_integration/google_tag_manager/?sdktab=web#web_tag-sequencing-for-braze-action-tags).
+**Tag sequencing:** The Braze Initialization tag must fire before any other tags that call Braze SDK methods (such as `braze.getUser()` or `braze.logCustomEvent()`). If custom events, user attributes, or other Braze method calls fire before the SDK is initialized, you may encounter errors like `Uncaught TypeError: Cannot read properties of undefined (reading 'getUser')`. To ensure proper sequencing, configure your Braze Initialization tag as a setup tag or use GTM's tag sequencing feature to guarantee it fires first. For more information, see [Tag sequencing for Braze action tags](https://www.braze.com/docs/developer_guide/sdk_integration/google_tag_manager?sdktab=web#web_tag-sequencing-for-braze-action-tags).
 
 
 
@@ -683,7 +683,7 @@ export function BuyButton() {
 
 This example shows a `BuyButton` component that logs activity when someone clicks **Buy**. First, it imports only `logCustomEvent`, `logPurchase`, and `getUser` at click time. Then it updates a user attribute, logs a custom event, and logs a purchase. This pattern helps you keep initialization centralized in `useBraze`, while still tracking meaningful actions from any client component.
 
-If you're using Remix with Vite and package-root imports fail at runtime, use the existing Vite workaround. For more information, see [Vite](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web#web_vite).
+If you're using Remix with Vite and package-root imports fail at runtime, use the existing Vite workaround. For more information, see [Vite](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web#web_vite).
 
 For a full list of available methods, see the [Braze JavaScript reference documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html).
 
@@ -691,7 +691,7 @@ For a full list of available methods, see the [Braze JavaScript reference docume
 
 Tealium iQ offers a basic turnkey Braze integration. To configure the integration, search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard.
 
-For more details or in-depth Tealium configuration support, check out our [integration documentation](https://www.braze.com/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or contact your Tealium account manager.
+For more details or in-depth Tealium configuration support, check out our [integration documentation](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/tealium/tealium) or contact your Tealium account manager.
 
 ### Vite {#vite}
 
@@ -722,7 +722,7 @@ repositories {
 }
 ```
 
-Next, add Braze to your dependencies. In the following examples, replace `SDK_VERSION` with the current version of your Android Braze SDK. For the full list of versions, see [Changelogs](https://www.braze.com/docs/developer_guide/changelogs/?sdktab=android).
+Next, add Braze to your dependencies. In the following examples, replace `SDK_VERSION` with the current version of your Android Braze SDK. For the full list of versions, see [Changelogs](https://www.braze.com/docs/developer_guide/changelogs?sdktab=android).
 
 **Note:**
 
@@ -828,13 +828,13 @@ dependencies {
 **Note:**
 
 
-As of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For more details, refer to our <a href="/docs/api/basics/#endpoints">list of available endpoints</a>.
+As of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For more details, refer to our <a href="/docs/api/basics#endpoints">list of available endpoints</a>.
 
 
 
 Create a `braze.xml` file in your project's `res/values` folder. If you are on a specific data cluster or have a pre-existing custom endpoint, you need to specify the endpoint in your `braze.xml` file as well. 
 
-The contents of that file should resemble the following code snippet. Make sure to substitute `YOUR_APP_IDENTIFIER_API_KEY` with the identifier found in the **Manage Settings** page of the Braze dashboard. Log in at [dashboard.braze.com](https://dashboard.braze.com) to find your [cluster address](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints/). 
+The contents of that file should resemble the following code snippet. Make sure to substitute `YOUR_APP_IDENTIFIER_API_KEY` with the identifier found in the **Manage Settings** page of the Braze dashboard. Log in at [dashboard.braze.com](https://dashboard.braze.com) to find your [cluster address](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints). 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -1051,7 +1051,7 @@ For the list of available parameters, see [`BrazeActivityLifecycleCallbackListen
 **Tip:**
 
 
-You can also use the [SDK Debugger](https://www.braze.com/docs/developer_guide/debugging) to diagnose SDK issues.
+You can also use the [SDK Debugger](https://www.braze.com/docs/developer_guide/sdk_integration/debugging) to diagnose SDK issues.
 
 
 
@@ -1315,7 +1315,7 @@ For each relevant build variant, create a new `braze.xml` in the `src/<build var
 **Tip:**
 
 
-To learn how to set up the API key in your code, see [Runtime configuration](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android#runtime-configuration).
+To learn how to set up the API key in your code, see [Runtime configuration](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android#android_runtime-configuration).
 
 
 
@@ -1817,7 +1817,7 @@ let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
 
-Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct value from your **App Settings** page. Check out our [API identifier types](https://www.braze.com/docs/api/identifier_types/?tab=app%20ids) for more information on where to find your app identifier API key.
+Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct value from your **App Settings** page. Check out our [API identifier types](https://www.braze.com/docs/api/identifier_types?tab=app%20ids) for more information on where to find your app identifier API key.
 
 
 
@@ -1855,7 +1855,7 @@ Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 AppDelegate.braze = braze;
 ```
 
-Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct value from your **Manage Settings** page. Check out our [API documentation](https://www.braze.com/docs/api/api_key/#the-app-identifier-api-key) for more information on where to find your app identifier API key.
+Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct value from your **Manage Settings** page. Check out our [API documentation](https://www.braze.com/docs/api/api_key#the-app-identifier-api-key) for more information on where to find your app identifier API key.
 
 
 
@@ -1987,7 +1987,7 @@ Replace the following:
 
 | Value                 | Description                                                                                                                      |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `BRAZE_API_KEY`       | Your [Braze REST API key](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys).              |
+| `BRAZE_API_KEY`       | Your [Braze REST API key](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers).              |
 | `CUSTOM_API_ENDPOINT` | A custom API endpoint. This endpoint is used to route your Braze instance data to the correct App Group in your Braze dashboard. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Step 2: Configure your project" }
 
@@ -2078,14 +2078,14 @@ You can add any of the following preferences to the `platform` element in your p
 | Method                                            | Description                                                                                                                                                                                                                                           |
 | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `ios_api_key`                                     | Sets the API key for your application.                                                                                                                                                                                                                |
-| `ios_api_endpoint`                                | Sets the [SDK endpoint](https://www.braze.com/docs/api/basics/#endpoints) for your application.                                                                                                                                                                 |
+| `ios_api_endpoint`                                | Sets the [SDK endpoint](https://www.braze.com/docs/api/basics#endpoints) for your application.                                                                                                                                                                 |
 | `ios_disable_automatic_push_registration`         | Sets whether automatic push registration should be disabled.                                                                                                                                                                                          |
 | `ios_disable_automatic_push_handling`             | Sets whether automatic push handling should be disabled.                                                                                                                                                                                              |
 | `ios_enable_idfa_automatic_collection`            | Sets whether the Braze SDK should automatically collect the IDFA information. For more information, see [the Braze IDFA method documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/). |
 | `enable_location_collection`                      | Sets whether the automatic location collection is enabled (if the user permits). The `geofence-branch`                                                                                                                                                |
 | `geofences_enabled`                               | Sets whether geofences are enabled.                                                                                                                                                                                                                   |
 | `ios_session_timeout`                             | Sets the Braze session timeout for your application in seconds. Defaults to 10 seconds.                                                                                                                                                               |
-| `sdk_authentication_enabled`                      | Sets whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.                                                                                              |
+| `sdk_authentication_enabled`                      | Sets whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/sdk_integration/authentication) feature.                                                                                              |
 | `display_foreground_push_notifications`           | Sets whether push notifications should be displayed while the application is in the foreground.                                                                                                                                                       |
 | `ios_disable_un_authorization_option_provisional` | Sets whether `UNAuthorizationOptionProvisional` should be disabled.                                                                                                                                                                                   |
 | `trigger_action_minimum_time_interval_seconds`    | Sets the minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                                                                                                                   |
@@ -2110,7 +2110,7 @@ For more detailed information, see [GitHub: Braze iOS Cordova plugin](https://gi
 | Method                                                            | Description                                                                                                                                                                                   |
 | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `android_api_key`                                                 | Sets the API key for your application.                                                                                                                                                        |
-| `android_api_endpoint`                                            | Sets the [SDK endpoint](https://www.braze.com/docs/api/basics/#endpoints) for your application.                                                                                                         |
+| `android_api_endpoint`                                            | Sets the [SDK endpoint](https://www.braze.com/docs/api/basics#endpoints) for your application.                                                                                                         |
 | `android_small_notification_icon`                                 | Sets the notification small icon.                                                                                                                                                             |
 | `android_large_notification_icon`                                 | Sets the notification large icon.                                                                                                                                                             |
 | `android_notification_accent_color`                               | Sets the notification accent color using a hexadecimal representation.                                                                                                                        |
@@ -2122,7 +2122,7 @@ For more detailed information, see [GitHub: Braze iOS Cordova plugin](https://gi
 | `enable_location_collection`                                      | Sets whether the automatic location collection is enabled (if the user permits).                                                                                                              |
 | `geofences_enabled`                                               | Sets whether geofences are enabled.                                                                                                                                                           |
 | `android_disable_auto_session_tracking`                           | Disable the Android Cordova plugin from automatically tracking sessions. For more information, see [Disabling automatic session tracking](#cordova_disable-automatic-session-tracking) |
-| `sdk_authentication_enabled`                                      | Sets whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.                                      |
+| `sdk_authentication_enabled`                                      | Sets whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/sdk_integration/authentication) feature.                                      |
 | `trigger_action_minimum_time_interval_seconds`                    | Sets the minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                                                           |
 | `is_session_start_based_timeout_enabled`                          | Sets whether the session timeout behavior to be based either on session start or session end events.                                                                                          |
 | `default_notification_channel_name`                               | Sets the user-facing name as seen via `NotificationChannel.getName` for the Braze default `NotificationChannel`.                                                                              |
@@ -2281,11 +2281,11 @@ public void onCreate() {
 
 
 
-After creating the channel in your Android code, use the channel ID when sending push notifications from the Braze dashboard. For more information on notification channels, see [Android notification channels](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/notification_channels/).
+After creating the channel in your Android code, use the channel ID when sending push notifications from the Braze dashboard. For more information on notification channels, see [Android notification channels](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/notification_channels).
 
 ## Troubleshooting iOS builds after upgrading the plugin
 
-Cordova Braze SDK 9.0.0 and later use Swift SDK 9.0.0 or later. Starting with Swift SDK 8.0.0, that native SDK is compiled with **Xcode 15.2**. If your iOS build fails after you upgrade the Cordova plugin to 9.0.0 or later, update Xcode to 15.2 or newer and confirm it matches the [Swift SDK changelog](https://www.braze.com/docs/developer_guide/changelogs/?sdktab=swift) for the native iOS version your plugin uses.
+Cordova Braze SDK 9.0.0 and later use Swift SDK 9.0.0 or later. Starting with Swift SDK 8.0.0, that native SDK is compiled with **Xcode 15.2**. If your iOS build fails after you upgrade the Cordova plugin to 9.0.0 or later, update Xcode to 15.2 or newer and confirm it matches the [Swift SDK changelog](https://www.braze.com/docs/developer_guide/changelogs?sdktab=swift) for the native iOS version your plugin uses.
 
 
 
@@ -2302,8 +2302,8 @@ Before you integrate the Braze Flutter SDK, you'll need to complete the followin
 
 | Prerequisite | Description |
 | --- | --- |
-| Braze API app identifier | To locate your app's identifier, go to **Settings** > **APIs and Identifiers** > **App Identifiers**. For more information see, [API Identifier Types](https://www.braze.com/docs/api/identifier_types/#app-identifier).|
-| Braze SDK endpoint | Your SDK endpoint URL (for example, `sdk.<cluster>.braze.com`). Your endpoint will depend on the [Braze URL for your instance](https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints).|
+| Braze API app identifier | To locate your app's identifier, go to **Settings** > **APIs and Identifiers** > **App Identifiers**. For more information see, [API Identifier Types](https://www.braze.com/docs/api/identifier_types#app-identifier).|
+| Braze SDK endpoint | Your SDK endpoint URL (for example, `sdk.<cluster>.braze.com`). Your endpoint will depend on the [Braze URL for your instance](https://www.braze.com/docs/api/basics#endpoints).|
 | Flutter SDK | Install the official [Flutter SDK](https://docs.flutter.dev/get-started/install) and ensure it meets the Braze Flutter SDK's [minimum supported version](https://github.com/braze-inc/braze-flutter-sdk#requirements). |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
@@ -2730,7 +2730,7 @@ In your `app.json`, add the Braze Expo plugin. The API key and endpoint are no l
 | `enableFirebaseCloudMessaging`                | boolean | Android only. Whether to use Firebase Cloud Messaging for push notifications.             |
 | `firebaseCloudMessagingSenderId`              | string  | Android only. Your Firebase Cloud Messaging sender ID.                                    |
 | `sessionTimeout`                              | integer | The Braze session timeout for your application in seconds.                                                                                               |
-| `enableSdkAuthentication`                     | boolean | Whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.      |
+| `enableSdkAuthentication`                     | boolean | Whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/sdk_integration/authentication) feature.      |
 | `logLevel`                                    | integer | The log level for your application. The default log level is 8 and minimally logs info. To enable verbose logging for debugging, use log level 0.    |
 | `minimumTriggerIntervalInSeconds`             | integer | The minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                           |
 | `enableAutomaticLocationCollection`           | boolean | Whether automatic location collection is enabled (if the user permits).                                                                                  |
@@ -3094,14 +3094,14 @@ In your `app.json`, add the Braze Expo plugin. You can provide the following con
 
 | Method                                        | Type    | Description                                                                                                                                              |
 | --------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `androidApiKey`                               | string  | Required. The [API key](https://www.braze.com/docs/api/identifier_types/) for your Android application, located in your Braze dashboard under **Manage Settings**. |
-| `iosApiKey`                                   | string  | Required. The [API key](https://www.braze.com/docs/api/identifier_types/) for your iOS application, located in your Braze dashboard under **Manage Settings**.     |
-| `baseUrl`                                     | string  | Required. The [SDK endpoint](https://www.braze.com/docs/api/basics/#endpoints) for your application, located in your Braze dashboard under **Manage Settings**.    |
+| `androidApiKey`                               | string  | Required. The [API key](https://www.braze.com/docs/api/identifier_types) for your Android application, located in your Braze dashboard under **Manage Settings**. |
+| `iosApiKey`                                   | string  | Required. The [API key](https://www.braze.com/docs/api/identifier_types) for your iOS application, located in your Braze dashboard under **Manage Settings**.     |
+| `baseUrl`                                     | string  | Required. The [SDK endpoint](https://www.braze.com/docs/api/basics#endpoints) for your application, located in your Braze dashboard under **Manage Settings**.    |
 | `enableBrazeIosPush`                          | boolean | iOS only. Whether to use Braze to handle push notifications on iOS. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                       |
 | `enableFirebaseCloudMessaging`                | boolean | Android only. Whether to use Firebase Cloud Messaging for push notifications. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.             |
 | `firebaseCloudMessagingSenderId`              | string  | Android only. Your Firebase Cloud Messaging sender ID. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                                    |
 | `sessionTimeout`                              | integer | The Braze session timeout for your application in seconds.                                                                                               |
-| `enableSdkAuthentication`                     | boolean | Whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.      |
+| `enableSdkAuthentication`                     | boolean | Whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/sdk_integration/authentication) feature.      |
 | `logLevel`                                    | integer | The log level for your application. The default log level is 8 and minimally logs info. To enable verbose logging for debugging, use log level 0.    |
 | `minimumTriggerIntervalInSeconds`             | integer | The minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                           |
 | `enableAutomaticLocationCollection`           | boolean | Whether automatic location collection is enabled (if the user permits).                                                                                  |
@@ -3248,7 +3248,7 @@ This adds Kotlin to your project.
 
 **Step 2.2: Configure the Braze SDK**
 
-To connect to Braze servers, create a `braze.xml` file in your project's `res/values` folder. The following code snippet shows an example `braze.xml` configuration. Replace the API [key](https://www.braze.com/docs/api/identifier_types/) and [endpoint](https://www.braze.com/docs/api/basics/#endpoints) with your values:
+To connect to Braze servers, create a `braze.xml` file in your project's `res/values` folder. The following code snippet shows an example `braze.xml` configuration. Replace the API [key](https://www.braze.com/docs/api/identifier_types) and [endpoint](https://www.braze.com/docs/api/basics#endpoints) with your values:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -3366,7 +3366,7 @@ import BrazeKit
 import braze_react_native_sdk
 ```
 
-In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API [key](https://www.braze.com/docs/api/identifier_types/) and [endpoint](https://www.braze.com/docs/api/basics/#endpoints) with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access.
+In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API [key](https://www.braze.com/docs/api/identifier_types) and [endpoint](https://www.braze.com/docs/api/basics#endpoints) with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access.
 
 **Note:**
 
@@ -3414,7 +3414,7 @@ The following code snippet shows how to import the Braze SDK at the top of the `
 #import "BrazeReactBridge.h"
 ```
 
-In the `application:didFinishLaunchingWithOptions:` method, replace the API [key](https://www.braze.com/docs/api/identifier_types/) and [endpoint](https://www.braze.com/docs/api/basics/#endpoints) with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access.
+In the `application:didFinishLaunchingWithOptions:` method, replace the API [key](https://www.braze.com/docs/api/identifier_types) and [endpoint](https://www.braze.com/docs/api/basics#endpoints) with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access.
 
 **Note:**
 
@@ -3647,7 +3647,7 @@ const App = () => {
   )
 ```
 
-In the Braze dashboard, go to [User Search](https://www.braze.com/docs/user_guide/engagement_tools/segments/using_user_search#using-user-search) and look for the user with the ID matching `some-user-id`. Here, you can verify that session and device data were logged.
+In the Braze dashboard, go to [User Search](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles) and look for the user with the ID matching `some-user-id`. Here, you can verify that session and device data were logged.
 
 
 
@@ -3660,9 +3660,9 @@ React Native unit tests that import the Braze SDK need mocks for native modules 
 
 After integrating the Braze SDK, you can start implementing common messaging features:
 
-- [Push Notifications](https://www.braze.com/docs/developer_guide/push_notifications/): Set up and send push notifications to your users.
-- [In-App Messages](https://www.braze.com/docs/developer_guide/in_app_messages/): Display contextual messages within your app.
-- [Banners](https://www.braze.com/docs/developer_guide/banners/): Show persistent banners in your app interface.
+- [Push Notifications](https://www.braze.com/docs/developer_guide/push_notifications): Set up and send push notifications to your users.
+- [In-App Messages](https://www.braze.com/docs/developer_guide/in_app_messages): Display contextual messages within your app.
+- [Banners](https://www.braze.com/docs/developer_guide/banners): Show persistent banners in your app interface.
 
 
 
@@ -3993,7 +3993,7 @@ To use the Braze Unity plugin with Prime31 plugins, edit your project's `Android
 
 ### Amazon Device Messaging (ADM)
 
-Braze supports integrating [ADM push](https://developer.amazon.com/public/apis/engage/device-messaging) into Unity apps. If you want to integrate ADM push, create a file called `api_key.txt` containing your ADM API key and place it in the `Plugins/Android/assets/` folder.  For more information on integrating ADM with Braze, visit our [ADM push integration instructions](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=unity).
+Braze supports integrating [ADM push](https://developer.amazon.com/public/apis/engage/device-messaging) into Unity apps. If you want to integrate ADM push, create a file called `api_key.txt` containing your ADM API key and place it in the `Plugins/Android/assets/` folder.  For more information on integrating ADM with Braze, visit our [ADM push integration instructions](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=unity).
 
 ### Extending the Braze Unity player (Android only) {#extend-unity-player}
 
@@ -4001,7 +4001,7 @@ The example `AndroidManifest.xml` file provided has one Activity class registere
 
 If you are creating your own custom `UnityPlayerActivity` in a library or plugin project, you will need to extend our `BrazeUnityPlayerActivity` to integrate your custom functionality with Braze. Before beginning work on extending `BrazeUnityPlayerActivity`, follow our instructions for integrating Braze into your Unity project.
 
-1. Add the Braze Android SDK as a dependency to your library or plugin project as described in the [Braze Android SDK integration instructions](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android).
+1. Add the Braze Android SDK as a dependency to your library or plugin project as described in the [Braze Android SDK integration instructions](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android).
 2. Integrate our Unity `.aar`, which contains our Unity-specific functionality, to your Android library project you are building for Unity. The `appboy-unity.aar` is available from our [public repo](https://github.com/braze-inc/braze-unity-sdk/tree/master/Assets/Plugins/Android). After our Unity library is successfully integrated, modify your `UnityPlayerActivity` to extend `BrazeUnityPlayerActivity`.
 3. Export your library or plugin project and drop it into `/<your-project>/Assets/Plugins/Android` as normal. Do not include any Braze source code in your library or plugin as they will already be present in `/<your-project>/Assets/Plugins/Android`.
 4. Edit your `/<your-project>/Assets/Plugins/Android/AndroidManifest.xml` to specify your `BrazeUnityPlayerActivity` subclass as the main activity.
@@ -4154,11 +4154,11 @@ See the `App.xaml.cs` file in the [iOS MAUI](https://github.com/braze-inc/braze-
 
 
 
-Now you can launch your application and see sessions being logged to the Braze dashboard (along with device information and other analytics). For a more in-depth discussion of best practices for the basic SDK integration, consult the [Android integration instructions](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android).
+Now you can launch your application and see sessions being logged to the Braze dashboard (along with device information and other analytics). For a more in-depth discussion of best practices for the basic SDK integration, consult the [Android integration instructions](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android).
 
 
 
-Now you can launch your application and see sessions being logged to the Braze dashboard. For a more in-depth discussion of best practices for the basic SDK integration, consult the [iOS integration instructions](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift).
+Now you can launch your application and see sessions being logged to the Braze dashboard. For a more in-depth discussion of best practices for the basic SDK integration, consult the [iOS integration instructions](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift).
 
 **Important:**
 
@@ -4416,7 +4416,7 @@ import { initialize, changeUser, openSession } from "@braze/vega-sdk";
 
 ### Step 2: Initialize the SDK
 
-After the Braze Vega SDK is added to your project, initialize the library with the API key and [SDK endpoint URL](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints/) found in **Settings** > **App Settings** within your Braze dashboard.
+After the Braze Vega SDK is added to your project, initialize the library with the API key and [SDK endpoint URL](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard.
 
 **Important:**
 
@@ -4470,7 +4470,7 @@ const App = () => {
 **Important:**
 
 
-Anonymous users may be counted towards your [MAU](https://www.braze.com/docs/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
+Anonymous users may be counted towards your [MAU](https://www.braze.com/docs/user_guide/analytics/dashboards/home#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 
 
 

@@ -393,6 +393,23 @@ You can use the `${set_user_to_unsubscribed_url}` Liquid tag only in email campa
 
 
 
+### Subscription group unsubscribe links {#subscription-group-unsubscribe-links}
+
+To let recipients unsubscribe from a single [email subscription group](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups#email-subscription-groups) without changing their global email subscription state, use the `{% subscription_group_unsubscribe_url <subscription_group_id> %}` Liquid tag in email campaigns and Canvases.
+
+Replace `<subscription_group_id>` with the subscription group's API identifier and don't wrap the ID in quotes. You can insert the tag from the composer personalization panel under **Email Properties** or type it manually.
+
+When a recipient selects the link, Braze unsubscribes them from that subscription group only. Test sends and message previews render `#` instead of a live URL.
+
+| Scenario | Rendered link |
+| -------- | ------------- |
+| Active email subscription group on a live send | Per-recipient subscription group unsubscribe URL |
+| Missing or invalid subscription group ID | Global unsubscribe URL (`${set_user_to_unsubscribed_url}`) |
+| Archived email subscription group | Global unsubscribe URL |
+| Archived non-email subscription group | `#` |
+| Test send, preview, or preference center page | `#` |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Subscription group unsubscribe link behavior" }
+
 When a user selects "Unsubscribe from all of the listed types of emails" in the preference center, Braze sets their global email subscription status to `unsubscribed` and unsubscribes them from all groups.
 
 Recipient-side email unsubscribes—unsubscribe links, list-unsubscribe, preference center submissions, and ESP-reported unsubscribes—appear in the Snowflake `USERS_MESSAGES_EMAIL_UNSUBSCRIBE` table. Unsubscribes made through the REST API are not included in that table; those emit [`users.behaviors.subscriptiongroup.StateChange`](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/#subscription-group-state-change-events) or [`users.behaviors.subscription.GlobalStateChange`](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/#global-subscription-state-change-events) events instead. For the table schema, see [USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED).

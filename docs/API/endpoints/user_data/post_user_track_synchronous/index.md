@@ -1,4 +1,4 @@
-<div id='api_zpocfxejnvqv' class='api_div' data-search-keywords='create and update users (synchronous) attributes events purchases users custom_attributes custom_events purchase_events message errors'>
+<div id='api_jhtwutidbadl' class='api_div' data-search-keywords='create and update users (synchronous) attributes events purchases users custom_attributes custom_events purchase_events message errors'>
 <h1 id="create-and-update-users-synchronous">Create and update users (synchronous)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track/sync</p>
@@ -32,7 +32,7 @@
 
 <p><strong>Note:</strong></p>
 
-<p>Each custom attribute sent in a request to <code class="language-plaintext highlighter-rouge">/users/track</code> consumes a data point. For more information, see <a href="/docs/user_guide/data/infrastructure/data_points/">Data points</a>.</p>
+<p>Each custom attribute sent in a request to <code class="language-plaintext highlighter-rouge">/users/track</code> consumes a data point. For more information, see <a href="/docs/user_guide/data/infrastructure/data_points">Data points</a>.</p>
 
 <p>We apply a base speed limit of 500 requests per minute to this endpoint for all customers. Each <code class="language-plaintext highlighter-rouge">/users/track/sync</code> request can contain up to one event object, one attribute object, or one purchase object. Each object (event, attribute, and purchase arrays) can update one user each.</p>
 

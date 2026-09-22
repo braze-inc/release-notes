@@ -1,4 +1,4 @@
-<div id='api_stcaowwgqble' class='api_div' data-search-keywords='upload an asset to the media library asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
+<div id='api_nscwtggmfkzv' class='api_div' data-search-keywords='upload an asset to the media library asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
 <h1 id="upload-an-asset-to-the-media-library">Upload an asset to the media library</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/media_library/create</p>
@@ -302,9 +302,19 @@
       <td>The asset failed to upload due to processing issues.</td>
     </tr>
     <tr>
+      <td><code class="language-plaintext highlighter-rouge">CORRUPT_FILE</code></td>
+      <td>400</td>
+      <td>The image file is corrupted or could not be decoded. The <code class="language-plaintext highlighter-rouge">meta</code> object includes <code class="language-plaintext highlighter-rouge">file_name</code>.</td>
+    </tr>
+    <tr>
       <td><code class="language-plaintext highlighter-rouge">INVALID_ASSET_URL</code></td>
       <td>400</td>
-      <td>The <code class="language-plaintext highlighter-rouge">asset_url</code> value is not a valid URI. The <code class="language-plaintext highlighter-rouge">meta</code> object includes <code class="language-plaintext highlighter-rouge">asset_url</code>.</td>
+      <td>The <code class="language-plaintext highlighter-rouge">asset_url</code> is malformed or is not an HTTP or HTTPS URL. The <code class="language-plaintext highlighter-rouge">meta</code> object includes <code class="language-plaintext highlighter-rouge">asset_url</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">FAILED_TO_DOWNLOAD_ASSET</code></td>
+      <td>400</td>
+      <td>Braze could not download the file at <code class="language-plaintext highlighter-rouge">asset_url</code> (for example, the host could not be resolved, the connection failed, or the remote server returned an error). The <code class="language-plaintext highlighter-rouge">meta</code> object includes <code class="language-plaintext highlighter-rouge">asset_url</code> and <code class="language-plaintext highlighter-rouge">original_error</code>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">ZIP_UPLOAD_ERROR</code></td>

@@ -1,22 +1,10 @@
-# Canvas threshold alerts
+# Custom Canvas alerts {#custom-canvas-alerts}
 
-> Canvas threshold alerts let you know when something in a Canvas isn't going as planned, so you can catch a stalled journey or an unexpected drop-off before it affects your customers.
-
-
-
-
-**Important:**
-
-
- is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-
-
-
-
+> Custom Canvas alerts let you know when something in a Canvas isn't going as planned, so you can catch a stalled journey or an unexpected drop-off before it affects your customers.
 
 Set a volume or percentage threshold for user entries or messages sent, and Braze notifies you by email or webhook if that threshold is crossed. You can also create multiple alerts for the same Canvas—for example, one alert for user entries and another for messages sent.
 
-Not sure where to start? [Operator](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities) can walk you through how to set up a Canvas threshold alert.
+Not sure where to start? [Operator](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities) can walk you through how to set up a Custom Canvas alert.
 
 ## Step 1: Create an alert
 
@@ -108,11 +96,11 @@ Saving an alert doesn't activate it. To turn it on, go to the **Manage Alerts** 
 
 ## Considerations
 
-- **Draft Canvases:** You can set up a threshold alert for a Canvas that's still in draft, but the alert won't start checking against your rules until the Canvas launches.
+- **Draft Canvases:** You can set up a custom alert for a Canvas that's still in draft, but the alert won't start checking against your rules until the Canvas launches.
 - **Percentage baseline:** Percentage rules need seven complete prior same-window days after the Canvas launches. Until those windows exist, or when the baseline average is zero (no activity in those prior windows), percentage rules don't trigger a notification.
 
 ## Frequently asked questions
 
-### Do Canvas threshold alerts count toward webhook usage?
+### Do custom alerts count toward webhook usage?
 
-No. Canvas threshold alerts don't count toward webhook rate limits or usage metrics.
+No. Custom Canvas alerts don't count toward webhook rate limits or usage metrics.

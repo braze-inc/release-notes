@@ -9,7 +9,7 @@ Once you've launched your campaign, you can return to the details page for that 
 **Tip:**
 
 
-Looking for definitions for the terms and metrics listed in your report? Refer to the [Report Metrics Glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary/) and filter by your channel. For email-specific definitions, see the [Email Analytics Glossary](https://www.braze.com/docs/user_guide/channels/email/reporting/analytics_glossary/).
+Looking for definitions for the terms and metrics listed in your report? Refer to the [Report Metrics Glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary) and filter by your channel. For email-specific definitions, see the [Email Analytics Glossary](https://www.braze.com/docs/user_guide/channels/email/reporting/analytics_glossary).
 
 
 
@@ -44,7 +44,7 @@ The following table summarizes what each label means.
 | **Estimated Audience** | The workspace has more than 50,000 users. Braze doesn't run a full-database count by default. Audience size is estimated from a sample and extrapolated, similar to the **Reachable users** range in the segment builder. Margins of error are expected, especially for small segments as a share of the workspace. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Estimated Audience and Current Audience" }
 
-For details on sampling behavior, **Calculate exact statistics**, and segmenting **Reachable users**, see [Measure segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size/).
+For details on sampling behavior, **Calculate exact statistics**, and segmenting **Reachable users**, see [Measure segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size).
 
 #### Changes Since Last Viewed
 
@@ -397,23 +397,23 @@ To get a day-by-day breakdown, click the <i class="fas fa-bars"></i> hamburger m
 
 ### Conversion event details
 
-The **Conversion Event Details** panel shows you the performance of your conversion events for your campaign. For more information, refer to [Conversion Events](https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).
+The **Conversion Event Details** panel shows you the performance of your conversion events for your campaign. For more information, refer to [Conversion Events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events).
 
 ![The Conversion Event Details panel.](https://www.braze.com/docs/assets/img/cc-conversion.png?39e3903bd0948f87cac25bf481eb0ba5)
 
 ### Conversion correlation
 
-The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion correlation](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/conversion_correlation/).
+The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion correlation](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/conversion_correlation).
 
 ![The Conversion Correlation panel with an analysis on user attributes and behavior from the Primary Conversion Event - A.](https://www.braze.com/docs/assets/img/convcorr.png?9322bf2817e7a5fbecd4ceb3b850875f)
 
 ## Retention report
 
-Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention reports](https://www.braze.com/docs/user_guide/analytics/reports/retention_reports/).
+Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention reports](https://www.braze.com/docs/user_guide/analytics/reports/retention_reports).
 
 ## Funnel report
 
 Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. If your campaign or Canvas uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
 
-For more information, refer to [Funnel reports](https://www.braze.com/docs/user_guide/analytics/reports/funnel_reports/).
+For more information, refer to [Funnel reports](https://www.braze.com/docs/user_guide/analytics/reports/funnel_reports).
 

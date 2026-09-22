@@ -14,7 +14,7 @@ You can do the following with captured anonymous users:
 
 ## How it works
 
-After you [integrate the Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/), users who launch your app for the first time will be considered "anonymous" until you call the `changeUser` method and assign them an `external_id`. Once assigned, you can't make them anonymous again. However, if they uninstall and reinstall your app, they will become anonymous again until `changeUser` is called.
+After you [integrate the Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration), users who launch your app for the first time will be considered "anonymous" until you call the `changeUser` method and assign them an `external_id`. Once assigned, you can't make them anonymous again. However, if they uninstall and reinstall your app, they will become anonymous again until `changeUser` is called.
 
 If a previously-identified user starts a session on a new device, Braze merges specific fields from the anonymous profile that don't already exist on the identified profile after you call `changeUser` on that device using their `external_id`. Not all data is transferred—only fields that are not already populated on the identified profile are merged. For the complete list of fields that transfer, see [merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#merge-behavior).
 
@@ -22,10 +22,10 @@ If a previously-identified user starts a session on a new device, Braze merges s
 
 ## Assigning user aliases
 
-Although anonymous users don’t have `external_ids`, you can assign them a [user alias](https://www.braze.com/docs/user_guide/data/user_data_collection/user_profile_lifecycle/#user-aliases) instead. You should assign a user alias when you want to add other identifiers to the user but don't know what their `external_id` is (for example, they aren't logged in). With user aliases, you also can:
+Although anonymous users don’t have `external_ids`, you can assign them a [user alias](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle#user-aliases) instead. You should assign a user alias when you want to add other identifiers to the user but don't know what their `external_id` is (for example, they aren't logged in). With user aliases, you also can:
 
 - Use the Braze API to log events and attributes associated with anonymous users
-- Use the [External User ID is blank](https://www.braze.com/docs/user_guide/engagement_tools/segments/segmentation_filters#external-user-id) segmentation filter to target anonymous users in your messaging
+- Use the [External User ID is blank](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters#external-user-id) segmentation filter to target anonymous users in your messaging
 
 
 

@@ -381,7 +381,7 @@ When creating custom  pages, Braze sanitizes HTML inputs to prevent cross-site s
 
 If you need to use custom fonts in your  page, reference fonts from one of these domains or use [web-safe fonts](https://www.w3schools.com/cssref/css_websafe_fonts.php) instead.
 
-For email list management best practices, see [Email subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions/).
+For email list management best practices, see [Email subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions).
 
 
 
@@ -404,7 +404,7 @@ When creating custom  pages, Braze sanitizes HTML inputs to prevent cross-site s
 
 If you need to use custom fonts in your  page, reference fonts from one of these domains or use [web-safe fonts](https://www.w3schools.com/cssref/css_websafe_fonts.php) instead.
 
-For email list management best practices, see [Email subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions/).
+For email list management best practices, see [Email subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions).
 
 
 

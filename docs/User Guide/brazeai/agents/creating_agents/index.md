@@ -79,10 +79,10 @@ Agents only receive data you explicitly pass in—they do not search user profil
 
 Select **+ Agent context** to choose what your agent can reference. This includes:
 
-- [Catalog fields](https://www.braze.com/docs/user_guide/brazeai/agents/reference#catalogs-and-fields): Give the agent access to your catalog data for more accurate responses.
-- [Knowledge sources](https://www.braze.com/docs/user_guide/brazeai/agents/knowledge_sources): Give the agent access to catalog data through a knowledge source for more accurate retrieval than attaching a catalog directly.
+- [Knowledge sources](https://www.braze.com/docs/user_guide/brazeai/agents/knowledge_sources): Give the agent access to catalog data. Create a knowledge source from a catalog, then add it as agent context so the agent can query and retrieve the rows and fields it needs.
 - [Segment membership](https://www.braze.com/docs/user_guide/brazeai/agents/reference#segment-membership-context): Let the agent personalize responses based on which segments a user belongs to. You can select up to five segments.
 - [Brand guidelines](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/brand_guidelines): Reference the brand voice and style guidelines for the agent to follow. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
+- [Context files](https://www.braze.com/docs/user_guide/brazeai/agents/reference#context-files): Upload reference documents (PDF, TXT, MD, CSV) for the agent to consult on every invocation. Select **+ Agent context** > **Upload files**, add one or more files, then save the agent to upload them.
 - [All Canvas Context](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables): Analyze all Canvas context data for a user when this agent is invoked, including any variables that are not referenced in the **Instructions** section.
 - [User interaction data](https://www.braze.com/docs/user_guide/brazeai/agents/reference#user-history): Provide the agent with each user's recent campaign and Canvas opens, clicks, and conversion data.
 

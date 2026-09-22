@@ -6,18 +6,18 @@
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=android).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android).
 
 ## Setting up silent push notifications
 
-Silent notifications are available through the Braze [Messaging API](https://www.braze.com/docs/api/endpoints/messaging/). To take advantage of them, you need to set the `send_to_sync` flag to `true` within the [Android push object](https://www.braze.com/docs/api/objects_filters/messaging/android_object/) and ensure there are no `title` or `alert` fields set as it will cause errors when used alongside `send_to_sync`&#8212;however, you can include data `extras` within the object.
+Silent notifications are available through the Braze [Messaging API](https://www.braze.com/docs/api/endpoints/messaging). To take advantage of them, you need to set the `send_to_sync` flag to `true` within the [Android push object](https://www.braze.com/docs/api/objects_filters/messaging/android_object) and ensure there are no `title` or `alert` fields set as it will cause errors when used alongside `send_to_sync`&#8212;however, you can include data `extras` within the object.
 
 
 
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift).
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift).
 
 ## iOS limitations
 
@@ -44,7 +44,7 @@ What Apple calls a remote notification is just a normal push notification with t
 
 
 
-The `content-available` flag can be set in the Braze dashboard as well as within our [Apple push object](https://www.braze.com/docs/api/objects_filters/messaging/apple_object/) in the [messaging API](https://www.braze.com/docs/api/endpoints/messaging/).
+The `content-available` flag can be set in the Braze dashboard as well as within our [Apple push object](https://www.braze.com/docs/api/objects_filters/messaging/apple_object) in the [messaging API](https://www.braze.com/docs/api/endpoints/messaging).
 
 **Warning:**
 
@@ -72,7 +72,7 @@ Check your application for automatic actions in the following places and update 
 
 ### Step 2: Use the internal push utility method
 
-You can use the static utility method in `Braze.Notifications` to check if your app has received or was launched by a Braze internal push. [`Braze.Notifications.isInternalNotification(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/isinternalnotification(_:)) returns `true` for all Braze internal push notifications, which include uninstall tracking and [Feature flags](https://www.braze.com/docs/user_guide/messaging/feature_flags/) sync notifications.
+You can use the static utility method in `Braze.Notifications` to check if your app has received or was launched by a Braze internal push. [`Braze.Notifications.isInternalNotification(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/isinternalnotification(_:)) returns `true` for all Braze internal push notifications, which include uninstall tracking and [Feature flags](https://www.braze.com/docs/user_guide/messaging/feature_flags) sync notifications.
 
 For example:
 
@@ -110,11 +110,11 @@ func application(_ application: UIApplication,
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=android).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android).
 
 ## Setting up silent push notifications
 
-Silent notifications are available through the Braze [Messaging API](https://www.braze.com/docs/api/endpoints/messaging/). To take advantage of them, you need to set the `send_to_sync` flag to `true` within the [Android push object](https://www.braze.com/docs/api/objects_filters/messaging/android_object/) and ensure there are no `title` or `alert` fields set as it will cause errors when used alongside `send_to_sync`&#8212;however, you can include data `extras` within the object.
+Silent notifications are available through the Braze [Messaging API](https://www.braze.com/docs/api/endpoints/messaging). To take advantage of them, you need to set the `send_to_sync` flag to `true` within the [Android push object](https://www.braze.com/docs/api/objects_filters/messaging/android_object) and ensure there are no `title` or `alert` fields set as it will cause errors when used alongside `send_to_sync`&#8212;however, you can include data `extras` within the object.
 
 
 

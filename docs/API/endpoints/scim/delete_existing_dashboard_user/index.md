@@ -1,4 +1,4 @@
-<div id='api_jgfzitfvnxhl' class='api_div' data-search-keywords='remove dashboard user account schemas detail status'>
+<div id='api_stwfmftuqokk' class='api_div' data-search-keywords='remove dashboard user account schemas detail status'>
 <h1 id="remove-dashboard-user-account">Remove dashboard user account</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/scim/v2/Users/{id}</p>

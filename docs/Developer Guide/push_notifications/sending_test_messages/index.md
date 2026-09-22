@@ -12,7 +12,7 @@ To set up a test segment, go to **Segments** and create a new segment. Select **
 
 ![A Braze test campaign displaying the filters available in the targeting step.](https://www.braze.com/docs/assets/img_archive/testmessages1.png?c440e858d187b30c92b316dfa12b9774)
 
-With test filters, you can ensure that only users with a specific email address or [external user ID](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#setting-user-ids) are sent the test message.
+With test filters, you can ensure that only users with a specific email address or [external user ID](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids#setting-a-user-id) are sent the test message.
 
 ![A dropdown menu displaying several filters listed under a heading that reads Testing](https://www.braze.com/docs/assets/img_archive/testmessages2.png?8c289defede0c6ba588c9b8ba8d0c9f5)
 
@@ -68,7 +68,7 @@ If you're only testing email messages, you do not necessarily have to set up a t
 **Tip:**
 
  
-You can also enable or disable [TEST (or SEED)](https://www.braze.com/docs/user_guide/administrative/app_settings/email_settings/#append-email-subject-lines) being appended on your test messages.
+You can also enable or disable [TEST (or SEED)](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/email_preferences#append-email-subject-lines) being appended on your test messages.
 
 
 
@@ -76,7 +76,7 @@ You can also enable or disable [TEST (or SEED)](https://www.braze.com/docs/user_
 
 
 
-Alternatively, you can send a single notification using cURL and the [Braze Messaging API](https://www.braze.com/docs/api/endpoints/messaging/). Note that these examples make a request using the `US-01` instance. To find out yours, refer to [API endpoints](https://www.braze.com/docs/api/basics/#endpoints).
+Alternatively, you can send a single notification using cURL and the [Braze Messaging API](https://www.braze.com/docs/api/endpoints/messaging). Note that these examples make a request using the `US-01` instance. To find out yours, refer to [API endpoints](https://www.braze.com/docs/api/basics#endpoints).
 
 
 
@@ -146,7 +146,7 @@ Replace the following:
 
 There are a few situations where test messages don't have complete feature parity with launching a campaign or Canvas to a real set of users. In these instances, to validate this behavior, you should launch the campaign or Canvas to a limited set of test users.
 
-- Viewing the Braze [preference center](https://www.braze.com/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) from **Test Messages** will cause the submit button to be grayed out.
+- Viewing the Braze [preference center](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups#email-subscription-groups) from **Test Messages** will cause the submit button to be grayed out.
 - The list-unsubscribe header is not included in emails sent by the test message functionality.
 - For in-app messages and Content Cards, the target user must have a push token for the target device.
 

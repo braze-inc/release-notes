@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift), which includes implementing the `UNNotification` framework.
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift), which includes implementing the `UNNotification` framework.
 
 The following minimum SDK version is required to receive Push Stories:
 
@@ -49,7 +49,7 @@ If you do not add your app to an App Group, your app may fail to populate certai
 
 
 
-After following the [Swift Package Manager integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager/), add `BrazePushStory` to your `Notification Content Extension`:
+After following the [Swift Package Manager integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/sdk_integration?tab=swift%20package%20manager/), add `BrazePushStory` to your `Notification Content Extension`:
 
 ![In Xcode, under frameworks and libraries, select the "+" icon to add a framework.](https://www.braze.com/docs/assets/img/swift/push_story/spm1.png?00b81a1ac272e7247a67cd7c176a79f8)
 
@@ -80,7 +80,7 @@ end
 **Note:**
 
 
-For instructions to implement Rich Push, see [Rich notifications](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/?tab=swift%20package%20manager).
+For instructions to implement Rich Push, see [Rich notifications](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications?tab=swift%20package%20manager).
 
 
 
@@ -180,7 +180,7 @@ let braze = Braze(configuration: configuration)
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Cordova Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=cordova). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=cordova).
+Before you can use this feature, you'll need to [integrate the Cordova Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=cordova). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=cordova).
 
 ## Setting up push stories
 
@@ -236,13 +236,13 @@ pod install
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=react%20native).
+Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=react%20native). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=react%20native).
 
 ## Enabling push stories
 
 For the React Native SDK, **push stories are available for Android by default**.
 
-To enable Push Stories on iOS using Expo, ensure you have an app group defined for your application. For more information, see [Adding an App Group](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group).
+To enable Push Stories on iOS using Expo, ensure you have an app group defined for your application. For more information, see [Adding an App Group](https://www.braze.com/docs/developer_guide/push_notifications/push_stories?sdktab=swift#swift_enable-capabilities).
 
 Next, configure the `enableBrazeIosPushStories` property to `true` and assign your app group ID to `iosPushStoryAppGroup` in your `expo.plugins` object in `app.json`:
 
@@ -263,7 +263,7 @@ Next, configure the `enableBrazeIosPushStories` property to `true` and assign yo
 }
 ```
 
-Lastly, add the bundle identifier for this app extension to your project's credentials configuration: `<your-app-bundle-id>.BrazeExpoPushStories`. For further details on this process, refer to [Using app extensions with Expo Application Services](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=react%20native#reactnative_app-extensions).
+Lastly, add the bundle identifier for this app extension to your project's credentials configuration: `<your-app-bundle-id>.BrazeExpoPushStories`. For further details on this process, refer to [Using app extensions with Expo Application Services](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=react%20native#reactnative_app-extensions).
 
 **Warning:**
 

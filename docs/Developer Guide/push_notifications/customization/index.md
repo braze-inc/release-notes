@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=android).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android).
 
 ## Using a callback for push events {#push-callback}
 
@@ -233,7 +233,7 @@ Add the following in your `braze.xml`:
 
 
 
-Add the following in your [`BrazeConfig`](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration):
+Add the following in your [`BrazeConfig`](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android#android_runtime-configuration):
 
 
 
@@ -428,7 +428,7 @@ For push notifications that include images, the message text will be shown in th
 
 ### Custom URIs {#custom-uri}
 
-The **Custom URI** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep link inside your app and direct users to resources that exist outside of your app. This can be specified via the [Messaging API](https://www.braze.com/docs/api/endpoints/messaging/) or our dashboard under **Advanced Settings** in the push composer as pictured:
+The **Custom URI** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep link inside your app and direct users to resources that exist outside of your app. This can be specified via the [Messaging API](https://www.braze.com/docs/api/endpoints/messaging) or our dashboard under **Advanced Settings** in the push composer as pictured:
 
 ![The deep linking advanced setting in the Braze push composer.](https://www.braze.com/docs/assets/img_archive/deep_link.png?30080909d43633ac9ca7ac8d115a686a)
 
@@ -464,7 +464,7 @@ For more information, refer to Google's [Android notification](http://developer.
 
 In Android O, notification sounds became a property of notification channels. You will need to work with your developer to define the sound for a channel during its configuration and then use the dashboard to select the proper channel when sending your notifications.
 
-For devices running versions of Android before O, Braze allows you to set the sound of an individual push message through the dashboard composer. You can do so by specifying a local sound resource on the device (for example, `android.resource://com.mycompany.myapp/raw/mysound`). Specifying "default" in this field will play the default notification sound on the device. This can be specified via the [Messaging API](https://www.braze.com/docs/api/endpoints/messaging/) or the dashboard under **Advanced Settings** in the push composer.
+For devices running versions of Android before O, Braze allows you to set the sound of an individual push message through the dashboard composer. You can do so by specifying a local sound resource on the device (for example, `android.resource://com.mycompany.myapp/raw/mysound`). Specifying "default" in this field will play the default notification sound on the device. This can be specified via the [Messaging API](https://www.braze.com/docs/api/endpoints/messaging) or the dashboard under **Advanced Settings** in the push composer.
 
 ![The sound advanced setting in the Braze push composer.](https://www.braze.com/docs/assets/img_archive/sound_android.png?70e53c2fdff6155d172b0399de090593)
 
@@ -477,7 +477,7 @@ To message your full user base with a specific sound, we recommend that you indi
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift).
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift).
 
 ## Customizing action buttons {#push-action-buttons-integration}
 
@@ -494,13 +494,13 @@ Manually registering push action buttons are not recommended.
 
 
 
-If you [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift) using the `configuration.push.automation` configuration option, Braze automatically registers the action buttons for the default push categories and handles the push action button click analytics and URL routing.
+If you [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift) using the `configuration.push.automation` configuration option, Braze automatically registers the action buttons for the default push categories and handles the push action button click analytics and URL routing.
 
 However, you can choose to manually register push action buttons instead.
 
 #### Step 1: Adding Braze default push categories {#registering}
 
-Use the following code to register for the default push categories when you [register for push](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze):
+Use the following code to register for the default push categories when you [register for push](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#swift_step-32-register-push-tokens-with-braze):
 
 
 
@@ -548,7 +548,7 @@ AppDelegate.braze?.notifications.handleUserNotification(response: response, with
 
 
 
-If you use the `UNNotification` framework and have implemented the Braze [notification methods](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling), you should already have this method integrated. 
+If you use the `UNNotification` framework and have implemented the Braze [notification methods](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#swift_step-33-enable-push-handling), you should already have this method integrated. 
 
 ## Customizing push categories {#customizing-push-categories}
 
@@ -622,7 +622,7 @@ You only need to define action buttons on the Braze dashboard for behaviors that
 
 
 
-1. In the Braze dashboard, select **Messaging** > **Push Notifications**, then choose your iOS [push campaign](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/).
+1. In the Braze dashboard, select **Messaging** > **Push Notifications**, then choose your iOS [push campaign](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message).
 2. Under **Compose push notification**, turn on **Action Buttons**.
 3. In the **iOS Notification Category** dropdown, select **Enter pre-registered custom iOS Category**.
 4. Finally, enter one of the categories you created earlier. The following example, uses the custom category: `LIKE_CATEGORY`.
@@ -658,7 +658,7 @@ Because `MANAGE_IDENTIFIER` deep links into the app, you would set up that actio
 
 ## Customizing badges
 
-Badges are small icons that are ideal for getting a user's attention. You can specify a badge count in the [**Settings**](https://www.braze.com/docs/developer_guide/push_notifications/customization/?sdktab=swift#swift_settings) tab when you compose a push notification using the Braze dashboard. You may also update your badge count manually through your application's [`applicationIconBadgeNumber`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber) property or the [remote notification payload](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1). 
+Badges are small icons that are ideal for getting a user's attention. You can specify a badge count in the [**Settings**](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=swift#swift_settings) tab when you compose a push notification using the Braze dashboard. You may also update your badge count manually through your application's [`applicationIconBadgeNumber`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber) property or the [remote notification payload](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1). 
 
 Braze will automatically clear the badge count when a Braze notification is received while the app is in the foreground. Manually setting the badge number to 0 will also clear notifications in the notification center. 
 
@@ -739,7 +739,7 @@ You can inspect a sound to determine its data format by opening it in QuickTime 
 You must specify a protocol URL that directs to the location of the sound file in your app. There are two methods for doing this:
 
 * Use the `sound` parameter of the [Apple push object](https://www.braze.com/docs/api/objects_filters/messaging/apple_object) to pass the URL to Braze.
-* Specify the URL in the dashboard. In the [push composer](https://www.braze.com/docs/user_guide/message_building_by_channel/push/creating_a_push_message/#step-3-select-notification-type-ios-and-android), select **Settings** and enter the protocol URL in the **Sound** field. 
+* Specify the URL in the dashboard. In the [push composer](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message#step-3-select-notification-type-ios-and-android), select **Settings** and enter the protocol URL in the **Sound** field. 
 
 ![The push composer in the Braze dashboard](https://www.braze.com/docs/assets/img_archive/sound_push_ios.png?c035b34ffb6c0f720f6d2c08ca1ba2b2)
 
@@ -763,11 +763,11 @@ Select the **Alert Options** checkbox to see a dropdown of key-values available 
 
 ### Adding content-available flag
 
-Check the **Add Content-Available Flag** checkbox to instruct devices to download new content in the background. Most commonly, this can be checked if you are interested in sending [silent notifications](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=swift).
+Check the **Add Content-Available Flag** checkbox to instruct devices to download new content in the background. Most commonly, this can be checked if you are interested in sending [silent notifications](https://www.braze.com/docs/developer_guide/push_notifications/silent?sdktab=swift).
 
 ### Adding mutable-content flag
 
-Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver customization. This flag will automatically be sent when composing a [rich notification](https://www.braze.com/docs/developer_guide/push_notifications/rich/?sdktab=swift), regardless of the value of this checkbox.
+Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver customization. This flag will automatically be sent when composing a [rich notification](https://www.braze.com/docs/developer_guide/push_notifications/rich?sdktab=swift), regardless of the value of this checkbox.
 
 ### Collapse ID
 
@@ -782,7 +782,7 @@ Checking the **Expiry** checkbox will allow setting an expiration time for your 
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=android).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android).
 
 ## Settings
 
@@ -857,7 +857,7 @@ To message your full user base with a specific sound, we recommend that you indi
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native). You must also [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=react%20native).
+Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=react%20native). You must also [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=react%20native).
 
 ## Push customization in React Native
 
@@ -876,11 +876,11 @@ The following table shows which features require native configuration:
 
 ### iOS customization
 
-To add push action buttons, categories, badges, or custom sounds on iOS, implement the native configuration in your `AppDelegate` (Swift or Objective-C). See [Customize push notifications – Swift](https://www.braze.com/docs/developer_guide/push_notifications/customization/?sdktab=swift) for step-by-step instructions.
+To add push action buttons, categories, badges, or custom sounds on iOS, implement the native configuration in your `AppDelegate` (Swift or Objective-C). See [Customize push notifications – Swift](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=swift) for step-by-step instructions.
 
 ### Android customization
 
-To add push action buttons, categories, or a custom notification factory on Android, implement the native configuration in your Android project. See [Customize push notifications – Android](https://www.braze.com/docs/developer_guide/push_notifications/customization/?sdktab=android) for step-by-step instructions.
+To add push action buttons, categories, or a custom notification factory on Android, implement the native configuration in your Android project. See [Customize push notifications – Android](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=android) for step-by-step instructions.
 
 
 
