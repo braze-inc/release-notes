@@ -1,4 +1,4 @@
-<div id='api_kaejeocfkoxt' class='api_div' data-search-keywords='create and update users attributes events purchases message attributes_processed events_processed purchases_processed errors'>
+<div id='api_fyehgeztkixx' class='api_div' data-search-keywords='create and update users attributes events purchases message attributes_processed events_processed purchases_processed errors'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
@@ -10,7 +10,7 @@
 
 <p><strong>Note:</strong></p>
 
-<p>Each custom attribute sent in a request to <code class="language-plaintext highlighter-rouge">/users/track</code> consumes a data point. For more information, see <a href="/docs/user_guide/data/infrastructure/data_points/">Data points</a>.</p>
+<p>Each custom attribute sent in a request to <code class="language-plaintext highlighter-rouge">/users/track</code> consumes a data point. For more information, see <a href="/docs/user_guide/data/infrastructure/data_points">Data points</a>.</p>
 
 <p>Braze processes the data passed through the API at face value, and you should only pass deltas (changing data) to minimize unnecessary data point logging.</p>
 

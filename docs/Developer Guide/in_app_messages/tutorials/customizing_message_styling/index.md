@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web). However, no additional setup is required.
+Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web). However, no additional setup is required.
 
 ## Customizing message styling using key-value pairs for Web
 
@@ -83,7 +83,7 @@ To display the message, call [`showInAppMessage(message)`](https://js.appboycdn.
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android). You'll also need to [enable in-app messages for Android](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=android#android_enabling-in-app-messages).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android). You'll also need to [enable in-app messages for Android](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=android#android_enabling-in-app-messages).
 
 ## Customizing message styling using key-value pairs for Android
 
@@ -230,7 +230,7 @@ Implement [`IInAppMessageViewFactory`](https://braze-inc.github.io/braze-android
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift). You'll also need to [enable in-app messages for Swift](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=swift#swift_enabling-in-app-messages).
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift). You'll also need to [enable in-app messages for Swift](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=swift#swift_enabling-in-app-messages).
 
 ## Customizing message styling using key-value pairs for Swift
 

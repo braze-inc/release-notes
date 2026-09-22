@@ -169,22 +169,18 @@ Refer to this table to understand what percentage of your inbound and outbound t
 
 For more ideas on improving deliverability, read [Deliverability pitfalls and spam traps](https://www.braze.com/docs/user_guide/channels/email/email_setup/deliverability_pitfalls_and_spam_traps). Be sure to reference our [Email best practices](https://www.braze.com/docs/user_guide/channels/email/best_practices) for things you should check for before sending an email campaign.
 
-## Set up Microsoft Smart Network Data Services (SNDS)
+## Set up Microsoft Smart Network Data Services (SNDS) {#set-up-microsoft-smart-network-data-services-snds}
 
 If Microsoft is your main mailbox provider, you can view Microsoft SNDS data in the Deliverability Center. This includes dedicated sending IPs for workspaces that use Amazon SES, SendGrid, or SparkPost. Use this data to monitor IP health and understand how Microsoft inbox providers are rating your sending.
 
-Microsoft SNDS provides IP-level data on spam complaints and sending volume as reported by Microsoft inbox providers such as Outlook, Hotmail, and Live.
+Microsoft SNDS is a free Microsoft service that reports how Microsoft inbox providers evaluate mail sent from your dedicated sending IPs. SNDS data is based on email actually delivered to Microsoft mailbox providers such as Outlook, Hotmail, and Live. It includes IP-level data on spam complaints and sending volume.
 
 **Important:**
 
 
-If you don't see your data in the Deliverability Center, contact [Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) with a list of your IP addresses.
+If you don't see your data in the Deliverability Center, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) with a list of your IP addresses.
 
 
-
-### Amazon SES
-
-For workspaces that send email through Amazon SES, the Deliverability Center displays Microsoft SNDS metrics for your dedicated sending IPs. Braze backfills up to 90 days of historical SNDS data when this feature is turned on for your workspace.
 
 ![An example of results from Microsoft SNDS, including sample IPs, recipients, RCPT commands, data commands, filter result, and complaint rate.](https://www.braze.com/docs/assets/img_archive/deliverability_center_msnds.png?a1e1ffcbaba60280a7997a425fa520d1)
 

@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android).
 
 ## Creating a universal delegate
 
@@ -201,7 +201,7 @@ Braze.configure(this, brazeConfig)
 If deep links from push notifications aren't working on Android, try the following steps:
 
 1. **Test the deep link outside of Braze.** Open the deep link URL from another app, such as email or a browser. If it doesn't open your app, the deep link may not be configured correctly in your `AndroidManifest.xml`. For more information, see Android's [Create Deep Links](https://developer.android.com/training/app-links/deep-linking) documentation.
-2. **Check that automatic deep link handling is enabled.** Verify that `com_braze_handle_push_deep_links_automatically` is set to `true` in `braze.xml`, or set this option through [runtime configuration](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android#runtime-configuration). Without this setting, Braze doesn't automatically open your app and deep link destination when someone taps a push notification.
+2. **Check that automatic deep link handling is enabled.** Verify that `com_braze_handle_push_deep_links_automatically` is set to `true` in `braze.xml`, or set this option through [runtime configuration](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android#android_runtime-configuration). Without this setting, Braze doesn't automatically open your app and deep link destination when someone taps a push notification.
 3. **Verify your deep link handler delegate.** If you set a custom `IBrazeDeeplinkHandler`, confirm that your `gotoUri` implementation handles the URI and doesn't drop it.
 4. **Test across channels.** If the same deep link works in an in-app message but not from push, the issue is likely in your push deep link handling, not in the deep link itself.
 
@@ -259,7 +259,7 @@ To handle deeplinks when using Jetpack Compose with NavHost:
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift).
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift).
 
 **Tip:**
 
@@ -587,7 +587,7 @@ func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
 
 
 
-Before you can implement deep linking into your Flutter iOS app, configure your URL schemes in your `Info.plist` file. For details, refer to [Deep linking for iOS](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking/?sdktab=swift#url-schemes).
+Before you can implement deep linking into your Flutter iOS app, configure your URL schemes in your `Info.plist` file. For details, refer to [Deep linking for iOS](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking?sdktab=swift#url-schemes).
 
 
 
@@ -600,7 +600,7 @@ Braze's native `com_braze_handle_push_deep_links_automatically` flag defaults to
 
 
 
-If you need advanced native-layer link handling (such as custom `IBrazeDeeplinkHandler` implementations), refer to [Deep linking for Android](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking/?sdktab=android).
+If you need advanced native-layer link handling (such as custom `IBrazeDeeplinkHandler` implementations), refer to [Deep linking for Android](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking?sdktab=android).
 
 
 
@@ -734,7 +734,7 @@ void deepLinkAlert(String link, BuildContext context) {
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Cordova Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=cordova).
+Before you can use this feature, you'll need to [integrate the Cordova Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=cordova).
 
 ## Enabling push deep linking
 

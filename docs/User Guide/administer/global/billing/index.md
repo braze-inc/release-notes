@@ -100,4 +100,4 @@ This graph gives you the ability to quickly see your total data point usage vers
 
 ## Next steps
 
-<ul class="guide_tiles"><li><a href="/docs/user_guide/administer/global/admin_settings/notification_preferences"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Notification preferences</span></span></div></a></li><li><a href="/docs/credits_usage_dashboard"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Credits usage dashboard</span></span></div></a></li></ul>
+<ul class="guide_tiles"><li><a href="/docs/user_guide/administer/global/admin_settings/notification_preferences"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Notification preferences</span></span></div></a></li><li><a href="/docs/credits_usage_dashboard"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Credits usage dashboard</span></span></div></a></li><li><a href="/docs/user_guide/administer/global/billing/usage_alerts"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Usage alerts</span></span></div></a></li></ul>

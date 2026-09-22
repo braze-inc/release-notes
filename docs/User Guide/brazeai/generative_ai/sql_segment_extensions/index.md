@@ -1,6 +1,6 @@
 # SQL Segment Extensions
 
-> You can generate a Segment Extension using Snowflake SQL queries of [Snowflake](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/) data. SQL can help you unlock new segment use cases because it offers the flexibility to describe the relationships between data in ways that aren't achievable through other segmentation features.
+> You can generate a Segment Extension using Snowflake SQL queries of [Snowflake](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake) data. SQL can help you unlock new segment use cases because it offers the flexibility to describe the relationships between data in ways that aren't achievable through other segmentation features.
 >
 > Like standard Segment Extensions, you can query events from up to the past two years (730 days) in your SQL Segment Extension. Unlike standard Segment Extensions, SQL Segment Extensions [consume credits](#credits).
 
@@ -69,7 +69,7 @@ The AI SQL generator leverages [GPT](https://openai.com/gpt-4), powered by OpenA
 
 To use the AI SQL generator, do the following:
 
-1. Select **Launch AI SQL Generator** after creating a [SQL segment](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/) using either full or incremental refresh.
+1. Select **Launch AI SQL Generator** after creating a [SQL segment](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments) using either full or incremental refresh.
 2. Type your prompt and select **Generate** to translate your prompt into SQL.
 3. Review the generated SQL to make sure it looks correct, and then save your segment.
 
@@ -80,7 +80,7 @@ To use the AI SQL generator, do the following:
 
 #### Tips
 
-- Familiarize yourself with the available [Snowflake data tables](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
+- Familiarize yourself with the available [Snowflake data tables](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
 - Familiarize yourself with the [SQL writing rules](https://www.braze.com/docs/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) for this feature. Not following these rules will cause an error. For example, your SQL code must select the `user_id` column. Starting your prompt with "users who" can help.
 - You can send up to 20 prompts per minute with the AI SQL Generator.
 
@@ -101,16 +101,16 @@ SQL queries that take longer than 20 minutes to run will time out.
 
 
 
-When the extension finishes processing, you can [create a segment](https://www.braze.com/docs/user_guide/engagement_tools/segments/segment_extension#step-5-use-your-extension-in-a-segment) using your Segment Extension and target this new segment with your campaigns and Canvases.
+When the extension finishes processing, you can [create a segment](https://www.braze.com/docs/user_guide/audience/segments/segment_extension#step-6-use-your-extension-in-a-segment) using your Segment Extension and target this new segment with your campaigns and Canvases.
 
 ### Step 2: Write your SQL
 
-Your SQL query should be written using [Snowflake syntax](https://docs.snowflake.com/en/sql-reference.html). Consult the [table reference](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/) for a full list of tables and columns available to be queried.
+Your SQL query should be written using [Snowflake syntax](https://docs.snowflake.com/en/sql-reference.html). Consult the [table reference](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables) for a full list of tables and columns available to be queried.
 
 **Important:**
 
 
-Note that the tables available to query contain only event data. If you wish to query for user attributes, you should combine your SQL segment with custom attribute filters from the [classic segmenter](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/).
+Note that the tables available to query contain only event data. If you wish to query for user attributes, you should combine your SQL segment with custom attribute filters from the [classic segmenter](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment).
 
  
 

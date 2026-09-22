@@ -22,7 +22,7 @@ To collect debugger logs when `Braze.configuration.logger.level` is `.disabled`,
 **Tip:**
 
 
-To enable debugging for the Braze Web SDK, you can [use a URL parameter](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup#logging).
+To enable debugging for the Braze Web SDK, you can [use a URL parameter](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web#web_logging).
 
 
 

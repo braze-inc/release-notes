@@ -1,6 +1,6 @@
 # Landing page surveys
 
-> Braze surveys collect feedback on landing pages that you can analyze and use in follow-up messaging. Surveys are built in the [landing page drag-and-drop editor](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages).
+> Braze surveys collect feedback on landing pages that you can analyze and use in follow-up messaging. To start a survey, select **Survey** as your message type on the message composition page before opening the [landing page drag-and-drop editor](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages).
 
 
 
@@ -12,17 +12,17 @@ Before creating a survey, you must:
 
 
 - Have access to landing pages, in-app messages, or both in your Braze workspace
-- Be familiar with [creating landing pages](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages/) and [creating in-app messages in the drag-and-drop editor](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop/)
+- Be familiar with [creating landing pages](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages) and [creating in-app messages in the drag-and-drop editor](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop)
 
 
 ## Create a survey
 
-Surveys are built inside your existing message composition flow.
+Surveys are built inside your existing message composition flow. On the message composition page, select **Survey** as your **message type** before you open the editor—this switches the editor into survey mode, with form blocks and survey-specific reporting instead of standard message content.
 
 
-1. Go to **Messaging** > **Landing Pages**, or create an [in-app message](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop/) in a campaign or Canvas.
+1. Go to **Messaging** > **Landing Pages**, or create an [in-app message](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop) in a campaign or Canvas.
 2. Create a new message.
-3. Select **Survey** as your message type.
+3. On the message composition page, select **Survey** as your message type before opening the editor.
 
 
 
@@ -32,7 +32,7 @@ Surveys are built inside your existing message composition flow.
 For shared styling and composition controls, see:
 
 
-- [In-app message drag-and-drop editor blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks/?sdktab=in-app%20messages)
+- [In-app message drag-and-drop editor blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks?sdktab=in-app%20messages)
 - [Landing page form blocks](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages)
 
 

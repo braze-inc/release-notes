@@ -131,7 +131,7 @@ To disable continuous location tracking at compile time, set `com_braze_enable_l
 
 
 
-To selectively disable continuous location tracking at runtime, use [`BrazeConfig`](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration):
+To selectively disable continuous location tracking at runtime, use [`BrazeConfig`](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android#android_runtime-configuration):
 
 
 
@@ -315,7 +315,7 @@ For more information, see [`Braze.User.swift`](https://braze-inc.github.io/braze
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native).
+Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=react%20native).
 
 ## Setting the last known location
 

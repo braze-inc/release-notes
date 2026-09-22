@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web). However, no additional setup is required.
+Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web). However, no additional setup is required.
 
 ## Deferring and restoring triggered messages for Web
 
@@ -99,7 +99,7 @@ To show a message instead of deferring it, call [`showInAppMessage(message)`](ht
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android). You'll also need to [enable in-app messages for Android](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=android#android_enabling-in-app-messages).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android). You'll also need to [enable in-app messages for Android](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=android#android_enabling-in-app-messages).
 
 ## Deferring and restoring triggered messages for Android
 
@@ -262,7 +262,7 @@ To display the previously-deferred message, call `showDeferredMessage(true)` fro
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift). You'll also need to [enable in-app messages for Swift](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=swift#swift_enabling-in-app-messages).
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift). You'll also need to [enable in-app messages for Swift](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=swift#swift_enabling-in-app-messages).
 
 ## Deferring and restoring triggered messages for Swift
 

@@ -125,7 +125,7 @@ Your push messages might not be sending because of the following situations:
 - Your credentials have the wrong permission scope.
 - You uploaded wrong credentials to the wrong Braze workspace (wrong sender ID).
 
-For other issues that may prevent you from sending a push message, refer to [User Guide: Troubleshooting Push Notifications](https://www.braze.com/docs/user_guide/channels/push/troubleshooting/).
+For other issues that may prevent you from sending a push message, refer to [User Guide: Troubleshooting Push Notifications](https://www.braze.com/docs/user_guide/channels/push/troubleshooting).
 
 ### No "push registered" users showing in the Braze dashboard (prior to sending messages)
 
@@ -167,7 +167,7 @@ If `com_braze_handle_push_deep_links_automatically` is set to its default of `fa
 
 ### Push notifications bounced
 
-If a push notification isn't delivered, make sure it didn't bounce by looking in the [developer console](https://www.braze.com/docs/developer_guide/platforms/android/push_notifications/troubleshooting/#utilizing-the-push-error-logs). The following are descriptions of common errors that may be logged in the developer console:
+If a push notification isn't delivered, make sure it didn't bounce by looking in the [developer console](https://www.braze.com/docs/developer_guide/push_notifications/troubleshooting?sdktab=android#android_use-the-push-error-logs). The following are descriptions of common errors that may be logged in the developer console:
 
 #### Error: MismatchSenderID
 
@@ -210,7 +210,7 @@ If you are testing push over Wi-Fi, your firewall may be blocking ports necessar
 
 #### Custom notification factory returning null
 
-If you have implemented a [custom notification factory](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-displaying-notifications), ensure that it is not returning `null`. This will cause notifications not to be displayed.
+If you have implemented a [custom notification factory](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=android#android_step-1-create-your-custom-notification-factory), ensure that it is not returning `null`. This will cause notifications not to be displayed.
 
 ### "Push registered" users no longer enabled after sending messages
 
@@ -230,7 +230,7 @@ The Firebase Cloud Messaging server key provided in the Braze dashboard is inval
 
 If push clicks are not being logged, it is possible that push click data has not been flushed to our servers yet. The Braze Android SDK may throttle flushes.
 
-If you implemented a custom push handler, ensure that you are appropriately [preserving native push analytics](https://www.braze.com/docs/developer_guide/push_notifications/logging_message_data/?tab=android#preserving-native-push-analytics-with-custom-push-handling)
+If you implemented a custom push handler, ensure that you are appropriately [preserving native push analytics](https://www.braze.com/docs/developer_guide/push_notifications/logging_message_data?tab=android#preserving-native-push-analytics-with-custom-push-handling)
 
 Logging push clicks is a network operation and is bound by networking limitations. As such, while the Braze Android SDK attempts to accommodate for network failures and will retry failed requests, some event loss is to be expected.
 
@@ -246,7 +246,7 @@ If the deep link fails to work, the deep link may be misconfigured. A misconfigu
 
 #### Verify custom handling logic
 
-If the deep link [works correctly with ADB](https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters) but fails to work from Braze push, check whether any [custom push open handling](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback) has been implemented. If so, verify that the custom handling code properly handles the incoming deep link.
+If the deep link [works correctly with ADB](https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters) but fails to work from Braze push, check whether any [custom push open handling](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=android#android_push-callback) has been implemented. If so, verify that the custom handling code properly handles the incoming deep link.
 
 #### Disable back stack behavior
 
@@ -322,7 +322,7 @@ It's normal for APNs to initially return a success status even if a token become
 
 ## Using the push error logs
 
-The [Message Activity Log](https://www.braze.com/docs/user_guide/administrative/app_settings/message_activity_log_tab/) lets you see any messages (especially error messages) associated with your campaigns and sends, including push notification errors. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Selecting an error message redirects you to relevant documentation to help you troubleshoot a particular incident.
+The [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log) lets you see any messages (especially error messages) associated with your campaigns and sends, including push notification errors. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Selecting an error message redirects you to relevant documentation to help you troubleshoot a particular incident.
 
 ![Push error logs displaying the time the error occurred, the app name, the channel, error type, and error message.](https://www.braze.com/docs/assets/img_archive/message_activity_log.png?6577302323ab3f2df3196a973320b8d3)
 
@@ -336,7 +336,7 @@ In addition, Braze also provides a push changelog on the user profile under the 
 
 #### Received unregistered sending to push token {#received-unregistered-sending}
 
-- Make sure that the push token being sent to Braze from the method `AppDelegate.braze?.notifications.register(deviceToken:)` is valid. You can look in the **Message Activity Log** to see the push token. It should look something like `6e407a9be8d07f0cdeb9e724733a89445f57a89ec890d63867c482a483506fa6`, a long string containing a mix of letters and numbers. If your push token looks different, check your [code](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift#swift_step-32-register-push-tokens-with-braze) for sending Braze the push tokens.
+- Make sure that the push token being sent to Braze from the method `AppDelegate.braze?.notifications.register(deviceToken:)` is valid. You can look in the **Message Activity Log** to see the push token. It should look something like `6e407a9be8d07f0cdeb9e724733a89445f57a89ec890d63867c482a483506fa6`, a long string containing a mix of letters and numbers. If your push token looks different, check your [code](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#swift_step-32-register-push-tokens-with-braze) for sending Braze the push tokens.
 - Ensure that your push provisioning profile matches the environment you're testing. Universal certificates may be configured in the Braze dashboard to send to either the development or production APNs environment. Using a development certificate for a production app or a production certificate for a development app does not work.
  - Check that the push token you have uploaded to Braze matches the provisioning profile you used to build the app you sent the push token from.
 
@@ -352,7 +352,7 @@ To resolve the mismatch:
 4. For `.p8` keys, verify **Team ID** and **Key ID** in Braze match your Apple Developer account.
 5. Re-upload a valid `.p8` key or `.p12` certificate if credentials were rotated or revoked.
 
-Prefer `.p8` authentication keys when possible. For credential types and dashboard status indicators, see [Migrate to a .p8 authentication key](https://www.braze.com/docs/user_guide/channels/push/troubleshooting/#migrate-to-a-p8-authentication-key).
+Prefer `.p8` authentication keys when possible. For credential types and dashboard status indicators, see [Migrate to a .p8 authentication key](https://www.braze.com/docs/user_guide/channels/push/troubleshooting#migrate-to-a-p8-authentication-key).
 
 #### BadDeviceToken sending to push token
 
@@ -370,19 +370,19 @@ The `BadDeviceToken` is an APNs error code and does not originate from Braze. Th
 
 ### No push registration prompt
 
-If the application does not prompt you to register for push notifications, there is likely an issue with your push registration integration. Ensure you have followed our [documentation](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift) and correctly integrated our push registration. You can also set breakpoints in your code to ensure the push registration code is running.
+If the application does not prompt you to register for push notifications, there is likely an issue with your push registration integration. Ensure you have followed our [documentation](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift) and correctly integrated our push registration. You can also set breakpoints in your code to ensure the push registration code is running.
 
 ### No "push registered" users showing in the dashboard (prior to sending messages)
 
 Ensure that your app is correctly configured to allow push notifications. Common failure points to check include:
 
 - Check that your app is prompting you to allow push notifications. Typically, this prompt will appear upon your first open of the app, but it can be programmed to appear elsewhere. If it does not appear where it should be, the problem is likely with the basic configuration of your app's push capabilities.
-  - Verify the steps for [push integration](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift) were successfully completed.
+  - Verify the steps for [push integration](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift) were successfully completed.
   - Check that the provisioning profile your app was built with includes permissions for push. Make sure that you're pulling down all of the available provisioning profiles from your Apple developer account. To confirm this, perform the following steps:
     1. In Xcode, navigate to **Preferences > Accounts** (or use the keyboard shortcut <kbd>Command</kbd>+<kbd>,</kbd>).
     2. Select the Apple ID you use for your developer account and click **View Details**.
     3. On the next page, click **<i class="fas fa-redo-alt"></i> Refresh** and confirm that you're pulling all available provisioning profiles.
-- Check you have [properly enabled push capability](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift#swift_step-2-enable-push-capabilities) in your app.
+- Check you have [properly enabled push capability](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#swift_step-2-enable-push-capabilities) in your app.
 - Check your push provisioning profile matches the environment you're testing in. Universal certificates may be configured in the Braze dashboard to send to either the development or production APNs environment. Using a development certificate for a production app or a production certificate for a development app does not work.
 - Check that you are calling our `registerPushToken` method by setting a breakpoint in your code.
 - Make sure you're testing using a device (push will not work on a simulator) and have good network connectivity.
@@ -413,7 +413,7 @@ On iOS versions that do not integrate push via the `UserNotifications` framework
 
 #### Test notification scheduled incorrectly
 
-Check the schedule you set for your test message. If it is set to local time zone delivery or [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence/intelligent_timing/), you may have just not received the message yet (or had the app in the foreground when it was received).
+Check the schedule you set for your test message. If it is set to local time zone delivery or [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing), you may have just not received the message yet (or had the app in the foreground when it was received).
 
 ### User not "push registered" for the app being tested
 
@@ -425,8 +425,8 @@ The following would indicate a problem with push registration or that the user's
 
 ## Push clicks not logged {#push-clicks-not-logged}
 
-- Make sure you have followed the [push integration steps](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift#swift_step-33-enable-push-handling).
-- Braze does not handle push notifications received silently in the foreground (default foreground push behavior prior to the `UserNotifications` framework). This means that links will not be opened,  and push clicks will not be logged. If your application has not yet integrated the `UserNotifications` framework, Braze will not handle push notifications when the application state is `UIApplicationStateActive`. Ensure that your app does not delay calls to [push handling methods](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift#swift_step-33-enable-push-handling); otherwise, the Swift SDK may treat push notifications as silent foreground push events and not handle them.
+- Make sure you have followed the [push integration steps](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#swift_step-33-enable-push-handling).
+- Braze does not handle push notifications received silently in the foreground (default foreground push behavior prior to the `UserNotifications` framework). This means that links will not be opened,  and push clicks will not be logged. If your application has not yet integrated the `UserNotifications` framework, Braze will not handle push notifications when the application state is `UIApplicationStateActive`. Ensure that your app does not delay calls to [push handling methods](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#swift_step-33-enable-push-handling); otherwise, the Swift SDK may treat push notifications as silent foreground push events and not handle them.
 
 ## Deep links not working
 
@@ -444,7 +444,7 @@ If opens are being logged, check whether it is an issue with the deep link in ge
 
 ### Push Story image taps do nothing
 
-If tapping a Push Story image does nothing, open the Notification Content Extension `Info.plist` and confirm `UNNotificationExtensionUserInteractionEnabled` is `YES`. The Swift SDK `BrazePushStory` module needs that key so the extension can receive taps. See [Push stories](https://www.braze.com/docs/developer_guide/push_notifications/push_stories/?sdktab=swift).
+If tapping a Push Story image does nothing, open the Notification Content Extension `Info.plist` and confirm `UNNotificationExtensionUserInteractionEnabled` is `YES`. The Swift SDK `BrazePushStory` module needs that key so the extension can receive taps. See [Push stories](https://www.braze.com/docs/developer_guide/push_notifications/push_stories?sdktab=swift).
 
 
 
@@ -529,7 +529,7 @@ Your push messages might not be sending because of the following situations:
 - Your credentials have the wrong permission scope.
 - You uploaded wrong credentials to the wrong Braze workspace (wrong sender ID).
 
-For other issues that may prevent you from sending a push message, refer to [User Guide: Troubleshooting Push Notifications](https://www.braze.com/docs/user_guide/channels/push/troubleshooting/).
+For other issues that may prevent you from sending a push message, refer to [User Guide: Troubleshooting Push Notifications](https://www.braze.com/docs/user_guide/channels/push/troubleshooting).
 
 ### No "push registered" users showing in the Braze dashboard (prior to sending messages)
 
@@ -571,7 +571,7 @@ If `com_braze_handle_push_deep_links_automatically` is set to its default of `fa
 
 ### Push notifications bounced
 
-If a push notification isn't delivered, make sure it didn't bounce by looking in the [developer console](https://www.braze.com/docs/developer_guide/platforms/android/push_notifications/troubleshooting/#utilizing-the-push-error-logs). The following are descriptions of common errors that may be logged in the developer console:
+If a push notification isn't delivered, make sure it didn't bounce by looking in the [developer console](https://www.braze.com/docs/developer_guide/push_notifications/troubleshooting?sdktab=android#android_use-the-push-error-logs). The following are descriptions of common errors that may be logged in the developer console:
 
 #### Error: MismatchSenderID
 
@@ -614,7 +614,7 @@ If you are testing push over Wi-Fi, your firewall may be blocking ports necessar
 
 #### Custom notification factory returning null
 
-If you have implemented a [custom notification factory](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-displaying-notifications), ensure that it is not returning `null`. This will cause notifications not to be displayed.
+If you have implemented a [custom notification factory](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=android#android_step-1-create-your-custom-notification-factory), ensure that it is not returning `null`. This will cause notifications not to be displayed.
 
 ### "Push registered" users no longer enabled after sending messages
 
@@ -634,7 +634,7 @@ The Firebase Cloud Messaging server key provided in the Braze dashboard is inval
 
 If push clicks are not being logged, it is possible that push click data has not been flushed to our servers yet. The Braze Android SDK may throttle flushes.
 
-If you implemented a custom push handler, ensure that you are appropriately [preserving native push analytics](https://www.braze.com/docs/developer_guide/push_notifications/logging_message_data/?tab=android#preserving-native-push-analytics-with-custom-push-handling)
+If you implemented a custom push handler, ensure that you are appropriately [preserving native push analytics](https://www.braze.com/docs/developer_guide/push_notifications/logging_message_data?tab=android#preserving-native-push-analytics-with-custom-push-handling)
 
 Logging push clicks is a network operation and is bound by networking limitations. As such, while the Braze Android SDK attempts to accommodate for network failures and will retry failed requests, some event loss is to be expected.
 
@@ -650,7 +650,7 @@ If the deep link fails to work, the deep link may be misconfigured. A misconfigu
 
 #### Verify custom handling logic
 
-If the deep link [works correctly with ADB](https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters) but fails to work from Braze push, check whether any [custom push open handling](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback) has been implemented. If so, verify that the custom handling code properly handles the incoming deep link.
+If the deep link [works correctly with ADB](https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters) but fails to work from Braze push, check whether any [custom push open handling](https://www.braze.com/docs/developer_guide/push_notifications/customization?sdktab=android#android_push-callback) has been implemented. If so, verify that the custom handling code properly handles the incoming deep link.
 
 #### Disable back stack behavior
 
@@ -687,7 +687,7 @@ For more information, see [Add deep links (Android)](https://www.braze.com/docs/
 
 ### Other push delivery and registration issues
 
-Since the Braze Flutter SDK for Android is built on top of the native Braze Android SDK, most other push delivery, registration, and logging issues (such as sender ID mismatches, missing Google Play Services, or `BrazeFirebaseMessagingService` not being registered) also apply to Flutter apps. For more information, see the [native Android troubleshooting guide](https://www.braze.com/docs/developer_guide/push_notifications/troubleshooting/?sdktab=android).
+Since the Braze Flutter SDK for Android is built on top of the native Braze Android SDK, most other push delivery, registration, and logging issues (such as sender ID mismatches, missing Google Play Services, or `BrazeFirebaseMessagingService` not being registered) also apply to Flutter apps. For more information, see the [native Android troubleshooting guide](https://www.braze.com/docs/developer_guide/push_notifications/troubleshooting?sdktab=android).
 
 
 

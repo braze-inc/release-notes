@@ -33,7 +33,7 @@ Braze does not automatically change a user's push subscription state to `Unsubsc
 
 ### Push registration and reachable users
 
-Push subscription state reflects a user's preference, but whether they count as **reachable** for push in the dashboard also depends on [push registration](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_token_lifecycle/)—that is, a valid foreground push token on their profile. For how Braze calculates channel-level counts, see [Measure segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size/).
+Push subscription state reflects a user's preference, but whether they count as **reachable** for push in the dashboard also depends on [push registration](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_token_lifecycle)—that is, a valid foreground push token on their profile. For how Braze calculates channel-level counts, see [Measure segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size).
 
 - **Push campaigns and Canvases:** Users who aren't push registered aren't included in **Reachable users** for Android Push or iOS Push in audience statistics, even when their push subscription state is `Subscribed` or `Opted-In`.
 - **Other channels:** The same users can still count as reachable for other channels they qualify for (for example, email or in-app messages).
@@ -41,7 +41,7 @@ Push subscription state reflects a user's preference, but whether they count as 
 
 A user profile can show push subscription state `Subscribed` while no push token is assigned. Those users still don't count toward **Reachable users** for Android Push or iOS Push until Braze records a valid token.
 
-For filter definitions, see [Segmentation filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters/).
+For filter definitions, see [Segmentation filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters).
 
 ### Updating push subscription states {#update-push-subscription-state}
 
@@ -80,7 +80,7 @@ You can update a user's subscription state with the Braze SDK using the `setPush
 
 #### REST API
 
-You can update a user's subscription state with the Braze REST API using the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) to update their [`push_subscribe`](https://www.braze.com/docs/api/objects_filters/user_attributes_object) attribute.
+You can update a user's subscription state with the Braze REST API using the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) to update their [`push_subscribe`](https://www.braze.com/docs/api/objects_filters/user_attributes_object) attribute.
 
 ### Differences between push enablement and push subscription status
 
@@ -102,8 +102,8 @@ Review **Contact Settings** on the user's profile after import and again after t
 
 You can check a user's push subscription state with Braze in any of the following ways:
 
-* **User profile:** You can access individual user profiles through the Braze dashboard on the **[User Search](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles/)** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state.
-* **REST API export:** You can export individual user profiles in JSON format using the export [Users by segment](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment/) or [Users by identifier](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/) endpoints. Braze returns a push tokens object that contains push enablement information per device.
+* **User profile:** You can access individual user profiles through the Braze dashboard on the **[User Search](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles)** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state.
+* **REST API export:** You can export individual user profiles in JSON format using the export [Users by segment](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment) or [Users by identifier](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier) endpoints. Braze returns a push tokens object that contains push enablement information per device.
 
 ## Where push registration and status appear {#where-push-registration-and-status-appear}
 
@@ -201,7 +201,7 @@ There are two ways a [push token](https://www.braze.com/docs/user_guide/channels
 1. **Foreground push** provides the ability to send regular visible push notifications to the foreground of a user's device.
 2. **Background push** is available regardless of whether a particular device has opted-in to receive push notifications from that brand. Background push allows brands to send silent push notifications - notifications that intentionally aren't displayed - to devices to support key functionalities like [uninstall tracking](https://www.braze.com/docs/user_guide/analytics/tracking/uninstall_tracking).
 
-When a user profile has a valid foreground push token associated with an app, Braze considers the user "push registered" for the given app. Braze, then, provides a specific segmentation filter, `Foreground Push Enabled for App,` to help identify these users.
+When a user profile has a valid foreground push token associated with an app, Braze considers the user "push registered" for the given app. Braze, then, provides a specific segmentation filter, `Foreground Push Enabled for App`, to help identify these users. This filter identifies users who are push registered for an app, but it doesn't restrict which app receives a message. To restrict delivery to specific apps, use a segment that has **Apps and websites targeted** set to **Users from specific apps**. In a Canvas, add that segment to each Message step's [delivery validations](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#delivery-validations).
 
 **Note:**
 

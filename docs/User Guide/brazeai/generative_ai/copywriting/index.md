@@ -5,7 +5,7 @@
 **Note:**
 
 
-This feature is now part of [BrazeAI Operator™](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/), Braze's unified AI assistant. AI capabilities that were previously available as standalone assistants are now all accessible through Operator from wherever you're already working in the dashboard.
+This feature is now part of [BrazeAI Operator™](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities), Braze's unified AI assistant. AI capabilities that were previously available as standalone assistants are now all accessible through Operator from wherever you're already working in the dashboard.
 
 
 

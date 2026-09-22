@@ -11,6 +11,8 @@
 
 
 
+
+
 ## Accessing SCIM provisioning settings
 
 **Important:**
@@ -44,6 +46,8 @@ SCIM provisioning availability depends on your platform edition. If this feature
 
 
 Use the **Okta - Braze app** option if you set up the Braze app for SAML SSO in Okta. If you set up a custom app for SSO, follow the instructions in the [Okta - Custom app integration](https://www.braze.com/docs/user_guide/administer/global/user_management/automated_user_provisioning?tab=okta%20-%20custom%20app%20integration#step-1-set-up-scim-provisioning) tab.
+
+
 
 
 
@@ -124,6 +128,8 @@ Use the **Okta - Custom app integration** option if you set up a custom app for 
 
 
 
+
+
 ## Step 1: Set up SCIM provisioning
 
 ### Step 1.1: Enable SCIM
@@ -167,6 +173,8 @@ Use the **Okta - Custom app integration** option if you set up a custom app for 
 
 
  is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+
+
 
 
 

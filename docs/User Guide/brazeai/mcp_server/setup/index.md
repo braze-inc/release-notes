@@ -34,7 +34,7 @@ Your agent's access mirrors your dashboard permissions. If your dashboard access
 **Note:**
 
 
-Before users can connect, a company admin must turn on **MCP OAuth access** in **Settings** > **Admin Settings** > **OAuth**. For more information, see [Manage OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin/).
+Before users can connect, a company admin must turn on **MCP OAuth access** in **Settings** > **Admin Settings** > **OAuth**. For more information, see [Manage OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin).
 
 
 
@@ -140,7 +140,7 @@ After you confirm your workflows and skills are working on the remote server, di
 
 ### Authentication fails in a supported client
 
-1. Confirm your company admin has turned on **MCP OAuth access** in [OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin/).
+1. Confirm your company admin has turned on **MCP OAuth access** in [OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin).
 2. Confirm your user has the "Use MCP Server" permission.
 3. Retry sign-in and authorization.
 

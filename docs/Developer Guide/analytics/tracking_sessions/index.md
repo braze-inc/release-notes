@@ -11,11 +11,11 @@ For wrapper SDKs not listed, use the relevant native Android or Swift method ins
 
 ## About the session lifecycle
 
-A session refers to the period of time the Braze SDK tracks user activity in your app after it's launched. You can also force a new session by [calling the `changeUser()` method](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids/#setting-a-user-id).
+A session refers to the period of time the Braze SDK tracks user activity in your app after it's launched. You can also force a new session by [calling the `changeUser()` method](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids#setting-a-user-id).
 
 
 
-By default, a session starts when you first call `braze.openSession()`. The session will remain active for up to `30` minutes of inactivity (unless you [change the default session timeout](https://www.braze.com/docs/developer_guide/analytics/tracking_sessions/?tab=web#change-session-timeout) or the user closes the app.
+By default, a session starts when you first call `braze.openSession()`. The session will remain active for up to `30` minutes of inactivity (unless you [change the default session timeout](https://www.braze.com/docs/developer_guide/analytics/tracking_sessions?tab=web#change-session-timeout) or the user closes the app.
 
 
 
@@ -26,7 +26,7 @@ If you've set up the [activity lifecycle callback](https://www.braze.com/docs/de
 
 
 
-By default, a session starts when `openSession()` is first called. If your app goes to the background and then returns to the foreground, the SDK will check if more than 10 seconds have passed since the session started (unless you [change the default session timeout](https://www.braze.com/docs/developer_guide/analytics/tracking_sessions/?tab=android#change-session-timeout)). If so, a new session will begin. Keep in mind that if the user closes your app while it's in the background, session data may not be sent to Braze until they reopen the app.
+By default, a session starts when `openSession()` is first called. If your app goes to the background and then returns to the foreground, the SDK will check if more than 10 seconds have passed since the session started (unless you [change the default session timeout](https://www.braze.com/docs/developer_guide/analytics/tracking_sessions?tab=android#change-session-timeout)). If so, a new session will begin. Keep in mind that if the user closes your app while it's in the background, session data may not be sent to Braze until they reopen the app.
 
 Calling `closeSession()` will not immediately end the session. Instead, it will end the session after 10 seconds if `openSession()` isn't called again by the user starting another activity.
 
@@ -34,7 +34,7 @@ Calling `closeSession()` will not immediately end the session. Instead, it will 
 
 By default, a session starts when you call `Braze.init(configuration:)`. This occurs when the `UIApplicationWillEnterForegroundNotification` notification is triggered, meaning the app has entered the foreground.
 
-If your app goes to the background, `UIApplicationDidEnterBackgroundNotification` is triggered. The app does not remain in an active session while in the background. When your app returns to the foreground, the SDK compares the time elapsed since the session started against the session timeout (unless you [change the default session timeout](https://www.braze.com/docs/developer_guide/analytics/tracking_sessions/?tab=swift#change-session-timeout)). If the time since the session started exceeds the timeout period, a new session begins.
+If your app goes to the background, `UIApplicationDidEnterBackgroundNotification` is triggered. The app does not remain in an active session while in the background. When your app returns to the foreground, the SDK compares the time elapsed since the session started against the session timeout (unless you [change the default session timeout](https://www.braze.com/docs/developer_guide/analytics/tracking_sessions?tab=swift#change-session-timeout)). If the time since the session started exceeds the timeout period, a new session begins.
 
 
 

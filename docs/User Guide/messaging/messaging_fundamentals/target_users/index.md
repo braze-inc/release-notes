@@ -44,14 +44,21 @@ Let's say you want to send an in-app message only to Android apps.
 ![A segment targeting users from a specific app, "Test_Android".](https://www.braze.com/docs/assets/img_archive/app_test_android.png?77264df8574c45713299cc36ac357b44){: style="max-width:60%;"}
 
 {: start="2"}
-2. In the **Target Audiences** step, confirm that your segment is added in the **Target Users By Segment** section. 
+2. In the **Target Audiences** step, confirm that your segment is added in the **Target Users By Segment** section.
+
+**Note:**
+
+
+This won't work if you add your segment in the **Additional Filters** section through a segment membership filter. You must directly reference your segment in **Target Users By Segment** to deliver your message only to that app.
+
+
 
 ![The "Target Audiences" step with an example segment selected.](https://www.braze.com/docs/assets/img_archive/target_users_by_segment_example.png?1dfdd9a4246d3d75d5f73182fcc953e5)
 
 **Note:**
 
 
-This won't work if you add your segment in the **Additional Filters** section through a segment membership filter. You must directly reference your segment in **Target Users By Segment** to deliver your message only to that app.
+A segment with **Apps and websites targeted** restricts the destination apps in a campaign's **Target Audiences** step. In a Canvas, it doesn't work the same way. The entry audience determines who enters the journey, but its app restriction doesn't carry forward to Message steps. To limit a Message step to specific apps, add the segment to that step's [delivery validations](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#delivery-validations) as well. Otherwise, the step sends to all of the user's eligible tokens.
 
 
 

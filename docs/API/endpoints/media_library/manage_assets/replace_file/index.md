@@ -1,4 +1,4 @@
-<div id='api_skurqdaffpbd' class='api_div' data-search-keywords='replace an asset in the media library asset_id asset_url asset_file message error_code meta info new_image_asset name size url ext'>
+<div id='api_yzucqzzzrekx' class='api_div' data-search-keywords='replace an asset in the media library asset_id asset_url asset_file message error_code meta info new_image_asset name size url ext'>
 <h1 id="replace-an-asset-in-the-media-library">Replace an asset in the media library</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/media_library/replace_file</p>
@@ -197,7 +197,12 @@
     <tr>
       <td><code class="language-plaintext highlighter-rouge">INVALID_ASSET_URL</code></td>
       <td>400</td>
-      <td>The <code class="language-plaintext highlighter-rouge">asset_url</code> value is not a valid URI. The <code class="language-plaintext highlighter-rouge">meta</code> object includes <code class="language-plaintext highlighter-rouge">asset_url</code>.</td>
+      <td>The <code class="language-plaintext highlighter-rouge">asset_url</code> is malformed or is not an HTTP or HTTPS URL. The <code class="language-plaintext highlighter-rouge">meta</code> object includes <code class="language-plaintext highlighter-rouge">asset_url</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">FAILED_TO_DOWNLOAD_ASSET</code></td>
+      <td>400</td>
+      <td>Braze could not download the file at <code class="language-plaintext highlighter-rouge">asset_url</code> (for example, the host could not be resolved, the connection failed, or the remote server returned an error). The <code class="language-plaintext highlighter-rouge">meta</code> object includes <code class="language-plaintext highlighter-rouge">asset_url</code> and <code class="language-plaintext highlighter-rouge">original_error</code>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">EXTENSION_MISMATCH</code></td>

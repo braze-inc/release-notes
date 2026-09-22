@@ -6,7 +6,7 @@
 
 Banners availability depends on your Braze package. Contact your account manager or customer success manager to get started.
 
-Before you start, make sure you have [Banner placements](https://www.braze.com/docs/developer_guide/banners/placements/) created in your app or website.
+Before you start, make sure you have [Banner placements](https://www.braze.com/docs/developer_guide/banners/placements) created in your app or website.
 
 ![An example Banner rendered on a device.](https://www.braze.com/docs/assets/img/banners/sample_banner.png?c7f37292fa4f239707f73a88139a4685)
 
@@ -28,7 +28,7 @@ After Banners are integrated into an app or website, marketers can design and la
 
 Features for Banners include:
 
-- **Easy content building:** Create and preview your Banner using a visual, drag-and-drop editor with support for images, text, buttons, email capture forms, custom code, and more. Teams that prefer to manage their own markup can use the HTML editor instead for full control over the Banner's HTML and styles, or ask [BrazeAI Operator™](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/#generate-messages) to generate HTML from a description.
+- **Easy content building:** Create and preview your Banner using a visual, drag-and-drop editor with support for images, text, buttons, email capture forms, custom code, and more. Teams that prefer to manage their own markup can use the HTML editor instead for full control over the Banner's HTML and styles, or ask [BrazeAI Operator™](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#generate-messages) to generate HTML from a description.
 - **Flexible placements:** Define multiple locations within your application or website where Banners can appear, enabling precise targeting to specific contexts or user experiences.
 - **Dynamic personalization:** Banners recalculate personalization (Liquid logic) and segmentation every time the banner is refreshed. If a user updates their profile or a custom attribute changes, the next Banner refresh will reflect those changes.
 - **Native prioritization:** Set the display priority for when multiple Banners target the same placement, ensuring the right message reaches users at the right time.
@@ -38,9 +38,9 @@ Features for Banners include:
 
 ### Placement IDs {#placement-id}
 
-Banner placements are specific locations in your app or website [you create with the Braze SDK](https://www.braze.com/docs/developer_guide/banners/placements/) that designate where Banners can appear.
+Banner placements are specific locations in your app or website [you create with the Braze SDK](https://www.braze.com/docs/developer_guide/banners/placements) that designate where Banners can appear.
 
-Common locations include the top of your homepage, product detail pages, and checkout flows. After placements are created, Banners can be [assigned in your Banner campaign](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner/).
+Common locations include the top of your homepage, product detail pages, and checkout flows. After placements are created, Banners can be [assigned in your Banner campaign](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner).
 
 There is no fixed limit on the number of placements you can create per workspace, and you can create as many placement IDs as your experience requires. Each placement must be unique within a workspace. A single placement ID can be referenced by up to 25 active messages at the same time.
 
@@ -53,13 +53,13 @@ Avoid modifying placement IDs after launching a Banner campaign.
 
 ### Banner priority {#priority}
 
-When multiple Banner messages reference the same placement ID, Banners are displayed in order of priority: high, medium, or low. By default, Banners are set to medium, but you can [manually set the priority](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner/#set-banner-priority-optional) when you create or edit your Banner campaign. 
+When multiple Banner messages reference the same placement ID, Banners are displayed in order of priority: high, medium, or low. By default, Banners are set to medium, but you can [manually set the priority](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner#set-banner-priority-optional) when you create or edit your Banner campaign. 
 
 If multiple Banners are set to the same priority, the newest Banner that the user is eligible for is displayed first.
 
 ### Placement requests {#requests}
 
-When you [create placements in your app or website](https://www.braze.com/docs/developer_guide/banners/placements/#requestBannersRefresh), your app sends a request to Braze to fetch Banner messages for each placement.  
+When you [create placements in your app or website](https://www.braze.com/docs/developer_guide/banners/placements#requestBannersRefresh), your app sends a request to Braze to fetch Banner messages for each placement.  
 
 - You can request up to **10 placements per refresh request**.  
 - For each placement, Braze returns the **highest-priority Banner** the user is eligible to receive.  
@@ -145,7 +145,7 @@ Here's what you need to know about Banner dimensions and sizing:
 
 
 
-You can use [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/) to pull real-time data from external APIs into your Banner. Because Banners render inline during a session refresh, Connected Content has specific limitations in this channel:
+You can use [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content) to pull real-time data from external APIs into your Banner. Because Banners render inline during a session refresh, Connected Content has specific limitations in this channel:
 
 - **GET requests only:** Banners render only `GET` Connected Content requests. `POST` requests aren't supported.
 - **Shared rendering budget:** All placements returned in a single refresh request (up to 10) share one rendering budget of approximately two seconds. Each Connected Content call counts against this shared budget, so a placement with slow or numerous calls can use time that other placements need.
@@ -153,19 +153,19 @@ You can use [Connected Content](https://www.braze.com/docs/user_guide/messaging/
 
 ## Limitations
 
-Each workspace can support up to 200 active Banner campaigns. If this limit is reached, you'll need to [archive or deactivate](https://www.braze.com/docs/user_guide/messaging/governance/statuses/#changing-the-status) an existing campaign before creating a new one.
+Each workspace can support up to 200 active Banner campaigns. If this limit is reached, you'll need to [archive or deactivate](https://www.braze.com/docs/user_guide/messaging/governance/statuses#changing-the-status) an existing campaign before creating a new one.
 
 Additionally, Banner messages do not support the following features:
 
 - API-triggered and action-based campaigns
 - [Connected Content](#connected-content) (in early access)
 - Promotional codes
-- `catalog_items` using the [`:rerender` tag](https://www.braze.com/docs/user_guide/data/activation/catalogs/using_catalogs/#using-liquid)
+- `catalog_items` using the [`:rerender` tag](https://www.braze.com/docs/user_guide/data/activation/catalogs/use#using-liquid)
 
 ## Next steps
 
-- [Create Banner placements in your app or website](https://www.braze.com/docs/developer_guide/banners/placements/)
-- [Create a Banner campaign in Braze](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner/)
+- [Create Banner placements in your app or website](https://www.braze.com/docs/developer_guide/banners/placements)
+- [Create a Banner campaign in Braze](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner)
 - [Tutorial: Displaying a Banner by Placement ID](https://www.braze.com/docs/developer_guide/banners/tutorial_displaying_banners)
 
 **Tip:**

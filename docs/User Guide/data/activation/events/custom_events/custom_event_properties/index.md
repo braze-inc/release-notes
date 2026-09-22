@@ -159,7 +159,7 @@ You can use Canvas entry properties and event properties in your Canvas user jou
 
 
 
-[Canvas entry properties](https://www.braze.com/docs/api/objects_filters/context_object/) are the properties you map for Canvases that are action-based or API-triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB.
+[Canvas entry properties](https://www.braze.com/docs/api/objects_filters/context_object) are the properties you map for Canvases that are action-based or API-triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB.
 
 **Note:**
 
@@ -228,7 +228,7 @@ You can no longer create or duplicate Canvases using the original editor. This s
 
 
 
-Refer to [Canvas entry properties and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/) for more information and examples.
+Refer to [Canvas entry properties and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties) for more information and examples.
 
 ### Nested objects {#nested-objects}
 

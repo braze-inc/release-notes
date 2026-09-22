@@ -1,4 +1,4 @@
-# Optimizing A/B tests with BrazeAI™
+# Optimize A/B tests with BrazeAI
 
 > Turn on **Optimize with BrazeAI™** to automatically optimize a campaign with multiple variants. The optimization method depends on whether the campaign sends once or sends multiple times.
 

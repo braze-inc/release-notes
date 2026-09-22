@@ -69,7 +69,7 @@ logout(successCallback, errorCallback);
 
 #### Re-enable tracking and push after `logout`
 
-After a successful `logout`, call [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk), then re-register for notifications with your operating system (OS) or push provider by following [Web push setup](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=web).
+After a successful `logout`, call [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk), then re-register for notifications with your operating system (OS) or push provider by following [Web push setup](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=web).
 
 #### Avoid immediate unregister calls
 
@@ -97,7 +97,7 @@ unregisterPush(successCallback, errorCallback);
 
 #### Re-register push after `unregisterPush`
 
-After calling `unregisterPush`, re-register for notifications with your OS or push provider by following [Web push setup](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=web) before sending Braze push notifications again.
+After calling `unregisterPush`, re-register for notifications with your OS or push provider by following [Web push setup](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=web) before sending Braze push notifications again.
 
 **Note:**
 
@@ -135,11 +135,11 @@ This article provides information related to the data the Braze SDK processes as
 |Do you provide a way for users to request that their data be deleted?|Yes.|
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Questions" }
 
-For more information about handling user requests for their data and deletion, see [Braze Data Retention Information](https://www.braze.com/docs/api/data_retention/).
+For more information about handling user requests for their data and deletion, see [Braze Data Retention Information](https://www.braze.com/docs/api/data_retention).
 
 ### Data collection
 
-The data collected by Braze is determined by your specific integration and the user data you choose to collect. To learn more about what data Braze collects by default and how to disable certain attributes, see our [SDK data collection options](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration).
+The data collected by Braze is determined by your specific integration and the user data you choose to collect. To learn more about what data Braze collects by default and how to disable certain attributes, see our [SDK data collection options](https://www.braze.com/docs/user_guide/data/unification/user_data/sdk_data_collection#minimum-integration).
 
 <table aria-label="Data collection" id="datatypes">
     <thead>
@@ -295,7 +295,7 @@ The data collected by Braze is determined by your specific integration and the u
     </tbody>
 </table>
 
-To learn more about other device data that Braze collects which may fall outside the scope of Google Play's data safety guidelines, see our [Android storage overview](https://www.braze.com/docs/developer_guide/storage/?tab=android) and our [SDK data collection options](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration).
+To learn more about other device data that Braze collects which may fall outside the scope of Google Play's data safety guidelines, see our [Android storage overview](https://www.braze.com/docs/developer_guide/storage?tab=android) and our [SDK data collection options](https://www.braze.com/docs/user_guide/data/unification/user_data/sdk_data_collection#minimum-integration).
 
 ## Disabling data tracking
 
@@ -354,7 +354,7 @@ lifecycleScope.launch {
 
 #### Re-enable tracking and push after `logout`
 
-After a successful `logout`, re-enable the SDK with [`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html), then re-register for notifications with your operating system (OS) or push provider by following [Android push setup](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=android).
+After a successful `logout`, re-enable the SDK with [`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html), then re-register for notifications with your operating system (OS) or push provider by following [Android push setup](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android).
 
 #### Avoid immediate unregister calls
 
@@ -403,7 +403,7 @@ lifecycleScope.launch {
 
 #### Re-register push after `unregisterPush`
 
-After calling `unregisterPush`, re-register for notifications with your OS or push provider by following [Android push setup](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=android) before sending Braze push notifications again.
+After calling `unregisterPush`, re-register for notifications with your OS or push provider by following [Android push setup](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android) before sending Braze push notifications again.
 
 #### Avoid immediate unregister calls
 
@@ -445,7 +445,7 @@ The following Braze SDK version is required to implement this feature:
 
 ### Step 1: Review your current policies
 
-Review your Braze SDK's current data-collection policies with your legal team to determine whether your app collects tracking data [as defined by Apple](#what-is-tracking-data). If you're not collecting any tracking data, you don't need to customize your privacy manifest for the Braze SDK at this time. For more information about the Braze SDK's data-collection policies, see [SDK data collection](https://www.braze.com/docs/user_guide/data/unification/user_data/sdk_data_collection/).
+Review your Braze SDK's current data-collection policies with your legal team to determine whether your app collects tracking data [as defined by Apple](#what-is-tracking-data). If you're not collecting any tracking data, you don't need to customize your privacy manifest for the Braze SDK at this time. For more information about the Braze SDK's data-collection policies, see [SDK data collection](https://www.braze.com/docs/user_guide/data/unification/user_data/sdk_data_collection).
 
 **Important:**
 
@@ -470,7 +470,7 @@ Under **App Privacy Configuration**, choose **NSPrivacyTracking** and set its va
 
 ![The 'PrivacyInfo.xcprivacy' file open with "NSPrivacyTracking" set to "YES".](https://www.braze.com/docs/assets/img/apple/privacy_manifest/add_nsprivacytracking.png?02325a36076d8716d2d1e340f7a8ecd7)
 
-Under **App Privacy Configuration**, choose **NSPrivacyTrackingDomains**. In the domains array, add a new element and set its value to the endpoint you [previously added to your `AppDelegate`](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/#update-your-app-delegate) prefixed with `sdk-tracking`.
+Under **App Privacy Configuration**, choose **NSPrivacyTrackingDomains**. In the domains array, add a new element and set its value to the endpoint you [previously added to your `AppDelegate`](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift#swift_step-3-update-your-app-delegate) prefixed with `sdk-tracking`.
 
 ![The 'PrivacyInfo.xcprivacy' file open with a Braze tracking endpoint listed under "NSPrivacyTrackingDomains".](https://www.braze.com/docs/assets/img/apple/privacy_manifest/add_nsprivacytrackingdomains.png?eb07fc3447c9380e0a20b912f9b22630)
 
@@ -555,9 +555,9 @@ To disable data-tracking activity on the Swift SDK, set the [`enabled`](https://
 
 You can use the [`wipeData()`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/wipedata()) method to fully clear locally-stored SDK data on a user's device.
 
-For Braze Swift versions 7.0.0 and later, the SDK and the `wipeData()` method randomly generates a UUID for their device ID. However, if your `useUUIDAsDeviceId` is set to `false` _or_ you're using Swift SDK version 5.7.0 or earlier, you'll also need to make a post request to [`/users/delete`](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/) since your Identifier for Vendors (IDFV) will automatically be used as that user's device ID.
+For Braze Swift versions 7.0.0 and later, the SDK and the `wipeData()` method randomly generates a UUID for their device ID. However, if your `useUUIDAsDeviceId` is set to `false` _or_ you're using Swift SDK version 5.7.0 or earlier, you'll also need to make a post request to [`/users/delete`](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete) since your Identifier for Vendors (IDFV) will automatically be used as that user's device ID.
 
-If you use manual push integration, and your app calls `wipeData()` and later re-enables the SDK in the same app run, call `registerForRemoteNotifications()` again so Braze can receive a refreshed device token. For more information, see [setting up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift).
+If you use manual push integration, and your app calls `wipeData()` and later re-enables the SDK in the same app run, call `registerForRemoteNotifications()` again so Braze can receive a refreshed device token. For more information, see [setting up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift).
 
 ## Resuming data tracking
 
@@ -630,7 +630,7 @@ This Objective-C example shows completion-based `logout` handling. Use it in Obj
 
 #### Re-enable tracking and push after `logout`
 
-After a successful `logout`, set [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled/) back to `true`, then re-register for notifications with your operating system (OS) or push provider by following [Swift push setup](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift).
+After a successful `logout`, set [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled/) back to `true`, then re-register for notifications with your operating system (OS) or push provider by following [Swift push setup](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift).
 
 #### Avoid immediate unregister calls
 
@@ -690,7 +690,7 @@ This Objective-C example shows completion-based `unregisterPush` handling. Use i
 
 #### Re-register push after `unregisterPush`
 
-After calling `unregisterPush`, re-register for notifications with your OS or push provider by following [Swift push setup](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift) before sending Braze push notifications again.
+After calling `unregisterPush`, re-register for notifications with your OS or push provider by following [Swift push setup](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift) before sending Braze push notifications again.
 
 #### Avoid immediate unregister calls
 
@@ -834,7 +834,7 @@ Yes, you can still optionally collect the IDFV through the Swift SDK (collection
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native).
+Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=react%20native).
 
 ## Disabling data tracking
 
@@ -904,7 +904,7 @@ This feature is not yet supported on the React Native SDK.
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Roku Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=roku).
+Before you can use this feature, you'll need to [integrate the Roku Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=roku).
 
 
 ## Wiping previously-stored data
@@ -938,7 +938,7 @@ end sub
 
 ### Step 2: Re-initialize the Braze SDK
 
-When you [initialize the Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=roku) again, the SDK handles the missing registry data gracefully:
+When you [initialize the Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=roku) again, the SDK handles the missing registry data gracefully:
 
 - The device ID section is empty, so the SDK generates a new UUID and treats the device as anonymous.
 - The user ID section is empty, so the SDK defaults to an anonymous user (an empty string `""`).
@@ -948,7 +948,7 @@ When you [initialize the Braze SDK](https://www.braze.com/docs/developer_guide/s
 **Note:**
 
 
-The Roku SDK doesn't generate any server-side delete request when you clear the registry. If you also need to remove the user from Braze, send a request to [`/users/delete`](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/) using the user's `external_id` or `braze_id`.
+The Roku SDK doesn't generate any server-side delete request when you clear the registry. If you also need to remove the user from Braze, send a request to [`/users/delete`](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete) using the user's `external_id` or `braze_id`.
 
 
 

@@ -48,7 +48,7 @@ The most critical step your company can take within your customer engagement pla
 
 #### Utilize the Braze Geographic Permissions allowlist
 
-You should proactively audit the regions where your actual target customers reside and configure an allowlist to explicitly permit messaging only to those countries. For setup steps, see [Geographic permissions](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups/geographic_permissions/).
+You should proactively audit the regions where your actual target customers reside and configure an allowlist to explicitly permit messaging only to those countries. For setup steps, see [Geographic permissions](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups/geographic_permissions).
 
 ##### Block high-risk destinations
 
@@ -60,6 +60,6 @@ If you only do business in North America or Western Europe, there's no reason to
 
 ### What else does Braze do to protect your company against fraud?
 
-In addition to guidance and support from your account team and [Geographic permissions](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups/geographic_permissions/), Braze maintains internal monitoring for unusual patterns and will proactively engage with customers when we identify anomalous activity on their account.
+In addition to guidance and support from your account team and [Geographic permissions](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups/geographic_permissions), Braze maintains internal monitoring for unusual patterns and will proactively engage with customers when we identify anomalous activity on their account.
 
 

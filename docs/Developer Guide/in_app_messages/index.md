@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web). However, no additional setup is required.
+Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web). However, no additional setup is required.
 
 ## Message types
 
@@ -38,7 +38,7 @@ Each in-app message type is customizable across content, images, icons, click ac
 
 
 
-[`HTML`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html) in-app messages are useful for creating fully customized user content. User-defined HTML is displayed in an iFrame and may contain rich content, such as images, fonts, videos, and interactive elements, allowing for full control over message appearance and functionality. These support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices/) for more details.
+[`HTML`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html) in-app messages are useful for creating fully customized user content. User-defined HTML is displayed in an iFrame and may contain rich content, such as images, fonts, videos, and interactive elements, allowing for full control over message appearance and functionality. These support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices) for more details.
 
 **Important:**
 
@@ -59,7 +59,7 @@ The following example shows a paginated HTML in-app message:
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android). You'll also need to enable in-app messages.
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android). You'll also need to enable in-app messages.
 
 ## Message types
 
@@ -114,7 +114,7 @@ On Android, links configured with `target="_blank"` in custom HTML in-app messag
 
 
 
-Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages#javascript-bridge/">JavaScript bridge</a> page for more details.
+Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/channels/in_app_messages/message_types/custom_html#javascript-bridge">JavaScript bridge</a> page for more details.
 
 ![An HTML in-app message with the a carousel of content and interactive buttons.](https://www.braze.com/docs/assets/img/full-screen-behavior.gif?b47edcbdd910efce932489d1fa592bd0){: style="border:0px;"}
 
@@ -279,7 +279,7 @@ class MyApplication : Application() {
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift). You'll also need to enable in-app messages.
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift). You'll also need to enable in-app messages.
 
 ## Message types
 
@@ -328,7 +328,7 @@ These are the available in-app message types in Braze and how they will look lik
 
 
 
-[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices/) for more details.
+[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices) for more details.
 
 The following example shows a paginated HTML Full in-app message:
 
@@ -382,7 +382,7 @@ Implement [`BrazeDelegate.(_:noMatchingTriggerForEvent)`](https://braze-inc.gith
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android).
 
 ## About TV and OTT support
 
@@ -397,7 +397,7 @@ The Android Braze SDK natively supports displaying in-app messages on OTT device
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Cordova Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=cordova).
+Before you can use this feature, you'll need to [integrate the Cordova Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=cordova).
 
 ## Message types
 
@@ -452,7 +452,7 @@ On Android, links configured with `target="_blank"` in custom HTML in-app messag
 
 
 
-Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages#javascript-bridge/">JavaScript bridge</a> page for more details.
+Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/channels/in_app_messages/message_types/custom_html#javascript-bridge">JavaScript bridge</a> page for more details.
 
 ![An HTML in-app message with the a carousel of content and interactive buttons.](https://www.braze.com/docs/assets/img/full-screen-behavior.gif?b47edcbdd910efce932489d1fa592bd0){: style="border:0px;"}
 
@@ -517,7 +517,7 @@ These are the available in-app message types in Braze and how they will look lik
 
 
 
-[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices/) for more details.
+[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices) for more details.
 
 The following example shows a paginated HTML Full in-app message:
 
@@ -543,7 +543,7 @@ For details about automatic variant optimization and control groups, see [Optimi
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Flutter Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=flutter).
+Before you can use this feature, you'll need to [integrate the Flutter Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=flutter).
 
 ## Message types
 
@@ -598,7 +598,7 @@ On Android, links configured with `target="_blank"` in custom HTML in-app messag
 
 
 
-Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages#javascript-bridge/">JavaScript bridge</a> page for more details.
+Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/channels/in_app_messages/message_types/custom_html#javascript-bridge">JavaScript bridge</a> page for more details.
 
 ![An HTML in-app message with the a carousel of content and interactive buttons.](https://www.braze.com/docs/assets/img/full-screen-behavior.gif?b47edcbdd910efce932489d1fa592bd0){: style="border:0px;"}
 
@@ -663,7 +663,7 @@ These are the available in-app message types in Braze and how they will look lik
 
 
 
-[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices/) for more details.
+[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices) for more details.
 
 The following example shows a paginated HTML Full in-app message:
 
@@ -788,7 +788,7 @@ For more information about accessing in-app message data, refer to [Logging in-a
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native).
+Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=react%20native).
 
 ## Message types
 
@@ -843,7 +843,7 @@ On Android, links configured with `target="_blank"` in custom HTML in-app messag
 
 
 
-Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages#javascript-bridge/">JavaScript bridge</a> page for more details.
+Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/channels/in_app_messages/message_types/custom_html#javascript-bridge">JavaScript bridge</a> page for more details.
 
 ![An HTML in-app message with the a carousel of content and interactive buttons.](https://www.braze.com/docs/assets/img/full-screen-behavior.gif?b47edcbdd910efce932489d1fa592bd0){: style="border:0px;"}
 
@@ -908,7 +908,7 @@ These are the available in-app message types in Braze and how they will look lik
 
 
 
-[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices/) for more details.
+[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices) for more details.
 
 The following example shows a paginated HTML Full in-app message:
 
@@ -978,7 +978,7 @@ For a full reference of button model, see the [Android](https://braze-inc.github
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Roku Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=roku).
+Before you can use this feature, you'll need to [integrate the Roku Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=roku).
  Additionally, in-app messages will only be sent to Roku devices running the minimum supported SDK version:
 
 <div id='sdk-versions'><a href='/docs/developer_guide/platforms/roku/changelog/#012' class='sdk-versions--chip roku-sdk' target='_blank'><i class='fa-solid fa-tv'></i> &nbsp; Roku: 0.1.2+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
@@ -1036,7 +1036,7 @@ On Android, links configured with `target="_blank"` in custom HTML in-app messag
 
 
 
-Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages#javascript-bridge/">JavaScript bridge</a> page for more details.
+Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/channels/in_app_messages/message_types/custom_html#javascript-bridge">JavaScript bridge</a> page for more details.
 
 ![An HTML in-app message with the a carousel of content and interactive buttons.](https://www.braze.com/docs/assets/img/full-screen-behavior.gif?b47edcbdd910efce932489d1fa592bd0){: style="border:0px;"}
 
@@ -1101,7 +1101,7 @@ These are the available in-app message types in Braze and how they will look lik
 
 
 
-[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices/) for more details.
+[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices) for more details.
 
 The following example shows a paginated HTML Full in-app message:
 
@@ -1209,7 +1209,7 @@ Keep in mind, you'll need to implement your own custom UI since in-app messaging
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift).
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift).
 
 ## Enabling in-app messages
 
@@ -1245,7 +1245,7 @@ Because Braze doesn't provide a default UI for in-app messages on tvOS, you'll n
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Unity Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=unity).
+Before you can use this feature, you'll need to [integrate the Unity Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=unity).
 
 ## Message types
 
@@ -1300,7 +1300,7 @@ On Android, links configured with `target="_blank"` in custom HTML in-app messag
 
 
 
-Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages#javascript-bridge/">JavaScript bridge</a> page for more details.
+Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/channels/in_app_messages/message_types/custom_html#javascript-bridge">JavaScript bridge</a> page for more details.
 
 ![An HTML in-app message with the a carousel of content and interactive buttons.](https://www.braze.com/docs/assets/img/full-screen-behavior.gif?b47edcbdd910efce932489d1fa592bd0){: style="border:0px;"}
 
@@ -1365,7 +1365,7 @@ These are the available in-app message types in Braze and how they will look lik
 
 
 
-[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices/) for more details.
+[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices) for more details.
 
 The following example shows a paginated HTML Full in-app message:
 
@@ -1391,7 +1391,7 @@ For details about automatic variant optimization and control groups, see [Optimi
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the .NET MAUI Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=.net%20maui%20(xamarin)).
+Before you can use this feature, you'll need to [integrate the .NET MAUI Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=.net%20maui%20(xamarin)).
 
 ## Message types
 
@@ -1446,7 +1446,7 @@ On Android, links configured with `target="_blank"` in custom HTML in-app messag
 
 
 
-Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages#javascript-bridge/">JavaScript bridge</a> page for more details.
+Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/channels/in_app_messages/message_types/custom_html#javascript-bridge">JavaScript bridge</a> page for more details.
 
 ![An HTML in-app message with the a carousel of content and interactive buttons.](https://www.braze.com/docs/assets/img/full-screen-behavior.gif?b47edcbdd910efce932489d1fa592bd0){: style="border:0px;"}
 
@@ -1511,7 +1511,7 @@ These are the available in-app message types in Braze and how they will look lik
 
 
 
-[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices/) for more details.
+[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices) for more details.
 
 The following example shows a paginated HTML Full in-app message:
 

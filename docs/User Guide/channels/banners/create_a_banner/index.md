@@ -336,7 +336,7 @@ While reviewing your test Banner, verify the following:
 - Does the Liquid function as expected? Have you accounted for a default attribute value in the event that the Liquid returns no information?
 - Is your copy clear, concise, and correct?
 
-For more information, see [Send test messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/).
+For more information, see [Send test messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages).
 
 
 ### Step 6: Review and deploy

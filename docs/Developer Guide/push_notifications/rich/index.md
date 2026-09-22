@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=swift).
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift).
 
 ## Setting up rich push notifications
 
@@ -48,7 +48,7 @@ To see a sample, refer to the usage in [`NotificationService`](https://github.co
 
 
 
-After following the [Swift Package Manager integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager/), add `BrazeNotificationService` to your `Notification Service Extension` by doing the following:
+After following the [Swift Package Manager integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/sdk_integration?tab=swift%20package%20manager/), add `BrazeNotificationService` to your `Notification Service Extension` by doing the following:
 
 1. In Xcode, under frameworks and libraries, select the <i class="fas fa-plus"></i> add icon to add a framework. <br><br>![The plus icon is located under frameworks and libraries in Xcode.](https://www.braze.com/docs/assets/img_archive/rich_notification.png?aacc2bc0878ec1e3bf74e346f2cd7132){: width="1930" height="446"}<br><br>
 
@@ -79,7 +79,7 @@ end
 **Note:**
 
 
-For instructions to implement Push Stories, see the [documentation](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/push_story/?tab=swift%20package%20manager).
+For instructions to implement Push Stories, see the [documentation](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/push_story?tab=swift%20package%20manager).
 
 
 
@@ -141,7 +141,7 @@ Your marketing team can also create rich notifications from the dashboard. Creat
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Cordova Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=cordova). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=cordova).
+Before you can use this feature, you'll need to [integrate the Cordova Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=cordova). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=cordova).
 
 ## Setting up rich push notifications
 
@@ -183,7 +183,7 @@ pod install
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=react%20native).
+Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=react%20native). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=react%20native).
 
 ## Using Expo to enable rich push notifications
 
@@ -207,7 +207,7 @@ To enable rich push notifications on iOS using Expo, configure the `enableBrazeI
 }
 ```
 
-Lastly, add the bundle identifier for this app extension to your project's credentials configuration: `<your-app-bundle-id>.BrazeExpoRichPush`. For further details on this process, refer to [Using app extensions with Expo Application Services](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=react%20native#reactnative_app-extensions).
+Lastly, add the bundle identifier for this app extension to your project's credentials configuration: `<your-app-bundle-id>.BrazeExpoRichPush`. For further details on this process, refer to [Using app extensions with Expo Application Services](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=react%20native#reactnative_app-extensions).
 
 
 

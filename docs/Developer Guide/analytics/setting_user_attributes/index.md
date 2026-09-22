@@ -13,7 +13,7 @@ For wrapper SDKs not listed, use the relevant native Android or Swift method ins
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web).
+Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web).
 
 ## Default user attributes
 
@@ -71,7 +71,7 @@ window.braze.getUser().setGender("f")
 
 ### Unsetting default attributes
 
-You can remove or unset a user attribute through your app code, a REST API request, or a [User Update](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update/) Canvas step. For array and boolean attributes, use `null`. For other data types, use an empty string (`""`).
+You can remove or unset a user attribute through your app code, a REST API request, or a [User Update](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update) Canvas step. For array and boolean attributes, use `null`. For other data types, use an empty string (`""`).
 
 To unset a default user attribute with the Web SDK, pass `null` to the related method. For example:
 
@@ -99,7 +99,7 @@ braze.getUser().setDateOfBirth(null, null, null);
 
 
 
-In addition to the default user attribute methods, you can also set [custom attributes](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) for your users. Full method specifications, see [our JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
+In addition to the default user attribute methods, you can also set [custom attributes](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types) for your users. Full method specifications, see [our JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
 
 
@@ -217,7 +217,7 @@ braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
 
 ### Nesting custom attributes
 
-You can also nest properties within custom attributes. In the following example, a `favorite_book` object with nested properties is set as a custom attribute on the user profile. For more details, refer to [Nested Custom Attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support/).
+You can also nest properties within custom attributes. In the following example, a `favorite_book` object with nested properties is set as a custom attribute on the user profile. For more details, refer to [Nested Custom Attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support).
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -233,7 +233,7 @@ braze.getUser().setCustomUserAttribute("favorite_book", favoriteBook);
 
 ### Using the REST API
 
-You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints](https://www.braze.com/docs/developer_guide/rest_api/user_data/#user-data).
+You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints](https://www.braze.com/docs/api/endpoints/user_data).
 
 ## Setting user subscriptions
 
@@ -248,7 +248,7 @@ To set up a subscription for your users (either email or push), call the functio
 
 When a user is registered for push, the browser forces them to choose to allow or block notifications, and if they choose to allow push, they are set `OPTED_IN` by default. 
 
-Visit [Managing user subscriptions](https://www.braze.com/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) for more information on implementing subscriptions and explicit opt-ins.
+Visit [Managing user subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions#changing-email-subscriptions) for more information on implementing subscriptions and explicit opt-ins.
 
 ### Unsubscribing a user from email
 
@@ -267,7 +267,7 @@ braze.getUser().setPushNotificationSubscriptionType(braze.User.NotificationSubsc
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android).
 
 ## Default user attributes
 
@@ -566,7 +566,7 @@ Dates passed to Braze with this method must either be in the [ISO 8601](http://e
 
 
 
-The default and maximum number of elements in an array is 500. You can update the maximum number of arrays in the Braze dashboard, under **Data Settings** > **Custom Attributes**. Arrays exceeding the maximum number of elements are truncated to contain the maximum number of elements. For more information on custom attribute arrays and their behavior, see [Arrays](https://www.braze.com/docs/developer_guide/analytics/#arrays).
+The default and maximum number of elements in an array is 500. You can update the maximum number of arrays in the Braze dashboard, under **Data Settings** > **Custom Attributes**. Arrays exceeding the maximum number of elements are truncated to contain the maximum number of elements. For more information on custom attribute arrays and their behavior, see [Arrays](https://www.braze.com/docs/developer_guide/analytics#arrays).
 
 
 
@@ -633,7 +633,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ### Nesting custom attributes
 
-You can also nest properties within custom attributes. In the following example, a `favorite_book` object with nested properties is set as a custom attribute on the user profile. For more details, refer to [Nested Custom Attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support/).
+You can also nest properties within custom attributes. In the following example, a `favorite_book` object with nested properties is set as a custom attribute on the user profile. For more details, refer to [Nested Custom Attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support).
 
 
 
@@ -670,7 +670,7 @@ braze.getCurrentUser { user ->
 
 ### Using the REST API
 
-You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints](https://www.braze.com/docs/developer_guide/rest_api/user_data/#user-data).
+You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints](https://www.braze.com/docs/api/endpoints/user_data).
 
 ## Setting user subscriptions
 
@@ -686,7 +686,7 @@ To set up a subscription for your users (either email or push), call the functio
 **Important:**
 
 
-No explicit opt-in is required by Android to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. Refer to [managing user subscriptions](https://www.braze.com/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) for more information on implementing subscriptions and explicit opt-ins.
+No explicit opt-in is required by Android to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. Refer to [managing user subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions#changing-email-subscriptions) for more information on implementing subscriptions and explicit opt-ins.
 
 
 
@@ -748,7 +748,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift).
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift).
 
 ## Default user attributes
 
@@ -810,7 +810,7 @@ AppDelegate.braze?.user.set(firstName: nil)
 
 ## Custom user attributes
 
-In addition to the default user attributes, Braze also allows you to define custom attributes using several different data types. For more information on each attribute's segmentation option, see [User data collection](https://www.braze.com/docs/developer_guide/analytics/).
+In addition to the default user attributes, Braze also allows you to define custom attributes using several different data types. For more information on each attribute's segmentation option, see [User data collection](https://www.braze.com/docs/developer_guide/analytics).
 
 **Important:**
 
@@ -989,7 +989,7 @@ To unset a custom attribute, pass the relevant attribute key to the `unsetCustom
 
 ### Nesting custom attributes
 
-You can also nest properties within custom attributes. In the following example, a `favorite_book` object with nested properties is set as a custom attribute on the user profile. For more details, refer to [Nested Custom Attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support/).
+You can also nest properties within custom attributes. In the following example, a `favorite_book` object with nested properties is set as a custom attribute on the user profile. For more details, refer to [Nested Custom Attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support).
 
 
 
@@ -1019,7 +1019,7 @@ NSDictionary *favoriteBook = @{
 
 ### Using the REST API
 
-You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints](https://www.braze.com/docs/developer_guide/rest_api/user_data/#user-data).
+You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints](https://www.braze.com/docs/api/endpoints/user_data).
 
 ## Setting user subscriptions
 
@@ -1034,7 +1034,7 @@ To set up a subscription for your users (either email or push), call the functio
 
 Users who grant permission for an app to send them push notifications default to the status of `optedIn` as iOS requires an explicit opt-in.
 
-Users will be set to `subscribed` automatically upon receipt of a valid email address; however, we suggest that you establish an explicit opt-in process and set this value to `optedIn` upon receipt of explicit consent from your user. Refer to [Managing user subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions/) for more details.
+Users will be set to `subscribed` automatically upon receipt of a valid email address; however, we suggest that you establish an explicit opt-in process and set this value to `optedIn` upon receipt of explicit consent from your user. Refer to [Managing user subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions) for more details.
 
 ### Setting email subscriptions
 
@@ -1074,14 +1074,14 @@ AppDelegate.braze?.user.set(pushNotificationSubscriptionState: Braze.User.Subscr
 
 
 
-Refer to [Managing user subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions/) for more details.
+Refer to [Managing user subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions) for more details.
 
 
 
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Flutter Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=flutter).
+Before you can use this feature, you'll need to [integrate the Flutter Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=flutter).
 
 ## Default user attributes
 
@@ -1195,7 +1195,7 @@ braze.unsetCustomUserAttribute('attribute_key');
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Roku Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=roku).
+Before you can use this feature, you'll need to [integrate the Roku Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=roku).
 
 
 ## Default user attributes
@@ -1353,7 +1353,7 @@ m.Braze.unsetCustomAttribute("attributeName")
 
 ### Using the REST API
 
-You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints](https://www.braze.com/docs/developer_guide/rest_api/user_data/#user-data).
+You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints](https://www.braze.com/docs/api/endpoints/user_data).
 
 ## Setting email subscriptions
 
@@ -1373,7 +1373,7 @@ These types fall under `BrazeConstants().SUBSCRIPTION_STATES`.
 
 
 
-The method for setting email subscription status is `setEmailSubscriptionState()`. Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. For more details, visit [Managing user subscriptions](https://www.braze.com/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions).
+The method for setting email subscription status is `setEmailSubscriptionState()`. Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. For more details, visit [Managing user subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions#changing-email-subscriptions).
 
 ```brightscript
 m.Braze.setEmailSubscriptionState(BrazeConstants().SUBSCRIPTION_STATES.OPTED_IN)
@@ -1384,7 +1384,7 @@ m.Braze.setEmailSubscriptionState(BrazeConstants().SUBSCRIPTION_STATES.OPTED_IN)
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Unity Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=unity).
+Before you can use this feature, you'll need to [integrate the Unity Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=unity).
 
 ## Default user attributes
 
@@ -1590,7 +1590,7 @@ AppboyBinding.UnsetCustomUserAttribute("custom attribute key");
 
 ### Using the REST API
 
-You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints](https://www.braze.com/docs/developer_guide/rest_api/user_data/#user-data).
+You can also use our REST API to set or unset user attributes. For more information, refer to [User Data Endpoints](https://www.braze.com/docs/api/endpoints/user_data).
 
 ## Setting user subscriptions
 
@@ -1616,14 +1616,14 @@ Both functions take `Appboy.Models.AppboyNotificationSubscriptionType` as argume
 **Note:**
 
 
-No explicit opt-in is required by Windows to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. To learn more, check out our documentation on [implementing subscriptions and explicit opt-ins](https://www.braze.com/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions).
+No explicit opt-in is required by Windows to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. To learn more, check out our documentation on [implementing subscriptions and explicit opt-ins](https://www.braze.com/docs/user_guide/channels/email/subscriptions#changing-email-subscriptions).
 
 
 
 | Subscription Type                        | Description |
 |------------------------------------------|-------------|
-| `EmailNotificationSubscriptionType`      | Users will be set to `SUBSCRIBED` automatically upon receipt of a valid email address. However, we suggest that you establish an explicit opt-in process and set this value to `OPTED_IN` upon receipt of explicit consent from your user. Visit our [Changing User Subscriptions](https://www.braze.com/docs/user_guide/administrative/manage_your_users/managing_user_subscriptions/#changing-subscriptions) doc for more details. |
-| `PushNotificationSubscriptionType`       | Users will be set to `SUBSCRIBED` automatically upon valid push registration. However, we suggest that you establish an explicit opt-in process and set this value to `OPTED_IN` upon receipt of explicit consent from your user. Visit our [Changing User Subscriptions](https://www.braze.com/docs/user_guide/administrative/manage_your_users/managing_user_subscriptions/#changing-subscriptions) doc for more details. |
+| `EmailNotificationSubscriptionType`      | Users will be set to `SUBSCRIBED` automatically upon receipt of a valid email address. However, we suggest that you establish an explicit opt-in process and set this value to `OPTED_IN` upon receipt of explicit consent from your user. Visit our [Changing User Subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions#changing-email-subscriptions) doc for more details. |
+| `PushNotificationSubscriptionType`       | Users will be set to `SUBSCRIBED` automatically upon valid push registration. However, we suggest that you establish an explicit opt-in process and set this value to `OPTED_IN` upon receipt of explicit consent from your user. Visit our [Changing User Subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions#changing-email-subscriptions) doc for more details. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Setting user subscriptions" }
 
 **Note:**
@@ -1650,7 +1650,7 @@ AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscrip
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native).
+Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=react%20native).
 
 ## Logging custom attributes
 
@@ -1680,7 +1680,7 @@ All string values such as first name, last name, country, and home city are limi
 
 ### Custom user attributes
 
-In addition to our predefined user attribute methods, Braze also provides [custom attributes](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) to track data from your applications. 
+In addition to our predefined user attribute methods, Braze also provides [custom attributes](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types) to track data from your applications. 
 
 ```javascript
 Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){

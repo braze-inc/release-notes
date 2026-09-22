@@ -5,7 +5,7 @@
 **Tip:**
 
 
-Using Content Cards for banner-style messages? Try out [Banners](https://www.braze.com/docs/user_guide/channels/banners/)&#8212; perfect for inline, persistent in-app and web messages.
+Using Content Cards for banner-style messages? Try out [Banners](https://www.braze.com/docs/user_guide/channels/banners)&#8212; perfect for inline, persistent in-app and web messages.
 
 
 
@@ -21,12 +21,12 @@ This guide uses code samples from the Braze Web SDK 4.0.0+. To upgrade to the la
 
 ## Prerequisites
 
-Before you can use Content Cards, you'll need to [integrate the Braze Web SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web) into your app. However, no additional setup is required. To build your own UI instead, see [Content Card Customization Guide](https://www.braze.com/docs/developer_guide/content_cards/).
+Before you can use Content Cards, you'll need to [integrate the Braze Web SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web) into your app. However, no additional setup is required. To build your own UI instead, see [Content Card Customization Guide](https://www.braze.com/docs/developer_guide/content_cards).
 
 **Note:**
 
 
-Some ad blockers and browser privacy extensions can block the Braze Web SDK script or related network requests, which can prevent Content Cards from loading. If you're using the CDN integration method, consider switching to the [NPM integration method](https://www.braze.com/docs/developer_guide/sdk_integration/?subtab=package%20manager&sdktab=web), which stores SDK libraries locally on your website and can avoid some ad-blocker-related issues.
+Some ad blockers and browser privacy extensions can block the Braze Web SDK script or related network requests, which can prevent Content Cards from loading. If you're using the CDN integration method, consider switching to the [NPM integration method](https://www.braze.com/docs/developer_guide/sdk_integration?subtab=package%20manager&sdktab=web), which stores SDK libraries locally on your website and can avoid some ad-blocker-related issues.
 
 
 
@@ -95,7 +95,7 @@ The Content Cards data model is available in the Web SDK and offers the followin
 **Tip:**
 
 
-To log Content Card data, see [Logging analytics](https://www.braze.com/docs/developer_guide/content_cards/logging_analytics/).
+To log Content Card data, see [Logging analytics](https://www.braze.com/docs/developer_guide/content_cards/logging_analytics).
 
 
 
@@ -176,7 +176,7 @@ Content Card images (including GIFs) are rendered using standard HTML `<img>` ta
 
 If you use the default Content Cards feed, impressions and clicks will be automatically tracked.
 
-If you use a custom integration for Content Cards, you need need [log impressions](https://www.braze.com/docs/developer_guide/content_cards/logging_analytics/) when a Control Card would have been seen. As part of this effort, make sure to handle Control cards when logging impressions in an A/B test. These cards are blank, and while they aren’t seen by users, you should still log impressions in order to compare how they perform against non-Control cards.
+If you use a custom integration for Content Cards, you need need [log impressions](https://www.braze.com/docs/developer_guide/content_cards/logging_analytics) when a Control Card would have been seen. As part of this effort, make sure to handle Control cards when logging impressions in an A/B test. These cards are blank, and while they aren’t seen by users, you should still log impressions in order to compare how they perform against non-Control cards.
 
 To determine if a Content Card is in the Control group for an A/B test, check the `card.isControl` property (Web SDK v4.5.0+) or check if the card is a `ControlCard` instance (`card instanceof braze.ControlCard`).
 
@@ -201,7 +201,7 @@ Use these methods when building your own Content Card UI:
 |---|---|
 |[`subscribeToContentCardsUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsupdates)| Registers a callback function that is invoked whenever Content Cards are updated for the current user, such as on session start. Use this as the primary way to receive card data for your custom feed. Must be called before `openSession()` to receive updates on the initial session. |
 |[`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)| Returns all currently available cards from the most recent Content Cards refresh. Use this to immediately display cards on page load without waiting for a new server request, such as when the user returns to a page during an active session. |
-|[`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh)| Requests an immediate refresh of Content Cards from Braze servers. By default, cards refresh on session start and when the default feed is reopened. Use this to force a refresh at other times, such as after a specific user action. Be aware of [rate limits](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/feed/#rate-limit). |
+|[`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh)| Requests an immediate refresh of Content Cards from Braze servers. By default, cards refresh on session start and when the default feed is reopened. Use this to force a refresh at other times, such as after a specific user action. Be aware of [rate limits](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/feed#rate-limit). |
 |[`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions)| Logs impression events for an array of cards. Call this when cards are rendered and visible to the user. Required for accurate campaign reporting when using a custom UI, as impressions are not tracked automatically outside the default feed. |
 |[`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick)| Logs a click event for a single card. Call this when a user interacts with a card in your custom UI. Required for accurate campaign reporting, as clicks are not tracked automatically outside the default feed. |
 |[`handleBrazeAction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#handlebrazeaction)| Processes a card's URL and executes the configured on-click action, including Braze actions (`brazeActions://` URLs) and standard URL navigation. Call this in your card click handler to ensure on-click behaviors configured in the Braze dashboard are executed. |
@@ -312,7 +312,7 @@ The argument passed to `logContentCardClick()` must be an original Braze `Card` 
 
 ## Using Google Tag Manager
 
-Google Tag Manager works by injecting the [Braze CDN](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup#install-cdn) (a version of our Web SDK) directly into your website code, which means that all SDK methods are available just as if you had integrated the SDK without Google Tag Manager, except when implementing Content Cards.
+Google Tag Manager works by injecting the [Braze CDN](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web#web_step-1-install-the-braze-library) (a version of our Web SDK) directly into your website code, which means that all SDK methods are available just as if you had integrated the SDK without Google Tag Manager, except when implementing Content Cards.
 
 ### Setting up Content Cards
 
@@ -334,11 +334,11 @@ For more freedom over customizing the appearance of Content Cards and their feed
 
 
 
-When implementing the [standard feed UI](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/content_cards/integration/#standard-feed-ui), Braze methods must have `window.` added to the start of the method. For example, `braze.showContentCards` should instead be `window.braze.showContentCards`.
+When implementing the [standard feed UI](https://www.braze.com/docs/developer_guide/content_cards?sdktab=web#web_standard-feed-ui), Braze methods must have `window.` added to the start of the method. For example, `braze.showContentCards` should instead be `window.braze.showContentCards`.
 
 
 
-For [custom feed](https://www.braze.com/docs/developer_guide/content_cards/creating_cards/) styling, the steps are the same as if you had integrated the SDK without GTM. For example, if you want to customize the width of the Content Card feed, you can paste the following into your CSS file:
+For [custom feed](https://www.braze.com/docs/developer_guide/content_cards/creating_cards) styling, the steps are the same as if you had integrated the SDK without GTM. For example, if you want to customize the width of the Content Card feed, you can paste the following into your CSS file:
 
 
 ```css
@@ -401,7 +401,7 @@ In your Google Tag Manager integration, navigate to your Braze Initialization Ta
 
 ## Prerequisites
 
-Before you can use Braze Content Cards, you must integrate the [Braze Android SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android) into your app. However, no additional setup is required.
+Before you can use Braze Content Cards, you must integrate the [Braze Android SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android) into your app. However, no additional setup is required.
 
 ## Google fragments
 
@@ -486,7 +486,7 @@ All [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sd
 
 ## Prerequisites
 
-Before you can use Content Cards, you'll need to integrate the [Braze Swift SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift) into your app. However, no additional setup is required.
+Before you can use Content Cards, you'll need to integrate the [Braze Swift SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift) into your app. However, no additional setup is required.
 
 ## View controller contexts
 
@@ -499,7 +499,7 @@ For more information about iOS view controller options, refer to the [Apple deve
 
 
 
-The `BrazeUI` library of the Swift SDK provides two default view controller contexts: [navigation](#swift_navigation) or [modal](#swift_modal). This means you can integrate Content Cards in these contexts by adding a few lines of code to your app or site. Both views offer customization and styling options as described in the [customization guide](https://www.braze.com/docs/developer_guide/customization_guides/content_cards/customizing_styles/?tab=ios). You can also create a custom Content Card view controller instead of using the standard Braze one for even more customization options&#8212;refer to the [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/) for an example.
+The `BrazeUI` library of the Swift SDK provides two default view controller contexts: [navigation](#swift_navigation) or [modal](#swift_modal). This means you can integrate Content Cards in these contexts by adding a few lines of code to your app or site. Both views offer customization and styling options as described in the [customization guide](https://www.braze.com/docs/developer_guide/customization_guides/content_cards/customizing_styles?tab=ios). You can also create a custom Content Card view controller instead of using the standard Braze one for even more customization options&#8212;refer to the [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/) for an example.
 
 **Important:**
 
@@ -584,7 +584,7 @@ The Content Cards data model is available in the `BrazeKit` module of the Braze 
 - Classic image
 - Control
 
-To access the Content Cards data model, call `contentCards.cards` on your `braze` instance. See [Logging analytics](https://www.braze.com/docs/developer_guide/content_cards/logging_analytics/) for more information on subscribing to card data.
+To access the Content Cards data model, call `contentCards.cards` on your `braze` instance. See [Logging analytics](https://www.braze.com/docs/developer_guide/content_cards/logging_analytics) for more information on subscribing to card data.
 
 **Note:**
 
@@ -621,7 +621,7 @@ For more details, refer to the [`Context` class documentation](https://braze-inc
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Cordova Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=cordova).
+Before you can use this feature, you'll need to [integrate the Cordova Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=cordova).
 
 ## Card Feeds
 
@@ -650,7 +650,7 @@ The Braze SDK includes a default card feed to get you started with Content Cards
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Flutter Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=flutter).
+Before you can use this feature, you'll need to [integrate the Flutter Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=flutter).
 
 ## Card methods
 
@@ -721,7 +721,7 @@ The Braze SDKs include a default card feed to get you started with Content Cards
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native).
+Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=react%20native).
 
 ## Cards methods
 
@@ -852,7 +852,7 @@ For a full reference of the control card, see the [Android](https://braze-inc.gi
 
 ## Prerequisites
 
-Before you can use Content Cards, integrate the [Braze Swift SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift) into your app. Then complete the steps for setting up your tvOS app.
+Before you can use Content Cards, integrate the [Braze Swift SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift) into your app. Then complete the steps for setting up your tvOS app.
 
 **Important:**
 
@@ -895,7 +895,7 @@ Because Braze doesn't provide a default UI for content cards on tvOS, customize 
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Unity Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=unity).
+Before you can use this feature, you'll need to [integrate the Unity Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=unity).
 
 ## Displaying Content Cards natively {#unity-content-cards-native-ui}
 
@@ -979,7 +979,7 @@ The Braze .NET MAUI (formerly Xamarin) SDK includes a default card feed to get y
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the .NET MAUI Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=.net%20maui%20(xamarin)).
+Before you can use this feature, you'll need to [integrate the .NET MAUI Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=.net%20maui%20(xamarin)).
 
 ## Card types and properties
 

@@ -39,10 +39,11 @@ Select **Using Intelligent Timing** in the **Delivery Settings** tab. Here, you 
 
 Delivery validations provide an additional check at message send to confirm your audience still meets your criteria. We recommend using it when Quiet Hours, Intelligent Timing, or rate limiting are enabled. Select **Validate audience at message send**, then add a segment or additional filters. If a user doesn't meet the validations, choose whether they exit the Canvas or advance to the next step.
 
-Delivery validations evaluate user profile criteria at send time. App-related filters check whether a user recently used or ever used a specific app, but they don't confirm which app a user is using in their current session.
+Delivery validations evaluate user profile criteria at send time. App-related filters check whether a user recently used or ever used a specific app, but they don't restrict which of the user's app tokens receive the message.
 
-If your workspace has multiple apps and a Message step should target a specific app, use one of the following approaches instead:
+If your workspace has multiple apps and a Message step should target a specific app, use one of the following approaches:
 
+- Add a segment that has **Apps and websites targeted** set to **Users from specific apps** to your delivery validations. Unlike app-related filters, this restricts delivery to the push tokens belonging to the selected apps.
 - When composing the message, [specify your delivery platforms](https://www.braze.com/docs/user_guide/channels/in_app_messages/traditional#step-2-specify-delivery-platforms), such as **Mobile Apps** or **Web Browsers**.
 - Use Liquid to check the targeted device or app at send time:
   - `{{targeted_device.${platform}}}` evaluates the platform for the user's current session. For more information, see [Targeted device information](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags#targeted-device-information).

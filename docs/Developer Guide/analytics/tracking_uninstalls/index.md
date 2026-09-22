@@ -8,7 +8,7 @@
 
 ### Step 1: Set up FCM
 
-The Android Braze SDK uses Firebase Cloud Messaging (FCM) to send silent push notifications, which are used to collect uninstall tracking analytics. If you haven't already, [set up](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=android#android_setting-up-push-notifications) or [migrate to](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=android) the Firebase Cloud Messaging API for push notifications.
+The Android Braze SDK uses Firebase Cloud Messaging (FCM) to send silent push notifications, which are used to collect uninstall tracking analytics. If you haven't already, [set up](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android#android_setting-up-push-notifications) or [migrate to](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=android) the Firebase Cloud Messaging API for push notifications.
 
 ### Step 2: Manually detect uninstall tracking (optional)
 
@@ -27,7 +27,7 @@ A silent push notification wakes your app and instantiates the `Application` com
 
 ### Step 4: Enable uninstall tracking
 
-Finally, enable uninstall tracking in Braze. For a full walkthrough, see [Turning on uninstall tracking](https://www.braze.com/docs/user_guide/analytics/tracking/uninstall_tracking/#turning-on-uninstall-tracking).
+Finally, enable uninstall tracking in Braze. For a full walkthrough, see [Turning on uninstall tracking](https://www.braze.com/docs/user_guide/analytics/tracking/uninstall_tracking#turning-on-uninstall-tracking).
 
 **Important:**
 
@@ -43,11 +43,11 @@ Tracking uninstalls can be imprecise. The metrics you see on Braze may be delaye
 
 ### Step 1: Enable background push
 
-In your Xcode project, go to **Capabilities** and ensure you have **Background Modes** enabled. For more information, see [silent push notification](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=swift).
+In your Xcode project, go to **Capabilities** and ensure you have **Background Modes** enabled. For more information, see [silent push notification](https://www.braze.com/docs/developer_guide/push_notifications/silent?sdktab=swift).
 
 ### Step 2: Ignore internal push notifications
 
-The Swift Braze SDK uses background push notifications to collect uninstall tracking analytics. Make sure your app [ignores internal push notifications](https://www.braze.com/docs/developer_guide/push_notifications/silent/?sdktab=swift#swift_ignoring-internal-push-notifications) so it doesn't take unwanted actions when these are sent.
+The Swift Braze SDK uses background push notifications to collect uninstall tracking analytics. Make sure your app [ignores internal push notifications](https://www.braze.com/docs/developer_guide/push_notifications/silent?sdktab=swift#swift_ignoring-internal-push-notifications) so it doesn't take unwanted actions when these are sent.
 
 ### Step 3: Send a test push (optional)
 
@@ -67,7 +67,7 @@ A badge number is sent along with the test push notification&#8212;however a rea
 
 ### Step 4: Enable uninstall tracking
 
-Finally, enable uninstall tracking in Braze. For a full walkthrough, see [Turning on uninstall tracking](https://www.braze.com/docs/user_guide/analytics/tracking/uninstall_tracking/#turning-on-uninstall-tracking).
+Finally, enable uninstall tracking in Braze. For a full walkthrough, see [Turning on uninstall tracking](https://www.braze.com/docs/user_guide/analytics/tracking/uninstall_tracking#turning-on-uninstall-tracking).
 
 **Important:**
 

@@ -68,6 +68,12 @@ Additionally, messages may be getting delivered and ending up in Spam, indicatin
 
 Finally, your business and the types of emails you send may also affect delivery. For example, someone sending mostly [transactional emails](https://www.braze.com/docs/user_guide/channels/transactional_email/create_a_transactional_email/) should expect to see a better rate than someone sending many marketing messages.
 
+### How do I set up Microsoft SNDS in Braze?
+
+Microsoft SNDS (Smart Network Data Services) reports how Microsoft inbox providers evaluate mail sent from your dedicated sending IPs. Braze automatically displays SNDS data in the Deliverability Center for Amazon SES, SendGrid, and SparkPost dedicated IPs. No customer setup is required.
+
+To view SNDS metrics and definitions, see [Set up Microsoft Smart Network Data Services (SNDS)](https://www.braze.com/docs/user_guide/analytics/dashboards/deliverability_center#set-up-microsoft-smart-network-data-services-snds).
+
 ### Why are my email delivery metrics not adding up to 100%?
 
 Email delivery metrics (deliveries, bounces, and spam rate) may not add up to 100% because of emails that are soft bounced and then not delivered after the retry period of up to 72 hours.
@@ -420,6 +426,22 @@ First, confirm you have the [user permissions](https://www.braze.com/docs/user_g
 
 [Apple’s Private Email Relay](https://www.braze.com/docs/user_guide/channels/email/best_practices/apple_mail/email_private_relay_apple_SSO) requires you to register your sending domains in the Apple Developer Portal to prevent bounces. Google Shielded Email does not require a manual domain registration or allowlisting process.
 
+### Where are my SPF and DKIM settings?
+
+There's no separate SPF or DKIM settings page. Braze generates these records for you during domain setup and displays them on your domain setup page, so you configure them at your DNS provider rather than in the dashboard.
+
+What you do next depends on your setup:
+
+- If you use verified domains, add the NS records once to delegate your subdomain. Braze then creates and maintains the SPF and DKIM records for you.
+- Otherwise, add the TXT and CNAME records that Braze shows on **Settings** > **Email Self Serve** to your DNS provider, then return to the dashboard and select **Verify**.
+
+If verification keeps failing after you confirm your records are correct, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support). To learn what each record does, see [Email authentication](https://www.braze.com/docs/user_guide/channels/email/email_setup/authentication) and [Understanding DNS records](https://www.braze.com/docs/user_guide/channels/email/email_setup/setting_up_ips_and_domains/understanding_dns_records).
+
+### Where do I find my sending IP addresses?
+
+Go to **Settings** > **Email Self Serve** under **Company Settings**, then expand an IP pool to see the addresses assigned to it. The page uses the **Sender Verification** heading. Viewing this page requires a domain settings permission, such as "Edit Domain Settings".
+
+On the **Email Self Serve** page, your IP addresses are read-only. To add or edit them, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support). For the full setup sequence, see [Set up IPs and domains](https://www.braze.com/docs/user_guide/channels/email/email_setup/setting_up_ips_and_domains).
 
 ### Can I add hyperlinks in email subject lines or preheaders?
 

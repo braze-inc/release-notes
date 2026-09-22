@@ -49,7 +49,7 @@ The following data types are supported:
       <td>
         A list of objects, such as <code>[{"title": "The Hobbit"}, {"title": "Dune"}]</code>. 
         For more information, refer to 
-        <a href="/docs/array_of_objects/">Arrays of objects</a>.
+        <a href="/docs/array_of_objects">Arrays of objects</a>.
       </td>
     </tr>
   </tbody>

@@ -27,7 +27,7 @@ For Shopify online stores, you can select the standard setup to automatically im
 
 ![“Enable Web SDK” step with options to implement through a standard setup or custom setup.](https://www.braze.com/docs/assets/img/shopify/sdk_setup.png?2cf7371d498413e1785a8ca3078aa062)
 
-After you select the standard setup onboarding path, you’ll need to choose when Braze should initialize and load the SDKs from one of the following options: 
+After you select the standard setup onboarding path, you must choose when Braze initializes and loads the SDKs from one of the following options: 
 - Upon site visit, such as session start
     - Tracks both identified and anonymous users
 - Upon account signup, such as account login
@@ -83,11 +83,11 @@ New customers are provisioned on the latest Braze Web SDK and JavaScript SDK ver
 
 
 
-Now you’ll select the Shopify data you want to track.
+Select the Shopify data you want to track.
 
 ![“Tracking Shopify data” section with a checkbox to track behavioral events and user attributes.](https://www.braze.com/docs/assets/img/shopify/tracking_shopify_data.png?17b975ab97f07c885e16ace136234fd0)
 
-The following events will be enabled by default in the standard integration.
+The following events are enabled by default in the standard integration.
 
 | Braze recommended events | Shopify custom events | Shopify custom attributes |
 | --- | --- | --- |
@@ -311,7 +311,7 @@ If you use the email or SMS channels, you can sync your email and SMS marketing 
 **Note:**
 
 
-As mentioned in [Shopify overview](https://www.braze.com/docs/shopify_overview/), if you want to use a third-party capture form, your developers need to integrate Braze SDK code. This will let you capture the email address and global email subscription status from form submissions. Specifically, you need to implement and test these methods to your `theme.liquid` file:<br><br>
+As mentioned in [Shopify overview](https://www.braze.com/docs/shopify_overview), if you want to use a third-party capture form, your developers need to integrate Braze SDK code. This will let you capture the email address and global email subscription status from form submissions. Specifically, you need to implement and test these methods to your `theme.liquid` file:<br><br>
 - [setEmail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail): Sets the email address on the user profile
 - [setEmailNotificationSubscriptionType](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype): Updates the global email subscription status
 
@@ -328,9 +328,6 @@ You can sync all products from your Shopify store to a Braze catalog for deeper 
 
 For Shopify standard integrations, you can enable in-app messages and Banners from your integration settings without additional development.
 
-
-
-
 ### In-app messages
 
 In the **Activate Channels** step, select in-app messages as part of your integration settings to enable use cases like email and SMS capture forms, promotional pop-ups, and surveys. To learn how to build one, see [In-app messages](https://www.braze.com/docs/user_guide/channels/in_app_messages/).
@@ -344,10 +341,7 @@ Braze collects visitor information, such as email addresses and phone numbers, t
 
 
 
-
-
-
-### Banners
+### Banners {#banners}
 
 [Banners](https://www.braze.com/docs/user_guide/channels/banners/) show personalized content on your Shopify storefront, such as promotions, announcements, and targeted offers.
 
@@ -389,14 +383,14 @@ Braze collects visitor information, such as email addresses and phone numbers, t
 
 
 
+#### Setup
+
 **Important:**
 
 
 Banners require a Shopify Online Store 2.0 theme and Braze SDK version `6.8.0` or later. During setup, Braze checks whether your store's published theme supports inline banner placements. Vintage themes don't support inline placements, so **Turn on banners and create banner placements** is disabled in **Activate Channels**. To use Banners, upgrade to an [Online Store 2.0 theme](https://help.shopify.com/en/manual/online-store/themes/managing-themes/versions) in your Shopify admin, then return to integration setup to enable Banners.
 
 
-
-#### Setup
 
 Select **Turn on banners and create banner placements** in **Activate Channels**, then save.
 
@@ -455,9 +449,6 @@ Visit your store as a test user to confirm the Banner renders in the right place
 
 
 Banners currently aren't supported on thank you, order status, or customer account pages. If you are interested in these specific placements, make a request through your Braze account team. 
-
-
-
 
 
 

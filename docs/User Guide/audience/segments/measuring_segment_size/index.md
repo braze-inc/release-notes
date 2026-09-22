@@ -31,6 +31,14 @@ A single user may belong to different reachable user groups. For example, a user
 
 Estimated statistics are approximated by sampling only a portion of your segment, so you should expect to see estimated sizes that are larger or smaller than the actual value, with larger workspaces seeing potentially larger margins of error. To get an accurate count of users in your segment, select **Calculate Exact Statistics**. The exact segment membership will always be calculated before a segment is affected by a message sent in a campaign or Canvas. 
 
+Send counts for a campaign or Canvas can be lower than the segment estimate when:
+
+- Segment membership changes after you preview the audience
+- Users fail channel reachability checks at send time
+- Audience filters change after launch
+
+If send counts are still lower than expected, see [Why are sends lower than the estimated audience size?](https://www.braze.com/docs/user_guide/messaging/campaigns/faq/#why-are-sends-lower-than-the-estimated-audience-size) for additional causes before contacting Braze Support.
+
 Braze provides the following statistics on segment size. 
 
 ### Filter statistics

@@ -22,6 +22,17 @@ App groups have been renamed to workspaces in Braze, but the keys on this page s
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 ```
 {
   "permissions": {
@@ -47,7 +58,7 @@ A valid workspace permission object is a JSON object with the following key-valu
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
 | `appGroupName`| Optional | String | Name of the workspace. Used to specify which workspace the permissions contained within this object are for. | 
-| `appGroupId` | Required if `appGroupName` is missing | String | ID of the workspace, serving as an alternative method of specifying the workspace. |
+| `appGroupId` | Required if `appGroupName` is missing | String | The workspace's API identifier (a UUID), serving as an alternative method of specifying the workspace. |
 | `appGroupPermissionSets` | Optional | Array | Array with a single [workspace permissions set object](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_workspace-permissions-set-object). Provide one of `appGroupPermissions` or `appGroupPermissionSets` per workspace entry, not both. |
 | `appGroupPermissions` | Conditionally required | Array | Array of workspace-level permission strings from the [workspace permission strings](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_workspace-strings) table. Required when `appGroupPermissionSets` is not provided. |
 | `team` | Optional | Array | Array of [Team permission objects](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_team-permissions-object). |
@@ -60,7 +71,7 @@ A valid workspace permissions set object is a JSON object with the following key
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
 | `appGroupPermissionSetName` | Optional | String | Name of the workspace permission set that is being assigned to the user for this workspace. |
-| `appGroupPermissionSetId` | Required if `appGroupPermissionSetName` is missing | String | ID of the workspace permission set, serving as an alternative method of specifying the workspace permission set assigned to the user for this workspace. |
+| `appGroupPermissionSetId` | Required if `appGroupPermissionSetName` is missing | String | The permission set's API identifier (a UUID), serving as an alternative method of specifying the workspace permission set assigned to the user for this workspace. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Workspace permissions set object #workspace-permissions-set-object" }
 
 ### Team permissions object {#team-permissions-object}
@@ -70,7 +81,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
 | `teamName` | Optional | String | Name of the team, which can be used to specify which team the permissions within this object are for. |
-| `teamId` | Required if `teamName` is missing | String | ID of the team, serving as an alternative method of specifying the team. |
+| `teamId` | Required if `teamName` is missing | String | The team's API identifier (a UUID), serving as an alternative method of specifying the team. |
 | `teamPermissions` | Required | Array | Array of team-level permission strings from the [teams permission strings](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_team) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified team. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Team permissions object" }
 
@@ -81,7 +92,7 @@ A valid role object is a JSON object with the following key-value pairs:
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
 | `roleName` | Optional | String | Name of the role that is being assigned to the user. |
-| `roleId` | Required if `roleName` is missing | String | ID of the role, serving as an alternative method of specifying the role. |
+| `roleId` | Required if `roleName` is missing | String | The role's API identifier (a UUID), serving as an alternative method of specifying the role. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Role object" }
 
 ## Appendix
@@ -229,17 +240,9 @@ A valid role object is a JSON object with the following key-value pairs:
 | View Canvases | `view_canvases` |
 | Edit Canvases | `edit_canvases` |
 | Archive Canvases | `archive_canvases` |
-| View Frequency Capping Rules | `view_frequency_caps` |
-| Edit Frequency Capping Rules | `edit_frequency_caps` |
-| View Message Prioritization | `view_message_prioritization` |
-| Edit Message Prioritization | `edit_message_prioritization` |
 | View Content Blocks | `view_content_blocks` |
-| View Feature Flags | `view_feature_flags` |
-| Edit Feature Flags | `edit_feature_flags` |
-| Archive Feature Flags | `archive_feature_flags` |
 | View Segments | `view_segments` |
 | Edit Segments | `edit_segments` |
-| Edit Global Control Group | `edit_global_control_group` |
 | View IAM Templates | `view_iam_templates` |
 | Edit IAM Templates | `edit_iam_templates` |
 | Archive IAM Templates | `archive_iam_templates` |
@@ -252,21 +255,13 @@ A valid role object is a JSON object with the following key-value pairs:
 | View Email Link Templates | `view_link_templates` |
 | Edit Email Link Templates | `edit_link_templates` |
 | View Media Library Assets | `view_media_library_assets` |
-| View Locations | `view_locations` |
-| Edit Locations | `edit_locations` |
-| Archive Locations | `archive_locations` |
 | View Promotion Codes | `view_promotion_codes` |
 | Edit Promotion Codes | `edit_promotion_codes` |
 | Export Promotion Codes | `export_promotion_codes` |
-| View Preference Centers | `view_preference_centers` |
-| Edit Preference Centers | `edit_preference_centers` |
 | View Reports | `view_reports` |
 | Create Reports | `create_reports` |
 | Edit Reports | `edit_reports` |
 | View Banner Templates | `view_banner_templates` |
-| View Multi Language Settings | `view_multi_language_settings` |
-| Use BrazeAI Operator<sup>TM</sup> | `use_operator` |
-| View Decisioning Studio Agents | `view_decisioning_studio_agents` |
 | Launch Campaigns | `launch_campaigns` |
 | Launch Canvases | `launch_canvases` |
 | Edit Dashboard Users | `edit_dashboard_users` |
@@ -306,6 +301,17 @@ App groups have been renamed to workspaces in Braze, but the keys on this page s
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 ```
 {
   "permissions": {
@@ -331,7 +337,7 @@ A valid workspace permission object is a JSON object with the following key-valu
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
 | `appGroupName`| Optional | String | Name of the workspace. Used to specify which workspace the permissions contained within this object are for. | 
-| `appGroupId` | Required if `appGroupName` is missing | String | ID of the workspace, serving as an alternative method of specifying the workspace. |
+| `appGroupId` | Required if `appGroupName` is missing | String | The workspace's API identifier (a UUID), serving as an alternative method of specifying the workspace. |
 | `appGroupPermissionSets` | Optional | Array | Array with a single [workspace permissions set object](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_workspace-permissions-set-object). Provide one of `appGroupPermissions` or `appGroupPermissionSets` per workspace entry, not both. |
 | `appGroupPermissions` | Conditionally required | Array | Array of workspace-level permission strings from the [workspace permission strings](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_workspace-strings) table. Required when `appGroupPermissionSets` is not provided. |
 | `team` | Optional | Array | Array of [Team permission objects](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_team-permissions-object). |
@@ -344,7 +350,7 @@ A valid workspace permissions set object is a JSON object with the following key
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
 | `appGroupPermissionSetName` | Optional | String | Name of the workspace permission set that is being assigned to the user for this workspace. |
-| `appGroupPermissionSetId` | Required if `appGroupPermissionSetName` is missing | String | ID of the workspace permission set, serving as an alternative method of specifying the workspace permission set assigned to the user for this workspace. |
+| `appGroupPermissionSetId` | Required if `appGroupPermissionSetName` is missing | String | The permission set's API identifier (a UUID), serving as an alternative method of specifying the workspace permission set assigned to the user for this workspace. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Workspace permissions set object #workspace-permissions-set-object" }
 
 ### Team permissions object {#team-permissions-object}
@@ -354,7 +360,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
 | `teamName` | Optional | String | Name of the team, which can be used to specify which team the permissions within this object are for. |
-| `teamId` | Required if `teamName` is missing | String | ID of the team, serving as an alternative method of specifying the team. |
+| `teamId` | Required if `teamName` is missing | String | The team's API identifier (a UUID), serving as an alternative method of specifying the team. |
 | `teamPermissions` | Required | Array | Array of team-level permission strings from the [teams permission strings](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_team) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified team. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Team permissions object" }
 
@@ -365,7 +371,7 @@ A valid role object is a JSON object with the following key-value pairs:
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
 | `roleName` | Optional | String | Name of the role that is being assigned to the user. |
-| `roleId` | Required if `roleName` is missing | String | ID of the role, serving as an alternative method of specifying the role. |
+| `roleId` | Required if `roleName` is missing | String | The role's API identifier (a UUID), serving as an alternative method of specifying the role. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Role object" }
 
 ## Appendix

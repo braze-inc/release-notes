@@ -172,7 +172,7 @@ sequenceDiagram
 
 - The response message step must still fall within 24 hours of the user's inbound message. In most Canvas flows, the response sends immediately after the Action Path evaluates, so this isn't an issue.
 - The 24-hour customer service window is different from Canvas [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events), which can use a window of up to 30 days. Conversion windows control attribution; they don't affect whether a response message can send.
-- For billing, see [Are WhatsApp response messages free?](https://www.braze.com/docs/user_guide/channels/whatsapp/faq#are-whatsapp-response-messages-free).
+- For billing, see [How are WhatsApp response messages billed?](https://www.braze.com/docs/user_guide/channels/whatsapp/faq#how-are-whatsapp-response-messages-billed).
 
 ### Inbound message attribution to campaigns and Canvases
 
@@ -199,4 +199,10 @@ If you save an `inbound_media_urls` value to a user custom attribute for later u
 
 ### Inbound profile name
 
-When Meta includes a display name on an inbound WhatsApp message, Braze exposes it as the `{{whats_app.${inbound_profile_name}}}` Liquid attribute on that inbound event. This value reflects the name the user set in WhatsApp and may not match CRM profile data. Validate the data before using it in user copy, or use a Canvas User Update step to save it to a profile field for later use. For a full list of WhatsApp Liquid attributes, see [Supported personalization tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags).
+When Meta includes a display name on an inbound WhatsApp message, Braze exposes it as the `{{whats_app.${inbound_profile_name}}}` Liquid attribute on that inbound event. This value reflects the name the user set in WhatsApp and may not match CRM profile data. Validate the data before using it in user copy, or use a Canvas User Update step to save it to a profile field for later use.
+
+### Inbound username
+
+When Meta includes a contact username on an inbound WhatsApp message, Braze exposes it as the `{{whats_app.${inbound_username}}}` Liquid attribute on that inbound event. This value is separate from `{{whats_app.${inbound_profile_name}}}`, which reflects the user's WhatsApp display name. The username may be absent when the sender hasn't enabled the username feature in their WhatsApp profile, even when a display name is present. Validate the data before using it in user copy, or use a Canvas User Update step to save it to a profile field for later use.
+
+For a full list of WhatsApp Liquid attributes, see [Supported personalization tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags).

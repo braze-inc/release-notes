@@ -102,7 +102,7 @@ These counts reflect membership in that group, not global email subscription sta
 
 Today's subscription group size isn't calculated by default. If your date range includes today, select **Calculate today's statistics** to add today's value to the timeseries. For very large workspaces, Braze may display estimated counts instead of exact counts.
 
-For footers, unsubscribe pages, and global email subscription management, see [Email subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions).
+For footers, unsubscribe pages, global email subscription management, and subscription group unsubscribe links, see [Email subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions).
 
 ### WhatsApp subscription groups
 

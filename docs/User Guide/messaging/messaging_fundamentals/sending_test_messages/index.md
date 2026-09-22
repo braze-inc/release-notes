@@ -239,17 +239,17 @@ The scanner runs automatically on custom HTML messages and evaluates your entire
 
 #### Understanding automated accessibility testing
 
-[Automated accessibility testing](https://www.braze.com/docs/help/accessibility/#automated-accessibility-testing) helps catch common issues like missing alt text or low color contrast based on WCAG Level AA standards. It’s a powerful starting point for building more inclusive messages.
+[Automated accessibility testing](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/accessibility#automated-accessibility-testing) helps catch common issues like missing alt text or low color contrast based on WCAG Level AA standards. It’s a powerful starting point for building more inclusive messages.
 
 But automation can’t catch everything. Some issues need a human eye—like whether the focus order makes sense, if links and buttons are clearly labeled, or if your instructions are easy to follow. Think of these checks as a diagnostic tool, not a final verdict. We recommend reviewing flagged issues manually and using your best judgment when something is marked as “Needs review.”
 
-For extra support, our [Accessibility at Braze](https://www.braze.com/docs/help/accessibility) guide shares practical tips for making your content easier for everyone to use, including:
+For extra support, our [Accessibility at Braze](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/accessibility) guide shares practical tips for making your content easier for everyone to use, including:
 
-- [Headings and structure](https://www.braze.com/docs/help/accessibility/#content)
-- [Alt text and images](https://www.braze.com/docs/help/accessibility/#images) 
-- [Links and buttons](https://www.braze.com/docs/help/accessibility/#links)
-- [Color contrast](https://www.braze.com/docs/help/accessibility/#color-contrast)
-- [Touch targets](https://www.braze.com/docs/help/accessibility/#touch-targets)
+- [Headings and structure](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/accessibility#content)
+- [Alt text and images](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/accessibility#images) 
+- [Links and buttons](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/accessibility#links)
+- [Color contrast](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/accessibility#color-contrast)
+- [Touch targets](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/accessibility#touch-targets)
 
 When you combine automated testing with thoughtful manual review, you’ll catch more issues—and create a better experience for all your users.
 

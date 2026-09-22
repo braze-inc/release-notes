@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications/?sdktab=web).
+Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web). You'll also need to [set up push notifications](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=web).
 
 If you're integrating Braze through mParticle's embedded kit on the web, see [Step 3 in mParticle's Braze Web event integration](https://docs.mparticle.com/integrations/braze/event/#web) for instructions to implement soft push prompts.
 
@@ -14,12 +14,12 @@ If you're integrating Braze through mParticle's embedded kit on the web, see [St
 
 It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again.
 
-Alternatively, if you would like to include special custom handling, instead of calling `requestPushPermission()` directly as described in the standard [Web push integration](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration), use our [triggered in-app messages](https://www.braze.com/docs/developer_guide/in_app_messages/triggering_messages/?tab=web).
+Alternatively, if you would like to include special custom handling, instead of calling `requestPushPermission()` directly as described in the standard [Web push integration](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=web#web_step-2-register-the-browser), use our [triggered in-app messages](https://www.braze.com/docs/developer_guide/in_app_messages/triggering_messages?tab=web).
 
 **Tip:**
 
 
-This can be done without SDK customization using our new [no code push primer](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages/). 
+This can be done without SDK customization using our new [no code push primer](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages). 
 
 
 

@@ -5,7 +5,7 @@
 **Tip:**
 
 
-When you're ready to create your own feature flags, check out [Creating feature flags](https://www.braze.com/docs/developer_guide/feature_flags/create/).
+When you're ready to create your own feature flags, check out [Creating feature flags](https://www.braze.com/docs/developer_guide/feature_flags/create).
 
 
 
@@ -36,7 +36,7 @@ With Braze feature flags, we can instead gradually roll out the feature and miti
 * We will enable this new feature for only 10% of users to determine if we're staffed appropriately.
 * If there are any bugs, we can quickly disable the feature instead of rushing to ship a new release.
 
-To gradually roll out this feature, we can [create a feature flag](https://www.braze.com/docs/developer_guide/feature_flags/create/) named "Live Chat Widget."
+To gradually roll out this feature, we can [create a feature flag](https://www.braze.com/docs/developer_guide/feature_flags/create) named "Live Chat Widget."
 
 ![Feature flag details for an example named Live Chat Widget. The ID is enable_live_chat. This feature flag description reads that the live chat widget will show on the support page.](https://www.braze.com/docs/assets/img/feature_flags/feature-flags-use-case-livechat-1.png?f87ac91f3de136edd7784b806876d8c0)
 
@@ -259,7 +259,7 @@ To effectively coordinate feature rollout and messaging, we'll create a new feat
 
 ![A feature flag with the name Loyalty Rewards Program. The ID is show_loyalty_program, and the description that this shows the new loyalty rewards program on the home screen and profile page.](https://www.braze.com/docs/assets/img/feature_flags/feature-flags-use-case-loyalty.png?8df52467dc60091b3ee90869d4c0c688)
 
-Then, in Canvas, we'll create a [Feature Flag step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/feature_flags/) that enables the `show_loyalty_program` feature flag for our "High Value Customers" segment:
+Then, in Canvas, we'll create a [Feature Flag step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/feature_flags) that enables the `show_loyalty_program` feature flag for our "High Value Customers" segment:
 
 ![An example of a Canvas with an Audience Split step where the high-value customers segment turns on the show_loyalty_program feature flag.](https://www.braze.com/docs/assets/img/feature_flags/feature-flags-use-case-canvas-flow.png?20b6eb4882f8f131848dff0c70948c92)
 
@@ -271,7 +271,7 @@ Use feature flags to experiment and confirm your hypotheses around your new feat
 
 For feature flag experiments, you can have up to nine total groups: one control group plus up to eight variants.
 
-An [A/B test](https://www.braze.com/docs/user_guide/messaging/ab_testing/) is a powerful tool that compares users' responses to multiple versions of a variable.
+An [A/B test](https://www.braze.com/docs/user_guide/messaging/ab_testing) is a powerful tool that compares users' responses to multiple versions of a variable.
 
 In this example, our team has built a new checkout flow for our eCommerce app. Even though we're confident it's improving the user experience, we want to run an A/B test to measure its impact on our app's revenue.
 
@@ -336,7 +336,7 @@ if let featureFlag, featureFlag.enabled {
 
 
 
-We'll set up our A/B test in a [Feature Flag Experiment](https://www.braze.com/docs/developer_guide/feature_flags/experiments/).
+We'll set up our A/B test in a [Feature Flag Experiment](https://www.braze.com/docs/developer_guide/feature_flags/experiments).
 
 Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two variants to determine which checkout flow resulted in a higher conversion rate. 
 
@@ -499,7 +499,7 @@ Use the **Feature Flag** filter to create a segment or target messaging at users
 4. Set the comparator to **is** to include users who have the feature flag enabled, or **is not** to include users who do not.
 ![Braze segment builder using a Feature Flag enabled-value filter.](https://www.braze.com/docs/assets/img/feature_flags/feature_flag_segmentation_filter.png?1e1d240bffb7e96c29d06a6fe26298aa)
 
-For more information about filtering on segments, see [Creating a segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/).
+For more information about filtering on segments, see [Creating a segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment).
 
 **Note:**
 
@@ -515,8 +515,8 @@ These are the feature flag limitations for free and paid plans.
 | Feature                                                                                                   | Free version     | Paid version      |
 | :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
 | [Active feature flags](#active-feature-flags)                                                                     | 10 per workspace | 110 per workspace |
-| [Active campaign experiments](https://www.braze.com/docs/developer_guide/feature_flags/experiments/)          | 1 per workspace  | 100 per workspace |
-| [Feature Flag Canvas steps](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/feature_flags/) | Unlimited        | Unlimited         |
+| [Active campaign experiments](https://www.braze.com/docs/developer_guide/feature_flags/experiments)          | 1 per workspace  | 100 per workspace |
+| [Feature Flag Canvas steps](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/feature_flags) | Unlimited        | Unlimited         |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Plan limitations" }
 
 A feature flag is considered active and will count toward your limit if any of the following apply:

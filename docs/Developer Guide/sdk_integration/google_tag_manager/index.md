@@ -10,8 +10,8 @@ Google Tag Manager (GTM) lets you remotely add, remove, and edit tags on your we
 
 |Tag Type|Use Case|
 |--------|--------|
-| Initialization tag | This tag lets you [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?tab=google%20tag%20manager&sdktab=web) without needing to modify your site’s code.|
-| Action tag | This tag lets you [create Content Cards](https://www.braze.com/docs/developer_guide/content_cards/?sdktab=web#web_using-google-tag-manager), [set user attributes](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes/?tab=google%20tag%20manager&sdktab=web), and [manage data collection](https://www.braze.com/docs/developer_guide/analytics/managing_data_collection/?tab=google%20tag%20manager&sdktab=web).|
+| Initialization tag | This tag lets you [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?tab=google%20tag%20manager&sdktab=web) without needing to modify your site’s code.|
+| Action tag | This tag lets you [create Content Cards](https://www.braze.com/docs/developer_guide/content_cards?sdktab=web#web_using-google-tag-manager), [set user attributes](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes?tab=google%20tag%20manager&sdktab=web), and [manage data collection](https://www.braze.com/docs/developer_guide/analytics/managing_data_collection?tab=google%20tag%20manager&sdktab=web).|
 {: .reset-td-br-1 .reset-td-br-2 aria-label="About Google Tag Manager for Web #google-tag-manager" }
 
 ## Tag sequencing for Braze action tags {#tag-sequencing-for-braze-action-tags}
@@ -27,7 +27,7 @@ To configure tag sequencing in Google Tag Manager:
 
 This ensures the SDK is fully loaded before any other tags attempt to call Braze methods.
 
-For more detail, see [Verify tag sequencing for custom events](https://www.braze.com/docs/developer_guide/content_cards/?sdktab=web#web_tag-sequencing).
+For more detail, see [Verify tag sequencing for custom events](https://www.braze.com/docs/developer_guide/content_cards?sdktab=web#web_tag-sequencing).
 
 ## Log purchases with GTM
 
@@ -136,14 +136,14 @@ window.braze.getUser().setCustomUserAttribute("$google_ad_personalization", true
 </script>
 ```
 
-For more information, refer to [Audience Sync to Google](https://www.braze.com/docs/partners/canvas_audience_sync/google_audience_sync/).
+For more information, refer to [Audience Sync to Google](https://www.braze.com/docs/partners/canvas_audience_sync/google_audience_sync).
 
 
 
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android).
 
 ## Using Google Tag Manager for Android
 
@@ -535,7 +535,7 @@ BrazeGtmTagProvider.setApplicationContext(this.applicationContext)
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift).
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift).
 
 ## Using Google Tag Manager for Swift
 

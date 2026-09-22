@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web).
+Before you can use this feature, you'll need to [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=web).
 
 ## Custom styles
 
@@ -115,7 +115,7 @@ braze.initialize('api-key', { openInAppMessagesInNewTab: true} );
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android). You'll also need to [set up in-app messages](https://www.braze.com/docs/developer_guide/in_app_messages).
+Before you can use this feature, you'll need to [integrate the Android Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android). You'll also need to [set up in-app messages](https://www.braze.com/docs/developer_guide/in_app_messages).
 
 ## Setting custom manager listeners
 
@@ -723,7 +723,7 @@ BrazeInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessa
 
 ## Customizing the orientation
 
-To set a fixed orientation for an in-app message, first [set a custom in-app message manager listener](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners). Then, update the orientation on the `IInAppMessage` object in the `beforeInAppMessageDisplayed()` delegate method:
+To set a fixed orientation for an in-app message, first [set a custom in-app message manager listener](https://www.braze.com/docs/developer_guide/in_app_messages/customization?sdktab=android#android_setting-custom-manager-listeners). Then, update the orientation on the `IInAppMessage` object in the `beforeInAppMessageDisplayed()` delegate method:
 
 
 
@@ -787,7 +787,7 @@ Due to the limitations and restrictions set by Google, custom Google Play review
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=swift).
+Before you can use this feature, you'll need to [integrate the Swift Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift).
 
 ## Setting up the UI delegate (required)
 
@@ -1296,13 +1296,13 @@ You can use in-app messages in a campaign to ask users for an App Store review.
 **Note:**
 
 
-Because this example prompt overrides default behavior of Braze, we cannot automatically track impressions if it is implemented. You must [log your own analytics](https://www.braze.com/docs/developer_guide/analytics/).
+Because this example prompt overrides default behavior of Braze, we cannot automatically track impressions if it is implemented. You must [log your own analytics](https://www.braze.com/docs/developer_guide/analytics).
 
 
 
 ### Step 1: Set the in-app message delegate
 
-First, set the [`BrazeInAppMessageUIDelegate`](https://www.braze.com/docs/developer_guide/in_app_messages/customization/#swift_setting-up-the-ui-delegate-required) in your app. 
+First, set the [`BrazeInAppMessageUIDelegate`](https://www.braze.com/docs/developer_guide/in_app_messages/customization#swift_setting-up-the-ui-delegate-required) in your app. 
 
 ### Step 2: Disable the default App Store review message
 
@@ -1343,7 +1343,7 @@ func inAppMessage(_ ui: BrazeInAppMessageUI, displayChoiceForMessage message: Br
 
 ### Step 3: Create a deep link
 
-In your [`scene:openURLContexts:`](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking/?sdktab=swift#swift_step-3-implement-a-handler) handler, add the following code to process the `{YOUR-APP-SCHEME}:app-store-review` deep link. Note that you will need to import `StoreKit` to use `SKStoreReviewController`:
+In your [`scene:openURLContexts:`](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking?sdktab=swift#swift_step-3-implement-a-handler) handler, add the following code to process the `{YOUR-APP-SCHEME}:app-store-review` deep link. Note that you will need to import `StoreKit` to use `SKStoreReviewController`:
 
 
 
@@ -1392,7 +1392,7 @@ Next, create an in-app messaging campaign with the following:
 **Tip:**
 
 
-Apple limits App Store review prompts to a maximum of three times per year for each user, so your campaign should be [rate-limited](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping/) to three times per year per user.<br><br>Users may turn off App Store review prompts. As a result, your custom review prompt should not promise that a native App Store review prompt will appear or directly ask for a review.
+Apple limits App Store review prompts to a maximum of three times per year for each user, so your campaign should be [rate-limited](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping) to three times per year per user.<br><br>Users may turn off App Store review prompts. As a result, your custom review prompt should not promise that a native App Store review prompt will appear or directly ask for a review.
 
 
 
@@ -1401,7 +1401,7 @@ Apple limits App Store review prompts to a maximum of three times per year for e
 
 ## Prerequisites
 
-Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native).
+Before you can use this feature, you'll need to [integrate the React Native Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=react%20native).
 
 ## Methods for logging
 
@@ -1462,9 +1462,9 @@ Since this is an advanced customization option, note that overriding the default
 
 
 
-Implement the `IInAppMessageManagerListener` as described in our Android article on [Custom Manager Listener](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners). In your `beforeInAppMessageDisplayed` implementation, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
+Implement the `IInAppMessageManagerListener` as described in our Android article on [Custom Manager Listener](https://www.braze.com/docs/developer_guide/in_app_messages/customization?sdktab=android#android_setting-custom-manager-listeners). In your `beforeInAppMessageDisplayed` implementation, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
 
-For more on these values, see our [Android documentation](https://www.braze.com/docs/developer_guide/in_app_messages/).
+For more on these values, see our [Android documentation](https://www.braze.com/docs/developer_guide/in_app_messages).
 
 ```java
 // In-app messaging

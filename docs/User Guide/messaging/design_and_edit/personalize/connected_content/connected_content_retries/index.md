@@ -13,6 +13,17 @@ Connected Content `:retry` is not available for in-app messages.
 
 
 
+### Retry behavior in Canvas steps
+
+Connected Content calls in a Canvas retry only when the call includes `:retry`. Behavior differs by step type:
+
+- **Message steps:** Connected Content with `:retry` still uses the messaging pipeline. Recipients are delayed on the send queue while Braze retries the call up to five times. If every retry fails, the message is aborted and the user advances to the next step. For more details, see [When the API call fails and retries are enabled](#when-the-api-call-fails-and-retries-are-enabled).
+- **Context and User Update steps:** Braze retries the Connected Content call at the step level (up to five times). If every retry fails, the user exits the Canvas.
+
+For Context and User Update steps, certain retryable step errors—such as a failed promo code fetch or an unexpected step error—can trigger additional step-level retries with exponential backoff (approximately 13 times) before Braze exits the user from the Canvas.
+
+For more information, see [Retry behavior](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context#retry-behavior).
+
 ## Using retry logic
 
 To use retry logic, add the `:retry` tag to the Connected Content call, as shown in the following code snippet:
@@ -38,7 +49,7 @@ If a retried attempt is successful, the message is sent and no further retries a
 
 #### When the API call fails and retries are enabled
 
-If the API call fails and this is enabled, Braze will retry the call while respecting the [rate limit](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#delivery-speed-rate-limiting) you set for each resend. Braze will move any failed messages to the back of the queue and add additional minutes, if necessary, to the total minutes it would take to send your message.
+If the API call fails and this is enabled, Braze retries the call while respecting the [rate limit](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#delivery-speed-rate-limiting) you set for each resend. Braze moves any failed messages to the back of the queue and adds additional minutes, if necessary, to the total minutes it takes to send your message.
 
 If the Connected Content call errors out over five times, the message is aborted, similar to how an [abort message tag](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/aborting_connected_content) is triggered.
 

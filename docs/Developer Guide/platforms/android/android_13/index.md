@@ -6,7 +6,7 @@ Refer to the [Android 13 developer documentation](https://developer.android.com/
 
 ## Android 13 Braze SDK
 
-To prepare for Android 13, upgrade your Braze SDK to the [latest version (v21.0.0+)](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2300). Doing so gives you access to the ["no-code" push primer feature](https://www.braze.com/docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
+To prepare for Android 13, upgrade your Braze SDK to the [latest version (v21.0.0+)](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2300). Doing so gives you access to the ["no-code" push primer feature](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages).
 
 ## Changes in Android 13
 
@@ -47,5 +47,5 @@ It is strongly recommended that your app targets Android 13 in order to control 
 
 Targeting Android 13 lets you optimize your [push opt-in rates](https://www.braze.com/resources/articles/android-13-developer-preview-push-opt-ins-arrive-for-android-apps) by prompting users at more appropriate times and leads to a better user experience in how and when your app asks for push permission.
 
-To start using our new ["no-code" push primer feature](https://www.braze.com/docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/), upgrade your Android SDK to the [latest version (v23.0.0+)](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2300).
+To start using our new ["no-code" push primer feature](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages), upgrade your Android SDK to the [latest version (v23.0.0+)](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2300).
 

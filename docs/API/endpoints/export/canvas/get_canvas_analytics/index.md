@@ -1,4 +1,4 @@
-<div id='api_gtnwuhznvxve' class='api_div' data-search-keywords='export canvas data series analytics data name stats time total_stats revenue conversions conversions_by_entry_time entries variant_stats step_stats messages email sent opens unique_opens clicks sms sent_to_carrier delivered rejected delivery_failed opt_out help message'>
+<div id='api_mohlvthzucun' class='api_div' data-search-keywords='export canvas data series analytics data name stats time total_stats revenue conversions conversions_by_entry_time entries variant_stats step_stats messages email sent opens unique_opens clicks sms sent_to_carrier delivered rejected delivery_failed opt_out help message'>
 <h1 id="export-canvas-data-series-analytics">Export Canvas data series analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/data_series</p>
@@ -10,7 +10,7 @@
 
 <p><strong>Note:</strong></p>
 
-<p>do not always match  or aggregates you build from <a href="/docs/user_guide/data/distribution/braze_currents/">Currents</a> one-for-one. Dashboard metrics and API time series use different aggregation windows and definitions than raw Currents events. For common reconciliation notes, see <a href="/docs/user_guide/data/distribution/braze_currents/faq/">Currents FAQ</a>.</p>
+<p>do not always match  or aggregates you build from <a href="/docs/user_guide/data/distribution/braze_currents">Currents</a> one-for-one. Dashboard metrics and API time series use different aggregation windows and definitions than raw Currents events. For common reconciliation notes, see <a href="/docs/user_guide/data/distribution/braze_currents/faq">Currents FAQ</a>.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0fd61e93-7edf-4d87-a8dc-052420aefb73" class="seeme">See me in Postman</a></div>
 

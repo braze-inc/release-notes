@@ -1,4 +1,4 @@
-<div id='api_ooyqvzeulibu' class='api_div' data-search-keywords='create and update users (bulk) attributes events purchases message attributes_processed events_processed purchases_processed errors'>
+<div id='api_gwnattsdzppd' class='api_div' data-search-keywords='create and update users (bulk) attributes events purchases message attributes_processed events_processed purchases_processed errors'>
 <h1 id="create-and-update-users-bulk">Create and update users (bulk)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track/bulk</p>
@@ -35,7 +35,7 @@
 
 <p><strong>Note:</strong></p>
 
-<p>Each custom attribute sent in a request to <code class="language-plaintext highlighter-rouge">/users/track</code> consumes a data point. For more information, see <a href="/docs/user_guide/data/infrastructure/data_points/">Data points</a>.</p>
+<p>Each custom attribute sent in a request to <code class="language-plaintext highlighter-rouge">/users/track</code> consumes a data point. For more information, see <a href="/docs/user_guide/data/infrastructure/data_points">Data points</a>.</p>
 
 <p>For most customers, this endpoint has a base speed limit of 50 requests per second.</p>
 
