@@ -325,7 +325,7 @@ For more information, see [Send test messages](https://www.braze.com/docs/user_g
 
 Deliver messages at a scheduled time or in response to an action or API trigger. For scheduling and trigger options, see [Schedule your campaign](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign).
 
-Configure delivery controls such as [re-eligibility](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/re_eligibility#turning-on-re-eligibility) and [frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#about-frequency-capping). For action-based delivery, set the campaign duration and [Quiet Hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours).
+Configure delivery controls such as [re-eligibility](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/re_eligibility#turning-on-re-eligibility) and [frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#about-frequency-capping). For action-based delivery, set the campaign duration and [Quiet Hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours). For SMS sending-time compliance, see [Comply with SMS sending times](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/best_practices#comply-with-sms-sending-times).
 
 #### Choose users to target
 

@@ -54,7 +54,9 @@ Each time you run a preview, Braze automatically renders the Connected Content c
 {:start="5"}
 5. Review the results, adjust your tag, headers, or endpoint as needed. Then, generate a new preview to confirm the fix.
 
-If your template contains more than one `{% connected_content %}` tag, the debugger lists every call that was made. For channels that render multiple message bodies from one template (for example, email, which renders separate HTML, plaintext, and AMP bodies, or Quick Push, which renders separate device-specific bodies), the debugger shows every Connected Content call made across all bodies, not only the one you're actively previewing.
+If your template contains more than one `{% connected_content %}` tag, the debugger lists every call that was made. For channels that render multiple message bodies or platform variants from one template, the debugger lists every Connected Content call across those renders—not only the body you're previewing. Email can produce separate HTML and plain text rendering passes (and Accelerated Mobile Pages (AMP) on send), so the same URL can appear more than once. Quick Push can render for up to four platforms (iOS, Android, Web, and Kindle), so the same Connected Content reference can appear up to four times.
+
+Those repeats match how Braze renders and sends the message; the debugger doesn't collapse them. For more on why call volume can exceed sends, see [Understanding Connected Content call volume](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call#understanding-connected-content-call-volume).
 
 ## Understand the debug output
 

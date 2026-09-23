@@ -2,6 +2,13 @@
 
 > Use this page to diagnose Canvas entry, send, and analytics issues. For definitions and deep dives, see the [Canvas FAQ](https://www.braze.com/docs/user_guide/messaging/canvas/faqs).
 
+**Tip:**
+
+
+After launch, start with [Phase 5: Post-launch monitoring](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist#phase-5-post-launch-monitoring) in the Canvas QA checklist for common first-hour patterns (deliverability spikes, many entries with few sends, empty audience, and step drop-off). Return here when you need a deeper investigation path.
+
+
+
 **Note:**
 
 
@@ -110,7 +117,7 @@ When a Canvas Message step aborts a send, the user still advances to the next st
 
 
 
-For step-level filters, conflicts between branches, and IAM branching behavior, see [Launch with Canvas Flow — Troubleshooting](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/launching_canvas_flow#troubleshooting) and the [Canvas FAQ](https://www.braze.com/docs/user_guide/messaging/canvas/faqs#messages-and-delivery).
+For in-app message send timing after delays or branches, see the [Canvas FAQ](https://www.braze.com/docs/user_guide/messaging/canvas/faqs#messages-and-delivery). For Message step advancement with Decision Split or Action Paths, see [Review Message steps for user advancement](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist#review-message-steps-for-user-advancement) in the Canvas QA checklist.
 
 **Important:**
 
@@ -123,7 +130,7 @@ If your action-based Canvas sends messages earlier than expected, check that you
 
 **Symptom:** No one or fewer users entered the Canvas than expected.
 
-Start with the [Launch with Canvas Flow checklist](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/launching_canvas_flow#launch-checklist), then confirm:
+Start with the [Canvas QA checklist](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist), then confirm:
 
 - The Canvas is active and the current time falls within the scheduled entry window.
 - [Entry settings](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#selecting-entry-controls) (re-eligibility, maximum entries, and entry caps) allow the users you expect to enter.

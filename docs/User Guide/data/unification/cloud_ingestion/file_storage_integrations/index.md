@@ -474,7 +474,7 @@ The integration requires the following resources:
 | Event subscription | An event subscription routes events from your storage account to a destination, using the Azure Event Grid service. You configure it to send **Blob Created** events to your queue. |
 | System topic | A system topic represents the source of the events. Event Grid creates one for your storage account when you add the first event subscription. |
 | Service principal | A service principal is a Microsoft Entra ID identity that CDI authenticates as. You create it through an app registration and enter its credentials in Braze. |
-| Azure role assignment | A role assignment grants a service principal a set of permissions at a given scope. You assign two built-in roles to the Braze service principal on your storage account. |
+| Azure role assignment | A role assignment grants a service principal a set of permissions at a given scope. You assign three built-in roles to the Braze service principal on your storage account. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Azure definitions" }
 
 ## Setting up Cloud Data Ingestion in Azure
@@ -539,16 +539,17 @@ We recommend creating a service principal that's used only for CDI, so its acces
 
 ### Step 5: Assign permissions to the service principal
 
-CDI needs only enough access to read your files and process queue messages. Assign these two built-in roles on the storage account itself, not at the subscription or resource group, because role assignments inherit downward. Don't assign broader roles such as Storage Blob Data Contributor, Storage Account Contributor, or Owner, which grant write and management permissions that CDI never uses.
+CDI needs only enough access to read your files and process queue messages. Assign these three built-in roles on the storage account itself, not at the subscription or resource group, because role assignments inherit downward. Don't assign broader roles such as Storage Blob Data Contributor, Storage Account Contributor, or Owner, which grant write and management permissions that CDI never uses.
 
 1. Go to your storage account, then go to **Access Control (IAM)**.
 2. Select **Add** > **Add role assignment**.
 3. Search for the service principal you created in step 4 by name.
 4. Assign it the following built-in roles:
     - **Storage Blob Data Reader:** lets CDI read the files in your container.
+    - **Storage Queue Data Reader:** lets CDI read the queue itself, so it can find the queue you named on the sync and check its properties.
     - **Storage Queue Data Message Processor:** lets CDI peek, retrieve, and delete messages on your queue.
 
-You can use a custom role instead, as long as it grants only read access to blobs in the container and the ability to receive and delete messages on the queue.
+You can use a custom role instead, as long as it grants only read access to blobs in the container, read access to the queue, and the ability to receive and delete messages on the queue.
 
 **Note:**
 
@@ -837,7 +838,7 @@ If files aren't ingested, verify the following:
 - The event subscription exists on the storage account and is filtered to **Blob Created**.
 - The event subscription uses **Event Grid Schema**. CDI can't read events delivered in another schema.
 - The event subscription's endpoint points at the queue configured on the sync, not a different queue.
-- The Braze service principal has **Storage Blob Data Reader** and **Storage Queue Data Message Processor** on the storage account.
+- The Braze service principal has **Storage Blob Data Reader**, **Storage Queue Data Reader**, and **Storage Queue Data Message Processor** on the storage account.
 - The service principal's client secret hasn't expired. Azure enforces an expiry on client secrets, and an expired secret stops the sync.
 
 For more information, see [Azure Blob Storage as an Event Grid source](https://learn.microsoft.com/en-us/azure/event-grid/event-schema-blob-storage) in the Microsoft documentation.

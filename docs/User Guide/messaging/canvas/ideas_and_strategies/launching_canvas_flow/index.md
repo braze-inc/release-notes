@@ -9,7 +9,7 @@ As you prepare to launch your Canvas, Braze recommends that you check your Canva
 
 ## Race conditions 
 
-Consider the [race conditions](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/race_conditions) that may be occur before launching your Canvas. 
+Consider the [race conditions](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/race_conditions) that may occur before launching your Canvas. 
 
 To enter a Canvas, users must be in the entry audience before the entry schedule occurs regardless of whether the Canvas is scheduled, action-based, or API-triggered. 
 
@@ -75,50 +75,15 @@ Similar to Action Paths, you can leverage [Experiment Paths](https://www.braze.c
 
 ## Testing before launch
 
-After reviewing the finer details of your Canvas, check out [Sending test Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/sending_test_canvases) for different methods you can leverage to test your Canvas with test users.
+After reviewing the finer details of your Canvas, work through the [Canvas QA checklist](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist) for setup, audience, content, and journey validation. 
 
-## Launch checklist
-
-### Check user availability
-
-- Make sure your users meet your segmentation criteria.
-- Confirm their subscription state is “subscribed” or “opted-in” and their Push token exists. If you added these as Canvas entry rules, it’s possible that the users were unsubscribed between entering your Canvas and receiving the Message step.
-- Confirm they match your Canvas send settings. (If users are “subscribed” but the settings are “Opted-in”, users won’t be enabled for the channel.)
-- If global frequency capping is enabled for your Canvas, check if your rules are limiting how many times each user can receive a message from a specific channel.
-- If Quiet Hours are enabled, your message send time could be affected, meaning that your message may be sent at the next available time (when the Quiet Hours end) or cancelled entirely.
-- Check user availability for additional filters in your Canvas step.
-
-### Confirm that they performed the prerequisite custom event or purchase
-
-- Check if there’s a race condition, which impacts the messages users receive if they trigger multiple actions at the same time.
-- Make sure there aren’t specific filters in the step that could have blocked users from receiving the message.
-- Search for conflicts between different steps within the same Canvas. For example, users who didn’t receive the message might be stopped by a filter that requires the completion of another step on a different branch.
-- Confirm that users meet additional validation rules.
-- Confirm that the Canvas step was connected to the preceding step at the time of send.
-
-### Confirm your Canvas saves correctly and all steps are valid
-
-If your Canvas isn't loading and won't progress, this can be caused when a previous version of the Canvas wasn't saved properly and contains invalid steps. You can duplicate the Canvas from the dashboard. If the issue persists, open a [support ticket](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
+For live end-to-end testing with duplicate Canvases and API-based branch testing, see [Send test Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/sending_test_canvases).
 
 ## Troubleshooting
 
 **Why are my users not receiving my Canvas messages?**
 
 
-**Check user availability**
-- Make sure they meet your segmentation criteria.
-- Confirm their push subscription state is "subscribed" or "opted-in" **and** their **Push Enabled** status is set to "true". If you added these as Canvas entry rules, it's possible that the users were unsubscribed between entering your Canvas and receiving the Message step.
-- Confirm they match your Canvas send settings. (If users are "subscribed" but the settings are "Opted-in", users won't be enabled for the channel.)
-- If global frequency capping is enabled for your Canvas, check if your rules are limiting how many times each user can receive a message from a specific channel. 
-- If Quiet Hours are enabled, your message send time could be affected, meaning that your message may be sent at the next available time (when the Quiet Hours end) or cancelled entirely.
-
-**Check user availability for additional filters in your Canvas step**
-- Confirm that they performed the prerequisite custom event or purchase.
-- Check if there's a [race condition](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/race_conditions), which impacts the messages users receive if they trigger multiple actions at the same time.
-- Make sure there aren't specific filters in the step that could have blocked users from receiving the message.
-- Search for conflicts between different steps within the same Canvas. For example, users who didn't receive the message might be stopped by a filter that requires the completion of another step on a different branch.
-- Confirm that users meet additional validation rules.
-- Confirm that the Canvas step was connected to the preceding step at the time of send.
-
+For pre-launch checks, see the [Canvas QA checklist](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist)—especially Phase 2 (audience and targeting) and Phase 5 (post-launch monitoring). For a deeper investigation path after go-live, see [Troubleshoot Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/troubleshooting).
 
 

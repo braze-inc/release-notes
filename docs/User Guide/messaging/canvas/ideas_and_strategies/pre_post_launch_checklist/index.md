@@ -1,104 +1,142 @@
-# Pre and post-launch checklist
+# Canvas QA checklist
 
-> This article provides a guideline for things to check before and after you launch a Canvas.
+> Use this checklist to validate your Canvas before launch and monitor performance in the first hours after go-live. Not every item applies to every Canvas, so work through the phases that match your entry type, channels, and journey complexity.
 
-## Things to consider before launch
+**Note:**
 
-Before you launch a Canvas, there are several details you can check to ensure that your messaging and send times align with your audience's preferences. Things to consider include any variations in time zones, entry settings, and more. Using this checklist as a guide, finetune these areas based on your use case to help contribute to the success of your Canvas. 
 
-### Review time zone settings
+For channel-specific considerations (push subscription states, SMS throughput, in-app message behavior, and more), also review [Know before you send](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/know_before_you_send).
 
-If you're entering users according to their local time zone using a scheduled entry schedule, you should launch your Canvas at least 24 hours prior to when you want users to enter your Canvas. For example, here's a Canvas that hasn't left enough time between the launch and the scheduled entry time. In this scenario, there may be some users who won't enter your Canvas since the scheduled entry time has already passed in certain time zones. 
+
+
+## Phase 1: Setup and governance
+
+Complete these checks in **Basics** and **Send Settings** before you build audience filters or journey steps. Every downstream check depends on getting these details right.
+
+- [Confirm entry type](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types): Verify whether your Canvas uses scheduled, action-based, or API-triggered entry when you [determine your Canvas entry schedule](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#step-12-determine-your-canvas-entry-schedule).
+- Use consistent naming: Name your Canvas so teammates can find it in search and reporting.
+- [Add tags](https://www.braze.com/docs/user_guide/messaging/governance/tags): Tags feed frequency capping rules, segment filters for retargeting, and custom reporting.
+- [Set a primary conversion event](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events): Conversion events power Canvas optimization and reporting.
+- [Configure exit criteria](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/exit_criteria): Align exit events with your primary conversion, or add segment-based exits so users leave the journey when they convert or no longer qualify. For pairing entry and exit events, see [Matching exit criteria to entry events](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/matching_entry_and_exit_criteria).
+- [Review suppression lists](https://www.braze.com/docs/user_guide/audience/suppression_lists): Workspace suppression lists exclude matching users from campaigns and Canvases unless the Canvas uses an exception tag configured on that list.
+- [Review re-eligibility](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/re_eligibility): Set the re-eligibility window correctly to prevent over-messaging or retargeting issues.
+- [Review subscription settings](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#step-14-select-your-send-settings): In **Subscription Settings**, choose who can receive email and push in this Canvas—subscribed or opted-in users, opted-in users only, or all users including unsubscribed (use the last option only for transactional email). This setting applies to every Email and Push step in the Canvas.
+- [Enable quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours) (optional): For action-based journeys, confirm quiet hours won't delay messages that require urgent delivery.
+- [Set frequency capping and rate limiting](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping) (optional): Cap delivery frequency and protect downstream systems that handle message volume.
+- [Add a seed group](https://www.braze.com/docs/user_guide/administer/global/user_management/internal_groups#seed-groups) (optional): Seed groups let stakeholders receive live copies of emails. If your email content references context variables, use **Test Canvas** preview with test sends instead—seed copies don't evaluate context variables.
+- [Set up approvals](https://www.braze.com/docs/user_guide/messaging/governance/approvals) (optional): If your team requires launch governance, configure approvals for campaigns and Canvases.
+
+## Phase 2: Audience and targeting
+
+Review **Entry Audience** and **Entry Schedule** after setup is complete.
+
+- [Check estimated audience size](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#calculating-target-population): In the **Target Population** summary, confirm the reachable audience looks right. Unexpectedly low numbers often point to a filter issue.
+- [Spot-check user eligibility](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment#testing-segments): Use **User Lookup** in the **Target Audience** step to confirm a known test user matches your segment and filters.
+- Filter reachable channels: Route push-enabled users toward push steps and email-subscribed users toward email using [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths) so reporting sizes stay accurate and users aren't sent down unreachable channels.
+- [Test for race conditions](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/race_conditions#scenario-3-matching-action-based-triggers-and-audience-filters): For action-based entry, confirm the trigger action can't fire before audience criteria are met—otherwise eligible users may never enter. Don't use the same trigger in both **Entry Schedule** and **Target Audience**.
+- Check time zone entry: For local-time scheduled entry, launch the Canvas at least 24 hours before the intended entry time so no time zone misses the window.
 
 **Tip:**
 
- 
+
 You'll see an alert if you haven't scheduled enough of a buffer. A quick solution is to adjust the send time to ensure that users can remain in the targeted segment for a full 24 hours.
 
 
 
 ![A Canvas scheduled to enter users at one time starting at 10 am on April 30, 2025, in their local time.](https://www.braze.com/docs/assets/img_archive/canvas_checklist1.png?36836f908cf5b0b4ce3e256fcf413ced){: style="max-width:75%;"}
 
-### Consider using regular expressions for audience filters
+- Review cross-Canvas overlap: When several Canvases run at once, check audience and persona overlap and suppression lists so users don't receive competing messages from multiple journeys.
+- [Consider regular expressions for filters](https://www.braze.com/docs/user_guide/audience/segments/regex): In **Target Audience**, Audience Paths, and delivery validations, regular expressions can catch values that `Equals` filters miss because of capitalization or formatting. If your target audience is smaller than expected, try `Matches Regex` or `Does Not Match Regex`.
 
-After setting up the preliminary details of when your users should enter a Canvas, it's recommended to now check your segments or filters in the **Target Audience** step of building a Canvas. In this step, you can also review the **Target Population** summary to see how your target audience has been set up. 
+## Phase 3: Content and personalization
 
-Here, consider using a regular expression for segments or filters in Audience Paths steps, delivery validation settings in Message and Decision Split steps as well. A [regular expression](https://www.braze.com/docs/user_guide/audience/segments/regex) (also referred to as regex) is a string, which means it recognizes patterns and takes into account characters, instead of things like capitalization. This means that if you're using "Equals / Does Not Equal," you could be limiting your audience size because of simple syntax errors.
+With setup and audience in place, open each Message step and validate personalization, media, and channel-specific content before you test the journey.
 
-If you notice that your target audience is smaller than expected, try using "Matches Regex" or "Does Not Match Regex" instead of "Equals" or "Does Not Equal". This may account for those missing users, and target a larger audience. 
+- [Verify entry, event, and context properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties): Confirm properties from events, attributes, catalogs, Connected Content, and API payloads populate correctly in previews.
+- Test Liquid logic and fallbacks: Ensure personalization renders for every variant, and [default values](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/setting_default_values) populate when data is missing.
+- [Add abort logic for Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages): Use abort message logic or [abort Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/aborting_connected_content) so failed API calls don't send broken messages.
+- Review delivery settings: Check per-step timing, Intelligent Timing, quiet hours, and [delivery validations](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#delivery-validations).
+- [Apply brand guidelines](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/brand_guidelines) (optional): If your workspace uses brand guidelines, confirm copy aligns with your defined voice and tone—or use BrazeAI Operator to apply them when drafting content.
+- Test all media: Confirm images, rich push media, and attachments render across the channels in your journey.
+- [Review email rendering with Inbox Vision](https://www.braze.com/docs/user_guide/channels/email/inbox_vision): Preview across major clients and devices, not just one inbox.
+- Perform content quality assurance: Proofread spelling, grammar, and tone in message content.
+- Confirm unsubscribe and opt-out links: Verify required footers and opt-out links for email and SMS are present and tested.
+- Check character limits: Confirm push and SMS copy won't be silently truncated. For SMS, use the [SMS segment calculator](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator#segment-calculator).
 
-### Identify entry settings and race conditions
+## Phase 4: Review journey logic, test, and preview
 
-A race condition can occur when you've used the same entry criteria in both your **Entry Schedule** and **Target Audience** settings. 
+After content is built, review the journey map and test in the following order.
 
-If you're using action-based entry, check that you haven't used the same trigger action here as in your target audience. A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't enter the Canvas.
+1. [Preview user paths](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths): Confirm Delays, Decision Splits, Audience Paths, and Action Paths behave as expected.
+2. Check for conflicting delivery controls: [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing) and [quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours) conflict—choose one. Intelligent Timing and [rate limiting](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping) also conflict—choose one.
+3. [Confirm action-based triggers reach Braze](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles#messaging-history-tab): Verify the triggering datapoint appears on a live user profile in **Messaging History** before launch.
+4. Send test messages: Send to an [internal test group](https://www.braze.com/docs/user_guide/administer/global/user_management/internal_groups).
+5. Complete a live end-to-end Canvas test (optional): Recommended for complex journeys:
+   - Duplicate your Canvas and restrict entry to test users only (filter on external ID, email address, or phone number).
+   - Reduce delays to about one second to speed up QA, then launch the test Canvas.
+   - Perform real behaviors in your app (web, iOS, and Android) to drive each branch and confirm expected messages arrive and all links—including [deep links](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls)—work as expected.
 
-**Tip:**
+For step-by-step testing and API-based branch testing, see [Send test Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/sending_test_canvases).
+
+**Important:**
 
 
-Check out the [best practices](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/race_conditions#scenario-3-matching-action-based-triggers-and-audience-filters) for avoiding this race condition when setting up an action-based Canvas with the same trigger as the audience filter.
+[Connected Content](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths#connected-content) executes during preview user paths. [Webhooks](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths#webhooks) execute when test messages are sent, not during the preview run itself. Remove Connected Content or webhooks that alter user profiles or data referenced in other Canvases before testing.
 
 
-
-### Check Canvas entry properties and event properties
-
-Though similar in name, [Canvas entry properties and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties) function differently within your Canvas workflows. Canvas entry properties are tied to your entry settings, and they can be referenced in any message component throughout your Canvas. Canvas entry properties are properties of the event or API call that triggers a user's entry into a Canvas, using action-based or API-triggered entry settings.
-
-Event properties, on the other hand, can only be referenced in the first Message step following an Action Paths step. Event properties are properties of a custom event or purchase event that the user performed during the evaluation window of an Action Paths step, and that triggers their progression down one of the defined action path.
-
-Check your message preview for any Message steps referencing Canvas entry properties or event properties.
 
 ### Review Message steps for user advancement
 
-By default, users will advance through all Message steps regardless of whether they received the message. If you want to advance the users who receive a particular message, you can do so by adding a Decision Split step directly after your Message component. Add the filter "Received Message from Canvas Step" as the additional filter, then select the Canvas and Message step.
+By default, users advance through all Message steps regardless of whether they received the message. If you want to advance only users who receive a particular message, add a Decision Split step directly after your Message component. Add the filter `Received Message from Canvas Step`, then select the Canvas and Message step.
 
-For Message steps with in-app messaging, you may want to use an Action Paths component instead of the Decision Split component. This will allow you to advance users based on whether they've viewed your in-app message. Define an action group by adding the filter "Interact with Step" and select **View in app message**. Then, set the evaluation window of the step to the expiration window of the in-app message.
+For Message steps with in-app messaging, use an [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) component instead of Decision Split. Define an action group with the filter `Interact with Step` and select `View in app message`. Set the evaluation window to the in-app message expiration window.
 
-For a Message component in multi-channel messaging, we recommend the following:
-* Include a Delay step in between your Message and Decision Split steps, and set the delay to at least five seconds
-* If the component includes Intelligent Timing, set the delay to 24 hours
-* If the component includes rate limiting, split your messages into several single-channel Message steps and connect them together. Then, connect the Decision Split step directly after the last Message step to check whether a user received any of the messages. You can also use this method as an alternative for a multi-channel Message step with Intelligent Timing.
+For a multi-channel Message component, do the following:
 
-## Things to consider after launch
+* Include a Delay step between your Message and Decision Split steps, and set the delay to at least five seconds.
+* If the component includes Intelligent Timing, set the delay to 24 hours.
+* If the component includes rate limiting, split your messages into several single-channel Message steps and connect them together. Then, connect the Decision Split step directly after the last Message step to check whether a user received any of the messages.
 
-You've launched your Canvas! Now, what? Use this checklist to see how you can review and adjust your Canvas in the event of discrepancies after launch based on these scenarios.
+## Phase 5: Post-launch monitoring
 
-### Many entries, but few sends
+In the first minutes and hours after go-live, watch for these patterns.
 
-For example, let's say that you've noticed a disparity between your number of messages sent and the total entries. You can identify and uncover areas to adjust your Canvas by checking these key areas.
+- Watch deliverability early: Check for bounce, error, or rejection spikes before volume ramps in [Email reporting](https://www.braze.com/docs/user_guide/channels/email/reporting) and the [Messaging Diagnostics dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard).
+- Investigate many entries with few sends: This is most often a channel-eligibility or subscription-state filter, an overly tight delivery control, or control-group size. Check the entry audience and the first step's send breakdown in Canvas analytics, then review Entry audience, First component of the Canvas, and Canvas control group.
 
-#### Entry audience
+### Entry audience
 
-If you're using a scheduled send campaign, double-check your target audience by reviewing your target population. How do the numbers look across the channels, and how does that relate to the channels you've used in your Canvas? If the lowest numbers correspond with the channels you've used in your Canvas, you may have found the issue.
+If you're using a scheduled send, double-check your target audience by reviewing your target population. How do the numbers look across channels, and how does that relate to the channels in your Canvas? If the lowest numbers correspond with the channels you've used, you may have found the issue.
 
-#### First component of the Canvas
+### First component of the Canvas
 
-Review any audience filters, action triggers, or segments used in the beginning components of your Canvas. Are there any misspellings or too-strict conditions that are preventing your Canvas from starting off right? Are you using "Equals" when you should be using "Matches Regex"?
+Review audience filters, action triggers, or segments in the beginning components. Look for misspellings or overly strict conditions. Confirm you aren't using `Equals` when `Matches Regex` is more appropriate.
 
-#### Canvas control group 
+### Canvas control group
 
-Review the distribution of users between your variants and your control group. Is the control group larger than you meant it to be? If so, you can edit this setting. If **Optimize with BrazeAI™** is on and the control group is winning, consider stopping your Canvas and trying a new approach.
+Review the distribution between variants and your control group. Is the control group larger than intended? If [Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#optimize-canvas-variants-with-brazeai) (shown as **Intelligent Selection** in some workspaces) is on and the control group is winning, consider stopping the Canvas and trying a new approach.
 
-### An empty total audience
+- Investigate empty audience: Usually a race condition or an over-restrictive filter. Confirm the segment has users via **Target Population**. For action-based entry, verify you haven't duplicated the trigger in **Target Audience**.
+- Investigate unexpected drop-off between steps: Check filters for typos and capitalization errors. Review Intelligent Timing, quiet hours, and delivery validations.
+- Investigate suspicious send volumes between paths: When sends between Audience Paths or Action Paths don't match expectations, review segments, filters, and trigger actions. Remove overlapping filters.
 
-If you aren’t seeing any entry data for your Canvas, the reason that users may not be entering your Canvas can be due to race conditions and restrictive audience segmentation filters.
+For a full investigation workflow, see [Troubleshoot Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/troubleshooting).
 
-If you're using action-based entry in your entry schedule, check that you haven't used the same trigger action here as in your **Target Audience**. A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't enter the Canvas.
+## Common final checks
 
-Additionally, check that the selected segment has users in it by reviewing the **Target Population** table in the **Target Audience** settings. If this number is low, see how you can adjust your entry settings or review your selected segments or filters for any errors.
+Action only the items that apply to your Canvas:
 
-### Unexpected drop-off between steps
+- Plan scheduled local-time entry: Allow a 24-hour lead time for optimal delivery across all global time zones. See Check time zone entry in Phase 2.
+- Prefer Intelligent Timing with a 3-day window: Intelligent Timing works best with at least a [3-day segment window](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing#3-day-window-for-segment-filters) so users don't drop out before their optimal send time.
+- Confirm control group size before launch: You can't add a control group retrospectively. Set variant and control percentages in the builder or [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step) before go-live.
+- [Test deep links on a real device](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/actions_and_media_urls): Confirm links open the correct in-app screen and provide a sensible fallback for users without the app installed. For platform-specific failures, see [Deep linking troubleshooting](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking_troubleshooting).
+- [Confirm tracking fires end-to-end](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing): Verify UTMs append correctly and click tracking registers on a live test send, not only in preview.
 
-Another apparent way to identify areas of adjustment for your Canvas can occur when there's a large drop-off from one Canvas step to the next. In this case, check that your audience filters and exception events don't have any misspellings or capitalization errors. And as always, check that your audience filters aren't so strict as to omit a majority of your users from entering the Canvas. 
+### Channel-specific checks
 
-Next, it's important to identify these settings that can affect when and if messages are sent to your users:
-- [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing)
-- [Quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours)
-- Delivery validations
+If your Canvas includes these channels, check these additional details:
 
-In general, choose either Intelligent Timing or [Quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours) for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping), not both. For more information on how to best use the Intelligence Suite, read our [Intelligence Suite use cases](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite#use-cases).
-
-### Suspicious send volumes between paths
-
-When the volume of sends between two or more paths (either Audience Paths or Action Paths) isn't what you expect, this can be an opportunity to check your segments, filters, or trigger actions. Also, be sure to identify and remove any overlapping filters.
-
+- [Push](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/know_before_you_send#push): Confirm rich media and images load, action buttons work, and you've tested both iOS and Android. Confirm badge and sound behavior if used.
+- [SMS and MMS](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/know_before_you_send#sms): Confirm the correct sender ID or short code, opt-out keyword footer, link shortening, and per-segment cost.
+- [In-app messages and Content Cards](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/know_before_you_send#in-app-messages): Conduct a live test inside the app or web—these channels depend on an SDK session rather than a dashboard test send. Also review [Content Cards](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/know_before_you_send#content-cards).
+- [WhatsApp](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/know_before_you_send#whatsapp): Confirm an approved template is in use and template variables map to the correct data.

@@ -17,15 +17,24 @@ Contact cards can be created [programmatically](https://www.twilio.com/blog/send
 
 Contact cards can be created from the SMS and MMS composer. Select the **Contact Card Generator** tab to get started.
 
-Next, you will be prompted to input your company name or nickname. This is the name that your users will see when they save the card. A 20-character limit is enforced to ensure the user can see your whole company name or alias in their contacts and messaging app. 
+Enter your company name or nickname. This is the name your users see when they save the card. A 20-character limit is enforced to ensure the user can see your whole company name or alias in their contacts and messaging app. 
 
 ![The Contact Card generator tab.](https://www.braze.com/docs/assets/img/sms/contact_card1.png?33a222490b9c7bff88119b7607656cf0){: style="max-width:60%" }
 
 ### Step 2: Assign phone number
 
-Select the subscription group and desired phone number from the available dropdown options. This number will be listed in your contact card and available on their phone to text to after it's saved.
+Select the subscription group and desired phone number from the available dropdown options.
 
-Note that alphanumeric codes are not compatible with two-way messaging and are not supported for contact cards.
+**Note:**
+
+
+The **Subscription Group** and **Phone Number** dropdowns list only MMS-capable subscription groups and sending numbers. Contact cards are delivered as MMS, so alphanumeric codes and SMS-only numbers are not available in the generator.
+
+
+
+This number is listed in your contact card and available on their phone to text to after it's saved.
+
+Alphanumeric codes aren't compatible with two-way messaging.
 
 ### Step 3: Optional fields
 
@@ -52,8 +61,8 @@ The **Full Name** field determines the initials that appear in the message chat 
 
 After inputting all the necessary fields, select **Generate Contact Card**, and it automatically attaches to your campaign or Canvas. From here, you can add a message, test your contact card, and launch your campaign or Canvas.
 
-The contact card will also be saved in the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library) to easily reuse in future campaigns and Canvases.
+The contact card is also saved in the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library) to easily reuse in future campaigns and Canvases.
 
 ## Adding an existing contact card
 
-To add an existing contact card, create a campaign or Canvas and select your desired subscription group. Next, an **Add Media** option will appear in the message composer window. Here, you can upload an existing contact card file or locate one through the media library.
+To add an existing contact card, create a campaign or Canvas and select your desired subscription group. Next, an **Add Media** option appears in the message composer window. Here, you can upload an existing contact card file or locate one through the media library.

@@ -1,6 +1,6 @@
 # Best practices for SMS, MMS, and RCS 
 
-> Learn more about best practices for SMS, MMS, and RCS with Braze, including our recommendations for opt-out monitoring and traffic pumping.
+> Learn more about best practices for SMS, MMS, and RCS with Braze, including our recommendations for opt-out monitoring, traffic pumping, and sending times.
 
 ## Opt-out monitoring recommendations
 
@@ -77,39 +77,88 @@ Plan on doing some high-volume sending? We have some best practices for you to e
 - Adjust the delivery speed rate limiting for your campaign or Canvases as needed, based on target audience size. This ensures that you reach the send volume that you need and that Braze sends messages at the rate your SMS or RCS provider expects and can handle.
 - Ensure you stick to the 160-character limit, and be aware of special characters double-counting (for example, forward-slashes `\`, carets `^`, and tildes `~`). 
 
-## Quiet Hours recommendations
+## Comply with SMS sending times {#comply-with-sms-sending-times}
+
+Many markets restrict when you can send marketing SMS, MMS, and RCS messages. Those windows are measured in each recipient's local time, and they can differ by country and by US state. Braze applies one quiet hours window per channel and cannot vary that window by day of week. Set the **SMS/MMS/RCS** window to the strictest rules that apply to your audience.
 
 **Warning:**
 
 
-**Braze-native Quiet Hours do not guarantee device-level delivery times.** When a message is sent, it is handed off to a carrier. Once the carrier accepts the message, Braze no longer has control over the precise moment it is delivered to the user's device.<br><br> For example, if a message is handed to a carrier at 8:59 pm, it may not land on the device until 9:02 pm. To reduce risk, we recommend using the following Liquid-based Quiet Hours method. This suppresses the message at the Braze engine-level before handoff.
+This section is not intended to provide, nor may it be relied upon as providing legal advice. Time-of-day rules change and can differ by message type. Work with your legal counsel to confirm the hours that apply to your program.
 
 
 
-### Braze-native Quiet Hours
+### Recommended window
 
-You can enable [Quiet Hours](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing#quiet-hours) across SMS campaigns and Canvases as an additional scheduling control. For compliance-sensitive sends, use the Liquid-based safeguard in the following section as your primary control before messages are handed off to carriers.
+For a US national audience, set [workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours) for **SMS/MMS/RCS** from 8 pm–12 pm. That allows sending from 12 pm–8 pm in each user's local time.
 
-### Additional safeguard through Content Blocks
+This is the strictest window you can set in Braze:
 
-You can add a Liquid-based check inside a Content Block. This provides a reliable, scalable safeguard that works alongside native settings.
+- Texas Senate Bill 140 (SB 140) starts Sunday sending at 12 pm (noon)
+- Several US states end sending at 8 pm rather than 9 pm
 
-#### Setup
+If you only send to Texas, a 9 pm–12 pm quiet window covers SB 140: Sunday sending is 12 pm–9 pm, and Monday through Saturday sending is 9 am–9 pm. Because Braze can't set Sunday-only hours, the 9 pm–12 pm quiet window is the correct Texas mapping. However, the 8 pm–12 pm workspace default is stricter and also covers 8 pm evening cutoffs.
 
-Include the following snippet at the top of your SMS message body. This example aborts the send if it falls outside a 9 am–9 pm window in the user's [local time zone](https://www.braze.com/docs/user_guide/messaging/campaigns/faq#what-does-local-time-zone-delivery-offer).
+### Regulations by market and state
+
+The following examples show how common rules map to a quiet hours window. This table is not exhaustive. Confirm current requirements with your legal counsel.
+
+| Market or rule | Allowed sending hours (recipient local time) | Quiet hours window that covers it |
+| --- | --- | --- |
+| US federal (Telephone Consumer Protection Act, or TCPA) | 8 am–9 pm | 9 pm–8 am |
+| Texas (SB 140) | Monday–Saturday 9 am–9 pm; Sunday 12 pm–9 pm | 9 pm–12 pm (covers the Sunday noon start every day) |
+| Several US states (for example, Florida) | 8 am–8 pm | 8 pm–8 am |
+| Brazil | 9 am–9 pm | 9 pm–9 am |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="SMS sending time regulations by market and state" }
+
+Use 8 pm–12 pm quiet hours (sending 12 pm–8 pm) as the workspace default when one window must cover these examples together.
+
+### Set up SMS quiet hours
+
+Use [workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours) to apply the window to every SMS, MMS, and RCS campaign and Canvas in the workspace.
+
+1. Go to **Settings** > **Quiet Hours**.
+2. Select **Add quiet hours**.
+3. Select **SMS/MMS/RCS**, then set the start time to 8 pm and the end time to 12 pm.
+4. Save your changes.
+
+Workspace quiet hours is currently in early access. If you don't have access, set the same 8 pm–12 pm window on each campaign or Canvas. For permissions, precedence, held-message behavior, and API campaigns, see [Workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours).
+
+### Abort or hold by delivery type
+
+Workspace quiet hours don't always hold a message for later delivery. The outcome depends on how the message is sent. For the full rules, see [What happens to a held message](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours#what-happens-to-a-held-message).
+
+| Delivery type | During the quiet hours window |
+| --- | --- |
+| Scheduled campaign (fixed send time) | Aborted. A scheduled SMS set for 9 am under the recommended 8 pm–12 pm window is discarded. Braze doesn't deliver it at noon when the window ends. |
+| API campaign | Aborted. |
+| Action-based campaign | Held and sent at the next available time, by default. |
+| Canvas | Held and sent at the next available time, by default. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Quiet hours abort or hold by delivery type" }
+
+### Optional Liquid abort
+
+You can add a Liquid check in a Content Block as an additional safeguard. This aborts the send before carrier handoff, which cancels the message.
+
+Include the following snippet at the top of your SMS message body. This example aborts the send outside a 12 pm–8 pm window in the user's [local time zone](https://www.braze.com/docs/user_guide/messaging/campaigns/faq#what-does-local-time-zone-delivery-offer).
 
 
 ```liquid
 {% assign time = 'now' | time_zone: ${time_zone} %}
 {% assign hour = time | date: '%H' | plus: 0 %}
-{% if hour >= 21 or hour < 9 %}
+{% if hour >= 20 or hour < 12 %}
   {% abort_message("Outside allowed time window") %}
 {% endif %}
 ```
 
 
-#### Considerations
+- `time_zone: ${time_zone}` evaluates the window against each user's local time, not a fixed global time, as explained in the [Campaigns FAQ](https://www.braze.com/docs/user_guide/messaging/campaigns/faq#what-does-local-time-zone-delivery-offer).
+- Messages suppressed by `abort_message()` are canceled. Workspace quiet hours abort or hold the send depending on delivery type. For details, see [Abort or hold by delivery type](#abort-or-hold-by-delivery-type).
+- By default, aborted messages are not visible in standard campaign reporting. When Liquid aborts a send with `{% abort_message %}`, Braze logs it to the Message Activity Log as a message error (by default it shows `{% abort_message %}` called). If you pass a string, that reason is what shows in the log, such as `{% abort_message('language was nil') %}`. For visibility into these suppressions in the dashboard, contact your customer success manager for access to the [Messaging Diagnostics Dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard).
 
-- `time_zone: ${time_zone}` allows the window to be evaluated against each user’s local time, not a fixed global time, as explained in the [Campaigns FAQ](https://www.braze.com/docs/user_guide/messaging/campaigns/faq#what-does-local-time-zone-delivery-offer).
-- Messages suppressed by `abort_message()` are not rescheduled for the next day; they are cancelled.
--  By default, aborted messages are not visible in standard campaign reporting. However, when Liquid aborts a send with `{% abort_message %}`, Braze logs it to the Message Activity Log as a message error (by default it shows `{% abort_message %}` called). If you pass a string, that reason is what shows in the log, such as `{% abort_message('language was nil') %}`. For visibility into these suppressions in the dashboard, contact your customer success manager for access to the [Messaging Diagnostics Dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard).
+### Considerations
+
+- Quiet hours apply in each user's local time zone, not your company's time zone.
+- A campaign or Canvas-level quiet hours window always takes precedence over the workspace default. A looser custom window can send outside the compliance hours you configured at the workspace.
+- Time-of-day rules typically apply to marketing and solicitation messages. Workspace quiet hours apply to all SMS on the channel except auto-responses, test sends, and seed groups. If your legal counsel says transactional campaigns should send overnight, opt those campaigns out of quiet hours.
+- Quiet hours control when Braze hands the message to the carrier, not the moment it arrives on the device. For example, a message handed off at 7:59 pm may land after 8 pm. Starting quiet hours at 8 pm provides a buffer before 9 pm cutoffs such as TCPA and Texas SB 140.

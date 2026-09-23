@@ -20,5 +20,5 @@ SMS messages use GSM-7 or UCS-2 encoding and are charged per message segment. Fo
 
 Regulations require responses to opt-in, opt-out, and Help or Info keywords. Define keywords, responses, and language-specific keyword sets through [Keyword processing](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing).
 
-For sending best practices, including multi-country and high-volume sending guidance, refer to [Best practices for SMS, MMS, and RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/best_practices).
+For sending best practices, including multi-country and high-volume sending guidance, refer to [Best practices for SMS, MMS, and RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/best_practices). To comply with SMS sending-time regulations, set [workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours) using the window in [Comply with SMS sending times](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/best_practices#comply-with-sms-sending-times).
 

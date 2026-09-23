@@ -24,6 +24,13 @@ Quiet hours and Intelligent Timing operate independently. Enabling quiet hours d
 - **Without Intelligent Timing:** Quiet hours act as a no-send window for your scheduled send time. If the scheduled time falls within quiet hours, the message is held and sent when the window closes.
 - **With Intelligent Timing:** Braze still calculates each user's optimal send time. If that time falls within quiet hours, the message is held and delivered at the nearest edge of the quiet window instead.
 
+**Note:**
+
+
+When Intelligent Timing is active for an action-based campaign, the quiet hours fallback controls (**Abort message** versus **Send at next available time**) may be hidden in the campaign builder. Intelligent Timing adjusts send times that fall inside quiet hours to the nearest edge of the quiet hours window. The abort fallback option is not available when Intelligent Timing is on.
+
+
+
 For more information on configuring quiet hours within an Intelligent Timing campaign, see [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing).
 
 ## Considerations
@@ -36,3 +43,4 @@ For more information on configuring quiet hours within an Intelligent Timing cam
 ## Related articles
 
 - [Workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours)
+- [Comply with SMS sending times](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/best_practices#comply-with-sms-sending-times)

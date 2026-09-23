@@ -56,9 +56,9 @@ Quiet hours has replaced the **Only send within specific hours** setting. Instea
 
 ![Quiet hours toggle turned on with start and end time set to block message delivery overnight](https://www.braze.com/docs/assets/img/intelligent_timing/quiet_hours.png?6b700a60f8173e86e13f197c95b06b93)
 
-When quiet hours are turned on, Braze won't send messages during the quiet period—even if that time matches a user's optimal send time. If a user's optimal time falls within the quiet window, the message will be sent instead at the nearest edge of the window.
+When quiet hours are turned on, Braze won't send messages during the quiet period—even if that time matches a user's optimal send time. If a user's optimal time falls within the quiet window, the message is sent instead at the nearest edge of the window. The abort fallback option is not available when Intelligent Timing is on.
 
-For example, if quiet hours are set from 10:00 PM to 6:00 AM, and a user's optimal time is 5:30 AM, Braze will hold the message and deliver it at 6:00 AM—the closest time outside the quiet window.
+For example, if quiet hours are set from 10 pm to 6 am and a user's optimal time is 5:30 am, Braze holds the message and delivers it at 6 am, the closest time outside the quiet window.
 
 For more information, see [Quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours).
 
@@ -222,7 +222,7 @@ However, Intelligent Timing is set to deliver at 2 pm, which has already passed.
 ## Considerations
 
 - In-app messages and webhooks are delivered immediately and not given optimal times.
-- Intelligent Timing is not available for action-based or API-triggered campaigns.
+- Intelligent Timing is not available for API-triggered campaigns.
 - Intelligent Timing should not be used in the following scenarios:
     - **Rate limiting:** If both rate limiting and Intelligent Timing are used, there is no guarantee about when the message will be delivered. Daily recurring campaigns with Intelligent Timing do not accurately support a total message send cap.
     - **IP warming campaigns:** Some Intelligent Timing behaviors can cause difficulties in hitting daily volumes that are needed when you are first warming up your IP. This is because Intelligent Timing evaluates segments twice—once when the campaign or Canvas is first created, and again before sending to users to verify that they should still be in that segment. This can cause segments to shift and change, often leading to some users falling out of the segment on the second evaluation. These users don't get replaced, impacting how close to the maximum user cap you can achieve.
