@@ -46,6 +46,8 @@ Admins control access to the MCP server through the "Use MCP Server" permission.
 
 To revoke access, remove the "Use MCP Server" permission from the user. Removing dashboard permissions from a user also removes those capabilities from any connected agent on the next request.
 
+If you think a token has been leaked or misused, a company admin can revoke every MCP OAuth token for the company at once in **Settings** > **Admin Settings** > **OAuth**. Every connected client loses access and all users must reconnect. For more information, see [Revoke MCP OAuth tokens](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#revoke-mcp-oauth-tokens).
+
 ### Audit usage
 
 When a user successfully connects through OAuth, an event is logged to the [security event report](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#security-event-report).
@@ -149,6 +151,10 @@ After you confirm your workflows and skills are working on the remote server, di
 Braze maintains an allowlist of supported client domains for security. If you connect from a client that isn't on the allowlist, authentication may be blocked. 
 
 Clients that run locally on your machine without a custom scheme, such as Claude Code and OpenAI Codex, should also work.
+
+### A working connection stops authenticating
+
+If your client was connected and now fails to authenticate, your company admin may have revoked your company's MCP OAuth tokens. Sign in to Braze through your client again to create a new connection. If sign-in still fails, confirm that **MCP OAuth access** is on and that you still have the "Use MCP Server" permission.
 
 ### Tools don't appear in your client
 

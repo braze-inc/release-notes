@@ -125,5 +125,6 @@ The following are never held by workspace quiet hours, regardless of channel:
 ## Related settings
 
 - [Quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours): The existing, per-campaign and per-Canvas version of this feature. Workspace quiet hours don't replace it; they set the default that applies when a campaign or Canvas doesn't configure its own window.
+- [Comply with SMS sending times](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/best_practices#comply-with-sms-sending-times): Recommended SMS/MMS/RCS window (8 pm–12 pm) and market and state sending-time examples.
 - [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing): Calculates an optimal send time per user. When enabled alongside workspace quiet hours, quiet hours are factored into that calculation.
 - [Rate limiting and frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping): Separate delivery controls that apply independently of quiet hours.

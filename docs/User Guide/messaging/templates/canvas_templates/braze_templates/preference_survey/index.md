@@ -97,5 +97,5 @@ After testing and reviewing our Canvas to make sure it works as expected, we’l
 **Tip:**
 
 
-Check out our [Pre and post-launch checklist](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
+Check out the [Canvas QA checklist](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist) for things to consider before and after you launch a Canvas.
 

@@ -105,7 +105,7 @@ For more on this topic, check out the CTIA's [Messaging Principles and Best Prac
 
 ### Scheduling
 
-Ensure you comply with the [TCPA](https://en.wikipedia.org/wiki/telephone_consumer_protection_act_of_1991), which dictates that you shouldn't send messages during late hours. Refer to the regulation's contents for exact hours. However, you shouldn't send messages that late anyway—don't you want high engagement?
+The Telephone Consumer Protection Act ([TCPA](https://en.wikipedia.org/wiki/telephone_consumer_protection_act_of_1991)) and some US state laws restrict when you can send marketing messages, measured in each recipient's local time. Federal TCPA hours are 8 am–9 pm; some states are stricter. For example, Texas SB 140 starts Sunday sending at 12 pm. For the recommended quiet hours window and setup steps, see [Comply with SMS sending times](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/best_practices#comply-with-sms-sending-times).
 
 ### International
 

@@ -492,3 +492,12 @@ To check your email configuration:
 3. Confirm that your sending domain and tracking domain are properly aligned for the workspace where links aren't working.
 
 If your sending domain differs between workspaces, make sure each workspace has the appropriate DNS records configured and that your AASA (iOS) or Digital Asset Links (Android) files are accessible from each tracking domain.
+
+#### Why is my link still click-tracked after I set `clicktracking=off`?
+
+Per-link disable attributes apply only to the specific HTML anchor tags where you add them. Common causes when a link still appears tracked:
+
+- **Missing attribute in HTML source** — Confirm `clicktracking=off` (SendGrid), `data-msys-clicktrack="0"` (SparkPost), or `ses:no-track` (Amazon SES) is on the `<a>` tag in the HTML editor source, not only in a preview.
+- **Drag-and-drop custom attributes** — For the drag-and-drop editor, verify the link's custom attribute name and value match your ESP (see [Turning off click-tracking on a link-to-link basis](#turning-off-click-tracking-on-a-link-to-link-basis)).
+- **Plaintext body URLs** — If you test links from the plaintext part of the message, those URLs may not inherit HTML-only disable attributes. Send a test message and inspect the raw email to confirm which part contains the wrapped link.
+

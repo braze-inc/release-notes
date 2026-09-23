@@ -39,3 +39,7 @@ Change the month by selecting <i class="fa-solid fa-chevron-left" style="color: 
 ![The Send Calendar displaying all scheduled campaigns in the current month.](https://www.braze.com/docs/assets/img/campaign_calendar/content_calendar_sends.png?4dc5c1291ae4618fe39c1e59cf1d1aca)
 
 View or modify your campaigns by selecting the campaign in the calendar. For more information, see [Managing campaigns](https://www.braze.com/docs/user_guide/messaging/campaigns/manage_campaigns).
+
+### Stopped or archived campaigns
+
+The send calendar shows campaigns with scheduled sends for the month you are viewing. Archived campaigns don't appear. Draft campaigns usually don't appear. Stopped campaigns can still show past sends in months they already sent (they appear as disabled in the calendar key), but they don't show upcoming sends after they were stopped.
