@@ -33,6 +33,7 @@ Follow these steps to set up your AWS secret key authentication method.
     - **Braze AU cluster:** `ap-southeast-2`
     - **Braze ID cluster:** `ap-southeast-3`
     - **Braze JP cluster:** `ap-northeast-1`
+    - **Braze KR cluster:** `ap-northeast-2`
 4. In AWS Key Management Service, create two keys and make sure that the IAM user is added in key usage permissions:
     - **[Encrypt/decrypt](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html#create-symmetric-cmk):** Select **Symmetric** key type and **Encrypt and Decrypt** key usage.
     - **[Hash](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):** Select **Symmetric** key type and **Generate and Verify MAC** key usage. The key spec should be **HMAC_256**. After creating the key, note the HMAC key ID somewhere as you’ll need to input this in Braze.

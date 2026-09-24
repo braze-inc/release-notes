@@ -116,9 +116,9 @@ To test your integration, you can select **Send Test Events** to send one event 
 Test Currents connectors are free versions of our existing connectors that can be used for testing and trying out different destinations. Test Currents have:
 
 - Up to 10 Test Currents connectors per workspace.
-- An aggregate maximum of 1,500 events per fixed 24-hour period, resetting at midnight UTC. This event total is updated hourly on the dashboard.
+- An aggregate maximum of 1,500 events per fixed 24-hour period, resetting at midnight UTC. On the **Currents** page, you can track your current sending volume against this limit. Braze updates this total hourly.
 
-After your Test Currents connectors reach the sending limit, your connector will not send events until the next day (at midnight UTC).
+After your Test Currents connectors reach the sending limit, Braze disables the connector and drops events that are created while the limit is reached. Event syncing resumes after the limit resets at midnight UTC.
 
 To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade Test Integration**.
 
