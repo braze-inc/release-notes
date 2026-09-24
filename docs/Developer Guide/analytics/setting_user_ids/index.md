@@ -156,6 +156,26 @@ Do not assign a single, shared user ID (for example, a static default external I
 
 
 
+## Managing push notifications after logout
+
+When a user logs out of your app, call the Braze SDK's `logout()` or `unregisterPush()` method as part of your logout flow. When either call succeeds, Braze immediately removes the device's push token from the current user profile, so Braze no longer targets that device for future push campaigns.
+
+- For a full logout, call `logout()` to unregister push and, on success, wipe local SDK data and disable the SDK. A successful `logout()` already calls `wipeData()` for you.
+- To stop push only, call `unregisterPush()` to remove the push token from the user profile and clear the locally stored token without wiping other SDK data.
+
+For implementation details, error handling, and re-registration steps, see [Manage data collection](https://www.braze.com/docs/developer_guide/analytics/managing_data_collection/) for your platform:
+
+- [Android](https://www.braze.com/docs/developer_guide/analytics/managing_data_collection/?sdktab=android#android_logout) (SDK [43.0.0+](https://github.com/braze-inc/braze-android-sdk/releases/tag/v43.0.0))
+- [Swift](https://www.braze.com/docs/developer_guide/analytics/managing_data_collection/?sdktab=swift#swift_logout) (SDK [18.0.0+](https://github.com/braze-inc/braze-swift-sdk/releases/tag/18.0.0))
+- [Web](https://www.braze.com/docs/developer_guide/analytics/managing_data_collection/?sdktab=web#web_logout) (`logout()` requires Web SDK [6.10.0+](https://github.com/braze-inc/braze-web-sdk/releases/tag/v6.10.0))
+
+**Note:**
+
+
+If a push notification is already in flight when `logout()` or `unregisterPush()` succeeds, that notification may still be delivered to the device.
+
+
+
 ## User aliases
 
 ### How they work

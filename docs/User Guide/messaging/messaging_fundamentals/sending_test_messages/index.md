@@ -419,7 +419,7 @@ There are a few situations where test messages don't behave the same way as camp
 
 - Viewing the Braze [preference center](https://www.braze.com/docs/user_guide/audience/subscription_preferences/preference_center) from test messages causes the **Save Preferences** button to be disabled. Preference center Liquid tags may also not resolve to valid links. This is expected behavior. To test end-to-end, see [Testing preference centers](https://www.braze.com/docs/user_guide/audience/subscription_preferences/preference_center/dnd_preference_center#testing-preference-centers).
 - For testing in-app messages and Content Cards, the target user must have a push token for the target device.
-- For testing unsubscribe links in emails, make sure your test user's email address is in the respective workspace.
+- For testing unsubscribe links in emails, `{{${set_user_to_unsubscribed_url}}}` renders as a full URL only when the recipient email address has an associated user profile with an external ID in the workspace. Without a user profile or external ID, the tag renders as `<a href="#">Unsubscribe</a>`. Make sure your test user's email address has an existing profile in the respective workspace.
 - The `List-Unsubscribe` header is not included in emails sent by the test message functionality.
 - Emails sent to seed group users do not update the user profile Campaign Received list or increment Sends in dashboard analytics.
 

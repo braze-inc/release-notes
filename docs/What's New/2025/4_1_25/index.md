@@ -87,7 +87,7 @@ You can limit the number of people who would potentially enter this Canvas by a 
 
 ### New use case: Booking reminder email system
 
-Learn how you can use Braze features to [build a booking reminder email messaging service](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/booking_use_case/). The service will allow users to book appointments and will message users with reminders of their upcoming appointments. Though this use case uses email messages, you can send messages in any, or multiple, channels based on a single update to a user profile.
+Learn how you can use Braze features to [build a booking reminder email messaging service](https://www.braze.com/docs/user_guide/messaging/campaigns/ideas_and_strategies/booking_use_case). The service will allow users to book appointments and will message users with reminders of their upcoming appointments. Though this use case uses email messages, you can send messages in any, or multiple, channels based on a single update to a user profile.
 
 ### Click tracking for specific links
 

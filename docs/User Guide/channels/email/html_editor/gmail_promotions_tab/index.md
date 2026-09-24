@@ -8,15 +8,15 @@ First, forward your domains and subdomains to Google’s Promotions Tab outreach
 
 ## Build the card with Braze
 
-Follow these steps to build a Gmail promotion card for an email campaign. Note that navigating away from the **Content** section in the editor will reset the fields and information in the **Gmail Promotion** tab. Complete the setup of your promotion card, and copy the HTML generated so you don't lose your HTML code.
+Follow these steps to build a Gmail promotion card for an email campaign or Canvas. After you generate the HTML, copy the script into your email. The generated HTML preview isn't saved if you leave the **Gmail Promotion** tab.
 
-### Step 1: Create an email campaign
+### Step 1: Create an email campaign {#step-1-create-an-email-campaign}
 
-First, [create your email campaign](https://www.braze.com/docs/user_guide/channels/email/html_editor), and select the **HTML code editor** as your editing experience.
+Create a standalone email campaign or an email message step in Canvas, then select the **HTML code editor** as your editing experience. For campaign setup steps, see [Create an email with custom HTML](https://www.braze.com/docs/user_guide/channels/email/html_editor).
 
-### Step 2: Add details to Gmail Promotion card
+### Step 2: Add details to Gmail Promotion card {#step-2-add-details-to-gmail-promotion-card}
 
-Next, go to the **Content** section of the HTML editor and select the **Gmail Promotion** tab. Fill out the fields under **Basic Information**, then select **Generate HTML Code**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section.
+Next, go to the **Content** section of the HTML editor and select the **Gmail Promotion** tab. Fill out the fields under **Basic Information**, then select **Generate HTML code**. This generates the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section.
 
 ![An example of how to build a card.](https://www.braze.com/docs/assets/img/create-gmail-promo.png?1cdfc01bf0f0d275955d547821ba13f0)
 
@@ -86,7 +86,7 @@ We recommend uploading your product images to the media library, then copying an
 
 
 
-### Step 4: Generate and paste HTML code
+### Step 4: Generate and paste HTML code {#step-4-generate-and-paste-html-code}
 
 After building your Gmail Promotion card, select **Generate HTML code**. Copy and paste the script into the `<head>` element of your email's HTML. 
 
@@ -196,4 +196,11 @@ Note that annotations don't render in the **Primary** tab or in any other tab in
 
 For more troubleshooting, see [Google's troubleshooting guide for email promotions](https://developers.google.com/workspace/gmail/promotab/troubleshooting).
 
+
+
+### Why don't I see the Gmail Promotion tab in the editor?
+
+The **Gmail Promotion** tab is in the **Content** section of the **HTML code editor**for standalone email campaigns and Canvas Message steps for email. For setup steps, see [Step 1](#step-1-create-an-email-campaign) and [Step 2](#step-2-add-details-to-gmail-promotion-card).
+
+For drag-and-drop emails, paste the generated HTML into [custom head tags](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop#custom-head-tags) under **Sending Settings**. See [Step 4](#step-4-generate-and-paste-html-code).
 

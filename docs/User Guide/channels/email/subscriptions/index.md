@@ -381,17 +381,15 @@ The email preference center lets you manage which users receive subscription gro
 
 To learn more about how to add or customize a preference center, refer to [Preference center](https://www.braze.com/docs/user_guide/audience/subscription_preferences/preference_center).
 
-
 ## Changing email subscriptions {#changing-email-subscriptions}
 
-In most cases, users manage their email subscription through links included in the emails they receive. Insert a legally compliant footer with an unsubscribe link at the bottom of every email. When users select the unsubscribe URL, Braze unsubscribes them and shows a landing page confirming the change. Include this Liquid tag: `${set_user_to_unsubscribed_url}`.
+In most cases, users manage their email subscription through links included in the emails they receive. Insert a legally compliant footer with an unsubscribe link at the bottom of every email. 
 
-**Note:**
+When users select the unsubscribe URL, Braze unsubscribes them and shows a landing page confirming the change. Include this Liquid tag in email campaigns and Canvases: `${set_user_to_unsubscribed_url}`. You cannot use this tag in other messaging channels.
 
+When sending test messages, `${set_user_to_unsubscribed_url}` renders as a full URL only if the recipient email address has an associated user profile with an external ID in the workspace. If the recipient has no user profile or external ID, the tag renders as `<a href="#">Unsubscribe</a>` instead. 
 
-You can use the `${set_user_to_unsubscribed_url}` Liquid tag only in email campaigns and Canvases. You cannot use this tag in other messaging channels.
-
-
+To test the full unsubscribe link, send to an existing user with a profile in your workspace.
 
 ### Subscription group unsubscribe links {#subscription-group-unsubscribe-links}
 
@@ -410,7 +408,7 @@ When a recipient selects the link, Braze unsubscribes them from that subscriptio
 | Test send, preview, or preference center page | `#` |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Subscription group unsubscribe link behavior" }
 
-When a user selects "Unsubscribe from all of the listed types of emails" in the preference center, Braze sets their global email subscription status to `unsubscribed` and unsubscribes them from all groups.
+When a user selects **Unsubscribe from all of the listed types of emails** in the preference center, Braze sets their global email subscription status to `unsubscribed` and unsubscribes them from all groups.
 
 Recipient-side email unsubscribes—unsubscribe links, list-unsubscribe, preference center submissions, and ESP-reported unsubscribes—appear in the Snowflake `USERS_MESSAGES_EMAIL_UNSUBSCRIBE` table. Unsubscribes made through the REST API are not included in that table; those emit [`users.behaviors.subscriptiongroup.StateChange`](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/#subscription-group-state-change-events) or [`users.behaviors.subscription.GlobalStateChange`](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/#global-subscription-state-change-events) events instead. For the table schema, see [USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED).
 
