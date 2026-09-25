@@ -41,7 +41,7 @@ Braze has three global subscription states for email. These states gate whether 
 - **Unsubscribes and spam reports:** Braze automatically unsubscribes users who unsubscribe through a [custom footer](https://www.braze.com/docs/user_guide/channels/email/customize/custom_email_footer). If a user marks an email as spam, Braze sends only transactional email (messages sent with **Send to all users including unsubscribed users**).
 - **Hard bounces:** When an email address hard bounces, Braze doesn't automatically set the user's subscription state to `unsubscribed`. Braze marks the address invalid and stops sending until the user updates their email address.
 - **Shared email addresses:** When a user's global email subscription state changes, Braze propagates that state to other profiles that share the same email address, up to 100 profiles per change.
-- **Email address updates:** When a user updates their email address, their subscription state is set to `subscribed` unless the updated address already exists on another profile, in which case the user inherits that profile's state.
+- **Email address updates:** When a user updates their email address to one that already exists on another profile, they inherit that address's subscription state. For the **Resubscribe users when they update their email** setting, see [Email subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions#checking-email-subscription-state).
 
 For updating subscription state, checking status, preference centers, and campaign targeting, see [Email subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions).
 

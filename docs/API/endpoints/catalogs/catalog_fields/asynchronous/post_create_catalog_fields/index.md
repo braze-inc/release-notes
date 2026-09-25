@@ -1,4 +1,4 @@
-<div id='api_ovulagwjwfhs' class='api_div' data-search-keywords='create catalog fields message errors id parameters parameter_values'>
+<div id='api_bmpqjkfqontj' class='api_div' data-search-keywords='create catalog fields message errors id parameters parameter_values'>
 <h1 id="create-catalog-fields">Create catalog fields</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/catalogs/{catalog_name}/fields</p>
@@ -93,6 +93,14 @@
 25
 26
 27
+28
+29
+30
+31
+32
+33
+34
+35
 </pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/fields' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -117,6 +125,14 @@
     {
       "name": "Location",
       "type": "geo"
+    },
+    {
+      "name": "Preferences",
+      "type": "object"
+    },
+    {
+      "name": "Top_Dishes",
+      "type": "array"
     }
   ]
 }'

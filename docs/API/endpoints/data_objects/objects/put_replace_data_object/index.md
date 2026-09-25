@@ -1,7 +1,7 @@
-<div id='api_sikxfyadshof' class='api_div' data-search-keywords='replace data object attributes name data_object type_name external_id'>
+<div id='api_rlwrrxonpdvb' class='api_div' data-search-keywords='replace data object attributes name data_object type_name object_id'>
 <h1 id="replace-data-object">Replace data object</h1>
 <div class="api_type"><div class="method put ">put</div>
-<p>/data_objects/objects/{type_name}/{external_id}</p>
+<p>/data_objects/objects/{type_name}/{object_id}</p>
 </div>
 
 <blockquote>
@@ -22,7 +22,7 @@
 
 <h2 id="path-parameters">Path parameters</h2>
 
-<p>The following table lists and describes the path parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{external_id}</code> endpoint.</p>
+<p>The following table lists and describes the path parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{object_id}</code> endpoint.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Replace data object path parameters">
   <thead>
@@ -41,7 +41,7 @@
       <td>Data object type machine name</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">object_id</code></td>
       <td>Required</td>
       <td>String</td>
       <td>Object identifier</td>
@@ -51,7 +51,7 @@
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<p>The following table lists and describes the JSON request body parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{external_id}</code> endpoint.</p>
+<p>The following table lists and describes the JSON request body parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{object_id}</code> endpoint.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Replace data object request parameters">
   <thead>
@@ -73,7 +73,7 @@
       <td><code class="language-plaintext highlighter-rouge">display_name</code></td>
       <td>Optional</td>
       <td>String</td>
-      <td>Display label for the object. When the type has a display-name source field, the value of that field takes precedence. Defaults to <code class="language-plaintext highlighter-rouge">external_id</code></td>
+      <td>Display label for the object. When the type has a display-name source field, the value of that field takes precedence. Defaults to <code class="language-plaintext highlighter-rouge">object_id</code></td>
     </tr>
   </tbody>
 </table>
@@ -136,7 +136,7 @@
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"data_object"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"type_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Updated Account"</span><span class="w"> </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -169,7 +169,7 @@
       <td>Data object type machine name</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">data_object.external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">data_object.object_id</code></td>
       <td>Required</td>
       <td>String</td>
       <td>Data object identifier</td>

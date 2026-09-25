@@ -154,7 +154,7 @@ Include the following snippet at the top of your SMS message body. This example 
 
 - `time_zone: ${time_zone}` evaluates the window against each user's local time, not a fixed global time, as explained in the [Campaigns FAQ](https://www.braze.com/docs/user_guide/messaging/campaigns/faq#what-does-local-time-zone-delivery-offer).
 - Messages suppressed by `abort_message()` are canceled. Workspace quiet hours abort or hold the send depending on delivery type. For details, see [Abort or hold by delivery type](#abort-or-hold-by-delivery-type).
-- By default, aborted messages are not visible in standard campaign reporting. When Liquid aborts a send with `{% abort_message %}`, Braze logs it to the Message Activity Log as a message error (by default it shows `{% abort_message %}` called). If you pass a string, that reason is what shows in the log, such as `{% abort_message('language was nil') %}`. For visibility into these suppressions in the dashboard, contact your customer success manager for access to the [Messaging Diagnostics Dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard).
+- By default, aborted messages are not visible in standard campaign reporting. When Liquid aborts a send with `{% abort_message %}`, review the send in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability). These aborts use the **Liquid abort** outcome. You can pass a reason string, such as `{% abort_message('language was nil') %}`.
 
 ### Considerations
 

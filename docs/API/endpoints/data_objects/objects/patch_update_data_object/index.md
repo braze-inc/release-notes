@@ -1,7 +1,7 @@
-<div id='api_icyyjufdqshd' class='api_div' data-search-keywords='update data object attributes credits data_object type_name external_id name'>
+<div id='api_xymdfureezmg' class='api_div' data-search-keywords='update data object attributes credits data_object type_name object_id name'>
 <h1 id="update-data-object">Update data object</h1>
 <div class="api_type"><div class="method patch ">patch</div>
-<p>/data_objects/objects/{type_name}/{external_id}</p>
+<p>/data_objects/objects/{type_name}/{object_id}</p>
 </div>
 
 <blockquote>
@@ -22,7 +22,7 @@
 
 <h2 id="path-parameters">Path parameters</h2>
 
-<p>The following table lists and describes the path parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{external_id}</code> endpoint.</p>
+<p>The following table lists and describes the path parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{object_id}</code> endpoint.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Update data object path parameters">
   <thead>
@@ -41,7 +41,7 @@
       <td>Data object type machine name</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">object_id</code></td>
       <td>Required</td>
       <td>String</td>
       <td>Object identifier</td>
@@ -51,7 +51,7 @@
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<p>The following table lists and describes the JSON request body parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{external_id}</code> endpoint.</p>
+<p>The following table lists and describes the JSON request body parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{object_id}</code> endpoint.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Update data object request parameters">
   <thead>
@@ -128,7 +128,7 @@
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"data_object"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"type_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Acme"</span><span class="p">,</span><span class="w"> </span><span class="nl">"credits"</span><span class="p">:</span><span class="w"> </span><span class="mi">750</span><span class="w"> </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -161,7 +161,7 @@
       <td>Data object type machine name</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">data_object.external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">data_object.object_id</code></td>
       <td>Required</td>
       <td>String</td>
       <td>Data object identifier</td>
@@ -196,7 +196,7 @@
     <tr>
       <td><code class="language-plaintext highlighter-rouge">404</code></td>
       <td>Type not found or object not found</td>
-      <td>Confirm <code class="language-plaintext highlighter-rouge">type_name</code> and <code class="language-plaintext highlighter-rouge">external_id</code> both exist in the workspace.</td>
+      <td>Confirm <code class="language-plaintext highlighter-rouge">type_name</code> and <code class="language-plaintext highlighter-rouge">object_id</code> both exist in the workspace.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">401</code></td>

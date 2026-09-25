@@ -1,7 +1,7 @@
-<div id='api_kqnjpazzbtax' class='api_div' data-search-keywords='delete user relationship braze_id rel_kind deleted'>
+<div id='api_uxhbvtzznhtn' class='api_div' data-search-keywords='delete user relationship braze_id rel_kind deleted'>
 <h1 id="delete-user-relationship">Delete user relationship</h1>
 <div class="api_type"><div class="method delete ">delete</div>
-<p>/data_objects/objects/{type_name}/{external_id}/users</p>
+<p>/data_objects/objects/{type_name}/{object_id}/users</p>
 </div>
 
 <blockquote>
@@ -22,7 +22,7 @@
 
 <h2 id="path-parameters">Path parameters</h2>
 
-<p>The following table lists and describes the path parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{external_id}/users</code> endpoint.</p>
+<p>The following table lists and describes the path parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{object_id}/users</code> endpoint.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Delete user relationship path parameters">
   <thead>
@@ -41,7 +41,7 @@
       <td>Object type</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">object_id</code></td>
       <td>Required</td>
       <td>String</td>
       <td>Object identifier</td>
@@ -51,7 +51,7 @@
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<p>The following table lists and describes the JSON request body parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{external_id}/users</code> endpoint.</p>
+<p>The following table lists and describes the JSON request body parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{object_id}/users</code> endpoint.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Delete user relationship request parameters">
   <thead>

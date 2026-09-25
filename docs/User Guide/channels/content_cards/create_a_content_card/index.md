@@ -250,7 +250,7 @@ The entire data payload for a single Content Card cannot exceed 2 KB **after** a
 
 Using Liquid to pull in long strings of text (such as from custom attributes) can cause you to exceed the limit. 
 
-The campaign composer displays a warning if your static content exceeds the limit. We do not predict the size for dynamic content using Liquid. If the message size exceeds 2 KB, it is aborted at send time. You can see these aborts in the Message Activity Log with the reason `Content card maximum size exceeded`.
+The campaign composer displays a warning if your static content exceeds the limit. We do not predict the size for dynamic content using Liquid. If the message size exceeds 2 KB, it is aborted at send time. You can see these aborts in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) with the outcome **Content Card invalid**.
 
 **Important:**
 

@@ -1,4 +1,4 @@
-<div id='api_ddkquuboiyre' class='api_div' data-search-keywords='create data object external_id attributes name industry data_object type_name'>
+<div id='api_ahbdqeacwtoy' class='api_div' data-search-keywords='create data object object_id attributes name industry data_object type_name'>
 <h1 id="create-data-object">Create data object</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/data_objects/objects/{type_name}</p>
@@ -58,10 +58,10 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">object_id</code></td>
       <td>Required</td>
       <td>String</td>
-      <td>Object identifier, unique within the type</td>
+      <td>Object identifier, unique within the type. Can only include letters, numbers, hyphens, and underscores, and must be 250 characters or fewer</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attributes</code></td>
@@ -73,7 +73,7 @@
       <td><code class="language-plaintext highlighter-rouge">display_name</code></td>
       <td>Optional</td>
       <td>String</td>
-      <td>Display label for the object. When the type has a display-name source field, the value of that field takes precedence. Defaults to <code class="language-plaintext highlighter-rouge">external_id</code></td>
+      <td>Display label for the object. When the type has a display-name source field, the value of that field takes precedence. Defaults to <code class="language-plaintext highlighter-rouge">object_id</code></td>
     </tr>
   </tbody>
 </table>
@@ -92,7 +92,7 @@
 6
 7
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-  </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-new"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-new"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New Account"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"industry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"software"</span><span class="w">
@@ -118,7 +118,7 @@
 <span class="nt">--header</span> <span class="s1">'Authorization: Bearer YOUR_REST_API_KEY'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 <span class="nt">--data-raw</span> <span class="s1">'{
-  "external_id": "acct-new",
+  "object_id": "acct-new",
   "attributes": {
     "name": "New Account",
     "industry": "software"
@@ -144,7 +144,7 @@
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"data_object"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"type_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-new"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-new"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New Account"</span><span class="p">,</span><span class="w"> </span><span class="nl">"industry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"software"</span><span class="w"> </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -177,7 +177,7 @@
       <td>Data object type machine name</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">data_object.external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">data_object.object_id</code></td>
       <td>Required</td>
       <td>String</td>
       <td>Data object identifier</td>
@@ -217,7 +217,7 @@
     <tr>
       <td><code class="language-plaintext highlighter-rouge">409</code></td>
       <td>Duplicate object (<code class="language-plaintext highlighter-rouge">duplicate-data-object</code>)</td>
-      <td>Use a different <code class="language-plaintext highlighter-rouge">external_id</code>, or use <code class="language-plaintext highlighter-rouge">PUT</code> to replace the existing object.</td>
+      <td>Use a different <code class="language-plaintext highlighter-rouge">object_id</code>, or use <code class="language-plaintext highlighter-rouge">PUT</code> to replace the existing object.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">422</code></td>

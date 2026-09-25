@@ -1,7 +1,7 @@
-<div id='api_lycscviotewa' class='api_div' data-search-keywords='replace object relationship rel_kind related_type_name related_external_id anchor attributes object_relationship to_data_object type_name external_id name'>
+<div id='api_ubzetkfckilb' class='api_div' data-search-keywords='replace object relationship rel_kind related_type_name related_object_id anchor attributes object_relationship to_data_object type_name object_id name'>
 <h1 id="replace-object-relationship">Replace object relationship</h1>
 <div class="api_type"><div class="method put ">put</div>
-<p>/data_objects/objects/{type_name}/{external_id}/object_relationships</p>
+<p>/data_objects/objects/{type_name}/{object_id}/object_relationships</p>
 </div>
 
 <blockquote>
@@ -22,7 +22,7 @@
 
 <h2 id="path-parameters">Path parameters</h2>
 
-<p>The following table lists and describes the path parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{external_id}/object_relationships</code> endpoint.</p>
+<p>The following table lists and describes the path parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{object_id}/object_relationships</code> endpoint.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Replace object relationship path parameters">
   <thead>
@@ -41,7 +41,7 @@
       <td>URL object type</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">object_id</code></td>
       <td>Required</td>
       <td>String</td>
       <td>URL object identifier</td>
@@ -51,7 +51,7 @@
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<p>The following table lists and describes the JSON request body parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{external_id}/object_relationships</code> endpoint.</p>
+<p>The following table lists and describes the JSON request body parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{object_id}/object_relationships</code> endpoint.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Replace object relationship request parameters">
   <thead>
@@ -76,7 +76,7 @@
       <td>Related object type</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">related_external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">related_object_id</code></td>
       <td>Required</td>
       <td>String</td>
       <td>Related object identifier</td>
@@ -112,7 +112,7 @@
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"rel_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subaccount"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"related_type_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"related_external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-456"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"related_object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-456"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"anchor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"source"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -138,7 +138,7 @@
 <span class="nt">--data-raw</span> <span class="s1">'{
   "rel_kind": "subaccount",
   "related_type_name": "account",
-  "related_external_id": "acct-456",
+  "related_object_id": "acct-456",
   "anchor": "source",
   "attributes": {}
 }'</span>
@@ -168,7 +168,7 @@
     </span><span class="nl">"rel_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subaccount"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"to_data_object"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"type_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-456"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-456"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Child Account"</span><span class="w"> </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">

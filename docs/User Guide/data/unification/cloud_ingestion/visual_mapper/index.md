@@ -5,7 +5,7 @@
 **Important:**
 
 
-The visual mapper is currently in beta. The visual mapper is available for user attribute syncs from all Cloud Data Ingestion data warehouse sources, and additional sync types become available throughout the beta. Contact your customer success manager or account manager for access.
+The visual mapper is currently in early access. The visual mapper is available for user attribute and canvas trigger syncs, for all Cloud Data Ingestion data warehouse sources. Additional sync types will become available throughout early access. Contact your customer success manager or account manager for access.
 
 
 

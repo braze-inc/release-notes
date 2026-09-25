@@ -791,11 +791,13 @@ Repeat [Step 6](#step-6), and enter your endpoint URL after selecting custom ext
 
 #### Step 6.4: Collect your email or SMS opt-ins from Shopify (optional)
 
-You have the option to collect your email or SMS marketing opt-ins from Shopify. 
-
-If you use the email or SMS channels, you can sync your email and SMS marketing opt-in states into Braze. If you sync email marketing opt-ins from Shopify, Braze will automatically create an email subscription group for all users associated with that specific store. You need to create a unique name for this subscription group.
+If you use the email or SMS channels, you can sync your email and SMS marketing opt-in states from Shopify into Braze.
 
 ![“Collect subscribers” section with option to collect email or SMS marketing opt-ins.](https://www.braze.com/docs/assets/img/shopify/collect_email_subscribers.png?5d52546267b5745cf48bff9c7802f073)
+
+
+
+If you sync email marketing opt-ins from Shopify, Braze automatically creates an email subscription group for all users associated with that specific store. You need to create a unique name for this subscription group.
 
 **Note:**
 
@@ -803,6 +805,21 @@ If you use the email or SMS channels, you can sync your email and SMS marketing 
 As mentioned in [Shopify overview](https://www.braze.com/docs/shopify_overview), if you want to use a third-party capture form, your developers need to integrate Braze SDK code. This will let you capture the email address and global email subscription status from form submissions. Specifically, you need to implement and test these methods to your `theme.liquid` file:<br><br>
 - [setEmail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail): Sets the email address on the user profile
 - [setEmailNotificationSubscriptionType](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype): Updates the global email subscription status
+
+
+
+
+
+Use SMS double opt-in to send your branded confirmation text through Braze instead of Shopify's confirmation email. To turn on SMS double opt-in:
+
+1. In the Shopify admin, go to **Settings** > **Notifications** > **Customer notifications**.
+2. Turn off marketing double opt-in for SMS.
+3. Set checkout SMS to single opt-in.
+4. In your Braze SMS settings, select **Use Braze SMS double opt-in**.
+
+![The "Use Braze SMS double opt-in" checkbox, a warning to turn off Shopify's SMS double opt-in first, and the confirmation checkbox.](https://www.braze.com/docs/assets/img/shopify/shopify_sms_double_opt_in.png?72f3a72dad6a0c0a549096ec14f8e896){: style="max-width:80%;"}
+
+For more information on Braze SMS double opt-in and the subscriber flow, see [Shopify overview](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_overview#sms-double-opt-in).
 
 
 

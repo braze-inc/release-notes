@@ -1,7 +1,7 @@
-<div id='api_sdmifqdflykb' class='api_div' data-search-keywords='list user relationships type_name external_id rel_kind limit offset items user braze_id attributes role total_count has_more next_offset'>
+<div id='api_yutfubqgmyxd' class='api_div' data-search-keywords='list user relationships type_name object_id rel_kind limit offset items user braze_id attributes role total_count has_more next_offset'>
 <h1 id="list-user-relationships">List user relationships</h1>
 <div class="api_type"><div class="method get ">get</div>
-<p>/data_objects/objects/{type_name}/{external_id}/user_relationships</p>
+<p>/data_objects/objects/{type_name}/{object_id}/user_relationships</p>
 </div>
 
 <blockquote>
@@ -22,7 +22,7 @@
 
 <h2 id="path-parameters">Path parameters</h2>
 
-<p>The following table lists and describes the path parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{external_id}/user_relationships</code> endpoint.</p>
+<p>The following table lists and describes the path parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{object_id}/user_relationships</code> endpoint.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="List user relationships path parameters">
   <thead>
@@ -41,7 +41,7 @@
       <td>Object type</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">object_id</code></td>
       <td>Required</td>
       <td>String</td>
       <td>Object identifier</td>
@@ -51,7 +51,7 @@
 
 <h2 id="query-parameters">Query parameters</h2>
 
-<p>The following table lists and describes the query parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{external_id}/user_relationships</code> endpoint.</p>
+<p>The following table lists and describes the query parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{object_id}/user_relationships</code> endpoint.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="List user relationships query parameters">
   <thead>
@@ -101,7 +101,7 @@
 7
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"type_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"rel_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account_user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
   </span><span class="nl">"offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
@@ -146,7 +146,7 @@
   </span><span class="nl">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="nl">"type_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"rel_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account_user"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"braze_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"507f1f77bcf86cd799439011"</span><span class="w"> </span><span class="p">},</span><span class="w">
       </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="w"> </span><span class="p">}</span><span class="w">
@@ -189,7 +189,7 @@
       <td>Data object type machine name</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">items[].external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">items[].object_id</code></td>
       <td>Required</td>
       <td>String</td>
       <td>Data object identifier</td>
@@ -267,7 +267,7 @@
     <tr>
       <td><code class="language-plaintext highlighter-rouge">404</code></td>
       <td>Type or object not found</td>
-      <td>Confirm <code class="language-plaintext highlighter-rouge">type_name</code> and <code class="language-plaintext highlighter-rouge">external_id</code> both exist in the workspace.</td>
+      <td>Confirm <code class="language-plaintext highlighter-rouge">type_name</code> and <code class="language-plaintext highlighter-rouge">object_id</code> both exist in the workspace.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">401</code></td>

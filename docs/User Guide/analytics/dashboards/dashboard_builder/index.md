@@ -102,7 +102,7 @@ Braze provides pre-built dashboards for frequent use cases. Use the following ta
 | Segment Insights - Email | **Analytics** > **Dashboard Builder** | [Segment Insights - Email](#segment-insights---email) |
 | Session Analytics | **Analytics** > **Dashboard Builder** | [Session Analytics](#session-analytics) |
 | eCommerce Revenue - Last Touch Attribution | **Analytics** > **Dashboard Builder** | [eCommerce revenue dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/ecommerce_revenue_dashboard) |
-| Messaging Diagnostics | **Analytics** > **Dashboard Builder** | [Messaging diagnostics dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard) |
+| Messaging Observability | **Analytics** > **Dashboard Builder** | [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) |
 | Industry Benchmarks | **Analytics** > **Dashboard Builder** | [Industry Benchmarks dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/industry_benchmarks_dashboard) |
 | Email performance | **Analytics** > **Email Performance** | [Channel performance dashboards](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance#email-performance-dashboard) |
 | SMS performance | **Analytics** > **SMS Performance** | [Channel performance dashboards](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance#sms-performance-dashboard) |

@@ -1,7 +1,7 @@
-<div id='api_ynygzgodwtjj' class='api_div' data-search-keywords='list object relationships type_name external_id anchor rel_kind limit offset items to_data_object attributes name total_count has_more next_offset'>
+<div id='api_kauktzgodcyp' class='api_div' data-search-keywords='list object relationships type_name object_id anchor rel_kind limit offset items to_data_object attributes name total_count has_more next_offset'>
 <h1 id="list-object-relationships">List object relationships</h1>
 <div class="api_type"><div class="method get ">get</div>
-<p>/data_objects/objects/{type_name}/{external_id}/object_relationships</p>
+<p>/data_objects/objects/{type_name}/{object_id}/object_relationships</p>
 </div>
 
 <blockquote>
@@ -22,7 +22,7 @@
 
 <h2 id="path-parameters">Path parameters</h2>
 
-<p>The following table lists and describes the path parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{external_id}/object_relationships</code> endpoint.</p>
+<p>The following table lists and describes the path parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{object_id}/object_relationships</code> endpoint.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="List object relationships path parameters">
   <thead>
@@ -41,7 +41,7 @@
       <td>Source object type</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">object_id</code></td>
       <td>Required</td>
       <td>String</td>
       <td>Source object identifier</td>
@@ -51,7 +51,7 @@
 
 <h2 id="query-parameters">Query parameters</h2>
 
-<p>The following table lists and describes the query parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{external_id}/object_relationships</code> endpoint.</p>
+<p>The following table lists and describes the query parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{object_id}/object_relationships</code> endpoint.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="List object relationships query parameters">
   <thead>
@@ -108,7 +108,7 @@
 8
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"type_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"anchor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"source"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"rel_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subaccount"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
@@ -158,7 +158,7 @@
       </span><span class="nl">"rel_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subaccount"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"to_data_object"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"type_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-456"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-456"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Child Account"</span><span class="w"> </span><span class="p">}</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
@@ -219,10 +219,10 @@
       <td>Related object type name</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">items[].to_data_object.external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">items[].to_data_object.object_id</code></td>
       <td>Conditional</td>
       <td>String</td>
-      <td>Related object external ID</td>
+      <td>Related object identifier</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">items[].to_data_object.attributes</code></td>
@@ -237,10 +237,10 @@
       <td>Related object type name</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">items[].from_data_object.external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">items[].from_data_object.object_id</code></td>
       <td>Conditional</td>
       <td>String</td>
-      <td>Related object external ID</td>
+      <td>Related object identifier</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">items[].from_data_object.attributes</code></td>
@@ -308,7 +308,7 @@
     <tr>
       <td><code class="language-plaintext highlighter-rouge">404</code></td>
       <td>Type or object not found</td>
-      <td>Confirm <code class="language-plaintext highlighter-rouge">type_name</code> and <code class="language-plaintext highlighter-rouge">external_id</code> both exist in the workspace.</td>
+      <td>Confirm <code class="language-plaintext highlighter-rouge">type_name</code> and <code class="language-plaintext highlighter-rouge">object_id</code> both exist in the workspace.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">401</code></td>

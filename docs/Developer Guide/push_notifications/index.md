@@ -1573,7 +1573,7 @@ To test if your push implementation is successful, send a notification from the 
 
 For marketers using Braze, launching a campaign to Android TV is identical to launching a push to Android mobile apps. To target these devices exclusively, select the Android TV App in segmentation.
 
-The delivered and clicked response returned by FCM follows the same convention as a mobile Android device; therefore, any errors are visible in the message activity log.
+The delivered and clicked response returned by FCM follows the same convention as a mobile Android device; therefore, any errors are visible in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability).
 
 
 
