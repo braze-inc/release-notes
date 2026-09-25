@@ -11,7 +11,7 @@ Calculated filters are currently in early access. If you're interested in partic
 
 ## How it works
 
-Braze segments give you powerful targeting tools to create dynamic groups of users. For most use cases, this is enough to reach your audience effectively. Calculated filters are designed for advanced use cases where you need to analyze behaviors from up to two years ago or apply complex logic—without compromising data retention or system performance. Use **User activity filters** for purchase and eCommerce event criteria, or **Data Object filters** for account and custom object targeting.
+Braze segments give you powerful targeting tools to create dynamic groups of users. For most use cases, this is enough to reach your audience effectively. Calculated filters are designed for advanced use cases where you need to analyze behaviors from up to two years ago or apply complex logic—without compromising data retention or system performance. Use **User activity filters** for purchase and eCommerce event criteria, or **Data Object filters** for account and data object targeting.
 
 For example, Braze default segmentation finds users that fit specific criteria you define, such as identifying a user who recently purchased one of your products. Calculated filters let you go deeper—like identifying users who bought a particular color of a specific product at least twice between 18 to 24 months ago. Calculated filters are an enhancement, not a requirement. If you need more advanced filters or a longer historical window, they're a great tool to help while keeping your data usage optimized.
 

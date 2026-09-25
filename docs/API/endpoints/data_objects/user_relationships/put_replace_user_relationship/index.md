@@ -1,7 +1,7 @@
-<div id='api_cpjsiaehjutr' class='api_div' data-search-keywords='replace user relationship braze_id rel_kind attributes role user_relationship type_name external_id user'>
+<div id='api_nlowccflhnsp' class='api_div' data-search-keywords='replace user relationship braze_id rel_kind attributes role user_relationship type_name object_id user'>
 <h1 id="replace-user-relationship">Replace user relationship</h1>
 <div class="api_type"><div class="method put ">put</div>
-<p>/data_objects/objects/{type_name}/{external_id}/users</p>
+<p>/data_objects/objects/{type_name}/{object_id}/users</p>
 </div>
 
 <blockquote>
@@ -22,7 +22,7 @@
 
 <h2 id="path-parameters">Path parameters</h2>
 
-<p>The following table lists and describes the path parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{external_id}/users</code> endpoint.</p>
+<p>The following table lists and describes the path parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{object_id}/users</code> endpoint.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Replace user relationship path parameters">
   <thead>
@@ -41,7 +41,7 @@
       <td>Object type</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">object_id</code></td>
       <td>Required</td>
       <td>String</td>
       <td>Object identifier</td>
@@ -51,7 +51,7 @@
 
 <h2 id="request-parameters">Request parameters</h2>
 
-<p>The following table lists and describes the JSON request body parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{external_id}/users</code> endpoint.</p>
+<p>The following table lists and describes the JSON request body parameters for the <code class="language-plaintext highlighter-rouge">/data_objects/objects/{type_name}/{object_id}/users</code> endpoint.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Replace user relationship request parameters">
   <thead>
@@ -152,7 +152,7 @@
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"user_relationship"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"type_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"rel_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account_user"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"braze_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"507f1f77bcf86cd799439011"</span><span class="w"> </span><span class="p">},</span><span class="w">
     </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="w"> </span><span class="p">}</span><span class="w">
@@ -187,7 +187,7 @@
       <td>Data object type machine name</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">user_relationship.external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">user_relationship.object_id</code></td>
       <td>Required</td>
       <td>String</td>
       <td>Data object identifier</td>

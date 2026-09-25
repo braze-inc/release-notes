@@ -18,7 +18,7 @@ Next, you can do a test send from the Braze dashboard or use Inbox Vision (email
 
 Use Braze logging to troubleshoot triggering, sending, and event problems. 
 - The [event user log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/event_user_log) will show you the raw payload of the API-trigger request, the custom event triggering the campaign, and any associated trigger or event properties.
-- The [message activity log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log) will log any errors and help you understand why a particular message may not have been delivered.
+- [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) shows why a particular message may not have been sent.
 
 ## Step 4: Remove the test segment and roll out the campaign
 

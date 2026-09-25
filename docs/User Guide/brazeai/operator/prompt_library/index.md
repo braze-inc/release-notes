@@ -1,6 +1,6 @@
 # Prompt library for BrazeAI Operator
 
-> Browse a curated collection of example Operator prompts, compiled by Braze experts. Select a goal to find relevant prompts. You can start from anywhere in Braze. If Operator needs a different part of the dashboard, it [navigates there](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#navigate-the-dashboard). For more information, see [Leverage page-aware context](https://www.braze.com/docs/user_guide/brazeai/operator#leverage-page-aware-context).
+> Browse a curated collection of example Operator prompts, compiled by Braze experts. Select a goal to find relevant prompts. You can start from anywhere in Braze. If Operator needs a different part of the dashboard, it [navigates there](https://www.braze.com/docs/user_guide/brazeai/operator#navigate-the-dashboard). For more information, see [Leverage page-aware context](https://www.braze.com/docs/user_guide/brazeai/operator#leverage-page-aware-context).
 
 
 <div class="prompt-library-tabs">

@@ -1,5 +1,47 @@
 # Currents changelog
 
+## Changes in Version 13 (release date 2026-10-07)
+
+### Changes for Storage:
+
+* Added new event type `users.campaigns.UniqueReceipt`.
+
+* Added new event type `users.canvas.sendtodestination.NotSent`.
+
+* Added new event type `users.canvas.sendtodestination.Sent`.
+
+* Field changes to event type `users.canvas.Entry`:
+    * Added new `string` field `data_object_provenance`: [PII] For linking events to data objects
+
+* Field changes to event type `users.messages.banner.Impression`:
+    * Added new `boolean` field `is_control`: True if the impression was served to a control group user, who receives an empty banner instead of the campaign content
+
+* Field changes to event type `users.messages.email.Abort`:
+    * Added new `string` field `data_object_provenance`: [PII] For linking events to data objects
+
+* Field changes to event type `users.messages.email.Click`:
+    * Added new `string` field `data_object_provenance`: [PII] For linking events to data objects
+
+* Field changes to event type `users.messages.email.Delivery`:
+    * Added new `string` field `data_object_provenance`: [PII] For linking events to data objects
+
+* Field changes to event type `users.messages.email.MarkAsSpam`:
+    * Added new `string` field `data_object_provenance`: [PII] For linking events to data objects
+
+* Field changes to event type `users.messages.email.Open`:
+    * Added new `string` field `data_object_provenance`: [PII] For linking events to data objects
+
+* Field changes to event type `users.messages.email.Send`:
+    * Added new `boolean` field `is_archived`: Whether a rendered copy of this message was archived to your configured message archiving destination.
+    * Added new `string` field `data_object_provenance`: [PII] For linking events to data objects
+
+* Field changes to event type `users.messages.pushnotification.Send`:
+    * Added new `string` field `click_url`: Rendered URL that the user clicked on
+    * Added new `boolean` field `is_archived`: Whether a rendered copy of this message was archived to your configured message archiving destination.
+
+* Field changes to event type `users.messages.sms.Send`:
+    * Added new `boolean` field `is_archived`: Whether a rendered copy of this message was archived to your configured message archiving destination.
+
 ## Changes in Version 12 (release date 2026-09-02)
 
 ### Changes for Storage:

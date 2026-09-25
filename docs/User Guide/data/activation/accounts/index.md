@@ -43,11 +43,11 @@ Before you start:
 
 ## Account data model
 
-Each account requires an external ID (`id`) and a name (`name`).
+Each account requires an identifier (`id`) and a name (`name`).
 
 The account fields in this section define the Account object schema. Those fields apply to every individual account record you store in Braze.
 
-Braze includes account objects with standard fields by default. You can add and remove custom fields based on your use case.
+Braze includes account objects with standard fields by default. You can add and remove custom fields based on your use case. The field names `id`, `external_id`, `object_id`, and `display_name` are reserved, so you can't use them as custom field names.
 
 | Field name | Field type | Required | Description |
 | --- | --- | --- | --- |

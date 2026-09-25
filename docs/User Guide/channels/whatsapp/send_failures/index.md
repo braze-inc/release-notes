@@ -7,7 +7,7 @@
 Work through the following steps in order.
 
 1. **Confirm failures in campaign or Canvas analytics.** Open the message step and review the **Failures** count and failure rate. If failures look elevated compared to sends or deliveries, continue to the next step.
-2. **Find the error code in the Message Activity Log.** Open the [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log) for the same send, filter to failed messages, and note the provider error code (for example, `131049` for per-user marketing limits). Use [Common failure codes](#common-failure-codes) to interpret the code and decide next steps.
+2. **Find the error code in Messaging Observability.** Open [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) for the same send and note the provider error code (for example, `131049` for per-user marketing limits). Use [Common failure codes](#common-failure-codes) to interpret the code and decide next steps.
 3. **Export failures with Currents for analysis or retargeting.** After you know the error code, export WhatsApp send failure events through Currents. Use that data to analyze failure trends in your warehouse or to build segments and retarget users on another channel.
 
 ## Common failure codes

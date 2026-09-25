@@ -1,4 +1,4 @@
-<div id='api_uwxlvvwtsezb' class='api_div' data-search-keywords='list data objects type_name search_term limit offset items external_id attributes name industry total_count has_more next_offset'>
+<div id='api_klaszxbxlhll' class='api_div' data-search-keywords='list data objects type_name search_term limit offset items object_id attributes name industry total_count has_more next_offset'>
 <h1 id="list-data-objects">List data objects</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/data_objects/objects/{type_name}</p>
@@ -136,7 +136,7 @@
   </span><span class="nl">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="nl">"type_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Acme"</span><span class="p">,</span><span class="w"> </span><span class="nl">"industry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"software"</span><span class="w"> </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
@@ -175,7 +175,7 @@
       <td>Data object type machine name</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">items[].external_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">items[].object_id</code></td>
       <td>Required</td>
       <td>String</td>
       <td>Data object identifier</td>

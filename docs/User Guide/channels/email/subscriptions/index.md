@@ -10,7 +10,7 @@ Braze uses global subscription states to control which users receive email. For 
 
 ### Unsubscribed email addresses
 
-Braze automatically unsubscribes any user who manually unsubscribes through a [custom footer](https://www.braze.com/docs/user_guide/channels/email/customize/custom_email_footer). If the user updates their email address and **Resubscribe users when they update their email** is enabled in **Sending Configuration**, normal sending resumes.
+Braze automatically unsubscribes any user who manually unsubscribes through a [custom footer](https://www.braze.com/docs/user_guide/channels/email/customize/custom_email_footer). If the user updates their email address and **Resubscribe users when they update their email** is turned on in **Sending Configuration**, normal sending resumes.
 
 If a user marks one or more of your emails as spam, Braze sends only transactional emails to that user. Transactional emails refer to the **Send to all users including unsubscribed users** option in **Target Audience**.
 
@@ -349,7 +349,7 @@ Use any of the following methods to check a user's email subscription state:
 1. **REST API export:** Use the [Export users by segment](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment) or [Export users by identifier](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier) endpoints to export individual user profiles in JSON format.
 2. **User profile:** Find the user's profile on the [Search Users](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles) page, then select the **Engagement** tab to view and manually update a user's subscription state.
 
-When a user updates their email address, their subscription state is set to subscribed. If the updated email address already exists elsewhere in a Braze workspace, the user inherits the subscription state from that existing user unless **Resubscribe users when they update their email setting** is turned on in **Sending Configuration**.
+When a user updates their email address to one that already exists in the workspace, they inherit that address's subscription state. If **Resubscribe users when they update their email** is turned on in **Sending Configuration**, Braze resubscribes a previously unsubscribed user only when the new address is not already on the unsubscribe list. For details, see [Resubscribe users when their email changes](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/email_preferences#resubscribe-users-when-their-email-changes).
 
 To troubleshoot subscription state changes, check the Currents [Global Subscription State Change](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events#global-subscription-state-change-events) event (`users.behaviors.subscription.GlobalStateChange`), which includes the history and source of subscription state changes.
 

@@ -47,20 +47,16 @@ Send this message in English!
 {% endif %}
 ```
 
-By default Braze will log a generic error message to your Message Activity Log:
 
-```text
-{% abort_message %} called
-```
+By default, the aborted send appears in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) with the outcome **Liquid abort**.
 
-You can also have the abort message log something to your Message Activity Log by including a string inside the parentheses:
+You can include a reason string inside the parentheses:
+
 
 ```liquid
 {% abort_message('language was nil') %}
 ```
 
-
-![Message error log in the Developer Console with an abort message of "language was nil".](https://www.braze.com/docs/assets/img_archive/developer_console.png?4a19ef2bc734188da7c5ae0ea04c9cc0)
 
 ## Query for abort messages
 
@@ -82,11 +78,12 @@ Abort logic is evaluated for [templated in-app messages](https://www.braze.com/d
 
 If a campaign or Canvas step shows many users entered but few sends, or deliveries look lower than expected, abort logic is a common cause—especially when Liquid requires attributes, catalog data, or list values that are missing at evaluation time.
 
-### Check the Message Activity Log
+### Check Messaging Observability {#check-the-message-activity-log}
 
-1. In the Braze dashboard, open the [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log) for the campaign or Canvas message step.
-2. Filter for abort-related entries. By default, Braze logs `{% abort_message %}` called. If you passed a reason string to `abort_message()`, that text appears instead.
-3. Note whether aborts cluster on one channel (for example email only) or across channels in the same Canvas.
+1. Open [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability).
+2. Select the campaign or Canvas, then select **Run Dashboard**.
+3. In the granular log, filter by the **Liquid abort** outcome.
+4. Note whether aborts cluster on one channel (such as email only) or across channels in the same Canvas.
 
 ### Verify attributes and Liquid at send time
 

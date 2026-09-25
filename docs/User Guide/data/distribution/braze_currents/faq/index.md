@@ -159,9 +159,13 @@ If S3 credentials are configured for Data Export but not for Currents, Braze upl
 
 Anonymous user data, identified by `device_id`, can be sent to Amplitude through Currents. This requires feature enablement by your Braze account team.
 
-## How are control group impressions for Content Cards and in-app messages logged in Currents?
+## How are control group users logged in Currents for Content Cards, in-app messages, and Banners? {#how-are-control-group-users-logged-in-currents-for-content-cards-in-app-messages-and-banners}
 
 When a user is assigned to a control group for a Content Card or in-app message campaign, Currents emits a `users.campaigns.EnrollInControl` event rather than an impression event.
+
+Banner campaigns work differently. Control users are not logged to `users.campaigns.EnrollInControl`. Instead, control exposure is logged as a `users.messages.banner.Impression` event after the SDK records an impression—including when your integration calls `insertBanner` for a control Banner and hides the container. To identify control users in Currents or Data Sharing, filter on the control variation's `message_variation_id` or `message_variation_name` (`Control Group`).
+
+For table schemas, see [Banner Impression events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events#banner-impression-events) and [`USERS_MESSAGES_BANNER_IMPRESSION_SHARED`](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#USERS_MESSAGES_BANNER_IMPRESSION_SHARED).
 
 ## What happens when you target a non-existent user through the API?
 

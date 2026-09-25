@@ -1,11 +1,11 @@
-# Messaging diagnostics dashboard
+# Messaging Observability
 
-> The **Messaging Diagnostics** dashboard provides a high-level breakdown of message sending outcomes, allowing you to spot trends and diagnose potential issues in your messaging setup. This dashboard can help you understand why messages from your campaigns or Canvases may not have been sent as expected.
+> **Messaging Observability** provides a high-level breakdown of message sending outcomes, allowing you to spot trends and diagnose potential issues in your messaging setup. This dashboard can help you understand why messages from your campaigns or Canvases may not have been sent as expected.
 
 **Note:**
 
 
-To access the **Messaging Diagnostics** dashboard, you need the "View Dashboard Reports" [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for your workspace.
+To access **Messaging Observability**, you need the "View Dashboard Reports" [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for your workspace.
 
 
 
@@ -13,7 +13,7 @@ To access the **Messaging Diagnostics** dashboard, you need the "View Dashboard 
 
 ### Sent and delivered
 
-It is crucial to understand that this dashboard reports on how Braze internally processed a message, not the message's final delivery status.
+This dashboard reports on how Braze internally processed a message, not the message's final delivery status.
 
 A message marked as "sent" in this dashboard means Braze successfully processed and dispatched the message. For most channels, this means Braze handed off the message to the relevant third-party sending partner. However, it does not guarantee final delivery to the user's device. 
 
@@ -37,15 +37,13 @@ The frequency at which data in this dashboard updates may fluctuate based on sys
 
 ## Configuring the dashboard
 
-You can access the diagnostics dashboard by going to **Analytics** > **Dashboard Builder** and selecting **Messaging Diagnostics** from the list of Braze-created dashboards.
+You can access Messaging Observability by going to **Analytics** > **Dashboard Builder** and selecting **Messaging Observability** from the list of Braze-created dashboards.
 
 To run the dashboard and view your data:
 
 1. Choose either **Campaigns** or **Canvases** as the source for your dashboard reports. 
 2. Select one or more campaigns or Canvases.
 3. Select **Run Dashboard** to load the data for your selected filters.
-
-![Campaign and Canvas diagnostics example from May 25 to May 31, 2025 for a welcome series campaign.](https://www.braze.com/docs/assets/img/messaging_diagnostics_dashboard_details_log.png?bd9b9796f681866f0cc14f61972e74f9){: style="max-width:45%;"} ![Campaign and Canvas diagnostics example with graph on hover from May 25 to May 31, 2025 for a welcome series campaign.](https://www.braze.com/docs/assets/img/messaging_diagnostics_dashboard_drawer_expanded.png?6bb4c95b4cda53a8828a34ed7b8c00a3){: style="max-width:45%;"}
 
 ## Interpreting the data
 
@@ -73,7 +71,7 @@ This time series chart shows an hourly breakdown of why a message was aborted or
 
 ### Message outcomes granular log
 
-The dashboard shows a granular table of individual message outcomes for your selected filters and time range. Use this table to review specific records, including the timestamp, user ID, Canvas step, outcome, details and channel.
+The dashboard shows a granular table of individual message outcomes for your selected filters and time range. Use this table to review specific records, including the timestamp, user ID, Canvas step, outcome, details, and channel.
 
 You can filter the table to focus on specific records:
 
@@ -84,7 +82,7 @@ When you apply both filters, the table returns rows that match both the selected
 
 Select a row in the table to open the details panel. The details panel provides additional context about that outcome and Ask Operator provides remediation guidance to help you troubleshoot the underlying issue.
 
-![Messaging Diagnostics granular outcomes log with a selected row and details panel access.](https://www.braze.com/docs/assets/img/messaging_diagnostics_dashboard_details_log.png?bd9b9796f681866f0cc14f61972e74f9){: style="max-width:45%;"} ![Messaging Diagnostics details panel expanded with outcome context and remediation guidance.](https://www.braze.com/docs/assets/img/messaging_diagnostics_dashboard_drawer_expanded.png?6bb4c95b4cda53a8828a34ed7b8c00a3){: style="max-width:45%;"}
+![Message outcomes table with Filter by outcome, Search by user ID, and columns for Time, User ID, Canvas step, Outcome, Details, and Channel.](https://www.braze.com/docs/assets/img/messaging_diagnostics_dashboard_details_log.png?eea55ea22251712334fbf10e54271820){: style="max-width:45%;"} ![Message outcomes details panel for a User not eligible row, showing outcome details, Canvas context, Ask Operator, and Go to User Profile.](https://www.braze.com/docs/assets/img/messaging_diagnostics_dashboard_drawer_expanded.png?b49b6e55bd4851a475335116ba577f59){: style="max-width:45%;"}
 
 **Note:**
 
@@ -100,7 +98,7 @@ The following definitions explain the abort outcomes shown on the dashboard. Out
 **Note:**
 
 
-Abort outcomes in Messaging Diagnostics are human-readable dashboard labels. In [Currents message engagement events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events), abort information is represented with fields such as `abort_type` and `abort_log`. Because these datasets have different representations and processing paths, counts or naming can differ between Currents and Messaging Diagnostics.
+Abort outcomes in Messaging Observability are human-readable dashboard labels. In [Currents message engagement events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events), abort information is represented with fields such as `abort_type` and `abort_log`. Because these datasets have different representations and processing paths, counts or naming can differ between Currents and Messaging Observability.
 
 
 

@@ -32,7 +32,7 @@ Cloud Data Ingestion (CDI) can now sync data warehouse data directly to BrazeAI 
 
 
 
-[Operator](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#navigate-the-dashboard) can navigate to a different dashboard page to complete your request. When a prompt needs a different part of the dashboard, Operator identifies the destination, proposes the navigation, and takes you there before continuing its work.
+[Operator](https://www.braze.com/docs/user_guide/brazeai/operator#navigate-the-dashboard) can navigate to a different dashboard page to complete your request. When a prompt needs a different part of the dashboard, Operator identifies the destination, proposes the navigation, and takes you there before continuing its work.
 
 This lets Operator chain multi-step work from a single prompt. For example, if you ask Operator from the home page to set up your drag-and-drop editor settings to match your brand guidelines, it navigates you to the relevant email settings and continues helping you from there.
 

@@ -101,7 +101,7 @@ For a multi-channel Message component, do the following:
 
 In the first minutes and hours after go-live, watch for these patterns.
 
-- Watch deliverability early: Check for bounce, error, or rejection spikes before volume ramps in [Email reporting](https://www.braze.com/docs/user_guide/channels/email/reporting) and the [Messaging Diagnostics dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard).
+- Watch deliverability early: Check for bounce, error, or rejection spikes before volume ramps in [Email reporting](https://www.braze.com/docs/user_guide/channels/email/reporting) and [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability).
 - Investigate many entries with few sends: This is most often a channel-eligibility or subscription-state filter, an overly tight delivery control, or control-group size. Check the entry audience and the first step's send breakdown in Canvas analytics, then review Entry audience, First component of the Canvas, and Canvas control group.
 
 ### Entry audience

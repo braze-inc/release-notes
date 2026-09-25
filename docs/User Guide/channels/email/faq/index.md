@@ -29,7 +29,7 @@ Users are not deduped by email on Canvas entry, so they may not be deduped beyon
 
 ### Exception: API-triggered campaigns
 
-API-triggered campaigns will deduplicate or send deduplicates depending on where the audience is defined. Duplicate emails must be targeted separately in the API call using distinct `user_ids` to receive multiple deliveries. Here are three possible scenarios for API-triggered campaigns:
+API-triggered campaigns deduplicate or send duplicates depending on where the audience is defined. Duplicate emails must be targeted separately in the API call using distinct `user_ids` to receive multiple deliveries. Here are three possible scenarios for API-triggered campaigns:
 
 - **Scenario 1: Duplicate emails in target segment:** If the same email appears in multiple user profiles that are grouped in the dashboard's audience filters for an API-triggered campaign, only one of the profiles receives the email.
 - **Scenario 2: Duplicate emails in different `user_ids` within recipients object:** If the same email appears within multiple `external_user_id` values referenced by the `recipients` object, the email is sent twice.
@@ -52,7 +52,7 @@ For Canvas journeys, whether duplicate email addresses receive one send or more 
 
 ### What happens to the subscription state when a user's email address changes to one shared by another user?
 
-If you set or update the email address for user A to another email address that's shared by an existing user B, user A inherits the subscription state that already exists from user B unless the **Resubscribe users when they update their email** setting is turned on.
+If you set or update the email address for user A to an address that user B already uses, user A inherits user B's subscription state. If **Resubscribe users when they update their email** is turned on, Braze resubscribes a previously unsubscribed user only when the new address is not already on the unsubscribe list. For details, see [Resubscribe users when their email changes](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/email_preferences#resubscribe-users-when-their-email-changes).
 
 ### Will updates to my outbound email settings apply retroactively?
 
@@ -401,6 +401,12 @@ You can also wrap content so it hides in Outlook desktop using conditional comme
 <span>Content hidden in Outlook desktop</span>
 <!--<![endif]-->
 ```
+
+### Duplicate images in Outlook test sends
+
+If you duplicate an email template and your test sends to Outlook show an image twice while the preview shows it once, the email likely contains two versions of that image: a standard image block and a Microsoft Office (MSO) conditional block.
+
+To resolve this, remove the MSO conditional block that duplicates the image. If removing the MSO block affects rendering in some Outlook versions, adjust the conditional logic so that each client renders only one version of the image.
 
 ### Can I use SVG or WebP images in my email messages?
 

@@ -12,4 +12,4 @@
 | Daily limit reached | The company-wide daily usage limit has been reached. All Operator actions count toward this limit. Wait for the limit to reset (every 24 hours). You can still file a support ticket through the web form. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Common issues" }
 
-For what Operator can and can't do across the dashboard, see [Limitations](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#limitations).
+For what Operator can and can't do across the dashboard, see [Operator's boundaries](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#limitations).
