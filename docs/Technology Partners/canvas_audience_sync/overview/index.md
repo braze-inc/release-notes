@@ -23,14 +23,14 @@ table td {
 
 | Destination | Time for destination to match audience members | Rate limit | Lookalike or actalike | Tips |
 | --- | --- | --- | --- | --- |
-| [Criteo](https://www.braze.com/docs/partners/canvas_audience_sync/criteo_audience_sync/) | Up to 24 hours | 250,000 requests per minute. Batched every 5 seconds with an auto-retry. | Yes | {::nomarkdown}<ul><li>Criteo supports up to 1,000 ad audiences.</li><li>The minimum audience size is 500, and the recommend is over 20,000.</li></ul>{:/} |
+| [Criteo](https://www.braze.com/docs/partners/canvas_audience_sync/criteo_audience_sync/) | Up to 24 hours | 250 requests per minute, with an auto-retry of up to ~13 hours | Yes | {::nomarkdown}<ul><li>Criteo supports up to 1,000 ad audiences.</li><li>The minimum audience size is 500, and the recommend is over 20,000.</li></ul>{:/} |
 | [Facebook or Instagram](https://www.braze.com/docs/partners/canvas_audience_sync/facebook_audience_sync/) | Up to 24 hours | 190,000 ad accounts per hour | Yes | {::nomarkdown}<ul><li>Facebook supports up to 500 ad audiences.</li><li>Facebook requires audiences to be at least 1,000 users.</li></ul>{:/} |
-| [Google Ads or YouTube](https://www.braze.com/docs/partners/canvas_audience_sync/google_audience_sync/) | Between 6 to 12 hours | Batched every 5 seconds with an auto-retry based on Google feedback | No | {::nomarkdown}<ul><li><b>Customer match:</b> Use either mobile ad, or email address or phone number.</li><li>Google Audiences require at least 5,000 users to start serving ads.</li><li>The audience size will show as zero until there are at least 1,000 users.</li></ul>{:/} |
+| [Google Ads or YouTube](https://www.braze.com/docs/partners/canvas_audience_sync/google_audience_sync/) | Between 6 to 12 hours | Auto-retry based on Google feedback, up to ~13 hours | No | {::nomarkdown}<ul><li><b>Customer match:</b> Use either mobile ad, or email address or phone number.</li><li>Google Audiences require at least 5,000 users to start serving ads.</li><li>The audience size will show as zero until there are at least 1,000 users.</li></ul>{:/} |
 | [LinkedIn](https://www.braze.com/docs/partners/canvas_audience_sync/linkedin_audience_sync/) | Up to 48 hours | Braze batches up to 2,000 users per request with an auto-retry of up to ~13 hours. | AI predictive audiences | {::nomarkdown}<ul><li>The minimum audience size is 300 members with location targeting taken into consideration.</li><li>LinkedIn shows match rate in the Braze dashboard.</li></ul>{:/} |
-| [Pinterest](https://www.braze.com/docs/partners/canvas_audience_sync/pinterest_audience_sync/) | Between 24 and 48 hours | Pinterest processes 7 queries per second and 1,900 users per request. Braze batches users every 5 seconds. | Yes | Pinterest audiences require at least 100 users. |
-| [Snapchat](https://www.braze.com/docs/partners/canvas_audience_sync/snapchat_audience_sync/) | N/A | Snapchat processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | Yes | Snapchat supports up to 1,000 ad audiences. |
+| [Pinterest](https://www.braze.com/docs/partners/canvas_audience_sync/pinterest_audience_sync/) | Between 24 and 48 hours | Pinterest processes 7 queries per second and 1,900 users per request | Yes | Pinterest audiences require at least 100 users. |
+| [Snapchat](https://www.braze.com/docs/partners/canvas_audience_sync/snapchat_audience_sync/) | N/A | Snapchat processes 10 queries per second and 100,000 users per request | Yes | Snapchat supports up to 1,000 ad audiences. |
 | [The Trade Desk](https://www.braze.com/docs/partners/canvas_audience_sync/trade_desk_audience_sync/) | Up to 24 hours | N/A | Yes | {::nomarkdown}<ul><li>There is no minimum audience size for CRM audiences in The Trade Desk.</li><li>There is no limit for how many audiences The Trade Desk supports.</li><li>If you sync to an audience with a region set to the EU, phone number is not supported.</li></ul>{:/} |
-| [TikTok](https://www.braze.com/docs/partners/canvas_audience_sync/tiktok_audience_sync/) | Between 24 and 48 hours | TikTok processes 50 queries per second and 10,000 users per request. Braze batches users every 5 seconds. | Yes | {::nomarkdown}<ul><li>TikTok supports up to 400 ad audiences.</li><li>TikTok audiences require at least 1,000 users to start serving ads.</li></ul>{:/} |
+| [TikTok](https://www.braze.com/docs/partners/canvas_audience_sync/tiktok_audience_sync/) | Between 24 and 48 hours | TikTok processes 50 queries per second and 10,000 users per request | Yes | {::nomarkdown}<ul><li>TikTok supports up to 400 ad audiences.</li><li>TikTok audiences require at least 1,000 users to start serving ads.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 aria-label="Overview" }
 <sup>When the rate limit is reached, Braze retries syncs for 13 hours.</sup>
 
@@ -61,7 +61,7 @@ For each Audience Sync destination, the partner may have different requirements 
 
 ### Audience Sync Pro
 
-To use an Audience Sync Pro partner including Criteo, LinkedIn, Pinterest, Snapchat, or TikTok, you can select your partners based on your Audience Sync Pro purchase allotments in the **Audience Sync Pro** section on the **Technology Partners** page.
+To use an Audience Sync Pro partner including Criteo, LinkedIn, Pinterest, Snapchat, The Trade Desk, or TikTok, you can select your partners based on your Audience Sync Pro purchase allotments in the **Audience Sync Pro** section on the **Technology Partners** page.
 
 ![Audience Sync Pro with no partners selected yet.](https://www.braze.com/docs/assets/img/audience_sync/audience_sync_pro1.png?8c566b03061fdcde746e301206097908){: style="max-width:75%;"}
 
@@ -85,6 +85,7 @@ When users enter an Audience Sync step in Canvas, Braze enqueues them into a bat
   - Default supports up to 2,000 users
   - Google Ads supports up to 10,000 users
   - Facebook and TikTok support up to 2,000 users
+  - The Trade Desk supports up to 50,000 users
 - **The batch latency timer expires.** The default is one hour, but this is configurable per partner. For example, The Trade Desk uses 10 minutes.
 
 High-volume Canvases may dispatch sooner because batches fill faster. Lower-volume Canvases wait until the latency timer expires. Braze doesn't guarantee a fixed dispatch time; the timing depends on batch size and the configured latency window.

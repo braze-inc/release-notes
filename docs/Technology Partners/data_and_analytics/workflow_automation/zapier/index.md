@@ -2,23 +2,24 @@
 
 > [Zapier](https://zapier.com/) is an automation web tool that allows you to share data between web apps and then use that information to automate actions. 
 
-The Braze and Zapier partnership leverages the Braze API and Braze [webhooks](https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#creating-a-webhook) to connect with third-party applications—such as Google Workplace, Slack, Salesforce, WordPress, etc. to automate various actions.
+The Braze and Zapier partnership leverages the Braze API and Braze [webhooks](https://www.braze.com/docs/user_guide/channels/webhooks/create_a_webhook/) to connect with third-party applications—such as Google Workplace, Slack, Salesforce, WordPress, etc. to automate various actions.
 
 ## Prerequisites
 
 | Requirements | Description |
 |---|---|
 | Zapier account | A Zapier account is required to take advantage of this partnership. |
-| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance](https://www.braze.com/docs/api/basics/#api-definitions). |
+| Braze REST API key | A Braze REST API key with permissions for the endpoints your zap calls (for example, `canvas.trigger.send` for `/canvas/trigger/send`, or `users.track` for `/users/track`). <br><br> This can be created in the Braze dashboard from **Settings** > **APIs and Identifiers**. |
+| Braze REST endpoint | Your REST endpoint URL. Your endpoint depends on the [Braze URL for your instance](https://www.braze.com/docs/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Integration
 
-In the following Zapier example, we will be sending information from WordPress to Braze using a POST webhook. This information can then be used to create a Braze Canvas.
+In the following Zapier example, we send information from WordPress to Braze using a POST webhook. This information can then be used to create a Braze Canvas.
 
 ### Step 1: Create a Zapier trigger
 
-Using Zapier's terminology, a "zap" is an automated workflow that connects your apps and services. The first part of any zap is to designate a trigger. After your zap is enabled, Zapier will automatically perform the respective actions whenever your trigger is detected.
+Using Zapier's terminology, a "zap" is an automated workflow that connects your apps and services. The first part of any zap is to designate a trigger. After your zap is enabled, Zapier automatically performs the respective actions whenever your trigger is detected.
 
 Using our WordPress example, in the Zapier platform, we'll set up our zap to trigger when a new WordPress post gets added and select **Published** and **Posts** as **Post Status** and **Post Type**. 
 
@@ -28,7 +29,7 @@ Using our WordPress example, in the Zapier platform, we'll set up our zap to tri
 
 ### Step 2: Add an action webhook
 
-Next, define the zap action. When your zap is enabled, and your trigger is detected, the action will automatically occur.
+Next, define the zap action. When your zap is enabled, and your trigger is detected, the action automatically occurs.
 
 Continuing our example, we want to send a POST request as a JSON to a Braze endpoint. This can be done by selecting the **Webhooks** option under **Apps**.
 

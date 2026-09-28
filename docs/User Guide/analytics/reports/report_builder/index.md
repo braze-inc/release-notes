@@ -26,9 +26,12 @@ The following video provides an overview of how to create and customize reports 
     - Campaigns and Canvases
     - Channels
     - Tags
+    - [Countries (Shopify Markets)](#countries-shopify-markets)
+    - Segments
+      -    For how to use **Segments** in rows or as a drilldown, see [Segment reporting](https://www.braze.com/docs/user_guide/analytics/reports/report_builder/segment_reporting).  
 
-    Note that your **Rows** selection impacts [the metrics that you can view](#metrics-availability). For example, you can view multivariate metrics only if you report on **Canvases**, or **Campaigns** with a **Variant** drilldown. You can't view those metrics when reporting on **Campaigns and Canvases**, even if those campaigns and Canvases have multivariate tests. 
-
+   Your **Rows** selection impacts [the metrics that you can view](#metrics-availability). For example, you can view multivariate metrics only if you report on **Canvases**, or **Campaigns** with a **Variant** drilldown. You can't view those metrics when reporting on **Campaigns and Canvases**, even if those campaigns and Canvases have multivariate tests. 
+   
 ![The "Rows and columns" section with fields to select the rows and groupings for your report.](https://www.braze.com/docs/assets/img/report_builder_2/rows_and_columns.png?a0b845ae75023002f259cf475f08fd34){: style="width:90%;"}
 
 {: start="4"}
@@ -41,6 +44,9 @@ The following video provides an overview of how to create and customize reports 
             - **Interval:** Days
     - Variants
     - Campaigns and Canvases
+    - [Countries (Shopify Markets)](#countries-shopify-markets)
+        - Available when **Rows** is **Campaigns**, **Canvases**, or **Campaigns and Canvases**.
+    - Segment
 
 **Tip:**
 
@@ -95,10 +101,26 @@ If you want to report on Canvas variants or steps, select **Canvases** for rows 
 | Sends | Available for each relevant channel. |
 | Messages Sent | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. |
 | Subject line | Available for email Campaigns with **Variant** drilldown, Canvases, and Canvases with **Variant** drilldown. |
-| Total Revenue | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. Unavailable with **Channels** drilldown. |
+| Total Revenue | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. Unavailable with **Channels** drilldown. Unavailable when **Countries (Shopify Markets)** is the row or a drilldown. |
 | Unique Impressions | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. |
 | Unique Recipients | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. Unavailable with **Channels** drilldown. |
+| Revenue (Shopify Markets) | Available when **Countries (Shopify Markets)** is the row or a drilldown. Country-level revenue from Shopify order events, shown in the order’s presentment currency. Matches **Total revenue** on the campaign or Canvas **Performance by country** table. |
+| Purchases (Shopify Markets) | Available when **Countries (Shopify Markets)** is the row or a drilldown. Country-level purchases from Shopify order events. Matches **Purchases** on the campaign or Canvas **Performance by country** table. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Metrics availability" }
+
+### Countries (Shopify Markets)
+
+**Countries (Shopify Markets)** appears only in workspaces where [Shopify Markets](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_markets) reporting is enabled, which powers the **Performance by country** table on campaign and Canvas analytics. Country is taken from the Shopify order when available. If the order has no country, Braze uses the user profile country. If neither is available, the row appears as **Default market**.
+
+When **Countries (Shopify Markets)** is selected as the row or as a drilldown, only **Revenue (Shopify Markets)** and **Purchases (Shopify Markets)** are available. All other metrics are unavailable in the metric selector rather than returning blank values.
+
+Country-level data comes from Shopify Markets order events:
+
+- Each row shows a country and currency combination, matching the **Performance by country** table on campaign and Canvas analytics.
+- Country-level revenue and purchase figures match that **Performance by country** table for the same campaign or Canvas. The unknown-country row is labeled **Default market** in Report Builder (the analytics table may show **Unknown**).
+- Adding **Countries (Shopify Markets)** as a drilldown returns every country attributed to the selected campaign or Canvas.
+
+When **Countries (Shopify Markets)** is the primary row, select at least one country (up to 25). Optionally drill down by **Date** or **Campaigns and Canvases**.
 
 ### Deleted message variants
 
@@ -162,7 +184,7 @@ Report Builder reports don't support [team assignment](https://www.braze.com/doc
 Users with team-level ["View Dashboard Reports"](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) permission (rather than workspace-level) can still use Report Builder, but report visibility is limited:
 
 - These users only see reports where every selected campaign and Canvas is assigned to their teams.
-- Reports with **Channels** as rows are hidden.
+- Reports with **Channels** or **Countries (Shopify Markets)** as rows are hidden.
 - Reports that use automatic selection to add campaigns or Canvases are hidden, because Braze can't verify team access for messages that may be added when the report runs.
 
 [Report Builder (legacy)](https://www.braze.com/docs/report_builder_legacy/) scopes which campaigns and Canvases you can add to a report by team, but saved reports are not filtered from the list the same way as in Report Builder (New). For permission setup, see [Setting user permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) and [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams).

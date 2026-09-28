@@ -352,6 +352,8 @@ Campaign and Canvas analytics include a **Performance by country** table showing
 | Purchases | Purchases attributed to that country. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="What each performance by country column shows"}
 
+You can also break down campaign and Canvas performance by country in [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder#countries-shopify-markets) using **Countries (Shopify Markets)** as a row or drilldown.
+
 ## Remove a market
 
 Removing a market stops Braze from syncing new data for its countries. It doesn't delete data you already have.

@@ -109,7 +109,7 @@ GO
 
 ### How it works
 
-With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
+With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze workspace. Syncs run on a schedule you set or on demand through the API. For frequency options, see [How it works](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion#how-it-works).
 
 When a sync runs, Braze directly connects to your data warehouse instance, retrieves all new data from the specified table, and deletes the corresponding user profiles on your Braze dashboard. 
 

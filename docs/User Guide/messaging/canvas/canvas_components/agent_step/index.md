@@ -126,9 +126,6 @@ Let’s say you’re sending a personalized message to recommend a new ice cream
 
 An Agent step analyzes the context data that the agent is configured to use, as well as any [optional step instructions](#step-4-add-optional-step-instructions) you add to the step.
 
-## Related articles  
+## Related articles
 
-- [Braze Agents overview](https://www.braze.com/docs/user_guide/brazeai/agents)  
-- [Create custom agents](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents)  
-- [Deploy agents](https://www.braze.com/docs/user_guide/brazeai/agents/deploying_agents)  
-- [Reference for agents](https://www.braze.com/docs/user_guide/brazeai/agents/reference)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/brazeai/agents"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Braze Agents overview</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/agents/creating_agents"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create custom agents</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/agents/deploying_agents"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Deploy agents</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/agents/reference"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Reference for agents</span></span></div></a></li></ul>

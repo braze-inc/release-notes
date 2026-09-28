@@ -9,7 +9,7 @@ The Braze and Amplitude bi-directional integration allows you to [sync your Ampl
 | Requirement | Description |
 |---|---|
 | Amplitude account | An [Amplitude account](https://amplitude.com/) is required to take advantage of this partnership. |
-| Currents | In order to export data back into Amplitude, you need to have [Braze Currents](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | In order to export data back into Amplitude, you need to have [Braze Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Data export integration
@@ -49,7 +49,7 @@ In Amplitude, locate your Amplitude export API key.
 **Warning:**
 
 
-Keep your Amplitude API Key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
+Keep your Amplitude API Key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **5 days**, the connector's events will be dropped, and data will be permanently lost.
 
 
 

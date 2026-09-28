@@ -4,16 +4,12 @@
 
 ## How it works
 
-With Braze Cloud Data Ingestion (CDI), you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. If you need syncs to occur more frequently than 15 minutes, contact your customer success manager or consider using REST API calls for real-time data ingestion.
+With Braze Cloud Data Ingestion (CDI), you set up an integration between your data warehouse instance and Braze workspace to sync data on a schedule or on demand. Each integration can have its own schedule.
 
-Amazon S3 file storage integrations are event-driven. Braze ingests new files when S3/SQS notifications arrive. For setup details, see [File storage integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations).
+- **Scheduled syncs:** Recurring syncs can run as often as every 5 minutes or as rarely as once per month. By default, the shortest interval you can set in the dashboard is 15 minutes, which helps manage your warehouse compute costs and request volume. To sync as often as every 5 minutes, contact Braze Support or your customer success manager.
+- **On-demand syncs:** To sync data as soon as it changes, call the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint with your integration ID when your warehouse load or transformation job finishes. On-demand syncs don't affect your recurring schedule. Only one sync can run per integration at a time.
 
-**Note:**
-
-
-Sync frequency in the dashboard controls how often Braze runs a sync (for example, options such as hourly or more frequent runs within an hour). It does not set a custom interval longer than one hour between runs. To run a sync outside the scheduled cadence—such as on demand after your warehouse load completes—use the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint with your integration ID.
-
-
+File storage integrations (Amazon S3, Azure Blob Storage, and Google Cloud Storage) are event-driven and don't use a schedule. Braze ingests new files as they're uploaded. For setup details, see [File storage integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations).
 
 When a sync runs, Braze directly connects to your data warehouse instance, retrieves all new data from the specified table, and updates the corresponding data on your Braze dashboard. Each time the sync runs, any updated data is reflected in Braze.
 

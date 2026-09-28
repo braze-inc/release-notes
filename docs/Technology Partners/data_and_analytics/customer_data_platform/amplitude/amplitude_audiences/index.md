@@ -2,14 +2,14 @@
 
 > [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 
-The Braze and Amplitude bi-directional integration allows you to [import your Amplitude Cohorts](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_cohort_import/), user traits, and events into Braze, as well as create segments that can target users in future campaigns or Canvases. You can also leverage Braze Currents to [export your Braze events to Amplitude](https://www.braze.com/docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/#data-export-integration) to perform deeper analytics of your product and marketing data.
+The Braze and Amplitude bi-directional integration allows you to [import your Amplitude Cohorts](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_cohort_import/), user traits, and events into Braze, as well as create segments that can target users in future campaigns or Canvases. You can also leverage Braze Currents to [export your Braze events to Amplitude](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_for_currents/#data-export-integration) to perform deeper analytics of your product and marketing data.
 
 ## Prerequisites
 
 | Requirement | Description |
 |---|---|
 | Amplitude account | An [Amplitude account](https://amplitude.com/) is required to take advantage of this partnership. |
-| Currents | In order to export data back into Amplitude, you need to have [Braze Currents](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | In order to export data back into Amplitude, you need to have [Braze Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Choose an integration 

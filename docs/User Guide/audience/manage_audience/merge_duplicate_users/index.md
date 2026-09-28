@@ -153,6 +153,4 @@ Before you merge duplicates, use the [Export user profile by identifier endpoint
 
 ## Related articles
 
-- [User merge behavior](https://www.braze.com/docs/user_guide/audience/manage_audience/merge_duplicate_users/merge_behavior)
-- [POST: Merge users](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge)
-- [Delete users](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles/delete_users)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/audience/manage_audience/merge_duplicate_users/merge_behavior"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">User merge behavior</span></span></div></a></li><li><a href="/docs/api/endpoints/user_data/post_users_merge"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">POST: Merge users</span></span></div></a></li><li><a href="/docs/user_guide/audience/manage_audience/user_profiles/delete_users"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Delete users</span></span></div></a></li></ul>

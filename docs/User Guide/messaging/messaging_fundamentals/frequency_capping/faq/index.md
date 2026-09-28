@@ -20,7 +20,11 @@ Global frequency capping uses the user's time zone and counts by calendar day, n
 
 ### Does global frequency capping apply to triggered in-app messages?
 
-No, global frequency capping only applies to push, email, SMS, webhook, WhatsApp, and LINE messages.
+No, global frequency capping only applies to push, email, SMS/MMS/RCS, webhook, WhatsApp, and LINE messages.
+
+### Does global frequency capping apply to RCS?
+
+Yes. There is no separate RCS frequency capping rule. RCS sends count toward the same workspace rule as SMS (labeled **SMS** or **SMS/MMS/RCS** in the dashboard, depending on whether MMS is enabled). The same shared channel applies to [Message Prioritization](https://www.braze.com/docs/message_prioritization/). For setup context, see [RCS setup](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup#frequency-capping-and-message-prioritization).
 
 ### Does frequency capping limit campaigns received or individual messages inside a send?
 

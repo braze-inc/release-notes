@@ -17,8 +17,8 @@ The Braze and ActionIQ integration allow brands to sync and map their ActionIQ d
 | Requirement | Description |
 | ----------- | ----------- |
 | ActionIQ account | An ActionIQ account is required to take advantage of this integration. |
-| Braze REST API key | A Braze REST API key with the required permissions for the respective integration. See the respective Requirements section for more details. <br><br>This key can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL](https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST API key | A Braze REST API key with the required permissions for the respective integration. See the respective Requirements section for more details. <br><br>This key can be created in the Braze dashboard from **Settings** > **APIs and Identifiers**. |
+| Braze REST endpoint | [Your REST endpoint URL](https://www.braze.com/docs/api/basics/#endpoints). Your endpoint depends on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Integrations
@@ -36,11 +36,11 @@ To create a segment of these users, do the following:
 4. From here, choose the ActionIQ custom attribute. 
 5. After the segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
-Additionally, this integration will update any custom or standard attribute in a Braze user profile with their ActionIQ attribute values.
+Additionally, this integration updates any custom or standard attribute in a Braze user profile with their ActionIQ attribute values.
 
 #### Requirements
 
-A Braze REST API key with `users.track` and `user.export.ids` permissions is required. This can be created in the Braze dashboard from **Settings** > **API Keys**. 
+A Braze REST API key with `users.track` and `users.export.ids` permissions is required. This can be created in the Braze dashboard from **Settings** > **APIs and Identifiers**. 
 
 In ActionIQ, set up a Braze connection by providing your REST API key and Braze REST endpoint. 
 
@@ -54,7 +54,7 @@ You can configure the ActionIQ platform to receive event information through the
 
 #### Requirements
 
-A Braze REST API key with `users.track` and `user.export.ids` permissions is required. This can be created in the Braze dashboard from **Settings** > **API Keys**. 
+A Braze REST API key with `users.track` and `users.export.ids` permissions is required. This can be created in the Braze dashboard from **Settings** > **APIs and Identifiers**. 
 
 The events integration sends the following information to Braze:
 - Event name
@@ -64,13 +64,13 @@ The events integration sends the following information to Braze:
 
 ### Triggered campaigns
 
-This integration will trigger a campaign in Braze for all users in an ActionIQ segment. After you have configured your campaign's copy, multivariate testing, and re-eligibility rules, you can trigger it from any ActionIQ journey touchpoint by adding the Braze campaign ID to your export setting.
+This integration triggers a campaign in Braze for all users in an ActionIQ segment. After you have configured your campaign's copy, multivariate testing, and re-eligibility rules, you can trigger it from any ActionIQ journey touchpoint by adding the Braze campaign ID to your export setting.
 
 Optionally, you can include any other ActionIQ attributes in your export to populate your campaign copy. Those are sent with the `trigger_properties` object.
 
 #### Requirements
 
-A Braze REST API key with `campaigns.trigger.send` and `campaigns.list` permissions is required. This can be created in the Braze dashboard from **Settings** > **API Keys**.
+A Braze REST API key with `campaigns.trigger.send` and `campaigns.list` permissions is required. This can be created in the Braze dashboard from **Settings** > **APIs and Identifiers**.
 
 The following values must be sent in your ActionIQ export to Braze:
 - Consumer identifier (either `braze_id` or `external_id`)

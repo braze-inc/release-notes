@@ -75,9 +75,9 @@ You will need to provide the data import key and REST endpoint to your Singular 
 
 ### Step 3: Confirm the integration
 
-After Braze receives attribution data from Singular, the status connection indicator on the Singular technology partners page in Braze changes from "Not Connected" to "Connected" and includes a timestamp of the last successful request.
+On the Singular technology partners page in Braze, the connection indicator shows **Not Connected** until you generate a data import API key in Step 2. After you generate the key, the indicator changes to **Connected** and displays a timestamp. That timestamp reflects when the integration was first set up in Braze (when the data import key was created), not when Singular last sent a postback.
 
-This status changes only after Braze receives data about an attributed install. Braze ignores organic installs (excludes them from the Singular postback) and does not count them when determining if the connection is successful.
+To confirm that install attribution data is flowing from Singular, check that non-organic install data appears in Braze segment filters. Braze ignores organic installs from Singular postbacks and does not store them as attributed install data.
 
 ## Facebook and X (formerly Twitter) attribution data
 
@@ -91,7 +91,7 @@ To get started with Singular click tracking links, visit their [documentation](h
 
 
 
-For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the Singular SDK integration. You can include the GAID in your Singular click tracking links by utilizing the following Liquid logic:
+For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id). The GAID is also collected natively through the Singular SDK integration. You can include the GAID in your Singular click tracking links by utilizing the following Liquid logic:
 
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -102,7 +102,7 @@ aifa={{most_recently_used_device.${google_ad_id}}}
 
 
 
-For iOS, both Braze and Singular automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your Singular click tracking links by utilizing the following Liquid logic:
+For iOS, append the Braze device identifier to improve deterministic attribution. In Liquid, `most_recently_used_device.${id}` is the Braze device ID, which may be the IDFV or a UUID depending on your Swift SDK `useUUIDAsDeviceId` setting. Singular click-tracking URLs commonly use an `idfv` query parameter for this value:
 
 
 ```
@@ -118,8 +118,7 @@ idfv={{most_recently_used_device.${id}}}
 
 
 **This recommendation is purely optional**<br>
-If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Singular will still be able to attribute these clicks through their probabilistic modeling.
-
+If you currently don't use any device identifiers—such as the Braze device ID or GAID—in your click tracking links, or don't plan to in the future, Singular can still attribute these clicks through their probabilistic modeling.
 
 
 

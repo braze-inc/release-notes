@@ -1,4 +1,4 @@
-<div id='api_aupmmmgkzxsg' class='api_div' data-search-keywords='create and update users attributes events purchases message attributes_processed events_processed purchases_processed errors'>
+<div id='api_ayrjiffuuqob' class='api_div' data-search-keywords='create and update users attributes events purchases group_id message attributes_processed events_processed purchases_processed errors type'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
@@ -49,10 +49,12 @@ Authorization: Bearer YOUR_REST_API_KEY
 3
 4
 5
+6
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">attributes</span><span class="w"> </span><span class="err">object)</span><span class="p">,</span><span class="w">
   </span><span class="nl">"events"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">event</span><span class="w"> </span><span class="err">object)</span><span class="p">,</span><span class="w">
   </span><span class="nl">"purchases"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">purchase</span><span class="w"> </span><span class="err">object)</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -89,6 +91,12 @@ Authorization: Bearer YOUR_REST_API_KEY
       <td>Optional</td>
       <td>Array of purchase objects</td>
       <td>See <a href="/docs/api/objects_filters/purchase_object">purchases object</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">group_id</code></td>
+      <td>Optional</td>
+      <td>String</td>
+      <td>(Beta) An ID you choose to group this request with related requests so you can check their processing status. For more information, see <a href="#track-request-processing-status">Track request processing status</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -413,6 +421,36 @@ Authorization: Bearer YOUR_REST_API_KEY
 }'
 </pre></td></tr></tbody></table></code></pre></div></div>
 
+<h3 id="example-request-with-a-group-id-for-status-tracking">Example request with a group ID for status tracking</h3>
+
+<p>This example updates a user’s loyalty tier and includes a <code class="language-plaintext highlighter-rouge">group_id</code> so you can check when Braze finishes processing the request. To check the status, call the <a href="/docs/api/endpoints/user_data/get_users_track_status"><code class="language-plaintext highlighter-rouge">/users/track/status</code> endpoint</a> with the same <code class="language-plaintext highlighter-rouge">group_id</code>. For more information, see <a href="#track-request-processing-status">Track request processing status</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--data-raw '{
+    "group_id": "loyalty_backfill_2026-09-23",
+    "attributes": [
+        {
+            "external_id": "user_identifier",
+            "loyalty_tier": "gold"
+        }
+    ]
+}'
+</pre></td></tr></tbody></table></code></pre></div></div>
+
 <h2 id="responses">Responses</h2>
 
 <p>When using any of the aforementioned API requests, you should receive one of the following three general responses: a <a href="#successful-message">successful message</a>, a <a href="#successful-message-with-non-fatal-errors">successful message with non-fatal errors</a>, or a <a href="#message-with-fatal-errors">message with fatal errors</a>.</p>
@@ -566,6 +604,122 @@ Authorization: Bearer YOUR_REST_API_KEY
   </tbody>
 </table>
 
+<h2 id="track-request-processing-status">Track request processing status</h2>
+
+<p><strong>Important:</strong></p>
+
+<p>Request processing status is in beta. If you’re interested in participating in the beta, contact your Braze account manager.</p>
+
+<p>Braze processes <code class="language-plaintext highlighter-rouge">/users/track</code> requests asynchronously. A successful response means Braze received your request and queued it for processing, but the data might not be on the user profile yet. To confirm when processing finishes, add a <code class="language-plaintext highlighter-rouge">group_id</code> to your requests and check the group’s status with the <a href="/docs/api/endpoints/user_data/get_users_track_status"><code class="language-plaintext highlighter-rouge">/users/track/status</code> endpoint</a>.</p>
+
+<p>Use request processing status to do the following:</p>
+
+<ul>
+  <li>Confirm that attribute or subscription updates are on a profile before you trigger a Canvas or campaign that depends on them</li>
+  <li>Confirm that a backfill or import has finished before you launch messaging to the affected users</li>
+  <li>Keep a record that high-priority updates, such as consent changes, finished processing</li>
+</ul>
+
+<h3 id="how-it-works">How it works</h3>
+
+<ol>
+  <li>Choose a <code class="language-plaintext highlighter-rouge">group_id</code> for a set of related requests. For example, use one <code class="language-plaintext highlighter-rouge">group_id</code> for every request in a backfill, or a unique <code class="language-plaintext highlighter-rouge">group_id</code> for a single request you want to confirm.</li>
+  <li>Include the <code class="language-plaintext highlighter-rouge">group_id</code> at the top level of each <code class="language-plaintext highlighter-rouge">/users/track</code> request body. Braze counts each accepted request toward the group.</li>
+  <li>Call the <a href="/docs/api/endpoints/user_data/get_users_track_status"><code class="language-plaintext highlighter-rouge">/users/track/status</code> endpoint</a> with the <code class="language-plaintext highlighter-rouge">group_id</code>. When the group’s <code class="language-plaintext highlighter-rouge">status</code> is <code class="language-plaintext highlighter-rouge">completed</code>, Braze has finished processing every request in the group.</li>
+</ol>
+
+<p>If you send another request with the same <code class="language-plaintext highlighter-rouge">group_id</code> after the group is <code class="language-plaintext highlighter-rouge">completed</code>, the group’s status returns to <code class="language-plaintext highlighter-rouge">processing</code> until Braze finishes processing the new request.</p>
+
+<p>Braze tracks status for each group as a whole. A group is <code class="language-plaintext highlighter-rouge">completed</code> when Braze finishes processing all requests in the group, including requests where Braze rejected some objects. Braze lists rejected objects in the <code class="language-plaintext highlighter-rouge">errors</code> array of each <code class="language-plaintext highlighter-rouge">/users/track</code> response.</p>
+
+<p>Status tracking is available only for the <code class="language-plaintext highlighter-rouge">/users/track</code> endpoint. Braze doesn’t track status for requests to the <a href="/docs/api/endpoints/user_data/post_user_track_bulk"><code class="language-plaintext highlighter-rouge">/users/track/bulk</code> endpoint</a> or the <a href="/docs/api/endpoints/user_data/post_user_track_synchronous"><code class="language-plaintext highlighter-rouge">/users/track/sync</code> endpoint</a>.</p>
+
+<h3 id="group-id-requirements">Group ID requirements</h3>
+
+<p>A <code class="language-plaintext highlighter-rouge">group_id</code> must be 1 to 128 characters and can contain only letters, numbers, periods (<code class="language-plaintext highlighter-rouge">.</code>), underscores (<code class="language-plaintext highlighter-rouge">_</code>), tildes (<code class="language-plaintext highlighter-rouge">~</code>), and hyphens (<code class="language-plaintext highlighter-rouge">-</code>).</p>
+
+<p>Group IDs are scoped to a workspace. The same <code class="language-plaintext highlighter-rouge">group_id</code> in two workspaces refers to two separate groups.</p>
+
+<p>Use a new <code class="language-plaintext highlighter-rouge">group_id</code> for each set of requests you want to track. Reusing a <code class="language-plaintext highlighter-rouge">group_id</code> adds requests to the existing group and doesn’t extend its retention period.</p>
+
+<h3 id="limits-and-retention">Limits and retention</h3>
+
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Request processing status limits">
+  <thead>
+    <tr>
+      <th>Limit</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Retention</td>
+      <td>24 hours<br /><br />Braze retains group status for 24 hours from the time of the first request with a <code class="language-plaintext highlighter-rouge">group_id</code>. After the retention period, the <code class="language-plaintext highlighter-rouge">/users/track/status</code> endpoint returns an empty <code class="language-plaintext highlighter-rouge">results</code> array for that <code class="language-plaintext highlighter-rouge">group_id</code>.</td>
+    </tr>
+    <tr>
+      <td>Requests per group</td>
+      <td>6,000,000</td>
+    </tr>
+    <tr>
+      <td>Active groups per workspace</td>
+      <td>100,000. A group is active until its retention period ends.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/users/track/status</code> rate limit</td>
+      <td>1,500 requests per minute per workspace. This limit is separate from the <code class="language-plaintext highlighter-rouge">/users/track</code> rate limit.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="status-tracking-errors">Status tracking errors</h3>
+
+<p>Braze can’t track a request’s status in some cases, such as when your workspace has reached its maximum number of active groups. When this happens, the <code class="language-plaintext highlighter-rouge">/users/track</code> response is still successful and Braze still processes the request’s attributes, events, and purchases. The response includes an entry in the <code class="language-plaintext highlighter-rouge">errors</code> array that describes why Braze isn’t tracking the request:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"request_status_group_full"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Status tracking errors">
+  <thead>
+    <tr>
+      <th>Error type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">invalid_group_id</code></td>
+      <td>The <code class="language-plaintext highlighter-rouge">group_id</code> isn’t a string, is empty, is longer than 128 characters, or contains characters that aren’t allowed. For more information, see <a href="#group-id-requirements">Group ID requirements</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">request_status_active_group_limit_exceeded</code></td>
+      <td>Your workspace has reached its limit of active groups. Wait for existing groups to expire, or send the request without a <code class="language-plaintext highlighter-rouge">group_id</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">request_status_group_full</code></td>
+      <td>The group has reached its limit of requests. Use a new <code class="language-plaintext highlighter-rouge">group_id</code> for additional requests.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">request_status_not_tracked</code></td>
+      <td>Braze couldn’t track the request. For example, the group’s retention period has ended or status tracking isn’t enabled for your workspace.</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="frequently-asked-questions">Frequently asked questions</h2>
 
 <h3 id="what-happens-when-multiple-profiles-with-the-same-email-address-are-found">What happens when multiple profiles with the same email address are found?</h3>
@@ -610,9 +764,26 @@ Authorization: Bearer YOUR_REST_API_KEY
   <li><strong>Batch updates in a single request:</strong> Include all attribute updates for a user in one API call rather than making separate consecutive calls.</li>
   <li><strong>Add delays between requests:</strong> If you must make separate calls for the same user, add a delay (a few seconds) between requests to allow the first request to complete processing before the next one is sent.</li>
   <li><strong>Avoid overlapping updates for the same field:</strong> If two requests update the same attribute with different values, send those updates in one request or separate them with a delay to reduce the chance of out-of-order results.</li>
+  <li><strong>Confirm processing before the next request (beta):</strong> Include a <code class="language-plaintext highlighter-rouge">group_id</code> in the first request, and wait until the <a href="/docs/api/endpoints/user_data/get_users_track_status"><code class="language-plaintext highlighter-rouge">/users/track/status</code> endpoint</a> returns <code class="language-plaintext highlighter-rouge">completed</code> before you send the dependent request. For more information, see <a href="#track-request-processing-status">Track request processing status</a>.</li>
 </ul>
 
 <p>For more information about race conditions and best practices, see <a href="/docs/user_guide/messaging/ab_testing/concepts/race_conditions">Race conditions</a>.</p>
+
+<h3 id="how-do-i-know-when-braze-has-finished-processing-my-request">How do I know when Braze has finished processing my request?</h3>
+
+<p>Include a <code class="language-plaintext highlighter-rouge">group_id</code> in your <code class="language-plaintext highlighter-rouge">/users/track</code> requests, then call the <a href="/docs/api/endpoints/user_data/get_users_track_status"><code class="language-plaintext highlighter-rouge">/users/track/status</code> endpoint</a> with that <code class="language-plaintext highlighter-rouge">group_id</code>. When the group’s <code class="language-plaintext highlighter-rouge">status</code> is <code class="language-plaintext highlighter-rouge">completed</code>, Braze has finished processing every request in the group. This feature is in beta. For more information, see <a href="#track-request-processing-status">Track request processing status</a>.</p>
+
+<h3 id="how-often-should-i-check-a-groups-status">How often should I check a group’s status?</h3>
+
+<p>Poll the <code class="language-plaintext highlighter-rouge">/users/track/status</code> endpoint at a regular interval, such as every few seconds, and stop when the group’s <code class="language-plaintext highlighter-rouge">status</code> is <code class="language-plaintext highlighter-rouge">completed</code>. Keep your polling within the endpoint’s rate limit of 1,500 requests per minute per workspace.</p>
+
+<h3 id="why-is-my-group-still-processing">Why is my group still processing?</h3>
+
+<p>A group stays in <code class="language-plaintext highlighter-rouge">processing</code> until Braze finishes processing every accepted request in the group. If a request fails during processing, Braze retries it, and the group stays in <code class="language-plaintext highlighter-rouge">processing</code> until the retry succeeds. If you add requests to a group after it’s <code class="language-plaintext highlighter-rouge">completed</code>, its status returns to <code class="language-plaintext highlighter-rouge">processing</code>. In rare cases, a group can stay in <code class="language-plaintext highlighter-rouge">processing</code> until its retention period ends. If a group stays in <code class="language-plaintext highlighter-rouge">processing</code> for much longer than your usual processing time, contact Braze Support.</p>
+
+<h3 id="why-does-userstrackstatus-return-an-empty-results-array">Why does <code class="language-plaintext highlighter-rouge">/users/track/status</code> return an empty <code class="language-plaintext highlighter-rouge">results</code> array?</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">results</code> array is empty when Braze doesn’t find the group in your workspace. This happens when the group’s 24-hour retention period has ended, the <code class="language-plaintext highlighter-rouge">group_id</code> doesn’t match the one in your requests, or you sent the requests to a different workspace. It also happens when Braze didn’t track any requests for that <code class="language-plaintext highlighter-rouge">group_id</code>. Check each <code class="language-plaintext highlighter-rouge">/users/track</code> response for <a href="#status-tracking-errors">status tracking errors</a>.</p>
 
 <h3 id="why-is-my-userstrack-response-slower-than-i-expect">Why is my <code class="language-plaintext highlighter-rouge">/users/track</code> response slower than I expect?</h3>
 

@@ -34,12 +34,12 @@ You can set a workspace quiet hours window for any of the following channels:
 
 ## Prerequisites
 
-To create or update workspace quiet hours, you need the "Edit Quiet Hours" permission.
+To create or update workspace quiet hours, you need the "Edit Quiet Hours Settings" permission.
 
 | Permission | Access |
 |---|---|
-| Edit Quiet Hours | Create and update workspace quiet hours. |
-| View Quiet Hours | View the workspace quiet hours configuration without editing it. |
+| Edit Quiet Hours Settings | Create and update workspace quiet hours. |
+| View Quiet Hours Settings | View the workspace quiet hours configuration without editing it. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Quiet Hours permissions" }
 
 Existing campaign and Canvas edit permissions are unaffected. Users with those permissions can still edit quiet hours at the campaign or Canvas level.

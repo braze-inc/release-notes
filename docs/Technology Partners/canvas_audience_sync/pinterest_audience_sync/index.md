@@ -105,9 +105,9 @@ You can view the audience on Pinterest by entering your ads manager account and 
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync step, Braze syncs them in near real time while respecting Pinterest's Marketing API rate limits. Braze batches and processes as many users as possible every 5 seconds before sending them to Pinterest.
+As users reach the Audience Sync step, Braze enqueues them for batching before sending them to Pinterest. See [Batching and latency](https://www.braze.com/docs/partners/canvas_audience_sync/overview/#batching-and-latency) for how Braze dispatches batches.
 
-Pinterest's Segment API rate limit allows no more than seven queries per second per user and 1,900 users per request. If a customer reaches this limit, Braze retries the sync for up to ~13 hours. If the sync is still not possible, Braze lists these users under the Users Errored metric.
+Braze sends up to 2,000 users per request to Pinterest. Pinterest's Segment API rate limit allows no more than seven queries per second per user and 1,900 users per request. If a customer reaches this limit, Braze retries the sync for up to ~13 hours. If the sync is still not possible, Braze lists these users under the Users Errored metric.
 
 ## Understanding analytics
 

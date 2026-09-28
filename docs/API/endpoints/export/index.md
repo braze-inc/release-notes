@@ -91,6 +91,4 @@ The following table lists all export APIs available.
 
 For one-off exports from the dashboard, refer to these articles:
 
-- [Export campaign data](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_campaign_results_data)
-- [Export Canvas data](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/export_canvas_data)
-- [Export segment data to CSV](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/segment_data_to_csv)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/data/distribution/export_braze_data/export_campaign_results_data"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Export campaign data</span></span></div></a></li><li><a href="/docs/user_guide/data/distribution/export_braze_data/export_canvas_data"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Export Canvas data</span></span></div></a></li><li><a href="/docs/user_guide/data/distribution/export_braze_data/segment_data_to_csv"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Export segment data to CSV</span></span></div></a></li></ul>

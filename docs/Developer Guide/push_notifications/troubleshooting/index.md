@@ -109,11 +109,9 @@ If FCM informs us that any of the push tokens we were attempting to send a messa
 
 For more details about FCM, visit [Cloud messaging](https://firebase.google.com/docs/cloud-messaging/).
 
-## Use the push error logs
+## Review push errors {#use-the-push-error-logs}
 
-Braze provides push notification errors within the message activity log. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Selecting an error message redirects you to relevant documentation to help you troubleshoot a particular incident.
-
-![Braze message activity log showing push notification error entries.](https://www.braze.com/docs/assets/img_archive/message_activity_log.png?6577302323ab3f2df3196a973320b8d3)
+Push notification errors for a campaign or Canvas appear in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability).
 
 ## Troubleshooting
 
@@ -133,7 +131,7 @@ Confirm that your app is correctly configured to allow push notifications. Commo
 
 #### Incorrect sender ID
 
-Check that the correct FCM sender ID is included in the `braze.xml` file. An incorrect sender ID will lead to `MismatchSenderID` errors reported in the dashboard's message activity log.
+Check that the correct FCM sender ID is included in the `braze.xml` file. An incorrect sender ID leads to `MismatchSenderID` errors. Review them in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability).
 
 #### Braze registration not occurring
 
@@ -320,29 +318,27 @@ It's normal for APNs to initially return a success status even if a token become
 
 
 
-## Using the push error logs
+## Review push errors {#using-the-push-error-logs}
 
-The [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log) lets you see any messages (especially error messages) associated with your campaigns and sends, including push notification errors. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Selecting an error message redirects you to relevant documentation to help you troubleshoot a particular incident.
+[Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) shows why a push from a campaign or Canvas was not sent, including errors returned by APNs or FCM.
 
-![Push error logs displaying the time the error occurred, the app name, the channel, error type, and error message.](https://www.braze.com/docs/assets/img_archive/message_activity_log.png?6577302323ab3f2df3196a973320b8d3)
-
-Common errors you might see here include user-specific notifications, such as ["Received Unregistered Sending to Push Token"](#swift_received-unregistered-sending).
+Common errors include user-specific notifications, such as ["Received Unregistered Sending to Push Token"](#swift_received-unregistered-sending).
 
 In addition, Braze also provides a push changelog on the user profile under the **Engagement** tab. This changelog provides insight into push registration behavior such as token invalidation, push registration errors, tokens being moved to new users, etc.
 
 ![Braze user profile Engagement tab showing the push registration changelog.](https://www.braze.com/docs/assets/img_archive/push_changelog.gif?36d10186d33121a195e943385dd0d02a){: style="max-width:50%;" }
 
-### Message Activity Log errors
+### Push notification errors {#message-activity-log-errors}
 
 #### Received unregistered sending to push token {#received-unregistered-sending}
 
-- Make sure that the push token being sent to Braze from the method `AppDelegate.braze?.notifications.register(deviceToken:)` is valid. You can look in the **Message Activity Log** to see the push token. It should look something like `6e407a9be8d07f0cdeb9e724733a89445f57a89ec890d63867c482a483506fa6`, a long string containing a mix of letters and numbers. If your push token looks different, check your [code](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#swift_step-32-register-push-tokens-with-braze) for sending Braze the push tokens.
+- Make sure that the push token being sent to Braze from the method `AppDelegate.braze?.notifications.register(deviceToken:)` is valid. Review the error for the campaign or Canvas in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability). The token should look something like `6e407a9be8d07f0cdeb9e724733a89445f57a89ec890d63867c482a483506fa6`, a long string containing a mix of letters and numbers. If your push token looks different, check your [code](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#swift_step-32-register-push-tokens-with-braze) for sending Braze the push tokens.
 - Ensure that your push provisioning profile matches the environment you're testing. Universal certificates may be configured in the Braze dashboard to send to either the development or production APNs environment. Using a development certificate for a production app or a production certificate for a development app does not work.
  - Check that the push token you have uploaded to Braze matches the provisioning profile you used to build the app you sent the push token from.
 
 #### Device token not for topic
 
-APNs returns `DeviceTokenNotForTopic` (HTTP status 400) when the push token doesn't match the topic (bundle ID) configured for your credentials. Braze may surface this in **Message Activity Log** or push delivery logs as `DeviceTokenNotForTopic`.
+APNs returns `DeviceTokenNotForTopic` (HTTP status 400) when the push token doesn't match the topic (bundle ID) configured for your credentials. Review the error for the campaign or Canvas in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability).
 
 To resolve the mismatch:
 
@@ -513,11 +509,9 @@ If FCM informs us that any of the push tokens we were attempting to send a messa
 
 For more details about FCM, visit [Cloud messaging](https://firebase.google.com/docs/cloud-messaging/).
 
-## Use the push error logs
+## Review push errors {#use-the-push-error-logs}
 
-Braze provides push notification errors within the message activity log. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Selecting an error message redirects you to relevant documentation to help you troubleshoot a particular incident.
-
-![Braze message activity log showing push notification error entries.](https://www.braze.com/docs/assets/img_archive/message_activity_log.png?6577302323ab3f2df3196a973320b8d3)
+Push notification errors for a campaign or Canvas appear in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability).
 
 ## Troubleshooting
 
@@ -537,7 +531,7 @@ Confirm that your app is correctly configured to allow push notifications. Commo
 
 #### Incorrect sender ID
 
-Check that the correct FCM sender ID is included in the `braze.xml` file. An incorrect sender ID will lead to `MismatchSenderID` errors reported in the dashboard's message activity log.
+Check that the correct FCM sender ID is included in the `braze.xml` file. An incorrect sender ID leads to `MismatchSenderID` errors. Review them in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability).
 
 #### Braze registration not occurring
 

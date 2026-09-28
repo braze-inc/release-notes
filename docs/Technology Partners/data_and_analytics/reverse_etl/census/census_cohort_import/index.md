@@ -29,12 +29,12 @@ Now you can run your sync!
 
 During a sync, any fields that you map will first be synced to the user object to update what already exists in Braze. After that, the updated user will be added to the specified cohort.
 
-After the sync, you can create and add a Braze segment with a Census cohort filter to future Braze campaigns and Canvases to target those users. 
+After the sync, you can create and add a Braze segment with the **Census Cohorts** filter to future Braze campaigns and Canvases to target those users. 
 
 **Note:**
 
 
-When using the Census and Braze integration, Census will only send the deltas (changing data) on each sync to Braze. 
+When using the Census and Braze integration, Census only sends the deltas (changing data) on each sync to Braze.
 
 
 

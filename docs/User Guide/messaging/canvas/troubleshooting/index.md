@@ -12,7 +12,7 @@ After launch, start with [Phase 5: Post-launch monitoring](https://www.braze.com
 **Note:**
 
 
-**Messaging History** and **Messaging Diagnostics** logs are available for up to **30 days** from the event. Contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) within that window if you need help investigating a specific incident.
+**Messaging History** and **Messaging Observability** logs are available for up to **30 days** from the event. Contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) within that window if you need help investigating a specific incident.
 
 
 
@@ -41,10 +41,10 @@ Use this workflow to investigate a specific user or an aggregate send issue. Sta
 3. Check a user's messaging record by going to **Audience** > **Search users**, opening the profile, and selecting **Messaging History** (last 30 days).
    - If no record exists for the expected send time, the issue is with entry, not the message. Go to [User didn't enter the Canvas](#user-didnt-enter-the-canvas).
 4. Check the Canvas **Changelog** and changelogs for any segments used in targeting. Confirm the audience, steps, or send settings weren't changed during the incident.
-5. Check aggregate outcomes on the Canvas analytics page by opening the [Messaging Diagnostics dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard) and reviewing abort and drop reasons.
-   - If you see an outcome you don't recognize, see [Abort outcomes](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard#abort-outcomes) in the diagnostics doc.
+5. Check aggregate outcomes on the Canvas analytics page by opening [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) and reviewing abort and drop reasons.
+   - If you see an outcome you don't recognize, see [Abort outcomes](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability#abort-outcomes) in the Messaging Observability doc.
    - If a step shows zero entries (not zero sends), check the previous step type ([Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths), [Delay](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/delay_step), [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths), or [Decision Split](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/decision_split)).
-6. If you're still blocked, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) within 30 days with the Canvas ID, affected user IDs, timestamps (with timezone), and screenshots from Messaging History or Messaging Diagnostics.
+6. If you're still blocked, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) within 30 days with the Canvas ID, affected user IDs, timestamps (with timezone), and screenshots from Messaging History or Messaging Observability.
 
 Before launch, use [Sending test Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/sending_test_canvases) and [Preview user paths](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths) to validate your setup.
 
@@ -77,7 +77,7 @@ Check the following:
 
 Braze deduplicates multiple entry attempts that occur in the same instant, so you may see fewer Canvas entries than trigger events. For testing multiple entries, space trigger events at least one second apart.
 
-If a user performs the same trigger multiple times within one second, Braze processes only one entry. Check Messaging Diagnostics for outcomes such as **User not re-eligible** when re-entry or re-eligibility rules apply.
+If a user performs the same trigger multiple times within one second, Braze processes only one entry. Check Messaging Observability for outcomes such as **User not re-eligible** when re-entry or re-eligibility rules apply.
 
 **Daylight Saving Time and daily scheduled Canvases**
 
@@ -113,7 +113,7 @@ Then check the following by trigger or step type:
 **Important:**
 
 
-When a Canvas Message step aborts a send, the user still advances to the next step. Canvas advances on abort so later Delay and Action Path steps aren't permanently blocked. See [How users advance](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#how-users-advance) and [Abort outcomes](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard#abort-outcomes).
+When a Canvas Message step aborts a send, the user still advances to the next step. Canvas advances on abort so later Delay and Action Path steps aren't permanently blocked. See [How users advance](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#how-users-advance) and [Abort outcomes](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability#abort-outcomes).
 
 
 
@@ -146,11 +146,11 @@ For a single user, follow the [standard investigation path](#standard-investigat
 
 Common causes include audience re-evaluation at send time, channel eligibility, control groups, Quiet Hours, Intelligent Timing, rate limits, and in-app message delivery behavior (zero _Sends_ with impressions is expected for in-app messages).
 
-If a Message step shows many users entered but few sends, check whether Liquid `abort_message()` canceled the send. For Message Activity Log checks, missing attributes, and test sends, see [Troubleshooting high abort rates](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages/#troubleshooting-high-abort-rates).
+If a Message step shows many users entered but few sends, check whether Liquid `abort_message()` canceled the send. For how to confirm those aborts, missing attributes, and test sends, see [Troubleshooting high abort rates](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages/#troubleshooting-high-abort-rates).
 
 For a detailed list, see [Why are sends lower than the estimated audience size?](https://www.braze.com/docs/user_guide/messaging/canvas/faqs#why-are-sends-lower-than-the-estimated-audience-size) in the Canvas FAQ and [Why are sends lower than the estimated audience size?](https://www.braze.com/docs/user_guide/messaging/campaigns/faq#why-are-sends-lower-than-the-estimated-audience-size) for campaigns.
 
-Use the [Messaging Diagnostics dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard) to see abort and drop reasons at the step level.
+Use [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) to see abort and drop reasons at the step level.
 
 ## Canvas analytics mismatches
 
@@ -266,5 +266,5 @@ Include:
 
 - Canvas ID and affected user IDs (external ID or Braze ID)
 - Timestamps with time zone
-- Screenshots or exports from **Messaging History** or **Messaging Diagnostics**
+- Screenshots or exports from **Messaging History** or **Messaging Observability**
 - For editor "Request Timed Out" errors, the details listed in [Editor and save issues](#editor-and-save-issues)

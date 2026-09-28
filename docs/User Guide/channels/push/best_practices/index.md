@@ -149,7 +149,4 @@ Because push messages are an intrusive type of messaging that goes directly to y
 
 Didn't find what you were looking for? Check out these additional best practices articles:
 
-- [Push message and image formats](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats)
-- [Push primer in-app messages](https://www.braze.com/docs/user_guide/channels/push/best_practices/push_primer_messages)
-- [Deliverability for Chinese Android devices](https://www.braze.com/docs/user_guide/channels/push/best_practices/chinese_push_deliverability)
-- [Know before you send: channels](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/know_before_you_send)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Push message and image formats</span></span></div></a></li><li><a href="/docs/user_guide/channels/push/best_practices/push_primer_messages"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Push primer in-app messages</span></span></div></a></li><li><a href="/docs/user_guide/channels/push/best_practices/chinese_push_deliverability"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Deliverability for Chinese Android devices</span></span></div></a></li><li><a href="/docs/user_guide/messaging/messaging_fundamentals/know_before_you_send"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Know before you send: channels</span></span></div></a></li></ul>

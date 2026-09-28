@@ -73,7 +73,7 @@ You can also confirm that the user is part of the segment by using **User Lookup
 
 Check the global frequency caps. It's possible you did not receive the push notification because your workspace has global frequency capping in place and you've already hit your push notification cap for the specified time frame.
 
-On the campaign **Analytics** page, check for a frequency capping banner showing approximately how many users didn't receive the campaign in the last 30 days. To investigate individual sends, use the [Messaging Diagnostics dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard) and filter by **Frequency capped**. To review or change rules, see [global frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#freq-cap-feat-over).
+On the campaign **Analytics** page, check for a frequency capping banner showing approximately how many users didn't receive the campaign in the last 30 days. To investigate individual sends, use [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) and filter by **Frequency capped**. To review or change rules, see [global frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#freq-cap-feat-over).
 
 ![Campaign Details](https://www.braze.com/docs/assets/img_archive/trouble3.png?2da7b998d84ba2c094988dfd2606da8f)
 
@@ -344,7 +344,7 @@ When a push provider signals that a registration token is no longer valid (for e
 
 Other push errors are recorded as bounces and don't remove the token. For example, an authentication failure such as [`MismatchSenderID`](#error-mismatch-sender-id) means Braze couldn't authenticate with FCM, so fix the credential instead of treating it as an uninstall signal.
 
-For Android uninstall tracking, Braze sends uninstall detection pushes as a dry run (validation only) or as a live silent push, depending on your workspace configuration. Because a dry run validates the request without delivering the message, its results can differ from a live send. If uninstall counts look low, confirm your Android integration meets [uninstall tracking](https://www.braze.com/docs/user_guide/analytics/tracking/uninstall_tracking) prerequisites and review bounce errors in the Message Activity Log.
+For Android uninstall tracking, Braze sends uninstall detection pushes as a dry run (validation only) or as a live silent push, depending on your workspace configuration. Because a dry run validates the request without delivering the message, its results can differ from a live send. If uninstall counts look low, confirm your Android integration meets [uninstall tracking](https://www.braze.com/docs/user_guide/analytics/tracking/uninstall_tracking) prerequisites and review bounce errors in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability).
 
 ## Uninstall metrics {#uninstall-metrics}
 

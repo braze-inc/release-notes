@@ -316,7 +316,7 @@ With your source setup complete and destination Canvas launched, create a new da
 2. Provide a name the integration.
 3. Select the **Canvas triggers** data type.
 4. Choose your destination Canvas (from [Step 2](#step-2-configure-your-destination-canvas)).
-5. Choose a sync frequency.
+5. Choose a [sync frequency](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion#how-it-works).
 6. Set up notification preferences.
 7. Select **Test Connection** to confirm everything works as expected. If connecting to Snowflake, first add the public key displayed on the dashboard to the user created for Braze to connect to Snowflake. To complete this step, you'll need **SECURITYADMIN** access or higher in Snowflake. 
 8. Save the sync to begin syncing Canvas triggers.

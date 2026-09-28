@@ -106,6 +106,13 @@ For iOS 15, Time Sensitive and Critical denotations push the title down to a new
 
 
 
+iOS displays the push title on a single line. If your templated title output includes newline characters, for example from a capture block, a conditional, or Connected Content, users may only see the text before the first line break.
+
+Apply the [`strip_newlines`](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters#string-filters) filter to the final title output to remove newlines before send. For an example, refer to [Create a push notification](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message#newlines-for-ios-push-titles).
+
+
+
+
 The following details can also impact text truncation:
 
 - **Phone display settings:** a user can increase or decrease the global UI font size on their phone, typically for accessibility reasons.

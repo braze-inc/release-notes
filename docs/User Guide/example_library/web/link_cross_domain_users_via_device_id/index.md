@@ -112,9 +112,4 @@ When the user logs in, call `changeUser` with their `external_id` so future acti
 
 ## Related articles
 
-- [Web SDK repository guide](https://www.braze.com/docs/developer_guide/sdk_repository_guides/web/)
-- [Multi-domain integration for the Braze Web SDK](https://www.braze.com/docs/developer_guide/platforms/web/multi_domain_integration)
-- [Set user IDs through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids/)
-- [Anonymous users](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle/anonymous_users/)
-- [User profile lifecycle](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle/)
-- [Web SDK storage](https://www.braze.com/docs/developer_guide/storage/)
+<ul class="guide_tiles"><li><a href="/docs/developer_guide/sdk_repository_guides/web"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Web SDK repository guide</span></span></div></a></li><li><a href="/docs/developer_guide/platforms/web/multi_domain_integration"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Multi-domain integration for the Braze Web SDK</span></span></div></a></li><li><a href="/docs/developer_guide/analytics/setting_user_ids"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Set user IDs through the Braze SDK</span></span></div></a></li><li><a href="/docs/user_guide/data/unification/user_data/user_profile_lifecycle/anonymous_users"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Anonymous users</span></span></div></a></li><li><a href="/docs/user_guide/data/unification/user_data/user_profile_lifecycle"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">User profile lifecycle</span></span></div></a></li><li><a href="/docs/developer_guide/storage"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Web SDK storage</span></span></div></a></li></ul>

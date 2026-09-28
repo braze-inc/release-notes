@@ -6,7 +6,7 @@ _This integration is maintained by eduMe._
 
 ## About the integration
 
-The Braze and eduMe integration leverages Braze [Connected Content](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) to give your users access to eduMe courses and lessons in your Braze campaigns. Individual and group progress can then be tracked through eduMe reporting functionality.
+The Braze and eduMe integration leverages Braze [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content) to give your users access to eduMe courses and lessons in your Braze campaigns. Individual and group progress can then be tracked through eduMe reporting functionality.
 
 ## Prerequisites
 

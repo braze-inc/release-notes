@@ -63,6 +63,14 @@ When a user dismisses a Banner, they're ineligible for that campaign by default.
 
 For example, if you display a promotional Banner until a user makes a purchase, logging an event such as `purchase_completed` can remove that user from the targeted segment, effectively hiding the Banner in subsequent sessions.
 
+## How are control group users logged in Currents and Data Sharing?
+
+Banner control groups work differently from Content Cards and in-app messages. Control users are not logged to `USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED` (or the Currents `users.campaigns.EnrollInControl` event). Instead, control exposure is logged to `USERS_MESSAGES_BANNER_IMPRESSION_SHARED` (Currents `users.messages.banner.Impression`) after your app records an impression, including when your integration calls [`insertBanner`](https://www.braze.com/docs/developer_guide/banners/placements) for a control Banner and hides the container.
+
+To identify control users in export data, filter on `message_variation_name` (`Control Group`) or the control variation's `message_variation_api_id`.
+
+For more information, see [How are control group users logged in Currents for Content Cards, in-app messages, and Banners?](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/faq#how-are-control-group-users-logged-in-currents-for-content-cards-in-app-messages-and-banners) and [`USERS_MESSAGES_BANNER_IMPRESSION_SHARED`](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#USERS_MESSAGES_BANNER_IMPRESSION_SHARED).
+
 ## Can I export Banners campaign analytics using the Braze API?
 
 Yes. You can use the [`/campaigns/data_series` endpoint](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_analytics) to get data on how many Banner campaigns were viewed, clicked, or converted.

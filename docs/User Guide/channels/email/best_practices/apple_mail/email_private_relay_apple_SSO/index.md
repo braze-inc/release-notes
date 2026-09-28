@@ -6,6 +6,16 @@ To send emails to Apple's private email relay, register your sending domains wit
 
 If a user decides to disable the email forwarding to your app's relay email, Braze will receive email bounce information as usual. These users can manage apps that use sign-in with Apple from their Apple ID settings page (see [Apple's documentation](https://support.apple.com/en-us/HT210426)).
 
+## Target Apple Private Relay users
+
+To create a segment that targets users with Apple Private Relay email addresses:
+
+1. Go to **Audience** > **Segments** and create a new segment.
+2. Add a filter for **Email Address**.
+3. Select **matches regex** and enter `@privaterelay\.appleid\.com$`.
+
+This regular expression pattern matches any email address ending with `@privaterelay.appleid.com`, allowing you to target campaigns specifically to Apple Private Relay users.
+
 ## Configure your email provider
 
 

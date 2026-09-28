@@ -6,7 +6,7 @@ _This integration is maintained by Merkury._
 
 ## About the integration
 
-The Braze and Merkury integration allows you to leverages the `MerkuryID` to increase site visitor recognition rates for Braze customers. Upon recognizing visitors that are brand email subscribers, Merkury updates the Braze profile to include the subscribers email address. The increased recognition capabilities of `MerkuryID` improves engagement and personalization opportunities and immediately increases site abandonment email send quantities and associated revenue. 
+The Braze and Merkury integration allows you to leverage the `MerkuryID` to increase site visitor recognition rates for Braze customers. Upon recognizing visitors that are brand email subscribers, Merkury updates the Braze profile to include the subscribers email address. The increased recognition capabilities of `MerkuryID` improves engagement and personalization opportunities and immediately increases site abandonment email send quantities and associated revenue. 
 
 ## Prerequisites
 
@@ -15,8 +15,8 @@ The Braze and Merkury integration allows you to leverages the `MerkuryID` to inc
 | Merkle account | A Merkle account is required to take advantage of this partnership. |
 | Merkle Client ID | Obtain your Client ID from your Merkle representative. |
 | Merkury tag | Place Merkle's Merkury tag on your website. |
-| Braze REST and SDK endpoint | Your REST or SDK endpoint URL. Your endpoint will depend on the [Braze URL for your instance](https://www.braze.com/docs/api/basics/#endpoints). |
-| Braze REST API key | A Braze REST API key with `users.track, users.export.ids, users.export.segment, and segments.list` permissions. <br><br>This can be created within **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze REST and SDK endpoint | Your REST or SDK endpoint URL. Your endpoint depends on the [Braze URL for your instance](https://www.braze.com/docs/api/basics/#endpoints). |
+| Braze REST API key | A Braze REST API key with `users.track, users.export.ids, users.export.segment, and segments.list` permissions. <br><br>This can be created in the Braze dashboard from **Settings** > **APIs and Identifiers**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Prerequisites" }
 
 **Important:**
@@ -32,7 +32,7 @@ Uses Merkle's client-side Merkury tag to capture Braze devices and forwards them
 
 ### Step 1: Setup Braze web SDK tag
 
-You must have the [Braze Web SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/#install-gtm) deployed on your website to use this integration.
+You must have the [Braze Web SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web) deployed on your website to use this integration.
 
 ### Step 2: Deploy Merkle's Merkury tag
 

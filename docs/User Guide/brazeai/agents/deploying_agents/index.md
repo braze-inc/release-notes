@@ -215,6 +215,4 @@ Refer to the [Message engagement events glossary](https://www.braze.com/docs/use
 
 ## Related articles
 
-- [Agent step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/agent_step)
-- [Reference for agents](https://www.braze.com/docs/user_guide/brazeai/agents/reference)
-- [Frequently asked questions](https://www.braze.com/docs/user_guide/brazeai/agents/faq)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/messaging/canvas/canvas_components/agent_step"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Agent step</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/agents/reference"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Reference for agents</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/agents/faq"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Frequently asked questions</span></span></div></a></li></ul>

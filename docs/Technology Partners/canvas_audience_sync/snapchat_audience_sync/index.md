@@ -107,9 +107,9 @@ You can view the audience in Snapchat by entering your ads manager account and s
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync step, Braze syncs them in near real time while respecting Snapchat's API rate limits. Braze batches and processes as many users as possible every 5 seconds before sending them to Snapchat.
+As users reach the Audience Sync step, Braze enqueues them for batching before sending them to Snapchat. See [Batching and latency](https://www.braze.com/docs/partners/canvas_audience_sync/overview/#batching-and-latency) for how Braze dispatches batches.
 
-Snapchat's API rate limit allows no more than ten queries per second and 100,000 users per request. If a customer reaches this limit, Braze retries the sync for up to ~13 hours. If the sync is still not possible, Braze lists these users under the Users Errored metric.
+Braze sends up to 2,000 users per request to Snapchat. Snapchat's API rate limit allows no more than ten queries per second and 100,000 users per request. If a customer reaches this limit, Braze retries the sync for up to ~13 hours. If the sync is still not possible, Braze lists these users under the Users Errored metric.
 
 ### Understanding analytics
 

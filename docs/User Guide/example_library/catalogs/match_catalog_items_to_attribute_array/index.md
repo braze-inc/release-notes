@@ -79,9 +79,4 @@ Send test messages to profiles with different `saved_product_names` values. Conf
 
 ## Related articles
 
-- [Catalogs](https://www.braze.com/docs/user_guide/data/activation/catalogs/)
-- [Selections](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections/)
-- [Using catalogs](https://www.braze.com/docs/user_guide/data/activation/catalogs/use/)
-- [Custom attributes](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes/)
-- [Conditional logic](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/conditional_logic/)
-- [Liquid use case library — find a string within an array](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/liquid_use_cases/#misc-string-in-array)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/data/activation/catalogs"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Catalogs</span></span></div></a></li><li><a href="/docs/user_guide/data/activation/catalogs/selections"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Selections</span></span></div></a></li><li><a href="/docs/user_guide/data/activation/catalogs/use"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Using catalogs</span></span></div></a></li><li><a href="/docs/user_guide/data/activation/attributes/custom_attributes"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Custom attributes</span></span></div></a></li><li><a href="/docs/user_guide/messaging/design_and_edit/personalize/liquid/conditional_logic"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Conditional logic</span></span></div></a></li><li><a href="/docs/user_guide/messaging/design_and_edit/personalize/liquid/liquid_use_cases/#misc-string-in-array"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Liquid use case library — find a string within an array</span></span></div></a></li></ul>

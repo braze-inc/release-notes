@@ -204,6 +204,7 @@ Braze Alloys is Braze's technology partner program. Partners extend the Braze pl
 - [Lob](https://www.braze.com/docs/partners/additional_channels_and_extensions/additional_channels/direct_mail/lob)
 - [Lokalise](https://www.braze.com/docs/partners/message_personalization/localization/lokalise)
 - [Looker](https://www.braze.com/docs/partners/data_and_analytics/business_intelligence/looker)
+- [Loop](https://www.braze.com/docs/partners/ecommerce/ordering_payments_subscription/loop)
 - [loplat](https://www.braze.com/docs/partners/message_personalization/location/loplat)
 - [Lytics](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/lytics)
 

@@ -52,7 +52,7 @@ VideoSmart will provide credentials for the Connected Content authentication use
 
 Create a Connected Content Basic Authentication credential in Braze named "basic_credentials".
 
-- Follow the instructions in [Using basic authentication](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/#using-basic-authentication).
+- Follow the instructions in [Using basic authentication](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call/#using-basic-authentication).
 - Use the username and password provided by VideoSmart.
 
 ### Step 3: Add the Content Block to your email

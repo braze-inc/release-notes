@@ -118,8 +118,9 @@ A valid role object is a JSON object with the following key-value pairs:
 | Archive Canvases | `archive_canvases` |
 | View Frequency Capping Rules | `view_frequency_caps` |
 | Edit Frequency Capping Rules | `edit_frequency_caps` |
-| View Message Prioritization | `view_message_prioritization` |
-| Edit Message Prioritization | `edit_message_prioritization` |
+| View Message Prioritization Settings | `view_message_prioritization` |
+| Edit Message Prioritization Settings | `edit_message_prioritization` |
+| Delete Message Prioritization Settings | `delete_message_prioritization` |
 | View Content Blocks | `view_content_blocks` |
 | Edit Content Blocks | `edit_content_blocks` |
 | Archive Content Blocks | `archive_content_blocks` |

@@ -117,6 +117,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | Permission | Endpoint | Description |
 |---|---|---|
 | `users.track` | [`/users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) | Record user attributes, custom events, and purchases. |
+| `users.track.status` | [`/users/track/status`](https://www.braze.com/docs/api/endpoints/user_data/get_users_track_status) | Retrieve the processing status for a group of asynchronous `/users/track` requests. |
 | `users.delete` | [`/users/delete`](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete) | Delete any user. |
 | `users.alias.new` | [`/users/alias/new`](https://www.braze.com/docs/api/endpoints/user_data/post_user_alias) |Create a new alias for an existing user. |
 | `users.identify` | [`/users/identify`](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify) |Identify an alias-only user with an external ID. |

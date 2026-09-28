@@ -10,9 +10,9 @@ The Braze Connector supports translations for messages in campaigns and Canvases
 
 | Channel/Feature | Traditional Editor (ex. HTML) | Drag-and-Drop Editor |
 | --------------- | ----------------------------- | -------------------- |
-| [Email](https://www.braze.com/docs/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=email) | ✅ | ✅ |
-| [IAM](https://www.braze.com/docs/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=in-app%20message) | ✅ | ✅ |
-| [Push](https://www.braze.com/docs/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=push) | ✅ | n/a |
+| [Email](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/) | ✅ | ✅ |
+| [IAM](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/) | ✅ | ✅ |
+| [Push](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/) | ✅ | n/a |
 | Email Template | ✅ | ✅ |
 | Banners | n/a | ✅ |
 | Content Blocks | ✅ | ✅ |
@@ -64,11 +64,11 @@ Refer to the [Smartling documentation](https://help.smartling.com/hc/en-us/artic
 
 ### Step 3: Add translation tags to your Braze message
 
-See [Braze's instructions](https://www.braze.com/docs/user_guide/message_building_by_channel/email/using_locales/?tab%3Dhtml%2520editor#prerequisites) on how to add translation tags to your messages:
+See [Braze's instructions](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/) on how to add translation tags to your messages:
 
-- [Email](https://www.braze.com/docs/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=email)
-- [Push](https://www.braze.com/docs/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=push)
-- [In-app messages](https://www.braze.com/docs/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=in-app%20message)
+- [Email](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/)
+- [Push](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/)
+- [In-app messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/)
 
 Here is an example of a HTML email campaign with translation tags.
 

@@ -20,9 +20,9 @@ The Braze and Amperity integration offers a unified view of your customers acros
 | Requirement | Description |
 | ----------- | ----------- |
 | Amperity account | An [Amperity account](https://amperity.com/request-a-demo) is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br> This can be created in the Braze dashboard by navigating to **Developer Console** > **Rest API Key** > **Create New API Key**. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br> This can be created in the Braze dashboard from **Settings** > **APIs and Identifiers**. |
 | Braze instance | Your Braze instance can be obtained from your Braze onboarding manager or be found on the [API overview page](https://www.braze.com/docs/api/basics#endpoints). |
-| Braze REST endpoint | Your Braze endpoint URL. Your endpoint will depend on your Braze instance. |
+| Braze REST endpoint | Your Braze endpoint URL. Your endpoint depends on your Braze instance. |
 | Currents connector (optional) | The S3 Currents connector. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 

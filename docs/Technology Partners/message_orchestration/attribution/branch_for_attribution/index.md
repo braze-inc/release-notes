@@ -91,9 +91,9 @@ Here, you will find the REST endpoint and generate your Braze data import key. A
 
 ### Step 4: Confirm the integration
 
-After Braze receives attribution data from Branch, the status connection indicator on the Branch technology partners page in Braze changes from "Not Connected" to "Connected" and includes a timestamp of the last successful request.
+On the Branch technology partners page in Braze, the connection indicator shows **Not Connected** until you generate a data import API key in Step 2. After you generate the key, the indicator changes to **Connected** and displays a timestamp. That timestamp reflects when the integration was first set up in Braze (when the data import key was created), not when Branch last sent a postback.
 
-This status changes only after Braze receives data about an attributed install. Braze ignores organic installs (excludes them from the Branch postback) and does not count them when determining if the connection is successful.
+To confirm that install attribution data is flowing from Branch, check that non-organic install data appears in Braze segment filters. Braze ignores organic installs from Branch postbacks when the attribution source is `organic` and does not store them as attributed install data.
 
 ## Field mapping
 
@@ -119,7 +119,7 @@ To get started with Branch click tracking links, visit their [documentation](htt
 
 
 
-For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the Branch SDK integration. You can include the GAID in your Branch click tracking links by utilizing the following Liquid logic:
+For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id). The GAID is also collected natively through the Branch SDK integration. You can include the GAID in your Branch click tracking links by utilizing the following Liquid logic:
 
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -130,7 +130,7 @@ user_data_aaid={{most_recently_used_device.${google_ad_id}}}
 
 
 
-For iOS, both Braze and Branch automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your Branch click tracking links by utilizing the following Liquid logic:
+For iOS, append the Braze device identifier to improve deterministic attribution. In Liquid, `most_recently_used_device.${id}` is the Braze device ID, which may be the IDFV or a UUID depending on your Swift SDK `useUUIDAsDeviceId` setting. Branch click-tracking URLs commonly use a `user_data_idfv` query parameter for this value:
 
 
 ```
@@ -146,7 +146,7 @@ user_data_idfv={{most_recently_used_device.${id}}}
 
 
 **This recommendation is purely optional**<br>
-If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Branch will still be able to attribute these clicks through their probabilistic modeling.
+If you currently don't use any device identifiers—such as the Braze device ID or GAID—in your click tracking links, or don't plan to in the future, Branch can still attribute these clicks through their probabilistic modeling.
 
 
 
