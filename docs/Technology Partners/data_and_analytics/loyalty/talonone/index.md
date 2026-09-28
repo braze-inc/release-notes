@@ -20,7 +20,7 @@ The Braze and Talon.One integration can help take your loyalty or coupon program
 **Warning:**
 
 
-Talon.One **_requires_** a maximum rate limit of 2,500 messages per minute. This rate limit can be [modified](https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting) in the Braze dashboard.
+Talon.One **_requires_** a maximum rate limit of 2,500 messages per minute. This rate limit can be [modified](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping/#delivery-speed-rate-limiting) in the Braze dashboard.
 
 
 

@@ -47,6 +47,12 @@ Here are some best practices to keep in mind when writing your preheaders:
   - Short, concise body copy
   - Clear calls to action
 
+### Apple Mail preview text
+
+Apple Mail may show an Apple Intelligence summary in the inbox instead of your preheader. **Preview and Test** and the sent message HTML can still show the preheader you configured, because the summary is generated on the recipient's device. On a test iPhone or iPad, go to **Settings** > **Apps** > **Mail**. Turn off **Summarize Message Previews** to display the sent preview text.
+
+If the inbox preview includes extra body copy instead of your preheader or a summary, see [Preview and test your message](https://www.braze.com/docs/user_guide/channels/email/html_editor/#step-3b-preview-and-test-your-message).
+
 ### Preheader character limits
 
   |   Mobile email client  |  Limit  |

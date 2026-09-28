@@ -86,7 +86,7 @@ The fields and limits in the composer depend on the message type you selected.
 | **Language** | Insert language-specific content into the message. |
 | **Message** | Enter up to 1,600 characters, including Liquid, Connected Content, and emojis. The composer estimates the encoding, character count, and number of billable SMS segments. An MMS message can contain media without a message body. |
 | **Media** | For an MMS-enabled subscription group, add one PNG, JPEG, or GIF image from the media library or by URL. You can add a vCard instead of an image. |
-| **Link shortening** | Shorten HTTP and HTTPS URLs and track engagement. For legacy link shortening, select basic or advanced tracking. |
+| **Link shortening** | Shorten HTTP and HTTPS URLs and track engagement with [unified link shortening](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening). |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="SMS and MMS fields and settings" }
 
 SMS messages use GSM-7 or UCS-2 encoding and are charged per message segment. A single character can change the encoding and increase the number of billable segments. For encoding rules, segment sizes, and the segment calculator, see [SMS and RCS billing calculators](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator).
@@ -286,11 +286,9 @@ Conversational message workflows let you respond dynamically to users, creating 
 
 ### Step 4: Configure link shortening
 
-Turn on **Link shortening** to shorten HTTP and HTTPS URLs and track clicks for SMS, MMS, and supported RCS links. Depending on the version available in your workspace, select basic or advanced tracking, or use unified link shortening.
+Turn on **Link shortening** to shorten HTTP and HTTPS URLs and track clicks for SMS, MMS, and supported RCS links. Unified link shortening uses a single personalized link format for SMS and RCS and includes user-level click data for segmentation and retargeting.
 
-Advanced tracking adds user-level click data for segmentation and retargeting. Unified link shortening combines SMS and RCS shortened links into one personalized format. For supported URLs, Liquid behavior, testing requirements, custom domains, and retargeting, see [Link shortening](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening).
-
-Braze shortens up to 25 links in a message. A URL longer than 4,000 characters can't be shortened and causes the message to fail at send time.
+Braze shortens up to 25 links in a message. A URL longer than 4,000 characters can't be shortened and causes the message to fail at send time. For supported URLs, Liquid behavior, testing requirements, custom domains, and retargeting, see [Link shortening](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening).
 
 ### Step 5: Preview and test your message
 

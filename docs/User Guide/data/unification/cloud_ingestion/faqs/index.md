@@ -2,6 +2,10 @@
 
 > This page contains answers to some frequently asked questions for Cloud Data Ingestion.
 
+## How often can a CDI sync run?
+
+Recurring syncs can run as often as every 5 minutes or as rarely as once per month. By default, the shortest interval you can set in the dashboard is 15 minutes, which helps manage your warehouse compute costs and request volume. To sync as often as every 5 minutes, contact Braze Support or your customer success manager. To sync as soon as your data changes, call the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint. For more information, see [How it works](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion#how-it-works).
+
 ## Why was I emailed: "Error in CDI Sync"?
 
 This type of email usually means there's an issue with your CDI setup. Here are some common issues and how to fix them:

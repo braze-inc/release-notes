@@ -157,7 +157,7 @@ Although WhatsApp has loosened their policy, Braze still recommends collecting o
 
 Since Meta has rolled out the per-user marketing template limit, Meta has seen significant improvements in user read rates and sentiment.
  
-Beginning now, ahead of the holiday season, people in the US will receive fewer new marketing conversations. Meta expects this change to create more engaged audiences, which ultimately leads to better outcomes for businesses. This may result in lower delivery rates for your business if you send marketing messages to US phone numbers, which can be monitored with the error code `131049` through Braze Currents and the Message Activity Log.
+Beginning now, ahead of the holiday season, people in the US will receive fewer new marketing conversations. Meta expects this change to create more engaged audiences, which ultimately leads to better outcomes for businesses. This may result in lower delivery rates for your business if you send marketing messages to US phone numbers, which can be monitored with the error code `131049` through Braze Currents and [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability).
 
 Businesses in the US can still deliver marketing messages in other geographies, and there is no impact to utility, authentication or service messages, or marketing template messages sent within a user-initiated conversation window (for example, a click-to-WhatsApp ad or product carousel or coupon template that is sent as part of a conversation). 
 

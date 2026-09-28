@@ -211,9 +211,9 @@ Users will then advance to the next component of the Canvas if there is one or e
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync component, Braze will sync these users in near real-time while respecting Google Ads API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Google. 
+As users reach the Audience Sync step, Braze enqueues them for batching before sending them to Google. See [Batching and latency](https://www.braze.com/docs/partners/canvas_audience_sync/overview/#batching-and-latency) for how Braze dispatches batches.
 
-Once a customer is close to reaching the Google Ads API rate limit, Google will provide feedback to Braze around retry recommendations. If a Braze customer reaches their rate limit, Braze the Canvas will retry the sync for up to &#126;13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
+Braze sends up to 10,000 users per request to Google. When a customer is close to the Google Ads API rate limit, Google provides retry recommendations to Braze. If the rate limit is reached, Braze retries the sync for up to &#126;13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
 
 ## Understanding analytics 
 

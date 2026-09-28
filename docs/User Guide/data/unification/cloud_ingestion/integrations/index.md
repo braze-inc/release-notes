@@ -736,9 +736,9 @@ Such problems can include the following:
 #### Step 3.3: Scheduling
 Lastly, configure your sync as non-recurring or recurring.
 
-Non-recurring syncs can be triggered manually or via the API.
+Non-recurring syncs run only when you select **Sync Now** in the dashboard or call the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint.
 
-Recurring syncs can have a frequency anywhere from every 15 minutes to once per month. Braze schedules the recurring sync in UTC timezone.
+Recurring syncs can run as often as every 5 minutes or as rarely as once per month. By default, the shortest interval you can set in the dashboard is 15 minutes, which helps manage your warehouse compute costs and request volume. To sync as often as every 5 minutes, contact Braze Support or your customer success manager. Braze schedules recurring syncs in UTC.
 
 
 
@@ -772,9 +772,9 @@ Such problems can include the following:
 #### Step 3.3: Scheduling
 Lastly, configure your sync as non-recurring or recurring.
 
-Non-recurring syncs can be triggered manually or via the API.
+Non-recurring syncs run only when you select **Sync Now** in the dashboard or call the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint.
 
-Recurring syncs can have a frequency anywhere from every 15 minutes to once per month. Braze schedules the recurring sync in UTC timezone.
+Recurring syncs can run as often as every 5 minutes or as rarely as once per month. By default, the shortest interval you can set in the dashboard is 15 minutes, which helps manage your warehouse compute costs and request volume. To sync as often as every 5 minutes, contact Braze Support or your customer success manager. Braze schedules recurring syncs in UTC.
 
 
 
@@ -806,9 +806,9 @@ Contact emails only receive notifications of global or sync-level errors such as
 #### Step 3.3: Scheduling
 Lastly, configure your sync as non-recurring or recurring.
 
-Non-recurring syncs can be triggered manually or via the API.
+Non-recurring syncs run only when you select **Sync Now** in the dashboard or call the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint.
 
-Recurring syncs can have a frequency anywhere from every 15 minutes to once per month. Braze schedules the recurring sync in UTC timezone.
+Recurring syncs can run as often as every 5 minutes or as rarely as once per month. By default, the shortest interval you can set in the dashboard is 15 minutes, which helps manage your warehouse compute costs and request volume. To sync as often as every 5 minutes, contact Braze Support or your customer success manager. Braze schedules recurring syncs in UTC.
 
 
 
@@ -841,9 +841,9 @@ Such problems can include the following:
 #### Step 3.3: Scheduling
 Lastly, configure your sync as non-recurring or recurring.
 
-Non-recurring syncs can be triggered manually or via the API.
+Non-recurring syncs run only when you select **Sync Now** in the dashboard or call the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint.
 
-Recurring syncs can have a frequency anywhere from every 15 minutes to once per month. Braze schedules the recurring sync in UTC timezone.
+Recurring syncs can run as often as every 5 minutes or as rarely as once per month. By default, the shortest interval you can set in the dashboard is 15 minutes, which helps manage your warehouse compute costs and request volume. To sync as often as every 5 minutes, contact Braze Support or your customer success manager. Braze schedules recurring syncs in UTC.
 
 
 
@@ -877,9 +877,9 @@ Such problems can include the following:
 #### Step 3.3: Scheduling
 Lastly, configure your sync as non-recurring or recurring.
 
-Non-recurring syncs can be triggered manually or via the API.
+Non-recurring syncs run only when you select **Sync Now** in the dashboard or call the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint.
 
-Recurring syncs can have a frequency anywhere from every 15 minutes to once per month. Braze schedules the recurring sync in UTC timezone.
+Recurring syncs can run as often as every 5 minutes or as rarely as once per month. By default, the shortest interval you can set in the dashboard is 15 minutes, which helps manage your warehouse compute costs and request volume. To sync as often as every 5 minutes, contact Braze Support or your customer success manager. Braze schedules recurring syncs in UTC.
 
 
 
@@ -931,26 +931,26 @@ If you reuse the same user across integrations, you cannot delete the user in th
 
 
 
-When activated, your sync runs on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, select **Sync Now**. This run does not impact regularly scheduled future syncs.
+When activated, your sync runs on the schedule configured during setup. If you want to run the sync outside its schedule or to fetch the most recent data, select **Sync Now**. This run does not impact regularly scheduled future syncs. To start a sync automatically when your data updates, call the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint from your pipeline.
 
 
 
-When activated, your sync runs on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, select **Sync Now**. This run does not impact regularly scheduled future syncs.
-
-
-
-
-When activated, your sync runs on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, select **Sync Now**. This run does not impact regularly scheduled future syncs.
+When activated, your sync runs on the schedule configured during setup. If you want to run the sync outside its schedule or to fetch the most recent data, select **Sync Now**. This run does not impact regularly scheduled future syncs. To start a sync automatically when your data updates, call the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint from your pipeline.
 
 
 
 
-When activated, your sync runs on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, select **Sync Now**. This run does not impact regularly scheduled future syncs.
+When activated, your sync runs on the schedule configured during setup. If you want to run the sync outside its schedule or to fetch the most recent data, select **Sync Now**. This run does not impact regularly scheduled future syncs. To start a sync automatically when your data updates, call the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint from your pipeline.
 
 
 
 
-When activated, your sync runs on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, select **Sync Now**. This run does not impact regularly scheduled future syncs.
+When activated, your sync runs on the schedule configured during setup. If you want to run the sync outside its schedule or to fetch the most recent data, select **Sync Now**. This run does not impact regularly scheduled future syncs. To start a sync automatically when your data updates, call the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint from your pipeline.
+
+
+
+
+When activated, your sync runs on the schedule configured during setup. If you want to run the sync outside its schedule or to fetch the most recent data, select **Sync Now**. This run does not impact regularly scheduled future syncs. To start a sync automatically when your data updates, call the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint from your pipeline.
 
 
 

@@ -15,9 +15,9 @@ This feature allows brands to control what specific first-party data is shared w
 
 ## User syncing and rate limit considerations
  
-As users reach the Audience Sync step, Braze syncs them in near real time while respecting Facebook's Marketing API rate limits. Braze batches and processes as many users as possible every 5 seconds before sending them to Facebook. 
+As users reach the Audience Sync step, Braze enqueues them for batching before sending them to Facebook. See [Batching and latency](https://www.braze.com/docs/partners/canvas_audience_sync/overview/#batching-and-latency) for how Braze dispatches batches.
 
-Facebook's Marketing API rate limit allows no more than &#126;190,000 API requests per ad account in a one-hour period. If a customer reaches this limit, Braze retries the sync for up to &#126;13 hours. If the sync still isn't possible, Braze lists these users under the Users Errored metric.
+Braze sends up to 2,000 users per request to Facebook. Facebook's Marketing API rate limit allows no more than &#126;190,000 API requests per ad account in a one-hour period. If a customer reaches this limit, Braze retries the sync for up to &#126;13 hours. If the sync still isn't possible, Braze lists these users under the Users Errored metric.
 
 ## Prerequisites
 

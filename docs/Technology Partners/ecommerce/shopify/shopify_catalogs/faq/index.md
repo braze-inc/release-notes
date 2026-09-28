@@ -38,9 +38,9 @@ You can sync up to 20 of each per configuration:
 - Up to 20 collections
 - Up to 20 product metafields
 
-### What if a product belongs to more than 250 collections?
+### What if a product belongs to many collections?
 
-Shopify allows products to belong to more than 250 collections, but Braze can only fetch the first 250 collection associations per product. If a product belongs to a selected collection that falls outside the first 250 fetched, that association will not be reflected in your Shopify catalog. If you notice missing collection associations, contact your customer success manager.
+Shopify allows products to belong to many collections. Braze does not sync every collection on a product. It checks membership only for the collections you select in your Shopify product sync configuration (up to 20) and writes those associations to your catalog. Membership is evaluated for each selected collection, regardless of how many other collections the product belongs to in Shopify.
 
 ### Why don't I see all my collections in the configuration modal?
 

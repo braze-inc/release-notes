@@ -15,7 +15,7 @@ Use permission sets to bundle permissions related to specific subject areas or a
 |Name|Permissions|
 |-----------|----------------|
 |Developers|"View API Keys", "Edit API Keys", "View Internal Groups", "Edit Internal Groups", "View Message Activity Log", "View Event User Log", "View API identifiers", "View API Usage Dashboard", "View API Limits", "View API Usage Alerts", "Edit API Usage Alerts", "View SDK Debugger", "Edit SDK Debugger".|
-|Marketers|"View Campaigns", "Edit Campaigns", "Archive Campaigns", "View Canvases", "Edit Canvases", "Archive Canvases", "View Frequency Capping Rules", "Edit Frequency Capping Rules", "View Message Prioritization", "Edit Message Prioritization", "View Content Blocks", "View Feature Flags", "Edit Feature Flags", "Archive Feature Flags", "View Segments", "Edit Segments", "Edit Global Control Group", "View IAM Templates", "Edit IAM Templates", "Archive IAM Templates", "View Email Templates", "Edit Email Templates", "Archive Email Templates", "View Webhook Templates", "Edit Webhook Templates", "Archive Webhook Templates", "View Email Link Templates", "Edit Email Link Templates", "View Media Library Assets", "View Locations", "Edit Locations", "Archive Locations", "View Promotion Codes", "Edit Promotion Codes", "Export Promotion Codes", "View Preference Centers", "Edit Preference Centers", "Edit Dashboard Reports", "View Banner Templates", "View Localization Settings", "Use Operator", "View Decisioning Studio Agents".|
+|Marketers|"View Campaigns", "Edit Campaigns", "Archive Campaigns", "View Canvases", "Edit Canvases", "Archive Canvases", "View Frequency Capping Rules", "Edit Frequency Capping Rules", "View Message Prioritization Settings", "Edit Message Prioritization Settings", "View Content Blocks", "View Feature Flags", "Edit Feature Flags", "Archive Feature Flags", "View Segments", "Edit Segments", "Edit Global Control Group", "View IAM Templates", "Edit IAM Templates", "Archive IAM Templates", "View Email Templates", "Edit Email Templates", "Archive Email Templates", "View Webhook Templates", "Edit Webhook Templates", "Archive Webhook Templates", "View Email Link Templates", "Edit Email Link Templates", "View Media Library Assets", "View Locations", "Edit Locations", "Archive Locations", "View Promotion Codes", "Edit Promotion Codes", "Export Promotion Codes", "View Preference Centers", "Edit Preference Centers", "Edit Dashboard Reports", "View Banner Templates", "View Localization Settings", "Use Operator", "View Decisioning Studio Agents".|
 |User Management|"Edit Dashboard Users", "View Teams", "Edit Teams", "Archive Teams".|
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Example permission set" }
 
@@ -180,11 +180,11 @@ To download a list of your users and their permissions, go to **Settings** > **U
 | Campaigns | View Campaigns | View campaigns |
 | Campaigns | Launch Campaigns | Start, stop, pause, or resume existing campaigns |
 | Campaigns | Archive Campaigns | Move campaigns to archive |
-| Campaigns | Edit Campaigns | Create and update campaigns |
+| Campaigns | Edit Campaigns | Create and update campaigns. This permission also lets users opt a specific campaign into or out of workspace-level messaging controls such as workspace quiet hours, Message Prioritization, and frequency capping. |
 | Campaigns | Approve and Deny Campaigns | Approve or deny campaigns. The [approval workflow for campaigns](https://www.braze.com/docs/user_guide/messaging/governance/approvals) must be turned on for this permission to apply. |
 | Canvas | View Canvases | View Canvases |
 | Canvas | Archive Canvases | Move Canvases to archive |
-| Canvas | Edit Canvases | Create and update Canvases |
+| Canvas | Edit Canvases | Create and update Canvases. This permission also lets users opt a specific Canvas into or out of workspace-level messaging controls such as workspace quiet hours, Message Prioritization, and frequency capping. |
 | Canvas | Launch Canvases | Start, stop, pause, or resume existing Canvases |
 | Canvas | Approve and Deny Canvases | Approve or deny Canvases. The [approval workflow for Canvases](https://www.braze.com/docs/user_guide/messaging/governance/approvals) must be turned on for this permission to apply. |
 | Feature flags | View Feature Flags | View feature flags |
@@ -197,8 +197,11 @@ To download a list of your users and their permissions, go to **Settings** > **U
 | Landing pages | Edit Landing Page Drafts | Create and save landing page drafts |
 | Message Archiving Settings | View Message Archiving Settings | View Message Archiving settings without making changes |
 | Message Archiving Settings | Edit Message Archiving Settings | Create and update Message Archiving settings |
-| Message Prioritization | View Message Prioritization | View message prioritization settings without making changes |
-| Message Prioritization | Edit Message Prioritization | Create and update message prioritization settings |
+| Message Prioritization | View Message Prioritization Settings | View Message Prioritization settings without making changes |
+| Message Prioritization | Edit Message Prioritization Settings | Create and update Message Prioritization settings |
+| Message Prioritization | Delete Message Prioritization Settings | Delete Message Prioritization settings |
+| Quiet Hours | View Quiet Hours Settings | View workspace quiet hours settings without making changes |
+| Quiet Hours | Edit Quiet Hours Settings | Create and update workspace quiet hours settings |
 | WhatsApp Flows | View WhatsApp Flows | View all WhatsApp Flows |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Messaging permissions" }
 

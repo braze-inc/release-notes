@@ -9,7 +9,7 @@ Because Connected Content relies on receiving data from APIs, an API might be in
 **Note:**
 
 
-Connected Content `:retry` is not available for in-app messages.
+Connected Content `:retry` is not available for in-app messages or Banners.
 
 
 

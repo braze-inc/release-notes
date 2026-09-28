@@ -103,6 +103,7 @@ Add a headline using the **Title** field. To make your push personalized and tar
 
 
 
+
 Start typing in the message box and watch a preview appear in the preview box beside it. Push messages must be formatted in plain text. 
 
 To make your push personalized and targeted, you can include [Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid).
@@ -115,6 +116,19 @@ You **cannot** send an Android push message without a title&#8212;however, you c
 
 
 
+
+#### Newlines for iOS push titles
+
+iOS push notification titles display as a single line on the device. If your Liquid output includes newline characters, users may only see text before the first line break. To keep the title on one line, apply the [`strip_newlines`](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters#string-filters) filter to your final output. For example:
+
+
+```liquid
+{% capture title_output %}YOUR LIQUID HERE{% endcapture %}
+{{ title_output | strip_newlines }}
+```
+
+
+For more information on how iOS truncates push text, refer to [Create rich push notifications for iOS](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/rich_notifications#variables-in-text-truncation).
 
 **Tip:**
 

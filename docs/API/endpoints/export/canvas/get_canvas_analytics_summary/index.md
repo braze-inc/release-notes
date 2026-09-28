@@ -1,4 +1,4 @@
-<div id='api_ziidcperzrzh' class='api_div' data-search-keywords='export canvas data summary analytics data name total_stats revenue entries conversions conversions_by_entry_time conversions1 conversions1_by_entry_time conversions2 conversions2_by_entry_time conversions3 conversions3_by_entry_time variant_stats step_stats messages android_push sent opens influenced_opens bounces message'>
+<div id='api_lrwdwqtbjyiu' class='api_div' data-search-keywords='export canvas data summary analytics data name total_stats revenue entries conversions conversions_by_entry_time conversions1 conversions1_by_entry_time conversions2 conversions2_by_entry_time conversions3 conversions3_by_entry_time variant_stats step_stats messages android_push sent opens influenced_opens bounces message'>
 <h1 id="export-canvas-data-summary-analytics">Export Canvas data summary analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/data_summary</p>
@@ -267,8 +267,6 @@
 
 <h2 id="related-articles">Related articles</h2>
 
-<ul>
-  <li><a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting">Export troubleshooting</a></li>
-</ul>
+<ul class="guide_tiles"><li><a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Export troubleshooting</span></span></div></a></li></ul>
 
 </div>

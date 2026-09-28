@@ -390,3 +390,58 @@ Anything added outside of `<head>` tags will be added after the `<body>` tag in 
 Link names can be up to 63 bytes and are automatically truncated if they exceed the limit.
 
 
+
+##### Dynamic font selection
+
+When you need a different font per user at send time, you can dynamically set the text font for an email using Liquid based on user attributes. For a single static custom font across messages, configure a [custom font](https://www.braze.com/docs/user_guide/channels/email/customize/email_global_style_settings/#custom-font) in your global style settings instead.
+
+Many email clients, like Gmail, strip away custom fonts and default to the system font. Dynamic font selection only works in some email clients (like Apple Mail).
+
+**Important:**
+
+
+If you reuse this pattern in the HTML editor, turn off **Enable inline CSS** first. That toggle isn't available for drag-and-drop emails, where CSS inlining is already off. When inlining runs before Liquid, conditionals around a `<style>` block can break. For details, see [CSS inlining](https://www.braze.com/docs/user_guide/channels/email/html_editor/css_inline).
+
+
+
+To set up dynamic font selection:
+
+1. In **Sending Settings**, open the custom head tags section and import the custom font with a `<link>` tag that points to the Google Fonts API URL or another URL that hosts the font's CSS file.
+2. Use a Liquid `if` statement to check the user attribute.
+3. Add a `<style>` tag that applies the font to the email's text elements when the user matches the Liquid condition:
+   - Include a fallback stack with web-safe fonts such as Arial after the custom font.
+   - Use `!important` so the custom font overrides Braze's default Arial fallback for matched selectors only.
+
+For example, to change the font when a user's [language attribute](#language-attribute) is Japanese:
+
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+{% if ${language} == 'ja' %}
+<style type="text/css">
+  body,
+  td,
+  div,
+  p,
+  span,
+  a,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Noto Sans JP", Arial, sans-serif !important;
+  }
+</style>
+{% endif %}
+```
+
+
+**Note:**
+
+
+Inspect the exported HTML for your message if some text still uses the wrong font. Drag-and-drop emails often wrap copy in `td` and `div` elements that a shorter selector list may miss.
+
+

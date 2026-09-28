@@ -43,7 +43,7 @@ Select a trigger event. Events are organized by category and are available depen
 
 **Place Order** and **Update Cart** accept property filters, so a trigger fires only for the orders or carts you want. Basic filters match a top-level property such as `total_value`; nested filters look inside the `products` array, so `products[].metadata.category` matches when any product qualifies. For details, see [Property filters](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events#property-filters).
 
-In-app message campaigns support a smaller set of triggers: **Make Purchase**, **Place Order**, **Start Session**, **Perform Custom Event**, and **Interact With Campaign**. For in-app message campaigns, **Interact With Campaign** only covers opening a push from any campaign or a specific campaign. It does not include the following campaign interaction list.
+In-app message campaigns support a smaller set of triggers: **Make Purchase**, **Place Order**, **Start Session**, **Perform Custom Event**, and **Interact With Campaign**. On an in-app message, **Place Order** applies to any order and supports basic property filters only. It can't target a specific product or filter on nested properties. For in-app message campaigns, **Interact With Campaign** only covers opening a push from any campaign or a specific campaign. It doesn't include the following campaign interaction list.
 
 For non-in-app-message campaigns, when you select **Interact With Campaign**, **Interact With Step**, or **Interact with Landing Page**, choose the interaction to trigger on. Each of these triggers offers its own interactions, and the interactions available to you depend on your enabled channels.
 

@@ -65,9 +65,4 @@ Global Control Group membership is determined by a user's [random bucket number]
 
 ## Related articles
 
-- [Merge duplicate users](https://www.braze.com/docs/user_guide/audience/manage_audience/merge_duplicate_users)
-- [POST: Merge users](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge)
-- [Delete users](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles/delete_users)
-- [Global Control Group](https://www.braze.com/docs/user_guide/audience/global_control_group)
-- [Random bucket numbers](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers)
-- [Internal groups](https://www.braze.com/docs/user_guide/administer/global/user_management/internal_groups)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/audience/manage_audience/merge_duplicate_users"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Merge duplicate users</span></span></div></a></li><li><a href="/docs/api/endpoints/user_data/post_users_merge"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">POST: Merge users</span></span></div></a></li><li><a href="/docs/user_guide/audience/manage_audience/user_profiles/delete_users"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Delete users</span></span></div></a></li><li><a href="/docs/user_guide/audience/global_control_group"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Global Control Group</span></span></div></a></li><li><a href="/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Random bucket numbers</span></span></div></a></li><li><a href="/docs/user_guide/administer/global/user_management/internal_groups"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Internal groups</span></span></div></a></li></ul>

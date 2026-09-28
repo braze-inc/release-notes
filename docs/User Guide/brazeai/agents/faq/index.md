@@ -31,9 +31,11 @@ Agents also cannot warn you when required data is missing—they proceed with wh
 
 ## Troubleshooting
 
-### Why did my agent not follow my instructions or rules?
+### Why did my agent not follow my instructions or rules? {#agent-not-following-instructions}
 
-Consider using [Operator](https://www.braze.com/docs/user_guide/brazeai/operator) to troubleshoot why your agent is not following your instructions. Operator can provide step-by-step instructions and detailed explanations.
+Write positive, explicit instructions whenever possible. Tell the agent what to do, and state any restrictions in concrete terms. For example: "If `{{product_name}}` is empty, treat it as if it was never provided."
+
+Use [Operator](https://www.braze.com/docs/user_guide/brazeai/operator) to review your prompt. Operator walks through your instructions and explains where the agent likely diverged.
 
 ### Why did my Catalog Agent skip some rows?
 

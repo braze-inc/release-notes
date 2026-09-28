@@ -9,8 +9,8 @@ The Braze and Fivetran integration allows users to create a zero-maintenance pip
 | Requirement | Description |
 | ----------- | ----------- |
 | Fivetran account | A [Fivetran](https://fivetran.com/login?next=%2Fdashboard) account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with the following permissions:<br>- users.export.ids<br>- users.export.segment<br>- email.unsubscribe<br>- email.hard_bounces<br>- messages.schedule_broadcasts<br>- campaigns.list<br>- campaigns.details<br>- canvas.list<br>- canvas.details<br>- segments.list<br>- segments.details<br>- purchases.product_list<br>- events.list<br>- feed.list<br>- feed.details<br>- templates.email.info<br>- templates.email.list<br>- subscription.status.get<br>- subscription.groups.get <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance](https://www.braze.com/docs/api/basics/#api-definitions). |
+| Braze REST API key | A Braze REST API key with the following permissions:<br>- users.export.ids<br>- users.export.segment<br>- email.unsubscribe<br>- email.hard_bounces<br>- messages.schedule_broadcasts<br>- campaigns.list<br>- campaigns.details<br>- canvas.list<br>- canvas.details<br>- segments.list<br>- segments.details<br>- purchases.product_list<br>- events.list<br>- feed.list<br>- feed.details<br>- templates.email.info<br>- templates.email.list<br>- subscription.status.get<br>- subscription.groups.get <br><br> This can be created in the Braze dashboard from **Settings** > **APIs and Identifiers**. |
+| Braze REST endpoint  | Your REST endpoint URL. Your endpoint depends on the [Braze URL for your instance](https://www.braze.com/docs/api/basics/#endpoints). |
 | Braze Currents | [Braze Currents](https://www.braze.com/product/data-agility-management/currents/) should be connected to either Amazon S3 or Google Cloud Storage. |
 | Amazon S3 or Google Cloud Storage | This integration requires you have access to one Amazon S3 or Google Cloud Storage. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
@@ -98,9 +98,9 @@ In Fivetran, select **+ Connector**, and then select the **Braze** connector to 
 - `Destination schema`: A unique schema name.
 - `API URL`: Your Braze REST API endpoint.
 - `API Key`: Your Braze REST API key. 
-- `External ID`: The external ID set in [step 2](#step-two) of the Currents set up directions. This ID is a fixed value.
+- `External ID`: The external ID from [step 1](#step-one) of the Currents setup directions. This ID is a fixed value.
 - `Bucket`: Found in your Braze account by navigating to **Partner Integrations** > **Data Export** > your Current name.
-- `Role ARN`: The Role ARN can be found in [step 1](#step-one) of the Current setup directions.
+- `Role ARN`: The Role ARN from [step 2](#step-two) of the Currents setup directions.
 
 **Important:**
 
@@ -109,7 +109,7 @@ Ensure **Amazon S3** is selected as the **Cloud Storage** choice.
 
 
 
-Lastly, select **Save & Test**, and Fivetran will do the rest by syncing with the data from your Braze account!
+Lastly, select **Save & Test**, and Fivetran syncs with the data from your Braze account!
 
 ### Setting up Braze Currents for Google Cloud Storage
 
@@ -145,5 +145,5 @@ Ensure **Google Cloud Storage** is selected as the **Cloud Storage** choice.
 
 
 
-Lastly, select **Save & Test**, and Fivetran will do the rest by syncing with the data from your Braze account!
+Lastly, select **Save & Test**, and Fivetran syncs with the data from your Braze account!
 

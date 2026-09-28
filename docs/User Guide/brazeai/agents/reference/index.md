@@ -132,8 +132,10 @@ Here are some general best practices to get you started with prompting:
 6. Break complex tasks into ordered steps ("Step 1... Step 2...").
 7. Encourage reasoning ("Think through the steps internally, then provide a concise final answer," or "briefly explain your decision").
 8. Pilot, inspect, and iterate. Small tweaks can lead to big quality gains.
-9. Handle the edge cases, add guardrails, and add refusal instructions.
+9. Handle edge cases with positive, explicit rules, and add refusal instructions where needed.
 10. Measure and document what works internally for reuse and scaling.
+
+Write positive, explicit instructions whenever possible. Tell the agent what to do, and state any restrictions in concrete terms. If an agent ignores your rules, see [Why did my agent not follow my instructions or rules?](https://www.braze.com/docs/user_guide/brazeai/agents/faq#agent-not-following-instructions).
 
 ### Examples {#examples}
 

@@ -42,5 +42,4 @@ For more information on configuring quiet hours within an Intelligent Timing cam
 
 ## Related articles
 
-- [Workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours)
-- [Comply with SMS sending times](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/best_practices#comply-with-sms-sending-times)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Workspace quiet hours</span></span></div></a></li><li><a href="/docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/best_practices#comply-with-sms-sending-times"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Comply with SMS sending times</span></span></div></a></li></ul>

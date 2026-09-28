@@ -1,11 +1,11 @@
-<div id='api_xdyzbijatlbm' class='api_div' data-search-keywords='trigger a sync message'>
+<div id='api_uqcqxszqmlyc' class='api_div' data-search-keywords='trigger a sync message'>
 <h1 id="trigger-a-sync">Trigger a sync</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/cdi/integrations/{integration_id}/sync</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to trigger a sync for a given integration.</p>
+  <p>Use this endpoint to start a sync for a given integration right away, for example when your warehouse load finishes. On-demand syncs run in addition to any recurring schedule and don’t change it. If a sync is already running for the integration, the request returns <code class="language-plaintext highlighter-rouge">429</code>.</p>
 </blockquote>
 
 <p><strong>Note:</strong></p>

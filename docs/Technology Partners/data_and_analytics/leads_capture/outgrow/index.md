@@ -28,7 +28,7 @@ Follow these steps to configure the Braze and Outgrow integration:
 
 ### Step 1: Generate Braze API key
 
-1. In your Braze account, go to **Developer Console** > **API Settings**.
+1. In your Braze account, go to **Settings** > **APIs and Identifiers**.
 2. Select **Create New API Key**.
 3. Name your API key, turn on the `users.track` permission, and save the API key.
 

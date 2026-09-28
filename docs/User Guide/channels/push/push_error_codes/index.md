@@ -22,7 +22,7 @@ Common failures may include:
 
 ### DEVICE_UNREGISTERED {#device-unregistered}
 
-This error appears in the Message Activity Log as: `Received 'Error: DEVICE_UNREGISTERED, ' sending to '[Token String]'`
+FCM returns this while sending to a token: `Received 'Error: DEVICE_UNREGISTERED, ' sending to '[Token String]'`. Review the error for the campaign or Canvas in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability).
 
 This typically occurs for one of the following reasons:
 
@@ -73,7 +73,7 @@ Next steps:
 
 The `BadToken` error may occur for several reasons:
 - The push token isn't being sent to Braze correctly (for example, in `registerDeviceToken:` or your platform's equivalent).
-	- Check the token in the [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log). It should generally look like a long string of letters and numbers (such as `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). If it doesn't, check the code involved in sending Braze the push token.<br><br>
+	- Review the error for the campaign or Canvas in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability). The token should generally look like a long string of letters and numbers (such as `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). If it doesn't, check the code involved in sending Braze the push token.<br><br>
 - Mismatched provisioning environment:
 	- If you register with a development certificate and try to send with a production one, you can see this error.  
 	- Braze only supports universal certificates for production environments. Testing push on development environments with a universal certificate will not work. 
@@ -93,9 +93,11 @@ The `TopicDisallowed` error means APNs rejected the push because the topic (bund
 
 ### Unregistered {#ios-unregistered}
 
-This error appears in the Message Activity Log as:
+APNs returns this while sending to a token:
 
 `Received 'Unregistered' sending to '[Token String]'`
+
+Review the error for the campaign or Canvas in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability).
 
 This is the iOS equivalent of the Android [DEVICE_UNREGISTERED](#device-unregistered) error. It typically occurs for one of the following reasons:
 

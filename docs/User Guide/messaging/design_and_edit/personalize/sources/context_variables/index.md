@@ -284,5 +284,4 @@ In all circumstances, we strongly recommend using [Liquid time_zone filters](htt
 
 ## Related articles
 
-- [Context step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context)
-- [Personalization and dynamic content with Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/messaging/canvas/canvas_components/context"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Context step</span></span></div></a></li><li><a href="/docs/user_guide/messaging/design_and_edit/personalize/liquid"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Personalization and dynamic content with Liquid</span></span></div></a></li></ul>

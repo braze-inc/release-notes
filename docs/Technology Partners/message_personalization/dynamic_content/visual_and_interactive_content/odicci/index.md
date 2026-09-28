@@ -51,7 +51,7 @@ Before you start, you'll need the following:
 ### Step 2: Obtain Your Braze REST API Key
 
 1. Log in to your Braze account.
-2. Go to **Developer Console > REST API Keys**.
+2. Go to **Settings** > **APIs and Identifiers**.
 3. Create a new API Key or copy an existing one with the `users.track` permission.
 
 ### Step 3: Activate the Integration at the Experience Level

@@ -264,6 +264,16 @@ When you template a Content Block with Liquid, mobile media queries in the block
 
 Use **Preview as Custom User** and enter sample custom event property values for the user you preview. This is also useful for messages with abort logic when you need preview values that do not trigger an abort.
 
+## Liquid in push messages
+
+### Why does my iOS push title look truncated when I use Liquid?
+
+iOS push notification titles display as a single line on the device. If your Liquid output includes newline characters, users may only see text before the first line break.
+
+Apply the [`strip_newlines`](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters#string-filters) filter to your final title output. For an example in the push composer, refer to [Create a push notification](https://www.braze.com/docs/user_guide/channels/push/create_a_push_message#newlines-for-ios-push-titles). For other factors that affect how much title text displays, refer to [Variables in text truncation](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/rich_notifications#variables-in-text-truncation).
+
+For the push message body (not the title), Braze automatically removes line breaks adjacent to Liquid tags when the message is sent. That behavior does not apply to the title field. For details, refer to [Line breaks in push notifications](https://www.braze.com/docs/developer_guide/push_notifications/troubleshooting#push-linebreaks).
+
 ## Liquid in email messages
 
 ### Why does my message abort with "Invalid from email address for recipient:"?

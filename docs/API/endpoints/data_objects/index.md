@@ -63,7 +63,7 @@ For throttled requests, Braze returns `429` and an error payload with `id` and `
 This section defines the key identifiers used across all Data Objects endpoints.
 
 - `type_name`: The data object type machine name, unique within a workspace.
-- `external_id`: Your object identifier, unique within a type.
+- `object_id`: Your object identifier, unique within a type.
 - `braze_id`: The Braze user ID used on user-relationship endpoints.
 - `attributes`: Field-name-keyed object or relationship data validated against the configured schema.
 
@@ -130,8 +130,8 @@ Creating the same edge from the opposite anchor perspective still targets one un
 
 User relationship reads and writes intentionally use different endpoint paths:
 
-- Read: `GET /data_objects/objects/{type_name}/{external_id}/user_relationships`
-- Write: `POST|PUT|PATCH|DELETE /data_objects/objects/{type_name}/{external_id}/users`
+- Read: `GET /data_objects/objects/{type_name}/{object_id}/user_relationships`
+- Write: `POST|PUT|PATCH|DELETE /data_objects/objects/{type_name}/{object_id}/users`
 
 ### Relationship attributes are separate from object attributes
 

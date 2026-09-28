@@ -98,7 +98,7 @@ Attribute values must be surrounded by `${}` to operate properly within our vers
 
 
 
-Connected Content requests support GET and POST requests only.
+Connected Content requests support only `GET` and `POST`. For Banners, only `GET` requests are supported. For more information, see [Connected Content for Banners](https://www.braze.com/docs/developer_guide/banners#connected-content).
 
 ## Error handling
 

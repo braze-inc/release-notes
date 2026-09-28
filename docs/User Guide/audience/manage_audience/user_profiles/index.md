@@ -84,7 +84,7 @@ The **Engagement** tab contains information about a user's interactions with the
 | Communication stats | When this user last received messages from you from each channel. |
 | Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs](https://www.braze.com/docs/user_guide/messaging/campaigns/ideas_and_strategies/install_attribution). |
 | Miscellaneous | The user's [random bucket number](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers). |
-| Canvas messages received | Canvas messages this user has received and when. Send timing follows the same channel rules as **Campaigns received**; see [When campaigns appear in Campaigns received](#when-campaigns-appear-in-campaigns-received).<br><br> When a message is received, opened, or clicked, Braze updates data for all profiles that share the same channel identifier as the profile that logged the interaction (for example, the same email address for email, or the same phone number for SMS or WhatsApp). Users who share an identifier with someone who received, opened, or clicked the message can match this filter even if they were not originally in the campaign or were not directly sent the message.<br><br> Select a message from the list to view it. |
+| Canvas messages received | Canvas messages this user has received and when. This section shows messaging interaction history (such as email sends and opens), not Canvas entry history. A user can appear here even if they never entered the Canvas (for example, when another profile sharing the same email address received or opened the message). An open can also create a new entry for a shared email profile that was not originally sent the message.<br><br>Send timing, shared channel identifiers, and [messaging interaction data](https://www.braze.com/docs/api/data_retention/messaging_interaction_data) expiration follow the same rules as **Campaigns received**. See [When campaigns appear in Campaigns received](#when-campaigns-appear-in-campaigns-received).<br><br>Select a message from the list to view it. |
 | Predictions | [Churn prediction](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_churn) and [event prediction](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_events) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Engagement tab" }
 
@@ -228,7 +228,4 @@ For more information on custom attributes, see [Custom attribute data types](htt
 
 ## Related articles
 
-- [User profile lifecycle](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle)
-- [POST: Export user profile by identifier](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier)
-- [POST: Delete users](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete)
-
+<ul class="guide_tiles"><li><a href="/docs/user_guide/data/unification/user_data/user_profile_lifecycle"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">User profile lifecycle</span></span></div></a></li><li><a href="/docs/api/endpoints/export/user_data/post_users_identifier"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">POST: Export user profile by identifier</span></span></div></a></li><li><a href="/docs/api/endpoints/user_data/post_user_delete"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">POST: Delete users</span></span></div></a></li></ul>

@@ -75,9 +75,15 @@ Access to Operator is managed at the workspace level through [Granular User Perm
 
 ### Human-in-the-loop model
 
-By default, Operator requires explicit approval before committing any change. Proposed modifications are presented as [action cards](https://www.braze.com/docs/user_guide/brazeai/operator/reviewing_actions) for review. If a user rejects a proposal, no changes occur. If a user accepts a proposal, the dashboard updates, but the changes remain pending and must be manually saved or launched to become persistent.
+By default, Operator requires explicit approval before making any change. Proposed modifications are presented as [action cards](https://www.braze.com/docs/user_guide/brazeai/operator/reviewing_actions) for review. If a user rejects a proposal, no changes occur. If a user accepts a proposal, the dashboard updates. Most changes remain pending until the user manually saves or launches them, but accepting a save action, such as saving a campaign draft, applies immediately.
 
-Users can enable **Auto-approve actions** in the Operator chat panel, which causes suggested actions to execute immediately without manual review. Even with auto-approve enabled, some actions always require explicit approval for safety, including generating images and modifying workspace-level settings.
+Users can enable **Auto-approve actions** in the Operator chat panel, which causes suggested actions to execute immediately without manual review. A few specific actions always require additional confirmation, even with auto-approve turned on:
+
+- **Launch a campaign.** Even with auto-approve on, Operator won't make it active unless someone is there to confirm.
+- **Save, archive, or unarchive an item, or change a workspace-level setting.** Operator can make the change, but it always pauses for approval first.
+- **Generate an image, or run a report, query, or data sync.** These can carry a usage-based cost, so Operator always pauses for approval first.
+
+For actions Operator can't perform at all, regardless of approval, see [Operator's boundaries](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#limitations).
 
 ### User permission inheritance
 

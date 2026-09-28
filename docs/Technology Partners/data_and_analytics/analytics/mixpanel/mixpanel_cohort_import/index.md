@@ -47,7 +47,7 @@ Only users who already exist within Braze will be added or removed from a cohort
 
 ### Step 4: Segment users in Braze
 
-In Braze, to create a segment of these users, go to **Audience** > **Segments**, name your segment, and select **Mixpanel_Cohorts** as the filter. Next, use the "includes" option and choose the cohort you created in Mixpanel. 
+In Braze, to create a segment of these users, go to **Audience** > **Segments**, name your segment, and select **Mixpanel Cohorts** as the filter. Next, use the "includes" option and choose the cohort you created in Mixpanel. 
 
 ![In the Braze segment builder, the user attributes filter "Mixpanel cohorts" is set to "includes" and "Braze cohort".](https://www.braze.com/docs/assets/img_archive/mixpanel1.png?8fa0d351236f3a90ac0e92793d2af3f7)
 

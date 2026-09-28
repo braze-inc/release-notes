@@ -126,8 +126,4 @@ For more information, see [Aborting messages](https://www.braze.com/docs/user_gu
 
 ## Related articles
 
-- [Create a catalog](https://www.braze.com/docs/user_guide/data/activation/catalogs/create/)
-- [Selections](https://www.braze.com/docs/user_guide/data/activation/catalogs/selections/)
-- [Using catalogs in campaigns](https://www.braze.com/docs/user_guide/data/activation/catalogs/use/)
-- [Liquid `date` filter](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters/#date-filter)
-- [Liquid use case library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/liquid_use_cases/)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/data/activation/catalogs/create"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create a catalog</span></span></div></a></li><li><a href="/docs/user_guide/data/activation/catalogs/selections"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Selections</span></span></div></a></li><li><a href="/docs/user_guide/data/activation/catalogs/use"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Using catalogs in campaigns</span></span></div></a></li><li><a href="/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters/#date-filter"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Liquid `date` filter</span></span></div></a></li><li><a href="/docs/user_guide/messaging/design_and_edit/personalize/liquid/liquid_use_cases"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Liquid use case library</span></span></div></a></li></ul>

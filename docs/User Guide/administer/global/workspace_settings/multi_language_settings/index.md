@@ -64,4 +64,12 @@ Translation files are stored at a campaign level, meaning each message variant m
 
 ### Does the locale name have to follow a specific pattern or format?
 
-No. You can use your preferred naming convention. The locale name is used when selecting the locale in the editor and will be in the headings of the file you download with translation IDs.
+No. You can use your preferred naming convention. The locale name is used when selecting the locale in the editor and appears in the headings of the file you download with translation IDs.
+
+### What happens when I delete a locale?
+
+Deleting a locale from **Localization Settings** removes it from the locale picker for messages that don't already reference it. Existing campaigns and Canvases that already reference the deleted locale continue to function and use those translations.
+
+You can still update translations for deleted locales in existing messages. If you remove a deleted locale from a message, you can't add it back unless you re-add the locale in **Localization Settings**.
+
+For message-level behavior when a locale is deleted, see [Using locales](https://www.braze.com/docs/locales_in_messages).

@@ -58,7 +58,7 @@ Table | Description
 [USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED](#USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED) | When a user is subscribed or unsubscribed globally from a channel such as email
 [USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED](#USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED) | When a user is subscribed or unsubscribed to or from a subscription group
 [USERS_CAMPAIGNS_CONVERSION_SHARED](#USERS_CAMPAIGNS_CONVERSION_SHARED) | When a user converts for a campaign
-[USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED](#USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED) | When a user is enrolled in the control group for a campaign
+[USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED](#USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED) | When a user is enrolled in the control group for a campaign<br><br>Does not include Banner campaigns. For Banners, see [USERS_MESSAGES_BANNER_IMPRESSION_SHARED](#USERS_MESSAGES_BANNER_IMPRESSION_SHARED).
 [USERS_CAMPAIGNS_FREQUENCYCAP_SHARED](#USERS_CAMPAIGNS_FREQUENCYCAP_SHARED) | When a user gets frequency capped for a campaign
 [USERS_CAMPAIGNS_REVENUE_SHARED](#USERS_CAMPAIGNS_REVENUE_SHARED) | When a user generates revenue within the primary conversion period
 [USERS_CANVASSTEP_PROGRESSION_SHARED](#USERS_CANVASSTEP_PROGRESSION_SHARED) | When a user progresses to a Canvas step
@@ -74,7 +74,7 @@ Table | Description
 [USERS_CANVAS_COSTEP_SEND_SHARED](#USERS_CANVAS_COSTEP_SEND_SHARED) | The canvas sends for content optimization canvas step
 [USERS_MESSAGES_BANNER_ABORT_SHARED](#USERS_MESSAGES_BANNER_ABORT_SHARED) | An originally scheduled banner message was aborted for some reason
 [USERS_MESSAGES_BANNER_CLICK_SHARED](#USERS_MESSAGES_BANNER_CLICK_SHARED) | When a user clicks a banner
-[USERS_MESSAGES_BANNER_IMPRESSION_SHARED](#USERS_MESSAGES_BANNER_IMPRESSION_SHARED) | When a user views a banner
+[USERS_MESSAGES_BANNER_IMPRESSION_SHARED](#USERS_MESSAGES_BANNER_IMPRESSION_SHARED) | When a user views a banner, including control group users when an impression is logged<br><br>Control and treatment impressions both use this table. Filter on `message_variation_name` (`Control Group`) or the control variation's `message_variation_api_id`.
 [USERS_MESSAGES_CONTENTCARD_ABORT_SHARED](#USERS_MESSAGES_CONTENTCARD_ABORT_SHARED) | An originally scheduled Content Card message was aborted for some reason.
 [USERS_MESSAGES_CONTENTCARD_CLICK_SHARED](#USERS_MESSAGES_CONTENTCARD_CLICK_SHARED) | When a user clicks a Content Card
 [USERS_MESSAGES_CONTENTCARD_DISMISS_SHARED](#USERS_MESSAGES_CONTENTCARD_DISMISS_SHARED) | When a user dismisses a Content Card
@@ -957,6 +957,13 @@ Field | Type | Description
 `message_variation_name` | `string` | Name of the message variation
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="USERSCAMPAIGNSENROLLINCONTROLSHARED #USERSCAMPAIGNSENROLLINCONTROLSHARED" }
 
+**Note:**
+
+
+This table does not include Banner campaign control group users. Unlike Content Cards and in-app messages, Banner control exposure is logged to [`USERS_MESSAGES_BANNER_IMPRESSION_SHARED`](#USERS_MESSAGES_BANNER_IMPRESSION_SHARED) when the SDK records an impression. For more information, see [How are control group users logged in Currents for Content Cards, in-app messages, and Banners?](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/faq#how-are-control-group-users-logged-in-currents-for-content-cards-in-app-messages-and-banners).
+
+
+
 ### USERS_CAMPAIGNS_FREQUENCYCAP_SHARED {#USERS_CAMPAIGNS_FREQUENCYCAP_SHARED}
 
 Field | Type | Description
@@ -1407,6 +1414,13 @@ Field | Type | Description
 `canvas_variation_name` | `string` | Name of the Canvas variation this user received
 `is_unique` | `boolean` | Whether this event was considered 7-day unique when processed
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="USERSMESSAGESBANNERIMPRESSIONSHARED #USERSMESSAGESBANNERIMPRESSIONSHARED" }
+
+**Note:**
+
+
+Control group users for Banner campaigns appear in this table only after the SDK logs an impression. Control and treatment impressions are both logged here. Identify control users by filtering on `message_variation_name` (`Control Group`) or the control variation's `message_variation_api_id` from your campaign setup. Control users are not logged to [`USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED`](#USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED).
+
+
 
 ### USERS_MESSAGES_CONTENTCARD_ABORT_SHARED {#USERS_MESSAGES_CONTENTCARD_ABORT_SHARED}
 

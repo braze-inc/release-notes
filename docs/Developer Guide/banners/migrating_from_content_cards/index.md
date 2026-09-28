@@ -819,8 +819,4 @@ Banners only support scheduled delivery campaigns. To migrate a message that was
 
 ## Related articles
 
-- [Banner placements](https://www.braze.com/docs/developer_guide/banners/placements)
-- [Tutorial: Displaying a Banner by Placement ID](https://www.braze.com/docs/developer_guide/banners/tutorial_displaying_banners)
-- [Banner analytics](https://www.braze.com/docs/developer_guide/banners/analytics)
-- [Banner FAQ](https://www.braze.com/docs/developer_guide/banners/faq)
-
+<ul class="guide_tiles"><li><a href="/docs/developer_guide/banners/placements"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Banner placements</span></span></div></a></li><li><a href="/docs/developer_guide/banners/tutorial_displaying_banners"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Tutorial: Displaying a Banner by Placement ID</span></span></div></a></li><li><a href="/docs/developer_guide/banners/analytics"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Banner analytics</span></span></div></a></li><li><a href="/docs/developer_guide/banners/faq"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Banner FAQ</span></span></div></a></li></ul>

@@ -72,9 +72,9 @@ Here, you can find the REST endpoint and generate your Braze data import key. Af
 
 ### Step 4: Confirm the integration
 
-After Braze receives attribution data from Kochava, the status connection indicator on the Kochava technology partners page in Braze changes from "Not Connected" to "Connected on" followed by a timestamp of the last successful request.
+On the Kochava technology partners page in Braze, the connection indicator shows **Not Connected** until you generate a data import API key in Step 2. After you generate the key, the indicator changes to **Connected** and displays a timestamp. That timestamp reflects when the integration was first set up in Braze (when the data import key was created), not when Kochava last sent a postback.
 
-This status changes only after Braze receives data about an attributed install. Organic installs don't update the connection status.
+To confirm that install attribution data is flowing from Kochava, check that non-organic install data appears in Braze segment filters. Braze ignores organic installs from Kochava postbacks when the attribution source is `organic` and does not store them as attributed install data.
 
 ## Facebook and X (formerly Twitter) attribution data
 

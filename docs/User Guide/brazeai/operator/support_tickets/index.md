@@ -9,7 +9,7 @@
 3. Review the suggested attachments and context to include.
 4. Review and select **Submit**.
 
-Filing a ticket through Operator counts toward the company-wide daily usage limit, and is lighter usage than creating or editing objects such as campaigns and segments. If the limit is already reached, Operator still directs you to **File a support ticket** through the web form. For more information, see [Limitations](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#limitations).
+Filing a ticket through Operator counts toward the company-wide daily usage limit, and is lighter usage than creating or editing objects such as campaigns and segments. If the limit is already reached, Operator still directs you to **File a support ticket** through the web form. For more information, see [Usage limits](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#usage-limits).
 
 ## Auto-included context
 

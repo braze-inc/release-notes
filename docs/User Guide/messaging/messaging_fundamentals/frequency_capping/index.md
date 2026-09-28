@@ -225,7 +225,7 @@ Frequency capping is applied at the campaign or Canvas component send level and 
 
 By default, frequency capping is toggled on when new campaigns are created. From here, you can choose the following:
 
-- The messaging channel you would like to cap: push, email, SMS, webhook, WhatsApp, LINE, or any of those channels.
+- The messaging channel you would like to cap: push, email, SMS/MMS/RCS, webhook, WhatsApp, LINE, or any of those channels. When your workspace has SMS enabled, the SMS rule type covers SMS, MMS, and RCS sends under one shared cap (the dashboard labels it **SMS/MMS/RCS** when MMS is enabled).
 - How many times each user should receive a campaign or Canvas component sent from a channel within a certain time frame.
 - How many times each user should receive a campaign or Canvas component sent by [tag](#frequency-capping-by-tag) within a certain time frame.
 

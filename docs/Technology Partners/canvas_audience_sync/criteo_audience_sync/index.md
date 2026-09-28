@@ -118,9 +118,9 @@ You can view the audience in Criteo by going into your ads manager account and t
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync step, Braze syncs them in near real time while respecting Criteo's API rate limits. Braze batches and processes as many users as possible every five seconds before sending them to Criteo.
+As users reach the Audience Sync step, Braze enqueues them for batching before sending them to Criteo. See [Batching and latency](https://www.braze.com/docs/partners/canvas_audience_sync/overview/#batching-and-latency) for how Braze dispatches batches.
 
-Criteo's API rate limit allows no more than 250 requests per minute. If a customer reaches this limit, Braze retries the sync for up to ~13 hours. If the sync is still not possible, Braze lists these users under the Users Errored metric. 
+Braze sends up to 2,000 users per request to Criteo. Criteo's API rate limit allows no more than 250 requests per minute. If a customer reaches this limit, Braze retries the sync for up to ~13 hours. If the sync is still not possible, Braze lists these users under the Users Errored metric. 
 
 ## Understanding analytics
 

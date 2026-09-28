@@ -26,7 +26,7 @@ The Braze and Adjust integration lets you import non-organic install attribution
 If you have an Android app, you must pass a unique Braze device ID to Adjust. This ID can be set in the Adjust SDK's `addGlobalPartnerParameter()` method. The following code snippet must be included before initializing the SDK on `Adjust.initSdk.`
 
 ```
-Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
+Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId());
 ```
 
 #### iOS
@@ -68,32 +68,32 @@ If you are planning to send post-install events from Adjust into Braze, you will
 
 ### Step 2: Get the Braze data import key
 
-In Braze, navigate to **Integrations** > **Technology Partners** and select **Adjust**. 
+In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Adjust**. 
 
-Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Adjust's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Adjust technology page. In this box, you are shown the data import key and the REST endpoint.](https://www.braze.com/docs/assets/img/attribution/adjust.png?b5e253a0c4e61219056d42be56659c3e){: style="max-width:90%;"}
+Here, you find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Adjust's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Adjust technology page. In this box, you are shown the data import key and the REST endpoint.](https://www.braze.com/docs/assets/img/attribution/adjust.png?b5e253a0c4e61219056d42be56659c3e){: style="max-width:90%;"}
 
 ### Step 3: Configure Braze in Adjust
 
 1. In Adjust's dashboard, navigate to **App Settings** and navigate to **Partner Setup**, then **Add Partners**.
 2. Select **Braze (formerly Appboy)** and provide the data import key and Braze REST endpoint.
-3. Click **Save & Close**.
+3. Select **Save & Close**.
 
 ### Step 4: Confirm the integration
 
-After Braze receives attribution data from Adjust, the status connection indicator on the Adjust technology partners page in Braze changes from "Not Connected" to "Connected" and includes a timestamp of the last successful request.
+On the Adjust technology partners page in Braze, the connection indicator shows **Not Connected** until you generate a data import API key in Step 2. After you generate the key, the indicator changes to **Connected** and displays a timestamp. That timestamp reflects when the integration was first set up in Braze (when the data import key was created), not when Adjust last sent a postback.
 
-This status changes only after Braze receives data about an attributed install. Braze ignores organic installs (excludes them from the Adjust postback) and does not count them when determining if the connection is successful.
+To confirm that install attribution data is flowing from Adjust, check that non-organic install data appears in Braze segment filters. Braze ignores organic installs from Adjust postbacks and does not store them as attributed install data.
 
 ## Available data fields
 
-Assuming you configure your integration as suggested, Braze will map Adjust's data to segment filters as described in the following table.
+Assuming you configure your integration as suggested, Braze maps Adjust's data to segment filters as described in the following table.
 
 | Adjust data field | Braze segment filter |
 | --- | --- |
-| `{network_name}` | Attributed Source |
-| `{campaign_name}` | Attributed Campaign |
-| `{adgroup_name}` | Attributed Adgroup |
-| `{creative_name}` | Attributed Ad |
+| `{network_name}` | Install Attribution Source |
+| `{campaign_name}` | Install Attribution Campaign |
+| `{adgroup_name}` | Install Attribution Adgroup |
+| `{creative_name}` | Install Attribution Ad |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Available data fields" }
 
 ## Facebook and X (formerly Twitter) attribution data
@@ -108,7 +108,7 @@ To get started with Adjust click tracking links, visit their [documentation](htt
 
 
 
-For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/sdk_integration#google-advertising-id). The GAID is also collected natively through the Adjust SDK integration. You can include the GAID in your Adjust click tracking links by utilizing the following Liquid logic:
+For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id). The GAID is also collected natively through the Adjust SDK integration. You can include the GAID in your Adjust click tracking links by utilizing the following Liquid logic:
 
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -119,7 +119,7 @@ aifa={{most_recently_used_device.${google_ad_id}}}
 
 
 
-For iOS, both Braze and Adjust automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your Adjust click tracking links by utilizing the following Liquid logic:
+For iOS, append the Braze device identifier to improve deterministic attribution. In Liquid, `most_recently_used_device.${id}` is the Braze device ID, which may be the IDFV or a UUID depending on your Swift SDK `useUUIDAsDeviceId` setting. Adjust click-tracking URLs commonly use an `idfv` query parameter for this value:
 
 
 ```
@@ -135,7 +135,7 @@ idfv={{most_recently_used_device.${id}}}
 
 
 **This recommendation is purely optional**<br>
-If you currently do not use any device identifiers-such as the IDFV or GAID-in your click tracking links, or do not plan to in the future, Adjust will still be able to attribute these clicks through their probabilistic modeling.
+If you currently do not use any device identifiers—such as the Braze device ID or GAID—in your click tracking links, or do not plan to in the future, Adjust can still attribute these clicks through their probabilistic modeling.
 
 
 

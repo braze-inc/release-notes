@@ -11,7 +11,7 @@ You can also use Braze Currents to [export your Braze events to Mixpanel](#data-
 | Requirement | Description |
 |---|---|
 | Mixpanel account | A [Mixpanel account](https://mixpanel.com/) is required to take advantage of this partnership. |
-| Currents | In order to export data back into Mixpanel, you need to have [Braze Currents](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | In order to export data back into Mixpanel, you need to have [Braze Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Data export integration
@@ -35,8 +35,11 @@ In your Mixpanel dashboard, click into the **Project Settings** in either a new 
 
 ![The Braze Mixpanel Currents page. This page includes fields for integration name, contact email, API secret, and mixpanel export token. The lower half of the Currents page lists available Currents events you can send.](https://www.braze.com/docs/assets/img_archive/mixpanel4.png?6f359e089da713a3121fc11fa6671d9c){: style="max-width:80%;"}
 
+**Note:**
+
 
 Check out Mixpanel's [integration docs](https://help.mixpanel.com/hc/en-us/articles/360001243663) to learn more. 
+
 
 
 ## Supported Currents events

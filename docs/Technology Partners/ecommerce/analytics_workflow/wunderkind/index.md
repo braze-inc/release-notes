@@ -404,7 +404,7 @@ If you trigger the Canvas with Braze's `email` field instead of `user_alias`, th
 
 When Wunderkind calls `/canvas/trigger/send`, the keys and values you pass in each recipient's `context` object become Canvas entry data. In Message steps, reference them with the `context` Liquid namespace. An example is `{{context.${WkPurpose}}}` as described in [Canvas context object](https://www.braze.com/docs/api/objects_filters/context_object/) and [Message](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step). No extra configuration is required beyond using the correct Liquid syntax.
 
-Do not nest Braze output tags inside the `for` tag condition. Assign the `Items` array from `context` to a variable first, then loop, as described in [Using Liquid](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#use-a-filter-result-in-a-for-loop). The `assign` line uses Braze's Canvas entry form `{{context.${Items}}}` (see [Supported personalization tags](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#summary-of-supported-tags)).
+Do not nest Braze output tags inside the `for` tag condition. Assign the `Items` array from `context` to a variable first, then loop, as described in [Using Liquid](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid/#use-a-filter-result-in-a-for-loop). The `assign` line uses Braze's Canvas entry form `{{context.${Items}}}` (see [Supported personalization tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/)).
 
 
 ```liquid

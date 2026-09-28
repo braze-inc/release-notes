@@ -2,9 +2,9 @@
 
 > Custom Canvas alerts let you know when something in a Canvas isn't going as planned, so you can catch a stalled journey or an unexpected drop-off before it affects your customers.
 
-Set a volume or percentage threshold for user entries or messages sent, and Braze notifies you by email or webhook if that threshold is crossed. You can also create multiple alerts for the same Canvas—for example, one alert for user entries and another for messages sent.
+Set a volume or percentage threshold for user entries or messages sent, and Braze notifies you by email or webhook if that threshold is crossed. You can create up to two alerts for the same Canvas—for example, one alert for user entries and another for messages sent.
 
-Not sure where to start? [Operator](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities) can walk you through how to set up a Custom Canvas alert.
+Not sure where to start? [Operator](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities) can walk you through how to set up a custom Canvas alert.
 
 ## Step 1: Create an alert
 
@@ -50,7 +50,14 @@ Choose who should be notified when an alert rule is met, and how they're notifie
 
 You can enable one or both notification methods for a single alert.
 
-Webhook alerts are useful for routing notifications to external platforms, such as a Slack channel—for more, see Slack's documentation for [sending messages using incoming webhooks](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/). Each webhook notification sends a JSON payload with the alert name, evaluation window, and the conditions that triggered the alert. Each condition includes a `threshold_unit` of `volume` or `percentage`. Percentage conditions also include `percentage_metric_value` (the observed count as a whole-number percentage of the baseline). `metric_value` is always the absolute count.
+Webhook alerts are useful for routing notifications to external platforms. Each webhook notification sends a JSON payload with the alert name, evaluation window, and the conditions that triggered the alert. Each condition includes a `threshold_unit` of `volume` or `percentage`. Percentage conditions also include `percentage_metric_value` (the observed count as a whole-number percentage of the baseline). `metric_value` is always the absolute count.
+
+**Note:**
+
+
+Slack incoming webhooks aren't supported yet for custom Canvas alerts.
+
+
 
 ### Example webhook payload
 
@@ -96,6 +103,7 @@ Saving an alert doesn't activate it. To turn it on, go to the **Manage Alerts** 
 
 ## Considerations
 
+- **Alert limit:** You can create up to two custom alerts per Canvas.
 - **Draft Canvases:** You can set up a custom alert for a Canvas that's still in draft, but the alert won't start checking against your rules until the Canvas launches.
 - **Percentage baseline:** Percentage rules need seven complete prior same-window days after the Canvas launches. Until those windows exist, or when the baseline average is zero (no activity in those prior windows), percentage rules don't trigger a notification.
 

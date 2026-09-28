@@ -273,7 +273,7 @@ Several factors can cause the number of sends to be lower than the estimated aud
 - **Send caps:** A Maximum number of users (or similar cap) in **Target Audiences** stops delivery when the cap is hit.
 - **Strict device or browser filters:** Filters that only match the newest app versions or browsers shrink the reachable set at send time compared to a broad segment preview.
 
-To see why a specific user was skipped at send time, check the [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log).
+To see why a specific user was skipped at send time, check [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability).
 
 ### Where are frequently asked questions about global frequency capping?
 

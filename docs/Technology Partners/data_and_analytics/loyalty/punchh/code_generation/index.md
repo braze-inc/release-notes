@@ -8,17 +8,17 @@ _This integration is maintained by Punchh._
 
 Using the Punchh coupon framework and Braze, you can achieve the following scenarios:
 
-- Generate a coupon code when the guest clicks a coupon generation link in an email: The coupon code will be generated dynamically and shown on a web page.
-- Generate a coupon code when the guest opens an email: The coupon code will be generated dynamically and shown as an image within the email.
+- Generate a coupon code when the guest selects a coupon generation link in an email: The coupon code is generated dynamically and shown on a web page.
+- Generate a coupon code when the guest opens an email: The coupon code is generated dynamically and shown as an image within the email.
 
 ## Integrating dynamic coupon code generation
 
 ### Step 1: Create a coupon campaign
 
 1. Using a Punchh coupon campaign, create a dynamic generation coupon campaign as shown in the following image.
-2. The Punchh coupon framework will generate the following parameters to enable dynamic coupon generation:
+2. The Punchh coupon framework generates the following parameters to enable dynamic coupon generation:
     - Dynamic coupon generation token: This is a system-generated security token for encryption.
-    - Dynamic coupon generation URL: This URL will be embedded in the email as a link or image, as required by the business.
+    - Dynamic coupon generation URL: This URL is embedded in the email as a link or image, as required by the business.
 
 ![The form for creating a coupon campaign in Punchh.](https://www.braze.com/docs/assets/img/punchh/punchh8.png?7e8bdb0311151c77f30a674d0df7cda3){: style="max-width:60%;"}
 
@@ -78,7 +78,7 @@ Replace the following:
 
 #### Linking to Punchh web page
 
-To link to a Punchh-hosted web page, add `{{jwt}}` to the dynamic generation URL [you created earlier](#step-1-create-a-coupon-campaign-in-punchh). Your link should be similar to the following: 
+To link to a Punchh-hosted web page, add `{{jwt}}` to the dynamic generation URL [you created earlier](#step-1-create-a-coupon-campaign). Your link should be similar to the following: 
 
 
 ```
@@ -86,13 +86,13 @@ https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX?sign
 ```
 
 
-When a user clicks the coupon URL, they'll be redirected to a Punchh-hosted web page, where their generated coupon will be displayed.
+When a user selects the coupon URL, they're redirected to a Punchh-hosted web page, where their generated coupon is displayed.
 
 ![Example confirmation message after a user successfully generates a coupon code.](https://www.braze.com/docs/assets/img/punchh/punchh7.png?313fa4b601ccca3ac3d691359dd3f9ff)
 
 #### Extracting code via JSON as plain text
 
-To return a JSON response, append `{{jwt}}` to the dynamic generation URL [you created earlier](#step-1-create-a-coupon-campaign-in-punchh), then add `.json` after the token in the URL string. Your link should be similar to the following:
+To return a JSON response, append `{{jwt}}` to the dynamic generation URL [you created earlier](#step-1-create-a-coupon-campaign), then add `.json` after the token in the URL string. Your link should be similar to the following:
 
 
 ```liquid
@@ -106,14 +106,14 @@ You could then leverage [Connected Content](https://www.braze.com/docs/user_guid
 ```liquid
 {% connected_content https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX.json?sign={{jwt}} :save punchh_coupon %}
 {{punchh_coupon.coupon}}
-````
+```
 
 
 #### Linking an image inside email content
 
 To link the coupon code inside an image:
 
-1. Append `{{jwt}}` to the dynamic generation URL [you created earlier](#step-1-create-a-coupon-campaign-in-punchh).
+1. Append `{{jwt}}` to the dynamic generation URL [you created earlier](#step-1-create-a-coupon-campaign).
 2. Add `.png` after the token in the URL string.
 3. Embed your link in an HTML `<img>` tag.
 
@@ -122,7 +122,7 @@ To link the coupon code inside an image:
 
 ```liquid
 <img src="https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX.png?sign={{jwt}}">
-````
+```
 
 
 
@@ -138,9 +138,9 @@ To link the coupon code inside an image:
 | `coupon_code_expired` | This promo code has expired | The code is used after its configured expiration date. |
 | `coupon_code_success` | Congratulations, Promo Code Applied Successfully. | The code is used successfully. |
 | `coupon_code_error` | Please enter a valid promo code | The code used is invalid. |
-| `coupon_code_type_error` | Incorrect coupon type. This coupon can only be redeemed at `%{coupon_type}`. | When a code supposed to be used at the POS is used in the Mobile app, this error will occur. |
-| `usage_exceeded` | The usage for this coupon code's campaign is full. Please try next time. | The usage of the code exceeds the number of users allowed to use it. For example, if the dashboard configuration allows a code to be used by 3,000 users and the number of users exceeds 3,000, this error will occur. |
-| `usage_exceeded_by_guest` | This promo code has already been processed. | The usage of the code by a user exceeds the number of times a user can use it. For example, the dashboard configuration allows a single code to be used three times by a user. If it is used more than that, this error will occur. |
+| `coupon_code_type_error` | Incorrect coupon type. This coupon can only be redeemed at `%{coupon_type}`. | When a code supposed to be used at the POS is used in the Mobile app, this error occurs. |
+| `usage_exceeded` | The usage for this coupon code's campaign is full. Please try next time. | The usage of the code exceeds the number of users allowed to use it. For example, if the dashboard configuration allows a code to be used by 3,000 users and the number of users exceeds 3,000, this error occurs. |
+| `usage_exceeded_by_guest` | This promo code has already been processed. | The usage of the code by a user exceeds the number of times a user can use it. For example, the dashboard configuration allows a single code to be used three times by a user. If it is used more than that, this error occurs. |
 | `already_used_by_other_guest` | This promo code has already been used by some other guest. | Another user has already used the code. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Error messages" }
 

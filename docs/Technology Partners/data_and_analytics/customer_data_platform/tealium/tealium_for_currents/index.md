@@ -9,7 +9,7 @@ The Braze and Tealium integration allows you to seamlessly control the flow of i
 | Requirement | Description |
 | ----------- | ----------- |
 | Tealium EventStream or Tealium AudienceStream | A [Tealium account](https://my.tealiumiq.com/) is required to take advantage of this partnership. |
-| Currents | In order to export data back into Tealium, you need to have [Braze Currents](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | To export data back into Tealium, you need to have [Braze Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents) set up for your account. |
 | Tealium URL | These can be obtained by navigating to your Tealium dashboard and copying the ingestion URL.|
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
@@ -17,7 +17,7 @@ The Braze and Tealium integration allows you to seamlessly control the flow of i
 
 ### Step 1: Create a data source for Braze within Tealium
 
-Instructions for creating a data source can be found on the [Tealium](https://docs.tealium.com/server-side/data-sources/webhooks/braze-currents/) site. When completed, Tealium will provide a data source URL to copy, which you will use in the next step.
+Instructions for creating a data source can be found on the [Tealium](https://docs.tealium.com/server-side/data-sources/webhooks/braze-currents/) site. When completed, Tealium provides a data source URL to copy, which you use in the next step.
 
 ### Step 2: Create Current
 
@@ -30,7 +30,7 @@ After setting up your integration, select **Launch Current**.
 **Important:**
 
 
-It's important to keep your Tealium URL up to date. If your connector's URL is incorrect, Braze will be unable to send events. If this persists for more than **5 days**, the connector's events will be dropped, and data will be permanently lost.
+It's important to keep your Tealium URL up to date. If your connector's URL is incorrect, Braze can't send events. If this persists for more than **5 days**, the connector's events are dropped, and data is permanently lost.
 
 
 

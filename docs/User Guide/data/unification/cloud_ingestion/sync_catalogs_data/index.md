@@ -49,7 +49,7 @@ The setup for a catalog sync closely follows the process for [user-data CDI inte
 4. In the Braze dashboard, navigate to **Technology Partners** > **Snowflake**, and create a new sync.
 5. Enter connection details (or reuse existing credentials) and the source table.
 6. Proceed to step 2 of the setup flow, select the “Catalogs” sync type, and input the integration name and schedule. Note that the name of the integration should **exactly match** the name of the catalog you previously created.
-7. Choose a sync frequency and proceed to the next step.
+7. Choose a [sync frequency](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion#how-it-works) and proceed to the next step.
 8. Add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake. To complete this step, you will need someone with `SECURITYADMIN` access or higher in Snowflake. 
 9. Select **Test Connection** so that everything works as expected. 
 10. Save the sync, and use the synced catalog data for all your personalization use cases. 

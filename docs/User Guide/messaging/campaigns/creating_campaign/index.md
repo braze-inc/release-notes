@@ -195,7 +195,4 @@ If your workspace uses approvals, a teammate with permission to approve campaign
 
 ## Related articles
 
-- [Design and edit](https://www.braze.com/docs/user_guide/messaging/design_and_edit)
-- [A/B tests](https://www.braze.com/docs/user_guide/messaging/ab_testing)
-- [Know before you send](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/know_before_you_send) 
-- [Campaign analytics](https://www.braze.com/docs/user_guide/analytics/reports/campaign_analytics)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/messaging/design_and_edit"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Design and edit</span></span></div></a></li><li><a href="/docs/user_guide/messaging/ab_testing"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">A/B tests</span></span></div></a></li><li><a href="/docs/user_guide/messaging/messaging_fundamentals/know_before_you_send"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Know before you send</span></span></div></a></li><li><a href="/docs/user_guide/analytics/reports/campaign_analytics"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Campaign analytics</span></span></div></a></li></ul>

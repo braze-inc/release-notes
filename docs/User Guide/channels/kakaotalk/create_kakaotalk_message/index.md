@@ -228,7 +228,7 @@ To preview and send a test message to an existing user, you must have "View PII"
 
 
 
-To review the results of a send or troubleshoot issues, go to **Settings** > **Message Activity Log**. For more information, refer to [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log).
+To review the results of a send or troubleshoot issues, use [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability).
 
 ## Step 5: Build the remainder of your campaign or Canvas
 

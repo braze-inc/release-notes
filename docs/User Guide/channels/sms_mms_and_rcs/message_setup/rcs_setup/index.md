@@ -70,3 +70,9 @@ Depending on your integration, Braze can add RCS-verified senders to your existi
 ## Migrating SMS traffic to RCS
 
 If you have separate SMS and RCS subscription groups, you can migrate users from SMS to RCS using a one-step Canvas. For step-by-step instructions, refer to [Migrate SMS traffic to RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups#migrate-sms-traffic-to-rcs).
+
+## Considerations
+
+### Frequency capping and Message Prioritization {#frequency-capping-and-message-prioritization}
+
+RCS sends are included in [global frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping) and [Message Prioritization](https://www.braze.com/docs/message_prioritization/) through the same channel rule as SMS. There is no separate RCS frequency capping or prioritization rule. In the dashboard, that shared channel appears as **SMS** or **SMS/MMS/RCS**, depending on whether MMS is enabled.

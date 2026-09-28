@@ -157,7 +157,7 @@ If something feels off, update the agent’s configuration and test again. Run a
 **Tip:**
 
 
-Avoid telling the agent exactly what you do not want it to do. LLMs may still generate that content if you mention it in the instructions.
+State what the agent should do. Listing unwanted content can still steer the model toward generating it. For more guidance, see [Why did my agent not follow my instructions or rules?](https://www.braze.com/docs/user_guide/brazeai/agents/faq#agent-not-following-instructions).
 
 
 

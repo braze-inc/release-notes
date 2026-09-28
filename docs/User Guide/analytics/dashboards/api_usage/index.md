@@ -79,6 +79,4 @@ For the most accurate reporting in the API usage dashboard, [include API keys in
 
 ## Related articles
 
-- [API usage alerts](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/api_usage_alerts)
-- [Rate limits](https://www.braze.com/docs/api/api_limits)
-- [Bearer token authentication](https://www.braze.com/docs/api/basics#bearer-token-authentication)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/api_usage_alerts"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">API usage alerts</span></span></div></a></li><li><a href="/docs/api/api_limits"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Rate limits</span></span></div></a></li><li><a href="/docs/api/basics#bearer-token-authentication"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Bearer token authentication</span></span></div></a></li></ul>

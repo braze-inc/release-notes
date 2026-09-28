@@ -84,7 +84,7 @@ For example, combining `total_value` is more than `1000` with `products[].metada
 
 Property filters are available on the following surfaces:
 
-- **Place Order:** Campaign and Canvas triggers, exception events, Canvas exit criteria, action paths, conversion events, and Content Card removal events. Basic and nested properties are supported.
+- **Place Order:** Campaign and Canvas triggers, exception events, Canvas exit criteria, action paths, conversion events, and Content Card removal events. Basic and nested properties are supported. On in-app message triggers, **Place Order** supports only basic properties.
 - **Update Cart:** Campaign and Canvas triggers, exception events, Canvas exit criteria, and action paths. Basic and nested properties are supported. On conversion events, Content Card removal events, and in-app message triggers, **Update Cart** is backed by the `ecommerce.cart_updated` custom event and supports basic properties only.
 
 **Note:**
@@ -94,11 +94,11 @@ On a nested filter, **does not equal** matches when no item in the array matches
 
 
 
-Nested properties aren't supported on in-app message triggers, which are evaluated on the device.
+In-app message triggers are evaluated on the device, so **Place Order** can't target a specific product or filter on nested properties there. The **Place order for specific product** option is disabled in the composer. To act on a specific product, use a campaign in another channel or a Canvas instead.
 
 #### Scoping an order to a specific product
 
-To trigger only when an order contains a specific product, add a nested property filter on the **Place Order** trigger:
+To trigger only when an order contains a specific product, add a nested property filter on the **Place Order** trigger. This isn't available on in-app message triggers.
 
 | Goal | Nested property filter |
 |---|---|

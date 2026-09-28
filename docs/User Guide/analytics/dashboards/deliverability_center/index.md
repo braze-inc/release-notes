@@ -18,8 +18,9 @@ To access the Deliverability Center, you need the [user permissions](https://www
 - Archive Canvases
 - View Frequency Capping Rules
 - Edit Frequency Capping Rules
-- View Message Prioritization
-- Edit Message Prioritization
+- View Message Prioritization Settings
+- Edit Message Prioritization Settings
+- Delete Message Prioritization Settings
 - View Content Blocks
 - View Feature Flags
 - Edit Feature Flags
