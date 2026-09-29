@@ -33,7 +33,7 @@ To run a Query Builder report:
 
 ![Query Builder showing the results for the templated query "Channel engagement and revenue for the last 30 days".](https://www.braze.com/docs/assets/img_archive/query_builder.png?5097986890f115229594b9f066dec792)
 
-Results from each report can be generated once a day. If you run the same report more than once in one calendar day, you'll see the same results in both reports.
+Each time you run a report, Query Builder queries the data currently available in Snowflake. Results may change between runs, including within the same day, as new data arrives. Recent events may take time to appear due to ingestion and processing delays.
 
 ### Query templates
 

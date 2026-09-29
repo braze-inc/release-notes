@@ -2,58 +2,29 @@
 
 > Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data. When you sync this data to Braze, you can leverage it for use cases such as personalization, triggering, or segmentation. 
 
-## Understanding the `UPDATED_AT` column
+## Track changes with `UPDATED_AT` {#understanding-the-updated_at-column}
 
 **Note:**
 
 
-`UPDATED_AT` is relevant for data warehouse integrations only, not for S3 syncs.
+`UPDATED_AT` is relevant for data warehouse integrations only, not for file storage syncs.
 
 
 
-When a sync runs, Braze directly connects to your data warehouse instance, retrieves all new data from the specified table, and updates the corresponding data on your Braze dashboard. Each time the sync runs, Braze reflects any updated data.
+When a sync runs, Braze directly connects to your data warehouse instance and uses each row's `UPDATED_AT` timestamp for change tracking. `UPDATED_AT` is a required field for all data warehouse syncs.
 
 **Important:**
 
 
-Braze CDI will sync rows strictly based on the `UPDATED_AT` value, regardless of whether the row content is the same as what’s currently in Braze. Given that, we recommend using `UPDATED_AT` properly to only sync new or updated data to avoid unnecessary data point usage.
+CDI tracks changes strictly based on `UPDATED_AT` values, regardless of whether the row content is the same as what’s currently in Braze. Braze recommends using `UPDATED_AT` to sync only new or updated data, which avoids unnecessary data point usage.
 
 
 
-### Example: Recurring sync
+### Example: Recurring sync behavior
 
-To illustrate how `UPDATED_AT` is used in a CDI sync, consider this example recurring sync for updating user attributes:
+To illustrate how `UPDATED_AT` is used in a CDI sync, see this example recurring sync for updating user attributes.
 
-- File storage sources 
-   - Amazon S3
-
-## Supported data types 
-
-Cloud Data Ingestion supports the following data types: 
-- User attributes, including:
-   - Nested custom attributes
-   - Arrays of objects
-   - Subscription statuses
-- Custom events
-- Purchase events
-- Catalog items
-- User delete requests
-
-### Avoiding data type issues
-
-When using CDI to sync data from external sources (such as Databricks or Snowflake), ensure your source columns use the correct data types before syncing. Common issues include:
-
-- **Timestamps stored as strings:** Make sure your date columns use a timestamp or datetime type in your source database, not a varchar or string.
-- **Numbers stored as strings:** Cast numeric columns to integer or float types in your source query before syncing.
-- **Inconsistent types across syncs:** If a column type changes between syncs, Braze may reject the new data. Verify your source schema remains consistent.
-
-For forcing or changing data types for custom attributes in the Braze dashboard, see [Manage custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/managing_custom_data#forcing-data-type-comparisons).
-
-You can update user data by external ID, user alias, Braze ID, email, or phone number. You can delete users by external ID, user alias, or Braze ID. 
-
-## What gets synced
-
-Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Braze selects and imports any rows where `UPDATED_AT` is later than the last synced `UPDATED_AT` value. Rows at the exact boundary timestamp may also be re-synced if new rows are added at that same timestamp between runs.
+Each time a sync runs, CDI looks for rows that have not previously been synced. CDI checks this using the `UPDATED_AT` column in your table or view. Braze selects and imports any rows where `UPDATED_AT` is later than the last synced `UPDATED_AT` value. Rows at the exact boundary timestamp may also be re-synced if new rows are added at that same timestamp between runs.
 
 **Important:**
 
@@ -227,7 +198,7 @@ During the next scheduled sync, Braze syncs all rows with an `UPDATED_AT` timest
   </tbody>
 </table>
 
-A new row was added for `customer_9012`, but its `UPDATED_AT` value (`2022-07-16 00:25:30`) is earlier than the stored timestamp (`2022-07-19 09:07:23`), so it won't be synced. However, the existing row for `customer_5678` has an `UPDATED_AT` value equal to the stored timestamp, so it is re-synced due to the inclusive boundary. For more details about this behavior, refer to [Make sure the UPDATED_AT time isn't the same time as your sync](#make-sure-the-updated_at-time-isnt-the-same-time-as-your-sync). The stored `UPDATED_AT` remains `2022-07-19 09:07:23`.
+A new row was added for `customer_9012`, but its `UPDATED_AT` value (`2022-07-16 00:25:30`) is earlier than the stored timestamp (`2022-07-19 09:07:23`), so it won't be synced. However, the existing row for `customer_5678` has an `UPDATED_AT` value equal to the stored timestamp, so it is re-synced due to the inclusive boundary. For more details about this behavior, refer to [Avoid resyncing rows with duplicate timestamps](#avoid-resyncing-rows-with-duplicate-timestamps). The stored `UPDATED_AT` remains `2022-07-19 09:07:23`.
 
 **Recurring sync, third run on July 21, 2022 at 12 pm**
 
@@ -351,6 +322,18 @@ In this third run, another new row was added for `customer_1234` with an `UPDATE
 
 
 
+## Prevent data type issues
+
+When using CDI to sync data from external sources (such as Databricks or Snowflake), ensure your source columns use the correct data types before syncing. Common issues include:
+
+- **Timestamps stored as strings:** Make sure your date columns use a timestamp or datetime type in your source database, not a varchar or string.
+- **Numbers stored as strings:** Cast numeric columns to integer or float types in your source query before syncing.
+- **Inconsistent types across syncs:** If a column type changes between syncs, Braze may reject the new data. Verify your source schema remains consistent.
+
+For forcing or changing data types for custom attributes in the Braze dashboard, see [Manage custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/managing_custom_data#forcing-data-type-comparisons).
+
+You can update user data by external ID, user alias, Braze ID, email, or phone number. You can delete users by external ID, user alias, or Braze ID. 
+
 ## Use a UTC timestamp for the `UPDATED_AT` column
 
 The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings time. Prefer UTC-only functions, such as `SYSDATE()` instead of `CURRENT_DATE()` whenever possible.
@@ -428,7 +411,7 @@ This example shows the general process for syncing data for the first time, then
     </tbody>
 </table>
 
-To get this data into the format that CDI expects, you could run the following query:
+To get this data into a `PAYLOAD` column, you could run the following query:
 
 ```sql
 SELECT
@@ -616,7 +599,7 @@ The `PAYLOAD` object should not include an external ID or other ID type.
 
 ### Remove an attribute
 
-You can set it to `null` if you want to omit an attribute from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated. To completely remove an attribute, use `TO_JSON(OBJECT_CONSTRUCT_KEEP_NULL(...))`.
+In a `PAYLOAD` column, you can set an attribute to `null` if you want to omit it from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated. To completely remove an attribute, use `TO_JSON(OBJECT_CONSTRUCT_KEEP_NULL(...))`.
 
 ### Make incremental updates
 
@@ -636,7 +619,9 @@ The best way to prevent this behavior is to ensure that the source data for your
 
 ### Create a JSON string from another table
 
-If you prefer to store each attribute in its own column internally, you need to convert those columns to a JSON string to populate the sync with Braze. To do that, you can use a query like:
+If you use a `PAYLOAD` column and store each attribute in its own column internally, convert those columns to a JSON string to populate `PAYLOAD`. To sync separate columns without building a JSON string, use the **Visual** or **SQL** option instead. For details, see [Choose a data definition option](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup#choose-a-data-definition-option).
+
+To build the JSON string, you can use a query like:
 
 
 
@@ -778,11 +763,11 @@ We recommend that queries be completed within one hour for optimal performance a
 
 | Limitation            | Description                                                                                                                                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.                                             |
+| Number of integrations | There is no limit on how many integrations you can set up. |
 | Number of rows         | By default, each run can sync up to 500 million rows. Braze stops any syncs with more than 500 million new rows. If you need a higher limit than this, contact your Braze customer success manager or Braze Support. |
-| Attributes per row     | Each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
-| Payload size           | Each row can contain a payload of up to 1 MB. Braze rejects payloads greater than 1&nbsp;MB and logs the error "Payload was greater than 1MB" to the sync log along with the associated external ID and truncated payload. |
-| Data type              | You can sync user attributes, events, and purchases through Cloud Data Ingestion.                                                                                                  |
+| Attributes per row     | For syncs using a `PAYLOAD` column, each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
+| Payload size           | For syncs using a `PAYLOAD` column, each row can contain a payload of up to 1 MB. Braze rejects payloads greater than 1&nbsp;MB and logs the error "Payload was greater than 1MB" to the sync log along with the associated external ID and truncated payload. |
+| Data type              | You can sync user attributes, custom events, purchase events, catalog items, user deletion requests, and Canvas triggers through Cloud Data Ingestion. |
 | Braze region           | This product is available in all Braze regions. Any Braze region can connect to any source data region.                                                                              |
 | Source region       | Braze will connect to your data warehouse or cloud environment in any region or cloud provider.                                                                                        |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Product limitations" }

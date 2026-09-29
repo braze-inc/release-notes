@@ -12,16 +12,17 @@ The Braze and Kochava integration helps power a more holistic understanding of y
 
 | Requirement | Description |
 |---|---|
+| Braze SDK | The Braze mobile SDK is required for this integration. Braze matches Kochava attribution postbacks to user profiles using device identifiers that the Braze SDK creates and registers. Exporting `device_id` values from Braze and passing them to Kochava offline is not a supported substitute for integrating the Braze SDK. |
 | Kochava account | A Kochava account is required to take advantage of this partnership. |
 | iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. Details on these requirements can be found in step 1 of the integration process. |
-| Kochava SDK | In addition to the required Braze SDK, you must install the [Kochava SDK](https://support.kochava.com/sdk-integration/). |
+| Kochava SDK | In addition to the Braze SDK, you must install the [Kochava SDK](https://support.kochava.com/sdk-integration/). |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Integration
 
 ### Step 1: Map user IDs
 
-Depending on your platform, your app may need to pass the Braze device identifier (`device_id`) to Kochava so that when Kochava sends attribution data back to Braze, Braze can match that data to the correct user profile. See the Android and iOS sections for when mapping is required.
+This step requires the Braze SDK in your app. Depending on your platform, your app may need to pass the Braze device identifier (`device_id`) from the Braze SDK to Kochava so that when Kochava sends attribution data back to Braze, Braze can match that data to the correct user profile. See the Android and iOS sections for when mapping is required.
 
 #### Android
 

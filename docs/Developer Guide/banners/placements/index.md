@@ -101,10 +101,10 @@ AppDelegate.braze?.banners.requestBannersRefresh(placementIds: ["global_banner",
 
 
 ```java
-ArrayList<String> listOfBanners = new ArrayList<>();
-listOfBanners.add("global_banner");
-listOfBanners.add("navigation_square_banner");
-Braze.getInstance(context).requestBannersRefresh(listOfBanners);
+ArrayList<String> placementIds = new ArrayList<>();
+placementIds.add("global_banner");
+placementIds.add("navigation_square_banner");
+Braze.getInstance(context).requestBannersRefresh(placementIds);
 ```
 
 

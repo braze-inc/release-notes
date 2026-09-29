@@ -2,18 +2,6 @@
 
 > [Amazon Bedrock](https://aws.amazon.com/bedrock/) is a fully managed AWS service that provides access to foundation models from leading AI companies through a unified API, so brands can build and scale generative AI applications on AWS.
 
-
-
-
-**Important:**
-
-
- is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-
-
-
-
-
 ## About the integration
 
 The Braze and Amazon Bedrock integration lets you connect your Amazon Bedrock credentials to Braze so you can use Bedrock-hosted models when building custom AI agents. With this integration, your agents can generate personalized copy, make real-time decisions, or update catalog fields using models available through Amazon Bedrock. 

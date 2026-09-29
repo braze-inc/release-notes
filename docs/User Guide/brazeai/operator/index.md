@@ -2,6 +2,8 @@
 
 > BrazeAI Operator<sup>TM</sup> is an AI-powered assistant built into the dashboard. Operator helps you build—drafting campaigns, Canvases, segments, and content—and helps you get unstuck, from answering questions and troubleshooting issues to brainstorming ideas.
 
+Operator works with you while you build. By default you review and approve each proposed action. For per-user content at send time, use [Braze Agents](https://www.braze.com/docs/user_guide/brazeai/agents) instead. For how to choose between BrazeAI features, see [BrazeAI](https://www.braze.com/docs/user_guide/brazeai).
+
 ## Access Operator
 
 Open Operator from any page in the Braze dashboard.  

@@ -150,7 +150,11 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 
 {:start="2"}
 
-2. Create a personal access token in your Databricks workspace.
+2. Create credentials for Braze. Braze recommends OAuth machine-to-machine (M2M) with a service principal, but you can also use a personal access token. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the catalog source table.
+
+**OAuth M2M:** Create a service principal, generate a client secret, grant the service principal **Can use** permission on your SQL warehouse, and grant it `SELECT` on the catalog source table. For steps, see [Create credentials for Braze](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations?tab=databricks#step-12-create-credentials-for-braze).
+
+**Personal access token:**
 
 - a. Select your Databricks username, then select **User Settings** from the dropdown menu.
 - b. On the **Access tokens** tab, select **Generate new token**.

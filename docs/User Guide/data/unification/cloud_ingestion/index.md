@@ -13,10 +13,6 @@ File storage integrations (Amazon S3, Azure Blob Storage, and Google Cloud Stora
 
 When a sync runs, Braze directly connects to your data warehouse instance, retrieves all new data from the specified table, and updates the corresponding data on your Braze dashboard. Each time the sync runs, any updated data is reflected in Braze.
 
-### Finding your integration ID
-
-You can find your integration ID in the URL when viewing an integration in the Braze dashboard. Navigate to **Data Settings** > **Cloud Data Ingestion** and select an integration. The integration ID appears in the URL in the format `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. For example, if your URL is `https://dashboard-01.braze.com/integrations/cloud_data_ingestion/abc123xyz`, your integration ID is `abc123xyz`. You can use this ID when making API calls to trigger syncs or check sync status.
-
 ## Use cases
 
 With Braze Cloud Data Ingestion capabilities, you can:
@@ -60,6 +56,7 @@ Cloud Data Ingestion supports the following data types:
 - Catalog items
 
 ### Zero-copy messaging
+- Canvas triggers
 - Connected Sources
 
 ## User identifiers for data ingestion
@@ -79,6 +76,10 @@ For detailed information about setting up table columns and payload formatting r
 
 For source-specific setup instructions and SQL examples, see [Data Warehouse integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations).
 
+### Finding your integration ID
+
+You can find your integration ID in the URL when viewing an integration in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** and select an integration. The integration ID appears in the URL in the format `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. For example, if your URL is `https://dashboard-01.braze.com/integrations/cloud_data_ingestion/abc123xyz`, your integration ID is `abc123xyz`. You can use this ID when making API calls to trigger syncs or check sync status.
+
 ## Data point usage
 
 For customers on data points-based billing, data point billing for Cloud Data Ingestion is equivalent to billing for updates through the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track). Refer to [Data points](https://www.braze.com/docs/user_guide/data/infrastructure/data_points) for more information. 
@@ -94,10 +95,10 @@ Braze Cloud Data Ingestion counts toward the available rate limit, so if you're 
 
 | Limitation            | Description                                                                                                                                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Number of integrations | There is no limit on how many integrations you can set up. However, you can set up only one integration per table or view.                                             |
+| Number of integrations | There is no limit on how many integrations you can set up.                                             |
 | Number of rows         | By default, each run can sync up to 500 million rows. Any syncs with more than 500 million new rows are stopped. If you need a higher limit than this, contact your Braze customer success manager or Braze Support. |
-| Attributes per row     | Each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
-| Payload size           | Each row can contain a payload of up to 1 MB. Payloads greater than 1 MB are rejected, and the error "Payload was greater than 1MB" is logged to the sync log along with the associated external ID and truncated payload. |
+| Attributes per row     | For syncs using a `PAYLOAD` column, each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
+| Payload size           | For syncs using a `PAYLOAD` column, each row can contain a payload of up to 1 MB. Payloads greater than 1 MB are rejected, and the error "Payload was greater than 1MB" is logged to the sync log along with the associated external ID and truncated payload. |
 | Data type              | You can sync user attributes, custom events, purchase events, catalog items, user deletion requests, and Canvas triggers through Cloud Data Ingestion.                                                                                                  |
 | Braze region           | This product is available in all Braze regions. Any Braze region can connect to any source data region.                                                                              |
 | Source region       | Braze connects to your data warehouse or cloud environment in any region or cloud provider.                                                                                        |

@@ -8,12 +8,21 @@
 - Sending first-party data to The Trade Desk for exclusion targeting.
 - Syncing users to new or existing audiences or CRM data segments.
 
+**Important:**
+
+
+**Audience Sync Pro disclaimer**<br>
+Braze Audience Sync to The Trade Desk is an Audience Sync Pro integration. For more information on this integration, contact your Braze account manager.
+
+
+
 ## Prerequisites 
 
 Make sure you have the following items created, completed, or accepted before setting up the Audience Sync step with The Trade Desk in Canvas.
 
 | Requirement | Origin | Description |
 | --- | --- | --- |
+| Audience Sync Pro | Braze | The Trade Desk is an [Audience Sync Pro](https://www.braze.com/docs/partners/canvas_audience_sync/overview/#audience-sync-pro) partner. Select The Trade Desk in your Audience Sync Pro allotments on the **Technology Partners** page before you connect an advertiser account. Contact your Braze account manager for purchase details. |
 | API token | [The Trade Desk](https://partner.thetradedesk.com/v3/portal/api/doc/Authentication#ui-method-create) | A standard API token created in The Trade Desk platform. We recommend setting the API token lifetime to up to one year to avoid minimal disruption to your Canvases with The Trade Desk Audience Sync. |
 | The Trade Desk Terms & Policies | The Trade Desk | You must agree to a UID2/CRM participation policy before being enabled to send data to The Trade Desk. Contact your representative at The Trade Desk to confirm you have the appropriate signature to enable data delivery to The Trade Desk.<br><br> {::nomarkdown}<ul><li>Confirm that CRM Data Management Access is enabled on your account&#8212your representative at The Trade Desk can help with this. You must have your advertiser ID.</li><li>Have your standard API token ready. You can follow the instructions on this page to generate one.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Prerequisites" }
