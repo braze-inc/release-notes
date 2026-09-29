@@ -1,10 +1,21 @@
 # Cloud Data Ingestion table setup
 
-> Use this page to separate two related but different requirements for Cloud Data Ingestion (CDI): source table setup and payload formatting.
+> Use this page to choose how Cloud Data Ingestion (CDI) reads your data, and to set up a source table with a `PAYLOAD` column if you use that method.
+
+## Choose a data definition option
+
+When you create a sync from a data warehouse source, you choose how Braze reads your data on the **Data definition** step. The options shown depend on the sync type.
+
+| Option | How it works | Available for |
+| --- | --- | --- |
+| **Visual** | Enter a table or view and map its columns to Braze fields in the dashboard, without writing SQL. For details, see [Visual mapper](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/visual_mapper). | Attribute, custom event, and Canvas trigger syncs on data warehouse sources |
+| **SQL** | Write a query against your source. The columns your query returns become Braze fields. For details, see [SQL editor](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sql_editor). | All sync types on data warehouse sources |
+| `PAYLOAD` column | Create a table or view in your source with a Braze-accepted identifier, `UPDATED_AT`, and `PAYLOAD` columns, where `PAYLOAD` holds a JSON object in the `/users/track` format. Then create a CDI sync, select **Table** or **Visual** on the **Data definition** step, and enter the table name. For requirements, see the following sections. | All sync types on all sources, including file storage |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Data definition options" }
 
 ## Understand table setup compared to payload formatting
 
-For CDI user data syncs, configure both:
+For CDI user data syncs that use a `PAYLOAD` column, configure both:
 
 | Layer | What it controls |
 | --- | --- |
@@ -16,7 +27,7 @@ Braze reads rows from your source table first, then validates the `PAYLOAD` fiel
 
 ## Set up your source table
 
-For data warehouse user data syncs, your source table or view should include:
+For data warehouse user data syncs that use a `PAYLOAD` column, your source table or view should include:
 
 - `UPDATED_AT`
 - `PAYLOAD`

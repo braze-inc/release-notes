@@ -2,6 +2,8 @@
 
 > Turn on **Optimize with BrazeAI™** to automatically optimize a campaign with multiple variants. The optimization method depends on whether the campaign sends once or sends multiple times.
 
+Optimize with BrazeAI finds one winner for your campaign audience. For Canvas path tests, see [Winning Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step/winning_path). To generate and mix content variants for the audience, see [Content Optimizer](https://www.braze.com/docs/user_guide/brazeai/content_optimizer). For per-recipient personalization, see [Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go). For a full comparison of BrazeAI features, see [BrazeAI](https://www.braze.com/docs/user_guide/brazeai).
+
 ## Prerequisites
 
 To use **Optimize with BrazeAI™**, your campaign must include at least two message variants.

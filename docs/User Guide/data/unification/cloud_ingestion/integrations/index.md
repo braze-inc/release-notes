@@ -40,7 +40,7 @@ Rows processed per sync depend on your warehouse performance, network latency, a
 4. Test the integration and start the sync. 
 
 
-1. Create a service account and allow access to the Databricks project(s) and dataset(s) that contain the data you want to sync.  
+1. Create a service principal (OAuth M2M) or personal access token, and allow access to the Databricks catalogs and schemas that contain the data you want to sync.  
 2. In your Databricks account, set up the tables or views you want to sync to Braze.   
 3. Create a new source and sync in the Braze dashboard.
 4. Test the integration and start the sync.
@@ -64,12 +64,12 @@ There may be two to five minutes of warm-up time when Braze connects to Classic 
 
 ### Step 1: Set up tables or views
 
-Before you start, review [Table setup for Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup) to understand source table requirements compared to `PAYLOAD` formatting requirements.
+The steps in this section create a table with a `PAYLOAD` column. If you plan to map columns with **Visual** or write a query with **SQL** on the **Data definition** step, you can use an existing table or view instead. Skip the table creation step for your warehouse, and grant Braze read access to the tables or views you want to sync. For a comparison of options, see [Choose a data definition option](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup#choose-a-data-definition-option).
 
 **Note:**
 
 
-Your source table or view can include columns that aren't listed for your warehouse in the tabs in the following section (for example, auditing or hashing). Braze reads only the columns described in those tabs; other columns are not used during Cloud Data Ingestion syncs.
+If you use a `PAYLOAD` column, your source table or view can include columns that aren't listed for your warehouse in the tabs in the following section (for example, auditing or hashing). Braze reads only the columns described in those tabs; other columns are not used during Cloud Data Ingestion syncs.
 
 
 
@@ -414,7 +414,81 @@ You can name the schema and table as you'd like, but the column names should mat
     - `PHONE` - The user's phone number. If multiple profiles with the same phone number exist, the most recently updated profile is prioritized for updates.
 - `PAYLOAD` - This is a string or struct of the fields you want to sync to the user in Braze.
 
-#### Step 1.2: Create an Access Token  
+#### Step 1.2: Create credentials for Braze
+
+Braze can connect to Databricks with either of the following authentication methods:
+
+- **OAuth M2M (recommended):** Braze authenticates as a Databricks service principal using a client ID and client secret. Databricks recommends OAuth machine-to-machine (M2M) authentication for unattended connections like Cloud Data Ingestion.
+- **Personal access token:** Braze authenticates with a token generated in your Databricks workspace.
+
+Existing personal access token credentials keep working, and you don't need to migrate them. However, personal access tokens often expire on a schedule set by your workspace admin, and syncs stop when the token expires. To move an existing source to OAuth M2M, create an OAuth M2M credential and select it when you edit the source.
+
+
+
+
+Braze connects to your Databricks workspace using a service principal with OAuth M2M authentication. Create a new service principal for Braze to use, and grant it access to your SQL warehouse and source tables. Braze needs the following details to connect:
+
+* Client ID (also called application ID) for the service principal
+* Client secret for Braze to authenticate
+
+##### Create the service principal
+
+1. In your Databricks workspace, select your username in the top bar, and then select **Settings**.
+2. Go to **Identity and access**, and then select **Manage** next to **Service principals**.
+3. Select **Add service principal** > **Add new**.
+4. Enter a name that helps you identify the service principal, such as "Braze CDI", and then select **Add**.
+5. Select the service principal you created. On the **Configurations** tab, make sure **Databricks SQL access** is selected.
+
+##### Generate a client secret
+
+1. On the service principal's page, select the **Secrets** tab, and then select **Generate secret**.
+2. Enter a lifetime for the secret, in days. Databricks allows a maximum lifetime of 730 days.
+3. Select **Generate**.
+4. Copy the **Secret** and **Client ID** values, and then select **Done**.
+
+Keep the client ID and secret in a safe place until you need to enter them on the Braze dashboard during the credential creation step. Databricks shows the secret only once.
+
+**Note:**
+
+
+Databricks doesn't allow unlimited lifetimes on service principal secrets. Remember to replace the secret before it expires to maintain the flow of data to Braze. For steps, see [Update the client secret](#update-the-client-secret).
+
+
+
+##### Grant access to the SQL warehouse
+
+Braze needs permission to run queries on your SQL warehouse, but doesn't need workspace admin access.
+
+1. In the sidebar, select **SQL Warehouses**, and then select the warehouse you want Braze to use.
+2. Select **Permissions**.
+3. Search for and select the service principal you created.
+4. In the permission dropdown, select **Can use**, and then select **Add**.
+
+##### Grant access to the source tables
+
+Grant the service principal read access to the catalog, schema, and tables you set up in Step 1.1. Use the service principal's application ID (the same value as the client ID) as the grantee.
+
+```sql
+GRANT USE CATALOG ON CATALOG `BRAZE-CLOUD-PRODUCTION` TO `<application-id>`;
+GRANT USE SCHEMA ON SCHEMA `BRAZE-CLOUD-PRODUCTION`.INGESTION TO `<application-id>`;
+GRANT SELECT ON TABLE `BRAZE-CLOUD-PRODUCTION`.INGESTION.USERS_ATTRIBUTES_SYNC TO `<application-id>`;
+```
+
+Update the names as needed, but the permissions should match the preceding example.
+
+##### Update the client secret
+
+Braze stores one client secret per credential. When you update it, every source and sync that uses the credential switches to the new secret. To replace the secret:
+
+1. In Databricks, generate a new secret for the service principal by following the steps in [Generate a client secret](#generate-a-client-secret). Don't delete the old secret yet.
+2. In the Braze dashboard, go to **Data Settings** > **Cloud Data Ingestion** > **Credentials**, and then select your OAuth M2M credential. The **Used by** section lists every source and sync that uses this credential.
+3. Pause the syncs that use this credential, or plan the update for a time when none of them are scheduled to run. This prevents a sync from starting while the credential is being updated.
+4. Select **Edit credential**, enter the new client secret, and then select **Save**. The change applies to every source and sync that uses this credential.
+5. Resume any syncs you paused.
+6. After Braze saves the new secret, delete the old secret in Databricks.
+
+
+
 
 For Braze to access Databricks, a personal access token needs to be created.
 
@@ -425,6 +499,9 @@ For Braze to access Databricks, a personal access token needs to be created.
 5. Copy the displayed token, and then select **Done**.
 
 Keep the token in a safe place until you need to enter it on the Braze dashboard during the credential creation step.
+
+
+
 
 #### Step 1.3: Allow access to Braze IPs    
 
@@ -664,7 +741,12 @@ In the Braze Dashboard, go to **Data Settings** > **Cloud Data Ingestion** > **S
 
 #### Step 2.1: Add Databricks connection information and source table
 
-Choose a name for your source and input your Databricks credentials and configuration. Then, proceed to the next step.
+Enter a name for your source, and then enter your Databricks credentials and configuration:
+- For **Credential name**, enter a label that helps you identify these credentials in Braze.
+- For **Authentication method**, select **OAuth M2M** or **Personal Access Token** to match the credentials you created in Step 1.2.
+- For OAuth M2M, enter the **Client ID** and **Client secret** for your service principal. For a personal access token, enter the **Access token**.
+
+Then, proceed to the next step.
 
 #### Step 2.2: Test connection and connect to source
 
@@ -709,15 +791,15 @@ Go to **Data Settings** > **Cloud Data Ingestion** > **Syncs**, and select **Cre
 
 
 
-#### Step 3.1: Configure sync details and test connection
-Choose a name for your sync. Then, select from any active source and input your source table for the sync. Select a data type and click **Test Connection**.
+#### Step 3.1: Configure sync details and define your data
+Enter a name for your sync. Then, select an active source and a sync data type. Next, select **Visual** or **Table** and enter your source table, or select **SQL** to write a custom SQL query. Finally, select **Preview and validate**.
 
-Once successful, a preview of the data appears. Select **Next: Notifications** to continue. If the connection fails, an error message appears to help troubleshoot the issue.
+After validation succeeds, a preview of the data appears. Select **Next: Notifications** to continue. If validation fails, an error message appears to help troubleshoot the issue.
 
 **Note:**
 
 
-You must successfully test a sync before progressing to next steps. If you need to close out of the sync creation page, click **Save as draft** to keep your work in progress.
+You must successfully validate a sync before progressing to next steps. If you need to close out of the sync creation page, select **Save as draft** to keep your work in progress.
 
 
 
@@ -731,7 +813,7 @@ Such problems can include the following:
 - Connectivity issues
 - Lack of resources
 - Permissions issues
-- (For catalogs syncs only) Catalog tier is out of space
+- Catalog tier is out of space (catalog syncs only)
 
 #### Step 3.3: Scheduling
 Lastly, configure your sync as non-recurring or recurring.
@@ -744,15 +826,15 @@ Recurring syncs can run as often as every 5 minutes or as rarely as once per mon
 
 
 
-#### Step 3.1: Configure sync details and test connection
-Choose a name for your sync. Then, select from any active source and input your source table for the sync. Select a data type and click **Test Connection**.
+#### Step 3.1: Configure sync details and define your data
+Enter a name for your sync. Then, select an active source and a sync data type. Next, select **Visual** or **Table** and enter your source table, or select **SQL** to write a custom SQL query. Finally, select **Preview and validate**.
 
-Once successful, a preview of the data appears. Select **Next: Notifications** to continue. If the connection fails, an error message appears to help troubleshoot the issue.
+After validation succeeds, a preview of the data appears. Select **Next: Notifications** to continue. If validation fails, an error message appears to help troubleshoot the issue.
 
 **Note:**
 
 
-You must successfully test a sync before progressing to next steps. If you need to close out of the sync creation page, click **Save as draft** to keep your work in progress.
+You must successfully validate a sync before progressing to next steps. If you need to close out of the sync creation page, select **Save as draft** to keep your work in progress.
 
 
 
@@ -766,8 +848,7 @@ Such problems can include the following:
 - Connectivity issues
 - Lack of resources
 - Permissions issues
-
-(For catalogs syncs only) Catalog tier is out of space
+- Catalog tier is out of space (catalog syncs only)
 
 #### Step 3.3: Scheduling
 Lastly, configure your sync as non-recurring or recurring.
@@ -780,15 +861,15 @@ Recurring syncs can run as often as every 5 minutes or as rarely as once per mon
 
 
 
-#### Step 3.1: Configure sync details and test connection
-Choose a name for your sync. Then, select from any active source and input your source table for the sync. Select a data type and click **Test Connection**.
+#### Step 3.1: Configure sync details and define your data
+Enter a name for your sync. Then, select an active source and a sync data type. Next, select **Visual** or **Table** and enter your source table, or select **SQL** to write a custom SQL query. Finally, select **Preview and validate**.
 
-Once successful, a preview of the data appears. Select **Next: Notifications** to continue. If the connection fails, an error message appears to help troubleshoot the issue.
+After validation succeeds, a preview of the data appears. Select **Next: Notifications** to continue. If validation fails, an error message appears to help troubleshoot the issue.
 
 **Note:**
 
 
-You must successfully test a sync before progressing to next steps. If you need to close out of the sync creation page, click **Save as draft** to keep your work in progress.
+You must successfully validate a sync before progressing to next steps. If you need to close out of the sync creation page, select **Save as draft** to keep your work in progress.
 
 
 
@@ -800,8 +881,7 @@ Contact emails only receive notifications of global or sync-level errors such as
 - Connectivity issues
 - Lack of resources
 - Permissions issues
-
-(For catalogs syncs only) Catalog tier is out of space
+- Catalog tier is out of space (catalog syncs only)
 
 #### Step 3.3: Scheduling
 Lastly, configure your sync as non-recurring or recurring.
@@ -814,15 +894,15 @@ Recurring syncs can run as often as every 5 minutes or as rarely as once per mon
 
 
 
-#### Step 3.1: Configure sync details and test connection
-Choose a name for your sync. Then, select from any active source and input your source table for the sync. Select a data type and click **Test Connection**.
+#### Step 3.1: Configure sync details and define your data
+Enter a name for your sync. Then, select an active source and a sync data type. Next, select **Visual** or **Table** and enter your source table, or select **SQL** to write a custom SQL query. Finally, select **Preview and validate**.
 
-Once successful, a preview of the data appears. Select **Next: Notifications** to continue. If the connection fails, an error message appears to help troubleshoot the issue.
+After validation succeeds, a preview of the data appears. Select **Next: Notifications** to continue. If validation fails, an error message appears to help troubleshoot the issue.
 
 **Note:**
 
 
-You must successfully test a sync before progressing to next steps. If you need to close out of the sync creation page, click **Save as draft** to keep your work in progress.
+You must successfully validate a sync before progressing to next steps. If you need to close out of the sync creation page, select **Save as draft** to keep your work in progress.
 
 
 
@@ -835,8 +915,7 @@ Such problems can include the following:
 - Connectivity issues
 - Lack of resources
 - Permissions issues
-
-(For catalogs syncs only) Catalog tier is out of space
+- Catalog tier is out of space (catalog syncs only)
 
 #### Step 3.3: Scheduling
 Lastly, configure your sync as non-recurring or recurring.
@@ -848,16 +927,16 @@ Recurring syncs can run as often as every 5 minutes or as rarely as once per mon
 
 
 
-#### Step 3.1: Configure sync details and test connection
+#### Step 3.1: Configure sync details and define your data
 
-Choose a name for your sync. Then, select from any active source and input your source table for the sync. Select a data type and click **Test Connection**.
+Enter a name for your sync. Then, select an active source and a sync data type. Next, select **Visual** or **Table** and enter your source table, or select **SQL** to write a custom SQL query. Finally, select **Preview and validate**.
 
-Once successful, a preview of the data appears. Select **Next: Notifications** to continue. If the connection fails, an error message appears to help troubleshoot the issue.
+After validation succeeds, a preview of the data appears. Select **Next: Notifications** to continue. If validation fails, an error message appears to help troubleshoot the issue.
 
 **Note:**
 
 
-You must successfully test a sync before progressing to next steps. If you need to close out of the sync creation page, click **Save as draft** to keep your work in progress.
+You must successfully validate a sync before progressing to next steps. If you need to close out of the sync creation page, select **Save as draft** to keep your work in progress.
 
 
 
@@ -871,8 +950,7 @@ Such problems can include the following:
 - Connectivity issues
 - Lack of resources
 - Permissions issues
-
-(For catalogs syncs only) Catalog tier is out of space
+- Catalog tier is out of space (catalog syncs only)
 
 #### Step 3.3: Scheduling
 Lastly, configure your sync as non-recurring or recurring.
@@ -887,7 +965,7 @@ Recurring syncs can run as often as every 5 minutes or as rarely as once per mon
 **Note:**
 
 
-You must successfully test an integration before it can move from Draft to Active state. If you close the creation page, your integration is saved, and you can revisit the details page to make changes and test.  
+You must successfully validate an integration before it can move from Draft to Active state. If you close the creation page, your integration is saved, and you can revisit the details page to make changes and validate.
 
 
 
@@ -895,32 +973,32 @@ You must successfully test an integration before it can move from Draft to Activ
 
 
 
-You may set up multiple integrations with Braze, but each integration should be configured to sync a different table. When creating additional syncs, you may reuse existing credentials if connecting to the Snowflake account.
+You can set up multiple integrations with Braze. When creating additional syncs, you can reuse existing credentials if connecting to the Snowflake account.
 
 If you reuse the same user and role across integrations, you do not need to add the public key again.
 
 
-You may set up multiple integrations with Braze, but each integration should be configured to sync a different table. When creating additional syncs, you may reuse existing credentials if connecting to the same Snowflake or Redshift account.
+You can set up multiple integrations with Braze. When creating additional syncs, you can reuse existing credentials if connecting to the same Redshift account.
 
 If you reuse the same user across integrations, you cannot delete the user in the Braze dashboard until it's removed from all active syncs.
 
 
 
-You may set up multiple integrations with Braze, but each integration should be configured to sync a different table. When creating additional syncs, you may reuse existing credentials if connecting to the same BigQuery account.
-
-If you reuse the same user across integrations, you cannot delete the user in the Braze dashboard until it's removed from all active syncs.
-
-
-
-
-You may set up multiple integrations with Braze, but each integration should be configured to sync a different table. When creating additional syncs, you may reuse existing credentials if connecting to the same Databricks account.
+You can set up multiple integrations with Braze. When creating additional syncs, you can reuse existing credentials if connecting to the same BigQuery account.
 
 If you reuse the same user across integrations, you cannot delete the user in the Braze dashboard until it's removed from all active syncs.
 
 
 
 
-You may set up multiple integrations with Braze, but each integration should be configured to sync a different table. When creating additional syncs, you may reuse existing credentials if connecting to the same Fabric account.
+You can set up multiple integrations with Braze. When creating additional syncs, you can reuse existing credentials if connecting to the same Databricks account.
+
+If you reuse the same user across integrations, you cannot delete the user in the Braze dashboard until it's removed from all active syncs.
+
+
+
+
+You can set up multiple integrations with Braze. When creating additional syncs, you can reuse existing credentials if connecting to the same Fabric account.
 
 If you reuse the same user across integrations, you cannot delete the user in the Braze dashboard until it's removed from all active syncs.
 

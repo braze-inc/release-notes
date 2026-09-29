@@ -53,6 +53,8 @@ Including every catalog field can add unnecessary context and may reduce output 
 
 Now, your agent can reference the knowledge source and retrieve the relevant catalog data.
 
+For [Conversational Agents](https://www.braze.com/docs/user_guide/brazeai/agents/conversational_agents), add a knowledge source as a tool in a workflow step instead of **+ Agent context**. See [Search knowledge sources](https://www.braze.com/docs/user_guide/brazeai/agents/conversational_agents#search-knowledge-sources).
+
 ## Frequently asked questions
 
 ### How do knowledge sources work?
@@ -61,7 +63,7 @@ Converting a catalog into a knowledge source helps Braze Agents understand the t
 
 ### When should I create a knowledge source?
 
-Create a knowledge source when an agent needs to search or retrieve catalog data as agent context—for example, to look up destinations, products, or restaurants during a Canvas journey. Knowledge sources are the supported way to add that searchable catalog context. Catalog Agents that only enrich the row they are deployed to may not need a knowledge source unless they must reference additional catalog data at runtime.
+Create a knowledge source when an agent needs to search or retrieve catalog data—for example, to look up destinations, products, or restaurants during a Canvas journey, or to answer product and FAQ questions in a [conversational workflow](https://www.braze.com/docs/user_guide/brazeai/agents/conversational_agents). Knowledge sources are the supported way to add that searchable catalog context. Catalog Agents that only enrich the row they are deployed to may not need a knowledge source unless they must reference additional catalog data at runtime.
 
 ### Can I still attach a catalog directly as agent context?
 

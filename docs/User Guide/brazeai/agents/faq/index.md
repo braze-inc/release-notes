@@ -4,6 +4,14 @@
 
 ## General
 
+### What's the difference between a Braze Agent and a decisioning agent?
+
+A Braze Agent reasons over one user's context in a Canvas step or catalog field. A decisioning agent in Decisioning Studio learns from measured outcomes across your population. For more information, see [Braze Agent versus decisioning agent](https://www.braze.com/docs/user_guide/brazeai#braze-agent-versus-decisioning-agent).
+
+### What's the difference between Braze Agents and BrazeAI Operator?
+
+Operator works with you in the dashboard while you build. Braze Agents run at send time and produce a different result for each user. For more information, see [Generate content](https://www.braze.com/docs/user_guide/brazeai#generate-content).
+
 ### What is the difference between Canvas Step Agents and Catalog Agents?
 
 When creating an agent, you specify if you want to create a Canvas Step Agent or Catalog Agent. This determines the types of instructions and options the agent can support. Canvas Step Agents process users in real-time within journeys, while Catalog Agents enrich catalog data by adding or updating columns with processed information.
@@ -21,7 +29,7 @@ Go to **Settings** > **Billing** > **Credits Usage** > **Agent Console** to see 
 
 ### Can I use conditional Liquid statements in agent instructions?
 
-No, attempting to write Liquid blocks like `{% if %} statements can result in a validation error. Agents can handle different scenarios through natural language descriptions in the prompt instead.
+No, attempting to write Liquid blocks like `{% if %}` statements can result in a validation error. Agents can handle different scenarios through natural language descriptions in the prompt instead.
 
 ### Can agents access user data beyond the specific Liquid attributes or Canvas context that I pass to them?
 

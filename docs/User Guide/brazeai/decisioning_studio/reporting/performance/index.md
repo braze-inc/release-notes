@@ -21,7 +21,7 @@ At the top of the dashboard, you choose:
 - **Date range:** The time period for the report.
 - **Comparison groups:** The groups being compared (such as Decisioning Studio versus Business as Usual).
 - **Aggregation:** The chart aggregation setting (Daily, 7-day rolling, or 30-day rolling).
-- **Segments:** Any applied segments. These are custom-configured with your AI Expert Services team.
+- **Segments:** Any applied segments. These are custom-configured with your AI Decisioning Services team.
 - **Timeline events:** Whether to overlay configured timeline events on the chart to help you understand changes or events that could impact performance.
 
 ![Performance report showing the comparison groups, aggregation, segments, and timeline events filters at the top, along with the date range selector in the upper right.](https://www.braze.com/docs/assets/img/decisioning_studio/reporting_performance_date_range.png?e15a8bd767c3d24aec1d59141ea128e3)
@@ -62,7 +62,7 @@ Use the chart to understand trends over time, performance shifts, and seasonalit
 
 The chart and KPI card are designed to show different things. The chart shows daily performance ("How did you perform each day?"). The KPI card shows full-period performance ("How did you perform across the entire period?"). For rate metrics, they answer different questions. 
 
-Consider the following example with these conversion rate:
+Consider the following example with these conversion rates:
 
 - Day 1: 10 conversions out of 100 customers = 10%
 - Day 2: 2 conversions out of 10 customers = 20%

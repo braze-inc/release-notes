@@ -130,6 +130,13 @@ Add up to 10 buttons to your template. Button types have different categories an
 | Copy offer code | Call to Action buttons | {::nomarkdown}<ul><li><b>Maximum count:</b> 1</li><li><b>Button text:</b> "Copy offer code" (can't be edited)</li><li><b>Offer code:</b> Up to 15 characters</li></ul> {:/}|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Buttons (optional)" }
 
+**Note:**
+
+
+Braze doesn't support templates that contain a request payment call-to-action button. Even if Meta approves those templates, they are unsupported when synced into Braze.
+
+
+
 For Flow templates, configure the Flow button and select an existing Flow from Meta instead of adding standard call-to-action buttons.
 
 ### Step 5: Preview your template

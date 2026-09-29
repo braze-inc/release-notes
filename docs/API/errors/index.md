@@ -18,7 +18,7 @@ Note that success means only that the RESTful API payload was correctly formed a
 
 A `message: success` or `2XX` response means Braze accepted and queued the request for the endpoints involved—not that every recipient received a message. For messaging, delivery still depends on channel eligibility, tokens, provider errors, and content validation. See the [fatal errors](https://www.braze.com/docs/api/errors/#fatal-errors) table for HTTP errors that block sends, and to your campaign or Canvas analytics for downstream delivery metrics.
 
-For endpoints like [`/users/identify`](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify), which don't send messages, a success message means only that Braze received the request for processing. If there is no match for the alias after processing, the request is stopped.
+For endpoints like [`/users/identify`](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify), which don't send messages, a success response means only that Braze accepted the request for processing. If no user exists with the provided alias, or the alias belongs to a profile that already has an `external_id`, Braze skips the identify. The API still returns the initial success response; there is no error indicating that the alias wasn't matched. Because `alias_name` is [case-sensitive](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify/#case-sensitivity), a capitalization mismatch produces this same result.
 
 If your message is successful but has non-fatal errors, you receive the following response:
 

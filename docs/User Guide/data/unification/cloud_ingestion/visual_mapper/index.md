@@ -2,14 +2,9 @@
 
 > This page covers how to use the visual mapper to sync a table or view from your data warehouse to Braze without writing SQL or restructuring your data.
 
-**Important:**
+The visual mapper is available for attribute, custom event, and Canvas trigger syncs on all Cloud Data Ingestion data warehouse sources. For other sync types, see [Choose a data definition option](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup#choose-a-data-definition-option).
 
-
-The visual mapper is currently in early access. The visual mapper is available for user attribute and canvas trigger syncs, for all Cloud Data Ingestion data warehouse sources. Additional sync types will become available throughout early access. Contact your customer success manager or account manager for access.
-
-
-
-With the visual mapper, you can sync an existing table or view from your data warehouse without writing SQL or restructuring your data. Instead of creating a Braze-specific table with `EXTERNAL_ID`, `UPDATED_AT`, and `PAYLOAD` columns, you map your existing table's columns to Braze fields directly in the dashboard.
+With the visual mapper, you can sync an existing table or view from your data warehouse without writing SQL or restructuring your data upstream. Instead of creating a Braze-specific table with `EXTERNAL_ID`, `UPDATED_AT`, and `PAYLOAD` columns, you map your existing table's columns to Braze fields directly in the dashboard.
 
 ## Prerequisites
 
@@ -17,7 +12,7 @@ Before you create a sync with the visual mapper, you'll need:
 
 - An active Cloud Data Ingestion data warehouse source. If you haven't set one up, see [Data warehouse integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations).
 - The name of the table or view you want to sync, as it appears in your data warehouse.
-- A column in your table that contains a supported user identifier, and a column with a timestamp Braze can use for incremental syncing.
+- A column in your table that contains a supported user identifier, and a column with a timestamp Braze can use for change tracking.
 
 **Note:**
 
@@ -33,21 +28,21 @@ Braze runs only read-only queries against your data and does not modify your und
 1. Go to **Data Settings** > **Cloud Data Ingestion** > **Syncs**, then select **Create data sync**.
 2. Choose a name for your sync and select an active data source. Only active sources can be used.
 3. For **Data destination**, select **Braze Data Platform**.
-4. For **Data Type**, select **User Attributes**.
+4. Select a **Data Type**.
 5. Select **Next: Data definition**.
 
 ### Step 2: Map your source schema
 
-1. On the **Data definition** step, select **Visual mapper**.
-2. In the **Table** field, enter the table or view name as it appears in your data warehouse.
-3. Select **Map source schema**. Braze reads the schema of your table or view and lists every column with its detected data type.
+1. On the **Data definition** step, select **Visual**.
+2. Enter the table or view name as it appears in your data warehouse.
+3. Select **Map source schema**. Braze reads the schema of your table or view and lists every column with its detected data type so you can map it to a Braze field.
 
 ### Step 3: Review your mappings
 
 The **Review mapping** section tracks two required mappings. Your sync can't be created until both are complete:
 
-- Map one column to a supported user identifier: `external_id`, `braze_id`, `email`, `phone`, or a user alias. Identifier options appear under **Identifiers** in the destination field dropdown.
-- Map one column to `updated_at`. Braze uses this timestamp for incremental syncing on recurring syncs, where each sync run imports rows where `updated_at` is later than the last synced value.
+- Map one column to a Braze-accepted user identifier: `external_id`, `braze_id`, `email`, `phone`, or a user alias. Identifier options appear under **Identifiers** in the destination field dropdown.
+- Map one column to `updated_at`. Braze uses this timestamp for change tracking, where each sync run imports rows where `updated_at` is later than the last synced value.
 
 For each remaining column, you can:
 
@@ -107,8 +102,8 @@ No. The visual mapper syncs column values exactly as they appear in your source.
 
 ### Do my existing CDI syncs change?
 
-No. Syncs using the existing table format with `EXTERNAL_ID`, `UPDATED_AT`, and `PAYLOAD` columns continue to work, and you can still create them by selecting **Table** on the **Data definition** step. No migration is required.
+No. Syncs using the existing table format with `EXTERNAL_ID`, `UPDATED_AT`, and `PAYLOAD` columns continue to work, and you can still create them.
 
 ### How is my Braze usage affected?
 
-Each column you import writes as an attribute update, and data point billing works the same as other CDI user data syncs. Excluding columns you don't need keeps your syncs efficient. For more information, see [Cloud Data Ingestion best practices](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/best_practices).
+Each column you import and map writes as a Braze field update, and data point billing works the same as other CDI user data syncs. Excluding columns you don't need keeps your syncs efficient. For more information, see [Cloud Data Ingestion best practices](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/best_practices).

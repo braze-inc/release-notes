@@ -238,7 +238,11 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 
 ##### Step 1.3: Set up credentials 
 
-Create a personal access token in Databricks:
+Create a service principal with OAuth machine-to-machine (M2M) credentials (recommended), or a personal access token. If you already have credentials from another sync, you can reuse them as long as they have access to the Canvas triggers table.
+
+**OAuth M2M:** Create a service principal, generate a client secret, grant the service principal **Can use** permission on your SQL warehouse, and grant it `SELECT` on the Canvas triggers table. For steps, see [Create credentials for Braze](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations?tab=databricks#step-12-create-credentials-for-braze).
+
+**Personal access token:**
 
 1. Select your username, then select **User Settings.**  
 2. On the **Access tokens** tab, select **Generate new token.**  

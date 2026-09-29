@@ -2,10 +2,10 @@
 
 > The Content Optimizer step lets you configure and test multiple versions of content components within a single step. It helps you experiment with content variations and automatically optimizes toward the best-performing combinations over time. For an introduction, see [Content Optimizer](https://www.braze.com/docs/user_guide/brazeai/content_optimizer).
 
-**Important:**
+**Note:**
 
 
-Content Optimizer is currently in beta. For help getting started, contact your customer success manager.
+On the Free plan, you can have only one active Content Optimizer step at a time per workspace. You can continue editing and save additional steps as drafts, but you can't launch another until you free up the active slot—by disconnecting the existing active step and saving the Canvas, or by stopping or archiving another Canvas that has an active Content Optimizer step.<br><br>On the Pro plan, you can launch unlimited Content Optimizer steps. Contact your Braze account manager if you need more than one active step. For details, see [Plan tiers](https://www.braze.com/docs/user_guide/brazeai/content_optimizer#plan-tiers).
 
 
 
@@ -20,13 +20,6 @@ Drag and drop the **Content Optimizer** component from the sidebar, or select th
 ### Step 2: Create your base message
 
 The base message is the starting point for your step. Variants for each content component are dynamically inserted based on the combinations defined in the **Content Optimizer Settings** tab. 
-
-**Note:**
-
-
-During the beta period, the supported channels are email, push notifications, and SMS/MMS/RCS. 
-
-
 
 
 
@@ -61,8 +54,9 @@ In the **Delivery Settings** tab, you can specify if the step should use Intelli
 Content components are the individual elements of your message that you want to test, such as different subject lines or titles. These components allow you to generate multiple versions of a message and automatically optimize based on performance over time.
 
 - **Email:** You can add up to four content components per step and up to five variants per component, for a total of 625 unique content combinations.
-- **Push notifications:** You can add up to two components per step and up to five variants per component, for a total of 25 unique content combinations.
-- **SMS/MMS/RCS:** You can add up to three content components per step, and up to five variants per component, for a total of 125 unique content combinations.
+- **Push notifications:** You can add up to three components per step and up to five variants per component, for a total of 125 unique content combinations.
+- **SMS and MMS:** You can add up to three content components per step and up to five variants per component, for a total of 125 unique content combinations. Image is not supported for SMS or MMS.
+- **RCS:** You can add up to four content components per step and up to five variants per component, for a total of 625 unique content combinations.
 
 When you use **Generate AI suggestions**, Braze sends content to OpenAI to generate variant ideas. Send-time traffic allocation does not use OpenAI. For details on what data is sent and how it is used, see [OpenAI and Content Optimizer](https://www.braze.com/docs/user_guide/brazeai/content_optimizer#openai-and-content-optimizer).
 
@@ -97,6 +91,7 @@ Choose which components you want to optimize for push notifications. Supported o
 
 - Title
 - Message
+- Image
 
 For each selected component, define a set of alternative versions of that content (variants). Use clear, distinct variants that differ in tone, structure, or content. This helps Content Optimizer identify top performers more effectively. You can:
 
@@ -108,11 +103,20 @@ For each selected component, define a set of alternative versions of that conten
 
 
 
-After selecting your subscription group and message type (if applicable), choose which components you want to optimize for SMS/MMS/RCS. Supported options are:
+After selecting your subscription group and message type (if applicable), choose which components you want to optimize for SMS/MMS/RCS. 
+
+Supported options for SMS and MMS are:
 
 - Hook
 - Body
 - CTA
+
+Supported options for RCS messages are:
+
+- Hook
+- Body
+- CTA
+- Image
 
 **Note:**
 
@@ -144,6 +148,33 @@ If you don’t add a Liquid tag for a selected content component, you’ll see a
 
 As the Canvas runs, Content Optimizer mixes and matches variants across components to generate different content combinations. Over time, higher-performing combinations are prioritized for delivery, helping you improve performance without manual intervention.
 
+##### Add an image component
+
+How you place the image Liquid tag depends on the editor and channel.
+
+
+
+
+1. Add an **Image with Liquid** block to your email in the drag-and-drop editor.
+2. Paste `{% message_component "Image" %}` into the **Dynamic URL** field.
+
+This works like a [dynamic image](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop#dynamic-images): Content Optimizer swaps the image URL at send time based on the assigned variant.
+
+
+
+
+Paste the image Liquid tag where the image should appear in your HTML (for example, in the image `src` attribute). You can also swap the component tag into the relevant place in your HTML from the Content Optimizer component tab.
+
+
+
+
+Add an **Image** content component in **Content Optimizer Settings**, then paste `{% message_component "Image" %}` as the image URL for the media you want to optimize.
+
+Image is supported for push and RCS. Image is not supported for SMS or MMS Content Optimizer steps.
+
+
+
+
 #### Liquid references
 
 | Channel | Component | Liquid snippet |
@@ -157,9 +188,11 @@ As the Canvas runs, Content Optimizer mixes and matches variants across componen
 | Email | Image | `{% message_component "Image" %}` | 
 | Push | Title | `{% message_component "Title" %}` | 
 | Push | Message | `{% message_component "Message" %}` | 
+| Push | Image | `{% message_component "Image" %}` |
 | SMS/MMS/RCS | Hook | `{% message_component "Hook" %}` |
 | SMS/MMS/RCS | Body | `{% message_component "Body" %}` |
 | SMS/MMS/RCS | CTA | `{% message_component "CTA" %}` |
+| RCS | Image | `{% message_component "Image" %}` |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Liquid references" }
 
 ### Step 5: Select optimization event
@@ -182,7 +215,7 @@ For email, you can optimize for one of the following events.
 
 
 
-For push notifications, you can optimize **Opens**. This optimizes combinations that get recipients to open the push notification. You can use this optimization event to test variations in title or message copy.
+For push notifications, you can optimize **Opens**. This optimizes combinations that get recipients to open the push notification. You can use this optimization event to test variations in title, message copy, or image.
 
 
 
@@ -206,11 +239,13 @@ At this time, RCS messaging with Content Optimizer does not support SMS fallback
 
 As a Content Optimizer step runs, Braze evaluates content variant performance and assigns the step one of three states, visible in the Canvas.
 
+A step stays in **Learning** for at least seven days. Within 15 days of launch (or of a content edit that resets the optimizer), Braze moves the step to either **Optimizing** or **Action Recommended**.
+
 | State | What it means |
 | --- | --- |
-| Learning | Content Optimizer is still collecting performance data across your content variants and hasn't found a consistent, reliable winner yet. |
+| Learning | Content Optimizer is still collecting performance data across your content variants and hasn't found a consistent, reliable winner yet. Every step remains in Learning for at least seven days. |
 | Optimizing | Content Optimizer has found variants that consistently outperform others and is shifting delivery toward the winning combinations. |
-| Action Recommended | The step has run for a while without a clear winner emerging. Review your step setup to help Content Optimizer find one. |
+| Action Recommended | The step reached the end of the learning window (no more than 15 days) without a clear winner. Review your step setup to help Content Optimizer find one. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Content Optimizer step states" }
 
 ### Actions to consider
@@ -220,7 +255,7 @@ If your step enters the Action Recommended state, consider the following:
 - Increase how many users enter the Canvas, if possible. More sends give Content Optimizer more data to learn from.
 - In general, test more combinations rather than fewer (see [Best practices](#best-practices)). This gives Content Optimizer a clearer signal on what's winning. If your audience volume is low (averaging under approximately 3,000 sends per day), consider reducing the number of variants slightly instead, since too many combinations relative to your volume can slow learning.
 - Make your content variants more clearly distinct from each other in tone, structure, or content.
-- If you can't increase your audience and your variant count and content diversity already look right, your step may simply need more time to find winners.
+- If you can't increase your audience and your variant count and content diversity already look right, try simplifying the test (fewer combinations, clearer differences) and republishing so Content Optimizer can learn again.
 
 ## Edit a launched step
 
@@ -231,12 +266,15 @@ After your Canvas is launched, you can update a running Content Optimizer step b
 - Re-activate previously deactivated variants, as long as doing so keeps the component at or below the five-variant limit.
 
 
-**Note:**
+Braze assigns each user a content combination when they enter the Content Optimizer step. If their send is delayed by delivery controls—such as [quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours), Intelligent Timing, rate limiting, or message prioritization—they can still receive a variant you deactivated after assignment.
 
+For example, if quiet hours run overnight and a user was scheduled to send during that window, Braze may hold the message and deliver it after quiet hours end—even if you deactivated the variant overnight. That delayed send may still use the assigned variant and may not attribute cleanly in analytics after deactivation.
 
-Braze assigns each user a content combination when they enter the Content Optimizer step. If their send is delayed by delivery controls such as rate limiting, Intelligent Timing, or quiet hours, they can still receive a variant you deactivated. To urgently stop these sends, follow the same steps as for a Message step. For more information, see [Stopping Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/change_your_canvas_after_launch#stopping-canvases).
+To reduce unexpected delayed sends:
 
-
+- Don't deactivate variants while quiet hours are holding sends for that step.
+- For time-bound promotions, deactivate variants about an hour before the offer ends—not at the exact end time—so already-scheduled sends can clear.
+- To urgently stop these sends, follow the same steps as for a Message step. See [Stopping Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/change_your_canvas_after_launch#stopping-canvases).
 
 When you publish changes, the optimizer resets and begins reallocating traffic from scratch across all active variants and combinations. Avoid updating variants while the step is in the Learning state. Historical data from before the edit is retained and viewable in the **Content Analytics** tab.
 
@@ -256,6 +294,7 @@ For SMS/MMS/RCS steps, the subscription group and message type also cannot be ch
 - If this is your first time using Content Optimizer, consider using an [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step) step so only part of your audience enters the branch that contains the Content Optimizer step. For example, you could send half your users down a path with the Content Optimizer step and send the other half of your users down a control path that sends the Message Step with your current business-as-usual content. Then, gather data for 2-3 weeks and compare any key performance indicators (KPIs) or counter-metrics before you increase traffic to the paths with Content Optimizer steps. 
   - For an effective one-to-one comparison, include your business-as-usual content as one of the variants for each component in your Content Optimizer step.
 - When you're ready to update after your Content Optimizer step has been in the Optimizing state for some time, deactivate low-performing variants and add new ones that build on the traits of your top performers.
+- Deactivate variants with enough lead time for delayed sends to clear. Avoid deactivating during quiet hours or at the exact moment a sale or offer ends; deactivate about an hour beforehand instead.
 
 ## Considerations
 

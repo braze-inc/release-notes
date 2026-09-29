@@ -2,6 +2,8 @@
 
 > Winning Path automatically tests Canvas paths and sends subsequent users down the best-performing path.
 
+Winning Path finds one winner for your Canvas audience. For campaign variant tests, see [Optimize with BrazeAI](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection). To generate and mix content variants, see [Content Optimizer](https://www.braze.com/docs/user_guide/brazeai/content_optimizer). For per-recipient personalization, see [Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go). For a full comparison of BrazeAI features, see [BrazeAI](https://www.braze.com/docs/user_guide/brazeai).
+
 When Winning Path is turned on in an Experiment Path step, after a specified period of time, all subsequent users are sent down the path with the highest conversion rate.
 
 ## Using Winning Path
