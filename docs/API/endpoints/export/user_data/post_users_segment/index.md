@@ -1,4 +1,4 @@
-<div id='api_fahhvjbbpmkj' class='api_div' data-search-keywords='export user profile by segment segment_id callback_endpoint fields_to_export output_format message object_prefix url created_at external_id user_aliases alias_name alias_label braze_id first_name last_name email dob home_city country phone language time_zone last_coordinates gender total_revenue attributed_campaign attributed_source attributed_adgroup attributed_ad push_subscribe email_subscribe custom_attributes custom_events name first last count purchases devices model os carrier idfv idfa google_ad_id roku_ad_id ad_tracking_enabled push_tokens app platform token device_id notifications_enabled provisionally_opted_in apps version sessions first_used last_used campaigns_received last_received engaged opened_email opened_push clicked_email clicked_triggered_in_app_message converted api_campaign_id variation_name variation_api_id in_control canvases_received api_canvas_id last_received_message last_entered last_exited steps_received api_canvas_step_id cards_clicked random_bucket push_opted_in_at multiple_converted last_entered_control_at'>
+<div id='api_ganscqipjokc' class='api_div' data-search-keywords='export user profile by segment segment_id callback_endpoint fields_to_export output_format user_last_updated_at message object_prefix url created_at external_id user_aliases alias_name alias_label braze_id first_name last_name email dob home_city country phone language time_zone last_coordinates gender total_revenue attributed_campaign attributed_source attributed_adgroup attributed_ad push_subscribe email_subscribe custom_attributes custom_events name first last count purchases devices model os carrier idfv idfa google_ad_id roku_ad_id ad_tracking_enabled push_tokens app platform token device_id notifications_enabled provisionally_opted_in apps version sessions first_used last_used campaigns_received last_received engaged opened_email opened_push clicked_email clicked_triggered_in_app_message converted api_campaign_id variation_name variation_api_id in_control canvases_received api_canvas_id last_received_message last_entered last_exited steps_received api_canvas_step_id cards_clicked random_bucket push_opted_in_at multiple_converted last_entered_control_at'>
 <h1 id="export-user-profile-by-segment">Export user profile by segment</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/export/segment</p>
@@ -117,11 +117,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 4
 5
 6
+7
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"segment_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">identifier</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">segment</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">exported</span><span class="p">,</span><span class="w">
   </span><span class="nl">"callback_endpoint"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">endpoint</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">post</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">download</span><span class="w"> </span><span class="err">URL</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">export</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">available</span><span class="p">,</span><span class="w">
   </span><span class="nl">"fields_to_export"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">name</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">data</span><span class="w"> </span><span class="err">fields</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">export</span><span class="p">,</span><span class="w"> </span><span class="err">you</span><span class="w"> </span><span class="err">may</span><span class="w"> </span><span class="err">also</span><span class="w"> </span><span class="err">export</span><span class="w"> </span><span class="err">custom</span><span class="w"> </span><span class="err">attributes.</span><span class="w"> </span><span class="err">New</span><span class="w"> </span><span class="err">accounts</span><span class="w"> </span><span class="err">must</span><span class="w"> </span><span class="err">specify</span><span class="w"> </span><span class="err">specific</span><span class="w"> </span><span class="err">fields</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">export</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"output_format"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">your</span><span class="w"> </span><span class="err">own</span><span class="w"> </span><span class="err">S</span><span class="mi">3</span><span class="w"> </span><span class="err">bucket</span><span class="p">,</span><span class="w">  </span><span class="err">specifies</span><span class="w"> </span><span class="err">file</span><span class="w"> </span><span class="err">format</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">'zip'</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">'gzip'.</span><span class="w"> </span><span class="err">Defaults</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">ZIP</span><span class="w"> </span><span class="err">file</span><span class="w"> </span><span class="err">format</span><span class="w">
+  </span><span class="nl">"output_format"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">your</span><span class="w"> </span><span class="err">own</span><span class="w"> </span><span class="err">S</span><span class="mi">3</span><span class="w"> </span><span class="err">bucket</span><span class="p">,</span><span class="w"> </span><span class="err">specifies</span><span class="w"> </span><span class="err">file</span><span class="w"> </span><span class="err">format</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">'zip'</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">'gzip'.</span><span class="w"> </span><span class="err">Defaults</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">ZIP</span><span class="w"> </span><span class="err">file</span><span class="w"> </span><span class="err">format</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_last_updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">datetime</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">export</span><span class="w"> </span><span class="err">users</span><span class="w"> </span><span class="err">whose</span><span class="w"> </span><span class="err">profiles</span><span class="w"> </span><span class="err">were</span><span class="w"> </span><span class="err">last</span><span class="w"> </span><span class="err">updated</span><span class="w"> </span><span class="err">at</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">after</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">time.</span><span class="w"> </span><span class="err">Must</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">parseable</span><span class="w"> </span><span class="err">datetime</span><span class="p">,</span><span class="w"> </span><span class="err">such</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="s2">"2024-01-01T00:00:00Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -166,6 +168,12 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td>Optional</td>
       <td>String</td>
       <td>The output format of your file. Defaults to <code class="language-plaintext highlighter-rouge">zip</code> file format. If you are using your own S3 bucket, you can specify <code class="language-plaintext highlighter-rouge">zip</code> or <code class="language-plaintext highlighter-rouge">gzip</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">user_last_updated_at</code></td>
+      <td>Optional</td>
+      <td>String</td>
+      <td>Export only users whose profiles were last updated at or after this time. Must be a parseable datetime (for example, <code class="language-plaintext highlighter-rouge">2024-01-01T00:00:00Z</code>). Invalid values return a <code class="language-plaintext highlighter-rouge">400</code> error.</td>
     </tr>
   </tbody>
 </table>
@@ -215,6 +223,26 @@ Authorization: Bearer YOUR-REST-API-KEY
   "fields_to_export" : ["first_name", "email", "purchases"],
   "custom_attributes_to_export" : ["allergies", "favorite_food"],
   "output_format" : "zip"
+}'
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="example-request-to-export-users-updated-at-or-after-a-given-time">Example request to export users updated at or after a given time</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--data-raw '{
+  "segment_id" : "segment_identifier",
+  "fields_to_export" : ["first_name", "email", "external_id"],
+  "user_last_updated_at" : "2024-01-01T00:00:00Z"
 }'
 </pre></td></tr></tbody></table></code></pre></div></div>
 

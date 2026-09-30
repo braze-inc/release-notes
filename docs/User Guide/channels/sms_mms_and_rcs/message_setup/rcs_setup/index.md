@@ -75,4 +75,4 @@ If you have separate SMS and RCS subscription groups, you can migrate users from
 
 ### Frequency capping and Message Prioritization {#frequency-capping-and-message-prioritization}
 
-RCS sends are included in [global frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping) and [Message Prioritization](https://www.braze.com/docs/message_prioritization/) through the same channel rule as SMS. There is no separate RCS frequency capping or prioritization rule. In the dashboard, that shared channel appears as **SMS** or **SMS/MMS/RCS**, depending on whether MMS is enabled.
+RCS sends are included in [global frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#freq-cap-feat-over) through the same channel rule as SMS, and that rule also applies to Message Prioritization. There is no separate RCS frequency capping or prioritization rule.
