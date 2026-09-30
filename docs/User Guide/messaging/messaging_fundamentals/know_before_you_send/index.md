@@ -19,7 +19,7 @@ While we provide an extensive list of resources to reference pre-send, each chan
 - [**Global control groups**](https://www.braze.com/docs/user_guide/audience/global_control_group): If you are using a global control group, a percentage of users will not receive any campaigns or Canvases. (You can create exceptions with [exclusion settings](https://www.braze.com/docs/user_guide/audience/global_control_group#step-3-assign-exclusion-settings)). To see a list of these users, export them via CSV or [API](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_global_control_group).
 - [**Canvas rate limits**](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping): In a Canvas, the rate limit applies across the entire Canvas, not the individual steps. For example, if you were to set a 10,000 message per minute rate limit on a Canvas with multiple steps, it will still be limited to 10,000 messages because the limit will have been reached at the first step.
 - **Frequency capping**: 
-  - Frequency capping rules will be applied to push, email, SMS, and webhooks, but not to in-app messages and Content Cards.
+  - Frequency capping rules apply to push, email, SMS/MMS/RCS, webhooks, WhatsApp, and LINE, but not to in-app messages and Content Cards.
   - Global frequency capping is scheduled based on the user's time zone and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
 
 **Tip:**
