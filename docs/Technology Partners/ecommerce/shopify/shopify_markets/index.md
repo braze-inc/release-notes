@@ -46,7 +46,6 @@ Each selected market needs a market catalog with active products. Braze reads th
 - **Catalog selections:** Up to 30 catalog selections.
 - **Refresh timing:** Market catalog product data refreshes once daily.
 - **Market prices and localized content:** Market rows include the market's price and `compare_at_price`, including localized product and variant titles and product URLs when translations are set up through the Shopify Translate & Adapt app.
-- **Inventory quantity:** Market rows include aggregate inventory values. Braze currently doesn't offer the ability to differentiate inventory between locations.
 - **Price drop:** Supported for market catalogs. A price change in a market catalog triggers on that market's price rather than your default store price. Because market catalog product data refreshes once daily, price drops are detected daily rather than when the price changes in Shopify.
 - **Back-in-stock:** [Back-in-stock](https://www.braze.com/docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications/) is supported for products in your default store catalog. Market rows don't trigger back-in-stock notifications. Back in stock looks at the total available inventory for a product variant across all Shopify locations, so stock added at a retail location can trigger a notification.
 

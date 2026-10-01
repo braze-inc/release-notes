@@ -116,7 +116,7 @@ The service account should have the in the following section permissions:
 - BigQuery Connection User: This will allow Braze to make connections.
 - BigQuery User: This will provide Braze access to run queries, read dataset metadata, and list tables.
 - BigQuery Data Viewer: This will provide Braze access to view datasets and their contents.
-- BigQuery Job User: This will provide Braze access to run jobs<br><br>After creating the service account and granting permissions, generate a JSON key. Refer to [Keys create and delete](https://cloud.google.com/iam/docs/keys-create-delete) for more information. You'll update this to the Braze dashboard later.
+- BigQuery Job User: This will provide Braze access to run jobs<br><br>After creating the service account and granting permissions, set up how Braze authenticates as the service account. Use [Workload Identity Federation](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/google_workload_identity_federation), so you don't create a key, or generate a JSON key. For more information about JSON keys, refer to [Keys create and delete](https://cloud.google.com/iam/docs/keys-create-delete). If you generate a JSON key, you'll upload it to the Braze dashboard later.
 
 {:start="3"}
 3. If you have network policies in place, you must give Braze network access to your BigQuery instance. For a list of IPs, refer to the [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations#step-1-set-up-tables-or-views).

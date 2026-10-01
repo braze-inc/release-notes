@@ -113,7 +113,7 @@ Then check the following by trigger or step type:
 **Important:**
 
 
-When a Canvas Message step aborts a send, the user still advances to the next step. Canvas advances on abort so later Delay and Action Path steps aren't permanently blocked. See [How users advance](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#how-users-advance) and [Abort outcomes](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability#abort-outcomes).
+When a Canvas Message step aborts a send, the user still advances to the next step. Canvas advances on abort so later Delay and Action Paths steps aren't permanently blocked. See [How users advance](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#how-users-advance) and [Abort outcomes](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability#abort-outcomes).
 
 
 
@@ -239,7 +239,7 @@ For "Request Timed Out" support tickets, include a screen recording, timestamp a
 
 When you stop a Canvas, users can't enter and no further messages are sent from the Canvas flow. Email sends already handed off to your email service provider can't be recalled.
 
-Users waiting on a Delay or Action Path step aren't automatically removed from the journey when you stop the Canvas. If you re-enable the Canvas before their scheduled send time passes, they may still receive pending steps.
+Users waiting on a Delay or Action Paths step aren't automatically removed from the journey when you stop the Canvas. If you re-enable the Canvas before their scheduled send time passes, they may still receive pending steps.
 
 For full details, see [What happens when you stop a Canvas?](https://www.braze.com/docs/user_guide/messaging/canvas/faqs#what-happens-when-you-stop-a-canvas) in the Canvas FAQ.
 

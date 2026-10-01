@@ -84,8 +84,8 @@ For example, combining `total_value` is more than `1000` with `products[].metada
 
 Property filters are available on the following surfaces:
 
-- **Place Order:** Campaign and Canvas triggers, exception events, Canvas exit criteria, action paths, conversion events, and Content Card removal events. Basic and nested properties are supported. On in-app message triggers, **Place Order** supports only basic properties.
-- **Update Cart:** Campaign and Canvas triggers, exception events, Canvas exit criteria, and action paths. Basic and nested properties are supported. On conversion events, Content Card removal events, and in-app message triggers, **Update Cart** is backed by the `ecommerce.cart_updated` custom event and supports basic properties only.
+- **Place Order:** Campaign and Canvas triggers, exception events, Canvas exit criteria, Action Paths steps, conversion events, and Content Card removal events. Basic and nested properties are supported. On in-app message triggers, **Place Order** supports only basic properties.
+- **Update Cart:** Campaign and Canvas triggers, exception events, Canvas exit criteria, and Action Paths steps. Basic and nested properties are supported. On conversion events, Content Card removal events, and in-app message triggers, **Update Cart** is backed by the `ecommerce.cart_updated` custom event and supports basic properties only.
 
 **Note:**
 
@@ -224,7 +224,7 @@ eCommerce recommended events power the same revenue surfaces customers already u
 | Report                                      | What it shows                             |
 |---------------------------------------------|-------------------------------------------|
 | Revenue Report                              | Total revenue, average daily revenue, daily purchases, and revenue per user over time across all sources for your selected date range and apps.                                                                                     |
-| Last Touch Attribution Revenue dashboard     | Revenue attributed to the last campaign or Canvas a user interacted with before placing an order. Touch events include email clicks, push opens, Content Card clicks, in-app message clicks, and SMS or WhatsApp short link clicks. |
+| [Revenue - Last Touch Attribution](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder#revenue---last-touch-attribution) dashboard | Revenue attributed to the last campaign or Canvas a user interacted with before placing an order. Touch events include email clicks, push opens, Content Card clicks, in-app message clicks, and SMS or WhatsApp short link clicks. |
 | Campaign and Canvas analytics                | Total revenue attributed to a specific campaign or Canvas within the primary conversion window.                                                                                   |
 | Conversions report                          | Revenue tied to conversion events on campaigns and Canvases.<br> **Note:** To count `ecommerce.order_placed` revenue, the campaign or Canvas must use the **Places Order** conversion event type.                                                                                    |
 | Segment Insights                            | Revenue comparisons across segments in the segment insights dashboard.                                                               |

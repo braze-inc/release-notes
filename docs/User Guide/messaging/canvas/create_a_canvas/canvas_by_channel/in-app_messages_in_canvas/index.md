@@ -244,7 +244,7 @@ The following Canvas features aren't available with in-app messages, so they won
 
 ## Custom event properties in a Canvas
 
-Custom event properties in in-app messages for Canvas are supported. However, these properties are from the custom event or purchase triggering the in-app message, which is located in the Message step, not the preceding action path.
+Custom event properties in in-app messages for Canvas are supported. However, these properties are from the custom event or purchase triggering the in-app message, which is located in the Message step, not the preceding Action Paths step.
 
 ## Considerations
 

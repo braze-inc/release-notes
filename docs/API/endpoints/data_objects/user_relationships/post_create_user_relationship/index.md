@@ -1,4 +1,4 @@
-<div id='api_pofqpkzuvwcg' class='api_div' data-search-keywords='create user relationship braze_id rel_kind attributes role user_relationship type_name object_id user'>
+<div id='api_vagrhykijklq' class='api_div' data-search-keywords='create user relationship braze_id rel_kind attributes role user_relationship type_name object_id user'>
 <h1 id="create-user-relationship">Create user relationship</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/data_objects/objects/{type_name}/{object_id}/users</p>

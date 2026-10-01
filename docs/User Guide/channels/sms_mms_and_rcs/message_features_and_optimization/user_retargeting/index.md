@@ -108,7 +108,7 @@ When evaluating if an inbound message meets a defined trigger event, the leading
 **Tip:**
 
  
-If an action-based Canvas is triggered by an inbound SMS or MMS message, you can reference [supported SMS Liquid properties](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags) in any Canvas step until the next action path.
+If an action-based Canvas is triggered by an inbound SMS or MMS message, you can reference [supported SMS Liquid properties](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags) in any Canvas step until the next Action Paths step.
 
 
 

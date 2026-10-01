@@ -77,14 +77,14 @@ Next, build the Canvas by customizing the channels and content that you want to 
 ![Two pages of an in-app message to capture user emails and display a success message.](https://www.braze.com/docs/assets/img/canvas_templates/email_signup8.png?54b44056ce3c833c50111f728a8e83ed){: style="max-width:90%;"}
 
 {:start="2"}
-2. From here, keep the **Subscribed** Action Path step as is. This step splits our users into two groups in a one-day window:
+2. From here, keep the **Subscribed** Action Paths step as is. This step splits our users into two groups in a one-day window:
 
 - Users who have subscribed to Steppington with their email
 - Users who haven't subscribed to Steppington with their email
 
 {:start="3"}
 3. Next, replace the email body with our branded confirmation email for the **Verify Email** Message step. This will send an email to our subscribed users and prompt them to confirm their email address and opt in to our messaging.
-4. Keep the **Confirm Subscription** Action Path step as is. This step further splits our users into those who have confirmed their email and those who have not, with a one-week window.
+4. Keep the **Confirm Subscription** Action Paths step as is. This step further splits our users into those who have confirmed their email and those who have not, with a one-week window.
 5. Lastly, update the **Welcome + Discount** Message step with our confirmation email that includes an exclusive promotion code.
 
 **Note:**

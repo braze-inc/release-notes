@@ -275,6 +275,26 @@ Creates a flexible menu for the message you're designing.
 | All sides | Sets a consistent padding number if item padding is disabled. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Menu" }
 
+### NPS survey
+
+Adds an NPS (Net Promoter Score) rating scale of 0–10 to your email. When a recipient selects a score tile, Braze opens a linked [survey landing page](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages/surveys) and records that score on arrival. Edit the question and scale labels directly in the block. Use the settings panel to choose the destination survey and style the tiles. For the full how-to, see [Email NPS survey block](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/nps_survey).
+
+You can add only one **NPS Survey** block per email.
+
+| Property | Description |
+|---|---|
+| Survey landing page | The published survey landing page that includes an NPS question and records responses. Select **Add survey** in the block settings to choose it. |
+| Font family | The font family for the rating numbers. Leave unset to inherit the email's global font. |
+| Font weight | The boldness of the rating numbers. |
+| Font size | The size of the rating numbers, in pixels. |
+| Text color | The color of the rating numbers on each tile. |
+| Background color | The fill color of each tile. |
+| Border color | The color of the border around each tile. |
+| Border width | The thickness of the tile border, in pixels. |
+| Border radius | The corner rounding of each tile, in pixels. |
+| Tile spacing | The gap between tiles, in pixels. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="NPS survey" }
+
 ### Product
 
 Renders product rows from a [Product Catalog](https://www.braze.com/docs/user_guide/messaging/design_and_edit/product_blocks/), either as static items from a catalog Selection (up to 12) or as dynamic products driven by a [Canvas eCommerce trigger](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/ecommerce_use_cases/) (up to 24).

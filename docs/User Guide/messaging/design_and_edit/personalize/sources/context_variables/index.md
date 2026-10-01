@@ -108,30 +108,30 @@ You can add [personalized delay options](https://www.braze.com/docs/user_guide/m
 You can leverage comparing property filters with either context variables or custom attributes in these trigger actions: **Perform Custom Event** and **Make Purchase**. These action triggers also support property filters for both basic and nested properties. 
 
 - When comparing against basic properties, the available comparisons will match the type of the property defined by the custom event. For example, string properties will have exactly equal, regex matches. Boolean properties will be true or false. 
-- When comparing against nested properties, types are not pre-defined, so you can select comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for nested custom attributes. If you select a data type that doesn't match the actual data type of the nested property at the time of comparison, the user will not match the Action Path or exit criteria.
+- When comparing against nested properties, types are not pre-defined, so you can select comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for nested custom attributes. If you select a data type that doesn't match the actual data type of the nested property at the time of comparison, the user will not match the Action Paths step or exit criteria.
 
-#### Action Path examples
+#### Action Paths examples
 
 **Important:**
 
 
-For custom attribute comparisons, we'll use the custom attribute value at the time the action is performed. This means a user won't match the Action Path group if a user doesn't have this custom attribute populated at the time of comparison, or if the custom attribute value doesn't match the defined property comparisons. This is the case even if the user would have matched when they entered the Action Path step.
+For custom attribute comparisons, we'll use the custom attribute value at the time the action is performed. This means a user won't match the action group if a user doesn't have this custom attribute populated at the time of comparison, or if the custom attribute value doesn't match the defined property comparisons. This is the case even if the user would have matched when they entered the Action Paths step.
 
 
 
 
 
 
-The following Action Path is set up to sort users who performed the custom event `Account_Created` with the basic property `source` to the context variable `app_source_variable`.
+The following Action Paths step is set up to sort users who performed the custom event `Account_Created` with the basic property `source` to the context variable `app_source_variable`.
 
-![An example Action Path that references a context variable when performing a custom event.](https://www.braze.com/docs/assets/img/context_action_path1.png?8108091edfcbc24fb2f49052cdda16ec)
-
-
+![An example Action Paths step that references a context variable when performing a custom event.](https://www.braze.com/docs/assets/img/context_action_path1.png?8108091edfcbc24fb2f49052cdda16ec)
 
 
-The following Action Path is set up to match the basic property `brand` for the specific product name `shoes` to a context variable `promoted_shoe_brand`.
 
-![An example Action Path that references a context variable when making a purchase.](https://www.braze.com/docs/assets/img/context_action_path2.png?a991ee11b0ec75857af60aa8a1bcaf73)
+
+The following Action Paths step is set up to match the basic property `brand` for the specific product name `shoes` to a context variable `promoted_shoe_brand`.
+
+![An example Action Paths step that references a context variable when making a purchase.](https://www.braze.com/docs/assets/img/context_action_path2.png?a991ee11b0ec75857af60aa8a1bcaf73)
 
 
 
@@ -167,7 +167,7 @@ For [Banners](https://www.braze.com/docs/user_guide/channels/banners) and [in-ap
 
 **Personalize duration** applies to that duration-based expiration option. If you choose **On a specific date and time** instead, set the expiration using the date and time controls.
 
-### Action Path delays
+### Action Paths delays
 
 In an [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) step, under **Evaluation Window**, turn on **Personalize delay** to set how long users are held in the step from a context variable. Use this when the wait period should differ per user based on details such as tier or region.
 

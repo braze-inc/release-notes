@@ -981,7 +981,7 @@ For a full reference of button model, see the [Android](https://braze-inc.github
 Before you can use this feature, you'll need to [integrate the Roku Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=roku).
  Additionally, in-app messages will only be sent to Roku devices running the minimum supported SDK version:
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/roku/changelog/#012' class='sdk-versions--chip roku-sdk' target='_blank'><i class='fa-solid fa-tv'></i> &nbsp; Roku: 0.1.2+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='https://github.com/braze-inc/braze-roku-sdk/blob/master/CHANGELOG.md' class='sdk-versions--chip roku-sdk' target='_blank'><i class='fa-solid fa-tv'></i> &nbsp; Roku: 0.1.2+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ## Message types
 

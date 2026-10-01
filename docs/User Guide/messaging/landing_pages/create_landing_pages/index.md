@@ -67,7 +67,7 @@ You can use these blocks to add content and customize the layout of your landing
 | Image       | A block for displaying images. You can upload an image or provide a URL to reference an external source. |
 | Link        | A hyperlink that users can click to navigate to a specified URL. Can be embedded within text or standalone. |
 | Spacer      | An invisible block that adds vertical spacing between elements for improved layout and readability. |
-| Custom Code | A block that allows you to insert and run custom HTML, CSS, or JavaScript for advanced customization. To interface with the Braze SDK from this block, see [JavaScript bridge for landing pages](https://www.braze.com/docs/user_guide/messaging/landing_pages/javascript_bridge) and [Create custom form blocks](https://www.braze.com/docs/user_guide/messaging/landing_pages/custom_form_blocks). |
+| Custom Code | A block that allows you to insert and run custom HTML, CSS, or JavaScript for advanced customization—for example, tracking pixels, third-party scripts, or custom CSS such as a `max-width` for wide browsers. To interface with the Braze SDK from this block, see [JavaScript bridge for landing pages](https://www.braze.com/docs/user_guide/messaging/landing_pages/javascript_bridge) and [Create custom form blocks](https://www.braze.com/docs/user_guide/messaging/landing_pages/custom_form_blocks). |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Step 3: Customize the page" }
 
 #### Span text
@@ -126,6 +126,8 @@ After creating a landing page with a form, be sure to embed its [landing page Li
 You can set styles to be applied across all relevant component blocks in your landing page from the **Page container** tab. These styles apply everywhere on your page except where you override them with a specific block.
 
 We recommend setting up page container-level styles before you customize styles at the block level. You can also add a background image for the entire page.
+
+Use **Content width** to set a max width for your page content on large screens. Choose a preset (**Narrow (640px)**, **Normal (1120px)**, **Wide (1440px)**, or **Full width (100%)**) or select **Custom** and enter a value. For layout or styling beyond those options, add CSS in a **Custom Code** block.
 
 ![The 'Page container' section with options to customize background images, colors, border details, and content styling.](https://www.braze.com/docs/assets/img/landing_pages/page_container.png?b3bb6aafc52354bf0c2c82f15de75cd8){: style="max-width:40%;"}
 

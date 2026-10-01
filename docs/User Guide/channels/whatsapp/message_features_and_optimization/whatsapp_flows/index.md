@@ -125,9 +125,9 @@ After the schema generates, the Flow **Custom Attribute** section will display t
 
 ## Saving specific fields from Flow responses to a specific custom attribute 
 
-### Step 1: Create an Action Path
+### Step 1: Create an Action Paths step
 
-Create an [Action Path](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) Canvas step or an action-based campaign. Select a **Send a WhatsApp inbound message** trigger and **Responded to Flow** condition, and then select the relevant Flow or **Any Flow**.
+Create an [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) step or an action-based campaign. Select a **Send a WhatsApp inbound message** trigger and **Responded to Flow** condition, and then select the relevant Flow or **Any Flow**.
 
 ![A trigger for users who sent an inbound WhatsApp message and responded to any Flow.](https://www.braze.com/docs/assets/img/whatsapp/flows/trigger_responded_flow.png?3e6d3555eeb58bdebce8b1b37a80e78a)
 

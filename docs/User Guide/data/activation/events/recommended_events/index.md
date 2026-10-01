@@ -61,7 +61,7 @@ CSV uploads don't support eCommerce events. Use the SDK, `/users/track`, or CDI 
 
 eCommerce events work everywhere other custom events do: triggers and filters for performed custom events, custom events reporting, and more. However, their schema validation unlocks additional capabilities, including:
 
-- "Places order" trigger actions in campaigns, Canvases, action paths, in-app message triggers, and Content Card removal
+- "Places order" trigger actions in campaigns, Canvases, Action Paths steps, in-app message triggers, and Content Card removal
 - Calculated eCommerce user profile fields (**Total Revenue**, **Total Orders**, **Total Refunds**)
 - Cart state management for abandoned cart flows
 - Richer data for BrazeAI<sup>TM</sup> features like Predictive Events, Predictive Churn, and item recommendations

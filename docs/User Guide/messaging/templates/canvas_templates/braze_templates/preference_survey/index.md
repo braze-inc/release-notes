@@ -65,12 +65,12 @@ We’ll keep the default subscription settings, so we only send to users who hav
 Now, we’ll build our Canvas by customizing the content that will send to users. 
 
 1. For the first Message step **Welcome Email**, we'll update this step to include our StyleRyde welcome email.
-2. Next, we'll keep the Action Path step as is. This step splits our users into two groups in a three-day window:
+2. Next, we'll keep the Action Paths step as is. This step splits our users into two groups in a three-day window:
 
 - Users who have started a session or clicked the onboarding email
 - Users who haven't started a session or clicked the onboarding email
 
-![An Action Path step split into two paths, with one for users who have started a session and another for everyone else.](https://www.braze.com/docs/assets/img/canvas_templates/preference_survey8.png?bfcd8050cbdb766fc38cf3d4a10d2580){: style="max-width:50%;"}
+![An Action Paths step split into two paths, with one for users who have started a session and another for everyone else.](https://www.braze.com/docs/assets/img/canvas_templates/preference_survey8.png?bfcd8050cbdb766fc38cf3d4a10d2580){: style="max-width:50%;"}
 
 From here, we'll target our users and messaging based on the aforementioned groups.
 

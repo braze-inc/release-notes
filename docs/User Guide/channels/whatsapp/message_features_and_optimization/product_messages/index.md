@@ -161,7 +161,7 @@ If you remove referenced products from your catalog, the associated messages wil
 
 ## Receiving inbound product questions 
 
-Users can respond to your product or catalog message with product questions. These arrive as inbound messages, which can then be sorted with an [Action Path](https://www.braze.com/docs/action_paths). 
+Users can respond to your product or catalog message with product questions. These arrive as inbound messages, which can then be sorted with an [Action Paths](https://www.braze.com/docs/action_paths) step. 
 
 Additionally, Braze extracts the product ID and catalog ID from these questions, so if you wish to automate responses or send questions to another team (such as customer support), you can include those details. For example, you could personalize responses with the WhatsApp properties of `inbound_product_id` or `inbound_catalog_id`.
 

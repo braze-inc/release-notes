@@ -78,7 +78,7 @@ After a Canvas has launched:
 
 - Conversion events can't be edited. 
 - The following steps can't be added or removed, and can't be reordered to adjust the ranking: [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths), [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths), and [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step).
-  - **Workaround 1:** Create a new Audience Path, Action Path, or Experiment Path and reconfigure the paths to that new step.
+  - **Workaround 1:** Create a new Audience Paths, Action Paths, or Experiment Paths step and reconfigure the paths to that new step.
   - **Workaround 2:** Duplicate the Canvas to make your edits.
 
 ### Individual steps

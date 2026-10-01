@@ -31,9 +31,9 @@ Feature flag campaigns and feature flag experiments don't become idle and aren't
 
 ### In-app message campaigns
 
-Action-based in-app message campaigns become idle after 30 days with no send, control-group enrollment, or edit. An idle in-app message campaign continues to deliver based on its configuration. Depending on your workspace, Braze may deliver it as a [templated in-app message](https://www.braze.com/docs/user_guide/channels/in_app_messages/faq#what-are-templated-in-app-messages).
+Action-based in-app message campaigns become idle after up to 30 days with no sends, control-group enrollment, or edits. This idle window may be shorter depending on your workspace. An idle in-app message campaign continues to deliver based on its configuration. Depending on your workspace, Braze may deliver it as a [templated in-app message](https://www.braze.com/docs/user_guide/channels/in_app_messages/faq#what-are-templated-in-app-messages).
 
-A send, control-group enrollment, or edit returns the campaign to active status and resets the 30-day window. Auto-stop still follows the seven-day and one-year rules in [Idle campaigns](#idle-campaigns), not the 30-day idle window.
+A send, control-group enrollment, or edit returns the campaign to active status and resets the idle window. Auto-stop still follows the seven-day and one-year rules in [Idle campaigns](#idle-campaigns), not the in-app message idle window.
 
 ## Idle Canvases
 

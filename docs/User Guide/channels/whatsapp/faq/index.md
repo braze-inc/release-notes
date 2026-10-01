@@ -221,8 +221,8 @@ For Canvas flows where users tap quick replies after the original 24-hour window
 #### What happens if a user replies or taps a quick reply after the 24-hour window closes?
 A new 24-hour customer service window opens. See [Quick replies and inbound messages outside the 24-hour window](https://www.braze.com/docs/user_guide/channels/whatsapp/message_processing/messaging_users#quick-replies-and-inbound-messages-outside-the-24-hour-window).
 
-#### Do I need to set my Canvas Action Path to 31 days for WhatsApp quick replies?
-No. The default Action Path duration is sufficient. See [Quick replies and inbound messages outside the 24-hour window](https://www.braze.com/docs/user_guide/channels/whatsapp/message_processing/messaging_users#quick-replies-and-inbound-messages-outside-the-24-hour-window).
+#### Do I need to set my Canvas Action Paths step to 31 days for WhatsApp quick replies?
+No. The default Action Paths evaluation window is sufficient. See [Quick replies and inbound messages outside the 24-hour window](https://www.braze.com/docs/user_guide/channels/whatsapp/message_processing/messaging_users#quick-replies-and-inbound-messages-outside-the-24-hour-window).
 
 #### Can I see how many WhatsApp credits a specific campaign or Canvas consumed?
 Not in the Braze dashboard today. Campaign and Canvas analytics show sends, deliveries, and failures, but not credit consumption per message. Send counts do not align one-to-one with credit usage because template category and message type affect billing differently. For billing details, see [How are WhatsApp response messages billed?](#how-are-whatsapp-response-messages-billed).

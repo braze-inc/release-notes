@@ -18,11 +18,11 @@ You can run a preview if you don't have permission to edit a Canvas, but this pr
 
 The following steps are supported:
 - Message 
-- Audience Path
+- Audience Paths
 - Decision Split
 - Delay
-- Action Path
-- Experiment Path
+- Action Paths
+- Experiment Paths
 - Agent
 - User Update (only in the UI editor, meaning steps using JSON editor are skipped)
 
@@ -69,9 +69,9 @@ Events, API triggers, custom attributes, and Canvas entry properties that are as
 
 ### Consideration
 
-If you test an Action Path with actions that correspond to exit criteria (including event properties), the exit criteria is triggered, and the test run ends. If you test a Message step that corresponds to exit criteria, the exit criteria is triggered, and the test run ends. 
+If you test an Action Paths step with actions that correspond to exit criteria (including event properties), the exit criteria is triggered, and the test run ends. If you test a Message step that corresponds to exit criteria, the exit criteria is triggered, and the test run ends. 
 
-At this point, you can't select a specific event or property within an action path to trigger exit criteria (only the path as a whole). If a user could potentially meet multiple exit criteria, the first one that is processed and that they meet is shown as the result.
+At this point, you can't select a specific event or property within an Action Paths step to trigger exit criteria (only the path as a whole). If a user could potentially meet multiple exit criteria, the first one that is processed and that they meet is shown as the result.
 
 ## Experiment Paths and Canvas variants
 
@@ -89,7 +89,7 @@ To send all test messages in a Canvas at once, regardless of the path, and witho
 
 Canvas steps are responsive to timing when previewing user paths. Updates made via the User Update step are reflected in subsequent steps in the flow but are not applied to the actual user profile. The effects of a user entering a variant are reflected in future steps in a preview.
 
-Similarly, filters recognize actions that occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode recognizes that a user encountered a Message step that was “sent” earlier in the Canvas, and it recognizes that the test user “took action” to advance through an action path.
+Similarly, filters recognize actions that occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode recognizes that a user encountered a Message step that was “sent” earlier in the Canvas, and it recognizes that the test user “took action” to advance through an Action Paths step.
 
 Refer to [Exit criteria](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/exit_criteria) for more details on responsive behavior.
 

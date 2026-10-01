@@ -74,7 +74,7 @@ The [Connected Content debugger](https://www.braze.com/docs/user_guide/messaging
 
 [Multi-language messaging for webhooks](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages) lets you localize payload values from one campaign, Canvas step, or template using translation tags. This replaces complex Liquid logic and separate webhooks for each language.
 
-### SCIM Provisioning for IdP Groups
+### SCIM Provisioning for Okta and Microsoft Entra ID
 
 
 
