@@ -214,7 +214,7 @@ You can't use `event_properties` in the first Message step of your Canvas. Inste
 
 In Canvas, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. Make sure to use  ``{{event_properties.${property_name}}}`` if you're referencing these event properties. These events must be custom events or purchase events to be used this way in the Message component.
 
-In the first Message step following an Action Path, you can use event properties related to the event referenced in that Action Path. However, these event properties can only be used if the user actually performed the action (and didn't get sorted into the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step.
+In the first Message step following an Action Paths step, you can use event properties related to the event referenced in that step. However, these event properties can only be used if the user actually performed the action (and didn't get sorted into the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step.
 
 **Expand for original Canvas editor**
 

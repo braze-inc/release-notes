@@ -3671,39 +3671,55 @@ After integrating the Braze SDK, you can start implementing common messaging fea
 
 ### Step 1: Add files
 
-Braze SDK files can be found in the `sdk_files` directory in the [Braze Roku SDK repository](https://github.com/braze-inc/braze-roku-sdk).
+Braze SDK files are in the `sdk_files` directory of the [Braze Roku SDK repository](https://github.com/braze-inc/braze-roku-sdk).
 
 1. Add `BrazeSDK.brs` to your app in the `source` directory.
 2. Add `BrazeTask.brs` and `BrazeTask.xml` to your app in the `components` directory.
 
 ### Step 2: Add references
 
-Add a reference to `BrazeSDK.brs` in your main scene using the following `script` element:
+Add a reference to `BrazeSDK.brs` in your main scene:
 
-```
+```xml
 <script type="text/brightscript" uri="pkg:/source/BrazeSDK.brs"/>
 ```
 
+Files in `source` are available to `main.brs`. Scene Graph components only see scripts listed in their component XML, so the main scene needs this reference before it can call `getBrazeInstance()`.
+
 ### Step 3: Configure
 
-Within `main.brs`, set the Braze configuration on the global node:
+In `main.brs`, set the Braze configuration on the global node before `CreateScene()`. Scene `init()` runs during `CreateScene()`, and that is where you initialize Braze.
 
 ```brightscript
+screen = CreateObject("roSGScreen")
 globalNode = screen.getGlobalNode()
 config = {}
 config_fields = BrazeConstants().BRAZE_CONFIG_FIELDS
-config[config_fields.API_KEY] = {YOUR_API_KEY}
+config[config_fields.API_KEY] = "YOUR_API_KEY_HERE"
 ' example endpoint: "https://sdk.iad-01.braze.com/"
-config[config_fields.ENDPOINT] = {YOUR_ENDPOINT}
+config[config_fields.ENDPOINT] = "YOUR_SDK_ENDPOINT"
 config[config_fields.HEARTBEAT_FREQ_IN_SECONDS] = 5
 globalNode.addFields({brazeConfig: config})
+screen.CreateScene("MainScene")
 ```
 
-You can find your [SDK endpoint](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints) and API key within the Braze dashboard.
+You can find your [SDK endpoint](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints) and API key in the Braze dashboard.
+
+To turn SDK console logging off, set `logging_enabled` to `false`:
+
+```brightscript
+config[config_fields.LOGGING_ENABLED] = false
+```
+
+To avoid caching feature flags in the device registry, set `ff_cache_disable` to `true`:
+
+```brightscript
+config[config_fields.FF_CACHE_DISABLED] = true
+```
 
 ### Step 4: Initialize Braze
 
-Initialize the Braze instance:
+Call `getBrazeInstance()` from your main Scene, for example in `init()`.
 
 ```brightscript
 m.BrazeTask = createObject("roSGNode", "BrazeTask")
@@ -3714,7 +3730,34 @@ m.Braze = getBrazeInstance(m.BrazeTask)
 
 ### Logging
 
-To debug your Braze integration, you can view the Roku debug console for Braze logs. Refer to [Debugging code](https://developer.roku.com/docs/developer-program/debugging/debugging-channels.md) from Roku Developers to learn more.
+Braze logs are printed to the Roku debug console. See [Debugging code](https://developer.roku.com/docs/developer-program/debugging/debugging-channels.md) from Roku Developers. Set `logging_enabled` to `false` in your Braze config to suppress those logs.
+
+### Feature flags
+
+Feature flags are available on Roku SDK 1.0.0 and later. `getFeatureFlag()` returns `invalid` when the flag does not exist.
+
+```brightscript
+ff = m.Braze.getFeatureFlag("theme")
+if ff <> invalid and ff.enabled
+  bgcolor = ff.getStringProperty("bgcolor")
+end if
+
+allFeatureFlags = m.Braze.getAllFeatureFlags()
+m.Braze.refreshFeatureFlags()
+m.Braze.logFeatureFlagImpression(ff.id)
+```
+
+Observe `BrazeFeatureFlagsUpdated` to be notified when a refresh finishes. That field does not fire for the initial cache load. Observe `BrazeFeatureFlags` if you need the cache load as well.
+
+```brightscript
+m.BrazeTask.observeField("BrazeFeatureFlagsUpdated", "onFeatureFlagChanges")
+```
+
+Other property getters are `getBooleanProperty()`, `getNumberProperty()`, `getJSONProperty()`, `getImageProperty()`, and `getTimestampProperty()`.
+
+## Next steps
+
+- [Setting user attributes](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes?sdktab=roku)
 
 
 

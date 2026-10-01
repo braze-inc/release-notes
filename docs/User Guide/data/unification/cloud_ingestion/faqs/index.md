@@ -137,6 +137,14 @@ If you receive this error, verify your table is in the correct project and datas
 
 If you receive this error, check that the BigQuery API service is enabled for your account.
 
+### Your workload identity pool trusts every Braze customer
+
+If you use Workload Identity Federation and the connection test reports that your workload identity pool trusts every Braze customer, your configuration accepted an identity that isn't your workspace's. This usually happens when the service account binding grants access to the Braze AWS role instead of your workspace's full principal. Bind access to the full Braze principal from your credential form. For steps, see [Your configuration trusts identities other than your workspace](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/google_workload_identity_federation#your-configuration-trusts-identities-other-than-your-workspace).
+
+### Braze could not confirm that your workload identity pool trusts only this workspace
+
+The check that your pool trusts only your workspace didn't reach a result. Test the connection again. If the error keeps happening, [contact Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support). For more information, see [Braze couldn't confirm that your pool trusts only this workspace](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/google_workload_identity_federation#braze-could-not-confirm-your-pool-trusts-only-this-workspace).
+
 
 
 ### Test Connection runs slow

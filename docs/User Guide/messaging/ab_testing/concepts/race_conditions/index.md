@@ -144,11 +144,11 @@ We recommend confirming how user data is managed and updated, specifically when 
 
 ## Scenario 4: Using the "Interact with Step" trigger
 
-In a Canvas, when a Message step is immediately followed by an Action Path step that uses the "Interact With Step" trigger, a race condition can occur. Because users can interact with a message as soon as it is delivered, it is possible for a user to complete the tracked action before they officially enter the Action Path step.
+In a Canvas, when a Message step is immediately followed by an Action Paths step that uses the "Interact With Step" trigger, a race condition can occur. Because users can interact with a message as soon as it is delivered, it is possible for a user to complete the tracked action before they officially enter the Action Paths step.
 
-In this case, the Action Path step does not register the interaction since it only evaluates events that occur after entry into the step, which means the user may be routed down an unintended path.
+In this case, the Action Paths step does not register the interaction since it only evaluates events that occur after entry into the step, which means the user may be routed down an unintended path.
 
-A Canvas sends a push notification in a Message step, followed by an Action Path step that checks whether the user opens that push notification. If a user opens the push notification immediately upon receiving it (before entering the Action Path step), the open event may not be captured. The user could then be incorrectly routed down the "did not open" path, even though they did engage with the message.
+A Canvas sends a push notification in a Message step, followed by an Action Paths step that checks whether the user opens that push notification. If a user opens the push notification immediately upon receiving it (before entering the Action Paths step), the open event may not be captured. The user could then be incorrectly routed down the "did not open" path, even though they did engage with the message.
 
 ### Best practices 
 

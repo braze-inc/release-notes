@@ -16,7 +16,7 @@ Set your trigger words when scheduling an action-based delivery campaign.
 
 ### Canvas
 
-Set your trigger words within [action paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) in your Canvas.
+Set your trigger words within [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) steps in your Canvas.
 
 ![Action path with a trigger of "Send this campaign to users who sent inbound LINE to subscription group where the message body is" and a blank field.](https://www.braze.com/docs/assets/img/line/trigger_word_canvas.png?f12bb0196522135e0170c40b5874c78b)
 
@@ -32,7 +32,7 @@ You should include a trigger option for unrecognized responses on interactive Ca
 
 ### Creating a trigger for unrecognized responses
 
-After creating action groups for the custom filter phrases, add another action group to the action path for **Send LINE message**, and don't check **Where the message body**. This will catch all unrecognized user responses, similar to an “else” clause.
+After creating action groups for the custom filter phrases, add another action group to the Action Paths step for **Send LINE message**, and don't check **Where the message body**. This will catch all unrecognized user responses, similar to an “else” clause.
 
 For this message, you should send a LINE message informing the user that this channel is not monitored by a human and, if needed, guide them to a support channel.
 

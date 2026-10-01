@@ -34,13 +34,13 @@ Rows processed per sync depend on your warehouse performance, network latency, a
 
 
 
-1. Create a service account and allow access to the BigQuery project(s) and dataset(s) that contain the data you want to sync.  
+1. Create a service account that Braze accesses through Workload Identity Federation or a service account key, and allow access to the BigQuery projects and datasets that contain the data you want to sync.  
 2. In your BigQuery account, set up the tables or views you want to sync to Braze.   
 3. Create a new source and sync in the Braze dashboard.  
 4. Test the integration and start the sync. 
 
 
-1. Create a service principal (OAuth M2M) or personal access token, and allow access to the Databricks catalogs and schemas that contain the data you want to sync.  
+1. Create a service principal for OAuth machine-to-machine (M2M) authentication or a personal access token, and allow access to the Databricks catalogs and schemas that contain the data you want to sync.  
 2. In your Databricks account, set up the tables or views you want to sync to Braze.   
 3. Create a new source and sync in the Braze dashboard.
 4. Test the integration and start the sync.
@@ -324,7 +324,7 @@ For more information, refer to the [BigQuery partitioning documentation](https:/
 
 
 
-#### Step 1.2: Create a Service Account and grant permissions 
+#### Step 1.2: Create credentials for Braze
 
 Create a service account in GCP for Braze to use to connect and read data from your table(s). The service account should have the following permissions: 
 
@@ -333,7 +333,25 @@ Create a service account in GCP for Braze to use to connect and read data from y
 - **BigQuery Data Viewer:** Provides Braze access to view datasets and their contents.
 - **BigQuery Job User:** Provides Braze access to run jobs
 
+Braze can access the service account with either of the following authentication methods:
+
+- **Workload Identity Federation:** Braze impersonates the service account with a short-lived identity, so you don't create or upload a key.
+- **Service account key:** You upload a JSON key for the service account to Braze.
+
+Existing service account key credentials keep working, and you don't need to migrate them. One Workload Identity Federation credential can serve both BigQuery and Google Cloud Storage sources.
+
+
+
+
+Set up a workload identity pool, a provider, and the service account, and bind the Braze principal to the service account. For steps, see [Configuring Google Cloud for Workload Identity Federation](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/google_workload_identity_federation). If you've already set up Workload Identity Federation for a Google Cloud Storage source, you don't need to repeat it. Grant the existing service account the permissions listed in this step.
+
+
+
+
 After creating the service account and granting permissions, generate a JSON key. For more information, see [Create and delete service account keys](https://cloud.google.com/iam/docs/keys-create-delete). Upload this key to the Braze dashboard in a later step. 
+
+
+
 
 #### Step 1.3: Allow access to Braze IPs    
 
@@ -418,7 +436,7 @@ You can name the schema and table as you'd like, but the column names should mat
 
 Braze can connect to Databricks with either of the following authentication methods:
 
-- **OAuth M2M (recommended):** Braze authenticates as a Databricks service principal using a client ID and client secret. Databricks recommends OAuth machine-to-machine (M2M) authentication for unattended connections like Cloud Data Ingestion.
+- **OAuth M2M (recommended):** Braze authenticates as a Databricks service principal using a client ID and client secret. Databricks recommends OAuth M2M authentication for unattended connections like Cloud Data Ingestion.
 - **Personal access token:** Braze authenticates with a token generated in your Databricks workspace.
 
 Existing personal access token credentials keep working, and you don't need to migrate them. However, personal access tokens often expire on a schedule set by your workspace admin, and syncs stop when the token expires. To move an existing source to OAuth M2M, create an OAuth M2M credential and select it when you edit the source.
@@ -437,7 +455,7 @@ Braze connects to your Databricks workspace using a service principal with OAuth
 2. Go to **Identity and access**, and then select **Manage** next to **Service principals**.
 3. Select **Add service principal** > **Add new**.
 4. Enter a name that helps you identify the service principal, such as "Braze CDI", and then select **Add**.
-5. Select the service principal you created. On the **Configurations** tab, make sure **Databricks SQL access** is selected.
+5. Select the service principal that you created. On the **Configurations** tab, make sure **Databricks SQL access** is selected.
 
 ##### Generate a client secret
 
@@ -466,23 +484,23 @@ Braze needs permission to run queries on your SQL warehouse, but doesn't need wo
 
 ##### Grant access to the source tables
 
-Grant the service principal read access to the catalog, schema, and tables you set up in Step 1.1. Use the service principal's application ID (the same value as the client ID) as the grantee.
+Grant the service principal read access to the catalog, schema, and tables that you set up in Step 1.1. Use the service principal's application ID (the same value as the client ID) as the grantee.
 
 ```sql
-GRANT USE CATALOG ON CATALOG `BRAZE-CLOUD-PRODUCTION` TO `<application-id>`;
-GRANT USE SCHEMA ON SCHEMA `BRAZE-CLOUD-PRODUCTION`.INGESTION TO `<application-id>`;
-GRANT SELECT ON TABLE `BRAZE-CLOUD-PRODUCTION`.INGESTION.USERS_ATTRIBUTES_SYNC TO `<application-id>`;
+GRANT USE CATALOG ON CATALOG `BRAZE-CLOUD-PRODUCTION` TO `APPLICATION_ID`;
+GRANT USE SCHEMA ON SCHEMA `BRAZE-CLOUD-PRODUCTION`.INGESTION TO `APPLICATION_ID`;
+GRANT SELECT ON TABLE `BRAZE-CLOUD-PRODUCTION`.INGESTION.USERS_ATTRIBUTES_SYNC TO `APPLICATION_ID`;
 ```
 
-Update the names as needed, but the permissions should match the preceding example.
+Replace *`APPLICATION_ID`* with the application ID of your service principal. Update the other names as needed, but the permissions should match the preceding example.
 
 ##### Update the client secret
 
 Braze stores one client secret per credential. When you update it, every source and sync that uses the credential switches to the new secret. To replace the secret:
 
-1. In Databricks, generate a new secret for the service principal by following the steps in [Generate a client secret](#generate-a-client-secret). Don't delete the old secret yet.
+1. In Databricks, generate a new secret for the service principal by following the steps in [Generate a client secret](#generate-a-client-secret). Keep the old secret until step 6.
 2. In the Braze dashboard, go to **Data Settings** > **Cloud Data Ingestion** > **Credentials**, and then select your OAuth M2M credential. The **Used by** section lists every source and sync that uses this credential.
-3. Pause the syncs that use this credential, or plan the update for a time when none of them are scheduled to run. This prevents a sync from starting while the credential is being updated.
+3. Pause the syncs that use this credential, or plan the update for a time when none of them are scheduled to run. This prevents a sync from starting while you update the credential.
 4. Select **Edit credential**, enter the new client secret, and then select **Save**. The change applies to every source and sync that uses this credential.
 5. Resume any syncs you paused.
 6. After Braze saves the new secret, delete the old secret in Databricks.
@@ -728,7 +746,12 @@ In the Braze Dashboard, go to **Data Settings** > **Cloud Data Ingestion** > **S
 
 #### Step 2.1: Add BigQuery connection information and source table
 
-Choose a name for your source. Then, upload the JSON key and provide a name for the service account. Then, input the remaining configuration fields.
+Enter a name for your source, and then enter your BigQuery credentials and configuration:
+- For **Credential name**, enter a label that helps you identify these credentials in Braze.
+- For the authentication method, select **Workload Identity Federation** or **Service Account Key** to match the credentials you created in Step 1.2.
+- For Workload Identity Federation, copy the **Braze principal ARN** for your Google Cloud setup, and then enter the **Project number**, **Workload identity pool ID**, **Provider ID**, and **Service account email**. For a service account key, upload the JSON key.
+
+Then, input the remaining configuration fields.
 
 #### Step 2.2: Test connection and connect to source
 

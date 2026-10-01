@@ -101,7 +101,6 @@ Braze provides pre-built dashboards for frequent use cases. Use the following ta
 | Devices and carriers | **Analytics** > **Dashboard Builder** | [Devices and carriers](#devices-and-carriers) |
 | Segment Insights - Email | **Analytics** > **Dashboard Builder** | [Segment Insights - Email](#segment-insights---email) |
 | Session Analytics | **Analytics** > **Dashboard Builder** | [Session Analytics](#session-analytics) |
-| eCommerce Revenue - Last Touch Attribution | **Analytics** > **Dashboard Builder** | [eCommerce revenue dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/ecommerce_revenue_dashboard) |
 | Messaging Observability | **Analytics** > **Dashboard Builder** | [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) |
 | Industry Benchmarks | **Analytics** > **Dashboard Builder** | [Industry Benchmarks dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/industry_benchmarks_dashboard) |
 | Email performance | **Analytics** > **Email Performance** | [Channel performance dashboards](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance#email-performance-dashboard) |
@@ -118,9 +117,25 @@ The ability to edit Braze-created dashboards isn't yet available. Contact your c
 
 #### Revenue - Last Touch Attribution
 
-The **Revenue - Last Touch Attribution** dashboard provides a review of revenue across campaigns, Canvases, and channels. All revenue data is attributed to the last-touched message during the attribution window.
+The **Revenue - Last Touch Attribution** dashboard provides a review of revenue across campaigns, Canvases, and channels. All revenue data is attributed to the last-touched message during the attribution window. The dashboard includes revenue from both legacy purchase events and eCommerce recommended events (for example, `ecommerce.order_placed`).
+
+To view the dashboard, go to **Analytics** > **Dashboard Builder**, then select **Revenue - Last Touch Attribution**.
+
+**Note:**
+
+
+If you're using the [Shopify connector](https://www.braze.com/docs/partners/ecommerce/shopify/multiple_stores?tab=shopify%20connector), eCommerce recommended events are available through the integration. If you aren't using the Shopify connector, implement [eCommerce recommended events](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events) for revenue from those events to appear in this dashboard. To view revenue from eCommerce events, your workspace must be migrated by Braze; contact your customer success manager to request migration.
+
+
 
 Touches include _Email Click_ (link click), _Content Card Click_, _In-App Message Click_ (excluding close buttons), _Push Opens_, _SMS Short Link Click_, _WhatsApp Read_, and _Webhook Send_.
+
+**Important:**
+
+
+Message interactions must have occurred within the selected attribution window. Revenue events without a qualifying last-touch interaction within the window are not attributed.
+
+
 
 | Metric | Definition |
 | --- | --- |
@@ -138,6 +153,10 @@ Touches include _Email Click_ (link click), _Content Card Click_, _In-App Messag
 | Revenue by Channel | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by channel. | 
 | Revenue Time Series | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by day in UTC. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Revenue - Last Touch Attribution" }
+
+All revenue is displayed in USD. Non-USD currencies are converted to USD using the exchange rate on the date the event is reported. To prevent conversion, set the currency to `USD` when sending events.
+
+For eCommerce event requirements and revenue calculations, see [eCommerce reporting](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events#ecommerce-reporting).
 
 #### Devices and carriers
 

@@ -270,12 +270,12 @@ Conversational message workflows let you respond dynamically to users, creating 
 ![RCS message composer with suggested replies.](https://www.braze.com/docs/assets/img/rcs/suggested_replies.png?45e82379185042e96693250cdbce4331)
 
 {: start="2"}
-2. Connect that message to an Action Path with an action group for each suggested reply.
+2. Connect that message to an Action Paths step with an action group for each suggested reply.
 3. For each action group:
    - Select the trigger **Send an SMS inbound message**.
    - Set the message body to be the same as the corresponding suggested reply.
 
-![Action Path step configured with three action groups, one for each suggested reply.](https://www.braze.com/docs/assets/img/rcs/quick_reply.png?0c62088a5f0358d10e98000470e4b7c4)
+![Action Paths step configured with three action groups, one for each suggested reply.](https://www.braze.com/docs/assets/img/rcs/quick_reply.png?0c62088a5f0358d10e98000470e4b7c4)
 
 {: start="4"}
 4. Connect each action group to an RCS message step, and then add content based on the associated suggested reply.

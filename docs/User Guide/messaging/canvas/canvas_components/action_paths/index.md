@@ -2,26 +2,26 @@
 
 > Action Paths in Canvas allow you to sort your users based on their actions. 
 
-![An Action Paths step  in a Canvas user journey.](https://www.braze.com/docs/assets/img/canvas_actionpath.png?a3b4e6240364076cdacfdcebd8cf9b77){: style="float:right;max-width:40%;margin-left:15px;"}
+![An Action Paths step in a Canvas user journey.](https://www.braze.com/docs/assets/img/canvas_actionpath.png?a3b4e6240364076cdacfdcebd8cf9b77){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Using Action Paths, you can:
 
 * Customize user paths based on a specific action, including user engagement events and custom events
 * Hold users for a given duration to prioritize their next path based on their actions during this evaluation period
 
-## Creating an action path
+## Creating an Action Paths step
 
-To create an action path, add a component to your Canvas. Drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Action Paths**.
+To create an Action Paths step, add a component to your Canvas. Drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Action Paths**.
 
 ### Action settings
 
-In the **Action Settings**, set the **Evaluation Window** to determine how long users are held in the step. By default, users are evaluated within one day, but you can adjust this window by seconds, minutes, hours, days, and weeks depending on your Canvas. The maximum evaluation window for an action path is 31 days.
+In the **Action Settings**, set the **Evaluation Window** to determine how long users are held in the step. By default, users are evaluated within one day, but you can adjust this window by seconds, minutes, hours, days, and weeks depending on your Canvas. The maximum evaluation window for an Action Paths step is 31 days.
 
 Within the **Action Settings**, you can also turn on the ranked order for your components by switching on the **Advance users based on ranked order** toggle.
 
 ![The Action Settings with an evaluation window of 1 day.](https://www.braze.com/docs/assets/img/actionpath_settings.png?9af8014d590176b0f4e2f20e56a062d0)
 
-By default, **Ranking** is off. When a user enters the action path and performs the trigger event attached to any action group, they immediately advance through the relevant action group based on the **first qualifying action** they perform after entering the step. If a user performs a second action that matches a different action group, they do not switch paths—the first action determines their route. If a user doesn't perform a trigger event, then they advance through the default **Everyone Else** group at the end of the evaluation period.
+By default, **Ranking** is off. When a user enters the Action Paths step and performs the trigger event attached to any action group, they immediately advance through the relevant action group based on the **first qualifying action** they perform after entering the step. If a user performs a second action that matches a different action group, they do not switch paths—the first action determines their route. If a user doesn't perform a trigger event, then they advance through the default **Everyone Else** group at the end of the evaluation period.
 
 When **Advance users based on ranked order** is turned on, this means **Ranking** is on. So, all users are held until the end of the evaluation window. At the end of the evaluation period, users advance through the highest priority action group that they are eligible for at the end of the evaluation window. Users who do not perform any of the actions during the evaluation window advance through the default **Everyone Else** group.
 
@@ -32,15 +32,15 @@ To route users based on their current attributes or segment membership rather th
 
 
 
-Note that you can trigger an action path when a nested custom attribute object changes, but not for arrays of nested custom attributes or changes to object array data types.
+Note that you can trigger an Action Paths step when a nested custom attribute object changes, but not for arrays of nested custom attributes or changes to object array data types.
 
 #### In-app messages
 
-Note that when the action group trigger is starting a session, and the next step is an in-app message, the user must perform two session starts to receive the in-app message. The first session assigns the user to the action group within the action path, and the second session triggers the in-app message.
+Note that when the action group trigger is starting a session, and the next step is an in-app message, the user must perform two session starts to receive the in-app message. The first session assigns the user to the action group within the Action Paths step, and the second session triggers the in-app message.
 
 #### Ranking status example
 
-Let's say you have an action path with an evaluation period of one day with two action groups: Group 1 and Group 2. Group 1 has a trigger event "Start Session", and Group 2 has "Place an Order". If **Ranking** is turned on, then all users in the action path are "held" for one day. At the end of the day, if a user has started a session and placed an order, then they advance to the highest rank path. In this case, the user would advance to Group 1. 
+Let's say you have an Action Paths step with an evaluation period of one day with two action groups: Group 1 and Group 2. Group 1 has a trigger event "Start Session", and Group 2 has "Place an Order". If **Ranking** is turned on, then all users in the Action Paths step are "held" for one day. At the end of the day, if a user has started a session and placed an order, then they advance to the highest rank path. In this case, the user would advance to Group 1. 
 
 In the preceding example, if **Ranking** is off and a user performs one of the trigger events ("Start Session" or "Place an Order"), that user is advanced in the relevant action group based on the trigger action.
 
@@ -66,7 +66,7 @@ Add a trigger or multiple triggers to define your action groups. Here, you can s
 
 #### Add an email address trigger
 
-The **Add an Email Address** action group trigger fires when an email address is added or updated on a user profile during the action path's **Evaluation Window**. This behavior matches other profile update triggers: users advance through the action group when the profile change qualifies under your configuration, including any filters on the trigger.
+The **Add an Email Address** action group trigger fires when an email address is added or updated on a user profile during the Action Paths step's **Evaluation Window**. This behavior matches other profile update triggers: users advance through the action group when the profile change qualifies under your configuration, including any filters on the trigger.
 
 ![An action group named "Group 1" for users who make any purchase.](https://www.braze.com/docs/assets/img/actionpath_group.png?1cf39c37541a14ef4f3e052f46361e13)
 
@@ -74,18 +74,18 @@ In each action group setting, you also have the option to select the checkbox **
 
 ### Canvases with re-eligibility
 
-If users enter an action path multiple times and have multiple entries in the action path at the same time, the expected behavior varies depending on the **Ranking** status.
+If users enter an Action Paths step multiple times and have multiple entries in the step at the same time, the expected behavior varies depending on the **Ranking** status.
 
-| Ranking status | Action path behavior |
+| Ranking status | Action Paths step behavior |
 |---|--------------|
-| **Off** | A user can enter an action path more than once. These entries are held in the action path until a trigger action or event is recorded. If the trigger event does not satisfy an entry's property filters (for example, a [context variable](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_variables) does not match the trigger's property filters), the entry remains in the action path. <br><br>If the trigger event satisfies more than one entry, Braze deduplicates only these entries and immediately advances the earliest matching entry through the relevant action group. |
+| **Off** | A user can enter an Action Paths step more than once. These entries are held in the step until a trigger action or event is recorded. If the trigger event does not satisfy an entry's property filters (for example, a [context variable](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables) does not match the trigger's property filters), the entry remains in the Action Paths step. <br><br>If the trigger event satisfies more than one entry, Braze deduplicates only these entries and immediately advances the earliest matching entry through the relevant action group. |
 | **On** | All entries advance at the end of the relevant evaluation window. No deduplication occurs. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Canvases with re-eligibility" }
 
 **Warning:**
 
 
-Do not change **Advance users based on ranked order** after launch when users are already in the step. Braze applies the current ranking setting when processing events and when the evaluation window ends, but path state recorded earlier in the window may reflect a previous setting. For example, if you turn ranking off after users performed a ranked action, they may not advance through the path you expect when the window closes. Instead, create a new action path with the desired ranking setting, or duplicate the Canvas.
+Do not change **Advance users based on ranked order** after launch when users are already in the step. Braze applies the current ranking setting when processing events and when the evaluation window ends, but path state recorded earlier in the window may reflect a previous setting. For example, if you turn ranking off after users performed a ranked action, they may not advance through the path you expect when the window closes. Instead, create a new Action Paths step with the desired ranking setting, or duplicate the Canvas.
 
 
 

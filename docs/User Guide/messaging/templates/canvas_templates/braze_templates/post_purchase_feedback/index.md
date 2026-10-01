@@ -78,7 +78,7 @@ We'll begin our customization by going through each messaging component to updat
 1. In the Canvas builder, select the first Message step in the user journey.
 2. Select the **Email** variant.
 3. Fill out the **Sending info** with a subject that encourages user feedback. 
-4. Select **Edit message** to replace the template's email message with our feedback survey message. This includes replacing the links for each call-to-action to capture which option is selected, which will be referenced in the Action Path step of our user journey.
+4. Select **Edit message** to replace the template's email message with our feedback survey message. This includes replacing the links for each call-to-action to capture which option is selected, which will be referenced in the Action Paths step of our user journey.
 
 **Tip:**
 
@@ -89,7 +89,7 @@ You can use [Canvas entry properties](https://www.braze.com/docs/user_guide/mess
 
 #### Set up feedback survey
 
-Next, we'll need to fill out the details for the **In-App Message** variant. This is where we need to specify our `Experience Feedback` custom attribute that indicates the sentiment of our user feedback. (We'll also reference this in the subsequent Action Path step.)
+Next, we'll need to fill out the details for the **In-App Message** variant. This is where we need to specify our `Experience Feedback` custom attribute that indicates the sentiment of our user feedback. (We'll also reference this in the subsequent Action Paths step.)
 
 1. In the same first Message step, select the **In-App Messages** variant. We'll keep the message controls as is. 
 2. For the header and body, we'll use language to encourage users to be honest about their experience with Proxy War 3.
@@ -99,11 +99,11 @@ Next, we'll need to fill out the details for the **In-App Message** variant. Thi
 
 ![A survey that asks the user if they enjoyed their recent purchase of Proxy War 3 with three options: "Loved it", "It was OK", and "Not for me".](https://www.braze.com/docs/assets/img/canvas_templates/post_purchase_feedback/survey_example_iam.png?9754bf97d07b2e4d9200aeb386b4ed32){: style="max-width:90%;"}
 
-#### Build out the Action Path
+#### Build out the Action Paths step
 
-Using our custom attribute `Experience Feedback` and the attribute values from the previous section, we'll update the template's Action Path to match our attribute and values.
+Using our custom attribute `Experience Feedback` and the attribute values from the previous section, we'll update the template's Action Paths step to match our attribute and values.
 
-![The "Good feedback" group for the Action Path step that includes users who responded "Loved it" to our survey.](https://www.braze.com/docs/assets/img/canvas_templates/post_purchase_feedback/action_path_good_example.png?c782472144464bd0ff65ee0456152822){: style="max-width:90%;"}
+![The "Good feedback" group for the Action Paths step that includes users who responded "Loved it" to our survey.](https://www.braze.com/docs/assets/img/canvas_templates/post_purchase_feedback/action_path_good_example.png?c782472144464bd0ff65ee0456152822){: style="max-width:90%;"}
 
 ### Set up ad retargeting
 

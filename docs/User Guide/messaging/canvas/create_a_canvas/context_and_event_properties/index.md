@@ -48,7 +48,7 @@ Refer to the following table for a summary of differences between context and ev
 |----|----|----|
 | **Liquid** | `context` | `event_properties` |
 | **Persistence** | Can be referenced by all [Message](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step) steps for the duration of a Canvas built using Canvas. | - Can only be referenced once. <br> - Cannot be referenced by any subsequent Message steps. |
-| **Canvas behavior** | Can reference `context` in any step of a Canvas. For post-launch behavior, refer to [Editing Canvases after launch](https://www.braze.com/docs/post-launch_edits#canvas-entry-properties). | - Can reference `event_properties` in the first Message step **after** an [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) step where the action taken is a custom event or purchase event. <br> - Cannot be after the Everyone Else path of the Action Paths step. <br> - Can have other non-Message components in between the Action Paths and Message steps. If one of these non-Message components is an Action Paths step, the user can go through that action path's Everyone Else path. | 
+| **Canvas behavior** | Can reference `context` in any step of a Canvas. For post-launch behavior, refer to [Editing Canvases after launch](https://www.braze.com/docs/post-launch_edits#canvas-entry-properties). | - Can reference `event_properties` in the first Message step **after** an [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) step where the action taken is a custom event or purchase event. <br> - Cannot be after the Everyone Else path of the Action Paths step. <br> - Can have other non-Message components in between the Action Paths and Message steps. If one of these non-Message components is an Action Paths step, the user can go through that step's Everyone Else path. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Context and event properties" }
 
 **Original Canvas editor details**
@@ -76,7 +76,7 @@ You can no longer create or duplicate Canvases using the original editor. Note t
 - Context is only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/nested_objects) instead.
 - For in-app message channels, you can reference `context` and `event_properties` in a Canvas. `event_properties` can be accessed when included in the first Canvas step because it's trigger-based.
 - You can't use `event_properties` in the lead Message step. Instead, you can use `context` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
-- When an Action Path step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvases. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
+- When an Action Paths step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvases. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
 
 **Note:**
 
@@ -109,7 +109,7 @@ All timestamps in Canvas are normalized to UTC. Given this behavior, Braze stron
 
 ## Use case
 
-![An Action Path step followed by a Delay step and Message step for users who have added an item to their wishlist, and a path for everyone else.](https://www.braze.com/docs/assets/img_archive/canvas_entry_properties1.png?06859d03288a62a8303471c084e9082c){: style="float:right;max-width:30%;margin-left:15px;"}
+![An Action Paths step followed by a Delay step and Message step for users who have added an item to their wishlist, and a path for everyone else.](https://www.braze.com/docs/assets/img_archive/canvas_entry_properties1.png?06859d03288a62a8303471c084e9082c){: style="float:right;max-width:30%;margin-left:15px;"}
 
 To further understand the differences for `context` and `event_properties`, let's consider this scenario where users enter an action-based Canvas if they perform the custom event "add item to wishlist". 
 

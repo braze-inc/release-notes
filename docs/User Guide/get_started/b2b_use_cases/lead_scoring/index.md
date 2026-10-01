@@ -58,7 +58,7 @@ Under **Subscription Settings**, for **Send to these users:** select **all users
 
 ### Step 4: Build your Canvas
 
-#### Step 4a: Add an Action Path
+#### Step 4a: Add an Action Paths step
 
 Under your variant, select <i class="fas fa-plus"></i> **Add** and then select **Action Paths**.
 
@@ -68,14 +68,14 @@ Under your variant, select <i class="fas fa-plus"></i> **Add** and then select *
 
 Each Action Group will represent all the actions that lead to the same point increment or decrement. You can set up to eight Action Groups. In this scenario, we'll be setting up four groups.
 
-Add the following groups to your Action Path:
+Add the following groups to your Action Paths step:
 
 - **Group 1:** All events that count for a 1-point increment.
 - **Group 2:** All events that count for a 5-point increment.
 - **Group 3:** All events that count for a 1-point decrement.
 - **Everyone Else:** Action Paths allow you to define the window to wait and see if a user takes an action, before dropping them into an “everyone else” group. For lead scoring, this is an opportunity to decrement the score for “inactivity”.
 
-![Action Path containing Action Groups for adding one point, five points, and ten points; subtracting one point and ten points; and “Everyone Else”.](https://www.braze.com/docs/assets/img/b2b/action_paths_selected_simple.png?058886fcb5e7ccc8afdc567338a364aa){: style="max-width:20%;"}
+![Action Paths step containing Action Groups for adding one point, five points, and ten points; subtracting one point and ten points; and “Everyone Else”.](https://www.braze.com/docs/assets/img/b2b/action_paths_selected_simple.png?058886fcb5e7ccc8afdc567338a364aa){: style="max-width:20%;"}
 
 #### Step 4c: Configure each group to include the relevant events
 
@@ -85,9 +85,9 @@ In each Action Group, select **Select trigger** and choose the event that will a
 
 #### Step 4d: Add User Update steps
 
-Add a User Update step to each Canvas path created in your Action Path. 
+Add a User Update step to each Canvas path created in your Action Paths step. 
 
-![Canvas displaying the Action Path with branched User Update paths for each Action Group.](https://www.braze.com/docs/assets/img/b2b/user_update_paths_simple.png?2487998ce39f96bb3164aa9d548101d3){: style="max-width:80%;"}
+![Canvas displaying the Action Paths step with branched User Update paths for each Action Group.](https://www.braze.com/docs/assets/img/b2b/user_update_paths_simple.png?2487998ce39f96bb3164aa9d548101d3){: style="max-width:80%;"}
 
 {: start=”2”}
 In each User Update step’s **Compose** tab, do the following for the respective fields:

@@ -82,13 +82,17 @@ No, there aren't any technical requirements.
 
 ### Is there an HTML editor for landing pages?
 
-Yes. Use the **Custom Code** block in the drag-and-drop editor to add or edit HTML. To interface with the Braze SDK from your custom code, see [JavaScript bridge for landing pages](https://www.braze.com/docs/user_guide/messaging/landing_pages/javascript_bridge). To connect a fully custom UI to a landing page form, see [Create custom form blocks](https://www.braze.com/docs/user_guide/messaging/landing_pages/custom_form_blocks).
+Yes. Use the **Custom Code** block in the drag-and-drop editor to add or edit HTML, CSS, or JavaScript—for example, tracking pixels, third-party scripts, or custom CSS such as a `max-width` for wide browsers. To interface with the Braze SDK from your custom code, see [JavaScript bridge for landing pages](https://www.braze.com/docs/user_guide/messaging/landing_pages/javascript_bridge). To connect a fully custom UI to a landing page form, see [Create custom form blocks](https://www.braze.com/docs/user_guide/messaging/landing_pages/custom_form_blocks).
 
 ### Can I use iframes on landing pages?
 
 Yes. Add a **Custom Code** block in the drag-and-drop editor and include an iframe element with the URL of the content you want to embed.
 
 If the embedded website restricts framing through `frame-ancestors` in its Content Security Policy (CSP) or `X-Frame-Options`, the page may not load in the iframe. Braze can't override those settings—the embedded site must be configured to allow your landing page domain.
+
+### Can I add tracking pixels to landing pages?
+
+Yes. Add a **Custom Code** block in the drag-and-drop editor and paste the tracking pixel HTML from your ad or analytics provider (often a 1×1 image or a script tag). For Google Tag Manager installs, see [Adding Google Tag Manager to a landing page](#adding-google-tag-manager-to-a-landing-page).
 
 ### Can I create a webhook inside a landing page?
 

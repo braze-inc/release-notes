@@ -48,7 +48,7 @@ A suggested best practice is to provide instructions about how to out-out in the
 
 For interactive Canvas flows that reply with [response messages](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message/message_and_image_formats#response-messages):
 
-- Place the response message step immediately after the inbound trigger or Action Path evaluation.
+- Place the response message step immediately after the inbound trigger or Action Paths evaluation.
 - Use [webhooks](https://www.braze.com/docs/user_guide/channels/webhooks/create_a_webhook) instead of User Update steps when subscription changes are not required before the reply.
 - Avoid long delays or multi-day waits between inbound messages and response sends; the WhatsApp customer service window is 24 hours per inbound message.
 

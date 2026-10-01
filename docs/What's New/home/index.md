@@ -72,10 +72,10 @@ The [**Manage Subscriptions** block](https://www.braze.com/docs/user_guide/messa
 
 Add [multiple link shortening domains](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/custom_domains#assigning-custom-domains-to-subscription-groups) for SMS, MMS, and RCS so your messages don't depend on one shared domain.
 
-### SCIM Provisioning for IdP Groups
+### SCIM Provisioning for Okta and Microsoft Entra ID
 
 **Area:** Channels & Touchpoints
-**Status:** General availability
+**Status:** Early access
 
 [SCIM provisioning](https://www.braze.com/docs/user_guide/administer/global/user_management/automated_user_provisioning#accessing-scim-provisioning-settings) can sync groups from Okta and Microsoft Entra ID to Braze custom roles, keeping dashboard access aligned with identity provider group membership.
 
@@ -1078,8 +1078,8 @@ Cloud Data Ingestion (CDI) has a new design that separates sources and syncs, so
 
 In Canvas, you can now reference context variables to set:
 
-- An [expiration](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#set-an-expiration) for Banners and in-app messages in a Message step
-- A [personalized delays](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#action-path-delays) for Action Paths steps
+- An [expiration](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables#set-an-expiration) for Banners and in-app messages in a Message step
+- A [personalized delays](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables#action-paths-delays) for Action Paths steps
 
 In the Context variable name field, you can also enter the context variable name or select it from the dropdown in the step editor. For more details, see [Context](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context) and [Context variables](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables).
 

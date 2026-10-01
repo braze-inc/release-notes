@@ -61,7 +61,7 @@ Now, build your Canvas by customizing the templated steps:
 1. Customize the first email that sends to all users who haven't visited your app in over 30 days. In this use case, customize an email that tells users they unlock new perks when they visit your app today.
 
 {: start="2"}
-2. Customize the action path component called "Start Session?" by selecting your app for the **Started Session** path.
+2. Customize the Action Paths step called "Start Session?" by selecting your app for the **Started Session** path.
 
 {: start="3"}
 3. Keep the default for the Decision Split step called "Sessions?", which defines the ">1 Session" group as users who've used your app more than once in the last calendar day.

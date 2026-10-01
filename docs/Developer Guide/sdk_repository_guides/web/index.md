@@ -190,11 +190,21 @@ if (user) {
 #### User Logout
 
 ``` typescript
-import { wipeData } from "@braze/web-sdk";
+import { logout } from "@braze/web-sdk";
 
-// There is no explicit method to logout. To "forget" the current users entirely, use wipeData().
-// This is a complete data wipe (use with caution, this wipes things such as device ID)
-wipeData();
+// Use logout() (Web SDK 6.10.0+): unregisters push, then wipes local SDK data and disables the SDK.
+logout(
+  () => {
+    // Optional: re-enable and initialize before the next user session
+  },
+  () => {
+    // Optional: handle logout failure
+  }
+);
+
+// To clear local storage only (without unregistering push or disabling the SDK), use wipeData() instead.
+// import { wipeData } from "@braze/web-sdk";
+// wipeData();
 ```
 
 ### In-App Messages
@@ -658,7 +668,9 @@ enableSDK();
 ``` typescript
 import { wipeData } from "@braze/web-sdk";
 
-// Remove all locally stored data
+// Remove all locally stored SDK data (session, device ID, cached messages).
+// The next activity is treated as a new anonymous user on a new device.
+// For a full logout that also unregisters push and disables the SDK, use logout() instead.
 wipeData();
 ```
 

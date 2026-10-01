@@ -71,9 +71,9 @@ We’ll keep the default subscription settings, so we only send to users who hav
 
 ### Step 6: Customize your Canvas
 
-#### Build out the Action Path
+#### Build out the Action Paths step
 
-Next, let's build out the first Action Path step, which is meant to indicate whether our users have an interest in the new feature. We'll make the following adjustments to the template:
+Next, let's build out the first Action Paths step, which is meant to indicate whether our users have an interest in the new feature. We'll make the following adjustments to the template:
 
 1. Since the Cruise Control feature is only available after an order has been added to a cart, we'll name the first action group **Added to cart** and select `added_to_cart` for the custom event.
 
@@ -81,7 +81,7 @@ Next, let's build out the first Action Path step, which is meant to indicate whe
 
 {: start="2"}
 2. Keep the second action group **Taken Tour** as is since we want to evaluate whether users have taken a tour of the app, and if they have, then they'll advance to the second path.
-3. For the subsequent Action Path named **Assess Usage**, replace **Used Feature >3x** with **Viewed Cruise Control settings**.
+3. For the subsequent Action Paths step named **Assess Usage**, replace **Used Feature >3x** with **Viewed Cruise Control settings**.
 4. Select the **Perform Custom Event** dropdown, then select `scheduled_delivery` for the custom event.
 
 ![The action group name set to 'Used Feature >3x' and the 'Perform Custom Event' set to 'scheduled_delivery'.](https://www.braze.com/docs/assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png?60505e7f82314e163bb6335cb647654e){: style="max-width:60%;"}

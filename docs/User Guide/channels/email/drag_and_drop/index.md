@@ -42,6 +42,7 @@ Basic blocks are the foundation of your email. Using these blocks, you can add a
 - Button
 - Divider
 - Spacer
+- [NPS Survey](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/nps_survey)
 
 
 

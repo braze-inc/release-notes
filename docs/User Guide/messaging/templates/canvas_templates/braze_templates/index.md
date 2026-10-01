@@ -44,7 +44,7 @@ Deliver timely personalized messages to highlight the benefits and usage tips. C
 
 - Exclude users who have already adopted the feature. For example, in **Target Audience**, add a filter for a custom event such as "Activated Feature" that has already occurred.
 - To use the Experiment Path step, define a conversion event. This event should be the event that signals feature adoption.
-- Set up the Action Path step in the template with custom events for "Activated Feature" and "Taken Tour".
+- Set up the Action Paths step in the template with custom events for "Activated Feature" and "Taken Tour".
 - Set up the custom attributes in the Message step named "Feedback Survey" to capture sentiment of feedback.
 
 

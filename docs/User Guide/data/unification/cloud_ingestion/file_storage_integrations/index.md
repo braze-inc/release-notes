@@ -229,7 +229,7 @@ The integration requires the following resources:
 
 - A Cloud Storage bucket for data storage
 - A Pub/Sub topic and subscription for new file notifications
-- A service account whose JSON key you upload to Braze
+- A service account that Braze accesses through Workload Identity Federation or a JSON key you upload to Braze
 
 ### GCP definitions
 
@@ -239,7 +239,8 @@ The integration requires the following resources:
 | Cloud Storage bucket | A bucket is the container that holds the data files you want Braze to ingest. |
 | Pub/Sub topic | A topic is the named resource that receives new-file notifications from your Cloud Storage bucket. |
 | Pub/Sub subscription | A subscription attaches to a topic and delivers its messages. Braze consumes new-file notifications from a pull subscription. |
-| Service account | A service account is a non-human identity that Braze uses to access your bucket and subscription. You upload its JSON key to Braze. |
+| Service account | A service account is a non-human identity that Braze uses to access your bucket and subscription. Braze impersonates it through Workload Identity Federation, or uses a JSON key you upload. |
+| Workload Identity Federation | Workload Identity Federation (WIF) lets Braze impersonate your service account with a short-lived identity, so you don't create or upload a key. |
 | IAM role | An Identity and Access Management (IAM) role is a collection of permissions that you assign to the service account on your bucket and subscription. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="GCP definitions" }
 
@@ -367,7 +368,19 @@ gcloud pubsub subscriptions add-iam-policy-binding YOUR-SUBSCRIPTION \
   --role="roles/pubsub.subscriber"
 ```
 
-### Step 6: Create a JSON key
+### Step 6: Set up authentication {#step-6-set-up-authentication}
+
+Braze can access the service account with Workload Identity Federation or a service account key. Existing service account key credentials keep working, and you don't need to migrate them. One Workload Identity Federation credential can serve both Google Cloud Storage and BigQuery sources.
+
+
+
+
+Set up a workload identity pool and provider, and bind the Braze principal to the service account from [Step 4](#step-4-create-a-service-account). For steps, see [Configuring Google Cloud for Workload Identity Federation](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/google_workload_identity_federation). Use the service account you created in Step 4, and skip the guide's service account creation step.
+
+If you've already set up Workload Identity Federation for another Google Cloud Storage or BigQuery source, you don't need to repeat it. Grant the existing service account the permissions in [Step 5](#step-5-assign-permissions).
+
+
+
 
 In the Google Cloud console, open the service account, go to **Keys** > **Add key** > **Create new key**, and select **JSON**.
 
@@ -377,6 +390,9 @@ Alternatively, use gcloud:
 gcloud iam service-accounts keys create braze-cdi-gcs-key.json \
   --iam-account=braze-cdi-gcs@YOUR-PROJECT-ID.iam.gserviceaccount.com
 ```
+
+
+
 
 ## Setting up Cloud Data Ingestion in Braze {#setting-up-cloud-data-ingestion-in-braze-gcs}
 
@@ -388,7 +404,7 @@ gcloud iam service-accounts keys create braze-cdi-gcs-key.json \
 2. Complete the source fields:
     - **Bucket:** your bucket name
     - **Project ID:** your GCP project ID
-    - **Service account JSON key:** upload the key file from step 6 and give the credential a name
+    - **Credential:** give the credential a name and select the authentication method from step 6. For **Workload Identity Federation**, enter the **Project number**, **Workload identity pool ID**, **Provider ID**, and **Service account email**. For **Service Account Key**, upload the JSON key file.
 
 ![The Google Cloud Storage source form showing Bucket, Project ID, and credential upload fields.](https://www.braze.com/docs/assets/img/cloud_ingestion/gcs_source_form.png?faba91f61508cdd5ab603d6c84c577a8)
 

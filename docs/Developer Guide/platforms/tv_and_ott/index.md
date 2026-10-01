@@ -193,7 +193,7 @@ Features include:
   - Webviews are not supported by the Roku platform, so HTML in-app messages are therefore not supported.
 - Feature Flags
 
-For more information, visit the [Roku integration guide](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=roku).
+For more information, visit the [Roku SDK integration guide](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=roku).
 
 ### Apple TV OS {#tvos}
 

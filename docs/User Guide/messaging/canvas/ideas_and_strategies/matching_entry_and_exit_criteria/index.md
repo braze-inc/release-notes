@@ -1,6 +1,6 @@
 # Matching exit criteria to entry events
 
-> This article covers how to set up exit criteria and action paths that directly correlate to the Canvas entry event, so that users only exit or branch when they perform a specific action related to why they entered the Canvas.
+> This article covers how to set up exit criteria and Action Paths steps that directly correlate to the Canvas entry event, so that users only exit or branch when they perform a specific action related to why they entered the Canvas.
 
 By comparing event properties against [Canvas entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties), you can create highly targeted flows. For example, in an abandoned checkout Canvas, you can configure a user to exit only when they purchase the exact item they abandoned, while continuing to receive reminder messages if they purchase a different item.
 
@@ -34,7 +34,7 @@ Use [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas
 
 ### Example: Abandoned checkout with branching paths
 
-In this scenario, a user who selected an item but didn't complete a purchase first receives an abandoned checkout message. The user is then held in an Action Path step for one week before being sorted into three pathways based on what they did during that period:
+In this scenario, a user who selected an item but didn't complete a purchase first receives an abandoned checkout message. The user is then held in an Action Paths step for one week before being sorted into three pathways based on what they did during that period:
 
 - **Completed the original purchase:** The custom event property ID equals the entry property ID. These users might receive a thank-you message or cross-sell recommendation.
 - **Made a different purchase:** The custom event property ID does not equal the entry property ID. These users might receive a reminder about the original item.
@@ -47,7 +47,7 @@ To set this up:
 3. For the second action group (different purchase), add the same trigger event but set the comparison to `does not equal` with the same context variable configuration.
 4. Use the **Everyone Else** group for users who didn't perform the completing event at all.
 
-For more detail on configuring these filters, see [Action Path examples](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables#action-path-examples).
+For more detail on configuring these filters, see [Action Paths examples](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables#action-paths-examples).
 
 ## Other applications
 
@@ -61,5 +61,5 @@ While this article uses an abandoned purchase example, you can apply the same pa
 ## Things to know
 
 - The configurations in this article are illustrative examples. Test all components in your development environment before launching.
-- Verify that the property names and data types in your entry events match those used in your exit criteria or action paths.
+- Verify that the property names and data types in your entry events match those used in your exit criteria or Action Paths steps.
 - Review [context variables](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables) for details on how property comparisons work across events.

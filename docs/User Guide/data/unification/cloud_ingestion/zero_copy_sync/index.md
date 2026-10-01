@@ -181,7 +181,11 @@ Create a user and grant permissions. If you already have credentials from anothe
 | BigQuery Job User | Allows Braze to run jobs. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Step 1.3: Set up credentials" }
 
-After granting permissions, generate a JSON key. See [Keys create and delete](https://cloud.google.com/iam/docs/keys-create-delete) for instructions. You’ll upload it in the Braze dashboard later.
+After granting permissions, set up how Braze authenticates as the service account:
+
+**Workload Identity Federation:** Bind the Braze principal to the service account, so you don't create a key. For steps, see [Configuring Google Cloud for Workload Identity Federation](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/google_workload_identity_federation).
+
+**Service account key:** Generate a JSON key. See [Keys create and delete](https://cloud.google.com/iam/docs/keys-create-delete) for instructions. You’ll upload it in the Braze dashboard later.
 
 ##### Step 1.4: Configure network policies 
 If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations?tab=bigquery#step-13-allow-access-to-braze-ips).
@@ -279,7 +283,7 @@ Create a service principal and grant permissions. If you already have credential
 
 ##### Step 1.3: Configure network policies 
 
-If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations?tab=microsoft%20fabric#step-15-allow-braze-ips-in-firewall-optional).
+If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations?tab=microsoft%20fabric#step-16-allow-braze-ips-in-firewall-optional).
 
 
 

@@ -51,7 +51,7 @@ Don’t forget to also provide any discount code, offer, or other information pr
 
 ![User Update Canvas step that uses the advanced JSON editor to update the user profile.](https://www.braze.com/docs/assets/img/whatsapp/user_update_step_json.png?00e478c6130fcc0fa675057b7f17d3f5)
 
-![Canvas showing the workflow for sending Ads That Click to WhatsApp, including three action paths: Opting in, Opting Out, and Everyone Else.](https://www.braze.com/docs/assets/img/whatsapp/ads_that_click_canvas.png?418b8eedfa41cef9d106f7ad7e911f0e)
+![Canvas showing the workflow for sending Ads That Click to WhatsApp, including an Action Paths step with three groups: Opting in, Opting Out, and Everyone Else.](https://www.braze.com/docs/assets/img/whatsapp/ads_that_click_canvas.png?418b8eedfa41cef9d106f7ad7e911f0e)
 
 ## Considerations
 

@@ -78,9 +78,11 @@ The following example uses the [`/campaigns/trigger/send`](https://www.braze.com
     "episode_title": "Season 3, Episode 1",
     "deep_link": "https://example.com/shows/example-show/s3e1"
   },
-  "broadcast": false
+  "broadcast": true
 }
 ```
+
+Set `broadcast` to `true` when you omit `recipients` and target with `audience`. For [`/campaigns/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns), `broadcast` is required to send to a connected audience without a recipients list. If `broadcast` is `true`, don't include a `recipients` list.
 
 ## Object body
 

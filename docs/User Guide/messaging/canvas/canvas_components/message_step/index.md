@@ -62,7 +62,7 @@ All users who enter the Message step advance to the next step when any one of th
 - A user does not meet the criteria in **Delivery validations**
 
 
-If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in the first step (Message step) or a Message step that is nested under an Action Path step. For example, in the Message step, you could use `{{sms.${inbound_message_body}}}` or `{{sms.${inbound_media_urls}}}`.
+If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in the first step (Message step) or a Message step that is nested under an Action Paths step. For example, in the Message step, you could use `{{sms.${inbound_message_body}}}` or `{{sms.${inbound_media_urls}}}`.
 
 
 ## Reference context properties
@@ -137,7 +137,7 @@ In Canvas, custom event and purchase event properties can be used in Liquid in a
 
 
 
-In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step. Note that you'll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Path step.
+In the first Message step following an Action Paths step, you can use `event_properties` related to the event referenced in that step. You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step. Note that you'll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Paths step.
 
 **Important:**
 

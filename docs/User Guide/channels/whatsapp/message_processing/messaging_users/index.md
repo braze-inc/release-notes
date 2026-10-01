@@ -139,7 +139,7 @@ For sub-minute replies in two-way Canvas flows, minimize steps between the inbou
 The following events unblock response messages: 
 
 - Inbound message 
-  - [Action Path](https://www.braze.com/docs/action_paths) or [action-based entry](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery) with the trigger **Send a WhatsApp inbound message**.
+  - [Action Paths](https://www.braze.com/docs/action_paths) step or [action-based entry](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery) with the trigger **Send a WhatsApp inbound message**.
 
 ![An action-based entry step with the trigger "Send a WhatsApp inbound message".](https://www.braze.com/docs/assets/img/whatsapp/whatsapp_inbound_message_trigger.png?b1c4ced44353dc412960ddabd1d13fef)
 
@@ -147,13 +147,13 @@ The following events unblock response messages:
 - Inbound product message 
   - [`ecommerce.cart_updated`](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events#types-of-ecommerce-recommended-events?tab=ecommerce.cart_updated) event
 
-![An Action Path with the trigger of a performed custom event `ecommerce.cart_updated`.](https://www.braze.com/docs/assets/img/whatsapp/ecommerce_cart_updated.png?6835a47614c225f10006f4c5c3680725)
+![An Action Paths step with the trigger of a performed custom event `ecommerce.cart_updated`.](https://www.braze.com/docs/assets/img/whatsapp/ecommerce_cart_updated.png?6835a47614c225f10006f4c5c3680725)
 
 ### Quick replies and inbound messages outside the 24-hour window
 
 When a user interacts with your business on WhatsApp—including by tapping a quick reply button on an older template message—their action counts as an inbound message. That inbound message opens a new 24-hour customer service window, even if the original template was sent more than 24 hours ago.
 
-In a Canvas with quick reply buttons, users can tap a button days after receiving the welcome template and still enter the correct Action Path. Braze evaluates the Action Path when the inbound message arrives; you don't need to extend the Action Path duration beyond the default to capture late replies.
+In a Canvas with quick reply buttons, users can tap a button days after receiving the welcome template and still advance down the correct path. Braze evaluates the Action Paths step when the inbound message arrives; you don't need to extend the Action Paths evaluation window beyond the default to capture late replies.
 
 The following diagram shows a common quick-reply flow:
 
@@ -165,12 +165,12 @@ sequenceDiagram
     Note over User: More than 24 hours pass
     User->>Brand: Taps quick reply (inbound message)
     Note over Brand,User: New 24-hour customer service window opens
-    Brand->>User: Response message (within Action Path)
+    Brand->>User: Response message (within Action Paths step)
 ```
 
 #### Things to know
 
-- The response message step must still fall within 24 hours of the user's inbound message. In most Canvas flows, the response sends immediately after the Action Path evaluates, so this isn't an issue.
+- The response message step must still fall within 24 hours of the user's inbound message. In most Canvas flows, the response sends immediately after the Action Paths step evaluates, so this isn't an issue.
 - The 24-hour customer service window is different from Canvas [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events), which can use a window of up to 30 days. Conversion windows control attribution; they don't affect whether a response message can send.
 - For billing, see [How are WhatsApp response messages billed?](https://www.braze.com/docs/user_guide/channels/whatsapp/faq#how-are-whatsapp-response-messages-billed).
 

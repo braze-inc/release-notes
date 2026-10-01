@@ -40,8 +40,8 @@ After adding locales to your workspace, use [multi-language translations](https:
 
 In Canvas, you can now reference context variables to set:
 
-- An [expiration](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#set-an-expiration) for Banners and in-app messages in a Message step
-- A [personalized delays](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#action-path-delays) for Action Paths steps
+- An [expiration](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables#set-an-expiration) for Banners and in-app messages in a Message step
+- A [personalized delays](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables#action-paths-delays) for Action Paths steps
 
 In the Context variable name field, you can also enter the context variable name or select it from the dropdown in the step editor. For more details, see [Context](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context) and [Context variables](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables).
 

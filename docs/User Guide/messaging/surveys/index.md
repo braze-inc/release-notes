@@ -4,12 +4,13 @@
 
 ## Channel availability
 
-Surveys are available on two channels. On either channel, select **Survey** as your message type on the message composition page before opening the editor to switch into survey mode. Each channel page covers the channel-specific create flow, composition, and reporting location, while this page covers the concepts and capabilities that apply to both.
+Surveys are available on landing pages and in-app messages. On either channel, select **Survey** as your message type on the message composition page before opening the editor to switch into survey mode. You can also collect an NPS score from email by linking an [email NPS Survey block](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/nps_survey) to a published survey landing page. Each channel page covers the channel-specific create flow, composition, and reporting location, while this page covers the concepts and capabilities that apply across channels.
 
 | Channel | Build surveys in |
 | --- | --- |
 | Landing pages | [Landing page surveys](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages/surveys) |
 | In-app messages | [In-app message surveys](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop/surveys) |
+| Email | [Email NPS survey block](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/nps_survey) (links score clicks to a landing page survey) |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Survey channel availability" }
 
 ## Surveys page
@@ -23,7 +24,7 @@ If you don't see **Surveys** under **Messaging**, contact your Braze account man
 
 
 
-## Analytics
+## Analytics {#analytics}
 
 Every survey question type includes enhanced reporting by default, so you can review response data at a glance without building a segment or exporting to a separate tool first.
 
@@ -33,6 +34,8 @@ Top-level analytics include:
 - **Completed:** Users who completed all required questions
 - **Partially complete:** Users who submitted some data, but did not complete all required questions
 - **Unique impressions:** Total page views
+
+Partial submissions have a six-hour grace period before they appear in results, so users can finish the rest of the survey. A response can stay partially complete until the user selects the final submit control—even when the only question is an NPS rating, such as a score recorded from an [email NPS Survey block](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/nps_survey).
 
 ![Survey responses page showing NPS score analytics with promoter, passive, and detractor percentages and a horizontal bar chart of score distribution.](https://www.braze.com/docs/assets/img/surveys/survey_responses.png?81fd35feff57a0e05d364c0e18f05cbc)
 
@@ -138,4 +141,4 @@ Go to **Messaging** > **Surveys** to review surveys across landing pages, campai
 
 ## Related articles
 
-<ul class="guide_tiles"><li><a href="/docs/user_guide/messaging/landing_pages/create_landing_pages/surveys"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Landing page surveys</span><span class="guide_tile_description">Create flow, composition, and reporting for the landing pages channel</span></span></div></a></li><li><a href="/docs/user_guide/channels/in_app_messages/drag_and_drop/surveys"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">In-app message surveys</span><span class="guide_tile_description">Create flow, composition, and reporting for the in-app messages channel</span></span></div></a></li><li><a href="/docs/user_guide/messaging/design_and_edit/editor_blocks"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Drag-and-drop editor blocks</span><span class="guide_tile_description">Full reference for the form blocks you can add to a survey</span></span></div></a></li><li><a href="/docs/user_guide/data/distribution/braze_currents"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Braze Currents</span><span class="guide_tile_description">Set up data export to your warehouse or BI tool</span></span></div></a></li></ul>
+<ul class="guide_tiles"><li><a href="/docs/user_guide/messaging/landing_pages/create_landing_pages/surveys"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Landing page surveys</span><span class="guide_tile_description">Create flow, composition, and reporting for the landing pages channel</span></span></div></a></li><li><a href="/docs/user_guide/channels/in_app_messages/drag_and_drop/surveys"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">In-app message surveys</span><span class="guide_tile_description">Create flow, composition, and reporting for the in-app messages channel</span></span></div></a></li><li><a href="/docs/user_guide/channels/email/drag_and_drop/nps_survey"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Email NPS survey block</span><span class="guide_tile_description">Collect NPS scores from drag-and-drop email and finish on a landing page survey</span></span></div></a></li><li><a href="/docs/user_guide/messaging/design_and_edit/editor_blocks"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Drag-and-drop editor blocks</span><span class="guide_tile_description">Full reference for the form blocks you can add to a survey</span></span></div></a></li><li><a href="/docs/user_guide/data/distribution/braze_currents"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Braze Currents</span><span class="guide_tile_description">Set up data export to your warehouse or BI tool</span></span></div></a></li></ul>

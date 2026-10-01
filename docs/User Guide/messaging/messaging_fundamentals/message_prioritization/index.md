@@ -235,7 +235,7 @@ Retry windows for Canvas messages are configured at the step level. If a Canvas 
 **Tip:**
 
 
-You don't need to understand everything in this section to use Message Prioritization. After you set your categories and rules and opt your messages in, Braze evaluates and prioritizes messages automatically and does its best to send the ones that matter most. The details here are for when you want to understand how those evaluations are made.
+You don't need to understand everything in this section to use Message Prioritization. After you set your categories and rules and opt your messages in to Message Prioritization, Braze evaluates and prioritizes messages automatically and does its best to send the ones that matter most. The details here are for when you want to understand how those evaluations are made.
 
 
 
@@ -298,7 +298,7 @@ Braze stops the look-ahead at these steps until the user actually progresses thr
 
 - Delay step with a personalized delay
 - Delay step that follows a branching step
-- Action Path step
+- Action Paths step
 - Experiment step
 
 #### Branching steps
@@ -332,7 +332,7 @@ Suppose a user is eligible for a lower-priority campaign, but is also expected t
 
 ### Higher-priority Canvas with a boundary step versus lower-priority campaign
 
-Suppose a higher-priority Canvas includes an Action Path step, an experiment, or a personalized delay before its next Message step. Until the user reaches and moves past that step, Braze does not look ahead to the downstream higher-priority Canvas message. In that case, a lower-priority campaign may still send and count toward the cap.
+Suppose a higher-priority Canvas includes an Action Paths step, an experiment, or a personalized delay before its next Message step. Until the user reaches and moves past that step, Braze does not look ahead to the downstream higher-priority Canvas message. In that case, a lower-priority campaign may still send and count toward the cap.
 
 ### Higher-priority branching Canvas versus lower-priority message
 

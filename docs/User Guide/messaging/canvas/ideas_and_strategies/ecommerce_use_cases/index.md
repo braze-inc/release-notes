@@ -445,10 +445,6 @@ After you launch a campaign or Canvas using the "Places Order" conversion event,
 
 ![Conversions Details table with campaigns and Canvases, and the associated conversion statistics.](https://www.braze.com/docs/assets/img_archive/conversion_details_table.png?77eb70a253fea124bde0c70cf9760b88)
 
-#### eCommerce revenue dashboard
+#### Revenue - Last Touch Attribution dashboard
 
-To gain insights into revenue attributed to the last campaign or Canvas a user interacted with before placing an order, use the [eCommerce revenue dashboard](https://www.braze.com/docs/ecommerce_revenue_dashboard) and select a conversion window.
-
-### Revenue report 
-
-To analyze data from these new events, go to the [Dashboard Builder](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder) and view the [**eCommerce Revenue - Last Touch Attribution** dashboard](https://www.braze.com/docs/ecommerce_revenue_dashboard).
+To gain insights into revenue attributed to the last campaign or Canvas a user interacted with before placing an order, go to **Analytics** > **Dashboard Builder** and select [**Revenue - Last Touch Attribution**](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder#revenue---last-touch-attribution).

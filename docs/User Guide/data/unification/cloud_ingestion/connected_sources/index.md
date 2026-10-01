@@ -49,7 +49,7 @@ Cloud Data Ingestion connected sources require some setup on Braze and in your i
 
 
 1. Set up the source data and required resources in your BigQuery environment.
-2. Create a service account and allow access to the BigQuery project(s) and dataset(s) that contain the data you want to sync.  
+2. Create a service account that Braze accesses through Workload Identity Federation or a service account key, and allow access to the BigQuery projects and datasets that contain the data you want to sync.  
 3. Create a new connected source in the Braze dashboard.
 4. Test the integration.
 5. Use the connected source to create one or more CDI Segment Extensions.
@@ -57,7 +57,7 @@ Cloud Data Ingestion connected sources require some setup on Braze and in your i
 
 
 1. Set up the source data and required resources in your Databricks environment.
-2. Create a service principal (OAuth M2M) or personal access token, and allow access to the Databricks catalogs and schemas that contain the data you want to sync.  
+2. Create a service principal for OAuth machine-to-machine (M2M) authentication or a personal access token, and allow access to the Databricks catalogs and schemas that contain the data you want to sync.  
 3. Create a new connected source in the Braze dashboard.
 4. Test the integration.
 5. Use the connected source to create one or more CDI Segment Extensions.
@@ -213,7 +213,7 @@ If you don't want your Redshift cluster to be publicly accessible, you can set u
 
 
 
-#### Step 2.1: Create a Service Account and grant permissions 
+#### Step 2.1: Create credentials for Braze
 
 Create a service account in GCP for Braze to use to connect and read data from your table(s). The service account should have the in the following section permissions: 
 
@@ -229,7 +229,20 @@ You may choose to grant access to all tables in a dataset, or grant privileges o
 
 The `create table` permission is required so Braze can create a table with your CDI Segment Extension query results before updating the segment in Braze. Braze will create a temporary table per segment, and the table will only persist while Braze is updating the segment. 
 
+Braze can access the service account with Workload Identity Federation or a service account key. Existing service account key credentials keep working, and you don't need to migrate them. One Workload Identity Federation credential can serve both BigQuery and Google Cloud Storage sources.
+
+
+
+
+Set up a workload identity pool, a provider, and the service account, and bind the Braze principal to the service account. For steps, see [Configuring Google Cloud for Workload Identity Federation](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/google_workload_identity_federation). If you've already set up Workload Identity Federation for another BigQuery or Google Cloud Storage source, you don't need to repeat it. Grant the existing service account the permissions listed in this step.
+
+
+
+
 After creating the service account and granting permissions, generate a JSON key. For more information, refer to [Google Cloud: Create and delete service account keys](https://cloud.google.com/iam/docs/keys-create-delete). You'll upload this to the Braze dashboard later.
+
+
+
 
 #### Step 2.2: Allow access to Braze IPs    
 
@@ -274,10 +287,12 @@ The `CREATE TABLE` permission is required so Braze can create a table with your 
 2. Grant the service principal access to the schema used for the connected source, including `CREATE TABLE`. Use the service principal's application ID (the same value as the client ID) as the grantee.
 
 ```sql
-GRANT USE CATALOG ON CATALOG `BRAZE-CLOUD-PRODUCTION` TO `<application-id>`;
-GRANT USE SCHEMA, CREATE TABLE ON SCHEMA `BRAZE-CLOUD-PRODUCTION`.INGESTION TO `<application-id>`;
-GRANT SELECT ON SCHEMA `BRAZE-CLOUD-PRODUCTION`.INGESTION TO `<application-id>`;
+GRANT USE CATALOG ON CATALOG `BRAZE-CLOUD-PRODUCTION` TO `APPLICATION_ID`;
+GRANT USE SCHEMA, CREATE TABLE ON SCHEMA `BRAZE-CLOUD-PRODUCTION`.INGESTION TO `APPLICATION_ID`;
+GRANT SELECT ON SCHEMA `BRAZE-CLOUD-PRODUCTION`.INGESTION TO `APPLICATION_ID`;
 ```
+
+Replace *`APPLICATION_ID`* with the application ID of your service principal.
 
 Keep the client ID and secret in a safe place until you need to enter them on the Braze dashboard during the credential creation step.
 
@@ -451,7 +466,7 @@ If your credentials have **Connect with SSH Tunnel** selected, take note of the 
 Create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Connected Sources**, select **Add data source**, and then select **Google BigQuery**.
 
 In **Setup source**, enter the following:
-- **Credentials:** **Credential name** and upload your **JSON key**
+- **Credentials:** **Credential name** and authentication method, plus either **Project number**, **Workload identity pool ID**, **Provider ID**, and **Service account email** (Workload Identity Federation) or your uploaded **JSON key** (service account key)
 - **Configuration:** **Project** and **Dataset**
 
 #### Step 3.2: Configure sync details

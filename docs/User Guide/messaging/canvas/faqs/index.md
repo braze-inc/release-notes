@@ -331,7 +331,7 @@ Note that if Intelligent Timing is turned on, the message will be sent within 24
 
 ##### Quiet Hours
 
-Exception event is applied using Action Paths, which are separate from Message steps. Quiet Hours are enforced in the Message component. This means that if a user already passed the Action Path (and wasn't excluded with the exception event), then encounters Quiet Hours when they got to the Message component, and had their Canvas configured such that the message re-sends after the Quiet Hours period, the exception event will no longer be applied. Note that this use case is not common.
+Exception event is applied using Action Paths, which are separate from Message steps. Quiet Hours are enforced in the Message component. This means that if a user already passed the Action Paths step (and wasn't excluded with the exception event), then encounters Quiet Hours when they got to the Message component, and had their Canvas configured such that the message re-sends after the Quiet Hours period, the exception event will no longer be applied. Note that this use case is not common.
 
 For segments and filters, the Message step has delivery validations that allows users to configure additional segments and filters that are validated at send-time. This prevents the aforementioned Quiet Hours edge case.
 
