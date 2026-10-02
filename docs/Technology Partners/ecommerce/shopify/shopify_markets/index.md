@@ -116,11 +116,15 @@ These properties are added to:
 
 ##### Currency
 
-Supported Shopify cart, checkout, and order events carry two sets of values:
+When Shopify Markets reporting is enabled, native Shopify checkout, order, and refund webhook events carry two sets of values:
 - Your store currency in the existing price and total fields, unchanged
 - The `presentment_currency` object holding the amounts the customer saw and paid
 
-Use `presentment_currency` when you're showing a customer what they paid, such as an order confirmation or an abandoned cart message. Use the store currency values when you're comparing revenue across markets, since they're already in a single currency.
+Those events can also include related market properties such as `country` and `market_handle`. 
+
+Use `presentment_currency` when you're showing a customer what they paid, such as an order confirmation or a checkout reminder. Use the store currency values when you're comparing revenue across markets, since they're already in a single currency.
+
+Cart events from the Shopify pixel don't include `presentment_currency`. Custom checkout and purchase events you send through a CDP such as Segment also omit it. To keep market currency in your messages and reporting, include an equivalent object in your custom event payload, or keep the native Shopify events enabled for the event types you need.
 
 ##### Localized product information
 
@@ -256,7 +260,11 @@ After these attributes and properties are on user profiles, you can use them to 
 
 ### Target by market in segmentation
 
-Filter by country, browser language, or `shopify_locale` in segments and in campaign or Canvas entry criteria. As an example, build an audience of users in a specific market, or split a Canvas by locale.
+Filter by country, browser language, or `shopify_locale` in segments and in campaign or Canvas entry criteria—for example, users in France, or a Canvas path by `shopify_locale`.
+
+You can also use Shopify Market segment filters, which target by the market associated with a shopper's order activity. To reach shoppers associated with your default market only, build a segment that excludes users in each non-default market you sync—for example, everyone who has placed an order except where the market equals Mexico.
+
+For catalog product selections by market handle (including when `market_handle` is `default` for default product rows), see [Tutorial: Show products and prices per market](#tutorial-show-products-and-prices-per-market).
 
 ### Trigger and personalize with Liquid
 
@@ -325,7 +333,7 @@ Market properties are included with supported Shopify events, so a campaign or C
 | Custom events | `shopify_paid_order`, `shopify_fulfilled_order`, `shopify_partially_fulfilled_order` |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Shopify Markets order events with market properties"}
 
-`presentment_currency` has the widest coverage compared to the others. It is included with supported cart, checkout, and order events, so an abandoned cart message can show the amount a customer saw even though cart events don't carry `country` or `market_handle`. For details, see [Currency](#currency).
+`presentment_currency` is included with supported checkout, order, and refund events, so a checkout reminder or order confirmation can show the amount a customer saw. Cart events don't carry `presentment_currency`, `country`, or `market_handle`. For details, see [Currency](#currency).
 
 ## Markets Reporting
 
