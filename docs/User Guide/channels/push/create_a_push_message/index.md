@@ -199,27 +199,58 @@ Here, you can also set up button prompts within your push notification, such as:
 
 ### Sending options
 
-If a user has your app installed on multiple devices, by default, your push message is sent to all devices with a valid push token assigned. If desired, you can select **Most recently used device**.
+Under **Sending options** on the **Compose** tab, configure device targeting and, for Android, delivery priority.
 
-![Device options checkbox to only send this push to the user's most recently used device.](https://www.braze.com/docs/assets/img_archive/push_recent_device.png?d60d3b2a3b6f7a3d9a53f95d9bc6548f){: style="max-width:70%;" }
+#### Push destination
 
-There is some nuance for this setting. If this option is selected, Braze will limit multiple sends from occurring except when a campaign targets multiple platforms, such as both iOS and Android. If the user has your app on both an iOS and an Android device, they'll receive a push for both platforms. If a user's most recently used device isn't [push enabled](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states#foreground-push-enabled), the message will not send.
+If a user has your app installed on multiple devices, Braze sends your push message to all devices with a valid push token by default. To limit delivery to a single device, select **Most recently used device** from the **Push destination** dropdown.
 
-By default, Braze sends messages to every device a user owns that has a valid push token. For iOS, you can further refine your reach by choosing to send notifications only to iPad devices, or only to iPhone and iPod devices.
+![Sending options section with Push destination set to Most recently used device.](https://www.braze.com/docs/assets/img_archive/push_recent_device.png?d60d3b2a3b6f7a3d9a53f95d9bc6548f){: style="max-width:70%;" }
 
-If desired, you can set the push destination to **Most recently used device**.
+For campaigns that include web push, the options are **All devices/browsers** and **Most recently used device/browser**.
 
 #### Most recently used device
 
-"Most recently used" is a technical status, not a behavioral one. Because Braze defaults to all devices, switching to this setting significantly narrows your reach and relies entirely on the status of the single device with the newest token.
+"Most recently used" is a technical status, not a behavioral one. Switching from **All devices** narrows your reach to the single device with the newest push token.
 
 The most recently used device is determined by which device has the most recently updated push token, rather than which device had the most recent session.
-* If a new device's push token is added to a user profile through the API, that device is immediately considered the most recently used, even if the user hasn't started a session on it yet.
-* If a user's most recently used device is not [push enabled](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states#foreground-push-enabled), the message will not send at all.
 
-Multiple sends can still occur if a campaign targets different platforms, such as both iOS and Android. If a user has the app on both, they can receive a push for both platforms.
+- If a new device's push token is added to a user profile through the API, that device is immediately considered the most recently used, even if the user hasn't started a session on it yet.
+- If a user's most recently used device isn't [push enabled](https://www.braze.com/docs/user_guide/channels/push/push_setup/push_subscription_states#foreground-push-enabled), the message doesn't send.
 
-For iOS, you can further limit messaging by only sending push notifications to iPad devices, or only sending to iPhone and iPod devices.
+Selecting **Most recently used device** limits multiple sends within a platform. Multiple sends can still occur when a campaign targets different platforms, such as both iOS and Android. If a user has your app on both, they can receive a push for both platforms.
+
+#### iOS device destinations
+
+For iOS push, use **iOS device destinations** to further limit which devices receive the message:
+
+| Option | Description |
+| --- | --- |
+| **All iOS devices** | Send to all eligible iOS devices (default). |
+| **iPhones only** | Send only to iPhone and iPod devices. |
+| **iPads only** | Send only to iPad devices. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="iOS device destinations" }
+
+#### Android delivery priority
+
+For Android push, use **Android delivery priority** to control how urgently Firebase Cloud Messaging (FCM) delivers the message:
+
+| Priority | Description |
+| --- | --- |
+| **Normal** | Ideal for background syncs or updates. Delivery may be delayed to conserve battery. |
+| **High** | Ideal for alerts or time-sensitive nudges. May help reach users faster, even when devices are idle or sleeping. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Android delivery priority" }
+
+You can set a workspace default on the [Push Settings](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/push_settings) page. The campaign-level setting overrides that default when needed.
+
+For details on FCM priority, deprioritization, and battery impact, see [Firebase messaging delivery priority](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/advanced_campaign_settings#fcm-priority).
+
+#### Related Settings tab options
+
+Device-side urgency and display behavior are configured on the **Settings** tab, separately from **Sending options**:
+
+- iOS: [Interruption level](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/notification_options#interruption-level) controls whether the notification can break through Focus modes.
+- Android: [Notification display priority](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/advanced_campaign_settings#notification-display-priority) controls how the notification appears in the notification tray on pre-Android O devices. On Android O and later, display priority is set through the [notification channel](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/android/notification_channels).
 
 ## Step 5: Preview and test your message (optional)
 

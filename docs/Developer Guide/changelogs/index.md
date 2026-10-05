@@ -1917,6 +1917,14 @@ You can also find a copy of the [Android Braze SDK changelog on GitHub](https://
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v44.0.0">Release Date</a></p>
 
+<h4 id="breaking">Breaking</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">requestBannersRefresh</code> now merges into the existing banner cache instead of replacing it entirely. Only the requested placement IDs are affected; other cached banners are untouched, and a requested placement with no banner in the response is removed from the cache.</li>
+  <li>After a banners refresh, <code class="language-plaintext highlighter-rouge">BannerView</code>s re-init only for placements whose cached content changed. Unchanged displayed banners are left as-is.</li>
+  <li><code class="language-plaintext highlighter-rouge">subscribeToBannersEvents</code> <code class="language-plaintext highlighter-rouge">DataUpdated</code> snapshots now follow banner cache merge: placements that were not requested remain, and a requested placement with no banner in the response is absent. A completed refresh still emits <code class="language-plaintext highlighter-rouge">DataUpdated</code> when the payload is identical to the current cache.</li>
+  <li>Banner storage supports a server-configurable content cache limit (default 50 MB). When enabled, over-cap refreshes evict the largest existing banners first and log an internal error event with banner id and placement id. Config changes apply on the next refresh or cache load.</li>
+</ul>
+
 <h5 id="fixed">Fixed</h5>
 <ul>
   <li>Fixed a crash involving the Firebase Performance Monitoring Gradle plugin on Android 11 (API 30) and higher where manual connection disconnects could cause a host app crash. The SDK now handles such failures when it closes the connection and when it processes network connectivity callbacks.</li>
@@ -1932,10 +1940,6 @@ You can also find a copy of the [Android Braze SDK changelog on GitHub](https://
 <h5 id="changed">Changed</h5>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">subscribeToContentCardsEvents</code>, <code class="language-plaintext highlighter-rouge">subscribeToBannersEvents</code>, and <code class="language-plaintext highlighter-rouge">subscribeToFeatureFlagsEvents</code> now emit analytics <code class="language-plaintext highlighter-rouge">FLUSHED</code> after a successful data-sync of the matching impression, click, or dismiss, matching iOS. Failed enqueue and failed data-sync do not emit <code class="language-plaintext highlighter-rouge">FLUSHED</code>.</li>
-  <li><code class="language-plaintext highlighter-rouge">requestBannersRefresh</code> now merges into the existing banner cache instead of replacing it entirely. Only the requested placement IDs are affected; other cached banners are untouched, and a requested placement with no banner in the response is removed from the cache.</li>
-  <li>After a banners refresh, <code class="language-plaintext highlighter-rouge">BannerView</code>s re-init only for placements whose cached content changed. Unchanged displayed banners are left as-is.</li>
-  <li><code class="language-plaintext highlighter-rouge">subscribeToBannersEvents</code> <code class="language-plaintext highlighter-rouge">DataUpdated</code> snapshots now follow banner cache merge: placements that were not requested remain, and a requested placement with no banner in the response is absent. A completed refresh still emits <code class="language-plaintext highlighter-rouge">DataUpdated</code> when the payload is identical to the current cache.</li>
-  <li>Banner storage supports a server-configurable content cache limit (default 50 MB). When enabled, over-cap refreshes evict the largest existing banners first and log an internal error event with banner id and placement id. Config changes apply on the next refresh or cache load.</li>
   <li>Deprecated <code class="language-plaintext highlighter-rouge">subscribeToContentCardsUpdates</code>, <code class="language-plaintext highlighter-rouge">subscribeToFeatureFlagsUpdates</code>, <code class="language-plaintext highlighter-rouge">subscribeToBannersUpdates</code>, and <code class="language-plaintext highlighter-rouge">subscribeToBannersErrors</code> in favor of <code class="language-plaintext highlighter-rouge">subscribeTo*Events</code>. Unsubscribe still uses the legacy event class. Removal targeted for 46.0.0.</li>
 </ul>
 
@@ -1997,7 +2001,7 @@ You can also find a copy of the [Android Braze SDK changelog on GitHub](https://
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v43.0.0">Release Date</a></p>
 
-<h4 id="breaking">Breaking</h4>
+<h4 id="breaking-1">Breaking</h4>
 <ul>
   <li>Renames <code class="language-plaintext highlighter-rouge">ProductViewedEvent.typeIdentifiers</code> to <code class="language-plaintext highlighter-rouge">type</code>.</li>
   <li>Added support for registering for Firebase Cloud Messaging using the Firebase Installation ID in version <code class="language-plaintext highlighter-rouge">25.1.0</code> and higher of the <code class="language-plaintext highlighter-rouge">firebase-messaging</code> library.
@@ -2057,7 +2061,7 @@ You can also find a copy of the [Android Braze SDK changelog on GitHub](https://
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v42.3.0">Release Date</a></p>
 
-<h4 id="breaking-1">Breaking</h4>
+<h4 id="breaking-2">Breaking</h4>
 <ul>
   <li><strong>BannerView</strong>: <code class="language-plaintext highlighter-rouge">BannerDismissSnapshot</code> fields passed to <code class="language-plaintext highlighter-rouge">onDismissCallback</code> are now non-null. If the SDK cannot resolve <code class="language-plaintext highlighter-rouge">placementId</code>, <code class="language-plaintext highlighter-rouge">stableKey</code>, or <code class="language-plaintext highlighter-rouge">trackingId</code>, the callback is skipped and a warning is logged.</li>
 </ul>
@@ -2099,7 +2103,7 @@ You can also find a copy of the [Android Braze SDK changelog on GitHub](https://
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v42.0.0">Release Date</a></p>
 
-<h4 id="breaking-2">Breaking</h4>
+<h4 id="breaking-3">Breaking</h4>
 <ul>
   <li>Updated Kotlin from 2.0.20 to 2.2.20.
     <ul>
@@ -2157,7 +2161,7 @@ You can also find a copy of the [Android Braze SDK changelog on GitHub](https://
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v41.0.0">Release Date</a></p>
 
-<h4 id="breaking-3">Breaking</h4>
+<h4 id="breaking-4">Breaking</h4>
 <ul>
   <li>Renamed <code class="language-plaintext highlighter-rouge">BrazeConfig.Builder.setIsLocationCollectionEnabled()</code> to <code class="language-plaintext highlighter-rouge">setIsAutomaticLocationCollectionEnabled()</code>.</li>
   <li>Renamed <code class="language-plaintext highlighter-rouge">BrazeConfig.isLocationCollectionEnabled</code> to <code class="language-plaintext highlighter-rouge">isAutomaticLocationCollectionEnabled</code>.</li>
@@ -2237,7 +2241,7 @@ You can also find a copy of the [Android Braze SDK changelog on GitHub](https://
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v40.0.0">Release Date</a></p>
 
-<h4 id="breaking-4">Breaking</h4>
+<h4 id="breaking-5">Breaking</h4>
 <ul>
   <li>Removed <code class="language-plaintext highlighter-rouge">InAppMessageCloser</code>.
     <ul>
@@ -2273,7 +2277,7 @@ You can also find a copy of the [Android Braze SDK changelog on GitHub](https://
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v39.0.0">Release Date</a></p>
 
-<h4 id="breaking-5">Breaking</h4>
+<h4 id="breaking-6">Breaking</h4>
 <ul>
   <li>Changed the behavior of <code class="language-plaintext highlighter-rouge">Braze.subscribeToContentCardsUpdates()</code> to immediately return cached Content Cards after registering the subscriber.</li>
 </ul>
@@ -2292,7 +2296,7 @@ You can also find a copy of the [Android Braze SDK changelog on GitHub](https://
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v38.0.0">Release Date</a></p>
 
-<h4 id="breaking-6">Breaking</h4>
+<h4 id="breaking-7">Breaking</h4>
 <ul>
   <li>Removed News Feed.
     <ul>
@@ -2337,7 +2341,7 @@ You can also find a copy of the [Android Braze SDK changelog on GitHub](https://
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v37.0.0">Release Date</a></p>
 
-<h4 id="breaking-7">Breaking</h4>
+<h4 id="breaking-8">Breaking</h4>
 <ul>
   <li>Removed the config field <code class="language-plaintext highlighter-rouge">BrazeConfig.setIsHtmlInAppMessageApplyWindowInsetsEnabled()</code> and defaulted its behavior to true. The SDK will now unconditionally apply window insets to all HTML In-App Messages.</li>
   <li>Removed <code class="language-plaintext highlighter-rouge">IBraze.requestContentCardsRefresh(boolean)</code>. Please instead use <code class="language-plaintext highlighter-rouge">IBraze.requestContentCardsRefresh()</code> and <code class="language-plaintext highlighter-rouge">IBraze.requestContentCardsRefreshFromCache()</code>.</li>
@@ -2387,7 +2391,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   </ul>
 </blockquote>
 
-<h4 id="breaking-8">Breaking</h4>
+<h4 id="breaking-9">Breaking</h4>
 <ul>
   <li>Fixed an issue where In-App Messages would cause a read on the main thread.
     <ul>
@@ -2433,7 +2437,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v35.0.0">Release Date</a></p>
 
-<h4 id="breaking-9">Breaking</h4>
+<h4 id="breaking-10">Breaking</h4>
 <ul>
   <li>HTML In-App Messages will now persist the WebView when the app is put in the background.
     <ul>
@@ -2465,7 +2469,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v34.0.0">Release Date</a></p>
 
-<h4 id="breaking-10">Breaking</h4>
+<h4 id="breaking-11">Breaking</h4>
 <ul>
   <li>Updated the minimum SDK version from 21 (Lollipop) to 25 (Nougat).</li>
 </ul>
@@ -2535,7 +2539,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v33.0.0">Release Date</a></p>
 
-<h5 id="breaking-11">Breaking</h5>
+<h5 id="breaking-12">Breaking</h5>
 <ul>
   <li>Updated Kotlin from 1.8 to Kotlin 2.0.</li>
 </ul>
@@ -2589,7 +2593,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v32.0.0">Release Date</a></p>
 
-<h5 id="breaking-12">Breaking</h5>
+<h5 id="breaking-13">Breaking</h5>
 <ul>
   <li>Fixed issue where cards with duplicate IDs would cause a crash in Jetpack Compose Content Cards.
     <ul>
@@ -2638,7 +2642,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v31.0.0">Release Date</a></p>
 
-<h4 id="breaking-13">Breaking</h4>
+<h4 id="breaking-14">Breaking</h4>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">BrazeImageUtils::getBitmap</code> now returns a <code class="language-plaintext highlighter-rouge">BitmapAndHeaders</code> object instead of just a <code class="language-plaintext highlighter-rouge">Bitmap</code>. This object contains the <code class="language-plaintext highlighter-rouge">Bitmap</code> and headers from the image download network request.
     <ul>
@@ -2729,7 +2733,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v30.0.0">Release Date</a></p>
 
-<h4 id="breaking-14">Breaking</h4>
+<h4 id="breaking-15">Breaking</h4>
 <ul>
   <li>WebViews used for In-App Messages have been updated to use <code class="language-plaintext highlighter-rouge">WebViewAssetLoader</code>.
     <ul>
@@ -2777,7 +2781,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v29.0.0">Release Date</a></p>
 
-<h5 id="breaking-15">Breaking</h5>
+<h5 id="breaking-16">Breaking</h5>
 <ul>
   <li>Renamed <code class="language-plaintext highlighter-rouge">BannerImageCard</code>, <code class="language-plaintext highlighter-rouge">BannerImageCardView</code>, and <code class="language-plaintext highlighter-rouge">BannerImageContentCardView</code> to <code class="language-plaintext highlighter-rouge">ImageOnlyCard</code>, <code class="language-plaintext highlighter-rouge">ImageOnlyCardView</code>, and <code class="language-plaintext highlighter-rouge">ImageOnlyContentCardView</code>.</li>
   <li>All styles used for Banner Cards have been updated to Image Only Cards. All keys with the word <code class="language-plaintext highlighter-rouge">banner</code> should be replaced with <code class="language-plaintext highlighter-rouge">image_only</code>.</li>
@@ -2808,7 +2812,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v28.0.0">Release Date</a></p>
 
-<h4 id="breaking-16">Breaking</h4>
+<h4 id="breaking-17">Breaking</h4>
 <ul>
   <li>Updated minimum SDK version to 21 (Lollipop).</li>
   <li>Feature Flags functions have been modified.
@@ -2849,7 +2853,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p>⚠️ This version has a known issue. Please upgrade to v33.0.0.</p>
 
-<h4 id="breaking-17">Breaking</h4>
+<h4 id="breaking-18">Breaking</h4>
 <ul>
   <li>Removed <code class="language-plaintext highlighter-rouge">IInAppMessage.logDisplayFailure()</code>.</li>
 </ul>
@@ -2959,7 +2963,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v26.0.0">Release Date</a></p>
 
-<h4 id="breaking-18">Breaking</h4>
+<h4 id="breaking-19">Breaking</h4>
 <ul>
   <li>Added the ability to configure link target behavior for HTML In-App Messages through <code class="language-plaintext highlighter-rouge">BrazeConfig.setIsHtmlInAppMessageHtmlLinkTargetEnabled()</code> or via adding <code class="language-plaintext highlighter-rouge">&lt;bool name="com_braze_html_in_app_message_enable_html_link_target"&gt;true&lt;/bool&gt;</code> to your <code class="language-plaintext highlighter-rouge">braze.xml</code>. Defaults to enabled.
     <ul>
@@ -3049,7 +3053,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v24.0.0">Release Date</a></p>
 
-<h4 id="breaking-19">Breaking</h4>
+<h4 id="breaking-20">Breaking</h4>
 <ul>
   <li>Location and geofence functionality has moved to a new module called <code class="language-plaintext highlighter-rouge">com.braze:android-sdk-location</code>. Add this module to your <code class="language-plaintext highlighter-rouge">build.gradle</code> if you are using Braze location functionality.</li>
   <li>Deprecated classes starting with <code class="language-plaintext highlighter-rouge">Appboy</code> have now been removed.</li>
@@ -3195,7 +3199,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v23.0.0">Release Date</a></p>
 
-<h4 id="breaking-20">Breaking</h4>
+<h4 id="breaking-21">Breaking</h4>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">BaseContentCardView.bindViewHolder()</code> now takes <code class="language-plaintext highlighter-rouge">Card</code> instead of generic type.</li>
 </ul>
@@ -3214,7 +3218,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v22.0.0">Release Date</a></p>
 
-<h4 id="breaking-21">Breaking</h4>
+<h4 id="breaking-22">Breaking</h4>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">Appboy.java</code> is now <code class="language-plaintext highlighter-rouge">Braze.kt</code>. Kotlin clients will need to update their code to support the use of Kotlin properties on the Braze singleton where needed.
     <ul>
@@ -3263,7 +3267,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>This release includes support for Android 13 (Tiramisu / API 33).</li>
 </ul>
 
-<h4 id="breaking-22">Breaking</h4>
+<h4 id="breaking-23">Breaking</h4>
 <ul>
   <li>Removed <code class="language-plaintext highlighter-rouge">IAppboy.logContentCardsDisplayed</code>. This method was not part of the recommended Content Cards integration and can be safely removed.</li>
 </ul>
@@ -3277,7 +3281,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v20.0.0">Release Date</a></p>
 
-<h4 id="breaking-23">Breaking</h4>
+<h4 id="breaking-24">Breaking</h4>
 <ul>
   <li>Changed <code class="language-plaintext highlighter-rouge">BrazeNotificationStyleFactory</code> to remove deprecated functions.
     <ul>
@@ -4514,7 +4518,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
   <li>This release introduced issues with in-app message unregistration (<code class="language-plaintext highlighter-rouge">AppboyInAppMessageManager.unregisterInAppMessageManager()</code>) and fullscreen in-app messages. These issues have been fixed in version 3.8.0 of the SDK.</li>
 </ul>
 
-<h5 id="breaking-24">Breaking</h5>
+<h5 id="breaking-25">Breaking</h5>
 <ul>
   <li>Added the <code class="language-plaintext highlighter-rouge">applyWindowInsets()</code> method to <code class="language-plaintext highlighter-rouge">IInAppMessageView</code> interface. This allows for granular customization at the in-app message view level with respect to device notches.</li>
   <li>The old configuration key used in <code class="language-plaintext highlighter-rouge">appboy.xml</code> for disabling location collection <code class="language-plaintext highlighter-rouge">com_appboy_disable_location_collection</code> is now deleted. This key is replaced by <code class="language-plaintext highlighter-rouge">com_appboy_enable_location_collection</code>. The default value of <code class="language-plaintext highlighter-rouge">com_appboy_disable_location_collection</code> is false. Braze location collection is disabled by default starting with Braze SDK version 3.6.0.</li>
@@ -4536,7 +4540,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
 
 <p><a href="https://github.com/braze-inc/braze-android-sdk/releases/tag/v3.6.0">Release Date</a></p>
 
-<h5 id="breaking-25">Breaking</h5>
+<h5 id="breaking-26">Breaking</h5>
 <ul>
   <li>External user ids (provided via <code class="language-plaintext highlighter-rouge">Appboy.changeUser()</code>), are now limited to 997 bytes in UTF-8 encoding.
     <ul>
@@ -4573,7 +4577,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
 
 <h2 id="350">3.5.0</h2>
 
-<h5 id="breaking-26">Breaking</h5>
+<h5 id="breaking-27">Breaking</h5>
 <ul>
   <li>Removed <code class="language-plaintext highlighter-rouge">IAppboyUnitySupport</code> interface from Appboy singleton object. Its methods have been added to the <code class="language-plaintext highlighter-rouge">IAppboy</code> interface.</li>
   <li>The <code class="language-plaintext highlighter-rouge">IAction</code> in <code class="language-plaintext highlighter-rouge">IContentCardsActionListener.onContentCardClicked()</code> is now annotated as <code class="language-plaintext highlighter-rouge">@Nullable</code>. Previously, this field was always non-null.</li>
@@ -4623,7 +4627,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
   <li>Fixed in-app message buttons not properly respecting colors when using a Material Design style theme.</li>
 </ul>
 
-<h5 id="breaking-27">Breaking</h5>
+<h5 id="breaking-28">Breaking</h5>
 <ul>
   <li>Geofences on Android Q+ devices will not work without the <code class="language-plaintext highlighter-rouge">android.permission.ACCESS_BACKGROUND_LOCATION</code> permission.</li>
   <li>Changed the signature of <code class="language-plaintext highlighter-rouge">IInAppMessageManagerListener.onInAppMessageButtonClicked()</code> to include the in-app message of the clicked button.</li>
@@ -4714,7 +4718,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
 
 <h2 id="311">3.1.1</h2>
 
-<h5 id="breaking-28">Breaking</h5>
+<h5 id="breaking-29">Breaking</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">AppboyFirebaseMessagingService</code> to directly use the Firebase messaging event <code class="language-plaintext highlighter-rouge">com.google.firebase.MESSAGING_EVENT</code>. This is now the required way to integrate Firebase push with Braze. The <code class="language-plaintext highlighter-rouge">AppboyFcmReceiver</code> should be removed from your <code class="language-plaintext highlighter-rouge">AndroidManifest</code> and replaced with the following:
     <ul>
@@ -4763,7 +4767,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
 
 <h2 id="310">3.1.0</h2>
 
-<h5 id="breaking-29">Breaking</h5>
+<h5 id="breaking-30">Breaking</h5>
 <ul>
   <li>Renamed <code class="language-plaintext highlighter-rouge">AppboyNotificationUtils.wakeScreenIfHasPermission()</code> to <code class="language-plaintext highlighter-rouge">AppboyNotificationUtils.wakeScreenIfAppropriate()</code>. Wakelocks can now be configured to not wake the device screen for push notifications.
     <ul>
@@ -4824,7 +4828,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
 
 <h2 id="300">3.0.0</h2>
 
-<h5 id="breaking-30">Breaking</h5>
+<h5 id="breaking-31">Breaking</h5>
 <ul>
   <li>From <code class="language-plaintext highlighter-rouge">AppboyConfig</code>, removed <code class="language-plaintext highlighter-rouge">getEnableBackgroundLocationCollection()</code>, <code class="language-plaintext highlighter-rouge">getLocationUpdateTimeIntervalSeconds()</code>, and <code class="language-plaintext highlighter-rouge">getLocationUpdateDistance()</code> and their respective setters in <code class="language-plaintext highlighter-rouge">AppboyConfig.Builder</code>.</li>
   <li>Removed <code class="language-plaintext highlighter-rouge">AppboyInAppMessageImmersiveBaseView.getMessageButtonsView()</code>.</li>
@@ -4884,7 +4888,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
 
 <h2 id="270">2.7.0</h2>
 
-<h5 id="breaking-31">Breaking</h5>
+<h5 id="breaking-32">Breaking</h5>
 <ul>
   <li>Renamed <code class="language-plaintext highlighter-rouge">AppboyGcmReceiver</code> to <code class="language-plaintext highlighter-rouge">AppboyFcmReceiver</code>. This receiver is intended to be used for Firebase integrations and thus the <code class="language-plaintext highlighter-rouge">com.google.android.c2dm.intent.REGISTRATION</code> intent-filter action in your <code class="language-plaintext highlighter-rouge">AndroidManifest</code> should be removed.</li>
   <li>Removed <code class="language-plaintext highlighter-rouge">AppboyConfigurationProvider.isGcmMessagingRegistrationEnabled()</code>, <code class="language-plaintext highlighter-rouge">AppboyConfigurationProvider.getGcmSenderId()</code>, <code class="language-plaintext highlighter-rouge">AppboyConfig.Builder.setGcmSenderId()</code>, and <code class="language-plaintext highlighter-rouge">AppboyConfig.Builder.setGcmMessagingRegistrationEnabled()</code>.</li>
@@ -4902,7 +4906,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
   <li>Introduced support for the Content Cards feature, which will eventually replace the existing News Feed feature and adds significant capability.</li>
 </ul>
 
-<h5 id="breaking-32">Breaking</h5>
+<h5 id="breaking-33">Breaking</h5>
 <ul>
   <li>Updated the minimum SDK version from 14 (Ice Cream Sandwich) to 16 (Jelly Bean).</li>
 </ul>
@@ -4937,7 +4941,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
 
 <h2 id="250">2.5.0</h2>
 
-<h5 id="breaking-33">Breaking</h5>
+<h5 id="breaking-34">Breaking</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">isControl()</code> to the <code class="language-plaintext highlighter-rouge">IInAppMessage</code> interface.</li>
   <li>Added <code class="language-plaintext highlighter-rouge">logDisplayFailure()</code> to the <code class="language-plaintext highlighter-rouge">IInAppMessage</code> interface. In-app message display failures may affect campaign statistics so care should be taken when logging display failures.</li>
@@ -4984,7 +4988,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
   <li>If the Google Play location services library is not present, calls to <code class="language-plaintext highlighter-rouge">Appboy.wipeData()</code> will throw an uncaught exception.</li>
 </ul>
 
-<h5 id="breaking-34">Breaking</h5>
+<h5 id="breaking-35">Breaking</h5>
 <ul>
   <li>Removed the <code class="language-plaintext highlighter-rouge">appboyInAppMessageCustomFontFile</code> custom xml attribute. Custom font typefaces must now be located in the <code class="language-plaintext highlighter-rouge">res/font</code> directory.
     <ul>
@@ -5091,7 +5095,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
 
 <h2 id="220">2.2.0</h2>
 
-<h5 id="breaking-35">Breaking</h5>
+<h5 id="breaking-36">Breaking</h5>
 <ul>
   <li>Removed <code class="language-plaintext highlighter-rouge">Appboy.requestInAppMessageRefresh()</code> and removed support for Original in-app messages. Note that all customers on version 2.2.0 and newer should use triggered in-app messages.</li>
   <li>Changed the signature of most methods on the <code class="language-plaintext highlighter-rouge">IAppboy</code> interface. Methods that logged values now return void instead of boolean.
@@ -5182,7 +5186,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
 
 <h2 id="210">2.1.0</h2>
 
-<h5 id="breaking-36">Breaking</h5>
+<h5 id="breaking-37">Breaking</h5>
 <ul>
   <li>Updated the minimum SDK version from 9 (Gingerbread) to 14 (Ice Cream Sandwich).
     <ul>
@@ -5263,7 +5267,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
 
 <h2 id="200">2.0.0</h2>
 
-<h5 id="breaking-37">Breaking</h5>
+<h5 id="breaking-38">Breaking</h5>
 <ul>
   <li>Removed the following deprecated methods and fields:
     <ul>
@@ -5340,7 +5344,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
 
 <h2 id="1180">1.18.0</h2>
 
-<h5 id="breaking-38">Breaking</h5>
+<h5 id="breaking-39">Breaking</h5>
 <ul>
   <li>Renamed the <code class="language-plaintext highlighter-rouge">android-sdk-jar</code> artifact in the <code class="language-plaintext highlighter-rouge">gh-pages</code> branch to <code class="language-plaintext highlighter-rouge">android-sdk-base</code> and changed its format from <code class="language-plaintext highlighter-rouge">jar</code> to <code class="language-plaintext highlighter-rouge">aar</code>. Most integrations depend on <code class="language-plaintext highlighter-rouge">android-sdk-ui</code> and won’t need to take any action.
     <ul>
@@ -5373,7 +5377,7 @@ String url = extras.getString(Constants.APPBOY_WEBVIEW_URL_EXTRA);
 
 <h2 id="1170">1.17.0</h2>
 
-<h5 id="breaking-39">Breaking</h5>
+<h5 id="breaking-40">Breaking</h5>
 <ul>
   <li>Added the ability to configure Braze completely at runtime using <code class="language-plaintext highlighter-rouge">Appboy.configure()</code>. Values set at runtime take precedence over their counterparts in <code class="language-plaintext highlighter-rouge">appboy.xml</code>. A complete example of Braze runtime configuration is available in our Hello Appboy sample app’s <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/hello-appboy/src/main/java/com/appboy/helloworld/HelloAppboyApplication.java">application class</a>.
     <ul>
@@ -5454,7 +5458,7 @@ Appboy.configure(this, appboyConfig);
 
 <h2 id="1150">1.15.0</h2>
 
-<h5 id="breaking-40">Breaking</h5>
+<h5 id="breaking-41">Breaking</h5>
 <ul>
   <li>Deprecated <code class="language-plaintext highlighter-rouge">AppboyInAppMessageManager.hideCurrentInAppMessage()</code>. Please use <code class="language-plaintext highlighter-rouge">AppboyInAppMessageManager.hideCurrentlyDisplayingInAppMessage()</code> instead.</li>
 </ul>
@@ -5482,7 +5486,7 @@ Appboy.configure(this, appboyConfig);
 
 <h2 id="1140">1.14.0</h2>
 
-<h5 id="breaking-41">Breaking</h5>
+<h5 id="breaking-42">Breaking</h5>
 <ul>
   <li>Renamed <code class="language-plaintext highlighter-rouge">disableAllAppboyNetworkRequests()</code> to <code class="language-plaintext highlighter-rouge">enableMockAppboyNetworkRequestsAndDropEventsMode()</code> and fixes a bug where calling <code class="language-plaintext highlighter-rouge">Appboy.changeUser()</code> would cause a network request even in disabled/mocked mode. Note that <code class="language-plaintext highlighter-rouge">enableMockAppboyNetworkRequestsAndDropEventsMode</code> should only be used in testing environments.</li>
 </ul>
@@ -5598,7 +5602,7 @@ Appboy.configure(this, appboyConfig);
 
 <h2 id="1120">1.12.0</h2>
 
-<h5 id="breaking-42">Breaking</h5>
+<h5 id="breaking-43">Breaking</h5>
 <ul>
   <li>Removed the deprecated method <code class="language-plaintext highlighter-rouge">Appboy.requestSlideupRefresh()</code>.  Please use <code class="language-plaintext highlighter-rouge">Appboy.requestInAppMessageRefresh()</code> instead.</li>
   <li>Removed the deprecated class AppboySlideupManager.  Please use AppboyInAppMessageManager instead.</li>
@@ -5695,7 +5699,7 @@ Appboy.configure(this, appboyConfig);
 
 <h2 id="190">1.9.0</h2>
 
-<h5 id="breaking-43">Breaking</h5>
+<h5 id="breaking-44">Breaking</h5>
 <ul>
   <li>All users must add the line <code class="language-plaintext highlighter-rouge">-dontwarn com.google.android.gms.**</code> to their proguard config file if using proguard.
     <ul>
@@ -5742,7 +5746,7 @@ Appboy.configure(this, appboyConfig);
 
 <h2 id="180">1.8.0</h2>
 
-<h5 id="breaking-44">Breaking</h5>
+<h5 id="breaking-45">Breaking</h5>
 <ul>
   <li>Updated the minimum sdk version from 8 (froyo) to 9 (gingerbread).</li>
 </ul>
@@ -5803,7 +5807,7 @@ Appboy.configure(this, appboyConfig);
 
 <h2 id="170">1.7.0</h2>
 
-<h5 id="breaking-45">Breaking</h5>
+<h5 id="breaking-46">Breaking</h5>
 <ul>
   <li>Added summary subtext in <code class="language-plaintext highlighter-rouge">BigView</code> style notifications.  This is a breaking change in <code class="language-plaintext highlighter-rouge">BigView</code> style notification display.  Previously the summary text in <code class="language-plaintext highlighter-rouge">BigView</code> style notifications was set to the bundle/dashboard summary text if it was present, or the alert message otherwise.  Now the bundle/dashboard summary text is used to set the message subtext, which results in the bundle/dashboard summary text being shown in both the collapsed and expanded views.  See our updated push previews for a visualization of this change.</li>
 </ul>
@@ -6045,7 +6049,7 @@ Appboy.configure(this, appboyConfig);
 
 <p>Braze version 1.3 provides a substantial upgrade to the slideup code and reorganization for better flexibility moving forward, but at the expense of a number of breaking changes. We’ve detailed the changes in this changelog and hope that you’ll love the added power, increased flexibility, and improved UI that the new Braze slideup provides. If you have any trouble with these changes, feel free to reach out to success@braze.com for help, but most migrations to the new code structure should be relatively painless.</p>
 
-<h5 id="breaking-46">Breaking</h5>
+<h5 id="breaking-47">Breaking</h5>
 <p>New AppboySlideupManager</p>
 <ul>
   <li>The AppboySlideupManager has moved to <code class="language-plaintext highlighter-rouge">com.appboy.ui.slideups.AppboySlideupManager.java</code>.</li>
@@ -6157,11 +6161,11 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
     </ul>
   </li>
   <li>Removes deprecated <code class="language-plaintext highlighter-rouge">BrazeInAppMessageUI.DisplayChoice.later</code> in favor of <code class="language-plaintext highlighter-rouge">BrazeInAppMessageUI.DisplayChoice.reenqueue</code>.</li>
+  <li><a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/banners-swift.class/requestbannersrefresh(placementids:_:fileid:line:)"><code class="language-plaintext highlighter-rouge">requestBannersRefresh</code></a> now merges into the existing banner cache instead of replacing it entirely. Only the requested placement IDs are affected; other cached banners are untouched, and a requested placement with no banner in the response is removed from the cache.</li>
 </ul>
 
 <h5 id="added">Added</h5>
 <ul>
-  <li><a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/banners-swift.class/requestbannersrefresh(placementids:_:fileid:line:)"><code class="language-plaintext highlighter-rouge">requestBannersRefresh</code></a> now merges into the existing banner cache instead of replacing it entirely. Only the requested placement IDs are affected; other cached banners are untouched, and a requested placement with no banner in the response is removed from the cache.</li>
   <li>Adds <code class="language-plaintext highlighter-rouge">featureDisabled</code> and <code class="language-plaintext highlighter-rouge">cacheEvicted</code> to <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/banner/removalreason"><code class="language-plaintext highlighter-rouge">Braze.Banner.RemovalReason</code></a>.
     <ul>
       <li><code class="language-plaintext highlighter-rouge">featureDisabled</code> is passed to <code class="language-plaintext highlighter-rouge">removeBannerContent(reason:)</code> when the server configuration disables Banners and clears the local cache. Previously this teardown reported no reason.</li>

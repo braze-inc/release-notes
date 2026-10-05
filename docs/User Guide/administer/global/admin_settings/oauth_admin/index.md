@@ -48,36 +48,41 @@ To update MCP OAuth access for your company:
 
 When **MCP OAuth access** is on, users with the "Use MCP Server" permission can authorize approved MCP clients. When it's off, OAuth access to the MCP server is denied for all users and workspaces in your company.
 
-Turning off MCP OAuth access doesn't remove your configured redirect URIs. Existing MCP connections stop working the next time they use or refresh their OAuth access token.
+Turning off **MCP OAuth access** doesn't remove or block your configured redirect URIs. Braze revokes existing MCP OAuth tokens for your company, so connected MCP clients lose access. The **Approved redirect URIs** section is hidden while MCP OAuth access is off; turn it back on to manage the same URI list again.
 
 If Braze has turned off the remote MCP server for your environment, the **MCP OAuth access** toggle is disabled and a message explains that the company setting has no effect until the remote MCP server is turned on again.
 
 ## Manage approved redirect URIs
 
-After you turn on **MCP OAuth access**, the **Approved redirect URIs** section lists redirect URIs that custom MCP clients can use during authentication.
-
-Braze-verified remote MCP clients are allowed through a global allowlist. Custom MCP clients—including HTTP and HTTPS loopback addresses, such as `http://127.0.0.1/callback`—must be added to **Approved redirect URIs**. Braze matches redirect URIs by scheme and host; paths under an approved authority are permitted.
+After you turn on **MCP OAuth access**, the **Approved redirect URIs** section lists redirect URIs that custom MCP clients can use during authentication. For formatting guidance, see [Redirect URI formats](#redirect-uri-formats).
 
 The **Approved redirect URIs** table shows the following information:
 
 | Column | Description |
 | --- | --- |
-| Redirect URI | The scheme and host Braze uses to match the client callback address. |
+| Redirect URI | The exact address Braze matches against the client's callback, including the path. |
 | Added by | The dashboard user who added or last updated the URI. |
 | Date added | When the URI was added or last updated. |
 | Status | Whether the URI is **Approved** or **Blocked**. |
 | Actions | **Block** or **Unblock**, depending on the current status. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Approved redirect URIs table columns" }
 
+### Redirect URI formats
+
+| URI type | Format to use when adding |
+| --- | --- |
+| Local (loopback address) | Starts with `http://localhost` or `http://127.0.0.1`. Omit the port (the colon and numbers after the host) so any local port can match. For example, if the client shows `http://localhost:33491/oauth/callback`, enter `http://localhost/oauth/callback`. If you keep a port in the URI you add (such as `:33491`), Braze matches that port only. |
+| Remote address | Enter the full address exactly as the client shows, for example `https://app.example.com/callback`. |
+| Custom scheme | Starts with a custom URI scheme (not `http://` or `https://`), such as `cursor://`. Enter it exactly as shown. Some desktop apps use these addresses. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Redirect URI formats" }
+
 ### Add a redirect URI
 
 To allow a custom MCP client that isn't already listed:
 
 1. Select **Add redirect URI**.
-2. Enter the full redirect URI from the client's OAuth or integration settings, such as `https://app.example.com/callback` or `cursor://anysphere.cursor-mcp`.
+2. Enter the full redirect URI with callback protocol from the client's OAuth or integration settings. Use the [Redirect URI formats](#redirect-uri-formats) table if you need help matching the client's callback.
 3. Select **Save**.
-
-New redirect URIs are added with an **Approved** status. HTTPS is required for remote clients. Custom URI schemes are supported for desktop applications.
 
 For local clients, use `127.0.0.1` and omit the port number in the redirect URI you add.
 
@@ -87,7 +92,9 @@ Only redirect URIs with an **Approved** status can complete a new OAuth authoriz
 
 To prevent new OAuth authorizations from a redirect URI, select **Block** for its row and confirm the action. Braze retains the URI record and changes its status to **Blocked**.
 
-Blocking a redirect URI doesn't revoke existing OAuth tokens. To end one user's connection, remove the "Use MCP Server" permission from that user. To end every connection at once, see [Revoke MCP OAuth tokens](#revoke-mcp-oauth-tokens).
+Blocking a redirect URI doesn't revoke tokens for users who are already connected to that MCP client. Select **Revoke MCP OAuth tokens** to end those sessions. Blocking the URI is a separate action that prevents new authorizations with that callback.
+
+Alternatively, remove the "Use MCP Server" permission from a user to stop only that user from using the MCP server. Other users' MCP connections stay active until you select **Revoke MCP OAuth tokens**.
 
 ### Unblock a redirect URI
 
@@ -118,15 +125,15 @@ Revoking tokens can't be undone. Every connected MCP client loses access to Braz
 
 | Item | Result |
 | --- | --- |
-| Access tokens | Revoked. Requests using them fail until the user reconnects. |
-| Refresh tokens | Revoked. Clients can't refresh their way back into an old connection. |
+| Access tokens | Revoked. Connected MCP clients stop working until the user reconnects. |
+| Refresh tokens | Revoked. MCP clients can't reconnect on their own in the background. Users have to reconnect themselves. |
 | **MCP OAuth access** | Unchanged. If it was on, users can reconnect right away. |
-| Approved redirect URIs | Unchanged. Your allowlist and blocked URIs stay as they are. |
-| "Use MCP Server" permission | Unchanged. Users keep the permission and can reauthorize. |
-| New connections | Unaffected. Connections authorized after you start the revocation keep working. |
+| Approved redirect URIs | Unchanged. Approved and blocked URIs stay as they are. |
+| "Use MCP Server" permission | Unchanged. Users keep the permission and can reconnect. |
+| New connections | Unaffected. Connections made after you start the revocation keep working. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="What revoking MCP OAuth tokens changes" }
 
-Requests that were already in progress when you revoked aren't recalled. To stop all MCP access instead of ending current sessions, turn off **MCP OAuth access**. To remove one user's access, remove the "Use MCP Server" permission from that user.
+Requests that were already in progress when you revoked aren't recalled. To stop all MCP access instead of only ending current sessions, turn off **MCP OAuth access** (that also revokes MCP OAuth tokens). To remove one user's MCP access, remove the "Use MCP Server" permission from that user.
 
 If revocation doesn't finish, Braze shows an error message. Some tokens may already be revoked, so contact support before trying again.
 
