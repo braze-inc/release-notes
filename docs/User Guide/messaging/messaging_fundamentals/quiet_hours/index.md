@@ -2,11 +2,16 @@
 
 > Quiet hours prevent messages from being sent during a specified time window. You can use them to avoid contacting users at inconvenient times (like overnight or early in the morning) while still sending at an optimal time outside that window.
 
-Quiet hours are configured at the campaign or Canvas level. You can also set [workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours) as a default for a messaging channel across your workspace (early access).
+**Note:**
+
+
+You can also set [workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours) as a default for a messaging channel across your workspace. Workspace quiet hours is an early access feature that requires enablement by your Braze account manager and appropriate user permissions.
+
+
 
 ## How quiet hours work
 
-When quiet hours are enabled and a message would otherwise be sent during the restricted window, Braze holds the message and delivers it at the next available time after quiet hours end.
+You can configure quiet hours at the campaign or Canvas level in the campaign or Canvas composer. When quiet hours are enabled and a message would otherwise be sent during the restricted window, Braze holds the message and delivers it at the next available time after quiet hours end.
 
 For example, if quiet hours run from 10 pm to 6 am and a message is scheduled for 5:30 am, Braze delivers it at 6 am instead.
 
@@ -38,7 +43,7 @@ For more information on configuring quiet hours within an Intelligent Timing cam
 - **Messages send at the same time when quiet hours end.** If a large audience has messages held during quiet hours, all of those messages send at once when the window closes. For time-sensitive campaigns, consider how this affects delivery timing.
 - **Quiet hours are not the same as aborting a message.** Aborting a message discards it entirely. Quiet hours hold the message and deliver it later.
 - **Quiet hours do not re-evaluate segment membership for a held send.** Braze checks segment membership when the message is triggered. If the user is eligible then, Braze holds the message and sends it when quiet hours end. This is separate from [re-evaluating segment membership at send-time](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery#audience-criteria-evaluation) or Canvas [delivery validations](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#delivery-validations).
-- **Quiet hours are separate from frequency capping and rate limiting.** Each of these delivery controls applies independently. A message that clears frequency and rate limits can still be held by quiet hours, and a message held by quiet hours is evaluated against frequency capping and rate limits when it eventually sends. For how Braze evaluates frequency capping relative to Quiet Hours, see [When frequency capping is checked](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#when-frequency-capping-is-checked).
+- **Quiet hours are separate from frequency capping and rate limiting.** Each of these delivery controls applies independently. A message that clears frequency and rate limits can still be held by quiet hours, and a message held by quiet hours is evaluated against frequency capping and rate limits when it eventually sends. For how Braze evaluates frequency capping relative to quiet hours, see [When frequency capping is checked](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#when-frequency-capping-is-checked).
 
 ## Related articles
 

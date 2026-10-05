@@ -12,6 +12,12 @@ The top of the **Canvas Details** page contains top-line Canvas statistics. Thes
 
 This is a great place to get a high-level overview to check how your Canvas is performing against your goal. To get notified proactively if a Canvas's performance drops outside your expected range, refer to [Custom Canvas alerts](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/custom_canvas_alerts).
 
+### Total Revenue
+
+*Total Revenue* is the total revenue within the conversion period from users who entered the Canvas, including users who haven't received a message yet. 
+
+Select **Show Revenue Breakdown** next to *Total Revenue* to open a per-step table. The breakdown lists revenue for each step that has revenue data (including deleted steps) and a **Not attributed to a step** row for purchases that count toward *Total Revenue* but aren't tied to a specific step—for example, when a user makes a purchase after entering the Canvas and before receiving a message.
+
 ### Reachable users and exact statistics {#reachable-users-and-exact-statistics}
 
 When **[Calculate exact statistics](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment#single-user-segments)** is running for audiences tied to your Canvas, Braze may briefly show a rounded estimate in the **Reachable users** area. The exact total replaces the estimate when the calculation finishes. Select **Show Additional Stats** for a full per-channel breakdown. The Canvas builder documents the same flow under **Target Population**; see [Calculating target population](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#calculating-target-population).
@@ -69,15 +75,7 @@ Basic metrics include the following:
 - **Total Entries:** The total number of users that have entered the Canvas variant.
 - **Total Sends:** The total number of messages sent in the Canvas variant.
 - **Total Steps:** The total number of steps in the Canvas variant.
-- **Total Revenue:** The total revenue in dollars from Canvas recipients within the set primary conversion window. _Total Revenue_ is the sum of purchases attributed to users who received that variant during that window. Purchases still count toward _Total Revenue_ even when the user does not perform the configured primary conversion event, as long as the purchase falls within the attribution rules for the window.
-
-**Note:**
-
-
-Like conversions, revenue is technically tracked at the Canvas level, but is attributed to the most recent component and most recent variant from which the user has received a message (or entered, if they haven't received a message yet).<br><br>
-For example, if a user completes two steps and then makes a purchase, that revenue is attributed to the second component, and to the variant they entered. If they enter the Canvas but make a purchase before receiving the first Canvas component, that revenue is attributed to the variant they entered, but not to any component.
-
-
+- **Total Revenue:** The total revenue in dollars within the set primary conversion window from users who entered that variant, including users who haven't received a message.
 
 Beyond that, you can see a more explicit breakdown of [conversion events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events), including the following:
 
@@ -85,9 +83,15 @@ Beyond that, you can see a more explicit breakdown of [conversion events](https:
 - Uplift against the control variant
 - Statistical confidence for each conversion event
 
+### How revenue is attributed
+
+Like conversions, revenue is tracked at the Canvas level and attributed to the most recent component or step and the most recent variant from which the user has received a message (or entered, if they haven't received a message yet). Purchases count toward *Total Revenue* even when the user doesn't perform the configured primary conversion event, as long as the purchase falls within the attribution rules for the window. Revenue attributed to a step follows the same rules as the [revenue breakdown](#total-revenue) on the Canvas overview.
+
+For example, if a user completes two steps and then makes a purchase, that revenue is attributed to the second step and to the variant they entered. If they enter the Canvas but make a purchase before receiving the first Canvas step, that revenue is attributed to the variant they entered and appears under **Not attributed to a step** in the revenue breakdown.
+
 ### How conversions are tracked
 
-A user can only convert once per conversion event per Canvas entry. Conversions are assigned to the most recent message received by the user for that entry. The Canvas summary reflects all conversions performed by users in that path and whether or not they received a message. Each subsequent step only show conversions that happened while that was the most recent step the user received.
+A user can only convert once per conversion event per Canvas entry. Conversions are assigned to the most recent message received by the user for that entry. The Canvas summary reflects all conversions performed by users in that path and whether or not they received a message. Each subsequent step only shows conversions that happened while that was the most recent step the user received.
 
 Consider the following example: a Canvas has 10 push notifications and the conversion event is "Opens App" (or "Session Start").
 - User A opens the app after entering but before receiving the first message.

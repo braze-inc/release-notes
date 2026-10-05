@@ -79,9 +79,35 @@ You can template the following attributes for the user's most recent device acro
 | `{{most_recently_used_device.${platform}}}` | The device's platform, if available. If set, the value is one of `ios`, `android`, `kindle`, `android_china`, `web`, or `tvos`. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Most recently used device information" }
 
+
+
 Because there is such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any Liquid that conditionally depends on any of those values. These values are `null` if they are not available on a particular device.
 
+### Differentiating mobile app from mobile browser
+
+Use `{{most_recently_used_device.${platform}}}` and `{{most_recently_used_device.${os}}}` together to tell whether a user is in your mobile app or a mobile browser. This is useful when you want to customize messaging based on the user's context, such as directing mobile browser users to download your app.
+
+- Mobile app: `platform` is `ios` or `android`
+- Mobile browser: `platform` is `web` and `os` contains the mobile operating system name
+
+For push notifications, in-app messages, and Banners, you can use the equivalent [`targeted_device`](#targeted-device-information) attributes for the device that receives the message.
+
+
+```liquid
+{% if {{most_recently_used_device.${platform}}} == 'web' and {{most_recently_used_device.${os}}} contains 'iOS' %}
+  You're on a mobile browser. <a href="https://apps.apple.com/app/your-app">Download our iOS app</a> for the best experience!
+{% elsif {{most_recently_used_device.${platform}}} == 'web' and {{most_recently_used_device.${os}}} contains 'Android' %}
+  You're on a mobile browser. <a href="https://play.google.com/store/apps/details?id=your.app">Download our Android app</a> for the best experience!
+{% elsif {{most_recently_used_device.${platform}}} == 'ios' %}
+  Thanks for using our iOS app!
+{% elsif {{most_recently_used_device.${platform}}} == 'android' %}
+  Thanks for using our Android app!
+{% endif %}
+```
+
+
 ## Targeted app information
+
 
 For in-app messages, you can use the following app attributes within Liquid. The values are based on which SDK API key your apps use to request messaging.
 

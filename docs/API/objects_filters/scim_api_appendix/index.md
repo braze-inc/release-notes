@@ -238,12 +238,23 @@ A valid role object is a JSON object with the following key-value pairs:
 | View Campaigns | `view_campaigns` |
 | Edit Campaigns | `edit_campaigns` |
 | Archive Campaigns | `archive_campaigns` |
+| Launch Campaigns | `launch_campaigns` |
+| Approve Campaigns | `approve_deny_campaigns` |
 | View Canvases | `view_canvases` |
 | Edit Canvases | `edit_canvases` |
 | Archive Canvases | `archive_canvases` |
+| Launch Canvases | `launch_canvases` |
+| Approve Canvases | `approve_deny_canvases` |
+| View Canvas Templates | `view_canvas_templates` |
+| Edit Canvas Templates | `create_and_edit_canvas_templates` |
+| Archive Canvas Templates | `archive_canvas_templates` |
 | View Content Blocks | `view_content_blocks` |
+| Edit Content Blocks | `edit_content_blocks` |
+| Archive Content Blocks | `archive_content_blocks` |
+| Launch Content Blocks | `launch_content_blocks` |
 | View Segments | `view_segments` |
 | Edit Segments | `edit_segments` |
+| Archive Segments | `archive_segments` |
 | View IAM Templates | `view_iam_templates` |
 | Edit IAM Templates | `edit_iam_templates` |
 | Archive IAM Templates | `archive_iam_templates` |
@@ -255,17 +266,23 @@ A valid role object is a JSON object with the following key-value pairs:
 | Archive Webhook Templates | `archive_webhook_templates` |
 | View Email Link Templates | `view_link_templates` |
 | Edit Email Link Templates | `edit_link_templates` |
-| View Media Library Assets | `view_media_library_assets` |
-| View Promotion Codes | `view_promotion_codes` |
-| Edit Promotion Codes | `edit_promotion_codes` |
-| Export Promotion Codes | `export_promotion_codes` |
-| View Reports | `view_reports` |
-| Create Reports | `create_reports` |
-| Edit Reports | `edit_reports` |
 | View Banner Templates | `view_banner_templates` |
-| Launch Campaigns | `launch_campaigns` |
-| Launch Canvases | `launch_canvases` |
+| Edit Banner Templates | `edit_banner_templates` |
+| Archive Banner Templates | `archive_banner_templates` |
+| View Landing Page Templates | `view_landing_page_templates` |
+| Edit Landing Page Templates | `edit_landing_page_templates` |
+| Archive Landing Page Templates | `archive_landing_page_templates` |
+| View Media Library Assets | `view_media_library_assets` |
+| Edit Media Library Assets | `edit_media_library_assets` |
+| Delete Media Library Assets | `delete_media_library_assets` |
+| Replace Media Library Assets | `replace_media_library_assets` |
+| View Dashboard Reports | `view_reporting` |
+| Edit Dashboard Reports | `edit_reporting` |
+| Delete Dashboard Reports | `delete_reporting` |
+| Export User Data | `export_user_data` |
+| View User Profiles (PII Redacted) | `view_user_profile` |
 | Edit Dashboard Users | `edit_dashboard_users` |
+| Admin | `admin` |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Team permission strings #team" }
 
 ### Department strings {#department-strings}

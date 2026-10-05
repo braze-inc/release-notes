@@ -117,9 +117,11 @@ The calculations for different metrics in the  performance dashboard are the sam
 | Delivery failures rate | Rate | (Total number of failures across each day in the date range) / (Total number of sends across each day in the date range) |
 | Rejections rate | Rate | (Total number of rejections across each day in the date range) / (Total number of sends across each day in the date range) |
 | Click rate | Rate | (Total number of clicks across each day in the date range) / (Total number of deliveries across each day in the date range) |
-| Total opt-ins | Rate | Total number of inbound message opt-ins across each day in the date range |
-| Total opt-outs | Rate | Total number of inbound message opt-outs across each day in the date range |
+| Total opt-ins | Count | Completed opt-ins across all sources, counted per user profile and subscription group in the selected date range |
+| Total opt-outs | Count | Opt-outs across all sources, counted per user profile and subscription group in the selected date range |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="How metrics are calculated" }
+
+*Total Opt-Ins* and *Total Opt-Outs* include subscription changes from all sources—for example, API updates and in-app preferences—not only inbound keywords. Braze counts each change per user profile and subscription group. Profiles that share a phone number count separately. Double opt-ins count only after confirmation. When you filter by campaign, Canvas, or tag, the tiles show only subscription changes attributed to those selections.
 
 
 
