@@ -112,6 +112,15 @@ To restore the integration, go to **Partner Integrations** > **Technology Partne
 
 The following metrics and definitions apply to Google Postmaster Tools.
 
+**Important:**
+
+
+Google deprecated the Postmaster Tools v1 API in September 2026 and discontinued *IP Reputation* and *Domain Reputation*. The v2 API does not include these metrics. If you have historical data from before that deprecation, it remains visible in the Deliverability Center. Braze no longer collects new data for these metrics.
+
+To monitor email health with Gmail, use *Authentication* (SPF, DKIM, DMARC), *Encryption* (TLS), *User-Reported Spam*, *Delivery Errors*, and *Compliance*.
+
+
+
 #### IP reputation 
 
 To help understand the ratings for IP reputation, refer to this table:
@@ -247,7 +256,7 @@ An email feedback loop (FBL) allows email senders to receive reports when recipi
 
 Because spam complaint data is not available from Gmail and iCloud, it's important to use other tools to monitor your email health and reputation with these major providers:
 
-- Use [Google Postmaster Tools](https://www.gmail.com/postmaster/) to monitor domain and IP reputation, spam rates, and user engagement. You can integrate Google Postmaster with Braze as described in [Integrate Google Postmaster](#integrating-google-postmaster).
+- Use [Google Postmaster Tools](https://www.gmail.com/postmaster/) to monitor *Authentication* (SPF, DKIM, DMARC), *Encryption* (TLS), *User-Reported Spam*, *Delivery Errors*, and *Compliance*. You can integrate Google Postmaster with Braze as described in [Integrate Google Postmaster](#integrating-google-postmaster). Google removed *IP Reputation* and *Domain Reputation* in September 2026.
 - Apple does not provide a public Postmaster tool equivalent to Google's. Focus on maintaining strong engagement metrics and following email best practices.
 
 To maintain good deliverability with all providers, implement a [sunset policy](https://www.braze.com/docs/user_guide/channels/email/best_practices/sunset_policies) to automatically stop sending to unengaged users. This helps prevent your emails from being marked as spam and protects your sender reputation.

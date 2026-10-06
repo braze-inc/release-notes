@@ -12,7 +12,7 @@ To set up a test segment, go to **Segments** and create a new segment. Select **
 
 ![A Braze test campaign displaying the filters available in the targeting step.](https://www.braze.com/docs/assets/img_archive/testmessages1.png?c440e858d187b30c92b316dfa12b9774)
 
-With test filters, you can ensure that only users with a specific email address or [external user ID](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids#setting-a-user-id) are sent the test message.
+Use test filters to send the test message only to users with a specific email address or [external user ID](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids?tab=swift#setting-a-user-id).
 
 ![A dropdown menu displaying several filters listed under a heading that reads Testing](https://www.braze.com/docs/assets/img_archive/testmessages2.png?8c289defede0c6ba588c9b8ba8d0c9f5)
 

@@ -133,7 +133,7 @@ To manage the following company-level permissions for a user, check or uncheck t
 
 ### Workspace
 
-You can give a user different permissions for each workspace they belong to in Braze. To manage their workspace-level permissions, select **Select workspaces and permissions**, then choose their permissions manually or assign a [permission set or role](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#create-a-permission-set) you previously created. If you need to give a user different permissions for different workspaces, repeat this process as many times as needed. For a description of each permission, see [List of permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#list-of-permissions).
+You can give a user different permissions for each workspace they belong to in Braze. To manage their workspace-level permissions, select **Select workspaces and permissions**, then choose their permissions manually or assign one or more [permission sets](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#create-a-permission-set) or a [role](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#creating-a-role) you previously created. If you need to give a user different permissions for different workspaces, repeat this process as many times as needed. For a description of each permission, see [List of permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#list-of-permissions).
 
 
 
@@ -147,11 +147,11 @@ When you're finished, select **Update user**.
 
 
 
-Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permission Sets**, choose one permission set. They will be assigned these permissions only for the workspaces you have selected.
+Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permission Sets**, choose one or more permission sets. The user gets every permission included in the selected permission sets, only for the workspaces you selected.
 
 When you're finished, select **Update user**.
 
-![Workspace-level permissions being assigned through a permission set in Braze.](https://www.braze.com/docs/assets/img/braze_permissions/workspace_level_permissions_set.png?4dc65f245b53a6d5f1addd0132124d98)
+![Workspace-level permissions being assigned through permission sets in Braze.](https://www.braze.com/docs/assets/img/braze_permissions/workspace_level_permissions_set.png?1f183d752974eecefbe6be5acefb28b4)
 
 
 

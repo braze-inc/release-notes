@@ -59,7 +59,7 @@ A valid workspace permission object is a JSON object with the following key-valu
 | --- | --- | --- | --- |
 | `appGroupName`| Optional | String | Name of the workspace. Used to specify which workspace the permissions contained within this object are for. | 
 | `appGroupId` | Required if `appGroupName` is missing | String | The workspace's API identifier (a UUID), serving as an alternative method of specifying the workspace. |
-| `appGroupPermissionSets` | Optional | Array | Array with a single [workspace permissions set object](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_workspace-permissions-set-object). Provide one of `appGroupPermissions` or `appGroupPermissionSets` per workspace entry, not both. |
+| `appGroupPermissionSets` | Optional | Array | Array of one or more [workspace permissions set objects](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_workspace-permissions-set-object). The user gets every permission included in the listed permission sets for this workspace. The array can't be empty. Provide one of `appGroupPermissions` or `appGroupPermissionSets` per workspace entry, not both. |
 | `appGroupPermissions` | Conditionally required | Array | Array of workspace-level permission strings from the [workspace permission strings](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_workspace-strings) table. Required when `appGroupPermissionSets` is not provided. |
 | `team` | Optional | Array | Array of [Team permission objects](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=granular%20scim%20api#granularscimapi_team-permissions-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Workspace permissions object" }
@@ -70,8 +70,8 @@ A valid workspace permissions set object is a JSON object with the following key
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
-| `appGroupPermissionSetName` | Optional | String | Name of the workspace permission set that is being assigned to the user for this workspace. |
-| `appGroupPermissionSetId` | Required if `appGroupPermissionSetName` is missing | String | The permission set's API identifier (a UUID), serving as an alternative method of specifying the workspace permission set assigned to the user for this workspace. |
+| `appGroupPermissionSetName` | Optional | String | Name of a workspace permission set that is being assigned to the user for this workspace. |
+| `appGroupPermissionSetId` | Required if `appGroupPermissionSetName` is missing | String | The permission set's API identifier (a UUID), serving as an alternative method of specifying a workspace permission set assigned to the user for this workspace. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Workspace permissions set object #workspace-permissions-set-object" }
 
 ### Team permissions object {#team-permissions-object}
@@ -356,7 +356,7 @@ A valid workspace permission object is a JSON object with the following key-valu
 | --- | --- | --- | --- |
 | `appGroupName`| Optional | String | Name of the workspace. Used to specify which workspace the permissions contained within this object are for. | 
 | `appGroupId` | Required if `appGroupName` is missing | String | The workspace's API identifier (a UUID), serving as an alternative method of specifying the workspace. |
-| `appGroupPermissionSets` | Optional | Array | Array with a single [workspace permissions set object](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_workspace-permissions-set-object). Provide one of `appGroupPermissions` or `appGroupPermissionSets` per workspace entry, not both. |
+| `appGroupPermissionSets` | Optional | Array | Array of one or more [workspace permissions set objects](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_workspace-permissions-set-object). The user gets every permission included in the listed permission sets for this workspace. The array can't be empty. Provide one of `appGroupPermissions` or `appGroupPermissionSets` per workspace entry, not both. |
 | `appGroupPermissions` | Conditionally required | Array | Array of workspace-level permission strings from the [workspace permission strings](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_workspace-strings) table. Required when `appGroupPermissionSets` is not provided. |
 | `team` | Optional | Array | Array of [Team permission objects](https://www.braze.com/docs/api/objects_filters/scim_api_appendix/?sdktab=legacy%20scim%20api#legacyscimapi_team-permissions-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Workspace permissions object #workspace-permission-object" }
@@ -367,8 +367,8 @@ A valid workspace permissions set object is a JSON object with the following key
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
-| `appGroupPermissionSetName` | Optional | String | Name of the workspace permission set that is being assigned to the user for this workspace. |
-| `appGroupPermissionSetId` | Required if `appGroupPermissionSetName` is missing | String | The permission set's API identifier (a UUID), serving as an alternative method of specifying the workspace permission set assigned to the user for this workspace. |
+| `appGroupPermissionSetName` | Optional | String | Name of a workspace permission set that is being assigned to the user for this workspace. |
+| `appGroupPermissionSetId` | Required if `appGroupPermissionSetName` is missing | String | The permission set's API identifier (a UUID), serving as an alternative method of specifying a workspace permission set assigned to the user for this workspace. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="Workspace permissions set object #workspace-permissions-set-object" }
 
 ### Team permissions object {#team-permissions-object}

@@ -1370,7 +1370,7 @@ To enable foreground push notifications and let Braze recognize them when they'r
 If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages). You will need to replace the following fields with the correct values for your test case:
 
 - `YOUR_API_KEY` - available at **Settings** > **API Keys**.
-- `YOUR_EXTERNAL_USER_ID` - available on the **Search Users** page. See [assigning user IDs](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids#setting-a-user-id) for more information.
+- `YOUR_EXTERNAL_USER_ID` - available on the **Search Users** page. For more information, see [Set user IDs](https://www.braze.com/docs/developer_guide/analytics/setting_user_ids?tab=swift#setting-a-user-id).
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
@@ -1652,11 +1652,11 @@ Add the following to your `braze.xml` file. Replace `FIREBASE_SENDER_ID` with th
 
 #### Step 1.1: Upload APNs certificates
 
-Generate an Apple Push Notification service (APNs) certificate and uploaded it to the Braze dashboard. For a full walkthrough, see [Uploading your APNs certificate](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#swift_step-1-upload-your-apns-token).
+Generate an Apple Push Notification service (APNs) certificate and upload it to the Braze dashboard. For a full walkthrough, see [Uploading your APNs certificate](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#swift_step-1-upload-your-apns-token).
 
 #### Step 1.2: Add push notification support to your app
 
-Follow the [native iOS integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration?tab=objective-c#automatic-push-integration).
+Follow the [native iOS integration guide](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#swift_step-31-enable-automation-in-the-push-property).
 
 
 
@@ -1967,7 +1967,7 @@ If you are not using the Braze Expo plugin, or would like to configure these set
 
 #### Step 1.1: Request for push permissions
 
-If you don't plan on requesting push permissions when the app is launched, omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate. Then, skip to [Step 2](#reactnative_step-2-request-push-notifications-permission). Otherwise, follow the [native iOS integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration?tab=objective-c#automatic-push-integration).
+If you don't plan on requesting push permissions when the app is launched, omit the `requestAuthorizationWithOptions:completionHandler:` call in your `AppDelegate`. Then, skip to [Step 2: Request push notifications permission](#reactnative_step-2-request-push-notifications-permission). Otherwise, follow the [native iOS integration guide](https://www.braze.com/docs/developer_guide/push_notifications?sdktab=swift#swift_step-31-enable-automation-in-the-push-property).
 
 #### Step 1.2 (Optional): Migrate your push key
 

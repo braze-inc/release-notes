@@ -115,7 +115,7 @@ The goal of a push primer campaign is to prompt users on any device where they h
 **Important:**
 
 
-**Automatic suppression with no-code push primer**: If you use the no-code push primer (the "Request Push Permission" button action), you don't need to add push subscription filters to your segmentation. The SDK automatically suppresses the in-app message on devices that already have an active push token, regardless of the user's push status on other devices. For more information about targeting users with multiple devices, see [Targeting users with multiple devices](#targeting-users-with-multiple-devices).
+**Automatic suppression with no-code push primer**: If you use the no-code push primer (the "Request Push Permission" button action), you don't need to add push subscription filters to your segmentation. The SDK automatically suppresses the in-app message on devices based on their push permission state. For details on when the primer is shown or suppressed on each platform, see [When the push primer is displayed](#when-the-push-primer-is-displayed). For more information about targeting users with multiple devices, see [Targeting users with multiple devices](#targeting-users-with-multiple-devices).
 
 
 
@@ -129,6 +129,55 @@ Using a user-level filter like `Push Subscription Status is not Opted In` exclud
 
 
 Beyond that, you can decide what additional segments you feel are most appropriate. For example, you might target users that have completed a second purchase, users that have just made an account to become a member, or even users that visit your app more than twice a week. Targeting users for these crucial segments increases the likelihood of users opting in and becoming push enabled.
+
+### When the push primer is displayed
+
+When you use the no-code push primer (the "Request Push Permission" button action), the Braze SDK automatically checks the device's push permission state and determines whether to display or suppress the in-app message. This happens at the device level before the message is shown, so you don't need to add additional segmentation filters to control this behavior.
+
+The following tables show when the push primer in-app message is displayed or suppressed on each platform:
+
+
+
+#### iOS (Swift SDK)
+
+| Authorization Status | Primer Shown? | Notes |
+|---------------------|---------------|-------|
+| `notDetermined` | Yes | User hasn't responded to the push prompt yet |
+| `denied` | No | SDK automatically suppresses the primer because iOS only allows the native permission prompt once. After denial, tapping "Allow" can't trigger the native prompt. |
+| `provisional` | Yes | Device has provisional authorization |
+| `ephemeral` | Yes | Device has ephemeral authorization |
+| `authorized` | No | User already granted push permission |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="iOS (Swift SDK)" }
+
+
+
+#### Android (Android SDK)
+
+| State | Primer Shown? | Notes |
+|-------|---------------|-------|
+| Android < 13 | No | No OS-level prompt exists on Android 12 and earlier (push is opt-in by default) |
+| App `targetSdkVersion` < 13 | No | App doesn't target the runtime permission model |
+| `POST_NOTIFICATIONS` already granted | No | User already granted permission |
+| Permanently denied | No | User denied the permission twice (or more), and `shouldShowRequestPermissionRationale` returns `false` |
+| Android 13+, permission not yet granted, eligible to prompt | Yes | Device is eligible to show the OS permission prompt |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Android (Android SDK)" }
+
+The Android SDK checks OS version, target SDK version, permission state, and whether the OS would actually show the prompt (through `shouldShowRequestPermissionRationale`).
+
+
+
+#### Web (Web SDK)
+
+| `Notification.permission` | Push Supported | Primer Shown? | Notes |
+|---------------------------|----------------|---------------|-------|
+| `"default"` | Yes | Yes | User hasn't responded to the permission request yet |
+| `"granted"` | Any | No | User already granted permission |
+| `"denied"` | Any | No | User blocked notifications. Unlike iOS, Web's `"denied"` state can't be recovered from in-browser (there's no Settings deep-link equivalent), so the SDK suppresses the primer. |
+| `"default"` | No | No | Browser doesn't support push notifications |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Web (Web SDK)" }
+
+
+
 
 ### Targeting users with multiple devices
 
@@ -201,7 +250,7 @@ The recommended solution is to use the no-code push primer (the "Request Push Pe
 **Important:**
 
 
-**Automatic suppression**: The no-code push primer automatically suppresses on devices that already have an active push token. The SDK checks if a user on their specific device already has a push token. If the SDK finds that the user has already opted in (for example, from a previous request or through device settings), the SDK automatically suppresses the in-app message without the need for any additional segmentation filters. The primer shows in all other scenarios, including if a user is provisionally opted into push.
+**Automatic suppression**: The no-code push primer automatically suppresses on devices based on their push permission state. The SDK checks the device's specific push authorization status before displaying the message. For example, on iOS, if the SDK detects that the user has already granted authorization (`.authorized`), the SDK automatically suppresses the in-app message without the need for any additional segmentation filters. Similarly, if the user has explicitly denied push permissions (`.denied`), the SDK also suppresses the primer since iOS only allows the native prompt to appear once. The primer shows only when the device is in a state where displaying it would be useful (such as `notDetermined`, `provisional`, or `ephemeral` on iOS). For the complete eligibility breakdown by platform, see [When the push primer is displayed](#when-the-push-primer-is-displayed).
 
 
 
@@ -211,7 +260,7 @@ The benefit of using the no-code push primer is that the functionality is suppor
 
 **No-code push primer required**: You must use the no-code push primer for automatic suppression to work. If you set up custom logic or deep links instead of using the "Request Push Permission" button action, the SDK can't identify that you're trying to display a push primer. This results in displaying the message regardless of that device's subscription state.
 
-**Suppressing for users who opted out**: You may want to suppress the in-app message for users who have explicitly opted out of push (for example, from the native request or device settings) and retarget those users with a separate nurture campaign. To do this, use the following Liquid logic in combination with the no-code primer:
+**Suppressing for users who opted out**: The no-code push primer automatically suppresses for users who have explicitly denied push permissions at the OS level (for example, iOS `.denied`, Android permanently denied after multiple requests, and Web `"denied"`). However, you may want additional control in some cases. For example, on Android, a user might disable notifications in their device settings without permanently denying the `POST_NOTIFICATIONS` permission. If you want to suppress the primer for these users and retarget them with a different campaign, use the following Liquid logic in combination with the no-code primer:
 
 
 ```liquid
