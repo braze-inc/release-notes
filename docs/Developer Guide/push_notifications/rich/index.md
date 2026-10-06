@@ -48,7 +48,7 @@ To see a sample, refer to the usage in [`NotificationService`](https://github.co
 
 
 
-After following the [Swift Package Manager integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/sdk_integration?tab=swift%20package%20manager/), add `BrazeNotificationService` to your `Notification Service Extension` by doing the following:
+After you've followed the [Swift Package Manager integration guide](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift#swift_step-11-import-sdk-version), add `BrazeNotificationService` to your `Notification Service Extension` by doing the following:
 
 1. In Xcode, under frameworks and libraries, select the <i class="fas fa-plus"></i> add icon to add a framework. <br><br>![The plus icon is located under frameworks and libraries in Xcode.](https://www.braze.com/docs/assets/img_archive/rich_notification.png?aacc2bc0878ec1e3bf74e346f2cd7132){: width="1930" height="446"}<br><br>
 
@@ -79,7 +79,7 @@ end
 **Note:**
 
 
-For instructions to implement Push Stories, see the [documentation](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/push_story?tab=swift%20package%20manager).
+For more information about implementing push stories, see [Push stories](https://www.braze.com/docs/developer_guide/push_notifications/push_stories?sdktab=swift).
 
 
 
@@ -89,7 +89,7 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 
 
 
-To add `BrazeNotificationService.xcframework` to your `Notification Service Extension`, see [Manual integration](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/sdk_integration?tab=manual/).
+To add `BrazeNotificationService.xcframework` to your `Notification Service Extension`, see [Manual integration](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift#swift_step-11-download-the-braze-sdk).
 
 ![Xcode project with BrazeNotificationService.xcframework added to the notification service extension.](https://www.braze.com/docs/assets/img/swift/rich_push/manual1.png?43f3a21a35ff7bd8ba2e787947a860b3){: width="1069" height="170"}
 

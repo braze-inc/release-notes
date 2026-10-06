@@ -39,12 +39,12 @@ If you select an experience that uses SQL, refer to [SQL Segment Extensions](htt
 
 #### SQL credit usage
 
-The following Segment Extension types consume SQL credits:
-
-- SQL Segment Extensions (both incremental and full refresh)
-- Catalog Segments
-- CDI Segments 
-    - Credits are consumed within your own data warehouse
+| Segment Extension type | Braze SQL credits |
+| --- | --- |
+| SQL Segment Extensions (incremental and full refresh) | Consume Braze SQL credits. |
+| Catalog Segments | Consume Braze SQL credits. |
+| [CDI Segments](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/cdi_segments) | Don't consume Braze SQL credits. These query your data warehouse directly, so you incur costs in your data warehouse provider's billing. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="SQL credit usage by Segment Extension type"}
 
 ### Step 2: Name your Segment Extension
 
@@ -68,7 +68,7 @@ If you are creating a Segment Extension using an eCommerce recommended event, fi
 
 #### Event property segmentation
 
-To increase targeting precision, select the **Add Property Filters** checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects.
+To increase targeting precision, select the **Add Property Filters** checkbox. This enables you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects.
 
 ##### Property data types
 

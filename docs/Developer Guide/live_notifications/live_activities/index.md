@@ -472,7 +472,7 @@ Multiple subscribers are supported—each active subscription receives every emi
 | ----- | ------------- |
 | `.started(activityId:activityType:pushTokenTag:launchSource:)` | The SDK started tracking this activity through `launchActivity(pushTokenTag:activity:)`. The `launchSource` value is `.local` for app-initiated activities or `.pushToStart` for remotely started activities. |
 | `.resumed(activityId:activityType:pushTokenTag:)` | The SDK resumed tracking this activity through `resumeActivities(ofType:)`. |
-| `.pushTokenFlushed(activityId:activityType:pushTokenTag:)` | The activity's push token was accepted by the Braze server—the activity can now receive remote updates. |
+| `.pushTokenFlushed(activityId:activityType:pushTokenTag:)` | The activity's push token was accepted by the Braze server. |
 | `.active(activityId:activityType:)` | The activity is currently active and visible to the user. |
 | `.stale(activityId:activityType:staleDate:)` | The activity's content has become stale. Only emitted on iOS 16.2 and later. |
 | `.dismissed(activityId:activityType:)` | The user manually dismissed the activity. |

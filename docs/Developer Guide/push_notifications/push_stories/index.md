@@ -49,7 +49,7 @@ If you do not add your app to an App Group, your app may fail to populate certai
 
 
 
-After following the [Swift Package Manager integration guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/sdk_integration?tab=swift%20package%20manager/), add `BrazePushStory` to your `Notification Content Extension`:
+After you've followed the [Swift Package Manager integration guide](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift#swift_step-11-import-sdk-version), add `BrazePushStory` to your `Notification Content Extension`:
 
 ![In Xcode, under frameworks and libraries, select the "+" icon to add a framework.](https://www.braze.com/docs/assets/img/swift/push_story/spm1.png?00b81a1ac272e7247a67cd7c176a79f8)
 
@@ -80,7 +80,7 @@ end
 **Note:**
 
 
-For instructions to implement Rich Push, see [Rich notifications](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications?tab=swift%20package%20manager).
+For more information about implementing rich push notifications, see [Rich push notifications](https://www.braze.com/docs/developer_guide/push_notifications/rich?sdktab=swift).
 
 
 
@@ -242,7 +242,7 @@ Before you can use this feature, you'll need to [integrate the React Native Braz
 
 For the React Native SDK, **push stories are available for Android by default**.
 
-To enable Push Stories on iOS using Expo, ensure you have an app group defined for your application. For more information, see [Adding an App Group](https://www.braze.com/docs/developer_guide/push_notifications/push_stories?sdktab=swift#swift_enable-capabilities).
+To enable push stories on iOS using Expo, make sure you have an app group defined for your application. For more information, see [Adding an App Group](https://www.braze.com/docs/developer_guide/push_notifications/push_stories?sdktab=swift#swift_adding-an-app-group).
 
 Next, configure the `enableBrazeIosPushStories` property to `true` and assign your app group ID to `iosPushStoryAppGroup` in your `expo.plugins` object in `app.json`:
 

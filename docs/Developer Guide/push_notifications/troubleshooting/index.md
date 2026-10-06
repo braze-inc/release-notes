@@ -282,7 +282,7 @@ Do not change the push certificate environment (development versus production). 
 
 ### Step 2: Devices register for APNs and provide Braze with push tokens
 
-When users open your app, they are prompted to accept push notifications. If they accept this prompt, APNs generates a push token for that particular device. The Swift SDK immediately and asynchronously sends the push token for apps using the default [automatic flush policy](https://www.braze.com/docs/developer_guide/platforms/legacy_sdks/ios/advanced_use_cases/fine_network_traffic_control#automatic-request-processing). After we have a push token associated with a user, they show as "Push Registered" in the dashboard on their user profile under the **Engagement** tab and are eligible to receive push notifications from Braze campaigns.
+When users open your app, your app prompts them to accept push notifications. If they accept this prompt, APNs generates a push token for that particular device. The Swift SDK immediately and asynchronously sends the push token for apps using the default [automatic flush policy](https://www.braze.com/docs/developer_guide/network?sdktab=swift#swift_requesting-processing-policies). After Braze has a push token associated with a user, they show as "Push Registered" in the dashboard on their user profile under the **Engagement** tab and are eligible to receive push notifications from Braze campaigns.
 
 **Note:**
 
@@ -430,7 +430,7 @@ For comprehensive troubleshooting across all channels—including universal link
 
 ### Web links from push clicks not opening
 
-Links in push notifications need to be ATS compliant to be opened in web views. Ensure that your web links use HTTPS. For more information, refer to [ATS compliance](https://www.braze.com/docs/developer_guide/platforms/legacy_sdks/ios/advanced_use_cases/linking#app-transport-security-ats).
+Links in push notifications must be ATS compliant to open in web views. Make sure your web links use HTTPS. For more information, see [App Transport Security (ATS)](https://www.braze.com/docs/developer_guide/push_notifications/deep_linking?sdktab=swift#swift_app-transport-security-ats).
 
 ### Deep links from push clicks not opening
 
