@@ -58,7 +58,7 @@ This won't work if you add your segment in the **Additional Filters** section th
 **Note:**
 
 
-A segment with **Apps and websites targeted** restricts the destination apps in a campaign's **Target Audiences** step. In a Canvas, it doesn't work the same way. The entry audience determines who enters the journey, but its app restriction doesn't carry forward to Message steps. To limit a Message step to specific apps, add the segment to that step's [delivery validations](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#delivery-validations) as well. Otherwise, the step sends to all of the user's eligible tokens.
+A segment with **Apps and websites targeted** restricts the destination apps in a campaign's **Target Audiences** step. In a Canvas, it doesn't work the same way. The entry audience determines who enters the journey, but its app restriction doesn't carry forward to Message steps. To limit a Message step to specific apps, add the segment to that step's [delivery validations](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#delivery-validations) in the **Segments** field. Otherwise, the step sends to all of the user's eligible tokens. Adding the segment under **Additional Filters** through a segment membership filter doesn't restrict delivery to that app.
 
 
 

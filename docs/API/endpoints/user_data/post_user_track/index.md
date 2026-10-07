@@ -1,4 +1,4 @@
-<div id='api_xeurjwskvcnc' class='api_div' data-search-keywords='create and update users attributes events purchases group_id message attributes_processed events_processed purchases_processed errors type'>
+<div id='api_eexvxjskeqjq' class='api_div' data-search-keywords='create and update users attributes events purchases group_id message attributes_processed events_processed purchases_processed errors type'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
@@ -63,6 +63,14 @@ Authorization: Bearer YOUR_REST_API_KEY
 <p><strong>Important:</strong></p>
 
 <p>For each request component listed in the following table, you must include one of <code class="language-plaintext highlighter-rouge">external_id</code>, <code class="language-plaintext highlighter-rouge">user_alias</code>, <code class="language-plaintext highlighter-rouge">braze_id</code>, <code class="language-plaintext highlighter-rouge">email</code>, or <code class="language-plaintext highlighter-rouge">phone</code>.</p>
+
+<p><strong>Note:</strong></p>
+
+<p>Braze assumes imported push tokens are valid foreground push tokens for your app and environment.</p>
+
+<p>When you import iOS tokens, Braze doesn’t store an Apple Push Notification service (APNs) gateway (<code class="language-plaintext highlighter-rouge">development</code> or <code class="language-plaintext highlighter-rouge">production</code>) for them. Braze sends to these tokens through your app’s configured gateway. If a token was generated for the other environment, APNs rejects it with <code class="language-plaintext highlighter-rouge">BadDeviceToken</code>, and the send bounces.</p>
+
+<p>Braze stores a gateway for the token only if the SDK later registers the same token and reports a gateway.</p>
 
 <table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
   <thead>

@@ -335,7 +335,14 @@ Market properties are included with supported Shopify events, so a campaign or C
 
 `presentment_currency` is included with supported checkout, order, and refund events, so a checkout reminder or order confirmation can show the amount a customer saw. Cart events don't carry `presentment_currency`, `country`, or `market_handle`. For details, see [Currency](#currency).
 
-## Markets Reporting
+## Markets reporting
+
+**Important:**
+
+
+Existing Shopify customers must use `ecommerce.order_placed` revenue to view Markets reporting. For new customers, this is enabled by default. If you have questions, contact your account team.
+
+
 
 When Markets is enabled, Braze breaks down revenue and message performance by country.
 

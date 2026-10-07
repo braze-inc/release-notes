@@ -55,6 +55,18 @@ When adding an Apple Push Certificate in Braze, the **Send to Production** and *
 
 If the wrong option is selected, push notifications silently fail because the push token type does not match the gateway. Typically, apps distributed through TestFlight or the App Store should use **Send to Production**.
 
+**Note:**
+
+
+Braze assumes imported push tokens are valid foreground push tokens for your app and environment.
+
+When you import iOS tokens, Braze doesn't store an Apple Push Notification service (APNs) gateway (`development` or `production`) for them. Braze sends to these tokens through your app's configured gateway. If a token was generated for the other environment, APNs rejects it with `BadDeviceToken`, and the send bounces.
+
+Braze stores a gateway for the token only if the SDK later registers the same token and reports a gateway.
+
+
+
+
 ## What is the difference between the "Foreground Push Enabled" and "Background or Foreground Push Enabled" filters?
 
 These segmentation filters check for different conditions:

@@ -63,7 +63,7 @@ If both the anonymous user and known user have a first name, the first name of t
 **Important:**
 
 
-Not all data is merged from the anonymous profile. Push tokens and messaging history are carried over, and custom attributes, custom events, and purchase history from the anonymous profile are merged into the identified user only when those fields don't already exist on the identified user profile. When there is conflicting data, the identified user's values are kept. See [merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#merge-behavior) for the full list of fields that are and aren't transferred.
+Not all data is merged from the anonymous profile. Push tokens and message engagement history are carried over (used for campaigns received and segmentation), and custom attributes, custom events, and purchase history from the anonymous profile are merged into the identified user only when those fields don't already exist on the identified user profile. When there is conflicting data, the identified user's values are kept. Note that the **Messaging History** tab is powered by our data warehouse and is not updated after a merge, so pre-merge events won't appear there. See [merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#merge-behavior) for the full list of fields that are and aren't transferred, including surfaces not reflected by merges.
 
 
 

@@ -43,7 +43,7 @@ Delivery validations evaluate user profile criteria at send time. App-related fi
 
 If your workspace has multiple apps and a Message step should target a specific app, use one of the following approaches:
 
-- Add a segment that has **Apps and websites targeted** set to **Users from specific apps** to your delivery validations. Unlike app-related filters, this restricts delivery to the push tokens belonging to the selected apps.
+- Add a segment that has **Apps and websites targeted** set to **Users from specific apps** to your delivery validations. Unlike app-related filters, this restricts delivery to the push tokens belonging to the selected apps. Add it in the **Segments** field, not under **Additional Filters** through a segment membership filter.
 - When composing the message, [specify your delivery platforms](https://www.braze.com/docs/user_guide/channels/in_app_messages/traditional#step-2-specify-delivery-platforms), such as **Mobile Apps** or **Web Browsers**.
 - Use Liquid to check the targeted device or app at send time:
   - `{{targeted_device.${platform}}}` evaluates the platform for the user's current session. For more information, see [Targeted device information](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags#targeted-device-information).

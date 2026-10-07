@@ -254,6 +254,18 @@ Manual push token migration is the process of importing these previously-created
 
 Programmatically migrate iOS (APNs) and Android (FCM) tokens to your platform by using the [`users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track). You can migrate both identified users (users with an associated external ID) and anonymous users (users without an external ID).
 
+**Note:**
+
+
+Braze assumes imported push tokens are valid foreground push tokens for your app and environment.
+
+When you import iOS tokens, Braze doesn't store an Apple Push Notification service (APNs) gateway (`development` or `production`) for them. Braze sends to these tokens through your app's configured gateway. If a token was generated for the other environment, APNs rejects it with `BadDeviceToken`, and the send bounces.
+
+Braze stores a gateway for the token only if the SDK later registers the same token and reports a gateway.
+
+
+
+
 Specify your app's `app_id` during push token migration to associate the appropriate push token with the appropriate app. Each app (iOS, Android, etc.) has its own `app_id`, which can be found in the **Identification** section of the [API Keys](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/apis_and_identifiers) page. Be sure to use the correct platform's `app_id`.
 
 **Important:**

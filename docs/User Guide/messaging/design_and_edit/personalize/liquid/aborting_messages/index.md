@@ -97,6 +97,8 @@ For push, email, SMS, webhooks, and Content Cards, abort logic runs when Braze p
 
 If a Message step is aborted in a Canvas, the user does not exit the Canvas. Instead, they proceed to the next step. Aborts affect only the send count for that Message step.
 
+In a Context step, `abort_message` affects only the variable that calls it: that variable isn't set, the other variables in the step still are, and the user moves to the next step. Context step aborts aren't recorded in the Message Activity Log. For details, see [Context](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context#using-abort_message-in-a-context-variable).
+
 When diagnosing Canvas aborts:
 
 - Compare entered users on the Message step to sent users on the same step.

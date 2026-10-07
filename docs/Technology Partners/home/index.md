@@ -47,6 +47,7 @@ Braze Alloys is Braze's technology partner program. Partners extend the Braze pl
 
 - [B.Layer](https://www.braze.com/docs/partners/message_orchestration/templates/blayer)
 - [Better Email](https://www.braze.com/docs/partners/message_orchestration/templates/better_email)
+- [Bidease](https://www.braze.com/docs/partners/message_orchestration/retargeting/bidease)
 - [Blings](https://www.braze.com/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/blings)
 - [BlueConic](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/blueconic)
 - [Bluedot](https://www.braze.com/docs/partners/message_personalization/location/bluedot)

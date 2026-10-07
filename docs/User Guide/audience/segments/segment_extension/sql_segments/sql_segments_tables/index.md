@@ -26,7 +26,6 @@ These SQL tables correspond to the events documented in the [Currents event glos
 Table | Description
 ------|------------
 [AGENTCONSOLE_AGENTEXECUTED_SHARED](#AGENTCONSOLE_AGENTEXECUTED_SHARED) | When an Agent Console agent is executed (**Snowflake Data Sharing only**)
-[AGENTCONSOLE_RAWLLMREQUEST_SHARED](#AGENTCONSOLE_RAWLLMREQUEST_SHARED) | Raw information from each LLM call (**Snowflake Data Sharing only**)
 [AGENTCONSOLE_TOOLINVOCATION_SHARED](#AGENTCONSOLE_TOOLINVOCATION_SHARED) | When a tool is executed (**Snowflake Data Sharing only**)
 [USER_CUSTOM_ATTRIBUTES_VIEW_SHARED](#USER_CUSTOM_ATTRIBUTES_VIEW_SHARED) | Periodic snapshot of custom profile attributes per user
 [USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED](#USER_DEFAULT_ATTRIBUTES_HISTORY_VIEW_SHARED) | Historical default profile attributes with effective date ranges
@@ -205,26 +204,6 @@ Field | Type | Description
 `error` | `string` | Error name
 `thinking_level` | `string` | the thinking/reasoning level used for the request
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="AGENTCONSOLEAGENTEXECUTEDSHARED #AGENTCONSOLEAGENTEXECUTEDSHARED" }
-
-### AGENTCONSOLE_RAWLLMREQUEST_SHARED {#AGENTCONSOLE_RAWLLMREQUEST_SHARED}
-
-Field | Type | Description
-------|------|------------
-`id` | `string` | Globally unique ID for this event
-`invocation_id` | `string` | Globally unique ID for this message
-`request_id` | `string` | Unique ID for this overall LLM request and complete execution
-`time` | `int` | UNIX timestamp at which the event happened
-`app_group_id` | `string` | BSON ID of the app group this event belongs to
-`agent_id` | `string` | BSON ID of the CustomerDefinedAgent
-`agent_name` | `string` | Name of the CustomerDefinedAgent
-`model_provider` | `string` | Name of the LLM model provider
-`model_name` | `string` | Name of the LLM model used in this request
-`duration` | `int`,&nbsp;`null` | Duration of the session in seconds
-`request` | `string` | [PII] Prompt used in the request
-`http_status_code` | `int`,&nbsp;`null` | HTTP status code of the response
-`response_body` | `string`,&nbsp;`null` | [PII] Response from the LLM
-`sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="AGENTCONSOLERAWLLMREQUESTSHARED #AGENTCONSOLERAWLLMREQUESTSHARED" }
 
 ### AGENTCONSOLE_TOOLINVOCATION_SHARED {#AGENTCONSOLE_TOOLINVOCATION_SHARED}
 

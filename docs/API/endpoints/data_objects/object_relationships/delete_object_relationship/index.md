@@ -1,4 +1,4 @@
-<div id='api_ndtgzcquklnd' class='api_div' data-search-keywords='delete object relationship rel_kind related_type_name related_object_id anchor deleted'>
+<div id='api_eypplbjrkifz' class='api_div' data-search-keywords='delete object relationship rel_kind related_type_name related_object_id deleted'>
 <h1 id="delete-object-relationship">Delete object relationship</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/data_objects/objects/{type_name}/{object_id}/object_relationships</p>
@@ -81,12 +81,6 @@
       <td>String</td>
       <td>Related object identifier</td>
     </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">anchor</code></td>
-      <td>Optional</td>
-      <td>String</td>
-      <td><code class="language-plaintext highlighter-rouge">source</code> (default) or <code class="language-plaintext highlighter-rouge">target</code></td>
-    </tr>
   </tbody>
 </table>
 
@@ -105,12 +99,10 @@
 3
 4
 5
-6
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"rel_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subaccount"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"related_type_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"related_object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-456"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"anchor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"source"</span><span class="w">
+  </span><span class="nl">"related_object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-456"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -126,15 +118,13 @@
 6
 7
 8
-9
 </pre></td><td class="rouge-code"><pre>curl <span class="nt">--location</span> <span class="nt">--request</span> DELETE <span class="s1">'https://rest.iad-01.braze.com/data_objects/objects/account/acct-123/object_relationships'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Authorization: Bearer YOUR_REST_API_KEY'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 <span class="nt">--data-raw</span> <span class="s1">'{
   "rel_kind": "subaccount",
   "related_type_name": "account",
-  "related_object_id": "acct-456",
-  "anchor": "source"
+  "related_object_id": "acct-456"
 }'</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
@@ -189,7 +179,7 @@
     <tr>
       <td><code class="language-plaintext highlighter-rouge">400</code></td>
       <td>Validation error</td>
-      <td>Confirm the request body includes valid <code class="language-plaintext highlighter-rouge">rel_kind</code>, <code class="language-plaintext highlighter-rouge">related_type_name</code>, <code class="language-plaintext highlighter-rouge">related_object_id</code>, and <code class="language-plaintext highlighter-rouge">anchor</code> values.</td>
+      <td>Confirm the request body includes valid <code class="language-plaintext highlighter-rouge">rel_kind</code>, <code class="language-plaintext highlighter-rouge">related_type_name</code>, and <code class="language-plaintext highlighter-rouge">related_object_id</code> values.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">404</code></td>

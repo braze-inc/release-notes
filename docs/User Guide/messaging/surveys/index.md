@@ -121,13 +121,167 @@ Save a survey as a template from the landing page or in-app message template lib
 
 ## Survey Response events
 
-Survey responses flow into [Braze Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents) so you can export survey data to your data warehouse or a third-party BI tool for downstream analysis, joins with other engagement data, and custom reporting that goes beyond the dashboard's built-in analytics.
+Survey responses flow into [Braze Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents) so you can export survey data to your data warehouse or a third-party BI tool for analysis, joins with other engagement data, and custom reporting that goes beyond the dashboard's built-in analytics.
 
-Braze exports individual survey answers to Currents through the **Survey Response** event (`users.messages.survey.Response`). Each event represents one respondent's answer to one survey question. For the full field reference, see [Survey Response events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events#survey-response-events) in the Currents event glossary.
+Braze exports individual survey answers through the **Survey Response** event (`users.messages.survey.Response`). Each event represents one respondent's answer to one survey question. For the full field reference, see [Survey Response events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events#survey-response-events) in the Currents event glossary.
 
-## Landing page engagement funnel
+The same data is available as the `USERS_MESSAGES_SURVEY_RESPONSE_SHARED` SQL table in [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder), [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments), and [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake). The examples in the following tabs use that table. For column details, see the [SQL table reference](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables#USERS_MESSAGES_SURVEY_RESPONSE_SHARED).
+
+The `answer_type` value matches the survey question type from the composer—for example, `single_choice`, `multiple_choice`, `free_form_text`, `nps`, `single_boolean`, or `single_number`. Use that value (not a separate response-shape enum) when filtering these queries.
+
+
+
+Use `survey_completion_status` to see how many survey sessions were completed versus left incomplete for a given survey.
+
+```sql
+SELECT
+  survey_id,
+  COUNT(DISTINCT survey_session_id) AS total_sessions,
+  COUNT(DISTINCT CASE WHEN survey_completion_status = 'complete' THEN survey_session_id END) AS completed_sessions,
+  COUNT(DISTINCT CASE WHEN survey_completion_status = 'incomplete' THEN survey_session_id END) AS incomplete_sessions
+FROM USERS_MESSAGES_SURVEY_RESPONSE_SHARED
+GROUP BY survey_id;
+```
+
+
+
+Use `answer_single_string` for radio button, dropdown, and other single-choice responses (`answer_type = 'single_choice'`). Group by `question_reporting_id` rather than display position, because randomized choice order doesn't affect how responses are reported.
+
+```sql
+SELECT
+  question_reporting_id,
+  answer_single_string AS choice,
+  COUNT(*) AS response_count
+FROM USERS_MESSAGES_SURVEY_RESPONSE_SHARED
+WHERE answer_type = 'single_choice'
+GROUP BY question_reporting_id, answer_single_string
+ORDER BY question_reporting_id, response_count DESC;
+```
+
+
+
+Use `answer_multiple_strings` for checkbox group responses where a respondent can select more than one choice (`answer_type = 'multiple_choice'`). Selected values are stored as a JSON array string (for example, `["Option A","Option C"]`).
+
+```sql
+SELECT
+  question_reporting_id,
+  answer_multiple_strings,
+  COUNT(*) AS response_count
+FROM USERS_MESSAGES_SURVEY_RESPONSE_SHARED
+WHERE answer_type = 'multiple_choice'
+GROUP BY question_reporting_id, answer_multiple_strings;
+```
+
+
+
+Use `answer_single_boolean` for single checkbox blocks (`answer_type = 'single_boolean'`).
+
+```sql
+SELECT
+  question_reporting_id,
+  answer_single_boolean,
+  COUNT(*) AS response_count
+FROM USERS_MESSAGES_SURVEY_RESPONSE_SHARED
+WHERE answer_type = 'single_boolean'
+  AND question_reporting_id = 'REPLACE_WITH_YOUR_QUESTION_REPORTING_ID'
+GROUP BY question_reporting_id, answer_single_boolean;
+```
+
+
+
+NPS block responses use `answer_type = 'nps'` with the score in `answer_single_int` (and optional free-text feedback in `answer_single_string`). Rating (number scale) questions use `answer_type = 'single_number'` with the score in `answer_single_number`.
+
+Promoter, passive, and detractor segments appear in the survey analytics dashboard. They aren't separate fields in the SQL table—derive them from the 0–10 score when you need them in Query Builder or Snowflake:
+
+```sql
+SELECT
+  question_reporting_id,
+  CASE
+    WHEN answer_single_int >= 9 THEN 'promoter'
+    WHEN answer_single_int >= 7 THEN 'passive'
+    ELSE 'detractor'
+  END AS nps_segment,
+  COUNT(*) AS response_count
+FROM USERS_MESSAGES_SURVEY_RESPONSE_SHARED
+WHERE answer_type = 'nps'
+  AND question_reporting_id = 'REPLACE_WITH_YOUR_NPS_QUESTION_REPORTING_ID'
+GROUP BY question_reporting_id, nps_segment;
+```
+
+
+
+Use `answer_long_string` for long-form text capture responses (`answer_type = 'free_form_text'`). These are free-text values, so consider your own PII handling policy before exporting them.
+
+```sql
+SELECT
+  survey_id,
+  question_id,
+  question_reporting_id,
+  response_id,
+  answer_long_string AS response_text,
+  time
+FROM USERS_MESSAGES_SURVEY_RESPONSE_SHARED
+WHERE answer_type = 'free_form_text'
+  AND question_reporting_id = 'REPLACE_WITH_YOUR_QUESTION_REPORTING_ID';
+```
+
+
+
+Landing page survey responses include a populated `landing_page_api_id`. In-app message survey responses use campaign or Canvas identifiers (`campaign_api_id` or `canvas_api_id` and related variation and step fields) instead.
+
+```sql
+SELECT
+  CASE WHEN landing_page_api_id IS NOT NULL THEN 'landing_page' ELSE 'in_app_message' END AS channel,
+  COUNT(DISTINCT survey_session_id) AS sessions
+FROM USERS_MESSAGES_SURVEY_RESPONSE_SHARED
+GROUP BY 1;
+```
+
+
+
+## Landing page events
 
 Landing page surveys also generate **Landing Page Impression** and **Landing Page Click** events for page views and tracked clicks. Completing a landing page survey writes a **Survey Response** event; it doesn't also fire the generic **Landing Page Form Submission** event, which is for standard (non-survey) landing page forms. For the full field reference for these events, see the [Currents event glossary](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events).
+
+**Note:**
+
+
+Landing Page Impression events are anonymous, so you can't join them to **Survey Response** or **Landing Page Form Submission** on `user_id` to calculate response or conversion rates.
+
+
+
+
+
+Braze exports a **Landing Page Click** event (`users.messages.landingpage.Click`) each time a user clicks a tracked element or form field on a landing page. The `target` field identifies which element was clicked—not just that a click happened—so you can compare click volume by element. For the full field reference, see [Landing Page Click events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events#landing-page-click-events).
+
+```sql
+SELECT
+  landing_page_name,
+  target,
+  COUNT(*) AS clicks
+FROM USERS_MESSAGES_LANDINGPAGE_CLICK_SHARED
+GROUP BY landing_page_name, target
+ORDER BY clicks DESC;
+```
+
+Use this query to compare click volume across tracked elements on the same page—for example, to see that one call-to-action earns several times the clicks of another—or to feed `target` values into a CDP or ad platform to retarget users who clicked a specific offer.
+
+
+
+Braze exports a **Landing Page Form Submission** event (`users.messages.landingpage.FormSubmission`) when a user completes a standard (non-survey) landing page form. This event records that a form was submitted, not the individual field values, so treat it as a conversion event rather than a source of response data. Survey completions use **Survey Response** instead.
+
+```sql
+SELECT
+  landing_page_name,
+  COUNT(*) AS submissions
+FROM USERS_MESSAGES_LANDINGPAGE_FORMSUBMISSION_SHARED
+GROUP BY landing_page_name
+ORDER BY submissions DESC;
+```
+
+Sync submitters to a CRM or email service provider as leads, or use the event to trigger a follow-up welcome or nurture flow as soon as someone submits.
+
+
 
 ## Frequently asked questions
 
