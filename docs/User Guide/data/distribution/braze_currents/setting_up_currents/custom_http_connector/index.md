@@ -35,6 +35,7 @@ Braze supports exporting the following data to your Custom HTTP Connector:
 
 - [Message engagement events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events?tab=custom%20http%20connector)
 - [Customer behavior events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events?tab=custom%20http%20connector)
+- [User profiles](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/user_profiles_events?tab=custom%20http%20connector)
 
 For the payload structure of each event, select the **Custom HTTP Connector** tab in the event glossary.
 
@@ -55,7 +56,7 @@ We typically give a two-week notice for these changes, but sometimes this isn't 
 **Tip:**
 
 
-For the full list of Currents event schemas, see [Message Engagement Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events) and [Customer Behavior Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events).
+For the full list of Currents event schemas, see [Message Engagement Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events), [Customer Behavior Events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events), and [User Profiles](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/user_profiles_events).
 
 
 

@@ -78,6 +78,7 @@ The `BadToken` error may occur for several reasons:
 	- If you register with a development certificate and try to send with a production one, you can see this error.  
 	- Braze only supports universal certificates for production environments. Testing push on development environments with a universal certificate will not work. 
 	- This reporting sends bouncing in production but not development.<br><br>
+	- If you imported iOS tokens through the `/users/track` endpoint, the token environment might not match your app's configured gateway. APNs reports this mismatch as `BadDeviceToken`. For more information, see [Create and update users](https://www.braze.com/docs/api/endpoints/user_data/post_user_track).<br><br>
 - Mismatched provisioning profile:
 	- This can happen if your certificate doesn't match the one that was used to get the token. If this is suspected, the next steps include:
 		- Ensuring that the push certificate being used to send push from the Braze dashboard and the provisioning profile are configured correctly.

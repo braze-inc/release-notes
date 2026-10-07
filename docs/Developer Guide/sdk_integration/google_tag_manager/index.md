@@ -11,7 +11,7 @@ Google Tag Manager (GTM) lets you remotely add, remove, and edit tags on your we
 |Tag Type|Use Case|
 |--------|--------|
 | Initialization tag | This tag lets you [integrate the Web Braze SDK](https://www.braze.com/docs/developer_guide/sdk_integration?tab=google%20tag%20manager&sdktab=web) without needing to modify your site’s code.|
-| Action tag | This tag lets you [create Content Cards](https://www.braze.com/docs/developer_guide/content_cards?sdktab=web#web_using-google-tag-manager), [set user attributes](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes?tab=google%20tag%20manager&sdktab=web), and [manage data collection](https://www.braze.com/docs/developer_guide/analytics/managing_data_collection?tab=google%20tag%20manager&sdktab=web).|
+| Action tag | This tag lets you [create Content Cards](https://www.braze.com/docs/developer_guide/content_cards?sdktab=web#web_using-google-tag-manager), [set user attributes](https://www.braze.com/docs/developer_guide/analytics/setting_user_attributes?tab=google%20tag%20manager&sdktab=web), [log eCommerce events](#web_log-ecommerce-events-with-gtm), and [manage data collection](https://www.braze.com/docs/developer_guide/analytics/managing_data_collection?tab=google%20tag%20manager&sdktab=web).|
 {: .reset-td-br-1 .reset-td-br-2 aria-label="About Google Tag Manager for Web #google-tag-manager" }
 
 ## Tag sequencing for Braze action tags {#tag-sequencing-for-braze-action-tags}
@@ -32,6 +32,140 @@ For more detail, see [Verify tag sequencing for custom events](https://www.braze
 ## Log purchases with GTM
 
 In Braze action tags and Custom HTML tags, call `braze.logPurchase()` to record revenue. The legacy `appboy.logPurchase()` namespace is not supported in current Web SDK integrations.
+
+## Log eCommerce events with GTM {#log-ecommerce-events-with-gtm}
+
+Use the **Log eCommerce Event (New)** tag type in the Braze Actions tag to send [eCommerce recommended events](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events) to Braze from your GTM data layer. The tag calls `braze.logEcommerceEvent()` and requires Web SDK 6.8.0 or later. Make sure your Braze Initialization tag loads a compatible SDK version.
+
+The tag supports the following events:
+
+| Tag event type | Braze event |
+|----------------|-------------|
+| **Product Viewed** | `ecommerce.product_viewed` |
+| **Cart Updated** | `ecommerce.cart_updated` |
+| **Checkout started** | `ecommerce.checkout_started` |
+| **Order placed** | `ecommerce.order_placed` |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Supported eCommerce events in the Braze Actions tag" }
+
+To log `ecommerce.order_cancelled` or `ecommerce.order_refunded`, use a **Custom HTML** tag that calls `braze.logCustomEvent()`. For examples, see [Log eCommerce events](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events?sdktab=web).
+
+**Note:**
+
+
+The **Log Purchase (Legacy)** and **E-Commerce Purchase (Legacy)** tag types continue to work. Use **Log eCommerce Event (New)** for new integrations.
+
+
+
+### Step 1: Push the event to the data layer
+
+In your site's code, push the event and its `ecommerce` object to the data layer. By default, the tag reads the standard [GA4 eCommerce data layer format](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce). For example, to log an order:
+
+```javascript
+dataLayer.push({
+  event: "purchase",
+  ecommerce: {
+    transaction_id: "T_12345",
+    value: 29.97,
+    currency: "USD",
+    items: [
+      {
+        item_id: "SKU_12345",
+        item_name: "Stan and Friends Tee",
+        item_variant: "green",
+        price: 9.99,
+        quantity: 3
+      }
+    ]
+  }
+});
+```
+
+Braze requires IDs such as `item_id` and `transaction_id` to be strings. Push them as strings, even if your IDs are numeric.
+
+### Step 2: Create a trigger in GTM
+
+1. In your GTM container, go to **Triggers** and create a new trigger.
+2. Set the **Trigger Type** to **Custom Event**.
+3. Set the **Event Name** to the event you pushed to the data layer (for example, `purchase`).
+
+### Step 3: Create the Braze Actions tag
+
+1. In GTM, go to **Tags** and create a new tag with the **Braze Actions Tag** type.
+2. Set **Tag Type** to **Log eCommerce Event (New)**.
+3. Select an **eCommerce Event Type**.
+4. Enter the fields for that event type, as described in the following table.
+5. (Optional) Add [metadata](#web_ecommerce-event-metadata).
+6. Under **Triggering**, select the trigger you created in step 2.
+7. Configure [tag sequencing](#web_tag-sequencing-for-braze-action-tags) so the Braze Initialization tag fires first.
+8. Save and publish your container.
+
+| eCommerce Event Type | Tag fields | Required data layer values |
+|----------------------|------------|----------------------------|
+| **Product Viewed** | None. | `ecommerce.items` and `ecommerce.currency`. The first item is the viewed product. |
+| **Cart Updated** | **Cart ID** is required. **Cart Update Action** is **Replace**, **Add**, or **Remove**, and defaults to **Replace**. | `ecommerce.items` and `ecommerce.currency`. `ecommerce.value` is required when the action is **Replace**. |
+| **Checkout started** | **Checkout ID** is required. **Cart ID** is optional. | `ecommerce.items`, `ecommerce.currency`, and `ecommerce.value`. |
+| **Order placed** | **Cart ID** is optional. | `ecommerce.items`, `ecommerce.currency`, `ecommerce.value`, and `ecommerce.transaction_id`. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Fields required for each eCommerce event type" }
+
+If `ecommerce.currency` is not set, the tag uses the `currency` field of the first item. The tag sets the event `source` to `google_tag_manager_web`.
+
+### Data layer mapping {#ecommerce-data-layer-mapping}
+
+When **Automatically parse e-commerce event from the data layer** is selected (the default), the tag maps data layer values to the Braze event properties as follows:
+
+| Braze property | Data layer value |
+|----------------|------------------|
+| `currency` | `ecommerce.currency` |
+| `total_value` | `ecommerce.value` |
+| `order_id` | `ecommerce.transaction_id` |
+| `products[].product_id` | `ecommerce.items[].item_id` |
+| `products[].product_name` | `ecommerce.items[].item_name` |
+| `products[].variant_id` | `ecommerce.items[].item_variant`. Defaults to `item_id`. |
+| `products[].price` | `ecommerce.items[].price` |
+| `products[].quantity` | `ecommerce.items[].quantity`. Defaults to `1`. |
+| `products[].image_url` | `ecommerce.items[].image_url` |
+| `products[].product_url` | `ecommerce.items[].product_url` |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="How the Braze Actions tag maps data layer values to eCommerce event properties" }
+
+### Enter event values manually {#ecommerce-manual-entry}
+
+If your site uses a custom eCommerce data layer format, clear **Automatically parse e-commerce event from the data layer**. Then enter the event values in the tag. You can use GTM variables in any of these fields.
+
+| Field | Description |
+|-------|-------------|
+| **Currency** | Required. An ISO 4217 currency code, such as `USD`. |
+| **Total Value** | Required for **Cart Updated** with the **Replace** action, **Checkout started**, and **Order placed**. |
+| **Order ID** | Required for **Order placed**. |
+| **Products** | Required. Add a row for each product. **Product ID**, **Product Name**, and **Price** are required. **Variant ID** defaults to the product ID, and **Quantity** defaults to `1`. **Image URL**, **Product URL**, and **Product Metadata (JSON)** are optional. For **Product Viewed**, the tag uses the first row. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Fields to enter when automatic parsing is turned off" }
+
+### eCommerce event metadata {#ecommerce-event-metadata}
+
+Add metadata to send additional key-value pairs with the event. Braze sends event metadata in the `metadata` object of the event, and product metadata in the `metadata` object of each product.
+
+**Event metadata**
+
+Use the **eCommerce Event Metadata** table to add event-level metadata. This table is available whether or not automatic parsing is turned on. For each row, enter a **Metadata property key** and a **Metadata property value**. You can use a GTM variable as the value. The tag skips rows that have an empty key or an empty value.
+
+Some event types support recognized metadata keys. For example, use `checkout_url` for **Checkout started** and `order_status_url` for **Order placed**. For the full list, see [Event schemas](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events#event-schemas).
+
+**Product metadata**
+
+Use the **Product Metadata (JSON)** column of the **Products** table to add metadata to an individual product. Enter a JSON object, such as `{"color": "green", "size": "M"}`. Product metadata has the following limitations:
+
+- Product metadata is only available when you clear **Automatically parse e-commerce event from the data layer**.
+- The tag sends product metadata for **Cart Updated**, **Checkout started**, and **Order placed** events. It does not send product metadata for **Product Viewed**, because that event has no products array. Use the **eCommerce Event Metadata** table for **Product Viewed** instead.
+- If the JSON is not a valid object, the tag ignores it.
+
+### Verify eCommerce events {#verify-ecommerce-events}
+
+The Braze Web SDK validates every eCommerce event. If a value is invalid, the SDK doesn't log the event and writes an error to the browser console. GTM still shows the tag as fired. To troubleshoot a missing event:
+
+1. Select **Enable GTM Tag Debugging** in the tag. The tag then logs a message to the browser console when it can't read a data layer value, finds no products, or ignores invalid product metadata.
+2. Open your browser's developer console and look for errors from the Braze Web SDK.
+3. Check the required fields for your event type. Confirm that IDs are strings, that `price` and `total_value` are valid numbers, and that `quantity` is a whole number.
+
+For event schemas and ingestion validation, see [Log eCommerce events](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events) and [Event validation and troubleshooting](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events#event-validation-and-troubleshooting).
 
 ## Logging custom events with GTM
 

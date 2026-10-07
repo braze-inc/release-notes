@@ -50,7 +50,7 @@ From the export details page, you can cancel an in-progress export or share a li
 | Export type | How to start | Documentation |
 |-------------|--------------|---------------|
 | Segment CSV export | **Audience** > **Segments** > select a segment > **User Data** > **CSV Export** | [Exporting segment data to CSV](https://www.braze.com/docs/user_guide/data/distribution/export_braze_data/segment_data_to_csv) |
-| Suppression list export | **Audience** > **Suppression Lists** | [Suppression lists](https://www.braze.com/docs/user_guide/audience/suppression_lists) |
+| Suppression list export | **Audience** > **Suppressions** (or **Suppression Lists**) | [Suppressions](https://www.braze.com/docs/user_guide/audience/suppression_lists) |
 | API segment export | `POST /users/export/segment` | [POST: Export user profile by segment](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Related export workflows" }
 

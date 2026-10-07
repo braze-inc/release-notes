@@ -130,6 +130,23 @@ SELECT DISTINCT user_id FROM "INSERT TABLE NAME"
    1. Write a query to select users who have the event MORE than X times.
    2. When referencing your Segment Extension in your segment, select `doesn't include` to invert the result.
 
+#### `user_id` column requirements
+
+The `user_id` column must be a direct, unchanged reference to `user_id` from a source table. Braze rejects queries where the final `user_id` column is:
+
+- A computed column with an alias, such as `COALESCE(m.orphaned_by_id, c.user_id) AS user_id`
+- A different column renamed to `user_id`, such as `m.orphaned_by_id AS user_id`
+- A subquery column aliased to `user_id`, such as selecting from a subquery that returns a computed `user_id`
+
+If you receive the error "sql - Please select only the following columns: user_id" but your query already selects the `user_id` column, check whether your query uses any of these patterns. The preview may work even if the query fails to save.
+
+**Tip:**
+
+
+Use `GROUP BY c.user_id` or `DISTINCT c.user_id` directly from your source table instead of aliasing or computing the `user_id` column.
+
+
+
 #### Additional rules
 
 Additionally, your standard SQL query must adhere to the following rules:

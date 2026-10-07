@@ -54,7 +54,9 @@ To use a specific property from an object output variable, use dot notation to a
 
 ### Step 4: Add optional step instructions
 
-You can include optional step instructions for anything your agent needs to know that is specific to this step and not already covered in the agent's main instructions. You can enter any Liquid templated values that you would normally use in a Canvas.
+You can include optional step instructions for anything your agent needs to know that is specific to this step and not already covered in the agent's main instructions. 
+
+You can enter any Liquid-templated values that you would normally use in a Canvas. Step instructions can't include `abort_message`.
 
 ### Step 5: Test the agent {#step-5-test-the-agent}
 
@@ -78,6 +80,7 @@ For how Braze handles agent failures, rate limit errors, and invocation flow con
 - If the connected model returns a [rate limit error](https://www.braze.com/docs/user_guide/brazeai/agents/reference#rate-limit-errors) from the LLM provider, Braze continuously retries the request using exponential backoff until the call succeeds or Braze determines it cannot be completed; users then proceed to the next Canvas step.
 - For other failures (such as a timeout error or invalid API key), or when an agent reaches its daily invocation limit, the output variable is set to `null` unless the agent has [fallback values configured](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents#configure-fallback-values) in Agent Console. When fallback values are configured, Braze renders the fallback with Liquid per user and stores the result in the output variable, including when the daily limit blocks an invocation.
 - If you do not configure fallback values, use [default Liquid values](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/setting_default_values) in downstream Message steps to handle null outputs. For example, in the **Add Personalization** modal, you can enter a default Liquid value such as `{{context.${response_variable_name}.push_title | default: 'Hello friend!'}}` or `{{context.${response_variable_name}.push_body | default: 'Open our app to get your prize!'}}`.
+- If the fallback output calls `abort_message` for a user, Braze handles that user as if no fallback were configured. When the agent succeeds, the fallback isn't used, so an `abort_message` call in the fallback has no effect.
 - Responses are cached for identical inputs and may be reused for repeated identical invocations within a few minutes.
     - Responses that use cached values do still count toward total and daily invocations.
 - Agent steps may take time to process a large batch of users. Braze queues invocations according to [invocation flow controls](https://www.braze.com/docs/user_guide/brazeai/agents/reference#invocation-flow-controls), so users may remain pending during high-volume sends. Check your logs to verify that invocations are happening.

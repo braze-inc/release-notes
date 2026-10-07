@@ -1258,6 +1258,12 @@ braze.logCustomEvent("ecommerce.order_refunded", {
 
 
 
+### Google Tag Manager {#google-tag-manager}
+
+If you use Google Tag Manager (GTM), use the **Log eCommerce Event (New)** tag type in the Braze Actions tag instead of calling `logEcommerceEvent()` in your site's code. The tag reads your GA4-format eCommerce data layer and supports the `ecommerce.product_viewed`, `ecommerce.cart_updated`, `ecommerce.checkout_started`, and `ecommerce.order_placed` events. It also supports event and product metadata. To log `ecommerce.order_cancelled` or `ecommerce.order_refunded`, use a **Custom HTML** tag that calls `braze.logCustomEvent()`.
+
+For setup steps, field mapping, and troubleshooting, see [Log eCommerce events with GTM](https://www.braze.com/docs/developer_guide/sdk_integration/google_tag_manager?sdktab=web#web_log-ecommerce-events-with-gtm).
+
 ## Manual logging with `logCustomEvent` {#manual-logging-with-logcustomevent}
 
 To manually log a recommended event, call `logCustomEvent` with the exact event name (for example, `ecommerce.product_viewed`) and a manually built `BrazeProperties` or `JSONObject` payload. The SDK does not validate recommended-event schemas for manual calls. Braze validates these payloads during ingestion:

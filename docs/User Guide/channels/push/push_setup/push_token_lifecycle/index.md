@@ -81,6 +81,18 @@ iOS does not automatically generate push tokens for an app when it's installed. 
 | **iOS 11 or earlier** | No                          | All users must explicitly opt-in to receive push notifications. A push token is generated only after permission is granted.                                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Push token registration" }
 
+**Note:**
+
+
+Braze assumes imported push tokens are valid foreground push tokens for your app and environment.
+
+When you import iOS tokens, Braze doesn't store an Apple Push Notification service (APNs) gateway (`development` or `production`) for them. Braze sends to these tokens through your app's configured gateway. If a token was generated for the other environment, APNs rejects it with `BadDeviceToken`, and the send bounces.
+
+Braze stores a gateway for the token only if the SDK later registers the same token and reports a gateway.
+
+
+
+
 
 
 ### Checking user's push subscription state

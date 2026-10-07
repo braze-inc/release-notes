@@ -66,6 +66,8 @@ The following messages listed are for example purposes and may not exactly match
 
 The messages in the Message Activity Log can come from a variety of sources: Braze, your apps or platforms, or our third-party partners. This means there is an infinite number of messages that could possibly appear in this log—as you can imagine, we can't list them all!
 
+`abort_message` calls in Context and Agent steps aren't logged here, because those steps don't send a message. To check whether a context variable was set, use the step's _Not Updated_ metric or [Preview user paths](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths).
+
 For example, some potential "Block" messages, in addition to the one listed in the preceding table, could be:
 
 - Unfortunately, messages from [_IP_ADDRESS_] weren't sent. Please contact your Internet Service provider since part of their network is on our block list.

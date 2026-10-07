@@ -14,7 +14,15 @@ For best results, refer to the following image size and message length guideline
 (iOS) 2:1 *Recommended* | 500&nbsp;KB | 5&nbsp;MB | PNG, JPEG, GIF
 (Android) Push icon | 500&nbsp;KB | 5&nbsp;MB | PNG, JPEG
 (Android) Expanded notification | 500&nbsp;KB | 5&nbsp;MB | PNG, JPEG
+(Android) Inline image | 500&nbsp;KB | 5&nbsp;MB | PNG, JPEG
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 aria-label="iOS and Android push" }
+
+**Note:**
+
+
+Inline image push uses a 3:2 aspect ratio.
+
+
 
 
 

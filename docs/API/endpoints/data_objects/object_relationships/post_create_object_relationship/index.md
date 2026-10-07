@@ -1,4 +1,4 @@
-<div id='api_yqjjgwmonljr' class='api_div' data-search-keywords='create object relationship rel_kind related_type_name related_object_id anchor attributes object_relationship to_data_object type_name object_id name'>
+<div id='api_tuodkfeexnmg' class='api_div' data-search-keywords='create object relationship rel_kind related_type_name related_object_id attributes object_relationship to_data_object type_name object_id name'>
 <h1 id="create-object-relationship">Create object relationship</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/data_objects/objects/{type_name}/{object_id}/object_relationships</p>
@@ -82,12 +82,6 @@
       <td>Related object identifier</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">anchor</code></td>
-      <td>Optional</td>
-      <td>String</td>
-      <td><code class="language-plaintext highlighter-rouge">source</code> (default) or <code class="language-plaintext highlighter-rouge">target</code></td>
-    </tr>
-    <tr>
       <td><code class="language-plaintext highlighter-rouge">attributes</code></td>
       <td>Optional</td>
       <td>Object</td>
@@ -108,12 +102,10 @@
 4
 5
 6
-7
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"rel_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subaccount"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"related_type_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"related_object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-456"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"anchor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"source"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></div></div>
@@ -131,7 +123,6 @@
 7
 8
 9
-10
 </pre></td><td class="rouge-code"><pre>curl <span class="nt">--location</span> <span class="nt">--request</span> POST <span class="s1">'https://rest.iad-01.braze.com/data_objects/objects/account/acct-123/object_relationships'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Authorization: Bearer YOUR_REST_API_KEY'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
@@ -139,7 +130,6 @@
   "rel_kind": "subaccount",
   "related_type_name": "account",
   "related_object_id": "acct-456",
-  "anchor": "source",
   "attributes": {}
 }'</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
@@ -204,15 +194,15 @@
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">object_relationship.to_data_object</code></td>
-      <td>Conditional</td>
+      <td>Optional</td>
       <td>Object</td>
-      <td>Related object when <code class="language-plaintext highlighter-rouge">anchor=source</code></td>
+      <td>Related object</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">object_relationship.from_data_object</code></td>
-      <td>Conditional</td>
+      <td>Optional</td>
       <td>Object</td>
-      <td>Related object when <code class="language-plaintext highlighter-rouge">anchor=target</code></td>
+      <td>Related object</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">object_relationship.to_data_object.type_name</code></td>
@@ -274,8 +264,8 @@
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">400</code></td>
-      <td>Unknown <code class="language-plaintext highlighter-rouge">rel_kind</code>, invalid <code class="language-plaintext highlighter-rouge">anchor</code>, invalid related type for the relationship kind, or schema violation</td>
-      <td>Confirm <code class="language-plaintext highlighter-rouge">rel_kind</code> is valid for the type pair, use a valid <code class="language-plaintext highlighter-rouge">anchor</code>, and ensure <code class="language-plaintext highlighter-rouge">attributes</code> match the relationship schema.</td>
+      <td>Unknown <code class="language-plaintext highlighter-rouge">rel_kind</code>, invalid related type for the relationship kind, or schema violation</td>
+      <td>Confirm <code class="language-plaintext highlighter-rouge">rel_kind</code> is valid for the type pair and ensure <code class="language-plaintext highlighter-rouge">attributes</code> match the relationship schema.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">404</code></td>

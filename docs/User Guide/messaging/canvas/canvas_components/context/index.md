@@ -178,6 +178,7 @@ A context variable is considered invalid when:
 
 - A call to an embedded Connected Content fails.
 - The Liquid expression at runtime returns a value that doesn't match the data type or is empty (null).
+- The Liquid expression calls `{% abort_message() %}`.
 
 For example, if the context variable data type is **Number** but the Liquid expression returns a string, it is invalid.
 
@@ -188,6 +189,43 @@ In these circumstances:
 When troubleshooting, monitor the _Not Updated_ metric to check that your context variable is updating correctly. If the context variable is invalid, your users can continue in your Canvas past the Context step, but may not qualify for later steps.
 
 Refer to [Data types](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables#data-types) for the example setups for each data type.
+
+A context variable can also be skipped on purpose with `abort_message`. See [Using `abort_message` in a context variable](#using-abort_message-in-a-context-variable).
+
+### Using `abort_message` in a context variable
+
+You can use the [`abort_message`](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages) Liquid tag in a context variable's value to skip that variable for some users. In a Context step, `abort_message` affects only the variable it's in. It doesn't stop the step, and it doesn't exit the user from the Canvas.
+
+When a context variable's Liquid calls `abort_message` for a user:
+
+- The variable isn't set for that user. If an earlier Context step already set this variable, the user keeps that earlier value.
+- The other variables in the step are still evaluated and set.
+- Later variables in the same step that reference this variable do not receive a new value from that variable.
+- The user advances to the next step.
+- The Canvas step analytics count the variable as _Not Updated_.
+
+For example, this variable is set to `true` for users in France and skipped for everyone else:
+
+
+```liquid
+{% if ${country} == "France" %}
+  true
+{% else %}
+  {% abort_message("Not in France") %}
+{% endif %}
+```
+
+
+When you preview user paths, a skipped variable appears as "**variable_name** was not updated because the Liquid logic triggered an abort".
+
+If later steps depend on this variable, plan for users who don't have it set. For example, you can route them with an Audience Paths step.
+
+**Note:**
+
+
+Context step aborts aren't recorded in the Message Activity Log, and the reason you pass to `abort_message` isn't shown.
+
+
 
 ### Delays in sending with Connected Content
 

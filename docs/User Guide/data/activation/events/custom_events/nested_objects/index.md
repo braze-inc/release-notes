@@ -129,7 +129,16 @@ Templating in Liquid in a message triggered by the "Ordered" event:
 
 ### Message triggering
 
-To use these properties to trigger a campaign, select your custom event or purchase, then add a **Nested Property** filter. The **Place Order** and **Update Cart** [eCommerce triggers](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events#property-filters) accept the same filter types. Note that message triggering is not yet supported for in-app messages, but nested properties in Liquid personalization in the messages will still display.
+To use these properties to trigger a campaign or Canvas, select your custom event or purchase, then add a **Nested Property** filter. The **Place Order** and **Update Cart** [eCommerce triggers](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events#property-filters) accept the same filter types.
+
+**Important:**
+
+
+**Nested Property** filters aren't supported for in-app message triggers. You can still use nested properties for Liquid personalization in in-app messages.
+
+Top-level (basic) event property filters—including array-typed properties—can be used to trigger in-app messages. Those filters are separate from **Nested Property** filters.
+
+
 
 
 
