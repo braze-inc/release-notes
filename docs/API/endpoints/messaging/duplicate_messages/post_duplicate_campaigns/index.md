@@ -1,4 +1,4 @@
-<div id='api_pxngqkrmwbat' class='api_div' data-search-keywords='duplicate campaigns using the api'>
+<div id='api_qqevehrfxfyy' class='api_div' data-search-keywords='duplicate campaigns using the api'>
 <h1 id="duplicate-campaigns-using-the-api">Duplicate campaigns using the API</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/duplicate</p>

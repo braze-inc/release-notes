@@ -2,18 +2,6 @@
 
 > SCIM group role mapping lets you provision Braze dashboard permissions through your identity provider (IdP). Your IdP pushes groups and their members to Braze over SCIM, you map each group to a custom role, and every member of that group inherits the role's permissions.
 
-
-
-
-**Important:**
-
-
- is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-
-
-
-
-
 SCIM group role mapping moves permission assignment to your IdP, so you can manage membership where you manage access, and Braze keeps your permissions in sync. This means you don't have to grant permissions one user at a time or make matching changes in your IdP and Braze.
 
 ## How it works
@@ -36,7 +24,6 @@ Group members must already be SCIM-provisioned Braze users. Mapping a group gran
 | ----------- | ------- |
 | SCIM provisioning | You must have an active SCIM integration with Okta or Microsoft Entra ID. Group role mapping reuses the same SCIM token, IP allowlist, and rate limits as [automated user provisioning](https://www.braze.com/docs/user_guide/administer/global/user_management/automated_user_provisioning). |
 | Custom roles | Custom roles must be enabled for your company. SCIM groups map to custom roles, not to individual [Braze permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) or permission sets. |
-| Feature access | SCIM group role mapping must be turned on for your workspace by your Braze account manager. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Supported identity providers
@@ -75,6 +62,8 @@ Members that your IdP sends but that don't yet exist as Braze users are skipped 
 3. In the role's info panel, find **SCIM user group mapping**.
 4. Select one or more groups provisioned from your IdP.
 5. Save the role.
+
+![The "Edit Role" page with the "Marketer UK" SCIM group selected in the "SCIM user group mapping" field.](https://www.braze.com/docs/assets/img/braze_permissions/scim_group_role_mapping.png?92e777de0d9a73069e4df9d782198f4d)
 
 Every member of the selected groups inherits the role's permissions. The roles list shows how many SCIM groups map to each role.
 
