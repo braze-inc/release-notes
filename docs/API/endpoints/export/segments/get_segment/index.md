@@ -1,4 +1,4 @@
-<div id='api_ueawlmgohoht' class='api_div' data-search-keywords='export segment list'>
+<div id='api_srywcqmzoope' class='api_div' data-search-keywords='export segment list'>
 <h1 id="export-segment-list">Export segment list</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/segments/list</p>

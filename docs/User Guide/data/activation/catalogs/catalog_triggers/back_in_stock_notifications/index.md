@@ -213,4 +213,5 @@ Use the Liquid tag ``{% catalog_items <name_of_your_catalog> {{context.${catalog
 - Users are only subscribed for 90 days. If the item isn't back in stock in 90 days, the user is unsubscribed.
 - When using the **Notify all subscribed users** notification rule, Braze will notify 100,000 users over 10 minutes.
 - Braze supports up to 50,000 updated items daily that are eligible for triggering back-in-stock notifications. You can have up to 100 million active subscriptions at a given time, where each subscription represents a user profile subscribed to watch a catalog item.
+- When you export subscribed users from your catalog settings, the CSV file includes up to 10,000 subscriptions, even if the catalog has more active subscriptions.
 

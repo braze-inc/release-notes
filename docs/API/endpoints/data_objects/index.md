@@ -58,6 +58,63 @@ For throttled requests, Braze returns `429` and an error payload with `id` and `
 }
 ```
 
+## Product limits
+
+This section lists the limits Braze enforces for Data Objects and what to expect when you reach one.
+
+### Count limits
+
+These limits apply to your company as a whole unless noted otherwise. Your Braze account team can adjust the default values for your company.
+
+| Limit | Default value |
+|---|---|
+| Data object records per company (across all workspaces) | 1,000,000 |
+| Fields per data object type | 500 |
+| Data objects linked to one user | 1,000 |
+| Users linked to one data object | 10,000 |
+| Object relationships for one data object | 1,000 |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Data Objects count limits" }
+
+### Field and value limits
+
+These limits are fixed for all companies.
+
+| Limit | Value |
+|---|---|
+| Attribute value length | 255 characters |
+| `object_id` length and format | 250 characters. Letters, numbers, hyphens, and underscores only. |
+| Field name length and format | 250 characters. Letters, numbers, and underscores only, and can't start with an underscore. |
+| Reserved field names | `id`, `external_id`, `object_id`, and `display_name` can't be used as custom field names. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Data Objects field and value limits" }
+
+### What happens when you reach a limit
+
+A request that would exceed a count limit returns `422` with an error `id` that identifies the limit:
+
+```json
+{
+  "errors": [
+    {
+      "id": "data-object-record-limit-exceeded",
+      "message": "This company has reached its data object record limit"
+    }
+  ]
+}
+```
+
+| Limit | Error `id` |
+|---|---|
+| Data object records per company | `data-object-record-limit-exceeded` |
+| Fields per data object type | `data-object-field-limit-exceeded` |
+| Data objects linked to one user | `data-objects-per-user-limit-exceeded` |
+| Users linked to one data object | `users-per-data-object-limit-exceeded` |
+| Object relationships for one data object | `data-object-relationship-limit-exceeded` |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Data Objects limit error IDs" }
+
+Your existing records and relationships stay in place—only the request that would exceed the limit is rejected. To make room under a limit, delete records you no longer need or remove relationships you no longer use. To raise a count limit, contact your Braze account team.
+
+Requests that fail validation, such as an `object_id` or attribute value that's too long, return `400`. Requests over the rate limit return `429`.
+
 ## Core concepts
 
 This section defines the key identifiers used across all Data Objects endpoints.
@@ -177,4 +234,4 @@ This section summarizes status and error response patterns used across the Data 
 
 - `404`, `409`, `422`, and `429` return an `errors` array with `id` and `message`.
 - `400`, `401`, and `403` return a single `error` string.
-- Contract-based `422` limits vary by company.
+- `422` means the request would exceed a [product limit](#product-limits). Default limit values vary by company contract.

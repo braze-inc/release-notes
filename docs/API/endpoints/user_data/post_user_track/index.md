@@ -1,4 +1,4 @@
-<div id='api_drsdtfgsctqg' class='api_div' data-search-keywords='create and update users attributes events purchases group_id message attributes_processed events_processed purchases_processed errors type'>
+<div id='api_esdmgbmwottb' class='api_div' data-search-keywords='create and update users attributes events purchases group_id message attributes_processed events_processed purchases_processed errors type'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
@@ -797,9 +797,18 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 <p>Successful <code class="language-plaintext highlighter-rouge">/users/track</code> calls are usually accepted quickly, but Braze still processes attribute, event, and purchase updates asynchronously. Perceived latency can increase when payloads are large or when network routing to your <a href="/docs/api/basics#endpoints">REST endpoint</a> is slow. If you need a synchronous acknowledgment per user or stricter ordering between calls, see <a href="/docs/api/endpoints/user_data/post_user_track_synchronous"><code class="language-plaintext highlighter-rouge">/users/track/sync</code></a> (<strong>limited beta</strong>).</p>
 
-<h3 id="how-do-rate-limits-affect-userstrack">How do rate limits affect <code class="language-plaintext highlighter-rouge">/users/track</code>?</h3>
+<h3 id="why-does-userstrack-return-429-too-many-requests">Why does <code class="language-plaintext highlighter-rouge">/users/track</code> return <code class="language-plaintext highlighter-rouge">429 Too Many Requests</code>?</h3>
 
-<p>When you approach your <a href="#rate-limit">rate limit</a>, you receive <code class="language-plaintext highlighter-rouge">429</code> responses. For non-<code class="language-plaintext highlighter-rouge">429</code> responses on supported contracts, you can use the <code class="language-plaintext highlighter-rouge">X-RateLimit-*</code> response headers described in <a href="#rate-limit-headers-for-monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau">Rate limit headers for Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU</a> to see how much of your current window remains.</p>
+<p>When your request volume exceeds the <a href="#rate-limit">rate limit</a>, <code class="language-plaintext highlighter-rouge">/users/track</code> returns an HTTP <code class="language-plaintext highlighter-rouge">429 Too Many Requests</code> response. To resume sending requests:</p>
+
+<ol>
+  <li>Pause requests for the number of seconds specified in the <code class="language-plaintext highlighter-rouge">X-RateLimit-Retry-After</code> response header.</li>
+  <li>Resume requests at a lower rate to reduce the likelihood of another <code class="language-plaintext highlighter-rouge">429</code> response.</li>
+  <li>Combine updates when possible, and follow the <a href="#rate-limit">request object limit for your account</a>.</li>
+  <li>Use the <a href="/docs/user_guide/analytics/dashboards/api_usage">API usage dashboard</a> to identify request spikes and <code class="language-plaintext highlighter-rouge">429</code> response trends. For workspace defaults and other endpoint limits, see <a href="/docs/api/api_limits">API rate limits</a>.</li>
+</ol>
+
+<p>For non-<code class="language-plaintext highlighter-rouge">429</code> responses on supported contracts, use the <code class="language-plaintext highlighter-rouge">X-RateLimit-*</code> response headers described in <a href="#rate-limit-headers-for-monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau">Rate limit headers for Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU</a> to check the remaining requests in the current window.</p>
 
 <h3 id="why-do-i-get-400-bad-request-with-a-bad-syntax-or-parse-error">Why do I get <code class="language-plaintext highlighter-rouge">400 Bad Request</code> with a bad syntax or parse error?</h3>
 
@@ -845,6 +854,6 @@ Authorization: Bearer YOUR_REST_API_KEY
   </tbody>
 </table>
 
-<p>Note that the <code class="language-plaintext highlighter-rouge">RateLimit-Limit</code>, <code class="language-plaintext highlighter-rouge">RateLimit-Remaining</code>, and <code class="language-plaintext highlighter-rouge">RateLimit-Reset</code> headers are not returned when you hit an HTTP <code class="language-plaintext highlighter-rouge">429</code> error. When the error occurs, those headers are replaced with an <code class="language-plaintext highlighter-rouge">X-Ratelimit-Retry-After</code> header that returns an integer indicating the number of seconds before you can start making requests.</p>
+<p>Note that the <code class="language-plaintext highlighter-rouge">RateLimit-Limit</code>, <code class="language-plaintext highlighter-rouge">RateLimit-Remaining</code>, and <code class="language-plaintext highlighter-rouge">RateLimit-Reset</code> headers are not returned when you hit an HTTP <code class="language-plaintext highlighter-rouge">429</code> error. When the error occurs, those headers are replaced with an <code class="language-plaintext highlighter-rouge">X-RateLimit-Retry-After</code> header that returns an integer indicating the number of seconds before you can start making requests.</p>
 
 </div>

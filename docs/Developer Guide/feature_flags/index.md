@@ -53,6 +53,25 @@ import * as braze from "@braze/web-sdk";
 const featureFlag = braze.getFeatureFlag("enable_live_chat");
 const [liveChatEnabled, setLiveChatEnabled] = useState(featureFlag.enabled);
 
+// - Available in version 7.0.0+
+// Listen for events from the Braze SDK
+braze.subscribeToFeatureFlagsEvents((event) => {
+  switch (event.type) {
+    case braze.ChannelEventType.CACHE_REPLAY:
+    case braze.ChannelEventType.CACHE_LOAD:
+    case braze.ChannelEventType.DATA_UPDATED: {
+      const flag = event.cacheSnapshot.featureFlags.find((f) => f.id === "enable_live_chat");
+      setLiveChatEnabled(flag ? flag.enabled : false);
+      break;
+    }
+    case braze.ChannelEventType.ERROR:
+      if (event.reason === braze.ChannelErrorReason.FEATURE_DISABLED) {
+        setLiveChatEnabled(false);
+      }
+      break;
+  }
+});
+
 // Listen for updates from the Braze SDK
 braze.subscribeToFeatureFlagsUpdates(() => {
     const newValue = braze.getFeatureFlag("enable_live_chat").enabled;
@@ -66,6 +85,10 @@ return (<>
 </>)
 ```
 
+Use `subscribeToFeatureFlagsEvents` on Web SDK 7.0.0 and later. `subscribeToFeatureFlagsUpdates` is the earlier pattern, deprecated as of 7.0.0.
+
+For the full list of events you can receive, see [Creating feature flags](https://www.braze.com/docs/developer_guide/feature_flags/create?tab=web#updates).
+
 
 
 
@@ -73,6 +96,21 @@ return (<>
 // Get the initial value from the Braze SDK
 FeatureFlag featureFlag = braze.getFeatureFlag("enable_live_chat");
 Boolean liveChatEnabled = featureFlag != null && featureFlag.getEnabled();
+
+// - Available in version 44.0.0+
+// Listen for events from the Braze SDK
+braze.subscribeToFeatureFlagsEvents(event -> {
+  if (event instanceof FeatureFlagsEvent.CacheReplay || event instanceof FeatureFlagsEvent.CacheLoad || event instanceof FeatureFlagsEvent.DataUpdated) {
+    FeatureFlag newFeatureFlag = braze.getFeatureFlag("enable_live_chat");
+    Boolean newValue = newFeatureFlag != null && newFeatureFlag.getEnabled();
+    liveChatEnabled = newValue;
+  } else if (event instanceof FeatureFlagsEvent.ErrorEvent) {
+    FeatureFlagsEvent.ErrorEvent errorEvent = (FeatureFlagsEvent.ErrorEvent) event;
+    if (errorEvent.getReason() instanceof ChannelErrorReason.FeatureDisabled) {
+      liveChatEnabled = false;
+    }
+  }
+});
 
 // Listen for updates from the Braze SDK
 braze.subscribeToFeatureFlagsUpdates(event -> {
@@ -89,6 +127,8 @@ if (liveChatEnabled) {
 }
 ```
 
+Use `subscribeToFeatureFlagsEvents` on Android SDK 44.0.0 and later. `subscribeToFeatureFlagsUpdates` is the earlier pattern, deprecated as of 44.0.0.
+
 
 
 
@@ -97,8 +137,25 @@ if (liveChatEnabled) {
 val featureFlag = braze.getFeatureFlag("enable_live_chat")
 var liveChatEnabled = featureFlag?.enabled
 
+// - Available in version 44.0.0+
+// Listen for events from the Braze SDK
+braze.subscribeToFeatureFlagsEvents { event ->
+  when (event) {
+    is FeatureFlagsEvent.CacheReplay, is FeatureFlagsEvent.CacheLoad, is FeatureFlagsEvent.DataUpdated -> {
+      val newValue = braze.getFeatureFlag("enable_live_chat")?.enabled
+      liveChatEnabled = newValue
+    }
+    is FeatureFlagsEvent.ErrorEvent -> {
+      if (event.reason is ChannelErrorReason.FeatureDisabled) {
+        liveChatEnabled = false
+      }
+    }
+    else -> {}
+  }
+}
+
 // Listen for updates from the Braze SDK
-braze.subscribeToFeatureFlagsUpdates() { event ->
+braze.subscribeToFeatureFlagsUpdates {
   val newValue = braze.getFeatureFlag("enable_live_chat")?.enabled
   liveChatEnabled = newValue
 }
@@ -111,6 +168,8 @@ if (liveChatEnabled) {
 }
 
 ```
+
+Use `subscribeToFeatureFlagsEvents` on Android SDK 44.0.0 and later. `subscribeToFeatureFlagsUpdates` is the earlier pattern, deprecated as of 44.0.0.
 
 
 
@@ -143,8 +202,20 @@ In Objective-C:
 let featureFlag = braze.featureFlags.featureFlag(id: "enable_live_chat")
 var liveChatEnabled = featureFlag?.enabled ?? false
 
+// - Available in version 19.0.0+
+// Listen for events from the Braze SDK
+let cancellable = braze.featureFlags.subscribeToEvents { event in
+  switch event {
+  case .cacheReplay, .cacheLoad, .dataUpdated:
+    let newValue = braze.featureFlags.featureFlag(id: "enable_live_chat")?.enabled ?? false
+    liveChatEnabled = newValue
+  default:
+    break
+  }
+}
+
 // Listen for updates from the Braze SDK
-braze.featureFlags.subscribeToUpdates() { _ in  
+let cancellable = braze.featureFlags.subscribeToUpdates { _ in
   let newValue = braze.featureFlags.featureFlag(id: "enable_live_chat")?.enabled ?? false
   liveChatEnabled = newValue
 }
@@ -153,8 +224,12 @@ braze.featureFlags.subscribeToUpdates() { _ in
 liveChatView.isHidden = !liveChatEnabled
 ```
 
+Use `subscribeToEvents(_:)` on Swift SDK 19.0.0 and later. `subscribeToUpdates(_:)` is the earlier pattern, deprecated as of 19.0.0.
 
 
+
+
+For when each event fires, and what each update reason, retry state, analytics action, and error reason means, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
 
 ### Remotely control app variables
 
@@ -531,4 +606,5 @@ Even if the same feature flag matches multiple criteria, such as if it's used in
 
 
 To purchase the paid version of feature flags, contact your Braze account manager, or request an upgrade in the Braze dashboard.
+
 

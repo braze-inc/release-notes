@@ -162,7 +162,7 @@ Take note of your certificate's expiration date. See [Updating Azure credentials
 
 Next, give your app registration permission to write to your container.
 
-Navigate to your storage account and select **Access Control (IAM)** > **+ Add** > **Add role assignment**. Then:
+In your storage account, navigate to **Data storage** > **Containers** and select the container you want Braze to write to. Then select **Access Control (IAM)** > **+ Add** > **Add role assignment**, and:
 
 1. On the **Role** tab, select **[Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor)**.
 2. On the **Members** tab, select **User, group, or service principal**, select **+ Select members**, and search for the app registration name you created in [Step 1](#cert-sp-1).
@@ -172,10 +172,12 @@ For detailed steps, see Microsoft's [Assign an Azure role for access to blob dat
 
 ![The Access Control (IAM) Role assignments tab for a storage account, showing a service principal and a group assigned the Storage Blob Data Contributor role.](https://www.braze.com/docs/assets/img/azure-currents-cert-sp-1.png?2a8a86630e352dd6a15d725a72750e01)
 
-**Note:**
+**Tip:**
 
 
-Assign the role at the **storage account** level rather than on an individual container.
+We recommend assigning the role on the container Braze writes to, so Braze can access only that container. Assigning it at the storage account level also works.
+
+Role assignments can take up to 30 minutes to take effect. If the credential check fails when you save your integration, wait a few minutes and try again.
 
 
 

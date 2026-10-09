@@ -62,10 +62,10 @@ Banner refresh behavior has two paths:
 1. **Explicit refresh:** You can call the refresh method at any point during an active session.
 2. **Automatic refresh on a new session:** After you make at least one explicit refresh request, the SDK can re-request the most recently requested placement IDs when a new Braze session starts (for example, after `changeUser()` or after a session timeout).
 
-The role of `subscribeToBannersUpdates()` differs by platform:
+The role of subscribing to Banner events differs by platform:
 
-- **iOS and Android:** `subscribeToBannersUpdates()` (or `subscribeToUpdates()` on Swift) registers an update callback. The automatic session-start refresh is not dependent on the subscription being active.
-- **Web:** The automatic session-start refresh is tied to `subscribeToBannersUpdates()` being registered. Without an active subscription, the SDK does not automatically repeat the refresh on a new session.
+- **iOS and Android:** `subscribeToBannersEvents()` on Android (or `subscribeToEvents()` on Swift) registers an event handler. The automatic session-start refresh is not dependent on the subscription being active.
+- **Web:** The automatic session-start refresh is tied to `subscribeToBannersEvents()` (or the deprecated `subscribeToBannersUpdates()`) being registered. Without an active subscription, the SDK does not automatically repeat the refresh on a new session.
 
 In all cases, you must make at least one explicit refresh request per app lifecycle so the SDK knows which placement IDs to keep updated. Banners are not fetched automatically on first launch without that initial call, and the tracked placement IDs reset after the app restarts.
 
@@ -166,44 +166,136 @@ If you insert Banners using the SDK methods in this guide, all analytics events 
 
 
 
+<div id='sdk-versions'><a href='/docs/developer_guide/platforms/web/changelog/#700' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 7.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
-If you're using vanilla JavaScript with the Web Braze SDK, use [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) to listen for placement updates and then call [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) to fetch them.
+Use [`subscribeToBannersEvents`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersevents) to listen for Banner events, and then call [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) to fetch placements. The SDK calls your handler with an event object. Switch on `event.type` to handle each kind of event. For more information about the event values, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
+
+
+
+If you're using vanilla JavaScript with the Web Braze SDK, register your handler before you call `requestBannersRefresh`.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.subscribeToBannersUpdates((banners) => {
+const placementIds = ["global_banner", "navigation_square_banner"];
+
+// - Available in version 7.0.0+
+const subscriptionId = braze.subscribeToBannersEvents((event) => {
+  switch (event.type) {
+    case braze.ChannelEventType.CACHE_REPLAY:
+      // Sent once, right away, with the Banners that are already cached.
+      // Render them now instead of waiting for the network.
+      console.log("Cached Banners:", Object.keys(event.cacheSnapshot.banners));
+      break;
+
+    case braze.ChannelEventType.CACHE_LOAD:
+      // The cache changed without a refresh, such as after changeUser().
+      // The snapshot can be empty, so clear Banners from the previous user.
+      console.log("Cache reloaded:", Object.keys(event.cacheSnapshot.banners));
+      break;
+
+    case braze.ChannelEventType.DATA_UPDATED:
+      // A refresh finished, even if nothing changed, or a Banner was dismissed.
+      console.log("Banners were updated:", event.reason);
+      break;
+
+    case braze.ChannelEventType.ERROR:
+      switch (event.retryState) {
+        case braze.RetryState.SDK_WILL_RETRY:
+          // The SDK is retrying. Keep the current Banners and wait.
+          break;
+        case braze.RetryState.INTEGRATOR_MAY_RETRY: {
+          // The SDK stopped retrying. Try again later, and limit how often you retry.
+          const delayMs = event.rateLimitedUntil
+            ? Math.max(event.rateLimitedUntil.getTime() - Date.now(), 0)
+            : 30000;
+          setTimeout(() => braze.requestBannersRefresh(placementIds), delayMs);
+          break;
+        }
+        case braze.RetryState.DO_NOT_RETRY:
+          // The failure is final. For example, Banners are disabled for this workspace.
+          if (event.reason === braze.ChannelErrorReason.FEATURE_DISABLED) {
+            // Hide the Banner containers.
+          }
+          break;
+      }
+      break;
+  }
+});
+
+const deprecatedSubscriptionId = braze.subscribeToBannersUpdates((banners) => {
   console.log("Banners were updated");
 });
 
-// always refresh after your subscriber function has been registered
-braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
+// Always refresh after your subscriber function has been registered
+braze.requestBannersRefresh(placementIds);
+
+// Remove the subscription when you no longer need it
+// braze.removeSubscription(subscriptionId);
 ```
 
 
-If you're using React with the Web Braze SDK, set up [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) inside a `useEffect` hook and call [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) after registering your listener.
+If you're using React with the Web Braze SDK, set up `subscribeToBannersEvents` inside a `useEffect` hook and call `requestBannersRefresh` after registering your listener.
 
 ```typescript
 import * as braze from "@braze/web-sdk";
 
 useEffect(() => {
-  const subscriptionId = braze.subscribeToBannersUpdates((banners) => {
+  const placementIds = ["global_banner", "navigation_square_banner"];
+
+  // - Available in version 7.0.0+
+  const subscriptionId = braze.subscribeToBannersEvents((event) => {
+    switch (event.type) {
+      case braze.ChannelEventType.CACHE_REPLAY:
+      case braze.ChannelEventType.CACHE_LOAD:
+        // Cached Banners, sent right away on subscribe or after the cache reloads
+        console.log("Cached Banners:", Object.keys(event.cacheSnapshot.banners));
+        break;
+
+      case braze.ChannelEventType.DATA_UPDATED:
+        // A refresh finished, even if nothing changed, or a Banner was dismissed
+        console.log("Banners were updated:", event.reason);
+        break;
+
+      case braze.ChannelEventType.ERROR:
+        if (event.retryState === braze.RetryState.INTEGRATOR_MAY_RETRY) {
+          // The SDK stopped retrying. Try again later, and limit how often you retry.
+          const delayMs = event.rateLimitedUntil
+            ? Math.max(event.rateLimitedUntil.getTime() - Date.now(), 0)
+            : 30000;
+          setTimeout(() => braze.requestBannersRefresh(placementIds), delayMs);
+        }
+        break;
+    }
+  });
+
+  const deprecatedSubscriptionId = braze.subscribeToBannersUpdates((banners) => {
     console.log("Banners were updated");
   });
 
-  // always refresh after your subscriber function has been registered
-  braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
+  // Always refresh after your subscriber function has been registered
+  braze.requestBannersRefresh(placementIds);
 
-  // cleanup listeners
+  // Cleanup listeners
   return () => {
     braze.removeSubscription(subscriptionId);
-  }
+    braze.removeSubscription(deprecatedSubscriptionId);
+  };
 }, []);
 ```
 
 
 
+For when each event fires, and what each update reason, retry state, analytics action, and error reason means, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
 
+`event.cacheSnapshot.banners` is an object that maps each placement ID to its `Banner`. It can include placements from earlier refreshes, not only the placement IDs from your most recent `requestBannersRefresh` call. If you care only about certain placements, read those placement IDs from the snapshot and skip the rest.
+
+Use `subscribeToBannersEvents` on Web SDK 7.0.0 and later. `subscribeToBannersUpdates` is the earlier pattern, deprecated as of 7.0.0. The earlier pattern only delivers the current Banners, so it can't tell you why the Banners changed or when a refresh failed.
+
+
+
+
+<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1900' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 19.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 **Note:**
 
@@ -213,6 +305,25 @@ Your banner update listener reflects the SDK's in-memory banner state. A single 
 
 
 ```swift
+// - Available in version 19.0.0+
+let placementIds = ["global_banner", "navigation_square_banner"]
+let cancellable = brazeClient.braze()?.banners.subscribeToEvents { event in
+  switch event {
+  case .cacheReplay(let cacheSnapshot), .cacheLoad(let cacheSnapshot):
+    cacheSnapshot.banners.forEach { placementId, banner in
+      print("Received banner: \(banner) with placement ID: \(placementId)")
+    }
+  case .dataUpdated(let cacheSnapshot, let reason):
+    cacheSnapshot.banners.forEach { placementId, banner in
+      print("Received banner: \(banner) with placement ID: \(placementId)")
+    }
+  default:
+    break
+  }
+}
+// Always refresh after your subscriber is registered
+brazeClient.braze()?.banners.requestBannersRefresh(placementIds: placementIds)
+
 let placementIds = ["global_banner", "navigation_square_banner"]
 let cancellable = brazeClient.braze()?.banners.subscribeToUpdates { banners in
   banners.forEach { placementId, banner in
@@ -223,13 +334,19 @@ let cancellable = brazeClient.braze()?.banners.subscribeToUpdates { banners in
 brazeClient.braze()?.banners.requestBannersRefresh(placementIds: placementIds)
 ```
 
+Use `subscribeToEvents(_:)` on Swift SDK 19.0.0 and later. `subscribeToUpdates(_:)` is the earlier pattern, deprecated as of 19.0.0.
+
+For when each event fires, and what each update reason, retry state, analytics action, and error reason means, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
 
 
+
+
+<div id='sdk-versions'><a href='/docs/developer_guide/platforms/android/changelog/#4400' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 44.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 **Note:**
 
 
-Your banner update listener reflects the SDK's in-memory banner state. A single update can include placements that were already cached (for example, from an earlier refresh, another screen, or automatic SDK work), not only the placement IDs from your most recent `requestBannersRefresh` call. If you care only about certain placements, check each banner's placement ID in your listener and skip the rest. When you've registered your listener, call `requestBannersRefresh` for the placements you want to sync from Braze.
+Your banner event handler reflects the SDK's in-memory banner state. A single event can include placements that were already cached (for example, from an earlier refresh, another screen, or automatic SDK work), not only the placement IDs from your most recent `requestBannersRefresh` call. If you care only about certain placements, check each banner's placement ID in your handler and skip the rest. When you've registered your subscriber, call `requestBannersRefresh` for the placements you want to sync from Braze.
 
 
 
@@ -240,13 +357,33 @@ Your banner update listener reflects the SDK's in-memory banner state. A single 
 ArrayList<String> placementIds = new ArrayList<>();
 placementIds.add("global_banner");
 placementIds.add("navigation_square_banner");
-Braze.getInstance(context).subscribeToBannersUpdates(banners -> {
-  for (Banner banner : banners.getBanners()) {
+
+// - Available in version 44.0.0+
+Braze.getInstance(context).subscribeToBannersEvents(event -> {
+  if (event instanceof BannersEvent.CacheReplay) {
+    logBanners(((BannersEvent.CacheReplay) event).getCacheSnapshot());
+  } else if (event instanceof BannersEvent.CacheLoad) {
+    logBanners(((BannersEvent.CacheLoad) event).getCacheSnapshot());
+  } else if (event instanceof BannersEvent.DataUpdated) {
+    logBanners(((BannersEvent.DataUpdated) event).getCacheSnapshot());
+  }
+});
+// Always refresh after your subscriber is registered
+Braze.getInstance(context).requestBannersRefresh(placementIds);
+
+Braze.getInstance(context).subscribeToBannersUpdates(event -> {
+  for (Banner banner : event.getBanners()) {
     Log.d(TAG, "Received banner: " + banner.getPlacementId());
   }
 });
 // Always refresh after your subscriber is registered
 Braze.getInstance(context).requestBannersRefresh(placementIds);
+
+private void logBanners(BannersCacheSnapshot cacheSnapshot) {
+  for (Banner banner : cacheSnapshot.getBanners().values()) {
+    Log.d(TAG, "Received banner: " + banner.getPlacementId());
+  }
+}
 ```
 
 
@@ -254,16 +391,42 @@ Braze.getInstance(context).requestBannersRefresh(placementIds);
 
 ```kotlin
 val placementIds = listOf("global_banner", "navigation_square_banner")
-Braze.getInstance(context).subscribeToBannersUpdates { update ->
-  for (banner in update.banners) {
-    Log.d(TAG, "Received banner: " + banner.placementId)
+
+// - Available in version 44.0.0+
+Braze.getInstance(context).subscribeToBannersEvents { event ->
+  when (event) {
+    is BannersEvent.CacheReplay -> logBanners(event.cacheSnapshot)
+    is BannersEvent.CacheLoad -> logBanners(event.cacheSnapshot)
+    is BannersEvent.DataUpdated -> logBanners(event.cacheSnapshot)
+    else -> {}
   }
 }
 // Always refresh after your subscriber is registered
 Braze.getInstance(context).requestBannersRefresh(placementIds)
+
+Braze.getInstance(context).subscribeToBannersUpdates { event ->
+  event.banners.forEach { banner ->
+    Log.d(TAG, "Received banner: ${banner.placementId}")
+  }
+}
+// Always refresh after your subscriber is registered
+Braze.getInstance(context).requestBannersRefresh(placementIds)
+
+private fun logBanners(cacheSnapshot: BannersCacheSnapshot) {
+  cacheSnapshot.banners.values.forEach { banner ->
+    Log.d(TAG, "Received banner: ${banner.placementId}")
+  }
+}
 ```
 
 
+
+
+Events arrive on a background thread. Switch to the main thread before updating views.
+
+Use `subscribeToBannersEvents` on Android SDK 44.0.0 and later. `subscribeToBannersUpdates` is the earlier pattern, deprecated as of 44.0.0.
+
+For when each event fires, and what each update reason, retry state, analytics action, and error reason means, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
 
 
 
@@ -346,6 +509,37 @@ braze.initialize("sdk-api-key", {
   allowUserSuppliedJavascript: true, // banners require you to opt-in to user-supplied javascript
 });
 
+// - Available in version 7.0.0+
+braze.subscribeToBannersEvents((event) => {
+  const container = document.getElementById("global-banner-container");
+
+  switch (event.type) {
+    case braze.ChannelEventType.CACHE_REPLAY:
+    case braze.ChannelEventType.CACHE_LOAD:
+    case braze.ChannelEventType.DATA_UPDATED: {
+      // get this placement's banner. If it's missing the user did not qualify for one.
+      const globalBanner = event.cacheSnapshot.banners["global_banner"];
+      if (!globalBanner) {
+        container.style.display = "none";
+        return;
+      }
+
+      // Insert the banner which replaces the innerHTML of that container
+      braze.insertBanner(globalBanner, container);
+
+      // Special handling if the user is part of a Control Variant
+      container.style.display = globalBanner.isControl ? "none" : "";
+      break;
+    }
+    case braze.ChannelEventType.ERROR:
+      if (event.reason === braze.ChannelErrorReason.FEATURE_DISABLED) {
+        // Banners are disabled, so hide the container
+        container.style.display = "none";
+      }
+      break;
+  }
+});
+
 braze.subscribeToBannersUpdates((banners) => {
   // get this placement's banner. If it's `null` the user did not qualify for one.
   const globalBanner = braze.getBanner("global_banner");
@@ -353,7 +547,6 @@ braze.subscribeToBannersUpdates((banners) => {
     return;
   }
 
-  // choose where in the DOM you want to insert the banner HTML
   const container = document.getElementById("global-banner-container");
 
   // Insert the banner which replaces the innerHTML of that container
@@ -368,6 +561,8 @@ braze.subscribeToBannersUpdates((banners) => {
 
 braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
+
+Use `subscribeToBannersEvents` on Web SDK 7.0.0 and later. `subscribeToBannersUpdates` is the earlier pattern, deprecated as of 7.0.0.
 
 
 
@@ -812,7 +1007,7 @@ These are the minimum SDK versions required to dismiss a banner programmatically
 
 
 
-Pass the `Banner` object to `braze.dismissBanner()`. You can get the `Banner` object from `braze.getAllBanners()` or from a `subscribeToBannersUpdates` callback.
+Pass the `Banner` object to `braze.dismissBanner()`. You can get the `Banner` object from `braze.getAllBanners()` or from the `cacheSnapshot.banners` object of a `subscribeToBannersEvents` event.
 
 
 
@@ -856,6 +1051,8 @@ Braze.getInstance(context).dismissBanner("your-placement-id")
 
 
 
+`dismissBanner()` removes the Banner from cache and publishes `BannersEvent.DataUpdated` with `ChannelUpdateReason.CLIENT_ACTION` so custom UIs can re-render. `BannerView` widgets hide when they receive `BannerDismissedEvent`. `BannersEvent.DismissEvent` is the analytics lifecycle for that dismissal, not a signal to hide the view.
+
 
 
 
@@ -897,7 +1094,7 @@ Use [`Banner.subscribeToDismissedEvent()`](https://js.appboycdn.com/web-sdk/late
 **Note:**
 
 
-`Banner.subscribeToDismissedEvent()` requires Web SDK 6.9.0 or later. On earlier versions, use `braze.subscribeToBannersUpdates()` and detect dismissal by checking whether the banner is no longer present in the updated banners map.
+`Banner.subscribeToDismissedEvent()` requires Web SDK 6.9.0 or later. On earlier versions, use `braze.subscribeToBannersUpdates()` and detect dismissal by checking whether the banner is no longer present in the updated banners map. On Web SDK 7.0.0 or later, you can also listen for the `DISMISS` event from `braze.subscribeToBannersEvents()`.
 
 
 
@@ -905,6 +1102,26 @@ Use [`Banner.subscribeToDismissedEvent()`](https://js.appboycdn.com/web-sdk/late
 
 ```javascript
 import * as braze from "@braze/web-sdk";
+
+// - Available in version 7.0.0+
+braze.subscribeToBannersEvents((event) => {
+  if (
+    event.type !== braze.ChannelEventType.CACHE_REPLAY &&
+    event.type !== braze.ChannelEventType.CACHE_LOAD &&
+    event.type !== braze.ChannelEventType.DATA_UPDATED
+  ) {
+    return;
+  }
+
+  const banner = event.cacheSnapshot.banners["global_banner"];
+
+  if (banner) {
+    banner.subscribeToDismissedEvent(() => {
+      // Run any custom logic here, such as logging custom analytics
+      console.log("Banner was dismissed");
+    });
+  }
+});
 
 braze.subscribeToBannersUpdates((banners) => {
   const banner = banners["global_banner"];
@@ -920,13 +1137,35 @@ braze.subscribeToBannersUpdates((banners) => {
 braze.requestBannersRefresh(["global_banner"]);
 ```
 
+Use `subscribeToBannersEvents` on Web SDK 7.0.0 and later. `subscribeToBannersUpdates` is the earlier pattern, deprecated as of 7.0.0.
+
 
 ```typescript
 import { useEffect } from "react";
 import * as braze from "@braze/web-sdk";
 
 useEffect(() => {
-  const subscriptionId = braze.subscribeToBannersUpdates((banners) => {
+  // - Available in version 7.0.0+
+  const subscriptionId = braze.subscribeToBannersEvents((event) => {
+    if (
+      event.type !== braze.ChannelEventType.CACHE_REPLAY &&
+      event.type !== braze.ChannelEventType.CACHE_LOAD &&
+      event.type !== braze.ChannelEventType.DATA_UPDATED
+    ) {
+      return;
+    }
+
+    const banner = event.cacheSnapshot.banners["global_banner"];
+
+    if (banner) {
+      banner.subscribeToDismissedEvent(() => {
+        // Run any custom logic here, such as logging custom analytics
+        console.log("Banner was dismissed");
+      });
+    }
+  });
+
+  const deprecatedSubscriptionId = braze.subscribeToBannersUpdates((banners) => {
     const banner = banners["global_banner"];
 
     if (banner) {
@@ -941,9 +1180,12 @@ useEffect(() => {
 
   return () => {
     braze.removeSubscription(subscriptionId);
+    braze.removeSubscription(deprecatedSubscriptionId);
   };
 }, []);
 ```
+
+Use `subscribeToBannersEvents` on Web SDK 7.0.0 and later. `subscribeToBannersUpdates` is the earlier pattern, deprecated as of 7.0.0.
 
 
 

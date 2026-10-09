@@ -5,7 +5,7 @@
 ## Prerequisites
 
 Before creating WhatsApp templates, you must complete the [WhatsApp setup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup) and have:
-- An active WhatsApp Business Account (WABA) connected to Braze
+- An active WhatsApp Business Account (WABA) connected to Braze through the native WhatsApp integration or the [BYO WhatsApp connector](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/byo_connector)
 - Appropriate subscription groups configured within your WABA
 - Media assets (images or videos) ready for upload
 - Braze permissions for non-admin users

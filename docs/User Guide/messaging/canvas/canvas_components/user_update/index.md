@@ -70,7 +70,7 @@ The following is an example of adding an item to the wishlist:
           {
             "product_id": "SKU-123",
             "product_name": "Wireless Headphones",
-            "added_at": "{{$isoTimestamp}}"
+            "added_at": "{{'now' | date: '%Y-%m-%dT%H:%M:%S%z'}}"
           }
         ]
       }
@@ -101,7 +101,7 @@ Track when a user has items in their shopping cart, when they add new items or r
          "product_id": array,
          "gift": boolean,
          "discount_code": "enum",
-         "timestamp": {"$time" : "{{$isoTimestamp}}"},
+         "timestamp": {"$time" : "{{'now' | date: '%Y-%m-%dT%H:%M:%S%z'}}"}
        }
       ]
     }
@@ -129,7 +129,7 @@ The `shopping_cart` attribute carries the total of many custom events: the total
          "product_id": ["1001", "1002"],
          "gift": true,
          "discount_code": "flashsale1000",
-         "timestamp": {"$time" : "{{$isoTimestamp}}"},
+         "timestamp": {"$time" : "{{'now' | date: '%Y-%m-%dT%H:%M:%S%z'}}"}
        }
       ]
     }
