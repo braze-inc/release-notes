@@ -58,7 +58,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.braze.Braze
-import com.braze.events.ContentCardsUpdatedEvent
+import com.braze.events.ContentCardsEvent
+import com.braze.events.ChannelErrorReason
 import com.braze.events.IEventSubscriber
 import com.braze.models.cards.*
 
@@ -69,16 +70,28 @@ fun ContentCardInboxScreen() {
     val loggedImpressions = remember { mutableSetOf<String>() }
 
     DisposableEffect(Unit) {
-        val subscriber = IEventSubscriber<ContentCardsUpdatedEvent> { event ->
-            cards = event.allCards.filter { !it.isControl }
+        val subscriber = IEventSubscriber<ContentCardsEvent> { event ->
+            when (event) {
+                is ContentCardsEvent.CacheReplay,
+                is ContentCardsEvent.CacheLoad,
+                is ContentCardsEvent.DataUpdated -> {
+                    cards = event.cacheSnapshot.cards.filter { !it.isControl }
+                }
+                is ContentCardsEvent.ErrorEvent -> {
+                    if (event.reason is ChannelErrorReason.FeatureDisabled) {
+                        cards = emptyList()
+                    }
+                }
+                else -> {}
+            }
         }
 
-        Braze.getInstance(context).subscribeToContentCardsUpdates(subscriber)
-        Braze.getInstance(context).requestContentCardsRefresh(false)
+        Braze.getInstance(context).subscribeToContentCardsEvents(subscriber)
+        Braze.getInstance(context).requestContentCardsRefresh()
 
         onDispose {
             Braze.getInstance(context)
-                .removeSingleSubscription(subscriber, ContentCardsUpdatedEvent::class.java)
+                .removeSingleSubscription(subscriber, ContentCardsEvent::class.java)
         }
     }
 
@@ -174,28 +187,30 @@ lines-MainApplication.kt=12
 To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
-lines-ContentCardsInboxScreen.kt=47-69
+lines-ContentCardsInboxScreen.kt=60-83
 
 #### 2. Build a UI view
 
 For Jetpack Compose, use a [`LazyColumn`](<https://developer.android.com/develop/ui/compose/lists#lazy>) to display Content Cards in a scrollable list.
 
 !!step
-lines-ContentCardsInboxScreen.kt=25-37
+lines-ContentCardsInboxScreen.kt=26-50
 
-#### 3. Subscribe to Content Card updates
+#### 3. Subscribe to Content Card events
 
-Use a [`DisposableEffect`](<https://developer.android.com/develop/ui/compose/side-effects#disposableeffect>) to manage the subscription lifecycle, ensuring proper cleanup when the composable leaves the composition.
+Use a [`DisposableEffect`](<https://developer.android.com/develop/ui/compose/side-effects#disposableeffect>) to manage the subscription lifecycle, ensuring proper cleanup when the composable leaves the composition. `subscribeToContentCardsEvents` delivers a `CacheReplay` handshake immediately with whatever is cached, then `CacheLoad` or `DataUpdated` when the cache changes.
+
+For the full list of events you can receive, see [Subscribe to card updates](https://www.braze.com/docs/developer_guide/content_cards/creating_cards?tab=android#step-2-subscribe-to-card-updates).
 
 !!step
-lines-ContentCardsInboxScreen.kt=84-95
+lines-ContentCardsInboxScreen.kt=110-131
 
 #### 4. Build a custom inbox UI
 
 Using the content card [attributes](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) such as `title`, `description`, and `url` allows you to build Content Cards to match your specific UI requirements. In this case, we're building an inbox with Jetpack Compose's `Card` and `Column` composables.
 
 !!step
-lines-ContentCardsInboxScreen.kt=57,62
+lines-ContentCardsInboxScreen.kt=68,93
 
 #### 5. Track impressions and clicks
 
@@ -243,13 +258,14 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.*
 import android.widget.TextView
 import com.braze.Braze
-import com.braze.events.ContentCardsUpdatedEvent
+import com.braze.events.ContentCardsEvent
+import com.braze.events.ChannelErrorReason
 import com.braze.events.IEventSubscriber
 import com.braze.models.cards.*
 
 class ContentCardsActivity : ComponentActivity() {
     private val cards = mutableListOf<Card>()
-    private var subscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
+    private var subscriber: IEventSubscriber<ContentCardsEvent>? = null
     private lateinit var recyclerView: RecyclerView
     private val adapter = ContentCardAdapter()
 
@@ -263,10 +279,25 @@ class ContentCardsActivity : ComponentActivity() {
 
         // Prepare the subscriber (attach/detach in onStart/onStop)
         subscriber = IEventSubscriber { event ->
-            runOnUiThread {
-                cards.clear()
-                cards.addAll(event.allCards.filter { !it.isControl })
-                adapter.notifyDataSetChanged()
+            when (event) {
+                is ContentCardsEvent.CacheReplay,
+                is ContentCardsEvent.CacheLoad,
+                is ContentCardsEvent.DataUpdated -> {
+                    runOnUiThread {
+                        cards.clear()
+                        cards.addAll(event.cacheSnapshot.cards.filter { !it.isControl })
+                        adapter.notifyDataSetChanged()
+                    }
+                }
+                is ContentCardsEvent.ErrorEvent -> {
+                    if (event.reason is ChannelErrorReason.FeatureDisabled) {
+                        runOnUiThread {
+                            cards.clear()
+                            adapter.notifyDataSetChanged()
+                        }
+                    }
+                }
+                else -> {}
             }
         }
     }
@@ -274,16 +305,16 @@ class ContentCardsActivity : ComponentActivity() {
     override fun onStart() {
         super.onStart()
         subscriber?.let {
-            Braze.getInstance(this).subscribeToContentCardsUpdates(it)
+            Braze.getInstance(this).subscribeToContentCardsEvents(it)
         }
         // Fetch fresh cards
-        Braze.getInstance(this).requestContentCardsRefresh(false)
+        Braze.getInstance(this).requestContentCardsRefresh()
     }
 
     override fun onStop() {
         // Avoid leaks by removing the subscription when not visible
         Braze.getInstance(this)
-            .removeSingleSubscription(subscriber, ContentCardsUpdatedEvent::class.java)
+            .removeSingleSubscription(subscriber, ContentCardsEvent::class.java)
         super.onStop()
     }
 
@@ -377,21 +408,23 @@ lines-content_card_inbox.xml=1-24
 In this tutorial, we use Android's [`RecyclerView`](<https://developer.android.com/develop/ui/views/layout/recyclerview>) to display Content Cards, but we recommend building a UI with classes and components that suits your use case. Braze provides the UI by default, but this tutorial guides you to create a custom view to customize the appearance and behavior.
 
 !!step
-lines-ContentCardInboxActivity.kt=29-35,40-42,44
+lines-ContentCardInboxActivity.kt=30-61
 
-#### 3. Subscribe to Content Card updates
+#### 3. Subscribe to Content Card events
 
-Use [`subscribeToContentCardsUpdates`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-content-cards-updates.html?query=abstract%20fun%20subscribeToContentCardsUpdates(subscriber:%20IEventSubscriber%3CContentCardsUpdatedEvent%3E)>) to allow your UI to respond when new Content Cards are available. Here, subscribers are registered and removed within the activity lifecycle hooks.
+Use `subscribeToContentCardsEvents` to allow your UI to respond when new Content Cards are available. Here, subscribers are registered and removed within the activity lifecycle hooks.
+
+For the full list of events you can receive, see [Subscribe to card updates](https://www.braze.com/docs/developer_guide/content_cards/creating_cards?tab=android#step-2-subscribe-to-card-updates).
 
 !!step
-lines-ContentCardInboxActivity.kt=73-84
+lines-ContentCardInboxActivity.kt=86-108
 
 #### 4. Build a custom inbox UI
 
 Using the Content Card [attributes](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) such as `title`, `description`, and `url` allows you to build Content Cards to match your specific UI requirements. In this case, we're building an inbox with Android's native `RecyclerView`.
 
 !!step
-lines-ContentCardInboxActivity.kt=90,93
+lines-ContentCardInboxActivity.kt=106,108
 
 #### 5. Track impressions and clicks
 
@@ -490,9 +523,17 @@ class BrazeInboxViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CardCell")
         tableView.rowHeight = 100
 
-        subscription = AppDelegate.braze.contentCards.subscribeToUpdates { [weak self] updatedCards in
-            self?.cards = updatedCards
-            self?.tableView.reloadData()
+        subscription = AppDelegate.braze.contentCards.subscribeToEvents { [weak self] event in
+            switch event {
+            case .cacheReplay(let cacheSnapshot), .cacheLoad(let cacheSnapshot):
+                self?.cards = cacheSnapshot.cards
+                self?.tableView.reloadData()
+            case .dataUpdated(let cacheSnapshot, _):
+                self?.cards = cacheSnapshot.cards
+                self?.tableView.reloadData()
+            default:
+                break
+            }
         }
 
         AppDelegate.braze.contentCards.requestRefresh()
@@ -550,21 +591,23 @@ lines-BrazeInboxView.swift=5
 In this tutorial, we use Swift's [`UITableViewController`](https://developer.apple.com/documentation/uikit/uitableviewcontroller), but we recommend building a UI with classes and components that suits your use case.
 
 !!step
-lines-BrazeInboxView.swift=15-20
+lines-BrazeInboxView.swift=15-28
 
-#### 3. Subscribe to Content Card updates
+#### 3. Subscribe to Content Card events
 
-Subscribe to the Content Cards listener to receive the latest updates, and then call `requestRefresh()` to request the latest Content Cards for that user.
+Subscribe to Content Cards events to receive the latest updates, and then call `requestRefresh()` to request the latest Content Cards for that user.
+
+For the full list of events you can receive, see [Subscribe to card updates](https://www.braze.com/docs/developer_guide/content_cards/creating_cards?tab=swift#step-2-subscribe-to-card-updates).
 
 !!step
-lines-BrazeInboxView.swift=34-35
+lines-BrazeInboxView.swift=42-43
 
 #### 4. Build a custom inbox UI
 
 Using the Content Card [`attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) such as `title`, `description`, and `imageUrl` allows you to build Content Cards to match your specific UI requirements. In this case, we're building an inbox with Swift's native table APIs.
 
 !!step
-lines-BrazeInboxView.swift=8,43,49-56
+lines-BrazeInboxView.swift=8,51,57-64
 
 #### 5. Track impressions and clicks
 
@@ -687,10 +730,20 @@ function renderCards(cards) {
   });
 }
 
-// Subscribe to updates *then* ask for a refresh
-braze.subscribeToContentCardsUpdates((updates) => {
-  const cards = updates.cards || [];
-  renderCards(cards);
+// Subscribe to events *then* ask for a refresh
+braze.subscribeToContentCardsEvents((event) => {
+  switch (event.type) {
+    case braze.ChannelEventType.CACHE_REPLAY:
+    case braze.ChannelEventType.CACHE_LOAD:
+    case braze.ChannelEventType.DATA_UPDATED:
+      renderCards(event.cacheSnapshot.contentCards.cards);
+      break;
+    case braze.ChannelEventType.ERROR:
+      if (event.reason === braze.ChannelErrorReason.FEATURE_DISABLED) {
+        listEl.textContent = ""; // Content Cards is disabled
+      }
+      break;
+  }
 });
 
 braze.requestContentCardsRefresh();
@@ -762,11 +815,13 @@ lines-index.html=1-44
 Create a UI for the inbox page. Here, we're building a basic HTML page, which includes a `div` with the id `cards-list`. This is used as the target container for rendering Content Cards.
 
 !!step
-lines-main.js=96-99,101
+lines-main.js=96-109,111
 
-#### 3. Subscribe to Content Card updates
+#### 3. Subscribe to Content Card events
 
-Subscribe to the Content Cards listener to receive the latest updates, and then call [`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) to request the latest Content Cards for that user. Alternatively, call the subscriber before `openSession()` for an automatic refresh on session start. 
+Use `subscribeToContentCardsEvents()` on Web SDK 7.0.0 and later to receive the cached cards and the latest updates, and then call [`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) to request the latest Content Cards for that user. Alternatively, call the subscriber before `openSession()` for an automatic refresh on session start.
+
+`subscribeToContentCardsUpdates()` is the earlier pattern, deprecated as of 7.0.0. For the full list of events you can receive, see [Subscribe to card updates](https://www.braze.com/docs/developer_guide/content_cards/creating_cards?tab=web#step-2-subscribe-to-card-updates).
 
 !!step
 lines-main.js=64,67,70-74

@@ -44,6 +44,8 @@ Continue using Content Cards if you need:
 
 ## Migration guide
 
+Some samples show two subscription patterns. Use the pattern marked `Available in version` on Web SDK 7.0.0, Android SDK 44.0.0, or Swift SDK 19.0.0 and later. The other pattern, `subscribeTo…Updates` (`subscribeToUpdates` on Swift), is deprecated as of those versions. For more information, see [Migrate from update subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions#migrate-from-update-subscriptions).
+
 ### Prerequisites
 
 Before migrating, ensure your Braze SDK meets the minimum version requirements:
@@ -56,7 +58,7 @@ Dismissals and re-eligibility require the following minimum SDK versions:
 
 <div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1410' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 14.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#671' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.7.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#4210' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 42.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
-### Subscribe to updates
+### Subscribe to updates and events
 
 #### Content Cards approach
 
@@ -65,9 +67,28 @@ Dismissals and re-eligibility require the following minimum SDK versions:
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.subscribeToContentCardsUpdates((cards) => {
+// - Available in version 7.0.0+
+braze.subscribeToContentCardsEvents((event) => {
+  switch (event.type) {
+    case braze.ChannelEventType.CACHE_REPLAY:
+    case braze.ChannelEventType.CACHE_LOAD:
+    case braze.ChannelEventType.DATA_UPDATED:
+      // Handle array of cards
+      event.cacheSnapshot.contentCards.cards.forEach(card => {
+        console.log("Card:", card.id);
+      });
+      break;
+    case braze.ChannelEventType.ERROR:
+      if (event.reason === braze.ChannelErrorReason.FEATURE_DISABLED) {
+        console.log("Content Cards is disabled for this workspace.");
+      }
+      break;
+  }
+});
+
+braze.subscribeToContentCardsUpdates((updates) => {
   // Handle array of cards
-  cards.forEach(card => {
+  updates.cards.forEach(card => {
     console.log("Card:", card.id);
   });
 });
@@ -75,9 +96,25 @@ braze.subscribeToContentCardsUpdates((cards) => {
 
 
 ```kotlin
-Braze.getInstance(context).subscribeToContentCardsUpdates { cards ->
-  // Handle array of cards
-  cards.forEach { card ->
+// - Available in version 44.0.0+
+Braze.getInstance(context).subscribeToContentCardsEvents { event ->
+  when (event) {
+    is ContentCardsEvent.CacheReplay -> {
+      event.cacheSnapshot.cards.forEach { card ->
+        Log.d(TAG, "Card: ${card.id}")
+      }
+    }
+    is ContentCardsEvent.ErrorEvent -> {
+      if (event.reason is ChannelErrorReason.FeatureDisabled) {
+        Log.d(TAG, "Content Cards is disabled for this app or user.")
+      }
+    }
+    else -> {}
+  }
+}
+
+Braze.getInstance(context).subscribeToContentCardsUpdates { event ->
+  event.allCards.forEach { card ->
     Log.d(TAG, "Card: ${card.id}")
   }
 }
@@ -85,7 +122,25 @@ Braze.getInstance(context).subscribeToContentCardsUpdates { cards ->
 
 
 ```swift
-braze.contentCards.subscribeToUpdates { cards in
+// - Available in version 19.0.0+
+let cancellable = braze.contentCards.subscribeToEvents { event in
+  switch event {
+  case .cacheReplay(let cacheSnapshot), .cacheLoad(let cacheSnapshot):
+    // Handle array of cards
+    for card in cacheSnapshot.cards {
+      print("Card: \(card.id)")
+    }
+  case .dataUpdated(let cacheSnapshot, _):
+    // Handle array of cards
+    for card in cacheSnapshot.cards {
+      print("Card: \(card.id)")
+    }
+  default:
+    break
+  }
+}
+
+let cancellable = braze.contentCards.subscribeToUpdates { cards in
   // Handle array of cards
   for card in cards {
     print("Card: \(card.id)")
@@ -123,6 +178,27 @@ StreamSubscription contentCardsStreamSubscription = braze.subscribeToContentCard
 ```javascript
 import * as braze from "@braze/web-sdk";
 
+// - Available in version 7.0.0+
+braze.subscribeToBannersEvents((event) => {
+  switch (event.type) {
+    case braze.ChannelEventType.CACHE_REPLAY:
+    case braze.ChannelEventType.CACHE_LOAD:
+    case braze.ChannelEventType.DATA_UPDATED: {
+      // Get banner for specific placement
+      const banner = event.cacheSnapshot.banners["sample_placement_id"];
+      if (banner) {
+        console.log("Banner received for placement:", banner.placementId);
+      }
+      break;
+    }
+    case braze.ChannelEventType.ERROR:
+      if (event.reason === braze.ChannelErrorReason.FEATURE_DISABLED) {
+        console.log("Banners is disabled for this workspace.");
+      }
+      break;
+  }
+});
+
 braze.subscribeToBannersUpdates((banners) => {
   // Get banner for specific placement
   const banner = braze.getBanner("sample_placement_id");
@@ -134,8 +210,25 @@ braze.subscribeToBannersUpdates((banners) => {
 
 
 ```kotlin
-Braze.getInstance(context).subscribeToBannersUpdates { update ->
-  // Get banner for specific placement
+// - Available in version 44.0.0+
+Braze.getInstance(context).subscribeToBannersEvents { event ->
+  when (event) {
+    is BannersEvent.CacheReplay, is BannersEvent.CacheLoad, is BannersEvent.DataUpdated -> {
+      val banner = Braze.getInstance(context).getBanner("sample_placement_id")
+      if (banner != null) {
+        Log.d(TAG, "Banner received for placement: ${banner.placementId}")
+      }
+    }
+    is BannersEvent.ErrorEvent -> {
+      if (event.reason is ChannelErrorReason.FeatureDisabled) {
+        Log.d(TAG, "Banners is disabled for this app or user.")
+      }
+    }
+    else -> {}
+  }
+}
+
+Braze.getInstance(context).subscribeToBannersUpdates {
   val banner = Braze.getInstance(context).getBanner("sample_placement_id")
   if (banner != null) {
     Log.d(TAG, "Banner received for placement: ${banner.placementId}")
@@ -145,7 +238,22 @@ Braze.getInstance(context).subscribeToBannersUpdates { update ->
 
 
 ```swift
-braze.banners.subscribeToUpdates { banners in
+// - Available in version 19.0.0+
+let cancellable = braze.banners.subscribeToEvents { event in
+  switch event {
+  case .cacheReplay, .cacheLoad, .dataUpdated:
+    // Get banner for specific placement
+    braze.banners.getBanner(for: "sample_placement_id") { banner in
+      guard let banner = banner else { return }
+
+      print("Banner received for placement: \(banner.placementId)")
+    }
+  default:
+    break
+  }
+}
+
+let cancellable = braze.banners.subscribeToUpdates { banners in
   // Get banner for specific placement
   braze.banners.getBanner(for: "sample_placement_id") { banner in
     guard let banner = banner else { return }
@@ -281,6 +389,29 @@ for (final card in cards) {
 
 
 ```javascript
+// - Available in version 7.0.0+
+braze.subscribeToBannersEvents((event) => {
+  if (
+    event.type !== braze.ChannelEventType.CACHE_REPLAY &&
+    event.type !== braze.ChannelEventType.CACHE_LOAD &&
+    event.type !== braze.ChannelEventType.DATA_UPDATED
+  ) {
+    return;
+  }
+
+  const banner = event.cacheSnapshot.banners["sample_placement_id"];
+  if (!banner) {
+    return;
+  }
+
+  const container = document.getElementById("global-banner-container");
+  braze.insertBanner(banner, container);
+
+  if (banner.isControl) {
+    container.style.display = "none";
+  }
+});
+
 braze.subscribeToBannersUpdates((banners) => {
   const banner = braze.getBanner("sample_placement_id");
   if (!banner) {
@@ -707,6 +838,32 @@ for (final card in cards) {
 
 
 ```javascript
+// - Available in version 7.0.0+
+braze.subscribeToBannersEvents((event) => {
+  if (
+    event.type !== braze.ChannelEventType.CACHE_REPLAY &&
+    event.type !== braze.ChannelEventType.CACHE_LOAD &&
+    event.type !== braze.ChannelEventType.DATA_UPDATED
+  ) {
+    return;
+  }
+
+  const banner = event.cacheSnapshot.banners["sample_placement_id"];
+  if (!banner) {
+    return;
+  }
+
+  const container = document.getElementById("global-banner-container");
+
+  // Always call insertBanner to track impression (including control)
+  braze.insertBanner(banner, container);
+
+  // Hide if control group
+  if (banner.isControl) {
+    container.style.display = "none";
+  }
+});
+
 braze.subscribeToBannersUpdates((banners) => {
   const banner = braze.getBanner("sample_placement_id");
   if (!banner) {

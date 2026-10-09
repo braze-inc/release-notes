@@ -1,4 +1,4 @@
-<div id='api_bihvogwdkypc' class='api_div' data-search-keywords='trigger a sync message'>
+<div id='api_kwfinfjfdkcz' class='api_div' data-search-keywords='trigger a sync message'>
 <h1 id="trigger-a-sync">Trigger a sync</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/cdi/integrations/{integration_id}/sync</p>
@@ -86,6 +86,10 @@
     <tr>
       <td><code class="language-plaintext highlighter-rouge">404 Integration not found</code></td>
       <td>No integration exists for the given integration ID. Make sure that your integration ID is valid.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">409 Integration must be active to trigger a sync</code></td>
+      <td>The integration isn’t active. This can happen when the sync is paused. Resume the sync in the Braze dashboard, then try again.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">429 Another job is in progress</code></td>

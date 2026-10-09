@@ -1,4 +1,4 @@
-<div id='api_pqsbkceyeymj' class='api_div' data-search-keywords='duplicate canvases using the api'>
+<div id='api_spbdyktldfea' class='api_div' data-search-keywords='duplicate canvases using the api'>
 <h1 id="duplicate-canvases-using-the-api">Duplicate Canvases using the API</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/duplicate</p>

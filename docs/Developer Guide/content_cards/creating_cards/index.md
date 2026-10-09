@@ -1,6 +1,6 @@
 # Create Content Cards
 
-> This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases. It assumes you've already read the other articles in the Content Card customization guide to understand what can be done by default and what requires custom code. It's especially helpful to understand how to [log analytics](https://www.braze.com/docs/developer_guide/content_cards/logging_analytics) for your custom Content Cards. 
+> This article discusses the basic approach you use when implementing custom Content Cards, as well as three common use cases. It assumes you've already read the other articles in the Content Card customization guide to understand what can be done by default and what requires custom code. It's especially helpful to understand how to [log analytics](https://www.braze.com/docs/developer_guide/content_cards/logging_analytics) for your custom Content Cards. 
 
 **Tip:**
 
@@ -45,12 +45,15 @@ All properties outside of `id` and `extras` are optional to parse for custom Con
 
 
 
+<div id='sdk-versions'><a href='/docs/developer_guide/platforms/web/changelog/#700' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 7.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+
+Use [`subscribeToContentCardsEvents`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsevents) to receive Content Card events. The SDK calls your handler with an event object. Switch on `event.type` to handle each kind of event. For more information about the event values, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
+
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.subscribeToContentCardsUpdates((updates) => {
-  const cards = updates.cards;
-// For example:
+function renderCards(cards) {
+  // For example:
   cards.forEach(card => {
     if (card.isControl) {
       // Do not display the control card, but remember to call `logContentCardImpressions([card])`
@@ -61,20 +64,78 @@ braze.subscribeToContentCardsUpdates((updates) => {
     else if (card instanceof braze.ImageOnly) {
       // Use `card.imageUrl`, etc.
     }
-  })
+  });
+}
+
+// - Available in version 7.0.0+
+const subscriptionId = braze.subscribeToContentCardsEvents((event) => {
+  switch (event.type) {
+    case braze.ChannelEventType.CACHE_REPLAY:
+      // Sent once, right away, with the cards that are already cached.
+      // Render them now instead of waiting for the network.
+      renderCards(event.cacheSnapshot.contentCards.cards);
+      break;
+
+    case braze.ChannelEventType.CACHE_LOAD:
+      // The cache changed without a refresh, such as after changeUser().
+      // The snapshot can be empty, so clear cards from the previous user.
+      renderCards(event.cacheSnapshot.contentCards.cards);
+      break;
+
+    case braze.ChannelEventType.DATA_UPDATED:
+      // A refresh finished, even if no cards changed, or a card was dismissed.
+      renderCards(event.cacheSnapshot.contentCards.cards);
+      break;
+
+    case braze.ChannelEventType.ERROR:
+      switch (event.retryState) {
+        case braze.RetryState.SDK_WILL_RETRY:
+          // The SDK is retrying. Keep the current cards and wait.
+          break;
+        case braze.RetryState.INTEGRATOR_MAY_RETRY: {
+          // The SDK stopped retrying. Try again later, and limit how often you retry.
+          const delayMs = event.rateLimitedUntil
+            ? Math.max(event.rateLimitedUntil.getTime() - Date.now(), 0)
+            : 30000;
+          setTimeout(() => braze.requestContentCardsRefresh(), delayMs);
+          break;
+        }
+        case braze.RetryState.DO_NOT_RETRY:
+          // The failure is final. For example, Content Cards are disabled for this workspace.
+          if (event.reason === braze.ChannelErrorReason.FEATURE_DISABLED) {
+            // Hide your Content Cards UI.
+          }
+          break;
+      }
+      break;
+  }
+});
+
+const deprecatedSubscriptionId = braze.subscribeToContentCardsUpdates((updates) => {
+  renderCards(updates.cards);
 });
 
 braze.openSession();
+
+// Remove the subscription when you no longer need it
+// braze.removeSubscription(subscriptionId);
 ```
 
 **Note:**
 
 
-Content Cards only refresh on session start if `subscribeToContentCardsUpdates()` is called before `openSession()`. You can also [manually refresh the feed](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/feed) at any time.
+Content Cards only refresh on session start if you call `subscribeToContentCardsEvents()` (or the deprecated `subscribeToContentCardsUpdates()`) before `openSession()`. You can also [manually refresh the feed](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/feed) at any time.
+
+
+
+For when each event fires, and what each update reason, retry state, analytics action, and error reason means, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
+
+Use `subscribeToContentCardsEvents` on Web SDK 7.0.0 and later. `subscribeToContentCardsUpdates` is the earlier pattern, deprecated as of 7.0.0. The earlier pattern only delivers the current cards, so it can't tell you why the cards changed or when a refresh failed.
 
 
 
 
+<div id='sdk-versions'><a href='/docs/developer_guide/platforms/android/changelog/#4400' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 44.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 
 
@@ -84,35 +145,61 @@ Content Cards only refresh on session start if `subscribeToContentCardsUpdates()
 To subscribe to card updates, first declare a private variable in your custom class to hold your subscriber:
 
 ```java
-// subscriber variable
+// - Available in version 44.0.0+
+private IEventSubscriber<ContentCardsEvent> mContentCardsEventSubscriber;
+
 private IEventSubscriber<ContentCardsUpdatedEvent> mContentCardsUpdatedSubscriber;
 ```
 
-#### Step 2b: Subscribe to updates
+#### Step 2b: Subscribe to events
 
-Add the following code to subscribe to Content Card updates from Braze, typically inside of your custom Content Cards activity's `Activity.onCreate()`:
+Add the following code to subscribe with `subscribeToContentCardsEvents()`, typically inside your custom Content Cards activity's `Activity.onCreate()`. Pattern-match the `ContentCardsEvent` subclasses you need.
 
 ```java
+// - Available in version 44.0.0+
+// Remove the previous subscriber before rebuilding a new one with our new activity.
+Braze.getInstance(context).removeSingleSubscription(mContentCardsEventSubscriber, ContentCardsEvent.class);
+mContentCardsEventSubscriber = new IEventSubscriber<ContentCardsEvent>() {
+    @Override
+    public void trigger(ContentCardsEvent event) {
+        if (event instanceof ContentCardsEvent.CacheReplay) {
+            handleCards(((ContentCardsEvent.CacheReplay) event).getCacheSnapshot());
+        } else if (event instanceof ContentCardsEvent.CacheLoad) {
+            handleCards(((ContentCardsEvent.CacheLoad) event).getCacheSnapshot());
+        } else if (event instanceof ContentCardsEvent.DataUpdated) {
+            handleCards(((ContentCardsEvent.DataUpdated) event).getCacheSnapshot());
+        }
+    }
+};
+Braze.getInstance(context).subscribeToContentCardsEvents(mContentCardsEventSubscriber);
+Braze.getInstance(context).requestContentCardsRefresh();
+
 // Remove the previous subscriber before rebuilding a new one with our new activity.
 Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
 mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>() {
     @Override
     public void trigger(ContentCardsUpdatedEvent event) {
-        // List of all Content Cards
         List<Card> allCards = event.getAllCards();
-
-        // Your logic below
     }
 };
 Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
 Braze.getInstance(context).requestContentCardsRefresh();
+
+private void handleCards(ContentCardsCacheSnapshot cacheSnapshot) {
+    List<Card> allCards = cacheSnapshot.getCards();
+}
 ```
+
+Events arrive on a background thread. Switch to the main thread before updating views.
 
 #### Step 2c: Unsubscribe
 
 Unsubscribe when your custom activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
 
 ```java
+// - Available in version 44.0.0+
+Braze.getInstance(context).removeSingleSubscription(mContentCardsEventSubscriber, ContentCardsEvent.class);
+
 Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
 ```
 
@@ -121,38 +208,66 @@ Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscrib
 
 #### Step 2a: Create a private subscriber variable
 
-To subscribe to card updates, first declare a private variable in your custom class to hold your subscriber:
+To subscribe to card events, first declare a private variable in your custom class to hold your subscriber:
 
 ```kotlin
+// - Available in version 44.0.0+
+private var contentCardsEventSubscriber: IEventSubscriber<ContentCardsEvent>? = null
+
 private var contentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
 ```
 
-#### Step 2b: Subscribe to updates
+#### Step 2b: Subscribe to events
 
-Add the following code to subscribe to Content Card updates from Braze, typically inside of your custom Content Cards activity's `Activity.onCreate()`:
+Add the following code to subscribe with `subscribeToContentCardsEvents()`, typically inside your custom Content Cards activity's `Activity.onCreate()`. Pattern-match the `ContentCardsEvent` subclasses you need.
 
 ```kotlin
+// - Available in version 44.0.0+
 // Remove the previous subscriber before rebuilding a new one with our new activity.
+Braze.getInstance(context).removeSingleSubscription(contentCardsEventSubscriber, ContentCardsEvent::class.java)
+contentCardsEventSubscriber = IEventSubscriber { event ->
+    when (event) {
+        is ContentCardsEvent.CacheReplay -> handleCards(event.cacheSnapshot)
+        is ContentCardsEvent.CacheLoad -> handleCards(event.cacheSnapshot)
+        is ContentCardsEvent.DataUpdated -> handleCards(event.cacheSnapshot)
+        else -> {}
+    }
+}
+Braze.getInstance(context).subscribeToContentCardsEvents(contentCardsEventSubscriber)
+Braze.getInstance(context).requestContentCardsRefresh()
+
+// Remove the previous subscriber before rebuilding a new one with our new activity.
+Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+contentCardsUpdatedSubscriber = IEventSubscriber { event ->
+    val allCards = event.allCards
+}
 Braze.getInstance(context).subscribeToContentCardsUpdates(contentCardsUpdatedSubscriber)
 Braze.getInstance(context).requestContentCardsRefresh()
-  // List of all Content Cards
-  val allCards = event.allCards
 
-  // Your logic below
+private fun handleCards(cacheSnapshot: ContentCardsCacheSnapshot) {
+    val allCards = cacheSnapshot.cards
 }
-Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
-Braze.getInstance(context).requestContentCardsRefresh(true)
 ```
+
+Events arrive on a background thread. Switch to the main thread before updating views.
 
 #### Step 2c: Unsubscribe
 
 Unsubscribe when your custom activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
 
 ```kotlin
+// - Available in version 44.0.0+
+Braze.getInstance(context).removeSingleSubscription(contentCardsEventSubscriber, ContentCardsEvent::class.java)
+
 Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 ```
 
 
+
+
+For when each event fires, and what each update reason, retry state, analytics action, and error reason means, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
+
+Use `subscribeToContentCardsEvents` on Android SDK 44.0.0 and later. `subscribeToContentCardsUpdates` is the earlier pattern, deprecated as of 44.0.0.
 
 
 
@@ -162,20 +277,45 @@ To access the Content Cards data model, call [`contentCards.cards`](https://braz
 
 
 
+<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1900' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 19.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+
 ```swift
 let cards: [Braze.ContentCard] = AppDelegate.braze?.contentCards.cards
 ```
 
-Additionally, you can maintain a subscription to observe for changes in your Content Cards. You can do so in one of two ways: 
+Additionally, you can subscribe to Content Cards events to observe cache changes, analytics, and errors. You can do so in one of two ways: 
 1. Maintaining a cancellable; or 
 2. Maintaining an `AsyncStream`.
 
 ##### Cancellable 
 
 ```swift
-// This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
+// - Available in version 19.0.0+
+// This subscription is maintained through a Braze cancellable, which will observe for events until the subscription is cancelled.
 // You must keep a strong reference to the cancellable to keep the subscription active.
 // The subscription is canceled either when the cancellable is deinitialized or when you call its `.cancel()` method.
+let cancellable = AppDelegate.braze?.contentCards.subscribeToEvents { [weak self] event in
+  switch event {
+  case .cacheReplay(let cacheSnapshot):
+    // Initial cache snapshot, delivered immediately after subscribing
+    break
+  case .cacheLoad(let cacheSnapshot):
+    // Cache loaded at the start of a user session (for example, after `changeUser()`)
+    break
+  case .dataUpdated(let cacheSnapshot, let reason):
+    // Cache changed after the initial replay
+    break
+  case .impressionEvent(let card, let action):
+    break
+  case .clickEvent(let card, let action):
+    break
+  case .dismissEvent(let card, let action):
+    break
+  case .error(let reason, let retryState):
+    break
+  }
+}
+
 let cancellable = AppDelegate.braze?.contentCards.subscribeToUpdates { [weak self] contentCards in
   // Implement your completion handler to respond to updates in `contentCards`.
 }
@@ -184,8 +324,17 @@ let cancellable = AppDelegate.braze?.contentCards.subscribeToUpdates { [weak sel
 ##### AsyncStream
 
 ```swift
+// - Available in version 19.0.0+
+Task {
+  for await event in AppDelegate.braze?.contentCards.eventsStream ?? AsyncStream { _ in } {
+    // Same switch statement as the cancellable example above.
+  }
+}
+
 let stream: AsyncStream<[Braze.ContentCard]> = AppDelegate.braze?.contentCards.cardsStream
 ```
+
+Use `subscribeToEvents(_:)` or `eventsStream` on Swift SDK 19.0.0 and later. `subscribeToUpdates(_:)` and `cardsStream` are the earlier pattern, deprecated as of 19.0.0.
 
 
 
@@ -194,16 +343,35 @@ let stream: AsyncStream<[Braze.ContentCard]> = AppDelegate.braze?.contentCards.c
 NSArray<BRZContentCardRaw *> *contentCards = AppDelegate.braze.contentCards.cards;
 ```
 
-Additionally, if you want to maintain a subscription to your content cards, you can call [`subscribeToUpdates`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)):
+Additionally, if you want to subscribe to Content Cards events, you can call `subscribeToEvents:`. Each event type is bridged to its own class (for example, `BRZContentCardsDataUpdatedEvent`), which you can discriminate with `isKindOfClass:`. The initial cache replay and subsequent data updates both bridge to `BRZContentCardsDataUpdatedEvent`; check `reason` against `BRZContentCardsDataUpdatedEvent.cacheReplayReason` to tell them apart:
 
 ```objc
-// This subscription is maintained through Braze cancellable, which will continue to observe for changes until the subscription is cancelled.
+// - Available in version 19.0.0+
+// This subscription is maintained through a Braze cancellable, which will continue to observe for events until the subscription is cancelled.
+BRZCancellable *cancellable = [self.braze.contentCards subscribeToEvents:^(BRZContentCardsEvent *event) {
+  if ([event isKindOfClass:[BRZContentCardsDataUpdatedEvent class]]) {
+    BRZContentCardsDataUpdatedEvent *updated = (BRZContentCardsDataUpdatedEvent *)event;
+    if (updated.reason == BRZContentCardsDataUpdatedEvent.cacheReplayReason) {
+      // Initial cache snapshot, delivered immediately after subscribing
+    } else {
+      // Cache changed after the initial replay
+    }
+  } else if ([event isKindOfClass:[BRZContentCardsCacheLoadEvent class]]) {
+    // Cache loaded at the start of a user session (for example, after `changeUser()`)
+  }
+}];
+
 BRZCancellable *cancellable = [self.braze.contentCards subscribeToUpdates:^(NSArray<BRZContentCardRaw *> *contentCards) {
   // Implement your completion handler to respond to updates in `contentCards`.
 }];
 ```
 
+Use `subscribeToEvents:` on Swift SDK 19.0.0 and later. `subscribeToUpdates:` is the earlier pattern, deprecated as of 19.0.0.
 
+
+
+
+For when each event fires, and what each update reason, retry state, analytics action, and error reason means, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
 
 
 

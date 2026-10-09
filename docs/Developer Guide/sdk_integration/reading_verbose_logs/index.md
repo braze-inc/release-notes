@@ -8,6 +8,13 @@ Before you start, make sure you've [enabled verbose logging](https://www.braze.c
 
 Sessions are the foundation of Braze analytics and message delivery. Many messaging features—including in-app messages and Content Cards—depend on a valid session starting before they can function. If sessions aren't logging correctly, investigate this first. For more information about enabling session tracking, see [Step 5: Enable user session tracking](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=android#android_step-5-enable-user-session-tracking).
 
+**Note:**
+
+
+Start SDK troubleshooting with sessions. If sessions are not logging, in-app messages, Content Cards, and many analytics events do not behave as expected. After you confirm session start/end entries, review custom event lines in the same log capture. See [Verbose logging](https://www.braze.com/docs/developer_guide/sdk_integration/verbose_logging) to enable logging and collect a shareable export.
+
+
+
 ### Key log entries
 
 

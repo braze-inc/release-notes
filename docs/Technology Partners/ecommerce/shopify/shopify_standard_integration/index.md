@@ -249,7 +249,20 @@ This means temporary duplicate profiles are possible but self-correct automatica
 
 ### Step 4.2: Create an endpoint to retrieve your external ID
 
-You must create a public endpoint that Braze can call to retrieve the external ID. This allows Braze to fetch the ID in scenarios where Shopify cannot provide the `braze.external_id` metafield directly.
+You must create a publicly reachable GET endpoint that returns the customer's Braze external ID. Braze calls this endpoint from two sources:
+
+| Call source | Examples | Behavior |
+| --- | --- | --- |
+| Shopify Admin API webhooks | `customers/create`, `customers/update`, and order events | Braze servers call your endpoint when the Shopify customer is missing the `braze.external_id` metafield. If the metafield is already set, Braze uses that value and doesn't call your endpoint for that request. |
+| Braze Shopify web pixel | Logged-in customer page views, checkout completed events | The Braze web pixel runs in the shopper's browser on your storefront and calls your endpoint to get the custom external ID. Unlike Shopify Admin API webhooks, it always calls the endpoint for these events and doesn't use the `braze.external_id` metafield. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Where Braze calls the custom external ID endpoint" }
+
+**Important:**
+
+
+Braze servers and the shopper's browser both call this endpoint. The Braze Shopify web pixel loads your endpoint URL into the browser, so the URL is public. Follow the [Validation](#validation) steps so you only return an external ID for a matching Shopify customer.
+
+
 
 #### Endpoint specifications
 
@@ -279,7 +292,8 @@ Braze expects a `200` status code returning the external ID JSON:
 ```
 
 #### Validation
-It is critical to validate that the `shopify_customer_id` and `email_address` (if present) match the customer values in Shopify. You can use the [Shopify Admin API](https://shopify.dev/docs/api/admin-graphql) or [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) to validate these parameters and retrieve the correct `braze.external_id` metafield.
+
+Validate that the `shopify_customer_id` and `email_address` (if present) match the customer values in Shopify before returning an external ID. You can use the [Shopify Admin API](https://shopify.dev/docs/api/admin-graphql) or [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) to validate these parameters and retrieve the correct `braze.external_id` metafield.
 
 #### Failure behavior and merging
 Any status code other than `200` is considered a failure.

@@ -119,6 +119,11 @@ braze.initialize('YOUR-API-KEY-HERE', {
 braze.automaticallyShowInAppMessages();
 
 // if you use Content Cards
+// - Available in version 7.0.0+
+braze.subscribeToContentCardsEvents(function(event){
+    // Content Cards events (such as cache replays, updates, and errors) arrive here
+});
+
 braze.subscribeToContentCardsUpdates(function(cards){
     // cards have been updated
 });
@@ -132,6 +137,8 @@ if (isLoggedIn){
 // `openSession` should be called last - after `changeUser` and `automaticallyShowInAppMessages`
 braze.openSession();
 ```
+
+Use `subscribeToContentCardsEvents` on Web SDK 7.0.0 and later. `subscribeToContentCardsUpdates` is the earlier pattern, deprecated as of 7.0.0.
 
 **Important:**
 
@@ -4307,6 +4314,18 @@ function YourWidget() {
 const [cards, setCards] = useState([]);
 
 useEffect(() => {
+  // - Available in version 7.0.0+
+  // Subscribe to content card events. The SDK sends the cached cards right away.
+  braze.subscribeToContentCardsEvents((event) => {
+    switch (event.type) {
+      case braze.ChannelEventType.CACHE_REPLAY:
+      case braze.ChannelEventType.CACHE_LOAD:
+      case braze.ChannelEventType.DATA_UPDATED:
+        setCards(event.cacheSnapshot.contentCards.cards);
+        break;
+    }
+  });
+
   // Get cached content cards
   setCards(braze.getCachedContentCards()?.cards ?? []);
 
@@ -4323,6 +4342,8 @@ useEffect(() => {
   }
 }, []);
 ```
+
+On Web SDK 7.0.0 and later, `subscribeToContentCardsEvents` delivers the cached cards right away in a `CACHE_REPLAY` event, so you don't need the `getCachedContentCards()` call. `subscribeToContentCardsUpdates` is deprecated as of 7.0.0.
 
 #### Track widget events
 
