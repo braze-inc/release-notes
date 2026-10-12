@@ -1,12 +1,19 @@
-# Data points
+# Data points (Legacy)
 
 > At Braze, data means action: each piece of data that arrives in Braze updates segment membership, can trigger and cancel messaging, is immediately available for messaging personalization, and more. Data points help you define the most impactful information for your business. By thoughtfully considering what information to track, you ensure that you're targeting the highest-impact data for your users' experience.
 
-Data points are based on information logged against user profiles. You can find a more detailed breakdown of this definition in your Braze contract. Our Customer Success team can help recommend data best practices to fit your needs. 
+**Important:**
+
+
+**Legacy billing metric:** As of Spring 2025, Braze no longer bills new customers based on data points. Data points are a legacy billing metric that applies only to customers on older, multi-year contracts. If you signed your contract after Spring 2025, this page does not apply to your billing structure.
+
+
+
+Data points are based on information logged against user profiles. You can find a more detailed breakdown of this definition in your Braze contract. Our Customer Success team can help recommend data best practices to fit your needs.
 
 ## Definition
 
-"Data points" shall refer to a billable unit of use of the Braze Services, measured by a session start, session end, custom event, or purchase recorded, as well as any attribute set on an end user profile. For clarity, each one of the earlier in this section-mentioned data (such as session start, session end, custom event, or purchase recorded, as well as any attribute) set to an end user’s profile at one point in time shall each count as a single data point.
+"Data points" refers to a historical billable unit of use of the Braze Services, measured by a session start, session end, custom event, or purchase recorded, as well as any attribute set on an end user profile. For clarity, each one of the earlier in this section-mentioned data (such as session start, session end, custom event, or purchase recorded, as well as any attribute) set to an end user’s profile at one point in time shall each count as a single data point.
 
 Data and events collected by default by the Braze Services, including, for example, push tokens, device information, and all campaign engagement tracking events, such as email opens and push notification clicks, are *not* counted as data points.
 
@@ -25,8 +32,7 @@ For more information on the data point dashboard components, see [Billing](https
 **Tip:**
 
 
-**Don't waste data points. Only update changing data!**<br><br>
-To minimize data point usage, we recommend setting up a program to prevent sending the same unchanging data and only passing new and relevant data to Braze. Braze will work with you to establish this best practice during onboarding. 
+**Managing data for legacy contracts:** If your contract utilizes data point billing, don't waste data points. To minimize data point usage, we recommend setting up a program to prevent sending the same unchanging data and only passing new and relevant data to Braze. For customers on non-data point billing models, passing redundant data is still discouraged for optimal platform performance, but it does not impact your bill.
 
 
 
@@ -44,6 +50,13 @@ The following actions do not log data points:
 - Subscription state changes globally and around subscription groups
 - Renaming your users' external IDs through [API calls](https://www.braze.com/docs/api/endpoints/user_data/external_id_migration/post_external_ids_rename)
 - Blocking events, attributes, or event properties
+
+**Note:**
+
+
+Braze still tracks and accumulates data points across all accounts to measure platform usage and system performance. However, for contracts on non-data points billing, this count is strictly informational and has no impact on your invoice or usage limits.
+
+
 
 ### Special circumstances
 

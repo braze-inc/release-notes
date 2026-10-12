@@ -77,7 +77,16 @@ Because of this, the `external_user_id` value (named `external_id` in the Braze 
 
 ## Are all send events logged to Currents?
 
-All events are logged to Currents. There are no scenarios where an event would be intentionally suppressed from the Currents stream.
+Braze logs events from live campaigns and Canvases to Currents. Other than test sends, Braze doesn't intentionally suppress any events from the Currents stream.
+
+Test sends don't generate Currents message engagement events. This includes test messages sent from a campaign or Canvas step and messages sent with **Send All Test Messages** when [testing a Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths). To see message engagement events in Currents, send from a live campaign or Canvas.
+
+**Note:**
+
+
+Test sends are different from **Send Test Events** on the Currents integration page. That button sends sample events with placeholder values to check your connection. For more information, see [Test events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/event_delivery_semantics#test-events).
+
+
 
 ## Can data be corrupted in Currents?
 

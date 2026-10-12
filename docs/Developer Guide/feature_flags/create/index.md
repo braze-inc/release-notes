@@ -757,24 +757,93 @@ This is useful if you want to update your app if a user is no longer eligible fo
 
 
 
+<div id='sdk-versions'><a href='/docs/developer_guide/platforms/web/changelog/#700' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 7.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+
+Use [`subscribeToFeatureFlagsEvents`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetofeatureflagsevents) to listen for feature flag events. The SDK calls your handler with an event object. Switch on `event.type` to handle each kind of event. For more information about the event values, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
+
 ```javascript
+import * as braze from "@braze/web-sdk";
+
+// - Available in version 7.0.0+
 // Register an event listener
-const subscriptionId = braze.subscribeToFeatureFlagsUpdates((features) => {
+const subscriptionId = braze.subscribeToFeatureFlagsEvents((event) => {
+  switch (event.type) {
+    case braze.ChannelEventType.CACHE_REPLAY:
+      // Sent once, right away, with the feature flags that are already cached.
+      // Evaluate your flags now instead of waiting for the network.
+      console.log("Cached feature flags:", event.cacheSnapshot.featureFlags);
+      break;
+
+    case braze.ChannelEventType.CACHE_LOAD:
+      // The cache changed without a refresh, such as after changeUser().
+      // The snapshot can be empty, so reset any state from the previous user.
+      console.log("Feature flags reloaded:", event.cacheSnapshot.featureFlags);
+      break;
+
+    case braze.ChannelEventType.DATA_UPDATED:
+      // A refresh finished, even if no feature flags changed.
+      console.log("Feature flags were updated:", event.cacheSnapshot.featureFlags);
+      break;
+
+    case braze.ChannelEventType.ERROR:
+      switch (event.retryState) {
+        case braze.RetryState.SDK_WILL_RETRY:
+          // The SDK is retrying. Keep the current values and wait.
+          break;
+        case braze.RetryState.INTEGRATOR_MAY_RETRY: {
+          // The SDK stopped retrying. Try again later, and limit how often you retry.
+          const delayMs = event.rateLimitedUntil
+            ? Math.max(event.rateLimitedUntil.getTime() - Date.now(), 0)
+            : 30000;
+          setTimeout(() => braze.refreshFeatureFlags(), delayMs);
+          break;
+        }
+        case braze.RetryState.DO_NOT_RETRY:
+          // The failure is final. For example, feature flags are disabled for this workspace.
+          if (event.reason === braze.ChannelErrorReason.FEATURE_DISABLED) {
+            // Fall back to the default behavior in your app.
+          }
+          break;
+      }
+      break;
+  }
+});
+
+// Register an event listener
+const deprecatedSubscriptionId = braze.subscribeToFeatureFlagsUpdates((features) => {
   console.log(`Features were updated`, features);
 });
+
 // Unregister this event listener
 braze.removeSubscription(subscriptionId);
+braze.removeSubscription(deprecatedSubscriptionId);
 ```
 
+For when each event fires, and what each update reason, retry state, analytics action, and error reason means, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
+
+Use `subscribeToFeatureFlagsEvents` on Web SDK 7.0.0 and later. `subscribeToFeatureFlagsUpdates` is the earlier pattern, deprecated as of 7.0.0. The earlier pattern only delivers the current feature flags, so it can't tell you why the flags changed or when a refresh failed.
 
 
+
+
+<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1900' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 19.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ```swift
 // Create the feature flags subscription
 // - You must keep a strong reference to the subscription to keep it active
-let subscription = braze.featureFlags.subscribeToUpdates { features in
-  print("Feature flags were updated:", features)
+
+// - Available in version 19.0.0+
+let subscription = braze.featureFlags.subscribeToEvents { event in
+  switch event {
+  case .cacheReplay(let cacheSnapshot), .cacheLoad(let cacheSnapshot):
+    print("Feature flags were updated:", cacheSnapshot.featureFlags)
+  case .dataUpdated(let cacheSnapshot, _):
+    print("Feature flags were updated:", cacheSnapshot.featureFlags)
+  default:
+    break
+  }
 }
+
 // Cancel the subscription
 subscription.cancel()
 ```
@@ -782,30 +851,69 @@ subscription.cancel()
 
 
 
+<div id='sdk-versions'><a href='/docs/developer_guide/platforms/android/changelog/#4400' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 44.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+
+
 
 
 ```java
-braze.subscribeToFeatureFlagsUpdates(event -> {
-  Log.i(TAG, "Feature flags were updated.");
-  for (FeatureFlag feature: event.getFeatureFlags()) {
-    Log.i(TAG, "Feature: ", feature.getId(), feature.getEnabled());
+// - Available in version 44.0.0+
+braze.subscribeToFeatureFlagsEvents(event -> {
+  if (event instanceof FeatureFlagsEvent.CacheReplay) {
+    logFeatureFlags(((FeatureFlagsEvent.CacheReplay) event).getCacheSnapshot());
+  } else if (event instanceof FeatureFlagsEvent.CacheLoad) {
+    logFeatureFlags(((FeatureFlagsEvent.CacheLoad) event).getCacheSnapshot());
+  } else if (event instanceof FeatureFlagsEvent.DataUpdated) {
+    logFeatureFlags(((FeatureFlagsEvent.DataUpdated) event).getCacheSnapshot());
   }
 });
+
+braze.subscribeToFeatureFlagsUpdates(event -> {
+  for (FeatureFlag feature : event.getFeatureFlags()) {
+    Log.i(TAG, "Feature: " + feature.getId() + " " + feature.getEnabled());
+  }
+});
+
+private void logFeatureFlags(FeatureFlagsCacheSnapshot cacheSnapshot) {
+  for (FeatureFlag feature : cacheSnapshot.getFeatureFlags()) {
+    Log.i(TAG, "Feature: " + feature.getId() + " " + feature.getEnabled());
+  }
+}
 ```
 
 
 
 
 ```kotlin
-braze.subscribeToFeatureFlagsUpdates() { event ->
-  Log.i(TAG, "Feature flags were updated.")
+// - Available in version 44.0.0+
+braze.subscribeToFeatureFlagsEvents { event ->
+  when (event) {
+    is FeatureFlagsEvent.CacheReplay -> logFeatureFlags(event.cacheSnapshot)
+    is FeatureFlagsEvent.CacheLoad -> logFeatureFlags(event.cacheSnapshot)
+    is FeatureFlagsEvent.DataUpdated -> logFeatureFlags(event.cacheSnapshot)
+    else -> {}
+  }
+}
+
+braze.subscribeToFeatureFlagsUpdates { event ->
   event.featureFlags.forEach { feature ->
-    Log.i(TAG, "Feature: ${feature.id}")
+    Log.i(TAG, "Feature: ${feature.id} ${feature.enabled}")
+  }
+}
+
+private fun logFeatureFlags(cacheSnapshot: FeatureFlagsCacheSnapshot) {
+  cacheSnapshot.featureFlags.forEach { feature ->
+    Log.i(TAG, "Feature: ${feature.id} ${feature.enabled}")
   }
 }
 ```
 
 
+
+
+Events arrive on a background thread. Switch to the main thread before updating views.
+
+Use `subscribeToFeatureFlagsEvents` on Android SDK 44.0.0 and later. `subscribeToFeatureFlagsUpdates` is the earlier pattern, deprecated as of 44.0.0.
 
 
 
@@ -874,9 +982,11 @@ m.BrazeTask.ObserveField("BrazeFeatureFlags", "onFeatureFlagChanges")
 ```typescript
 import { useEffect, useState } from "react";
 import {
+  ChannelEventType,
   FeatureFlag,
   getFeatureFlag,
   removeSubscription,
+  subscribeToFeatureFlagsEvents,
   subscribeToFeatureFlagsUpdates,
 } from "@braze/web-sdk";
 
@@ -886,11 +996,24 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
   );
 
   useEffect(() => {
-    const listener = subscribeToFeatureFlagsUpdates(() => {
+    // - Available in version 7.0.0+
+    const listener = subscribeToFeatureFlagsEvents((event) => {
+      switch (event.type) {
+        case ChannelEventType.CACHE_REPLAY:
+        case ChannelEventType.CACHE_LOAD:
+        case ChannelEventType.DATA_UPDATED:
+          setFeatureFlag(getFeatureFlag(id));
+          break;
+      }
+    });
+
+    const deprecatedListener = subscribeToFeatureFlagsUpdates(() => {
       setFeatureFlag(getFeatureFlag(id));
     });
+
     return () => {
       removeSubscription(listener);
+      removeSubscription(deprecatedListener);
     };
   }, [id]);
 
@@ -898,7 +1021,11 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 };
 ```
 
+Use `subscribeToFeatureFlagsEvents` on Web SDK 7.0.0 and later. `subscribeToFeatureFlagsUpdates` is the earlier pattern, deprecated as of 7.0.0.
 
+
+
+For a description of each event that `subscribeToFeatureFlagsEvents` (Android) and `subscribeToEvents` (Swift) can deliver, see the events table in [Feature flags](https://www.braze.com/docs/developer_guide/feature_flags). For Web, see the events table in [Listening for changes](#updates).
 
 ## Checking user eligibility
 

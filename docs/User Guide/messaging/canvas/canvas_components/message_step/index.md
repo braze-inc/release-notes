@@ -16,12 +16,12 @@ You can select from the following messaging channels:
 - Email
 - LINE
 - Push notifications
-- SMS/MMS/RCS
+- SMS, MMS, and RCS
 - In-app messages
 - Webhook
 - WhatsApp
 
-![A list of available messaging channels to select for the Message step.](https://www.braze.com/docs/assets/img/canvas_components/message_step2.png?9f758c3b59ccdbd832d4b8e6f2c48d46)
+![A list of available messaging channels to select for the Message step.](https://www.braze.com/docs/assets/img/canvas_components/message_step2.png?c1f93c9d9bd71b7940082a35c7e50233)
 
 ### Step 2: Edit delivery settings
 
@@ -33,7 +33,7 @@ You can enable [Intelligent Timing](https://www.braze.com/docs/user_guide/brazea
 
 Select **Using Intelligent Timing** in the **Delivery Settings** tab. Here, you can select either the most popular time or a specific fallback time. If Quiet Hours are enabled, the Message step also allows you to override this setting.
 
-![The Delivery Settings tab for Message component settings. Quiet Hours are enabled, and the checkbox for Using Intelligent Timing is selected to deliver the message at an optimal time.](https://www.braze.com/docs/assets/img/canvas_components/message_step4.png?8450c5f09b1192aa81ad04347a148d56){: style="max-width:90%;"}
+![The Delivery Settings tab for Message component settings. Quiet Hours are enabled, and the checkbox for Using Intelligent Timing is selected to deliver the message at an optimal time.](https://www.braze.com/docs/assets/img/canvas_components/message_step4.png?b3bbcdd5c904d624c2c1438728424b38){: style="max-width:90%;"}
 
 #### Delivery validations
 
@@ -49,7 +49,7 @@ If your workspace has multiple apps and a Message step should target a specific 
   - `{{targeted_device.${platform}}}` evaluates the platform for the user's current session. For more information, see [Targeted device information](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags#targeted-device-information).
   - `{{app.${api_id}}}` evaluates which app is requesting the message. Combine this tag with `abort_message()` to prevent sends to the wrong app. For more information, see [Targeted app information](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags#targeted-app-information).
 
-![Delivery Validations are enabled to validate the audience at message send. Delivery validations advancement behavior is set to progress the user to the next step in the Canvas if delivery validations are not met.](https://www.braze.com/docs/assets/img/canvas_components/message_step5.png?b7f0f9d772194934ebbd013b7eacfd5e){: style="max-width:90%;"}
+![Delivery Validations are enabled to validate the audience at message send. Delivery validations advancement behavior is set to progress the user to the next step in the Canvas if delivery validations are not met.](https://www.braze.com/docs/assets/img/canvas_components/message_step5.png?6db0c7c39a2cd7e3ccaea3672fb8b473){: style="max-width:90%;"}
 
 ## How users advance
 
@@ -105,9 +105,9 @@ If an action-based Canvas is triggered by an inbound SMS message, you can refere
 
 
 
-Entry properties are configured in the **Entry Schedule** step of creating a Canvas and will indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `context` object has a maximum size limit of 50 KB.
+Entry properties are configured in the **Entry Schedule** step and contain data from the trigger that enters a user into a Canvas. They can also contain entry payload data in API-triggered Canvases. The entry properties object has a maximum size limit of 50 KB.
 
-Entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: ``{context.${property_name}}``. Events must be custom events or purchase events to be used this way.
+If your workspace shows **Context Variables**, use `{{context.${property_name}}}` to reference an entry property in any Message step. The entry event must be a custom event or purchase event.
 
 **Note:**
 
@@ -116,13 +116,11 @@ For in-app message channels specifically, `context` can only be referenced in Ca
 
 
 
-Use the following Liquid when referencing these entry properties: ``context.${property_name}``. Note that the events must be custom events or purchase events to be used this way.
+
+For example, given `"context": {"product_name": "shoes", "product_price": 79.99}`, you could add "shoes" to a message with `{{context.${product_name}}}`.
 
 
-For example, consider the following request: `\"context\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with the Liquid `{{context.${product_name}}}`.
-
-
-You can also leverage [persistent entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties) in any Message step to guide your users through personalized steps throughout your Canvas workflow.
+If your workspace shows **Canvas Entry Properties** instead, use the legacy `{{canvas_entry_properties.${property_name}}}` namespace. For details, see [Persistent entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties).
 
 ### Event properties
 

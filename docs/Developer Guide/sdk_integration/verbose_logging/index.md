@@ -21,6 +21,14 @@ Turn on verbose logging when you need to:
 - **Validate session tracking**: Confirm sessions start and end as expected.
 - **Diagnose connectivity issues**: Inspect the network requests and responses between the SDK and Braze servers.
 
+**Note:**
+
+
+If custom events or sessions are missing in Braze, enable verbose logging **before** other SDK calls, reproduce on a test device, and confirm `changeUser` runs with the expected user ID. Share logs with Support using the steps in [Collecting logs](#collecting-logs) section. For interpreting session and event lines, see [Reading verbose logs](https://www.braze.com/docs/developer_guide/sdk_integration/reading_verbose_logs).
+
+
+
+
 ## Enabling verbose logging
 
 **Important:**

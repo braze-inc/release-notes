@@ -47,7 +47,7 @@ Administrators can also suspend a user by selecting their name from the list and
 
 To delete a user, go to **Settings** > **Company Settings** > **User Management** > **Company Users**, find the user's name, and select <i class="fa fa-trash-can"></i> **Delete user**. 
 
-Only administrators can delete company users, and company users cannot delete their own accounts. An administrator cannot delete their own dashboard account; another administrator must delete it for them.
+To delete company users, you must be an administrator or have the company-level [Delete dashboard users](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#company-permissions) permission. Only administrators can delete other administrators. Administrators and company-level users can't delete their own accounts. 
 
 ![Delete a user.](https://www.braze.com/docs/assets/img_archive/delete_user_new.png?10587eba02bc4a23186fb2015567bc24)
 

@@ -27,7 +27,7 @@ The following use cases showcase a few ways to use Extole’s integration with B
 
 ## Integration
 
-Complete the following steps to quickly get your integration up and running. Your Extole implementation and customer success managers will support you through this process and answer any questions you may have.
+Complete the following steps to quickly get your integration running. Your Extole implementation and customer success managers will support you through this process and answer any questions you may have.
 
 ### Connect to your Braze account
 

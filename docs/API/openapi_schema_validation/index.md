@@ -74,19 +74,15 @@ Validating requests against the schema helps you:
 
 ## Related resources
 
-Braze documentation:
 
-- [Using Braze OpenAPI specs](https://www.braze.com/docs/api/using_openapi_specs/)
-- [API overview](https://www.braze.com/docs/api/basics/)
-- [API endpoints](https://www.braze.com/docs/api/endpoints/)
-- [Objects and filters](https://www.braze.com/docs/api/objects_filters/)
-- [API errors and responses](https://www.braze.com/docs/api/errors/)
-- [API rate limits](https://www.braze.com/docs/api/api_limits/)
-- [Postman and sample requests](https://www.braze.com/docs/api/postman_collection/)
 
-External references:
 
-- [OpenAPI Initiative](https://www.openapis.org/)
-- [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [JSON Schema](https://json-schema.org/)
-- [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/)
+<ul class="guide_tiles"><li><a href="/docs/api/using_openapi_specs"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Using Braze OpenAPI specs</span></span></div></a></li><li><a href="/docs/api/basics"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">API overview</span></span></div></a></li><li><a href="/docs/api/endpoints"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">API endpoints</span></span></div></a></li><li><a href="/docs/api/objects_filters"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Objects and filters</span></span></div></a></li><li><a href="/docs/api/errors"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">API errors and responses</span></span></div></a></li><li><a href="/docs/api/api_limits"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">API rate limits</span></span></div></a></li><li><a href="/docs/api/postman_collection"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Postman and sample requests</span></span></div></a></li></ul>
+
+
+
+
+<ul class="guide_tiles"><li><a href="https://www.openapis.org/"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">OpenAPI Initiative</span></span></div></a></li><li><a href="https://spec.openapis.org/oas/latest.html"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">OpenAPI Specification</span></span></div></a></li><li><a href="https://json-schema.org/"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">JSON Schema</span></span></div></a></li><li><a href="https://json-schema.org/understanding-json-schema/"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Understanding JSON Schema</span></span></div></a></li></ul>
+
+
+

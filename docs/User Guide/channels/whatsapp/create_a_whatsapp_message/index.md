@@ -129,6 +129,8 @@ Response messages support these layouts:
 - Meta Product Messages
 - Carousel
 
+When a response layout includes both quick reply buttons and call-to-action buttons, Braze groups buttons by type and uses a fixed display order. To control whether call-to-action buttons appear before or after quick replies, create an approved template in the Template Builder and send that template instead of a response message layout.
+
 ![The response message composer for a Reply Message that welcomes new users with a discount code.](https://www.braze.com/docs/assets/img/whatsapp/whatsapp_response_messages.png?d492c229b2894ab1d1ef48ee5a6e2338){: style="max-width:80%;"}
 
 

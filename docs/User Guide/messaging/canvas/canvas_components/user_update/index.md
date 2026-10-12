@@ -19,21 +19,18 @@ There are three options that allow you to update existing user profile informati
 **Tip:**
 
 
-You can also test the changes made with this component by searching for a user and applying the change to them. This will update the user.
+You can also test the changes made with this component by searching for a user and applying the change to them. This updates the user.
 
 
 
-## Updating custom attributes
+### Custom attributes
 
-To update or remove a custom attribute, select an attribute name from your list of attributes and enter the value.
+In the UI editor, select an attribute name (existing or new) and choose an **Action**:
 
-![User Update step that updates the two attributes "Loyalty Member" and "Loyalty Program" to "true".](https://www.braze.com/docs/assets/img_archive/canvas_user_update_update.png?fdef18e43c87187f105d73873e50ea93){: style="max-width:90%;"}
+- **Update:** Enter the new value.
+- **Remove:** Clear the attribute from the user profile (no value required).
 
-## Removing custom attributes
-
-To remove a custom attribute, select an attribute name using the dropdown. You can switch to the [advanced JSON editor](#advanced-json-editor) to further edit. 
-
-![User Update step that removes an attribute "Loyalty Member".](https://www.braze.com/docs/assets/img_archive/canvas_user_update_remove.png?72c312737715509082056e23abb8c7a2){: style="max-width:90%;"}
+You can add up to 10 attributes in one step. For events, purchases, nested fields, or other complex changes, use the [advanced JSON editor](#advanced-json-editor).
 
 ### Increasing and decreasing values
 
@@ -43,7 +40,7 @@ The User Update step can increase or decrease an attribute value. Select the att
 
 By incrementing a custom attribute that tracks an event, you can track the number of classes that a user has taken in a week. Using this component, the class count can reset at the start of the week and begin tracking again. 
 
-![User Update step that increments the attribute "class_count" by one.](https://www.braze.com/docs/assets/img_archive/canvas_user_update_increment.png?8584860af805e3ee223516585f0d7394){: style="max-width:90%;"}
+![User Update step that increments the attribute "class_count" by one.](https://www.braze.com/docs/assets/img_archive/canvas_user_update_increment.png?e0677bf0b26fce9c565e0b813095e70e){: style="max-width:90%;"}
 
 ### Updating an array of objects
 
@@ -70,7 +67,7 @@ The following is an example of adding an item to the wishlist:
           {
             "product_id": "SKU-123",
             "product_name": "Wireless Headphones",
-            "added_at": "{{$isoTimestamp}}"
+            "added_at": "{{'now' | date: '%Y-%m-%dT%H:%M:%S%z'}}"
           }
         ]
       }
@@ -101,7 +98,7 @@ Track when a user has items in their shopping cart, when they add new items or r
          "product_id": array,
          "gift": boolean,
          "discount_code": "enum",
-         "timestamp": {"$time" : "{{$isoTimestamp}}"},
+         "timestamp": {"$time" : "{{'now' | date: '%Y-%m-%dT%H:%M:%S%z'}}"}
        }
       ]
     }
@@ -129,7 +126,7 @@ The `shopping_cart` attribute carries the total of many custom events: the total
          "product_id": ["1001", "1002"],
          "gift": true,
          "discount_code": "flashsale1000",
-         "timestamp": {"$time" : "{{$isoTimestamp}}"},
+         "timestamp": {"$time" : "{{'now' | date: '%Y-%m-%dT%H:%M:%S%z'}}"}
        }
       ]
     }
@@ -138,19 +135,27 @@ The `shopping_cart` attribute carries the total of many custom events: the total
 ```
 
 
-## Setting Canvas entry property as an attribute
+## Persist entry data as a custom attribute
 
-You can use the user update step to persist a `canvas_entry_property`. Let’s say you have an event that triggers when an item is added to a cart. You can store the ID of the most recent item added to cart and use that for a remarketing campaign. Use the personalization feature to retrieve a Canvas entry property and store it in an attribute.
+Use a User Update step to copy Canvas entry data onto a custom attribute so you can segment or message on it after the user exits the Canvas. Entry data is available in Liquid for the duration of the Canvas only—User Update stores it on the profile.
 
-![User Update step that updates the attribute "most_recent_cart_item" with an item ID.](https://www.braze.com/docs/assets/img_archive/canvas_user_update_cep.png?ff29ccee5a7c96b96b34f01059345cf0){: style="max-width:90%;"}
+For example, an abandoned-cart Canvas can set `most_recent_cart_item` from the item ID on the trigger event, then later campaigns can target that item again.
+
+1. In the UI editor, select or create the attribute (for example `most_recent_cart_item`).
+2. Set **Action** to **Update** and turn on **Use personalization**.
+3. Insert the entry property from the personalization modal:
+   - If your workspace shows **Context Variables**, use `{{context.${item_id}}}`.
+   - If your workspace shows **Canvas Entry Properties**, use the legacy `{{canvas_entry_properties.${item_id}}}`.
+
+For more on which namespace your workspace uses, see [Context and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties).
 
 ### Personalization
 
-To store the property of the trigger event for a Canvas as an attribute, use the personalization modal to extract and store the Canvas entry property. User Update also supports the following personalization features:
+To store trigger entry data as an attribute, turn on **Use personalization** and insert the property from the personalization modal. User Update also supports the following personalization features:
 
 * [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content) 
 * [Content Blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/content_blocks)
-* [Entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties)
+* [Context and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties) (or legacy [Canvas entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties))
 * Liquid logic (including [aborting messages](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages))
 * Multiple attribute or event updates per object
 
@@ -272,5 +277,4 @@ You can also update subscription groups using this Canvas step. The following ex
   ]
 }
 ```
-
 

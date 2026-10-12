@@ -232,7 +232,7 @@ Make sure to select **Save / Publish** for your connector when finished. The act
 
 ### Step 3: Test your Tealium connector
 
-After your connector is up and running, you should test it to ensure it's working properly. The most simple way to test this is to use the Tealium **Trace Tool**. To start using Trace, make sure that you have added the Tealium Tools browser extension.
+After your connector is running, you should test it to ensure it's working properly. The most simple way to test this is to use the Tealium **Trace Tool**. To start using Trace, make sure that you have added the Tealium Tools browser extension.
 
 1. To start a new trace, select **Trace** on the sidebar under **Server-Side** options. Select **Start** and capture the Trace ID.
 2. Open the browser extension and enter the Trace ID into AudienceStream Trace.

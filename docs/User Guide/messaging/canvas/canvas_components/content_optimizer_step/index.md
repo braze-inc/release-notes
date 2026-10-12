@@ -38,7 +38,7 @@ Content Optimizer uses the selected push platforms specified in this variant to 
 
 
 
-From the **Messaging Channels** tab, select **SMS/MMS/RCS** and create your base message. For help, see the [SMS/MMS/RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs) section. 
+From the **Messaging Channels** tab, select **SMS/MMS/RCS** and create your base message. For help, see [SMS, MMS, and RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs). 
 
 Content Optimizer uses the **Content** and **Message** details specified in this variant to send all messages. You can either start with a new design or select an existing template for this message. At this step, consider which components of the message you want to optimize for. You define these in [step 4](#step-4).
 
@@ -103,7 +103,7 @@ For each selected component, define a set of alternative versions of that conten
 
 
 
-After selecting your subscription group and message type (if applicable), choose which components you want to optimize for SMS/MMS/RCS. 
+After selecting your subscription group and message type (if applicable), choose which components you want to optimize for SMS, MMS, and RCS. 
 
 Supported options for SMS and MMS are:
 
@@ -121,7 +121,7 @@ Supported options for RCS messages are:
 **Note:**
 
 
-After an SMS/MMS/RCS Content Optimizer step is launched, you cannot update the subscription group or message type. 
+After an SMS, MMS, or RCS Content Optimizer step is launched, you cannot update the subscription group or message type. 
 
 
 
@@ -189,9 +189,9 @@ Image is supported for push and RCS. Image is not supported for SMS or MMS Conte
 | Push | Title | `{% message_component "Title" %}` | 
 | Push | Message | `{% message_component "Message" %}` | 
 | Push | Image | `{% message_component "Image" %}` |
-| SMS/MMS/RCS | Hook | `{% message_component "Hook" %}` |
-| SMS/MMS/RCS | Body | `{% message_component "Body" %}` |
-| SMS/MMS/RCS | CTA | `{% message_component "CTA" %}` |
+| SMS, MMS, and RCS | Hook | `{% message_component "Hook" %}` |
+| SMS, MMS, and RCS | Body | `{% message_component "Body" %}` |
+| SMS, MMS, and RCS | CTA | `{% message_component "CTA" %}` |
 | RCS | Image | `{% message_component "Image" %}` |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Liquid references" }
 
@@ -284,7 +284,7 @@ The following settings cannot be changed after launch:
 - Which components are being tested
 - The optimization event
 
-For SMS/MMS/RCS steps, the subscription group and message type also cannot be changed after launch.
+For SMS, MMS, and RCS steps, the subscription group and message type also cannot be changed after launch.
 
 ## Best practices
 
@@ -300,7 +300,7 @@ For SMS/MMS/RCS steps, the subscription group and message type also cannot be ch
 
 - Multi-language settings aren't supported in Content Optimizer steps. Instead, use one Content Optimizer step per language and branch paths individually.
 - Liquid tags for Content Optimizer components aren't supported in Message steps, so the Liquid aborts in Message steps.
-- After a Content Optimizer step is launched, you can't change which components are being tested, the content of existing active variants, or the optimization event. For SMS/MMS/RCS steps, the subscription group and message type also can't be changed.
+- After a Content Optimizer step is launched, you can't change which components are being tested, the content of existing active variants, or the optimization event. For SMS, MMS, and RCS steps, the subscription group and message type also can't be changed.
 
 ## Analytics
 

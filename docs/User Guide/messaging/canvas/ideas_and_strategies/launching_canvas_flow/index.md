@@ -11,16 +11,14 @@ As you prepare to launch your Canvas, Braze recommends that you check your Canva
 
 Consider the [race conditions](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/race_conditions) that may occur before launching your Canvas. 
 
-To enter a Canvas, users must be in the entry audience before the entry schedule occurs regardless of whether the Canvas is scheduled, action-based, or API-triggered. 
+To enter a Canvas, users must be in the entry audience before the entry schedule occurs regardless of whether the Canvas is scheduled, action-based, or API-triggered.
 
-![An Action-Based Canvas that enters users when they make any purchase during a user's local time from April 30, 2025 at 12 pm to May 7, 2025 at 12 pm.](https://www.braze.com/docs/assets/img_archive/launch_with_canvas_flow_example.png?f5f34302d27905223218d9557a14b26f){: style="max-width:75%;"}
-
-Note that users who qualify for your entry audience after the Canvas launches will not enter the Canvas.
+Users who qualify for your entry audience after the Canvas launches do not enter the Canvas.
 
 **Tip:**
 
 
-Check out [Entry schedule types](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#step-12-determine-your-canvas-entry-schedule) for guidance and details for when to use scheduled, action-based, or API-triggered delivery for your Canvas!
+Check out [Entry schedule types](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#step-12-determine-your-canvas-entry-schedule) for guidance and details for when to use scheduled, action-based, or API-triggered delivery for your Canvas.
 
 
 
@@ -81,9 +79,8 @@ For live end-to-end testing with duplicate Canvases and API-based branch testing
 
 ## Troubleshooting
 
-**Why are my users not receiving my Canvas messages?**
+### Why are my users not receiving my Canvas messages?
 
+For pre-launch checks, see the [Canvas QA checklist](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist). 
 
-For pre-launch checks, see the [Canvas QA checklist](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist)—especially Phase 2 (audience and targeting) and Phase 5 (post-launch monitoring). For a deeper investigation path after go-live, see [Troubleshoot Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/troubleshooting).
-
-
+For a deeper investigation path after go-live, see [Troubleshoot Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/troubleshooting).

@@ -39,6 +39,13 @@ Select a trigger event. Events are organized by category and are available depen
     - **Update Subscription Status**
     - **Update Subscription Group Status**
 
+**Note:**
+
+
+When triggering a campaign or Canvas through a WhatsApp inbound message, the trigger event fires for any user who sends a qualifying inbound message, regardless of their WhatsApp subscription status. Subscription status is only checked when Braze attempts to send a message to that user. As a result, unsubscribed users can still enter a triggered campaign or Canvas as long as they meet the trigger criteria, but they do not receive any WhatsApp messages unless they're subscribed.
+
+
+
 **Start Checkout**, **View Product**, **Cancel Order**, and **Refund Order** are recommended eCommerce events that use **Perform Custom Event** with the event name pre-filled.
 
 **Place Order** and **Update Cart** accept property filters, so a trigger fires only for the orders or carts you want. Basic filters match a top-level property such as `total_value`; nested filters look inside the `products` array, so `products[].metadata.category` matches when any product qualifies. For details, see [Property filters](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events#property-filters).

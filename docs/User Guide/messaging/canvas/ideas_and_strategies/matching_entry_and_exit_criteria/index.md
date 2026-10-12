@@ -2,9 +2,9 @@
 
 > This article covers how to set up exit criteria and Action Paths steps that directly correlate to the Canvas entry event, so that users only exit or branch when they perform a specific action related to why they entered the Canvas.
 
-By comparing event properties against [Canvas entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties), you can create highly targeted flows. For example, in an abandoned checkout Canvas, you can configure a user to exit only when they purchase the exact item they abandoned, while continuing to receive reminder messages if they purchase a different item.
+By comparing event properties against [Canvas entry data](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties), you can create highly targeted flows. For example, in an abandoned checkout Canvas, you can configure a user to exit only when they purchase the exact item they abandoned, while continuing to receive reminder messages if they purchase a different item.
 
-This approach uses [context variables](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables) to compare properties across events. The pattern applies to many scenarios beyond eCommerce, including policy renewals, booking reminders, and subscription management.
+This approach uses [context variables](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables) to compare properties across events. In workspaces without Canvas Context, the personalization menu labels the same entry data **Canvas Entry Properties** instead. The pattern applies to many scenarios beyond eCommerce, including policy renewals, booking reminders, and subscription management.
 
 ## Exit criteria: Exiting the Canvas when a matching action occurs
 
@@ -24,7 +24,7 @@ To set this up:
 1. Set up an action-based Canvas entry with the triggering custom event (such as `Selected Ticket`) and its relevant property (such as `event_id`).
 2. In the **Target Audience** step, configure the exit criteria exception event with the completing custom event (such as `Purchased Ticket`).
 3. Select **Add property filters**, then add a filter where the basic property `event_id` comparison is set to `equals`.
-4. Turn on the **Personalize value** toggle, set the **Personalization type** to `Context Variables`, and set the **Attribute** to `event_id`.
+4. Turn on the **Personalize value** toggle. For **Personalization type**, select **Context Variables** or **Canvas Entry Properties**, depending on which label appears in your workspace. Then, set **Attribute** to `event_id`.
 
 This compares the `event_id` from the `Purchased Ticket` event against the `event_id` stored from the original Canvas entry event. For more detail on configuring these filters, see [Exit criteria examples](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables#exit-criteria-examples).
 
@@ -43,7 +43,7 @@ In this scenario, a user who selected an item but didn't complete a purchase fir
 To set this up:
 
 1. Add an [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) step and set the evaluation window (such as one week).
-2. For the first action group (original purchase), add a trigger for the completing custom event (such as `Purchased_Ticket`). Select **Add property filters**, then add a filter where the basic property `event_id` comparison is set to `equals`. Turn on **Personalize value**, set the **Personalization type** to `Context Variables`, and set the **Attribute** to `event_id`.
+2. For the first action group (original purchase), add a trigger for the completing custom event (such as `Purchased_Ticket`). Select **Add property filters**, then add a filter where the basic property `event_id` comparison is set to `equals`. Turn on **Personalize value**, set **Personalization type** to **Context Variables** or **Canvas Entry Properties**, depending on your workspace, and set **Attribute** to `event_id`.
 3. For the second action group (different purchase), add the same trigger event but set the comparison to `does not equal` with the same context variable configuration.
 4. Use the **Everyone Else** group for users who didn't perform the completing event at all.
 

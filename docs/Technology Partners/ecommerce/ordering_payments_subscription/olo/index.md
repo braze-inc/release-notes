@@ -106,7 +106,7 @@ This return value must adhere to Braze’s `/users/track` request body format:
 
 ## Example Data Transformations for Olo webhooks
 
-This section contains example templates that can be used as a starting point. Feel free to start from scratch, or to delete specific components as you see fit.
+This section contains example templates that can be used as a starting point. Feel free to create a new template, or to delete specific components as you see fit.
 
 In each template the code defines a variable, `brazecall`, to build a `/users/track` request.
 

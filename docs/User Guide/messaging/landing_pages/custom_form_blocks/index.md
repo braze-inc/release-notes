@@ -372,5 +372,4 @@ Check that the selector matches an element that exists in the DOM when `register
 
 ## Related content
 
-- [JavaScript bridge for landing pages](https://www.braze.com/docs/user_guide/messaging/landing_pages/javascript_bridge) covers the full `brazeBridge` reference used in `onSubmit`.
-- [Create landing pages](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/messaging/landing_pages/javascript_bridge"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">JavaScript bridge for landing pages</span><span class="guide_tile_description">Full <code>brazeBridge</code> reference used in <code>onSubmit</code>.</span></span></div></a></li><li><a href="/docs/user_guide/messaging/landing_pages/create_landing_pages"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create landing pages</span></span></div></a></li></ul>

@@ -91,12 +91,16 @@ The following are all available permissions you can assign at the Team level. An
 - View Dashboard Reports
 - Edit Dashboard Reports
 - Delete Dashboard Reports
+- View Catalogs
+- Edit Catalogs
+- Export Catalogs
+- Delete Catalogs
 
 To see descriptions of what each user permission includes and how to use them, check out our [User Permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) section.
 
 ## Assign Team tags {#tags-and-filters}
 
-You can assign a Team to Canvases, campaigns, Content Cards, segments, email templates, webhook templates, Content Blocks, and media library assets with the **Add Team** filter.
+You can assign a Team to Canvases, campaigns, Content Cards, segments, email templates, webhook templates, Content Blocks, catalogs, and media library assets with the **Add Team** filter.
 
 ### Automatic Team assignment
 
@@ -104,7 +108,7 @@ For users with Team-level permissions only (and no workspace-level edit permissi
 
 | User's Team membership | Behavior |
 | --- | --- |
-| Exactly one Team | Braze auto-assigns that Team when the user creates a new campaign, Canvas, Content Block, or email template. |
+| Exactly one Team | Braze auto-assigns that Team when the user creates a new campaign, Canvas, Content Block, email template, or catalog. |
 | More than one Team | The user must choose a Team before saving. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Automatic Team Assignment behavior" }
 

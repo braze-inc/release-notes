@@ -259,7 +259,7 @@ After writing your Data Transformation, select **Validate** to make your Data Tr
 
 ## Data Transformation use cases
 
-The following are example templates built using our [example Stripe webhook payload](#example). These templates can be used as a starting point. You can start from scratch or delete specific components as you see fit.
+The following are example templates built using our [example Stripe webhook payload](#example). These templates can be used as a starting point. You can create a new template or delete specific components as you see fit.
 
 In this example template, we're logging a custom event to the Braze profile. The event type will be sent as the custom event name, and the data object will be passed as event properties. 
 

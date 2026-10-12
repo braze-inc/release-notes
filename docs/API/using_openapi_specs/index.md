@@ -77,10 +77,4 @@ To build against an endpoint before you write live integration code:
 
 ## Related resources
 
-- [Use OpenAPI schemas for request validation](https://www.braze.com/docs/api/openapi_schema_validation/)
-- [API overview](https://www.braze.com/docs/api/basics/)
-- [API endpoints](https://www.braze.com/docs/api/endpoints/)
-- [Objects and filters](https://www.braze.com/docs/api/objects_filters/)
-- [API errors and responses](https://www.braze.com/docs/api/errors/)
-- [API rate limits](https://www.braze.com/docs/api/api_limits/)
-- [Postman and sample requests](https://www.braze.com/docs/api/postman_collection/)
+<ul class="guide_tiles"><li><a href="/docs/api/openapi_schema_validation"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Use OpenAPI schemas for request validation</span></span></div></a></li><li><a href="/docs/api/basics"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">API overview</span></span></div></a></li><li><a href="/docs/api/endpoints"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">API endpoints</span></span></div></a></li><li><a href="/docs/api/objects_filters"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Objects and filters</span></span></div></a></li><li><a href="/docs/api/errors"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">API errors and responses</span></span></div></a></li><li><a href="/docs/api/api_limits"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">API rate limits</span></span></div></a></li><li><a href="/docs/api/postman_collection"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Postman and sample requests</span></span></div></a></li></ul>

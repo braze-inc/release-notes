@@ -122,7 +122,7 @@ When a multichannel campaign or Canvas uses a shared rate limit, this means the 
 
 When a multichannel campaign or Canvas uses channel-based rate limiting, the rate limit will apply to each of your selected channels. For example, you can set your campaign or Canvas to send a maximum of 5,000 webhooks and 2,500 SMS messages per minute across the campaign or Canvas.
 
-![Separate rate limits for two channels, webhook and SMS/MMS/RCS, with 5,000 and 2,500 messages per minute respectively.](https://www.braze.com/docs/assets/img_archive/channel_rate_limits.png?5cd7bc2b254be886a012755462d79646){: style="max-width:70%;"}
+![Separate rate limits for the webhook and SMS, MMS, and RCS channels with 5,000 and 2,500 messages per minute respectively.](https://www.braze.com/docs/assets/img_archive/channel_rate_limits.png?5cd7bc2b254be886a012755462d79646){: style="max-width:70%;"}
 
 ##### Push notifications
 
@@ -225,7 +225,7 @@ Frequency capping is applied at the campaign or Canvas component send level and 
 
 By default, frequency capping is toggled on when new campaigns are created. From here, you can choose the following:
 
-- The messaging channel you would like to cap: push, email, SMS/MMS/RCS, webhook, WhatsApp, LINE, or any of those channels. When your workspace has SMS enabled, the SMS rule type covers SMS, MMS, and RCS sends under one shared cap (the dashboard labels it **SMS/MMS/RCS** when MMS is enabled).
+- The messaging channel you would like to cap: push, email, SMS, MMS, RCS, webhook, WhatsApp, LINE, or any of those channels. SMS, MMS, and RCS share one frequency-capping rule type (the dashboard labels it **SMS** or **SMS/MMS/RCS**, depending on whether MMS is enabled).
 - How many times each user should receive a campaign or Canvas component sent from a channel within a certain time frame.
 - How many times each user should receive a campaign or Canvas component sent by [tag](#frequency-capping-by-tag) within a certain time frame.
 

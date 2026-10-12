@@ -68,7 +68,7 @@ Properties in a Canvas step can be changed after launch, and even after a user g
 
 When creating a feature flag you specify default properties. When setting up a feature flag Canvas step, you can either keep the default values, or overwrite the values for users who enter this step.
 
-![A feature flag "Preference Center" with "String" as the property, "url" as the property key, and a value.](https://www.braze.com/docs/assets/img/feature_flags/feature_flags_canvas_details.png?856f906d0c4f665aaaa11d066a999ced){: style="max-width:90%"}
+![A feature flag "Preference Center" with "String" as the property, "url" as the property key, and a value.](https://www.braze.com/docs/assets/img/feature_flags/feature_flags_canvas_details.png?5c479f99bac758baa3f7a8c96df57ec3){: style="max-width:90%"}
 
 Go to **Messaging** > **Feature Flags** to edit, add, or remove additional properties.
 

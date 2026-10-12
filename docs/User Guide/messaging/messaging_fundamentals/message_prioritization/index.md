@@ -45,7 +45,7 @@ Message Prioritization supports the same channels as frequency capping:
 
 - Push notifications
 - Email
-- SMS/MMS/RCS
+- SMS, MMS, and RCS
 - Webhooks
 - WhatsApp
 - LINE
@@ -82,13 +82,13 @@ The brand creates two categories and ranks them in this order:
 1. Loyalty
 2. Paid Partnerships
 
-![An example of prioritization rules for two categories: Paid Partnerships and Loyalty.](https://www.braze.com/docs/assets/img/message_prioritization/message_prioritization12.png?a42380a55b755b04f6e43563b57dc8cb)
+![An example of prioritization rules for two categories: Paid Partnerships and Loyalty.](https://www.braze.com/docs/assets/img/message_prioritization/message_prioritization12.png?bf064a53718529d1283d6697b0f8a4f2)
 
 During the holiday season, when frequency caps fill quickly, a loyalty reward and a partner promotion are both scheduled for the same user on the same day, and the cap allows only one of them. Braze sends the loyalty reward, and the partner campaign isn't selected to send. If a retry window is configured, Braze can try the partner campaign again later. For other send-time patterns, see [Examples](#examples).
 
 ## Categories
 
-Prioritization rules are based on a ranking of categories, which are labels you can assign to a given campaign or Canvas (similar to a [tag](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags)). There is a limit on the number of categories you can create at a given time; contact your customer success manager if you'd like a higher limit.
+Prioritization rules are based on a ranking of categories, which are labels you can assign to a given campaign or Canvas (similar to a [tag](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/tags)). For the number of categories you can create, see [Plan tiers](#plan-tiers).
 
 To add a new category:
 
@@ -101,9 +101,11 @@ To add a new category:
 
 To edit or delete a category, select the <i class="fas fa-ellipsis-vertical"></i> menu.
 
+A Canvas has one category for all steps. You can't rank a welcome email over a later promotion inside the same opted-in Canvas.
+
 ## Prioritization rules
 
-After your categories are set up, you can rank them in a set of prioritization rules. Prioritization rules are ranked in order: the first rule has the highest priority. There is a limit on the number of prioritization rules you can create at a given time; contact your customer success manager if you'd like a higher limit.
+After your categories are set up, you can rank them in a set of prioritization rules. Prioritization rules are ranked in order: the first rule has the highest priority. For the number of prioritization rules you can create, see [Plan tiers](#plan-tiers).
 
 1. Go to **Settings** > **Message Prioritization** > **Prioritization Rules** to configure your rules. 
 
@@ -218,7 +220,7 @@ When a message isn't selected to send, it doesn't send at its scheduled time. Wi
 
 A retry window schedules later ranking attempts for a limited number of days. A retry is another attempt, not a send. That attempt can lose ranking again. If a retry attempt is selected to send, Braze records a normal send. There is no separate sent-after-retry event.
 
-The maximum retry window length depends on your Braze platform edition. On each subsequent day, at the same time the message was originally scheduled or triggered to send, Braze attempts the message again. After the last day in the retry window, if the message still has not sent, it's aborted and logged as a Message Prioritization abort.
+The maximum retry window is one day on the free tier and three days on the paid tier. For more information, see [Plan tiers](#plan-tiers). On each subsequent day, at the same time the message was originally scheduled or triggered to send, Braze attempts the message again. After the last day in the retry window, if the message still has not sent, it's aborted and logged as a Message Prioritization abort.
 
 For recurring scheduled campaigns, the retry window must be shorter than the minimum time between sends for that campaign. Retries always happen one day at a time from the original send time, even if the campaign is not normally scheduled to send on that day. For example, if you have a campaign that sends every Monday and Wednesday, the retry attempt occurs on Tuesday, so the retry window must be set to one day. If you have a campaign that sends every Monday, Wednesday, and Friday, and the Friday send is retried with a one-day retry window, the retry attempt occurs on Saturday, not Monday.
 
@@ -342,14 +344,16 @@ Suppose a higher-priority Canvas can send different messages depending on which 
 
 Suppose a user enters a higher-priority Canvas Message step that uses Intelligent Timing. After Braze calculates that user's send time for the step with Intelligent Timing, Message Prioritization uses that per-user send time for the current step and for later Message steps on the same deterministic path. This helps Braze compare downstream Canvas messages against other opted-in sends using the updated timing instead of only the earlier path estimate.
 
-## Limitations
+## Plan tiers
 
-Message Prioritization has the following feature limits. Specific limits depend on your Braze platform edition. Contact your customer success manager for details.
+These Message Prioritization limitations depend on your plan type: free or paid.
 
-- A limit on the number of active opted-in scheduled campaigns and Canvases (combined)
-- A limit on the number of active opted-in action-based campaigns and Canvases (combined)
-- A limit on the number of prioritization evaluations per month
-- A limit on the number of categories per workspace
-- A limit on the number of prioritization rules per workspace
-- A maximum retry window length
-- A Canvas has one category for all steps. You can't rank a welcome email over a later promotion inside the same opted-in Canvas.
+| Feature | Free tier | Paid tier |
+| --- | --- | --- |
+| Categories per workspace | 20 | 50 |
+| Prioritization rules per workspace | 10 | 50 |
+| Active opted-in scheduled campaigns and Canvases per workspace | 25 | 100 |
+| Active opted-in action-based campaigns and Canvases per workspace | 25 | 250 |
+| Maximum retry window | One day | Three days |
+| Prioritization evaluations per company, per month | 20 million | 5 billion |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Plan tiers" }

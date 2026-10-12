@@ -2,6 +2,13 @@
 
 > Context steps let you create and update one or more variables for a user as they move through a Canvas. For example, if you have a Canvas that manages seasonal discounts, you can use a context variable to store a different discount code each time a user enters the Canvas.
 
+**Important:**
+
+
+Canvas Context availability varies by workspace. If **Context** doesn't appear in the Canvas step menu and the personalization menu shows **Canvas Entry Properties** instead of **Context Variables**, use [`canvas_entry_properties`](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties) for entry data. Contact your account manager if you need access to Canvas Context.
+
+
+
 ## How it works
 
 ![A Context step as the first step of a Canvas.](https://www.braze.com/docs/assets/img/context_step3.png?fa6617cfab3adb369b499fdc7aa9d553){: style="float:right;max-width:40%;margin-left:15px;"}
@@ -250,9 +257,9 @@ The time it takes to process all users through a Context step depends on:
 
 If your Connected Content endpoint has rate limits, consider that Context steps process users sequentially within each batch, which helps respect rate limits naturally. However, multiple batches are processed in parallel, so ensure your endpoint can handle concurrent requests from multiple batches.
 
-## Time zone consistency standardization
+## Time zone consistency
 
-With Canvas Context generally available, all default timestamp event properties in action-based Canvases are in UTC. This change is part of a broader effort to ensure a more predictable and consistent experience when editing Canvas steps and messages. Note that this change impacts all action-based Canvases, whether the specific Canvas is using a Context step or not.
+For workspaces with Canvas Context, all default timestamp event properties in action-based Canvases are in UTC. This behavior applies whether or not the Canvas uses a Context step.
 
 **Important:**
 
@@ -263,9 +270,9 @@ In all circumstances, we strongly recommend using [Liquid time_zone filters](htt
 
 ## Frequently asked questions
 
-### What has changed since Canvas Context became generally available?
+### How does Canvas Context affect timestamps?
 
-Now that Canvas Context is generally available, the following details apply:
+For workspaces with Canvas Context:
 
 - All timestamps with a [datetime type](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/custom_event_properties) from [trigger event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties) in action-based Canvases are in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
 - This change impacts all action-based Canvases, whether the specific Canvas is using a Context step or not.

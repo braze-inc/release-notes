@@ -8,7 +8,7 @@
 
 Before you can start this tutorial, verify that your Braze SDK meets the minimum version requirements:
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1130' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 11.3.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#581' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 5.8.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#3310' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 33.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/flutter/changelog/#1300' class='sdk-versions--chip flutter-sdk' target='_blank'>Flutter: 13.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/react_native/changelog/#1400' class='sdk-versions--chip reactnative-sdk' target='_blank'>React Native: 14.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1130' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 11.3.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#700' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 7.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#3310' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 33.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/flutter/changelog/#1300' class='sdk-versions--chip flutter-sdk' target='_blank'>Flutter: 13.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/react_native/changelog/#1400' class='sdk-versions--chip reactnative-sdk' target='_blank'>React Native: 14.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ## Displaying banners for the Web SDK
 
@@ -29,20 +29,33 @@ braze.initialize("YOUR-API-KEY", {
   enableLogging: true,
 });
 
-braze.subscribeToBannersUpdates((banners) => {
-  // Get this placement's banner. If it's `null`, the user did not qualify for any banners.
-  const globalBanner = braze.getBanner("global_banner");
-  if (!globalBanner) {
-    return;
-  }
-
+braze.subscribeToBannersEvents((event) => {
   const container = document.getElementById("global-banner-container");
 
-  braze.insertBanner(globalBanner, container);
+  switch (event.type) {
+    case braze.ChannelEventType.CACHE_REPLAY:
+    case braze.ChannelEventType.CACHE_LOAD:
+    case braze.ChannelEventType.DATA_UPDATED: {
+      // Get this placement's banner. If it's missing, the user did not qualify for any banners.
+      const globalBanner = event.cacheSnapshot.banners["global_banner"];
+      if (!globalBanner) {
+        return;
+      }
 
-  if (globalBanner.isControl) {
-    // Hide or collapse the container
-    container.style.display = "none";
+      braze.insertBanner(globalBanner, container);
+
+      if (globalBanner.isControl) {
+        // Hide or collapse the container
+        container.style.display = "none";
+      }
+      break;
+    }
+    case braze.ChannelEventType.ERROR:
+      if (event.reason === braze.ChannelErrorReason.FEATURE_DISABLED) {
+        // Banners are disabled, so hide the container
+        container.style.display = "none";
+      }
+      break;
   }
 });
 
@@ -65,21 +78,21 @@ lines-index.js=5
 To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
-lines-index.js=8-23
+lines-index.js=8-36
 
-### 2. Subscribe to Banner updates
+### 2. Subscribe to Banner events
 
-Use `subscribeToBannersUpdates()` to register a handler that runs whenever a Banner is updated. Inside the handler, call `braze.getBanner("global_banner")` to get the latest placement.
+Use `subscribeToBannersEvents()` on Web SDK 7.0.0 and later to register a handler. The handler runs when the Banner cache is replayed, reloaded, or updated, or when an error occurs. Inside the handler, read the placement from `event.cacheSnapshot.banners`. `subscribeToBannersUpdates()` is the earlier pattern, deprecated as of 7.0.0. For the full list of events, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
 
 !!step
-lines-index.js=15-22
+lines-index.js=21-26
 
 ### 3. Insert the Banner and handle control groups
 
 Use `braze.insertBanner(banner, container)` to insert a Banner when it's returned. To ensure keep your layout clean, hide or collapse Banners that are apart of a control group (for example, when `isControl` is `true`).
 
 !!step
-lines-index.js=25
+lines-index.js=38
 
 ### 4. Refresh your Banners
 
@@ -120,6 +133,8 @@ import android.app.Application
 import android.util.Log
 import com.braze.Braze
 import com.braze.configuration.BrazeConfig
+import com.braze.events.BannersEvent
+import com.braze.events.ChannelErrorReason
 import com.braze.support.BrazeLogger
 
 public class MainApplication : Application() {
@@ -136,12 +151,31 @@ public class MainApplication : Application() {
             .build()
         Braze.configure(this, config)
 
-        // Subscribe to Banner updates
+        // Subscribe to Banner events
         Braze.getInstance(this)
-            .subscribeToBannersUpdates { update ->
-                for (banner in update.banners) {
-                    Log.d("brazeBanners", "Received banner for placement: ${banner.placementId}")
-                    // Add any custom banner logic you'd like
+            .subscribeToBannersEvents { event ->
+                when (event) {
+                    is BannersEvent.CacheReplay -> {
+                        for ((_, banner) in event.cacheSnapshot.banners) {
+                            Log.d("brazeBanners", "Received banner for placement: ${banner.placementId}")
+                        }
+                    }
+                    is BannersEvent.CacheLoad -> {
+                        for ((_, banner) in event.cacheSnapshot.banners) {
+                            Log.d("brazeBanners", "Received banner for placement: ${banner.placementId}")
+                        }
+                    }
+                    is BannersEvent.DataUpdated -> {
+                        for ((_, banner) in event.cacheSnapshot.banners) {
+                            Log.d("brazeBanners", "Received banner for placement: ${banner.placementId}")
+                        }
+                    }
+                    is BannersEvent.ErrorEvent -> {
+                        if (event.reason is ChannelErrorReason.FeatureDisabled) {
+                            Log.d("brazeBanners", "Banners is disabled for this app or user.")
+                        }
+                    }
+                    else -> {}
                 }
             }
     }
@@ -195,18 +229,20 @@ class MainActivity : ComponentActivity() {
 ```
 
 !!step
-lines-MainApplication.kt=12
+lines-MainApplication.kt=14
 
 ### 1. Enable debugging (optional)
 
 To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
-lines-MainApplication.kt=21-28
+lines-MainApplication.kt=23-49
 
-### 2. Subscribe to Banner updates
+### 2. Subscribe to Banner events
 
-Use `subscribeToBannersUpdates()` to register a handler that runs whenever a Banner is updated.
+Use `subscribeToBannersEvents()` to register a handler that runs when the Banner cache is replayed or updated. `BannersCacheSnapshot.banners` is a map of placement ID to `Banner`.
+
+For the full list of events you can receive, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
 
 !!step
 lines-MainActivity.kt=10-14
@@ -256,6 +292,7 @@ import BrazeUI
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
     static var braze: Braze? = nil
+    static var bannersSubscription: Braze.Cancellable? = nil
 
     func application(
       _ application: UIApplication,
@@ -267,6 +304,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Initialize Braze SDK instance
         AppDelegate.braze = Braze(configuration: configuration)
+
+        // Subscribe to Banner events
+        AppDelegate.bannersSubscription = AppDelegate.braze?.banners.subscribeToEvents { event in
+            switch event {
+            case .cacheReplay(let cacheSnapshot), .cacheLoad(let cacheSnapshot), .dataUpdated(let cacheSnapshot, _):
+                for (placementId, banner) in cacheSnapshot.banners {
+                    print("Received banner: \(banner) with placement ID: \(placementId)")
+                }
+            case .error(let reason, _) where reason == .featureDisabled:
+                print("Banners is disabled for this app or user.")
+            default:
+                break
+            }
+        }
 
         // Request a banners refresh
         AppDelegate.braze?.banners.requestBannersRefresh(placementIds: ["top-1"])
@@ -355,37 +406,46 @@ final class BannerViewController: UIViewController {
 ```
 
 !!step
-lines-AppDelegate.swift=14
+lines-AppDelegate.swift=15
 
 ### 1. Enable debugging (optional)
 
 To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
-lines-AppDelegate.swift=20
+lines-AppDelegate.swift=20-32
 
-### 2. Refresh your placements
+### 2. Subscribe to Banner events
 
-After initializing the Braze SDK, `call requestBannersRefresh(placementIds: ["PLACEMENT_ID"])` to refresh Banner content at the start of each session.
+Use `subscribeToEvents` to register a handler that runs when the Banner cache is replayed, reloaded, or updated, or when an error occurs. `cacheSnapshot.banners` is a dictionary of placement ID to `Banner`. Keep a strong reference to the returned `Braze.Cancellable`, because the SDK cancels the subscription when it is deallocated.
+
+For when each event fires, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
+
+!!step
+lines-AppDelegate.swift=35
+
+### 3. Refresh your placements
+
+After you register your subscription, call `requestBannersRefresh(placementIds: ["PLACEMENT_ID"])` to refresh Banner content at the start of each session.
 
 !!step
 lines-BannerViewController.swift=19-37
 
-### 3. Initialize the Banner and provide a callback
+### 4. Initialize the Banner and provide a callback
 
 Create a `BrazeBannerUI.BannerUIView` instance with your Braze object and placement ID, and provide a `processContentUpdates` callback to unhide the Banner and update its height constraint based on the provided content height.
 
 !!step
 lines-BannerViewController.swift=38-40
 
-### 4. Enable Auto Layout constraints
+### 5. Enable Auto Layout constraints
 
 Hide the Banner view by default, then disable autoresizing mask translation to enable Auto Layout constraints.
 
 !!step
 lines-BannerViewController.swift=43-58
 
-### 5. Anchor content and set height constraints
+### 6. Anchor content and set height constraints
 
 Anchor your main content to the top using Auto Layout, and place the Banner view after it. Pin the Banner’s leading, trailing, and bottom edges to the safe area, and set an initial height constraint of `0` that will be updated when content loads.
 
@@ -448,6 +508,7 @@ struct BannerSwiftUIView: View {
 
   @State var hasBannerForPlacement: Bool = false
   @State var contentHeight: CGFloat = 0
+  @State var bannersSubscription: Braze.Cancellable?
 
   var body: some View {
     VStack {
@@ -473,12 +534,16 @@ struct BannerSwiftUIView: View {
         .frame(height: min(contentHeight, 80))
       }
     }.onAppear {
-      AppDelegate.braze?.banners.getBanner(
-        for: BannerSwiftUIView.bannerPlacementID,
-        { banner in
-          hasBannerForPlacement = banner != nil
+      bannersSubscription = AppDelegate.braze?.banners.subscribeToEvents { event in
+        switch event {
+        case .cacheReplay(let cacheSnapshot), .cacheLoad(let cacheSnapshot), .dataUpdated(let cacheSnapshot, _):
+          hasBannerForPlacement = cacheSnapshot.banners[BannerSwiftUIView.bannerPlacementID] != nil
+        case .error(let reason, _) where reason == .featureDisabled:
+          hasBannerForPlacement = false
+        default:
+          break
         }
-      )
+      }
     }
   }
 }
@@ -500,35 +565,37 @@ lines-AppDelegate.swift=19
 After initializing the Braze SDK, call `requestBannersRefresh(placementIds: ["PLACEMENT_ID"])` to refresh Banner content at the start of each session.
 
 !!step
-lines-BannerSwiftUIView.swift=1-46
+lines-BannerSwiftUIView.swift=1-50
 
 ### 3. Create a view component
 
 Create a reusable SwiftUI view component that displays available Banners and contains your main app content if needed.
 
 !!step
-lines-BannerSwiftUIView.swift=36-43
+lines-BannerSwiftUIView.swift=37-48
 
-### 4. Only display available Banners
+### 4. Subscribe to Banner events
 
-Only attempt to show `BrazeBannerUI.BannerView` if the SDK is initialized and Banner content exists for that user. In `.onAppear`, call `getBanner(for:placementID)` to set the state of `hasBannerForPlacement`.
+In `.onAppear`, use `subscribeToEvents` to register a handler that sets `hasBannerForPlacement` whenever the Banner cache is replayed, reloaded, or updated. Keep a strong reference to the returned `Braze.Cancellable` in your state, because the SDK cancels the subscription when it is deallocated.
+
+For when each event fires, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
 
 !!step
-lines-BannerSwiftUIView.swift=17-32
+lines-BannerSwiftUIView.swift=18-36
 
 ### 5. Only show `BannerView` after it loads
 
 To avoid blank space in your UI, only show `BrazeBannerUI.BannerView` if a Banner is present and the SDK is initialized.
 
 !!step
-lines-BannerSwiftUIView.swift=23-32
+lines-BannerSwiftUIView.swift=24-33
 
 ### 6. Dynamically update Banner height
 
 Use the `processContentUpdates` callback to fetch the Banner’s content height as soon as it loads. Update your SwiftUI state (`contentHeight`) and apply a `.frame(height:)` constraint using the provided height.
 
 !!step
-lines-BannerSwiftUIView.swift=34
+lines-BannerSwiftUIView.swift=35
 
 ### 7. Limit the Banner height
 

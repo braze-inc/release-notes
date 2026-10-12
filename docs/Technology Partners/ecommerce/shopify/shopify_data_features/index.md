@@ -846,9 +846,8 @@ The Shopify integration currently doesn't support populating the Braze [purchase
     {
       "shopify_tags": "VIP_customer",
       "shopify_total_spent": "60.00",
-      "shopify_order_count": "3",
+      "shopify_orders_count": "3",
       "shopify_last_order_id": "1234567",
-      "shopify_last_order_name": "test_order",
       "shopify_zipcode": "10001",
       "shopify_province": "null"
     }
@@ -859,25 +858,19 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 
 
 
-| Attribute Name | Description |
-| --- | --- |
-| `shopify_total_spent` | The total amount of money that the customer has spent across their order history. |
-| `shopify_order_count` | The number of orders associated with this customer. Test and archived orders aren't counted. |
-| `shopify_last_order_id` | The ID of the customer's last order. |
-| `shopify_last_order_name` | The name of the customer's last order. This is directly related to the `name` field on the order resource. |
-| `shopify_zipcode` | The customer's zipcode from their default address. |
-| `shopify_province` | The customer's province from their default address. |
-{: .reset-td-br-1 .reset-td-br-2 aria-label="Supported Shopify custom attributes" }
+| Attribute name | Description | Data source |
+| --- | --- | --- |
+| `shopify_total_spent` | The total amount of money that the customer has spent across their order history. | Shopify's `customers/purchasing_summary` webhook |
+| `shopify_orders_count` | The number of orders associated with this customer. Test and archived orders aren't counted. | Shopify's `customers/purchasing_summary` webhook |
+| `shopify_last_order_id` | The ID of the customer's last order. | Shopify's `customers/purchasing_summary` webhook |
+| `shopify_zipcode` | The customer's zipcode from their default address. | Shopify's `customers/create` and `customers/update` webhooks |
+| `shopify_province` | The customer's province from their default address. | Shopify's `customers/create` and `customers/update` webhooks |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Supported Shopify custom attributes" }
 
-**Important:**
+**Note:**
 
 
-A known issue with the current Shopify API version prevents the `shopify_last_order_name` user attribute from correctly populating. The impact on users is as follows:<br><br>
-
-- **Existing users:** For any user who already has a value for `shopify_last_order_name`, that value persists but is not updated by subsequent orders.
-- **New users:** For any new users, the field does not populate and remains empty or null.
-
-This page will be updated after Shopify resolves this issue.
+Shopify no longer provides the name of a customer's last order, so Braze doesn't set a `shopify_last_order_name` attribute. Profiles that already have a value keep it, but it isn't updated.
 
 
 
@@ -988,5 +981,5 @@ The following table summarizes the data included in that initial load.
 
 | Braze recommended events | Shopify custom events | Braze standard attributes | Braze subscription statuses |
 | --- | --- | --- | --- |
-| {::nomarkdown}<ul><li>Order placed</li><li>Order cancelled</li><li>Order refunded</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li><li>shopify_province</li></ul>{:/} | {::nomarkdown}<ul><li>Email</li><li>First Name</li><li>Last Name</li><li>Phone</li><li>City</li><li>Country</li><li>Total Revenue</li><li>Total Refunds</li><li>Total Orders</li></ul>{:/} | {::nomarkdown}<ul><li>Email marketing subscriptions associated with this Shopify store</li><li>SMS marketing subscriptions associated with this Shopify store</li></ul>{:/} |
+| {::nomarkdown}<ul><li>Order placed</li><li>Order cancelled</li><li>Order refunded</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_orders_count</li><li>shopify_last_order_id</li><li>shopify_zipcode</li><li>shopify_province</li></ul>{:/} | {::nomarkdown}<ul><li>Email</li><li>First Name</li><li>Last Name</li><li>Phone</li><li>City</li><li>Country</li><li>Total Revenue</li><li>Total Refunds</li><li>Total Orders</li></ul>{:/} | {::nomarkdown}<ul><li>Email marketing subscriptions associated with this Shopify store</li><li>SMS marketing subscriptions associated with this Shopify store</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Synced data" }

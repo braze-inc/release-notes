@@ -119,7 +119,7 @@ To create a recommendation, you need to tell Braze which field of your interacti
 
 Select this field for the **Property Name**.
 
-The **Property Name** field pre-populates with a list of fields sent through the SDK to Braze. If enough data is provided, these properties are also ranked in order of probability to be the correct property. Select the one that corresponds to the `id` field of the catalog.
+The **Property Name** field pre-populates with a list of fields sent through the SDK to Braze. If enough data is provided, these properties are also ranked in order of probability to be the correct property. The score shown next to each property name represents how well that property matches your catalog data for a custom event, the purchase object, or the order placed event, based on factors such as how often catalog item IDs appear in the event data. Select the property that corresponds to the `id` field of the catalog.
 
 ![The property name "purchase_item" selected that corresponds to the item IDs in the catalog.](https://www.braze.com/docs/assets/img/item_recs_4.png?04646252921dc2c0d58004a38f22d20e)
 

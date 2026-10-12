@@ -6,7 +6,7 @@
 
 Braze allows any marketer to collect and take action on any amount of data from any source, so you can creatively engage with customers in real time, across channels from one platform.
 
-Integrating Justuno and Braze gives you the best of both worlds. You can combine the customer data saved in Braze with the visitor and customer data saved in Justuno and create more personalized experiences for all audiences. This increases the effectiveness of your marketing campaigns and customer engagements.
+Integrating Justuno and Braze gives you both capabilities. You can combine the customer data saved in Braze with the visitor and customer data saved in Justuno and create more personalized experiences for all audiences. This increases the effectiveness of your marketing campaigns and customer engagements.
 
 ## Prerequisites
 

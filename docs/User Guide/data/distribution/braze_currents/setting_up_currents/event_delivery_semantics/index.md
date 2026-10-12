@@ -67,6 +67,17 @@ currents-export/dataexport.prod-01.S3.integration.69cadaaed2d51b7c75b1a3e5/event
 
 The `version` path segment is a simple integer Currents version value, such as `version=6`.
 
+**Important:**
+
+
+The `version` path segment indicates that the schema of the files has changed. Use it only as an indicator, not as a data column that you query.
+
+Some tools read [Hive-style](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL#LanguageManualDDL-PartitionedTables) `key=value` path segments, such as `version=6`, as partition columns (for example, [BigQuery external tables with Hive partitioning](https://cloud.google.com/bigquery/docs/hive-partitioned-queries)). When you load files this way, the `version` partition key can conflict with event fields that are also named `version`, such as the `version` field in `users.messages.inappmessage.Abort` events.
+
+To avoid this conflict, set up your pipeline so it doesn't treat the `version` path segment as a column. You can ignore the value of the in-app message `version` field. It's a legacy field that distinguished legacy in-app messages, which are no longer used, from triggered in-app messages.
+
+
+
 |Filename Segment |Definition|
 |---|---|
 | `<your-bucket-prefix>` | The prefix set for this Currents integration. |

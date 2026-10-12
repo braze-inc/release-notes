@@ -6,7 +6,7 @@ _This integration is maintained by Knak._
 
 ## About the integration
 
-The Braze and Knak integration allows you to create fully responsive emails in minutes or hours instead of days or weeks and export them as ready-to-use Braze templates. Knak is built for marketers who want to level up their email creation for campaigns managed in Braze, without the need for outside agencies or hand-coding. 
+The Braze and Knak integration allows you to create fully responsive emails in minutes or hours instead of days or weeks and export them as ready-to-use Braze templates. Knak is built for marketers who want to improve their email creation for campaigns managed in Braze, without the need for outside agencies or hand-coding. 
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ The Braze and Knak integration allows you to create fully responsive emails in m
 
 ## Use cases
 
-Knak is built for marketers who want to level up their email creation, with no coding or outside help required. It's great for those who:
+Knak is built for marketers who want to improve their email creation, with no coding or outside help required. It's great for those who:
 - Currently use simple templates for emails and want to up their game
 - Rely on outside agencies or developers to build emails for Braze
 - Want to take back creative control over asset creation and get to market considerably faster

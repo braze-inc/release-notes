@@ -77,7 +77,7 @@ For more information, refer to the following articles based on your platform: [i
 
 A REST Application Programming Interface key (REST API key) is a unique code that you pass into an API to authenticate the API call and identify the calling application or user. You access the API using HTTPS web requests to your company's REST API endpoint. REST API keys work in tandem with App Identifier keys to track, access, send, export, and analyze data to help ensure everything is running smoothly.
 
-Workspaces and API keys go hand in hand at Braze. Workspaces are designed to house versions of the same application across multiple platforms. Many customers also use workspaces to contain free and premium versions of their applications on the same platform. As you may notice, these workspaces are also making use of the REST API and have their own REST API keys. These keys can be individually scoped to include access to specific endpoints on the API. Each call to the API must include a key with access to the endpoint hit.
+Workspaces and API keys are closely related at Braze. Workspaces are designed to house versions of the same application across multiple platforms. Many customers also use workspaces to contain free and premium versions of their applications on the same platform. As you may notice, these workspaces also make use of the REST API and have their own REST API keys. These keys can be individually scoped to include access to specific endpoints on the API. Each call to the API must include a key with access to the endpoint hit.
 
 We refer to both the REST API key and workspace API key as the `api_key`. The `api_key` is included in each request as a request header and acts as an authentication key that allows you to use our REST APIs. These REST APIs are used to track users, send messages, export user data, and more. When you create a new REST API key, you must give it access to specific endpoints. By assigning specific permissions to an API key, you can limit exactly which calls an API key can authenticate.
 
@@ -96,7 +96,7 @@ To create a new REST API key:
 
 1. Go to **Settings** > **APIs and Identifiers**.
 2. Select **Create API Key**.
-3. Give your new key a name for identification at a glance.
+3. Give your new key a name for quick identification.
 4. Specify [allowlisted IP addresses](#api-ip-allowlisting) and subnets for the new key.
 5. Select which [permissions](#rest-api-key-permissions) you want to be associated with your new key.
 
@@ -170,7 +170,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `campaigns.details` | [`/campaigns/details`](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_details) | Query for details of a specific campaign. |
 | `sends.data_series` | [`/sends/data_series`](https://www.braze.com/docs/api/endpoints/export/campaigns/get_send_analytics) | Query for message send analytics over a time range. |
 | `sends.id.create` | [`/sends/id/create`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_create_send_ids) | Create send ID for message blast tracking. |
-| `campaigns.url_info.details` | [`/campaigns/url_info/details`](https://www.braze.com/docs) | Query for URL details of a specific message variation within a campaign. This permission is available only for workspaces with [Link Aliasing](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing) enabled. If this permission isn't available in your workspace, reach out to your Braze account manager. |
+| `campaigns.url_info.details` | [`/campaigns/url_info/details`](https://www.braze.com/docs) | Query for URL details of a specific message variation within a campaign. This permission is available only for workspaces with [Link Aliasing](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing) enabled. If this permission isn't available in your workspace, contact your Braze account manager. |
 | `transactional.send` | [`/transactional/v1/campaigns/{campaign_id}/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_transactional_message) | Allows for ability to send transactional messaging using the Transactional messaging endpoint. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="REST API key permissions" }
 
@@ -187,7 +187,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `canvas.data_series` | [`/canvas/data_series`](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvas_analytics) | Query for Canvas analytics over a time range. |
 | `canvas.details` | [`/canvas/details`](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvas_details) | Query for details of a specific Canvas. |
 | `canvas.data_summary` | [`/canvas/data_summary`](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvas_analytics_summary) | Query for rollups of Canvas analytics over a time range. |
-| `canvas.url_info.details` | [`/canvas/url_info/details`](https://www.braze.com/docs/get_canvas_link_alias) | Query for URL details of a specific message variation within a Canvas step. This permission is available only for workspaces with [Link Aliasing](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing) enabled. If this permission isn't available in your workspace, reach out to your Braze account manager. |
+| `canvas.url_info.details` | [`/canvas/url_info/details`](https://www.braze.com/docs/get_canvas_link_alias) | Query for URL details of a specific message variation within a Canvas step. This permission is available only for workspaces with [Link Aliasing](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing) enabled. If this permission isn't available in your workspace, contact your Braze account manager. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="REST API key permissions" }
 
 

@@ -16,9 +16,7 @@ Consider creating a [Content Test Group](https://www.braze.com/docs/user_guide/a
 
 ### Step 2: Duplicate and restrict entry
 
-Create a duplicate of your Canvas for testing. In the duplicated Canvas, edit **Entry Audience** so only test users are eligible—for example, by adding an **Email Address** filter. In the following example, Canvas has been limited to two test users who have first used the app less than three days ago.
-
-![A Canvas with an entry audience of "First used these apps less than 3 days ago" and the email addresses of two test users.](https://www.braze.com/docs/assets/img_archive/canvas_test2.png?4410d82b03178adbe89b1a67253c5698){: style="max-width:90%;"}
+Create a duplicate of your Canvas for testing. In the duplicated Canvas, edit **Entry Audience** so only test users are eligible—for example, by adding an **Email Address** filter.
 
 Reduce time delays to seconds or minutes so you can view messages quickly. Allow at least 2–3 minutes between tests to isolate specific actions to specific Canvas journeys.
 

@@ -28,7 +28,7 @@ Next, select **Create Experience Block** to design a Dynamic Content or Recommen
 
 ### Step 2: Draft your messaging
 
-The following image shows an email from scratch in the builder.<br>![Dynamic Yield email builder with a draft experience email layout.](https://www.braze.com/docs/assets/img/dynamic_yield/dynamic_yield5.png?c6337b79e038877e11e53e1790eb9768)
+The following image shows an new email in the builder.<br>![Dynamic Yield email builder with a draft experience email layout.](https://www.braze.com/docs/assets/img/dynamic_yield/dynamic_yield5.png?c6337b79e038877e11e53e1790eb9768)
 
 1. Enter a campaign name, note, and labels for the campaign in the heading area.<br><br>
 2. Insert an Experience Block. These blocks include:

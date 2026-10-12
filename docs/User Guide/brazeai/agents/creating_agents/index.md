@@ -187,8 +187,6 @@ Operator can pre-configure instructions, output fields, and context for the foll
 | Localization translator | Translate catalog strings into target locales within character limits | Localized text per locale |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Catalog Agent templates" }
 
-## Related resources  
+## Related resources
 
-- [Reference for agents](https://www.braze.com/docs/user_guide/brazeai/agents/reference)
-- [Frequently asked questions](https://www.braze.com/docs/user_guide/brazeai/agents/faq)
-- [Braze webinar about AI in Action: 3 new use cases for 1:1 personalization](https://www.braze.com/resources/webinars-and-events/ai-in-action-use-cases)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/brazeai/agents/reference"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Reference for agents</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/agents/faq"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Frequently asked questions</span></span></div></a></li><li><a href="https://www.braze.com/resources/webinars-and-events/ai-in-action-use-cases"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Braze webinar: AI in Action</span></span></div></a></li></ul>

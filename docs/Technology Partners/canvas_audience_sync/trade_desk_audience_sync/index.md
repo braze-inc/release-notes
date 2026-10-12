@@ -71,7 +71,7 @@ Next, configure your sync details:
 **Note:**
 
 
-If you're syncing to an audience in The Trade Desk with a region set to the EU, phone number isn't supported by The Trade Desk. Reach out to The Trade Desk for phone number support in the EU region.
+If you're syncing to an audience in The Trade Desk with a region set to the EU, phone number isn't supported by The Trade Desk. Contact The Trade Desk for phone number support in the EU region.
 
 
 

@@ -21,7 +21,7 @@ For help choosing the right deep linking approach for your use case, see [iOS de
 
 ## Integration
 
-Follow [Branch's SDK integration guide](https://help.branch.io/developers-hub/docs/native-sdks-overview) to get up and running with your Branch integration. Refer to the following for additional use cases.
+Follow [Branch's SDK integration guide](https://help.branch.io/developers-hub/docs/native-sdks-overview) to get set up with your Branch integration. Refer to the following for additional use cases.
 
 ### Support iOS universal links
 

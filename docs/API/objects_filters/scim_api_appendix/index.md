@@ -104,6 +104,9 @@ A valid role object is a JSON object with the following key-value pairs:
 | Administrator | `admin` |
 | Manage Company Settings | `manage_company_settings` |
 | Create and delete workspaces| `add_remove_app_groups` |
+| View Domain Settings | `view_domain_settings` |
+| Edit Domain Settings | `edit_domain_settings` |
+| Delete Dashboard Users | `delete_dashboard_users` |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Company permission strings #company" }
 
 ### Workspace permission strings {#workspace-strings}

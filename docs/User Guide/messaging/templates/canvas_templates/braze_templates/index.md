@@ -94,8 +94,6 @@ eCommerce Canvas templates are tailored specifically for eCommerce marketers, ma
 
 Use the **Abandoned browse** template to engage users who have browsed products but did not add them to their cart or place an order.
 
-![An applied "Abandoned Browse" Canvas template with expanded "Entry Rules".](https://www.braze.com/docs/assets/img_archive/abandoned_browse.png?227d20ff870fe4f89ddf52bd1a5c2a1d)
-
 #### Setup
 
 On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **Abandoned browse** template. 
@@ -109,7 +107,7 @@ The following settings are pre-configured in your Canvas:
         - Conversion deadline: 3 days 
 - Entry schedule 
     - Action-based when a user performs the `ecommerce.product_viewed` event
-    - Start time is when you create the Canvas template<br><br>!["Action Based Options" for the Canvas.](https://www.braze.com/docs/assets/img/ecommerce/abandoned_browse_entry.png?6e460471aeb2343dbf9747bcfd61abf9)<br><br> 
+    - Start time is when you create the Canvas template
 - Target audience 
     - Entry audience 
         - Email **is not blank**
@@ -158,9 +156,7 @@ Here is an example of how you would add an HTML product block for your Abandoned
 
 ### Abandoned cart
 
-Use the **Abandoned cart** template to cover potential lost sales from customers who added products to their cart but did not continue to checkout or place an order. 
-
-![An applied "Abandoned Cart" Canvas template with expanded "Entry Rules".](https://www.braze.com/docs/assets/img_archive/abandoned_cart.png?0d89e0a4e29af550228a1b79d26b34a9)
+Use the **Abandoned cart** template to cover potential lost sales from customers who added products to their cart but did not continue to checkout or place an order.
 
 #### Setup
 
@@ -175,7 +171,7 @@ The following settings are pre-configured in your Canvas:
         - Conversion deadline: 3 days 
 - Entry schedule 
     - Action-based trigger when a user triggers the **Perform Cart Updated Event** (located in the dropdown)
-    - Start time is when you create the Canvas template<br><br>!["Action Based Options" for the Canvas.](https://www.braze.com/docs/assets/img/ecommerce/abandoned_cart_entry.png?bfcde31a86077f89b31c2c031ed8553f)<br><br> 
+    - Start time is when you create the Canvas template
 - Target Audience 
     - Entry audience 
         - Has used these apps **more than 0** times 
@@ -183,7 +179,7 @@ The following settings are pre-configured in your Canvas:
     - Entry controls
         - Users are immediately re-eligible for Canvas entry
     - Exit criteria 
-        - Performs `ecommerce.cart_updated`, `ecommerce.checkout_started`, or `ecommerce.order_placed`<br><br>![Entry controls and exit criteria for the Canvas.](https://www.braze.com/docs/assets/img/ecommerce/abandoned_cart_entry_exit.png?16c6b7fc1c38c953185b987cd58ffa60)<br><br> 
+        - Performs `ecommerce.cart_updated`, `ecommerce.checkout_started`, or `ecommerce.order_placed`
 - Send settings 
     - Users who are subscribed or opted in 
 - Delay step
@@ -264,8 +260,6 @@ If you use Shopify, create your cart URL by using this Liquid template:
 
 Use the **Abandoned checkout** template to target customers who started the checkout process but left before placing their order. 
 
-![An applied "Abandoned Checkout" Canvas template with expanded "Entry Rules".](https://www.braze.com/docs/assets/img_archive/abandoned_checkout.png?86ee87fe7cc26b46920dae2ce7274a8e)
-
 #### Setup
 
 On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **Abandoned checkout** template. 
@@ -280,7 +274,7 @@ The following settings are pre-configured in your Canvas:
         - Conversion deadline: 3 days 
 - Entry schedule 
     - Action-based trigger when a user performs the `ecommerce.checkout_started` event
-    - Start time is when you create the Canvas template<br><br>!["Action Based Options" for the Canvas.](https://www.braze.com/docs/assets/img/ecommerce/abandoned_checkout_entry.png?393a872b484e98c324c59c5f4396c3c6)
+    - Start time is when you create the Canvas template
 - Target audience 
     - Entry audience 
         - Has used these apps **more than 0** times 
@@ -288,7 +282,7 @@ The following settings are pre-configured in your Canvas:
     - Entry controls
         - Users are immediately re-eligible for Canvas entry
         - Exit criteria 
-            - Performs the `ecommerce.order_placed` events<br><br>![Entry controls and exit criteria for the Canvas.](https://www.braze.com/docs/assets/img/ecommerce/abandoned_checkout_entry_exit.png?d4f96ee8dd405433d7d69b548d7cfc10)<br><br>
+            - Performs the `ecommerce.order_placed` events
 - Send settings 
     - Users who are subscribed or opted in 
 - Delay step
@@ -352,8 +346,6 @@ Set `abort_if_not_abandoned` to `false` when you want to send the checkout remin
 
 Use the **Order confirmation & feedback survey** template to confirm successful orders and enhance customer satisfaction.
 
-![An applied "Order confirmation" Canvas template with expanded "Entry Rules".](https://www.braze.com/docs/assets/img_archive/order_confirmation_feedback.png?d52b30c185386e9651e7d2f1de5b2a9d)
-
 #### Setup
 
 On the Canvas page, select **Use a Canvas Template** > **Braze templates** and then apply the **Order confirmation & feedback survey** template. 
@@ -368,7 +360,7 @@ The following settings are pre-configured in your Canvas:
         - Conversion deadline: 10 days 
 - Entry schedule 
     - Action-based trigger when a user performs the `ecommerce.cart_updated` event
-    - Start time is when you create the Canvas template<br><br>!["Action Based Options" for the Canvas.](https://www.braze.com/docs/assets/img/ecommerce/feedback_entry.png?d5332d6baa2137ccd7f1d357f080b34a)<br><br>
+    - Start time is when you create the Canvas template
 - Target audience 
     - Entry audience 
         - Has used these apps **more than 0** times 
@@ -376,7 +368,7 @@ The following settings are pre-configured in your Canvas:
     - Entry controls
         - Users are immediately re-eligible for Canvas entry
     - Exit criteria 
-        - Not applicable<br><br>![Additional filters and entry controls for the Canvas.](https://www.braze.com/docs/assets/img/ecommerce/feedback_entry_exit.png?7c41fe6f11707edf55b1d502f6844312)<br><br>
+        - Not applicable
 - Send settings 
     - Users who are subscribed or opted in 
 - Message step 

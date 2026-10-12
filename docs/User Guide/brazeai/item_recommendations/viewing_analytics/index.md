@@ -23,7 +23,7 @@ Refer to the following table for more information:
 
 | Metric              | Description |
 | ------------------- | ---------- |
-| **Precision**           | The percentage of time the model correctly guessed the next item a user purchased. Precision is heavily dependent on your specific catalog size and mix, and should be used as a guide to understand how often the model is correct.<br><br>In past testing, models have performed well with precision numbers ranging from 6-20%. This metric updates when the model next retrains.  |
+| **Precision**           | The percentage of time the model's top prediction matched the user's actual next purchase. During training, Braze compares its single most likely prediction with what the user actually purchased next in a set of interactions held back from training. Precision is heavily dependent on your specific catalog size and mix, and should be used as a guide to understand how often the model is correct.<br><br>In past testing, models have performed well with precision numbers ranging from 6-20%. This metric updates when the model next retrains.  |
 | **Coverage**            | What percentage of available items in the catalog are recommended to at least one user. You can expect to see higher item coverage with personalized item recommendations over most popular ones. |
 | **Personalization rate** | For **AI Personalized** recommendations, the estimated percentage of users with personalized recommendations stored on their profile, calculated against the total number of users who have performed the configured event in the past 24 months. Users who performed the event but don't have enough data to generate a personalized recommendation receive most popular items as a fallback when messaged. |
 | **Recommendation type** | For **Most Recent** recommendations, the percentage of users who receive **Most Recent** recommendations compared to the **Most Popular** fallback. |
@@ -39,7 +39,7 @@ Refer to the following table for more information:
 
 | Metric              | Description |
 | ------------------- | ---------- |
-| **Personalized items**<br><br>**Most recent items** | This column lists each item in the catalog in descending order of most often recommended to users. This column also shows how many users were assigned each item by the model.<br><br>Either **Personalized** or **Most recent** items will be listed depending on the [recommendation type](https://www.braze.com/docs/user_guide/brazeai/item_recommendations). |
+| **Personalized items**<br><br>**Most recent items** | This column lists each item from the recommendation model in descending order of most often recommended to users. These are model-generated personalized or most recent recommendations. Most popular fallback items appear in the **Most Popular items** column. The count shows how many users were assigned each item by the model.<br><br>Either **Personalized** or **Most recent** items will be listed depending on the [recommendation type](https://www.braze.com/docs/user_guide/brazeai/item_recommendations). |
 | **Most Popular items** | This column lists each item in the catalog in descending order of popularity. Popularity here refers to items in the catalog that users interact with most often in the entire workspace. Most popular is used as the fallback when personalized or most recent cannot be calculated for an individual user. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Items" }
 

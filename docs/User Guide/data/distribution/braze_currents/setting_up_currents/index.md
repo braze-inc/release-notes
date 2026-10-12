@@ -94,6 +94,14 @@ Selecting a field for one of these transformations will apply that transformatio
 
 ![Adding field transformations](https://www.braze.com/docs/assets/img/current3.png?024d1ea8f9aa4c950324551a54b1119f)
 
+Field transformations work only on string fields. Other field types, such as arrays, aren't available to select, so you can't remove or hash them. For example, the `suspected_bot_click_reason` array field in Email Click events stays in your export.
+
+#### Edit field transformations on a live connector
+
+You can add, change, or remove field transformations on a live connector without relaunching it. After you [update the connector](#updating-currents), your changes take effect in about 5 minutes.
+
+Editing field transformations doesn't change the Avro schema version or the `version=<currents_version>` segment in your storage path. Only Currents releases change that segment. For more information, see [Avro schema changes](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/event_delivery_semantics#avro-schema-changes).
+
 ### Step 6: Test your integration
 
 **Important:**

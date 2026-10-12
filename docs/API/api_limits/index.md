@@ -193,6 +193,17 @@ Every single API request sent to Braze returns the following information in the 
 
 This information is intentionally included in the header of the response to the API request rather than the Braze dashboard. This allows your system to better react in real time as you're interacting with our API. For example, if the `X-RateLimit-Remaining` value drops below a certain threshold, you might want to slow sending to make sure all transactional emails go out. Or, if it reaches zero, you might want to pause all sending until the time specified in `X-RateLimit-Reset` elapses.
 
+### Troubleshooting `429 Too Many Requests` responses
+
+If an endpoint returns an HTTP `429 Too Many Requests` response because your integration exceeded a rate limit, use the response headers to determine when to retry:
+
+1. Pause requests. If the response includes `X-RateLimit-Retry-After`, wait for the specified number of seconds. Otherwise, wait until the UTC epoch timestamp in `X-RateLimit-Reset`.
+2. Resume requests at a lower rate. Send fewer requests within each rate limit window to reduce the likelihood of another `429` response.
+3. Where supported, combine multiple updates into each request. For `/users/track`, follow the [request object limit for your account](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#rate-limit).
+4. Use the [API usage dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/api_usage) to identify request spikes and `429` response trends.
+
+For endpoint-specific defaults, see [Rate limits by request type](#rate-limits-by-request-type).
+
 **Note:**
 
 

@@ -6,8 +6,6 @@ If you have an active Canvas that requires large-scale changes, you can use this
 
 As with any Canvas, only one user can edit a draft at a time, and a Canvas can only have one draft at a time. These drafts don't have any analytics because the draft changes haven't been launched yet.
 
-![An example draft Canvas with a banner that indicates to the user that they're editing a draft Canvas with an option to view the active Canvas. The footer has options to go back to the analytics view, save as draft, or launch draft.](https://www.braze.com/docs/assets/img_archive/canvas_draft1.png?1837ca90952d3b98d300f48b38740c97)
-
 ## Creating a draft
 
 To create a draft:

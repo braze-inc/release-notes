@@ -349,7 +349,7 @@ Content-Type: application/json
 
 ## Data Transformation use cases
 
-The following are example templates built using our [example Typeform webhook payload](#example-typeform-webhook-payload). These templates can be used as a starting point. You can start from scratch or delete specific components as you see fit.
+The following are example templates built using our [example Typeform webhook payload](#example-typeform-webhook-payload). These templates can be used as a starting point. You can create a new template or delete specific components as you see fit.
 
 In these example templates, we are logging a custom event to the Braze profile. The title of the Typeform is passed as the custom event name, and the Typeform results is passed as event properties. These example templates do not account for the Calendly, File Upload, or Payment question types in Typeform.
 
