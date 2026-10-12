@@ -24,11 +24,18 @@ Try to use the same conversion events for conversion A, B, and so on across camp
 
 ## Running a report
 
+**Important:**
+
+
+The legacy Report Builder's **Create New Report** button is deprecated in most workspaces. Existing saved reports remain available to open and run. To create new reports, use the new [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder).
+
+
+
 ### Step 1: Create a new report
 
 Within the dashboard, navigate to **Analytics** > **Report Builder**.
 
-Select **Create New Report** and select either a campaign comparison report or a Canvas comparison report.
+If **Create New Report** is available in your workspace, select it and choose either a campaign comparison report or a Canvas comparison report. Otherwise, open an existing saved report from the list.
 
 If you choose to run a report on campaigns, you can select between a **Manual** or **Automated** report. Reports may contain either campaigns or Canvases, but not both together. Any campaigns and Canvases that have last sent messages within the past 12 months will be eligible for a report.
 

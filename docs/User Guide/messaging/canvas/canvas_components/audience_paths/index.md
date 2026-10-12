@@ -21,8 +21,6 @@ Within a single Audience Paths step, users are evaluated against audience groups
 
 ### How users are evaluated
 
-![Canvas showing a 24-hour delay after a Message step, followed by an Audience Path.](https://www.braze.com/docs/assets/img/audience_path/audience_path5.png?5d1b9608f27e1e17535d3d2cc656661b){: style="float:right;max-width:40%;margin-left:15px;"}
-
 Users are evaluated against filters and segment membership **at the moment they reach the Audience Path step**—not when they entered the Canvas. After evaluation, they immediately progress to the matching path. When a user is placed in an audience group, they stay in that group even if their user profile changes afterward.
 
 <div style="clear: both;"></div>
@@ -57,13 +55,11 @@ The default Audience Paths component contains two default audience groups, **Gro
 
 ### Defining audience groups
 
-The following screenshot shows the layout of an expanded Audience Paths step. Here, you can define up to eight audience groups (one preset and seven customizable). To define an audience group, select the group name from the Audience Paths editor. You can rename your audience group, choose the filters and segments that apply to your group, and add or delete groups. For example, if you wanted to target onboarding messaging to a group of users, you might select retargeting filters, such as "Has clicked email" and "Has clicked in-app message".
+You can define up to eight audience groups (one preset and seven customizable). To define an audience group, select the group name from the Audience Paths editor. 
 
-![An expanded Audience Path with groups for "Loves Asian Cuisine”, “Loves Latin Cuisine”, “Loves European Cuisine”, and "Everyone Else".](https://www.braze.com/docs/assets/img/audience_path/audience_path3.png?4171d06315efceae6d9b733df80b09a4)
+You can rename your audience group, choose the filters and segments that apply to your group, and add or delete groups. For example, to target onboarding messaging to a group of users, select retargeting filters, such as "Has clicked email" and "Has clicked in-app message".
 
-After the Audience Paths step is complete, each audience group will have a separate branch. You can continue using Audience Paths to further filter your audience, or continue your Canvas journey with the standard Canvas steps. 
-
-![Two Audience Paths with different groups based on engagement.](https://www.braze.com/docs/assets/img/audience_path/audience_path4.png?8003dd4487fe8f324bc0af9051bf9adb){: style="max-width:50%"}
+After the Audience Paths step is complete, each audience group has a separate branch. Add more Audience Paths to further filter your audience, or continue your Canvas journey with the standard Canvas steps.
 
 #### Using comparison filters with context variables
 
@@ -73,25 +69,27 @@ When splitting on a context variable that holds a date, see [Day of Year and Tim
 
 After adding segments and filters to your audience, you can test if your audience groups are set up as expected by [looking up a user](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment) to confirm they match the audience criteria.
 
-![The "User Lookup" section.](https://www.braze.com/docs/assets/img_archive/user_lookup.png?a23b1b90dd9a139a54218f61761a0040){: style="max-width:70%"}
-
 ## Using Audience Paths
 
-The true power of Audience Paths lies in putting the paths you care about most **first**. While this feature doesn't need to be used strategically, some marketers may find themselves pushing certain products to users such as specials or limited-edition releases. 
+Audience Paths work best when the groups you care about most are listed first. Users move down the first path they qualify for, so prioritize narrower or higher-value segments before broader fallback groups.
 
-By placing those segments first in the list, you can target users that fall into specific filters and segments while still targeting users that might not fit those specific criteria—all in a single Canvas step.
+Placing those segments first lets you target users who meet specific filters while still covering users who don't—all in a single Canvas step.
 
-![An Audience Path with groups for “Likes Big Brand Shoes”, “Likes Big Brand”, and "Everyone Else".](https://www.braze.com/docs/assets/img/audience_path/audience_path2.png?9711da55d665fb9d5f610af2f29d18b9){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![An Audience Path with groups for "Likes Flash & Thread Shoes", "Likes Flash & Thread Bags", and "Everybody Else".](https://www.braze.com/docs/assets/img/audience_path/audience_path2.png?9711da55d665fb9d5f610af2f29d18b9){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
-For example, let's say you wanted to send a group of users ads for new products. You'd start by putting filters that fall under those products **first** on the Audience Path. If you were creating a marketing campaign for the company "Big Brand" and a new retail brand had just released, you might select filters like "Likes Big Brand Shoes" or "Likes Big Brand Bags", and send different email messages based on what filtered group they fall into. 
+For example, Flash & Thread, a fictional retail brand, is promoting a limited-edition product drop and wants different emails by product interest. The Audience Path lists product filters first:
 
-When users enter this Audience Paths component, they'll first be evaluated for Audience Group 1 "Likes Big Brand Shoes"—the first path in the list. If so, they'll continue to the next component defined in your Canvas. If they don't "Like Big Brand Shoes", they will then be evaluated for the next audience group, Audience Group 2 "Likes Big Brand Bags", and will continue to the next step if the criteria are met. Lastly, users who don't fall into the previous groups would fall into the "Everybody Else" group and also continue to the next Canvas step you define for that path.
+1. Audience Group 1: "Likes Flash & Thread Shoes"
+2. Audience Group 2: "Likes Flash & Thread Bags"
+3. Everybody Else
+
+When users enter this step, Braze evaluates Audience Group 1 first. Matching users continue to the next Canvas step on that path. Users who don't match are evaluated against Audience Group 2. Remaining users fall into Everybody Else and continue on that path.
 
 You can also see the performance of this step using [Canvas analytics](https://www.braze.com/docs/user_guide/analytics/reports/canvas_analytics#performance-visualization).
 
 ### Segmenting Audience Paths with random bucket numbers
 
-If your Canvas uses a [rate limit](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping) (such as limiting the total number of users who will receive the Canvas), Braze recommends that you don't use random bucket numbers to segment your Audience Paths. 
+If your Canvas uses a [rate limit](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping) (such as limiting the total number of users who receive the Canvas), Braze recommends that you don't use random bucket numbers to segment your Audience Paths. 
 
 A [random bucket number](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers) is a user attribute that can be used to create uniformly distributed segments of random users. Braze uses the random bucket number to group users during the segmentation phase of Canvas entry, and each group is processed separately. Depending on which groups finish processing first, some users may be capped at entry due to the rate limit, which could cause an uneven distribution of users when they reach the Audience Paths step.
 
@@ -99,7 +97,7 @@ In this scenario, try using [Experiment Paths](https://www.braze.com/docs/user_g
 
 ### Using Intelligent Channel filter with Audience Paths
 
-Using a combination of Audience Paths steps and Intelligent Channel filters, you can tailor your messaging experience to each user's preferences and behaviors. This way, your users will receive the most relevant messages through the appropriate channels.
+Using a combination of Audience Paths steps and Intelligent Channel filters, you can tailor your messaging experience to each user's preferences and behaviors. This way, your users receive the most relevant messages through the appropriate channels.
 
 For example, in an Audience Paths step, you can create three audiences: Email, Mobile Push, and Everyone Else. For the Email audience, add the filter `Intelligent Channel is Email`. For the Mobile Push audience, add the filter `Intelligent Channel is Mobile Push`. Then, you can add a Message step for each of the audience paths to deliver personalized and relevant messages.
 

@@ -360,7 +360,7 @@ let unixTimestamp = payload.originalTimestamp;
 let dateObj = new Date(unixTimestamp * 1000);
 let isoString = dateObj.toISOString();
 
-// This is a default template you can use as a starting point. Feel free to delete this entirely to start from scratch or to delete specific components as you see fit.
+// This is a default template you can use as a starting point. Feel free to delete this entirely and create a new template, or to delete specific components as you see fit.
 
 // First, this code defines a variable, "brazecall", to build up a /users/track request
 // Everything from the incoming webhook is accessible via the special variable "payload". As such, you can template in desired values in your /users/track request with JS dot notation, such as payload.x.y.z
@@ -441,7 +441,7 @@ The following sample payload shows a `contact.attribute.edited` event in Regal. 
 The following sample Data Transformation maps the new custom property values to the relevant attributes on your Braze profiles:
 
 ```
-// This is an example template you can use as a starting point. Feel free to delete this entirely to start from scratch or to delete specific components as you see fit.
+// This is an example template you can use as a starting point. Feel free to delete this entirely and create a new template, or to delete specific components as you see fit.
 
 // Capture the key's updated property value within the 'changes' object and store this in an attributes variable that can be used in the /users/track request
 
@@ -505,7 +505,7 @@ let unixTimestamp = payload.originalTimestamp;
 let dateObj = new Date(unixTimestamp * 1000);
 let isoString = dateObj.toISOString();
 
-// This is an example template you can use as a starting point. Feel free to delete this entirely to start from scratch or to delete specific components as you see fit.
+// This is an example template you can use as a starting point. Feel free to delete this entirely and create a new template, or to delete specific components as you see fit.
 
 // First, this code defines a variable, "brazecall", to build up a /users/track request
 // Everything from the incoming webhook is accessible via the special variable "payload". As such, you can template in desired values in your /users/track request with JS dot notation, such as payload.x.y.z
@@ -564,7 +564,7 @@ The following sample payload shows a `contact.unsubscribed` event in Regal.
 The following sample Data Transformation unsubscribes the contact in Braze.
 
 ```
-// This is an example template you can use as a starting point. Feel free to delete this entirely to start from scratch or to delete specific components as you see fit.
+// This is an example template you can use as a starting point. Feel free to delete this entirely and create a new template, or to delete specific components as you see fit.
 
 // First, this code defines a variable, "brazecall", to build up a /users/track request
 // Everything from the incoming webhook is accessible via the special variable "payload". As such, you can template in desired values in your /users/track request with JS dot notation, such as payload.x.y.z
@@ -699,7 +699,7 @@ The following sample payload shows a `call.transcript.available` event in Regal.
         "tracker_name": "High Intent"
       }
     ],
-    "transcript": "[handling agent]: Hi Alex, this is Yuri with BrightCover Insurance. I'll be going over some insurance options with you today. [contact]: Sounds good. [handling agent]: Before we start, I'm going to transfer you to a specialist for a moment. One sec. [transfer agent]: Hi Alex, this is Lee. Just verifying a few details before sending you back to Yuri. [contact]: Okay. [handling agent]: Thanks, Alex. Based on what you shared, here are some plan options... [contact]: I'll need to think about it. [handling agent]: Totally understandable. Feel free to reach out anytime. Have a great day! END OF TRANSCRIPT",
+    "transcript": "[handling agent]: Hi Alex, this is Yuri with BrightCover Insurance. I'll be going over some insurance options with you today. [contact]: Sounds good. [handling agent]: Before we start, I'm going to transfer you to a specialist for a moment. One sec. [transfer agent]: Hi Alex, this is Lee. Just verifying a few details before sending you back to Yuri. [contact]: Okay. [handling agent]: Thanks, Alex. Based on what you shared, here are some plan options... [contact]: I'll need to think about it. [handling agent]: Totally understandable. Feel free to contact us anytime. Have a great day! END OF TRANSCRIPT",
     "transcript_is_truncated": false,
     "transcript_url": "https://app.regalvoice.com/transcripts/WT953358e8822dd9333fc38dfbac25e1e1"
   },

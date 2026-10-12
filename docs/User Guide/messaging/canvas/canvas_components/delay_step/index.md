@@ -49,13 +49,6 @@ Selecting **Calendar date** allows you to hold users in the step until a specifi
 
 If the selected date and time have already passed by the time users proceed to the Delay step, users exit the Canvas. There can be up to 31 days between the start of the Canvas and the dates chosen for "wait until an exact day" steps.
 
-**Important:**
-
-
-If you're participating in the [Canvas Context early access](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context), you can set delays of up to 2 years.
-
-
-
 For example, users won't receive steps or messages in these scenarios:
 
 - A message is scheduled to be sent on May 3rd at 9 pm, but the Delay step expires on May 3rd at 9 am. 
@@ -130,7 +123,7 @@ Let's say you want to remind your customers to purchase toothpaste 30 days from 
 - **Data type:** Time
 - **Value:** `{{custom_attribute.${Order_filled_time}}}`
 
-![The "product_reminder_interval" and its value.](https://www.braze.com/docs/assets/img/context_step1.png?e2a548dac408e9fd491f9a7752d09aec)
+![The "product_reminder_interval" and its value.](https://www.braze.com/docs/assets/img/context_step1.png?339e2cfaeeefa8151919e3a66d7956ea)
 
 Next, because you want to remind your customers 30 days from now, you'll select **Until a specific day** as the delay option and select **Personalize delay** to use the information from your Context step. This means your users are delayed until the selected Context variable.
 

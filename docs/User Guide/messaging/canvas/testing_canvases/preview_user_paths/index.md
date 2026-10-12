@@ -117,8 +117,6 @@ For search fields, tab details, and the 30-day Messaging History window, see [Us
 
 In this scenario, the Canvas is set up to target users who haven't had a session in an app. This journey includes a Message step with a welcome email, a Delay step set for one day, and an Audience Paths step that splits into two paths: users with at least one session, and everyone else. Depending on which audience path a user falls into, the subsequent Message step is sent.
 
-![An example of a Canvas with a Message step, Delay step, Audience Paths step, and two Message steps.](https://www.braze.com/docs/assets/img/preview_user_path_example.png?93df010e4aa03a3cd2ebc2ec06bce159){:style="max-width:70%"}
-
 Because our test user meets the Canvas entry criteria, they can enter the Canvas and go through the user journey. However, because our test user hasn't opened the app in the last calendar day, they continue down the "Everyone else" path and receive a push notification that reads: "Last chance! Complete your first task for an exclusive bonus."
 
 ![The "Test Results" section shows that the test user has met the entry criteria and provides a summary of their journey, including which steps they were sent.](https://www.braze.com/docs/assets/img/preview_user_path_results_example.png?761e13808fbdaa7440b63299ab875e4d)

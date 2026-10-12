@@ -6,7 +6,7 @@
 
 Before getting started with the finer details of setting up campaigns, let's identify the key details for understanding how campaigns work across different messaging channels.
 
-Campaigns are a single message step to connect to your users on channels, or more commonly referred to as messaging channels. These messaging channels include Content Cards, email, in-app messages, push, SMS and MMS, and webhooks. By understanding where your customers reside, you can leverage the appropriate messaging channels to communicate.
+Campaigns are a single message step to connect to your users on channels, or more commonly referred to as messaging channels. These messaging channels include Content Cards, email, in-app messages, push, SMS, MMS, RCS, and webhooks. By understanding where your customers reside, you can leverage the appropriate messaging channels to communicate.
 
 ## Building the customer journey
 

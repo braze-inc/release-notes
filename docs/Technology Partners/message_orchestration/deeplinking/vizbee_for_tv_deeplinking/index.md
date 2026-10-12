@@ -21,7 +21,7 @@ The Braze and Vizbee integration allows you to use a single console to schedule 
 
 ## Integration
 
-Follow Vizbee's [SDK integration guide](https://console.vizbee.tv/app/vzb1765003429/develop/guides/ios-continuity) to get up and running with your Vizbee and Braze integration. Here, you can find guidance on mobile-to-TV deep linking, TV app installs, and viewership attribution. 
+Follow Vizbee's [SDK integration guide](https://console.vizbee.tv/app/vzb1765003429/develop/guides/ios-continuity) to get set up with your Vizbee and Braze integration. Here, you can find guidance on mobile-to-TV deep linking, TV app installs, and viewership attribution. 
 
 ### Viewing install and attribution reports {#vizbee-tv-app-installs-viewership-attribution}
 

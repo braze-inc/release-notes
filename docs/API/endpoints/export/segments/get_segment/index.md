@@ -1,16 +1,65 @@
-<div id='api_ueawlmgohoht' class='api_div' data-search-keywords='export segment list'>
+<div id='api_lgwgckpbikcq' class='api_div' data-search-keywords='export segment list'>
 <h1 id="export-segment-list">Export segment list</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/segments/list</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to export a list of segments, each of which will include its name, Segment API identifier, and whether it has analytics tracking enabled.</p>
+  <p>Use this endpoint to export a list of segments, each of which includes its name, Segment API identifier, and whether it has analytics tracking enabled.</p>
 </blockquote>
 
 <p>The segments are returned in groups of 100 sorted by time of creation (oldest to newest by default). Archived segments are not included.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1349e6f4-3ce7-4e60-b3e9-951c99c0993f" class="seeme">See me in Postman</a></div>
+
+<h2 id="when-to-use-this-endpoint">When to use this endpoint</h2>
+
+<p>You send events and purchases to Braze with the <a href="/docs/api/endpoints/user_data/post_user_track"><code class="language-plaintext highlighter-rouge">/users/track</code> endpoint</a>. To view that data over time for a segment, the segment needs <a href="/docs/user_guide/analytics/tracking/segment_analytics_tracking">analytics tracking</a> turned on. The <code class="language-plaintext highlighter-rouge">analytics_tracking_enabled</code> field in this endpoint’s response shows which segments have it on.</p>
+
+<p>The <a href="/docs/api/endpoints/export/segments/get_segment_details">Export segment details endpoint</a> doesn’t return this setting, so this endpoint is how you check it through the API.</p>
+
+<p>Use this endpoint to do the following:</p>
+
+<ul>
+  <li>Confirm tracking is on before you send new data. Braze doesn’t backfill revenue and purchase data from before you turn on tracking. Check that <code class="language-plaintext highlighter-rouge">analytics_tracking_enabled</code> is <code class="language-plaintext highlighter-rouge">true</code> for the segments you plan to compare first.</li>
+  <li>Troubleshoot empty segment reports. If a segment’s sessions, custom events, or revenue reports are empty, check whether <code class="language-plaintext highlighter-rouge">analytics_tracking_enabled</code> is <code class="language-plaintext highlighter-rouge">false</code> before you debug your integration.</li>
+  <li>Count your tracked segments. A workspace can have tracking turned on for up to 25 segments. Use the <code class="language-plaintext highlighter-rouge">page</code> parameter to retrieve every page, then count the segments where <code class="language-plaintext highlighter-rouge">analytics_tracking_enabled</code> is <code class="language-plaintext highlighter-rouge">true</code> to see how many remain.</li>
+</ul>
+
+<p>To check a few segments one time, select the <strong>Advanced Tracking Segments Only</strong> filter on the <strong>Segments</strong> page. Use this endpoint when you need the answer in a script or scheduled job.</p>
+
+<p>This endpoint reads the tracking setting and doesn’t change it. To turn on tracking, go to a segment’s <strong>Segment Details</strong> section and turn on <strong>Analytics Tracking</strong>.</p>
+
+<h2 id="combine-this-endpoint-with-other-endpoints">Combine this endpoint with other endpoints</h2>
+
+<p>These endpoints cover the rest of the user tracking workflow. For the segment endpoints, use an <code class="language-plaintext highlighter-rouge">id</code> from this endpoint’s response as the <code class="language-plaintext highlighter-rouge">segment_id</code>.</p>
+
+<table class="reset-td-br-1 reset-td-br-2" aria-label="Related endpoints">
+  <thead>
+    <tr>
+      <th>Endpoint</th>
+      <th>How it supports your user tracking workflow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/docs/api/endpoints/user_data/post_user_track"><code class="language-plaintext highlighter-rouge">/users/track</code> endpoint</a></td>
+      <td>Records the custom events, purchases, and attribute updates that your tracked segments report on.</td>
+    </tr>
+    <tr>
+      <td><a href="/docs/api/endpoints/export/segments/get_segment_details">Export segment details endpoint</a></td>
+      <td>Retrieves a segment’s filter description and tags for a given <code class="language-plaintext highlighter-rouge">segment_id</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="/docs/api/endpoints/export/segments/get_segment_analytics">Export segment analytics endpoint</a></td>
+      <td>Retrieves the estimated size of a segment over time.</td>
+    </tr>
+    <tr>
+      <td><a href="/docs/api/endpoints/export/user_data/post_users_segment"><code class="language-plaintext highlighter-rouge">/users/export/segment</code> endpoint</a></td>
+      <td>Exports the user profiles in a segment, so you can verify that the attributes, custom events, and purchases you sent landed on profiles.</td>
+    </tr>
+  </tbody>
+</table>
 
 <div class="openapi-explorer" data-spec-url="/docs/assets/api/openapi/export_segments_get_segment.yaml">
   

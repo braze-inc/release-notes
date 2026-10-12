@@ -99,7 +99,7 @@ You can add tags to a custom attribute after it's created if you have the "Manag
 
 There are two ways you can remove custom attributes from user profiles:
 
-* Select the custom attribute name to be removed in a [User Update step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update#removing-custom-attributes).
+* Select the custom attribute name to be removed in a [User Update step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update#custom-attributes).
 * Set the `null` value in your API request to the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track).
 
 ### Export data

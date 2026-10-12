@@ -447,7 +447,7 @@ Loyalty programs: Highlight products that would maximize a customer’s loyalty 
 
 ### What causes "Most popular" items to be mixed into other models' recommendations?
 
-When our recommendation engine curates a list for you, it first prioritizes personalized selections based on the specific model you’ve chosen, like "Most recent" or "AI Personalized". If this model can’t fill the complete list of 30 recommendations for whatever reason, some of your most popular items among all users are then added to make sure each user always has a full set of recommendations.
+When the recommendation engine curates a list for you, it first adds personalized selections based on the specific model you've chosen, like "Most recent" or "AI Personalized". If this model fills fewer than 30 items, Braze appends most popular items. The personalized items appear first in the list, followed by the most popular fallback items.
 
 This happens under a few specific conditions:
 

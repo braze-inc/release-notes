@@ -136,5 +136,4 @@ The following methods work in in-app messages and Banners but aren't supported o
 
 ## Related content
 
-- [Create custom form blocks](https://www.braze.com/docs/user_guide/messaging/landing_pages/custom_form_blocks) covers a more advanced use of this bridge: connecting a fully custom UI to a landing page form.
-- [Create landing pages](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/messaging/landing_pages/custom_form_blocks"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Create custom form blocks</span><span class="guide_tile_description">Connect a fully custom UI to a landing page form.</span></span></div></a></li><li><a href="/docs/user_guide/messaging/landing_pages/create_landing_pages"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create landing pages</span></span></div></a></li></ul>

@@ -4,7 +4,7 @@
 
 
 
-If you're participating in the [Canvas Context step early access](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context/), all timestamps with a datetime type from trigger event properties in action-based Canvases will always be normalized to [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). To learn more about this, refer to [Time zone consistency standardization](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context#time-zone-consistency-standardization).
+If you're participating in the [Canvas Context step early access](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context/), all timestamps with a datetime type from trigger event properties in action-based Canvases will always be normalized to [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). To learn more about this, refer to [Time zone consistency](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context#time-zone-consistency).
 
 ## Data flexibility
 
@@ -16,7 +16,7 @@ If you're participating in the [Canvas Context step early access](https://www.br
 
 ### Segment funnel statistics
 
-Select [View funnel statistics](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/#viewing-funnel-statistics) to display the statistics for that filter group and see how each added filter impacts your segment statistics. You’ll see an estimated count and percentage for users who are targeted by all filters up to that point. After the statistics are displayed for a filter group, they will update automatically whenever you change the filters. 
+Select [View funnel statistics](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/#viewing-funnel-statistics) to display the statistics for that filter group and see how each added filter impacts your segment statistics. You see an estimated count and percentage for users who are targeted by all filters up to that point. After the statistics are displayed for a filter group, they update automatically whenever you change the filters. 
 
 ### New response fields for `/campaigns/details` endpoint for push notifications
 
@@ -43,9 +43,9 @@ Use `<head>` tags to add CSS and metadata in your email message. For example, yo
 
 ## Robust channels
 
-### Fuzzy out-out best practices
+### Fuzzy opt-out best practices
 
-We've added a [best practices section](https://www.braze.com/docs) to help you thoughtfully configure your fuzzy opt-out message and create a clear, compliant, and positive experience for your subscribers.
+We've added a [best practices section](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/fuzzy_opt_out/#best-practices-for-fuzzy-opt-out-messages) to help you thoughtfully configure your fuzzy opt-out message and create a clear, compliant, and positive experience for your subscribers.
 
 ### WhatsApp Flows
 

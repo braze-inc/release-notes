@@ -205,4 +205,8 @@ When Meta includes a display name on an inbound WhatsApp message, Braze exposes 
 
 When Meta includes a contact username on an inbound WhatsApp message, Braze exposes it as the `{{whats_app.${inbound_username}}}` Liquid attribute on that inbound event. This value is separate from `{{whats_app.${inbound_profile_name}}}`, which reflects the user's WhatsApp display name. The username may be absent when the sender hasn't enabled the username feature in their WhatsApp profile, even when a display name is present. Validate the data before using it in user copy, or use a Canvas User Update step to save it to a profile field for later use.
 
+### Inbound business-scoped user ID (BSUID)
+
+When Meta includes a business-scoped user ID on an inbound WhatsApp message, Braze exposes it as the `{{whats_app.${inbound_bsuid}}}` Liquid attribute on that inbound event. Use this value when a webhook or third-party messaging integration needs the sender's BSUID in addition to—or instead of—a phone number. The attribute may be empty when Meta doesn't send a BSUID on the webhook (for example, when the user is identified only by phone number). Validate the data before using it in user copy or outbound webhook payloads, or use a Canvas User Update step to save it to a profile field for later use.
+
 For a full list of WhatsApp Liquid attributes, see [Supported personalization tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags).

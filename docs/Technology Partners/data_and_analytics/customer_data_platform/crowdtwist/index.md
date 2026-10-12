@@ -1,6 +1,6 @@
 # Oracle Crowdtwist
 
-> [Oracle Crowdtwist](https://www.oracle.com/uk/cx/marketing/customer-loyalty/) is a leading cloud-native customer loyalty solution to empower brands to offer personalized customer experiences. Their solution offers over 100 out-of-the-box engagement paths, providing rapid time-to-value for marketers to develop a more complete view of the customer.
+> [Oracle Crowdtwist](https://www.oracle.com/uk/cx/marketing/customer-loyalty/) is a leading cloud-native customer loyalty solution to empower brands to offer personalized customer experiences. Their solution offers over 100 built-in engagement paths, providing rapid time-to-value for marketers to develop a more complete view of the customer.
 
 Oracle Crowdtwist's Data Push feature allows user or event metadata to be passed whenever an update occurs in Crowdtwist's platform.
 

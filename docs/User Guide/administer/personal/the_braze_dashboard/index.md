@@ -169,17 +169,10 @@ Want to tell us what you think? You can share feedback about navigation, accessi
 
 ### Administrative tasks
 
-- [Create and manage workspaces](https://www.braze.com/docs/user_guide/administer/global/create_and_manage_workspaces)
-- [Manage Braze users](https://www.braze.com/docs/user_guide/administer/global/user_management/manage_company_users)
-- [User permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions)
-- [Teams](https://www.braze.com/docs/user_guide/administer/global/user_management/teams)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/administer/global/create_and_manage_workspaces"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create and manage workspaces</span></span></div></a></li><li><a href="/docs/user_guide/administer/global/user_management/manage_company_users"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Manage Braze users</span></span></div></a></li><li><a href="/docs/user_guide/administer/global/user_management/permissions"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">User permissions</span></span></div></a></li><li><a href="/docs/user_guide/administer/global/user_management/teams"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Teams</span></span></div></a></li></ul>
 
-### Key tasks and next steps
+### Key tasks
 
-- **Build campaigns**: [Create a campaign](https://www.braze.com/docs/user_guide/messaging/campaigns/creating_campaign)
-- **Create journeys**: [Build a Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas)
-- **Define audiences**: [Create a segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment)
-- **Review performance**: [Analytics overview](https://www.braze.com/docs/user_guide/analytics/dashboards/home)
-- **Configure settings**: [App settings](https://www.braze.com/docs/user_guide/administer/global/workspace_settings)
+<ul class="guide_tiles"><li><a href="/docs/user_guide/messaging/campaigns/creating_campaign"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create a campaign</span></span></div></a></li><li><a href="/docs/user_guide/messaging/canvas/create_a_canvas"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Build a Canvas</span></span></div></a></li><li><a href="/docs/user_guide/audience/segments/creating_a_segment"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Create a segment</span></span></div></a></li><li><a href="/docs/user_guide/analytics/dashboards/home"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Analytics overview</span></span></div></a></li><li><a href="/docs/user_guide/administer/global/workspace_settings"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">App settings</span></span></div></a></li></ul>
 
 

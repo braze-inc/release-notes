@@ -20,7 +20,7 @@ The Connected Content Debugger is available for the following areas:
     - Excludes footers and subscription pages
 - In-app messages
 - Push notifications
-- SMS/MMS/RCS
+- SMS, MMS, and RCS
 - Webhooks
     - Includes templates
 - WhatsApp

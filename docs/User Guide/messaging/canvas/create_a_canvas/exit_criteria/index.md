@@ -21,8 +21,6 @@ In the **Target Audience** step of the Canvas builder, you can set up exit crite
 
 The exit criteria includes an exception event, which is the specific action that can cause users to exit the Canvas.
 
-![The exit criteria set up to re-engage users who have browsed products but haven't added them to their cart or placed an order yet.](https://www.braze.com/docs/assets/img/exit_criteria.png?134c3b1b16b8b71aaa0c8da55c7d80a6){: style="max-width:90%;"}
-
 ### Selecting exception events {#exception-events}
 
 When a user performs the exception event, Braze marks them to exit according to [How users exit](#how-users-exit). Exception events apply while a user is in the Canvas, including when they're waiting in a step such as a Delay step.
@@ -85,15 +83,13 @@ Consider the following example on how analytics are calculated:
 
 ## Example
 
-Let's say we want to target users who haven't placed an order at our backpack supply company yet. To set up the exit criteria, we would:
+To target users who haven't placed an order at a backpack supply company yet, set up the exit criteria as follows:
 
 1. Select **Place an Order** as the exception event.
 2. Select **Add Trigger**. 
-3. For **Segments**, select **Used in last day** so that when our Canvas launches, the audience will exclude users who have made any purchases.
+3. For **Segments**, select **Used in last day** so that when the Canvas launches, the audience excludes users who have made any purchases.
 4. For **Filters**, select **Purchase behavior** > **Number of purchases** > **Purchased product**.
-5. Set the filter group to `backpack-example exactly 1`. This means that users who have purchased our backpack product would exit the Canvas.
-
-![Exit Criteria settings with "Makes Any Purchase" as the exception event, so if a user makes any purchase, then they will exit this Canvas.](https://www.braze.com/docs/assets/img_archive/exit_criteria_example.png?ae54f048f9604de07fd59509237d0a44){: style="max-width:80%;"}
+5. Set the filter group to `backpack-example exactly 1`. This means that users who have purchased the backpack product exit the Canvas.
 
 **Tip:**
 

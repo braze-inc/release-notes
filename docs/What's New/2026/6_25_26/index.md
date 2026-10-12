@@ -57,7 +57,7 @@ This functionality is available from the **Campaigns** page or from within any e
 
 ### Operator support for Content Blocks
 
-[Operator](https://www.braze.com/docs/user_guide/brazeai/operator/) can now create and edit [Content Blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/content_blocks/)—the reusable snippets you build once and reference across multiple messages—directly from a natural-language prompt. From the **Content Blocks** page, ask Operator to create a new Content Block from scratch or edit an existing one, and Operator generates or updates the content for you to review.
+[Operator](https://www.braze.com/docs/user_guide/brazeai/operator/) can now create and edit [Content Blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/content_blocks/)—the reusable snippets you build once and reference across multiple messages—directly from a natural-language prompt. From the **Content Blocks** page, ask Operator to create a Content Block with a new design or edit an existing one, and Operator generates or updates the content for you to review.
 
 ### Agent Console templates built with Operator
 

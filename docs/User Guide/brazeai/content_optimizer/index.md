@@ -4,7 +4,7 @@
 
 ## About Content Optimizer
 
-Content Optimizer runs in a Canvas step. It helps you define message components to test, generate variants using generative AI or manual input, and automatically optimize which content combinations are sent to users. Content Optimizer is available for these channels: email, push notifications, and SMS/MMS/RCS messages.
+Content Optimizer runs in a Canvas step. It helps you define message components to test, generate variants using generative AI or manual input, and automatically optimize which content combinations are sent to users. Content Optimizer is available for these channels: email, push notifications, SMS, MMS, and RCS.
 
 This feature helps you to:
 
@@ -126,7 +126,7 @@ The best fit for Content Optimizer is in daily recurring entry Canvases, as well
 
 ## Considerations
 
-- Content Optimizer is available for these channels: email, push notifications, and SMS/MMS/RCS messages.
+- Content Optimizer is available for these channels: email, push notifications, SMS, MMS, and RCS.
 - For email, Content Optimizer can generate up to 625 combinations per step:
    - Up to four components per step
    - Up to five variants for each component

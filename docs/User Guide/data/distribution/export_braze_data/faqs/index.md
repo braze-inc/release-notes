@@ -12,7 +12,7 @@ No. If you don't add S3 credentials, your exports will appear in an S3 bucket be
 
 ## What happens if you set up S3 credentials in the dashboard but don't select "Make this the default data export destination?"
 
-The **Make this the default data export destination** checkbox impacts whether exports go to S3 or Azure, assuming you've added credentials for both.
+If you add S3 credentials, exports triggered from the dashboard and export APIs go to your S3 connection by default, even when **Make this the default data export destination** isn't selected. If you select **Make this the default data export destination** for another Technology Partner connection (such as Microsoft Azure or Google Cloud Storage), exports go to that selected connection instead. If you don't add S3 credentials and don't select another default destination, Braze sends those exports to a Braze-owned AWS bucket for download. This setting doesn't affect Currents connectors.
 
 ## Does the default data export destination affect Braze Currents?
 

@@ -827,7 +827,7 @@ Electron does not officially support web push notifications (see: this [GitHub i
 
 #### Tealium iQ
 
-Tealium iQ offers a basic turnkey Braze integration. To configure the integration, search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard. For more details or in-depth Tealium configuration support, check out our [integration documentation](https://www.braze.com/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium account manager.
+Tealium iQ offers a basic ready-to-use Braze integration. To configure the integration, search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard. For more details or in-depth Tealium configuration support, check out our [integration documentation](https://www.braze.com/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or contact your Tealium account manager.
 
 #### Google Tag Manager
 
@@ -835,7 +835,7 @@ The Web SDK can be initialized and called from a custom HTML tag in your Google 
 
 #### Other Tag Managers
 
-Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Reach out to a Braze representative if you need help evaluating these solutions.
+Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Contact a Braze representative if you need help evaluating these solutions.
 
 ---
 

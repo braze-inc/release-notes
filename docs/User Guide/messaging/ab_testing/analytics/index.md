@@ -138,7 +138,26 @@ Don't see confidence in your results? Confidence will only appear if you have a 
 
 An important part of your results is the confidence of your results. For example, what if the Control Group had a 20% conversion rate and Variant A had a 25% conversion rate? This seems to indicate that sending Variant A is more effective than sending no message. Having a confidence of 95% means that the difference between the two conversion rates is likely due to an actual difference in users' responses and that there is only a 5% likelihood that the difference has occurred by chance.
 
-Braze compares each variant's conversion rate against the control's conversion rate with a statistical procedure called a [Z&nbsp;Test](https://en.wikipedia.org/wiki/Z-test). A result of 95% or greater confidence, as in the preceding example, indicates that the difference is statistically meaningful. This is true anywhere you see a confidence metric in the Braze dashboard that describes the difference between two messages or user populations.
+Braze compares each variant's conversion rate against the control's conversion rate using an unpooled two-proportion Z-test. "Unpooled" means Braze estimates the variance of each group (variant and control) separately from that group's own conversion rate and sample size, rather than combining both groups into a single pooled rate.
+
+The resulting Z-score is converted into a two-sided p-value, and confidence is reported as (1 − p-value) × 100. A result of 95% or greater confidence, as in the preceding example, indicates that the difference is statistically meaningful. This is true anywhere you see a confidence metric in the Braze dashboard that describes the difference between two messages or user populations.
+
+**Note:**
+
+
+If you calculate significance outside of Braze using a pooled Z-test, your results may differ from the confidence shown in the dashboard, especially for small samples or low conversion rates. To reproduce Braze's confidence values, use an unpooled two-proportion Z-test with a two-sided p-value.
+
+
+
+Braze calculates confidence with this formula:
+
+```
+SE_control = sqrt(p_c × (1 − p_c) / n_c)
+SE_variant = sqrt(p_v × (1 − p_v) / n_v)
+z = (p_v − p_c) / sqrt(SE_control² + SE_variant²)
+p_value = 2 × (1 − Φ(|z|))
+confidence = (1 − p_value) × 100
+```
 
 In general, a confidence of at least 95% is necessary to show that your results are reflective of users' actual preferences, and not due to chance. In rigorous scientific tests, 95% confidence (or otherwise commonly referred to as the "p" value being less than 0.05) is the common benchmark used to determine statistical significance. If you continually fail to achieve 95% confidence, try increasing your sample size or decreasing the number of variants. 
 

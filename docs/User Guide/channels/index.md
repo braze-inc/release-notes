@@ -9,7 +9,7 @@ The Braze Messaging Matrix streamlines channel selection by mapping **Content Co
 
 ![Mobile/web push are simple content, high urgency; Emails are rich content, high urgency; In-app/browser messages are simple content, low urgency; Content Cards are low urgency, rich content](https://www.braze.com/docs/assets/img_archive/messaging_matrix.png?1bf26300f23159b87a3ec10468d93336)
 
-While the matrix highlights core channels, it is adaptable: SMS and WhatsApp, for instance, are high-urgency tools that scale into rich content when utilizing multimedia formats. To learn more about how you can leverage this matrix, check out our Braze Learning course on [Cross-Channel Messaging](https://learning.braze.com/cross-channel-messaging).
+While the matrix highlights core channels, it is adaptable: SMS, RCS, and WhatsApp, for instance, are high-urgency tools that scale into rich content when utilizing multimedia formats. To learn more about how you can leverage this matrix, check out our Braze Learning course on [Cross-Channel Messaging](https://learning.braze.com/cross-channel-messaging).
 
 ## Accessibility resources
 

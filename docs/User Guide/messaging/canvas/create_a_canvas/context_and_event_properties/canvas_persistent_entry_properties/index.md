@@ -1,11 +1,11 @@
-# Persistent entry properties
+# Persistent entry properties (legacy)
 
-> When a Canvas is triggered by a custom event, purchase, or an API call, you can use metadata from the API call, custom event, or purchase event for personalization in each step in your Canvas workflow. You can use these properties to send more curated messages.
+> This legacy reference describes the `canvas_entry_properties` namespace used by existing Canvases.
 
 **Important:**
 
 
-Persistent entry properties are an artifact of the original Canvas editor, so there are deprecated references to terms like Canvas entry properties that remain for historical reference. For the current Canvas editor, refer to [Context and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties).<br><br>To use persistent entry properties in the current Canvas editor, you must either create a new Canvas or [clone](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases) an existing one to the current editor.
+`canvas_entry_properties` is a legacy namespace retained for backward compatibility. Use [`context`](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties) to access this data throughout the Canvas. The examples on this page still apply to existing Canvases that use `canvas_entry_properties`.
 
 
 
@@ -13,7 +13,7 @@ Persistent entry properties are an artifact of the original Canvas editor, so th
 
 Entry properties can be used in action-based and API-triggered Canvases. These entry properties are defined when a Canvas is triggered by a custom event, purchase, or API call. Refer to the following articles for more information:
 
-- [Canvas entry properties object](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context)
+- [Canvas context object](https://www.braze.com/docs/api/objects_filters/context_object)
 - [Event properties object](https://www.braze.com/docs/api/objects_filters/event_object)
 - [Purchase object](https://www.braze.com/docs/api/objects_filters/purchase_object#purchase-product-id)
 
@@ -93,4 +93,4 @@ The second step may send another push notification prompting the user to checkou
 
 Braze stores `canvas_entry_properties` from the trigger that entered this user, not from every trigger configured on the Canvas. If that trigger has no event or API payload—for example **Start Session** or **Change Custom Attribute Value**—Liquid `canvas_entry_properties` is blank for that journey. Users who enter the same Canvas from a custom event, purchase, or API call still have the properties from that payload.
 
-To keep entry properties populated for every user, use only entry types that pass those properties (custom event, purchase, or API-triggered). For personalization in the current Canvas editor, use [context and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties). To filter on properties, use [event property segmentation](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/nested_objects) instead of Liquid `canvas_entry_properties`.
+To keep entry properties populated for every user, use only entry types that pass those properties (custom event, purchase, or API-triggered). If your workspace has Canvas Context, use [context and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties) for new personalization. To filter on properties without Canvas Context, use [event property segmentation](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/nested_objects) instead of Liquid `canvas_entry_properties`.

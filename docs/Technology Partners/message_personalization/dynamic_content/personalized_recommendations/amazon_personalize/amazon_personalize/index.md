@@ -90,7 +90,7 @@ Once you have created a solution version that you're happy with, it is time to p
 
 ### Filters
 
-Filters let you adjust the recommendation output by excluding items based on the item's ID, event type, or metadata. You can also filter users based on their metadata, such as age or loyalty membership status. Filters can come in handy to prevent recommending items that the user has already interacted with.
+Filters let you adjust the recommendation output by excluding items based on the item's ID, event type, or metadata. You can also filter users based on their metadata, such as age or loyalty membership status, and prevent recommending items that the user has already interacted with.
 
 ## Integrating results with Braze
 

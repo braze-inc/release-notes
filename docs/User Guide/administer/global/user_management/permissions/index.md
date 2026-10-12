@@ -62,7 +62,7 @@ Limited users have specific permissions that allow them to manage certain aspect
 | Limited user type | Description |
 | --- | --- |
 | Workspace Admin | Workspace Admins have permissions specific to managing Workspaces but do not have the same authority as Company Admins. Limited Users can inherit permissions similar to those of Workspace Admins if they have the necessary permissions checked. |
-| Admin (Company Admin) | Company Admins have broader permissions, including the ability to delete dashboard users. However, they cannot delete their own accounts and must contact another Company Admin for that action. |
+| Admin (Company Admin) | Company Admins have broader permissions, including the ability to delete any dashboard user, including other Company Admins. However, they cannot delete their own accounts and must contact another Company Admin for that action. |
 | View-only access | To access parts of the dashboard, such as the Campaigns page, users must have view permissions assigned to them.
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Comparison of limited users" }
 
@@ -83,7 +83,8 @@ Keep the following behaviors in mind when you assign dashboard access:
 
 - **Workspace Admin versus Company Admin:** Workspace Admins manage permissions within assigned workspaces. Company Admins have company-wide authority, including deleting other dashboard users.
 - **Limited users:** Limited users with the "Edit Dashboard Users" permission can manage other limited users but cannot create or manage Company Admin accounts.
-- **Manage Dashboard Users scope:** On the user detail page, permissions appear only for workspaces the editor can access. A limited user who can edit users in one workspace may not see another workspace's permission checkboxes.
+- **Delete Dashboard Users:** This company-level permission lets a user who isn't a Company Admin delete other dashboard users. It's separate from "Edit Dashboard Users". A user who has only "Delete Dashboard Users" can open **Company Users** and delete users, but can't add users or change their details or permissions. Users with this permission can't delete Company Admins.
+- **Edit Dashboard Users scope:** On the user detail page, permissions appear only for workspaces the editor can access. A limited user who can edit users in one workspace may not see another workspace's permission checkboxes.
 - **Assign permissions button:** When you edit a user and they already have workspace-level permissions or permission sets for every workspace you can manage, the **Assign permissions** button disappears. This happens because there are no additional workspaces left to assign at the workspace level.
 - **Export User Data:** Exporting user data requires workspace-level access in addition to the export permission.
 - **Composite permissions:** Some areas require multiple permissions. For example, configuring [Technology Partners](https://www.braze.com/docs/partners) typically requires both partner access and a baseline read permission for the related workspace features.
@@ -120,13 +121,7 @@ If you remove admin privileges from a user, they won't be able to access Braze u
 
 ### Company
 
-To manage the following company-level permissions for a user, check or uncheck the box next to that permission. When you're finished, select **Update user**.
-
-|Permission name|Description|
-|----------|-----------|
-|Manage company settings|Allows users to modify permission settings and sender verification. .|
-|Create and delete workspaces|Allows users to create and delete workspaces.|
-{: .reset-td-br-1 .reset-td-br-2 aria-label="Company-level permissions" }
+To manage a user's company-level permissions, check or uncheck the box next to each permission. When you're finished, select **Update user**. For a description of each permission, see [Company permissions](#company-permissions).
 
 
 
@@ -172,6 +167,21 @@ When you're finished, select **Update user**.
 To download a list of your users and their permissions, go to **Settings** > **User Management** > **Company Users**, then select **Export Users**. A CSV file will be sent to your email address shortly.
 
 ## List of permissions
+
+Company permissions apply to the whole company. All other permissions on this list are workspace-level, and you can add them to permission sets and roles.
+
+### Company {#company-permissions}
+
+Company permissions are assigned to each user from the [Company tab](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#edit-a-users-permissions) of their user page. You can't add them to permission sets or roles.
+
+| Permission name | Description |
+| --- | --- |
+| Manage company settings | Allows users to modify permission settings and sender verification. |
+| Create and delete workspaces | Allows users to create and delete workspaces. |
+| View domain settings | Allows users to view verified domains. |
+| Edit domain settings | Allows users to add and delete verified domains and view custom domains. |
+| Delete dashboard users | Allows users to delete other dashboard users. Users with this permission can't delete Company Admins or their own account. To add users or edit their details and permissions, users also need the "Edit Dashboard Users" permission, which is assigned at the workspace or team level. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Company permissions" }
 
 ### Messaging
 
@@ -312,7 +322,7 @@ To download a list of your users and their permissions, go to **Settings** > **U
 | App Settings | Edit App Settings | Create, edit, and update apps within app settings |
 | App Settings | View App Settings | View App Settings page |
 | Audience Sync Settings | View Audience Sync Settings | View all settings of their connected Audience Sync partners |
-| Dashboard Users | Edit Dashboard Users | View, create, and edit company users |
+| Dashboard Users | Edit Dashboard Users | View, create, and edit company users. To delete company users, a user needs the company-level [Delete dashboard users](#company-permissions) permission. |
 | Email Settings | View Email Settings | View Email Preferences |
 | Email Settings | Edit Email Settings | Enable and update Email Preferences |
 | Event User Log | View Event User Log | View event user logs |

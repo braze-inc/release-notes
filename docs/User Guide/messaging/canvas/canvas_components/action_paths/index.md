@@ -19,7 +19,7 @@ In the **Action Settings**, set the **Evaluation Window** to determine how long 
 
 Within the **Action Settings**, you can also turn on the ranked order for your components by switching on the **Advance users based on ranked order** toggle.
 
-![The Action Settings with an evaluation window of 1 day.](https://www.braze.com/docs/assets/img/actionpath_settings.png?9af8014d590176b0f4e2f20e56a062d0)
+![The Action Settings with an evaluation window of 6 hours.](https://www.braze.com/docs/assets/img/actionpath_settings.png?187f342e599952a9afa5a5c0d0fb65bd)
 
 By default, **Ranking** is off. When a user enters the Action Paths step and performs the trigger event attached to any action group, they immediately advance through the relevant action group based on the **first qualifying action** they perform after entering the step. If a user performs a second action that matches a different action group, they do not switch paths—the first action determines their route. If a user doesn't perform a trigger event, then they advance through the default **Everyone Else** group at the end of the evaluation period.
 
@@ -44,7 +44,7 @@ Let's say you have an Action Paths step with an evaluation period of one day wit
 
 In the preceding example, if **Ranking** is off and a user performs one of the trigger events ("Start Session" or "Place an Order"), that user is advanced in the relevant action group based on the trigger action.
 
-Note that Canvas entry properties differ from event properties. Canvas entry properties are properties from the event that triggered the Canvas. These properties can only be used in the first full step of a Canvas when using the original Canvas workflow. When using Canvas, persistent entry properties are enabled and allow the entry properties to be reused throughout the Canvas. Conversely, event properties originate from an event or action that occurs as the user goes through their workflow.
+Entry properties contain data from the event or API request that triggered the Canvas. Use `context` to access this data throughout the Canvas. Event properties originate from an event or action that occurs after the user enters the Canvas and are available to the first eligible Message step after the Action Paths step. For details, see [Context and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties).
 
 ### Action groups
 
@@ -68,7 +68,7 @@ Add a trigger or multiple triggers to define your action groups. Here, you can s
 
 The **Add an Email Address** action group trigger fires when an email address is added or updated on a user profile during the Action Paths step's **Evaluation Window**. This behavior matches other profile update triggers: users advance through the action group when the profile change qualifies under your configuration, including any filters on the trigger.
 
-![An action group named "Group 1" for users who make any purchase.](https://www.braze.com/docs/assets/img/actionpath_group.png?1cf39c37541a14ef4f3e052f46361e13)
+![An action group named "Group 1" for users who make any purchase.](https://www.braze.com/docs/assets/img/actionpath_group.png?ada0bdf20f7e79db93dcff524469a3ae)
 
 In each action group setting, you also have the option to select the checkbox **I want this group to exit the Canvas**, meaning that the users within this group exit the Canvas at the end of the evaluation period.
 

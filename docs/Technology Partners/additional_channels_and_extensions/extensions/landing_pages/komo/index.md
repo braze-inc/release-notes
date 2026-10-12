@@ -74,4 +74,4 @@ From here, configure the events, attributions, and subscriptions you want to syn
 
 ## Using the integration
 
-Now your integration is up and running, and you can monitor each run in the Workflow Runs tab. 
+Now your integration is running, and you can monitor each run in the Workflow Runs tab. 

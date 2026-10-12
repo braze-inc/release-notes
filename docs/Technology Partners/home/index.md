@@ -352,6 +352,7 @@ Braze Alloys is Braze's technology partner program. Partners extend the Braze pl
 - [Toovio](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/toovio)
 - [Transcend](https://www.braze.com/docs/partners/ecommerce/payments/transcend)
 - [Transifex](https://www.braze.com/docs/partners/message_personalization/localization/transifex)
+- [TransPerfect](https://www.braze.com/docs/partners/message_personalization/localization/transperfect)
 - [Treasure Data](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/treasure_data)
 - [Trustpilot](https://www.braze.com/docs/partners/message_personalization/dynamic_content/content_optimization_testing/trustpilot)
 - [Typeform](https://www.braze.com/docs/partners/additional_channels_and_extensions/extensions/surveys/typeform)

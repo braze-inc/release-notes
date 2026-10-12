@@ -199,7 +199,7 @@ Use these methods when building your own Content Card UI:
 
 |Method | Description |
 |---|---|
-|[`subscribeToContentCardsUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsupdates)| Registers a callback function that is invoked whenever Content Cards are updated for the current user, such as on session start. Use this as the primary way to receive card data for your custom feed. Must be called before `openSession()` to receive updates on the initial session. |
+|[`subscribeToContentCardsEvents`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsevents)| Registers a callback function that is invoked with each Content Cards event for the current user, such as a cache replay, a completed refresh, or an error. Use this as the primary way to receive card data for your custom feed. Must be called before `openSession()` to receive events for the initial session. For the list of events, see [Create Content Cards](https://www.braze.com/docs/developer_guide/content_cards/creating_cards?tab=web#step-2-subscribe-to-card-updates). Replaces the deprecated `subscribeToContentCardsUpdates`. |
 |[`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)| Returns all currently available cards from the most recent Content Cards refresh. Use this to immediately display cards on page load without waiting for a new server request, such as when the user returns to a page during an active session. |
 |[`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh)| Requests an immediate refresh of Content Cards from Braze servers. By default, cards refresh on session start and when the default feed is reopened. Use this to force a refresh at other times, such as after a specific user action. Be aware of [rate limits](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/feed#rate-limit). |
 |[`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions)| Logs impression events for an array of cards. Call this when cards are rendered and visible to the user. Required for accurate campaign reporting when using a custom UI, as impressions are not tracked automatically outside the default feed. |
@@ -214,7 +214,7 @@ For more details, refer to the [SDK reference documentation](https://js.appboycd
 
 ### Call methods in the correct order
 
-For custom feeds, Content Cards refresh only on session start if `subscribeToContentCardsUpdates()` is called before `openSession()`. Call your Braze methods in this order:
+For custom feeds, Content Cards refresh only on session start if you call `subscribeToContentCardsEvents()` (or the deprecated `subscribeToContentCardsUpdates()`) before `openSession()`. Call your Braze methods in this order:
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -223,6 +223,17 @@ import * as braze from "@braze/web-sdk";
 braze.initialize("YOUR-API-KEY", { baseUrl: "YOUR-SDK-ENDPOINT" });
 
 // Step 2: Subscribe to card updates
+// - Available in version 7.0.0+
+braze.subscribeToContentCardsEvents((event) => {
+  switch (event.type) {
+    case braze.ChannelEventType.CACHE_REPLAY:
+    case braze.ChannelEventType.CACHE_LOAD:
+    case braze.ChannelEventType.DATA_UPDATED:
+      renderCards(event.cacheSnapshot.contentCards.cards);
+      break;
+  }
+});
+
 braze.subscribeToContentCardsUpdates((updates) => {
   const cards = updates.cards;
   renderCards(cards);
@@ -235,9 +246,11 @@ braze.changeUser("USER_ID");
 braze.openSession();
 ```
 
+Use `subscribeToContentCardsEvents` on Web SDK 7.0.0 and later. `subscribeToContentCardsUpdates` is the earlier pattern, deprecated as of 7.0.0.
+
 ### Use cached cards to persist content across page loads
 
-Because `subscribeToContentCardsUpdates()` invokes only its callback when there are new updates (such as on session start), cards can disappear from your custom feed if a user refreshes the page mid-session. To prevent this, use `getCachedContentCards()` to immediately render cards from the local cache, alongside your subscription for new updates:
+The deprecated `subscribeToContentCardsUpdates()` method invoked its callback only when there were new updates (such as on session start), so cards could disappear from your custom feed if a user refreshed the page mid-session. `subscribeToContentCardsEvents()` avoids this problem. It sends a `CACHE_REPLAY` event with the cached cards as soon as you subscribe, so your custom feed renders from the local cache on every page load:
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -283,6 +296,21 @@ function renderCards(cards) {
   }
 }
 
+// - Available in version 7.0.0+
+braze.subscribeToContentCardsEvents((event) => {
+  switch (event.type) {
+    case braze.ChannelEventType.CACHE_REPLAY:
+      // Display cached cards immediately
+      renderCards(event.cacheSnapshot.contentCards.cards);
+      break;
+    case braze.ChannelEventType.CACHE_LOAD:
+    case braze.ChannelEventType.DATA_UPDATED:
+      // Display cards after the cache reloads or a refresh finishes
+      renderCards(event.cacheSnapshot.contentCards.cards);
+      break;
+  }
+});
+
 // Display cached cards immediately
 const cached = braze.getCachedContentCards();
 if (cached && cached.cards.length > 0) {
@@ -294,6 +322,10 @@ braze.subscribeToContentCardsUpdates((updates) => {
   renderCards(updates.cards);
 });
 ```
+
+On Web SDK 7.0.0 and later, `subscribeToContentCardsEvents` delivers the cached cards right away in a `CACHE_REPLAY` event, so you don't need the `getCachedContentCards()` call. `subscribeToContentCardsUpdates` is deprecated as of 7.0.0.
+
+If you need the cached cards outside of a subscription, call `getCachedContentCards()`.
 
 ### Log analytics for custom feeds
 

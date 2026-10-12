@@ -72,7 +72,7 @@ After sending this payload successfully, this response confirms that Braze remov
 
 Siege Valley Health is a hospital system that includes 10 operating hospitals and research centers with thousands of patients. Its marketing team wants to compare the Canvases sent to patients to remind them to schedule an appointment for flu shots from the past 3 years of using Braze. Siege Valley Health’s marketing team also wants a quick and efficient way to see both the list of Canvases and the analytics summary.
 
-Let’s dive into how Siege Valley Health can accomplish these two tasks using a combination of endpoints rather than filtering through the Braze dashboard.
+The following example shows how Siege Valley Health can accomplish these two tasks using a combination of endpoints rather than filtering through the Braze dashboard.
 
 For the first task of auditing Canvases, use the [`/canvas/list` endpoint](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvases) to export a list of Canvases that includes the name and tags. Here’s an example request:
 

@@ -449,8 +449,4 @@ The following metrics will be available soon in the Wunderkind reporting dashboa
 
 ## Additional resources
 
-- [Wunderkind Help Center — Signals for Braze Overview](https://support.wunderkind.co/hc/en-us/articles/47156898436891-Signals-for-Braze-Overview)
-- [Wunderkind Developer Portal — Integration Overview](https://developer.wunderkind.co/docs/integration-overview)
-- [Send Canvas messages using API-triggered delivery](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)
-- [Canvas context object](https://www.braze.com/docs/api/objects_filters/context_object/)
-- [Braze Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/)
+<ul class="guide_tiles"><li><a href="https://support.wunderkind.co/hc/en-us/articles/47156898436891-Signals-for-Braze-Overview"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Wunderkind Help Center — Signals for Braze Overview</span></span></div></a></li><li><a href="https://developer.wunderkind.co/docs/integration-overview"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Wunderkind Developer Portal — Integration Overview</span></span></div></a></li><li><a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Send Canvas messages using API-triggered delivery</span></span></div></a></li><li><a href="/docs/api/objects_filters/context_object"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Canvas context object</span></span></div></a></li><li><a href="/docs/user_guide/data/distribution/braze_currents"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Braze Currents</span></span></div></a></li></ul>

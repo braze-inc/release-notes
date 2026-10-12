@@ -41,8 +41,8 @@ Use this workflow to investigate a specific user or an aggregate send issue. Sta
 3. Check a user's messaging record by going to **Audience** > **Search users**, opening the profile, and selecting **Messaging History** (last 30 days).
    - If no record exists for the expected send time, the issue is with entry, not the message. Go to [User didn't enter the Canvas](#user-didnt-enter-the-canvas).
 4. Check the Canvas **Changelog** and changelogs for any segments used in targeting. Confirm the audience, steps, or send settings weren't changed during the incident.
-5. Check aggregate outcomes on the Canvas analytics page by opening [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) and reviewing abort and drop reasons.
-   - If you see an outcome you don't recognize, see [Abort outcomes](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability#abort-outcomes) in the Messaging Observability doc.
+5. Check aggregate outcomes on the Canvas analytics page by opening [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) and reviewing suppressions and failures.
+   - If you see an outcome you don't recognize, see [Suppressions](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability#suppressions) and [Failures](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability#failures) in the Messaging Observability doc.
    - If a step shows zero entries (not zero sends), check the previous step type ([Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths), [Delay](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/delay_step), [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths), or [Decision Split](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/decision_split)).
 6. If you're still blocked, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) within 30 days with the Canvas ID, affected user IDs, timestamps (with timezone), and screenshots from Messaging History or Messaging Observability.
 
@@ -113,7 +113,7 @@ Then check the following by trigger or step type:
 **Important:**
 
 
-When a Canvas Message step aborts a send, the user still advances to the next step. Canvas advances on abort so later Delay and Action Paths steps aren't permanently blocked. See [How users advance](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#how-users-advance) and [Abort outcomes](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability#abort-outcomes).
+When a Canvas Message step aborts a send, the user still advances to the next step. Canvas advances on abort so later Delay and Action Paths steps aren't permanently blocked. See [How users advance](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step#how-users-advance), [Suppressions](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability#suppressions), and [Failures](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability#failures) in Messaging Observability.
 
 
 
@@ -150,7 +150,7 @@ If a Message step shows many users entered but few sends, check whether Liquid `
 
 For a detailed list, see [Why are sends lower than the estimated audience size?](https://www.braze.com/docs/user_guide/messaging/canvas/faqs#why-are-sends-lower-than-the-estimated-audience-size) in the Canvas FAQ and [Why are sends lower than the estimated audience size?](https://www.braze.com/docs/user_guide/messaging/campaigns/faq#why-are-sends-lower-than-the-estimated-audience-size) for campaigns.
 
-Use [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) to see abort and drop reasons at the step level.
+Use [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) to see suppressions and failures at the step level.
 
 ## Canvas analytics mismatches
 

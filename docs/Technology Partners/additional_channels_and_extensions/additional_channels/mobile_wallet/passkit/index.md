@@ -43,7 +43,7 @@ To pass data from PassKit, ensure that you have set your Braze external ID as Pa
 Within Braze, you can set up a SmartPass link to generate a unique URL for your customers to install their pass on either Android or iOS. To do this, you must define an encrypted SmartPass data payload that can be called from a Braze Content Block. This [Content Block](https://www.braze.com/docs/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) can then be reused for future passes and coupons. The following is used during your integration:
 
 - **PassKit URL**: Your PassKit URL is a unique URL for your PassKit program.<br>Each program has a unique URL, and you can find it under the **Distribution** tab of your PassKit program or project. (for example, https://pub1.pskt.io/c/ww0jir)<br><br>
-- **PassKit secret**: Along with the URL, you must have the PassKit Key for this program handy.<br>This can be found on the same page as your PassKit URL.<br><br>
+- **PassKit secret**: Along with the URL, you must have the PassKit Key for this program available.<br>This can be found on the same page as your PassKit URL.<br><br>
 - **Program (or project) ID**: Your PassKit Program ID is required to create the SmartPass URL. <br>You can find it under the **Settings** tab of your project or program.
 
 For more information on creating encrypted SmartPass links, check out this [PassKit article](https://help.passkit.com/en/articles/3742778-hashed-smartpass-links).
