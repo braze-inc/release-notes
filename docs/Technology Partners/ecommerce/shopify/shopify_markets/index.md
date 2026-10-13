@@ -86,7 +86,7 @@ To support Shopify Markets, Braze syncs additional data beyond the integration's
 
 | Attribute | Data type | Description | Data source |
 | --- | --- | --- | --- |
-| `shopify_locale` | Custom attribute | The language the customer is browsing your store in, such as `en` or `fr-CA`. It changes when they switch storefront language. | Shopify customer locale |
+| `shopify_locale` | Custom attribute | The customer's locale, such as `en` or `fr-CA`. The Braze web pixel sets it from the shopper's browser language, and each order they place updates it to the locale they checked out in. The historical backfill also imports it from the Shopify customer record. Customer edits in Shopify don't change it. | Web pixel, order webhooks, historical backfill |
 | `browser_language` | Standard attribute | The language set in the customer's browser. | Braze SDKs |
 | `country` | Standard attribute | The customer's country. | Braze SDKs |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="User profile attributes"}

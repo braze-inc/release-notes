@@ -26,7 +26,7 @@ If you don't see **Surveys** under **Messaging**, contact your Braze account man
 
 ## Analytics {#analytics}
 
-Every survey question type includes enhanced reporting by default, so you can review response data at a glance without building a segment or exporting to a separate tool first.
+Every survey question type includes enhanced reporting by default, so you can review response data without building a segment or exporting to a separate tool first.
 
 Top-level analytics include:
 

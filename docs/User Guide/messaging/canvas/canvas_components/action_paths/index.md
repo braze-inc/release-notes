@@ -40,7 +40,7 @@ Note that when the action group trigger is starting a session, and the next step
 
 #### Ranking status example
 
-Let's say you have an Action Paths step with an evaluation period of one day with two action groups: Group 1 and Group 2. Group 1 has a trigger event "Start Session", and Group 2 has "Place an Order". If **Ranking** is turned on, then all users in the Action Paths step are "held" for one day. At the end of the day, if a user has started a session and placed an order, then they advance to the highest rank path. In this case, the user would advance to Group 1. 
+Let's say you have an Action Paths step with an evaluation period of one day with two action groups: Group 1 and Group 2. Group 1 has a trigger event "Start Session", and Group 2 has "Place an Order". If **Ranking** is turned on, then all users in the Action Paths step are "held" for one day. When the evaluation period ends, if a user has started a session and placed an order, then they advance to the highest rank path. In this case, the user advances to Group 1.
 
 In the preceding example, if **Ranking** is off and a user performs one of the trigger events ("Start Session" or "Place an Order"), that user is advanced in the relevant action group based on the trigger action.
 

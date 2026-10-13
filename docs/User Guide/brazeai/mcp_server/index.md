@@ -91,6 +91,12 @@ Yes. Specify the workspace per conversation or per request. One connection cover
 
 No. As of now, tools that expose PII are not available.
 
+### Do campaign edits made through the MCP server appear in edit history?
+
+Yes. Campaign edits made through MCP tools are attributed to your signed-in dashboard user and appear in campaign edit history.
+
+Canvas-specific MCP tools are currently read-only (`get_canvas_list`, `get_canvas_details`, `get_canvas_data_series`, and `get_canvas_data_summary`).
+
 ### What happens when my permissions change?
 
 Agent access changes with the dashboard user. Permission changes apply on the next request. Deactivated dashboard users lose MCP access.

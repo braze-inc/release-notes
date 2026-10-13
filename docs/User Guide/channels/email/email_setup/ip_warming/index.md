@@ -42,7 +42,7 @@ If you're interested in having a dedicated deliverability resource as part of yo
 
 
 
-The conservative schedule is a slower, more cautious approach that helps establish a strong sending reputation from scratch. This is recommended if you're new to email sending, migrating from a shared IP, or have experienced deliverability issues such as throttling or blocklisting by an inbox provider.
+The conservative schedule is a slower, more cautious approach that helps establish a strong sending reputation as a new design. This is recommended if you're new to email sending, migrating from a shared IP, or have experienced deliverability issues such as throttling or blocklisting by an inbox provider.
 
 Day | Number of emails to send
 ----|---------------------

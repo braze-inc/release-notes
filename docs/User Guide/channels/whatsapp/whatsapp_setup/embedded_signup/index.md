@@ -69,6 +69,21 @@ After embedded signup, Braze runs setup steps automatically. On the **WhatsApp M
 
 Wait until integration completes before you send messages. If setup fails, review the error on the integration page and see [WhatsApp setup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup) for general guidance.
 
+## Troubleshooting 
+
+### Ineligible phone number selection
+
+During Meta embedded signup, a phone number may appear as **Ineligible**. Meta blocks a phone number from selection until the number is free to connect to Braze. The following table describes the different reasons a number could be blocked, and how to unblock the number.
+
+| Cause | Fix |
+| --- | --- |
+| Number still registered to another Meta developer app | In the [Meta for Developers](https://developers.facebook.com/) dashboard, open the app where the WhatsApp API was previously set up. Go to **WhatsApp** > **API Setup** (or **Getting Started**), find the phone number, and remove it from that app. If the number is live for another WhatsApp Business Account (WABA), you may also need to remove it from that account in [WhatsApp Manager](https://business.facebook.com/latest/settings/whatsapp_account) before it becomes available. |
+| WhatsApp Business Account shared with another solution provider | In WhatsApp Manager settings, confirm the WABA that holds the number is shared only with Braze or isn't shared with other messaging providers. If another provider has access, remove that partner share or [migrate the number](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number) to a Braze-connected WABA. |
+| Braze partner access missing | If the WABA isn't shared with Braze yet, assign Braze as a partner with full access when Meta prompts you during signup, then retry phone number selection. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Ineligible phone number causes and fixes" }
+
+After you clear the conflicting registration or partner share, relaunch embedded signup from Braze and select the number again.
+
 ## Next steps
 
 - [Acquire or migrate a WhatsApp phone number](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/)

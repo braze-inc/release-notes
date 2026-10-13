@@ -2,7 +2,7 @@
 
 > Use Dashboard Builder to create dashboards and visualizations using reports created in Report Builder or Query Builder.
 
-Dashboard Builder empowers you to compose and visualize custom analytic dashboards from scratch and from Braze-supplied dashboards. You can use either a no-code data source (Report Builder) or SQL data source (Query Builder) to power your dashboard, or start from one of many Braze-supplied dashboards.
+Dashboard Builder empowers you to compose and visualize custom analytic dashboards as a new design and from Braze-supplied dashboards. You can use either a no-code data source (Report Builder) or SQL data source (Query Builder) to power your dashboard, or start from one of many Braze-supplied dashboards.
 
 ## Creating a custom dashboard
 

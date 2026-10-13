@@ -1,10 +1,10 @@
 # API-triggered and action-based campaigns
 
-> When setting up campaigns, it is always a good practice to test your messages before launching. This reference article covers creating a test user segment that will allow you to inspect API requests, payloads, and view deliverability logs.
+> When setting up campaigns, it's a good practice to test your messages before launching. This reference article covers creating a test user segment for inspecting API requests, payloads, and deliverability logs.
 
 ## Step 1: Create a test user segment
 
-The only way to test the triggering of a campaign with the API or custom event is to push the campaign live. As part of rolling out a new campaign, we strongly recommend adding a test user segment to campaigns when testing triggering deliverability. This will provide a safety net, ensuring that even if a campaign is accidentally sent, it will only go to internal users.
+The only way to test the triggering of a campaign with the API or custom event is to push the campaign live. As part of rolling out a new campaign, we strongly recommend adding a test user segment to campaigns when testing triggering deliverability. This provides a safety net so that even if a campaign is accidentally sent, it only goes to internal users.
 
 1. **Import test users**<br>Test users can be imported to Braze through a CSV or a one-off batched request through [Postman](https://www.braze.com/docs/api/postman_collection). When importing these users, we recommend setting a custom attribute on their profiles (such as `internal_test_user: true`) that can be used to build a test group segment. <br><br>
 2. **Add test users as Braze-recognized test users**<br>[Marking your test users as Braze-recognized test users](https://www.braze.com/docs/user_guide/administer/global/user_management/internal_groups) in the dashboard gives you access to verbose logging for each user, allowing you to inspect API requests, their payloads, and view deliverability logs. These logs can help you determine if there were any issues delivering campaigns to end users. <br><br>
@@ -22,4 +22,4 @@ Use Braze logging to troubleshoot triggering, sending, and event problems.
 
 ## Step 4: Remove the test segment and roll out the campaign
 
-Once the message is triggering and rendering properly with all clicked links registered, you can remove the segment and update the campaign. If you prefer to start the campaign from scratch so that the few test user impressions are not included, you can duplicate the campaign and restart it without the test user segment. 
+Once the message is triggering and rendering properly with all clicked links registered, you can remove the segment and update the campaign. If you prefer to start a new campaign so that the few test user impressions are not included, you can duplicate the campaign and restart it without the test user segment. 

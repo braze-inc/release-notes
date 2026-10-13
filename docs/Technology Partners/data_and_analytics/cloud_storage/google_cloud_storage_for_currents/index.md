@@ -11,6 +11,13 @@ If you're switching between cloud storage providers, contact your Braze customer
 
 The Braze and Google Cloud Storage integration allows you to stream Currents data to Google Cloud Storage. You can later use an ETL process (Extract, Transform, Load) to transfer your data to other locations, such as Google BigQuery.
 
+**Note:**
+
+
+Currents doesn't connect directly to BigQuery, so it isn't part of the [Google Cloud Ready - BigQuery](https://cloud.google.com/bigquery/docs/bigquery-ready-overview) validation of Braze. Currents writes event data to your Google Cloud Storage bucket, and you can then use BigQuery tools to load or query that data from Cloud Storage.
+
+
+
 ## Prerequisites
 
 | Requirement | Description |

@@ -163,7 +163,7 @@ Here, you can write transformation code to define how you want to map various we
 
 ```java
 // This is a default template that you can use as a starting point
-// Feel free to delete this entirely to start from scratch, or to edit specific components
+// Feel free to delete this entirely and create a new transformation, or edit specific components
 
 // First, this code defines a variable, "brazecall", to build a PUT /catalogs/{catalog_name}/items request
 // Everything from the incoming webhook is accessible via the special variable "payload"

@@ -1,6 +1,6 @@
 # Troubleshoot Canvases
 
-> Use this page to diagnose Canvas entry, send, and analytics issues. For definitions and deep dives, see the [Canvas FAQ](https://www.braze.com/docs/user_guide/messaging/canvas/faqs).
+> Use this page to diagnose Canvas entry, send, and analytics issues. For definitions and detailed explanations, see the [Canvas FAQ](https://www.braze.com/docs/user_guide/messaging/canvas/faqs).
 
 **Tip:**
 

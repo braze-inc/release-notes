@@ -53,7 +53,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 ## Step 2: Build your webhook
 
-You can choose to create a webhook from scratch, use an existing template, or use one of our existing templates. Then, build your webhook in the **Compose** tab of the editor.
+You can choose to create a new webhook, use an existing template, or use one of our existing templates. Then, build your webhook in the **Compose** tab of the editor.
 
 The **Compose** tab consists of the following fields:
 

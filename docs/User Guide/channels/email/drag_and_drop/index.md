@@ -80,7 +80,7 @@ You can't save a drag-and-drop email from a campaign or Canvas directly to **Tem
 
 
 
-After you've selected where to build your message, let's dive into the steps to create a drag-and-drop email.
+After you've selected where to build your message, follow these steps to create a drag-and-drop email.
 
 ### Step 1: Select your template
 

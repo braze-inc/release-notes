@@ -10,7 +10,7 @@ In brief, the Braze SDK:
 ## What is an SDK?
 A software development kit (SDK) is a set of pre-made tools&mdash;just small blocks of code&mdash;that can be added to digital applications to support new capabilities. The Braze SDK is used to send and get information to and from your app or site. It's designed to provide essential functionality right from the start: creating user profiles, logging custom events, triggering push notifications, etc. 
 
-Because this functionality comes default from Braze, your developers are freed up to focus on your core business. Without an SDK, every Braze client would have to create all the infrastructure and tools for data processing, segmentation logic, delivery options, anonymous user handling, campaign analytics, and a lot more completely from scratch. That would take a lot longer and be way more of a pain than the hour or so it takes to incorporate our SDK.
+Because this functionality comes default from Braze, your developers are freed up to focus on your core business. Without an SDK, every Braze client would have to build all the infrastructure and tools for data processing, segmentation logic, delivery options, anonymous user handling, campaign analytics, and more. That would take much longer than the hour or so it takes to incorporate our SDK.
 
 ## Implementation
 

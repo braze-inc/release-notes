@@ -80,7 +80,7 @@ Across all fit levels, the agent learns best when your audience generates enough
 | What to do instead | If you have an evergreen program with similar content—for example, a year-round product-announcement program—use Decisioning Studio Go there and apply what you learn to one-time sends. For a one-time send, use [Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection) for A/B testing. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="One-time email blasts" }
 
-## At a glance
+## Overview {#at-a-glance}
 
 | Scenario | Fit | Key consideration |
 |---|---|---|

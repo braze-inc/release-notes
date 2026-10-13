@@ -63,7 +63,7 @@ Other options for sending data include:
 - Sending Braze custom events via the SDK
 - Sending events using the REST endpoint ([`/users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track))
 
-These patterns require more engineering effort, but are sometimes preferable depending on your current Braze configuration. Reach out to the AI Decisioning Services team to learn more.
+These patterns require more engineering effort, but are sometimes preferable depending on your current Braze configuration. Contact the AI Decisioning Services team to learn more.
 
 
 

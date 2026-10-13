@@ -110,4 +110,4 @@ You are. The agent only sends content that you've added as a variant. The agent 
 
 ### Where do I get help with my agent?
 
-Reach out to your Braze customer success manager or solutions consultant for help with configuration, performance review, or program design.
+Contact your Braze customer success manager or solutions consultant for help with configuration, performance review, or program design.

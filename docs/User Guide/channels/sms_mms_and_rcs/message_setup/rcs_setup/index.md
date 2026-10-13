@@ -1,6 +1,6 @@
 # Set up RCS
 
-> This article covers the requirements needed to get your RCS channel up and running.
+> This article covers the requirements needed to get your RCS channel running.
 
 Setting up RCS is as straightforward as setting up SMS. Keep reading to learn how you can begin sending rich and interactive messages.
 

@@ -1,6 +1,6 @@
 # Handle unknown phone numbers - new users
 
-> You may find that after you get SMS, MMS, and RCS up and running with Braze, you receive messages from unknown users. The following steps describe how an unidentified user and number get processed.
+> You may find that after you get SMS, MMS, and RCS running with Braze, you receive messages from unknown users. The following steps describe how an unidentified user and number get processed.
 
 ## Opt-in/out and custom keyword workflow for unknown numbers
 
