@@ -80,7 +80,7 @@ These users are showing strong signals of engagement—like browsing Pro feature
 
 
 
-These users dabble in fitness features but haven’t taken steps toward upgrading. The message leans into their fitness interests while reducing friction with a limited-time offer—helping them see Pro as a low-risk way to level up their routine.
+These users dabble in fitness features but haven’t taken steps toward upgrading. The message leans into their fitness interests while reducing friction with a limited-time offer—helping them see Pro as a low-risk way to improve their routine.
 
 - **Subject line:** Ready to train smarter? Try Pro at 50% off
 - **Header:** Your workout upgrade is waiting

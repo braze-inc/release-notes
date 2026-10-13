@@ -34,7 +34,7 @@ If the majority of webhook requests to a specific host are failing, Braze tempor
 
 ## Using webhooks with Braze partners {#utilizing-webhooks}
 
-There are many ways to use webhooks, and with our technology partners (Alloys), you can use webhooks to level up your communication directly with your customers and users.
+There are many ways to use webhooks, and with our technology partners (Alloys), you can use webhooks to improve your communication directly with your customers and users.
 
 Check out:
 * [Messenger](https://www.braze.com/docs/partners/additional_channels_and_extensions/additional_channels/instant_chat/messenger)

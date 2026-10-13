@@ -50,7 +50,7 @@ Marketing templates are for promotional and engagement messages (for example, we
 
 | Type | Description |
 | --- | --- |
-| **Custom** | A standard WhatsApp message you build from scratch. This is the layout covered in [Build your template](#step-4-build-your-template). |
+| **Custom** | A standard WhatsApp message you create yourself. This is the layout covered in [Build your template](#step-4-build-your-template). |
 | **Carousel** | A message with horizontally scrollable cards. For more information, see [Carousel templates](https://www.braze.com/docs/whatsapp_carousel_templates). |
 | **Limited-time offer** | A time-sensitive promotional offer. For more information, see [Limited time offer templates](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message/message_and_image_formats#limited-time-offer-templates). |
 | **Flow** | A template that opens a WhatsApp Flow (for example, surveys or appointment bookings). Create and manage the Flow in Meta's WhatsApp Manager, then select it when you build the template. For more information, see [WhatsApp Flows](https://www.braze.com/docs/user_guide/channels/whatsapp/message_features_and_optimization/whatsapp_flows). |
@@ -62,7 +62,7 @@ Utility templates are for non-promotional messages (for example, order confirmat
 
 | Type | Description |
 | --- | --- |
-| **Custom** | A standard utility message you build from scratch. Follow the same composition steps as [Build your template](#step-4-build-your-template). |
+| **Custom** | A standard utility message you create yourself. Follow the same composition steps as [Build your template](#step-4-build-your-template). |
 | **Flow** | A utility Flow template (for example, reminders, feedback, or order management). Create and manage the Flow in Meta's WhatsApp Manager, then select it when you build the template. For more information, see [WhatsApp Flows](https://www.braze.com/docs/user_guide/channels/whatsapp/message_features_and_optimization/whatsapp_flows). |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Utility template types" }
 

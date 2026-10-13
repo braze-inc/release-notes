@@ -68,7 +68,7 @@ If you are creating a Segment Extension using an eCommerce recommended event, fi
 
 #### Event property segmentation
 
-To increase targeting precision, select the **Add Property Filters** checkbox. This enables you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects.
+To increase targeting precision, select the **Add Property Filters** checkbox. This enables you to filter based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects.
 
 ##### Property data types
 

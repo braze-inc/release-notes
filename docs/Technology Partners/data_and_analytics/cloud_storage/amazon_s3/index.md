@@ -368,6 +368,16 @@ A notification informs you whether your credentials have been successfully valid
 
 
 
+### Security considerations for the role ARN method {#role-arn-security}
+
+When you select **Another AWS Account** and enter the Braze account ID in [Step 2](#role-arn-2), AWS creates a trust policy whose `Principal` is the Braze AWS account root (`arn:aws:iam::<BRAZE_ACCOUNT_ID>:root`). If your security team reviews this trust policy, note the following:
+
+- Braze uses a shared IAM user to assume your role.
+- The external ID is required. Keep the `sts:ExternalId` condition in your trust policy, including when you scope the principal to a specific IAM user.
+- You can scope the principal to a specific IAM user. If your security policy doesn't allow trusting an account root, you can replace the `Principal` with the ARN of the Braze IAM user. To get that ARN for your region, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
+- The Braze IAM user can change. The principal is generally stable, but Braze might change it in the future. If you scope your trust policy to a specific IAM user and that user changes, Braze can't assume your role until you update the trust policy.
+- Principals differ by product. Currents and dashboard data exports use the same Braze IAM user. [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion) uses a different principal in a different AWS account, so configure its trust policy separately.
+
 ## Updating Amazon S3 credentials for Currents {#updating-currents-credentials}
 
 You can update the Amazon S3 credentials on an existing Braze Currents connector without stopping the integration or losing data already exported to your bucket.

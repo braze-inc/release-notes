@@ -38,7 +38,7 @@ Compare your channel performance against industry benchmarks. To see which chann
 
 
 
-See how your channels are performing at a glance.
+See how your channels are performing.
 
 - "Which channels are performing best for us in FY26 to date?"
 - "Break down engagement by channel for the last 90 days."
@@ -167,7 +167,7 @@ Data refreshes daily. Same-day activity appears after the next refresh. Each res
 
 Operator Analyze has boundaries.
 
-- **Product-level breakdowns:** *Attributed Revenue* and engagement roll up to the campaign, Canvas, channel, or program level. Product- or SKU-level breakdowns aren't supported. Reach out to your customer success manager if you need product-level analysis.
+- **Product-level breakdowns:** *Attributed Revenue* and engagement roll up to the campaign, Canvas, channel, or program level. Product- or SKU-level breakdowns aren't supported. Contact your customer success manager if you need product-level analysis.
 - **Industry benchmarks:** Benchmarks are available for email, push, in-app messages, Content Cards, and SMS *Delivery Rate*. Benchmarks aren't available yet for WhatsApp, RCS, or other SMS metrics.
 - **Per-user and per-send lookups:** Results are aggregated. Operator can't look up activity for a specific user or message. For individual user activity, use user profiles or the **Message Activity Log**.
 - **Opt-in and subscription state:** Operator Analyze reports messaging engagement (sends, deliveries, opens, clicks), not current opt-in or consent status. For subscription state, use your audience or user profile views.

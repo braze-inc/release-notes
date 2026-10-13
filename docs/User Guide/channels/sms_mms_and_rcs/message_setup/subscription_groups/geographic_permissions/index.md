@@ -1,6 +1,6 @@
 # Geographic permissions
 
-> Geographic permissions enhance security and protect against fraudulent SMS, MMS, and RCS traffic by enforcing controls on the countries to which you can send messages. You can specify an allowlist of countries to only send SMS, MMS, and RCS messages to approved regions. Messages are only sent to phone numbers with those countries' dialing codes.<br><br> Only admins can make changes to the country allowlist. Non-admin users have access to a read-only version of the allowlist that indicates which countries a subscription group is able to send to.
+> Geographic permissions enhance security and protect against fraudulent SMS, MMS, and RCS traffic by enforcing controls on the countries to which you can send messages. You can specify an allowlist of countries to only send SMS, MMS, and RCS messages to approved regions. Braze sends messages only to phone numbers registered to the selected country codes.<br><br> Only admins can make changes to the country allowlist. Non-admin users have access to a read-only version of the allowlist that indicates which countries a subscription group is able to send to.
 
 If you're an admin, you can configure the countries that are on the allowlist. The country allowlist is configured at the [subscription group](https://www.braze.com/docs/sms_rcs_subscription_groups) level. You can access it by going to **Audience** > **Subscription Group Management** and selecting an SMS, MMS, or RCS subscription group. The allowlist is under **Geographic Permissions**.
 
@@ -8,15 +8,22 @@ If you're an admin, you can configure the countries that are on the allowlist. T
 
 ## Selecting countries
 
-Add countries to the allowlist with the dropdown. The most common SMS, MMS, and RCS countries are shown at the top, with others shown in the following section. You can also search for countries by typing in the text field.
-
-![The "Country allowlist" dropdown with the most common countries displaying at the top.](https://www.braze.com/docs/assets/img/sms/allowlist_dropdown.png?fdf84b8364c3970633cdaaf14b8a6deb){: style="max-width:80%;"}
+Add countries to the allowlist with the dropdown. The most common SMS, MMS, and RCS countries are shown at the top, with others shown in the following section. You can also search for countries by typing in the text field. 
 
 Remove previously selected countries by clearing the respective boxes next to them.
 
+**Important:**
+
+
+**United States** doesn't include U.S. territories. Territories such as Puerto Rico, Guam, American Samoa, the U.S. Virgin Islands, and the Northern Mariana Islands appear as separate allowlist entries. Add each territory you need to send to.
+
+
+
+![The "Country allowlist" dropdown with the most common countries displaying at the top.](https://www.braze.com/docs/assets/img/sms/allowlist_dropdown.png?fdf84b8364c3970633cdaaf14b8a6deb){: style="max-width:80%;"}
+
 ### Saving your changes
 
-Changes take effect after you save. Removing countries from your allowlist prevents all SMS, MMS, and RCS messages from being sent to phone numbers with those countries' dialing codes.
+Changes take effect after you save. Removing countries from your allowlist prevents all SMS, MMS, and RCS messages from being sent to phone numbers registered to those country codes.
 
 ![Warning modal confirming the countries that will be deleted from the allowlist.](https://www.braze.com/docs/assets/img/sms/delete_allowlist_warning.png?99e4c6af954e64752cee284da48189fc){: style="max-width:70%;"}
 

@@ -197,7 +197,7 @@ In this use case, a user with a blank or null first name receives the message "T
 
 You can use the `assign` tag to create a variable in the message composer. We recommend using a unique name for your variable. If you create a variable with a similar name to the supported personalization tags (such as `language`), this may affect your messaging logic.
 
-After you create a variable, you can reference that variable in your messaging logic or message. This tag comes in handy when you want to reformat content that is returned from our [Connected Content](https://www.braze.com/docs/assets/img_archive/personalized_firstname_.png?ab1f2c99d1b34b0bdddaab42c8916a0b) feature. You can read more in Shopify's documentation on [variable tags](https://docs.shopify.com/themes/liquid/tags/variable-tags).
+After you create a variable, you can reference that variable in your messaging logic or message. This tag is helpful when you want to reformat content that is returned from our [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content) feature. You can read more in Shopify's documentation on [variable tags](https://docs.shopify.com/themes/liquid/tags/variable-tags).
 
 **Important:**
 

@@ -865,6 +865,7 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 | `shopify_last_order_id` | The ID of the customer's last order. | Shopify's `customers/purchasing_summary` webhook |
 | `shopify_zipcode` | The customer's zipcode from their default address. | Shopify's `customers/create` and `customers/update` webhooks |
 | `shopify_province` | The customer's province from their default address. | Shopify's `customers/create` and `customers/update` webhooks |
+| `shopify_locale` | The customer's locale (for example, `en` or `fr-CA`), set from the browser language collected by the Braze web pixel until they place an order, then updated from the locale on their latest checkout. | Braze web pixel, Shopify `orders/*` webhooks, historical customer backfill |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Supported Shopify custom attributes" }
 
 **Note:**
@@ -981,5 +982,5 @@ The following table summarizes the data included in that initial load.
 
 | Braze recommended events | Shopify custom events | Braze standard attributes | Braze subscription statuses |
 | --- | --- | --- | --- |
-| {::nomarkdown}<ul><li>Order placed</li><li>Order cancelled</li><li>Order refunded</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_orders_count</li><li>shopify_last_order_id</li><li>shopify_zipcode</li><li>shopify_province</li></ul>{:/} | {::nomarkdown}<ul><li>Email</li><li>First Name</li><li>Last Name</li><li>Phone</li><li>City</li><li>Country</li><li>Total Revenue</li><li>Total Refunds</li><li>Total Orders</li></ul>{:/} | {::nomarkdown}<ul><li>Email marketing subscriptions associated with this Shopify store</li><li>SMS marketing subscriptions associated with this Shopify store</li></ul>{:/} |
+| {::nomarkdown}<ul><li>Order placed</li><li>Order cancelled</li><li>Order refunded</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_orders_count</li><li>shopify_last_order_id</li><li>shopify_zipcode</li><li>shopify_province</li><li>shopify_locale</li></ul>{:/} | {::nomarkdown}<ul><li>Email</li><li>First Name</li><li>Last Name</li><li>Phone</li><li>City</li><li>Country</li><li>Total Revenue</li><li>Total Refunds</li><li>Total Orders</li></ul>{:/} | {::nomarkdown}<ul><li>Email marketing subscriptions associated with this Shopify store</li><li>SMS marketing subscriptions associated with this Shopify store</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Synced data" }

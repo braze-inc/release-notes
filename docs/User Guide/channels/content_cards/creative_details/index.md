@@ -52,7 +52,7 @@ If you want more creative control, the image-only card is for you. Create your i
 
 ## Global creative details {#general}
 
-Content Cards support text and images, including GIFs, out of the box. At this time, custom styling for the card, such as different font colors or multiple images, can't be done in the dashboard. You can custom style your Content Card and feed during integration. For more details, refer to [Customize cards](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards) for the Braze SDK.
+Content Cards support text and images, including GIFs, by default. At this time, custom styling for the card, such as different font colors or multiple images, can't be done in the dashboard. You can custom style your Content Card and feed during integration. For more details, refer to [Customize cards](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards) for the Braze SDK.
 
 ### Dismissal behavior
 

@@ -276,7 +276,7 @@ To reduce unexpected delayed sends:
 - For time-bound promotions, deactivate variants about an hour before the offer ends—not at the exact end time—so already-scheduled sends can clear.
 - To urgently stop these sends, follow the same steps as for a Message step. See [Stopping Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/change_your_canvas_after_launch#stopping-canvases).
 
-When you publish changes, the optimizer resets and begins reallocating traffic from scratch across all active variants and combinations. Avoid updating variants while the step is in the Learning state. Historical data from before the edit is retained and viewable in the **Content Analytics** tab.
+When you publish changes, the optimizer resets and begins reallocating traffic again across all active variants and combinations. Avoid updating variants while the step is in the Learning state. Historical data from before the edit is retained and viewable in the **Content Analytics** tab.
 
 The following settings cannot be changed after launch:
 

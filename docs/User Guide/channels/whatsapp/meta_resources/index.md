@@ -79,7 +79,7 @@ For more information, see Meta's documentation on [template archival](https://de
 - Previously open to all customers through WhatsApp Manager
 - Now restricted to: government/large Meta advertisers, direct advertisers, or via a BSP like Braze (up to 5 per week)
 - New prerequisites: business verification, 2-step verification, approved display name, notability
-- Reach out to your customer success manager for assistance 
+- Contact your customer success manager for assistance 
 
 ### October 2025: Regional pricing rate cuts
 *Last Updated March 2026*

@@ -77,7 +77,7 @@ Write anything you want. There are no limits, but the faster you can get your me
 
 To add an image to your Content Card, you can select **Add Image** or provide an image URL. Selecting **Add Image** opens the **Media Library**, where you can select a previously uploaded image or add a new one. 
 
-Each message type and platform may have its own suggested proportions and requirements, so be sure to check what those are before commissioning or making an image from scratch. Keep in mind that Content Card message fields are limited to 2&nbsp;KB in total size.
+Each message type and platform may have its own suggested proportions and requirements, so be sure to check what those are before commissioning or creating a new image. Keep in mind that Content Card message fields are limited to 2&nbsp;KB in total size.
 
 
 

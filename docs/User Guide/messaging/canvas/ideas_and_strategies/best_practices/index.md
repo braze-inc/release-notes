@@ -4,7 +4,7 @@
 
 ## Identify your purpose
 
-Dive into the what, who, and why!
+Review the what, who, and why.
 - What are you trying to help the users accomplish?
 - Who are the users you're trying to reach?
 - Why are you building this Canvas?
@@ -32,7 +32,7 @@ Reel in your users with richer messages.
 
 ## Test your user journeys
 
-Determine the impact of your Canvas messaging by incorporating control groups. This way, you can build an understanding of how your Canvas was received!
+Determine the impact of your Canvas messaging by incorporating control groups. This way, you can build an understanding of how your Canvas was received.
 
 - Name each step of your Canvas to identify your user journey.
 - Leverage the [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step) component in your user journey to randomly assign users to different paths you create. 

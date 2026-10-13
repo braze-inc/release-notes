@@ -148,7 +148,7 @@ A common use case is trying to debug why a user can't see a particular Content C
 
 ![Search for campaign_id on Campaigns page](https://www.braze.com/docs/assets/img_archive/cc_debug.png?f9f496a9f5221760285ca0ca5082963b){: style="max-width:80%;"}
 
-From there, you can review your message settings and content to drill down and determine why a user can't see a particular Content Card.
+From there, you can review your message settings and content to examine and determine why a user can't see a particular Content Card.
 
 
 

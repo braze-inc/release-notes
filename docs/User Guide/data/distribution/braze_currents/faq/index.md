@@ -102,6 +102,14 @@ Message engagement events (sends, opens, clicks, and so on) include the Braze us
 
 If you are routing Currents data to a warehouse or CRM and need to join on profile data, perform that join in your downstream system using `user_id` or `external_user_id`.
 
+## What is the `app_group_id` field in Currents events?
+
+The `app_group_id` field contains the API identifier of the workspace the event belongs to. This value is a UUID. It's the same value as the `app_group_api_id` column in the SQL tables for the [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder), [SQL Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments), and [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake), so you can use it to join Currents data with those tables.
+
+Currents uses API identifiers instead of internal Braze IDs in its ID fields, so other fields follow the same pattern. For example, `canvas_id` in Currents contains the Canvas API identifier.
+
+The `app_group_id` value isn't a credential, so you can't use it to authenticate REST API requests. To make REST API requests for a workspace, use a [REST API key](https://www.braze.com/docs/api/basics#about-rest-api-keys).
+
 ## Can I include custom attributes in Currents send events?
 
 No. Currents does not include custom attributes in send events. Currents logs custom events and message engagement events. For a complete list of available fields, refer to the [event glossaries](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary).
@@ -113,6 +121,19 @@ No. Currents does not include campaign or Canvas tags or message-level key-value
 ## How does Braze notify customers of changes to Currents?
 
 In the rare circumstance when breaking changes occur, Braze sends an advance email to the contact on any active integration and all admins with active Currents integrations who have used the dashboard within the past 30 days. For non-breaking changes, like new events or new fields to an existing event, Braze does not send a notification. You can refer to the [Currents changelog](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/currents_changelogs) for the latest changes.
+
+## Which time period does a Currents recovery notification cover?
+
+When a Currents integration recovers from an error such as bad credentials or 500s from the destination's endpoint, Braze emails the integration's contact email to say the integration "is now recovering." After the integration catches up, Braze says it "has fully recovered" and all backlogged data was sent. These recovery notifications don't state which time period the backlogged data covers.
+
+To determine the recovered time period:
+
+1. Find the first failure notification Braze sent for the same integration. It states approximately when the integration started failing.
+2. Note when you received the "has fully recovered" notification.
+
+The backlogged data Braze sent covers the events from when the integration started failing until it recovered.
+
+If the integration was failing for more than five days, some events may have been dropped. Dropped events can't be recovered. For more information, see [Requirements](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents#requirements).
 
 ## How much storage do I need for Currents data?
 

@@ -74,7 +74,7 @@ Limit how often your customers receive campaigns of a certain type. For example,
 
 ### Reporting
 
-Set up an Engagement Report to keep an eye on the volume of all campaigns with a certain tag. For example, if you want to monitor all of your push campaigns, you could add a tag like `Push Reporting` to those campaigns, then set up an [Engagement Report](https://www.braze.com/docs/user_guide/analytics/reports/engagement_reports#automatically-select-campaigns-or-canvases) to send you a report of those tagged campaigns every day.
+Set up an Engagement Report to monitor the volume of all campaigns with a certain tag. For example, if you want to monitor all of your push campaigns, you could add a tag like `Push Reporting` to those campaigns, then set up an [Engagement Report](https://www.braze.com/docs/user_guide/analytics/reports/engagement_reports#automatically-select-campaigns-or-canvases) to send you a report of those tagged campaigns every day.
 
 
 

@@ -76,7 +76,7 @@ For email opens, Braze will separate Google Image Proxy, Apple Image Proxy, and 
 
 #### Engagement by Mailbox Provider
 
-The **Engagement by Mailbox Provider** report displays the top mailbox providers contributing to your clicks or opens. You can click into specific premier mailbox providers to drill down into specific receiving domains. For example, if Microsoft is listed on this report as one of your top mailbox provider metrics, you can further view details for their receiving domains, such as “outlook.com”, “hotmail.com”, “live.com”, and more.
+The **Engagement by Mailbox Provider** report displays the top mailbox providers contributing to your clicks or opens. You can click into specific premier mailbox providers to view specific receiving domains. For example, if Microsoft is listed on this report as one of your top mailbox provider metrics, you can further view details for their receiving domains, such as “outlook.com”, “hotmail.com”, “live.com”, and more.
 
 ![An example Engagement by Mailbox Provider report with Google, Apple iCloud, Yahoo, Microsoft, and Mail.Ru Group and their corresponding number of clicks.](https://www.braze.com/docs/assets/img_archive/mailbox_provider_time_engagement.png?784f80e08b3491b19ebfb5b7a1f10809){: style="max-width:70%;"}
 
@@ -331,7 +331,7 @@ For the _Unique Opens_ metric, Braze will deduplicate any repeat opens registere
 
 These reports use a three-month analysis window. If your selected range is shorter, Braze may expand the range to include earlier dates when data is available.
 
-If your date range is long enough and the reports are still empty, benchmark data may not yet be available for your workspace. Reach out to Braze Support if you have any questions.
+If your date range is long enough and the reports are still empty, benchmark data may not yet be available for your workspace. Contact Braze Support if you have any questions.
 
 ### Why don't my filters change the frequency and cadence reports?
 

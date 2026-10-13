@@ -40,7 +40,7 @@ This example compares tradeoffs so you can match an approach to your QA workflow
 | Team skills | Can your team maintain Liquid, CSV uploads, APIs, or partner integrations? |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Capture your localization requirements" }
 
-### Step 2: Compare approaches at a glance
+### Step 2: Compare approaches {#step-2-compare-approaches-at-a-glance}
 
 | Dimension | Manual Liquid | Content Blocks | Catalogs | Multi-language messages | Translation partners | Connected Content |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -54,7 +54,7 @@ This example compares tradeoffs so you can match an approach to your QA workflow
 | Structured / product data | Limited | Limited | Yes—ideal for keyed copy | Limited | Varies | Yes—through external source |
 | External dependency risk | None | None | None | None | Medium | Medium—send fails if source is down |
 | Best suited for | Few languages, infrequent updates | Shared components across messages | Many locales of structured strings | Many languages with lower copy-paste effort | Enterprise translation with approvals | Dynamic CMS-driven localization |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 .reset-td-br-7 aria-label="Compare approaches at a glance" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 .reset-td-br-7 aria-label="Compare approaches" }
 
 ### Step 3: Match Kitchenerie-style scenarios to an approach
 

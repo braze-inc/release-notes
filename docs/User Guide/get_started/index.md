@@ -63,7 +63,7 @@ For more, check out: [Getting Started: Workspaces](https://www.braze.com/docs/us
 
 ## Integrating Braze
 
-Braze is designed to get up and running quickly and easily. Our average time-to-value is six weeks across our customer base of hundreds of brands.
+Braze is designed for a quick setup. Our average time-to-value is six weeks across our customer base of hundreds of brands.
 
 ![Screenshot related to integrating braze.](https://www.braze.com/docs/assets/img/getting_started/timetovalue.png?2946a8d9bbf11a99dc7e1d4e3f382b90)
 

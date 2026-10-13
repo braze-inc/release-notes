@@ -33,18 +33,6 @@ SCIM provisioning availability depends on your platform edition. If this feature
 
 
 
-
-
-
-**Important:**
-
-
- is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-
-
-
-
-
 Use the **Okta - Braze app** option if you set up the Braze app for SAML SSO in Okta. If you set up a custom app for SSO, follow the instructions in the [Okta - Custom app integration](https://www.braze.com/docs/user_guide/administer/global/user_management/automated_user_provisioning?tab=okta%20-%20custom%20app%20integration#step-1-set-up-scim-provisioning) tab.
 
 
@@ -105,18 +93,6 @@ Select **Test API Credentials**. A verification message appears if the integrati
 
 
 
-
-
-
-**Important:**
-
-
- is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-
-
-
-
-
 Use the **Okta - Custom app integration** option if you set up a custom app for SSO. If you set up the Braze app for SAML SSO in Okta, follow the instructions in the [Okta - Braze app](https://www.braze.com/docs/user_guide/administer/global/user_management/automated_user_provisioning?tab=okta%20-%20braze%20app#step-1-set-up-scim-provisioning) tab.
 
 
@@ -162,18 +138,6 @@ Use the **Okta - Custom app integration** option if you set up a custom app for 
 2. Select **Assign** and select an option.
 3. Assign the app to the people who should have access to Braze.
 4. Select **Done**.
-
-
-
-
-
-
-
-**Important:**
-
-
- is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-
 
 
 

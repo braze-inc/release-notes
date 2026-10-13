@@ -28,7 +28,7 @@ While these updates to email deliverability are significant, MPP doesn't fundame
 
 ## How to prepare for MPP?
 
-Time is of the essence for brands who are just beginning to think about how they respond to MPP and its potential impact on their email marketing and overall customer engagement efforts. We recommend users do the following:
+Act quickly for brands who are just beginning to think about how they respond to MPP and its potential impact on their email marketing and overall customer engagement efforts. We recommend users do the following:
 
 - Assess the risk that MPP poses to their marketing efforts
 - Put together a targeted MPP response plan that addresses automation adjustments on the Braze platform, strengthens deliverability best practices, and develops a broader set of metrics to measure performance.
