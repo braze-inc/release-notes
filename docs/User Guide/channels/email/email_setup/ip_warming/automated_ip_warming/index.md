@@ -8,7 +8,7 @@ You can use automated IP warming to gradually increase your daily send volume, a
 
 Each automated IP warming plan is tied to one from address. That from address maps to a sending subdomain and an IP pool. If the pool contains multiple dedicated IPs, Braze warms them together in a single plan.
 
-Braze sends to your most engaged subscribers first, which allows daily volume to grow at a pace that matches best practices. Then, Braze tracks engagement and deliverability signals. If Braze detects any issues, the system adjusts your schedule automatically.
+When you set up a plan, choose how to rank your audience. With manual ranking, you select and order segments by engagement, and Braze sends to the highest-ranked segments first. With Intelligent ranking, you upload a CSV of recent email engagement from your previous email provider. Braze scores the matching users by predicted engagement and sends to the most engaged users first. For either method, Braze monitors deliverability and adjusts your schedule if it detects issues.
 
 After you complete at least one plan, you can view completed plans at **Settings** > **Email Preferences** > **Automated IP warming**.
 
@@ -49,18 +49,63 @@ If the campaign approval workflow is turned on, Braze automatically approves cam
 
 ### Step 2: Select and rank segments
 
-1. Next, select the segments to target. During IP warming, Braze starts sending to your highest engaged users and gradually increases send volume over time and slowly adds in segments with less engagement. 
-2. Then, drag and drop the segments to rank them from high to low engagement. High engagement includes recipients who consistently open and click on your emails. Low engagement includes recipients who are inconsistent in their engagement with your emails or haven't engaged with your emails in a very long time.
-3. Select **Next: Messages** to continue the setup.
+Choose how to select and rank your audience:
+
+| Ranking type | Description | When to use |
+| --- | --- | --- |
+| **Manual** | Uses the engagement already in Braze, including users with no email engagement history. | You're new to email, or you don't have a recent engagement export from a previous provider. |
+| **Intelligent** | Uses recent open and click data to identify users most likely to engage. | You have recent email engagement data. Ranking works better with more recent data. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Audience ranking types" }
+
+
+
+
+1. Select **Manual**.
+2. Select the segments to target, then drag and drop them from high to low engagement. Braze sends to the highest-ranked segments first and adds lower-ranked segments as the daily volume increases.
+3. Select **Next: Messages**.
+
+Use these engagement categories when you rank segments:
+
+| Engagement category | Description |
+| --- | --- |
+| **High engagement** | Recipients who consistently click links in your emails. This can include internal addresses, such as company email accounts. |
+| **Moderate engagement** | Recipients who often click links in your emails. Use recently active users. |
+| **Low engagement** | Recipients who sometimes click links. They engage inconsistently, or they haven't been in your audience long enough for a higher rating. |
+| **No engagement** | Recipients with no engagement data. These are typically new users, or users who were previously engaged and are now dormant. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Engagement categories" }
+
+![Two segments selected to target for automated IP warming.](https://www.braze.com/docs/assets/img/automated_ip_warming_segment.png?e82f2aa9ba5112b012c9313b98a989f8)
+
+The total number of emailable users across all selected segments must be greater than or equal to your **Target send volume**. When the available audience is smaller, some users receive more than one email template on the same day. For more information, see [Audience size and multiple sends per user](#audience-size-and-multiple-sends-per-user).
+
+
+
 
 **Important:**
 
 
-Make sure the total number of emailable users across all selected segments is greater than or equal to your **Target send volume**. When your audience is smaller than your target volume, some users receive more than one email template on the same day. For more information, see [Audience size and multiple sends per user](#audience-size-and-multiple-sends-per-user).
+If you want to use **Intelligent**, you must not be opted out of either aggregated, anonymized data or all data. Go to **Settings** > **Admin Settings** > **AI Settings** and turn off **Opt-out for Aggregated, Anonymized Data** and **Opt-out for all data (non-aggregated/anonymized)**. Changing these settings requires company admin access.
 
 
 
-![Two segments selected to target for automated IP warming.](https://www.braze.com/docs/assets/img/automated_ip_warming_segment.png?e82f2aa9ba5112b012c9313b98a989f8)
+Prepare the CSV before you upload it:
+
+- Include exactly one identifier column, either `email` or `external_id` (not both).
+- Include one `latest_open_timestamp` column and one `latest_click_timestamp` column. Each row needs its identifier and at least one of those timestamps. Use ISO 8601 format, for example `2026-08-04T14:22:31Z`.
+- Save the file as a UTF-8 CSV no larger than 500&nbsp;MB.
+
+Braze scores only identifiers that match an email-reachable user in the workspace. An email-reachable user has an email address and is not unsubscribed. Unrecognized identifiers don't create profiles. Select **Download sample CSV** to see the file format.
+
+1. Select **Intelligent**.
+2. Upload the CSV. Uploading the file saves the plan and starts scoring. Braze ranks matching users by predicted engagement and sends to the most engaged users first.
+3. Wait until scoring succeeds. **Next: Messages** stays unavailable until then.
+
+Braze retains the uploaded CSV data for 14 days. If that data expires before you launch the plan, the page tells you to upload the CSV again.
+
+The number of matched users from the CSV must be greater than or equal to your **Target send volume**. When the available audience is smaller, some users receive more than one email template on the same day. For more information, see [Audience size and multiple sends per user](#audience-size-and-multiple-sends-per-user).
+
+
+
 
 ### Step 3: Select the messages to send
 
@@ -179,14 +224,17 @@ If holds continue, you can review the following areas on your side:
 
 To reach the send goal for each day, Braze cycles through the email templates you selected. Within a plan, Braze excludes users who already received a given template, but users who received a different template remain eligible. When the audience available for that day's schedule runs out, the plan cycles back through your templates, so some users receive a second template on the same day.
 
-If the total number of emailable users across your selected segments is smaller than your **Target send volume**, this outcome is unavoidable on the final day or days of the plan, when daily volume is at its highest. For example, if your segments contain 400,000 emailable users and your target send volume is 600,000, about 200,000 users receive two templates on the last day and the remaining 200,000 users receive one.
+For a manual plan, this outcome is unavoidable on the final day or days when the total number of emailable users across your selected segments is smaller than your **Target send volume**. For example, if your segments contain 400,000 emailable users and your target send volume is 600,000, about 200,000 users receive two templates on the last day and the remaining 200,000 users receive one.
 
-Users can also receive different templates on different days, even when your audience is larger than your target send volume. Because Braze splits each day's audience across your templates without accounting for which template a user received previously, a user who received one template can be selected for a different template later in the plan.
+For an Intelligent plan, Braze sends each template through the ranked users once, starting with the most engaged users. When a template has already reached every ranked user and the day's volume is still unmet, Braze starts the next template from the most engaged users again. Some users then receive a second template on the same day.
+
+If you add multiple templates to the plan, a user can receive different templates on different days with either manual or Intelligent ranking, even when your audience is larger than your target send volume. Braze can select a user who already received one template for a different template later in the plan.
 
 Braze doesn't prevent you from launching a plan when your target send volume is greater than your available audience. To keep each user to one template per send day, do one of the following before you launch:
 
-- Add segments so that the total number of emailable users is greater than or equal to your target send volume.
-- Lower your **Target send volume** so that it's no greater than your total number of emailable users.
+- For manual ranking, add segments so that the total number of emailable users is greater than or equal to your target send volume.
+- For Intelligent ranking, include enough matching users in the CSV to reach your target send volume.
+- Lower your **Target send volume** so that it's no greater than your available audience.
 
 ## Stop an IP warmup plan
 

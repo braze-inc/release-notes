@@ -35,7 +35,7 @@ Message Prioritization can evaluate:
 - Action-based campaigns
 - Canvases
 
-API-triggered campaigns and Canvases aren't supported and don't participate in prioritization.
+API-triggered campaigns and API-triggered Canvases aren't supported and don't participate in prioritization.
 
 Braze uses its prediction of when each message is expected to send when evaluating whether sending one message now could prevent a higher-priority message from sending later. For more information on how Braze predicts future send timing for campaigns and Canvases, see [How does Braze predict when a future message sends?](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/message_prioritization/faq#how-does-braze-predict-when-a-future-message-sends).
 

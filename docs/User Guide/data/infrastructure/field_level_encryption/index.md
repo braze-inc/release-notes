@@ -91,8 +91,8 @@ These features are not supported with identifier field-level encryption:
 
 When using identifier field-level encryption with the `/users/track` endpoint, note these field details for the [user attributes object](https://www.braze.com/docs/api/objects_filters/user_attributes_object):
 
-- The `email` field must be the hashed value of the email.
-- The `email_encrypted` field must be the encrypted value for the email.
+- The `email` field must be the Base64-encoded hashed value of the email.
+- The `email_encrypted` field must be the Base64-encoded encrypted value for the email.
 
 ## Frequently asked questions
 

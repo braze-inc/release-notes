@@ -1,10 +1,10 @@
 # Use case: Win back lapsed customers with a revenue-focused decisioning agent
 
-> This example shows how a fictional brand uses BrazeAI Decisioning Studio™ and a decisioning agent to route each customer toward an optimal decision from the action bank, personalize messaging for win-back, and optimize for revenue. It ties together agent design, audience and experiments, orchestration through Braze, and post-launch learning.
+> This example shows how a fictional brand uses BrazeAI Decisioning Studio™ Pro and a decisioning agent to route each customer toward an optimal decision from the action bank, personalize messaging for win-back, and optimize for revenue. It ties together agent design, audience and experiments, orchestration through Braze, and post-launch learning.
 
 Let’s say Poppy is a CRM manager at Kitchenerie, a fictional online retailer brand specializing in kitchenware. 
 
-Many customers only browse seasonal collections once or twice before navigating away. Past win-back programs used fixed journeys and manual A/B splits, which were helpful for testing copy, but not for learning which combination of offer, channel, cadence, and timing maximizes purchase revenue for each customer. Leadership’s priority is clear: bring back as many lapsed buyers as possible and lift revenue without breaking guardrails on discounts or frequency. 
+Many customers only browse seasonal collections once or twice before navigating away. Past win-back programs used fixed journeys and manual A/B splits to test copy. Identifying which combination of offer, channel, cadence, and timing maximizes purchase revenue for each customer remained a separate problem. Leadership’s priority is clear: bring back as many lapsed buyers as possible and lift revenue without breaking guardrails on discounts or frequency. 
 
 This walkthrough describes how Poppy:
 
@@ -34,7 +34,7 @@ For each dimension, she lists concrete options in the action bank—the only act
 
 Following [Connect your data](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data/connect_data_sources), Poppy ensures rich first-party signals (including purchase history, category affinity, browse behavior, and engagement) feed the agent so each decision is grounded in real behavior. 
 
-For orchestration, she uses the native Braze path: Decisioning Studio decides what to send and when; Braze delivers it. She plans base templates (API-triggered campaigns) per channel with dynamic fields for offers and creative, and sets re-eligibility.
+For orchestration, she uses the native Braze path: Decisioning Studio Pro decides what to send and when; Braze delivers it. She plans base templates (API-triggered campaigns) per channel with dynamic fields for offers and creative, and sets re-eligibility.
 
 ## Step 4: Launch, monitor, and optimize for revenue
 

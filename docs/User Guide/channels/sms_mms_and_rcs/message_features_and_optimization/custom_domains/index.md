@@ -41,7 +41,7 @@ If your DNS records aren't updated within 45 days, the setup token expires. Rest
 !["Add Domain" button on the "SMS/RCS and Messaging Apps Domains" page.](https://www.braze.com/docs/assets/img/custom_domain_button.png?f42c35c4b94c3cb2af69f16b72de0e6a){: style="max-width:70%;"}
 
 {: start="4"}
-4. Have your technical team (such as engineering or IT) update your DNS configuration with the Cloudflare DNS record details that display. Your technical team must update your DNS records with these details within 45 days.
+4. Have your technical team (such as engineering or IT) add the DNS records shown in Braze to your domain's DNS configuration. New custom domains use A and AAAA records. Your team must add these records within 45 days.
   - If you need additional time to update your DNS records, you can restart the process and generate a new set of DNS records for your domain.
 
 Braze polls your DNS configuration roughly every 30 minutes to check for updates.
@@ -63,7 +63,21 @@ After your domain is verified, your custom domains will appear in the table on t
 
 Live monitoring alerts you in the Braze dashboard if any of your active domains have an issue, so that your custom links remain usable. If you encounter any issues, refer to the in-app error details or contact Braze [Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) for assistance.
 
-## Assigning custom domains to subscription groups
+## DNS records for custom domains
+
+When you add a custom domain, Braze shows the DNS records to add with your DNS provider. These records tell browsers and devices where to send clicks on your shortened links. Add the records exactly as they appear in Braze.
+
+New custom domains use A and AAAA records. Older custom domains that use a CNAME record still work, and don't need to be updated.
+
+| Records | Points to | Used for |
+| --- | --- | --- |
+| A and AAAA | An IPv4 address (A) and an IPv6 address (AAAA) | New custom domains (default) |
+| CNAME | Another domain name | Older custom domains |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="DNS record types for custom domains" }
+
+With A and AAAA records, your domain points directly to the Braze link infrastructure instead of to a domain name shared with other customers, so an issue with a shared domain doesn't affect your links. 
+
+## Assign custom domains to subscription groups {#assigning-custom-domains-to-subscription-groups}
 
 After they're configured, custom domains can be assigned to one or multiple SMS, RCS, and WhatsApp subscription groups.
 

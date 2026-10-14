@@ -1,13 +1,13 @@
 # Choose good features
 
-> The Decisioning Studio model uses customer features as inputs to make individualized recommendations. High-quality features that are well-matched to your decision space are one of the most impactful levers for improving model performance. This article covers the types of features you can provide, how to construct them well, and how to think about aligning features with the actions your agent will be choosing between.
+> The Decisioning Studio Pro model uses customer features as inputs to make individualized recommendations. High-quality features that are well-matched to your decision space are one of the most impactful levers for improving model performance. This article covers the types of features you can provide, how to construct them well, and how to think about aligning features with the actions your agent will be choosing between.
 
 If you have internal data science or data engineering teams, they are best positioned to construct and curate features, since they have the most context about which signals in your data are meaningful.
 
 **Note:**
 
 
-For Braze customers, customer features are typically passed to Decisioning Studio through custom attributes on user profiles. For details on custom attributes versus custom events and their respective update strategies, see [Snapshots versus event streams](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data/data_streams).
+For Braze customers, customer features are typically passed to Decisioning Studio Pro through custom attributes on user profiles. For details on custom attributes versus custom events and their respective update strategies, see [Snapshots versus event streams](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data/data_streams).
 
 
 
@@ -31,14 +31,14 @@ Keep the following in mind when selecting and constructing features:
 
 - **Coverage:** Features should cover all customers in your target audience. A feature that is missing or null for a large portion of your audience gives the model less to work with for those customers.
 - **Granularity:** All features should be aggregated to the customer level. See [Use Braze external ID](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data/braze_external_id) for guidance on what "customer level" means in practice.
-- **Freshness:** Features should be updated on a time-driven schedule, not an event-driven one. See [Snapshots versus event streams](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data/data_streams) for why this matters.
+- **Freshness:** Update features on a time-driven schedule, such as daily, for every customer in the audience, including customers with no new activity. See [Snapshots versus event streams](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data/data_streams) for why this matters.
 - **Validity:** Feature values should fall within ranges that make sense given the definition. A feature for "purchases in the last 30 days" should never be negative.
 - **Sparsity:** Avoid features that are zero or null for the vast majority of customers, unless there is a clear business reason. Sparse features add noise without adding signal.
 - **Correlation:** Avoid including features that are highly correlated with each other. Redundant features can introduce bias and slow down training without improving predictions.
 
 ## Construct behavioral features
 
-Behavioral features summarize a customer's history of actions over a defined time window (for example, "number of purchases in the last 28 days"). These are among the most valuable features for a recommendation system because they capture how a customer actually behaves, not only static profile traits.
+Behavioral features summarize a customer's history of actions over a defined time window (for example, "number of purchases in the last 28 days"). These are among the most valuable features for a recommendation system because they capture how a customer actually behaves. Static profile traits describe who the customer is; behavioral features describe what the customer does.
 
 ### Choose time windows
 
@@ -56,7 +56,7 @@ A useful diagnostic: if a large percentage of your feature values are zero, the 
 
 ## Align features with the action space
 
-Decisioning Studio is not a propensity model; it is a ranking system. Its goal is to identify, for each customer, which action from a defined set of options is most likely to produce the best outcome. This creates a specific requirement: **features should, where possible, give the model information that helps it distinguish between the available options for a given customer.**
+Decisioning Studio Pro is a ranking system. Its goal is to identify, for each customer, which action from a defined set of options is most likely to produce the best outcome. This creates a specific requirement: features should, where possible, give the model information that helps it distinguish between the available options for a given customer.
 
 ### Why this matters
 

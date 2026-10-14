@@ -175,6 +175,9 @@ Select a tab to view metrics for each channel.
 
 
 
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+
+
 
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
@@ -319,6 +322,9 @@ Select a tab to view metrics for each channel.
 
 
 
+
+
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
@@ -479,6 +485,9 @@ Push metrics are available for iOS, Android, Web, and across all platforms combi
 
 
 
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+
+
 
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
@@ -625,6 +634,9 @@ Push metrics are available for iOS, Android, Web, and across all platforms combi
 
 
 
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+
+
 
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
@@ -769,6 +781,9 @@ Push metrics are available for iOS, Android, Web, and across all platforms combi
 
 
 
+
+
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
@@ -924,6 +939,9 @@ Push metrics are available for iOS, Android, Web, and across all platforms combi
 
 
 
+
+
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 

@@ -1,17 +1,17 @@
 # Connect your data
 
-> BrazeAI Decisioning Studio™ agents need to fully understand customer context in order to make effective decisions. This article explains how to connect customer data sources to Decisioning Studio.
+> BrazeAI Decisioning Studio™ Pro agents need to fully understand customer context to make effective decisions. This article explains how to connect customer data sources to Decisioning Studio Pro.
 
 **Tip:**
 
 
-Your AI Decisioning Services team will support you in configuring data connections for optimal performance.
+Your AI Decisioning Services team supports you in configuring data connections for optimal performance.
 
 
 
 ## Supported integration patterns
 
-Decisioning Studio supports multiple integration patterns for connecting customer data:
+Decisioning Studio Pro supports multiple integration patterns for connecting customer data:
 
 | Integration pattern | Best for | Setup complexity |
 |---------------------|----------|------------------|
@@ -36,7 +36,7 @@ The following customer data assets help agents personalize more effectively:
 **Tip:**
 
 
-The more information agents have about your customers, the better they will perform. Consider including data on any insights that would be particularly important to your business (for example, do you want to see how AI treats your loyalty customers differently? Make sure loyalty status is in the customer data).
+The more information agents have about your customers, the better they perform. Consider including data on any insights that would be particularly important to your business (for example, do you want to see how AI treats your loyalty customers differently? Make sure loyalty status is in the customer data).
 
 
 
@@ -47,16 +47,16 @@ The more information agents have about your customers, the better they will perf
 
 ### Send customer data through Braze
 
-BrazeAI Decisioning Studio can use all data that you are already sending to the Braze Data Platform.
+BrazeAI Decisioning Studio Pro can use all data that you are already sending to the Braze Data Platform.
 
 For customer data that isn't on the user profile or custom attributes, you have two ways to bring it in with [Braze Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion):
 
 - Ingest into the Braze Data Platform. Sync warehouse data into Braze user profiles, custom attributes, or events. Choose this when you also want the data available in Braze for segmentation and messaging. Supports Snowflake, Redshift, BigQuery, Databricks, Microsoft Fabric, AWS S3, and Google Cloud Storage.
-- Send directly to Decisioning Studio (Early Access). Sync warehouse data straight to Decisioning Studio, without adding them to the Braze user profile or custom attributes. Choose this for data you want Decisioning Studio to use but don't need elsewhere in Braze. This option is in early access, see [Cloud Data Ingestion: Sync Decisioning Studio data](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/decisioning_studio) to set it up.
+- Send directly to Decisioning Studio Pro. Sync warehouse data straight to Decisioning Studio Pro, without adding it to the Braze user profile or custom attributes. Choose this for data you want Decisioning Studio Pro to use but don't need elsewhere in Braze. This option is in early access. See [Cloud Data Ingestion: Sync Decisioning Studio Pro data](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/decisioning_studio) to set it up.
 
-Once you are satisfied with the data you are sending into the Braze Data Platform, contact your AI Decisioning Services team to discuss which fields on the user profile or custom attributes should be used for AI Decisioning.
+After you are satisfied with the data you are sending into the Braze Data Platform, contact your AI Decisioning Services team to discuss which fields on the user profile or custom attributes should be used for AI Decisioning.
 
-To streamline this process, create a list of Braze user profile attributes that you think best represent your customers' behaviors that should be used in Decisioning Studio (see the [list of available fields](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment#fields-to-export)). Your services team can also help you conduct discovery sessions to decide which fields are most appropriate for AI Decisioning.
+To streamline this process, create a list of Braze user profile attributes that you think best represent your customers' behaviors that should be used in Decisioning Studio Pro (see the [list of available fields](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment#fields-to-export)). Your services team can also help you conduct discovery sessions to decide which fields are most appropriate for AI Decisioning.
 
 Other options for sending data include:
 
@@ -73,10 +73,10 @@ These patterns require more engineering effort, but are sometimes preferable dep
 For Salesforce Marketing Cloud integrations:
 
 1. Configure SFMC Data Extension(s) for your customer data
-2. Set up SFMC Installed Package for API integration with the appropriate permissions required by Decisioning Studio
-3. Ensure that data extensions are refreshed daily, as Decisioning Studio will pull from the latest incremental data available
+2. Set up SFMC Installed Package for API integration with the appropriate permissions required by Decisioning Studio Pro
+3. Ensure that data extensions are refreshed daily, as Decisioning Studio Pro pulls from the latest incremental data available
 
-Provide the extension ID and API key to your AI Decisioning Services team. They will assist with next steps in ingesting customer data.
+Provide the extension ID and API key to your AI Decisioning Services team. They assist with the next steps for ingesting customer data.
 
 
 
@@ -96,7 +96,7 @@ See the [Klaviyo documentation](https://help.klaviyo.com/hc/en-us/articles/11500
 
 ### Other cloud solutions (Google Cloud Storage, Azure, AWS)
 
-If customer data is not currently stored in Braze, SFMC, or Klaviyo, the next best step is to configure an automated export directly to a Braze-controlled Google Cloud Storage bucket. We can also support export to AWS or Azure (although GCS is preferable). For these platforms, export to their internal cloud storage in those cloud platforms and Braze can then pull that data.
+If customer data is not currently stored in Braze, SFMC, or Klaviyo, the next best step is to configure an automated export directly to a Braze-controlled Google Cloud Storage bucket. Braze can also support export to AWS or Azure (although GCS is preferable). For these platforms, export to their internal cloud storage in those cloud platforms and Braze can then pull that data.
 
 To determine whether this is feasible, refer to the documentation for your Martech platform. For example:
 
@@ -106,7 +106,7 @@ To determine whether this is feasible, refer to the documentation for your Marte
 - [ActionIQ](https://info.actioniq.com/hubfs/ActionIQ%20Industry%20Brief%20Solutions/ActionIQ_Integrations_Brief.pdf)
 - [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/cloud-storage/google-cloud-storage)
 
-If this is feasible, we can provide a GCS bucket to export customer data to that is isolated to Decisioning Studio.
+If this is feasible, Braze can provide a GCS bucket to export customer data to that is isolated to Decisioning Studio Pro.
 
 
 

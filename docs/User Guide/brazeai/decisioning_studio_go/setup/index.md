@@ -2,16 +2,16 @@
 
 > This article describes how to configure a Decisioning Studio Go agent with the self-serve setup flow in the Braze dashboard.
 
-For an overview of how Decisioning Studio Go works, see [BrazeAI Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/). To confirm your program is a good fit before you configure an agent, see [Examples for Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/examples/).
+For an overview of how Decisioning Studio Go works, see [BrazeAI Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go). To confirm your program is a good fit before you configure an agent, see [Examples for Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/examples).
 
 ## Prerequisites
 
 Confirm you have the following ready:
 
-- A [segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/) for your entry audience that isn't actively used in another Canvas or campaign
-- At least one email template
-- The variant content you want to test, such as alternative subject lines, CTAs, and hero images. You can create variants during setup, but having them ready speeds up configuration
-- Workspace access with permissions to configure AI Decisioning agents
+- A [segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment) for your entry audience that isn't actively used in another Canvas or campaign. We recommend a minimum audience of 20,000 users; the agent supports audiences up to a maximum of 40,000,000. Smaller audiences can run, but they learn more slowly and show less reliable lift.
+- At least one email template.
+- The variant content you want to test, such as alternative subject lines, calls to action (CTAs), and hero images. You can create variants during setup, but having them ready speeds up configuration.
+- Workspace access with permissions to configure AI Decisioning agents.
 
 If your workspace hasn't been provisioned for Decisioning Studio Go, you won't see the agent configuration option in the **AI Decisioning** tab. Contact your customer success manager to get access.
 
@@ -22,7 +22,6 @@ If your workspace hasn't been provisioned for Decisioning Studio Go, you won't s
 3. Give your agent a name that distinguishes this agent from others in your workspace. An example is "Loyalty Members—Weekly Engagement" rather than "Email Agent".
 4. (Optional) Add a description to provide context that you or a teammate may need later. This can include what the agent is for, which segment it targets, and what success looks like.
 
-
 The agent optimizes your email creative to maximize genuine engagement, measured by meaningful click activity per user. Clicks pass through multiple independent validation filters that screen out automated activity and opt-out-related clicks, so the signal reflects real customer interest rather than raw click volume.
 
 ## Step 2: Select the target audience
@@ -30,9 +29,18 @@ The agent optimizes your email creative to maximize genuine engagement, measured
 Select the Braze segment your agent sends to. Users in this segment are automatically split into two groups:
 
 - **Decisioning Studio group:** Receives AI-optimized email content. The agent picks the best variant combination for each user.
-- **Random control group:** Minimum 5% of the segment. Receives randomly selected combinations of the same options on randomly selected days. This group is required.
+- **Random control group:** A permanent measurement group that receives randomly chosen combinations of the same options you configured, on allowed days within the same schedule and constraints. The only difference from the Decisioning Studio group is that the choice is random rather than AI-optimized. This group is required, and it is how lift is measured. Users in this group still receive email.
 
-![A segment selected with 1,100 estimated users.](https://www.braze.com/docs/assets/img/decisioning_studio_go/audience_details.png?d2a1784761b36666e4b5e1b92b5e0f2f)
+### Choose your control group size
+
+The recommended split scales with your audience size: a larger audience can measure lift reliably with a smaller control group, while a smaller audience needs a proportionally larger one to stay statistically meaningful. The minimum control group size is 5%.
+
+| Audience size | Recommended split (Decisioning Studio / random control) |
+| --- | --- |
+| 20,000 – 100,000 | 80 / 20 |
+| 100,000 – 1,000,000 | 90 / 10 |
+| 1,000,000 – 40,000,000 | 95 / 5 |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Choose your control group size" }
 
 ### Why a dedicated segment matters
 
@@ -44,15 +52,15 @@ Use **User Lookup** to verify whether specific users meet your segment criteria.
 
 ### Audience filters
 
-Audience filters aren't supported in this release. If you need additional targeting criteria, [create a segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/) with those filters applied, then select that segment as your entry audience.
+Audience filters aren't supported in this release. If you need additional targeting criteria, [create a segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment) with those filters applied, then select that segment as your entry audience.
 
 ### Integrate with existing Canvases
 
 To use Decisioning Studio Go inside a broader journey:
 
 1. Create a dedicated segment for users who should be in the agent.
-2. In your [Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/), use a User Update step to add the user to that segment at the right point in the journey.
-3. Confirm that users exit the Canvas so the agent (not the Canvas) handles email sending for everyone in the segment from that point on.
+2. In your [Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas), use a User Update step to add the user to that segment at the right point in the journey.
+3. Confirm that users exit the Canvas so the agent handles email sending for everyone in the segment from that point on.
 
 ## Step 3: Configure the schedule
 
@@ -68,7 +76,11 @@ Choose which days the agent can send on. You must select at least as many days a
 
 ### Step 3.3: Set quiet hours
 
-Specify times when the agent shouldn't send. Quiet hours use the user's local time zone. The most common use is to block late-night and very-early-morning sends. Outside quiet hours, the agent schedules sends at the times most likely to drive clicks for each user.
+Specify the times the agent shouldn't choose for a send. Quiet hours use the user's local time zone, and the most common use is to block late-night and very-early-morning sends. Outside quiet hours, the agent schedules sends at the times most likely to drive clicks for each user.
+
+Quiet hours guide the times the agent chooses for a send. For a guaranteed send block, also set [workspace-level quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours).
+
+For audiences across multiple time zones, the agent prioritizes delivering your message over sending it at the precise intended local time. A message may occasionally arrive outside its intended day or time window. If most of your audience is in one region, consider that when setting allowed days and quiet hours.
 
 ### Step 3.4: Set frequency capping rules
 
@@ -93,10 +105,12 @@ Define what the agent has to work with:
 
 You can build base creatives by:
 
-- Using the standard Braze email composer.
-- Importing an email from an existing Canvas or campaign.
+- Using the standard Braze email composer
+- Importing an email from an existing Canvas or campaign
 
 Use a single base creative or many. With one base creative, the agent personalizes only the components inside it. With multiple base creatives—for example, one casual, one formal, and one promotional—the agent also picks which base creative is right for each user. The agent can also choose from several base creatives with no additional creative components.
+
+When you add creatives, the agent builds its own representation of each one and uses that understanding to decide which content suits which users. Meaningfully different options help it distinguish between creatives and learn from them. For guidance on structuring your creative library, see [Creative setup and management](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/creative_setup).
 
 ### Step 4.1: Mark personalization points with Liquid tags
 
@@ -108,12 +122,9 @@ The supported components in this release are:
 - **CTA:** Replace the button text in the email body with the Liquid tag for CTA.
 - **Image:** Replace the hero image URL with the Liquid tag for image.
 
-**Note:**
+The agent evaluates each creative's fully resolved content. Liquid, catalog references, and Content Blocks are expanded before the agent builds its understanding, so dynamic and assembled content is part of what it sees.
 
-
-[Content blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/content_blocks/) aren't supported as substitution points for personalized components. Place your personalized subject line, CTA, and image directly in the email body rather than inside a content block.
-
-
+[Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content) is an exception. It renders and sends normally, but the agent doesn't see or learn from what it returns, so don't rely on Connected Content as the thing that makes two creatives different.
 
 ### Step 4.2: Add variants
 
@@ -121,11 +132,13 @@ In the **Creative Components** section, add the variant options for each persona
 
 - Multiple subject line options
 - Multiple CTA text options
-- Multiple image URLs
+- Multiple images
 
 Each variant can be associated with specific base creatives, or made available across all base creatives. For example, if you have one base creative promoting a sale and another promoting new arrivals, you can restrict your `Don't miss our biggest savings of the year` subject line to the sale creative only, while keeping your `Just dropped` CTA available across both.
 
-Images must be selected from the Braze media library. If there's an image you want to use, upload it to the media library first.
+Images must be selected from the Braze [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library). You can't paste a raw image URL. If there's an image you want to use, upload it to the media library first.
+
+If your email is a single image with no separate text elements, use one base creative and let the agent choose the image within it. You can also let the agent choose the subject line. Don't load each image variation as a separate base creative.
 
 ### Step 4.3: Preview and test
 
@@ -152,17 +165,30 @@ Select **Launch** to activate the agent. It transitions from **Draft** to **Acti
 
 ### Training period
 
-When your agent launches, it enters a training period. A training indicator displays in the reporting interface. Performance can fluctuate in the first days as the agent explores combinations. Emails continue to send while it learns. There is no waiting period.
+When your agent launches, it enters a training period, and its reporting shows which stage it's in. The agent progresses through these stages:
 
-Meaningful changes in performance appear after the agent moves out of training and into active personalization. Reporting indicates when that transition happens, so you always know what stage your agent is in.
+| Stage | What's happening |
+| --- | --- |
+| **Launched, not yet sending** | The agent is active but hasn't made its first send. |
+| **Waiting for signal** | The agent is sending, but hasn't yet gathered enough genuine clicks to begin training. |
+| **In training** | The agent has enough signal and is exploring combinations. It is expected that performance can look close to random during this phase. |
+| **Partially trained** | The agent is personalizing, but results aren't yet robust enough to read as final. |
+| **Fully trained** | The agent is fully trained and results are robust. This is the point to trust and report on lift. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Training period" }
+
+Two things move the agent forward: accumulated genuine clicks (training begins after enough clean clicks accrue, and results become robust at a higher threshold) and calendar time (personalization becomes meaningful roughly from the start of the second week of training). A low-volume audience can stay in **Waiting for signal** for several days. This can indicate it needs more engagement volume.
+
+A new user receives their first send on the first day they enter the audience, and the agent begins personalizing for them the day after. Emails continue to send the whole time the agent learns.
+
+Don't judge results, resize the audience, or change the control split while the agent is still training. For what to expect through each stage and how to read early results, see [What to expect after launch](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/after_launch).
 
 ### Reporting views
 
 The reporting interface offers three main views:
 
 | View | Description |
-|---|---|
-| **Performance** | Click rates, engagement metrics, and the lift of the Decisioning Studio group versus the random control. |
+| --- | --- |
+| **Performance** | Click rates, engagement metrics, and the lift of the Decisioning Studio group versus the random control. The headline learning metric is *Unique Customers Who Clicked Daily*. |
 | **Configuration** | The current settings of the agent—useful for confirming what's running. |
 | **Agent preferences** | Counts of how often each variant has been chosen by the agent, showing what the agent is gravitating toward for your audience. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Reporting views" }
@@ -171,7 +197,9 @@ Element-level breakdowns show how individual subject lines, CTAs, and images per
 
 ### Edit an active agent
 
-Go to the **Configuration** view to modify audience, schedule, creatives, or constraints after launch. The Configuration view shows a summary of changes. Promote changes before they take effect. Adding new variants doesn't reset the agent's training on existing variants; it adds new options to the agent's menu.
+Go to the **Configuration** view to modify audience, schedule, creatives, or constraints after launch. Both variants and dimensions can be changed after launch. The Configuration view shows a summary of changes; promote them before they take effect. Adding new variants keeps the agent's training on existing variants and adds the new options to its menu.
+
+Changing the control-versus-AI split proportion or swapping the segment triggers a reshuffle of users between the Decisioning Studio and random control groups. Creative, schedule, and constraint edits do not reshuffle the audience.
 
 ### Pause or stop
 
@@ -182,20 +210,20 @@ An agent's lifecycle is **Draft** > **Active** > **Stopped**. Select **Stop** at
 The following table summarizes areas of Decisioning Studio Go and related details.
 
 | Area | Details |
-|---|---|
+| --- | --- |
 | **Channel** | Email only |
-| **Conversion metric** | Clicks only (unique daily clicks per user) |
+| **Conversion metric** | Genuine clicks only (unique customers who clicked daily) |
 | **Personalization points** | Subject line, CTA, hero image (per base creative) |
-| **Audience** | One Braze segment, with required random control (minimum 5%) |
+| **Audience** | One Braze segment (20,000 recommended minimum, 40,000,000 maximum), with required random control (minimum 5%; see recommended splits) |
 | **Frequency** | Single selection (no frequency decisioning) |
 | **Test sends** | Through Braze composer |
 | **Reporting** | Performance, Configuration, and Agent preferences views, plus element-level breakdowns |
-{: .reset-td-br-1 .reset-td-br-2 aria-label="Decisioning Studio Go in scope" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Decisioning Studio Go reference" }
 
 ### Considerations
 
-- Content blocks aren't supported as personalization substitution points.
-- Image URLs must be added manually. Currently, media library integration isn't supported.
+- The agent evaluates fully resolved content, so Liquid, catalog references, and Content Blocks are all part of what it learns from. [Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content) renders and sends normally but isn't seen by the agent.
+- Images are selected from the Braze media library. Pasting a raw image URL isn't supported.
 - Audience filters aren't supported beyond segment selection.
 - Body copy, preheader, and header personalization aren't available yet.
 
@@ -203,4 +231,6 @@ The following table summarizes areas of Decisioning Studio Go and related detail
 
 Contact your customer success manager or solutions consultant for help with agent configuration, performance review, or program design.
 
-For common questions, see the [Decisioning Studio Go FAQ](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go/faq/).
+For common reporting and setup questions, see [Troubleshooting Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/troubleshooting).
+
+For common questions, see the [Decisioning Studio Go FAQ](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/faq).

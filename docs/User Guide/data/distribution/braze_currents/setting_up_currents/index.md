@@ -29,6 +29,24 @@ If you can create or edit a connector but can't enable one of the optional track
 
 If you need additional entitlements or help adjusting your configuration, contact your Braze account manager.
 
+### Understanding integration error notifications
+
+When a Currents integration has trouble delivering events, Braze emails the contact email addresses set on that integration. If the integration has no contact email, Braze asks your Braze account team to reach the right person. To get these notices directly, add a contact email to each integration.
+
+Every notice uses the same subject line, "[Urgent Action Required to Prevent Data Loss] _Company name_ _Integration type_ Currents integration failing", including notices that the integration has recovered. To identify which notice you received, find the matching phrase from the email body in the following table. If the email says that the integration was disabled, use the matching "disabled" row, even if the email also says the integration is still failing.
+
+| Phrase in the email | What it means | What to do |
+| --- | --- | --- |
+| The integration "is failing due to invalid credentials" or "is still failing due to invalid credentials" | The destination rejected the credentials Braze uses to send data. The credentials may have expired or changed. The email includes the error and the approximate time the integration started failing. | Update the credentials on the integration in Braze. Braze starts dropping events after five days, and dropped events can't be recovered. |
+| The integration "is failing and receiving an unsupported response from the target endpoint" or "is still failing due to receiving unsupported responses" | The destination returned a response that Braze can't process. Braze keeps retrying. The email includes an example response. | Confirm that your destination is set up correctly, and contact the destination's support team with the response from the email. If the issue persists, Braze starts dropping events after five days. |
+| The integration "is being rate-limited by the destination" | The destination is limiting how much traffic it accepts from Braze. Braze keeps retrying and sends events after the destination accepts traffic again. | Check that the rate limit on your endpoint can handle the volume Braze sends, or ask the destination's support team for a higher throughput limit. |
+| The integration "is failing with HTTP 400 Bad Request responses from the destination" | The destination is rejecting the payloads Braze sends. The email includes an approximate count of failed events. | For a custom HTTP connector, check whether your endpoint changed the request format it accepts. If the email says this is a known failure scenario for your connector, contact the destination's support team. |
+| "we have temporarily disabled it" | The integration hasn't been able to send data since the time in the email, so Braze disabled it. Braze doesn't queue new data while the integration is disabled, and keeps already queued data for up to seven days. | Fix the underlying issue (such as expired credentials) and re-enable the integration in Braze. You lose queued data if you don't fix and re-enable the integration within seven days. |
+| The integration "has been disabled" | The integration was disabled while it was failing, for example by a company user. Braze doesn't queue new data until the integration is re-enabled, and keeps already queued data for up to seven days. | Re-enable the integration after fixing the underlying issue to send the queued data and new data. |
+| The integration "is now recovering" | The issue is resolved and data is flowing again, but data is delayed while Braze sends the backlog. Braze sends a follow-up when it's caught up. | No action needed. |
+| The integration "has fully recovered" | Braze has caught up and sent all backlogged data. | No action needed. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Currents integration error notifications" }
+
 ## Requirements
 
 Using Currents with any of our partners requires the same basic parameters and connection methodology.
@@ -126,7 +144,9 @@ Test Currents connectors are free versions of our existing connectors that can b
 - Up to 10 Test Currents connectors per workspace.
 - An aggregate maximum of 1,500 events per fixed 24-hour period, resetting at midnight UTC. On the **Currents** page, you can track your current sending volume against this limit. Braze updates this total hourly.
 
-After your Test Currents connectors reach the sending limit, Braze disables the connector and drops events that are created while the limit is reached. Event syncing resumes after the limit resets at midnight UTC.
+Braze checks Test Currents usage against this limit once per hour. If a large burst of events arrives between two hourly checks, your Test Currents connectors can export more than 1,500 events in that period before the limit takes effect.
+
+After an hourly check finds that your Test Currents connectors have reached the sending limit, Braze disables the connector and drops events that are created while the limit is reached. Event syncing resumes after the limit resets at midnight UTC.
 
 To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade Test Integration**.
 

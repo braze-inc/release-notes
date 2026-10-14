@@ -131,6 +131,7 @@ A valid role object is a JSON object with the following key-value pairs:
 | Edit Feature Flags | `edit_feature_flags` |
 | Archive Feature Flags | `archive_feature_flags` |
 | View Segments | `view_segments` |
+| View Audience Population | `view_audience_population` |
 | Edit Segments | `edit_segments` |
 | Archive Segments | `archive_segments` |
 | View Global Control Group | `view_global_control_group` |
@@ -256,6 +257,7 @@ A valid role object is a JSON object with the following key-value pairs:
 | Archive Content Blocks | `archive_content_blocks` |
 | Launch Content Blocks | `launch_content_blocks` |
 | View Segments | `view_segments` |
+| View Audience Population | `view_audience_population` |
 | Edit Segments | `edit_segments` |
 | Archive Segments | `archive_segments` |
 | View IAM Templates | `view_iam_templates` |

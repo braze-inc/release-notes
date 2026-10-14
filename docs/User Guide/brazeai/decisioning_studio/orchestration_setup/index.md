@@ -1,19 +1,19 @@
 # Set up orchestration
 
-> Decisioning agents need to connect to a customer engagement platform (CEP) to orchestrate communications once they have ingested customer data and personalized at a 1:1 level. This article covers what you need to prepare and how to configure the integration for each supported CEP.
+> Decisioning agents need to connect to a customer engagement platform (CEP) to orchestrate communications after they have ingested customer data and personalized at a 1:1 level. This article covers what you need to prepare and how to configure the integration for each supported CEP.
 
 ## What is orchestration?
 
-Orchestration is the connection between Decisioning Studio and your customer engagement platform (CEP). Once your decisioning agent determines the optimal action for each customer, orchestration carries out those decisions by triggering personalized communications through your CEP.
+Orchestration is the connection between Decisioning Studio Pro and your customer engagement platform (CEP). After your decisioning agent determines the optimal action for each customer, orchestration carries out those decisions by triggering personalized communications through your CEP.
 
 Think of it this way:
 
-- **Decisioning Studio** decides what to send and when to send it
+- **Decisioning Studio Pro** decides what to send and when to send it
 - **Your CEP** handles how to send it
 
 ## Choose your CEP
 
-The first step is to choose which CEP to use with Decisioning Studio. Your choice affects setup complexity and available features.
+The first step is to choose which CEP to use with Decisioning Studio Pro. Your choice affects setup complexity and available features.
 
 ### Supported CEPs
 
@@ -27,7 +27,7 @@ The first step is to choose which CEP to use with Decisioning Studio. Your choic
 **Tip:**
 
 
-If you're already using Braze as your CEP, we recommend using the native Braze integration for the smoothest setup experience.
+If you're already using Braze as your CEP, use the native Braze integration for the smoothest setup experience.
 
 
 
@@ -56,14 +56,14 @@ Before setting up orchestration, gather the following items based on your chosen
 | **App package credentials** | Client ID, Client Secret, Authentication Base URI, REST Base URI, and SOAP Base URI from an installed package with server-to-server API integration. |
 | **API permissions** | Scopes for channels, assets, automations, journeys, contacts, data extensions, and tracking events. |
 | **Data extensions** | You need data extensions for subscriber data, engagement data, and recommendations. |
-| **Email templates** | The templates you want Decisioning Studio to use, with template IDs for each. |
+| **Email templates** | The templates you want Decisioning Studio Pro to use, with template IDs for each. |
 | **Journey Builder access** | Access to create and activate multi-step journeys with API event entry sources. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 
 
 
-If you're using a CEP other than Braze or Salesforce Marketing Cloud, Decisioning Studio can integrate through a recommendation file approach:
+If you're using a CEP other than Braze or Salesforce Marketing Cloud, Decisioning Studio Pro can integrate through a recommendation file approach:
 
 | Item | Description |
 |------|-------------|
@@ -97,7 +97,7 @@ Your campaigns should allow users to receive messages multiple times:
 **Note:**
 
 
-While setting up re-eligibility for testing, Decisioning Studio agents are designed to respect frequency caps and do not send the same campaign to a user more than once per day in production.
+While setting up re-eligibility for testing, Decisioning Studio Pro agents are designed to respect frequency caps and do not send the same campaign to a user more than once per day in production.
 
 
 
@@ -122,7 +122,7 @@ Select your CEP from this list to get started with the integration setup.
 
 ## Set up Braze integration
 
-Follow these steps to integrate a Decisioning Studio agent with Braze's orchestration capabilities (Braze's services team is available to help):
+Follow these steps to integrate a Decisioning Studio Pro agent with orchestration in Braze (the Braze services team is available to help):
 
 ### Step 1: Create an API key
 
@@ -167,17 +167,17 @@ Ensure all API-triggered campaigns allow users to become re-eligible within 15 m
 **Note:**
 
 
-While the Decisioning Studio agent never sends the same campaign more than once a day, you want the ability to send the same campaigns multiple times in a day for testing purposes.
+While the Decisioning Studio Pro agent never sends the same campaign more than once a day, you want the ability to send the same campaigns multiple times in a day for testing purposes.
 
 
 
 ### Step 4: Add dynamic placeholders
 
-These serve as dynamic placeholders for decisions that the Decisioning Studio agent is optimizing.
+These serve as dynamic placeholders for decisions that the Decisioning Studio Pro agent is optimizing.
 
 #### Example 1: Email Campaign
 
-Suppose the Decisioning Studio agent is optimizing an email campaign. This might be configured like this:
+Suppose the Decisioning Studio Pro agent is optimizing an email campaign. This might be configured like this:
 
 ![Decisioning Pro Diagram](https://www.braze.com/docs/assets/img/decisioning_studio/decisioning_email_example_1.png?aa7bc7323a8585d6edb120e92f2db91f)
 
@@ -187,7 +187,7 @@ Supposing the agent is optimizing for choice of templates and Call to Action (CT
 
 #### Example 2: Push campaign
 
-Suppose a Decisioning Studio agent is optimizing the message of a Push campaign. This might be configured like this:
+Suppose a Decisioning Studio Pro agent is optimizing the message of a Push campaign. This might be configured like this:
 
 ![Decisioning Pro Diagram](https://www.braze.com/docs/assets/img/decisioning_studio/decisioning_studio_push_example_1.png?9773a38fb2ce8c797698439aa328fc01)
 
@@ -199,7 +199,7 @@ Resulting in the following message:
 
 #### Example 3: SMS Campaign
 
-Suppose that the Decisioning Studio agent is optimizing for fields in an SMS campaign. This might be configured like this:
+Suppose that the Decisioning Studio Pro agent is optimizing for fields in an SMS campaign. This might be configured like this:
 
 ![Decisioning Pro Diagram](https://www.braze.com/docs/assets/img/decisioning_studio/decisioning_studio_sms_example_1.png?5c86bd8f1501910ee5dd397fa398355c)
 
@@ -214,7 +214,7 @@ Resulting in the following message:
 
 ## Set up SFMC integration
 
-Decisioning Studio supports native integration with Salesforce Marketing Cloud. Decisioning Studio triggers API events into a journey with data required to populate dynamic elements.
+Decisioning Studio Pro supports native integration with Salesforce Marketing Cloud. Decisioning Studio Pro triggers API events into a journey with data required to populate dynamic elements.
 
 **Important:**
 
@@ -228,7 +228,7 @@ For your configuration, API IDs must be entered in uppercase. This includes jour
 
 ## Set up other CEP integrations
 
-Decisioning Studio can integrate with any customer engagement platform. However, this may require some custom engineering work from your team, since Decisioning Studio cannot trigger communications directly.
+Decisioning Studio Pro can integrate with any customer engagement platform. However, this may require some custom engineering work from your team, since Decisioning Studio Pro cannot trigger communications directly.
 
 In this scenario, the agent delivers a "recommendation file." This file contains rows for each customer, with columns that indicate all of the personalized decisions for that customer.
 
@@ -249,7 +249,7 @@ Keep these best practices in mind as you prepare for orchestration:
 
 1. **Begin with a narrow scope:** Use one channel and one or two templates at first. You can expand later as you learn what works.
 2. **Test thoroughly:** Before launching, test your integration with a small set of users to verify that dynamic content populates correctly.
-3. **Document your setup:** Keep track of campaign IDs, template IDs, API keys, and other identifiers. You need these to reference in the Decisioning Studio portal.
+3. **Document your setup:** Keep track of campaign IDs, template IDs, API keys, and other identifiers. You need these to reference in the Decisioning Studio Pro portal.
 4. **Coordinate with your team:** Orchestration setup can involve marketing, engineering, and data teams. Ensure everyone understands their role in the process.
 5. **Plan for feedback data:** Orchestration sends messages and collects the engagement and conversion data that helps your agent learn. See [Prepare your data](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data) for more details.
 

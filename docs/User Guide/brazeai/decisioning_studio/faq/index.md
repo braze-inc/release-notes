@@ -1,22 +1,22 @@
 # Frequently asked questions
 
-> This article provides answers to some frequently asked questions about Decisioning Studio.
+> This article provides answers to some frequently asked questions about Decisioning Studio Pro.
 
 ## What is a decisioning agent?
 
-A decisioning agent is a custom configuration for BrazeAI Decisioning Studio™ that's tailor-made to meet a specific business goal. This is defined by the success metric, dimensions, and options you choose. The decisioning agent automatically discovers the optimal action for every customer to maximize your chosen business metric.
+A decisioning agent is a custom configuration for BrazeAI Decisioning Studio™ Pro that's tailor-made to meet a specific business goal. This is defined by the success metric, dimensions, and options you choose. The decisioning agent automatically discovers the optimal action for every customer to maximize your chosen business metric.
 
 ### What metrics can I optimize for?
 
 You can optimize for any business metric that aligns with your goals, such as revenue, conversions, average revenue per user (ARPU), customer lifetime value (CLV), profit, contract renewals, or any other business KPI.
 
-### What are dimensions in Decisioning Studio?
+### What are dimensions in Decisioning Studio Pro?
 
-Dimensions can be thought of as the *types of levers* which the decisioning agent can pull to maximize the success metric. Typical dimensions include offer, subject line, creative, channel, or send time.
+Dimensions can be thought of as the *types of levers* that the decisioning agent can pull to maximize the success metric. Typical dimensions include offer, subject line, creative, channel, or send time.
 
 ### What is an action bank?
 
-The action bank defines the *specific options* which the decisioning agent has access to for each dimension "lever". For instance, for a channel dimension, you define the specific channels the decisioning agent has access to. For an offer dimension, you define the specific offers the decisioning agent can test.
+The action bank defines the *specific options* that the decisioning agent has access to for each dimension "lever". For instance, for a channel dimension, you define the specific channels the decisioning agent has access to. For an offer dimension, you define the specific offers the decisioning agent can test.
 
 ### Can the decisioning agent take actions I haven't configured?
 
@@ -28,4 +28,4 @@ Constraints limit the decisioning agent's actions to respect critical business r
 
 ### What is the difference between Decisioning Studio Go and Decisioning Studio Pro?
 
-Decisioning Studio Pro includes support from the AI Decisioning Services team, which helps you design and configure your agent to maximize your business outcomes. For more information, see [Decisioning Studio Go versus Decisioning Studio Pro](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio#decisioning-studio-go-vs-decisioning-studio-pro).
+Decisioning Studio Go is a self-service option for recurring email programs that optimizes for clicks. Decisioning Studio Pro includes support from the AI Decisioning Services team, optimizes any business metric, and connects to any data source. To learn more about Go, see [Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go).

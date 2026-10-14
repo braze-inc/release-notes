@@ -1,10 +1,10 @@
 # Use Braze external ID
 
-> Decisioning Studio requires a single, stable customer identifier that is consistent across all data assets. The recommendation is to use the Braze external ID as that identifier. This article explains why, and what risks arise when other identifier structures are used instead.
+> Decisioning Studio Pro requires a single, stable customer identifier that is consistent across all data assets. The recommendation is to use the Braze external ID as that identifier. This article explains why, and what risks arise when other identifier structures are used instead.
 
 ## Why use Braze external ID?
 
-Decisioning Studio operates exclusively using the Braze external ID as its unit of customer identity. All data assets (customer profiles, features, activations, engagements, conversions) should reference the Braze external ID as the primary customer identifier.
+Decisioning Studio Pro operates exclusively using the Braze external ID as its unit of customer identity. All data assets (customer profiles, features, activations, engagements, conversions) should reference the Braze external ID as the primary customer identifier.
 
 Beyond meeting a technical requirement, requiring Braze external ID is a deliberate design choice that protects the reliability of the model's training and recommendations.
 
@@ -35,11 +35,11 @@ Recommendations generated against a Braze external ID can be injected directly i
 
 #### Isolated from upstream changes
 
-By operating on the Braze external ID, Decisioning Studio is insulated from changes in your upstream systems. If your internal warehouse ID changes due to a system migration, a data quality fix, or an ERP update, the Braze external ID, and everything associated with it, remains stable.
+By operating on the Braze external ID, Decisioning Studio Pro is insulated from changes in your upstream systems. If your internal warehouse ID changes due to a system migration, a data quality fix, or an ERP update, the Braze external ID, and everything associated with it, remains stable.
 
 #### Clean channel separation
 
-In Braze, a user profile corresponds to a reachable communication channel. If a customer registers two email addresses, they have two distinct Braze profiles with two distinct Braze external IDs. Decisioning Studio treats these as two separate entities, meaning recommendations and event history for one email are not contaminated by activity associated with the other.
+In Braze, a user profile corresponds to a reachable communication channel. If a customer registers two email addresses, they have two distinct Braze profiles with two distinct Braze external IDs. Decisioning Studio Pro treats these as two separate entities, meaning recommendations and event history for one email are not contaminated by activity associated with the other.
 
 This prevents what might be called "context creep". The recommendation engine would not, for example, mix work-related purchasing behavior into recommendations sent to a personal email account.
 
@@ -49,10 +49,10 @@ This prevents what might be called "context creep". The recommendation engine wo
 
 For businesses that operate multiple storefronts or sub-brands (for example, a franchisor with many franchisees), the concept of "customer" can be ambiguous. A customer who shops across multiple locations may have separate records at each location but should be treated as one person for recommendation purposes.
 
-If your business has this structure, discuss with your Decisioning Studio team how to model the customer hierarchy before finalizing your identifier strategy.
+If your business has this structure, discuss with your AI Decisioning Services team how to model the customer hierarchy before finalizing your identifier strategy.
 
 ### B2C identity fragmentation
 
-A single physical person can accumulate multiple Braze profiles over time, such as by registering with different email addresses or logging in on different devices before account merge. Decisioning Studio treats each Braze external ID as a distinct customer.
+A single physical person can accumulate multiple Braze profiles over time, such as by registering with different email addresses or logging in on different devices before account merge. Decisioning Studio Pro treats each Braze external ID as a distinct customer.
 
 This is by design: each profile represents a distinct activation channel. However, it does mean that the quality of your recommendations depends on the quality of your Braze identity resolution. If your Braze implementation does not reliably merge duplicate profiles, some customers may receive lower-quality personalization because their history is fragmented across multiple profiles.

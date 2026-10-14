@@ -151,6 +151,9 @@ Refer to our [IP warming](https://www.braze.com/docs/user_guide/channels/email/e
 
 
 
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+
+
 
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
@@ -294,6 +297,9 @@ Refer to our [IP warming](https://www.braze.com/docs/user_guide/channels/email/e
 
 
 
+
+
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 

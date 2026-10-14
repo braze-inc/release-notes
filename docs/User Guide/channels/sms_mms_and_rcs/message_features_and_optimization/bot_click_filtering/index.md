@@ -6,7 +6,20 @@
 
 Braze has a proprietary detection system that uses multiple inputs to identify suspected bot clicks, also known as non-human interactions (NHI). Bot clicks can inflate click rates, skewing engagement metrics. By filtering these, Braze facilitates the capture of reliable data for decision making.
 
+User agent and IP address checks work together. A click is flagged if it matches either check. If both match, Currents records both reasons.
+
+
+
+
 Our system analyzes user agents associated with web crawlers, Android and iOS link previews, or CPaaS security software. A few examples of filtered user agents include `GoogleBot`, `GoogleMessages/20`, `python-requests/2.32.3`, and `Barracuda Sentinel (EE)`.
+
+
+
+
+Braze also checks the IP address of each click against a list of known automated link scanners. Some scanners, such as carrier security systems, open every shortened link as soon as a message is delivered and use the same user agents as regular web browsers. Clicks from these IP addresses are flagged as suspected bot clicks even when the user agent looks like a real browser. Real users on the same browsers are still counted because Braze matches the scanner's IP address, not the browser.
+
+
+
 
 ## Affected metrics and workflows
 
@@ -30,7 +43,7 @@ Braze includes the following Currents fields for SMS click events:
 | Field | Data type | Description |
 | --- | --- | --- |
 | `is_suspected_bot_click` | Boolean | Indicates if the click is a suspected bot click. For SMS and RCS short-link clicks, Braze evaluates bot detection on every click and populates this field with `true` or `false`. |
-| `suspected_bot_click_reason` | String, Array | Indicates the reason for a suspected bot click (such as `user_agent`). Populates when bot detection runs for SMS and RCS short-link clicks. |
+| `suspected_bot_click_reason` | String, Array | The reasons a click was flagged as a suspected bot click. Possible values: `User-Agent`, `IP Address`. A click can have more than one reason. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Currents fields in SMS click events" }
 
 ## Query Builder template
@@ -50,3 +63,11 @@ No. All unsubscribe requests are processed as usual.
 ### Are link previews included in bot click filtering?
 
 Yes. Link previews (such as Android and iOS link previews) are flagged as bot clicks and filtered out.
+
+### Why did my SMS click rate drop?
+
+The drop reflects removed bot traffic, not lower engagement from real users. If your recipients use a mobile carrier that scans links automatically, Braze filters those scanner clicks by IP address. Your reported click rate may drop from the date this filtering was applied to your account. 
+
+### Are past clicks reclassified?
+
+No. IP-based filtering applies only to clicks recorded after it was turned on. Past clicks and existing campaign and Canvas analytics don't change.

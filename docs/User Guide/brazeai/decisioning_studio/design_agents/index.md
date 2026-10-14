@@ -4,18 +4,18 @@
 
 ## About decisioning agents
 
-Designing your decisioning agent is the first step in setting up Decisioning Studio. For the decisioning agent to be able to make decisions, you need to define what outcome you want to maximize, and what actions the agent can take to do so.
+Designing your decisioning agent is the first step in setting up Decisioning Studio Pro. For the decisioning agent to be able to make decisions, you need to define what outcome you want to maximize, and what actions the agent can take to do so.
 
 ### Key concepts
 
-The following terms are referenced throughout the Decisioning Studio guide.
+The following terms are referenced throughout the Decisioning Studio Pro guide.
 
 | Term | Definition |
 | --- | --- |
-| **Decisioning agent** | A decisioning agent is a custom configuration for BrazeAI Decisioning Studio™ that's tailor-made to meet a specific business goal. This is defined by the success metric, dimensions, and options you choose. |
-| **Success metric** | The specific business metric you want to optimize for, such as revenue, conversions, or average revenue per user (ARPU). This is the metric which the decisioning agent will aim to maximize through its actions. |
-| **Dimensions** | Dimensions can be thought of as the *types of levers* which the decisioning agent can pull to maximize the success metric. Typical dimensions include offer, subject line, creative, channel, or send time. |
-| **Action bank** | The action bank defines the *specific options* which the decisioning agent has access to for each dimension "lever". For instance, for a channel dimension, you define the specific channels the decisioning agent has access to. For an offer dimension, you define the specific offers the decisioning agent can test. |
+| **Decisioning agent** | A decisioning agent is a custom configuration for BrazeAI Decisioning Studio™ Pro that's tailor-made to meet a specific business goal. This is defined by the success metric, dimensions, and options you choose. |
+| **Success metric** | The specific business metric you want to optimize for, such as revenue, conversions, or average revenue per user (ARPU). This is the metric the decisioning agent aims to maximize through its actions. |
+| **Dimensions** | Dimensions can be thought of as the *types of levers* the decisioning agent can pull to maximize the success metric. Typical dimensions include offer, subject line, creative, channel, or send time. |
+| **Action bank** | The action bank defines the *specific options* the decisioning agent has access to for each dimension "lever". For instance, for a channel dimension, you define the specific channels the decisioning agent has access to. For an offer dimension, you define the specific offers the decisioning agent can test. |
 | **Constraints** | In general, the decisioning agent could take any combination of actions that you put in the action bank. However, you can also define constraints to limit the decisioning agent's actions to respect critical business rules. For example, this could be preventing a specific offer from being selected for customers in an ineligible geography, or setting a maximum budget for the decisioning agent to spend. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Key concepts" }
 
@@ -36,7 +36,7 @@ When setting up a decisioning agent, you'll need to think through four main desi
 
 *What outcome do you want the agent to maximize?*
 
-Your success metric is the business outcome the agent will optimize for. This should align directly with your business objectives, not proxy metrics like clicks or opens, but real business results like revenue, conversions, ARPU, or customer lifetime value.
+Your success metric is the business outcome the agent will optimize for. It should align directly with real business results like revenue, conversions, ARPU, or customer lifetime value, rather than proxy metrics like clicks or opens.
 
 ### The "who": Select your audience
 
@@ -71,7 +71,7 @@ Some examples of decisioning agents you could build are:
 You could build a repeat purchase agent to increase follow-up conversions after an initial sale:
 
 - Define the audience and message in Braze
-- Decisioning Studio automatically runs daily experiments, testing different combinations of product offers, message timing, and frequency for each customer
+- Decisioning Studio Pro automatically runs daily experiments, testing different combinations of product offers, message timing, and frequency for each customer
 - Over time, BrazeAI™ learns what works best for each customer
 - Orchestrates personalized sends through Braze to maximize repurchase rates
 
@@ -79,7 +79,7 @@ You could build a repeat purchase agent to increase follow-up conversions after 
 You could build a cross-sell or upsell agent to maximize average revenue per user (ARPU) from internet subscriptions:
 
 - Define the audience and message in Braze
-- Decisioning Studio automatically runs daily experiments, testing different combinations of messages, sending times, discounts, and plan offers for each customer
+- Decisioning Studio Pro automatically runs daily experiments, testing different combinations of messages, sending times, discounts, and plan offers for each customer
 - BrazeAI™ learns which customers are susceptible to leapfrog offers and which require discounts or other incentives to upgrade
 - Orchestrates personalized sends through Braze to maximize ARPU
 
@@ -87,7 +87,7 @@ You could build a cross-sell or upsell agent to maximize average revenue per use
 You could build a renewal and retention agent to secure contract renewals, maximizing both contract length and net present value (NPV):
 
 - Define the audience and message in Braze
-- Decisioning Studio automatically runs daily experiments, testing different renewal offers for each customer
+- Decisioning Studio Pro automatically runs daily experiments, testing different renewal offers for each customer
 - BrazeAI™ identifies customers who are less price sensitive and need less significant discounts to renew
 - Orchestrates personalized sends through Braze to maximize contract renewals and NPV
 
@@ -95,7 +95,7 @@ You could build a renewal and retention agent to secure contract renewals, maxim
 You could build a winback agent to increase reactivation by encouraging past subscribers to resubscribe:
 
 - Define the audience and message in Braze
-- Decisioning Studio automatically runs daily experiments, testing thousands of variables at once, including creative, message, channel, and cadence
+- Decisioning Studio Pro automatically runs daily experiments, testing thousands of variables at once, including creative, message, channel, and cadence
 - BrazeAI™ discovers the best combination for each individual customer
 - Orchestrates personalized sends through Braze to maximize reactivation rates
 
@@ -103,7 +103,7 @@ You could build a winback agent to increase reactivation by encouraging past sub
 You could build a referral agent to maximize new accounts opened through business credit card referrals from existing customers:
 
 - Define the audience and message in Braze
-- Decisioning Studio automatically runs daily experiments, testing different emails, creatives, sending times, and credit card offers for each customer
+- Decisioning Studio Pro automatically runs daily experiments, testing different emails, creatives, sending times, and credit card offers for each customer
 - BrazeAI™ determines the ideal combination for specific customers
 - Orchestrates personalized sends through Braze to maximize referral conversions
 
@@ -111,7 +111,7 @@ You could build a referral agent to maximize new accounts opened through busines
 You could build a lead nurturing and conversion agent to drive incremental revenue and pay the right amount for each customer:
 
 - Define the audience and message in Braze
-- Decisioning Studio automatically runs daily experiments, testing different customer segments, bidding methodology, bid levels, and creative
+- Decisioning Studio Pro automatically runs daily experiments, testing different customer segments, bidding methodology, bid levels, and creative
 - BrazeAI™ leverages robust first-party data to optimize paid ad performance as privacy policies change
 - Orchestrates personalized sends through Braze to maximize revenue while optimizing cost per customer
 
@@ -119,7 +119,7 @@ You could build a lead nurturing and conversion agent to drive incremental reven
 You could build a loyalty and engagement agent to maximize purchases by new enrollees in a customer loyalty program:
 
 - Define the audience and message in Braze
-- Decisioning Studio automatically runs daily experiments, testing different email offers, sending times, and frequencies for each customer
+- Decisioning Studio Pro automatically runs daily experiments, testing different email offers, sending times, and frequencies for each customer
 - BrazeAI™ learns what works best for each new enrollee in the loyalty program
 - Orchestrates personalized sends through Braze to maximize purchase and repurchase rates
 
@@ -127,4 +127,4 @@ You could build a loyalty and engagement agent to maximize purchases by new enro
 
 ## Next steps
 
-Ready to build your own decisioning agent? See [Get Started with Decisioning Studio](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/get_started) for a guide that walks you through connecting data sources, setting up orchestration, designing your agent, and launching to production.
+Ready to build your own decisioning agent? See [Get started with Decisioning Studio Pro](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/get_started) for a guide that walks you through connecting data sources, setting up orchestration, designing your agent, and launching to production.

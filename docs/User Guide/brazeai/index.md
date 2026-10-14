@@ -10,7 +10,7 @@ Each goal has one recommended starting point. You can also combine features. For
 | Find the best-performing variant of a campaign | [Optimize with BrazeAI](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection) | At least two active variants. Multi-send campaigns also need a conversion event and a re-eligibility window of 24 hours or more. |
 | Find the best-performing path through a Canvas | [Winning Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step/winning_path) | An Experiment Paths step with more than one path. |
 | Generate and test many content variants continuously | [Content Optimizer](https://www.braze.com/docs/user_guide/brazeai/content_optimizer) | Currently in beta, for email, push, SMS, MMS, and RCS. Contact your customer success manager to get started. |
-| Personalize every send in a recurring email program, per recipient | [Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go) | A recurring email program, and more than one option to choose between: creatives, subject lines, images, or send times. |
+| Personalize every send in a recurring email program, per recipient | [Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go) | A recurring email program, and more than one option to choose between: creatives, subject lines, images, or send times. |
 | Maximize a business or financial metric, including what offer to give | [Decisioning Studio Pro](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio) | Connected first-party data and the AI Decisioning Services team. Contact your customer success manager to scope it. |
 | Send at the time each user is most likely to engage | [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing) | Best results when time zones are set on user profiles. Not recommended with rate limiting or IP warming. |
 | Send on the channel each user is most likely to engage with | [Intelligent Channel filter](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_channel) | Engagement data across two or more supported channels, and at least three messages per channel. |
@@ -50,7 +50,7 @@ These features all improve what a message contains, in increasing order of scope
 | [Optimize with BrazeAI](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection) | Which of your campaign variants wins | The audience as a whole |
 | [Winning Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step/winning_path) | Which of your Canvas paths wins | The audience as a whole |
 | [Content Optimizer](https://www.braze.com/docs/user_guide/brazeai/content_optimizer) | Which combination of content elements wins, from variants it generates for you | The audience as a whole |
-| [Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go) | Which creative to send (including its subject line, call to action (CTA), and image) and when to send it | Each recipient individually |
+| [Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go) | Which creative to send (including its subject line, call to action (CTA), and image) and when to send it | Each recipient individually |
 | [Decisioning Studio Pro](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio) | Which offer, channel, timing, and frequency to use | Each user individually |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Optimizing what you send" }
 
@@ -102,7 +102,7 @@ Among the features that learn, capability and setup both rise in steps.
 
 1. Read one dimension off a user's own history. [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing) and the [Intelligent Channel filter](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_channel) are self-serve toggles with no added cost.
 2. Learn one pattern across your whole population. [Predictive Churn](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_churn), [Predictive Events](https://www.braze.com/docs/user_guide/brazeai/predictive_suite/predictive_events), and [AI item recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai) are still self-serve, with moderate setup.
-3. Optimize several levers at once, per user. [Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go) has low setup on data already in Braze and optimizes engagement only.
+3. Optimize several levers at once, per user. [Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go) has low setup on data already in Braze and optimizes engagement only.
 4. Optimize every lever, including offers, against a key performance indicator (KPI). [Decisioning Studio Pro](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio) needs external data plus the AI Decisioning Services team.
 
 Match the level to what the use case is worth. For a low-value or single-dimension need, a lighter tool usually fits better. Extra capability from a heavier tool often isn't worth the additional data and setup.
@@ -147,7 +147,7 @@ Both decide. A Braze Agent decides by reading. A decisioning agent decides by me
 | [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing) | Finds each user's best send time | Statistics on that user's history |
 | [Intelligent Channel filter](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_channel) | Ranks channels for each user by their history | Statistics on that user's history |
 | [AI item recommendations](https://www.braze.com/docs/user_guide/brazeai/item_recommendations/creating_recommendations/ai) | Picks catalog items for each user | Deep learning |
-| [Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go) | Personalizes content, timing, and frequency for engagement | Reinforcement learning |
+| [Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go) | Personalizes content, timing, and frequency for engagement | Reinforcement learning |
 | [Decisioning Studio Pro](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio) | Personalizes every lever, including offers, against a business KPI | Reinforcement learning |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="BrazeAI decisioning features" }
 

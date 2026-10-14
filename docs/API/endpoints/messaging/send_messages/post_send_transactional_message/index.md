@@ -1,4 +1,4 @@
-<div id='api_wufdfrazxegg' class='api_div' data-search-keywords='send transactional emails using api-triggered delivery external_send_id trigger_properties recipient user_alias external_user_id attributes dispatch_id status metadata campaign_api_id received_at enqueued_at executed_at sent_at processed_at delivered_at bounced_at aborted_at reason'>
+<div id='api_cmpyggkhqbqz' class='api_div' data-search-keywords='send transactional emails using api-triggered delivery external_send_id trigger_properties recipient user_alias external_user_id attributes dispatch_id status metadata campaign_api_id received_at enqueued_at executed_at sent_at processed_at delivered_at bounced_at aborted_at reason'>
 <h1 id="send-transactional-emails-using-api-triggered-delivery">Send transactional emails using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/transactional/v1/campaigns/{campaign_id}/send</p>
@@ -219,7 +219,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   </tbody>
 </table>
 
-<p>Most endpoints at Braze have a rate limit implementation that returns a 429 response code if you make too many requests. The transactional sending endpoint has a paid hourly allotment measured in units (for example, 50,000 units per hour, depending on your package). There is no separate per-endpoint rate limit for this endpoint: you can send beyond your allotted volume, but only the allotted volume is covered by SLA; requests above that allotment still send but are not covered by SLA. Requests to this endpoint count toward your <a href="/docs/api/api_limits">overall external API rate limit</a>. If you exceed that limit (for example, 250,000 requests per hour across all endpoints), Braze returns 429 and throttles requests until the limit resets. The transactional volume count resets each hour. Contact Braze Support if you need more information about this functionality.</p>
+<p>This endpoint doesn’t return <code class="language-plaintext highlighter-rouge">429</code> responses when you exceed your transactional allotment. For allotment, SLA, and response header details, see <a href="#rate-limit">Rate limit</a>.</p>
 
 <h2 id="transactional-http-event-postback">Transactional HTTP event postback</h2>
 

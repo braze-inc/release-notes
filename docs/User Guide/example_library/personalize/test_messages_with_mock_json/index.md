@@ -6,7 +6,7 @@
 
 Flash & Thread, a fictional clothing retail brand, builds messages that depend on Connected Content responses, Canvas context variables, or array of objects profile data. Triggering real API calls or launching campaigns for every iteration slows development.
 
-This pattern embeds a mock JSON payload in the message body, stores it with `capture`, then parses it with `json_parse` so Liquid can reference structured fields in the **Preview** section—without a live Connected Content call, API-triggered Canvas entry, or test send.
+This scenario embeds a mock JSON payload in the message body, stores it with `capture`, then parses it with `json_parse` so Liquid can reference structured fields in the **Preview** section—without a live Connected Content call, API-triggered Canvas entry, or test send.
 
 Use this during message development. It does not replace end-to-end testing with real triggers, test sends, or [preview user paths](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths/) in Canvas.
 
