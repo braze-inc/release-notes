@@ -96,6 +96,16 @@ To add `BrazeNotificationService.xcframework` to your `Notification Service Exte
 
 
 
+#### Troubleshooting generated Xcode projects
+
+If you generate your Xcode project with build tools such as [Tuist](https://tuist.dev/en/docs/), confirm that your generated project keeps `BrazeNotificationService` linked to your Notification Service Extension target and preserves its resources in the extension bundle. Some generated project structures can place resources in unexpected bundles, which can cause rich push assets to fail to load at runtime.
+
+See the following resources for help:
+
+- [Braze Swift SDK repository](https://github.com/braze-inc/braze-swift-sdk)
+- [Braze Swift SDK examples for Notification Service Extension](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/PushNotificationsServiceExtension)
+- [Braze Swift SDK issue tracker](https://github.com/braze-inc/braze-swift-sdk/issues)
+
 #### Using your own UNNotificationServiceExtension
 
 If you need to use your own UNNotificationServiceExtension, you can instead call [`brazeHandle`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazenotificationservice/brazehandle(request:contenthandler:)) in your `didReceive` method.

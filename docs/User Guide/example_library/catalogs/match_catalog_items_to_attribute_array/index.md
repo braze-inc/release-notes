@@ -8,7 +8,7 @@ Flash & Thread stores each customer's saved product names in a string array cust
 
 Catalog selections can filter catalog columns against static or Liquid values, including array fields on catalog rows. They do not filter a catalog row against values stored in a user profile array. To personalize from the user's list, return a broad set of catalog items with a selection, then use Liquid to keep only rows that match the profile array.
 
-This pattern:
+This scenario:
 
 1. Assigns the user's array custom attribute to a Liquid variable.
 2. Calls `catalog_selection_items` for a pre-filtered catalog selection (up to 50 items).
@@ -17,7 +17,7 @@ This pattern:
 **Important:**
 
 
-This pattern works only when the selection's result set (up to 50 catalog rows) can plausibly contain each user's saved items—for example, small catalogs, or catalogs where filters narrow the selection tightly enough to cover a typical list. If a user's saved items fall outside the 50 rows returned, the loop finds no matches and the message renders nothing for those items—no filter resolves this in the general case, because the selection can't match against the user's profile array.
+This scenario works only when the selection's result set (up to 50 catalog rows) can plausibly contain each user's saved items—for example, small catalogs, or catalogs where filters narrow the selection tightly enough to cover a typical list. If a user's saved items fall outside the 50 rows returned, the loop finds no matches and the message renders nothing for those items—no filter resolves this in the general case, because the selection can't match against the user's profile array.
 
 
 

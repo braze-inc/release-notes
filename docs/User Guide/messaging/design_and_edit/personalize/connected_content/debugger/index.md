@@ -14,6 +14,7 @@ The Connected Content Debugger is available for the following areas:
 
 - Banners
 - Canvas Context steps
+- Content Blocks
 - Content Cards
 - Email
     - Includes templates
@@ -28,7 +29,7 @@ The Connected Content Debugger is available for the following areas:
 **Note:**
 
 
-The debugger is available for most channels, but not yet for KakaoTalk, LINE, or non-channel-specific composition surfaces (such as Content Blocks and Canvas User Update step). If you don't see the debugger, Connected Content debugging may not yet be supported for that feature.
+The debugger is available for most channels, but not yet for KakaoTalk, LINE, or the Canvas User Update step. If you don't see the debugger, Connected Content debugging may not yet be supported for that feature.
 
 
 

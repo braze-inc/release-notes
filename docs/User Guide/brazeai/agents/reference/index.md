@@ -17,13 +17,6 @@ The Braze-powered **Auto** model is optimized for models whose thinking capabili
 
 This is the simplest option, with no extra setup required. Braze provides access to large language models (LLMs) directly. To use this option, select **Auto**, which uses Gemini models.
 
-**Important:**
-
-
-If you don't see **Braze Auto** as an option in the **Model** dropdown when creating an agent, contact your customer success manager to learn how to become eligible to use the Braze Auto model.
-
-
-
 ### Option 2: Bring your own API key
 
 With this option, you can connect your Braze account with providers like OpenAI, Anthropic, or Google Gemini. If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not through Braze.
@@ -272,7 +265,7 @@ If you want to collect user feedback for their most recent dining experience at 
 
 ## Catalog context and fields {#catalogs-and-fields}
 
-To give a Canvas Step Agent access to catalog data, create a [knowledge source](https://www.braze.com/docs/user_guide/brazeai/agents/knowledge_sources) from the catalog and add it as **+ Agent context**. The agent queries the knowledge source to retrieve matching rows and sends only the relevant catalog data to the LLM, which minimizes token use and improves retrieval accuracy. Do not attach the catalog directly as agent context. Agents configured with the legacy **Add catalog fields** option before knowledge sources were available can continue using that context until you migrate them.
+To give a Canvas Step Agent access to catalog data, create a [knowledge source](https://www.braze.com/docs/user_guide/brazeai/agents/knowledge_sources) from the catalog and add it as **+ Agent context**. The agent queries the knowledge source to retrieve matching rows and sends only the relevant catalog data to the LLM, which minimizes token use and improves retrieval accuracy. You can't attach the catalog directly as agent context. Agents configured with the legacy **Add catalog fields** option before knowledge sources were available can continue using that context until you migrate them.
 
 ![A knowledge source "nyc_restaurants" that references the catalog "nyc_restaurants".](https://www.braze.com/docs/assets/img/ai_agent/knowledge_source_example2.png?cc739bb9fe00c6915ec6773f51215842){: style="max-width:75%;"}
 

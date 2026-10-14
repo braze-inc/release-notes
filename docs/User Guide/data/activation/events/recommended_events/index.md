@@ -86,10 +86,13 @@ The six eCommerce recommended events map to stages of the purchase journey. Fire
 **Tip:**
 
 
-The following examples show the REST API payload for each event.
-For client-side logging, `ecommerce.product_viewed`, `ecommerce.cart_updated`, `ecommerce.checkout_started`, and `ecommerce.order_placed` use SDK eCommerce event APIs where available, while `ecommerce.order_cancelled` and `ecommerce.order_refunded` use `logCustomEvent`. For platform-specific implementation examples, refer to [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events).
+The examples in the following tabs show the REST API payload for each event.
 
 
+
+For client-side logging, `ecommerce.product_viewed`, `ecommerce.cart_updated`, `ecommerce.checkout_started`, and `ecommerce.order_placed` use SDK eCommerce event APIs where available, while `ecommerce.order_cancelled` and `ecommerce.order_refunded` use `logCustomEvent`. 
+
+Refund and cancellation events are typically sent from your server through the Braze REST API because they tend to rely on server-side logic completion, such as your refund flow. For platform-specific implementation examples, see [Log eCommerce events through the Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events).
 
 
 

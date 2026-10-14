@@ -1,43 +1,45 @@
-# BrazeAI Decisioning Studio™
+# BrazeAI Decisioning Studio™ Pro
 
-> Get started with BrazeAI Decisioning Studio™ (formerly OfferFit by Braze) to make 1:1 AI decisions that maximize your business metrics.
+> Get started with BrazeAI Decisioning Studio™ Pro (formerly OfferFit by Braze) to make 1:1 AI decisions that maximize your business metrics.
 
-## What is BrazeAI Decisioning Studio™?
+## What is BrazeAI Decisioning Studio™ Pro?
 
-[BrazeAI Decisioning Studio™](https://www.braze.com/product/brazeai-decisioning-studio/) uses decisioning agents that personalize for each individual and can maximize any business metric&#8212;not only clicks.
+[BrazeAI Decisioning Studio™ Pro](https://www.braze.com/product/brazeai-decisioning-studio/) uses decisioning agents that personalize for each individual and can maximize any business metric.
 
-Audience-level tests such as [Optimize with BrazeAI](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection), [Winning Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step/winning_path), and [Content Optimizer](https://www.braze.com/docs/user_guide/brazeai/content_optimizer) find one winner for everyone. Decisioning Studio finds a different answer for each person.
+Audience-level tests such as [Optimize with BrazeAI](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection), [Winning Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step/winning_path), and [Content Optimizer](https://www.braze.com/docs/user_guide/brazeai/content_optimizer) find one winner for everyone. Decisioning Studio Pro finds a different answer for each person.
 
 BrazeAI™ decisioning agents automatically discover the optimal action for every customer. Using your first-party data, BrazeAI™ can maximize any business KPI for a wide range of use cases, including cross-sell, upsell, repurchase, retention, renewal, referral, winback, and more.
 
-To learn more or get started with Decisioning Studio, contact your customer success manager.
+To learn more or get started with Decisioning Studio Pro, contact your customer success manager.
 
-![Overview of the Decisioning Studio feedback loop](https://www.braze.com/docs/assets/img/decisioning_studio/decisioniong_studio_feedback_loop.png?e6a6335904325ae3e2123e0e60cbac18)
+Looking for a self-service option for recurring email programs? See [Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go).
+
+![Overview of the Decisioning Studio Pro feedback loop](https://www.braze.com/docs/assets/img/decisioning_studio/decisioniong_studio_feedback_loop.png?e6a6335904325ae3e2123e0e60cbac18)
 
 ## Key features
 
-- **Keep your tech stack, but add a brain:** BrazeAI™ plugs in as a decisioning layer between your data systems and your customer engagement platform. While Decisioning Studio works best with Braze, a variety of other platforms are supported.
-- **Pick winners for people, not segments:** Use all your first-party data to make the optimal 1:1 decision for each individual.
-- **Personalize everything:** AI decisioning agents find the best message, product, incentive, channel, timing, and frequency for each individual customer.
-- **Maximize any metric:** Clicks aren’t dollars. Use BrazeAI™ to pick the offers or incentives that maximize revenue, profit, CLV, or any other business KPI.
-- **Open the black box:** See how AI decisioning agents personalize for deep insights into the drivers of customer behavior.
-- **Expert support all the way:** Decisioning Studio Pro includes support from the AI Decisioning Services team, which tailors your decisioning agents to the specific needs of your business.
+- Works with your existing tech stack: BrazeAI™ plugs in as a decisioning layer between your data systems and your customer engagement platform. While Decisioning Studio Pro works best with Braze, a variety of other platforms are supported.
+- Individual-level decisions: Use all your first-party data to make the optimal 1:1 decision for each individual.
+- Personalization across dimensions: AI decisioning agents find the best message, product, incentive, channel, timing, and frequency for each individual customer.
+- Any business metric: Use BrazeAI™ to choose the offers or incentives that maximize revenue, profit, customer lifetime value (CLV), or another business KPI.
+- Insights into customer behavior: See how AI decisioning agents personalize for deep insights into the drivers of customer behavior.
+- Dedicated expert support: Decisioning Studio Pro includes support from the AI Decisioning Services team, which tailors your decisioning agents to the specific needs of your business.
 
-## About Decisioning Studio
+## About Decisioning Studio Pro
 
 ### How it works
 
-BrazeAI Decisioning Studio™ allows you to design and deploy decisioning agents that optimize any business metric. 
+BrazeAI Decisioning Studio™ Pro allows you to design and deploy decisioning agents that optimize any business metric. 
 
-To set up Decisioning Studio:
+To set up Decisioning Studio Pro:
 - Connect data sources that tell the Agent how a customer reacts to its decisions.
 - Configure orchestration to carry out the decisioning agent's actions.
 - Design your decisioning agent to define what outcome you want to maximize, and what actions the agent can take to do so.
 - Launch your decisioning agent and let it continuously learn and optimize for your business outcomes.
 
-While Decisioning Studio Go is a self-service platform, Decisioning Studio Pro includes support from the AI Decisioning Services team, which helps you design and configure your agent to maximize your business outcomes. See [Decisioning Studio Go vs. Decisioning Studio Pro](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio#decisioning-studio-go-vs-decisioning-studio-pro) for more details.
+You work with the AI Decisioning Services team through each of these steps to design and configure an agent that maximizes your business outcomes.
 
-For more details, see [Get Started with Decisioning Studio](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/get_started).
+For more details, see [Get started with Decisioning Studio Pro](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/get_started).
 
 ### Decisioning agents versus Braze Agents
 
@@ -50,36 +52,14 @@ Braze Agents reason over one user's context. They live in Canvas steps or catalo
 You can use them together: let a decisioning agent choose the offer and channel, then use a Braze Agent to write the copy. For a full comparison, see [Braze Agent versus decisioning agent](https://www.braze.com/docs/user_guide/brazeai#braze-agent-versus-decisioning-agent).
 
 
-## Decisioning Studio Go vs. Decisioning Studio Pro 
-
-Decisioning Studio offers two tiers: Go and Pro. Each tier is designed to meet different needs and use cases.
-
-### Decisioning Studio Go
-
-Go is ideal for teams getting started with AI decisioning. It includes:
-
-- Self-serve creative configuration with a pre-designed decisioning agent
-- Success metric focused on engagement (clicks)
-- Compatibility with three Customer Engagement Platforms (CEPs): Braze, Salesforce Marketing Cloud, and Klaviyo
-
-### Decisioning Studio Pro
-
-Pro offers the full suite of Decisioning Studio capabilities for advanced use cases. Key features include:
-
-- A dedicated AI Decisioning Services team to support you from decisioning agent design through stable state
-- Success metric can be any business metric, including revenue and conversions
-- Ability to connect any customer data source for decisioning
-- Full suite of reporting and insights
-- Extended orchestration patterns
-
 
 ### About this guide
 
-In this guide, you first learn what decisioning agents are and how they work. Next, you set up the self-service Decisioning Studio Go, followed by the full-service Decisioning Studio Pro. Finally, you review reports and insights to understand the performance of your decisioning agents.
+In this guide, you first learn what decisioning agents are and how they work. Next, you work with the AI Decisioning Services team to design your agent, prepare your data, define your audience, set up orchestration, and launch. Finally, you review reports and insights to understand the performance of your decisioning agents.
 
 ## Next steps
 
-1. [Get Started with Decisioning Studio](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/get_started)
-2. [Setting up Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go)
-3. [Viewing reports and insights](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/reporting)
+1. [Get started with Decisioning Studio Pro](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/get_started)
+2. [Prepare your data](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data)
+3. [View reports and insights](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/reporting)
 

@@ -386,6 +386,12 @@ To refresh credentials—or to switch between **AWS Secret Access Key** and **AW
 
 When you've finished preparing credentials in AWS, go to **Partner Integrations** > **Currents** in Braze, locate your Amazon S3 connector in the list, select **Edit**, update **Credentials**, and select **Update Current**. Braze validates the credentials you enter; your connector keeps running and data already in your bucket remains available. For more information, see [Updating Currents in Set up Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/#updating-currents).
 
+## How Currents uploads files to S3
+
+Currents closes each Avro file when it reaches the [Avro write threshold](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/event_delivery_semantics#avro-write-threshold), then uploads the completed file to your bucket using [Amazon S3 multipart upload](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html) in 5&nbsp;MB parts. The multipart upload is separate from the write threshold, and it usually finishes within seconds after the file is closed.
+
+Amazon S3 doesn't expose an in-progress multipart upload as an object. A Currents file becomes visible to `ListObjectsV2` and `GetObject` only after the upload completes, so downstream processes that read your bucket through the standard S3 APIs don't see partially uploaded files.
+
 ## Export behavior
 
 Users who have integrated a cloud data storage solution and export APIs, dashboard reports, or CSV reports experience the following:

@@ -27,7 +27,7 @@ Content Optimizer finds one winner for your audience by generating variants and 
 | Test campaign variants you already wrote | [Optimize with BrazeAI](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection) |
 | Test Canvas journey paths | [Winning Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step/winning_path) |
 | Generate and mix content variants for the audience | Content Optimizer |
-| Personalize creative, timing, or offers for each recipient | [Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/decisioning_studio_go) or [Decisioning Studio Pro](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio) |
+| Personalize creative, timing, or offers for each recipient | [Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go) or [Decisioning Studio Pro](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio) |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Choose between Content Optimizer and similar features" }
 
 For a full comparison of BrazeAI features, see [BrazeAI](https://www.braze.com/docs/user_guide/brazeai).

@@ -111,12 +111,12 @@ In the **Canvas steps** step, define rules that are evaluated on individual step
 
 Select **Add ruleset** and choose a step type to see the following categories:
 
-- **Message**
+- **Message and Content Optimizer steps**
     - **Content and copy:** Defines requirements for text quality, character limits, and message completeness.
     - **Links and tracking:** Verifies URLs, CTAs, deep links, and UTM parameters.
     - **Personalization and dynamic content:** Defines checks for Liquid logic and fallback values.
     - **Compliance and deliverability:** Defines requirements for legal obligations and sending safeguards.
-- **Audience paths**
+- **Audience Paths**
     - **Path and priority:** Validates path labels, narrow-before-broad ordering, and intentional priority.
     - **Path coverage and gaps:** Checks fallback paths, dead ends, and unreachable branches.
     - **Evaluation timing and delays:** Validates lookback windows, delay timing, and re-entry behavior.

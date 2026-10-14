@@ -10,15 +10,16 @@ After completing all configuration steps with your AI Decisioning Services team:
 2. Verify that your data connections and orchestration integrations are active.
 3. Work with your AI Decisioning Services team to activate the agent.
 
-Once launched, your agent will:
-- Begin receiving audience and customer data
-- Start making personalized recommendations for each customer
-- Orchestrate actions through your configured CEP
-- Collect feedback data to learn and improve over time
+After you launch, your agent:
+
+- Begins receiving audience and customer data
+- Starts making personalized recommendations for each customer
+- Orchestrates actions through your configured CEP
+- Collects feedback data to learn and improve over time
 
 ## Close the AI decisioning loop
 
-Once launched, your agent needs feedback data to learn and improve. This includes conversions data, engagement data, and activations data that tell the agent what happened after customer engagement decisions were sent.
+After you launch, your agent needs feedback data to learn and improve. This includes conversions data, engagement data, and activations data that tell the agent what happened after customer engagement decisions were sent.
 
 For detailed requirements on preparing these critical feedback data assets, see [Preparing your data sources](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data).
 
@@ -39,7 +40,7 @@ After launching, work with your AI Decisioning Services team to monitor performa
 
 ## Ongoing optimization
 
-Your AI Decisioning Services team will continue to work with you to:
+Your AI Decisioning Services team continues to work with you to:
 
 - Analyze agent performance and identify optimization opportunities
 - Expand dimensions or options as needed
@@ -50,6 +51,5 @@ Your AI Decisioning Services team will continue to work with you to:
 
 
 The agent continuously learns and improves over time. Allow sufficient time for the agent to gather data and optimize before making significant changes to the configuration.
-
 
 

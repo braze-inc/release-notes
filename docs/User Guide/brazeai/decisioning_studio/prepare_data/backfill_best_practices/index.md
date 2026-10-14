@@ -9,13 +9,13 @@ Backfilling is the process of retroactively populating a dataset with historical
 | Scenario | Description | Example |
 |----------|-------------|---------|
 | **New features** | You've identified a new metric that is important for your model, and you have the raw historical logs to compute it. | You add "click-through rate" as a feature and need three months of history so the model has enough data to learn from. |
-| **Data recovery** | Your data pipeline failed on specific days, creating gaps in the data delivered to Decisioning Studio. | A pipeline outage on Tuesday left a gap. After the fix is deployed, you backfill those missing records from the source system. |
+| **Data recovery** | Your data pipeline failed on specific days, creating gaps in the data delivered to Decisioning Studio Pro. | A pipeline outage on Tuesday left a gap. After the fix is deployed, you backfill those missing records from the source system. |
 | **Logic changes** | You've updated the formula for a feature calculation or changed an event definition. | You redefined "active user" and need to re-export historical data so the model trains on the updated definition. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="When backfilling is needed" }
 
 ## Requirements
 
-For Decisioning Studio to function correctly, all incoming data must support backfilling for historical periods. The specific lookback window required (measured in months) depends on the AI model's training requirements. Consult your AI Decisioning Services team to confirm the correct value for your use case.
+For Decisioning Studio Pro to function correctly, all incoming data must support backfilling for historical periods. The specific lookback window required (measured in months) depends on the AI model's training requirements. Consult your AI Decisioning Services team to confirm the correct value for your use case.
 
 When performing a historical backfill, the following standards are mandatory:
 
@@ -34,7 +34,7 @@ If the model trains on data that "knows the future," it will appear to perform w
 
 For example, consider calculating a historical "lifetime value" feature using a customer's total spend to date (that is, up to today), then using that value to predict behavior that occurred months ago. At the time of that historical event, the full lifetime value wasn't yet known.
 
-This can be avoided by always reconstruct historical features using only the information that would have been available at the historical timestamp, not information that accumulated afterwards.
+Avoid this by reconstructing each historical feature from the information available at that historical timestamp.
 
 ### Schema and logic drift
 

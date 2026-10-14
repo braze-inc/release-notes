@@ -182,7 +182,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 
 ## Monitoring your rate limits
 
-Every single API request sent to Braze returns the following information in the response headers:
+Every API request sent to Braze that is subject to standard REST API rate limiting returns the following information in the response headers:
 
 | Header Name             | Description                                                                                 |
 | ----------------------- | ------------------------------------------------------------------------------------------- |
@@ -191,7 +191,9 @@ Every single API request sent to Braze returns the following information in the 
 | `X-RateLimit-Reset`     | The time at which the current rate limit window resets in UTC epoch seconds.                |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Monitoring your rate limits" }
 
-This information is intentionally included in the header of the response to the API request rather than the Braze dashboard. This allows your system to better react in real time as you're interacting with our API. For example, if the `X-RateLimit-Remaining` value drops below a certain threshold, you might want to slow sending to make sure all transactional emails go out. Or, if it reaches zero, you might want to pause all sending until the time specified in `X-RateLimit-Reset` elapses.
+Endpoints that bypass standard REST API rate limiting, such as [transactional email endpoints](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_transactional_message), don't count toward your overall external API rate limit and don't return these headers.
+
+This information is intentionally included in the header of the response to the API request rather than the Braze dashboard. This allows your system to better react in real time as you're interacting with our API. For example, if the `X-RateLimit-Remaining` value drops below a certain threshold, you might want to slow your requests. Or, if it reaches zero, you might want to pause requests until the time specified in `X-RateLimit-Reset` elapses.
 
 ### Troubleshooting `429 Too Many Requests` responses
 

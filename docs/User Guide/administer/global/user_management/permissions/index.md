@@ -225,6 +225,7 @@ Company permissions are assigned to each user from the [Company tab](https://www
 | Locations | View Locations | View locations |
 | Locations | Edit Locations | Create and edit locations |
 | Segments | View Segments | View segments. Users must have the “View Segments” permission to have the “Edit Segments” or “Archive Segments” permission |
+| Segments | View Audience Population | Allows users to view audience size and reachable user counts across campaigns, Canvases, and segments. This permission is managed alongside “View Segments”. |
 | Segments | Archive Segments | Archive and un-archive segments. Users with the “Archive Segments” permission must also be granted the “View Segments” permission |
 | Segments | Edit Segments | Create and update Segments. Users with the “Edit Segments” permission must also be granted the “View Segments permission” |
 | User Data | View Import Users | View CSV user imports without making changes |

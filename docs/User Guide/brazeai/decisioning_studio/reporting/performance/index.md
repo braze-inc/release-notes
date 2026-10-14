@@ -31,14 +31,14 @@ These selections determine which days are included, which groups are compared, h
 **Important:**
 
 
-Changing the aggregation setting (such as 7-day rolling) only affects the chart display. It does not change stored data.
+Changing the aggregation setting (such as 7-day rolling) changes how the chart displays the KPI. Stored data stays the same.
 
 
 
 If you can't select a recent date from the date picker, that date is likely disabled due to configured data delays. There are two types of delays that may limit date availability:
 
-- **Data pipeline delays:** The time it takes to ingest and process data from your CDP into Decisioning Studio. This ensures reports only show complete, reliable data.
-- **Recommendation activation delays:** The time between when the Decisioning Studio engine predicts a recommendation and when you activate it in your campaigns. Reporting won't include days where recommendations haven't been activated yet.
+- **Data pipeline delays:** The time it takes to ingest and process data from your CDP into Decisioning Studio Pro. Reports show only complete, reliable data.
+- **Recommendation activation delays:** The time between when the Decisioning Studio Pro engine predicts a recommendation and when you activate it in your campaigns. Reporting does not include days where recommendations have not been activated yet.
 
 These delays are configured for your use case. If you need to understand your specific reporting window, contact your AI Success Manager.
 
@@ -50,7 +50,7 @@ The KPI cards on the primary side side of the report show the key performance in
 - Conversions / Customer
 - Unsubscribes / Customer
 
-Each card represents the KPI calculated across the entire selected date range. This is a full-period value, not a daily average. For example, if you see "Incremental LTV / Customer = 3.192", that reflects performance across the whole selected window.
+Each card represents the KPI calculated once across the entire selected date range. For example, if you see "Incremental LTV / Customer = 3.192", that reflects performance across the whole selected window.
 
 ![Performance report showing the left-side KPI summary cards, including metrics like Incremental LTV / Customer, Conversions / Customer, and Unsubscribes / Customer.](https://www.braze.com/docs/assets/img/decisioning_studio/reporting_performance_kpi_cards.png?1fd43d82dee5886ad2a7dc9103e5dce1)
 
@@ -67,7 +67,7 @@ Consider the following example with these conversion rates:
 - Day 1: 10 conversions out of 100 customers = 10%
 - Day 2: 2 conversions out of 10 customers = 20%
 
-The chart shows both. The KPI card recalculates across both days combined (12 conversions / 110 customers = 10.9%), not an average of 10% and 20%.
+The chart shows both daily rates. The KPI card pools both days into one ratio: 12 conversions / 110 customers = 10.9%.
 
 ## Uplift chart
 
@@ -78,7 +78,7 @@ The uplift chart shows the percentage difference between your comparison groups.
 **Important:**
 
 
-Uplift is not stored. It is computed from the KPI results. If uplift changes, it's because the underlying KPI changed.
+The report computes uplift from the KPI results. If uplift changes, it's because the underlying KPI changed.
 
 
 
@@ -116,10 +116,6 @@ Driver trees use the same KPI definitions as the rest of the dashboard and intro
 Segments let you break down performance by defined groups, such as engagement levels, customer characteristics, device type, or other configured features.
 
 Segment membership is custom-configured for your use case and calculated daily. This means a customer's past segment reflects who they were on that day. If their behavior changes later, historical days remain unchanged. This preserves historical accuracy and prevents reports from shifting retroactively.
-
-### Does the performance report for Go versus Pro agents differ?
-
-The KPIs for Go use cases are set automatically and standardized, since all Go use cases have the same target metric: unique clicks.
 
 ### Why can't I select certain recent dates?
 
@@ -172,7 +168,7 @@ Consider this example with the following conversion rate:
 - Day 1: 10 conversions out of 100 customers = 10%
 - Day 2: 2 conversions out of 10 customers = 20%
 
-The chart shows 10% on Day 1 and 20% on Day 2. The summary card calculates performance across both days combined: 12 total conversions out of 110 customers = 10.9%. It does not average 10% and 20%.
+The chart shows 10% on Day 1 and 20% on Day 2. The summary card pools both days: 12 total conversions out of 110 customers = 10.9%.
 
 ### What's the recommended approach for "unique" counts?
 
@@ -183,6 +179,6 @@ When measuring unique behavior (like unique clickers or converters), uniqueness 
 
 The chart shows 3 on Day 1 and 3 on Day 2. Across both days, you can see 3 + 3 = 6. Customers B and C are counted once per day, which is intentional.
 
-This configuration answers: "How many unique customer engagements happened across days?" It does not answer: "How many individual customers engaged at least once across the entire period?"
+This configuration counts how many unique customer engagements happened across days.
 
 If your goal is window-level uniqueness (unique individuals across the full campaign or quarter), that is a different modeling approach. Contact your AI Success Manager for guidance on designing that.

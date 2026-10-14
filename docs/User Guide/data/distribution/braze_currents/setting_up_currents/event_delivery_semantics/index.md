@@ -38,6 +38,12 @@ All timestamps exported by Currents are sent in the UTC time zone. For some even
 
 Events sent to Braze through SDK or API can include a timestamp from the past. The most notable example is when SDK data gets queued, such as when there isn't mobile connectivity. In that case, the event timestamp will reflect when the event was generated. This means a percentage of events will appear to have high latency.
 
+The Braze Android, Swift, and Web SDKs store unsent events on the device and retry them after the device reconnects, with no time-based cutoff. For the Web SDK, queued events are limited only by browser storage (about 5&nbsp;MB).
+
+There's no maximum window for late-arriving events. Currents is designed to export every event it receives, regardless of how old the event's timestamp is. A late-arriving event is written to the `date=` partition for the hour it was queued for processing in Braze, and keeps its original timestamp in the `time` field. Braze doesn't backfill late events into earlier partitions.
+
+Because late events land in current partitions, Braze recommends processing files as they're written to your storage bucket instead of re-scanning older `date=` partitions with a lookback window. To remove duplicates, use the event `id` field as described in [At-least-once delivery](#at-least-once-delivery).
+
 ## Apache Avro format
 
 The Braze Currents data storage integrations output data in the `.avro` format. We chose [Apache Avro](https://avro.apache.org/) because it is a flexible data format that natively supports schema evolution and is supported by a wide variety of data products: 
@@ -83,7 +89,7 @@ To avoid this conflict, set up your pipeline so it doesn't treat the `version` p
 | `<your-bucket-prefix>` | The prefix set for this Currents integration. |
 | `<cluster-identifier>` | For internal use by Braze. Will be a string such as "prod-01", "prod-02", "prod-03", or "prod-04". All files will have the same cluster identifier.|
 | `<connection-type-identifier>` | The identifier for type of connection. Options are "S3", "AzureBlob", or "GCS". |
-| `<integration-id>` | The unique ID for this Currents integration. |
+| `<integration-id>` | The unique ID for this Currents integration. Braze sets this ID when you create the integration, and it doesn't change when you edit the integration's settings (such as field transformations). |
 | `<event-type>` | The type of the event in the file. |
 | `<date>` | The hour that events are queued in our system for processing in the UTC time zone. Formatted YYYY-MM-DD-HH. |
 | `version=<currents_version>` | The Currents version for the pipeline path. This value is a simple integer such as `6`. |
@@ -102,6 +108,8 @@ File naming conventions may change. Braze recommends searching all keys in your 
 ### Avro write threshold
 
 Under normal circumstances, Braze will write data files to your storage bucket every 5 minutes or 15,000 events, whichever is sooner. Under heavy load, we may write larger data files with as many as 100,000 events per file.
+
+Currents is designed to buffer large bursts of events internally, such as the events from a message sent to millions of users. You don't need to plan extra write throughput or I/O capacity on your storage bucket for these bursts.
 
 **Important:**
 

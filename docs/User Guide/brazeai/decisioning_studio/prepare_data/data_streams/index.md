@@ -1,6 +1,6 @@
 # Snapshots versus event streams
 
-> Data falls into one of two fundamental categories: snapshots (state) and event streams (what happened). Understanding this distinction and applying it correctly is one of the most important things you can do to ensure your Decisioning Studio agent learns effectively.
+> Data falls into one of two fundamental categories: snapshots (state) and event streams (what happened). Understanding this distinction and applying it correctly is one of the most important things you can do to ensure your Decisioning Studio Pro agent learns effectively.
 
 ## Snapshot data (state)
 
@@ -18,13 +18,13 @@ A snapshot is static and aggregated. It reflects the cumulative result of all ch
 
 ### How snapshots should be updated
 
-- **Trigger:** Time-driven, not event-driven. Snapshots should be generated on a fixed schedule (for example, daily), regardless of whether a customer had any activity on that day.
+- **Trigger:** Time-driven. Generate snapshots on a fixed schedule (for example, daily), including customers with no activity that day.
 - **Scope:** Every update must include all relevant customers, including those who had no event.
 - **Method:** Append new snapshot records to the dataset rather than overwriting previous values. This preserves historical state for model training.
 
 ### Query snapshot data for daily delivery
 
-Decisioning Studio runs its recommendation pipeline once per day. When delivering snapshot data, export the previous day's snapshot at each pipeline run:
+Decisioning Studio Pro runs its recommendation pipeline once per day. When delivering snapshot data, export the previous day's snapshot at each pipeline run:
 
 ```sql
 SELECT *
@@ -44,7 +44,7 @@ An event stream records discrete actions as they happen. It answers the question
 | Event type | What happened (for example, activation, conversion, click) |
 | Event timestamp | When the event actually occurred |
 | Creation timestamp | When this record was created in your system (see note in the following section) |
-| Event properties | Additional metadata about the event; the richer this is, the better Decisioning Studio can link events across the customer journey |
+| Event properties | Additional metadata about the event; the richer this is, the better Decisioning Studio Pro can link events across the customer journey |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Required fields" }
 
 **Important:**
@@ -62,7 +62,7 @@ The event timestamp and creation timestamp are different fields and both are req
 
 ### Query event data for daily delivery
 
-Use `create_timestamp`, not `event_timestamp`, to slice daily exports. Events are sometimes written to your system after they occur (late arrivals). If you slice on `event_timestamp`, those late-arriving records will be permanently missed.
+Slice daily exports on `create_timestamp`. Events are sometimes written to your system after they occur (late arrivals). If you slice on `event_timestamp`, those late-arriving records will be permanently missed.
 
 ```sql
 -- Correct: use create_timestamp to ensure late-arriving events are captured
@@ -86,7 +86,7 @@ Braze provides two built-in mechanisms that map directly to these two data types
 
 ### Custom attributes: snapshot data
 
-Custom attributes store user-level state at a point in time. They are the correct vehicle for customer profiles and computed features (for example, `churn_score`, `total_purchases_last_30d`). They are **not** suitable for raw event data, because they overwrite rather than accumulate.
+Custom attributes store user-level state at a point in time. Use them for customer profiles and computed features (for example, `churn_score`, `total_purchases_last_30d`). Each update overwrites the previous value, so the attribute holds the latest state and earlier events are gone.
 
 ### Braze Currents: event stream data
 
@@ -95,7 +95,7 @@ Braze Currents provides raw, immutable event flow data. The `USER_BEHAVIOR_CUSTO
 **Tip:**
 
 
-Treat custom attributes as the source of customer state and Braze Currents as the source of customer behavior events. Do not use custom attributes to pass raw event data to Decisioning Studio.
+Treat custom attributes as the source of customer state and Braze Currents as the source of customer behavior events. Do not use custom attributes to pass raw event data to Decisioning Studio Pro.
 
 
 
@@ -103,13 +103,13 @@ Treat custom attributes as the source of customer state and Braze Currents as th
 
 ### Pass event data as a snapshot
 
-Aggregating event data into snapshot fields before sending it to Decisioning Studio causes several problems:
+Aggregating event data into snapshot fields before sending it to Decisioning Studio Pro causes several problems:
 
-- **Loss of granularity:** Once data is aggregated to a daily customer-level summary, the individual event records are gone. Decisioning Studio cannot reconstruct them.
+- **Loss of granularity:** After data is aggregated to a daily customer-level summary, the individual event records are gone. Decisioning Studio Pro cannot reconstruct them.
 - **Imprecise timestamps:** A field like "last_email_sent" tells you the most recent occurrence but loses the full history of events and makes precise attribution impossible.
 - **Phantom updates:** Even on days when no events occurred, the snapshot record is updated, creating duplicate entries that are difficult to deduplicate.
 
-If you're using Braze, use Currents exports (not custom attributes) to deliver raw event data to Decisioning Studio.
+If you're using Braze, deliver raw event data to Decisioning Studio Pro with Currents exports.
 
 ### Update snapshot data on an event trigger
 

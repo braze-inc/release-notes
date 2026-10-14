@@ -1,6 +1,6 @@
 # General principles
 
-> Well-structured data is the foundation of an effective Decisioning Studio agent. Before diving into specific asset requirements, it helps to understand the four core principles that apply across all data you send to Decisioning Studio. Violations of any of these principles are among the most common causes of degraded model performance.
+> Well-structured data is the foundation of an effective Decisioning Studio Pro agent. Before diving into specific asset requirements, it helps to understand the four core principles that apply across all data you send to Decisioning Studio Pro. Violations of any of these principles are among the most common causes of degraded model performance.
 
 ## One consistent customer identifier across all assets
 
@@ -8,25 +8,25 @@ Every data asset (customer profiles, activations, engagements, conversions) must
 
 | Requirement | Implication if violated |
 |-------------|------------------------|
-| A single, unique customer identifier must be present in every asset | If different assets use different ID systems (for example, a warehouse ID for features but a platform ID for activations), the Decisioning Studio engine cannot reliably join them. This breaks the feedback loop and degrades both model training and reporting accuracy. If the mapping between the two ID systems turns out to be many-to-many rather than one-to-many, the resulting data integrity failures can be severe. |
+| A single, unique customer identifier must be present in every asset | If different assets use different ID systems (for example, a warehouse ID for features but a platform ID for activations), the Decisioning Studio Pro engine cannot reliably join them. This breaks the feedback loop and degrades both model training and reporting accuracy. If the mapping between the two ID systems turns out to be many-to-many rather than one-to-many, the resulting data integrity failures can be severe. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="One consistent customer identifier across all assets" }
 
 See [Use Braze external ID](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data/braze_external_id) for guidance on which identifier to use.
 
-## Event data must be passed as an incremental stream, not as a snapshot
+## Event data must be passed as an incremental stream {#event-data-must-be-passed-as-an-incremental-stream-not-as-a-snapshot}
 
-Events, such as conversions, engagements, and activations, represent discrete things that happened at a specific point in time. They must be delivered to Decisioning Studio as an incremental (append-only) stream of individual records, not as an aggregated snapshot.
+Events, such as conversions, engagements, and activations, represent discrete things that happened at a specific point in time. Deliver each event to Decisioning Studio Pro as its own record in an incremental (append-only) stream.
 
 | Requirement | Implication if violated |
 |-------------|------------------------|
 | Event data must be structured as individual, timestamped records and delivered incrementally | When event data is aggregated into a snapshot (for example, storing a "last send time" attribute rather than individual send records), you lose the precise timing of each event. This makes it impossible to accurately attribute outcomes to specific decisions, breaking the feedback loop that the model needs to learn. Without precise event timestamps, you cannot know exactly when a conversion happened or which recommendation triggered it. |
-{: .reset-td-br-1 .reset-td-br-2 aria-label="Event data must be passed as an incremental stream, not as a snapshot" }
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Event data must be passed as an incremental stream" }
 
 See [Snapshots versus event streams](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data/data_streams) for a full explanation of the distinction and examples of correct and incorrect patterns.
 
 ## Snapshot data must be updated on a regular, time-driven schedule
 
-Snapshot data (such as customer profiles and features) represents the current state of a customer at a given point in time. Updates to snapshot data should be driven by a regular schedule (for example, daily), not by event triggers.
+Snapshot data (such as customer profiles and features) represents the current state of a customer at a given point in time. Update snapshot data on a regular schedule (for example, daily) for every customer, including customers with no new events.
 
 | Requirement | Implication if violated |
 |-------------|------------------------|
@@ -46,7 +46,7 @@ For event stream data specifically, each record must include at minimum:
 
 **Required fields:**
 - Customer identifier
-- Timestamp of when the event occurred (not when the record was created in your system; these are different; see [Snapshots versus event streams](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data/data_streams) for why this matters)
+- Timestamp of when the event occurred (the time of the action itself; see [Snapshots versus event streams](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio/prepare_data/data_streams) for how this differs from the record-creation timestamp)
 - Timestamp of when the record was created in your system (used for reliably slicing incremental exports)
 - Event type
 - Fields sufficient to filter down to the specific events you care about

@@ -1,18 +1,18 @@
 # Reports and insights
 
-> Learn how to view BrazeAI Decisioning Studio™ reports in Braze, so you can understand how AI-powered decisions impact your campaigns. From performance metrics to data health and system changes, these reports help you understand results, troubleshoot issues, and make informed decisions with confidence.
+> Learn how to view BrazeAI Decisioning Studio™ Pro reports in Braze, so you can understand how AI-powered decisions impact your campaigns. From performance metrics to data health and system changes, these reports help you understand results, troubleshoot issues, and make informed decisions with confidence.
 
 ## Prerequisites
 
-Before you can view Decisioning Studio reports in the Braze, you must:
+Before you can view Decisioning Studio Pro reports in Braze, you must:
 
-- Have an active contract for Braze and BrazeAI Decisioning Studio™. 
-- Contact your CSM to enable BrazeAI Decisioning Studio™ for you on your behalf.
-- Have an active BrazeAI Decisioning Studio™ agent.
+- Have an active contract for Braze and BrazeAI Decisioning Studio™ Pro. 
+- Contact your customer success manager to enable BrazeAI Decisioning Studio™ Pro.
+- Have an active BrazeAI Decisioning Studio™ Pro agent.
 
 ## View reports {#view}
 
-To view metrics for a Decisioning Studio agent in Braze, go to **AI Decisioning** > **BrazeAI Decisioning Studio™**, then select an agent.
+To view metrics for a Decisioning Studio Pro agent in Braze, go to **AI Decisioning** > **BrazeAI Decisioning Studio™**, then select an agent.
 
 Here, you can view reports like performance, insights, diagnostics, and timelines. For more details, see [Available reports](#available-reports).
 
@@ -20,13 +20,13 @@ Here, you can view reports like performance, insights, diagnostics, and timeline
 
 After [opening a report](#view), you can change the date range by selecting a new start and end date from the calendar dropdown.
 
-![BrazeAI Decisioning Studio™ date range selector open with a calendar dropdown. The calendar displays selectable start and end dates for customizing the report view.](https://www.braze.com/docs/assets/img/decisioning_studio/reporting_change_date_range.png?a69a1d5ea749e0ddd76330bbe897451f){: style="max-width:50%;"}
+![BrazeAI Decisioning Studio™ Pro date range selector open with a calendar dropdown. The calendar displays selectable start and end dates for customizing the report view.](https://www.braze.com/docs/assets/img/decisioning_studio/reporting_change_date_range.png?a69a1d5ea749e0ddd76330bbe897451f){: style="max-width:50%;"}
 
 You can also set a default start date or choose dates to always exclude. Excluded dates will be filtered out of all reports for that agent.
 
 To set or exclude dates, select <i class="fa-solid fa-gear"></i> **Settings**, then change your default date or exclude dates as needed.
 
-![Settings panel open in BrazeAI Decisioning Studio™ showing options to set a default start date and exclude specific dates from reports. The panel displays two sections labeled Default start date and Exclude dates. Under Exclude dates, several dates are listed with checkboxes next to each.](https://www.braze.com/docs/assets/img/decisioning_studio/reporting_set_exclude_dates.png?8cc952489fa1c42c8b850ecbae00c6f9)
+![Settings panel open in BrazeAI Decisioning Studio™ Pro showing options to set a default start date and exclude specific dates from reports. The panel displays two sections labeled Default start date and Exclude dates. Under Exclude dates, several dates are listed with checkboxes next to each.](https://www.braze.com/docs/assets/img/decisioning_studio/reporting_set_exclude_dates.png?8cc952489fa1c42c8b850ecbae00c6f9)
 
 ## Available reports {#available-reports}
 

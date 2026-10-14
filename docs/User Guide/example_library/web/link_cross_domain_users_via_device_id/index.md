@@ -6,7 +6,7 @@
 
 Kitchenerie, a fictional kitchenware retailer, hosts a marketing site (`kitchenerie.com`) and a shop (`kitchenerie.shop`). Each domain has its own Braze Web SDK integration. Browser cookies do not cross domains, so Braze assigns separate device IDs—and separate anonymous profiles—when the same user moves from the marketing site to the shop.
 
-This pattern:
+This scenario:
 
 1. Reads the device ID on the source domain with `getDeviceId` after SDK initialization
 2. Appends it to outbound links as a query parameter (for example, `brazeDeviceId`)
@@ -18,7 +18,7 @@ Both domains should use the same Braze workspace API key and SDK endpoint so eve
 
 ## Considerations
 
-- The device ID is per browser. This pattern does not link activity across different browsers, devices, or profiles. Use `external_id` through `changeUser` for authenticated, cross-device identity.
+- The device ID is per browser. This scenario does not link activity across different browsers, devices, or profiles. Use `external_id` through `changeUser` for authenticated, cross-device identity.
 - Retrieve the device ID only after the Web SDK is initialized on the source domain. Calling `getDeviceId` before `initialize` does not return a value.
 - The Web SDK reads `deviceId` once at `initialize`. There is no post-initialization `setDeviceId` that changes the active device ID. Read the URL parameter on the destination domain before calling `initialize`.
 - Direct visits, bookmarks, or third-party referrals to the shop without `brazeDeviceId` should fall back to default device ID assignment—expected when there is no source-domain ID to inherit.

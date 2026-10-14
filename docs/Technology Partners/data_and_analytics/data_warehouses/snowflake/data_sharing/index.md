@@ -134,6 +134,12 @@ When possible, breaking changes are preceded by an announcement and a migration 
 - Changing the type or nullability of an existing column
 
 
+#### How Braze communicates breaking changes {#schema-change-notices}
+
+If Braze needs to make a breaking change, such as removing a table or a column, Braze emails advance notice to every company admin of each company that has Snowflake Data Sharing configured. For more information about the company admin role, see [Braze permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#admin).
+
+Make sure at least one company admin can forward these notices to the team that maintains your Snowflake queries.
+
 ### Snowflake regions
 
 Braze currently hosts all user-level data in these Snowflake AWS regions:

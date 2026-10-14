@@ -13,7 +13,7 @@ The Braze React Native SDK connects your iOS and Android apps to Braze: user pro
 - **In-app messages**: Default Braze UI or custom handling via subscriptions and logging APIs
 - **Content Cards**: Default feed UI, or fetch cards and build your own UI
 - **Banners**: Placement-based HTML banners, including `BrazeBannerView`
-- **Push notifications**: Permission prompts, token registration, payload listeners. For platform notes, see [Native setup](#native-setup).
+- **Push notifications**: Permission prompts, token registration, payload listeners (see the platform notes in [Native setup](#native-setup))
 - **Feature flags**: Refresh, read properties, log impressions
 - **Analytics**: Custom events, purchases, immediate flush
 - **SDK controls**: Enable/disable SDK, wipe local data, SDK Authentication signatures
@@ -42,8 +42,8 @@ npm install @braze/react-native-sdk
 
 This section shows the minimum setup required to initialize the Braze React Native SDK.
 
-1. Install the npm package in [Installation](#installation).
-2. Complete [native setup](#native-setup) for Android and iOS (configuration, permissions, push if needed).
+1. Install the npm package. See [Installation](#installation).
+2. Complete **native setup** for Android and iOS (configuration, permissions, push if needed).
 3. Initialize the SDK from JavaScript and start using it:
 
 ``` typescript
@@ -66,7 +66,7 @@ Calling `Braze.initialize` again with different credentials tears down the curre
 
 ## Native setup
 
-> **Source of truth:** Step-by-step screens, Gradle/CocoaPods changes, and the full list of Android XML keys are in the [Braze React Native developer guide](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native). The following snippets are minimal examples.
+> **Source of truth:** Step-by-step screens, Gradle/CocoaPods changes, and the full list of Android XML keys are in the [Braze React Native developer guide](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=react%20native). The snippets in this section are minimal examples.
 
 ### Android
 
@@ -91,7 +91,8 @@ Calling `Braze.initialize` again with different credentials tears down the curre
 **Note:**
 
 
-** The API key and endpoint are no longer set in `braze.xml` — they are passed from JavaScript via `Braze.initialize(apiKey, endpoint)`.
+The API key and endpoint are no longer set in `braze.xml` — they are passed from JavaScript via `Braze.initialize(apiKey, endpoint)`.
+
 
 
 ### iOS
@@ -134,7 +135,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 **Note:**
 
 
-** `BrazeReactInitializer.configure` is a Swift-first API that replaces the deprecated `BrazeReactBridge.initBraze(_:)`. It also resolves a Swift type-resolution issue with `Braze.Configuration` in the Objective-C bridge.
+`BrazeReactInitializer.configure` is a Swift-first API that replaces the deprecated `BrazeReactBridge.initBraze(_:)`. It also resolves a Swift type-resolution issue with `Braze.Configuration` in the Objective-C bridge.
+
 
 
 ---

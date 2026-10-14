@@ -153,7 +153,41 @@ When you need timelier session boundaries in Currents, call `requestImmediateDat
 
 ## What happens if my storage bucket is unavailable when Currents tries to write data?
 
-If your storage bucket is unavailable at the time of data transfer, that data is lost. Braze is not able to backfill events that were not successfully delivered. To avoid data loss, ensure your storage bucket is available and properly configured at all times.
+If Braze can't write to your storage bucket, Braze queues the events it can't write and keeps retrying. This applies regardless of the error your bucket returns. When the bucket accepts writes again, Braze delivers the queued events, followed by new events.
+
+While Braze can't write to your bucket, you may receive an integration error notification at your integration's contact email. Depending on the error your bucket returns, the notification may say that your credentials are invalid, even if they haven't changed.
+
+If the issue persists for more than five days, Braze starts dropping events, and dropped events can't be recovered. For more information, see [Requirements](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents#requirements).
+
+### How to make sure your bucket is available
+
+Your bucket is available when it exists under the name saved in your Currents integration and accepts writes from Braze. To check this, do the following:
+
+1. In Braze, go to **Partner Integrations** > **Currents** and open your integration. Note the bucket name (or container name for Azure Blob Storage) and the folder path or prefix.
+2. In your cloud provider's console, confirm that a bucket with that exact name exists:
+    - For Amazon S3, check the AWS account that owns the bucket.
+    - For Google Cloud Storage, check the project listed as `project_id` in your JSON key file.
+    - For Azure Blob Storage, check the storage account in your account endpoint or connection string.
+3. If the bucket doesn't exist, create a new bucket and update your integration with its name.
+4. If you restrict network access to your bucket, such as with firewall rules or private endpoints, confirm that your rules allow Braze to write. For the IP addresses Braze sends Currents data from, see [IP allowlisting](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents#ip-allowlisting). For Azure Blob Storage, see [Can Braze provide IP addresses to allowlist for Azure Blob storage?](https://www.braze.com/docs/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents#can-braze-provide-ip-addresses-to-allowlist-for-azure-blob-storage).
+5. After your bucket accepts writes, check the folder path or prefix for new files. Braze delivers the queued events first, followed by new events.
+
+### How to make sure your bucket is properly configured
+
+Braze needs the exact bucket name, valid credentials, and permission to write to your bucket. To check your configuration, do the following:
+
+1. In your Currents integration, confirm that the bucket name matches your bucket exactly. Enter only the bucket name in the bucket field, without slashes or a path. Enter any path in the folder path or prefix field.
+2. Confirm that the credentials in your integration have the required permissions:
+    - Amazon S3: Your IAM policy allows `s3:ListBucket` and `s3:GetBucketLocation` on the bucket, and `s3:PutObject` and `s3:GetObject` on the objects in the bucket. Your bucket also can't use SSE-KMS encryption or Object Lock. For more information, see [Amazon S3 integration](https://www.braze.com/docs/partners/data_and_analytics/cloud_storage/amazon_s3#integration) and [Troubleshooting](https://www.braze.com/docs/partners/data_and_analytics/cloud_storage/amazon_s3#troubleshooting).
+    - Google Cloud Storage: Your service account's role includes `storage.objects.create`, `storage.objects.delete`, `storage.objects.list`, `storage.objects.get`, and `storage.buckets.get`. If your bucket uses hierarchical namespace, the role also needs `storage.folders.create`. For more information, see [Step 1: Create role](https://www.braze.com/docs/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents#step-1-create-role).
+    - Azure Blob Storage: If you use certificate service principal authentication, your app registration has the Storage Blob Data Contributor role on your container. Role assignments can take up to 30 minutes to take effect. For more information, see [Step 4: Grant access to your storage account](https://www.braze.com/docs/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents#cert-sp-4).
+3. Confirm that your credentials are current. If you rotated a key, role, or certificate, update your integration. For more information, see [Updating Amazon S3 credentials for Currents](https://www.braze.com/docs/partners/data_and_analytics/cloud_storage/amazon_s3#updating-currents-credentials), [Updating Azure credentials for Currents](https://www.braze.com/docs/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents#updating-currents-credentials), or [Updating Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents#updating-currents).
+
+## Can I relocate my storage bucket without losing Currents data?
+
+Yes. If you relocate a storage bucket that's connected to a live Currents integration (for example, with Google Cloud Storage bucket relocation), and the bucket name, credentials, and prefix stay the same, you don't need to edit your Currents integration. During the relocation, Braze queues the events it can't write and delivers them when the bucket accepts writes again.
+
+Complete the relocation within five days to avoid dropped events.
 
 ## Why do I see entitlement limit messages when creating or editing a Currents integration?
 

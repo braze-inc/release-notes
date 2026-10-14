@@ -1,12 +1,12 @@
 # Define your audience
 
-> Use case audiences are typically defined in a Customer Engagement Platform (such as Braze or Salesforce Marketing Cloud), then sent to the Decisioning Studio agent. The agent then divides customers into treatment groups in order to conduct randomized controlled trials.
+> You typically define use case audiences in a customer engagement platform (such as Braze or Salesforce Marketing Cloud) and then send them to the Decisioning Studio Pro agent, which divides customers into treatment groups to conduct randomized controlled trials.
 
 ## Treatment groups
 
 | Group | Description |
 |-------|-------------|
-| **Decisioning Studio** | Customers who receive AI-optimized recommendations |
+| **Decisioning Studio Pro** | Customers who receive AI-optimized recommendations |
 | **Random Control** | Customers who receive randomly selected options (baseline comparison) |
 | **Business-as-Usual (optional)** | Customers who receive the current marketing journey (for comparing against existing performance) |
 | **Holdout (optional)** | Customers who receive no communications (to measure overall campaign impact) |
@@ -23,7 +23,7 @@
 **Note:**
 
 
-For Braze, we can ingest multiple segments and combine them to create the audience. Decisioning Studio can ingest a segment for a Business-as-Usual comparator campaign. All of these patterns are acceptable.
+Braze can ingest multiple segments and combine them to create the audience. Decisioning Studio Pro can ingest a segment for a Business-as-Usual comparator campaign. All of these patterns are acceptable.
 
 
 
@@ -31,10 +31,10 @@ For Braze, we can ingest multiple segments and combine them to create the audien
 
 
 1. Configure an SFMC Data Extension for your audience and provide the data extension ID
-2. Set up SFMC Installed Package for API integration with the appropriate permissions required by Decisioning Studio
-3. Confirm this data extension is refreshed daily, as Decisioning Studio pulls from the latest incremental data available
+2. Set up SFMC Installed Package for API integration with the appropriate permissions required by Decisioning Studio Pro
+3. Confirm this data extension is refreshed daily, as Decisioning Studio Pro pulls from the latest incremental data available
 
-Provide the extension ID and API key to our AI Decisioning Services team, who will assist with next steps in ingesting customer data.
+Provide the extension ID and API key to the AI Decisioning Services team, who assist with the next steps for ingesting customer data.
 
 
 
@@ -43,7 +43,7 @@ Provide the extension ID and API key to our AI Decisioning Services team, who wi
 
 If the audience is not currently stored in Braze or Salesforce Marketing Cloud, then the next best step is to configure an automated export directly to a Braze-controlled Google Cloud Storage (GCS) bucket.
 
-To determine whether this is feasible, refer to the documentation for your platform. For example, mParticle offers a [native integration with Google Cloud Storage](https://www.mparticle.com/integration/google-cloud-storage/). If this is the case, we can provide a GCS bucket to export audience data to.
+To determine whether this is feasible, refer to the documentation for your platform. For example, mParticle offers a [native integration with Google Cloud Storage](https://www.mparticle.com/integration/google-cloud-storage/). If this is the case, Braze can provide a GCS bucket to export audience data to.
 
 ### Additional resources
 

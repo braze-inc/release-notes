@@ -6,7 +6,7 @@
 
 Flash & Thread, a fictional clothing retail brand, logs orders with [eCommerce recommended events](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/). Its marketing team wants daily revenue, average order value (AOV), and order volume in a single dashboard—not only the prebuilt last-touch attribution view.
 
-This pattern uses Query Builder to query `ecommerce.order_placed` from Snowflake shared event tables, then adds the saved query as a **Custom Queries** tile in Dashboard Builder. You can repeat the workflow for additional metrics (new versus returning purchasers, product categories, or segment-level revenue).
+This scenario uses Query Builder to query `ecommerce.order_placed` from Snowflake shared event tables, then adds the saved query as a **Custom Queries** tile in Dashboard Builder. You can repeat the workflow for additional metrics (new versus returning purchasers, product categories, or segment-level revenue).
 
 Use this when built-in eCommerce dashboards do not cover your metric mix. For last-touch attributed revenue, see the [Revenue - Last Touch Attribution](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/#revenue---last-touch-attribution) dashboard instead.
 
@@ -88,7 +88,7 @@ Use a line or bar chart with `Date` on the X-axis and both metrics on the Y-axis
 
 #### New versus returning purchasers per day
 
-This pattern compares each user's first `ecommerce.order_placed` day to later purchase days. It is most accurate when your Query Builder window covers the full reporting period (for example, the default 60-day window).
+This scenario compares each user's first `ecommerce.order_placed` day to later purchase days. It is most accurate when your Query Builder window covers the full reporting period (for example, the default 60-day window).
 
 
 ```sql

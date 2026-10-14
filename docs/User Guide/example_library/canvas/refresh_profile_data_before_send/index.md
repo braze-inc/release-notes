@@ -8,7 +8,7 @@ ClaimsJumpr, a fictional insurance brand, starts an action-based Canvas when a p
 
 Each user profile stores policies as an array of objects custom attribute (`policies`). Each object includes a unique `policy_id` in the triggering event, and an `auto_renewal` value (`opted_in` or `opted_out`). This example adds a Context step before later Message steps so Liquid reads the current object from `policies`, matching on the `policy_id` from Canvas context (the entry event).
 
-This pattern:
+This scenario:
 
 1. Keeps the entry `policy_id` in Canvas context.
 2. Uses a Context step and the Liquid `where` filter to select the matching object from `policies`.

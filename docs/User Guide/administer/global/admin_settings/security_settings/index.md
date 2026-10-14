@@ -248,10 +248,6 @@ Removed Push Credential
 - Created Agent
 - Edited Agent
 
-### BrazeAI Operator 
-- Requested BrazeAI Operator Response
-- BrazeAI Operator Responded
-
 
 
 ## Viewing personally identifiable information (PII) {#view-pii}

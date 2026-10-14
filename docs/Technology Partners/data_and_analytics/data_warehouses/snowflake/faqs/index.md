@@ -3,6 +3,10 @@
 ## Is it possible to obfuscate PII data via Snowflake data sharing?
 No, as of now that is not supported.
 
+## How do I know about changes to the Snowflake Data Sharing schema?
+
+Braze emails advance notice of breaking changes, such as removing a table or a column, to every company admin of each company that has Snowflake Data Sharing configured. Non-breaking changes, such as new tables or columns, can happen at any time. For details, see [Breaking versus non-breaking changes](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/data_sharing#breaking-versus-non-breaking-changes).
+
 ## Do I need data share for the same region or cross region?
 Use data sharing for the same region in the following scenarios:
 - Your Snowflake account is in US-EAST-1 (AWS) and your Braze dashboard region is in the US.

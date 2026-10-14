@@ -1,4 +1,4 @@
-<div id='api_luylxgdzcgmf' class='api_div' data-search-keywords='update live activity app_id activity_id content_state end_activity dismissal_date stale_date notification message error'>
+<div id='api_bnkxgnruhphz' class='api_div' data-search-keywords='update live activity app_id activity_id content_state end_activity dismissal_date stale_date notification message error'>
 <h1 id="update-live-activity">Update Live Activity</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/live_activity/update</p>
@@ -11,6 +11,10 @@
 <p>After you register a Live Activity, you can pass a JSON payload to update your Apple Push Notification service (APNs). See Apple’s documentation on <a href="https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications">updating your Live Activity with push notification payloads</a> for more information.</p>
 
 <p>If <code class="language-plaintext highlighter-rouge">content-available</code> isn’t set, the default Apple Push Notification service (APNs) priority is 10. If <code class="language-plaintext highlighter-rouge">content-available</code> is set, this priority is 5. Refer to <a href="/docs/api/objects_filters/messaging/apple_object">Apple push object</a> for more details.</p>
+
+<p><strong>Important:</strong></p>
+
+<p>If you start an activity remotely with <code class="language-plaintext highlighter-rouge">/messages/live_activity/start</code>, wait at least 5 minutes before you send the first <code class="language-plaintext highlighter-rouge">/messages/live_activity/update</code> request for that same <code class="language-plaintext highlighter-rouge">activity_id</code>. This delay gives Braze and APNs time to register the new Live Activity and its token mapping. If you send the first update too soon, that update may not apply to the activity.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd" class="seeme">See me in Postman</a></div>
 

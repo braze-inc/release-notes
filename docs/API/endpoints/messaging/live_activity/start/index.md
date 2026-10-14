@@ -1,4 +1,4 @@
-<div id='api_siqbyhbsorky' class='api_div' data-search-keywords='start live activity app_id activity_id activity_attributes_type activity_attributes content_state stale_date notification external_user_ids user_aliases custom_audience segment_id message error'>
+<div id='api_falklippcmlh' class='api_div' data-search-keywords='start live activity app_id activity_id activity_attributes_type activity_attributes content_state stale_date notification external_user_ids user_aliases custom_audience segment_id message error'>
 <h1 id="start-live-activity">Start Live Activity</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/live_activity/start</p>
@@ -11,6 +11,10 @@
 <p>After you create a Live Activity, make a POST request to target a segment, a connected audience, or specific users. Identify specific users by external user ID, user alias, or both. For more information about Apple’s Live Activities, see <a href="https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications">Starting and updating Live Activities with ActivityKit push notifications</a>.</p>
 
 <p>If <code class="language-plaintext highlighter-rouge">content-available</code> isn’t set, the default Apple Push Notification service (APNs) priority is 10. If <code class="language-plaintext highlighter-rouge">content-available</code> is set, this priority is 5. For more information, see <a href="/docs/api/objects_filters/messaging/apple_object">Apple push object</a>.</p>
+
+<p><strong>Important:</strong></p>
+
+<p>After a successful <code class="language-plaintext highlighter-rouge">/messages/live_activity/start</code> request, wait at least 5 minutes before you send the first <code class="language-plaintext highlighter-rouge">/messages/live_activity/update</code> request for the same <code class="language-plaintext highlighter-rouge">activity_id</code>. This delay gives Braze and APNs time to register the new Live Activity and its token mapping. If you send the first update too soon, that update may not apply to the activity.</p>
 
 <p><strong>Tip:</strong></p>
 

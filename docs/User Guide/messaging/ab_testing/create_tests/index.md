@@ -29,7 +29,9 @@ To automatically optimize your variants, see [Optimizing A/B tests with BrazeAI]
 
 Select segments to target, then distribute the members across your selected variants and the optional [control group](#including-a-control-group). For best practices around choosing a segment to test with, see [Choosing a segment](#choosing-a-segment).
 
-For supported campaigns, turn on **Optimize with BrazeAI™** to automatically optimize your variant distribution. For a single-send campaign, Braze reserves part of the audience for an optimized second send. For a multi-send campaign, BrazeAI™ adjusts the distribution over time.
+For supported campaigns, turn on **Optimize with BrazeAI™** to automatically optimize your variant distribution. For a multi-send campaign, BrazeAI™ adjusts the distribution over time.
+
+For a single-send campaign, Braze reserves part of the audience for an optimized second send. This portion appears as **Holdout Group** in the variant distribution. To learn how it differs from a control group, see [Holdout group versus control group](#holdout-group-versus-control-group).
 
 ### Control group {#including-a-control-group}
 
@@ -52,7 +54,16 @@ When using rate limiting with an A/B test, the rate limit isn't applied to the c
 
 #### Control groups with Optimize with BrazeAI™
 
-For a multi-send campaign with [Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection), the initial control-group size depends on the number of variants. If each variant receives more than 20% of users, the control group starts at 20%, and the variants split the remaining 80% evenly. With more variants, the control group starts smaller. As BrazeAI™ analyzes performance, the control group may grow or shrink.
+For a multi-send campaign with [Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection), the initial control-group size depends on the number of variants. If each variant receives more than 20% of users, the control group starts at 20%, and the variants split the remaining 80% evenly. With more variants, the control group starts smaller. As BrazeAI analyzes performance, the control group may grow or shrink.
+
+### Holdout group versus control group {#holdout-group-versus-control-group}
+
+In a single-send campaign with **Optimize with BrazeAI™** turned on, the holdout group and the control group serve different purposes:
+
+- **Holdout group:** Receives the winning variant after the experiment ends. If Braze can't determine a winning variant, the holdout group doesn't receive a message.
+- **Control group:** Doesn't receive a message. Braze uses its conversion rate as a baseline to measure lift.
+
+For example, with 25% Variant A, 25% Variant B, and 50% Holdout Group, the entire audience receives a message when a winning variant is sent. If you add a 10% control group, no more than 90% of the audience receives a message.
 
 ## Step 5: Designate a conversion event (optional)
 

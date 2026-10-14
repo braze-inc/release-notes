@@ -314,6 +314,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 The [`/messages/live_activity/update`](https://www.braze.com/docs/api/endpoints/messaging/live_activity/update) endpoint allows you to update a Live Activity through push notifications passed through the Braze REST API. Use this endpoint to update your Live Activity's `ContentState`.
 
+**Important:**
+
+
+When you call `/messages/live_activity/start` and then send the first `/messages/live_activity/update` request for the same `activity_id`, wait at least 5 minutes between requests. This delay gives Braze and APNs time to register the new Live Activity and its token mapping. If you send the first update too soon, that update may not apply to the activity.
+
+
+
 As you update your `ContentState`, your Live Activity widget displays the new information. Here's what the Superb Owl show looks like at the end of the first half.
 
 See our [`/messages/live_activity/update` endpoint](https://www.braze.com/docs/api/endpoints/messaging/live_activity/update) article for full details.
