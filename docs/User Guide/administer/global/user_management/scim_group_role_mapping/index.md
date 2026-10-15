@@ -14,7 +14,7 @@ Group role mapping connects two relationships:
 | Groups to roles | Braze admin | In the dashboard, you map each SCIM group to one or more custom roles. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="How it works" }
 
-A user's effective permissions are the union of their directly assigned roles and every role reached through their group memberships. Group-derived roles are additive—they never remove a permission a user already has. When membership or a mapping changes, Braze re-evaluates the affected users' permissions on their next request.
+A user's effective permissions are the union of their directly assigned permissions and roles and every role reached through their group memberships. Directly assigned permissions include the [default permission set](https://www.braze.com/docs/user_guide/administer/global/user_management/automated_user_provisioning/#default-permissions-for-new-users) that Braze gives every new SCIM user. Group-derived roles are additive—they never remove a permission a user already has. When membership or a mapping changes, Braze re-evaluates the affected users' permissions on their next request.
 
 Group members must already be SCIM-provisioned Braze users. Mapping a group grants a custom role, and the role carries the underlying permissions, so custom roles must be enabled for your company.
 
@@ -74,6 +74,10 @@ To stop granting a role through a group, remove the group from the role's mappin
 ### What happens to a user's directly assigned roles?
 
 Nothing. Group-derived roles are added on top of direct assignments. Directly assigned roles remain editable in Braze; roles granted through a group are managed by editing the mapping or the group's membership.
+
+### Does group role mapping replace the default permissions?
+
+No. Every user that your IdP creates starts with the [default permission set](https://www.braze.com/docs/user_guide/administer/global/user_management/automated_user_provisioning/#default-permissions-for-new-users). Roles from group mapping add to that set and don't remove any of it. To remove a default permission, edit the user in Braze.
 
 ### Can one group map to more than one role?
 
