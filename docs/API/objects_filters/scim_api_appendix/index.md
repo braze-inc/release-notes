@@ -33,6 +33,8 @@ App groups have been renamed to workspaces in Braze, but the keys on this page s
 
 
 
+
+
 ```
 {
   "permissions": {
@@ -321,6 +323,8 @@ The permissions object is a field found in some of the requests and responses wh
 
 
 App groups have been renamed to workspaces in Braze, but the keys on this page still reference the old terminology (for example, `appGroup`, `appGroupName`).
+
+
 
 
 

@@ -13,6 +13,8 @@
 
 
 
+
+
 ## Accessing SCIM provisioning settings
 
 **Important:**
@@ -34,6 +36,21 @@ SCIM provisioning availability depends on your platform edition. If this feature
 
 
 Use the **Okta - Braze app** option if you set up the Braze app for SAML SSO in Okta. If you set up a custom app for SSO, follow the instructions in the [Okta - Custom app integration](https://www.braze.com/docs/user_guide/administer/global/user_management/automated_user_provisioning?tab=okta%20-%20custom%20app%20integration#step-1-set-up-scim-provisioning) tab.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -106,6 +123,21 @@ Use the **Okta - Custom app integration** option if you set up a custom app for 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Step 1: Set up SCIM provisioning
 
 ### Step 1.1: Enable SCIM
@@ -138,6 +170,21 @@ Use the **Okta - Custom app integration** option if you set up a custom app for 
 2. Select **Assign** and select an option.
 3. Assign the app to the people who should have access to Braze.
 4. Select **Done**.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -199,7 +246,7 @@ The `userName` attribute must exactly match the user's email address in Braze fo
 
 ## Step 1: Configure your SCIM settings
 
-- **Default Workspace:** Select the workspace where new users should be added by default. If you don’t specify a workspace in your [SCIM API request](https://www.braze.com/docs/post_create_user_account), Braze assigns users to this workspace.
+- **Default Workspace:** Select the workspace where new users should be added by default. If you don’t specify a workspace in your [SCIM API request](https://www.braze.com/docs/post_create_user_account), Braze assigns users to this workspace. If your request doesn't include `permissions`, Braze gives the user the [default permission set](#default-permissions-for-new-users) on this workspace.
 - **Service Origin:** Enter the origin domain of your SCIM requests. Braze uses this in the `X-Request-Origin` header to verify where requests are coming from.
 - **IP Allowlisting (optional):** You can restrict SCIM requests to specific IP addresses. Enter a comma-separated list or range of IP addresses to allow. The `X-Request-Origin` header in each request is used to check the request IP address against the allowlist.
 
@@ -213,3 +260,18 @@ Braze expects all SCIM requests to contain the SCIM API bearer token attached vi
 
 
 
+
+## Default permissions for new users
+
+When SCIM creates a user through the Okta or Entra ID integration without a permission list, Braze gives that user a default set of view-only permissions on your default workspace. This also applies to custom SCIM API requests that leave out `permissions`.
+
+The default set doesn't include any permission to create, edit, archive, delete, export, or send. To give users more access, use [SCIM group role mapping](https://www.braze.com/docs/scim/group_role_mapping/) or edit the user in Braze.
+
+| Product area | Permissions |
+| --- | --- |
+| Messaging | View Campaigns, View Canvases, View Canvas Templates, View Feature Flags, View Placements, View Message Prioritization Settings, View Frequency Capping Rules, View Messaging Rate Limits, View Global Control Group, View Quiet Hours Settings, View Dashboard Reports |
+| Content | View Content Blocks, View Email Templates, View Email Link Templates, View IAM Templates, View Webhook Templates, View Media Library Assets, View Preference Centers, View Promotion Codes, View Locations, View Localization Settings |
+| Audience and data | View Segments, View Custom Attributes, View Custom Events, View Catalogs, View User Merge Records, View Audience Sync Settings |
+| Channel settings | View Email Settings, View Push Settings, View WhatsApp Settings, View WhatsApp Catalog, View WhatsApp Flows, View WhatsApp Message Templates From Meta |
+| Decisioning Studio | View Decisioning Studio Agent, View Decisioning Studio Audience, View Decisioning Studio Action Banks, View Conversion Event, View Decisioning Studio Guardrails, View Decisioning Studio Timing |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Default permissions for new users" }

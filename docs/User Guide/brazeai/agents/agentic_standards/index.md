@@ -42,7 +42,12 @@ Next, set up the details for your standard:
 
 In the **Campaign Rules** step, define the rules that should be enforced as part of this standard. You can add up to 15 rulesets per standard, and up to 20 rules per ruleset.
 
-Select **Add ruleset** to see a list of the following categories:
+You can build your rules by selecting either:
+
+- **Generate from file:** Upload a PDF, TXT, Markdown, or CSV file containing your existing checklists or policies. Braze uses the Braze Auto model to convert the content into rules and rulesets that Agentic Standards can evaluate.
+- **Add ruleset:** Build rules from scratch.
+
+When you select **Add ruleset**, these categories appear:
 
 - **Campaign setup:** Validates naming conventions, tags, and conversion tracking.
 - **Audience and targeting:** Checks segments, exclusions, and audience size.
@@ -96,7 +101,12 @@ Next, set up the details for your standard:
 
 In the **Canvas configuration** step, define rules that are evaluated once for the whole Canvas. You can add up to 15 rulesets per standard across both rules steps combined, and up to 20 rules per ruleset.
 
-Select **Add ruleset** to see a list of the following categories:
+You can build your rules by selecting either:
+
+- **Generate from file:** Upload a PDF, TXT, Markdown, or CSV file containing your existing checklists or policies. Braze uses the Braze Auto model to convert the content into rules and rulesets that Agentic Standards can evaluate.
+- **Add ruleset:** Build rules from scratch.
+
+When you select **Add ruleset**, these categories appear:
 
 - **Canvas setup:** Validates naming conventions, tags, conversion events, entry schedule, and re-entry settings.
 - **Canvas structure:** Validates flow connectivity, branching, delays, and exit criteria.
@@ -179,7 +189,7 @@ To run an automated evaluation, go to the **Summary** step of your Canvas creati
 
 If you make changes to your Canvas after running an initial evaluation, select **Re-run evaluation** to refresh the results.
 
-You can also start an evaluation from the Canvas builder while editing a step. Step-scoped runs evaluate the open step (or steps you select), and full results appear on the **Summary** step.
+You can also evaluate specific steps instead of the entire Canvas. Start a step-scoped run from the Canvas builder while editing a step, or select **Go to step** from the **Summary** step and then select **Re-run evaluation** for those steps. Full results appear on the **Summary** step.
 
 
 
@@ -187,6 +197,8 @@ You can also start an evaluation from the Canvas builder while editing a step. S
 ### Review evaluation results
 
 After the evaluation is complete, a summary shows the findings in these categories: **Pass**, **Fail**, **Warning**, and **Ignored**.
+
+If an evaluation fails due to a rate limiting error, select **Try again**.
 
 The **Fail** tab lists rules that were not met. For each failure, the standard provides the:
 

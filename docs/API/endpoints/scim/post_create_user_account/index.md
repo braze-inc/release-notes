@@ -1,4 +1,4 @@
-<div id='api_llfgnwqewhkw' class='api_div' data-search-keywords='create new dashboard user account schemas id name department permissions roles team'>
+<div id='api_zbgybtmyjoch' class='api_div' data-search-keywords='create new dashboard user account schemas id name department permissions roles team'>
 <h1 id="create-new-dashboard-user-account">Create new dashboard user account</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/scim/v2/Users</p>
@@ -154,7 +154,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
       <td><code class="language-plaintext highlighter-rouge">permissions</code></td>
       <td>Optional</td>
       <td>JSON object</td>
-      <td>Permissions object as described in the <a href="/docs/api/objects_filters/scim_api_appendix">permissions object documentation</a>. When omitted or empty, Braze assigns default read-only workspace permissions on the default workspace configured in <strong>SCIM Provisioning</strong>. After granular permissions migration, this includes view-only workspace permissions.</td>
+      <td>Permissions object as described in the <a href="/docs/api/objects_filters/scim_api_appendix">permissions object documentation</a>. When omitted or empty, Braze gives the user the <a href="/docs/user_guide/administer/global/user_management/automated_user_provisioning/#default-permissions-for-new-users">default permission set</a> on the default workspace configured in <strong>SCIM Provisioning</strong>. The default set includes view permissions only.</td>
     </tr>
   </tbody>
 </table>
