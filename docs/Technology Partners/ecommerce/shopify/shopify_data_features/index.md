@@ -923,9 +923,14 @@ For more information on what data is collected by the Braze SDKs, see [SDK data 
 
 ## Historical backfill
 
-> Historical Shopify data is imported from before you connect Braze—order events from the past 90 days and customer data from the past year. Both timeframes are counted back from the date you complete your integration.
+> Historical Shopify data is imported from before you connect Braze. During setup, you choose how far back to import order events and customer profiles. Each timeframe is counted back from the date you complete your integration.
 
-Through the [Shopify standard integration setup](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_standard_integration/) or [Shopify custom integration setup](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_custom_integration/), you can turn on historical backfill to include past customers and orders in [segments](https://www.braze.com/docs/user_guide/audience/segments/), [campaigns](https://www.braze.com/docs/user_guide/messaging/campaigns), and [Canvases](https://www.braze.com/docs/user_guide/messaging/canvas). This imports your Shopify orders (order-related events) from the past 90 days and user profiles from the past year. Both timeframes are counted back from the date you complete your integration.
+Through the [Shopify standard integration setup](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_standard_integration/) or [Shopify custom integration setup](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_custom_integration/), you can turn on historical backfill to include past customers and orders in [segments](https://www.braze.com/docs/user_guide/audience/segments/), [campaigns](https://www.braze.com/docs/user_guide/messaging/campaigns), and [Canvases](https://www.braze.com/docs/user_guide/messaging/canvas). When you turn it on, select:
+
+- An **orders** date range: **Past 90 days**, **Past year**, or **Past 2 years** (defaults to **Past 90 days**)
+- A **customer profiles** date range: **Past year**, **Past 2 years**, or **All time** (defaults to **All time**)
+
+Braze shows an estimated record count and processing time for each option before you finish setup. After the backfill completes, your selected windows appear as concrete dates on the Shopify partner page. These selections can't be changed after setup completes.
 
 When Braze imports your Shopify customers, it assigns the `external_id` type that you chose in your configuration settings.
 
@@ -946,23 +951,19 @@ If you're an existing Braze customer with active campaigns or Canvases, review h
 
 Braze uses these Shopify date fields when the initial load runs:
 
-| Data | Window | Shopify date field |
+| Data | Available windows | Shopify date field |
 | --- | --- | --- |
-| Order events | Past 90 days | Order created date |
-| User profiles | Past year | Customer updated date |
+| Order events (order placed, order refunded, and order cancelled) | **Past 90 days**, **Past year**, or **Past 2 years** | Order created date |
+| User profiles | **Past year**, **Past 2 years**, or **All time** | Customer updated date |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Historical backfill date fields" }
 
-If you migrate historical orders into Shopify and keep their original created dates, Braze imports only orders created in the past 90 days.
+If you migrate historical orders into Shopify and keep their original created dates, Braze imports only orders whose created dates fall within the order window you selected.
 
 ### Setting up Shopify historical backfill
 
-1. Turn on historical backfill in the **Track Shopify data** step.
-
-![The "Track Shopify data" step of the Shopify integration showing historical backfill selected.](https://www.braze.com/docs/assets/img/shopify/historical_data_backfill_sync.png?364b55c6802557a4f26fe48dc8421884)
-
-{: start="2"}
-
-2. After you complete your integration setup, Braze will begin the initial data sync. You can monitor progress on the **Shopify Data** tab of your integration settings. 
+1. Select **Turn on historical backfill** in the **Track Shopify data** step.
+2. Choose a date range for orders and a date range for customer profiles. Review the estimated counts and processing time for your selections.
+3. After you complete your integration setup, Braze begins the initial data sync. You can monitor progress on the **Shopify Data** tab of your integration settings.
 
 ![The Shopify Integration Settings page with a spinner showing that events are actively syncing.](https://www.braze.com/docs/assets/img/shopify/historical_data_backfill_syncing.png?71507a82e5a764cf08084c54aaf93d6e)
 
@@ -970,9 +971,9 @@ If you migrate historical orders into Shopify and keep their original created da
 
 Historical backfill is performed by Braze's Shopify integration—not the Braze SDK—and starts automatically when you complete integration setup.
 
-After you enable historical backfill, Braze imports order events and customer profiles from Shopify in batches. Order events and customer profiles sync on separate timelines, so one may finish before the other.
+After you enable historical backfill, Braze imports order events and customer profiles from Shopify in batches. Order events and customer profiles sync on separate timelines, so one may finish before the other. Large backfills are split into parallel date ranges so they can run at the same time.
 
-Sync time depends on how much historical data is in your store. Stores with high order volume or large customer bases may take longer to complete backfill. You can't change the backfill speed or request a faster sync.
+Sync time depends on how much historical data is in your store and which windows you selected. Stores with high order volume or large customer bases may take longer to complete backfill. You can't change the backfill speed or request a faster sync.
 
 ### Synced data
 

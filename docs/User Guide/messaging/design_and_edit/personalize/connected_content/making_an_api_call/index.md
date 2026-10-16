@@ -176,9 +176,11 @@ If your messages use Connected Content and you send at high volume, plan for mor
 
 ## Authentication types
 
+Manage saved credentials at **Settings** > **Credential Management**. You can use these credentials for Connected Content and webhooks. For webhook setup, see [Use a saved credential](https://www.braze.com/docs/user_guide/channels/webhooks/create_a_webhook#use-a-saved-credential-optional).
+
 ### Using basic authentication
 
-If the URL requires basic authentication, Braze can store a basic authentication credential for you to use in your API call. You can manage existing basic authentication credentials and add new ones at **Settings** > **Connected Content**.
+If the URL requires basic authentication, Braze can store a username and password for you to use in your API call.
 
 ![The Connected Content settings in the Braze dashboard.](https://www.braze.com/docs/assets/img/connected_content/basic_auth_mgmt.png?bf48985d22d67682d9d78eaf873ec479)
 
@@ -187,6 +189,10 @@ To add a new credential, select **Add credential** > **Basic authentication**.
 !["Add credential" dropdown with the option to use basic authentication or token authentication.](https://www.braze.com/docs/assets/img/connected_content/add_credential_button.png?d2012f969d270528ec823aacf8df3669){: style="max-width:60%"}
 
 Give your credential a name and enter the username and password.
+
+The **Allowed domain** field is optional for basic authentication used with Connected Content and required for webhook use. If you leave it empty, Connected Content doesn't restrict the credential to a particular domain. Existing basic authentication credentials without a domain keep this behavior.
+
+If you enter a domain, Braze restricts the credential to that domain and all its subdomains, including for Connected Content calls. Before adding a domain to an existing credential, check the destinations of calls that already use it. For more information, see [Choose an allowed domain](#choose-an-allowed-domain).
 
 ![The "Create New Credential" window with the option to enter a name, username, and password.](https://www.braze.com/docs/assets/img/connected_content/basic_auth_token.png?69afae4a7515c6e0edfe5bdcd38a4829){: style="max-width:60%"}
 
@@ -205,13 +211,13 @@ If you delete a credential, keep in mind that any Connected Content calls trying
 
 
 
-Stored credentials apply to `{% connected_content %}` requests while Braze renders a message. They are not applied to the primary HTTP request configured in a [webhook](https://www.braze.com/docs/user_guide/channels/webhooks/create_a_webhook#authentication-and-connected-content-credentials) step. Use Request headers or a `{% connected_content %}` tag inside a webhook header or body field when you need to retrieve secrets for that call.
+Referencing a credential in a `{% connected_content %}` tag authenticates that Connected Content request while Braze renders the message. Select a credential separately in the webhook composer to authenticate the primary webhook request. See [Authentication and Connected Content credentials](https://www.braze.com/docs/user_guide/channels/webhooks/create_a_webhook#authentication-and-connected-content-credentials).
 
 ### Using token authentication
 
 When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. Braze can also store credentials that hold token authentication header values.
 
-To add a credential that holds token values, select **Add credential** > **Token authentication**. Then, add the key-value pairs for your API call headers and the allowed domain.
+To add a credential that holds token values, select **Add credential** > **Token authentication**. Then, add the key-value pairs for your API call headers and the **Allowed domain**. A domain is required for token authentication. The credential can be used with that domain and all its subdomains. Review [Choose an allowed domain](#choose-an-allowed-domain) before saving.
 
 ![An example token "token_credential_abc" with token authentication details.](https://www.braze.com/docs/assets/img/connected_content/token_auth.png?4ec320d4c59fc12e0189ffcc042b93ba){: style="max-width:60%"}
 
@@ -229,6 +235,65 @@ You can then use this credential in your API calls by referencing the credential
      :save publication
 %}
 ```
+
+
+### Choose an allowed domain
+
+Enter a hostname, such as `api.example.com`, without `http://`, `https://`, a port, a path, or a wildcard. Domain matching is case-insensitive. The allowed domain includes the hostname you enter and every subdomain beneath it, for both basic authentication and token authentication.
+
+These examples show how the allowed domain determines where a credential can be sent:
+
+| Allowed domain | Example request hostname | Allowed? |
+| --- | --- | --- |
+| `example.com` | `example.com` | Yes |
+| `example.com` | `api.example.com` or `store.example.com` | Yes |
+| `example.com` | `eu.api.example.com` | Yes |
+| `api.example.com` | `api.example.com` or `eu.api.example.com` | Yes |
+| `api.example.com` | `example.com` or `store.example.com` | No |
+| `example.com` | `example.com.other-domain.com` | No |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Allowed domain and subdomain examples" }
+
+**Warning:**
+
+
+Use the most specific hostname your organization controls. Avoid a shared hosting provider's parent domain: another organization could control a subdomain and receive your secret. For example, if separate organizations control `your-company.example.com` and `other-company.example.com`, allowing `example.com` permits the credential to be sent to both. Use `your-company.example.com` to narrow access to your organization's hostname and its subdomains.
+
+
+
+Adding or changing a domain restriction affects existing calls that use the credential. Connected Content aborts the message if a call uses the credential with a hostname outside its allowed domain.
+
+### Manage saved credentials
+
+Saved passwords and token values aren't displayed. To save changes, re-enter the password for basic authentication or every token header value you keep, even when you're only changing the allowed domain. The masked placeholder doesn't preserve a secret when you submit an edit.
+
+Go to **Settings** > **Credential Management**. You need the "Manage App Group" permission to access this page and create, edit, or delete credentials. Ask your workspace administrator to grant it if needed.
+
+Credentials belong to one workspace. If you use separate development, staging, and production workspaces, create credentials in each workspace that needs them.
+
+The **Available in** column shows where you can use each credential:
+
+- **Connected content**: A basic authentication credential without an allowed domain. Add an allowed domain to use it with webhooks.
+- **Connected content, Webhooks**: A credential with an allowed domain. It supports both Connected Content and webhooks, subject to that domain restriction.
+
+#### Edit a credential
+
+Select the credential's name to edit its username, password, token headers, or allowed domain as needed. The credential name can't be changed after creation.
+
+Select **Edit credential** to save.
+
+Credentials are shared by the calls and webhooks that reference them. Before changing authentication details or the allowed domain, check those uses and test the affected requests after saving.
+
+#### Delete a credential
+
+The deletion dialog checks for credential use in webhook campaigns, Canvases, and webhook templates. Remove or replace the credential in every listed webhook before deleting it. Saved drafts and paused objects can also block deletion.
+
+The usage list covers webhooks only. Connected Content references in Liquid and Content Blocks aren't detected. Review and update those references before deleting the credential. Remove the listed webhook uses, acknowledge the Connected Content warning, and select **Delete credential**.
+
+**Warning:**
+
+
+Deleting a credential is permanent. Connected Content calls that still reference it are aborted.
+
 
 
 ### Use Open Authentication (OAuth)
@@ -375,7 +440,7 @@ If your Connected Content call is not rendering correctly or at all, check for t
 - **Inspect the live request and response:** Use the [Connected Content Debugger](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/debugger) in **Preview & Test**.
 - **Confirm that a Connected Content call was made:** You can check that a call was made at the [Messaging History tab](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles/#messaging-history-tab). You can also test send a single Connected Content request.
 - **Verify through Postman or a CURL request to check if the ideal request succeeds:** If the request works and returns a response, compare the request in detail (including headers). Confirm that the headers are captured in key-value pairs with double quotations.
-- **Validate authorization is handled correctly:** Confirm the `:basic_auth`/`:auth_credentials` option is used and has added the Connected Content authorization to the Connected Content workspace settings. Sometimes the Connected Content URL requires headers beyond authentication that need to be entered.
+- Validate authentication: Confirm the credential is saved under **Settings** > **Credential Management** and referenced with the `:basic_auth` or `:auth_credentials` option. Sometimes the Connected Content URL requires headers beyond authentication that need to be entered.
 - **Verify the data is in an expected format:** For the response body, Braze parses valid JSON into a Liquid object; otherwise, the response is treated as plain text (including HTML). The `:content_type` option sets outbound `Content-Type` and `Accept` headers on your request and doesn't affect response parsing. For the request `:body`, if your JSON contains spaces, follow the guidance in the [Providing JSON body](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/local_connected_content_variables/#providing-json-body) section.
 - **Confirm the data has been parsed correctly:** Check that the Liquid is correctly referencing the expected field. For nested JSON, use `{{sampleresult.data[0].sample_field}}` to point at the intended nested field. You can check the nested JSON properties by printing out the expected outcome with `RESPONSE:{{sampleresult.data}}`.
 - **Check the response status code:** The response status code must be a `2XX` code. Connected Content does not have a way to consume the response when the code is not `2XX`.

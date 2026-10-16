@@ -61,7 +61,7 @@ To set up consistent user updates, bring over existing users' LINE IDs, and sync
 **Note:**
 
 
-You can only have one LINE account in a single workspace. If you have multiple LINE accounts, we recommend using each one in a different workspace.
+Each workspace supports one LINE provider. You can connect multiple LINE accounts under one LINE provider. If you need more than one provider, use a separate workspace for each.
 
 
 

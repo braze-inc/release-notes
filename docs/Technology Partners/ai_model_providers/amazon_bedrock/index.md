@@ -69,9 +69,36 @@ To connect Amazon Bedrock to Braze:
    - **AWS IAM role:** Use the values Braze displays to configure your IAM role trust policy, then enter the role details in Braze:
      1. Copy the **Braze AWS account ID** and trust that account in your IAM role's trust policy.
      2. Copy the **Braze external ID** and require it in your role's trust policy with an `sts:ExternalId` condition. Select **Generate new external ID** if you need a new value.
-     3. Enter the **AWS role ARN** for the IAM role that has Amazon Bedrock permissions. The ARN must match `arn:aws:iam::<account-id>:role/<role-name>`.
-     4. Select the **AWS region** where your Bedrock models are hosted.
-     5. Select **Save**.
+     3. Attach a permissions policy to the IAM role that allows the actions Braze needs to access Amazon Bedrock. The policy must include `bedrock:CallWithBearerToken` and `bedrock-mantle:CallWithBearerToken`—Braze generates short-term bearer tokens when it assumes the role, and AWS rejects bearer-token calls unless these permissions are allowed. Your policy should also include `bedrock:ListInferenceProfiles`, `bedrock:InvokeModel`, and `bedrock:InvokeModelWithResponseStream` for Braze to list and invoke models, plus `bedrock-mantle:CreateInference` for the bedrock-mantle endpoint. Example policy:
+        ```json
+        {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "bedrock:CallWithBearerToken",
+                "bedrock:ListInferenceProfiles",
+                "bedrock:InvokeModel",
+                "bedrock:InvokeModelWithResponseStream"
+              ],
+              "Resource": "*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": [
+                "bedrock-mantle:CreateInference",
+                "bedrock-mantle:CallWithBearerToken"
+              ],
+              "Resource": "*"
+            }
+          ]
+        }
+        ```
+        For more restrictive policies, replace `"Resource": "*"` with specific model or inference-profile ARNs as needed. See [Amazon Bedrock actions and resources](https://docs.aws.amazon.com/bedrock/latest/userguide/security-iam.html) for details.
+     4. Enter the **AWS role ARN** for the IAM role that has Amazon Bedrock permissions. The ARN must match `arn:aws:iam::<account-id>:role/<role-name>`.
+     5. Select the **AWS region** where your Bedrock models are hosted.
+     6. Select **Save**.
 
 **Note:**
 

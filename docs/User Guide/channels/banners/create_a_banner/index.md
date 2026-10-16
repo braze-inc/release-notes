@@ -6,6 +6,13 @@
 
 Before you can launch your Banner, your development team must [set up placements in your app or website](https://www.braze.com/docs/developer_guide/banners/placements). You can still draft your Banner campaign in the meantime, but you won't be able to launch the campaign until the placements are configured.
 
+**Note:**
+
+
+For web placements, you can also use [Web Targeting](https://www.braze.com/docs/user_guide/channels/banners/web_targeting) to choose where a Banner appears on your website without writing insertion code for each placement.
+
+
+
 ## Create a Banner message
 
 ### Step 1: Create placements in Braze

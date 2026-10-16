@@ -49,6 +49,7 @@ Message Prioritization supports the same channels as frequency capping:
 - Webhooks
 - WhatsApp
 - LINE
+- KakaoTalk
 
 For prioritization and frequency capping, the following are each treated as one shared channel:
 

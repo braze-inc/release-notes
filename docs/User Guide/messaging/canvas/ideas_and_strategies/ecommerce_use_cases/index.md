@@ -37,19 +37,19 @@ On the Canvas page, select **Use a Canvas Template** > **Braze templates** and t
 The following settings are pre-configured in your Canvas:
 - Basics 
     - Canvas name: **Abandoned browse**
-    - Conversion event: `ecommerce.order placed`
+    - Conversion event: **Place Order** (`ecommerce.order_placed`)
         - Conversion deadline: 3 days 
 - Entry schedule 
-    - Action-based when a user performs the `ecommerce.product_viewed` event
+    - Action-based trigger when a user performs **View product** (`ecommerce.product_viewed`)
     - Start time is when you create the Canvas template
 - Target audience 
     - Entry audience 
-        - Email **is not blank**
+        - Email available **is true**
         - You can also modify the entry audience criteria to meet your business needs
     - Entry controls
         - Users are eligible to re-enter this Canvas after the full duration of the Canvas is complete
     - Exit criteria 
-        - Performs `ecommerce.cart_updated`, `ecommerce.checkout_started`, or `ecommerce.order_placed`<br><br>![Entry controls and exit criteria for the Canvas.](https://www.braze.com/docs/assets/img/ecommerce/abandoned_browse_entry_exit.png?f9fb0f9d70c9b0470158d44532ab8a4c)<br><br> 
+        - Performs **View product**, **Update cart**, **Start checkout**, or the Canvas's primary conversion event (**Place Order**)<br><br>![Entry controls and exit criteria for the Canvas.](https://www.braze.com/docs/assets/img/ecommerce/abandoned_browse_entry_exit.png?94a531a6b0740ecdb23c3aaad671f9f2)<br><br> 
 - Send settings 
     - Users who are subscribed or opted in 
 - Delay step
@@ -101,19 +101,18 @@ On the Canvas page, select **Use a Canvas Template** > **Braze templates** and t
 The following settings are pre-configured in your Canvas:
 - Basics 
     - Canvas name: **Abandoned cart**
-    - Conversion event: `ecommerce.order_placed`
+    - Conversion event: **Place Order** (`ecommerce.order_placed`)
         - Conversion deadline: 3 days 
 - Entry schedule 
-    - Action-based trigger when a user triggers the **Perform Cart Updated Event** (located in the dropdown)
+    - Action-based trigger when a user performs **Update cart** (`ecommerce.cart_updated`)
     - Start time is when you create the Canvas template
 - Target Audience 
     - Entry audience 
-        - Has used these apps **more than 0** times 
-        - Email **is not blank**
+        - Email available **is true**
     - Entry controls
         - Users are immediately re-eligible for Canvas entry
     - Exit criteria 
-        - Performs `ecommerce.cart_updated`, `ecommerce.checkout_started`, or `ecommerce.order_placed`
+        - Performs **Update cart**, **Start checkout**, or the Canvas's primary conversion event (**Place Order**)
 - Send settings 
     - Users who are subscribed or opted in 
 - Delay step
@@ -204,19 +203,18 @@ The following settings are pre-configured in your Canvas:
 
 - Basics 
     - Canvas name: **Abandoned checkout**
-    - Conversion event: `ecommerce.order_placed`
+    - Conversion event: **Place Order** (`ecommerce.order_placed`)
         - Conversion deadline: 3 days 
 - Entry schedule 
-    - Action-based trigger when a user performs the `ecommerce.checkout_started` event
+    - Action-based trigger when a user performs **Start checkout** (`ecommerce.checkout_started`)
     - Start time is when you create the Canvas template
 - Target audience 
     - Entry audience 
-        - Has used these apps **more than 0** times 
-        - Email **is not blank**
+        - Email available **is true**
     - Entry controls
-        - Users are immediately re-eligible for Canvas entry
+        - Users are eligible to re-enter this Canvas after the full duration of the Canvas is complete
         - Exit criteria 
-            - Performs the `ecommerce.order_placed` events
+            - Performs the Canvas's primary conversion event (**Place Order**)
 - Send settings 
     - Users who are subscribed or opted in 
 - Delay step
@@ -290,17 +288,16 @@ The following settings are pre-configured in your Canvas:
 
 - Basics 
     - Canvas name: **Order confirmation with feedback survey**
-    - Conversion event: `ecommerce.session_start`
+    - Conversion event: **Start Session**
         - Conversion deadline: 10 days 
 - Entry schedule 
-    - Action-based trigger when a user performs the `ecommerce.cart_updated` event
+    - Action-based trigger when a user performs **Place Order** (`ecommerce.order_placed`)
     - Start time is when you create the Canvas template
 - Target audience 
     - Entry audience 
-        - Has used these apps **more than 0** times 
-        - Email **is not blank**
+        - Email available **is true**
     - Entry controls
-        - Users are immediately re-eligible for Canvas entry
+        - Users are eligible to re-enter this Canvas after the full duration of the Canvas is complete
     - Exit criteria 
         - Not applicable
 - Send settings 

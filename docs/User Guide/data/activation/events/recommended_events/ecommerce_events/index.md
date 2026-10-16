@@ -200,7 +200,7 @@ Use this template when you want to streamline post-purchase communication and ga
 | Setting | Value |
 | --- | --- |
 | Entry event | `ecommerce.order_placed` |
-| Conversion event | Start Session or `ecommerce.product_viewed` |
+| Conversion event | Start Session |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="eCommerce Canvas templates" }
 
 

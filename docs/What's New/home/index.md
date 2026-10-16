@@ -1,5 +1,141 @@
 # What's new in Braze
 
+## October 15, 2026
+
+### Agentic Standards
+
+**Area:** BrazeAI™
+**Status:** Beta
+
+[Agentic Standards](https://www.braze.com/docs/user_guide/brazeai/agents/agentic_standards) let you define Campaign Standards and Canvas Standards. These are rules and rulesets for brand guidelines, organizational conventions, and technical requirements—then run an agentic evaluation before launch. Operator can help draft rules as you configure a standard, so you can reduce manual oversight and check that campaigns and Canvases are ready to launch.
+
+### BrazeAI Decisioning Studio™ Go
+
+**Area:** BrazeAI™
+**Status:** General availability
+
+[BrazeAI Decisioning Studio™ Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go) is an AI decisioning agent for recurring email programs. Instead of picking one winning subject line, send time, or image for the whole audience, the agent selects the best combination for each recipient based on their past engagement, with a random control group so you can measure lift.
+
+### Content Optimizer
+
+**Area:** BrazeAI™
+**Status:** General availability
+
+[Content Optimizer](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/content_optimizer_step) is a Canvas step that tests high volumes of content variants for email, push notifications, SMS, MMS, and RCS, and automatically optimizes toward better-performing combinations.
+
+### Apex proxying for new custom domains
+
+**Area:** Channels & Touchpoints
+**Status:** General availability
+
+New [custom domains](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/custom_domains) for link shortening use A and AAAA records that point directly to the Braze link infrastructure, instead of a CNAME to a shared domain. Existing custom domains keep working as they are.
+
+### Email NPS Survey block
+
+**Area:** Channels & Touchpoints
+**Status:** General availability
+
+Add a 0–10 [NPS Survey](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/nps_survey) block to drag-and-drop emails. Recipients select a score in their inbox and land on a Braze survey landing page.
+
+### IP-based bot click filtering
+
+**Area:** Channels & Touchpoints
+**Status:** General availability
+
+[SMS and RCS bot click filtering](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/bot_click_filtering) checks the IP address and user agent of each click. Clicks from known automated link scanners are flagged as suspected bot clicks and excluded from reported click metrics.
+
+### Intelligent IP warming
+
+**Area:** Channels & Touchpoints
+**Status:** General availability
+
+[Automated IP warming](https://www.braze.com/docs/user_guide/channels/email/email_setup/ip_warming/automated_ip_warming) now supports Intelligent ranking alongside manual segment ranking. Upload a CSV of recent email opens and clicks from your previous provider, and Braze scores matching users by predicted engagement so the warm-up ramp sends to the most engaged users first.
+
+### Real-time updates for Content Cards
+
+**Area:** Channels & Touchpoints
+**Status:** General availability
+
+Content Cards now reach a user's device as soon as they happen during a session, with no manual refresh required. [Real-time delivery](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/feed#real-time-delivery) covers campaign eligibility, Canvas step entry, card removals, and API-triggered sends. The SDK keeps a live connection open for the session, so Braze pushes updates to the device instead of waiting for the next session or refresh. Real-time delivery requires Swift SDK 18.0.0 or later, Android SDK 43.1.1 or later, or Web SDK 6.12.0 or later.
+
+### Shopify historical backfill updates
+
+**Area:** Channels & Touchpoints
+**Status:** General availability
+
+During [Shopify historical backfill](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/#historical-backfill) setup, choose how much history to bring into Braze at setup, instead of the fixed 90 days of orders and one year of customers. For Orders, you can choose 90 days, 1 year, or 2 years; for customers, you can choose the past year, 2 years, or all time.
+
+### Web Targeting for Banners
+
+**Area:** Channels & Touchpoints
+**Status:** Early access
+
+[Web Targeting for Banners](https://www.braze.com/docs/user_guide/channels/banners/web_targeting) lets you place a Banner on your website from the dashboard using a CSS selector and insertion method, without a code change for each placement. After a one-time Web SDK auto-insertion setup, you can update targeting entirely from Braze.
+
+### Industry Benchmarks dashboard
+
+**Area:** Data & Reporting
+**Status:** General availability
+
+The [Industry Benchmarks dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/industry_benchmarks_dashboard) compares your email, push, Content Card, and SMS performance against aggregated benchmarks from your industry, region, and sub-industry.
+
+### Messaging Observability
+
+**Area:** Data & Reporting
+**Status:** General availability
+
+[Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) now traces events across a Canvas or campaign so you can audit entries, suppressions, failures, and sends in one place. For Canvases, progression events show how users move through the journey separately from send outcomes.
+
+### Teams support for Catalogs
+
+**Area:** Data & Reporting
+**Status:** General availability
+
+You can assign a catalog to a Team. Admins can grant the View Catalogs, Edit Catalogs, Export Catalogs, and Delete Catalogs [Team-level permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/teams#available-team-level-permissions). Users with these permissions see and manage only their Team's catalogs, so admins don't need to grant workspace-wide catalog access.
+
+### Message Prioritization
+
+**Area:** Orchestration
+**Status:** General availability
+
+[Message Prioritization](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/message_prioritization) is an optional layer on top of frequency capping. When multiple opted-in campaigns or Canvas Message steps compete for the same user, categories and ranked rules decide which message sends—not which was scheduled first. Braze can hold back a lower-priority send to preserve cap space for a higher-priority one, and retry windows let deprioritized messages compete again later.
+
+### Bidease - Message Orchestration - Retargeting
+
+**Area:** Partners
+
+[Bidease](https://www.braze.com/docs/partners/message_orchestration/retargeting/bidease) is a mobile demand-side platform (DSP) for app user acquisition and retargeting. The Braze and Bidease integration lets you use your Braze segments as audiences in Bidease campaigns, so you can re-engage lapsed users, reach high-value users, or exclude existing users from acquisition campaigns, with audiences kept in sync with your segments automatically.
+
+### Google DV360 – Canvas Audience Sync
+
+**Area:** Partners
+**Status:** Beta
+
+Using [Audience Sync to Google DV360](https://www.braze.com/docs/partners/canvas_audience_sync/dv360_audience_sync), you can sync Braze audiences to Google Display & Video 360 to target, trigger, and suppress ads across DV360 inventory such as YouTube, connected TV, and the open web.
+
+### SDK breaking updates
+
+**Area:** SDK
+**Status:** Breaking
+
+The following major SDK releases include breaking changes:
+
+- [Swift SDK 19.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#1900) raises the minimum supported versions to iOS 15.0 and tvOS 15.0, and removes `BrazeInAppMessageUI.DisplayChoice.later` in favor of `BrazeInAppMessageUI.DisplayChoice.reenqueue`. It also changes `requestBannersRefresh` to merge into the existing Banner cache instead of replacing it.
+- [Android SDK 44.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#4400) changes `requestBannersRefresh` to merge into the existing Banner cache instead of replacing it, and adds a size limit for the Banner content cache.
+- [Web SDK 7.0.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#700) changes `braze.requestBannersRefresh()` to update only the placements it requests, and `braze.getAllBanners()` no longer returns expired Banners. Refresh callbacks are now called at most once per call.
+- [Flutter SDK 23.0.0](https://github.com/braze-inc/braze-flutter-sdk/blob/master/CHANGELOG.md) raises the minimum supported versions to Flutter 3.44.0 and Dart 3.12.0, and migrates the Android build to Android Gradle Plugin 9.2.1.
+
+### Summary of recent SDK features and fixes
+
+**Area:** SDK
+
+- [Swift SDK 19.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#1900) adds `subscribeToEvents(_:)` and `eventsStream` for Content Cards, Banners, and Feature Flags, and deprecates `subscribeToUpdates(_:)`. Banner refreshes now merge into the existing cache.
+- [Android SDK 43.2.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#4320) fixes crashes when calling `wipeData()`, `disableSdk()`, or `logout()` during SDK initialization, and fixes the Content Cards feed rendering under the system bars.
+- [Android SDK 44.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#4400) adds `subscribeToContentCardsEvents`, `subscribeToBannersEvents`, and `subscribeToFeatureFlagsEvents`, and deprecates the matching `subscribeTo*Updates` methods. Banner refreshes now merge into the existing cache.
+- [Web SDK 7.0.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#700) adds `braze.subscribeToContentCardsEvents()`, `braze.subscribeToBannersEvents()`, and `braze.subscribeToFeatureFlagsEvents()`, and deprecates the matching `subscribeTo*Updates()` methods. Banner refreshes now update only the placements they request.
+- [Flutter SDK 23.0.0](https://github.com/braze-inc/braze-flutter-sdk/blob/master/CHANGELOG.md) fixes an Android issue where `getCachedContentCards()` never completed when the native cache was null. The method now returns an empty list.
+- [React Native SDK 23.1.0](https://github.com/braze-inc/braze-react-native-sdk/releases/tag/23.1.0) adds `Braze.logout()` and `Braze.unregisterPush()` to support logout use cases.
+
 ## September 17, 2026
 
 ### Braze MCP server
@@ -1616,140 +1752,3 @@ The [Respond with different messages based on inbound SMS keyword](https://www.b
 The latest SDK updates have been released. Breaking updates are listed in the SDK updates section; all other updates can be found in the corresponding SDK changelogs.
 
 - [Web SDK 6.3.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
-
-## November 11, 2025
-
-### BrazeAI Decisioning Studio™ Go
-
-**Area:** BrazeAI™
-
-You can now set up your integration with [BrazeAI Decisioning Studio™ Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/) by referencing these configuration articles for:
-
-- [Braze](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/setup)
-- [Klaviyo](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/setup)
-- [Salesforce Marketing Cloud](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/setup)
-
-### ChatGPT models with BrazeAI™ Operator
-
-**Area:** BrazeAI™
-**Status:** Beta
-
-You can select from these GPT models to use for different request types with [Operator](https://www.braze.com/docs/user_guide/brazeai/operator):
-
-- GPT-5 nano
-- GPT-5 mini (default)
-- GPT-5
-
-### New features for Braze Agents
-
-**Area:** BrazeAI™
-**Status:** Beta
-
-You can now customize your [Braze Agent](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents) by:
-
-- Applying [brand guidelines](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/brand_guidelines/) for your agent to adhere to in its response. 
-- Referencing a catalog to further personalize your message.
-- Structuring an agent's output by providing the [output format](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents#select-output).
-- Adjusting the [temperature](https://www.braze.com/docs/user_guide/brazeai/agents/reference) for the level of deviation for your agent's output.
-
-### Background row images
-
-**Area:** Channels & Touchpoints
-**Status:** General availability
-
-You can [add a background row image](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize/style_settings#background-image) to an in-app message or landing page in the **Row properties** panel. Toggle on **Background image**, and then provide an image URL or select an image from the [media library](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/). Finally, configure your alt text, size, position, and whether the image repeats to create patterns across the row.
-
-![A row background image of a pizza that has a horizontal repeat pattern.](https://www.braze.com/docs/assets/img_archive/background_row.png)
-
-### Copy preview link
-
-**Area:** Channels & Touchpoints
-
-Use **Copy preview link** in your [Banners](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner/#step-5-test-your-message-optional), [email custom footers](https://www.braze.com/docs/user_guide/channels/email/customize/custom_email_footer/#create-your-custom-footer), and [email opt-in and unsubscribe pages](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/email_preferences/?tab=custom%20footer#subscription-pages-and-footers) to generate a shareable link that shows how your content looks for a random user.
-
-### Editable user preview
-
-**Area:** Channels & Touchpoints
-
-You can [edit individual fields from a random or existing user](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=webhook#customizing-an-existing-user) to help test dynamic content within your message. Select **Edit** to convert the selected user into a custom user you can modify.
-
-![The "Preview as a User" tab with an "Edit" button.](https://www.braze.com/docs/assets/img_archive/edit_user_preview.png){: style="max-width:50%;"}
-
-### WhatsApp Flows
-
-**Area:** Channels & Touchpoints
-
-When incorporating a WhatsApp Flow message into a Braze Canvas or campaign, you may want to capture and utilize specific information that users submit through the Flow. Braze needs to receive additional information regarding the structure of the user response, specifically the expected shape of the JSON response, to generate the required nested custom attribute (NCA) schema.
-
-Now you can give Braze the information about the response structure by [saving the Flow response as a custom attribute](https://www.braze.com/docs/user_guide/channels/whatsapp/message_features_and_optimization/whatsapp_flows/?tab=recommended%20method#step-1-generate-the-flow-custom-attribute) and completing a test send.
-
-### WhatsApp messages with optimized delivery
-
-**Area:** Channels & Touchpoints
-
-Use Meta’s advanced AI systems to deliver your marketing messages to more users who are most likely to engage with them, significantly boosting deliverability and message engagement.
-
-[WhatsApp messages with optimized delivery](https://www.braze.com/docs/user_guide/channels/whatsapp/message_features_and_optimization/optimized_delivery/) are sent using Meta's new [Marketing Messages Lite API](https://developers.facebook.com/docs/whatsapp/marketing-messages-lite-api/), which provides superior performance compared to the traditional Cloud API. This new sending pipeline helps you better reach users who value and want to receive your messages.
-
-### Custom attributes — Values
-
-**Area:** Data & Reporting
-
-When viewing a usage report, select the [**Values** tab](https://www.braze.com/docs/user_guide/data/activation/custom_data/custom_attributes/#values-tab) to view the top values of the selected custom attributes based on a sample of approximately 250,000 users.
-
-### Frequency capping abort events in Currents
-
-**Area:** Data & Reporting
-
-When using Currents, you can now reference `abort_type` in the channel abort events. This identifies that a message has been aborted due to frequency capping and includes which frequency capping rule caused the abort. This helps inform how you set up your frequency capping rules. Refer to [Message engagement events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events) for specific Currents event details.
-
-### Mapping to catalog fields for drag-and-drop product blocks
-
-**Area:** Data & Reporting
-
-In your catalog settings, you can select the **Product blocks** toggle to [map to specific fields](https://www.braze.com/docs/user_guide/messaging/design_and_edit/product_blocks/#catalog-setup) and information in your catalog. This allows you to select which fields to use as the product title, product URL, and image URL.
-
-### Multi-rule feature flag rollouts
-
-**Area:** Data & Reporting
-
-Use [multi-rule feature flag rollouts](https://www.braze.com/docs/developer_guide/feature_flags/create/#multi-rule-feature-flag-rollouts) to define a sequence of rules for evaluating users, which allows for precise segmentation and controlled feature releases. This method is ideal for deploying the same feature to diverse audiences.
-
-### RFM SQL Segment Extension
-
-**Area:** Data & Reporting
-
-You can create an [RFM (recency, frequency, monetary) Segment Extension](https://www.braze.com/docs/rfm_segments/) to target your best users by measuring their purchasing habits.
-
-RFM analysis is a marketing technique that identifies your best users by scoring users on a scale from 0—3 for each category (recency, frequency, monetary), where 3 is the best score and 0 is the worst. Recency, frequency, and monetary values are all based on data from a specific time range of your choosing.
-
-### Sync logs and observability for Cloud Data Ingestion
-
-**Area:** Data & Reporting
-**Status:** General availability
-
-The Cloud Data Ingestion (CDI) [Sync Log dashboard](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sync_logs/) allows you to monitor all data processed by CDI, verify whether data was synced successfully, and diagnose any issues with “incorrect” or missing data.
-
-### `Live Activities Push to Start Registered for App` segmentation filter
-
-**Area:** Data & Reporting
-
-The [`Live Activities Push to Start Registered for App` filter](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters/#live-activities-push-to-start-registered-for-app) segments your users by whether they are registered to start a Live Activity through iOS push notifications for a specific app.
-
-### Cloudinary - Dynamic content
-
-**Area:** Partners
-
-[Cloudinary](https://www.braze.com/docs/partners/cloudinary/) is an image and video platform that empowers you to manage, edit, optimize, and deliver images and video on a massive scale to any campaign across channels and customer journeys. When integrated and enabled, Cloudinary's media management will power and provide dynamic, contextual, and personalized asset delivery for your Braze campaigns and Canvases.
-
-### Kameleoon - A/B testing
-
-**Area:** Partners
-
-[Kameleoon](https://www.braze.com/docs/partners/kameleoon/) is an optimization solution with experiment, AI-powered personalization, and feature management capabilities in a single unified platform.
-
-### StackAdapt - Advertising
-
-**Area:** Partners
-
-[StackAdapt](https://www.braze.com/docs/partners/stackadapt/) is an AI-powered marketing platform that delivers targeted performance-driven advertising. It allows you to sync user profile data from Braze into the StackAdapt Data Hub. By connecting the two platforms, you can create a unified view of your customers and activate first-party data to improve ad performance.

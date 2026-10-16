@@ -10,6 +10,15 @@ For example, an attribute may appear as `NULL` in Snowflake while the dashboard 
 
 If you see widespread mismatches, contact your customer success manager or Braze Support.
 
+## External user ID availability
+
+**Important:**
+
+
+`EXTERNAL_USER_ID` should not be assumed to be present on every user profile record. Availability depends on workspace-specific configuration and how user profiles are updated. This field may be `NULL` for many profiles, particularly when a workspace does not have certain feature flags enabled. When querying user data, account for the possibility that `EXTERNAL_USER_ID` may be null by using appropriate null handling in your SQL queries (for example, `LEFT JOIN` instead of `INNER JOIN`, or filtering with `IS NOT NULL` when the external ID is required).
+
+
+
 ## Available views
 
 <table aria-label="Available views">
@@ -86,7 +95,7 @@ These views provide periodic snapshots of user profile attributes. The data is d
 | `TIME_MS` | NUMBER | Unix timestamp (milliseconds) of the profile update |
 | `UPDATE_SOURCE` | VARCHAR | The source of the attribute update (API, SDK, dashboard, etc.) |
 | `SF_UPDATED_AT` | TIMESTAMP_NTZ | When the data was last updated in Snowflake |
-| `EXTERNAL_USER_ID` | VARCHAR | Your own user identifier (if set) |
+| `EXTERNAL_USER_ID` | VARCHAR | Your own user identifier (if set). May be `NULL` for many profiles depending on workspace configuration. |
 | `FIRST_NAME` | VARCHAR | User's first name |
 | `LAST_NAME` | VARCHAR | User's last name |
 | `EMAIL_ADDRESS` | VARCHAR | User's email address |
@@ -108,7 +117,7 @@ These views provide periodic snapshots of user profile attributes. The data is d
 | `APP_GROUP_ID` | VARCHAR | Your Braze workspace identifier |
 | `APP_ID` | VARCHAR | The specific app within your workspace |
 | `USER_ID` | VARCHAR | The unique Braze user identifier |
-| `EXTERNAL_USER_ID` | VARCHAR | Your own user identifier (if set) |
+| `EXTERNAL_USER_ID` | VARCHAR | Your own user identifier (if set). May be `NULL` for many profiles depending on workspace configuration. |
 | `TIME` | NUMBER | Unix timestamp (seconds) of the profile update |
 | `TIME_MS` | NUMBER | Unix timestamp (milliseconds) of the profile update |
 | `UPDATE_SOURCE` | VARCHAR | The source of the attribute update (API, SDK, dashboard, etc.) |
@@ -197,7 +206,7 @@ These views provide near real-time updates on user profile attributes, with data
 | `UPDATE_SOURCE` | VARCHAR | The source of the attribute update (API, SDK, dashboard, etc.) |
 | `ARCHIVED` | BOOLEAN | Whether the user profile is archived |
 | `SF_UPDATED_AT` | TIMESTAMP_LTZ | When the data was last updated in Snowflake |
-| `EXTERNAL_USER_ID` | VARCHAR | Your own user identifier (if set) |
+| `EXTERNAL_USER_ID` | VARCHAR | Your own user identifier (if set). May be `NULL` for many profiles depending on workspace configuration. |
 | `FIRST_NAME` | VARCHAR | User's first name |
 | `LAST_NAME` | VARCHAR | User's last name |
 | `EMAIL_ADDRESS` | VARCHAR | User's email address |
@@ -271,7 +280,7 @@ These views store historical change logs of user attributes, capturing changes w
 | `TIME_MS` | NUMBER | Unix timestamp (milliseconds) of the profile update |
 | `UPDATE_SOURCE` | VARCHAR | The source of the attribute update (API, SDK, dashboard, etc.) |
 | `SF_UPDATED_AT` | TIMESTAMP_NTZ | When the data was last updated in Snowflake |
-| `EXTERNAL_USER_ID` | VARCHAR | Your own user identifier (if set) |
+| `EXTERNAL_USER_ID` | VARCHAR | Your own user identifier (if set). May be `NULL` for many profiles depending on workspace configuration. |
 | `FIRST_NAME` | VARCHAR | User's first name |
 | `LAST_NAME` | VARCHAR | User's last name |
 | `EMAIL_ADDRESS` | VARCHAR | User's email address |
