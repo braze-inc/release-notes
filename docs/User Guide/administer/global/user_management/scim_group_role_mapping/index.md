@@ -55,6 +55,12 @@ Members that your IdP sends but that don't yet exist as Braze users are skipped 
 
 
 
+### Manually provisioned users
+
+Users created in Braze before your SCIM integration was set up lack the identity link (`externalId`) required for SCIM management. These manually provisioned users can't be automatically updated or deprovisioned through SCIM group role mapping, even if they're added to a mapped group in your IdP.
+
+To convert manually provisioned users to SCIM-managed users, perform a user import within the Braze application in your IdP. This import connects existing Braze users to their IdP identities by email and creates the `externalId` link.
+
 ## Step 2: Map a group to a custom role
 
 1. Go to **Settings** > **User Management** > **Roles**.

@@ -45,6 +45,13 @@ Give your placement a name and assign a **Placement ID**. Be sure you consult ot
 ![Placement details that designate a Banner will display in the left sidebar for spring sale promotion campaigns.](https://www.braze.com/docs/assets/img/banners/placement_details_example.png?e94e5b7365737e3a8d7ae38e01121c6c)
 
 
+**Note:**
+
+
+For web placements, you can optionally configure **Web Targeting** on the placement to have the Braze Web SDK automatically insert Banners at a specific spot on the page, instead of calling `insertBanner()` yourself. See [Web Targeting: auto-inserting Banners](https://www.braze.com/docs/developer_guide/banners/web_targeting).
+
+
+
 ### Step 2: Refresh placements in your app {#requestBannersRefresh}
 
 To refresh placements, call `requestBannersRefresh()` for your SDK.

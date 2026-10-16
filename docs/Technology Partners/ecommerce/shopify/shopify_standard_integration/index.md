@@ -136,9 +136,9 @@ For more information on the data tracked through the integration, refer to [Shop
 
 ### Historical backfill setup
 
-In the **Track Shopify data** step, select the checkbox to include the initial historical data load as part of your integration.
+In the **Track Shopify data** step, select **Turn on historical backfill** to include the initial historical data load as part of your integration. Choose a date range for orders (**Past 90 days**, **Past year**, or **Past 2 years**) and for customer profiles (**Past year**, **Past 2 years**, or **All time**). Braze shows an estimated record count and processing time for each option before you finish setup. These selections can't be changed after setup completes.
 
-For what is imported, revenue reporting behavior, setup screenshots, and guidance if you already use Braze with active campaigns or Canvases, see [Historical backfill](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/#historical-backfill).
+For what is imported, revenue reporting behavior, and guidance if you already use Braze with active campaigns or Canvases, see [Historical backfill](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/#historical-backfill).
 
 ### (Advanced) Custom data tracking setup
 

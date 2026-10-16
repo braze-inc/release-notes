@@ -28,7 +28,7 @@ Connected Content supports GET and POST requests. Braze requires the server to r
 
 ## Authentication
 
-Braze supports basic authentication, token authentication, and OAuth for Connected Content requests. You can store credentials securely in the Braze dashboard under **Settings** > **Connected Content** and reference them in your API calls.
+Braze supports basic authentication, token authentication, and OAuth for Connected Content requests. You can store credentials securely in the Braze dashboard under **Settings** > **Credential Management** and reference them in your API calls.
 
 For more information, see [Making a Connected Content API call](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call#authentication-types).
 

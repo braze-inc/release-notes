@@ -30,7 +30,8 @@ Features for Banners include:
 
 - **Easy content building:** Create and preview your Banner using a visual, drag-and-drop editor with support for images, text, buttons, email capture forms, custom code, and more. Teams that prefer to manage their own markup can use the HTML editor instead for full control over the Banner's HTML and styles, or ask [BrazeAI Operator™](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#generate-messages) to generate HTML from a description.
 - **Flexible placements:** Define multiple locations within your application or website where Banners can appear, enabling precise targeting to specific contexts or user experiences.
-- **Dynamic personalization:** Banners recalculate personalization (Liquid logic) and segmentation every time the banner is refreshed. If a user updates their profile or a custom attribute changes, the next Banner refresh will reflect those changes.
+- **Web Targeting (early access):** Point a web placement at a CSS selector on your page, and the Braze Web SDK automatically inserts the Banner there—no per-placement insertion code required. See [Web Targeting for Banners](https://www.braze.com/docs/user_guide/channels/banners/web_targeting) and [Web Targeting: auto-inserting Banners](https://www.braze.com/docs/developer_guide/banners/web_targeting).
+- **Dynamic personalization:** Banners recalculate personalization (Liquid logic) and segmentation every time the banner is refreshed. If a user updates their profile or a custom attribute changes, the next Banner refresh reflects those changes.
 - **Native prioritization:** Set the display priority for when multiple Banners target the same placement, ensuring the right message reaches users at the right time.
 - **Custom Code editor block:** Use the Custom Code editor block to add custom HTML for advanced customization or seamless integration with your existing web styles.
 
@@ -167,6 +168,7 @@ Additionally, Banner messages do not support the following features:
 - [Create Banner placements in your app or website](https://www.braze.com/docs/developer_guide/banners/placements)
 - [Create a Banner campaign in Braze](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner)
 - [Tutorial: Displaying a Banner by Placement ID](https://www.braze.com/docs/developer_guide/banners/tutorial_displaying_banners)
+- [Web Targeting for Banners](https://www.braze.com/docs/user_guide/channels/banners/web_targeting)
 
 **Tip:**
 

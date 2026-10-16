@@ -27,6 +27,8 @@ For example, if you're using [LINE](https://www.braze.com/docs/user_guide/channe
 3. Add a request body. This can be either **JSON Key/Value Pairs** or **Raw Text**.
 4. (Optional) Add a request header. This may be required by your webhook destination.
 
+To authenticate your webhook, select a saved credential in **Credential**. Use an HTTPS URL and a credential whose allowed domain covers the destination hostname. For setup, permissions, and header behavior, see [Use a saved credential](https://www.braze.com/docs/user_guide/channels/webhooks/create_a_webhook#use-a-saved-credential-optional).
+
 ![The "Compose" tab when creating a webhook template. Available fields are webhook URL, HTTP method, request body, and request headers. You can also add languages.](https://www.braze.com/docs/assets/img_archive/Webhook_template_test.png?c87609572f82662db7e492dc0d730d7a){: style="max-width:90%"}
 
 ## Step 5: Test your template

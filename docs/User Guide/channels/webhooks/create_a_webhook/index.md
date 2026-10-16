@@ -156,6 +156,42 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 
 ## Step 3: Configure additional settings
 
+### Use a saved credential (optional)
+
+Use a saved credential to authenticate a webhook without entering its password or token in the message. You can reuse basic authentication and token authentication credentials from **Settings** > **Credential Management** across webhook campaigns, Canvas steps, and webhook templates.
+
+Credentials belong to one workspace. Create a credential in each workspace where you need it, including separate development, staging, and production workspaces.
+
+To select an existing credential, you need "Manage App Group" or the relevant editing permission: "Edit Campaigns", "Edit Canvases", or "Edit Webhook Templates". To create, edit, or delete credentials, you need the "Manage App Group" permission. Ask your workspace administrator to grant it if needed.
+
+1. In the **Compose** tab, enter an HTTPS webhook URL with a fixed hostname, such as `https://api.example.com/events`. You can use Liquid in the path or query parameters, but the hostname must be static to select a credential.
+2. In **Credential**, select a saved credential. The list shows credentials whose allowed domain matches the URL's hostname, including credentials that allow a parent domain.
+3. If you have permission to create credentials, select **Add credential** from the selector to create one. Select **Basic authentication** or **Token authentication**, enter a unique credential name and the authentication details, and select **Add credential**. The allowed domain is filled in from the webhook's hostname and can't be changed in this form.
+4. Confirm the selected credential before saving or sending a test webhook.
+
+If your hostname comes from Liquid or a Content Block, keep authentication in [Request headers](#request-headers-optional). To use a saved credential, change the URL to a fixed hostname and keep dynamic values in the path or query parameters.
+
+Both credential types require an allowed domain for webhook use. A basic authentication credential without a domain can still be used for Connected Content, but it isn't available in the webhook selector. Check the **Available in** column on the **Credential Management** page to confirm whether a credential supports webhooks. For setup and domain examples, see [Authentication types](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call#authentication-types).
+
+**Warning:**
+
+
+A credential's allowed domain includes all of its subdomains. Use the most specific hostname your organization controls. A shared parent domain can allow another organization's subdomain to receive your credential. See [Choose an allowed domain](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call#choose-an-allowed-domain).
+
+
+
+Braze applies the saved authentication when sending the request. Basic authentication supplies the `Authorization` header. Token authentication supplies the headers saved in the credential. If you manually enter a header with the same name, the saved credential's value takes precedence. Header names are case-insensitive.
+
+If you change the URL so the selected credential no longer matches, the composer clears the selection. Select a matching credential again before saving. Braze also validates the credential and the rendered destination URL at send time. An invalid credential or disallowed destination prevents the webhook from being sent.
+
+To update or remove a saved credential, see [Manage saved credentials](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call#manage-saved-credentials).
+
+### Preview saved credentials
+
+The webhook preview shows the rendered URL, body, and manually entered request headers. It omits the selected credential reference and the authentication headers supplied by that credential, rather than showing masked values. Braze applies the saved credential when sending a test or live webhook.
+
+In the composer, users without "Manage App Group" or the relevant editing permission see **Hidden** in the disabled **Credential** selector when a credential is selected. They can't view or change the selection.
+
 ### Request headers (optional)
 
 Certain endpoints may require that you include headers in your request. In the **Compose** section of the composer, you can add as many headers as needed.
@@ -177,7 +213,7 @@ Authorization headers must use the key `Authorization`. Common values are  `Bear
 
 ## Step 4: Test send your message
 
-Before making your campaign go live, Braze recommends that you test the webhook to make sure the request is formatted properly.
+Before making your campaign go live, Braze recommends that you test the webhook to make sure the request is formatted properly. If you selected a saved credential, the test send uses it to authenticate the request.
 
 To do so, switch to the **Test** tab and send a test webhook. You can test the webhook as a random user, a specific user (by entering their email address of external user ID), or a customized user with attributes of your choosing.  
 
@@ -297,7 +333,9 @@ For other `4XX` troubleshooting steps, refer to [Troubleshoot webhook and Connec
 
 #### Authentication and Connected Content credentials
 
-The outbound webhook HTTP request does not support attaching [Connected Content credentials](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call#authentication-types) (`:basic_auth` or `:auth_credentials`) to authenticate against your endpoint. Set authentication using **Request headers** on the webhook instead. To fetch a token or secret at send time, you can place a `{% connected_content %}` tag in a header or body field so Liquid resolves it before the webhook is sent.
+Select a credential in the webhook composer to authenticate the outbound request. On this page, see [Use a saved credential](#use-a-saved-credential-optional).
+
+The Liquid options `:basic_auth` and `:auth_credentials` authenticate only the `{% connected_content %}` call in which they appear. They don't select a credential for the primary webhook request. To fetch a token or secret at send time, you can place a `{% connected_content %}` tag in a header or body field so Liquid resolves it before the webhook is sent.
 
 #### Saved webhook templates and campaign usage
 

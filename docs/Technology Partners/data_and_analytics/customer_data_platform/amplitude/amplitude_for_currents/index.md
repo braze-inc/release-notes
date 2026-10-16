@@ -74,7 +74,7 @@ If you receive an "Invalid API key" error when pasting your Amplitude API key, t
 
 
 
-For more information, see Amplitude's [Appboy Amplitude Integration](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration).
+For more information, see [Amplitude's Braze Integration](https://amplitude.com/docs/data/source-catalog/braze#considerations).
 
 
 ## Rate limits

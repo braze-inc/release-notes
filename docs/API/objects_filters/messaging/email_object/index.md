@@ -64,7 +64,7 @@ An `email_template_id` can be retrieved from the bottom of any email template cr
 
 Use a stored basic authentication credential when an attachment URL requires a login. This applies to attachments in the email object on [`/messages/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages) and to the top-level `attachments` array on [`/campaigns/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns).
 
-1. Go to **Settings** > **Connected Content**.
+1. Go to **Settings** > **Credential Management**.
 2. Select **Add credential**.
 3. Select **Basic authentication**.
 4. Enter a credential name, username, and password.

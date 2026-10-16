@@ -20,7 +20,7 @@ Global frequency capping uses the user's time zone and counts by calendar day, n
 
 ### Does global frequency capping apply to triggered in-app messages?
 
-No, global frequency capping only applies to push, email, SMS, MMS, RCS, webhook, WhatsApp, and LINE messages.
+No, global frequency capping only applies to push, email, SMS, MMS, RCS, webhook, WhatsApp, LINE, and KakaoTalk messages.
 
 ### Does global frequency capping apply to RCS?
 

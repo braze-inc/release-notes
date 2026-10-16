@@ -646,11 +646,13 @@ Enhance your integration by adding more Shopify events and attributes, which wil
 
 ### Step 4: Historical backfill (optional)
 
-Through the custom setup, you can optionally include the same historical Shopify data load as the [standard integration](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_standard_integration/#historical-backfill-setup): order events from the past 90 days and user profiles from the past year, each counted back from the date you complete your integration. To include this initial data load, select the checkbox for the initial data load option.
+Through the custom setup, you can optionally include the same historical Shopify data load as the [standard integration](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_standard_integration/#historical-backfill-setup). 
+
+Select **Turn on historical backfill**, then choose a date range for orders (**Past 90 days**, **Past year**, or **Past 2 years**) and for customer profiles (**Past year**, **Past 2 years**, or **All time**). These selections can't be changed after setup completes.
 
 If you prefer to perform the backfill later, you can complete the initial setup now and return to this step at a later time.
 
-![Section to set up historical data backfill.](https://www.braze.com/docs/assets/img/shopify/historical_backfill_setup.png?b48a39d583221dacab77407c6a4d1900)
+![Historical data backfill section with "Turn on historical backfill" selected, and date range selectors for Orders and Customer profiles.](https://www.braze.com/docs/assets/img/shopify/historical_backfill_setup.png?f7a01166796eafee904fa920c5cfffa4){: style="max-width:70%;"}
 
 For the full list of data in the initial load, revenue reporting behavior, and monitoring the sync, see [Historical backfill](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/#historical-backfill).
 

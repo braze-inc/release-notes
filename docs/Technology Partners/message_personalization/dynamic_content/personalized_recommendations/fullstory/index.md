@@ -44,7 +44,7 @@ In the response to this request, Fullstory provides a session profile ID. This p
 
 ### Step 2: Create the Connected Content token authentication
 
-1. In Braze, go to **Settings** > **Workspace Settings** > **Connected Content** > **Add Credential** > **Token Authentication**. 
+1. In Braze, go to **Settings** > **Credential Management** > **Add credential** > **Token authentication**.
 2. Name the authentication `fullstory`.
 3. Add the header key “Authorization”. Supply the header value Fullstory provided in the previous step. 
 4. Under **Allowed Domain**, enter **api.fullstory.com**.
