@@ -1,4 +1,4 @@
-<div id='api_qxninxkgxksc' class='api_div' data-search-keywords='trigger a sync'>
+<div id='api_ldhmcvvijrkw' class='api_div' data-search-keywords='trigger a sync'>
 <h1 id="trigger-a-sync">Trigger a sync</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/cdi/integrations/{integration_id}/sync</p>
