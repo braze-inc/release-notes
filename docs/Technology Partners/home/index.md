@@ -397,6 +397,7 @@ Braze Alloys is Braze's technology partner program. Partners extend the Braze pl
 
 - [Zapier](https://www.braze.com/docs/partners/data_and_analytics/workflow_automation/zapier)
 - [Zendesk](https://www.braze.com/docs/partners/additional_channels_and_extensions/additional_channels/support/zendesk)
+- [Zendesk Support Handoff](https://www.braze.com/docs/partners/additional_channels_and_extensions/additional_channels/instant_chat/zendesk_support_handoff)
 - [Zeotap](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/zeotap)
 
 </div>

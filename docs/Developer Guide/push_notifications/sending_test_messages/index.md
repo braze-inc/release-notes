@@ -2,6 +2,13 @@
 
 > Before sending out a messaging campaign to your users, you may want to test it to make sure it looks right and operates in the intended manner. You can use the dashboard to create and send test messages with push notifications, in-app messages (IAM), or email.
 
+**Tip:**
+
+
+For a marketer-facing walkthrough for every channel (including email, SMS/MMS and RCS, Banners, Content Cards, LINE, WhatsApp, and webhooks), see [Send test messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/).
+
+
+
 ## Sending a test message
 
 ### Step 1: Create a designated test segment <a class="margin-fix" name="test-segment"></a>
@@ -61,16 +68,32 @@ Be sure to select **Allow users to become re-eligible to receive campaign** unde
 
 
 
-If you're only testing email messages, you do not necessarily have to set up a test segment. In the first step of the campaign composer where you compose your campaign's email message, click **Send Test** and enter the email address to which you wish to send a test email. 
+You don't need to set up a test segment to send a test email. Instead, you can send a test directly from the email composer to one or more inboxes, one or more external user IDs, or a [Content Test Group](https://www.braze.com/docs/user_guide/administer/global/user_management/internal_groups/#content-test-groups).
 
-![A Braze campaign with the Test Send tab selected](https://www.braze.com/docs/assets/img_archive/testmessages45.png?883cb58cd3adf2e8315817db896b7914)
+To send a test email from the email composer:
+
+1. In the **Campaigns** or **Canvas** composer, draft your email message.
+2. Select **Preview and Test**, then select the **Test Send** tab.
+3. Add recipients in any of the following ways:
+   - Enter one or more email addresses or external user IDs in the **Add individual users** field.
+   - Select an existing **Content Test Group** to send the test to a predefined list of testers.
+4. (Optional) To preview personalization, select an existing user or define a custom user. This populates user attributes, custom attributes, and event properties so you can verify that Liquid renders the correct values for that user.
+5. Select **Send Test** to send the test email to the selected recipients.
+
+![A Braze campaign with the Test Send tab selected.](https://www.braze.com/docs/assets/img_archive/testmessages45.png?883cb58cd3adf2e8315817db896b7914)
 
 **Tip:**
 
  
-You can also enable or disable [TEST (or SEED)](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/email_preferences#append-email-subject-lines) being appended on your test messages.
+You can also enable or disable [TEST (or SEED)](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/email_preferences#append-email-subject-lines) being appended on your test messages. Find this setting under **Settings** > **Email Preferences** as [Append email subject lines](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/email_preferences/#append-email-subject-lines). When enabled, Braze prepends `[TEST]` (or `[SEED]`) to the subject line of any test or seed email.
 
 
+
+For shared test limitations, including unsubscribe-related behavior, see [Test limitations](#test-limitations).
+
+If a large image isn't rendering as expected in Outlook, reduce the actual file dimensions of the image with an image editing or resizing tool instead of only scaling it with CSS or HTML.
+
+For the full set of email testing options (including a complete preview workflow, troubleshooting, and channel-specific test checklists), see [Send test messages: Email](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=email).
 
 
 
@@ -148,5 +171,6 @@ There are a few situations where test messages don't have complete feature parit
 
 - Viewing the Braze [preference center](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups#email-subscription-groups) from **Test Messages** will cause the submit button to be grayed out.
 - The list-unsubscribe header is not included in emails sent by the test message functionality.
+- For testing unsubscribe links in emails, make sure your test user's email address is in the workspace you're sending from.
 - For in-app messages and Content Cards, the target user must have a push token for the target device.
 

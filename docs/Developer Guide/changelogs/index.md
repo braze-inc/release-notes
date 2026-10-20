@@ -12757,6 +12757,13 @@ You can also find a copy of the [Roku Braze SDK changelog on GitHub](https://git
 
 
 
+<h2 id="unreleased">Unreleased</h2>
+
+<h5 id="changed">Changed</h5>
+<ul>
+  <li>Removed the deprecated <code class="language-plaintext highlighter-rouge">roUrlTransfer.InitClientCertificates()</code> call from SDK network requests. Roku will block publishing apps that still call it starting April 1, 2027. HTTPS server verification via <code class="language-plaintext highlighter-rouge">SetCertificatesFile()</code> is unchanged.</li>
+</ul>
+
 <h2 id="221">2.2.1</h2>
 
 <h5 id="fixed">Fixed</h5>
@@ -12874,7 +12881,7 @@ end if
   <li>Style data on buttons in In-App messages is now available. See <code class="language-plaintext highlighter-rouge">README.md</code> for more information.</li>
 </ul>
 
-<h5 id="changed">Changed</h5>
+<h5 id="changed-1">Changed</h5>
 <ul>
   <li>Get In-App Message triggers at the start of session to match other SDKs.</li>
 </ul>
@@ -12902,7 +12909,7 @@ end if
 
 <h2 id="004">0.0.4</h2>
 
-<h5 id="changed-1">Changed</h5>
+<h5 id="changed-2">Changed</h5>
 <ul>
   <li>Replaced the <code class="language-plaintext highlighter-rouge">GetModel</code> method with the more precise <code class="language-plaintext highlighter-rouge">GetModelDetails().ModelNumber</code>.</li>
 </ul>

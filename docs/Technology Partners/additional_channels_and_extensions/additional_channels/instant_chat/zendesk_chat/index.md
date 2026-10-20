@@ -2,6 +2,8 @@
 
 > [Zendesk Chat](https://www.zendesk.com/service/messaging/) uses webhooks from each platform to set up a two-way SMS conversation. When a user requests support, a ticket is created in Zendesk. Agent responses are forwarded to Braze through an API-triggered SMS campaign, and user replies are sent back to Zendesk.
 
+For Conversational AI live-agent handoff through Sunshine Conversations, see [Zendesk Support Handoff](https://www.braze.com/docs/partners/additional_channels_and_extensions/additional_channels/instant_chat/zendesk_support_handoff). For Zendesk ticket creation and sync through Braze webhooks, see [Zendesk](https://www.braze.com/docs/partners/additional_channels_and_extensions/additional_channels/support/zendesk).
+
 ## Prerequisites
 
 
@@ -29,7 +31,7 @@ Enhance customer support efficiency by combining Braze SMS capabilities with Zen
 
 ### Step 2: Create an outbound SMS campaign
 
-Next, you’ll create an SMS campaign that will listen for webhooks from Zendesk and send a custom SMS response to your customers.
+Next, create an SMS campaign that listens for webhooks from Zendesk and sends a custom SMS response to your customers.
 
 #### Step 2.1: Compose your message
 

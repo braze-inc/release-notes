@@ -141,6 +141,14 @@ The Security Event report CSV contains the following columns:
 **Reported security events**
 
 
+
+**Note:**
+
+
+The **Users Viewed** and **User Updated** events are available by request. Contact your customer success manager to enable these events for your workspace.
+
+
+
 ### Login and account
 - Signed In
 - Failed Login
@@ -149,6 +157,7 @@ The Security Event report CSV contains the following columns:
 - Cleared Developer 2FA
 - Added Additional Developer
 - Added Account
+- Confirmed Account
 - Developer Suspended
 - Developer Unsuspended
 - Developer Updated
@@ -244,9 +253,17 @@ Removed Push Credential
 - Catalog Created
 - Catalog Deleted
 
+### Cloud Data Ingestion
+- CDI Sync Created
+- CDI Sync Updated
+- CDI Sync Deleted
+- CDI Sync Triggered
+- CDI Sync Status Changed
+
 ### Braze Agents
 - Created Agent
 - Edited Agent
+
 
 
 

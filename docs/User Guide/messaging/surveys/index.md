@@ -189,7 +189,7 @@ GROUP BY question_reporting_id, answer_single_boolean;
 
 
 
-NPS block responses use `answer_type = 'nps'` with the score in `answer_single_int` (and optional free-text feedback in `answer_single_string`). Rating (number scale) questions use `answer_type = 'single_number'` with the score in `answer_single_number`.
+NPS block responses use `answer_type = 'nps'` with the score in `answer_single_number` (and optional free-text feedback in `answer_single_string`). Rating (number scale) questions use `answer_type = 'single_number'` with the score in `answer_single_number`.
 
 Promoter, passive, and detractor segments appear in the survey analytics dashboard. They aren't separate fields in the SQL table—derive them from the 0–10 score when you need them in Query Builder or Snowflake:
 
@@ -197,8 +197,8 @@ Promoter, passive, and detractor segments appear in the survey analytics dashboa
 SELECT
   question_reporting_id,
   CASE
-    WHEN answer_single_int >= 9 THEN 'promoter'
-    WHEN answer_single_int >= 7 THEN 'passive'
+    WHEN answer_single_number >= 9 THEN 'promoter'
+    WHEN answer_single_number >= 7 THEN 'passive'
     ELSE 'detractor'
   END AS nps_segment,
   COUNT(*) AS response_count
