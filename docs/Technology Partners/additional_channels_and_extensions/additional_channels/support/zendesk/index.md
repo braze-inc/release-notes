@@ -6,6 +6,8 @@ The Braze and Zendesk server-to-server integration allows you to use:
 - Braze webhooks to automate the creation of support tickets in Zendesk due to message engagement in user journeys in Braze. For example, after successfully implementing and testing an integration, Braze can create a support ticket from a user answering negatively to an "Enjoying our App?" in-app message, allowing your support team to follow up with the customer.
 - Zendesk webhooks to support bi-directional use cases like updating the user profile in Braze due to activity in Zendesk. For example, after a ticket is solved, log an event to the user profile in Braze.
 
+For Conversational AI live-agent handoff through Sunshine Conversations, see [Zendesk Support Handoff](https://www.braze.com/docs/partners/additional_channels_and_extensions/additional_channels/instant_chat/zendesk_support_handoff). For two-way SMS with Zendesk Chat, see [Zendesk Chat](https://www.braze.com/docs/partners/additional_channels_and_extensions/additional_channels/instant_chat/zendesk_chat).
+
 ## Prerequisites
 
 | Requirement | Description |

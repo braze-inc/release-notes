@@ -24,7 +24,7 @@ Braze offers two integration options for Shopify merchants that are designed to 
 
 ## How the integration works
 
-If you've already set up and turned on [historical backfill](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/#historical-backfill) in your configuration settings, the initial data sync will immediately begin.
+If you've already set up and turned on [historical backfill](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/#historical-backfill) in your configuration settings, the initial data sync begins immediately.
 
 
 
@@ -32,7 +32,7 @@ If you've already set up and turned on [historical backfill](https://www.braze.c
 
 
 
-Following the initial data sync, Braze will continuously track new data and updates, directly from Shopify and Braze SDKs.
+Following the initial data sync, Braze continuously tracks new data and updates, directly from Shopify and Braze SDKs.
 
 **Note:**
 
@@ -43,11 +43,11 @@ If you’re an existing Braze customer with active campaigns or Canvases, review
 
 ### User and data syncing
 
-After the integration is live, Braze will gather user data from two key sources through the Shopify integration:
+After the integration is live, Braze gathers user data from two key sources through the Shopify integration:
 - **Shopify Web Pixel API and app embeds:** This powers the Braze Web SDK and Javascript SDK to support on-site tracking, identity management, eCommerce behavioral data, and power messaging channels like in-app messages.
 - **Shopify webhooks:** eCommerce behavioral data, product syncing, and subscriber collection
 
-During integration onboarding, you will need to select when the Braze SDKs initialize and load your Shopify site: 
+During integration onboarding, you need to select when the Braze SDKs initialize and load your Shopify site: 
 - Upon site visit (such as session start)
     - **What it does:** Tracks anonymous users—such as guest shoppers—to access more data for deeper personalization 
 - Upon account signup (such as account login) 
@@ -84,17 +84,17 @@ The integration requires Braze SDKs and Shopify services to work together to app
 
 ### Syncing Shopify email and SMS marketing opt-ins
 
-If you enable subscriber collection in your configuration settings, you need to assign a subscription group for each store you connect to Braze. This means your customers will be categorized as either “subscribed” or “unsubscribed” to your store’s subscription group.
+If you enable subscriber collection in your configuration settings, you need to assign a subscription group for each store you connect to Braze. This means your customers are categorized as either "subscribed" or "unsubscribed" to your store's subscription group. This applies to email, SMS, and [WhatsApp](#whatsapp-marketing-opt-ins) opt-ins.
 
-The Shopify marketing opt-in status for email and SMS marketing can be updated in the following ways:
-- **Manual update:** You can manually change a user’s email or SMS marketing opt-in status in your Shopify admin.
+The Shopify marketing opt-in status for email, SMS, and WhatsApp marketing can be updated in the following ways:
+- **Manual update:** You can manually change a user’s email, SMS, or WhatsApp marketing opt-in status on your Shopify admin page.
 - **Shopify newsletter footer:** If a user enters their email in the Shopify default newsletter footer, their opt-in status is updated.
 - **Checkout:** User consent is captured at checkout when users select the marketing checkbox and proceed with checkout by selecting **Pay now** on the one-page checkout or **Continue to shipping** on the three-page checkout.
 
 **Note:**
 
 
-The email marketing opt-in status from Shopify will not change a user’s [global email subscription state](https://www.braze.com/docs/user_guide/channels/email/subscriptions/) in Braze. The default subscription state when a user profile is created is “subscribed.” Remember to use the subscription group as part of your campaign or Canvas entry criteria.
+The email marketing opt-in status from Shopify doesn't change a user's [global email subscription state](https://www.braze.com/docs/user_guide/channels/email/subscriptions/) in Braze. The default subscription state when a user profile is created is "subscribed." Remember to use the subscription group as part of your campaign or Canvas entry criteria.
 
 
 
@@ -108,13 +108,16 @@ This table shows which Shopify marketing opt-in states correlate with the status
 | Email is invalid | Unsubscribed |
 | SMS subscribed | Subscribed |
 | SMS unsubscribed | Unsubscribed |
+| WhatsApp subscribed | Subscribed |
+| WhatsApp unsubscribed | Unsubscribed |
+| WhatsApp pending, or no consent recorded | Not changed |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Syncing Shopify email and SMS marketing opt-ins" }
 
 #### SMS double opt-in
 
 Use SMS double opt-in to send your branded confirmation text through Braze instead of Shopify's confirmation email. To turn on SMS double opt-in, do the following:
 
-1. In the Shopify admin, go to **Settings** > **Notifications** > **Customer notifications**.
+1. On your Shopify admin page, go to **Settings** > **Notifications** > **Customer notifications**.
 2. Turn off marketing double opt-in for SMS.
     - If Shopify's double opt-in stays on, Shopify sends its own pending status or an email confirmation, and shoppers don't receive the Braze SMS confirmation.
 3. Set checkout SMS to single opt-in. 
@@ -129,6 +132,28 @@ When a shopper subscribes to SMS at checkout or through a form, the following ha
 4. If they don't reply before the confirmation window ends, they stay pending.
 
 For more information on Braze SMS double opt-in, see [SMS double opt-in](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in).
+
+#### WhatsApp marketing opt-ins
+
+Shopify stores WhatsApp marketing consent on the customer's default phone number. Merchants collect WhatsApp marketing consent the same ways as SMS consent:
+
+- At checkout
+- On the customer's profile on your Shopify admin page
+- Through a customer import
+- Through the Shopify API
+
+At checkout, Shopify shows either the SMS checkbox or the WhatsApp checkbox for a region, depending on your checkout settings.
+
+To sync WhatsApp opt-ins, select **Collect WhatsApp subscribers** in the **Manage users** step and select the WhatsApp subscription groups to sync to. Your workspace needs a connected WhatsApp Business Account to have WhatsApp subscription groups. To connect one, go to **Technology Partners** > **WhatsApp**.
+
+Keep the following in mind:
+
+- Braze only syncs the WhatsApp consent that Shopify records. An SMS or email opt-in doesn't subscribe a customer to WhatsApp.
+- You're responsible for the consent you collect. Consent set on your Shopify admin page or through a customer import is synced as it's set, so make sure it meets [Meta's opt-in requirements](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/).
+- A customer who opts in at checkout hasn't messaged your WhatsApp number, so there's no open conversation window. If you send a confirmation or welcome message, use a Meta-approved template. For more information, see [WhatsApp opt-in flows](https://www.braze.com/docs/user_guide/channels/whatsapp/use_cases/opt_in_flows#opt-in-confirmation-with-a-response-message).
+- WhatsApp currently doesn't deliver marketing template messages to United States phone numbers. Customers with a US number still sync, but your marketing messages to them aren't delivered. For more information, see [Per-user marketing template message limits](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates/#per-user-marketing-template-message-limits).
+- Customers whose phone number isn't in international format, such as `+14155551234`, aren't synced because they couldn't receive WhatsApp messages.
+- There's no double opt-in for WhatsApp. The **Use Braze SMS double opt-in** setting doesn't apply to WhatsApp opt-ins.
 
 ### Sign-up forms
 

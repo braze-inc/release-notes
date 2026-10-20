@@ -326,6 +326,13 @@ This scenario uses a frequency capping rule for users to receive no more than tw
 
 With frequency capping by tag, rules can be set on the main and nested tags, so Braze will take into account all tags. For example, if you've selected to use the main tag A as the frequency cap, we'll also include information in all the nested tags (for example, tags B and C) when determining the limit.
 
+**Note:**
+
+
+For performance reasons, Braze limits the number of messages considered when checking frequency cap rules by tag. The system sorts messages by recent activity, but if more messages than the limit have recent activity, a user may receive multiple messages even if they're tagged with the same tag.
+
+
+
 You can also combine regular frequency capping with frequency capping by tags. Consider the following rules:
 
 1. No more than three push notification campaigns or Canvas components per week from all campaigns and Canvas steps. <br>**AND**

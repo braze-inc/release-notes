@@ -54,8 +54,8 @@ You can choose from the following options for your Braze external ID:
 
 |Option|Description|
 |------|-----------|
-|Shopify Customer ID|If you use Shopify's customer ID as your Braze external ID, each store will generate a unique customer ID for each user. This means that if a user interacts with multiple stores, they will have separate profiles in Braze.|
-|Email, Hashed Email, or Custom External ID|If you use the email, hashed email, or custom external ID types, users who engage with multiple stores will have their profiles merged into a single consolidated profile when they log in or place an order.|
+|Shopify Customer ID|If you use Shopify's customer ID as your Braze external ID, each store generates a unique customer ID for each user. This means that if a user interacts with multiple stores, they have separate profiles in Braze.|
+|Email, Hashed Email, or Custom External ID|If you use the email, hashed email, or custom external ID types, users who engage with multiple stores have their profiles merged into a single consolidated profile when they log in or place an order.|
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Braze external ID" }
 
 ### Merged fields
@@ -79,14 +79,14 @@ You can choose to collect subscribers directly through Braze (in your Shopify co
 
 
 
-In the **Manage users** step of your Shopify connector settings, you can use Braze to collect email and SMS subscriber opt-ins and organize them into a dedicated subscription group:
+In the **Manage users** step of your Shopify connector settings, you can use Braze to collect email, SMS, and WhatsApp subscriber opt-ins and organize them into a dedicated subscription group:
 
 1. Create a unique subscription group for each store you connect. This helps you maintain accurate data about where subscribers are coming from.
-2. Enable email and SMS subscriber collection.
+2. Enable email, SMS, and WhatsApp subscriber collection. WhatsApp subscriber collection needs a connected WhatsApp Business Account in your workspace.
 
 
 
-Alternatively, you can sync email and SMS marketing opt-in information directly from Shopify using the Braze API or SDKs.
+Alternatively, you can sync email, SMS, and WhatsApp marketing opt-in information directly from Shopify using the Braze API or SDKs.
 
 |Option|Resources|
 |------|---------|

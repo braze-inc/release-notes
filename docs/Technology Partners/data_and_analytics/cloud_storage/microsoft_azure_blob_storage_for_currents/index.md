@@ -21,10 +21,11 @@ The Braze and Microsoft Azure Blob Storage integration allows you to export data
 
 ## Integration
 
-To integrate with Microsoft Azure Blob Storage, you must have a storage account and a container to allow Braze to either export data back to Azure or stream Currents data. Braze supports two authentication methods:
+To integrate with Microsoft Azure Blob Storage, you must have a storage account and a container to allow Braze to either export data back to Azure or stream Currents data. Braze supports three authentication methods:
 
 - [Connection string method](#connection-string-auth-method)
 - [Certificate service principal method](#certificate-service-principal-auth-method) (Currents only)
+- [Workload identity federation method](#workload-identity-federation-auth-method) (Currents only)
 
 ## Connection string auth method
 
@@ -234,11 +235,128 @@ When you save, Braze validates the credentials you enter.
 
 Finally, scroll to the bottom of the page and select which message engagement events or customer behavior events you'd like to export. When completed, launch your Current.
 
+## Workload identity federation auth method
+
+This method lets Braze authenticate to Microsoft Entra ID through [workload identity federation](https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation), then write to your container using Azure role-based access control (RBAC). You don't provide a connection string, certificate, or any other secret to Braze. It's available for Braze Currents only.
+
+**Note:**
+
+
+Braze stores no secret for this method. Your app registration trusts a short-lived token that Braze issues for each connection. Braze can access your container only through the [Storage Blob Data Contributor](#wif-3) role you assign, and you can revoke that access at any time by deleting the federated credential from your app registration in Azure.
+
+
+
+Before you begin, [create a storage account](#step-1-create-a-storage-account) and a [blob service container](#step-3-create-a-blob-service-container) as described in the [Connection string method](#connection-string-auth-method).
+
+### Step 1: Register an application {#wif-1}
+
+In Microsoft Azure, go to **Microsoft Entra ID** > **App registrations** > **+ New registration**. Enter a name (for example, `braze-currents`), then select **Register**. For detailed steps, see Microsoft's [Register an application with the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app).
+
+On your new app registration's **Overview** page, take note of the following values. You'll provide both to Braze in [Step 5](#wif-5).
+
+- **Application (client) ID**
+- **Directory (tenant) ID**
+
+### Step 2: Add a federated credential {#wif-2}
+
+In Braze, go to **Currents** > **+ Create Current** > **Azure Blob Data Export**, then select **Workload Identity Federation** as the authentication type. Braze displays the **Issuer**, **Subject Identifier**, and **Braze Audience** values you need for this step. Keep this page open, or copy the values somewhere you can reach them.
+
+In your app registration, go to **Certificates & secrets** > **Federated credentials** > **+ Add credential**, then:
+
+1. For **Federated credential scenario**, select **Other issuer**.
+2. For **Issuer**, enter the **Issuer** value from Braze.
+3. For **Type**, select **Explicit subject identifier**, then enter the **Subject Identifier** value from Braze.
+4. For **Audience**, enter the **Braze Audience** value from Braze.
+5. Enter a name (for example, `braze-currents`), then select **Add**.
+
+For detailed steps, see Microsoft's [Configure an app to trust an external identity provider](https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation-create-trust).
+
+The following table shows which Braze value belongs in each Azure field:
+
+| Field in Azure | Value from Braze |
+| -------------- | ---------------- |
+| Issuer | **Issuer** |
+| Subject identifier | **Subject Identifier** |
+| Audience | **Braze Audience** |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Federated credential fields" }
+
+**Important:**
+
+
+Enter each value exactly as Braze shows it. Entra ID matches the issuer, subject, and audience character for character, and a mismatch causes authentication to fail.
+
+
+
+The **Issuer** is specific to the Braze environment your dashboard runs on, and the **Braze Audience** is unique to your workspace and doesn't change.
+
+### Step 3: Grant access to your storage account {#wif-3}
+
+Next, give your app registration permission to write to your container.
+
+In your storage account, go to **Data storage** > **Containers** and select the container you want Braze to write to. Then select **Access Control (IAM)** > **+ Add** > **Add role assignment**, and:
+
+1. On the **Role** tab, select **[Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor)**.
+2. On the **Members** tab, select **User, group, or service principal**, select **+ Select members**, and search for the app registration name you created in [Step 1](#wif-1).
+3. Select **Review + assign**.
+
+For detailed steps, see Microsoft's [Assign an Azure role for access to blob data](https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access).
+
+**Tip:**
+
+
+We recommend assigning the role on the container Braze writes to, so Braze can access only that container. Assigning it at the storage account level also works.
+
+Role assignments can take up to 30 minutes to take effect. If the credential check fails when you save your integration, wait a few minutes and try again.
+
+
+
+**Important:**
+
+
+Without this role assignment, Braze can authenticate to Microsoft Entra ID but can't write to your container.
+
+
+
+### Step 4: Get your account endpoint {#wif-4}
+
+From your storage account, go to **Settings** > **Endpoints** and take note of the **Blob service** endpoint. It looks like `https://<your-storage-account>.blob.core.windows.net`.
+
+**Note:**
+
+
+Workload identity federation supports the public Azure cloud only. Your blob endpoint must end in `.blob.core.windows.net`.
+
+
+
+### Step 5: Set up Currents {#wif-5}
+
+Return to the **Azure Blob Data Export** page in Braze. If you haven't already, enter your integration name and contact email.
+
+Provide a contact email for integration error notifications. Braze sends notifications to this address if the integration encounters errors, such as credential issues or connectivity problems. To help ensure the right people receive alerts, use a distribution list or group email address.
+
+
+For **Credentials**, make sure **Workload Identity Federation** is selected and enter the following:
+
+| Field | Value |
+| ----- | ----- |
+| Tenant ID | The **Directory (tenant) ID** from [Step 1](#wif-1). |
+| Client ID | The **Application (client) ID** from [Step 1](#wif-1). |
+| Account Endpoint | The **Blob service** endpoint from [Step 4](#wif-4). |
+| Container Name | The name of your blob container. |
+| Prefix | Optional. A path prefix for your exported data within the container. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Workload identity federation fields" }
+
+The **Issuer**, **Subject Identifier**, and **Braze Audience** fields are read-only. They show the same values you entered in Azure in [Step 2](#wif-2).
+
+When you save, Braze validates the credentials you enter.
+
+Finally, scroll to the bottom of the page and select which message engagement events or customer behavior events you'd like to export. When completed, launch your Current.
+
 ## Updating Azure credentials for Currents {#updating-currents-credentials}
 
 You can update the Azure credentials on an existing Braze Currents connector without stopping the integration or losing data already exported to your container.
 
-To refresh credentials—or to switch between the **Connection String** and **Certificate Service Principal** methods—finish the Azure-side steps for your chosen method earlier in this article. Then, in Braze, go to **Currents**, locate your Azure Blob connector in the list, select **Edit Current**, update **Credentials**, and select **Update Current**. Braze validates the credentials you enter; your connector keeps running and data already in your container remains available. For more information, see [Updating Currents in Set up Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/#updating-currents).
+To refresh credentials—or to switch between the **Connection String**, **Certificate Service Principal**, and **Workload Identity Federation** methods—finish the Azure-side steps for your chosen method earlier in this article. Then, in Braze, go to **Currents**, locate your Azure Blob connector in the list, select **Edit Current**, update **Credentials**, and select **Update Current**. Braze validates the credentials you enter; your connector keeps running and data already in your container remains available. For more information, see [Updating Currents in Set up Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/#updating-currents).
 
 **Important:**
 
@@ -246,6 +364,16 @@ To refresh credentials—or to switch between the **Connection String** and **Ce
 It's important to keep your certificate up to date. If your certificate expires, the connector stops sending events until you provide a valid certificate, and a prolonged interruption can result in data loss.
 
 
+
+### Workload identity federation credentials
+
+Workload identity federation has no secret to rotate or expire, so there's nothing to renew on a schedule. Keep the following in mind:
+
+- **Changing your app registration:** If you register a new app, update the **Tenant ID** and **Client ID** in Braze, and add a federated credential to the new app registration.
+- **Revoking access:** To stop Braze from writing to your container, delete the federated credential from your app registration in Azure. You can also remove the Storage Blob Data Contributor role assignment.
+- **Federated credential values:** The issuer, subject identifier, and audience Braze shows are fixed for your workspace. If you recreate the federated credential in Azure, enter the same values.
+
+If the federated credential is deleted or doesn't match the values in Braze, or if the role assignment is removed, the connector can't authenticate or write to your container and stops sending events. If this persists for more than **5 days**, the connector's events are dropped, and data is permanently lost. To resume, correct the credential in Azure, or update the integration in Braze.
 
 ## Export behavior
 

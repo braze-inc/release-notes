@@ -135,16 +135,16 @@ Translated titles, descriptions, and product URLs live on your market catalog ro
 ### Step 3: Manage users
 
 1. Select your `external_id` type from the dropdown.
-2. Turn on email and SMS opt-ins from Shopify, which allows Braze to sync email and SMS subscription states from Shopify. You have two options:
-   - **Use the integration:** Braze syncs email and SMS states. Select the subscription groups they sync to.
+2. Turn on email, SMS, and WhatsApp opt-ins from Shopify, which allows Braze to sync email, SMS, and WhatsApp subscription states from Shopify. You have two options:
+   - **Use the integration:** Braze syncs email, SMS, and WhatsApp states. Select the subscription groups they sync to. WhatsApp groups are only available when your workspace has a connected WhatsApp Business Account.
    - **Build your own:** For more control over state management, build a custom integration using the Braze subscription group endpoints.
 3. Select the subscription groups that Shopify consent syncs to:
-   - **Store-wide groups (required):** Select at least one email group and one SMS group. Every opt-in Braze receives from Shopify is recorded here.
+   - **Store-wide groups (required):** Select at least one group for each channel you turn on. Every opt-in Braze receives from Shopify is recorded here.
    - **Country groups (optional):** Assign one or more groups to any country in your synced markets. Opt-ins are also recorded here when Braze can determine the customer's country.
 
 #### How opt-ins and opt-outs work
 
-In Shopify, each customer has one email consent state and one SMS consent state. When customers opt in, they subscribe to your brand, not to a country or a list.
+In Shopify, each customer has one email consent state, one SMS consent state, and one WhatsApp consent state. When customers opt in, they subscribe to your brand, not to a country or a list.
 
 Braze records each opt-in in your store-wide groups. If you set up country groups and Braze can tell which country the customer is in, the opt-in is also recorded in that country's groups.
 
@@ -156,11 +156,12 @@ If you don't set up country groups, opt-ins go to your store-wide groups only, w
 | ------- | ---------------------------- |
 | Email   | Uses the customer's Shopify locale first; if unavailable, uses the country attribute on their Braze profile. |
 | SMS     | Uses the phone number's country, as determined by E.164 country routing patterns. |
+| WhatsApp | Uses the phone number's country, the same as SMS. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Braze country determination by channel"}
 
 A locale identifies a country only when it includes a region, such as `fr-FR`. A locale of `fr` on its own doesn't.
 
-For SMS, the country comes from the phone number. The shopper must be added to a subscription group that can send messages to that number. 
+For SMS and WhatsApp, the country comes from the phone number. The shopper must be added to a subscription group that can send messages to that number. 
 
 #### What happens when someone opts in
 

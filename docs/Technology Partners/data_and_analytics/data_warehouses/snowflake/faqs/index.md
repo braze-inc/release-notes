@@ -1,7 +1,7 @@
 # Frequently asked questions
 
 ## Is it possible to obfuscate PII data via Snowflake data sharing?
-No, as of now that is not supported.
+Braze does not provide PII data control within the data sharing feature itself. However, you can manage PII data by using Snowflake's [Dynamic Data Masking](https://docs.snowflake.com/en/user-guide/security-column-ddm-use) feature in your Snowflake environment. Create views from the shared Braze data and apply dynamic data masking policies to those views to control access to sensitive fields based on user roles.
 
 ## How do I know about changes to the Snowflake Data Sharing schema?
 

@@ -725,7 +725,7 @@ The next steps depend on your external ID selection:<br><br>
 
 #### Step 6.1: Create the `braze.external_id` metafield
 
-1. In your Shopify admin panel, go to **Settings** > **Metafields**.
+1. On your Shopify admin page, go to **Settings** > **Metafields**.
 2. Select **Customers** > **Add definition**.
 3. For **Namespace and key**, enter `braze.external_id`.
 4. For **Type**, select **ID Type**.
@@ -793,7 +793,7 @@ Repeat [Step 6](#step-6), and enter your endpoint URL after selecting custom ext
 
 #### Step 6.4: Collect your email or SMS opt-ins from Shopify (optional)
 
-If you use the email or SMS channels, you can sync your email and SMS marketing opt-in states from Shopify into Braze.
+If you use the email, SMS, or WhatsApp channels, you can sync your email, SMS, and WhatsApp marketing opt-in states from Shopify into Braze.
 
 ![“Collect subscribers” section with option to collect email or SMS marketing opt-ins.](https://www.braze.com/docs/assets/img/shopify/collect_email_subscribers.png?5d52546267b5745cf48bff9c7802f073)
 
@@ -814,7 +814,7 @@ As mentioned in [Shopify overview](https://www.braze.com/docs/shopify_overview),
 
 Use SMS double opt-in to send your branded confirmation text through Braze instead of Shopify's confirmation email. To turn on SMS double opt-in:
 
-1. In the Shopify admin, go to **Settings** > **Notifications** > **Customer notifications**.
+1. On your Shopify admin page, go to **Settings** > **Notifications** > **Customer notifications**.
 2. Turn off marketing double opt-in for SMS.
 3. Set checkout SMS to single opt-in.
 4. In your Braze SMS settings, select **Use Braze SMS double opt-in**.
@@ -822,6 +822,20 @@ Use SMS double opt-in to send your branded confirmation text through Braze inste
 ![The "Use Braze SMS double opt-in" checkbox, a warning to turn off Shopify's SMS double opt-in first, and the confirmation checkbox.](https://www.braze.com/docs/assets/img/shopify/shopify_sms_double_opt_in.png?72f3a72dad6a0c0a549096ec14f8e896){: style="max-width:80%;"}
 
 For more information on Braze SMS double opt-in and the subscriber flow, see [Shopify overview](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_overview#sms-double-opt-in).
+
+
+If you send WhatsApp messages through Braze, you can also sync WhatsApp marketing opt-ins from Shopify. Select **Collect WhatsApp subscribers**, then select the WhatsApp subscription groups to sync to.
+
+![The "Collect WhatsApp subscribers" checkbox with a WhatsApp subscription group selected, and the "Route consent by region" table below it.](https://www.braze.com/docs/assets/img/shopify/collect_whatsapp_subscribers.png?322d4c494ff31ccbf580464349c0188d){: style="max-width:80%;"}
+
+**Important:**
+
+
+Your workspace needs a connected WhatsApp Business Account to have WhatsApp subscription groups. Connect one in **Technology Partners** > **WhatsApp**.
+
+
+
+Braze only syncs the WhatsApp consent that Shopify stores for a customer. An SMS or email opt-in doesn't subscribe a customer to WhatsApp, and there's no double opt-in for WhatsApp. For more information, see [WhatsApp marketing opt-ins](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_overview#whatsapp-marketing-opt-ins).
 
 
 
