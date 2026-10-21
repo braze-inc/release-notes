@@ -81,7 +81,7 @@ Because these conversion windows have different starting points, they can show d
 
 ### Winning Path performance
 
-Use Winning Path to track performance over time and automatically send subsequent users down the best-performing path. For more information, see [Winning Path analytics](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step/winning_path#analytics).
+Use Winning Path to track performance over time and automatically send subsequent users down the best-performing path. If Winning Path is turned on, Experiment Path analytics aren't available until the experiment is complete. For more information, see [Winning Path analytics](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step/winning_path#analytics).
 
 The winning metric and the analytics shown in Experiment Paths can differ:
 

@@ -2,6 +2,17 @@
 
 > Message Prioritization is an optional layer on top of frequency capping. When multiple opted-in messages compete for the same user, prioritization decides which message sends.
 
+## Prerequisites
+
+To manage Message Prioritization settings, you need these [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for your workspace:
+
+| Permission | What it allows |
+| --- | --- |
+| "View Message Prioritization Settings" | View Message Prioritization settings |
+| "Edit Message Prioritization Settings" | Create and edit Message Prioritization settings |
+| "Delete Message Prioritization Settings" | Delete Message Prioritization settings |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Message Prioritization permissions" }
+
 ## Why use Message Prioritization?
 
 Users can only receive so many messages before volume becomes a problem. The messages that reach them should be the ones that matter most to your business.
@@ -25,7 +36,7 @@ The result is the same capped send volume among opted-in messages, allocated to 
 
 Use Message Prioritization to create [categories](#categories) and [prioritization rules](#prioritization-rules) to rank which messages send.
 
-To manage these settings, go to **Settings** > **Message Prioritization**. Users need the "View Message Prioritization Settings" permission to view settings in this section, the "Edit Message Prioritization Settings" permission to edit them, and the "Delete Message Prioritization Settings" permission to delete them.
+To manage these settings, go to **Settings** > **Message Prioritization**.
 
 At send time, Braze compares the message that's about to send against other messages the user may receive that are opted in to prioritization, are assigned a category, and count toward the same frequency capping rule within the same frequency capping window. If sending the current message would prevent a higher-priority message from sending later, the lower-priority message isn't selected to send. If it has a retry window, Braze tries it again the next day. If it doesn't, it's aborted. For how to decide those categories and rankings before you configure, see [Plan your setup](#plan-your-setup).
 

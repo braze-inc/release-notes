@@ -46,9 +46,16 @@ The campaign creation flow for Transaction Email campaigns is simplified compare
 
 As a result, you'll notice several settings you may be familiar with from other Braze campaign types are not required when setting up this campaign type:
 
-- The **Delivery** step has been simplified to remove scheduling options. Transactional emails will always be triggered through the Braze REST API using the campaign ID shown on the **Delivery** page. Additional settings, like re-eligibility controls and frequency capping settings, have also been removed to confirm that all users are reachable for these critical transactional alerts when your service triggers a send request.
+- The **Delivery** step has been simplified to remove scheduling options. Transactional emails are always triggered through the [`/transactional/v1/campaigns/{campaign_id}/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_transactional_message) using the campaign ID shown on the **Delivery** page. Additional settings, like re-eligibility controls and frequency capping settings, have also been removed to confirm that all users are reachable for these critical transactional alerts when your service triggers a send request.
 - The **Target Audiences** step has been removed. As transactional emails enroll your entire user base as eligible (including unsubscribed users), there is no need to specify filters or segments. As a result, if you have any logic to apply to who should receive this message, we recommend applying that logic before determining whether to make the API request to Braze to trigger the message to a specific user.
 - The **Conversions** step has been removed. Transactional emails do not support conversion event tracking at this time.
+
+**Note:**
+
+
+Don't use [`/campaigns/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns) or [`/campaigns/trigger/schedule/create`](https://www.braze.com/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns) for transactional email campaigns. Those endpoints return a `400` error for transactional email campaign IDs.
+
+
 
 ![Compose, Delivery, and Confirm workflow to create a Transactional Email campaign.](https://www.braze.com/docs/assets/img/transactional_campaign_compose.png?e82a89a3e130e65aca93871cfafae85a){: width="1586" height="1112" style="max-width:80%;height:auto;"}
 

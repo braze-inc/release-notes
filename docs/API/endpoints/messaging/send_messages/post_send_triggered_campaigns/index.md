@@ -1,4 +1,4 @@
-<div id='api_rghvnoulaojr' class='api_div' data-search-keywords='send campaign messages using api-triggered delivery campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url basic_auth_credential'>
+<div id='api_xdbqkbmycrux' class='api_div' data-search-keywords='send campaign messages using api-triggered delivery campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url basic_auth_credential'>
 <h1 id="send-campaign-messages-using-api-triggered-delivery">Send campaign messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/send</p>
@@ -11,6 +11,12 @@
 <p>API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom using your API.</p>
 
 <p>If you’re targeting a segment, a record of your request is stored in the <a href="https://dashboard.braze.com/app_settings/developer_console/activitylog/">Developer Console</a>. To send messages with this endpoint, you must have a <a href="/docs/api/identifier_types">campaign ID</a> created when you build an <a href="/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery">API-triggered campaign</a>.</p>
+
+<p><strong>Important:</strong></p>
+
+<p>This endpoint doesn’t support transactional email campaigns and returns a <code class="language-plaintext highlighter-rouge">400</code> error if <code class="language-plaintext highlighter-rouge">campaign_id</code> belongs to one.</p>
+
+<p>To send a <a href="/docs/user_guide/channels/transactional_email/create_a_transactional_email">transactional email</a>, use the <a href="/docs/api/endpoints/messaging/send_messages/post_send_transactional_message"><code class="language-plaintext highlighter-rouge">/transactional/v1/campaigns/{campaign_id}/send</code> endpoint</a>.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05" class="seeme">See me in Postman</a></div>
 

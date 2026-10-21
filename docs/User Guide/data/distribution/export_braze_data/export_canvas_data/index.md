@@ -2,6 +2,16 @@
 
 > User data can be exported to a CSV. This page covers how to export data for your entire Canvas or a specific Canvas component.
 
+## Prerequisites
+
+To export Canvas user data as a CSV, you need these [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for your workspace:
+
+| Permission | What it allows |
+| --- | --- |
+| "Export User Data" | Export Canvas user data as a CSV |
+| "View PII" | Export email addresses (email-only CSV exports also include first and last name fields) |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Canvas CSV export permissions" }
+
 ## Exporting data for a Canvas
 
 To export data for a Canvas, do the following:

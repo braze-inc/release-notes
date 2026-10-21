@@ -6,7 +6,14 @@
 
 ## Prerequisites
 
-Because it's possible to access PII data through this feature, you must have PII permissions to run SQL segment queries.
+To use SQL Segment Extensions, you need these [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for your workspace:
+
+| Permission | What it allows |
+| --- | --- |
+| "View Segments" | Open Segment Extensions and view SQL Segment Extensions |
+| "Edit Segments" | Create, edit, and refresh SQL Segment Extensions |
+| "View PII" | Run SQL preview queries that can return customer data |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="SQL Segment Extension permissions" }
 
 ## Creating a Segment Extension
 

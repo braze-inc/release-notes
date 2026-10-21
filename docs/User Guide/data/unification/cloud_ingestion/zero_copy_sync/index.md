@@ -74,6 +74,8 @@ GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
 
 ```
 
+The `CREATE USER` statement in this example is for RSA key-pair authentication. For Workload Identity Federation, create the role and warehouse as shown, and create the service user from the Snowflake credential form. The role, warehouse, and database grants stay the same. The network policy in the next step still applies. For the statement and where to run it, see [Configuring Snowflake for Workload Identity Federation](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/snowflake_workload_identity_federation).
+
 ##### Step 1.3: Configure network policies
 
 If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations?tab=snowflake#step-15-allow-braze-ips-in-snowflake-network-policy-optional).  
@@ -326,10 +328,10 @@ With your source setup complete and destination Canvas launched, create a new da
 4. Choose your destination Canvas (from [Step 2](#step-2-configure-your-destination-canvas)).
 5. Choose a [sync frequency](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion#how-it-works).
 6. Set up notification preferences.
-7. Select **Test Connection** to confirm everything works as expected. If connecting to Snowflake, first add the public key displayed on the dashboard to the user created for Braze to connect to Snowflake. To complete this step, you'll need **SECURITYADMIN** access or higher in Snowflake. 
+7. Select **Test Connection** to confirm everything works as expected. If connecting to Snowflake with an RSA key pair, first add the public key displayed on the dashboard to the user created for Braze. To complete that step, you need **SECURITYADMIN** access or higher in Snowflake. If connecting with Workload Identity Federation, run the statement from the credential form before you test the connection. See [Configuring Snowflake for Workload Identity Federation](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/snowflake_workload_identity_federation). 
 8. Save the sync to begin syncing Canvas triggers.
 
-When the sync runs, users in your source table will begin to enter the Canvas. Use Canvas analytics and the Cloud Data Ingestion sync logs page to monitor performance.
+7. Select **Test Connection** to confirm everything works as expected. If connecting to Snowflake with an RSA key pair, first add the public key displayed on the dashboard to the user created for Braze. To complete that step, you need `SECURITYADMIN` access or higher in Snowflake. If connecting with Workload Identity Federation, run the statement from the credential form before you test the connection. See [Configuring Snowflake for Workload Identity Federation](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/snowflake_workload_identity_federation).
 
 **Tip:**
 

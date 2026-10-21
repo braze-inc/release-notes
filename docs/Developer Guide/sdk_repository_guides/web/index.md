@@ -827,7 +827,7 @@ Electron does not officially support web push notifications (see: this [GitHub i
 
 #### Tealium iQ
 
-Tealium iQ offers a basic ready-to-use Braze integration. To configure the integration, search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard. For more details or in-depth Tealium configuration support, check out our [integration documentation](https://www.braze.com/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or contact your Tealium account manager.
+Tealium iQ offers a basic turnkey Braze integration. To configure the integration, search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard. For more details or in-depth Tealium configuration support, check out our [integration documentation](https://www.braze.com/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium account manager.
 
 #### Google Tag Manager
 
@@ -835,7 +835,7 @@ The Web SDK can be initialized and called from a custom HTML tag in your Google 
 
 #### Other Tag Managers
 
-Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Contact a Braze representative if you need help evaluating these solutions.
+Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Reach out to a Braze representative if you need help evaluating these solutions.
 
 ---
 
@@ -845,9 +845,9 @@ The following table describes the available Braze Web SDK distributions.
 
 | Name | Description | npm | CDN URL
 | ---- | ----------- | --- | -------
-| Full | Full SDK with UI. When using the npm version, JavaScript bundlers remove unused code, including UI code. | `@braze/web-sdk` | https://js.appboycdn.com/web-sdk/7.0/braze.min.js
-| Core | Contains the SDK without UI. Implement your own UI for In-App Messages and Content Cards when using this version of the SDK. Use the full library for most integrations because it provides customizable UI elements through CSS. | N/A | https://js.appboycdn.com/web-sdk/7.0/braze.core.min.js
-| No-AMD | Contains the full SDK without AMD support. This is useful if your site uses RequireJS or another AMD module-loader, but you prefer to load the SDK through the CDN. | N/A | https://js.appboycdn.com/web-sdk/7.0/braze.no-amd.min.js
+| Full | Full SDK with UI. When using the npm version, JavaScript bundlers remove unused code, including UI code. | `@braze/web-sdk` | https://js.appboycdn.com/web-sdk/7.1/braze.min.js
+| Core | Contains the SDK without UI. Implement your own UI for In-App Messages and Content Cards when using this version of the SDK. Use the full library for most integrations because it provides customizable UI elements through CSS. | N/A | https://js.appboycdn.com/web-sdk/7.1/braze.core.min.js
+| No-AMD | Contains the full SDK without AMD support. This is useful if your site uses RequireJS or another AMD module-loader, but you prefer to load the SDK through the CDN. | N/A | https://js.appboycdn.com/web-sdk/7.1/braze.no-amd.min.js
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Libraries" }
 
 ## Supported Browsers
@@ -858,7 +858,7 @@ The following table describes the available Braze Web SDK distributions.
 
 ## Debugging & Troubleshooting
 
-Pass the option `enableLogging: true` to the initialize function (`braze.initialize('YOUR-API-KEY-HERE', { baseUrl: 'YOUR-SDK-ENDPOINT', enableLogging: true });`) to cause Braze to log to the javascript console. This is valuable for development but is visible to all users, so remove this option or [provide an alternate logger](https://js.appboycdn.com/web-sdk/7.0/doc/modules/braze.html#setlogger) before you release your page to production.
+Pass the option `enableLogging: true` to the initialize function (`braze.initialize('YOUR-API-KEY-HERE', { baseUrl: 'YOUR-SDK-ENDPOINT', enableLogging: true });`) to cause Braze to log to the javascript console. This is valuable for development but is visible to all users, so remove this option or [provide an alternate logger](https://js.appboycdn.com/web-sdk/7.1/doc/modules/braze.html#setlogger) before you release your page to production.
 
 ## Font Awesome
 

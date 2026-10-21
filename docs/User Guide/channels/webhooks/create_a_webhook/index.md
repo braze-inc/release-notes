@@ -379,6 +379,6 @@ If you're making a Braze-to-Braze webhook and using allowlisting, you should all
 
 ### Delete users
 
-To delete an individual user or a segment of users, go to **Audience** > **Manage Audience** > **Delete Users**. The dashboard supports bulk segment deletion (up to 10 million profiles), includes a 7-day cancellation window, and doesn't consume shared REST API rate limits. For steps, limits, and permissions, see [Delete users](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles/delete_users).
+To delete an individual user or a segment of users, go to **Audience** > **Manage Audience** > **Delete Users**. The dashboard supports bulk segment deletion (up to 25 million profiles), includes a 7-day cancellation window, and doesn't consume shared REST API rate limits. For steps, limits, and permissions, see [Delete users](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles/delete_users).
 
 For programmatic deletion in smaller batches, use the [`/users/delete` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete) instead of a webhook campaign.

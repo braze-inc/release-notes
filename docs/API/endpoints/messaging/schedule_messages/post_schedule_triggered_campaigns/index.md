@@ -1,4 +1,4 @@
-<div id='api_njyjvcobofqv' class='api_div' data-search-keywords='schedule api-triggered campaigns campaign_id send_id recipients audience broadcast trigger_properties schedule time in_local_time at_optimal_time dispatch_id schedule_id message'>
+<div id='api_xohhkmfxyeza' class='api_div' data-search-keywords='schedule api-triggered campaigns campaign_id send_id recipients audience broadcast trigger_properties schedule time in_local_time at_optimal_time dispatch_id schedule_id message'>
 <h1 id="schedule-api-triggered-campaigns">Schedule API-triggered campaigns</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/schedule/create</p>
@@ -11,6 +11,12 @@
 <p>You can pass in <code class="language-plaintext highlighter-rouge">trigger_properties</code> that will be templated into the message itself.</p>
 
 <p>Note that to send messages with this endpoint, you must have a <a href="/docs/api/identifier_types">campaign ID</a>, created when you build an <a href="/docs/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery">API-triggered campaign</a>.</p>
+
+<p><strong>Important:</strong></p>
+
+<p>This endpoint doesn’t support transactional email campaigns and returns a <code class="language-plaintext highlighter-rouge">400</code> error if <code class="language-plaintext highlighter-rouge">campaign_id</code> belongs to one.</p>
+
+<p>To send a <a href="/docs/user_guide/channels/transactional_email/create_a_transactional_email">transactional email</a>, use the <a href="/docs/api/endpoints/messaging/send_messages/post_send_transactional_message"><code class="language-plaintext highlighter-rouge">/transactional/v1/campaigns/{campaign_id}/send</code> endpoint</a>.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba" class="seeme">See me in Postman</a></div>
 

@@ -4,10 +4,14 @@
 
 ## Prerequisites
 
-To use Query Builder, you'll need the following [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions):
+To use Query Builder, you need these [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) at the workspace level:
 
-- **View PII:** Query Builder allows direct access to some customer data.
-- **View Dashboard Reports:** This permission is required for non-admin users to view Query Builder in the dashboard.
+| Permission | What it allows |
+| --- | --- |
+| "View Dashboard Reports" | Open Query Builder in the dashboard |
+| "View PII" | Access Query Builder data, which can include customer data |
+| "Edit Dashboard Reports" | Create, edit, and run Query Builder reports |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Query Builder permissions" }
 
 ## Using the Query Builder
 

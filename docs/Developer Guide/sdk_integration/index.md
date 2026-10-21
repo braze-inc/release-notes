@@ -3682,6 +3682,7 @@ Braze SDK files are in the `sdk_files` directory of the [Braze Roku SDK reposito
 
 1. Add `BrazeSDK.brs` to your app in the `source` directory.
 2. Add `BrazeTask.brs` and `BrazeTask.xml` to your app in the `components` directory.
+3. To use the [default in-app message UI](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=roku#roku_using-the-default-ui) (Roku SDK 2.3.0 and later), also add `BrazeDefaultInAppMessage.brs`, `BrazeDefaultInAppMessage.xml`, and `BrazeDefaultInAppMessageStyles.brs` to your app in the `components` directory.
 
 ### Step 2: Add references
 
@@ -3712,7 +3713,7 @@ screen.CreateScene("MainScene")
 
 You can find your [SDK endpoint](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints) and API key in the Braze dashboard.
 
-To turn SDK console logging off, set `logging_enabled` to `false`:
+To turn SDK console logging off, set `logging_enabled` to `false` (Roku SDK 2.3.0 and later):
 
 ```brightscript
 config[config_fields.LOGGING_ENABLED] = false
@@ -3738,6 +3739,16 @@ m.Braze = getBrazeInstance(m.BrazeTask)
 ### Logging
 
 Braze logs are printed to the Roku debug console. See [Debugging code](https://developer.roku.com/docs/developer-program/debugging/debugging-channels.md) from Roku Developers. Set `logging_enabled` to `false` in your Braze config to suppress those logs.
+
+### In-app messages
+
+Roku SDK 2.3.0 and later can display modal in-app messages with a default UI. This is off by default. To turn it on, set `automatic_iam_display` to `true` in your Braze config:
+
+```brightscript
+config[config_fields.AUTOMATIC_IAM_DISPLAY] = true
+```
+
+For setup, behavior, and click handling, refer to [In-app messages](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=roku#roku_using-the-default-ui).
 
 ### Feature flags
 

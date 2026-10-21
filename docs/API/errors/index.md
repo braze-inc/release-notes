@@ -76,6 +76,7 @@ All of the following error codes indicate that no messages are sent.
 | `400 Bad Request` | Bad syntax. Invalid JSON returns HTTP 400. The `error` field may include a message that you must pass valid `application/json` in the request body, or `Error while parsing request body. Please check your syntax.` See [Error while parsing request body](#error-while-parsing-request-body).|
 | `400 No Recipients` | There are no external IDs or segment IDs, or no push tokens in the request.|
 | `400 Invalid Campaign ID` | No messaging API campaign was found for your provided campaign ID.|
+| `400 Bad Request (transactional campaign)` | Transactional campaigns cannot be triggered through this endpoint. Use the [`/transactional/v1/campaigns/{campaign_id}/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_transactional_message) instead. Returned by `/campaigns/trigger/send` and `/campaigns/trigger/schedule/create` when `campaign_id` belongs to a transactional email campaign.|
 | `400 Message Variant Unspecified` | You provide a campaign ID but no message variation ID.|
 | `400 Invalid Message Variant` | You provided a valid campaign ID, but the message variation ID doesn't match any of that campaign's messages.|
 | `400 Mismatched Message Type` | You provided a message variation of the wrong message type for at least one of your messages.|

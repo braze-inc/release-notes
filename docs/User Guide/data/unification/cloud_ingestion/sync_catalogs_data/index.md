@@ -45,12 +45,14 @@ The setup for a catalog sync closely follows the process for [user-data CDI inte
     CREATE USER BRAZE_INGESTION_USER;
     GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
     ```
+
+    The `CREATE USER` statement in this example is for RSA key-pair authentication. For Workload Identity Federation, create the role and warehouse as shown, and create the service user from the Snowflake credential form. The role, warehouse, and database grants stay the same. If your account uses a network policy, the allowlist in the next step still applies. For the statement and where to run it, see [Configuring Snowflake for Workload Identity Federation](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/snowflake_workload_identity_federation).
 3. If your Snowflake account has network policies, allowlist the Braze IPs so the CDI service can connect. For a list of IPs, refer to the [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations#step-1-set-up-tables-or-views).
 4. In the Braze dashboard, navigate to **Technology Partners** > **Snowflake**, and create a new sync.
 5. Enter connection details (or reuse existing credentials) and the source table.
-6. Proceed to step 2 of the setup flow, select the “Catalogs” sync type, and input the integration name and schedule. Note that the name of the integration should **exactly match** the name of the catalog you previously created.
+6. Proceed to step 2 of the setup flow, select the "Catalogs" sync type, and input the integration name and schedule. Note that the name of the integration should exactly match the name of the catalog you previously created.
 7. Choose a [sync frequency](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion#how-it-works) and proceed to the next step.
-8. Add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake. To complete this step, you will need someone with `SECURITYADMIN` access or higher in Snowflake. 
+8. For an RSA key pair, add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake. To complete this step, you need someone with `SECURITYADMIN` access or higher in Snowflake. For Workload Identity Federation, you already ran the statement from the credential form. 
 9. Select **Test Connection** so that everything works as expected. 
 10. Save the sync, and use the synced catalog data for all your personalization use cases. 
 

@@ -2,6 +2,17 @@
 
 > Channel performance dashboards show aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email, push, and SMS, MMS, and RCS.
 
+## Prerequisites
+
+To view channel performance dashboards, you need these [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for your workspace:
+
+| Dashboard | Permission | What it allows |
+| --- | --- | --- |
+| Email Performance | "View Usage Data" or "View Dashboard Reports" | Open the **Email Performance** dashboard |
+| Push Performance | "View Usage Data" or "View Dashboard Reports" | Open the **Push Performance** dashboard |
+| SMS/MMS/RCS Performance | "View Usage Data" or "View Dashboard Reports" | Open the **SMS/MMS/RCS Performance** dashboard |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Channel performance dashboard permissions" }
+
 ## Dashboards
 
 Select a tab to view details for available channel performance dashboards.
@@ -12,13 +23,6 @@ Select a tab to view details for available channel performance dashboards.
 ### Email performance dashboard
 
 View your email performance dashboard by going to **Analytics** > **Email Performance**, and selecting the date range for the period you want to view data. Your date range can be up to one year in the past.
-
-**Note:**
-
-
-To view the **Email Performance** dashboard, you need the "View Usage Data" or "View Dashboard Reports" permission.
-
-
 
 ![Email performance dashboard displaying email channel engagement from the last thirty days.](https://www.braze.com/docs/assets/img_archive/email_performance_dashboard_1.png?6f51d7e3f0dd384a3a2614be9cf5d77c)
 

@@ -985,144 +985,239 @@ Before you can use this feature, you'll need to [integrate the Roku Braze SDK](h
 
 ## Message types
 
+The Roku SDK supports only [modal](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/modal) in-app messages.
 
+## Choosing a display method
 
+Roku SDK 2.3.0 and later can display in-app messages for you. You can also keep rendering them with your own UI.
 
-Braze offers several default in-app message types, each customizable with messages, images, [Font Awesome](https://fontawesome.com/icons?d=gallery&p=2) icons, click actions, analytics, color schemes, and more.
+| Method | Description |
+| ------ | ----------- |
+| Default UI | The SDK displays modal in-app messages and logs impressions and clicks. This is off by default. |
+| Custom UI | Your app observes `BrazeTask.BrazeInAppMessage`, renders the message, and logs impressions and clicks. This is how in-app messages work on earlier SDK versions. |
+| Default UI with custom overrides | The SDK displays modal in-app messages, and your Scene renders specific messages with its own UI. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Display methods" }
 
-Their basic behavior and traits are defined by the [`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html) interface, in a subclass called [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html). `IInAppMessage` also includes a subinterface, [`IInAppMessageImmersive`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-immersive/index.html), which lets you add close, click-action, and analytics [buttons](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html) to your app.
+If you're upgrading and already use a custom UI, refer to [Upgrading to Roku SDK 2.3.0](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=roku#roku_upgrading-to-roku-sdk-230). Your custom UI keeps working as long as you don't turn on the default UI.
+
+## Using the default UI
 
 **Important:**
 
 
-Keep in mind, in-app messages containing buttons will include the `clickAction` message in the final payload if the click action is added prior to adding the button text.
+The default UI requires Roku SDK 2.3.0 or later.
 
 
 
+### Step 1: Add the default UI files
+
+Add the following files from the `sdk_files/components` directory of the [Braze Roku SDK repository](https://github.com/braze-inc/braze-roku-sdk) to the `components` directory of your app:
+
+- `BrazeDefaultInAppMessage.brs`
+- `BrazeDefaultInAppMessage.xml`
+- `BrazeDefaultInAppMessageStyles.brs`
+
+If these files are missing, the SDK logs `BrazeDefaultInAppMessage component not found` and doesn't display the message.
+
+### Step 2: Turn on the default UI
+
+In `main.brs`, set `automatic_iam_display` to `true` in your Braze configuration:
+
+```brightscript
+config[config_fields.AUTOMATIC_IAM_DISPLAY] = true
+globalNode.addFields({brazeConfig: config})
+```
+
+### Step 3: Initialize Braze from your Scene
+
+Call `getBrazeInstance()` from your Scene component, for example in `init()`:
+
+```brightscript
+sub init()
+    m.BrazeTask = CreateObject("roSGNode", "BrazeTask")
+    m.Braze = getBrazeInstance(m.BrazeTask)
+end sub
+```
+
+**Warning:**
 
 
-[`slideup`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-slideup/index.html) in-app messages are so-named because they "slide up" or "slide down" from the top or bottom of the screen. They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
-
-The `slideup` in-app message object extends [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html).
-
-![An in-app message sliding from the bottom of a phone screen displaying "Humans are complicated. Custom engagement shouldn't be." In the background is the same in-app message displayed in the bottom right corner of a web page.](https://www.braze.com/docs/assets/img/slideup-behavior.gif?7239589ee8c964f354440e07ca4b9db1){: style="border:0px;"}
+If you call `getBrazeInstance()` from any other component, the SDK can't attach the overlay to the Scene, and the message is lost.
 
 
 
-[`modal`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-modal/index.html) in-app messages appear in the center of the screen and are framed by a translucent panel. Useful for more critical messaging, they can be equipped with two click-action and analytics-enabled buttons.
+You don't need to observe `BrazeTask.BrazeInAppMessage` or create any UI for the default messages.
 
-This message type is a subclass of [`InAppMessageImmersiveBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html), an abstract class that implements `IInAppMessageImmersive`, giving you the option to add custom functionality to your locally generated in-app messages.
+## How the default UI works
 
-![A modal in-app message in the center of a phone screen displaying "Humans are complicated. Custom engagement shouldn't be." In the background is the same in-app message displayed in the center of a web page.](https://www.braze.com/docs/assets/img/modal-behavior.gif?00fa4f83404c611c82cb0816f682e3f3){: style="border:0px;"}
+### Supported messages
 
+The default UI displays only `MODAL` in-app messages. The SDK drops other types and logs an error.
 
+The default UI uses the following fields. It ignores any others.
 
-[`full`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-full/index.html) in-app messages are useful for maximizing the content and impact of your user communication. The upper half of a `full` in-app message contains an image, and the lower half displays text and up to two click action and analytics-enabled buttons.
+| Field | How the default UI uses it |
+| ----- | -------------------------- |
+| `image_url` | Image at the top of the message. |
+| `header` | Header text. |
+| `message` | Body text. |
+| `text_align` | Alignment of the header and body: `"START"`, `"CENTER"`, or `"END"`. |
+| `bg_color` | Message background color. |
+| `frame_color` | Color of the full-screen overlay behind the message. |
+| `header_text_color` | Header text color. |
+| `message_text_color` | Body text color. |
+| `close_button_color` | Color of the × close button. |
+| `buttons` | Up to two buttons. Each button uses its `text`, `bg_color`, and `text_color`. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Fields used by the default UI" }
 
-This message type extends [`InAppMessageImmersiveBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html), giving you the option to add custom functionality to your locally generated in-app messages.
+### Display and dismissal
 
-![A full screen in-app message shown across an entire phone screen displaying, "Humans are complicated. Custom engagement shouldn't be." In the background is the same in-app message displayed largely in the center of a web page.](https://www.braze.com/docs/assets/img_archive/In-App_Full.png?ecd62a88d38438aaebbda4cdcc22aa00)
+For each modal message, the SDK does the following:
 
+1. Waits `display_delay` seconds, if set.
+2. Adds a full-screen `BrazeDefaultInAppMessage` overlay to your Scene and gives it focus.
+3. Logs the impression.
+4. Clears `BrazeTask.BrazeInAppMessage`.
+5. When the message closes, removes the overlay and restores focus.
 
+If `dismiss_type` is `AUTO_DISMISS`, the message closes after `duration` milliseconds and no click is logged. Otherwise, the message stays until the user closes it.
 
-[`HTML`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html/index.html) in-app messages are useful for creating fully customized user content. User-defined HTML in-app message content is displayed in a `WebView` and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality.
+The SDK shows one message at a time and doesn't queue messages:
 
-This message type implements [`IInAppMessageHtml`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-html/index.html), which is a subclass of [`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html).
+- A newer message cancels a message that's still waiting out its `display_delay`.
+- A newer message replaces the message on screen when it's displayed, after its own `display_delay`.
+- Dropped messages (not `MODAL`, or without a `message` value) don't cancel or replace anything.
+
+### Remote control
+
+| Key | Result |
+| --- | ------ |
+| Left and Right | Switch between buttons (up to two). |
+| Up and Down | Move to and from the × close button. |
+| OK on a button | Logs a button click, closes the message, and calls `brazeHandleInAppMessageClick`. |
+| OK with no buttons | Logs a body click, closes the message, and calls `brazeHandleInAppMessageClick`. |
+| OK on the × close button | Closes the message. No click is logged and `brazeHandleInAppMessageClick` isn't called. |
+| Back | Closes the message. No click is logged and `brazeHandleInAppMessageClick` isn't called. |
+| Any other key | Ignored. The overlay captures all key events. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Default UI remote control behavior" }
+
+### Focus
+
+If your app calls `setFocus` while the overlay is displayed, such as when content loads, screens change, or video plays, the overlay takes focus back. When the message closes, focus returns to the last node your app focused.
+
+If your app opens a Scene `dialog` while the overlay is displayed, the dialog keeps focus until it closes.
+
+## Handling clicks and deep links
+
+The SDK never opens URIs. To handle a message's `click_action` and `uri`, implement `brazeHandleInAppMessageClick(event)` on your Scene and declare it in the Scene's `<interface>`. If it isn't declared, the SDK doesn't call it.
+
+```xml
+<component name="MainScene" extends="Scene">
+    <interface>
+        <function name="brazeHandleInAppMessageClick" />
+    </interface>
+    ...
+</component>
+```
+
+The `event` parameter has the following structure:
+
+```brightscript
+{
+    in_app_message: <message AA>,
+    button:         <button AA, or invalid for a body click>,
+    button_index:   <0 or 1, or -1 for a body click>
+}
+```
+
+Keep the following in mind:
+
+- The SDK calls this function after it removes the overlay and restores focus, so you can open a new screen from it.
+- Buttons with a `click_action` of `"NONE"` also call this function. Check `click_action` before you act.
+- The SDK ignores the return value.
+- The SDK doesn't call this function when the user closes the message with the × close button, Back, or `AUTO_DISMISS`.
+- The SDK doesn't call this function for messages you render with `brazeHandleCustomInAppMessage`.
+
+### Example: Route a deep link
+
+1. In the Braze dashboard, set the on-click behavior of the message or button to a deep link with a URI your app understands, such as `myapp://details/123`. The SDK delivers it as `click_action = "URI"`, with the URI in `uri`.
+2. In `brazeHandleInAppMessageClick`, parse the URI and route to the matching screen:
+
+```brightscript
+function brazeHandleInAppMessageClick(event as object) as boolean
+    target = event.button
+    if target = invalid then target = event.in_app_message
+
+    if target.click_action <> "URI" then return false
+    if target.uri = invalid then return false
+
+    uri = target.uri.ToStr()
+    prefix = "myapp://details/"
+    if Left(uri, Len(prefix)) = prefix
+        ' ShowDetailsScreen is a function in your app.
+        ShowDetailsScreen(Mid(uri, Len(prefix) + 1))
+        return true
+    end if
+    return false
+end function
+```
 
 **Note:**
 
 
-On Android, links configured with `target="_blank"` in custom HTML in-app messages open in the device's default web browser.
-
-
-
-Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Android SDK from within your HTML, see our <a href="/docs/user_guide/channels/in_app_messages/message_types/custom_html#javascript-bridge">JavaScript bridge</a> page for more details.
-
-![An HTML in-app message with the a carousel of content and interactive buttons.](https://www.braze.com/docs/assets/img/full-screen-behavior.gif?b47edcbdd910efce932489d1fa592bd0){: style="border:0px;"}
-
-**Important:**
-
-
-We currently do not support the display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.
-
- 
-
-
-
-
-**Tip:**
-
-
-You can also define custom in-app message views for your app. For a full walkthrough, see [Setting custom factories](https://www.braze.com/docs/developer_guide/in_app_messages/customization#android_setting-custom-factories).
-
-
-
-
-Each in-app message type is highly customizable across content, images, icons, click actions, analytics, display, and delivery. They are enumerated types of `Braze.InAppMessage`, which defines basic behavior and traits for all in-app messages. For the full list of in-app message properties and usage, see the [`InAppMessage` class](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage).
-
-These are the available in-app message types in Braze and how they will look like for end-users.
-
-
-
-
-[`Slideup`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/slideup-swift.struct) in-app messages are given this name because they "slide up" or "slide down" from the top or bottom of the screen. They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
-
-![A slideup in-app message at the bottom and the top of a phone screen.](https://www.braze.com/docs/assets/img/slideup-spec.png?5e0eb3225ef5a9ca264817b8267aad45){: style="max-width:35%;border:none;"}
-
-
-
-
-
-[`Modal`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/modal-swift.struct) in-app messages appear in the center of the screen and are framed by a translucent panel. Useful for more critical messaging, they can be equipped with up to two analytics-enabled buttons.
-
-![A modal in-app message in the center of a phone screen.](https://www.braze.com/docs/assets/img/modal-header-text.png?cef10f16ce8c681a237e5352cebf76f9){: style="max-width:35%;border:none;"}
-
-
-
-
-[`Modal Image`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/modalimage-swift.struct) in-app messages appear in the center of the screen and are framed by a translucent panel. These messages are similar to the `Modal` type except without header or message text. Useful for more critical messaging, they can be equipped with up to two analytics-enabled buttons.
-
-![A modal image in-app message in the center of a phone screen.](https://www.braze.com/docs/assets/img/modal-full-image.png?2cda602759102cab22396c78978d712b){: style="max-width:35%;border:none;"}
-
-
-
-
-[`Full`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/full-swift.struct) in-app messages are useful for maximizing the content and impact of your user communication. The upper half of a `Full` in-app message contains an image, and the lower half displays text and up to two analytics-enabled buttons.
-
-![A fullscreen in-app message shown across an entire phone screen.](https://www.braze.com/docs/assets/img/full-screen-header-text.png?803a758bf53c33ebc3ff63797676339b){: style="max-width:35%;border:none;"}
-
-
-
-
-[`Full Image`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/fullimage-swift.struct) in-app messages are similar to `Full` in-app messages except without header or message text. This message type is useful for maximizing the content and impact of your user communication. A `Full Image` in-app message contains an image spanning the entire screen, with the option to display up to two analytics-enabled buttons.
-
-![A fullscreen image in-app message shown across an entire phone screen.](https://www.braze.com/docs/assets/img/full-screen-image.png?b29bfae801d78d57fcc7c9fdcb7cc0cc){: style="max-width:35%;border:none;"}
-
-
-
-
-[`HTML`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/html-swift.struct) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see our [best practices](https://www.braze.com/docs/user_guide/channels/in_app_messages/best_practices) for more details.
-
-The following example shows a paginated HTML Full in-app message:
-
-![An HTML in-app message with a carousel of content and interactive buttons.](https://www.braze.com/docs/assets/img_archive/ios-html-full-iam.gif?4c6c9603065d4c430d406677e8cb6045)
-
-Note that we currently do not support the display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.
-
-
-
-
-[`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) in-app messages do not contain a UI component and are used primarily for analytics purposes. This type is used to verify receipt of an in-app message sent to a control group.
-
-For details about automatic variant optimization and control groups, see [Optimize with BrazeAI™](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/variant_selection).
-
-
-
-
-
-
-
-## Enabling in-app messages
+The `uri` value can arrive as a number, for example if the dashboard value is numeric. Convert it with `ToStr()` before you parse it.
+
+
+
+## Rendering specific messages with a custom UI
+
+To render some messages with your own UI and use the default UI for the rest, implement `brazeHandleCustomInAppMessage(in_app_message)` on your Scene and declare it in the Scene's `<interface>`.
+
+The SDK calls this function for each `MODAL` message after `display_delay`. Return `true` if you rendered the message. Return `false` to display it with the default UI.
+
+```xml
+<interface>
+    <function name="brazeHandleCustomInAppMessage" />
+    <function name="brazeHandleInAppMessageClick" />
+</interface>
+```
+
+```brightscript
+function brazeHandleCustomInAppMessage(in_app_message as object) as boolean
+    if in_app_message.extras <> invalid and in_app_message.extras.msgtype = "sidebyside"
+        ' getDeepestFocusedNode is a helper in the sample app's MainScene.brs.
+        m.oldFocus = getDeepestFocusedNode(m.top.focusedChild)
+        m.customMsg = CreateObject("roSGNode", "CustomSideBySideInAppMessage")
+        m.top.appendChild(m.customMsg)
+        m.customMsg.BrazeTask = m.BrazeTask
+        m.customMsg.inappmessage = in_app_message
+        m.customMsg.setFocus(true)
+        m.customMsg.ObserveField("isClosed", "reclaimFocus")
+        return true
+    end if
+    return false
+end function
+
+sub reclaimFocus()
+    m.top.removeChild(m.customMsg)
+    m.customMsg = invalid
+    if m.oldFocus <> invalid then m.oldFocus.setFocus(true)
+end sub
+```
+
+For a complete custom component, refer to `CustomSideBySideInAppMessage` in the `torchietv` sample app in the [Braze Roku SDK repository](https://github.com/braze-inc/braze-roku-sdk).
+
+Keep the following in mind:
+
+- The SDK calls this function only when `automatic_iam_display` is `true` and the default UI files are in your app.
+- Only `MODAL` messages reach this function.
+- Your custom UI is responsible for logging impressions, clicks, and button clicks, removing its own node, and restoring focus.
+- The SDK clears `BrazeTask.BrazeInAppMessage` and applies `display_delay` itself, so don't handle either yourself.
+- When a newer message arrives, the SDK removes the default overlay before it calls this function. It can't remove a custom layout you rendered earlier, so remove it in your Scene.
+
+## Using a custom UI for all messages
+
+If you leave `automatic_iam_display` unset, your app handles every in-app message. Your observer, UI, and logging work as they did before Roku SDK 2.3.0, for every message type.
 
 ### Step 1: Add an observer
 
@@ -1143,7 +1238,51 @@ sub onInAppMessageReceived()
 end sub
 ```
 
+## Upgrading to Roku SDK 2.3.0
+
+Roku SDK 2.3.0 adds the default UI. It's off by default, so upgrading doesn't change how your in-app messages display. Choose one of the following paths.
+
+### Keep your custom UI
+
+1. Replace your existing SDK files with the files from the `sdk_files` directory of the 2.3.0 release.
+2. Leave `automatic_iam_display` unset.
+
+Your observer, UI, and logging work as before, for every message type. The SDK uses the `BrazeDefaultInAppMessage` files only when `automatic_iam_display` is `true`, so it's safe to copy them with the rest of `sdk_files`.
+
+### Switch to the default UI
+
+1. Replace your existing SDK files with the files from the `sdk_files` directory of the 2.3.0 release, and add the `BrazeDefaultInAppMessage.brs`, `BrazeDefaultInAppMessage.xml`, and `BrazeDefaultInAppMessageStyles.brs` files to `components`. Your old sample `BrazeInAppMessage` component isn't changed. You can delete it after you switch.
+2. [Turn on the default UI](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=roku#roku_step-2-turn-on-the-default-ui).
+3. [Check that `getBrazeInstance()` is called from your Scene](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=roku#roku_step-3-initialize-braze-from-your-scene).
+4. Remove your existing in-app message handling:
+    - The observer: `m.BrazeTask.observeField("BrazeInAppMessage", "onInAppMessageReceived")` and its handler
+    - Creating and appending your in-app message node
+    - Calls to `LogInAppMessageImpression`, `LogInAppMessageClick`, and `LogInAppMessageButtonClick`
+    - `m.BrazeTask.BrazeInAppMessage = invalid`
+5. Move your click and deep link handling to [`brazeHandleInAppMessageClick`](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=roku#roku_handling-clicks-and-deep-links).
+
+**Warning:**
+
+
+The SDK adds its own observer and doesn't replace yours. If you keep your observer and logging when you turn on the default UI, messages can display twice, and impressions and clicks are logged twice.
+
+
+
+### Keep some of your custom layouts
+
+Follow the steps in [Switch to the default UI](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=roku#roku_switch-to-the-default-ui). Then move the rendering code from your old handler into [`brazeHandleCustomInAppMessage`](https://www.braze.com/docs/developer_guide/in_app_messages?sdktab=roku#roku_rendering-specific-messages-with-a-custom-ui).
+
+Compared to your old handler:
+
+- Keep your impression and click logging.
+- Keep removing your own node and restoring focus.
+- Remove `m.BrazeTask.BrazeInAppMessage = invalid`. The SDK clears it.
+- Remove your own `display_delay` handling. The SDK applies it.
+- Only `MODAL` messages reach the function. If you render other message types, keep using a custom UI for all messages.
+
 ## Message fields
+
+These fields are available on `in_app_message` when you render messages with a custom UI. The default UI applies them for you.
 
 ### Handling
 

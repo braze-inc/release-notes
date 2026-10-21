@@ -2,12 +2,11 @@
 
 > This page covers how to request a CSV export of user data from a segment, and the data included in the export.
 
-**Note:**
+## Prerequisites
 
+To export segment data to a CSV, you need the "Export User Data" [permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for your workspace.
 
-CSV export options appear in the **User Data** dropdown only for company users who have the ["Export User Data" permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for that workspace.
-
-
+## Request a CSV export
 
 To export segment data to a CSV, select the **User Data** dropdown while editing a segment and select to export either the user data or email addresses for the segment.
 
@@ -27,13 +26,6 @@ To export data from all your user profiles, create a segment with no filters, an
 The CSV output contains the data from each user profile captured in the segment at the time of export. You can export any segment by selecting the gear icon and CSV export. Braze will generate the report in the background and email it to the user who is currently logged in.
 
 ## Segment CSV export details
-
-**Note:**
-
-
-Dashboard users need the **Export user data** permission to use CSV export options. If they don't have this permission, CSV export options don't appear.
-
-
 
 **CSV Export Email Addresses** only includes rows for users in the segment who have an email address. For example, if your segment has 100,000 users but only 50,000 have an email address, **CSV Export Email Addresses** produces about 50,000 rows. **CSV Export User Data** exports all user data for the segment.
 

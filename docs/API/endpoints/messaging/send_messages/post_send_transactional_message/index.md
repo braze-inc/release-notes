@@ -1,4 +1,4 @@
-<div id='api_ghicmwhugzul' class='api_div' data-search-keywords='send transactional emails using api-triggered delivery external_send_id trigger_properties recipient user_alias external_user_id attributes dispatch_id status metadata campaign_api_id received_at enqueued_at executed_at sent_at processed_at delivered_at bounced_at aborted_at reason'>
+<div id='api_jieyeryxwkiu' class='api_div' data-search-keywords='send transactional emails using api-triggered delivery external_send_id trigger_properties recipient user_alias external_user_id attributes dispatch_id status metadata campaign_api_id received_at enqueued_at executed_at sent_at processed_at delivered_at bounced_at aborted_at reason'>
 <h1 id="send-transactional-emails-using-api-triggered-delivery">Send transactional emails using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/transactional/v1/campaigns/{campaign_id}/send</p>
@@ -15,6 +15,8 @@
 <p>Transactional Email is currently available as part of select Braze packages. Contact your Braze customer success manager for more details.</p>
 
 <p>Similar to the <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns">Send triggered campaign endpoint</a>, this campaign type allows you to house message content inside of the Braze dashboard while dictating when and to whom a message is sent via your API. Unlike the Send triggered campaign endpoint, which accepts an audience or segment to send messages to, a request to this endpoint must specify a single user either by <code class="language-plaintext highlighter-rouge">external_user_id</code> or <code class="language-plaintext highlighter-rouge">user_alias</code>, as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.</p>
+
+<p>Don’t send transactional email campaigns through <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns"><code class="language-plaintext highlighter-rouge">/campaigns/trigger/send</code></a> or <a href="/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns"><code class="language-plaintext highlighter-rouge">/campaigns/trigger/schedule/create</code></a>. Those endpoints return a <code class="language-plaintext highlighter-rouge">400</code> error for transactional email campaign IDs.</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cec874e1-fa51-42a6-9a8d-7fc57d6a63bc" class="seeme">See me in Postman</a></div>
 

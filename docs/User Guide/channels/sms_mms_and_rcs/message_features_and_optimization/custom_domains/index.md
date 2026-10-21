@@ -6,7 +6,7 @@ With self-serve custom domains, you can configure and manage your own custom dom
 
 ## Benefits of self-serve custom domains
 
-- **Streamlined setup:** Configure your domains on the **Company Settings** page, reducing set up time.
+- **Streamlined setup:** Configure your domains on the **Company Settings** page, reducing setup time.
 - **Enhanced transparency:** Receive real-time updates on your domain’s setup status through banners in the dashboard.
 - **Proactive notifications:** Get immediate alerts when your custom domain is connected or if any configuration errors occur.
 
@@ -18,7 +18,7 @@ With self-serve custom domains, you can configure and manage your own custom dom
   - Can't be used to host any web content
     - You can also use unique subdomains. For example, the domain `braze.com` could have subdomains of `sms.braze.com` or `whatsapp.braze.com`.
 
-## Delegating your custom domain
+## Delegate your custom domain
 
 We require you to delegate your custom domain to Braze so that we can facilitate proper routing and infrastructure compatibility with our link shortening and click tracking services. When you delegate your domain to Braze, we automatically handle the certificate renewal to prevent a lapse in service.
 
@@ -29,7 +29,7 @@ If your DNS records aren't updated within 45 days, the setup token expires. Rest
 
 
 
-## Adding a custom domain
+## Add a custom domain
 
 1. In Braze, go to **Company Settings** > **SMS/RCS and Messaging Apps Domains**.
 !["SMS/RCS and Messaging Apps Domains" page with several domains listed.](https://www.braze.com/docs/assets/img/main_page.png?633343c437c73b174a84d8f95ba802cf)
@@ -77,7 +77,7 @@ New custom domains use A and AAAA records. Older custom domains that use a CNAME
 
 With A and AAAA records, your domain points directly to the Braze link infrastructure instead of to a domain name shared with other customers, so an issue with a shared domain doesn't affect your links. 
 
-## Assign custom domains to subscription groups {#assigning-custom-domains-to-subscription-groups}
+## Assign custom domains to subscription groups
 
 After they're configured, custom domains can be assigned to one or multiple SMS, RCS, and WhatsApp subscription groups.
 
@@ -88,6 +88,24 @@ After they're configured, custom domains can be assigned to one or multiple SMS,
    - **Braze domains:** Braze-managed short domains (`brz.ai`, `brz.is`, `brz.sh`, `brz.so`)
 
 Campaigns sent with link shortening turned on use the assigned domain associated with your SMS, RCS, or WhatsApp subscription group.
+
+## Delete a custom domain
+
+You can delete Cloudflare-based custom domains, including those that use A and AAAA or CNAME records. Legacy Fastly-based custom domains can't be deleted.
+
+You can only delete a domain if no subscription groups are using it as their **Link Shortening Domain**.
+
+1. Reassign any subscription group that uses the domain as its **Link Shortening Domain**.
+2. Go to **Company Settings** > **SMS/RCS and Messaging Apps Domains**.
+3. Select the domain you want to delete.
+4. Select **Delete domain**. In the confirmation modal, select **Delete domain** again.
+
+**Important:**
+
+
+All links that use the domain will stop working, including links in messages you've already sent. Update or archive any active messages that use it first.
+
+
 
 ## Frequently asked questions
 
@@ -103,9 +121,7 @@ Yes. Domains can be associated with subscription groups in multiple workspaces, 
 
 You can add up to 10 custom domains per dashboard. Braze may configure a higher limit for your company on request.
 
-Domains in **Pending** or **Error** status count toward this limit. Delete them or resolve the error on the **SMS/RCS and Messaging Apps Domains** page.
-
-You can't delete a domain that is assigned as the **Link Shortening Domain** on a subscription group. Reassign the domain on each subscription group first, then delete the domain.
+Domains in **Pending** or **Error** status count toward this limit. Delete them or resolve the error on the **SMS/RCS and Messaging Apps Domains** page. For steps, see [Delete a custom domain](#delete-a-custom-domain).
 
 ### What happens if I don’t update my DNS records within 45 days?
 

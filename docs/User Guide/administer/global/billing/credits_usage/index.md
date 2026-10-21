@@ -54,6 +54,23 @@ Refer to the following tabs for details on what is shown for each feature that c
 
 
 
+### Credit Ratios
+
+**Credit Ratios** shows credit ratios across different channels and destinations. There are no summary tiles and no **Date range** control on this page. The **Credit ratios** table includes **Channel grouping**, **Destination**, and **Credit ratio**.
+
+#### Filters
+
+You can filter your data by:
+- Channel grouping
+- Destination
+
+Use **Export** to download the table data.
+
+![Credit Ratios page with a credit ratios table and channel and destination filters.](https://www.braze.com/docs/assets/img/app_settings/credits_usage_credit_ratios.png?d580545e7273dfc048ccba7922564db5)
+
+
+
+
 ### Banners
 
 **Banners Credits Usage** shows Banners credit usage across all accounts. Tiles show total credits consumed and total daily unique impressions. The **Usage by account** table includes **Braze workspace**, **Daily unique impressions**, **Credit ratio**, and **Credits**. When data is available, **Last updated** shows when the table was refreshed.
@@ -200,23 +217,6 @@ You can filter your data by:
 - Region
 
 ![WhatsApp Credits Usage with a tile for total credits consumed and a usage by account table.](https://www.braze.com/docs/assets/img/app_settings/whatsapp_credit_consumption4.png?4bc88b246a51cdf4fd85d928bb9087a5)
-
-
-
-
-### Credit Ratios
-
-**Credit Ratios** shows credit ratios across different channels and destinations. There are no summary tiles and no **Date range** control on this page. The **Credit ratios** table includes **Channel grouping**, **Destination**, and **Credit ratio**.
-
-#### Filters
-
-You can filter your data by:
-- Channel grouping
-- Destination
-
-Use **Export** to download the table data.
-
-![Credit Ratios page with a credit ratios table and channel and destination filters.](https://www.braze.com/docs/assets/img/app_settings/credits_usage_credit_ratios.png?5edae7fc6667976cdc664be7571dea65)
 
 
 

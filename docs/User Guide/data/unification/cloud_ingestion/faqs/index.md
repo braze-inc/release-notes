@@ -88,7 +88,7 @@ If you receive this error, allow that user access to your Snowflake account.
 
 ### Error connecting to Snowflake instance with current and old key
 
-If you receive this error, make sure the user is using the current public key as displayed in your Braze dashboard.
+If you receive this error, open the credential under **Snowflake Data Access Credentials** and run the statement shown for **RSA public key (primary)**. That statement installs the current public key. See [Review a Snowflake credential](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/snowflake_workload_identity_federation#review-a-snowflake-credential).
 
 
 

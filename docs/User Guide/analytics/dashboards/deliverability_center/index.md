@@ -2,59 +2,16 @@
 
 > The Deliverability Center provides more insight into your email performance by supporting the use of [Gmail Postmaster Tools](https://www.gmail.com/postmaster/) to track data on emails sent and gather data about your sending domain.
 
-Email deliverability is the core of campaign success. Using the Deliverability Center in the Braze dashboard, you can view your domains by **IP Reputation** or **Delivery Errors** to discover and troubleshoot any potential issues with email deliverability. 
+Email deliverability is the core of campaign success. Using the Deliverability Center in the Braze dashboard, you can view your domains by **IP Reputation** or **Delivery Errors** to discover and troubleshoot any potential issues with email deliverability.
 
-To access the Deliverability Center, you need the [user permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) in the following dropdown for your workspace.
+## Prerequisites
 
-**User permissions for the Deliverability Center**
-
-
-
-- View Campaigns
-- Edit Campaigns
-- Archive Campaigns
-- View Canvases
-- Edit Canvases
-- Archive Canvases
-- View Frequency Capping Rules
-- Edit Frequency Capping Rules
-- View Message Prioritization Settings
-- Edit Message Prioritization Settings
-- Delete Message Prioritization Settings
-- View Content Blocks
-- View Feature Flags
-- Edit Feature Flags
-- Archive Feature Flags
-- View Segments
-- Edit Segments
-- View IAM Templates
-- Edit IAM Templates
-- Archive IAM Templates
-- View Email Templates
-- Edit Email Templates
-- Archive Email Templates
-- View Webhook Templates
-- Edit Webhook Templates
-- Archive Webhook Templates
-- View Email Link Templates
-- Edit Email Link Templates
-- View Media Library Assets
-- Edit Media Library Assets
-- Delete Media Library Assets
-- View Locations
-- Edit Locations
-- Archive Locations
-- View Promotion Codes
-- Edit Promotion Codes
-- Export Promotion Codes
-- View Preference Centers
-- Edit Preference Centers
-- View Reports
-- Edit Reports
-- View Usage Data
-
-
-
+| Requirements | Description |
+| --- | --- |
+| "View Usage Data" or "View Dashboard Reports" [permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) | Open the Deliverability Center and view deliverability data |
+| "Edit Technology Partners" [permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) | Connect or disconnect Google Postmaster |
+| Google Postmaster Tools account | A Google Postmaster Tools account for the domains you want to monitor. Set this up before you [integrate Google Postmaster](#integrating-google-postmaster). |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Deliverability Center prerequisites" }
 
 ## Set up your Google Postmaster account
 
