@@ -2,13 +2,6 @@
 
 > Engagement reports let you pull engagement statistics for specific messages from campaigns and Canvases to receive as an email at your preferred time.
 
-**Note:**
-
-
-You need "Export User Data" permissions to run engagement reports.
-
-
-
 With engagement reports, you can manually select campaigns and Canvases to include in your email report, or specify rules to automatically select relevant campaigns and Canvases.
 
 Regardless of the number of campaigns or Canvases you select, up to two CSV files are generated—one for all campaign data and one for all Canvas data. You can access these CSV files from the link embedded inside your report email. Engagement reports are not saved in the Braze dashboard.
@@ -21,6 +14,17 @@ Certain data is aggregated at the campaign or Canvas level versus at the individ
 You can re-run the report to generate updated statistics.
 
 
+
+## Prerequisites
+
+To run engagement reports, you need these [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for your workspace:
+
+| Permission | What it allows |
+| --- | --- |
+| "Edit Dashboard Reports" | Open Engagement Reports and create, edit, and run reports |
+| "View Campaigns" | Include campaigns in engagement reports |
+| "View Canvases" | Include Canvases in engagement reports |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Engagement Reports permissions" }
 
 ## Creating a new report
 

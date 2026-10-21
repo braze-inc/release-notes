@@ -2,12 +2,9 @@
 
 > Messaging Observability traces events across your Canvas or campaign so you can audit and troubleshoot messaging. Use it to spot trends, see how users progress through a Canvas, and diagnose why messages may not have been sent as expected.
 
-**Note:**
+## Prerequisites
 
-
-To access **Messaging Observability**, you need the "View Dashboard Reports" [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for your workspace.
-
-
+To access Messaging Observability, you need the "View Dashboard Reports" [permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for your workspace.
 
 ## Key concepts
 
@@ -21,9 +18,11 @@ When Braze "sends" a message, the final delivery may depend on external services
 
 | Channel | Example of final delivery |
 | --- | --- |
+| Banners | The Banner was sent and is eligible for viewing. |
 | Content Cards | The card was sent and is eligible for viewing. |
 | Email | Braze hands the message to an email service provider (ESP). The ESP is then responsible for the final delivery. That ESP, for example, may report a "bounce" if the email address is invalid or the inbox is full. |
 | In-app messages | The message was viewed by the user and an impression was logged. |
+| KakaoTalk | The message was successfully handed off to a sending partner. |
 | LINE | The message was successfully handed off to a sending partner. |
 | Push | Braze hands the message to the appropriate push notification service (such as Apple Push Notification service for iOS or Firebase Cloud Messaging for Android). That service is responsible for the final delivery of the notification to the device. |
 | SMS/MMS/RCS | Braze hands the message to an SMS gateway (like Twilio). That gateway is responsible for the final delivery to the mobile carrier. |

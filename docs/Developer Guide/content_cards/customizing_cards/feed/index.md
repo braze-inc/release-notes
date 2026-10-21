@@ -49,7 +49,7 @@ To dynamically show up-to-date Content Cards without manually refreshing, select
 
 ### Real-time delivery
 
-Braze also sends Content Card updates to the device as soon as they happen, over a live connection that the SDK maintains during the session. Users don't need to start a new session or wait for a refresh to see the change.
+Braze also sends Content Card updates to the device as soon as they happen, over a live connection that the SDK maintains during the session. Users don't need to start a new session or wait for a refresh to see the change. Real-time delivery works for both default and customized Content Card feeds.
 
 Real-time delivery covers the following updates:
 

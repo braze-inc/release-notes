@@ -10,12 +10,14 @@ You can answer questions like:
 - Which campaigns and Canvases are targeting a given segment, and how did each perform?  
 - How does engagement compare across segments for a single campaign or Canvas?
 
-**Note:**
+## Prerequisites
 
-
-Segment reporting is available only for segments with [analytics tracking](https://www.braze.com/docs/user_guide/analytics/tracking/segment_analytics_tracking) enabled. To select **Segments** in the **Rows** dropdown, you need the workspace-level ["View Dashboard Reports" permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions).
-
-
+| Requirements | Description |
+| --- | --- |
+| Segment analytics tracking | Segment reporting is available only for segments with [analytics tracking](https://www.braze.com/docs/user_guide/analytics/tracking/segment_analytics_tracking) enabled |
+| "View Dashboard Reports" [permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) | Open Report Builder, view reports, and run segment reports |
+| "Edit Dashboard Reports" [permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) | Create and edit reports that use segments |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Segment reporting prerequisites" }
 
 ## Report on segments
 

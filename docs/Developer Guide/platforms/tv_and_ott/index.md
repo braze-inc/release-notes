@@ -70,7 +70,7 @@ The following table summarizes messaging channel support for common TV and OTT p
         <tr>
             <td>Roku</td>
             <td><a href="https://github.com/braze-inc/braze-roku-sdk">Roku SDK</a></td>
-            <td><span aria-hidden="true">🔧</span><span class="sr-only">Headless only</span></td>
+            <td><span aria-hidden="true">✅</span><span class="sr-only">Supported</span></td>
             <td><span aria-hidden="true">❌</span><span class="sr-only">Not supported by Braze</span></td>
             <td><span aria-hidden="true">➖</span><span class="sr-only">OTT platform unsupported</span></td>
             <td><span aria-hidden="true">❌</span><span class="sr-only">Not supported by Braze</span></td>
@@ -189,7 +189,8 @@ Use the Braze Roku SDK to integrate with [Roku TVs](https://developer.roku.com/d
 Features include:
 
 - Data and analytics collection for cross-channel engagement
-- In-app messages (via [Headless UI](#custom-ui))
+- In-app messages
+  - Display modal messages with the default UI (Roku SDK 2.3.0 and later), or build your own UI with [Headless UI](#custom-ui).
   - Webviews are not supported by the Roku platform, so HTML in-app messages are therefore not supported.
 - Feature Flags
 

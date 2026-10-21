@@ -43,13 +43,15 @@ A Delay Group appears in your path distribution only if your Canvas is set up fo
 
 A single Experiment Path component can contain up to four paths. However, if your Canvas is set up for [one-time entry](#one-time-entry), one path must be reserved for the Delay Group that Braze automatically adds when Winning Path is turned on. This means for Canvases with one-time entry, you can add up to three paths to your experiment.
 
-Finish setting up your Canvas as needed, then launch it. When the first user has entered the experiment, you can check the Canvas to see analytics as they come in and [track your experiment's performance](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step#tracking-performance).
+Finish setting up your Canvas as needed, then launch it. While the experiment is running, the Experiment Path step shows **Experiment in progress** in Canvas analytics. After the experiment window ends and Braze selects the Winning Path, you can view [Winning Path analytics](#analytics) to [track your experiment's performance](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step#tracking-performance).
 
 After a Winning Path concludes, all subsequent users who enter the Canvas go down the Winning Path, including users who re-entered and were previously in the control group of the Experiment Path step.
 
 ## Analytics {#analytics}
 
-If Winning Path is turned on, your analytics view is separated into two tabs: **Initial Experiment** and **Winning Path**.
+If Winning Path is turned on, Experiment Path analytics aren't available until the experiment is complete. While the experiment window is open, selecting the Experiment Path step in Canvas analytics shows **Experiment in progress**.
+
+After the experiment is complete, your analytics view is separated into two tabs: **Initial Experiment** and **Winning Path**.
 
 - **Initial Experiment:** Shows the metrics for each path during the experiment window, which path was selected as the winner, and Canvas conversion metrics. The conversion event used to pick the winner, configured in Winning Path settings, might not be the same as the conversion metric highlighted in Canvas analytics. For more information on how Experiment Path analytics relate to Canvas conversion events and the winning metric, see [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step#winning-path-performance).
 - **Winning Path:** Shows only the metrics for the Winning Path starting from the moment the Initial Experiment finished.

@@ -24,6 +24,25 @@ When **[Calculate exact statistics](https://www.braze.com/docs/user_guide/audien
 
 ![The Canvas Details page showing top-line statistics including messages sent, conversion rate, total entries, total revenue, total exits, and estimated audience, with channel and statistics filters.](https://www.braze.com/docs/assets/img_archive/Journey_5.png?bac8aa2dd1321b465cb524c570ebf35e)
 
+
+### Performance by country
+
+Campaign and Canvas analytics include a **Performance by country** table showing how a message performed in each country. Each row is a country and currency combination. Currency and total revenue come from the order’s `presentment_currency`.
+
+
+| Column | What it shows |
+| --- | --- |
+| Country | Each country attributed to the campaign or Canvas. Orders without a country appear as **Unknown**. |
+| Currency | The presentment currency for that country’s revenue. |
+| Total Revenue | Revenue attributed to that country, shown in the presentment currency. |
+| Total Purchases | Purchases attributed to that country. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="What each performance by country column shows"}
+
+The **Total** row sums **Total Purchases** only. **Total Revenue** is blank in the total row because rows can use different currencies and aren’t summed together.
+
+You can also break down campaign and Canvas performance by country in [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder#countries-shopify-markets) using **Countries (Shopify Markets)** as a row or drilldown.
+
+
 **Tip:**
 
 

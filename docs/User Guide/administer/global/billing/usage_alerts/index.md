@@ -14,6 +14,10 @@
 
 
 
+## Prerequisites
+
+To receive usage alert emails and banners, you need the workspace-level "View Billing Details" [permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions). Grant or revoke this permission in [Company Users](https://www.braze.com/docs/user_guide/administer/global/user_management/manage_company_users) to add or remove alert recipients.
+
 ## About usage alerts
 
 Usage alerts are proactive emails and banners about total Action Credit consumption across channels and products that draw from your contract allotment. They don't pause messaging, change limits, or replace the [Credits Usage dashboard](https://www.braze.com/docs/user_guide/administer/global/billing/credits_usage).
@@ -35,9 +39,7 @@ The Credits Usage **Overview** tab shows a banner at 90% or higher usage.
 
 ## Who receives alerts
 
-Alerts go to dashboard users who have the workspace-level "View Billing Details" permission. Braze doesn't maintain a separate billing contact list for these emails.
-
-Grant or revoke the "View Billing Details" permission in [Company Users](https://www.braze.com/docs/user_guide/administer/global/user_management/manage_company_users) to add or remove alert recipients. For what the permission includes, see [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions).
+Alerts go to dashboard users who meet the [Prerequisites](#prerequisites). Braze doesn't maintain a separate billing contact list for these emails.
 
 Your Braze account team may receive a copy of the email when Braze has account team contact information on file.
 

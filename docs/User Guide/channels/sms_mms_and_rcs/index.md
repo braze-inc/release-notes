@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-SMS, MMS, and RCS availability depends on your Braze package. Contact your account manager or customer success manager to get started.
+SMS, MMS, and RCS availability depends on your Braze package and where you send. For a list of Braze-supported RCS countries, see [RCS setup](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup#step-1-meet-the-eligibility-criteria). Contact your account manager or customer success manager to get started.
 
 Before you start, make sure you have the following:
 
@@ -27,7 +27,7 @@ Before you start, make sure you have the following:
 
 - **SMS** delivers text-only messages up to 160 characters (or 70 characters with Unicode). It's universally supported across all mobile devices and carriers.
 - **MMS** extends SMS with support for multimedia content, including images, GIFs, and audio. MMS requires carrier and device support.
-- **RCS** is the next generation of business messaging, offering rich features such as branded sender profiles, suggested replies, carousels, and read receipts. RCS availability depends on carrier and device support.
+- **RCS** is the next generation of business messaging, offering rich features such as branded sender profiles, suggested replies, carousels, and read receipts. RCS availability depends on country eligibility, carrier support, and device support.
 
 ### Why use RCS?
 

@@ -18,7 +18,7 @@ User deletion lets you manage your database by removing profiles that are no lon
 
 | Consideration | Details |
 |---------------|---------|
-| Maximum size | You can delete up to 10 million user profiles when deleting a segment. |
+| Maximum size | You can delete up to 25 million user profiles when deleting a segment. |
 | Waiting period | All segment deletions require a 7-day waiting period plus the time it takes to process deletions. |
 | Job limits | Only one segment can be deleted at a single time, which includes the 7-day waiting period. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="About user deletion" }
@@ -144,13 +144,13 @@ You can also check the status of previous deletions by downloading a security ev
 
 ## Frequently asked questions {#faq}
 
-### Can I delete segments with more than 10 million users?
+### Can I delete segments with more than 25 million users?
 
-No. You cannot delete segments with more than 10 million users. If you need help deleting a segment of this size, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
+No. You cannot delete segments with more than 25 million users. If you need help deleting a segment of this size, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
 
-### I can only delete up to 10 million users at a time. Is this a bug?
+### I can only delete up to 25 million users at a time. Is this a bug?
 
-No, this is not a bug. The maximum number of user profiles that can be deleted in one segment deletion run is 10 million.
+No, this is not a bug. The maximum number of user profiles that can be deleted in one segment deletion run is 25 million.
 
 ### Does automated user merging affect user deletion?
 

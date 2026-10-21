@@ -85,6 +85,16 @@ The warehouse needs to have the auto-resume flag on. If not, grant Braze additio
 
 #### Step 1.4: Create a Snowflake user
 
+Braze authenticates to Snowflake using either Workload Identity Federation or an RSA key pair. Existing RSA key-pair credentials keep working, and you don't need to migrate them. Follow one method. You use this user when you configure your Snowflake source in Braze.
+
+
+
+
+Use the role and warehouse grants in [Step 1.2](#step-12-set-up-role-and-database-permissions) and [Step 1.3](#step-13-set-up-the-warehouse-and-grant-access-to-the-braze-role). Create the service user from the Snowflake credential form, and run that statement in a Snowflake worksheet. The user is `TYPE = SERVICE`, with no password and no RSA key. If your Snowflake account uses a network policy, allow Braze IP addresses as described in [Step 1.5: Allow Braze IPs in Snowflake network policy (optional)](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations?tab=snowflake#step-15-allow-braze-ips-in-snowflake-network-policy-optional). For what the statement does and where to run it, see [Configuring Snowflake for Workload Identity Federation](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/snowflake_workload_identity_federation).
+
+
+
+
 Create a user for Braze and assign the role:
 
 ```sql
@@ -92,7 +102,8 @@ CREATE USER BRAZE_INGESTION_USER;
 GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
 ```
 
-You use this user when you configure your Snowflake source in Braze.
+
+
 
 ### Step 2: Create a new source in the Braze dashboard
 
@@ -115,7 +126,17 @@ For the **Snowflake Account Locator** field, enter your Snowflake [account ident
 
 
 
-#### Step 2.3: Complete RSA key setup
+#### Step 2.3: Complete authentication
+
+Select **Workload Identity Federation** or **Key pair** to match the user from Step 1.4.
+
+
+
+
+Enter **Account Locator**, **Username**, and **Role**. Select **Copy statement** when it is available, run the statement in a Snowflake worksheet, and then select **Save credential**. For the statement, see [Configuring Snowflake for Workload Identity Federation](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/snowflake_workload_identity_federation).
+
+
+
 
 After entering your credentials and configuration, select **Save credentials** and generate an RSA key. Then go back to Snowflake to complete setup. Add the public key shown in the dashboard to the user you created for Braze to connect to Snowflake.
 
@@ -124,6 +145,9 @@ For additional information, see [Snowflake key-pair authentication](https://docs
 ```sql
 ALTER USER BRAZE_INGESTION_USER SET RSA_PUBLIC_KEY='MIIBIjANBgkqhkiG9w0BA...';
 ```
+
+
+
 
 Back in Braze, select **Test connection** to verify source access, and then create the source.
 
@@ -293,7 +317,7 @@ When you see "No preview available", one of the following underlying error types
 | Error type | Steps to resolve |
 |---|---|
 | "No preview available" | Read the error banner for hints. |
-| "Unable to connect to the source" | Check the configured username, account locator, and RSA key-pair authentication setup.<br>Verify the warehouse is running.<br>Confirm network access. |
+| "Unable to connect to the source" | Check the configured username, account locator, and authentication method.<br>For a key pair, confirm the RSA public key is on the Snowflake user.<br>For Workload Identity Federation, confirm you ran the statement from the credential form.<br>Verify the warehouse is running.<br>Confirm network access. |
 | "SQL syntax error" | Check your SQL syntax. |
 | "Object does not exist or not authorized" | Make sure the role has `SELECT` access to the table.<br>Confirm database and schema permissions.<br>Check table name typos. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="&quot;No preview available&quot;" }

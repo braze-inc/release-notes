@@ -44,9 +44,21 @@ For in-app messages sent from a Canvas, whether a user can see the message again
 
 ## When is eligibility for an in-app message calculated?
 
-Eligibility for an in-app message is calculated at the time of delivery. If an in-app message is scheduled to send at 7 am, then eligibility is checked for this in-app message at 7 am.
+### Campaigns
 
-When the in-app message appears, the eligibility depends on when the in-app message is downloaded and triggered.
+For in-app message campaigns, Braze checks whether a user is in your target audience when their device downloads in-app messages. This usually happens at session start. The device stores eligible messages and displays each one when its trigger occurs, even if that is later in the session.
+
+For campaigns with a future start time, Braze also sends the message to devices that start a session up to an hour before the start time. This way, the message is ready to display on time. For example, a user who starts a session at 6:30 am receives a campaign that starts at 7 am. Braze checks their eligibility at 6:30 am, and the message displays when its trigger occurs after 7 am.
+
+#### Eligibility during a session
+
+Users who become eligible during a session receive the message at their next session start.
+
+To check eligibility again right before the message displays, select **Re-evaluate campaign eligibility before displaying**. If the user no longer qualifies, the message doesn't display. This setting doesn't send the message to users who became eligible after their session started. For more information, see [Choose users to target](https://www.braze.com/docs/user_guide/channels/in_app_messages/traditional#choose-users-to-target).
+
+### Canvases
+
+For in-app messages in a Canvas, Braze checks the step's audience when the user reaches the step. The message then downloads at the user's next session start.
 
 ## Why is my archived in-app message campaign still delivering in-app message impressions?
 

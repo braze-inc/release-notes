@@ -17,7 +17,21 @@ Blocklisting pushes blocklist information to each user's device and can be data-
 
 Regardless of whether you blocklist or delete, those custom attributes, events, and purchases no longer appear on the **Manage Workspace** page and are removed as segment filters. If you delete custom data, Braze removes that user-level data from profiles according to [How deletion works](#how-deletion-works).
 
-To blocklist custom data, you need the [user permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) in the following dropdown for your workspace.
+Blocklisted data is not sent by the SDK, and the Braze dashboard doesn't process blocklisted data from other sources (for example, the API). However, blocklisting doesn't remove data from user profiles or retroactively decrease the amount of data points incurred for that custom data object. Blocklisted data is hidden and can still be used for Liquid templating.
+
+### Prerequisites
+
+To blocklist or delete custom data, you need these [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions):
+
+| Permission | What it allows |
+| --- | --- |
+| "Blocklist Custom Attributes" or "Edit Custom Attributes" | Blocklist custom attributes |
+| "Blocklist Custom Events" or "Edit Custom Events" | Blocklist custom events |
+| "Blocklist Products" or "Edit Products" | Blocklist products |
+| "Add/Remove App Groups" | Delete custom attributes or custom events (company-level permission; company admins have this access) |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Blocklist custom data permissions" }
+
+If the custom data is used in campaigns, Canvases, or segments, you also need permission to edit or archive those objects before Braze can remove the references during blocklisting:
 
 **User permissions for blocklisting custom data**
 
@@ -66,8 +80,6 @@ To blocklist custom data, you need the [user permissions](https://www.braze.com/
 
 
 
-
-Blocklisted data is not sent by the SDK, and the Braze dashboard doesn't process blocklisted data from other sources (for example, the API). However, blocklisting doesn't remove data from user profiles or retroactively decrease the amount of data points incurred for that custom data object. Blocklisted data is hidden and can still be used for Liquid templating.
 
 ### Blocklisting custom attributes, custom events, and products
 
@@ -118,7 +130,7 @@ As you build targeted campaigns and segments, you may find that you no longer ne
 **Important:**
 
 
-You must be a [Braze admin](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions#admin) to delete custom data.
+Only users with the company-level ["Add/Remove App Groups"](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) permission can delete custom data. See [Prerequisites](#prerequisites).
 
 
 

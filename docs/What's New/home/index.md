@@ -206,7 +206,7 @@ The [**Manage Subscriptions** block](https://www.braze.com/docs/user_guide/messa
 **Area:** Channels & Touchpoints
 **Status:** General availability
 
-Add [multiple link shortening domains](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/custom_domains#assigning-custom-domains-to-subscription-groups) for SMS, MMS, and RCS so your messages don't depend on one shared domain.
+Add [multiple link shortening domains](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/custom_domains#assign-custom-domains-to-subscription-groups) for SMS, MMS, and RCS so your messages don't depend on one shared domain.
 
 ### SCIM Provisioning for Okta and Microsoft Entra ID
 

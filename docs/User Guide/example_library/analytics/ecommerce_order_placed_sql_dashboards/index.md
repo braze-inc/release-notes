@@ -2,6 +2,14 @@
 
 > Build custom revenue and order charts from `ecommerce.order_placed` recommended events by saving SQL queries in Query Builder and visualizing the results in Dashboard Builder.
 
+## Prerequisites
+
+| Requirements | Description |
+| --- | --- |
+| Query Builder permissions | The "View Dashboard Reports", "View PII", and "Edit Dashboard Reports" [permissions](https://www.braze.com/docs/user_guide/analytics/reports/query_builder#prerequisites) at the workspace level |
+| `ecommerce.order_placed` events | [eCommerce recommended events](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/) implemented and sending `total_value` (and product data when needed). If you use the [Shopify connector](https://www.braze.com/docs/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), recommended events may already be available. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Order Placed SQL dashboard prerequisites" }
+
 ## About this example
 
 Flash & Thread, a fictional clothing retail brand, logs orders with [eCommerce recommended events](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/). Its marketing team wants daily revenue, average order value (AOV), and order volume in a single dashboard—not only the prebuilt last-touch attribution view.
@@ -12,8 +20,6 @@ Use this when built-in eCommerce dashboards do not cover your metric mix. For la
 
 ## Considerations
 
-- **Event implementation:** `ecommerce.order_placed` must be implemented and sending `total_value` (and product data when needed) before queries return data. If you use the [Shopify connector](https://www.braze.com/docs/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), recommended events may already be available.
-- **Query Builder access:** You need the "View PII" [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions/) to use Query Builder.
 - **Data retention:** Query Builder returns data from the past 60 days by default. With [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/), you may query up to two years of retained data. See [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/).
 - **Timeouts:** Queries that run longer than six minutes time out. Narrow the date range, filter on `TIME`, or reduce the audience size if a report fails. Event tables are clustered on `TIME`; prefer filtering on when the event occurred.
 - **Revenue field:** Sample queries sum `total_value` from event `properties`. Braze's standardized eCommerce revenue in product reports often derives from each product's `price` and `quantity`. Align `total_value` with your product line items, or adjust SQL to match your schema.

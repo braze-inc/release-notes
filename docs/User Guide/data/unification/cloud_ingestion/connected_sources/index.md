@@ -24,7 +24,7 @@ Cloud Data Ingestion connected sources require some setup on Braze and in your i
 **In your data warehouse**
 1. Create a role and grant permissions to query and create tables in a schema.
 2. Set up your warehouse and give access to that role.
-3. Create a user for that role.
+3. Create a user for that role with Workload Identity Federation or an RSA key pair.
 4. Depending on your configuration, you may need to allow Braze IPs in your Snowflake network policy.
 
 **In the Braze dashboard**
@@ -32,12 +32,12 @@ Cloud Data Ingestion connected sources require some setup on Braze and in your i
 {: start="5"} 
 5. Create a new connected source in the Braze dashboard.
 6. Configure the sync details for the connected source.
-7. Retrieve the public key provided in the Braze dashboard.
+7. For an RSA key pair, retrieve the public key. For Workload Identity Federation, copy the statement from the credential form.
 
 **In your data warehouse**
 
 {: start="8"} 
-8. Append the public key from the Braze dashboard to the [Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). When you're finished, you can use the connected source to create one or more CDI Segment Extensions. 
+8. For an RSA key pair, append the public key to the [Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). For Workload Identity Federation, run the statement in a Snowflake worksheet. When you're finished, you can use the connected source to create one or more CDI Segment Extensions. 
 
 
 
@@ -127,6 +127,19 @@ The warehouse needs to have the **auto-resume** flag turned on. If it's not, you
 
 
 #### Step 2.3: Set up the user
+
+Braze authenticates to Snowflake with Workload Identity Federation or an RSA key pair. Existing RSA key-pair credentials keep working, and you don't need to migrate them. Follow one method.
+
+
+
+
+Use the role and warehouse grants in [Step 2.1](#step-21-create-a-role-and-grant-permissions) and [Step 2.2](#step-22-set-up-the-warehouse-and-give-access-to-braze-role). If your Snowflake account uses a network policy, allow Braze IP addresses as described in [Step 2.4](#step-24-allow-braze-ips-in-your-snowflake-network-policy-optional).
+
+Create the service user from the Snowflake credential form, and run that statement in a Snowflake worksheet. For what the statement does and where to run it, see [Configuring Snowflake for Workload Identity Federation](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/snowflake_workload_identity_federation).
+
+
+
+
 ```sql
 CREATE USER BRAZE_INGESTION_USER;
 
@@ -134,6 +147,9 @@ GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
 ```
 
 You will share connection information with Braze and receive a public key to append to the user in a later step.
+
+
+
 
 **Note:**
 
@@ -407,10 +423,11 @@ Depending on the configuration of your Microsoft Fabric account, you may need to
 Create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Connected Sources**, select **Add data source**, and then select **Snowflake**.
 
 In **Setup source**, enter the following:
+- **Credential name** and the authentication method, **Workload Identity Federation** or **Key pair**
 - **Credentials:** **Account Locator**, **Username**, and **Role**
 - **Configuration:** **Warehouse**, **Database**, and **Schema**
 
-If you're creating new Snowflake credentials, select **Save credentials and generate RSA key** before testing the connection.
+For Workload Identity Federation, select **Copy statement**, run it in a Snowflake worksheet, and then select **Save credential**. For a key pair, select **Save credentials and generate RSA key** before testing the connection.
 
 #### Step 3.2: Configure sync details
 
@@ -425,9 +442,9 @@ If queries are consistently timing out and you have set a maximum runtime of 60 
 
 
 
-#### Step 3.3: Note the public key  
+#### Step 3.3: Note the public key (key pair)
 
-In the **Test connection** step, take note of the RSA public key. You'll need it to complete the integration in Snowflake.
+In the **Test connection** step, take note of the RSA public key. You need it to complete the integration in Snowflake.
 
 
 
@@ -549,15 +566,27 @@ Select **Test Connection** to verify that the list of tables visible to the user
 
 
 
-Add the public key you noted during the last step to your user in Snowflake. This will allow Braze to connect to Snowflake. For details on how to do this, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). 
 
-If you want to rotate the keys at any point, you can create a new public key by going to **Data Access Management** in **Cloud Data Ingestion** and selecting **Generate New Key** for the respective account.
+
+
+
+You ran the statement from the credential form in an earlier step. Select **Test Connection** in Braze, and then select **Done**. Your connected source is now created and ready to use in CDI Segment Extensions.
+
+
+
+
+Add the public key you noted during the last step to your user in Snowflake. This allows Braze to connect to Snowflake. For details, see [Snowflake key-pair authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 ```sql
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
 ```
 
+To rotate the key later, go to **Data Settings** > **Cloud Data Ingestion** > **Credentials**, open the credential under **Snowflake Data Access Credentials**, and select **Rotate credential**. For the detail modal, see [Review a Snowflake credential](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/snowflake_workload_identity_federation#review-a-snowflake-credential).
+
 After you add the key to the user in Snowflake, select **Test Connection** in Braze, and then select **Done**. Your connected source is now created and ready to use in CDI Segment Extensions.
+
+
+
 
 
 
@@ -593,7 +622,7 @@ You must successfully test a source before it can move from the "draft" to the "
 
 You may set up multiple integrations with Braze, but each integration should be configured to connect a different schema. When creating additional connections, you may reuse existing credentials if connecting to the same Snowflake account.
 
-If you reuse the same user and role across integrations, you won't need to add the public key again.
+If you reuse the same key-pair user and role across integrations, you don't add the public key again. A Workload Identity Federation credential has no public key to add.
 
 
 

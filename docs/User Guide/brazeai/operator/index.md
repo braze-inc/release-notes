@@ -4,6 +4,10 @@
 
 Operator works with you while you build. By default you review and approve each proposed action. For per-user content at send time, use [Braze Agents](https://www.braze.com/docs/user_guide/brazeai/agents) instead. For how to choose between BrazeAI features, see [BrazeAI](https://www.braze.com/docs/user_guide/brazeai).
 
+## Prerequisites
+
+To use Operator, you need the "Use BrazeAI Operator" [permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) for your workspace. For how Operator inherits your other dashboard permissions and handles PII, see [Data privacy and security](https://www.braze.com/docs/user_guide/brazeai/operator/data_privacy_security).
+
 ## Access Operator
 
 Open Operator from any page in the Braze dashboard.  

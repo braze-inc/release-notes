@@ -347,7 +347,7 @@ For when each event fires, and what each update reason, retry state, analytics a
 
 
 
-
+These steps require Android SDK 44.0.0 or later. Use them to render Banners without reacting to cached data.
 <div id='sdk-versions'><a href='/docs/developer_guide/platforms/android/changelog/#4400' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 44.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 **Note:**
@@ -357,84 +357,76 @@ Your banner event handler reflects the SDK's in-memory banner state. A single ev
 
 
 
+1. Subscribe to Banner events with `subscribeToBannersEvents`. Handle each event type separately.
+   | Event | When it fires |
+   |---|---|
+   | `CacheReplay` | Right after you subscribe. It contains the cached Banners, which might not match your latest request. |
+   | `CacheLoad` | When the SDK loads the Banner cache from disk, such as at the start of a session. |
+   | `DataUpdated` | When the cache changes, including each time a refresh completes. |
+   {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+   ```kotlin
+   val bannerSubscriber = IEventSubscriber<BannersEvent> { event ->
+     when (event) {
+       is BannersEvent.CacheReplay -> {
+         // Cached Banners. Don't show fallback content based on this event.
+       }
+       is BannersEvent.DataUpdated -> {
+         val cachedPlacementIds = event.cacheSnapshot.banners.values.map { it.placementId }
+         Log.d(TAG, "Banner cache updated: $cachedPlacementIds")
+         // Update any Banners that are already on screen.
+       }
+       else -> Unit
+     }
+   }
+   Braze.getInstance(context).subscribeToBannersEvents(bannerSubscriber)
+   ```
 
+2. Call `requestBannersRefresh` with the placement IDs for the current screen. Pass a completion callback so you know when the refresh finishes.
 
-```java
-ArrayList<String> placementIds = new ArrayList<>();
-placementIds.add("global_banner");
-placementIds.add("navigation_square_banner");
+   ```kotlin
+   val requestedPlacementIds = listOf("global_banner", "navigation_square_banner")
 
-// - Available in version 44.0.0+
-Braze.getInstance(context).subscribeToBannersEvents(event -> {
-  if (event instanceof BannersEvent.CacheReplay) {
-    logBanners(((BannersEvent.CacheReplay) event).getCacheSnapshot());
-  } else if (event instanceof BannersEvent.CacheLoad) {
-    logBanners(((BannersEvent.CacheLoad) event).getCacheSnapshot());
-  } else if (event instanceof BannersEvent.DataUpdated) {
-    logBanners(((BannersEvent.DataUpdated) event).getCacheSnapshot());
-  }
-});
-// Always refresh after your subscriber is registered
-Braze.getInstance(context).requestBannersRefresh(placementIds);
+   Braze.getInstance(context).requestBannersRefresh(
+     requestedPlacementIds,
+     object : IValueCallback<BannersUpdatedEvent> {
+       override fun onSuccess(value: BannersUpdatedEvent) {
+         // The refresh finished. Check each requested placement.
+       }
+     }
+   )
+   ```
 
-Braze.getInstance(context).subscribeToBannersUpdates(event -> {
-  for (Banner banner : event.getBanners()) {
-    Log.d(TAG, "Received banner: " + banner.getPlacementId());
-  }
-});
-// Always refresh after your subscriber is registered
-Braze.getInstance(context).requestBannersRefresh(placementIds);
+3. In the callback, call `getBanner` for each placement ID you requested. If `getBanner` returns `null`, the placement has no Banner content for the current user. Show your fallback content for that placement.
 
-private void logBanners(BannersCacheSnapshot cacheSnapshot) {
-  for (Banner banner : cacheSnapshot.getBanners().values()) {
-    Log.d(TAG, "Received banner: " + banner.getPlacementId());
-  }
-}
-```
+   ```kotlin
+   requestedPlacementIds.forEach { placementId ->
+     val banner = Braze.getInstance(context).getBanner(placementId)
+     if (banner == null) {
+       Log.d(TAG, "No Banner content for $placementId")
+     } else {
+       Log.d(TAG, "Banner available for ${banner.placementId}")
+     }
+   }
+   ```
 
+4. When you no longer need the subscriber, remove it.
 
+   ```kotlin
+   Braze.getInstance(context).removeSingleSubscription(bannerSubscriber, BannersEvent::class.java)
+   ```
 
+Keep the following in mind:
 
-```kotlin
-val placementIds = listOf("global_banner", "navigation_square_banner")
-
-// - Available in version 44.0.0+
-Braze.getInstance(context).subscribeToBannersEvents { event ->
-  when (event) {
-    is BannersEvent.CacheReplay -> logBanners(event.cacheSnapshot)
-    is BannersEvent.CacheLoad -> logBanners(event.cacheSnapshot)
-    is BannersEvent.DataUpdated -> logBanners(event.cacheSnapshot)
-    else -> {}
-  }
-}
-// Always refresh after your subscriber is registered
-Braze.getInstance(context).requestBannersRefresh(placementIds)
-
-Braze.getInstance(context).subscribeToBannersUpdates { event ->
-  event.banners.forEach { banner ->
-    Log.d(TAG, "Received banner: ${banner.placementId}")
-  }
-}
-// Always refresh after your subscriber is registered
-Braze.getInstance(context).requestBannersRefresh(placementIds)
-
-private fun logBanners(cacheSnapshot: BannersCacheSnapshot) {
-  cacheSnapshot.banners.values.forEach { banner ->
-    Log.d(TAG, "Received banner: ${banner.placementId}")
-  }
-}
-```
-
-
-
+- Banners cached for placements you didn't request stay in the cache, so `DataUpdated` events can include placements from other screens. Filter by the placement IDs for your current screen.
+- A requested placement with no Banner content doesn't appear in the `DataUpdated` event. Use `getBanner` in the completion callback instead of waiting for a matching Banner in an event.
+- A completed refresh sends a `DataUpdated` event even when the Banner content didn't change.
 
 Events arrive on a background thread. Switch to the main thread before updating views.
 
 Use `subscribeToBannersEvents` on Android SDK 44.0.0 and later. `subscribeToBannersUpdates` is the earlier pattern, deprecated as of 44.0.0.
 
 For when each event fires, and what each update reason, retry state, analytics action, and error reason means, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
-
 
 
 

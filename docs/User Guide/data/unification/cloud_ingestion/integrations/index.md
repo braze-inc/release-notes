@@ -9,8 +9,8 @@ Cloud Data Ingestion integrations require some setup on the Braze side and in yo
 
 
 1. In your Snowflake instance, set up the tables or views you want to sync to Braze.
-2. Create a new Snowflake source in the Braze dashboard.
-3. Retrieve the public key provided in the Braze dashboard and [append it to the Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+2. Create a role and warehouse, and a user that Braze authenticates with Workload Identity Federation or an RSA key pair.
+3. Create a new Snowflake source in the Braze dashboard. For a key pair, append the public key Braze provides to the Snowflake user. For Workload Identity Federation, run the statement from the credential form in a Snowflake worksheet.
 4. Create a sync in the Braze dashboard, test the integration, and start the sync.
 
 **Tip:**
@@ -137,13 +137,33 @@ The warehouse needs to have the **auto-resume** flag on. If not, grant Braze add
 
 #### Step 1.4: Set up the user
 
+Braze authenticates to Snowflake with either of the following methods:
+
+- **Workload Identity Federation:** Braze connects as a `TYPE = SERVICE` user bound to Braze's AWS identity for Snowflake. The user has no password and no RSA key.
+- **Key pair:** Braze connects with an RSA key pair. You add the public key Braze generates to the Snowflake user.
+
+Existing RSA key-pair credentials keep working, and you don't need to migrate them. Follow one method.
+
+
+
+
+Create the role, warehouse, and database grants in [Step 1.2](#step-12-set-up-the-role-and-database-permissions) and [Step 1.3](#step-13-set-up-the-warehouse-and-give-access-to-braze-role). If your Snowflake account uses a network policy, allow Braze IP addresses as described in [Step 1.5](#step-15-allow-braze-ips-in-snowflake-network-policy-optional).
+
+Create the service user from the Snowflake credential form, and run that statement in a Snowflake worksheet. For what the statement does and where to run it, see [Configuring Snowflake for Workload Identity Federation](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/snowflake_workload_identity_federation).
+
+
+
+
 ```sql
 CREATE USER BRAZE_INGESTION_USER;
 
 GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
 ```
 
-After this step, share connection information with Braze to receive a public key to append to the user.
+After this step, share connection information with Braze and append the public key to the user.
+
+
+
 
 **Note:**
 
@@ -669,7 +689,7 @@ In the Braze Dashboard, go to **Data Settings** > **Cloud Data Ingestion** > **S
 
 #### Step 2.1: Add Snowflake connection information
 
-Choose a name for your source and input your Snowflake credentials and configuration, then proceed to the next step.
+Choose a name for your source. Enter a **Credential name**, and then select **Workload Identity Federation** or **Key pair** to match the user you created in Step 1.4.
 
 Before you continue, confirm the value you enter in **Snowflake Account Locator**.
 
@@ -682,15 +702,36 @@ To find your Snowflake account identifier:
 3. Copy the **Account identifier** value.
 4. If you copy from a Snowflake URL, use only the value before `.snowflakecomputing.com`.
 
-#### Step 2.2: Add a public key to the Braze user
+#### Step 2.2: Authenticate the Snowflake user
 
-After inputting your credentials and configuration, click **Save credentials** and generate an RSA key and go back to Snowflake to complete the setup. Add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake.
+
+
+
+On the credential form, complete the steps in order:
+
+1. Enter **Account Locator**, **Username**, and **Role**.
+2. Select **Create user** or **Alter user**, and then select **Copy statement** when it is available.
+3. Run that statement in a Snowflake worksheet. For what the statement does, see [Configuring Snowflake for Workload Identity Federation](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/snowflake_workload_identity_federation).
+4. Return to Braze and select **Save credential**.
+5. Enter the warehouse, database, and schema, select **Test connection**, and then select **Connect to Source**.
+
+
+
+
+Enter **Account Locator**, **Username**, and **Role**, and then select **Save credentials and generate RSA key**. In Snowflake, add the public key displayed on the dashboard to the user you created for Braze.
 
 For additional information on how to do this, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). If you want to rotate the keys at any point, Braze can generate a new key pair and provide the new public key.
 
 ```sql
 ALTER USER BRAZE_INGESTION_USER SET RSA_PUBLIC_KEY='MIIBIjANBgkqhkiG9w0BA...';
 ```
+
+To rotate the key later, go to **Data Settings** > **Cloud Data Ingestion** > **Credentials**, open the credential under **Snowflake Data Access Credentials**, and select **Rotate credential**. For the detail modal, see [Review a Snowflake credential](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/snowflake_workload_identity_federation#review-a-snowflake-credential).
+
+After you add the key in Snowflake, select **Test connection**, and then select **Connect to Source**.
+
+
+
 
 
 
@@ -709,7 +750,7 @@ In the Braze dashboard, the **Database name** field only accepts letters (A–Z,
 
 #### Step 2.2: Test connection and connect to source
 
-Next, select **Test connection**. Once successful, finalize remaining settings and click **Connect to Source**. If the connection fails, an error message appears to help troubleshoot the issue.
+Next, select **Test connection**. Once successful, finalize remaining settings and select **Connect to Source**. If the connection fails, an error message appears to help troubleshoot the issue.
 
 #### Troubleshooting: Invalid snapshot identifier
 
@@ -755,7 +796,7 @@ Then, input the remaining configuration fields.
 
 #### Step 2.2: Test connection and connect to source
 
-Next, select **Test connection**. Once successful, finalize remaining settings and click **Connect to Source**. If the connection fails, an error message appears to help troubleshoot the issue.
+Next, select **Test connection**. Once successful, finalize remaining settings and select **Connect to Source**. If the connection fails, an error message appears to help troubleshoot the issue.
 
 
 
@@ -773,7 +814,7 @@ Then, proceed to the next step.
 
 #### Step 2.2: Test connection and connect to source
 
-Next, select **Test connection**. Once successful, finalize remaining settings and click **Connect to Source**. If the connection fails, an error message appears to help troubleshoot the issue.
+Next, select **Test connection**. Once successful, finalize remaining settings and select **Connect to Source**. If the connection fails, an error message appears to help troubleshoot the issue.
 
 **Note:**
 
@@ -795,7 +836,7 @@ Choose a name for your source and input your Microsoft Fabric credentials and co
 
 #### Step 2.2: Test connection and connect to source
 
-Next, select **Test connection**. Once successful, finalize remaining settings and click **Connect to Source**. If the connection fails, an error message appears to help troubleshoot the issue.
+Next, select **Test connection**. Once successful, finalize remaining settings and select **Connect to Source**. If the connection fails, an error message appears to help troubleshoot the issue.
 
 **Note:**
 
@@ -998,7 +1039,7 @@ You must successfully validate an integration before it can move from Draft to A
 
 You can set up multiple integrations with Braze. When creating additional syncs, you can reuse existing credentials if connecting to the Snowflake account.
 
-If you reuse the same user and role across integrations, you do not need to add the public key again.
+If you reuse the same key-pair user and role across integrations, you don't add the public key again. A Workload Identity Federation credential has no public key to add.
 
 
 You can set up multiple integrations with Braze. When creating additional syncs, you can reuse existing credentials if connecting to the same Redshift account.

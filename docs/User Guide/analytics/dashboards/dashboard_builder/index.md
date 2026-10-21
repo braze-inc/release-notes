@@ -4,6 +4,19 @@
 
 Dashboard Builder empowers you to compose and visualize custom analytic dashboards as a new design and from Braze-supplied dashboards. You can use either a no-code data source (Report Builder) or SQL data source (Query Builder) to power your dashboard, or start from one of many Braze-supplied dashboards.
 
+## Prerequisites
+
+To use Dashboard Builder, you need these [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) at the workspace level:
+
+| Permission | What it allows |
+| --- | --- |
+| "View Dashboard Reports" or "View Usage Data" | Open Dashboard Builder and view dashboards |
+| "View PII" | Access most dashboards and dashboard data (some Braze template dashboards do not require the "View PII" permission) |
+| "Edit Dashboard Reports" | Create, edit, and run dashboards |
+| [Report Builder](https://www.braze.com/docs/user_guide/analytics/reports/report_builder#prerequisites) permissions | Add tiles powered by Report Builder reports |
+| [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder#prerequisites) permissions | Add tiles powered by Query Builder queries |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Dashboard Builder permissions" }
+
 ## Creating a custom dashboard
 
 1. Go to **Analytics** > **Dashboard Builder**.

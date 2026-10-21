@@ -8,6 +8,16 @@ The following video provides an overview of how to create and customize reports 
 
 
 
+## Prerequisites
+
+To use Report Builder, you need these [permissions](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions) at the workspace level:
+
+| Permission | What it allows |
+| --- | --- |
+| "View Dashboard Reports" | Open Report Builder, view reports, and run reports |
+| "Edit Dashboard Reports" | Create, edit, and clone reports |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Report Builder permissions" }
+
 ## Using a report template
 
 1. Go to **Analytics** > **Report Builder (New)**.
@@ -105,7 +115,7 @@ If you want to report on Canvas variants or steps, select **Canvases** for rows 
 | Unique Impressions | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. |
 | Unique Recipients | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. Unavailable with **Channels** drilldown. |
 | Revenue (Shopify Markets) | Available when **Countries (Shopify Markets)** is the row or a drilldown. Country-level revenue from Shopify order events, shown in the order’s presentment currency. Matches **Total revenue** on the campaign or Canvas **Performance by country** table. |
-| Purchases (Shopify Markets) | Available when **Countries (Shopify Markets)** is the row or a drilldown. Country-level purchases from Shopify order events. Matches **Purchases** on the campaign or Canvas **Performance by country** table. |
+| Purchases (Shopify Markets) | Available when **Countries (Shopify Markets)** is the row or a drilldown. Country-level purchases from Shopify order events. Matches **Total Purchases** on the campaign or Canvas **Performance by country** table. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Metrics availability" }
 
 ### Countries (Shopify Markets)
