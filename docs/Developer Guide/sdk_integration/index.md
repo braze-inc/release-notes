@@ -1,4 +1,4 @@
-# ![Braze Logo](https://www.braze.com/docs/assets/Braze_Primary_Icon_BLACK.svg?919c4e99e8ae11eafc3470e63b4fedce){: style="float:right;width:120px;border:0;" class="noimgborder"}Integrate the Braze SDK
+# ![Braze Logo](https://www.braze.com/docs/assets/Braze_Primary_Icon_BLACK.svg?919c4e99e8ae11eafc3470e63b4fedce){: width="120" height="120" style="float:right;width:120px;height:auto;border:0;" class="noimgborder"}Integrate the Braze SDK
 
 > Learn how to integrate the Braze SDK. Each SDK is hosted in its own public GitHub repository, which includes fully-buildable sample apps you can use to test Braze features or implement alongside your own applications. To learn more, see [References, Repositories, and Sample Apps](https://www.braze.com/docs/developer_guide/references). For more general information about the SDK, see [Getting started: Integration overview](https://www.braze.com/docs/developer_guide/getting_started/integration_overview).
 

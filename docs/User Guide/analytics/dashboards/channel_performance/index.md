@@ -1,6 +1,6 @@
 # Channel performance dashboards
 
-> Channel performance dashboards show aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email, push, and SMS, MMS, and RCS.
+> Channel performance dashboards show aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email, push, and SMS, MMS, and RCS—including RCS and SMS fallback metrics on the **SMS/MMS/RCS Performance** dashboard.
 
 ## Prerequisites
 
@@ -105,7 +105,7 @@ For more information on analytics for your emails, check out [Email reporting](h
 
 To use the **SMS/MMS/RCS Performance** dashboard, go to **Analytics** > **SMS/MMS/RCS Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past.
 
-When RCS is provisioned for your workspace, the dashboard groups headline metrics into **SMS/MMS** and **RCS** sections. The engagement-over-time chart includes RCS sends, deliveries, reads, rejections, clicks, and rates alongside the SMS/MMS series. Dashboard filters (tag, campaign, and Canvas) apply to both sections.
+When RCS is provisioned for your workspace, the dashboard groups headline metrics into **SMS/MMS** and **RCS** sections, including SMS fallback metrics on the RCS tiles where applicable. The **Performance Over Time** chart includes RCS sends, deliveries, reads, rejections, clicks, and rates alongside the SMS/MMS series, and the dashboard includes opt-in and opt-out tiles. Dashboard filters (tag, campaign, and Canvas) apply to both sections.
 
 ![An example SMS campaign with 335,630 sends, with an average of 11,187.667 per day.](https://www.braze.com/docs/assets/img_archive/email_performance_dashboard_2.png?c69633137073334f4c8ac2caa3e37def){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
@@ -127,7 +127,7 @@ The calculations for different metrics in the  performance dashboard are the sam
 | Total opt-outs | Count | Opt-outs across all sources, counted per user profile and subscription group in the selected date range |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="SMS/MMS metrics" }
 
-*Total Opt-Ins* and *Total Opt-Outs* include subscription changes from all sources—for example, API updates and in-app preferences—not only inbound keywords. Braze counts each change per user profile and subscription group. Profiles that share a phone number count separately. Double opt-ins count only after confirmation. When you filter by campaign, Canvas, or tag, the tiles show only subscription changes attributed to those selections.
+*Total Opt-Ins* and *Total Opt-Outs* include subscription changes from all sources—for example, API updates and in-app preferences—not only inbound keywords. Braze counts each change per user profile and subscription group. Profiles that share a phone number count separately. Double opt-ins count only after confirmation. When you filter by campaign, Canvas, or tag, the tiles show only subscription changes attributed to those selections. Opt-in, opt-out, and HELP counts are reported for SMS, MMS, and RCS combined.
 
 #### RCS metrics
 
@@ -138,11 +138,11 @@ The calculations for different metrics in the  performance dashboard are the sam
 
 | Metric | Type | Calculation | Notes |
 | --- | --- | ---- | --- |
-| Sends | Count | Total number of RCS sends across each day in the date range | |
-| Delivery rate | Rate | (Total number of RCS and SMS fallback deliveries across each day in the date range) / (Total number of RCS sends across each day in the date range) | The tile also shows RCS deliveries, SMS fallback deliveries, and SMS fallback rate. |
-| Rejection rate | Rate | (Total number of RCS and SMS fallback rejections across each day in the date range) / (Total number of RCS sends across each day in the date range) | Rejection totals include provider outcomes such as failed or undelivered statuses, which differ from delivery failures. |
-| Click rate | Rate | (Total number of RCS clicks across each day in the date range) / (Total number of RCS deliveries across each day in the date range) | Click totals include message URL clicks and card interactions (such as suggested replies, suggested URLs, and button replies). |
-| Read rate | Rate | (Total number of RCS reads across each day in the date range) / (Total number of RCS deliveries across each day in the date range) | |
+| Sends | Count | Total number of RCS sends across each day in the date range | Counts the RCS send attempt. Fallback SMS is counted separately under **SMS/MMS**. |
+| Delivery rate | Rate | (Total number of RCS and SMS fallback deliveries across each day in the date range) / (Total number of RCS sends across each day in the date range) | Includes SMS fallback deliveries. The tile also shows RCS deliveries, SMS fallback deliveries, and SMS fallback rate. |
+| Rejection rate | Rate | (Total number of RCS and SMS fallback rejections across each day in the date range) / (Total number of RCS sends across each day in the date range) | Includes SMS fallback rejections. Rejection totals include provider outcomes such as failed or undelivered statuses, which differ from delivery failures. |
+| Click rate | Rate | (Total number of RCS clicks across each day in the date range) / (Total number of RCS deliveries across each day in the date range) | Uses RCS deliveries (not SMS fallback) in the denominator. Click totals include message URL clicks and card interactions (such as suggested replies, suggested URLs, and button replies). |
+| Read rate | Rate | (Total number of RCS reads across each day in the date range) / (Total number of RCS deliveries across each day in the date range) | Counts RCS messages only. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="RCS metrics" }
 
 

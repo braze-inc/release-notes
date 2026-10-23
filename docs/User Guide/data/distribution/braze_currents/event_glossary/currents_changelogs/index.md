@@ -1,5 +1,85 @@
 # Currents changelog
 
+## Changes in Version 14 (release date 2026-11-04)
+
+### Changes for Storage:
+
+* Added new event type `api.RequestProcessingStatus`.
+
+* Field changes to event type `users.behaviors.CustomEvent`:
+    * Added new `long` field `received_at_ms`: UNIX timestamp, in milliseconds, at which Braze received the request that contained this event. For some batched API requests, this is when the batch was queued, which can be a few seconds later.
+
+* Field changes to event type `users.campaigns.Conversion`:
+    * Added new `string` field `attribution_types`: JSON-encoded array of attribution types for this campaign conversion. Values include email_open, email_click, and push_click. Multiple values can apply. An empty array indicates no matching attribution; null indicates attribution is unavailable.
+
+* Field changes to event type `users.campaigns.UniqueReceipt`:
+    * Added new `boolean` field `is_daily_unique`: Whether this receipt contributes to the daily unique recipient count, evaluated at event time using the effective time zone and campaign or Canvas step receipt history. False for lifetime-only contributions. Null on legacy events, which represent daily contributions.
+    * Added new `boolean` field `is_total_unique`: Whether this receipt contributes to the lifetime unique recipient count for the campaign or Canvas step, using existing receipt history. May be true when is_daily_unique is false. Null means lifetime uniqueness was not supplied by a legacy producer.
+
+* Field changes to event type `users.canvas.Conversion`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.canvas.costep.Conversion`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.canvas.costep.Send`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.canvas.Entry`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+    * Added new `string` field `dispatch_id`: ID of the dispatch this entry belongs to
+
+* Field changes to event type `users.canvas.exit.MatchedAudience`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.canvas.exit.PerformedEvent`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.canvas.experimentstep.Conversion`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.canvas.experimentstep.SplitEntry`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.canvas.sendtodestination.NotSent`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.canvas.sendtodestination.Sent`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.messages.contentcard.Send`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.messages.email.Click`:
+    * Added new `string` field `ip_address`: [PII] IP address of user who generated the event
+
+* Field changes to event type `users.messages.email.Send`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.messages.line.Send`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.messages.pushnotification.Send`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.messages.rcs.Click`:
+    * Added new `string` field `ip_address`: [PII] IP address of where the click originated
+
+* Field changes to event type `users.messages.rcs.Send`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.messages.sms.Send`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.messages.sms.ShortLinkClick`:
+    * Added new `string` field `ip_address`: [PII] IP address of where the click originated
+
+* Field changes to event type `users.messages.webhook.Send`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
+* Field changes to event type `users.messages.whatsapp.Send`:
+    * Added new `string` field `canvas_entry_id`: Unique identifier for this instance of a user in a canvas
+
 ## Changes in Version 13 (release date 2026-10-07)
 
 ### Changes for Storage:

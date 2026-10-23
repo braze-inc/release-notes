@@ -21,9 +21,9 @@ To use SQL Segment Extensions, you need these [permissions](https://www.braze.co
 
 There are two types of SQL editors to choose from when creating your SQL Segment Extension: the SQL Editor, and the Incremental SQL Editor.
 
-- **Full Refresh:** Each time your segment refreshes, Braze will query all available data to update your segment, which will use more credits than incremental refreshes. Full refresh extensions can automatically regenerate membership daily, but can’t be refreshed using incremental refresh.
-- **Incremental refresh:** Incremental refresh is a more cost-efficient way to set up your query, although the setup involves a few more [steps](#step-2-write-your-sql). If you can complete these additional steps when constructing your segment, then it’s worth choosing this option because your query will run using fewer credits. 
-- **AI SQL generator:** The AI SQL Generator lets you write a prompt in plain language and turns it into a SQL query for your segment. It's a quick way to get started without needing to write the SQL yourself.
+- **Full Refresh:** Each time your segment refreshes, Braze queries all available data to update your segment, which uses more credits than incremental refreshes. Full refresh extensions can automatically regenerate membership daily, but can’t be refreshed using incremental refresh.
+- **Incremental refresh:** Incremental refresh is a more cost-efficient way to set up your query, although the setup involves a few more [steps](#step-2-write-your-sql). If you can complete these additional steps when constructing your segment, then it's worth choosing this option because your query runs using fewer credits.
+- **AI SQL Generator:** The [AI SQL Generator](https://www.braze.com/docs/user_guide/brazeai/generative_ai/sql_segment_extensions) lets you write a prompt in plain language and turns it into a SQL query for your segment. It's a quick way to get started without needing to write the SQL yourself.
 
 **Tip:**
 
@@ -56,47 +56,14 @@ To create an incremental refresh SQL Segment Extension:
    ![SQL editor showing an example incremental SQL Segment Extension.](https://www.braze.com/docs/assets/img_archive/sql_segments_editor_incremental.png?cbd25f0f9a05678d85f804b574b3e384){: style="max-width:60%" }<br><br>
 4. If desired, select **Regenerate Extension Daily**.<br><br>
    ![Checkbox to regenerate the extension daily.](https://www.braze.com/docs/assets/img_archive/sql_segments_regenerate.png?477e2923749cc444f8b9238bf70bb3d7){: style="max-width:60%" }<br><br>
-   When selected, Braze will update segment membership each day automatically. This means that each day at midnight in your company’s time zone (with a potential delay of an hour), Braze will check for new users in your segment and automatically add them to your segment. If a Segment Extension has not been used in 7 days, Braze will automatically pause daily regeneration. An unused Segment Extension is one that is not part of a campaign or Canvas (the campaign or Canvas doesn't need to be active for the extension to be considered "used").<br><br>
+   When selected, Braze updates segment membership each day automatically. This means that each day at midnight in your company’s time zone (with a potential delay of an hour), Braze checks for new users in your segment and automatically adds them to your segment. If a Segment Extension has not been used in 7 days, Braze automatically pauses daily regeneration. An unused Segment Extension is one that is not part of a campaign or Canvas (the campaign or Canvas doesn't need to be active for the extension to be considered "used").<br><br>
 5. Save your Segment Extension.
 
 
 
 
 
-**Note:**
-
-
-The AI SQL generator is currently available as a beta feature. Contact your customer success manager if you're interested in participating in this beta trial.
-
-
-
-The AI SQL generator leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your SQL segment.
-
-![AI SQL generator with the prompt "Users that received a notification last month"](https://www.braze.com/docs/assets/img/ai_sql_generator.png?acea994f0ac93ccc2bf7e89098378667){: style="max-width:70%;"}
-
-To use the AI SQL generator, do the following:
-
-1. Select **Launch AI SQL Generator** after creating a [SQL segment](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments) using either full or incremental refresh.
-2. Type your prompt and select **Generate** to translate your prompt into SQL.
-3. Review the generated SQL to make sure it looks correct, and then save your segment.
-
-#### Example prompts
-
-- Users who received an email in the last month
-- Users who made less than five purchases in the last year
-
-#### Tips
-
-- Familiarize yourself with the available [Snowflake data tables](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
-- Familiarize yourself with the [SQL writing rules](https://www.braze.com/docs/user_guide/engagement_tools/segments/sql_segments?tab=sql%20editor#writing-sql) for this feature. Not following these rules will cause an error. For example, your SQL code must select the `user_id` column. Starting your prompt with "users who" can help.
-- You can send up to 20 prompts per minute with the AI SQL Generator.
-
-#### How is my data used and sent to OpenAI? {#ai-policy} 
-<!-- Braze Legal must approve any changes to this content. -->
-<!-- Note: Keep these comments under this H2 heading to avoid breaking how headings on certain pages are rendered. -->
-
-To generate AI output through BrazeAI features that leverage OpenAI (“Output”), Braze will send certain information (“Input”) to OpenAI. Input consists of your prompts, and may include the content displayed in the dashboard, and other workspace data relevant to your queries, as applicable. Per [OpenAI’s API platform commitments](https://openai.com/enterprise-privacy/), data sent to OpenAI’s API via Braze is not used to train or improve OpenAI models. OpenAI may retain data for 30 days for abuse monitoring purposes, after which it is deleted. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content, including Output.
-
+Use the [AI SQL Generator](https://www.braze.com/docs/user_guide/brazeai/generative_ai/sql_segment_extensions) to describe an audience in plain language and generate Snowflake SQL for your Segment Extension.
 
 
 

@@ -6,6 +6,10 @@ This message type is available in both the [drag-and-drop](https://www.braze.com
 
 ![Two modal in-app messages side-by-side, detailing the image and text recommendations. See following sections for details.](https://www.braze.com/docs/assets/img/modal-spec.png?669610101074d796579857bd0ed6f772){: style="max-width: 801px; border: none;"}
 
+## Text specifications
+
+Modal in-app messages have no hard character limit for header, body, or button text. However, Braze suggests to keep your copy short with about two to four lines of body text. Longer copy may require users to expand and scroll the message.
+
 ## Image specifications
 
 
@@ -28,7 +32,7 @@ This message type is available in both the [drag-and-drop](https://www.braze.com
 
 ## Larger screens
 
-On a tablet or desktop browser, a modal in-app message will still sit in the center of the app screen as shown in the following screenshot.
+On a tablet or desktop browser, a modal in-app message sits in the center of the app screen.
 
 ![Modal in-app message as it would appear on a large screen. Similarly to phone screens, the message sits in the center of the screen.](https://www.braze.com/docs/assets/img/modal-large-viewport.png?51c6d5bf750d6cb24a75543b6492ff70){: style="max-width: 800px; border: none;"}
 

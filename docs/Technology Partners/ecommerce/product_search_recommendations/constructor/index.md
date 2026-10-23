@@ -60,3 +60,61 @@ You can use Constructor's Offsite Discovery API URL to render product images and
 | `num_results` | Number of products to be added to the email. The default is 10, up to 100. For example, `num_results = 3` means three recommendations are added. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Optional inputs" }
 
+## Connected Content
+
+You can also use Connected Content to send personalized messages featuring Constructor recommendations.
+
+### Example Connected Content request
+
+
+```liquid
+{% connected_content https://offsite-discovery.cnstrc.com/v1/recommendations/pods/{{ constructor_pod }}?key=YOUR_API_KEY&ui={{ constructor_ui }}&campaign_id={{ constructor_campaign_id }}&num_results={{ constructor_num_results }}&item_id={{ constructor_item_id }} :save recs :cache 0 :rerender %}
+```
+
+
+Reach out to your Constructor account team if you have questions about your custom URL.
+
+### Content Blocks
+
+We recommend saving your Connected Content snippet as a Braze Content Block. This allows you to centralize the request logic across multiple templates while defining campaign-specific variables directly within individual message templates. In the Content Block, you can add the HTML/CSS that stylizes the API response data. 
+
+The following is an example of defining the Liquid variables for a particular campaign:
+
+
+```liquid
+{% assign constructor_ui = {{${user_id}}} %}
+<!-- Dynamic User ID from Braze profile -->
+
+{% assign constructor_item_id = '1234' %}
+<!-- Seed item ID (required for item-based recommendation pods) -->
+
+{% assign constructor_num_results = 6 %}
+<!-- Number of recommended items to return -->
+
+{% assign constructor_pod = 'test-user-featured' %}
+<!-- Pod ID from Constructor Dashboard -->
+
+{% assign constructor_campaign_id = 'your-personalized-picks' %}
+<!-- Campaign name for tracking -->
+```
+
+
+Then, you can reference the Content Block snippet in the campaign.
+
+
+```liquid
+{{content_blocks.${constructor_recommendations}}}
+```
+
+
+### Best practices
+
+#### Rate limiter
+
+Ensure that you [limit the number of messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#delivery-speed-rate-limiting) sent by Braze per minute. This secures both Braze and Constructor APIs against hitting too much traffic from your campaign. Consult with your Constructor team on what the sending rate limit should be.
+
+#### Retry
+
+The Connected Content logic retries five times before aborting the message (it respects the rate limiter). This method helps prevent cases of failed recommendations publishing when it takes a little longer to fetch data from Constructor.
+
+If you do not use `:retry`, then irrespective of the response returned from Constructor, Braze attempts to send the distribution, which may result in generating emails without any recommendations.

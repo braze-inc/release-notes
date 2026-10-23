@@ -1,4 +1,4 @@
-<div id='api_aeyrbcppdslo' class='api_div' data-search-keywords='trigger a sync'>
+<div id='api_tjtkzrqsdntp' class='api_div' data-search-keywords='trigger a sync'>
 <h1 id="trigger-a-sync">Trigger a sync</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/cdi/integrations/{integration_id}/sync</p>
@@ -246,41 +246,6 @@
   .openapi-explorer .swagger-ui .model-container {
     background: var(--braze-surface);
     border-color: var(--braze-border);
-  }
-  @media (prefers-color-scheme: dark) {
-    .openapi-explorer {
-      --braze-bg: #17101f;
-      --braze-bg-muted: #211430;
-      --braze-surface: #261938;
-      --braze-border: #473458;
-      --braze-text: #f6f2ff;
-      --braze-text-muted: #c9bddb;
-      --braze-link: #c9c4ff;
-      --braze-accent: #c9c4ff;
-      --braze-accent-strong: #ffffff;
-      --braze-accent-soft: #7d62a2;
-      --braze-code-bg: #0e0a16;
-      --braze-code-text: #ffffff;
-      --braze-code-accent: #b9f7cb;
-      box-shadow: none;
-    }
-  }
-  html[data-theme="dark"] .openapi-explorer,
-  body.dark .openapi-explorer,
-  body.dark-mode .openapi-explorer {
-    --braze-bg: #17101f;
-    --braze-bg-muted: #211430;
-    --braze-surface: #261938;
-    --braze-border: #473458;
-    --braze-text: #f6f2ff;
-    --braze-text-muted: #c9bddb;
-    --braze-link: #c9c4ff;
-    --braze-accent: #c9c4ff;
-    --braze-accent-strong: #ffffff;
-    --braze-accent-soft: #7d62a2;
-    --braze-code-bg: #0e0a16;
-    --braze-code-text: #ffffff;
-    --braze-code-accent: #b9f7cb;
   }
   /* Copy-to-clipboard button injected on each example code block. The extra
      top padding reserves a gutter so the button never overlaps the code. */
