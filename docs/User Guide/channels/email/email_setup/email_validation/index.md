@@ -64,6 +64,13 @@ For most domains, the local part must follow these parameters:
 - Cannot contain double quotes (")
 - Must be between 1 and 64 characters in length
 
+**Note:**
+
+
+Braze normalizes email addresses by converting uppercase letters to lowercase and removing leading and trailing whitespace. This normalization applies when email addresses are created or updated through the API, CSV upload, SDK, or dashboard.
+
+
+
 The following regular expression can be used to validate if an email address will be considered valid:
 ```
 /\A([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])(([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~\.]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])*([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}]))?\z/

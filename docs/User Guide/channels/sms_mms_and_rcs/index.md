@@ -27,7 +27,7 @@ Before you start, make sure you have the following:
 
 - **SMS** delivers text-only messages up to 160 characters (or 70 characters with Unicode). It's universally supported across all mobile devices and carriers.
 - **MMS** extends SMS with support for multimedia content, including images, GIFs, and audio. MMS requires carrier and device support.
-- **RCS** is the next generation of business messaging, offering rich features such as branded sender profiles, suggested replies, carousels, and read receipts. RCS availability depends on country eligibility, carrier support, and device support.
+- **RCS** is the next generation of business messaging, offering rich features such as branded sender profiles, suggested replies, and read receipts. RCS availability depends on country eligibility, carrier support, and device support.
 
 ### Why use RCS?
 

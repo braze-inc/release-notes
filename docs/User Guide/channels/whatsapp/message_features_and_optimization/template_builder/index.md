@@ -127,7 +127,7 @@ Add up to 10 buttons to your template. Button types have different categories an
 | Quick reply | Quick reply buttons |{::nomarkdown}<ul><li><b>Maximum count:</b> 10</li><li><b>Button text:</b> Up to 25 characters</li></ul> {:/}|
 | Phone number | Call to Action buttons | {::nomarkdown}<ul><li><b>Maximum count:</b> 1</li><li><b>Button text:</b> Up to 25 characters</li><li><b>Phone number:</b> Valid phone number with country code, without + (such as "14155552671")</li></ul> {:/}|
 | Visit website | Call to Action buttons | {::nomarkdown}<ul><li><b>Maximum count:</b> 2</li><li><b>Button text:</b> Up to 25 characters</li><li><b>Website URL:</b> Up to 2,000 characters</li></ul> {:/}|
-| Copy offer code | Call to Action buttons | {::nomarkdown}<ul><li><b>Maximum count:</b> 1</li><li><b>Button text:</b> "Copy offer code" (can't be edited)</li><li><b>Offer code:</b> Up to 15 characters</li></ul> {:/}|
+| Copy offer code | Call to Action buttons | {::nomarkdown}<ul><li><b>Maximum count:</b> 1</li><li><b>Button text:</b> "Copy offer code" (can't be edited)</li><li><b>Offer code:</b> Up to 15 characters. For limited-time offer templates, the offer code can be up to 20 characters.</li></ul> {:/}|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Buttons (optional)" }
 
 **Note:**

@@ -89,6 +89,10 @@ The report may take up to a few minutes to run, depending on the date range and 
 
 
 
+## Supported channels
+
+Report Builder includes metrics for Braze messaging channels such as email, push, in-app messages, Content Cards, SMS, MMS, RCS, WhatsApp, and webhooks. For SMS, MMS, and RCS, you can report on RCS metrics alongside SMS—including sends, deliveries, rejections, clicks, and related rates. For how RCS and SMS fallback appear in reporting, see [RCS and SMS fallback metrics](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/reporting#rcs-and-sms-fallback-metrics).
+
 ## Metrics availability
 
 Your selection for **Rows** affects the metrics you can select.

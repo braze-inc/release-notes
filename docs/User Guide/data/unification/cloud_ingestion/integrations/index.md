@@ -2,6 +2,15 @@
 
 > This page covers how to use Braze Cloud Data Ingestion (CDI) to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration.
 
+## Data organization guidance
+
+Each CDI sync updates one data type at a time—such as user attributes, custom events, purchase events, or catalog items. When you set up your source tables or views, organize your data based on how you plan to sync it:
+
+- One table per data type: Creating separate tables or views for each data type (for example, `user_attributes`, `custom_events`, `purchases`) gives you clear separation and makes it easier to manage different sync schedules and data definitions.
+- Shared source table: If you use Visual or SQL mapper modes, multiple syncs can pull from the same source table. For example, an attributes sync and an events sync can query the same table, but you still create separate syncs in the Braze dashboard—one for attributes and one for events. Each sync maps or queries only the columns it needs.
+
+Choose the approach that fits your data pipeline and the number of use cases you manage. Both patterns work as your use cases scale.
+
 ## Setting up data warehouse integrations
 
 Cloud Data Ingestion integrations require some setup on the Braze side and in your data warehouse instance. Follow these steps to set up the integration:

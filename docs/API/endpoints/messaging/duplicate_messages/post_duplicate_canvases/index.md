@@ -1,4 +1,4 @@
-<div id='api_ksvcrfvzooss' class='api_div' data-search-keywords='duplicate canvases using the api'>
+<div id='api_kgprbahbfqgo' class='api_div' data-search-keywords='duplicate canvases using the api'>
 <h1 id="duplicate-canvases-using-the-api">Duplicate Canvases using the API</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/duplicate</p>
@@ -242,41 +242,6 @@
   .openapi-explorer .swagger-ui .model-container {
     background: var(--braze-surface);
     border-color: var(--braze-border);
-  }
-  @media (prefers-color-scheme: dark) {
-    .openapi-explorer {
-      --braze-bg: #17101f;
-      --braze-bg-muted: #211430;
-      --braze-surface: #261938;
-      --braze-border: #473458;
-      --braze-text: #f6f2ff;
-      --braze-text-muted: #c9bddb;
-      --braze-link: #c9c4ff;
-      --braze-accent: #c9c4ff;
-      --braze-accent-strong: #ffffff;
-      --braze-accent-soft: #7d62a2;
-      --braze-code-bg: #0e0a16;
-      --braze-code-text: #ffffff;
-      --braze-code-accent: #b9f7cb;
-      box-shadow: none;
-    }
-  }
-  html[data-theme="dark"] .openapi-explorer,
-  body.dark .openapi-explorer,
-  body.dark-mode .openapi-explorer {
-    --braze-bg: #17101f;
-    --braze-bg-muted: #211430;
-    --braze-surface: #261938;
-    --braze-border: #473458;
-    --braze-text: #f6f2ff;
-    --braze-text-muted: #c9bddb;
-    --braze-link: #c9c4ff;
-    --braze-accent: #c9c4ff;
-    --braze-accent-strong: #ffffff;
-    --braze-accent-soft: #7d62a2;
-    --braze-code-bg: #0e0a16;
-    --braze-code-text: #ffffff;
-    --braze-code-accent: #b9f7cb;
   }
   /* Copy-to-clipboard button injected on each example code block. The extra
      top padding reserves a gutter so the button never overlaps the code. */

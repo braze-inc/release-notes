@@ -18,6 +18,8 @@ Braze uniquely identifies links within emails by appending an extra parameter ca
 
 Link identifiers are also updated if an email campaign, Canvas with an email message, or Content Block is duplicated.
 
+Link aliasing is not applied in email templates (**Templates** > **Email Templates**). Test messages sent from the template editor won't include `lid` on links, and links inside Content Blocks may render with an empty `lid=` value. Link alias markup is applied when the template is used in a campaign or Canvas, so send tests from the campaign or Canvas editor to verify final links.
+
 ## Turn on link aliasing
 
 Link aliasing is turned on for your whole company by Braze, not in the dashboard. To request it, contact your Braze account manager. Turning on link aliasing also turns on [link templates](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_template) for your company. Only Braze can turn link aliasing on or off for your company.
@@ -218,7 +220,7 @@ _Update noted in August 2019._
 
 ## Link aliasing in Content Blocks
 
-New Content Blocks will have their links modified where Braze will append a `lid=` to each link where applicable. This placeholder value is resolved when inserted into an email message variant.
+For new Content Block links, Braze appends a `lid={{placeholder}}` to each link where applicable. This placeholder value is resolved when inserted into an email message variant. When the Content Block is previewed or tested outside a campaign or Canvas (for example, in email templates), the placeholder isn't resolved, and links may render with an empty `lid=` value.
 
 To modify the links within existing Content Blocks that were created before Braze enabled link aliasing, duplicate the existing Content Blocks, then modify the links within the duplicated Content Blocks.
 
@@ -373,7 +375,7 @@ In some cases, URLs in the HTML email editor may be missing the link identifier 
 
 ### Destinations that don't accept the `lid` parameter
 
-When you send a test message from the email editor, Braze appends `lid={{placeholder}}` to your links (the placeholder becomes a unique value at send time). If the destination site or API doesn't tolerate extra query parameters, the link can work in the editor, but fail when opened from the email.
+When you send a test message from the campaign or Canvas email editor, Braze appends `lid={{placeholder}}` to your links (the placeholder becomes a unique value at send time). If the destination site or API doesn't tolerate extra query parameters, the link can work in the editor, but fail when opened from the email.
 
 Without the `lid` value, Braze doesn't treat the URL as link-aliased for tracking and segmentation. We recommend updating your backend or site so it ignores the `lid` query parameter when present. That preserves link aliasing, reporting, and segment use cases described in this article.
 

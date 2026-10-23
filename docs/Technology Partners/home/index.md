@@ -117,6 +117,7 @@ Braze Alloys is Braze's technology partner program. Partners extend the Braze pl
 - [Facebook](https://www.braze.com/docs/partners/message_orchestration/retargeting/facebook)
 - [Facebook Audience Sync](https://www.braze.com/docs/partners/canvas_audience_sync/facebook_audience_sync)
 - [Facebook Lead Ads through Zapier](https://www.braze.com/docs/partners/data_and_analytics/leads_capture/facebook_via_zapier)
+- [FeedOtter](https://www.braze.com/docs/partners/message_orchestration/templates/feedotter)
 - [Figma](https://www.braze.com/docs/partners/message_personalization/creative_studio/figma)
 - [Fivetran](https://www.braze.com/docs/partners/data_and_analytics/workflow_automation/fivetran)
 - [Flybuy](https://www.braze.com/docs/partners/message_personalization/location/flybuy)

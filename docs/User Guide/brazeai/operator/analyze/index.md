@@ -2,7 +2,7 @@
 
 > Operator Analyze is how Operator answers performance and analytics questions. Ask from the same conversation panel you use for everything else—about channel engagement, revenue, or industry benchmarks—and Operator returns charts, comparisons, insights, and recommendations pulled from your workspace data.
 
-Operator Analyze is included with BrazeAI OperatorTM. Analytics questions count toward your company's Operator [usage limit](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#limitations).
+Operator Analyze is included with BrazeAI Operator<sup>TM</sup>. Analytics questions count toward your company's Operator [usage limit](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities#limitations).
 
 ## Prerequisites
 
@@ -183,7 +183,7 @@ Specific prompts get clearer answers. Keep these in mind when you ask about perf
 
 ## Data privacy and security
 
-Operator Analyze follows the same privacy and security model as BrazeAI OperatorTM. For more information, see [Data privacy and security](https://www.braze.com/docs/user_guide/brazeai/operator/data_privacy_security).
+Operator Analyze follows the same privacy and security model as BrazeAI Operator<sup>TM</sup>. For more information, see [Data privacy and security](https://www.braze.com/docs/user_guide/brazeai/operator/data_privacy_security).
 
 ## Next steps
 

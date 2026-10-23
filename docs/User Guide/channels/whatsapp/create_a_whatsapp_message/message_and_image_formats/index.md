@@ -36,6 +36,7 @@ Marketing templates are the most common type used in Braze. They consist of up t
 | Footer | 60 characters |
 | Button label (URL, phone, quick reply) | 25 characters |
 | Phone number (in phone button) | 20 characters |
+| Offer code (**Copy offer code** button) | 15 characters |
 | Template name | 512 characters (lowercase, alphanumeric, and underscores only) |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Character length" }
 
@@ -70,8 +71,8 @@ Limited time offer templates display a time-sensitive promotional offer with an 
 
 | Field | Required | Notes |
 |---|---|---|
-| Title | Yes | A short line describing the offer. |
-| Code | Yes | The offer code recipients will copy. This populates the **Copy offer code** button automatically. |
+| Title | Yes | A short line describing the offer. Up to 16 characters. |
+| Code | Yes | The offer code recipients will copy. This populates the **Copy offer code** button automatically. Up to 20 characters (alphanumeric, no spaces). |
 | Expiration | No | Set a fixed date and time (for example, an end date for a summer sale), or personalize it based on a user attribute (for example, each user's birthday). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Offer details" }
 
