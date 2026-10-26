@@ -1,4 +1,4 @@
-<div id='api_hwcduixyxrlr' class='api_div' data-search-keywords='create data object object_id attributes name industry data_object type_name'>
+<div id='api_qxjwqhcwtsob' class='api_div' data-search-keywords='create data object object_id attributes name industry data_object type_name'>
 <h1 id="create-data-object">Create data object</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/data_objects/objects/{type_name}</p>
@@ -18,7 +18,7 @@
 
 <h2 id="rate-limit">Rate limit</h2>
 
-<p>This endpoint is in the Data Objects write bucket with a default limit of 50 requests per minute.</p>
+<p>This endpoint is in the Data Objects write bucket with a default limit of 1000 requests per minute.</p>
 
 <h2 id="path-parameters">Path parameters</h2>
 

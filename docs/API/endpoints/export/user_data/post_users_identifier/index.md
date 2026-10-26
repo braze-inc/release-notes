@@ -1,4 +1,4 @@
-<div id='api_eelrlvyioskh' class='api_div' data-search-keywords='export user profile by identifier external_ids user_aliases device_id braze_id email_address phone fields_to_export message users invalid_user_ids created_at external_id alias_name alias_label first_name last_name email dob home_city country language time_zone last_coordinates gender total_revenue attributed_campaign attributed_source attributed_adgroup attributed_ad push_subscribe email_subscribe custom_attributes custom_events name first last count purchases devices model os carrier idfv idfa google_ad_id roku_ad_id ad_tracking_enabled push_tokens app platform token notifications_enabled provisionally_opted_in apps version sessions first_used last_used campaigns_received last_received engaged opened_email opened_push clicked_email clicked_triggered_in_app_message converted api_campaign_id variation_name variation_api_id in_control canvases_received api_canvas_id last_received_message last_entered last_exited steps_received api_canvas_step_id cards_clicked random_bucket push_opted_in_at multiple_converted last_entered_control_at'>
+<div id='api_vxesikipqumd' class='api_div' data-search-keywords='export user profile by identifier'>
 <h1 id="export-user-profile-by-identifier">Export user profile by identifier</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/export/ids</p>
@@ -12,886 +12,663 @@
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577" class="seeme">See me in Postman</a></div>
 
-<h2 id="prerequisites">Prerequisites</h2>
+<div class="openapi-explorer" data-spec-url="/docs/assets/api/openapi/users_export_ids.yaml">
+  
+    <h2 id="endpoint-reference">Endpoint reference</h2>
+    <p>
+      This reference is generated from the OpenAPI specification for this
+      endpoint. To run the endpoint, copy the generated cURL example and send
+      it from your terminal or Postman. You can also download the raw OpenAPI
+      spec for this page at <a href="/docs/assets/api/openapi/users_export_ids.yaml">/docs/assets/api/openapi/users_export_ids.yaml</a>. Use this
+      spec to validate that your requests include the correct parameters, fields,
+      and structure before you send them. To learn how, see
+      <a href="/docs/api/openapi_schema_validation/">Use OpenAPI schemas for request validation</a>.
+    </p>
+  
+  <div id="swagger-ui-users_export_ids" class="openapi-explorer__ui"></div>
+</div>
+<link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5.17.14/swagger-ui.css" crossorigin="anonymous" />
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">users.export.ids</code> permission.</p>
+<style>
+  .openapi-explorer {
+    --braze-bg: #ffffff;
+    --braze-bg-muted: #f8f4ff;
+    --braze-surface: #f4f4f7;
+    --braze-border: #dddde2;
+    --braze-text: #212123;
+    --braze-text-muted: #475467;
+    --braze-link: #801ed7;
+    --braze-accent: #801ed7;
+    --braze-accent-strong: #300266;
+    --braze-accent-soft: #c9c4ff;
+    --braze-success: #169b72;
+    --braze-warning: #c48d3c;
+    --braze-danger: #c6132c;
+    --braze-code-bg: #24173b;
+    --braze-code-text: #ffffff;
+    --braze-code-accent: #b9f7cb;
+    margin: 1.5rem 0 2rem;
+    color: var(--braze-text);
+  }
+  .openapi-explorer__ui {
+    background: var(--braze-bg);
+    border: 1px solid var(--braze-border);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(48, 2, 102, 0.08);
+    overflow: hidden;
+  }
+  .openapi-explorer .swagger-ui,
+  .openapi-explorer .swagger-ui * {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  .openapi-explorer .swagger-ui {
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: normal;
+    line-height: 1.4;
+  }
+  .openapi-explorer--minimal {
+    margin-top: 0.5rem;
+  }
+  .openapi-explorer .swagger-ui .topbar { display: none; }
+  .openapi-explorer .swagger-ui .information-container {
+    padding: 1.25rem 1.5rem;
+    background: var(--braze-bg-muted);
+    border-bottom: 1px solid var(--braze-border);
+  }
+  .openapi-explorer .swagger-ui .info .title {
+    color: var(--braze-accent-strong);
+    font-weight: 700;
+  }
+  .openapi-explorer .swagger-ui .info p,
+  .openapi-explorer .swagger-ui .info li,
+  .openapi-explorer .swagger-ui .info td,
+  .openapi-explorer .swagger-ui .parameter__name,
+  .openapi-explorer .swagger-ui .response-col_status,
+  .openapi-explorer .swagger-ui .response-col_description,
+  .openapi-explorer .swagger-ui .responses-inner h4,
+  .openapi-explorer .swagger-ui .responses-inner h5 {
+    color: var(--braze-text);
+  }
+  .openapi-explorer .swagger-ui .scheme-container {
+    background: var(--braze-bg);
+    box-shadow: none;
+    border-bottom: 1px solid var(--braze-border);
+    padding: 0.85rem 1.5rem;
+  }
+  .openapi-explorer .swagger-ui .scheme-container .schemes > label {
+    color: var(--braze-text-muted);
+  }
+  .openapi-explorer .swagger-ui .scheme-container .schemes {
+    display: none;
+  }
+  .openapi-explorer .swagger-ui .opblock-tag {
+    border-bottom: 1px solid var(--braze-border);
+    color: var(--braze-accent-strong);
+    background: var(--braze-bg-muted);
+    margin: 0;
+    padding: 14px 20px;
+  }
+  .openapi-explorer .swagger-ui .opblock {
+    border: 1px solid var(--braze-border);
+    border-radius: 10px;
+    box-shadow: none;
+    margin: 0 0 16px;
+    background: var(--braze-bg);
+  }
+  .openapi-explorer .swagger-ui .opblock .opblock-summary {
+    border-bottom-color: var(--braze-border);
+  }
+  .openapi-explorer .swagger-ui .opblock.opblock-get {
+    border-left: 4px solid #169b72;
+  }
+  .openapi-explorer .swagger-ui .opblock.opblock-post {
+    border-left: 4px solid #801ed7;
+  }
+  .openapi-explorer .swagger-ui .opblock.opblock-put,
+  .openapi-explorer .swagger-ui .opblock.opblock-patch {
+    border-left: 4px solid #23a8b7;
+  }
+  .openapi-explorer .swagger-ui .opblock.opblock-delete {
+    border-left: 4px solid #c6132c;
+  }
+  .openapi-explorer .swagger-ui .opblock-summary-method {
+    border-radius: 999px;
+    padding: 6px 12px;
+    min-width: 72px;
+    font-weight: 700;
+  }
+  .openapi-explorer .swagger-ui .btn,
+  .openapi-explorer .swagger-ui select,
+  .openapi-explorer .swagger-ui input[type="text"],
+  .openapi-explorer .swagger-ui input[type="password"],
+  .openapi-explorer .swagger-ui input[type="search"],
+  .openapi-explorer .swagger-ui textarea {
+    border-radius: 8px;
+    border-color: var(--braze-border);
+    color: var(--braze-text);
+  }
+  .openapi-explorer .swagger-ui .responses-table .response-col_status {
+    font-weight: 700;
+  }
+  .openapi-explorer .swagger-ui table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+  .openapi-explorer .swagger-ui table thead tr th,
+  .openapi-explorer .swagger-ui table tbody tr td {
+    text-align: left;
+    vertical-align: middle;
+    padding: 12px 10px !important;
+  }
+  .openapi-explorer .swagger-ui table th,
+  .openapi-explorer .swagger-ui table td {
+    padding: 12px 10px !important;
+    /* Wrap only at word boundaries so words never split mid-character. */
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  /* Keep inline code tokens (such as parameter names like segment_id) on a
+     single line so they stay legible instead of breaking across two lines. */
+  .openapi-explorer .swagger-ui table th code,
+  .openapi-explorer .swagger-ui table td code {
+    white-space: nowrap;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+  .openapi-explorer .swagger-ui .responses-table .response-col_status,
+  .openapi-explorer .swagger-ui .responses-table .response-col_links,
+  .openapi-explorer .swagger-ui .responses-table .response-col_description {
+    text-align: left !important;
+    vertical-align: middle !important;
+  }
+  .openapi-explorer .swagger-ui .responses-table .response-col_status {
+    width: 11%;
+    min-width: 72px;
+  }
+  .openapi-explorer .swagger-ui .responses-table .response-col_description {
+    width: auto;
+  }
+  /* Remove the always-empty Links column from native response tables. */
+  .openapi-explorer .swagger-ui .responses-table .response-col_links {
+    display: none;
+  }
+  .openapi-explorer .swagger-ui .response-control-media-type__accept-message {
+    color: var(--braze-text-muted);
+  }
+  .openapi-explorer .swagger-ui table thead tr th,
+  .openapi-explorer .swagger-ui .parameter__type,
+  .openapi-explorer .swagger-ui .parameter__deprecated,
+  .openapi-explorer .swagger-ui .prop-format {
+    color: var(--braze-text-muted);
+  }
+  .openapi-explorer .swagger-ui a {
+    color: var(--braze-link);
+  }
+  .openapi-explorer .swagger-ui .highlight-code,
+  .openapi-explorer .swagger-ui .microlight,
+  .openapi-explorer .swagger-ui .curl,
+  .openapi-explorer .swagger-ui .opblock-body pre {
+    background: var(--braze-code-bg);
+    border-radius: 8px;
+    color: var(--braze-code-text);
+  }
+  .openapi-explorer .swagger-ui .opblock-body pre code,
+  .openapi-explorer .swagger-ui .microlight code,
+  .openapi-explorer .swagger-ui .hljs {
+    color: var(--braze-code-text) !important;
+    background: transparent !important;
+    text-shadow: none !important;
+  }
+  .openapi-explorer .swagger-ui .hljs-string,
+  .openapi-explorer .swagger-ui .hljs-attr,
+  .openapi-explorer .swagger-ui .hljs-number,
+  .openapi-explorer .swagger-ui .hljs-literal {
+    color: var(--braze-code-accent) !important;
+  }
+  .openapi-explorer .swagger-ui .hljs * {
+    background: transparent !important;
+  }
+  .openapi-explorer .swagger-ui ::selection {
+    background: rgba(128, 30, 215, 0.35);
+    color: var(--braze-code-text);
+  }
+  .openapi-explorer .swagger-ui .tab li button.tablinks {
+    color: var(--braze-text-muted);
+  }
+  .openapi-explorer .swagger-ui .tab li.active button.tablinks {
+    color: var(--braze-accent-strong);
+    font-weight: 700;
+  }
+  .openapi-explorer .swagger-ui .model-box,
+  .openapi-explorer .swagger-ui section.models,
+  .openapi-explorer .swagger-ui .model-container {
+    background: var(--braze-surface);
+    border-color: var(--braze-border);
+  }
+  /* Copy-to-clipboard button injected on each example code block. The extra
+     top padding reserves a gutter so the button never overlaps the code. */
+  .openapi-explorer .opblock-description-wrapper pre,
+  .openapi-explorer .renderedMarkdown pre {
+    position: relative;
+    padding-top: 2.75em;
+  }
+  .openapi-explorer .openapi-copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 2;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--braze-code-text);
+    background: rgba(128, 30, 215, 0.9);
+    border: 1px solid var(--braze-accent-soft);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .openapi-explorer .openapi-copy-btn:hover {
+    background: var(--braze-accent);
+  }
+  .openapi-explorer .openapi-copy-btn:focus-visible {
+    outline: 2px solid var(--braze-accent-soft);
+    outline-offset: 2px;
+  }
+  .openapi-explorer .openapi-copy-btn[data-copied="true"] {
+    background: var(--braze-success);
+  }
+  /* Response status codes table: equal-width columns so the Meaning and
+     resolution columns get enough room and the table reads evenly. */
+  .openapi-explorer table.openapi-response-table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  .openapi-explorer table.openapi-response-table th,
+  .openapi-explorer table.openapi-response-table td {
+    width: 25%;
+    vertical-align: top;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  /* Allow long inline code tokens (such as the Authorization header) to wrap
+     inside the equal-width response cells instead of overflowing them. Short
+     tokens still stay on one line because they fit without breaking. */
+  .openapi-explorer table.openapi-response-table th code,
+  .openapi-explorer table.openapi-response-table td code {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+</style>
 
-<h2 id="rate-limit">Rate limit</h2>
-
-<!---DEFAULT RATE LIMIT-->
-
-<!---Additional if statement for Messaging endpoints-->
-
-<!---Additional if statement for Translation endpoints-->
-
-<!---Additional if statement for /messages/send endpoint-->
-
-<h2 id="request-body">Request body</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre>Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-  </span><span class="nl">"external_ids"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">strings)</span><span class="w"> </span><span class="err">External</span><span class="w"> </span><span class="err">identifiers</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">users</span><span class="w"> </span><span class="err">you</span><span class="w"> </span><span class="err">wish</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">export</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"user_aliases"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">alias</span><span class="w"> </span><span class="err">objects)</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">aliases</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">users</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">export</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"device_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">Device</span><span class="w"> </span><span class="err">identifier</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">returned</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">various</span><span class="w"> </span><span class="err">SDK</span><span class="w"> </span><span class="err">methods</span><span class="w"> </span><span class="err">such</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">`getDeviceId`</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"braze_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">Braze</span><span class="w"> </span><span class="err">identifier</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">particular</span><span class="w"> </span><span class="err">user</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"email_address"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">address</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">user</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">Phone</span><span class="w"> </span><span class="err">number</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">user</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fields_to_export"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">strings)</span><span class="w"> </span><span class="err">Name</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">data</span><span class="w"> </span><span class="err">fields</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">export</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-
-<p><strong>Note:</strong></p>
-
-<p>For customers who have onboarded with Braze on or after August 22, 2024, the request parameter <code class="language-plaintext highlighter-rouge">fields_to_export</code> is required.</p>
-
-<h2 id="request-parameters">Request parameters</h2>
-
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Required</th>
-      <th>Data Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">external_ids</code></td>
-      <td>Optional</td>
-      <td>Array of strings</td>
-      <td>External identifiers for users you wish export.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">user_aliases</code></td>
-      <td>Optional</td>
-      <td>Array of user alias object</td>
-      <td><a href="/docs/api/objects_filters/user_alias_object">User aliases</a> for users to export.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">device_id</code></td>
-      <td>Optional</td>
-      <td>String</td>
-      <td>Device identifier, as returned by various SDK methods such as <code class="language-plaintext highlighter-rouge">getDeviceId</code>.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">braze_id</code></td>
-      <td>Optional</td>
-      <td>String</td>
-      <td>Braze identifier for a particular user.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">email_address</code></td>
-      <td>Optional</td>
-      <td>String</td>
-      <td>Email address of user.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">phone</code></td>
-      <td>Optional</td>
-      <td>String in <a href="https://en.wikipedia.org/wiki/E.164">E.164</a> format</td>
-      <td>Phone number of user.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">fields_to_export</code></td>
-      <td>Optional*</td>
-      <td>Array of strings</td>
-      <td>Name of user data fields to export.<br /><br />*This field is required to use the faster rate limit of 40 requests per second. If omitted, the default rate limit of 250 requests per min will be used instead.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>*Required for customers who have onboarded with Braze on or after August 22, 2024.</p>
-
-<h2 id="example-request">Example request</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-</pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-REST-API-KEY' \
---data-raw '{
-  "external_ids": ["user_identifier1", "user_identifier2"],
-  "user_aliases": [
-    {
-      "alias_name": "example_alias",
-      "alias_label": "example_label"
+<script>
+  (function () {
+    var specPath = "/docs/assets/api/openapi/users_export_ids.yaml";
+    var specUrl = specPath;
+    try {
+      specUrl = new URL(specPath, window.location.origin).toString();
+    } catch (error) {
+      specUrl = specPath;
     }
-  ],
-  "device_id": "1234567",
-  "braze_id": "braze_identifier",
-  "email_address": "example@example.com",
-  "phone": "11112223333",
-  "fields_to_export": ["first_name", "email", "purchases"]
-}'
-</pre></td></tr></tbody></table></code></pre></div></div>
+    var baseUrl = "/docs";
+    var domId = "#" + "swagger-ui-users_export_ids";
+    var uiInstance = null;
+    var specBasename = specPath.split("/").pop();
 
-<h2 id="fields-to-export">Fields to export</h2>
+    // Log engagement to Braze via the Web SDK loaded site-wide in analytics.html.
+    // Tracking must never break the page, so guard every call.
+    function brazeLog(eventName, properties) {
+      try {
+        if (window.braze && typeof window.braze.logCustomEvent === "function") {
+          window.braze.logCustomEvent(eventName, properties || {});
+          if (typeof window.braze.requestImmediateDataFlush === "function") {
+            window.braze.requestImmediateDataFlush();
+          }
+        }
+      } catch (err) { /* no-op */ }
+    }
 
-<p>The following is a list of valid <code class="language-plaintext highlighter-rouge">fields_to_export</code>. Using <code class="language-plaintext highlighter-rouge">fields_to_export</code> to minimize the data returned can improve response time of this API endpoint:</p>
+    // Track clicks on the reference links (Postman, spec download, and the
+    // schema-validation guide). Bind once per page even with several explorers.
+    if (!window.__openapiTrackingBound) {
+      window.__openapiTrackingBound = true;
+      document.addEventListener("click", function (evt) {
+        var link = evt.target && evt.target.closest ? evt.target.closest("a") : null;
+        if (!link) { return; }
+        var href = link.getAttribute("href") || "";
+        var page = window.location.pathname;
+        if (link.classList.contains("seeme")) {
+          var isSwagger = !!link.closest(".api_reference.swagger");
+          brazeLog(isSwagger ? "docs_api_swagger_click" : "docs_api_postman_click", { href: href, page: page });
+        } else if (href.indexOf("/assets/api/openapi/") !== -1) {
+          brazeLog("docs_api_spec_download_click", { spec_url: href, page: page });
+        } else if (href.indexOf("/api/openapi_schema_validation") !== -1) {
+          brazeLog("docs_api_validation_guide_click", { page: page });
+        }
+      }, true);
+    }
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" aria-label="Fields to export">
-  <thead>
-    <tr>
-      <th>Field to export</th>
-      <th>Data type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">apps</code></td>
-      <td>Array</td>
-      <td>Apps this user has logged sessions for, which includes the fields:<br /><br />- <code class="language-plaintext highlighter-rouge">name</code>: app name<br />- <code class="language-plaintext highlighter-rouge">platform</code>: app platform, such as iOS, Android, or Web<br />- <code class="language-plaintext highlighter-rouge">version</code>: app version number or name <br />- <code class="language-plaintext highlighter-rouge">sessions</code>: total number of sessions for this app<br />- <code class="language-plaintext highlighter-rouge">first_used</code>: date of first session<br />- <code class="language-plaintext highlighter-rouge">last_used</code>: date of last session<br /><br />All fields are strings.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">attributed_campaign</code></td>
-      <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for a particular ad campaign.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">attributed_source</code></td>
-      <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for the platform the ad was on.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">attributed_adgroup</code></td>
-      <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for an optional sub-grouping below campaign.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">attributed_ad</code></td>
-      <td>String</td>
-      <td>Data from <a href="/docs/partners/message_orchestration">attribution integrations</a>, if set up. Identifier for an optional sub-grouping below campaign and ad group.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">push_subscribe</code></td>
-      <td>String</td>
-      <td>User’s push subscription status.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">email_subscribe</code></td>
-      <td>String</td>
-      <td>User’s email subscription status.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">braze_id</code></td>
-      <td>String</td>
-      <td>Device-specific unique user identifier set by Braze for this user.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">country</code></td>
-      <td>String</td>
-      <td>User’s country using <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> standard.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">created_at</code></td>
-      <td>String</td>
-      <td>Date and time for when the user profile was created, in ISO 8601 format.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">custom_attributes</code></td>
-      <td>Object</td>
-      <td>Custom attribute key-value pairs for this user.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">custom_events</code></td>
-      <td>Array</td>
-      <td>Custom events attributed to this user in the last 90 days.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">devices</code></td>
-      <td>Array</td>
-      <td>Information about the user’s device, which could include the following depending on platform:<br /><br />- <code class="language-plaintext highlighter-rouge">model</code>: Device’s model name<br />- <code class="language-plaintext highlighter-rouge">os</code>: Device’s operating system<br />- <code class="language-plaintext highlighter-rouge">carrier</code>: Device’s service carrier, if available<br />- <code class="language-plaintext highlighter-rouge">idfv</code>: (iOS) Braze device identifier, the Apple Identifier for Vendor, if exists<br />- <code class="language-plaintext highlighter-rouge">idfa</code>: (iOS) Identifier for Advertising, if exists<br />- <code class="language-plaintext highlighter-rouge">device_id</code>: (Android) Braze device identifier<br />- <code class="language-plaintext highlighter-rouge">google_ad_id</code>: (Android) Google Play Advertising Identifier, if exists<br />- <code class="language-plaintext highlighter-rouge">roku_ad_id</code>: (Roku) Roku Advertising Identifier<br />- <code class="language-plaintext highlighter-rouge">ad_tracking_enabled</code>: If ad tracking is enabled on the device, can be true or false</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">dob</code></td>
-      <td>String</td>
-      <td>User’s date of birth in the format <code class="language-plaintext highlighter-rouge">YYYY-MM-DD</code>.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">email</code></td>
-      <td>String</td>
-      <td>User’s email address.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">external_id</code></td>
-      <td>String</td>
-      <td>Unique user identifier for identified users.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">first_name</code></td>
-      <td>String</td>
-      <td>User’s first name.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">gender</code></td>
-      <td>String</td>
-      <td>User’s gender. Possible values are:<br /><br />- <code class="language-plaintext highlighter-rouge">M</code>: male<br />- <code class="language-plaintext highlighter-rouge">F</code>: female<br />- <code class="language-plaintext highlighter-rouge">O</code>: other<br />- <code class="language-plaintext highlighter-rouge">N</code>: not applicable<br />- <code class="language-plaintext highlighter-rouge">P</code>: prefer not to say<br />- <code class="language-plaintext highlighter-rouge">nil</code>: unknown</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">home_city</code></td>
-      <td>String</td>
-      <td>User’s home city.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">language</code></td>
-      <td>String</td>
-      <td>User’s language in ISO-639-1 standard.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">last_coordinates</code></td>
-      <td>Array of floats</td>
-      <td>User’s most recent device location, formatted as <code class="language-plaintext highlighter-rouge">[longitude, latitude]</code>.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">last_name</code></td>
-      <td>String</td>
-      <td>User’s last name.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">phone</code></td>
-      <td>String</td>
-      <td>User’s telephone number in E.164 format.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">purchases</code></td>
-      <td>Array</td>
-      <td>Purchases this user has made in the last 90 days.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">push_tokens</code></td>
-      <td>Array</td>
-      <td>Unique anonymous identifier that specifies where to send an app’s notifications.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">random_bucket</code></td>
-      <td>Integer</td>
-      <td>User’s <a href="/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events">random bucket number</a>, used to create uniformly distributed segments of random users.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">time_zone</code></td>
-      <td>String</td>
-      <td>User’s time zone in the same format as the IANA Time Zone Database.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">total_revenue</code></td>
-      <td>Float</td>
-      <td>Total revenue attributed to this user. Total revenue is calculated based on purchases the user made during conversion windows for the campaigns and Canvases they received.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">uninstalled_at</code></td>
-      <td>Timestamp</td>
-      <td>Date and time the user uninstalls the app. Omitted if the app has not been uninstalled.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">user_aliases</code></td>
-      <td>Object</td>
-      <td><a href="/docs/api/objects_filters/user_alias_object">User aliases object</a> containing the <code class="language-plaintext highlighter-rouge">alias_name</code> and <code class="language-plaintext highlighter-rouge">alias_label</code>, if exists.</td>
-    </tr>
-  </tbody>
-</table>
+    // Classify a code block by the nearest preceding heading so copy events can
+    // be segmented into request vs. response engagement.
+    function blockTypeFor(pre) {
+      var node = pre.previousElementSibling;
+      while (node) {
+        if (/^H[1-6]$/.test(node.tagName)) {
+          var text = (node.textContent || "").toLowerCase();
+          if (text.indexOf("response") !== -1) { return "response"; }
+          if (text.indexOf("request") !== -1 || text.indexOf("example") !== -1) { return "request"; }
+          return "other";
+        }
+        node = node.previousElementSibling;
+      }
+      return "other";
+    }
 
-<p>Be aware that the <code class="language-plaintext highlighter-rouge">/users/export/ids</code> endpoint will pull together the entire user profile for this user, including data such as all campaigns and Canvases received, all custom events performed, all purchases made, and all custom attributes. As a result, this endpoint is slower than other REST API endpoints.</p>
+    function addCopyButtons(root) {
+      var blocks = root.querySelectorAll(".opblock-description-wrapper pre, .renderedMarkdown pre");
+      Array.prototype.forEach.call(blocks, function (pre) {
+        if (pre.querySelector(".openapi-copy-btn")) { return; }
+        var blockType = blockTypeFor(pre);
+        var button = document.createElement("button");
+        button.type = "button";
+        button.className = "openapi-copy-btn";
+        button.textContent = "Copy";
+        button.setAttribute("aria-label", "Copy code to clipboard");
+        button.addEventListener("click", function () {
+          var code = pre.querySelector("code");
+          var text = (code ? code.innerText : pre.innerText) || "";
+          text = text.replace(/\s*Copy\s*$/, "");
+          function finish() {
+            button.textContent = "Copied";
+            button.setAttribute("data-copied", "true");
+            setTimeout(function () {
+              button.textContent = "Copy";
+              button.removeAttribute("data-copied");
+            }, 2000);
+            brazeLog("docs_api_copy_code_click", { block_type: blockType, spec: specBasename, page: window.location.pathname });
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(finish, finish);
+          } else {
+            finish();
+          }
+        });
+        pre.appendChild(button);
+      });
+    }
 
-<p>Depending on the data requested, this API endpoint may not be sufficient to meet your needs due to the 250 requests per minute rate limit. If you anticipate using this endpoint regularly to export users, instead consider exporting users by segment, which is asynchronous and more optimized for larger data pulls.</p>
+    // Whether the authored description already renders a Markdown table whose
+    // header matches the given pattern (for example, a parameters table).
+    function descriptionHasTableMatching(root, regex) {
+      var tables = root.querySelectorAll(".opblock-description-wrapper table");
+      for (var i = 0; i < tables.length; i += 1) {
+        var headers = tables[i].querySelectorAll("th");
+        for (var j = 0; j < headers.length; j += 1) {
+          if (regex.test(headers[j].textContent || "")) { return true; }
+        }
+      }
+      return false;
+    }
 
-<h2 id="response">Response</h2>
+    // Native responses are "rich" when they document more than one status code
+    // or include an example/model, meaning the spec relies on native rendering.
+    function nativeResponsesAreRich(root) {
+      if (root.querySelectorAll(".responses-inner tr.response").length > 1) { return true; }
+      return !!root.querySelector(
+        ".responses-inner .highlight-code, .responses-inner .microlight, .responses-inner .model-example, .responses-inner .model-box"
+      );
+    }
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">'success'</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">request</span><span class="w"> </span><span class="err">completes</span><span class="w"> </span><span class="err">without</span><span class="w"> </span><span class="err">errors</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"users"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">object)</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">data</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">each</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">exported</span><span class="w"> </span><span class="err">users</span><span class="p">,</span><span class="w"> </span><span class="err">may</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">empty</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">no</span><span class="w"> </span><span class="err">users</span><span class="w"> </span><span class="err">are</span><span class="w"> </span><span class="err">found</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"invalid_user_ids"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">each</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">identifiers</span><span class="w"> </span><span class="err">provided</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">request</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">did</span><span class="w"> </span><span class="err">not</span><span class="w"> </span><span class="err">correspond</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">known</span><span class="w"> </span><span class="err">user</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
+    function hideParameters(root) {
+      Array.prototype.forEach.call(root.querySelectorAll(".parameters-container"), function (el) {
+        var section = el.closest(".opblock-section");
+        if (section) { section.style.display = "none"; }
+      });
+      Array.prototype.forEach.call(root.querySelectorAll(".opblock-section-header"), function (header) {
+        if ((header.textContent || "").trim().toLowerCase() === "parameters") {
+          var section = header.closest(".opblock-section");
+          if (section) { section.style.display = "none"; }
+        }
+      });
+    }
 
-<p>For an example of the data that is accessible through this endpoint see the following example.</p>
+    // Remove duplicate native sections only when the authored Markdown already
+    // covers them, so specs that render fully from the OpenAPI structure (rich
+    // native parameters/responses without Markdown tables) are left untouched.
+    function hideNativeSections(root) {
+      if (descriptionHasTableMatching(root, /parameter/i)) {
+        hideParameters(root);
+      }
+      // Hide native responses when an authored responses/errors table exists, or
+      // when the native section is just a thin single-status placeholder (which
+      // also removes the always-empty Links column).
+      var hasResponseTable = descriptionHasTableMatching(root, /status|error/i);
+      if (hasResponseTable || !nativeResponsesAreRich(root)) {
+        Array.prototype.forEach.call(root.querySelectorAll(".responses-wrapper"), function (el) {
+          el.style.display = "none";
+        });
+      }
+    }
 
-<h3 id="example-user-export-file-output">Example user export file output</h3>
+    // Tag the authored "Response status codes" table so its columns render at
+    // equal width (keeps the Meaning column from being squeezed).
+    function styleResponseTables(root) {
+      var tables = root.querySelectorAll(".opblock-description-wrapper table, .renderedMarkdown table");
+      Array.prototype.forEach.call(tables, function (table) {
+        var firstHeader = table.querySelector("th");
+        if (firstHeader && /status code/i.test(firstHeader.textContent || "")) {
+          table.classList.add("openapi-response-table");
+        }
+      });
+    }
 
-<p>User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null or empty):</p>
+    function enhanceExplorer() {
+      var root = document.querySelector(domId);
+      if (!root) { return; }
+      hideNativeSections(root);
+      addCopyButtons(root);
+      styleResponseTables(root);
+    }
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"external_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"user_aliases"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"alias_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"alias_label"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"braze_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"first_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"last_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"dob"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">date</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">user's</span><span class="w"> </span><span class="err">date</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">birth</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"home_city"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"country"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">ISO</span><span class="mi">-3166-1</span><span class="w"> </span><span class="err">alpha</span><span class="mi">-2</span><span class="w"> </span><span class="err">standard</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"language"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">ISO</span><span class="mi">-639-1</span><span class="w"> </span><span class="err">standard</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"time_zone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"last_coordinates"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">float)</span><span class="w"> </span><span class="p">[</span><span class="err">lon</span><span class="p">,</span><span class="w"> </span><span class="err">lat</span><span class="p">],</span><span class="w">
-    </span><span class="nl">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="s2">"M"</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="s2">"F"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"total_revenue"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(float)</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"attributed_campaign"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"attributed_source"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"attributed_adgroup"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"attributed_ad"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"push_subscribe"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="s2">"opted_in"</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="s2">"subscribed"</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="s2">"unsubscribed"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"email_subscribe"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="s2">"opted_in"</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="s2">"subscribed"</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="s2">"unsubscribed"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"custom_attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(object)</span><span class="w"> </span><span class="err">custom</span><span class="w"> </span><span class="err">attribute</span><span class="w"> </span><span class="err">key-value</span><span class="w"> </span><span class="err">pairs</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"custom_events"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"first"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">date</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">date</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"count"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(int)</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"purchases"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"first"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">date</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">date</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"count"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(int)</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"devices"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"os"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"carrier"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"idfv"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">included</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">iOS</span><span class="w"> </span><span class="err">devices</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">IDFV</span><span class="w"> </span><span class="err">collection</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">enabled</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"idfa"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">included</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">iOS</span><span class="w"> </span><span class="err">devices</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">IDFA</span><span class="w"> </span><span class="err">collection</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">enabled</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"google_ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">included</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">Android</span><span class="w"> </span><span class="err">devices</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">Google</span><span class="w"> </span><span class="err">Play</span><span class="w"> </span><span class="err">Advertising</span><span class="w"> </span><span class="err">Identifier</span><span class="w"> </span><span class="err">collection</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">enabled</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"roku_ad_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">included</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">Roku</span><span class="w"> </span><span class="err">devices</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"ad_tracking_enabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(boolean)</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"push_tokens"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"app"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">app</span><span class="w"> </span><span class="err">name</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"device_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"notifications_enabled"</span><span class="p">:</span><span class="w"> </span><span class="err">(boolean)</span><span class="w"> </span><span class="err">whether</span><span class="w"> </span><span class="err">foreground</span><span class="w"> </span><span class="err">push</span><span class="w"> </span><span class="err">notifications</span><span class="w"> </span><span class="err">are</span><span class="w"> </span><span class="err">enabled</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">token.</span><span class="w"> </span><span class="err">`</span><span class="kc">true</span><span class="err">`</span><span class="w"> </span><span class="err">means</span><span class="w"> </span><span class="err">foreground</span><span class="w"> </span><span class="err">push</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">enabled</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">token</span><span class="p">,</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">`</span><span class="kc">false</span><span class="err">`</span><span class="w"> </span><span class="err">means</span><span class="w"> </span><span class="err">foreground</span><span class="w"> </span><span class="err">push</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">disabled</span><span class="w"> </span><span class="err">(for</span><span class="w"> </span><span class="err">example</span><span class="p">,</span><span class="w"> </span><span class="err">background-only).</span><span class="w"> </span><span class="err">This</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">device-level</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">doesn't</span><span class="w"> </span><span class="err">indicate</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">user's</span><span class="w"> </span><span class="err">global</span><span class="w"> </span><span class="err">push</span><span class="w"> </span><span class="err">subscription</span><span class="w"> </span><span class="err">status</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"provisionally_opted_in"</span><span class="p">:</span><span class="w"> </span><span class="err">(boolean)</span><span class="w"> </span><span class="err">included</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">iOS</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">Android</span><span class="w"> </span><span class="err">tokens</span><span class="w"> </span><span class="err">only.</span><span class="w"> </span><span class="err">Indicates</span><span class="w"> </span><span class="err">whether</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">token</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">provisional</span><span class="w"> </span><span class="err">push</span><span class="w"> </span><span class="err">authorization</span><span class="w"> </span><span class="err">state.</span><span class="w"> </span><span class="err">`</span><span class="kc">true</span><span class="err">`</span><span class="w"> </span><span class="err">means</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">token</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">provisionally</span><span class="w"> </span><span class="err">opted</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">(notifications</span><span class="w"> </span><span class="err">are</span><span class="w"> </span><span class="err">delivered</span><span class="w"> </span><span class="err">quietly)</span><span class="p">,</span><span class="w"> </span><span class="err">`</span><span class="kc">false</span><span class="err">`</span><span class="w"> </span><span class="err">means</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">token</span><span class="w"> </span><span class="err">isn't</span><span class="w"> </span><span class="err">provisional</span><span class="w"> </span><span class="err">(the</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">has</span><span class="w"> </span><span class="err">explicitly</span><span class="w"> </span><span class="err">authorized</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">denied</span><span class="w"> </span><span class="err">push)</span><span class="p">,</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">`</span><span class="kc">null</span><span class="err">`</span><span class="w"> </span><span class="err">means</span><span class="w"> </span><span class="err">provisional</span><span class="w"> </span><span class="err">status</span><span class="w"> </span><span class="err">isn't</span><span class="w"> </span><span class="err">set.</span><span class="w"> </span><span class="err">Provisional</span><span class="w"> </span><span class="err">authorization</span><span class="w"> </span><span class="err">applies</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">iOS;</span><span class="w"> </span><span class="err">Android</span><span class="w"> </span><span class="err">tokens</span><span class="w"> </span><span class="err">report</span><span class="w"> </span><span class="err">`</span><span class="kc">null</span><span class="err">`</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"apps"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"sessions"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(integer)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"first_used"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">date</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last_used"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">date</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"campaigns_received"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last_received"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">date</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"engaged"</span><span class="w"> </span><span class="p">:</span><span class="w">
-         </span><span class="p">{</span><span class="w">
-           </span><span class="nl">"opened_email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(boolean)</span><span class="p">,</span><span class="w">
-           </span><span class="nl">"opened_push"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(boolean)</span><span class="p">,</span><span class="w">
-           </span><span class="nl">"clicked_email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(boolean)</span><span class="p">,</span><span class="w">
-           </span><span class="nl">"clicked_triggered_in_app_message"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(boolean)</span><span class="w">
-          </span><span class="p">},</span><span class="w">
-          </span><span class="nl">"converted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(boolean)</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"api_campaign_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"variation_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">exists</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">it</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">multivariate</span><span class="w"> </span><span class="err">campaign</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"variation_api_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">exists</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">it</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">multivariate</span><span class="w"> </span><span class="err">campaign</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"in_control"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">boolean)</span><span class="w"> </span><span class="err">exists</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">it</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">multivariate</span><span class="w"> </span><span class="err">campaign</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"canvases_received"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"api_canvas_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last_received_message"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">date</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last_entered"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">date</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"variation_name"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"in_control"</span><span class="p">:</span><span class="w"> </span><span class="err">(boolean)</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last_exited"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">date</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"steps_received"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"api_canvas_step_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"last_received"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">date</span><span class="w">
-          </span><span class="p">},</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"api_canvas_step_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"last_received"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">date</span><span class="w">
-          </span><span class="p">},</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"api_canvas_step_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"last_received"</span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w"> </span><span class="err">date</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"cards_clicked"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(string)</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
+    function countLeadingSpaces(line) {
+      var match = line.match(/^ */);
+      return match ? match[0].length : 0;
+    }
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-    </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-10 15:00:00.000 UTC"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"external_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"A8i3mkd99"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"user_aliases"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"alias_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"user_123"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"alias_label"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"amplitude_id"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"braze_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5fbd99bac125ca40511f2cb1"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"random_bucket"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2365</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"first_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Alex"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"last_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Smith"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"example@example.com"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"dob"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1980-12-21"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"home_city"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Chicago"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"country"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"phone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"+15555550123"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"language"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"time_zone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Eastern Time (US &amp; Canada)"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"last_coordinates"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">41.84157636433568</span><span class="p">,</span><span class="w"> </span><span class="mf">-87.83520818508256</span><span class="p">],</span><span class="w">
-    </span><span class="nl">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"F"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"total_revenue"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">65</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"attributed_campaign"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"braze_test_campaign_072219"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"attributed_source"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"braze_test_source_072219"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"attributed_adgroup"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"braze_test_adgroup_072219"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"attributed_ad"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"braze_test_ad_072219"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"push_subscribe"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"opted_in"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"push_opted_in_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-26T22:45:53.953Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"email_subscribe"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"subscribed"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"custom_attributes"</span><span class="p">:</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"loyaltyId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"37c98b9d-9a7f-4b2f-a125-d873c5152856"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"loyaltyPoints"</span><span class="p">:</span><span class="w"> </span><span class="s2">"321"</span><span class="p">,</span><span class="w">
-       </span><span class="nl">"loyaltyPointsNumber"</span><span class="p">:</span><span class="w"> </span><span class="mi">107</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"custom_events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Loyalty Acknowledgement"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-28T17:02:43.032Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-06-28T17:02:43.032Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"purchases"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"item_40834"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-09-05T03:45:50.540Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-06-03T17:30:41.201Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pixel XL"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"os"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Android (Q)"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"carrier"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"device_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"312ef2c1-83db-4789-967-554545a1bf7a"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"ad_tracking_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"push_tokens"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"app"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MovieCanon"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Android"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345abcd"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"device_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"312ef2c1-83db-4789-967-554545a1bf7a"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"notifications_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"provisionally_opted_in"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"apps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MovieCannon"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Android"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.29.0"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"sessions"</span><span class="p">:</span><span class="w"> </span><span class="mi">1129</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"first_used"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-02-02T19:56:19.142Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last_used"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-11-11T00:25:19.201Z"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"campaigns_received"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email Unsubscribe"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"api_campaign_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d72fdc84-ddda-44f1-a0d5-0e79f47ef942"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last_received"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-06-02T03:07:38.105Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"engaged"</span><span class="p">:</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-           </span><span class="nl">"opened_email"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"converted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"multiple_converted"</span><span class="p">:</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"Primary Conversion Event - A"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"in_control"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"variation_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Variant 1"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"variation_api_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1bddc73a-a134-4784-9134-5b5574a9e0b8"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"canvases_received"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Non Global  Holdout Group 4/21/21"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"api_canvas_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"46972a9d-dc81-473f-aa03-e3473b4ed781"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last_received_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-07-07T20:46:24.136Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last_entered"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-07-07T20:45:24.000+00:00"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"variation_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Variant 1"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"in_control"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last_entered_control_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"last_exited"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-07-07T20:46:24.136Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"steps_received"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Step"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"api_canvas_step_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43d1a349-c3c8-4be1-9fbe-ce708e4d1c39"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"last_received"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-07-07T20:46:24.136Z"</span><span class="w">
-          </span><span class="p">},</span><span class="w">
-          </span><span class="err">...</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"cards_clicked"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Loyalty Promo"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
+    function isBlockScalarKey(line) {
+      return /^(\s*)(?:"[^"]+"|'[^']+'|[A-Za-z0-9_.-]+):\s*[|>][+-]?\s*$/.test(line);
+    }
 
-<p><strong>Tip:</strong></p>
+    function isYamlKeyLine(trimmedLine, indent, blockIndent) {
+      if (indent > blockIndent) { return false; }
+      if (/^(?:"[^"]+"|'[^']+'|[A-Za-z0-9_.-]+):\s*/.test(trimmedLine)) { return true; }
+      if (/^-\s+(?:"[^"]+"|'[^']+'|[A-Za-z0-9_.-]+):\s*/.test(trimmedLine)) { return true; }
+      return false;
+    }
 
-<p>For help with CSV and API exports, visit <a href="/docs/user_guide/data/distribution/export_braze_data/export_troubleshooting">Export troubleshooting</a>.</p>
+    function sanitizeYamlBlockScalars(rawYaml) {
+      var lines = rawYaml.replace(/\r\n/g, "\n").split("\n");
+      var blockIndent = null;
+      var contentIndent = null;
+
+      for (var i = 0; i < lines.length; i += 1) {
+        var line = lines[i];
+        var trimmed = line.trim();
+        var indent = countLeadingSpaces(line);
+
+        if (blockIndent !== null) {
+          if (trimmed === "") {
+            continue;
+          }
+
+          if (isYamlKeyLine(trimmed, indent, blockIndent)) {
+            blockIndent = null;
+            contentIndent = null;
+          } else if (indent < contentIndent) {
+            lines[i] = " ".repeat(contentIndent) + trimmed;
+            continue;
+          }
+        }
+
+        if (blockIndent === null && isBlockScalarKey(line)) {
+          blockIndent = indent;
+          contentIndent = indent + 2;
+        }
+      }
+
+      return lines.join("\n");
+    }
+
+    function isYamlSpec(url) {
+      return /\.ya?ml(?:$|[?#])/.test(url);
+    }
+
+    async function resolveSpecUrl() {
+      if (!isYamlSpec(specUrl)) { return specUrl; }
+      return specUrl;
+    }
+
+    // Load js-yaml on demand so the spec can be parsed here rather than by
+    // Swagger UI. Shared across every explorer on the page, and resolves to
+    // null if the CDN is unavailable so rendering still falls back to the URL.
+    function loadJsYaml() {
+      if (window.jsyaml && typeof window.jsyaml.load === "function") {
+        return Promise.resolve(window.jsyaml);
+      }
+      if (!window.__openapiJsYamlPromise) {
+        window.__openapiJsYamlPromise = new Promise(function (resolve) {
+          var script = document.getElementById("openapi-explorer-jsyaml");
+          if (!script) {
+            script = document.createElement("script");
+            script.id = "openapi-explorer-jsyaml";
+            script.src = "https://unpkg.com/js-yaml@4.1.0/dist/js-yaml.min.js";
+            script.crossOrigin = "anonymous";
+            document.body.appendChild(script);
+          }
+          script.addEventListener("load", function () { resolve(window.jsyaml || null); });
+          script.addEventListener("error", function () { resolve(null); });
+        });
+      }
+      return window.__openapiJsYamlPromise;
+    }
+
+    async function loadResolvedYamlSpec() {
+      if (!isYamlSpec(specUrl)) { return null; }
+
+      var yaml = await loadJsYaml();
+      if (!yaml || typeof yaml.load !== "function") {
+        return null;
+      }
+
+      var response = await fetch(specUrl, { credentials: "same-origin" });
+      if (!response.ok) { return null; }
+
+      var rawYaml = await response.text();
+      // Liquid is disabled for these YAML assets, so resolve the /docs
+      // token here. Idempotent: specs that already use absolute URLs are untouched.
+      var withBaseUrl = rawYaml.replace(/\{\{\s*site\.baseurl\s*\}\}/g, baseUrl);
+      var sanitizedYaml = sanitizeYamlBlockScalars(withBaseUrl);
+
+      try {
+        return yaml.load(sanitizedYaml);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    async function renderSwaggerUI() {
+      if (!window.SwaggerUIBundle) { return false; }
+
+      var resolvedSpecUrl = specUrl;
+      var resolvedSpecObject = null;
+      try {
+        resolvedSpecUrl = await resolveSpecUrl();
+        resolvedSpecObject = await loadResolvedYamlSpec();
+      } catch (error) {
+        resolvedSpecUrl = specUrl;
+        resolvedSpecObject = null;
+      }
+
+      var swaggerConfig = {
+        dom_id: domId,
+        deepLinking: false,
+        // Expand each operation (parameters, request body, and responses) by
+        // default so the full endpoint reference is visible on page load
+        // without an extra click.
+        docExpansion: "full",
+        defaultModelsExpandDepth: 0,
+        // Read-only reference: never expose the interactive "Try it out"
+        // control and never allow the UI to submit a live request.
+        tryItOutEnabled: false,
+        supportedSubmitMethods: [],
+        syntaxHighlight: { activate: true },
+        // After Swagger finishes rendering, hide the duplicate native sections
+        // and inject tracked copy buttons. Re-run shortly after to catch any
+        // asynchronous sub-renders.
+        onComplete: function () {
+          enhanceExplorer();
+          setTimeout(enhanceExplorer, 200);
+          setTimeout(enhanceExplorer, 800);
+        },
+        presets: [
+          window.SwaggerUIBundle.presets.apis,
+          window.SwaggerUIStandalonePreset
+        ],
+        plugins: [window.SwaggerUIBundle.plugins.DownloadUrl],
+        layout: "BaseLayout"
+      };
+
+      if (resolvedSpecObject) {
+        swaggerConfig.spec = resolvedSpecObject;
+      } else {
+        swaggerConfig.url = resolvedSpecUrl;
+      }
+
+      uiInstance = window.SwaggerUIBundle(swaggerConfig);
+
+      return true;
+    }
+
+    if (window.SwaggerUIBundle) {
+      renderSwaggerUI();
+      return;
+    }
+
+    if (!document.getElementById("openapi-explorer-bundle")) {
+      var bundleScript = document.createElement("script");
+      bundleScript.id = "openapi-explorer-bundle";
+      bundleScript.src = "https://unpkg.com/swagger-ui-dist@5.17.14/swagger-ui-bundle.js";
+      bundleScript.crossOrigin = "anonymous";
+
+      var presetScript = document.createElement("script");
+      presetScript.id = "openapi-explorer-preset";
+      presetScript.src = "https://unpkg.com/swagger-ui-dist@5.17.14/swagger-ui-standalone-preset.js";
+      presetScript.crossOrigin = "anonymous";
+
+      var loaded = 0;
+      function maybeRender() {
+        loaded += 1;
+        if (loaded === 2) {
+          renderSwaggerUI();
+        }
+      }
+      bundleScript.addEventListener("load", maybeRender);
+      presetScript.addEventListener("load", maybeRender);
+
+      document.body.appendChild(bundleScript);
+      document.body.appendChild(presetScript);
+    } else {
+      var existing = document.getElementById("openapi-explorer-bundle");
+      if (window.SwaggerUIBundle) {
+        renderSwaggerUI();
+      } else {
+        existing.addEventListener("load", function () {
+          renderSwaggerUI();
+        });
+      }
+    }
+  })();
+</script>
 
 </div>

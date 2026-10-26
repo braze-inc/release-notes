@@ -97,6 +97,13 @@ Refer to [Exit criteria](https://www.braze.com/docs/user_guide/messaging/canvas/
 
 Connected Content is executed if it’s included in the Canvas. This means if you test a Canvas that has Connected Content calls or Content Blocks that contain Connected Content, the Canvas may send the Connected Content calls, which would modify the data referenced in other campaigns or Canvases.
 
+**Note:**
+
+
+Connected Content retry logic only applies to live sends (including test sends), not to previewing user paths. If a Connected Content call with `:retry` fails during previewing user paths, Braze does not retry the call. For more information, see [Connected Content retries](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/connected_content_retries#preview-behavior).
+
+
+
 When previewing user paths, consider removing the Connected Content that alters user profiles or data referenced in other Canvases or campaigns.
 
 ## Webhooks

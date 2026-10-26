@@ -1,4 +1,4 @@
-<div id='api_leddjxwiorbr' class='api_div' data-search-keywords='create user relationship braze_id rel_kind attributes role user_relationship type_name object_id user'>
+<div id='api_dmvogyhliwpa' class='api_div' data-search-keywords='create user relationship braze_id rel_kind attributes role user_relationship type_name object_id user'>
 <h1 id="create-user-relationship">Create user relationship</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/data_objects/objects/{type_name}/{object_id}/users</p>
@@ -18,7 +18,7 @@
 
 <h2 id="rate-limit">Rate limit</h2>
 
-<p>This endpoint is in the Data Objects write bucket with a default limit of 50 requests per minute.</p>
+<p>This endpoint is in the Data Objects write bucket with a default limit of 1000 requests per minute.</p>
 
 <h2 id="path-parameters">Path parameters</h2>
 

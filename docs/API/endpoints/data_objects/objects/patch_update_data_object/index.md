@@ -1,4 +1,4 @@
-<div id='api_clnmjnhlfdmq' class='api_div' data-search-keywords='update data object attributes credits data_object type_name object_id name'>
+<div id='api_vnnuvmkrjvxd' class='api_div' data-search-keywords='update data object attributes credits data_object type_name object_id name'>
 <h1 id="update-data-object">Update data object</h1>
 <div class="api_type"><div class="method patch ">patch</div>
 <p>/data_objects/objects/{type_name}/{object_id}</p>
@@ -18,7 +18,7 @@
 
 <h2 id="rate-limit">Rate limit</h2>
 
-<p>This endpoint is in the Data Objects write bucket with a default limit of 50 requests per minute.</p>
+<p>This endpoint is in the Data Objects write bucket with a default limit of 1000 requests per minute.</p>
 
 <h2 id="path-parameters">Path parameters</h2>
 

@@ -56,7 +56,7 @@ For customer data that isn't on the user profile or custom attributes, you have 
 
 After you are satisfied with the data you are sending into the Braze Data Platform, contact your AI Decisioning Services team to discuss which fields on the user profile or custom attributes should be used for AI Decisioning.
 
-To streamline this process, create a list of Braze user profile attributes that you think best represent your customers' behaviors that should be used in Decisioning Studio Pro (see the [list of available fields](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment#fields-to-export)). Your services team can also help you conduct discovery sessions to decide which fields are most appropriate for AI Decisioning.
+To streamline this process, create a list of Braze user profile attributes that you think best represent your customers' behaviors that should be used in Decisioning Studio Pro (see the [list of available fields](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment#endpoint-reference)). Your services team can also help you conduct discovery sessions to decide which fields are most appropriate for AI Decisioning.
 
 Other options for sending data include:
 

@@ -1,4 +1,4 @@
-<div id='api_jpcaiotfebkx' class='api_div' data-search-keywords='send canvas messages using api-triggered delivery canvas_id context broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes'>
+<div id='api_mvhxnpdwrhel' class='api_div' data-search-keywords='send canvas messages using api-triggered delivery'>
 <h1 id="send-canvas-messages-using-api-triggered-delivery">Send Canvas messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/canvas/trigger/send</p>
@@ -10,302 +10,667 @@
 
 <p>API-triggered delivery allows you to store message content in the Braze dashboard while dictating when a message is sent, and to whom using your API.</p>
 
-<p>Before you can send messages with this endpoint, you must have a <a href="/docs/api/identifier_types#canvas-identifier">Canvas ID</a> (which is created when you build a Canvas).</p>
+<p>Before you can send messages with this endpoint, you must have a <a href="/docs/api/identifier_types/#canvas-identifier">Canvas ID</a> (which is created when you build a Canvas).</p>
 
 <div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c9a8a5fe-a101-4755-99f2-73aa8fc146fe" class="seeme">See me in Postman</a></div>
 
-<h2 id="prerequisites">Prerequisites</h2>
+<div class="openapi-explorer" data-spec-url="/docs/assets/api/openapi/messaging_send_messages_post_send_triggered_canvases.yaml">
+  
+    <h2 id="endpoint-reference">Endpoint reference</h2>
+    <p>
+      This reference is generated from the OpenAPI specification for this
+      endpoint. To run the endpoint, copy the generated cURL example and send
+      it from your terminal or Postman. You can also download the raw OpenAPI
+      spec for this page at <a href="/docs/assets/api/openapi/messaging_send_messages_post_send_triggered_canvases.yaml">/docs/assets/api/openapi/messaging_send_messages_post_send_triggered_canvases.yaml</a>. Use this
+      spec to validate that your requests include the correct parameters, fields,
+      and structure before you send them. To learn how, see
+      <a href="/docs/api/openapi_schema_validation/">Use OpenAPI schemas for request validation</a>.
+    </p>
+  
+  <div id="swagger-ui-messaging_send_messages_post_send_triggered_canvases" class="openapi-explorer__ui"></div>
+</div>
+<link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5.17.14/swagger-ui.css" crossorigin="anonymous" />
 
-<p>To use this endpoint, you’ll need to generate an API key with the <code class="language-plaintext highlighter-rouge">canvas.trigger.send</code> permission.</p>
+<style>
+  .openapi-explorer {
+    --braze-bg: #ffffff;
+    --braze-bg-muted: #f8f4ff;
+    --braze-surface: #f4f4f7;
+    --braze-border: #dddde2;
+    --braze-text: #212123;
+    --braze-text-muted: #475467;
+    --braze-link: #801ed7;
+    --braze-accent: #801ed7;
+    --braze-accent-strong: #300266;
+    --braze-accent-soft: #c9c4ff;
+    --braze-success: #169b72;
+    --braze-warning: #c48d3c;
+    --braze-danger: #c6132c;
+    --braze-code-bg: #24173b;
+    --braze-code-text: #ffffff;
+    --braze-code-accent: #b9f7cb;
+    margin: 1.5rem 0 2rem;
+    color: var(--braze-text);
+  }
+  .openapi-explorer__ui {
+    background: var(--braze-bg);
+    border: 1px solid var(--braze-border);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(48, 2, 102, 0.08);
+    overflow: hidden;
+  }
+  .openapi-explorer .swagger-ui,
+  .openapi-explorer .swagger-ui * {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  .openapi-explorer .swagger-ui {
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: normal;
+    line-height: 1.4;
+  }
+  .openapi-explorer--minimal {
+    margin-top: 0.5rem;
+  }
+  .openapi-explorer .swagger-ui .topbar { display: none; }
+  .openapi-explorer .swagger-ui .information-container {
+    padding: 1.25rem 1.5rem;
+    background: var(--braze-bg-muted);
+    border-bottom: 1px solid var(--braze-border);
+  }
+  .openapi-explorer .swagger-ui .info .title {
+    color: var(--braze-accent-strong);
+    font-weight: 700;
+  }
+  .openapi-explorer .swagger-ui .info p,
+  .openapi-explorer .swagger-ui .info li,
+  .openapi-explorer .swagger-ui .info td,
+  .openapi-explorer .swagger-ui .parameter__name,
+  .openapi-explorer .swagger-ui .response-col_status,
+  .openapi-explorer .swagger-ui .response-col_description,
+  .openapi-explorer .swagger-ui .responses-inner h4,
+  .openapi-explorer .swagger-ui .responses-inner h5 {
+    color: var(--braze-text);
+  }
+  .openapi-explorer .swagger-ui .scheme-container {
+    background: var(--braze-bg);
+    box-shadow: none;
+    border-bottom: 1px solid var(--braze-border);
+    padding: 0.85rem 1.5rem;
+  }
+  .openapi-explorer .swagger-ui .scheme-container .schemes > label {
+    color: var(--braze-text-muted);
+  }
+  .openapi-explorer .swagger-ui .scheme-container .schemes {
+    display: none;
+  }
+  .openapi-explorer .swagger-ui .opblock-tag {
+    border-bottom: 1px solid var(--braze-border);
+    color: var(--braze-accent-strong);
+    background: var(--braze-bg-muted);
+    margin: 0;
+    padding: 14px 20px;
+  }
+  .openapi-explorer .swagger-ui .opblock {
+    border: 1px solid var(--braze-border);
+    border-radius: 10px;
+    box-shadow: none;
+    margin: 0 0 16px;
+    background: var(--braze-bg);
+  }
+  .openapi-explorer .swagger-ui .opblock .opblock-summary {
+    border-bottom-color: var(--braze-border);
+  }
+  .openapi-explorer .swagger-ui .opblock.opblock-get {
+    border-left: 4px solid #169b72;
+  }
+  .openapi-explorer .swagger-ui .opblock.opblock-post {
+    border-left: 4px solid #801ed7;
+  }
+  .openapi-explorer .swagger-ui .opblock.opblock-put,
+  .openapi-explorer .swagger-ui .opblock.opblock-patch {
+    border-left: 4px solid #23a8b7;
+  }
+  .openapi-explorer .swagger-ui .opblock.opblock-delete {
+    border-left: 4px solid #c6132c;
+  }
+  .openapi-explorer .swagger-ui .opblock-summary-method {
+    border-radius: 999px;
+    padding: 6px 12px;
+    min-width: 72px;
+    font-weight: 700;
+  }
+  .openapi-explorer .swagger-ui .btn,
+  .openapi-explorer .swagger-ui select,
+  .openapi-explorer .swagger-ui input[type="text"],
+  .openapi-explorer .swagger-ui input[type="password"],
+  .openapi-explorer .swagger-ui input[type="search"],
+  .openapi-explorer .swagger-ui textarea {
+    border-radius: 8px;
+    border-color: var(--braze-border);
+    color: var(--braze-text);
+  }
+  .openapi-explorer .swagger-ui .responses-table .response-col_status {
+    font-weight: 700;
+  }
+  .openapi-explorer .swagger-ui table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+  .openapi-explorer .swagger-ui table thead tr th,
+  .openapi-explorer .swagger-ui table tbody tr td {
+    text-align: left;
+    vertical-align: middle;
+    padding: 12px 10px !important;
+  }
+  .openapi-explorer .swagger-ui table th,
+  .openapi-explorer .swagger-ui table td {
+    padding: 12px 10px !important;
+    /* Wrap only at word boundaries so words never split mid-character. */
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  /* Keep inline code tokens (such as parameter names like segment_id) on a
+     single line so they stay legible instead of breaking across two lines. */
+  .openapi-explorer .swagger-ui table th code,
+  .openapi-explorer .swagger-ui table td code {
+    white-space: nowrap;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+  .openapi-explorer .swagger-ui .responses-table .response-col_status,
+  .openapi-explorer .swagger-ui .responses-table .response-col_links,
+  .openapi-explorer .swagger-ui .responses-table .response-col_description {
+    text-align: left !important;
+    vertical-align: middle !important;
+  }
+  .openapi-explorer .swagger-ui .responses-table .response-col_status {
+    width: 11%;
+    min-width: 72px;
+  }
+  .openapi-explorer .swagger-ui .responses-table .response-col_description {
+    width: auto;
+  }
+  /* Remove the always-empty Links column from native response tables. */
+  .openapi-explorer .swagger-ui .responses-table .response-col_links {
+    display: none;
+  }
+  .openapi-explorer .swagger-ui .response-control-media-type__accept-message {
+    color: var(--braze-text-muted);
+  }
+  .openapi-explorer .swagger-ui table thead tr th,
+  .openapi-explorer .swagger-ui .parameter__type,
+  .openapi-explorer .swagger-ui .parameter__deprecated,
+  .openapi-explorer .swagger-ui .prop-format {
+    color: var(--braze-text-muted);
+  }
+  .openapi-explorer .swagger-ui a {
+    color: var(--braze-link);
+  }
+  .openapi-explorer .swagger-ui .highlight-code,
+  .openapi-explorer .swagger-ui .microlight,
+  .openapi-explorer .swagger-ui .curl,
+  .openapi-explorer .swagger-ui .opblock-body pre {
+    background: var(--braze-code-bg);
+    border-radius: 8px;
+    color: var(--braze-code-text);
+  }
+  .openapi-explorer .swagger-ui .opblock-body pre code,
+  .openapi-explorer .swagger-ui .microlight code,
+  .openapi-explorer .swagger-ui .hljs {
+    color: var(--braze-code-text) !important;
+    background: transparent !important;
+    text-shadow: none !important;
+  }
+  .openapi-explorer .swagger-ui .hljs-string,
+  .openapi-explorer .swagger-ui .hljs-attr,
+  .openapi-explorer .swagger-ui .hljs-number,
+  .openapi-explorer .swagger-ui .hljs-literal {
+    color: var(--braze-code-accent) !important;
+  }
+  .openapi-explorer .swagger-ui .hljs * {
+    background: transparent !important;
+  }
+  .openapi-explorer .swagger-ui ::selection {
+    background: rgba(128, 30, 215, 0.35);
+    color: var(--braze-code-text);
+  }
+  .openapi-explorer .swagger-ui .tab li button.tablinks {
+    color: var(--braze-text-muted);
+  }
+  .openapi-explorer .swagger-ui .tab li.active button.tablinks {
+    color: var(--braze-accent-strong);
+    font-weight: 700;
+  }
+  .openapi-explorer .swagger-ui .model-box,
+  .openapi-explorer .swagger-ui section.models,
+  .openapi-explorer .swagger-ui .model-container {
+    background: var(--braze-surface);
+    border-color: var(--braze-border);
+  }
+  /* Copy-to-clipboard button injected on each example code block. The extra
+     top padding reserves a gutter so the button never overlaps the code. */
+  .openapi-explorer .opblock-description-wrapper pre,
+  .openapi-explorer .renderedMarkdown pre {
+    position: relative;
+    padding-top: 2.75em;
+  }
+  .openapi-explorer .openapi-copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 2;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--braze-code-text);
+    background: rgba(128, 30, 215, 0.9);
+    border: 1px solid var(--braze-accent-soft);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .openapi-explorer .openapi-copy-btn:hover {
+    background: var(--braze-accent);
+  }
+  .openapi-explorer .openapi-copy-btn:focus-visible {
+    outline: 2px solid var(--braze-accent-soft);
+    outline-offset: 2px;
+  }
+  .openapi-explorer .openapi-copy-btn[data-copied="true"] {
+    background: var(--braze-success);
+  }
+  /* Response status codes table: equal-width columns so the Meaning and
+     resolution columns get enough room and the table reads evenly. */
+  .openapi-explorer table.openapi-response-table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  .openapi-explorer table.openapi-response-table th,
+  .openapi-explorer table.openapi-response-table td {
+    width: 25%;
+    vertical-align: top;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  /* Allow long inline code tokens (such as the Authorization header) to wrap
+     inside the equal-width response cells instead of overflowing them. Short
+     tokens still stay on one line because they fit without breaking. */
+  .openapi-explorer table.openapi-response-table th code,
+  .openapi-explorer table.openapi-response-table td code {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+</style>
 
-<h2 id="rate-limit">Rate limit</h2>
+<script>
+  (function () {
+    var specPath = "/docs/assets/api/openapi/messaging_send_messages_post_send_triggered_canvases.yaml";
+    var specUrl = specPath;
+    try {
+      specUrl = new URL(specPath, window.location.origin).toString();
+    } catch (error) {
+      specUrl = specPath;
+    }
+    var baseUrl = "/docs";
+    var domId = "#" + "swagger-ui-messaging_send_messages_post_send_triggered_canvases";
+    var uiInstance = null;
+    var specBasename = specPath.split("/").pop();
 
-<!---DEFAULT RATE LIMIT-->
-
-<!---Additional if statement for Messaging endpoints-->
-
-<!---Additional if statement for Translation endpoints-->
-
-<!---Additional if statement for /messages/send endpoint-->
-
-<h2 id="request-body">Request body</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre>Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-  </span><span class="nl">"canvas_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">see</span><span class="w"> </span><span class="err">Canvas</span><span class="w"> </span><span class="err">identifier</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"context"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">object)</span><span class="w"> </span><span class="err">Canvas</span><span class="w"> </span><span class="err">context</span><span class="w"> </span><span class="err">properties</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">apply</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">all</span><span class="w"> </span><span class="err">users</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">request</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"broadcast"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">boolean)</span><span class="w"> </span><span class="err">see</span><span class="w"> </span><span class="err">Broadcast</span><span class="w"> </span><span class="err">--</span><span class="w"> </span><span class="err">defaults</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="err">on</span><span class="w"> </span><span class="mi">8</span><span class="err">/</span><span class="mi">31</span><span class="err">/</span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="err">must</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">set</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">`recipients`</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">omitted</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"audience"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">connected</span><span class="w"> </span><span class="err">audience</span><span class="w"> </span><span class="err">object)</span><span class="w"> </span><span class="err">see</span><span class="w"> </span><span class="err">connected</span><span class="w"> </span><span class="err">audience</span><span class="p">,</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">Including</span><span class="w"> </span><span class="err">'audience'</span><span class="w"> </span><span class="err">will</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">send</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">users</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">audience</span><span class="w">
-  </span><span class="nl">"recipients"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">array;</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">not</span><span class="w"> </span><span class="err">provided</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">broadcast</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">not</span><span class="w"> </span><span class="err">set</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">'</span><span class="kc">false</span><span class="err">'</span><span class="p">,</span><span class="w"> </span><span class="err">message</span><span class="w"> </span><span class="err">sends</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">entire</span><span class="w"> </span><span class="err">segment</span><span class="w"> </span><span class="err">targeted</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Canvas)</span><span class="w">
-    </span><span class="p">[{</span><span class="w">
-      </span><span class="err">//</span><span class="w"> </span><span class="err">Either</span><span class="w"> </span><span class="s2">"external_user_id"</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="s2">"user_alias"</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="s2">"email"</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">required.</span><span class="w"> </span><span class="err">Requests</span><span class="w"> </span><span class="err">must</span><span class="w"> </span><span class="err">specify</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">one.</span><span class="w">
-      </span><span class="nl">"user_alias"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">alias</span><span class="w"> </span><span class="err">object)</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">alias</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">receive</span><span class="w"> </span><span class="err">message</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"external_user_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">external</span><span class="w"> </span><span class="err">identifier</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">receive</span><span class="w"> </span><span class="err">message</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">email</span><span class="w"> </span><span class="err">address</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">receive</span><span class="w"> </span><span class="err">message</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"prioritization"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">array)</span><span class="w"> </span><span class="err">prioritization</span><span class="w"> </span><span class="err">array;</span><span class="w"> </span><span class="err">required</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">email</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"context"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">object)</span><span class="w"> </span><span class="err">Canvas</span><span class="w"> </span><span class="err">context</span><span class="w"> </span><span class="err">properties</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">user;</span><span class="w"> </span><span class="err">key-value</span><span class="w"> </span><span class="err">pairs</span><span class="w"> </span><span class="err">override</span><span class="w"> </span><span class="err">any</span><span class="w"> </span><span class="err">keys</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">conflict</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">parent</span><span class="w"> </span><span class="err">`context`</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"send_to_existing_only"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">boolean)</span><span class="w"> </span><span class="err">defaults</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="err">can't</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">used</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">aliases;</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">set</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">`</span><span class="kc">false</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">`attributes`</span><span class="w"> </span><span class="err">object</span><span class="w"> </span><span class="err">must</span><span class="w"> </span><span class="err">also</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">included</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">object)</span><span class="w"> </span><span class="err">fields</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">attributes</span><span class="w"> </span><span class="err">object</span><span class="w"> </span><span class="err">create</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">update</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">attribute</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">name</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">given</span><span class="w"> </span><span class="err">value</span><span class="w"> </span><span class="err">on</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">specified</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">profile</span><span class="w"> </span><span class="err">before</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">message</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">sent</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">existing</span><span class="w"> </span><span class="err">values</span><span class="w"> </span><span class="err">are</span><span class="w"> </span><span class="err">overwritten</span><span class="w">
-    </span><span class="p">}],</span><span class="w">
-    </span><span class="err">...</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-
-<h2 id="request-parameters">Request parameters</h2>
-
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Required</th>
-      <th>Data Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">canvas_id</code></td>
-      <td>Required</td>
-      <td>String</td>
-      <td>See <a href="/docs/api/identifier_types">Canvas identifier</a>.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">context</code></td>
-      <td>Optional</td>
-      <td>Object</td>
-      <td>Canvas context properties for all recipients in this request. Personalization key-value pairs apply to every user unless a per-recipient <code class="language-plaintext highlighter-rouge">context</code> overrides a key. The <code class="language-plaintext highlighter-rouge">context</code> object can be up to 50 KB.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">broadcast</code></td>
-      <td>Optional</td>
-      <td>Boolean</td>
-      <td>You must set <code class="language-plaintext highlighter-rouge">broadcast</code> to true when sending a message to the entire segment configured as the Canvas’s target audience in the Braze dashboard. This parameter defaults to false (as of August 31, 2017). <br /><br /> If <code class="language-plaintext highlighter-rouge">broadcast</code> is set to true, a <code class="language-plaintext highlighter-rouge">recipients</code> list cannot be included. However, use caution when setting <code class="language-plaintext highlighter-rouge">broadcast: true</code>, as unintentionally setting this flag may cause you to send your message to a larger-than-expected audience.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">audience</code></td>
-      <td>Optional</td>
-      <td>Connected audience object</td>
-      <td>See <a href="/docs/api/objects_filters/connected_audience">Connected audience</a>. When you include <code class="language-plaintext highlighter-rouge">audience</code>, the message is sent only to users who match the defined filters, such as custom attributes and subscription statuses.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">recipients</code></td>
-      <td>Optional</td>
-      <td>Array</td>
-      <td>See <a href="/docs/api/objects_filters/recipient_object">Recipients object</a>. <br /><br />If <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> is <code class="language-plaintext highlighter-rouge">false</code>, an <code class="language-plaintext highlighter-rouge">attributes</code> object must be included on the recipient. <br /><br />You can update a user’s subscription group status by including <code class="language-plaintext highlighter-rouge">subscription_groups</code> in the nested <code class="language-plaintext highlighter-rouge">attributes</code> object. For more details, refer to <a href="/docs/api/objects_filters/user_attributes_object">User attributes object</a>.<br /><br />If not provided and <code class="language-plaintext highlighter-rouge">broadcast</code> is set to <code class="language-plaintext highlighter-rouge">true</code>, the message is sent to the entire segment configured as the Canvas’s target audience in the Braze dashboard.<br /><br /> The <code class="language-plaintext highlighter-rouge">recipients</code> array may contain up to 50 objects. Each object must include exactly one of <code class="language-plaintext highlighter-rouge">external_user_id</code>, <code class="language-plaintext highlighter-rouge">user_alias</code>, or <code class="language-plaintext highlighter-rouge">email</code>, and may include a per-recipient <code class="language-plaintext highlighter-rouge">context</code> object for Canvas context properties (per-recipient keys override the parent-level <code class="language-plaintext highlighter-rouge">context</code> when they conflict). <br /><br />If <code class="language-plaintext highlighter-rouge">email</code> is the identifier, you must include <a href="/docs/api/endpoints/user_data/post_user_identify#identifying-users-by-email-addresses-and-phone-numbers"><code class="language-plaintext highlighter-rouge">prioritization</code></a> in the recipients object.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="example-request">Example request</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-</pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/send' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-REST-API-KEY' \
---data-raw '{
-  "canvas_id": "canvas_identifier",
-  "context": {"product_name" : "shoes", "product_price" : 79.99},
-  "broadcast": false,
-  "audience": {
-    "AND": [
-      {
-        "custom_attribute": {
-          "custom_attribute_name": "eye_color",
-          "comparison": "equals",
-          "value": "blue"
-        }
-      },
-      {
-        "custom_attribute": {
-          "custom_attribute_name": "favorite_foods",
-          "comparison": "includes_value",
-          "value": "pizza"
-        }
-      },
-      {
-        "OR": [
-          {
-            "custom_attribute": {
-              "custom_attribute_name": "last_purchase_time",
-              "comparison": "less_than_x_days_ago",
-              "value": 2
-            }
-          },
-          {
-            "push_subscription_status": {
-              "comparison": "is",
-              "value": "opted_in"
-            }
+    // Log engagement to Braze via the Web SDK loaded site-wide in analytics.html.
+    // Tracking must never break the page, so guard every call.
+    function brazeLog(eventName, properties) {
+      try {
+        if (window.braze && typeof window.braze.logCustomEvent === "function") {
+          window.braze.logCustomEvent(eventName, properties || {});
+          if (typeof window.braze.requestImmediateDataFlush === "function") {
+            window.braze.requestImmediateDataFlush();
           }
-        ]
-      },
-      {
-        "email_subscription_status": {
-          "comparison": "is_not",
-          "value": "subscribed"
         }
-      },
-      {
-        "last_used_app": {
-          "comparison": "after",
-          "value": "2019-07-22T13:17:55+0000"
+      } catch (err) { /* no-op */ }
+    }
+
+    // Track clicks on the reference links (Postman, spec download, and the
+    // schema-validation guide). Bind once per page even with several explorers.
+    if (!window.__openapiTrackingBound) {
+      window.__openapiTrackingBound = true;
+      document.addEventListener("click", function (evt) {
+        var link = evt.target && evt.target.closest ? evt.target.closest("a") : null;
+        if (!link) { return; }
+        var href = link.getAttribute("href") || "";
+        var page = window.location.pathname;
+        if (link.classList.contains("seeme")) {
+          var isSwagger = !!link.closest(".api_reference.swagger");
+          brazeLog(isSwagger ? "docs_api_swagger_click" : "docs_api_postman_click", { href: href, page: page });
+        } else if (href.indexOf("/assets/api/openapi/") !== -1) {
+          brazeLog("docs_api_spec_download_click", { spec_url: href, page: page });
+        } else if (href.indexOf("/api/openapi_schema_validation") !== -1) {
+          brazeLog("docs_api_validation_guide_click", { page: page });
+        }
+      }, true);
+    }
+
+    // Classify a code block by the nearest preceding heading so copy events can
+    // be segmented into request vs. response engagement.
+    function blockTypeFor(pre) {
+      var node = pre.previousElementSibling;
+      while (node) {
+        if (/^H[1-6]$/.test(node.tagName)) {
+          var text = (node.textContent || "").toLowerCase();
+          if (text.indexOf("response") !== -1) { return "response"; }
+          if (text.indexOf("request") !== -1 || text.indexOf("example") !== -1) { return "request"; }
+          return "other";
+        }
+        node = node.previousElementSibling;
+      }
+      return "other";
+    }
+
+    function addCopyButtons(root) {
+      var blocks = root.querySelectorAll(".opblock-description-wrapper pre, .renderedMarkdown pre");
+      Array.prototype.forEach.call(blocks, function (pre) {
+        if (pre.querySelector(".openapi-copy-btn")) { return; }
+        var blockType = blockTypeFor(pre);
+        var button = document.createElement("button");
+        button.type = "button";
+        button.className = "openapi-copy-btn";
+        button.textContent = "Copy";
+        button.setAttribute("aria-label", "Copy code to clipboard");
+        button.addEventListener("click", function () {
+          var code = pre.querySelector("code");
+          var text = (code ? code.innerText : pre.innerText) || "";
+          text = text.replace(/\s*Copy\s*$/, "");
+          function finish() {
+            button.textContent = "Copied";
+            button.setAttribute("data-copied", "true");
+            setTimeout(function () {
+              button.textContent = "Copy";
+              button.removeAttribute("data-copied");
+            }, 2000);
+            brazeLog("docs_api_copy_code_click", { block_type: blockType, spec: specBasename, page: window.location.pathname });
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(finish, finish);
+          } else {
+            finish();
+          }
+        });
+        pre.appendChild(button);
+      });
+    }
+
+    // Whether the authored description already renders a Markdown table whose
+    // header matches the given pattern (for example, a parameters table).
+    function descriptionHasTableMatching(root, regex) {
+      var tables = root.querySelectorAll(".opblock-description-wrapper table");
+      for (var i = 0; i < tables.length; i += 1) {
+        var headers = tables[i].querySelectorAll("th");
+        for (var j = 0; j < headers.length; j += 1) {
+          if (regex.test(headers[j].textContent || "")) { return true; }
         }
       }
-    ]
-  },
-  "recipients": [
-    {
-      "user_alias": {
-        "alias_name" : "example_name",
-        "alias_label" : "example_label"
-      },
-      "external_user_id": "user_identifier",
-      "send_to_existing_only": true,
-      "attributes": {
-          "first_name" : "Alex"
+      return false;
+    }
+
+    // Native responses are "rich" when they document more than one status code
+    // or include an example/model, meaning the spec relies on native rendering.
+    function nativeResponsesAreRich(root) {
+      if (root.querySelectorAll(".responses-inner tr.response").length > 1) { return true; }
+      return !!root.querySelector(
+        ".responses-inner .highlight-code, .responses-inner .microlight, .responses-inner .model-example, .responses-inner .model-box"
+      );
+    }
+
+    function hideParameters(root) {
+      Array.prototype.forEach.call(root.querySelectorAll(".parameters-container"), function (el) {
+        var section = el.closest(".opblock-section");
+        if (section) { section.style.display = "none"; }
+      });
+      Array.prototype.forEach.call(root.querySelectorAll(".opblock-section-header"), function (header) {
+        if ((header.textContent || "").trim().toLowerCase() === "parameters") {
+          var section = header.closest(".opblock-section");
+          if (section) { section.style.display = "none"; }
+        }
+      });
+    }
+
+    // Remove duplicate native sections only when the authored Markdown already
+    // covers them, so specs that render fully from the OpenAPI structure (rich
+    // native parameters/responses without Markdown tables) are left untouched.
+    function hideNativeSections(root) {
+      if (descriptionHasTableMatching(root, /parameter/i)) {
+        hideParameters(root);
+      }
+      // Hide native responses when an authored responses/errors table exists, or
+      // when the native section is just a thin single-status placeholder (which
+      // also removes the always-empty Links column).
+      var hasResponseTable = descriptionHasTableMatching(root, /status|error/i);
+      if (hasResponseTable || !nativeResponsesAreRich(root)) {
+        Array.prototype.forEach.call(root.querySelectorAll(".responses-wrapper"), function (el) {
+          el.style.display = "none";
+        });
       }
     }
-  ]
-}'
-</pre></td></tr></tbody></table></code></pre></div></div>
 
-<h2 id="response-details">Response details</h2>
+    // Tag the authored "Response status codes" table so its columns render at
+    // equal width (keeps the Meaning column from being squeezed).
+    function styleResponseTables(root) {
+      var tables = root.querySelectorAll(".opblock-description-wrapper table, .renderedMarkdown table");
+      Array.prototype.forEach.call(tables, function (table) {
+        var firstHeader = table.querySelector("th");
+        if (firstHeader && /status code/i.test(firstHeader.textContent || "")) {
+          table.classList.add("openapi-response-table");
+        }
+      });
+    }
 
-<p>Message-sending endpoint responses include the message’s <code class="language-plaintext highlighter-rouge">dispatch_id</code> for reference back to the dispatch of the message. The <code class="language-plaintext highlighter-rouge">dispatch_id</code> is the ID of the message dispatch (unique ID for each “transmission” sent from the Braze platform). Check out <a href="/docs/user_guide/messaging/messaging_fundamentals/dispatch_id">Dispatch ID behavior</a> for more information.</p>
+    function enhanceExplorer() {
+      var root = document.querySelector(domId);
+      if (!root) { return; }
+      hideNativeSections(root);
+      addCopyButtons(root);
+      styleResponseTables(root);
+    }
 
-<h3 id="example-success-response">Example success response</h3>
+    function countLeadingSpaces(line) {
+      var match = line.match(/^ */);
+      return match ? match[0].length : 0;
+    }
 
-<p>The status code <code class="language-plaintext highlighter-rouge">201</code> could return the following response body. If the Canvas is archived, stopped, or paused, the Canvas is not sent through this endpoint.</p>
+    function isBlockScalarKey(line) {
+      return /^(\s*)(?:"[^"]+"|'[^']+'|[A-Za-z0-9_.-]+):\s*[|>][+-]?\s*$/.test(line);
+    }
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre>{
-  "notice": "The Canvas is paused. Resume the Canvas to ensure trigger requests will take effect.",
-  "dispatch_id": "example_dispatch_id",
-  "message": "success"
-}
-</pre></td></tr></tbody></table></code></pre></div></div>
+    function isYamlKeyLine(trimmedLine, indent, blockIndent) {
+      if (indent > blockIndent) { return false; }
+      if (/^(?:"[^"]+"|'[^']+'|[A-Za-z0-9_.-]+):\s*/.test(trimmedLine)) { return true; }
+      if (/^-\s+(?:"[^"]+"|'[^']+'|[A-Za-z0-9_.-]+):\s*/.test(trimmedLine)) { return true; }
+      return false;
+    }
 
-<p>If your Canvas is archived, you see this <code class="language-plaintext highlighter-rouge">notice</code> message: “The Canvas is archived. Unarchive the Canvas to ensure trigger requests will take effect.” If your Canvas is not active, you see this <code class="language-plaintext highlighter-rouge">notice</code> message: “The Canvas is paused. Resume the Canvas to ensure trigger requests will take effect.”</p>
+    function sanitizeYamlBlockScalars(rawYaml) {
+      var lines = rawYaml.replace(/\r\n/g, "\n").split("\n");
+      var blockIndent = null;
+      var contentIndent = null;
 
-<p>If your request encounters a fatal error, refer to <a href="/docs/api/errors#fatal-errors">Errors and responses</a> for the error code and description.</p>
+      for (var i = 0; i < lines.length; i += 1) {
+        var line = lines[i];
+        var trimmed = line.trim();
+        var indent = countLeadingSpaces(line);
 
-<h2 id="considerations">Considerations</h2>
+        if (blockIndent !== null) {
+          if (trimmed === "") {
+            continue;
+          }
 
-<p>Consider the following when making API calls to send Canvas messages using API-triggered delivery:</p>
+          if (isYamlKeyLine(trimmed, indent, blockIndent)) {
+            blockIndent = null;
+            contentIndent = null;
+          } else if (indent < contentIndent) {
+            lines[i] = " ".repeat(contentIndent) + trimmed;
+            continue;
+          }
+        }
 
-<ul>
-  <li><strong>Sending to existing users</strong>: When <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> is set to <code class="language-plaintext highlighter-rouge">true</code> (the default), the message is sent only to existing users in Braze.</li>
-  <li><strong>Creating new users</strong>: When <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> is set to <code class="language-plaintext highlighter-rouge">false</code>, you must include an <code class="language-plaintext highlighter-rouge">attributes</code> object. If a user with the specified ID does not exist, Braze creates a user with that ID and attributes before sending the message.</li>
-  <li><strong>Net-new profiles need <code class="language-plaintext highlighter-rouge">attributes</code> with <code class="language-plaintext highlighter-rouge">send_to_existing_only: false</code>.</strong> Braze runs the pre-send create or update from the <code class="language-plaintext highlighter-rouge">attributes</code> object in the same recipient. If you set <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> to <code class="language-plaintext highlighter-rouge">false</code> but omit <code class="language-plaintext highlighter-rouge">attributes</code> (or send an empty object), Braze does not hydrate profile data the same way, so you do not get the combined “create or update user, then send” behavior this pattern is meant for.</li>
-  <li><strong>Email and SMS addressing.</strong> For most Email or SMS API-triggered sends to someone who is not already in Braze, include the delivery fields you need inside <code class="language-plaintext highlighter-rouge">attributes</code> (for example <code class="language-plaintext highlighter-rouge">email</code>, or the phone attributes your workspace uses for SMS). You can also set subscription group membership or subscription status there when opt-in state must change in the same call.</li>
-  <li><strong>Canvas eligibility.</strong> After the profile exists or updates, that user must still match the Canvas’s dashboard target audience and channel send rules (for example opted in for email) or Braze does not send the message.</li>
-  <li><strong>User alias limitation</strong>: The <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> flag cannot be used with user aliases. To send to an alias-only user, the user must already exist in Braze.</li>
-  <li><strong>Segment targeting</strong>: The <code class="language-plaintext highlighter-rouge">segment_id</code> parameter is not supported for this endpoint. To target a segment, configure the segment in the Canvas’s target audience settings in the Braze dashboard and use <code class="language-plaintext highlighter-rouge">broadcast: true</code>, or use the <code class="language-plaintext highlighter-rouge">audience</code> parameter with <a href="/docs/api/objects_filters/connected_audience">Connected Audience</a> filters.</li>
-  <li><strong>Combined targeting</strong>: When you include both the <code class="language-plaintext highlighter-rouge">recipients</code> parameter and configure a target segment in the dashboard, the message is sent only to user profiles that are specified in the API call and also match the segment’s filters.</li>
-  <li><strong>Server-to-server calls</strong>: If you’re making server-to-server calls, you may need to allowlist the appropriate API URL if you’re behind a firewall.</li>
-</ul>
+        if (blockIndent === null && isBlockScalarKey(line)) {
+          blockIndent = indent;
+          contentIndent = indent + 2;
+        }
+      }
 
-<h2 id="attributes-object-for-canvas">Attributes object for Canvas</h2>
+      return lines.join("\n");
+    }
 
-<p>Use the messaging object <code class="language-plaintext highlighter-rouge">attributes</code> to add, create, or update attributes and values for a user before sending them an API-triggered Canvas using the <code class="language-plaintext highlighter-rouge">canvas/trigger/send</code> endpoint. This API call processes the user attributes object before it processes and sends the Canvas. This helps minimize the risk of issues caused by <a href="/docs/user_guide/messaging/ab_testing/concepts/race_conditions">race conditions</a>.</p>
+    function isYamlSpec(url) {
+      return /\.ya?ml(?:$|[?#])/.test(url);
+    }
 
-<p><strong>Note:</strong></p>
+    async function resolveSpecUrl() {
+      if (!isYamlSpec(specUrl)) { return specUrl; }
+      return specUrl;
+    }
 
-<p>Looking for the campaign version of this endpoint? Check out <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns">Sending campaign messages using API-triggered delivery</a>.</p>
+    // Load js-yaml on demand so the spec can be parsed here rather than by
+    // Swagger UI. Shared across every explorer on the page, and resolves to
+    // null if the CDN is unavailable so rendering still falls back to the URL.
+    function loadJsYaml() {
+      if (window.jsyaml && typeof window.jsyaml.load === "function") {
+        return Promise.resolve(window.jsyaml);
+      }
+      if (!window.__openapiJsYamlPromise) {
+        window.__openapiJsYamlPromise = new Promise(function (resolve) {
+          var script = document.getElementById("openapi-explorer-jsyaml");
+          if (!script) {
+            script = document.createElement("script");
+            script.id = "openapi-explorer-jsyaml";
+            script.src = "https://unpkg.com/js-yaml@4.1.0/dist/js-yaml.min.js";
+            script.crossOrigin = "anonymous";
+            document.body.appendChild(script);
+          }
+          script.addEventListener("load", function () { resolve(window.jsyaml || null); });
+          script.addEventListener("error", function () { resolve(null); });
+        });
+      }
+      return window.__openapiJsYamlPromise;
+    }
+
+    async function loadResolvedYamlSpec() {
+      if (!isYamlSpec(specUrl)) { return null; }
+
+      var yaml = await loadJsYaml();
+      if (!yaml || typeof yaml.load !== "function") {
+        return null;
+      }
+
+      var response = await fetch(specUrl, { credentials: "same-origin" });
+      if (!response.ok) { return null; }
+
+      var rawYaml = await response.text();
+      // Liquid is disabled for these YAML assets, so resolve the /docs
+      // token here. Idempotent: specs that already use absolute URLs are untouched.
+      var withBaseUrl = rawYaml.replace(/\{\{\s*site\.baseurl\s*\}\}/g, baseUrl);
+      var sanitizedYaml = sanitizeYamlBlockScalars(withBaseUrl);
+
+      try {
+        return yaml.load(sanitizedYaml);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    async function renderSwaggerUI() {
+      if (!window.SwaggerUIBundle) { return false; }
+
+      var resolvedSpecUrl = specUrl;
+      var resolvedSpecObject = null;
+      try {
+        resolvedSpecUrl = await resolveSpecUrl();
+        resolvedSpecObject = await loadResolvedYamlSpec();
+      } catch (error) {
+        resolvedSpecUrl = specUrl;
+        resolvedSpecObject = null;
+      }
+
+      var swaggerConfig = {
+        dom_id: domId,
+        deepLinking: false,
+        // Expand each operation (parameters, request body, and responses) by
+        // default so the full endpoint reference is visible on page load
+        // without an extra click.
+        docExpansion: "full",
+        defaultModelsExpandDepth: 0,
+        // Read-only reference: never expose the interactive "Try it out"
+        // control and never allow the UI to submit a live request.
+        tryItOutEnabled: false,
+        supportedSubmitMethods: [],
+        syntaxHighlight: { activate: true },
+        // After Swagger finishes rendering, hide the duplicate native sections
+        // and inject tracked copy buttons. Re-run shortly after to catch any
+        // asynchronous sub-renders.
+        onComplete: function () {
+          enhanceExplorer();
+          setTimeout(enhanceExplorer, 200);
+          setTimeout(enhanceExplorer, 800);
+        },
+        presets: [
+          window.SwaggerUIBundle.presets.apis,
+          window.SwaggerUIStandalonePreset
+        ],
+        plugins: [window.SwaggerUIBundle.plugins.DownloadUrl],
+        layout: "BaseLayout"
+      };
+
+      if (resolvedSpecObject) {
+        swaggerConfig.spec = resolvedSpecObject;
+      } else {
+        swaggerConfig.url = resolvedSpecUrl;
+      }
+
+      uiInstance = window.SwaggerUIBundle(swaggerConfig);
+
+      return true;
+    }
+
+    if (window.SwaggerUIBundle) {
+      renderSwaggerUI();
+      return;
+    }
+
+    if (!document.getElementById("openapi-explorer-bundle")) {
+      var bundleScript = document.createElement("script");
+      bundleScript.id = "openapi-explorer-bundle";
+      bundleScript.src = "https://unpkg.com/swagger-ui-dist@5.17.14/swagger-ui-bundle.js";
+      bundleScript.crossOrigin = "anonymous";
+
+      var presetScript = document.createElement("script");
+      presetScript.id = "openapi-explorer-preset";
+      presetScript.src = "https://unpkg.com/swagger-ui-dist@5.17.14/swagger-ui-standalone-preset.js";
+      presetScript.crossOrigin = "anonymous";
+
+      var loaded = 0;
+      function maybeRender() {
+        loaded += 1;
+        if (loaded === 2) {
+          renderSwaggerUI();
+        }
+      }
+      bundleScript.addEventListener("load", maybeRender);
+      presetScript.addEventListener("load", maybeRender);
+
+      document.body.appendChild(bundleScript);
+      document.body.appendChild(presetScript);
+    } else {
+      var existing = document.getElementById("openapi-explorer-bundle");
+      if (window.SwaggerUIBundle) {
+        renderSwaggerUI();
+      } else {
+        existing.addEventListener("load", function () {
+          renderSwaggerUI();
+        });
+      }
+    }
+  })();
+</script>
 
 </div>

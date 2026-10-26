@@ -55,15 +55,15 @@ One of two scenarios can occur when you identify anonymous users:
 
 In other words, you already have a user profile for this user. In this instance, Braze will do the following:
 1. Orphan the anonymous user
-2. Merge [specific user profile fields](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#merge-behavior) that don't already exist on the identified user profile from the anonymous profile
+2. Merge [specific user profile fields](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#endpoint-reference) that don't already exist on the identified user profile from the anonymous profile
 3. Remove the anonymous profile from your user base so the user counts aren't inflated
 
-If both the anonymous user and known user have a first name, the first name of the known user is maintained. If the known user has a null value and the anonymous user has a value, the anonymous user's value is merged into the known user's profile if the value falls under these [specific user profile fields](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#merge-behavior).
+If both the anonymous user and known user have a first name, the first name of the known user is maintained. If the known user has a null value and the anonymous user has a value, the anonymous user's value is merged into the known user's profile if the value falls under these [specific user profile fields](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#endpoint-reference).
 
 **Important:**
 
 
-Not all data is merged from the anonymous profile. Push tokens and message engagement history are carried over (used for campaigns received and segmentation), and custom attributes, custom events, and purchase history from the anonymous profile are merged into the identified user only when those fields don't already exist on the identified user profile. When there is conflicting data, the identified user's values are kept. Note that the **Messaging History** tab is powered by our data warehouse and is not updated after a merge, so pre-merge events won't appear there. See [merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#merge-behavior) for the full list of fields that are and aren't transferred, including surfaces not reflected by merges.
+Not all data is merged from the anonymous profile. Push tokens and message engagement history are carried over (used for campaigns received and segmentation), and custom attributes, custom events, and purchase history from the anonymous profile are merged into the identified user only when those fields don't already exist on the identified user profile. When there is conflicting data, the identified user's values are kept. Note that the **Messaging History** tab is powered by our data warehouse and is not updated after a merge, so pre-merge events won't appear there. See [merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#endpoint-reference) for the full list of fields that are and aren't transferred, including surfaces not reflected by merges.
 
 
 
@@ -71,7 +71,7 @@ For information on how to set an `external_id` against a user profile, see our d
 
 ### Reporting and merged profiles
 
-When anonymous and identified profiles merge after a send, dashboard campaign summaries attribute that send to the surviving (identified) profile. [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents), [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder), and the [Messaging History](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles#messaging-history-tab) tab still attribute the send to the orphaned profile's user ID—the ID at send time. This is expected. For the full list of fields that transfer, see [merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#merge-behavior).
+When anonymous and identified profiles merge after a send, dashboard campaign summaries attribute that send to the surviving (identified) profile. [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents), [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder), and the [Messaging History](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles#messaging-history-tab) tab still attribute the send to the orphaned profile's user ID—the ID at send time. This is expected. For the full list of fields that transfer, see [merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#endpoint-reference).
 
 To find that send in Currents, Query Builder, or Messaging History, look up the orphaned profile's `braze_id`. A query that uses only the identified user's `braze_id` does not return the pre-merge send.
 

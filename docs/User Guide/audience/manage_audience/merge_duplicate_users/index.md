@@ -7,7 +7,7 @@
 The tools on this page merge duplicate profiles in the dashboard. You can also combine or re-point profiles through Braze's [User Data endpoints](https://www.braze.com/docs/api/endpoints/user_data):
 
 - [POST: Identify users](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify) (`/users/identify`): Combines an alias-only, email-only, or phone number-only profile with a profile that has an `external_id`.
-- [POST: Merge users](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge) (`/users/merge`): Merges one user profile into another, including when both profiles already have an `external_id`. Review [Prerequisites](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#prerequisites) and [Merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#merge-behavior) before you call this endpoint.
+- [POST: Merge users](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge) (`/users/merge`): Merges one user profile into another, including when both profiles already have an `external_id`. Review [Prerequisites](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#endpoint-reference) and [Merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#endpoint-reference) before you call this endpoint.
 
 When an anonymous profile is matched to an existing identified profile (for example through an SDK `changeUser()` call or `/users/identify`), Braze orphans the anonymous profile and copies only certain fields onto the identified profile. For more information, see [What happens when you identify anonymous users](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle#what-happens-when-you-identify-anonymous-users).
 
@@ -85,7 +85,7 @@ In the following example, Braze uses the user's external ID to flag duplicate pr
 
 #### Merge behavior
 
-Braze will fill empty fields on the kept profile with values from the merged profile. For a list of the fields that will be filled, refer to [Merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#merge-behavior).
+Braze will fill empty fields on the kept profile with values from the merged profile. For a list of the fields that will be filled, refer to [Merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#endpoint-reference).
 
 ### Step 3: Merge your duplicates
 

@@ -1,4 +1,4 @@
-<div id='api_lfytiuvfmmbf' class='api_div' data-search-keywords='list user relationship types type_name limit offset items rel_kind display_name total_count has_more next_offset'>
+<div id='api_mxuymptspivi' class='api_div' data-search-keywords='list user relationship types type_name limit offset items rel_kind display_name total_count has_more next_offset'>
 <h1 id="list-user-relationship-types">List user relationship types</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/data_objects/types/{type_name}/user_relationship_types</p>
@@ -18,7 +18,7 @@
 
 <h2 id="rate-limit">Rate limit</h2>
 
-<p>This endpoint is in the Data Objects read bucket with a default limit of 50 requests per minute.</p>
+<p>This endpoint is in the Data Objects read bucket with a default limit of 1000 requests per minute.</p>
 
 <h2 id="path-parameters">Path parameters</h2>
 

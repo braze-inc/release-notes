@@ -1,4 +1,4 @@
-<div id='api_jwponkvdjxlh' class='api_div' data-search-keywords='replace object relationship rel_kind related_type_name related_object_id attributes object_relationship to_data_object type_name object_id name'>
+<div id='api_rknnihfreili' class='api_div' data-search-keywords='replace object relationship rel_kind related_type_name related_object_id attributes object_relationship to_data_object type_name object_id name'>
 <h1 id="replace-object-relationship">Replace object relationship</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/data_objects/objects/{type_name}/{object_id}/object_relationships</p>
@@ -18,7 +18,7 @@
 
 <h2 id="rate-limit">Rate limit</h2>
 
-<p>This endpoint is in the Data Objects write bucket with a default limit of 50 requests per minute.</p>
+<p>This endpoint is in the Data Objects write bucket with a default limit of 1000 requests per minute.</p>
 
 <h2 id="path-parameters">Path parameters</h2>
 

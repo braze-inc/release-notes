@@ -1,4 +1,4 @@
-<div id='api_pqsewwnclude' class='api_div' data-search-keywords='list user relationships type_name object_id rel_kind limit offset items user braze_id attributes role total_count has_more next_offset'>
+<div id='api_agwjedyyobcd' class='api_div' data-search-keywords='list user relationships type_name object_id rel_kind limit offset items user braze_id attributes role total_count has_more next_offset'>
 <h1 id="list-user-relationships">List user relationships</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/data_objects/objects/{type_name}/{object_id}/user_relationships</p>
@@ -18,7 +18,7 @@
 
 <h2 id="rate-limit">Rate limit</h2>
 
-<p>This endpoint is in the Data Objects read bucket with a default limit of 50 requests per minute.</p>
+<p>This endpoint is in the Data Objects read bucket with a default limit of 1000 requests per minute.</p>
 
 <h2 id="path-parameters">Path parameters</h2>
 

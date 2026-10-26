@@ -172,4 +172,4 @@ You can [cancel segment deletions](#cancel) within the first 7 days after. Howev
 
 ### Can I delete users with the API instead of the dashboard?
 
-Yes. For smaller batches, you can use the [`/users/delete` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete), which accepts up to 50 identifiers per request and is subject to that endpoint's [rate limit](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete#rate-limit). Segment-based dashboard deletion is better suited to very large audiences but includes the [7-day waiting period](#about-user-deletion).
+Yes. For smaller batches, you can use the [`/users/delete` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete), which accepts up to 50 identifiers per request and is subject to that endpoint's [rate limit](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete#endpoint-reference). Segment-based dashboard deletion is better suited to very large audiences but includes the [7-day waiting period](#about-user-deletion).

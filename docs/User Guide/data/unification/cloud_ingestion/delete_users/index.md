@@ -116,7 +116,7 @@ When a sync runs, Braze directly connects to your data warehouse instance, retri
 **Warning:**
 
 
-Deleting user profiles cannot be undone. The delete action permanently removes users, which may cause discrepancies in your data. For details, see [Effects of deleting user profiles](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete#effects-of-deleting-user-profiles).
+Deleting user profiles cannot be undone. The delete action permanently removes users, which may cause discrepancies in your data. For details, see [Effects of deleting user profiles](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete#endpoint-reference).
 
 
 

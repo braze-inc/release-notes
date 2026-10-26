@@ -44,7 +44,7 @@ For more information, refer to [Editing Canvases after launch](https://www.braze
 
 ### Faster rate limit available for `/users/export/ids` endpoint
 
-You can also increase the [rate limit for the /users/export/ids endpoint](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/#rate-limit) to 40 requests per second by meeting the following requirements:
+You can also increase the [rate limit for the /users/export/ids endpoint](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/#endpoint-reference) to 40 requests per second by meeting the following requirements:
 
 - Your workspace has the default rate limit (250 requests per minute) enabled. Contact your Braze account manager for further assistance with removing any pre-existing rate limit you may have.
 - Your request includes the fields_to_export parameter to list out all the fields you want to receive.

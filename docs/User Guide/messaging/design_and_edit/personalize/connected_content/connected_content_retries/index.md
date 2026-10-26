@@ -39,7 +39,12 @@ When a `:retry` tag is included in the Connected Content call, Braze attempts to
 
 ### Preview behavior
 
-Retry logic applies only to live sends (including test sends), not to previews. If a Connected Content call with `:retry` fails during preview, the preview may display the message "This message would not have been shown because retry functionality was triggered" instead of rendering the content. This is expected behavior and does not indicate an issue within Braze.
+Retry logic applies only to live sends (including test sends), not to message previews or [Preview User Paths](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths). If a Connected Content call with `:retry` fails, Braze does not retry the call. Instead:
+
+- During message preview, the preview may display "This message would not have been shown because retry functionality was triggered" instead of rendering the content.
+- When previewing user paths, a Message step may show "Message aborted due to connected content retry failure".
+
+This is expected behavior and does not indicate an issue within Braze.
 
 ### Retry outcomes
 
