@@ -1,4 +1,4 @@
-<div id='api_pvxhvapfsxuu' class='api_div' data-search-keywords='replace data object attributes name data_object type_name object_id'>
+<div id='api_wtglcaaoslij' class='api_div' data-search-keywords='replace data object attributes name data_object type_name object_id'>
 <h1 id="replace-data-object">Replace data object</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/data_objects/objects/{type_name}/{object_id}</p>
@@ -18,7 +18,7 @@
 
 <h2 id="rate-limit">Rate limit</h2>
 
-<p>This endpoint is in the Data Objects write bucket with a default limit of 50 requests per minute.</p>
+<p>This endpoint is in the Data Objects write bucket with a default limit of 1000 requests per minute.</p>
 
 <h2 id="path-parameters">Path parameters</h2>
 

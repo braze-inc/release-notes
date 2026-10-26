@@ -39,8 +39,8 @@ This section explains default request quotas and response headers for both read 
 
 | Bucket | Default limit |
 |---|---|
-| Data Objects reads | 50 requests per minute |
-| Data Objects writes | 50 requests per minute |
+| Data Objects reads | 1000 requests per minute |
+| Data Objects writes | 1000 requests per minute |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Data Objects default rate limits" }
 
 Every response includes `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset`.
@@ -52,7 +52,7 @@ For throttled requests, Braze returns `429` and an error payload with `id` and `
   "errors": [
     {
       "id": "rate-limit-exceeded",
-      "message": "You have exceeded your limit of 50 requests per minute."
+      "message": "You have exceeded your limit of 1000 requests per minute."
     }
   ]
 }
@@ -81,6 +81,7 @@ These limits are fixed for all companies.
 
 | Limit | Value |
 |---|---|
+| Fields per relationship type (user relationships and object relationships) | 25. Relationship fields don't count toward the fields per data object type limit. |
 | Attribute value length | 255 characters |
 | `object_id` length and format | 250 characters. Letters, numbers, hyphens, and underscores only. |
 | Field name length and format | 250 characters. Letters, numbers, and underscores only, and can't start with an underscore. |
@@ -106,6 +107,7 @@ A request that would exceed a count limit returns `422` with an error `id` that 
 |---|---|
 | Data object records per company | `data-object-record-limit-exceeded` |
 | Fields per data object type | `data-object-field-limit-exceeded` |
+| Fields per relationship type | `data-object-field-limit-exceeded` |
 | Data objects linked to one user | `data-objects-per-user-limit-exceeded` |
 | Users linked to one data object | `users-per-data-object-limit-exceeded` |
 | Object relationships for one data object | `data-object-relationship-limit-exceeded` |

@@ -347,7 +347,7 @@ CDI Canvas triggers utilize your REST API rate limit for `/canvas/trigger/send`.
 Each sync run enters users into its respective destination Canvas at a maximum rate of approximately 3.75 million users per hour. Be prepared for longer source-to-Canvas entry times when:
 
 * Syncing more than 3.75 million users per sync run.
-* Using CDI Canvas triggers when already saturating your REST API's [rate limit for `/canvas/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases#rate-limit).
+* Using CDI Canvas triggers when already saturating your REST API's [rate limit for `/canvas/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases#endpoint-reference).
 
 Consider the following about zero-copy CDI when Message Archiving is enabled:
 

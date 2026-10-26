@@ -60,7 +60,7 @@ You can choose from the following options for your Braze external ID:
 
 ### Merged fields
 
-When a user profile is synced, the following fields will be merged. For full details on merging behavior, refer to [Merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge/#merge-behavior).
+When a user profile is synced, the following fields will be merged. For full details on merging behavior, refer to [Merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge/#endpoint-reference).
 
 - Device information
 - Total session count (combined from both profiles)

@@ -1,4 +1,4 @@
-<div id='api_rgsmkrxbkizw' class='api_div' data-search-keywords='create object relationship rel_kind related_type_name related_object_id attributes object_relationship to_data_object type_name object_id name'>
+<div id='api_twdfjilwthig' class='api_div' data-search-keywords='create object relationship rel_kind related_type_name related_object_id attributes object_relationship to_data_object type_name object_id name'>
 <h1 id="create-object-relationship">Create object relationship</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/data_objects/objects/{type_name}/{object_id}/object_relationships</p>
@@ -18,7 +18,7 @@
 
 <h2 id="rate-limit">Rate limit</h2>
 
-<p>This endpoint is in the Data Objects write bucket with a default limit of 50 requests per minute.</p>
+<p>This endpoint is in the Data Objects write bucket with a default limit of 1000 requests per minute.</p>
 
 <h2 id="path-parameters">Path parameters</h2>
 

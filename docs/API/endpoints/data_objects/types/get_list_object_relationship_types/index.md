@@ -1,4 +1,4 @@
-<div id='api_wouikuwwgxqg' class='api_div' data-search-keywords='list object relationship types type_name anchor limit offset items from_type_name to_type_name rel_kind display_name related_type_name total_count has_more next_offset'>
+<div id='api_mcieiafbszzt' class='api_div' data-search-keywords='list object relationship types type_name anchor limit offset items from_type_name to_type_name rel_kind display_name related_type_name total_count has_more next_offset'>
 <h1 id="list-object-relationship-types">List object relationship types</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/data_objects/types/{type_name}/object_relationship_types</p>
@@ -18,7 +18,7 @@
 
 <h2 id="rate-limit">Rate limit</h2>
 
-<p>This endpoint is in the Data Objects read bucket with a default limit of 50 requests per minute.</p>
+<p>This endpoint is in the Data Objects read bucket with a default limit of 1000 requests per minute.</p>
 
 <h2 id="path-parameters">Path parameters</h2>
 

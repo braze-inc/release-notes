@@ -157,7 +157,7 @@ If you use an automated script to retrieve the file, you may also receive a `403
 Exports take time to finish, so immediate access from a script often fails. You can:
 
 - Poll the download URL with exponential backoff, or
-- Use the [`callback_endpoint` parameter](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment#request-parameters) and point it at a service that runs your script when the export is ready.
+- Use the [`callback_endpoint` parameter](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment#endpoint-reference) and point it at a service that runs your script when the export is ready.
 
 ## Segment and user export API fields
 

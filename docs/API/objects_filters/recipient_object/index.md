@@ -31,7 +31,7 @@ That profile must still meet the message's audience and channel eligibility rule
 - [Braze ID](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle)
 - [User aliases](https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle#user-aliases)
 - [External user ID](https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields)
-- [Prioritization](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify#identifying-users-by-email-addresses-and-phone-numbers)
+- [Prioritization](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify#endpoint-reference)
 - [User attributes object](https://www.braze.com/docs/api/objects_filters/user_attributes_object)
 
 ## Recipient object deduping

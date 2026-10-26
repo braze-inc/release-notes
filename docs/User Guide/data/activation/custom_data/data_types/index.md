@@ -347,6 +347,35 @@ When using **in less than** or **in more than** operators with 90 days or more, 
 
 #### Time attribute details
 
+##### Recurring-event date and timestamp offsets
+
+For Time custom attributes, Braze stores both the absolute timestamp and derives a recurring-event date (month and day) used by the "Day of Recurring Event" filter and "day of year" comparisons for nested custom attributes. The recurring-event date is calculated from the calendar date in the timestamp's UTC offset when the attribute is set.
+
+**How the offset affects recurring-date comparisons:**
+
+When you set a Time attribute, the timestamp's UTC offset determines the stored recurring-event date. Equivalent instants with different offsets produce different recurring dates:
+
+- `2026-10-13T00:09:49+09:00` → October 13
+- `2026-10-12T15:09:49Z` → October 12
+
+These timestamps represent the same instant, but the first uses a +09:00 offset (JST) and stores October 13, while the second uses UTC (Z) and stores October 12. Company and user time zone settings do not recalculate this stored recurring-event date.
+
+**SDK serialization:**
+
+Some SDKs serialize Date objects to UTC before sending them to Braze. For example, when you set a Time attribute using a Date object in the Swift, Web, or Android SDK, the SDK converts it to a UTC timestamp before transmission. If the local time falls between 00:00 and 08:59 JST, the UTC date is one day earlier, and the stored recurring-event date matches the previous day in the user's local time zone. Likewise, if the local time zone is behind UTC (such as US time zones), the UTC date can be one day later than the local calendar date, and the stored recurring-event date is one day later than the user's local date.
+
+**Preserving the intended local calendar date:**
+
+To ensure the recurring-event date matches the user's local calendar date, send Time attributes as strings with the local offset rather than as Date objects:
+
+```json
+{
+  "anniversary_date": "2026-10-13T00:00:00+09:00"
+}
+```
+
+This preserves October 13 as the recurring-event date for "Day of Recurring Event" and nested day-of-year filtering.
+
 - Day of Recurring Event
   - When using the "Day of Recurring Event" filter, and are then prompted to select the "Calendar Day of Recurring Event", if you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.
   - For example, if on March 10, 2020, you selected the date of the attribute to be `LESS THAN ... March 10, 2020`, attributes will be considered for the days up to, and including March 10, 2020.

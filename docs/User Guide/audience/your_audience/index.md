@@ -55,7 +55,7 @@ Identifying a user allows you to:
 - Segment and personalize using long-term user data  
 - Manage profiles through APIs and integrations
 
-When an anonymous user is later identified, Braze merges eligible data into the identified profile according to [this merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#merge-behavior). For example, push tokens and messaging history carry over, and many fields from the anonymous profile merge only when they are not already set on the identified profile; when values conflict, the identified profile is kept.
+When an anonymous user is later identified, Braze merges eligible data into the identified profile according to [this merge behavior](https://www.braze.com/docs/api/endpoints/user_data/post_users_merge#endpoint-reference). For example, push tokens and messaging history carry over, and many fields from the anonymous profile merge only when they are not already set on the identified profile; when values conflict, the identified profile is kept.
 
 ## Message users through channels
 
