@@ -17,7 +17,7 @@ Before you start, make sure you have the following:
 | Prerequisite | Description |
 |--------------|-------------|
 | Supported MCP client | Any client that supports remote MCP servers with OAuth can work. Braze has verified Claude, ChatGPT, Cursor, OpenAI Codex, Claude Code, and Visual Studio Code. |
-| Approved redirect URI | A company admin must approve your client's redirect URI in **Settings** > **Admin Settings** > **OAuth**. The admin can copy it from the client's OAuth or connector settings. For more information, see [Manage OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-approved-redirect-uris). |
+| Approved redirect URI | A company admin must approve your client's redirect URI in **Settings** > **Admin Settings** > **External Connections**. The admin can copy it from the client's OAuth or connector settings. For more information, see [Manage OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-approved-redirect-uris). |
 | Braze dashboard account | You sign in with your normal Braze credentials, including SSO or SAML if your company uses it. There is no separate MCP login. |
 | Server endpoint selection | Choose `https://mcp.braze.com/mcp` (US) or `https://mcp.braze.eu/mcp` (EU). Either endpoint can reach any Braze cluster. |
 | No IP allowlisting | Customers who use [IP Allowlisting](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#dashboard-ip-allowlisting) cannot use the Braze MCP server at this time. |
@@ -35,7 +35,7 @@ Your agent's access mirrors your dashboard permissions. If your dashboard access
 **Note:**
 
 
-Before users can connect, a company admin must turn on **MCP OAuth access** in **Settings** > **Admin Settings** > **OAuth**. For more information, see [Manage OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin).
+Before users can connect, a company admin must turn on **MCP OAuth access** in **Settings** > **Admin Settings** > **External Connections**. For more information, see [Manage OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin).
 
 
 
@@ -47,7 +47,7 @@ Admins control access to the MCP server through the "Use MCP Server" permission.
 
 To revoke access, remove the "Use MCP Server" permission from the user. Removing dashboard permissions from a user also removes those capabilities from any connected agent on the next request.
 
-If you think a token has been leaked or misused, a company admin can revoke every MCP OAuth token for the company at once in **Settings** > **Admin Settings** > **OAuth**. Every connected client loses access and all users must reconnect. For more information, see [Revoke MCP OAuth tokens](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#revoke-mcp-oauth-tokens).
+If you think a token has been leaked or misused, a company admin can revoke every MCP OAuth token for the company at once in **Settings** > **Admin Settings** > **External Connections**. Every connected client loses access and all users must reconnect. For more information, see [Revoke MCP OAuth tokens](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#revoke-mcp-oauth-tokens).
 
 ### Audit usage
 

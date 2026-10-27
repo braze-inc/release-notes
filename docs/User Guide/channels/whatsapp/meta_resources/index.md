@@ -14,6 +14,26 @@ Review the following Meta documentation for guidance with display names, phone n
 
 ## WhatsApp product updates
 
+### October 2026: WhatsApp account model evolution
+*Last Updated October 2026*
+
+Meta is splitting the WhatsApp Business account (WABA) into two accounts: 
+
+- WhatsApp account: This holds your phone number
+- Messaging account: This holds templates, billing, webhook subscriptions, and analytics
+
+The rollout began September 23, 2026. Meta migrates accounts automatically in stages, with all businesses reached by mid-October. Your WABA ID becomes your Messaging account ID, and existing integrations keep working.
+
+Under the new model:
+
+- One phone number can be shared with multiple partners. Each partner has its own Messaging account, with separate templates and billing.
+- Templates aren't shared between Messaging accounts. Migrated templates reset to a baseline quality rating, and the ramp-up takes about 2–4 weeks.
+- Messaging limits and throughput are shared across all partners on a number.
+- Moving a number between partners is no longer supported. Clients share their WhatsApp account instead.
+- Meta is deprecating the two-step verification PIN for eligible numbers.
+
+For more information, see Meta's documentation on [updates to WhatsApp Business accounts](https://developers.facebook.com/documentation/business-messaging/whatsapp/account-model-evolution).
+
 ### 2026: Business usernames
 *Last Updated May 2026*
 
@@ -47,6 +67,16 @@ When your business profile appears in a chat window, WhatsApp uses the following
 
 For more information, see Meta's documentation on [business usernames](https://developers.facebook.com/documentation/business-messaging/whatsapp/business-scoped-user-ids/#business-usernames).
 
+### October 2026: Pricing changes
+*Last Updated October 2026*
+
+Starting October 1, 2026, Meta charges per delivered message for service messages (non-template replies sent within the 24-hour customer service window). The rate matches the utility and authentication rate in each market.
+
+- Each business phone number gets 1,000 free service messages per month. Charges begin at message 1,001.
+- Utility templates sent in response to a user within the 24-hour window, which have been free since July 1, 2025, are now charged.
+- Service and utility messages are still not charged in a free entry point window, such as one opened by an ad that clicks to WhatsApp.
+- Meta also updated rates for 40 market categories, including moving 9 markets out of their pricing regions and adding a higher international authentication rate. See Meta's [pricing documentation](https://developers.facebook.com/docs/whatsapp/pricing/) for current rates.
+
 ### April 2026: Automatic archival of inactive templates
 *Last Updated April 2026*
 
@@ -60,18 +90,26 @@ For more information, see Meta's documentation on [business usernames](https://d
 For more information, see Meta's documentation on [template archival](https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/template-archival).
 
 ### June 2026: Business-scoped user IDs
-*Last Updated March 2026*
+*Last Updated October 2026*
 
-- Meta is introducing user IDs to replace phone number sharing for privacy
-- Braze is working on a solution ahead of the rollout
-- Expected June 2026 rollout from Meta
+Meta is introducing business-scoped user IDs (BSUIDs), a unique identifier for each user within a business portfolio, so businesses can message people who choose not to share their phone number.
+
+Braze fully supports receiving and sending messages using BSUIDs. No action is required to get started, and Braze handles routing, user creation, and event tracking automatically.
+
+Meta's rollout is still in progress and hasn't reached every market, so you may see more users who share only a BSUID over time.
+
+Braze is working on support for requesting a user's contact information.
+
+For setup recommendations and how Braze stores BSUIDs, see [WhatsApp usernames and business-scoped user IDs](https://www.braze.com/docs/user_guide/channels/whatsapp/message_features_and_optimization/bsuid).
 
 ### November 2025: [Marketing messages API for WhatsApp](https://developers.facebook.com/documentation/business-messaging/whatsapp/marketing-messages/overview/) (formerly Marketing Messages Lite API)
-*Last Updated March 2026*
+*Last Updated October 2026*
 
 - Replaces static Cloud API limits with dynamic, engagement-based limits
 - Not available in EMEA, Japan, or South Korea for optimized delivery
 - Utility/authentication continue through Cloud API automatically
+- Marketing messages on the Cloud API will sunset on October 13, 2027. After that date, all marketing messages must be sent through the Marketing Messages API for WhatsApp. Service, authentication and utility messages stay on the Cloud API.
+- Businesses that haven't accepted the Marketing Messages API terms currently fall back to the Cloud API automatically. That fallback ends at the sunset.
 
 ### October 2025: Official Business Account (OBA) approval process changed
 *Last Updated March 2026*

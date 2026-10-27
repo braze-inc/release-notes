@@ -133,6 +133,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Purchase properties object {#purchase-properties-object}
 
+Purchase properties are designed for filtering and Liquid personalization in messages triggered by their parent purchase events. By default, they are not persisted on the Braze user profile. To use purchase property values in segmentation, refer to [Event property segmentation](https://www.braze.com/docs/user_guide/data/activation/events/purchase_events#event-property-segmentation), which stores values on the user profile for a lookback window of up to 30 days.
+
 The `properties` values must be an object up to 50&nbsp;KB where the keys are the property names and the values are the property values. Property names must be strings, 255 characters or fewer, with no leading dollar signs (`$`).
 
 Property values can be any of the following data types:

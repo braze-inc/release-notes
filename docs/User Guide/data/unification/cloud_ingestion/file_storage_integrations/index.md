@@ -811,6 +811,7 @@ When the sync runs, rows with `deleted: true` cause the matching catalog item to
 - While there is no additional limit on the number of rows per file, we recommend using smaller files to improve how fast your syncs run. For example, a 500&nbsp;MB file would take considerably longer to ingest than five separate 100&nbsp;MB files.
 - There's no additional limit on the number of files uploaded in a given time.
 - Ordering isn't supported in or between files. We recommend batching updates periodically if you're monitoring for any expected race conditions.
+- **For Amazon S3 syncs:** Braze deletes an SQS message only when the file has been successfully read and the resulting rows have been ingested into Braze's internal systems. Braze does not extend the visibility timeout. If you're seeing messages in your dead-letter queue, consider increasing your visibility timeout to match the time it takes for your largest files to process. Braze also tracks metadata for each file—if a file is successfully ingested and a duplicate SQS message appears for that file, Braze immediately deletes the duplicate message. If the file was not successfully ingested, Braze processes the SQS message normally.
 
 ## Troubleshooting
 

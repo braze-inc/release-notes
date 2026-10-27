@@ -1,4 +1,4 @@
-<div id='api_ectbjmwozazb' class='api_div' data-search-keywords='create new user alias'>
+<div id='api_vniupxmhpkrk' class='api_div' data-search-keywords='create new user alias'>
 <h1 id="create-new-user-alias">Create new user alias</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/alias/new</p>
@@ -16,7 +16,7 @@
 
 <p>You can send API-triggered campaigns to users by <code class="language-plaintext highlighter-rouge">user_alias</code> using the <a href="/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns"><code class="language-plaintext highlighter-rouge">/campaigns/trigger/send</code></a> endpoint.</p>
 
-<h2 id="when-alias_label-and-alias_name-already-exist">When <code class="language-plaintext highlighter-rouge">alias_label</code> and <code class="language-plaintext highlighter-rouge">alias_name</code> already exist</h2>
+<h2 id="when-the-alias-label-and-name-already-exist">When <code class="language-plaintext highlighter-rouge">alias_label</code> and <code class="language-plaintext highlighter-rouge">alias_name</code> already exist</h2>
 
 <p>The combination of <code class="language-plaintext highlighter-rouge">alias_label</code> and <code class="language-plaintext highlighter-rouge">alias_name</code> must be unique across your user base. For more information, see <a href="/docs/user_guide/data/unification/user_data/user_profile_lifecycle/#user-aliases">User aliases</a>.</p>
 

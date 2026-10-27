@@ -83,8 +83,6 @@ You can filter your data by:
 
 Use **Export** to download the table data.
 
-![Banners Credits Usage with tiles for credits and unique impressions and a usage by account table.](https://www.braze.com/docs/assets/img/app_settings/credits_usage_banners.png?b9f76d034221166a424767b45105ebeb)
-
 
 
 
@@ -101,7 +99,21 @@ You can filter your data by:
 
 Use **Export** to download the table data.
 
-![Content Cards Credits Usage with tiles for credits and unique impressions and a usage by account table.](https://www.braze.com/docs/assets/img/app_settings/credits_usage_content_cards.png?562916897220cd63e3ed76f444cd38ff)
+
+
+
+### Decisioning Studio Go
+
+**Decisioning Studio Go Credits Usage** shows Decisioning Studio Go credit usage across all accounts. Tiles show total credits consumed and total sends. The **Usage by account** table includes **Braze workspace**, **Agent name**, **Total sends**, **Credit ratio**, and **Credits**. When data is available, **Last updated** shows when the table was refreshed.
+
+#### Filters
+
+You can filter your data by:
+- Date range (defaults to the last 30 days)
+- Braze workspace
+- Agent name
+
+Use **Export** to download the table data.
 
 
 
@@ -117,8 +129,6 @@ You can filter your data by:
 - Braze workspace
 
 Use **Export** to download the table data.
-
-![Email Credits Usage with tiles for credits and emails sent and a usage by account table.](https://www.braze.com/docs/assets/img/app_settings/credits_usage_email.png?001b8c10c1fe079229b8becb8d9451df)
 
 
 
@@ -137,8 +147,6 @@ You can filter your data by:
 - Company
 
 Use **Export** to download the table data.
-
-![KakaoTalk Credits Usage with tiles for credits and KakaoTalk sends and a KakaoTalk usage table.](https://www.braze.com/docs/assets/img/app_settings/credits_usage_kakaotalk.png?3baefd1127d04dcef850abcc8ac2a54f)
 
 
 
@@ -159,8 +167,6 @@ You can filter your data by:
 
 Use **Export** to download the table data.
 
-![LINE Credits Usage with tiles for credits and billable sends and a detailed usage table.](https://www.braze.com/docs/assets/img/app_settings/credits_usage_line.png?b1ae5d03f5d65751ed71bb754f740bfb)
-
 
 
 
@@ -170,8 +176,6 @@ Use **Export** to download the table data.
 
 Filters are available allowing you to filter by **Country** or SMS and RCS type.
 
-![SMS/MMS/RCS Credits Usage with tiles for high-level data and a section for consumption by account.](https://www.braze.com/docs/assets/img/app_settings/sms_credit_consumption2.png?1c8e2e7e4433f0e72ee9601087db3d84)
-
 Unlike the **Credits Usage Overview**, this section contains historical data from prior contract periods. 
 
 **Note:**
@@ -180,8 +184,6 @@ Unlike the **Credits Usage Overview**, this section contains historical data fro
 It’s possible to select a date range that contains both non-credits and credits usage. In this case, the consumption that occurred outside of credits will display `—` (null) in the **Credit ratio** and **Credits** columns.
 
 
-
-![SMS/MMS/RCS Credits Usage table with null values.](https://www.braze.com/docs/assets/img/app_settings/sms_table_null3.png?ccab047e1cbbf666af1d79804c235d07)
 
 
 
@@ -198,8 +200,6 @@ You can filter your data by:
 
 Use **Export** to download the table data.
 
-![Webhooks Credits Usage with tiles for credits and webhook sends and a usage by account table.](https://www.braze.com/docs/assets/img/app_settings/credits_usage_webhooks.png?c0a72f86c054f29a9eb87da41ae41c73)
-
 
 
 
@@ -215,8 +215,6 @@ You can filter your data by:
 - Braze workspace
 - Conversation category type
 - Region
-
-![WhatsApp Credits Usage with a tile for total credits consumed and a usage by account table.](https://www.braze.com/docs/assets/img/app_settings/whatsapp_credit_consumption4.png?4bc88b246a51cdf4fd85d928bb9087a5)
 
 
 
@@ -237,8 +235,6 @@ You can filter your data by:
 
 Use **Export** to download the table data.
 
-![Agent Console Credits Usage with tiles for credits and invocations and a usage by account table.](https://www.braze.com/docs/assets/img/app_settings/credits_usage_agent_console.png?aa247bc4c8084226a4f2cf1dfc201281)
-
 
 
 
@@ -255,8 +251,6 @@ You can filter your data by:
 
 Use **Export** to download the table data.
 
-![Audience Sync Credits Usage with tiles for credits and audience syncs and a usage by account table.](https://www.braze.com/docs/assets/img/app_settings/credits_usage_audience_sync.png?130539778cb47d49fdf776c254a5dcb0)
-
 
 
 
@@ -272,8 +266,6 @@ You can filter your data by:
 - Channel
 
 Use **Export** to download the table data.
-
-![Message Archiving Credits Usage with tiles for credits and messages archived and a usage by account table.](https://www.braze.com/docs/assets/img/app_settings/credits_usage_message_archiving.png?cef5964c9135b1b6e2dc21192d1870f4)
 
 
 
