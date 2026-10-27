@@ -1,4 +1,4 @@
-<div id='api_plyxdxdfqzla' class='api_div' data-search-keywords='export app session by time'>
+<div id='api_gdwoajvplzic' class='api_div' data-search-keywords='export app session by time'>
 <h1 id="export-app-session-by-time">Export app session by time</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/sessions/data_series</p>

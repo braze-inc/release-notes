@@ -331,6 +331,8 @@ To capture dates as object properties, you must use the `$time` key. In the foll
 **Note:**
 
 
+When `_merge_objects` is `true`, a `null` value without `$time` deletes an existing nested date field from the object. If the field doesn't already exist, Braze ignores the `null` value and doesn't create the field. Braze doesn't return an error in either case.
+
 If you haven't captured dates as object properties initially, we recommend resending this data using the `$time` key for all users. Otherwise, this may result in incomplete segments when using the `$time` attribute. However, if the value for `$time` in a nested custom attribute isn't formatted correctly, the entire nested custom attribute won't be updated.
 
 

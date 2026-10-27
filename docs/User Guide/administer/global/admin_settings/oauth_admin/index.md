@@ -31,9 +31,9 @@ OAuth policy is stored at the company level. Workspace admins can't override **M
 
 | Control | Where you configure it | Scope |
 | --- | --- | --- |
-| **MCP OAuth access** | **Settings** > **Admin Settings** > **OAuth** | Entire company. When this is off, MCP OAuth is denied in every workspace. |
-| Approved redirect URIs | **Settings** > **Admin Settings** > **OAuth** | Entire company. Approved and blocked URIs apply to all workspaces. |
-| **Revoke MCP OAuth tokens** | **Settings** > **Admin Settings** > **OAuth** | Entire company. Revocation applies to every MCP OAuth token in every workspace. |
+| **MCP OAuth access** | **Settings** > **Admin Settings** > **External Connections** | Entire company. When this is off, MCP OAuth is denied in every workspace. |
+| Approved redirect URIs | **Settings** > **Admin Settings** > **External Connections** | Entire company. Approved and blocked URIs apply to all workspaces. |
+| **Revoke MCP OAuth tokens** | **Settings** > **Admin Settings** > **External Connections** | Entire company. Revocation applies to every MCP OAuth token in every workspace. |
 | "Use MCP Server" permission | **Settings** > **User Management** | Per workspace. Users need this permission in each workspace they access through the MCP server. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Company and workspace OAuth controls" }
 
@@ -43,7 +43,7 @@ Only users with the "Admin" permission can change **MCP OAuth access**, change r
 
 To update MCP OAuth access for your company:
 
-1. Go to **Settings** > **Admin Settings** > **OAuth**.
+1. Go to **Settings** > **Admin Settings** > **External Connections**.
 2. In **Global access controls**, turn **MCP OAuth access** on or off.
 
 When **MCP OAuth access** is on, users with the "Use MCP Server" permission can authorize approved MCP clients. When it's off, OAuth access to the MCP server is denied for all users and workspaces in your company.
@@ -115,11 +115,11 @@ Revoking tokens invalidates every MCP OAuth token across your company at once. U
 
 To revoke your company's MCP OAuth tokens:
 
-1. Go to **Settings** > **Admin Settings** > **OAuth**.
+1. Go to **Settings** > **Admin Settings** > **External Connections**.
 2. In **Revoke MCP OAuth tokens**, select **Revoke MCP OAuth tokens**.
 3. Review the confirmation dialog, then select **Revoke tokens**.
 
-Braze revokes the tokens in the background and shows a confirmation message when the revocation finishes. For companies with many connections, this can take a few minutes. Leave the **OAuth** page open until the confirmation appears.
+Braze revokes the tokens in the background and shows a confirmation message when the revocation finishes. For companies with many connections, this can take a few minutes. Leave the **External Connections** page open until the confirmation appears.
 
 **Warning:**
 
@@ -148,7 +148,7 @@ If revocation doesn't finish, Braze shows an error message. Some tokens may alre
 
 If a user sees "This app needs approval" or a generic error such as "An unexpected error occurred" when they connect an MCP client to Braze, your company may not have approved that client's redirect URI.
 
-1. Go to **Settings** > **Admin Settings** > **OAuth** and find the client's redirect URI in the **Approved redirect URIs** table. Check the **Status** column to see whether the URI is approved or blocked.
+1. Go to **Settings** > **Admin Settings** > **External Connections** and find the client's redirect URI in the **Approved redirect URIs** table. Check the **Status** column to see whether the URI is approved or blocked.
 2. [Add the URI](#add-a-redirect-uri) if it isn't listed, or select **Unblock** if its status is **Blocked**.
 3. Ask the user to connect their MCP client again.
 

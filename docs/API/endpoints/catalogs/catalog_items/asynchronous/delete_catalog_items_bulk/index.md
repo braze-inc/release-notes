@@ -1,4 +1,4 @@
-<div id='api_mkqldbwvhxxu' class='api_div' data-search-keywords='delete multiple catalog items'>
+<div id='api_ghqkutjeluew' class='api_div' data-search-keywords='delete multiple catalog items'>
 <h1 id="delete-multiple-catalog-items">Delete multiple catalog items</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/catalogs/{catalog_name}/items</p>
