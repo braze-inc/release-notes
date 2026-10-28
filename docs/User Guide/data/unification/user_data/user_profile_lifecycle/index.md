@@ -123,7 +123,7 @@ For information on how to set a user alias, see our documentation for each platf
 **Tip:**
 
 
-Having trouble picturing how this may look for the user profile lifecycle of your customers? Visit [Best practices](https://www.braze.com/docs/user_guide/data/unification/user_data/best_practices) to view user data collection best practices.
+Having trouble picturing how this may look for the user profile lifecycle of your customers? Visit [Best practices](https://www.braze.com/docs/collection_best_practices) to view user data collection best practices.
 
 
 

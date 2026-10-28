@@ -30,7 +30,7 @@ To use the AI SQL Generator, you need these [permissions](https://www.braze.com/
 
 ## Generate SQL for a Segment Extension
 
-The AI SQL Generator uses [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your SQL Segment Extension.
+The AI SQL Generator uses [OpenAI's GPT family of models](https://developers.openai.com/api/docs/models) to recommend SQL for your SQL Segment Extension.
 
 ![AI SQL Generator with the prompt "Users that received a notification last month"](https://www.braze.com/docs/assets/img/ai_sql_generator.png?acea994f0ac93ccc2bf7e89098378667){: style="max-width:70%;"}
 
@@ -46,7 +46,7 @@ The AI SQL Generator uses [GPT](https://openai.com/gpt-4), powered by OpenAI, to
 
 ## Tips
 
-- Familiarize yourself with the available [Snowflake data tables](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
+- Familiarize yourself with the available [Snowflake data tables](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables). Asking for data that doesn't exist in these tables may result in the model inventing a table.
 - Follow the [SQL writing rules](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#step-2-write-your-sql) for SQL Segment Extensions. For example, your SQL must select the `user_id` column. Starting your prompt with "users who" can help.
 - You can send up to 20 prompts per minute with the AI SQL Generator.
 - If the AI SQL Generator returns a statement that needs to be negated, it may automatically turn on **Invert SQL**. Confirm that the toggle matches the audience you want. For details, see [Determine if you need to invert SQL](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#step-4-determine-if-you-need-to-invert-sql).

@@ -5,7 +5,7 @@
 **Note:**
 
 
-To migrate from other Business Solution Providers (BSPs) to the Braze integration, see [Migrate from another Business Solution Provider](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number#migrate-from-another-business-solution-provider).
+To connect a number that already belongs to another Business Solution Provider (BSP), see [Use a number that's already with another provider](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number#migrate-from-another-business-solution-provider).
 
 
 
@@ -25,11 +25,11 @@ Before setting up the BYO WhatsApp connector, confirm that your WhatsApp Busines
 
 ### Supported cases
 
-- WhatsApp Business Account and phone number have never been connected to a partner before
-- WhatsApp Business Account is connected directly to Braze through the native integration.
-    - Follow the steps in [Migrate between WhatsApp Business Accounts](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number#migrate-between-whatsapp-business-accounts) to migrate your phone numbers to a new WhatsApp Business Account one phone number at a time.
-- WhatsApp Business Account is connected to a different solution provider from Braze and Infobip
-    - Follow the steps in [Migrate between WhatsApp Business Accounts](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number#migrate-between-whatsapp-business-accounts) to migrate your phone numbers to a new WhatsApp Business Account one phone number at a time.
+- WhatsApp account and phone number have never been connected to a partner before
+- WhatsApp account is connected directly to Braze through the native integration.
+    - Follow the steps in [Connect through Embedded Signup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number#migrate-between-whatsapp-business-accounts) for each phone number you need to connect.
+- WhatsApp account is connected to a different solution provider from Braze and Infobip
+    - Share the WhatsApp account with Braze through [Embedded Signup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number#migrate-from-another-business-solution-provider), then continue with the Infobip steps in this article.
 
 ## Step 1: Retrieve Infobip account information {#step-1}
 
@@ -111,7 +111,7 @@ Confirm your WhatsApp Business Account isn’t connected to a different Braze wo
 
 ## Considerations 
 
-While all existing functionality with Braze is supported, these use cases are currently not supported.
+While all existing functionality with Braze is supported, these use cases are not supported.
 
 | Use case | Reason |
 | --- | --- |

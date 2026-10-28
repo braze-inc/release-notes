@@ -162,12 +162,14 @@ Both decide. A Braze Agent decides by reading. A decisioning agent decides by me
 
 ## How Braze uses your data
 
-BrazeAI features that use a Braze-provided large language model send your prompt and inputs to that model. Data sent to a Braze-provided model is not used to train or improve it. Output belongs to you. Braze asserts no copyright over it. Braze makes no warranty about AI-generated content.
+BrazeAI features that use a Braze-provided large language model send your prompt and inputs to that model. Data sent to a Braze-provided model is not used to train or improve it. Output belongs to you. Braze asserts no copyright over it. Braze makes no warranty about AI-generated content. AI output can be inaccurate or incomplete, so review it before you use it.
 
-Which model a feature uses, and how long the provider retains data, is documented on each feature's page:
+Braze updates the specific model behind each feature as providers release new versions. Each feature's page names its model provider and how long that provider retains data:
 
 - [Braze Agents](https://www.braze.com/docs/user_guide/brazeai/agents#how-is-my-data-used-and-sent-to-braze-provided-llms)
 - [Operator data privacy and security](https://www.braze.com/docs/user_guide/brazeai/operator/data_privacy_security)
+
+If your security or procurement review requires the current model version, contact your account manager.
 
 You can also connect your own model provider, such as OpenAI, Anthropic, Google Gemini, or Databricks Mosaic, when using [Braze Agents](https://www.braze.com/docs/user_guide/brazeai/agents).
 

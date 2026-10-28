@@ -18,3 +18,9 @@ Work through the following steps in order.
 | `130472` | Meta marketing experiment holdout | See [Meta resources FAQ](https://www.braze.com/docs/user_guide/channels/whatsapp/meta_resources#faq) |
 | `131026` | Various non-delivery reasons (Meta doesn't disclose specifics) | Avoid immediate retries; review [Meta Cloud API troubleshooting](https://developers.facebook.com/docs/whatsapp/cloud-api/support#troubleshooting) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Common WhatsApp failure codes" }
+
+## Messaging account access removed {#messaging-account-access-removed}
+
+If someone removes Braze access to your Messaging account in Meta, Braze isn't notified. However, sends start to fail with authorization errors. Over time, Braze marks the number inactive, the Message Activity Log shows **WhatsApp messaging service has no sending numbers**, and the number is hidden from the WhatsApp composer.
+
+Confirm partner access for Braze in WhatsApp Manager, then reconnect through [Embedded Signup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/embedded_signup) if needed. For how Messaging accounts relate to shared numbers, see [WhatsApp accounts and Messaging accounts](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_accounts_and_messaging_accounts#if-braze-loses-messaging-account-access).

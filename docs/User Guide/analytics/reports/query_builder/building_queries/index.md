@@ -33,26 +33,17 @@ When building your query, you can choose to get help from AI or build it on your
 
 
 
-The AI Query Builder leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your query. To generate SQL with the AI Query Builder:
+**Note:**
 
-1. After creating a report in the Query Builder, select the **AI Query Builder** tab.
-2. Type in your prompt or select a sample prompt and select **Generate** to translate your prompt into SQL.
-3. Review the generated SQL to make sure it looks correct, and then select **Insert into Editor**.
 
-![The SQL AI query builder.](https://www.braze.com/docs/assets/img_archive/query_builder_ai_tab.png?4dcc02b256e5f6755acc0680ade87279){: style="max-width:60%;" }
+This feature is now part of [BrazeAI Operator™](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities), Braze's unified AI assistant. AI capabilities that were previously available as standalone assistants are now all accessible through Operator from wherever you're already working in the dashboard.
 
-#### Tips
 
-- Familiarize yourself with the available [Snowflake data tables](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
-- Familiarize yourself with the [SQL writing rules](https://www.braze.com/docs/user_guide/analytics/reports/query_builder#custom-sql) for this feature. Not following these rules will cause an error.
-- You can send up to 20 prompts per minute with the AI Query Builder.
 
-#### How is my data used and sent to OpenAI? {#ai-policy} 
-<!-- Braze Legal must approve any changes to this content. -->
-<!-- Note: Keep these comments under this H2 heading to avoid breaking how headings on certain pages are rendered. -->
 
-To generate AI output through BrazeAI features that leverage OpenAI (“Output”), Braze will send certain information (“Input”) to OpenAI. Input consists of your prompts, and may include the content displayed in the dashboard, and other workspace data relevant to your queries, as applicable. Per [OpenAI’s API platform commitments](https://openai.com/enterprise-privacy/), data sent to OpenAI’s API via Braze is not used to train or improve OpenAI models. OpenAI may retain data for 30 days for abuse monitoring purposes, after which it is deleted. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content, including Output.
+In the Query Builder side panel, select **Ask Operator** and describe the data you want. Operator writes SQL against the available [Snowflake data tables](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables), and you can review the SQL and preview results before you run your report. To use Operator in the Query Builder, you need the "Edit Dashboard Reports" permission.
 
+Generated SQL must follow the same [SQL writing rules](https://www.braze.com/docs/user_guide/analytics/reports/query_builder#custom-sql) as queries you write yourself. For more information, see [What you can do with Operator](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities). For how Operator handles your data, see [Operator data privacy and security](https://www.braze.com/docs/user_guide/brazeai/operator/data_privacy_security).
 
 
 
@@ -110,7 +101,7 @@ Your query may fail for any of the following reasons:
 
 ### Step 3: Generate your report
 
-When you're finished building your query, select **Run Query**. If there's no errors or [report timeouts](#report-timeouts), a CSV file will be generated from the query.
+When you're finished building your query, select **Run Query**. If there are no errors or [report timeouts](#report-timeouts), a CSV file is generated from the query.
 
 To download the CSV report, select **Export**.
 
@@ -119,7 +110,7 @@ To download the CSV report, select **Export**.
 **Important:**
 
 
-Each report can only generate results once per day. If you run the same report multiple times in a single calendar day, you'll see the same results in each report.
+Each report can only generate results once per day. If you run the same report multiple times in a single calendar day, you see the same results in each report.
 
 
 

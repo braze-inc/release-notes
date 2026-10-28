@@ -1,4 +1,4 @@
-<div id='api_lnfihoioorak' class='api_div' data-search-keywords='export daily new users by date'>
+<div id='api_stvjjlwuozci' class='api_div' data-search-keywords='export daily new users by date'>
 <h1 id="export-daily-new-users-by-date">Export daily new users by date</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/kpi/new_users/data_series</p>

@@ -9,7 +9,7 @@
   "app_id": (required, string) see App Identifier,
   "subscription_group_id": (required, string) the ID of your subscription group,
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
-  "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message | list_response_message | flow_response_message | carousel_response_message),
+  "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message | list_response_message | flow_response_message | carousel_response_message | request_contact_info_response_message),
   "message": (required, object) The message object that must include the required fields based on the selected `message_type`. Below are the specific message structures for each type. Refer to the relevant message type for the required fields and their format.
 }
 ```
@@ -31,6 +31,8 @@
   "carousel_cards": (optional, array) an array of carousel card objects, required if the specified template_name is a carousel template; see object specification below
 }
 ```
+
+You can send an approved template with a [**Share Contact Info**](#request_contact_info_response_message) button. Use `template_name`, `template_language_code`, and `body_variables`, and leave out `button_variables` for that button, because WhatsApp adds it to the message.
 
 **Important:**
 
@@ -91,7 +93,7 @@ Each carousel card fills one card of an approved carousel template, in order. Th
 
 ##### Header variables object
 
-The `header_variables` object lets you specify values for header variables in the WhatsApp template. Each key is the WhatsApp template variable index (zero-indexed) to replace with the specified value.
+The `header_variables` object lets you specify values for header variables in the WhatsApp template. Each key is the zero-based index of the WhatsApp template variable to replace, starting at `0` for the first variable.
 
 **Note:**
 
@@ -120,7 +122,15 @@ Currently, only zero or one header variables can be specified.
 
 ##### Body variables object
 
-The `body_variables` object lets you specify values for body variables in the WhatsApp template. Each key is the WhatsApp template variable index (zero-indexed) to replace with the specified value.
+The `body_variables` object lets you specify values for body variables in the WhatsApp template. Each key is the zero-based index of the WhatsApp template variable to replace, starting at `0` for the first variable.
+
+**Note:**
+
+
+For all variables objects (`header_variables`, `body_variables`, `button_variables`, and carousel card variables), keys must be integer strings from `"0"` to `"200"` and values must be strings. Any other key or value type returns a `400` error.
+
+
+
 ```json
 {
   "$TEMPLATE_VARIABLE_INDEX_0": "$TEMPLATE_VARIABLE_VALUE_0",
@@ -139,7 +149,7 @@ The `body_variables` object lets you specify values for body variables in the Wh
 
 ##### Button variables object
 
-The `button_variables` object lets you specify values for button variables in the WhatsApp template. Each key is the WhatsApp template variable index (zero-indexed) to replace with the specified value.
+The `button_variables` object lets you specify values for button variables in the WhatsApp template. Each key is the zero-based index of the WhatsApp template variable to replace, starting at `0` for the first variable.
 
 ```json
 {
@@ -436,5 +446,28 @@ The `carousel_response_message` type allows you to send an interactive carousel 
       }
     }
   ]
+}
+```
+
+#### request_contact_info_response_message
+
+When enabled for your workspace, the `request_contact_info_response_message` type allows you to ask the recipient to share their contact information in WhatsApp. WhatsApp adds a fixed **Share Contact Info** button to the message, and the recipient's reply arrives as an inbound contact share.
+
+```json
+{
+  "body": (required, string) the body of the message to send; Liquid is supported
+}
+```
+
+##### Constraints
+
+- `body`: Maximum 1024 characters, measured excluding Liquid. Longer bodies return a `400` error: `body must be a string of 1024 characters or fewer, excluding Liquid`.
+- `header_text`, `header_image_uri`, `header_asset_id`, `image_uri`, `asset_id`, `footer`, and `buttons`: Not allowed. WhatsApp adds the **Share Contact Info** button itself and renders it in the recipient's device language.
+
+##### Example
+
+```json
+{
+  "body": "Share your contact info so we can send you order updates."
 }
 ```

@@ -1,4 +1,4 @@
-<div id='api_njhgcwcdpdls' class='api_div' data-search-keywords='export kpis for daily app uninstalls by date'>
+<div id='api_blntzahfhtnr' class='api_div' data-search-keywords='export kpis for daily app uninstalls by date'>
 <h1 id="export-kpis-for-daily-app-uninstalls-by-date">Export KPIs for daily app uninstalls by date</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/kpi/uninstalls/data_series</p>

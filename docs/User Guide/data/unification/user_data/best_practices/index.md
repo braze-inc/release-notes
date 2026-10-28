@@ -32,13 +32,13 @@ When a user enters content through a web form, check if a user with that email a
 
 Use an email capture form to prompt users to submit their email address, which will be added to their user profile. For more information on how to set up this form, check out [Email capture form](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/email_capture_form).
 
-If you use a custom form and set subscription group membership through the REST API, check whether a profile already exists before creating a user. See [Step 1: Check if the user exists](#step-1-check-if-user-exists).
+If you use a custom form and set subscription group membership through the REST API, check whether a profile already exists before creating a user. See [Step 1: Check if the user exists](#step-1-check-if-the-user-exists).
  
 ## Identifying alias-only users
 
 When identifying users upon account creation, alias-only users can be identified and assigned an external ID through the [`/users/identify` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify) by merging the alias-only user with the known profile. 
 
-To check if a user is alias-only, [check if the user exists](#step-1-check-if-user-exists) within your database. 
+To check if a user is alias-only, [check if the user exists](#step-1-check-if-the-user-exists) within your database. 
 - If an external record exists, you can call the `/users/identify/` endpoint. 
 - If the [`/users/export/id` endpoint](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier) returns an `external_id`, you can call the `/users/identify/` endpoint.
 - If the endpoint returns nothing, a `/users/identify/` call shouldn't be made.

@@ -8,8 +8,6 @@ Braze takes data privacy and security for our organization, our customers, and o
 
 These are performed by independent, third-party auditors. We are compliant with these internationally-recognized standards and codes of practice to ensure that our security standards are up-to-date and in line with leading best practices.
 
-For more on this, check out [Braze Perspectives](https://www.braze.com/perspectives/article/braze-soc-2-iso-27001-certified)!
-
 ## ISO 27001 certification
 
 ![ISO certification graphic](https://www.braze.com/docs/assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png?977a1a16c4a464e2ab0dacc3f37f9358){: height="25%" width="25%" style="border:0px;"}

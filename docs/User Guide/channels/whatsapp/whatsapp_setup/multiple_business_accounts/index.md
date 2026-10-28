@@ -1,10 +1,17 @@
 # Multiple WhatsApp Business accounts and phone numbers
 
-> You can add multiple WhatsApp Business accounts and subscription groups (and phone numbers) to each workspace. <br><br>Each subscription group is connected to one unique phone number, so you can't connect the same phone number to multiple subscription groups or connect multiple phone numbers to a subscription group.
+> You can add multiple WhatsApp Business accounts and subscription groups (and phone numbers) to each workspace. <br><br>Each subscription group is connected to one unique phone number within a workspace, so you can't connect the same phone number to multiple subscription groups in the same workspace or connect multiple phone numbers to a subscription group.
+
+**Note:**
+
+
+Meta separates the phone number (WhatsApp account) from templates, billing, and webhooks (Messaging account). For an overview, see [WhatsApp accounts and Messaging accounts](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_accounts_and_messaging_accounts).
+
+
 
 ## Multiple WhatsApp Business accounts 
 
-Having multiple WhatsApp Business accounts is useful if you want to send WhatsApp messages to users in a Braze workspace that has multiple brands. This is because each business account operates separately within WhatsApp and has its own phone number, message template, and quality rating.
+Having multiple WhatsApp Business accounts is useful if you want to send WhatsApp messages to users in a Braze workspace that has multiple brands. Each connection operates separately in WhatsApp and has its own Messaging account for templates, billing, and related settings.
 
 Business accounts that are nested within the same Meta Business Manager will also share user access permission management and catalogs (not yet supported on Braze).
 
@@ -24,19 +31,19 @@ You can add up to 10 WhatsApp Business accounts per workspace. The business acco
 **Important:**
 
 
-Your phone number must follow all the requirements of any WhatsApp phone number, including not being registered to any other WhatsApp accounts. 
+Any phone number you connect must meet [Meta's phone number requirements](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers).
 
 
 
 ## Multiple subscription groups and phone numbers
 
-Message templates are shared among all phone numbers in the same WhatsApp Business account. For details about WhatsApp subscription groups, view [Subscription groups](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups).
+You can add multiple [subscription groups](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups) under the same WhatsApp Business account. Each subscription group is tied to one sending phone number, and each phone number appears as a separate WhatsApp chat to users.
 
-Each WhatsApp phone number will appear as a separate WhatsApp chat to users. Each phone number within a WhatsApp Business account operates independently from each other, so they can have the same or different values for the following: 
-- Display name 
-- Status 
-- Quality rating 
-- Messaging limit 
+Phone numbers on the same account can differ in display name, status, and quality rating. Shared scope varies:
+
+- **Message templates:** Shared by every phone number on the same Messaging account. Not shared across Messaging accounts or providers.
+- **Messaging limits:** Shared at the business portfolio level across providers on a number.
+- **Throughput:** Shared at the phone-number level across providers on that number.
 
 ### Adding a subscription group and phone number
 
@@ -47,7 +54,7 @@ You can add up to 20 subscription groups (and sending phone numbers) per WhatsAp
 ![WhatsApp Messaging Integration section with options to add a business account or add a subscription group and number.](https://www.braze.com/docs/assets/img/whatsapp/multiple_wabas.png?432027085b74a6da96800d095f97bb7e)
 
 {: start="2"}
-2. Go through the sign-up workflow. <br><br> In the **Select your WhatsApp Business Account** step, select your existing WhatsApp Business account and add a new phone number. This number must follow all the requirements of any WhatsApp phone number, including not being registered to any other WhatsApp accounts.
+2. Go through the sign-up workflow. <br><br> In the **Select your WhatsApp Business Account** step, select your existing WhatsApp Business account and add a new phone number. The number must meet Meta's phone number requirements.
 
 ### Removing a subscription group and phone number 
 

@@ -7,18 +7,18 @@
 | Word | Definition |
 | --- | --- |
 | Quality rating | A rating based on the recent messages that your customers have received over the last seven days. This rating is determined by the feedback from your customers, such as the reason to block your phone number and other reporting issues. View Meta's documentation to learn more [about your quality rating](https://www.facebook.com/business/help/896873687365001).|
-| Messaging limit | The maximum number of business-initiated conversations you can begin with each of your phone numbers in a rolling 24-hour period. |
+| Messaging limit | The maximum number of business-initiated conversations you can begin in a rolling 24-hour period. Meta applies messaging limits at the business portfolio level. When multiple providers share a phone number, they share that portfolio-level limit. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Definitions" }
 
 ## Onboarding  
 
-When a new WhatsApp Business Account is created, Meta uses a variety of factors to determine the initial sending limit. You can find this limit in your WhatsApp Business Manager, and additional details on your Phone Number Insights page. 
+When a new WhatsApp connection is created, Meta uses a variety of factors to determine the initial sending limit. You can find this limit in **WhatsApp Manager**, and additional details on your **Phone Number Insights** page. 
 
-View Meta's documentation to learn more about [checking your limit](https://developers.facebook.com/docs/whatsapp/messaging-limits#checking-your-limit) and [phone number requirements](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers).
+See Meta's documentation to learn more about [checking your limit](https://developers.facebook.com/docs/whatsapp/messaging-limits#checking-your-limit) and [phone number requirements](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers). For how limits interact with shared numbers, see [WhatsApp accounts and Messaging accounts](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_accounts_and_messaging_accounts).
 
 ## Throughput
 
-Meta starts each registered business phone number with a throughput of 80 messages per a second. Upgrades to 1,000 messages per second can happen automatically, or on request. Information. 
+Meta starts each registered business phone number with a throughput of 80 messages per second. Upgrades to 1,000 messages per second can happen automatically, or on request. Throughput applies to the phone number, so every provider using the number shares the same limit.
 
 View Meta's documentation to learn more about your [throughput](https://developers.facebook.com/docs/whatsapp/cloud-api/overview#throughput).
 

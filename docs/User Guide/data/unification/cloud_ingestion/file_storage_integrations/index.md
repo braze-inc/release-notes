@@ -2,7 +2,7 @@
 
 > This page covers how to set up Cloud Data Ingestion to sync data from Amazon S3, Google Cloud Storage, or Azure Blob Storage to Braze.
 
-## How it works
+## How it works {#how-it-works}
 
 You can use Cloud Data Ingestion (CDI) to directly integrate one or more storage buckets in your cloud account with Braze. When you add a new file to a bucket, your cloud provider publishes a notification, and Braze Cloud Data Ingestion syncs the data.
 
@@ -19,7 +19,7 @@ Cloud Data Ingestion supports the following:
 - Parquet files
 - Attribute, custom event, purchase event, user delete, and catalog data
 
-## Setting up Cloud Data Ingestion
+## Setting up Cloud Data Ingestion {#setting-up-cloud-data-ingestion}
 
 The setup steps depend on your file storage provider. Select the tab for your provider, then complete the shared configuration in the sections that follow.
 
@@ -623,7 +623,7 @@ For each folder you want to sync in a shared container:
 
 
 
-## Required file formats
+## Required file formats {#required-file-formats}
 
 The required file formats are the same for Amazon S3, Google Cloud Storage, and Azure Blob Storage. Cloud Data Ingestion supports JSON, CSV, and Parquet files. The required columns depend on the data type:
 
@@ -733,7 +733,7 @@ Include an optional `DELETED` column. When `DELETED` is `true`, that catalog ite
 
   
 
-## Deleting data
+## Deleting data {#deleting-data}
 
 Cloud Data Ingestion for file storage supports deleting users and catalog items through file uploads. Use separate syncs and file formats for each.
 
@@ -805,7 +805,7 @@ ID,PAYLOAD,DELETED
 
 When the sync runs, rows with `deleted: true` cause the matching catalog item to be deleted in Braze. For full catalog sync and delete behavior, see [Sync and delete catalog data](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sync_catalogs_data).
 
-## Things to know
+## Things to know {#things-to-know}
 
 - Files added to the source bucket or container should not exceed 512&nbsp;MB. This limit applies to Amazon S3, Google Cloud Storage, and Azure Blob Storage. Files larger than 512&nbsp;MB result in an error and are not synced to Braze. Azure Blob Storage itself allows much larger files, but CDI applies the same 512&nbsp;MB limit across all file storage sources.
 - While there is no additional limit on the number of rows per file, we recommend using smaller files to improve how fast your syncs run. For example, a 500&nbsp;MB file would take considerably longer to ingest than five separate 100&nbsp;MB files.
@@ -813,7 +813,7 @@ When the sync runs, rows with `deleted: true` cause the matching catalog item to
 - Ordering isn't supported in or between files. We recommend batching updates periodically if you're monitoring for any expected race conditions.
 - **For Amazon S3 syncs:** Braze deletes an SQS message only when the file has been successfully read and the resulting rows have been ingested into Braze's internal systems. Braze does not extend the visibility timeout. If you're seeing messages in your dead-letter queue, consider increasing your visibility timeout to match the time it takes for your largest files to process. Braze also tracks metadata for each file—if a file is successfully ingested and a duplicate SQS message appears for that file, Braze immediately deletes the duplicate message. If the file was not successfully ingested, Braze processes the SQS message normally.
 
-## Troubleshooting
+## Troubleshooting {#troubleshooting}
 
 ### Uploading files and processing
 

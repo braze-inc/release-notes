@@ -93,7 +93,7 @@ After completing the integration, we recommend completing the two following Meta
 	- You may already have business verification if you’ve used an existing Meta Business Manager. 
 - [Official Business Account](https://www.facebook.com/business/help/604726921052590?ref=search_new_0)
 
-We also recommend reading about [user phone numbers](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/user_phone_numbers) and adding any users who will need access to create message [templates at your organization](https://www.facebook.com/business/help/2169003770027706?id=2190812977867143).
+We also recommend learning about [WhatsApp accounts and Messaging accounts](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_accounts_and_messaging_accounts), [user phone numbers](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/user_phone_numbers), and adding any users who will need access to create message [templates at your organization](https://www.facebook.com/business/help/2169003770027706?id=2190812977867143).
 
 ### WhatsApp Cloud API Local Storage
 

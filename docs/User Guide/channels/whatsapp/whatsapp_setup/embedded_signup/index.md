@@ -52,7 +52,7 @@ In general, Meta guides you through:
 
 1. **Sign in and grant permissions.** Authenticate with Meta and allow Braze to connect to your WhatsApp Business Account.
 2. **Select your business portfolio.** Connect the Business Manager portfolio that should own the WhatsApp Business Account. If you don't see the portfolio you expect, confirm your Meta permissions.
-3. **Connect or create a WhatsApp Business Account.** Create a new account or select an unused account when prompted. Don't select a WhatsApp Business Account that's actively connected to another messaging provider; that connection won't succeed in Braze. To [migrate a number from another provider](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number), contact your Braze account team before you begin.
+3. **Connect or create a WhatsApp account.** Create a new account or select the WhatsApp account that already holds your phone number. If the number is already used with another provider, you can [share that WhatsApp account with Braze](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number) instead of moving the number.
 4. **Provide business and display details.** Enter the account name, display name, and category Meta requests for your WhatsApp Business Account.
 5. **Verify your phone number.** Add the number you want to use for WhatsApp messaging and complete verification by text message or phone call.
 
@@ -78,14 +78,15 @@ During Meta embedded signup, a phone number may appear as **Ineligible**. Meta b
 | Cause | Fix |
 | --- | --- |
 | Number still registered to another Meta developer app | In the [Meta for Developers](https://developers.facebook.com/) dashboard, open the app where the WhatsApp API was previously set up. Go to **WhatsApp** > **API Setup** (or **Getting Started**), find the phone number, and remove it from that app. If the number is live for another WhatsApp Business Account (WABA), you may also need to remove it from that account in [WhatsApp Manager](https://business.facebook.com/latest/settings/whatsapp_account) before it becomes available. |
-| WhatsApp Business Account shared with another solution provider | In WhatsApp Manager settings, confirm the WABA that holds the number is shared only with Braze or isn't shared with other messaging providers. If another provider has access, remove that partner share or [migrate the number](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number) to a Braze-connected WABA. |
-| Braze partner access missing | If the WABA isn't shared with Braze yet, assign Braze as a partner with full access when Meta prompts you during signup, then retry phone number selection. |
+| WhatsApp account shared with another solution provider | Sharing a WhatsApp account with another provider is supported under Meta's newer account model. Confirm Braze has access to the Messaging account for your connection, then retry phone number selection. See [Use an existing WhatsApp phone number](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number). |
+| Braze partner access missing | If the WhatsApp account isn't shared with Braze yet, assign Braze as a partner when Meta prompts you during signup, then retry phone number selection. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Ineligible phone number causes and fixes" }
 
 After you clear the conflicting registration or partner share, relaunch embedded signup from Braze and select the number again.
 
 ## Next steps
 
-- [Acquire or migrate a WhatsApp phone number](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/)
+- [Acquire or use an existing WhatsApp phone number](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/)
+- [WhatsApp accounts and Messaging accounts](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_accounts_and_messaging_accounts)
 - [Create a WhatsApp message](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message)
 - [Manage subscription groups](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups)
