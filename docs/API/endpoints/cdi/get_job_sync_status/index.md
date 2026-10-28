@@ -1,4 +1,4 @@
-<div id='api_vucucgrumnxf' class='api_div' data-search-keywords='list job sync status'>
+<div id='api_nmfkvuaqmuwr' class='api_div' data-search-keywords='list job sync status'>
 <h1 id="list-job-sync-status">List job sync status</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/cdi/integrations/{integration_id}/job_sync_status</p>

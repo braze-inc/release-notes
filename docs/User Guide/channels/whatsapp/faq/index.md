@@ -1,6 +1,6 @@
 # Frequently asked questions
 
-> On this page, we'll attempt to answer your most stringent questions about WhatsApp!<br><br>This FAQ is not intended to provide, nor may it be relied upon as providing legal advice. The use of the WhatsApp channel is subject to specific Meta Platforms, Inc. requirements. To ensure that you are using the WhatsApp channel in compliance with all applicable requirements and any laws to which you may specifically be subject, you should seek the advice of your legal counsel.
+> On this page, we attempt to answer your most pressing questions about WhatsApp.<br><br>This FAQ is not intended to provide, nor may it be relied upon as providing legal advice. The use of the WhatsApp channel is subject to specific Meta Platforms, Inc. requirements. To ensure that you are using the WhatsApp channel in compliance with all applicable requirements and any laws to which you may specifically be subject, you should seek the advice of your legal counsel.
 
 ## FAQ topics
 - [WhatsApp business accounts](#whatsapp-business-accounts)
@@ -45,14 +45,15 @@ If your display name meets the guidelines and is still being rejected, Braze can
 For further guidance on display name rejections, refer to [Meta resources](https://www.braze.com/docs/user_guide/channels/whatsapp/meta_resources).
 
 ### WhatsApp business account phone numbers 
+
 #### Do I need a phone number for my WhatsApp business account? 
-Yes, you need a number that you have access to. You will be asked to verify your phone number with 2-factor authentication when you go through the embedded sign-up flow. The phone number cannot be used for other WhatsApp accounts (business or personal).
+Yes, you need a number that you have access to. Meta asks you to verify the number during Embedded Signup. The number can't be registered to a personal WhatsApp account. Under Meta's newer account model, the same business number can be shared with more than one provider through one WhatsApp account. See [Use an existing WhatsApp phone number](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number).
 
 #### What types of phone numbers are supported with WhatsApp? 
 Refer to Meta's requirements for [phone numbers](https://developers.facebook.com/docs/whatsapp/phone-numbers) for more information. 
 
 #### Can I use one phone number across multiple WABAs? 
-No. A phone number cannot be shared across multiple WABAs. 
+A phone number belongs to one WhatsApp account. Under Meta's account model, you can share that WhatsApp account (and its number) with more than one provider, and each provider gets its own Messaging account. In Braze, each Messaging account connection still maps to one workspace connection. For details, see [WhatsApp accounts and Messaging accounts](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_accounts_and_messaging_accounts). 
 
 #### Do I need a specific type of phone number to send messages to specific countries? 
 No. WhatsApp allows you to send messages to end-users from any supported phone number in any country. Refer to Meta's requirements for [phone numbers](https://developers.facebook.com/docs/whatsapp/phone-numbers) for more information. 
@@ -69,7 +70,7 @@ Yes. You can [import user phone numbers](https://www.braze.com/docs/user_guide/c
 Yes, WhatsApp requires businesses to [collect opt-in consent](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/) to send marketing messages to end-users.
 
 #### Can I proactively message end-users on WhatsApp to collect opt-in consent? 
-If you choose to proactively message end-users, your first business-initiated message should ask the user if the user wants to receive marketing messages from your business and should comply with Meta's requirements for [getting opt-in](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/). Keep in mind that WhatsApp will monitor your business reputation on the channel, so the recommended best practice is to be explicit with end-users and only send messages they have indicated they want to receive.
+If you choose to proactively message end-users, your first business-initiated message should ask the user if the user wants to receive marketing messages from your business and should comply with Meta's requirements for [getting opt-in](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/). Keep in mind that WhatsApp monitors your business reputation on the channel, so the recommended best practice is to be explicit with end-users and only send messages they have indicated they want to receive.
  
 #### Do I need to collect the end user's phone number when I collect opt-in? 
 You need to have the end-users phone number on the Braze profile to message them. 
@@ -235,7 +236,12 @@ WhatsApp appears on the **Technology Partners** page when WhatsApp is enabled fo
 #### Does Braze support customer support use cases like chatbots and human-assisted chat for WhatsApp? 
 We do not support chatbots or human-assisted chat within Braze or through direct integrations. 
 
-If you already use WhatsApp as a customer support channel, we recommend you keep your current setup and create a new WABA via Braze for marketing messaging. This WABA will require a new phone number. 
+If you already use WhatsApp as a customer support channel, you can keep that setup and still use Braze for marketing. Common approaches include:
+
+- Keeping separate phone numbers for support and marketing
+- Sharing one phone number with Braze and your support provider, then recreating any templates you need in your Braze Messaging account
+
+See [Use an existing WhatsApp phone number](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number), [WhatsApp accounts and Messaging accounts](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_accounts_and_messaging_accounts#using-one-number-with-more-than-one-provider-or-workspace), and [WhatsApp and external systems](https://www.braze.com/docs/user_guide/channels/whatsapp/use_cases/whatsapp_and_external_systems). 
 
 #### How do I connect WhatsApp support and marketing in Braze? {#how-do-i-connect-whatsapp-support-and-marketing-in-braze}
 

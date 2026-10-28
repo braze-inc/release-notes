@@ -1,6 +1,6 @@
 # Integrate Braze and WhatsApp with an external AI or communication system
 
-> Leverage the power of AI chatbots and live agent hand-offs on the WhatsApp channel to streamline your customer support operations. By automating routine inquiries and seamlessly transitioning to human agents when needed, you can significantly improve response times and enhance the overall customer experience.
+> Use AI chatbots and live agent hand-offs on the WhatsApp channel to streamline your customer support operations. By automating routine inquiries and seamlessly transitioning to human agents when needed, you can significantly improve response times and enhance the overall customer experience.
 
 ## Prerequisites
 
@@ -10,6 +10,13 @@
 | Braze and WhatsApp integration | A WhatsApp number managed by Braze |
 | Braze REST API Key | A REST API key with `campaigns.trigger.send` permissions. This can be created in the Braze dashboard by going to **Settings** > **API Keys**. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
+
+**Note:**
+
+
+You can handle marketing in Braze and customer support on another provider with separate phone numbers, or by [sharing one WhatsApp account](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number) across providers. If you share a number, inbound messages can reach every Braze workspace connected to that number. For details, see [WhatsApp accounts and Messaging accounts](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_accounts_and_messaging_accounts#using-one-number-with-more-than-one-provider-or-workspace).
+
+
 
 ## How it works
 

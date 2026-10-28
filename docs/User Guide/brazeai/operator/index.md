@@ -33,7 +33,9 @@ Describe what you're trying to accomplish using natural language. Clear and spec
 
 Operator can provide step-by-step instructions, links to Braze documentation, plain-language explanations, and drafts of campaigns, Canvases, segments, and content that you can review and insert directly into your work. For how Operator proposes and applies changes, see [Take action with Operator](#take-action-with-operator). 
 
-Operator uses [GPT-5.6 Terra](https://developers.openai.com/api/docs/models/gpt-5.6-terra), which is suited for complex, multi-step tasks. For the full range of what Operator can help you build, see [What you can do with Operator](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities). For ready-to-use examples, see the [prompt library](https://www.braze.com/docs/user_guide/brazeai/operator/prompt_library).
+Operator is powered by OpenAI's GPT family of models. Braze selects and updates the specific model as OpenAI releases new versions, so you get improvements without changing your setup. For details on model capabilities, see [OpenAI's model documentation](https://developers.openai.com/api/docs/models).
+
+For the full range of what Operator can help you build, see [What you can do with Operator](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities). For ready-to-use examples, see the [prompt library](https://www.braze.com/docs/user_guide/brazeai/operator/prompt_library).
 
 Before Operator, several AI features stood alone as separate assistants, such as the AI Copywriter and AI SQL Generator. Their entry points remain in place and route to Operator, so your existing workflows are unaffected.
 

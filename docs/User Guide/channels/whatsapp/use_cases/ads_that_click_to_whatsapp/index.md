@@ -60,7 +60,7 @@ Don’t forget to also provide any discount code, offer, or other information pr
 Clicking an ad opens a WhatsApp conversation with your business, but Meta may not share the user's phone number with Braze, especially when WhatsApp privacy features (such as [usernames and business-scoped user IDs](https://www.braze.com/docs/user_guide/channels/whatsapp/message_features_and_optimization/bsuid)) obscure the number. In that case:
 
 - Braze receives a business-scoped user ID (BSUID) when Meta provides one, and matches or creates a user profile using that identifier.
-- Matching a known user profile by phone number alone isn't always possible from the ad click. Plan segmentation and follow-up journeys around [inbound message triggers](https://www.braze.com/docs/user_guide/channels/whatsapp/message_processing/messaging_users), [subscription status](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_status#whatsapp), and any identifiers you already have on the profile.
+- Matching a known user profile by phone number alone isn't always possible from the ad click. Plan segmentation and follow-up journeys around [inbound message triggers](https://www.braze.com/docs/whatsapp_user_messages), [subscription status](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_status#whatsapp), and any identifiers you already have on the profile.
 - If you need a phone number on the profile later, collect it through an [opt-in](https://www.braze.com/docs/user_guide/channels/whatsapp/message_processing/opt_ins_and_opt_outs) or contact-sharing workflow that Meta supports for your account, not from the ad click itself.
 
 ### Pricing

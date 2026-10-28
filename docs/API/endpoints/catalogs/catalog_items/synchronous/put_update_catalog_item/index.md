@@ -1,4 +1,4 @@
-<div id='api_hqnirhdrdncu' class='api_div' data-search-keywords='replace catalog item'>
+<div id='api_gkiykygbgvyu' class='api_div' data-search-keywords='replace catalog item'>
 <h1 id="replace-catalog-item">Replace catalog item</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/catalogs/{catalog_name}/items/{item_id}</p>

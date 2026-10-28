@@ -257,7 +257,7 @@ You can add more steps to your Canvas workflow by dragging and dropping componen
 **Important:**
 
 
-You can add up to 200 steps in a Canvas. If your Canvas exceeds 200 steps, loading issues may occur.
+You can add up to 200 steps in a Canvas. If your Canvas exceeds 200 steps, loading issues may occur. Step names can be up to 256 characters.
 
 
 

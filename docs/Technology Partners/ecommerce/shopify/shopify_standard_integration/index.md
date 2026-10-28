@@ -134,6 +134,32 @@ For more information on the data tracked through the integration, refer to [Shop
 
 
 
+#### Send Order Placed events from another source
+
+If another system, such as your data warehouse or ERP, already sends `ecommerce.order_placed` events to Braze in the [recommended events format](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/), select **Send Order Placed events from another source** in the **Events** section. Braze then stops adding Order Placed events from this store's Shopify orders to user profiles, so each order is counted once. This applies to live orders and to the Order Placed events in a historical backfill.
+
+**Important:**
+
+
+Before you select this option, review anything that depends on the Shopify Order Placed event, such as campaigns and Canvases triggered by it and segment filters that use it. They keep working only if your other source sends the event with the same properties.
+
+
+
+While the option is selected, the **Shopify events** table on the integration page shows Order Placed as **Inactive**. To resume Order Placed events for new orders, clear the checkbox and save your settings.
+
+#### Sync customer metafields as user attributes
+
+Select **Sync customer metafields as user attributes** in the **User attributes** section, then select **Select customer metafields** and choose up to 20 customer metafield definitions. The list shows each definition as `namespace.key` and only includes definitions with [supported types](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/#supported-metafield-types). Braze shows an estimated processing time for syncing the values to your existing user profiles, and the selected definitions appear as chips that you can remove later.
+
+After you save, Braze adds the values to each user profile as one nested custom attribute per store, named `shopify_metafields_<store>`, with one key per metafield named `<namespace>_<key>`. For how values are typed, updated, segmented, and personalized, see [Shopify customer metafields](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/#shopify-customer-metafields).
+
+**Note:**
+
+
+If you later remove a metafield from the selection, user profiles keep the last value from Shopify and stop updating. Before you remove a metafield, check that your active segments, campaigns, and Canvases don't rely on it.
+
+
+
 ### Historical backfill setup
 
 In the **Track Shopify data** step, select **Turn on historical backfill** to include the initial historical data load as part of your integration. Choose a date range for orders (**Past 90 days**, **Past year**, or **Past 2 years**) and for customer profiles (**Past year**, **Past 2 years**, or **All time**). Braze shows an estimated record count and processing time for each option before you finish setup. These selections can't be changed after setup completes.

@@ -1,49 +1,58 @@
-# Migrate a WhatsApp phone number
+# Use an existing WhatsApp phone number
 
-> Migrate your WhatsApp phone number between WhatsApp Business Accounts by using Meta's Embedded Signup.
+> If you already use a WhatsApp number with another provider, you don't need to move it. Share your WhatsApp account with Braze through Embedded Signup. Your number, conversations, and other providers stay in place. Templates and billing are separate for each provider, so recreate the templates you need in your Braze Messaging account.
 
 ## Prerequisites
 
-Your phone number must meet Meta's requirements to be eligible for migration:
+Before you connect an existing number to Braze, confirm your phone number meets Meta's requirements:
 
-- Your Meta Business Account is verified.
-- Your existing WhatsApp Business Account is approved.
-- Your existing WhatsApp Business Account has a valid payment method in **Payment Settings**.
-- Your business phone number has two-step verification turned off. If you own your WhatsApp Business Account, you can turn off two-step verification on their number in the WhatsApp Manager. Otherwise, you must ask your Solution Provider to turn it off for you.
+- Your Meta Business account is verified.
+- You can complete Meta's [Embedded Signup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/embedded_signup) flow with a Meta user who has permission to share the WhatsApp account with Braze.
+- You understand that templates and billing stay separate per Messaging account. Recreate any templates you need to send from Braze.
 
-For information on migrating your WhatsApp phone number, see Meta's documentation for [Migrating phone numbers between WhatsApp Business Accounts via Embedded Signup](https://developers.facebook.com/docs/whatsapp/business-management-api/guides/migrate-phone-to-different-waba/).
+**Note:**
 
-## Migrate between WhatsApp Business Accounts {#migrate-between-whatsapp-business-accounts}
 
-1. In the WhatsApp Manager, select the WhatsApp Business Account (WABA) associated with your phone number, then go to **Account tools** > **Phone numbers**.
-2. Select **Turn off two-step verification** and complete the steps that follow.<br><br>![WhatsApp Business Manager opened to the "Phone numbers" page.](https://www.braze.com/docs/assets/img/whatsapp/waba_manager.png?e6ef5415f789f4698196d3c46142d7e5){: style="max-width:80%;"} <br><br> If you're migrating a phone number to a different WhatsApp Business Group and Meta's embedded signup requires the display name to match, take note of the existing display name on the **Phone Numbers** page. You'll enter that name during the next step.<br><br>![The WhatsApp Business Manager's Phone Numbers page with a display name of "Braze" listed next to a phone number.](https://www.braze.com/docs/assets/img/whatsapp/phone_numbers.png?6a95914a404e45b34f4faec6ed4e5fad){: style="max-width:80%;"}<br><br>
-3. Continue Meta's embedded signup workflow to completion.
+Since September 23, 2026, Meta has begun [retiring the two-step verification PIN](https://developers.facebook.com/documentation/business-messaging/whatsapp/account-model-evolution/onboarding/) for eligible numbers. Where that change applies, **WhatsApp Manager** no longer shows a **Two-step verification** tab, and there is no PIN to disable. Ownership verification with a one-time passcode (OTP) may still be required during Embedded Signup.
 
-## Migrate from another Business Solution Provider (BSP) {#migrate-from-another-business-solution-provider}
 
-If your WhatsApp phone number is registered with another BSP, you must migrate the number to a Braze-connected WhatsApp Business Account before Braze can send on that number.
 
-### Before you migrate
+## Use a number that's already with another provider {#migrate-from-another-business-solution-provider}
 
-- Know that a phone number can be active on one BSP at a time. Migrating moves sending to Braze; your prior BSP loses access to the number.
-- Review contracts and billing with your current provider. Message history and templates may not transfer automatically.
-- Turn off two-step verification on the number per Meta's requirements.
-- If you need separate support and marketing numbers, see [Integrations, data, and reporting](https://www.braze.com/docs/user_guide/channels/whatsapp/faq#integrations-data-and-reporting) in the WhatsApp FAQ.
+If your WhatsApp phone number is already registered with another Business Solution Provider (BSP), share the WhatsApp account that holds that number with Braze. You don't need to remove the other provider for Braze to send on the number.
 
-### Migration paths
+### Before you connect
 
-| Current setup | Recommended path |
-|---|---|
-| Number on another BSP, moving fully to Braze | Migrate through [embedded signup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/embedded_signup) into a new or existing Braze WABA |
-| Number on Braze native integration, moving to Infobip billing | [BYO WhatsApp connector](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/byo_connector) (Infobip only) |
-| Marketing on Braze, support on another WABA | Keep separate WABAs and phone numbers; see the [WhatsApp FAQ](https://www.braze.com/docs/user_guide/channels/whatsapp/faq#integrations-data-and-reporting) and [WhatsApp and external systems](https://www.braze.com/docs/user_guide/channels/whatsapp/use_cases/whatsapp_and_external_systems) |
-{: .reset-td-br-1 .reset-td-br-2 aria-label="Migration paths" }
+- A phone number can stay available to more than one provider at a time. Sharing with Braze does not remove the current provider's access unless you later revoke that access in Meta.
+- Templates aren't shared across Messaging accounts. Recreate the templates you need in your Braze Messaging account. Migrated or recreated templates start from a baseline quality rating; Meta's ramp-up typically takes about two to four weeks.
+- Messaging limits (at the portfolio level) and throughput (at the phone-number level) are shared across providers on the same number.
+- Review contracts and billing with your current provider. Message history may not transfer automatically.
+- If you use separate support and marketing setups, see [Integrations, data, and reporting](https://www.braze.com/docs/user_guide/channels/whatsapp/faq#integrations-data-and-reporting) and [Using one number with more than one provider or workspace](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_accounts_and_messaging_accounts#using-one-number-with-more-than-one-provider-or-workspace).
+
+### Connection paths
+
+| Current setup | Path |
+| --- | --- |
+| Number on another BSP; keep using that BSP and also send from Braze | Share the WhatsApp account with Braze through [Embedded Signup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/embedded_signup). Recreate templates in your Braze Messaging account. |
+| Number on another BSP; move sending fully to Braze | Share the WhatsApp account with Braze through Embedded Signup, then remove the other provider's access in Meta when you're ready. |
+| Number on Braze native integration; move to Infobip billing | [BYO WhatsApp connector](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/byo_connector) (Infobip only) |
+| Marketing on Braze and support on another provider | You can use separate numbers, or share one number across providers. For sharing behavior, see [Using one number with more than one provider or workspace](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_accounts_and_messaging_accounts#using-one-number-with-more-than-one-provider-or-workspace). |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Connection paths for existing WhatsApp numbers" }
+
+## Connect through Embedded Signup {#migrate-between-whatsapp-business-accounts}
+
+1. In Braze, start the [Embedded Signup](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/embedded_signup) flow from the WhatsApp partner page.
+2. When Meta prompts you, select the business portfolio and WhatsApp account that already hold your phone number, then grant Braze access.
+3. Select the phone number you want Braze to use.
+4. Complete Meta's Embedded Signup workflow.
+
+If Meta shows WhatsApp Business Account (WABA) labels, that may mean your business hasn't migrated to Meta's latest account model yet. Existing IDs and API field names such as `waba_id` continue to work. See [WhatsApp accounts and Messaging accounts](https://www.braze.com/docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_accounts_and_messaging_accounts).
 
 ## Development and production workspaces
 
-Braze recommends separate WhatsApp Business Accounts for development and production when possible:
+Braze recommends separate Messaging accounts for development and production when possible:
 
-- Don't bind your production phone number to a sandbox or development workspace.
-- Use a dedicated test WABA and phone number for integration testing.
-- Template approvals apply per WABA; approve templates in the WABA tied to the workspace where you send.
-
+- Use a dedicated test phone number in your sandbox or development workspace for integration testing.
+- Keep your production phone number in your production workspace.
+- If you need the same number in more than one workspace, connect it with a separate Messaging account in each workspace.
+- Approve templates in the Messaging account tied to the workspace where you send. Template approvals apply per Messaging account.

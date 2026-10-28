@@ -14,17 +14,35 @@ Visit the [Braze Certification page](https://learning.braze.com/page/certificati
 
 Each credential links to recommended [Braze Learning paths](https://learning.braze.com/page/learning-paths) and study materials on the [Braze Certification page](https://learning.braze.com/page/certification). From the dashboard, go to **Support** > **Braze Learning**, or sign in to Braze Learning directly to study before you register on Certiverse.
 
+#### Exam topic weights
+
+Each exam's study guide includes the exam blueprint and topic (domain) weights. Open the study guide for your credential from the [Braze Certification page](https://www.braze.com/certification).
+
 ### Step 3: Register and take your exam
 
 Exams are scheduled and delivered through Certiverse. Registration steps, proctoring setup, and technical requirements are described on Certiverse and on the [Braze Certification page](https://learning.braze.com/page/certification). Before your exam, confirm your system meets [Certiverse proctoring requirements](https://help.certiverse.com/portal/en/kb/articles/proctoring-with-talview-hardware-requirements).
 
 ## After you pass
 
-When you pass an exam, you receive a digital credential and related program benefits. How results are reported, how skills badges are issued, and what you can do with your credential are covered in the frequently asked questions on the [Braze Certification page](https://learning.braze.com/page/certification). To view or manage skills badges you have already earned, sign in to [Credly](https://www.credly.com/users/sign_in).
+When you pass an exam, you receive a digital credential and related program benefits. How results are reported, how skills badges are issued, and what you can do with your credential are covered in the frequently asked questions on the [Braze Certification page](https://learning.braze.com/page/certification). To view or manage skills badges and certification credentials you have already earned, sign in to [Credly](https://www.credly.com/users/sign_in).
 
 ## Recertification
 
 Braze Certifications must be kept current over time. Renewal steps and how to check your status are maintained in the [Recertification guide](https://learning.braze.com/page/recertification) on Braze Learning.
+
+## Frequently asked questions
+
+### How do I transfer or merge my Braze Learning history?
+
+To transfer or merge Braze Learning course history between accounts, email [certification@braze.com](mailto:certification@braze.com). The Certification team completes that transfer for you.
+
+### How do I transfer my certification credentials?
+
+To transfer Braze Certification credentials (digital badges) to a different email or account, use Credly's self-service settings. Sign in to [Credly](https://www.credly.com/users/sign_in), open your profile or system settings, and update your account details there. For help with Credly or your badge, email [certification@braze.com](mailto:certification@braze.com).
+
+### Where can I find exam topic weights?
+
+Topic weights and exam blueprints are published in each exam's study guide. Open the study guide for your credential from the [Braze Certification page](https://www.braze.com/certification).
 
 ## Policies and program details
 

@@ -1,4 +1,4 @@
-<div id='api_mubvfahqacwo' class='api_div' data-search-keywords='list catalog item details'>
+<div id='api_xfiisyjsxkbo' class='api_div' data-search-keywords='list catalog item details'>
 <h1 id="list-catalog-item-details">List catalog item details</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/catalogs/{catalog_name}/items/{item_id}</p>

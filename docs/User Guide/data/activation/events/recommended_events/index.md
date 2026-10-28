@@ -50,14 +50,7 @@ Because these events follow a defined schema, each supported feature can read th
 
 ### How eCommerce events work
 
-eCommerce events are custom events with predefined names and property schemas. You send them using the [Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events), the [`/users/track` REST API endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track), or [Cloud Data Ingestion (CDI)](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion), and Braze validates each event against its schema on ingestion. When validation passes, Braze automatically applies post-processing specific to that event type, such as calculating revenue fields and managing cart state on user profiles.
-
-**Note:**
-
-
-CSV uploads don't support eCommerce events. Use the SDK, `/users/track`, or CDI to send these events.
-
-
+eCommerce events are custom events with predefined names and property schemas. You send them using the [Braze SDK](https://www.braze.com/docs/developer_guide/analytics/logging_ecommerce_events), the [`/users/track` REST API endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track), [Cloud Data Ingestion (CDI)](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion), or [CSV import](https://www.braze.com/docs/user_guide/audience/manage_audience/import_users/csv_import#build-your-csv), and Braze validates each event against its schema on ingestion. When validation passes, Braze automatically applies post-processing specific to that event type, such as calculating revenue fields and managing cart state on user profiles.
 
 eCommerce events work everywhere other custom events do: triggers and filters for performed custom events, custom events reporting, and more. However, their schema validation unlocks additional capabilities, including:
 

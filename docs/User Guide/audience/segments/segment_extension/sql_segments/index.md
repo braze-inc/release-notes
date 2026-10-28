@@ -23,7 +23,8 @@ There are two types of SQL editors to choose from when creating your SQL Segment
 
 - **Full Refresh:** Each time your segment refreshes, Braze queries all available data to update your segment, which uses more credits than incremental refreshes. Full refresh extensions can automatically regenerate membership daily, but can’t be refreshed using incremental refresh.
 - **Incremental refresh:** Incremental refresh is a more cost-efficient way to set up your query, although the setup involves a few more [steps](#step-2-write-your-sql). If you can complete these additional steps when constructing your segment, then it's worth choosing this option because your query runs using fewer credits.
-- **AI SQL Generator:** The [AI SQL Generator](https://www.braze.com/docs/user_guide/brazeai/generative_ai/sql_segment_extensions) lets you write a prompt in plain language and turns it into a SQL query for your segment. It's a quick way to get started without needing to write the SQL yourself.
+
+To have Operator write the SQL for you, select **Ask Operator** in either editor and describe your audience in plain language. For more information, see [What you can do with Operator](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities).
 
 **Tip:**
 
@@ -58,12 +59,6 @@ To create an incremental refresh SQL Segment Extension:
    ![Checkbox to regenerate the extension daily.](https://www.braze.com/docs/assets/img_archive/sql_segments_regenerate.png?477e2923749cc444f8b9238bf70bb3d7){: style="max-width:60%" }<br><br>
    When selected, Braze updates segment membership each day automatically. This means that each day at midnight in your company’s time zone (with a potential delay of an hour), Braze checks for new users in your segment and automatically adds them to your segment. If a Segment Extension has not been used in 7 days, Braze automatically pauses daily regeneration. An unused Segment Extension is one that is not part of a campaign or Canvas (the campaign or Canvas doesn't need to be active for the extension to be considered "used").<br><br>
 5. Save your Segment Extension.
-
-
-
-
-
-Use the [AI SQL Generator](https://www.braze.com/docs/user_guide/brazeai/generative_ai/sql_segment_extensions) to describe an audience in plain language and generate Snowflake SQL for your Segment Extension.
 
 
 

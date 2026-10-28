@@ -1,4 +1,4 @@
-<div id='api_ynkmrzdjymnx' class='api_div' data-search-keywords='create catalog'>
+<div id='api_rjbuswiqbdbc' class='api_div' data-search-keywords='create catalog'>
 <h1 id="create-catalog">Create catalog</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/catalogs</p>

@@ -1,4 +1,4 @@
-<div id='api_qridytymgths' class='api_div' data-search-keywords='delete catalog selection'>
+<div id='api_jduibcyhpnly' class='api_div' data-search-keywords='delete catalog selection'>
 <h1 id="delete-catalog-selection">Delete catalog selection</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/catalogs/{catalog_name}/selections/{selection_name}</p>

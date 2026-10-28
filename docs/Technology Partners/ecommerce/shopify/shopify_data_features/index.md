@@ -566,6 +566,8 @@ Then you can add the following Liquid tags into your message to reference the pr
 **Data source**: Braze REST API<br>
 **Use Case**: Order confirmation, post-purchase retargeting, upsells or cross-sells 
 
+If another system already sends Order Placed events to Braze, you can turn this event off for a store with **Send Order Placed events from another source** in the Track Shopify data step. Braze then skips `ecommerce.order_placed` for that store's live and backfilled orders, while the other order events, `shopify_paid_order`, and the purchase attributes keep updating. For details, see [Standard data setup](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_standard_integration/#send-order-placed-events-from-another-source).
+
 
 | Variable                | Liquid templating                                   |
 |-------------------------|-----------------------------------------------------|
@@ -913,9 +915,73 @@ After selecting your custom attribute, input a default value and copy the Liquid
 **Note:**
 
 
-Braze will only update supported Shopify custom attributes and Braze standard attributes if there is a difference in data from the existing user profile. For example, if the inbound Shopify data contains a first name of Bob and Bob already exists as a first name on the Braze user profile, Braze will not trigger an update, and you will not be charged a data point.
+Braze only updates supported Shopify custom attributes and Braze standard attributes if there is a difference in data from the existing user profile. For example, if the inbound Shopify data contains a first name of Bob and Bob already exists as a first name on the Braze user profile, Braze doesn't trigger an update, and you aren't charged a data point.
 
 
+
+## Shopify customer metafields
+
+Shopify customer metafields hold your own data about a customer, such as a loyalty tier or a churn-risk score. With the [standard integration](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_standard_integration/#sync-customer-metafields-as-user-attributes), you can sync up to 20 customer metafield definitions to Braze user profiles and use them to segment and personalize.
+
+### How metafields land on the user profile
+
+Braze adds one [nested custom attribute](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support/) per connected store, named `shopify_metafields_<store>`, where `<store>` is the first part of your `<store>.myshopify.com` domain. Each selected metafield becomes a key inside that object, named `<namespace>_<key>`. For example, the definitions `custom.vip_tier` and `custom.loyalty_points` on the store `acme.myshopify.com` land on a profile as:
+
+```json
+{
+  "shopify_metafields_acme": {
+    "custom_vip_tier": "gold",
+    "custom_loyalty_points": 120
+  }
+}
+```
+
+Each update deep merges into the object, so an update that carries one key never clears the others, and Braze never removes a key from the object. If a metafield is empty in Shopify, the profile keeps its last value.
+
+### Supported metafield types
+
+Only definitions with the following types appear in the picker. Other types, such as references, files, JSON, money, and rating, aren't supported.
+
+| Shopify type | Stored on the profile as |
+| --- | --- |
+| Single line text, Multi-line text, Color, URL, ID | String |
+| Integer | Integer |
+| Decimal | Number |
+| True or false | Boolean |
+| Date, Date and time | Time, so you can use date-based segment filters |
+| List of single line text, dates, dates and times, colors, IDs, or URLs | Array of strings |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Supported customer metafield types" }
+
+Braze leaves a value off the profile, and keeps writing the other keys, when:
+
+- A string value, or an item in a list, is longer than 255 characters.
+- A value can't be converted to the definition's type, for example text in an integer field.
+- The attribute key (`<namespace>_<key>`) is longer than 255 characters or contains a character Braze can't store, such as `$` or `.`.
+
+### When values sync
+
+| Source | When |
+| --- | --- |
+| Shopify's `customers/create` and `customers/update` webhooks | Whenever a customer changes in Shopify, including a change to a selected metafield |
+| Historical backfill | If you select metafields during setup, the initial customer backfill includes them |
+| Existing customers | When you add metafields to a connected store, Braze syncs their values to the user profiles of customers updated since the start of your historical customer backfill window (or since the store was connected if backfill was off). The integration page shows **Syncing customer metafields to existing user profiles** while this runs, and the picker is unavailable until it finishes. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="When customer metafield values sync" }
+
+You can check the sync state in the **Shopify user attributes** table on the integration page. It lists **Default attributes** and **Customer metafields** with a status (**Active**, or **Updating** while a sync runs) and the number of attributes in each. Select the view icon on a row to see the attribute names.
+
+### Changing or removing metafields
+
+- To change the selection, select **Edit settings** on the integration page and update the picker in the Track Shopify data step. Adding a metafield starts a sync for existing customers; removing one stops updates for that key.
+- If you remove a metafield from the selection, or turn **Sync customer metafields as user attributes** off, user profiles keep the last value from Shopify and stop updating.
+- If you delete a definition in Shopify, Braze removes it from your selection automatically. Values already on user profiles stay.
+
+### Segmentation and personalization
+
+Before you can filter on the metafields, [generate a schema](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support/#regenerate-schema) for the attribute: go to **Data Settings** > **Custom Attributes**, find `shopify_metafields_<store>`, and select **Generate Schema**. Braze builds the schema from values already on user profiles, so do this after the first sync finishes, and regenerate it after you add metafields so the new keys appear.
+
+To segment on a metafield, add the **Nested Custom Attributes** filter, select `shopify_metafields_<store>`, select the key as the property, then choose a comparator for its type. Date metafields use the **Time** and **Day of Year** comparators. To personalize a message, use the `custom_attribute` tag with dot notation. For the profile in the previous example, `{{custom_attribute.${shopify_metafields_acme}.custom_vip_tier}}` returns `gold`.
+
+You can't use nested custom attributes as a filter in a Connected Audience API call, and **Preview as a Custom User** accepts mock data only as strings or arrays of strings. For the full list, see [Nested custom attributes considerations](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support/#considerations).
 
 ## SDK data collection 
 
@@ -977,7 +1043,7 @@ Sync time depends on how much historical data is in your store and which windows
 
 ### Synced data
 
-For the initial data sync, Braze imports the order events and user profiles described in [How Braze selects historical data](#how-braze-selects-historical-data). When Braze imports your Shopify customers, it assigns the `external_id` type that you chose in your configuration settings.
+For the initial data sync, Braze imports the order events and user profiles described in [How Braze selects historical data](#how-braze-selects-historical-data). When Braze imports your Shopify customers, it assigns the `external_id` type that you chose in your configuration settings. If you selected [customer metafields](#shopify-customer-metafields) during setup, the customer backfill writes those values too.
 
 The following table summarizes the data included in that initial load.
 

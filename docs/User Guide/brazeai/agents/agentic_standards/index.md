@@ -205,6 +205,8 @@ The **Fail** tab lists rules that were not met. For each failure, the standard p
 - **Rule:** The specific criteria being checked, such as "Spelling & Grammar Check".
 - **Reason:** An explanation of why the check failed. For example, the evaluation might identify that "personalized" was used instead of the Australian English spelling "personalised", or that a delay step is shorter than your team's minimum wait time.
 
+Some results show "Based on an agent's judgment" under the reason for that rule. The marker applies only to that rule, not the entire standard. It appears when the rule is ambiguous enough that the agent must interpret it (for example, whether copy is well-written, clear, or on-brand). The reason text explains what the agent assessed. Use that detail to revise the rule with concrete, logic-based criteria so the agent needs less interpretation.
+
 The **Pass** tab lists all rules that were successfully followed. This confirms that checks like **Offensive Language Detection** or **Naming Convention Validation** have been cleared.
 
 The **Warning** tab lists non-critical issues that may require attention. For example, if you're testing an email ruleset against a webhook campaign or a Canvas with only in-app message steps, the evaluation may yield a warning that sender names do not apply.

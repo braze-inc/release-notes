@@ -8,6 +8,10 @@
 
 You can add up to 200 steps in a Canvas.
 
+### What is the maximum character length for a Canvas step name?
+
+Canvas step names can be up to 256 characters.
+
 ### Are there size limits for Canvas entry properties?
 
 Yes. The [Canvas context object](https://www.braze.com/docs/api/objects_filters/context_object) (Canvas entry properties) has a maximum size of 50&nbsp;KB. Keep payloads as small as practical within that limit. For how entry and event properties work in Canvas, see [Context and event properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties).

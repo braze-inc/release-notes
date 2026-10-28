@@ -9,8 +9,8 @@ Both campaigns and Canvases can start, branch, and have mid-journey changes from
 Ensure that your trigger word matches what you are expecting from users.
 
 **Things to know:**
-- Each letter of your trigger word must be capitalized when configured. Braze does not require inbound trigger words sent by users to be capitalized. For example, messaging "jOin2023" will still trigger the Canvas or campaign.
-- If no trigger word is specified on the entry schedule action-based trigger, the campaign or Canvas will run for ALL inbound WhatsApp messages. This includes messages that have matched phrases across active campaigns and Canvases, in which case the user will receive two WhatsApp messages.
+- Trigger-word matching is case-insensitive, so an inbound message like `jOin2023` still matches a keyword configured as `JOIN2023` or `join2023`.
+- If no trigger word is specified on the entry schedule action-based trigger, the campaign or Canvas runs for all inbound WhatsApp messages. This includes messages that have matched phrases across active campaigns and Canvases, in which case the user receives two WhatsApp messages.
 
 
 
@@ -28,7 +28,7 @@ Ensure that your trigger word matches what you are expecting from users.
 ## Unrecognized responses
 
 We recommend that you include an option for unrecognized responses on interactive Canvases. This guides users to understand what are available prompts and sets expectations for the channel. Expectation management can be especially helpful if you have WhatsApp channels with live agent chat. 
-- In the action step, after creating the action groups for the custom filter phrases, add an additional action group for "Send WhatsApp message", but **do not check Where the message body**. This will catch all unrecognized user responses, similar to an "else" clause. 
+- In the action step, after creating the action groups for the custom filter phrases, add an additional action group for "Send WhatsApp message", but **do not check Where the message body**. This catches all unrecognized user responses, similar to an "else" clause. 
 - We recommend following up with a WhatsApp message informing the user that this channel is not manned and guiding them to a support channel if needed. 
 
 ## Quick replies 
@@ -66,7 +66,7 @@ Create an action step that follows the message step. Create one group per quick 
 
 ![A Canvas where the evaluation action is "send a whatsapp inbound message".](https://www.braze.com/docs/assets/img/whatsapp/whatsapp15.png?ed0695b02fc9d904e51382143ba82097)
 
-For each quick reply option group, specify the exact text as the button you are matching. Note that the keywords must be in uppercase. 
+For each quick reply option group, specify the exact text as the button you are matching. Matching is case-insensitive. Exact keywords (not regex) are stored in uppercase—for example, configuring `Yes` stores `YES`. 
 
 ![A Canvas step where the action "send a whatsapp inbound message" is set to send when a specific message body is received.](https://www.braze.com/docs/assets/img/whatsapp/whatsapp16.png?5bc28f0bca10947a93f49821566acc02)
 
@@ -76,7 +76,7 @@ Continue building the Canvas as you would otherwise from this point forward.
 
 ### Responses
 
-You will most likely want a reply message for each response. We recommend having a catch-all option for responses outside the bounds of quick replies (such as for customers who respond with a general message rather than a predetermined prompt). For example, "We’re sorry, we didn’t recognize your response. For support issues, please message <support channel>."
+You most likely want a reply message for each response. We recommend having a catch-all option for responses outside the bounds of quick replies (such as for customers who respond with a general message rather than a predetermined prompt). For example, "We’re sorry, we didn’t recognize your response. For support issues, please message <support channel>."
 
 ![A Canvas built out showing the responses for each call-to-action button.](https://www.braze.com/docs/assets/img/whatsapp/whatsapp18.png?f138680c21fa71d4f8162e8a7281daaf)
 
@@ -100,7 +100,7 @@ Add a WhatsApp [Message step](https://www.braze.com/docs/user_guide/messaging/ca
 
 ![A selectable collection of the different types of WhatsApp response messages you can create, including "List Message".](https://www.braze.com/docs/assets/img/whatsapp/list_message_option.png?2a35e77bc113528e0c05c28b94e5f1d0){: style="max-width:70%;"}
 
-Add a **List button** name that users will select to display your list. Then, use the fields in **List content** to create your list:
+Add a **List button** name that users select to display your list. Then, use the fields in **List content** to create your list:
 
 - **Section:** Add up to 10 sections to group and organize your list items. For example, a clothing retailer could use sections to organize by seasonal styles (like spring, summer, autumn, and winter) or clothing items (like tops, bottoms, and shoes).
 - **Row:** Add up to 10 rows, or list items, across all sections.
@@ -127,6 +127,52 @@ Continue to build out your Canvas.
 If you have row descriptions, you must use **Matches regex** to specify a row. For example, if you want to specify a row with the description, "Our new style that fits over your favorite pair of ankle boots", you could use [regex](https://www.braze.com/docs/user_guide/audience/segments/regex) with "ankle boots".
 
 ![A WhatsApp trigger using the filter for "Matches regex" to capture response messages with "ankle boots".](https://www.braze.com/docs/assets/img/whatsapp/regex_list_message.png?2ca4c40951f2c66d97479cfdff10479b)
+
+## Inbound Liquid attributes
+
+The following sections describe Liquid attributes available on inbound WhatsApp message events. For the full list, see [Supported personalization tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags).
+
+### Inbound media storage and URL expiration
+
+When a user sends a WhatsApp message that contains media (such as an image, audio file, or document), Braze stores that media in Amazon S3 for 30 days from the time the message is received. 
+
+However, the `{{whats_app.${inbound_media_urls}}}` Liquid field, which references the URL of that media, is valid for seven days from the time Braze receives the inbound message. Because the URL is generated once at receipt and not regenerated, the seven-day window applies regardless of when you access the field. The shorter of the two limits applies, so in practice, `{{whats_app.${inbound_media_urls}}}` should be treated as valid for up to seven days.
+
+**Note:**
+
+
+If you save an `{{whats_app.${inbound_media_urls}}}` value to a user custom attribute for later use, be aware of this seven-day expiration. Attempting to access the URL after it has expired results in a broken link.
+
+
+
+### Inbound profile name
+
+When Meta includes a display name on an inbound WhatsApp message, Braze exposes it as the `{{whats_app.${inbound_profile_name}}}` Liquid attribute on that inbound event. This value reflects the name the user set in WhatsApp and may not match CRM profile data. Validate the data before using it in user copy, or use a Canvas User Update step to save it to a profile field for later use.
+
+### Inbound username
+
+When Meta includes a contact username on an inbound WhatsApp message, Braze exposes it as the `{{whats_app.${inbound_username}}}` Liquid attribute on that inbound event. This value is separate from `{{whats_app.${inbound_profile_name}}}`, which reflects the user's WhatsApp display name. The username may be absent when the sender hasn't enabled the username feature in their WhatsApp profile, even when a display name is present. Validate the data before using it in user copy, or use a Canvas User Update step to save it to a profile field for later use.
+
+### Inbound business-scoped user ID (BSUID)
+
+When Meta includes a business-scoped user ID on an inbound WhatsApp message, Braze exposes it as the `{{whats_app.${inbound_bsuid}}}` Liquid attribute on that inbound event. Use this value when a webhook or third-party messaging integration needs the sender's BSUID in addition to—or instead of—a phone number. The attribute may be empty when Meta doesn't send a BSUID on the webhook (for example, when the user is identified only by phone number). Validate the data before using it in user copy or outbound webhook payloads, or use a Canvas User Update step to save it to a profile field for later use.
+
+### Contact share origin
+
+When a user replies to a WhatsApp message by sharing contact information, Braze exposes how that share happened as the `{{whats_app.${contact_share_origin}}}` Liquid attribute on the inbound event. 
+
+The value is `contact_request` when the user tapped a **Share Contact Info** button sent from Braze, and `other` for any other contact share (for example, a contact card the user attached manually). The attribute is empty on inbound messages that aren't contact shares. Use it to tell button-driven shares apart from any other contact message before acting on the shared data.
+
+### Contact shared phone number
+
+When a user taps a **Share Contact Info** button sent from Braze, Braze exposes the phone number they shared as the `{{whats_app.${contact_shared_phone_number}}}` Liquid attribute on the inbound event, formatted as an E.164 number (for example, `+5215512345678`). The attribute is only populated when `{{whats_app.${contact_share_origin}}}` is `contact_request`. For any other contact share, and for inbound messages that aren't contact shares, it is empty. Use a Canvas [User Update](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update) step to save it to a profile field for later use.
+
+**Important:**
+
+
+This number is user-shared through WhatsApp and is not independently verified by Braze. This means that WhatsApp holds this number for the user's account, but Braze doesn't confirm if it is current or if it belongs to the sender. Verify this number before using it as an authoritative identity or in a security-sensitive workflow such as account recovery, fraud checks, or one-time passcodes.
+
+
 
 ## Considerations
 
@@ -183,30 +229,3 @@ If an inbound message arrives more than four hours after the user last received 
 ### Filtering by a custom time attribute
 
 If your action-based WhatsApp campaign or Canvas audience depends on a custom time attribute falling within a relative window (for example, between now and the next 24 hours), combine two filters as described in [Time](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types).
-
-### Inbound media storage and URL expiration
-
-When a user sends a WhatsApp message that contains media (such as an image, audio file, or document), Braze stores that media in Amazon S3 for 30 days from the time the message is received. 
-
-However, the `inbound_media_urls` Liquid field, which references the URL of that media, is valid for seven days from the time Braze receives the inbound message. Because the URL is generated once at receipt and not regenerated, the seven-day window applies regardless of when you access the field. The shorter of the two limits applies, so in practice, `inbound_media_urls` should be treated as valid for up to seven days.
-
-**Note:**
-
-
-If you save an `inbound_media_urls` value to a user custom attribute for later use, be aware of this seven-day expiration. Attempting to access the URL after it has expired results in a broken link.
-
-
-
-### Inbound profile name
-
-When Meta includes a display name on an inbound WhatsApp message, Braze exposes it as the `{{whats_app.${inbound_profile_name}}}` Liquid attribute on that inbound event. This value reflects the name the user set in WhatsApp and may not match CRM profile data. Validate the data before using it in user copy, or use a Canvas User Update step to save it to a profile field for later use.
-
-### Inbound username
-
-When Meta includes a contact username on an inbound WhatsApp message, Braze exposes it as the `{{whats_app.${inbound_username}}}` Liquid attribute on that inbound event. This value is separate from `{{whats_app.${inbound_profile_name}}}`, which reflects the user's WhatsApp display name. The username may be absent when the sender hasn't enabled the username feature in their WhatsApp profile, even when a display name is present. Validate the data before using it in user copy, or use a Canvas User Update step to save it to a profile field for later use.
-
-### Inbound business-scoped user ID (BSUID)
-
-When Meta includes a business-scoped user ID on an inbound WhatsApp message, Braze exposes it as the `{{whats_app.${inbound_bsuid}}}` Liquid attribute on that inbound event. Use this value when a webhook or third-party messaging integration needs the sender's BSUID in addition to—or instead of—a phone number. The attribute may be empty when Meta doesn't send a BSUID on the webhook (for example, when the user is identified only by phone number). Validate the data before using it in user copy or outbound webhook payloads, or use a Canvas User Update step to save it to a profile field for later use.
-
-For a full list of WhatsApp Liquid attributes, see [Supported personalization tags](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags).

@@ -108,7 +108,7 @@ The [**Manage Subscriptions** block](https://www.braze.com/docs/user_guide/messa
 
 
 
-Use the `{% subscription_group_unsubscribe_url <subscription_group_id> %}` [Liquid tag](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags) for one-click email subscription group unsubscribes without changing global subscription state. You can also use `{{whats_app.${inbound_username}}}` to retrieve a contact's username from [inbound WhatsApp messages](https://www.braze.com/docs/user_guide/channels/whatsapp/message_processing/messaging_users).
+Use the `{% subscription_group_unsubscribe_url <subscription_group_id> %}` [Liquid tag](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags) for one-click email subscription group unsubscribes without changing global subscription state. You can also use `{{whats_app.${inbound_username}}}` to retrieve a contact's username from [inbound WhatsApp messages](https://www.braze.com/docs/whatsapp_user_messages).
 
 ### WhatsApp carousel messages—API sending
 

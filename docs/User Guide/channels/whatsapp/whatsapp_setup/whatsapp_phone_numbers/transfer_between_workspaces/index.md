@@ -1,6 +1,6 @@
 # Transfer WhatsApp phone numbers and subscription groups between workspaces
 
-> This page covers how you can move a WhatsApp Business Account (WABA) phone number and its associated subscription group from one workspace to another within Braze. This process streamlines your experience using WhatsApp with Braze, and reduce the need for engineering help.
+> This page covers how you can move a WhatsApp phone number and its associated subscription group from one Braze workspace to another.
 
 ## Prerequisites
 
