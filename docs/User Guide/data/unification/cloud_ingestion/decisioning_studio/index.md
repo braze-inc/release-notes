@@ -22,7 +22,7 @@ For the other ways to make data available to Decisioning Studio, see [Connect yo
 ## Prerequisites
 
 - Access to Braze and BrazeAI Decisioning Studio.
-- An active Cloud Data Ingestion data warehouse source. If you haven't set one up, see [Data warehouse integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations).
+- An active Cloud Data Ingestion data warehouse source. If you haven't set one up, see [Cloud Data Ingestion sources](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources).
 - The table or view you want to sync.
 - A column (or columns) in that table to use as the primary key, and a timestamp column CDI can use for incremental syncing.
 

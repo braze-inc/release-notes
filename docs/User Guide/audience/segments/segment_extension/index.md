@@ -8,7 +8,7 @@ Braze segmentation allows you to target users based on custom event or purchase 
 
 Braze segments give you powerful targeting tools to create dynamic groups of users. For most use cases, this is enough to reach your audience effectively. Segment Extensions are designed for advanced use cases where you need to analyze behaviors from up to two years ago or apply complex logic—without compromising data retention or system performance. You can use [SQL](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments) queries (SQL Segment Extensions) or data from your own [data warehouse](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/cdi_segments) to refine your audience further.
 
-For example, Braze default segmentation will find users that fit specific criteria you define, such as identifying a user who recently purchased one of your products. Segment Extensions let you go deeper—like identifying users who bought a particular color of a specific product at least twice between 18 to 24 months ago. Segment Extensions are an enhancement, not a requirement. If you need more advanced filters or a longer lookback window, they're a great tool to help while keeping your data usage optimized.
+For example, Braze default segmentation finds users that fit specific criteria you define, such as identifying a user who recently purchased one of your products. Segment Extensions let you go deeper—like identifying users who bought a particular color of a specific product at least twice between 18 to 24 months ago. Segment Extensions are an enhancement, not a requirement. If you need more advanced filters or a longer lookback window, they're a great tool to help while keeping your data usage optimized.
 
 **Note:**
 
@@ -54,13 +54,21 @@ Name your Segment Extension by describing the type of users you intend to filter
 
 ### Step 3: Choose your criteria
 
-Select between purchase, message engagement, eCommerce recommended event, or custom event criteria for targeting. After you've selected the desired event type criteria, choose which purchased item, message interaction, eCommerce recommended event, or custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and the time period—for Segment Extensions specifically, you can go back up to the past 730 days (2 years).
+#### Select your event criteria
+
+Select between purchase, message engagement, eCommerce recommended event, or custom event criteria for targeting. After you've selected the desired event type criteria, choose which purchased item, message interaction, eCommerce recommended event, or custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user must have completed the event, and the time period.
 
 For recent message interaction data only, see [Calculated filters](https://www.braze.com/docs/user_guide/audience/segments/calculated_filters#message-channel-interactions).
 
-Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range to select the past X number of days, a start date, an end date, or an exact date range (date A to date B).
+#### Time period
+
+For Segment Extensions, you can go back up to the past 730 days (2 years). When choosing your time period, you can specify a relative date range to select the past X number of days, a start date, an end date, or an exact date range (date A to date B).
+
+For windows longer than 730 days, use relative date filters in a standard [segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/#time-based-filter-lookback-windows) (for example, **Last Custom Event** or **First Purchase**). [Calculated filters](https://www.braze.com/docs/user_guide/audience/segments/calculated_filters) share the same 730-day maximum as Segment Extensions, so they won't extend past that window either. Relative date filters can look back up to 100 years, but they don't support X-in-Y counts or event-property matching beyond the standard 30-day window.
 
 ![Segmentation criteria for users who performed a custom event more than 2 times in the date range of March 1st, 2025 through March 31st, 2025.](https://www.braze.com/docs/assets/img/segment/segment_extension1.png?b476a6cc8ad0600ed27851358a2dcba7)
+
+#### eCommerce recommended events
 
 If you are creating a Segment Extension using an eCommerce recommended event, first select **eCommerce Recommended Event** as your criterion, then select an event from the dropdown.
 
@@ -97,13 +105,6 @@ For information on the different nested properties available, see [Types of eCom
 ##### Lookback window and data points
 
 Segment Extensions rely on long term storage of event properties and don't have a time-stamped property storage limit. You can look back on event properties tracked within the past two years. Using event properties within Segment Extensions does not impact data point usage.
-
-**Note:**
-
-
-You don't need Segment Extensions to use event properties or nested custom attributes in your segment. Segment Extensions just extend the historic window used to create a default segment. You can create a real-time default [segment](https://www.braze.com/docs/user_guide/audience/segments) that uses event properties from the past 30 days or uses nested custom attributes. Similarly, you can [schedule your message](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery) to trigger in real time based on an event property—no Segment Extension required. 
-
-
 
 ### Step 4: Designate refresh settings (optional)
 

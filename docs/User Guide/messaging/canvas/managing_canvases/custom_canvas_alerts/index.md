@@ -4,6 +4,8 @@
 
 Set a volume or percentage threshold for user entries or messages sent, and Braze notifies you by email or webhook if that threshold is crossed. You can create up to two alerts for the same Canvas—for example, one alert for user entries and another for messages sent.
 
+For default alerts across every Canvas in a workspace, see [Workspace Canvas alerts](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/workspace_canvas_alerts).
+
 Not sure where to start? [Operator](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities) can walk you through how to set up a custom Canvas alert.
 
 ## Step 1: Create an alert
@@ -39,7 +41,7 @@ You can group multiple rules together—including mixing volume and percentage r
 
 ## Step 4: Set the alert schedule
 
-Define how often your alert rules are checked. You can set the check frequency anywhere from 3 to 12 hours (in 1-hour increments), or every 24 hours. Once activated, an alert continues checking on this schedule for as long as the alert and its associated Canvas is active.
+Define how often your alert rules are checked. You can set the check frequency anywhere from 3 to 12 hours (in 1-hour increments), or every 24 hours. After it's activated, an alert continues checking on this schedule for as long as the alert and its associated Canvas is active.
 
 ## Step 5: Set up notifications
 

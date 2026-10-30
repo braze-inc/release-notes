@@ -1,4 +1,4 @@
-<div id='api_ntfcprrmltpw' class='api_div' data-search-keywords='list multiple catalog item details'>
+<div id='api_pfslcehyglsv' class='api_div' data-search-keywords='list multiple catalog item details'>
 <h1 id="list-multiple-catalog-item-details">List multiple catalog item details</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/catalogs/{catalog_name}/items</p>

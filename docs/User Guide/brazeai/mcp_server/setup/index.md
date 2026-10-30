@@ -20,6 +20,7 @@ Before you start, make sure you have the following:
 | Approved redirect URI | A company admin must approve your client's redirect URI in **Settings** > **Admin Settings** > **External Connections**. The admin can copy it from the client's OAuth or connector settings. For more information, see [Manage OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-approved-redirect-uris). |
 | Braze dashboard account | You sign in with your normal Braze credentials, including SSO or SAML if your company uses it. There is no separate MCP login. |
 | Server endpoint selection | Choose `https://mcp.braze.com/mcp` (US) or `https://mcp.braze.eu/mcp` (EU). Either endpoint can reach any Braze cluster. |
+| Paid Braze account | The Braze MCP server isn't available for free trial accounts. |
 | No IP allowlisting | Customers who use [IP Allowlisting](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#dashboard-ip-allowlisting) cannot use the Braze MCP server at this time. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 

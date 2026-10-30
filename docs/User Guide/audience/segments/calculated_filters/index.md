@@ -90,7 +90,7 @@ For string properties, enter multiple values at once—for example, targeting us
 **Note:**
 
 
-You don't need calculated filters to use event properties in your segment. Calculated filters just extend the historic window used to create a default segment. You can create a real-time default [segment](https://www.braze.com/docs/user_guide/audience/segments/) that uses event properties from the past 30 days. Similarly, you can [schedule your message](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/) to trigger in real time based on an event property—no calculated filter required. 
+You don't need calculated filters to use event properties in a [segment](https://www.braze.com/docs/user_guide/audience/segments/) for the past 30 days. Use calculated filters when you need a longer window.
 
 
 

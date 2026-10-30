@@ -1,4 +1,4 @@
-<div id='api_vismctcbyeqk' class='api_div' data-search-keywords='export campaign analytics'>
+<div id='api_empzvjkvsuge' class='api_div' data-search-keywords='export campaign analytics'>
 <h1 id="export-campaign-analytics">Export campaign analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/campaigns/data_series</p>

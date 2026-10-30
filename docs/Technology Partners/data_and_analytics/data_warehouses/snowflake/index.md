@@ -30,6 +30,20 @@ For setup instructions, see [Snowflake Data Sharing](https://www.braze.com/docs/
 
 To learn more about Snowflake's data sharing, see [Introduction to Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work).
 
+## Identity resolution with Snowflake
+
+Snowflake offers an Identity Resolution Data (IDR) solution accelerator that enables you to build first-party and third-party identity resolution graphs directly in your Snowflake environment. This solution uses deterministic matching, fuzzy matching, probabilistic and machine learning (ML) matching, and large language model (LLM) adjudication to resolve customer identities across your data sources.
+
+When using Braze with Snowflake IDR:
+
+1. Use Data Sharing to send Braze engagement and campaign data into your Snowflake instance, where it becomes a source for identity resolution.
+2. Build your identity resolution graph in Snowflake using the IDR solution accelerator, incorporating Braze data alongside your other customer touchpoints.
+3. Use Cloud Data Ingestion to sync the resolved identities back into Braze, keeping user profiles unified and up to date.
+
+This workflow allows you to maintain a single, deduplicated view of each customer across all systems while activating that data in Braze for campaigns and messaging.
+
+To get started with Snowflake's IDR solution accelerator, work with your Snowflake account team or refer to the [IDR solution accelerator documentation](https://other-docs.snowflake.com/en/solution-accelerators/identity-resolution).
+
 ## Prerequisites
 
 Before you can use this feature, you'll need to complete the following:

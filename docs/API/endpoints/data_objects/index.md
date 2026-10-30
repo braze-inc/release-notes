@@ -60,15 +60,15 @@ For throttled requests, Braze returns `429` and an error payload with `id` and `
 
 ## Product limits
 
-This section lists the limits Braze enforces for Data Objects and what to expect when you reach one.
+This section lists the limits Braze enforces for Data Objects and what to expect when you reach one. For how these limits apply to account records, see [Account objects limits](https://www.braze.com/docs/user_guide/data/activation/accounts#limits).
 
 ### Count limits
 
-These limits apply to your company as a whole unless noted otherwise. Your Braze account team can adjust the default values for your company.
+These limits apply to your company as a whole unless noted otherwise. These are starting capacities. If you need more records or a higher limit, contact your Braze account team to request an increase.
 
 | Limit | Default value |
 |---|---|
-| Data object records per company (across all workspaces) | 1,000,000 |
+| Data object records per company (across all workspaces) | 50,000 |
 | Fields per data object type | 500 |
 | Data objects linked to one user | 1,000 |
 | Users linked to one data object | 10,000 |

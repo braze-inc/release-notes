@@ -21,13 +21,6 @@ The **Commerce** tab on each user profile combines two modules: **Order activity
 
 The **Order activity** module surfaces three calculated metrics that update in real time as events are processed. The order-level model of these calculations cleanly separates product prices from total order value.
 
-**Note:**
-
-
-eCommerce recommended events do not populate within the **Purchase history** section of the **Commerce** tab. Purchase history is populated by legacy purchase events. Use the metrics in the following table for revenue, and order activity from recommended events.
-
-
-
 | Metric | Formula |
 | ----- | ----- |
 | Total Revenue | sum (`order_placed.total_value`) − sum (`order_refunded.total_value`) |

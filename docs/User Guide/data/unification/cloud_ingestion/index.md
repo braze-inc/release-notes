@@ -9,7 +9,7 @@ With Braze Cloud Data Ingestion (CDI), you set up an integration between your da
 - **Scheduled syncs:** Recurring syncs can run as often as every 5 minutes or as rarely as once per month. By default, the shortest interval you can set in the dashboard is 15 minutes, which helps manage your warehouse compute costs and request volume. To sync as often as every 5 minutes, contact Braze Support or your customer success manager.
 - **On-demand syncs:** To sync data as soon as it changes, call the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint with your integration ID when your warehouse load or transformation job finishes. On-demand syncs don't affect your recurring schedule. Only one sync can run per integration at a time.
 
-File storage integrations (Amazon S3, Azure Blob Storage, and Google Cloud Storage) are event-driven and don't use a schedule. Braze ingests new files as they're uploaded. For setup details, see [File storage integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations).
+File storage integrations (Amazon S3, Azure Blob Storage, and Google Cloud Storage) are event-driven and don't use a schedule. Braze ingests new files as they're uploaded. For setup details, see [Amazon S3](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_s3), [Google Cloud Storage](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/google_cloud_storage), or [Azure Blob Storage](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/azure_blob_storage).
 
 When a sync runs, Braze directly connects to your data warehouse instance, retrieves all new data from the specified table, and updates the corresponding data on your Braze dashboard. Each time the sync runs, any updated data is reflected in Braze.
 
@@ -25,19 +25,21 @@ In addition, [Connected Sources](https://www.braze.com/docs/user_guide/data/unif
 
 ## Supported data sources
 
-Cloud Data Ingestion can sync data from:
+Cloud Data Ingestion can sync data from the following sources. Each source has its own setup page under [Cloud Data Ingestion sources](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources).
 
-**Cloud Data Warehouse:**
-- Amazon Redshift
-- Databricks
-- Google BigQuery
-- Microsoft Fabric
-- Snowflake
+**Data warehouses**
 
-**Cloud Data Storage:**
-- Amazon S3
-- Azure Blob Storage
-- Google Cloud Storage
+- [Snowflake](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/snowflake)
+- [Amazon Redshift](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift)
+- [Google BigQuery](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/google_bigquery)
+- [Databricks](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/databricks)
+- [Microsoft Fabric](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/microsoft_fabric)
+
+**File storage**
+
+- [Amazon S3](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_s3)
+- [Google Cloud Storage](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/google_cloud_storage)
+- [Azure Blob Storage](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/azure_blob_storage)
 
 ## Supported data types 
 
@@ -74,7 +76,7 @@ When syncing user data through Cloud Data Ingestion, you can identify users usin
 
 For detailed information about setting up table columns and payload formatting requirements, see [Table setup for Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup).
 
-For source-specific setup instructions and SQL examples, see [Data Warehouse integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations).
+For source-specific setup instructions and SQL examples, see [Cloud Data Ingestion sources](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources).
 
 ### Finding your integration ID
 

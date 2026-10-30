@@ -1,4 +1,4 @@
-<div id='api_yddwkgzxgmpi' class='api_div' data-search-keywords='export canvas data summary analytics'>
+<div id='api_mrjwzqnpmyox' class='api_div' data-search-keywords='export canvas data summary analytics'>
 <h1 id="export-canvas-data-summary-analytics">Export Canvas data summary analytics</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/data_summary</p>

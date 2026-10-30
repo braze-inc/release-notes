@@ -45,6 +45,23 @@ Later, when drafting a message in Braze, you can pull in your images from the me
  For more help with the media library, check out our [Media library FAQ](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/faq). 
 
 
+## Supported file types {#supported-file-types}
+
+You can upload the following file types to the media library:
+
+| Asset type | File extensions | Maximum file size |
+|---|---|---|
+| Images | `.png`, `.jpg`, `.jpeg`, `.gif`, `.webp`, `.svg`, `.ico` | 5&nbsp;MB |
+| Videos (for WhatsApp messages) | `.mp4` | 16&nbsp;MB |
+| Fonts | `.ttf`, `.otf`, `.woff`, `.woff2` | 5&nbsp;MB |
+| Code | `.js`, `.css` | 5&nbsp;MB |
+| Documents | `.pdf`, `.doc`, `.docx`, `.ppt`, `.pptx`, `.xls`, `.xlsx` | 5&nbsp;MB |
+| Contact cards | `.vcf` | 5&nbsp;MB |
+| ZIP archives | `.zip` | 50&nbsp;MB for the archive, and 5&nbsp;MB for each file inside it |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Supported media library file types and size limits" }
+
+Files with other extensions, including audio files, can't be uploaded to the media library. Some channels have their own media requirements. For example, see [WhatsApp media specifications](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message/message_and_image_formats#media-specifications).
+
 ## ZIP file uploads {#zip-file-uploads}
 
 When you upload a ZIP file to the media library, all files must be in the root of the ZIP folder—do not include subdirectories.
@@ -82,7 +99,7 @@ You can also replace an asset programmatically using the [`PUT /media_library/re
 
 ## Image specifications
 
-All images uploaded to the media library must be less than 5&nbsp;MB. Supported file types are PNG, JPEG, GIF, SVG, and WebP. For recommended image sizes and specifications by messaging channel, refer to [Image specifications](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/image_specifications).
+For supported image file types and the maximum file size, see [Supported file types](#supported-file-types). For recommended image sizes and specifications by messaging channel, see [Image specifications](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/image_specifications).
 
 **Important:**
 

@@ -183,14 +183,40 @@ When you record revenue for a currency without an exchange rate, Braze records i
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 
@@ -335,14 +361,40 @@ When you record revenue for a currency without an exchange rate, Braze records i
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 
@@ -487,14 +539,40 @@ When you record revenue for a currency without an exchange rate, Braze records i
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 
@@ -639,14 +717,40 @@ When you record revenue for a currency without an exchange rate, Braze records i
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 
@@ -791,14 +895,40 @@ When you record revenue for a currency without an exchange rate, Braze records i
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 

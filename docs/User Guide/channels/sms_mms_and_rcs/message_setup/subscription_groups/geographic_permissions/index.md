@@ -12,14 +12,13 @@ Add countries to the allowlist with the dropdown. The most common SMS, MMS, and 
 
 Remove previously selected countries by clearing the respective boxes next to them.
 
-**Important:**
+![The "Country allowlist" dropdown with the most common countries displaying at the top.](https://www.braze.com/docs/assets/img/sms/allowlist_dropdown.png?fdf84b8364c3970633cdaaf14b8a6deb){: style="max-width:80%;"}
 
+### United States territories and UK Crown dependencies
 
 **United States** doesn't include U.S. territories. Territories such as Puerto Rico, Guam, American Samoa, the U.S. Virgin Islands, and the Northern Mariana Islands appear as separate allowlist entries. Add each territory you need to send to.
 
-
-
-![The "Country allowlist" dropdown with the most common countries displaying at the top.](https://www.braze.com/docs/assets/img/sms/allowlist_dropdown.png?fdf84b8364c3970633cdaaf14b8a6deb){: style="max-width:80%;"}
+**United Kingdom** doesn't include UK Crown dependencies. Jersey, Guernsey, and Isle of Man appear as separate allowlist entries. Add each Crown dependency you need to send to.
 
 ### Saving your changes
 

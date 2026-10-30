@@ -14,7 +14,7 @@ The Currents Mixpanel integration now supports Mixpanel's EU and India data cent
 
 
 
-Cloud Data Ingestion (CDI) has a new design that separates sources and syncs, so you can reuse one source across multiple syncs. Existing syncs migrate automatically to the new sources and syncs model with no downtime. Go to **Cloud Data Ingestion** > **Sources** to view, edit, or create sources, then select a source from the dropdown when creating a sync. This change reduces repetitive setup, and creates a foundation for future enhancements. For more information, see [Setting up data warehouse integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations#setting-up-data-warehouse-integrations).
+Cloud Data Ingestion (CDI) has a new design that separates sources and syncs, so you can reuse one source across multiple syncs. Existing syncs migrate automatically to the new sources and syncs model with no downtime. Go to **Cloud Data Ingestion** > **Sources** to view, edit, or create sources, then select a source from the dropdown when creating a sync. This change reduces repetitive setup, and creates a foundation for future enhancements. For more information, see [Cloud Data Ingestion sources](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources).
 
 ## BrazeAI<sup>TM</sup>
 

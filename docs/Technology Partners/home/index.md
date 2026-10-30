@@ -83,6 +83,7 @@ Braze Alloys is Braze's technology partner program. Partners extend the Braze pl
 ## D
 
 - [DailyPlay](https://www.braze.com/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/dailyplay)
+- [Databricks](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/databricks)
 - [Databricks Mosaic](https://www.braze.com/docs/partners/ai_model_providers/databricks_mosaic)
 - [Datadog](https://www.braze.com/docs/partners/data_and_analytics/business_intelligence/datadog)
 - [DataGrail](https://www.braze.com/docs/partners/data_and_analytics/data_privacy/datagrail)

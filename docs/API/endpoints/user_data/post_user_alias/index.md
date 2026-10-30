@@ -1,4 +1,4 @@
-<div id='api_uzofszfoumcg' class='api_div' data-search-keywords='create new user alias'>
+<div id='api_sokxqhihniph' class='api_div' data-search-keywords='create new user alias'>
 <h1 id="create-new-user-alias">Create new user alias</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/alias/new</p>

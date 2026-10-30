@@ -1,6 +1,6 @@
 # Create rich push notifications for iOS
 
-> Rich Notifications allow for more customization in your push notifications by adding additional content beyond copy. Android notifications have included images in push notifications for some time now, messaged as an 'Expanded Notification Image'. Starting with iOS 10, your customers will be able to receive iOS push notifications that include GIFs, images, videos, or audio.
+> Rich Notifications allow for more customization in your push notifications by adding additional content beyond copy. Android notifications have included images in push notifications for some time now, messaged as an 'Expanded Notification Image'. Starting with iOS 10, your customers can receive iOS push notifications that include GIFs, images, videos, or audio.
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ Before you create a rich push notification for iOS, note the following details:
 - To ensure your app can send rich notifications, follow the [iOS push integration](https://www.braze.com/docs/developer_guide/push_notifications/rich?sdktab=swift) instructions, as your developer will need to add a service extension to your app.
 - File types that we currently support for direct uploading within our dashboard include JPEG, PNG, or GIF. These files can also be entered into the templatable URL field along with these additional file types: AIF, M4A, MP3, MP4, or WAV.
 - Reference [Apple's documentation](https://developer.apple.com/reference/usernotifications/unnotificationattachment) for media limitations and specs.
-- iOS will scale images to fit in the screen and will scale rich images for the active or locked view.
+- iOS scales images to fit in the screen and will scale rich images for the active or locked view.
 
 **Note:**
 
@@ -130,7 +130,7 @@ Follow the [campaign steps](https://www.braze.com/docs/user_guide/channels/push/
 
 ### Step 2: Add media
 
-Add your image, GIF, audio, or video file in the **iOS Notification Image** field in the composer of the message. Refer to the [requirements](#requirements) on how to add your content files.
+Add your image, GIF, audio, or video file in the **iOS Notification Image** field in the composer of the message. Refer to the [prerequisites](#prerequisites) on how to add your content files.
 
 ![An example of summary text for a push notification.](https://www.braze.com/docs/assets/img_archive/rich_notification_add_image.png?1f76474b4f2613e45497d80032ddb959){: style="max-width:70%;" }
 

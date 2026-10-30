@@ -49,12 +49,18 @@ Existing campaign and Canvas edit permissions are unaffected. Users with those p
 ### Configure the workspace window
 
 1. Go to **Settings** > **Quiet Hours**.
-2. Select **Add quiet hours**.
+2. Select **Create quiet hours**. If workspace quiet hours already exist, click **Edit quiet hours**.
 3. Select a channel, then enter a start time and end time. A channel can have at most one workspace quiet hours window at a time.
-4. (Optional) To add another channel, select **Add quiet hours** again.
-5. Save your changes.
+4. (Optional) To add another channel, select **Add quiet hours**.
+5. Select **Next**.
+6. Review the existing campaigns and Canvases that this change affects.
+7. Save your changes.
 
-![The Quiet Hours workspace settings page with SMS and Email quiet hours windows, each with a start time and end time, and an Add quiet hours option.](https://www.braze.com/docs/assets/img/quiet_hours/workspace_quiet_hours_settings.png?51a0bf6613ca5f7fffa63c738c6554b9){: style="max-width:90%;"}
+![Edit quiet hours on the Setup step, with a Push notifications window and an SMS/MMS/RCS window, each from 12:00 am to 8:00 am, Add quiet hours, and Next.](https://www.braze.com/docs/assets/img/quiet_hours/workspace_quiet_hours_settings.png?f3ad4ced95a976fbf8d97cfff55d6072){: style="max-width:90%;"}
+
+To opt a campaign or Canvas out of quiet hours, select its link, then select **Opt out**.
+
+If a campaign or Canvas step already has custom quiet hours, those quiet hours take precedence over the workspace quiet hours.
 
 Updates to workspace quiet hours are recorded in a changelog, including who made the change and when, since this setting affects every campaign and Canvas on the channel.
 
@@ -70,17 +76,17 @@ After you save, the workspace quiet hours window appears in the campaign and Can
 
 ## Precedence: workspace versus campaign or Canvas quiet hours
 
-For any given campaign or Canvas, only one quiet hours setting is ever in effect at a time (workspace quiet hours, a campaign or Canvas-specific window, or none). A campaign or Canvas-level quiet hours window always takes precedence over the workspace default.
+For any given campaign, Canvas, or Canvas step, only one quiet hours setting is ever in effect at a time (workspace quiet hours, a custom window, or none). If a campaign or Canvas step already has custom quiet hours, those quiet hours take precedence over the workspace quiet hours.
 
 How quiet hours apply also depends on when the campaign or Canvas was created:
 
-- **Existing campaigns and Canvases** (created before you turned on workspace quiet hours): If the campaign or Canvas doesn't have its own quiet hours window, the workspace quiet hours window for that channel applies automatically. If it already has a campaign or Canvas-level window, that window continues to apply.
+- **Existing campaigns and Canvases** (created before you turned on workspace quiet hours): If the campaign or Canvas doesn't have its own quiet hours window, the workspace quiet hours window for that channel applies automatically. If a campaign or Canvas step already has custom quiet hours, that window continues to apply.
 - **New campaigns and Canvases:** When you create a campaign or Canvas, you can use the workspace quiet hours default, set a custom campaign or Canvas-level window, or opt out of quiet hours entirely.
 
 | Configuration present | Which quiet hours applies |
 |---|---|
-| Campaign or Canvas has its own quiet hours window | The campaign or Canvas-level window applies. Workspace quiet hours are ignored for that campaign or Canvas. |
-| Campaign or Canvas has no quiet hours window of its own, and a workspace quiet hours window exists for the channel it uses | The workspace quiet hours window applies automatically. This includes existing campaigns and Canvases that never configured quiet hours. |
+| Campaign, Canvas, or Canvas step has its own quiet hours window | The campaign, Canvas, or Canvas step window applies. Workspace quiet hours are ignored for that campaign, Canvas, or step. |
+| Campaign, Canvas, or Canvas step has no quiet hours window of its own, and a workspace quiet hours window exists for the channel it uses | The workspace quiet hours window applies automatically. This includes existing campaigns and Canvases that never configured quiet hours. |
 | Campaign or Canvas is opted out | No quiet hours apply. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Quiet hours precedence" }
 

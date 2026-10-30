@@ -621,11 +621,16 @@ The best way to prevent this behavior is to ensure that the source data for your
 
 If you use a `PAYLOAD` column and store each attribute in its own column internally, convert those columns to a JSON string to populate `PAYLOAD`. To sync separate columns without building a JSON string, use the **Visual** or **SQL** option instead. For details, see [Choose a data definition option](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup#choose-a-data-definition-option).
 
-To build the JSON string, you can use a query like:
+Each source page has a worked example in that warehouse's SQL dialect:
 
+- [Snowflake](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/snowflake#format-a-payload-from-existing-columns)
+- [Amazon Redshift](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#format-a-payload-from-existing-columns)
+- [Google BigQuery](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/google_bigquery#format-a-payload-from-existing-columns)
+- [Databricks](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/databricks#format-a-payload-from-existing-columns)
+- [Microsoft Fabric](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/microsoft_fabric#format-a-payload-from-existing-columns)
 
+For example, in Snowflake:
 
-Use this query in Snowflake to format source columns into CDI fields.
 ```sql
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
@@ -646,97 +651,6 @@ SELECT
             attribute_3)
     )as PAYLOAD FROM "EXAMPLE_USER_DATA";
 ```
-
-
-Use this query in Redshift to format source columns into CDI fields.
-```sql
-CREATE TABLE "EXAMPLE_USER_DATA"
-    (attribute_1 string,
-     attribute_2 string,
-     attribute_3 number,
-     my_user_id string);
-
-SELECT
-    CURRENT_TIMESTAMP as UPDATED_AT,
-    my_user_id as EXTERNAL_ID,
-    JSON_SERIALIZE(
-        OBJECT (
-            'attribute_1',
-            attribute_1,
-            'attribute_2',
-            attribute_2,
-            'yet_another_attribute',
-            attribute_3)
-    ) as PAYLOAD FROM "EXAMPLE_USER_DATA";
-```
-
-
-Use this query in BigQuery to format source columns into CDI fields.
-```sql
-CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (attribute_1 string,
-     attribute_2 STRING,
-     attribute_3 NUMERIC,
-     my_user_id STRING);
-
-SELECT
-    CURRENT_TIMESTAMP as UPDATED_AT,
-    my_user_id as EXTERNAL_ID,
-    TO_JSON(
-      STRUCT(
-        'attribute_1' AS attribute_1,
-        'attribute_2'AS attribute_2,
-        'yet_another_attribute'AS attribute_3
-      )
-    ) as PAYLOAD 
-  FROM BRAZE.EXAMPLE_USER_DATA;
-```
-
-
-Use this query in Databricks to format source columns into CDI fields.
-```sql
-CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (
-    attribute_1 string,
-    attribute_2 STRING,
-    attribute_3 NUMERIC,
-    my_user_id STRING
-);
-
-SELECT
-    CURRENT_TIMESTAMP as UPDATED_AT,
-    my_user_id as EXTERNAL_ID,
-    TO_JSON(
-      STRUCT(
-        attribute_1,
-        attribute_2,
-        attribute_3
-      )
-    ) as PAYLOAD 
-  FROM BRAZE.EXAMPLE_USER_DATA;
-```
-
-
-Use this query in Microsoft Fabric to format source columns into CDI fields.
-```sql
-CREATE TABLE [braze].[users] (
-    attribute_1 VARCHAR,
-    attribute_2 VARCHAR,
-    attribute_3 VARCHAR,
-    attribute_4 VARCHAR,
-    user_id VARCHAR
-)
-GO
-
-CREATE VIEW [braze].[user_update_example]
-AS SELECT 
-    user_id as EXTERNAL_ID,
-    CURRENT_TIMESTAMP as UPDATED_AT,
-    JSON_OBJECT('attribute_1':attribute_1, 'attribute_2':attribute_2, 'attribute_3':attribute_3, 'attribute_4':attribute_4) as PAYLOAD
-
-FROM [braze].[users] ;
-```
-
-
-
 
 ### Use the `UPDATED_AT` timestamp
 

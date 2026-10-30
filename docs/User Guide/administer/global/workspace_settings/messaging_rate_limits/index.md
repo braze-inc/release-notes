@@ -45,8 +45,8 @@ Consider the next example with a workspace messaging rate limit of 100,000 messa
 
 The following is the expected dispatch schedule and messages sent per minute:
 
-- Campaign 1 would be scheduled 9 am–9:10 am, with 100,000 messages sent per minute.
-- Campaign 2 would be scheduled to dispatch 5 minutes after its original dispatch time, 9:10 am–9:20 am, with 100,000 messages sent per minute. 
+- Campaign 1 is scheduled 9 am–9:10 am, with 100,000 messages sent per minute.
+- Campaign 2 is scheduled to dispatch 5 minutes after its original dispatch time, 9:10 am–9:20 am, with 100,000 messages sent per minute. 
 
 ![Example of how messages are dispatched per minute for the two campaigns.](https://www.braze.com/docs/assets/img/workspace_messaging_rate_limits1.png?e812d6a28d412e2b73ee6f31e7847815)
 
@@ -56,6 +56,12 @@ The following is the expected dispatch schedule and messages sent per minute:
 After you set the workspace messaging rate limit, you can increase it. However, every message already processed before the increase uses the previously set limit. 
 
 
+
+### When large sends overlap
+
+The previous examples show short delays, but the same behavior can push delivery hours or days past the original send time. If several large sends run at the same time, and many more messages are waiting than the limit allows each minute, some messages are sent hours or days after the original send time.
+
+Stopping a campaign or Canvas does not clear those later send times. Messages you schedule afterward are placed after that backlog, so they can also send much later than the time you chose. To shorten the wait for later messages, temporarily increase the workspace messaging rate limit. Messages already processed before the increase still use the previous limit.
 
 ## Setting your workspace messaging rate limit
 

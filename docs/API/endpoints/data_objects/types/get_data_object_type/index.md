@@ -1,4 +1,4 @@
-<div id='api_fvbdqykruxxx' class='api_div' data-search-keywords='get data object type type_name data_object_type metadata display_name_source schema_def type properties name title industry renewal_date format required'>
+<div id='api_xmqpxtmsyrrx' class='api_div' data-search-keywords='get data object type type_name data_object_type metadata display_name_source schema_def type properties name title industry renewal_date format required'>
 <h1 id="get-data-object-type">Get data object type</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/data_objects/types/{type_name}</p>
@@ -10,7 +10,7 @@
 
 <p><strong>Important:</strong></p>
 
-<p>Data Objects is currently in early access. Your workspace must be enabled before the Data Objects API key permissions appear on <strong>Settings</strong> &gt; <strong>API Keys</strong>.</p>
+<p>Data Objects is generally available, but your workspace must be provisioned for Accounts before you can use this endpoint. To request provisioning, go to <strong>Data Settings</strong> &gt; <strong>Accounts</strong> and complete the questionnaire. For details, see <a href="/docs/user_guide/data/activation/accounts#step-1-enable-accounts">Enable Accounts</a>.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

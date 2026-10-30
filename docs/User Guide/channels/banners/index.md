@@ -43,7 +43,7 @@ Banner placements are specific locations in your app or website [you create with
 
 Common locations include the top of your homepage, product detail pages, and checkout flows. After placements are created, Banners can be [assigned in your Banner campaign](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner).
 
-There is no fixed limit on the number of placements you can create per workspace, and you can create as many placement IDs as your experience requires. Each placement must be unique within a workspace. A single placement ID can be referenced by up to 25 active messages at the same time.
+There is no fixed limit on the number of placements you can create per workspace, and you can create as many placement IDs as your experience requires. Each placement must be unique within a workspace. A single placement ID can be referenced by up to 200 active messages at the same time.
 
 **Important:**
 
@@ -151,6 +151,16 @@ You can use [Connected Content](https://www.braze.com/docs/user_guide/messaging/
 - **GET requests only:** Banners render only `GET` Connected Content requests. `POST` requests aren't supported.
 - **Shared rendering budget:** All placements returned in a single refresh request (up to 10) share one rendering budget of approximately two seconds. Each Connected Content call counts against this shared budget, so a placement with slow or numerous calls can use time that other placements need.
 - **No retries:** If a Connected Content call fails, times out, or the rendering budget is exceeded, the Connected Content result for that placement is treated as null. Unlike other channels, Banners don't retry the request or delay delivery.
+
+## Implementation best practices
+
+
+### Managing user logout
+
+When a user logs out of your app or website, call the SDK's logout method to prevent cached  content (and other personalized data) from persisting for the next user. This is especially important on shared devices or when users can switch accounts.
+
+For the Web SDK, use [`logout()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logout) or [`wipeData()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#wipedata) when a user logs out. For full details, see [Wiping previously-stored data](https://www.braze.com/docs/developer_guide/analytics/managing_data_collection#web_wiping-previously-stored-data).
+
 
 ## Limitations
 

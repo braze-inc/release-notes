@@ -54,6 +54,16 @@ The following example shows a paginated HTML in-app message:
 
 
 
+## Implementation best practices
+
+
+### Managing user logout
+
+When a user logs out of your app or website, call the SDK's logout method to prevent cached  content (and other personalized data) from persisting for the next user. This is especially important on shared devices or when users can switch accounts.
+
+For the Web SDK, use [`logout()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logout) or [`wipeData()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#wipedata) when a user logs out. For full details, see [Wiping previously-stored data](https://www.braze.com/docs/developer_guide/analytics/managing_data_collection#web_wiping-previously-stored-data).
+
+
 
 
 

@@ -169,6 +169,8 @@ When a user sends inbound media, Braze exposes its URLs in [Currents SMS inbound
 | **Card** | Media card or text-only card, title, description, buttons, optional suggestions, and optional SMS fallback | The title can contain up to 200 characters. The description can contain up to 1,600 or 2,000 characters, depending on the provider. Add between one and four buttons. See [Provider support for Card messages](#provider-support-for-card-messages) for layout and field availability. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="RCS message types, fields, and limits" }
 
+RCS message billing depends on the message type and content. For basic, rich, and rich card billing rules, see [RCS message billing](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator#rcs-message-billing).
+
 #### Card layouts
 
 RCS **Card** messages combine media, text, and buttons into a single unit. Choose a layout in the composer:
@@ -181,9 +183,21 @@ RCS **Card** messages combine media, text, and buttons into a single unit. Choos
 
 Use Liquid to personalize card titles, descriptions, media, and buttons. URLs entered as plain text in the title or description aren't clickable—add an **Open URL** card button instead.
 
-Suggestions can be suggested replies, which pre-populate the user's text input, or Open URL actions. Add up to 25 characters of text to each suggestion and a URL of up to 2,048 characters to each Open URL action. Turn on **Send SMS if RCS fails** to add a fallback message of up to 1,600 characters when RCS delivery fails. The selected subscription group must contain an SMS sender. Link shortening applies only to links in the SMS fallback body, not to card button URLs.
+Suggestions can be suggested replies, which pre-populate the user's text input, or Open URL actions. Add up to 25 characters of text to each suggestion and a URL of up to 2,048 characters to each Open URL action.
 
-RCS message billing depends on the message type and content. For basic, rich, and rich card billing rules, see [RCS message billing](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator#rcs-message-billing).
+#### SMS fallback for RCS messages
+
+When RCS delivery fails, you can automatically send your message as SMS instead. To enable SMS fallback:
+
+1. In the composer, go to the **Fallback option** section.
+2. Turn on **Send SMS if RCS fails**.
+3. Compose your SMS fallback message (up to 1,600 characters).
+
+![Fallback option section with Send SMS if RCS fails turned on and an SMS fallback message with a character and segment counter.](https://www.braze.com/docs/assets/img/sms/sms_fallback.png?f37bffd3867216f7c02a83f634ab22fa){: style="max-width:60%;"}
+
+The selected subscription group must contain an SMS sender for SMS fallback to work. When enabled, a character counter shows how many SMS segments your fallback message uses. Link shortening applies only to links in the SMS fallback body, not to card button URLs.
+
+SMS fallback is available for all RCS message types (Text, Media, and Card). For more information about how SMS fallback works with events and segmentation, see [RCS setup](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup#how-sms-fallback-works-with-events-and-segmentation).
 
 #### Provider support for Card messages {#provider-support-for-card-messages}
 

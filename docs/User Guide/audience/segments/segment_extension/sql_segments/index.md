@@ -197,7 +197,7 @@ Next, determine if you need to invert SQL. While it's not possible to directly q
 **Note:**
 
 
-By default, **Invert SQL** is not toggled on. However, if you use the AI SQL generator to generate a SQL statement that needs to be negated, ChatGPT could return an output that automatically toggles this feature on.
+By default, **Invert SQL** is not toggled on. However, if you use the AI SQL generator to generate a SQL statement that needs to be negated, the model could return an output that automatically toggles this feature on.
 
 
 
