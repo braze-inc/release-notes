@@ -12,7 +12,7 @@ This type of email usually means there's an issue with your CDI setup. Here are 
 
 ### CDI can't access the data warehouse or table using your credentials
 
-This could mean the credentials in CDI are incorrect or are misconfigured on the data warehouse. For more information, refer to [Data Warehouse Integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations).
+This could mean the credentials in CDI are incorrect or are misconfigured on the data warehouse. For more information, refer to the setup steps on your [source page](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources).
 
 ### The table cannot be found
 
@@ -41,125 +41,21 @@ For full payload requirements, refer to [Table setup for Cloud Data Ingestion](h
 
 ## How do I fix errors for Test Connection and support emails?
 
-
-
-### Test Connection runs slow
-
-Test Connection is running on your data warehouse, so increasing warehouse capacity may improve its speed. Using a serverless SQL instance will minimize warmup time and improve query throughput, but may result in slightly higher integration costs.
-
-### Error connecting to Snowflake instance: Incoming request with IP is not allowed to access Snowflake
-
-Try adding the official Braze IPs to your IP allowlist. For more information, refer to [Data Warehouse Integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations), or allow the relevant IPs:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--The following section is the list of IPs for IP allowlisting-->
-
-
-
-
-### Error executing SQL due to customer config: 002003 (42S02): SQL compilation error: does not exist or not authorized
-
-If the table doesn't exist, create the table. If the table does exist, verify that the user and role have permissions to read from the table.
-
-### Could not use schema
-
-If you receive this error, grant access to that schema for the specified user or role.
-
-### Could not use role
-
-If you receive this error, allow that user to use the specified role.
-
-### User access disabled
-
-If you receive this error, allow that user access to your Snowflake account.
-
-### Error connecting to Snowflake instance with current and old key
-
-If you receive this error, open the credential under **Snowflake Data Access Credentials** and run the statement shown for **RSA public key (primary)**. That statement installs the current public key. See [Review a Snowflake credential](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/snowflake_workload_identity_federation#review-a-snowflake-credential).
-
-
-
-### Test Connection runs slow
-
-Test Connection is running on your data warehouse, so increasing warehouse capacity may improve its speed. Using a serverless SQL instance will minimize warmup time and improve query throughput, but may result in slightly higher integration costs.
-
-### Permission denied for relation {table_name}
-
-If you receive this error:
-
-  - Grant the `usage` permission on the schema for that user.
-  - Grant the `select` permission on the table for that user.
-
-### Create Connection Error
-
-If you receive this error, verify the Redshift endpoint and port are correct.
-
-### Create SSH Tunnel Error
-
-If you receive this error:
-
-  - Verify the public key on your braze dashboard is on ec2 host used for SSH tunneling.
-  - Verify your username is correct.
-  - Verify the SSH Tunnel is correct.
-
-
-
-### Test Connection runs slow
-
-Test Connection is running on your data warehouse, so increasing warehouse capacity may improve its speed. Using a serverless SQL instance will minimize warmup time and improve query throughput, but may result in slightly higher integration costs.
-
-### User does not have permission to query table
-
-If you receive this error, add user permissions to query the table.
-
-### Your usage exceeded the custom quota
-
-If you receive this error, your quota needs to be updated so you can continue syncing at your current rate.
-
-### Table was not found in location {region} Location
-
-If you receive this error, verify your table is in the correct project and dataset.
-
-### Invalid JWT Signature
-
-If you receive this error, check that the BigQuery API service is enabled for your account.
-
-### Your workload identity pool trusts every Braze customer
-
-If you use Workload Identity Federation and the connection test reports that your workload identity pool trusts every Braze customer, your configuration accepted an identity that isn't your workspace's. This usually happens when the service account binding grants access to the Braze AWS role instead of your workspace's full principal. Bind access to the full Braze principal from your credential form. For steps, see [Your configuration trusts identities other than your workspace](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/google_workload_identity_federation#your-configuration-trusts-identities-other-than-your-workspace).
-
-### Braze could not confirm that your workload identity pool trusts only this workspace
-
-The check that your pool trusts only your workspace didn't reach a result. Test the connection again. If the error keeps happening, [contact Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support). For more information, see [Braze couldn't confirm that your pool trusts only this workspace](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/google_workload_identity_federation#braze-could-not-confirm-your-pool-trusts-only-this-workspace).
-
-
-
-### Test Connection runs slow
-
-Test Connection is running on your data warehouse, so increasing warehouse capacity may improve its speed. For Databricks, there may be two to five minutes of warm-up time when Braze connects to Classic and Pro SQL instances, which will lead to delays during connection setup and testing, as well as at the beginning of scheduled syncs. Using a serverless SQL instance will minimize warmup time and improve query throughput, but may result in slightly higher integration costs.
-
-### Command failed because warehouse was stopped
-
-If you receive this error, ensure Databricks warehouse is running.
-
-### Service: Amazon S3; Status Code: 403; Error Code: 403 Forbidden
-
-If you receive this error, see [Databricks: Forbidden error while accessing S3 data](https://kb.databricks.com/security/forbidden-access-to-s3-data).
-
-
+Test Connection runs on your data warehouse, so increasing warehouse capacity may improve its speed. Using a serverless SQL instance minimizes warm-up time and improves query throughput, but may result in slightly higher integration costs.
+
+For error messages specific to your source, see the troubleshooting section on that source's page:
+
+| Source | Troubleshooting |
+| --- | --- |
+| Snowflake | [Troubleshooting Snowflake](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/snowflake#troubleshooting) |
+| Amazon Redshift | [Troubleshooting Redshift](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#troubleshooting) |
+| Google BigQuery | [Troubleshooting BigQuery](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/google_bigquery#troubleshooting) |
+| Databricks | [Troubleshooting Databricks](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/databricks#troubleshooting) |
+| Microsoft Fabric | [Troubleshooting Microsoft Fabric](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/microsoft_fabric#troubleshooting) |
+| Amazon S3 | [Troubleshooting Amazon S3](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_s3#troubleshooting) |
+| Google Cloud Storage | [Troubleshooting Google Cloud Storage](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/google_cloud_storage#troubleshooting) |
+| Azure Blob Storage | [Troubleshooting Azure Blob Storage](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/azure_blob_storage#troubleshooting) |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Troubleshooting by source" }
 
 ## How do I update my email alert preferences for CDI integrations?
 
@@ -254,7 +150,7 @@ If your warehouse doesn't support `LIMIT` (for example, Fabric), use an equivale
 
 ## Why can a CDI sync with a small number of rows still take several minutes?
 
-A CDI sync includes a fixed startup period before row processing begins. Because this startup time is similar across sync sizes, a small sync can still take several minutes and may appear slower in rows per minute. Total sync time still depends on your source query complexity, data shape, and available capacity in your data warehouse. For more information, see [Data warehouse integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations).
+A CDI sync includes a fixed startup period before row processing begins. Because this startup time is similar across sync sizes, a small sync can still take several minutes and may appear slower in rows per minute. Total sync time still depends on your source query complexity, data shape, and available capacity in your data warehouse. For more information, see [Cloud Data Ingestion sources](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources).
 
 ## During a sync, is the order preserved if multiple records share the same ID?
 
@@ -282,4 +178,4 @@ Braze has the following measures in place for CDI:
 We recommend you and your team set up the following security measures on your side: 
 
 - Restrict credential access to the minimum required for CDI to operate. This is because we need to be able to run select (and count) on the specific tables and views.
-- Restrict the IPs that can access the tables to officially published [Braze IPs](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations#step-1-set-up-tables-or-views).
+- Restrict the IPs that can access the tables to the officially published Braze IPs. Each [source page](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources) lists the IPs to allow for that source.

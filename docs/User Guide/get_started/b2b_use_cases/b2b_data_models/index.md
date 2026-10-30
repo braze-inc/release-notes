@@ -143,7 +143,7 @@ In this use case, Salesforce is the example CRM system. You can map over any fie
 
 Connected sources are data tables that are hosted by you in your own data warehouse and queried by Braze [CDI Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/cdi_segments). Unlike catalogs, instead of duplicating your business objects (accounts and opportunities) in Braze, you’d be keeping them in your data warehouse and using your warehouse as the source of truth.
 
-To set up connected sources, refer to [Integrating connected sources](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/connected_sources#integrating-connected-sources).
+To set up connected sources, refer to [Integrating connected sources](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/connected_sources#set-up-a-connected-source).
 
 
 

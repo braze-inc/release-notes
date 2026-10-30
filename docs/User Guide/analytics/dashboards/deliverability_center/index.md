@@ -34,25 +34,32 @@ If your subdomains aren't included in the Deliverability Center for Google Postm
 
 ## Integrate Google Postmaster {#integrating-google-postmaster}
 
-**Important:**
-
-
-**Google Postmaster Tools v2 migration**<br>
-Google is deprecating the old Postmaster Tools (v1) and has released a next-generation version (v2) with a modern user interface and new dashboards, including a Compliance dashboard to help monitor adherence to Gmail's sender guidelines. All users must migrate to v2 by October 31, 2026.<br><br>
-To re-authorize your Google Postmaster Tool connection, go to **Partner Integrations** > **Technology Partners**, open **Google Postmaster**, and select **Change Account** to re-authenticate with the new v2 permissions. When finished, you are upgraded to v2 and gain access to new dashboards and data.<br><br>
-Braze stores the Google account used for the connection and lists that email address under **Connected User**, even when the page shows a disconnected banner. Braze sends the reconnect reminder to the dashboard user who originally set up the connection. Select **Change Account** to sign in with any Google account that can access your domains in Postmaster Tools. Selecting **Disconnect** clears the stored Google account.<br><br>
-For more information, refer to [Google's announcement about the new Postmaster Tools](https://support.google.com/mail/answer/16594218?hl=en).
-
-
-
 Before setting up your Deliverability Center, check that your domains have been [added to the Gmail Postmaster Tools](https://support.google.com/mail/answer/9981691?hl=en).
 
-Follow these steps to integrate with Google Postmaster and set up your Deliverability Center:
+How you integrate depends on whether you've connected Google Postmaster to Braze before:
+
+- **New connection:** If you've never connected Google Postmaster to Braze, follow [Connect Google Postmaster](#connect-google-postmaster).
+- **Existing v1 connection:** If you connected Google Postmaster to Braze before Postmaster Tools v2, follow [Migrate from Postmaster Tools v1](#migrate-from-postmaster-tools-v1) by November 30, 2026.
+
+### Connect Google Postmaster
 
 1. Go to **Analytics** > **Email Performance**.
 2. Select the **Deliverability Center** tab. <br>![A Deliverability Center with Google Postmaster unconnected.](https://www.braze.com/docs/assets/img_archive/deliverability_center1.png?029403b4fd3b22923056edc2f31d0f8b)
 3. Select **Connect with Google Postmaster**. 
-4. Select your Google Account and then select **Allow** to allow Braze to view email traffic metrics for the domains registered with the Postmaster Tools. 
+4. Select your Google account, review the permissions, and then select **Allow**. Braze requests the following access:
+
+| Permission | What Braze uses it for |
+| --- | --- |
+| View email traffic metrics for your Postmaster Tools domains (`postmaster.traffic.readonly`) | Reading domain statistics and compliance status, such as authentication, encryption, user-reported spam, and delivery errors. |
+| View the domains you have registered with Postmaster Tools (`postmaster.domain`) | Reading the list of your registered domains so Braze can show them in the Deliverability Center. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Google Postmaster permissions" }
+
+**Note:**
+
+
+Google's consent screen may describe the domain permission as also allowing apps to add, remove, or verify domains. Braze uses it only to read your list of registered domains.
+
+
 
 Your verified domains display in the Deliverability Center. 
 
@@ -60,11 +67,34 @@ Your verified domains display in the Deliverability Center.
 
 You can also access Google Postmaster in the Braze dashboard by going to **Partner Integrations** > **Technology Partners** > **Google Postmaster**. After integrating, Braze pulls reputation and error data for the last 30 days. The data may not be immediately available and could take several minutes to populate.
 
+### Migrate from Postmaster Tools v1
+
+**Important:**
+
+
+All users with an existing Google Postmaster connection must migrate to v2 by November 30, 2026, to avoid the risk of gaps in data.
+
+
+
+Google is deprecating the old Postmaster Tools (v1) and has released a next-generation version (v2) with a modern user interface and new dashboards, including a Compliance dashboard to help monitor adherence to Gmail's sender guidelines. For more information, refer to [Google's announcement about the new Postmaster Tools](https://support.google.com/mail/answer/16594218?hl=en).
+
+To migrate, reconnect with the new v2 permissions:
+
+1. Go to **Partner Integrations** > **Technology Partners** and open **Google Postmaster**.
+2. Select **Change Account**.
+3. Sign in with any Google account that can access your domains in Postmaster Tools, review the permissions, and then select **Allow**. Google's v2 consent screen requests two permissions rather than the single permission v1 required, so you may see a different prompt than before. For details, refer to the permissions table in [Connect Google Postmaster](#connect-google-postmaster).
+
+After you reconnect, you gain access to the new dashboards and data.
+
+Braze lists the stored Google account under **Connected User**, even when the page shows a disconnected banner, and sends the reconnect reminder to the dashboard user who originally set up the connection.
+
 ### Invalid or expired authorization
 
 If you receive an alert that Google Postmaster Tools authorization credentials are invalid, email sending from Braze is **not** affected. Only the connection between Braze and Google Postmaster breaks, which stops Gmail reputation and error data from syncing to the Deliverability Center until you reconnect.
 
-To restore the integration, go to **Partner Integrations** > **Technology Partners**, open **Google Postmaster**, select **Disconnect**, then run through the connection flow again (same steps as in [Integrating Google Postmaster](#integrating-google-postmaster)).
+To restore the integration, go to **Partner Integrations** > **Technology Partners**, open **Google Postmaster**, and select **Change Account**. Sign in with any Google account that can access your domains in Postmaster Tools, and then select **Allow**.
+
+Select **Disconnect** only if you want to remove the connection and clear the stored Google account. After disconnecting, you can set up the connection again by following the steps in [Connect Google Postmaster](#connect-google-postmaster).
 
 ### Metrics and definitions
 
@@ -87,8 +117,8 @@ To help understand the ratings for IP reputation, refer to this table:
 | ----- | ---------- |
 | High | Has a good track record of generating low spam complaints (such as users clicking the "spam" button). |
 | Medium/Fair | Known to generate positive engagement but occasionally receives spam complaints. Most of the emails from this domain are sent to the inbox, except when spam complaints increase. |
-| Low | Known to receive elevated rates of spam complaints regularly. Emails from this sender are likely be filtered to the spam folder. |
-| Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain are almost always be rejected at connection time or filtered to the spam folder. |
+| Low | Known to receive elevated rates of spam complaints regularly. Emails from this sender are likely to be filtered to the spam folder. |
+| Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain are almost always rejected at connection time or filtered to the spam folder. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="IP reputation" }
 
 **Important:**
@@ -110,8 +140,8 @@ Use the following table to help monitor and understand your domain reputation ra
 | ----- | ---------- |
 | High | Has a good track record of very low spam complaints. Complies with Gmail’s sender guidelines. Emails are rarely filtered into the spam folder. Has a good track record of a very low spam rate. Complies with [Gmail's sender guidelines](https://developers.google.com/gmail/markup/registering-with-google). |
 | Medium/Fair | Known to generate positive engagement, but has occasionally received a low volume of spam complaints. Most of the emails from this domain reach the inbox (except when there is a notable increase in spam levels). |
-| Low | Known to receive spam complaints regularly. Emails from this sender are likely be filtered to the spam folder. |
-| Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain are almost always be rejected at connection time or filtered to the spam folder. |
+| Low | Known to receive spam complaints regularly. Emails from this sender are likely to be filtered to the spam folder. |
+| Bad | Has a history of receiving elevated rates of spam complaints. Emails from this domain are almost always rejected at connection time or filtered to the spam folder. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Domain reputation" }
 
 #### Authentication
@@ -172,7 +202,7 @@ Refer to this table to understand the filter results
 | ----- | ---------- |
 | Green | Judged to be spam by Microsoft’s spam filter up to 10% of the given time frame. |
 | Yellow | Judged to be spam by Microsoft’s spam filter between 10% and 90% of the given time frame. |
-| Red | Judged to be spam by Microsoft’s spam filter up to more than 90% of the given time frame.| 
+| Red | Judged to be spam by Microsoft’s spam filter more than 90% of the given time frame.| 
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Filter results" }
 
 #### Complaint rate

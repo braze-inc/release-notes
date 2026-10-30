@@ -130,6 +130,15 @@ After making edits to a Content Block, you can save and launch the updated Conte
 
 ![A Content Block that reads "Welcome to our newsletter".](https://www.braze.com/docs/assets/img/copy-content-block.png?e8fcd5b10dd32d2fcca20385f3bfaae1)
 
+### Track changes to Content Blocks
+
+Each Content Block records when it was created and last edited, so you can check whether it changed recently:
+
+- **Dashboard:** The [Content Block preview](#preview-content-blocks) shows who created the Content Block, the date it was created, and the date and time it was last edited.
+- **API:** The [`/content_blocks/info`](https://www.braze.com/docs/api/endpoints/templates/content_blocks_templates/get_see_email_content_blocks_information) and [`/content_blocks/list`](https://www.braze.com/docs/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks) endpoints return the `created_at` and `last_edited` timestamps for each Content Block.
+
+These are the only edit details available for Content Blocks. Earlier versions can't be viewed or restored, so we recommend saving a copy before you make significant changes. To save a copy, select **More** > **Duplicate**. The duplicate is saved as a draft and doesn't affect messages that use the original Content Block.
+
 ## Use email footers in Content Blocks {#email-footers}
 
 Content Blocks cannot be used within an email footer, but you can create a Content Block that includes footer content for use in your emails. To do so:

@@ -1,4 +1,4 @@
-<div id='api_ylbqskbwmlwi' class='api_div' data-search-keywords='edit multiple catalog items'>
+<div id='api_jesteypaadwe' class='api_div' data-search-keywords='edit multiple catalog items'>
 <h1 id="edit-multiple-catalog-items">Edit multiple catalog items</h1>
 <div class="api_type"><div class="method patch ">patch</div>
 <p>/catalogs/{catalog_name}/items</p>

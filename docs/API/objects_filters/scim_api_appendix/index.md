@@ -165,6 +165,12 @@ A valid role object is a JSON object with the following key-value pairs:
 | View Banner Templates | `view_banner_templates` |
 | View Multi Language Settings | `view_multi_language_settings` |
 | Use BrazeAI Operator<sup>TM</sup> | `use_operator` |
+| View Canvas and Data Agents | `view_custom_agents` |
+| Edit Canvas and Data Agents | `edit_custom_agents` |
+| Archive Canvas and Data Agents | `archive_custom_agents` |
+| View Agentic Standards | `view_qa_agents` |
+| Edit Agentic Standards | `edit_qa_agents` |
+| Archive Agentic Standards | `archive_qa_agents` |
 | View Decisioning Studio Agents | `view_decisioning_studio_agents` |
 | View Decisioning Studio Audience |`view_decisioning_studio_audience` |
 | View Decisioning Studio Conversion Event | `view_decisioning_studio_conversion_event` |
@@ -286,6 +292,12 @@ A valid role object is a JSON object with the following key-value pairs:
 | View Dashboard Reports | `view_reporting` |
 | Edit Dashboard Reports | `edit_reporting` |
 | Delete Dashboard Reports | `delete_reporting` |
+| View Canvas and Data Agents | `view_custom_agents` |
+| Edit Canvas and Data Agents | `edit_custom_agents` |
+| Archive Canvas and Data Agents | `archive_custom_agents` |
+| View Agentic Standards | `view_qa_agents` |
+| Edit Agentic Standards | `edit_qa_agents` |
+| Archive Agentic Standards | `archive_qa_agents` |
 | Export User Data | `export_user_data` |
 | View User Profiles (PII Redacted) | `view_user_profile` |
 | Edit Dashboard Users | `edit_dashboard_users` |

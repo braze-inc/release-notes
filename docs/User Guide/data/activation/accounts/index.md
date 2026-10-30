@@ -2,13 +2,6 @@
 
 > Use account objects to segment and personalize messaging with account data.
 
-**Important:**
-
-
-Accounts is in Early Access. These instructions may change as the feature evolves.
-
-
-
 With account objects, you can:
 
 - Build segments with account criteria
@@ -37,9 +30,8 @@ This approach replaces duplicating the same account attributes across many user 
 
 Before you start:
 
-- Your workspace must be enabled for Accounts Early Access. Contact your Braze account team.
+- Your workspace must be provisioned for Accounts. Although Accounts is generally available, you must request provisioning before you can use it in the dashboard or through the [Data Objects endpoints](https://www.braze.com/docs/api/endpoints/data_objects). For steps, see [Step 1: Enable Accounts](#step-1-enable-accounts).
 - You must already have users in Braze.
-- After Accounts is enabled, it appears in **Data Settings** > **Accounts**. If this is your first time using Accounts, follow the on-screen initialization instructions.
 
 ## Account data model
 
@@ -81,9 +73,14 @@ You can manage account records through:
 
 ### Step 1: Enable Accounts
 
-Accounts is enabled at the company level. During Early Access, your Braze account team handles one-time enablement.
+Accounts is enabled at the company level. To request provisioning:
 
-When Accounts is enabled, go to **Data Settings** > **Accounts** and complete the one-time initialization flow if prompted.
+1. In the Braze dashboard, go to **Data Settings** > **Accounts**.
+2. Complete the questionnaire.
+
+After you submit the questionnaire, it's forwarded to Braze for review. You should receive a response within a week. High-scale use cases can take longer.
+
+When provisioning is complete, go to **Data Settings** > **Accounts** and complete the one-time initialization flow if prompted.
 
 ### Step 2: Add account records
 
@@ -102,6 +99,24 @@ For details, see [Calculated filters](https://www.braze.com/docs/user_guide/audi
 ### Step 4: Use the calculated filter in Segment Builder
 
 In Segment Builder, select the calculated filter you created, then add any additional user attribute filters that support your campaign or Canvas targeting.
+
+## Limits
+
+Accounts includes the following default limits to support most use cases:
+
+| Resource | Default limit |
+| --- | --- |
+| Account records per company | 50,000 |
+| Fields per account type | 500 |
+| Fields per relationship type | 25 |
+| Account objects per user | 1,000 |
+| Users per account object | 10,000 |
+| Related objects per account object | 1,000 |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Account limits" }
+
+These are starting capacities. If you need more account records or a higher limit, contact your Braze account team to request an increase.
+
+For limit error codes and what happens when an API request would exceed a limit, see [Product limits](https://www.braze.com/docs/api/endpoints/data_objects#product-limits).
 
 ## Build account-based segments
 
@@ -149,7 +164,7 @@ To iterate over all matched accounts:
 
 ## API basics
 
-You can use the REST API to manage account records during Early Access.
+You can use the REST API to manage account records.
 
 For endpoint details, refer to [Data Objects endpoints](https://www.braze.com/docs/api/endpoints/data_objects).
 
@@ -163,4 +178,4 @@ Yes. You can define and manage custom account fields in your workspace. For fiel
 
 ### Is Accounts a paid add-on?
 
-No. Accounts isn't a paid add-on, and is available on all plans. During Early Access, your Braze account team must enable it for your workspace.
+No. Accounts isn't a paid add-on, and is available on all plans. Your workspace must be provisioned before you can use it. For steps, see [Step 1: Enable Accounts](#step-1-enable-accounts).

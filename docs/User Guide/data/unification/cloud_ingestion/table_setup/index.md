@@ -13,6 +13,15 @@ When you create a sync from a data warehouse source, you choose how Braze reads 
 | `PAYLOAD` column | Create a table or view in your source with a Braze-accepted identifier, `UPDATED_AT`, and `PAYLOAD` columns, where `PAYLOAD` holds a JSON object in the `/users/track` format. Then create a CDI sync, select **Table** or **Visual** on the **Data definition** step, and enter the table name. For requirements, see the following sections. | All sync types on all sources, including file storage |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Data definition options" }
 
+## Data organization guidance
+
+Each CDI sync updates one data type at a time—such as user attributes, custom events, purchase events, or catalog items. When you set up your source tables or views, organize your data based on how you plan to sync it:
+
+- One table per data type: Creating separate tables or views for each data type (for example, `user_attributes`, `custom_events`, `purchases`) gives you clear separation and makes it easier to manage different sync schedules and data definitions.
+- Shared source table: If you use Visual or SQL mapper modes, multiple syncs can pull from the same source table. For example, an attributes sync and an events sync can query the same table, but you still create separate syncs in the Braze dashboard—one for attributes and one for events. Each sync maps or queries only the columns it needs.
+
+Choose the approach that fits your data pipeline and the number of use cases you manage. Both patterns work as your use cases scale.
+
 ## Understand table setup compared to payload formatting
 
 For CDI user data syncs that use a `PAYLOAD` column, configure both:
@@ -51,7 +60,7 @@ For guidance on duplicate timestamps and incremental updates, see [Cloud Data In
 **Note:**
 
 
-File storage sources use different setup requirements and do not support `UPDATED_AT`. For details, see [File storage integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations#required-file-formats).
+File storage sources use different setup requirements and do not support `UPDATED_AT`. For details, see the **Required file formats** section on your source page: [Amazon S3](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_s3#required-file-formats), [Google Cloud Storage](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/google_cloud_storage#required-file-formats), or [Azure Blob Storage](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/azure_blob_storage#required-file-formats).
 
 
 
@@ -154,4 +163,4 @@ To sync subscription group statuses, include one or more `subscription_group_id`
 
 ## Related CDI setup docs
 
-<ul class="guide_tiles"><li><a href="/docs/user_guide/data/unification/cloud_ingestion/integrations#step-1-set-up-tables-or-views"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Data warehouse integrations</span><span class="guide_tile_description">Source-specific DDL examples.</span></span></div></a></li><li><a href="/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">File storage integrations</span><span class="guide_tile_description">File-based CDI setup.</span></span></div></a></li><li><a href="/docs/user_guide/data/unification/cloud_ingestion/best_practices"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Cloud Data Ingestion best practices</span><span class="guide_tile_description">Sync behavior and optimization guidance.</span></span></div></a></li></ul>
+<ul class="guide_tiles"><li><a href="/docs/user_guide/data/unification/cloud_ingestion/sources"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Cloud Data Ingestion sources</span><span class="guide_tile_description">Source-specific DDL examples and file-based setup.</span></span></div></a></li><li><a href="/docs/user_guide/data/unification/cloud_ingestion/best_practices"><div class="guide_tile guide_tile_has_description"><span class="guide_tile_text"><span class="guide_tile_title">Cloud Data Ingestion best practices</span><span class="guide_tile_description">Sync behavior and optimization guidance.</span></span></div></a></li></ul>

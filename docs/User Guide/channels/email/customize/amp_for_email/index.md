@@ -348,14 +348,40 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 
@@ -500,14 +526,40 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 
@@ -652,14 +704,40 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 
@@ -804,14 +882,40 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 

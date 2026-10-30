@@ -295,14 +295,40 @@ You can find this data on the [Revenue Report](https://www.braze.com/docs/user_g
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 
@@ -447,14 +473,40 @@ You can find this data on the [Revenue Report](https://www.braze.com/docs/user_g
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 
@@ -599,14 +651,40 @@ You can find this data on the [Revenue Report](https://www.braze.com/docs/user_g
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 
@@ -751,14 +829,40 @@ You can find this data on the [Revenue Report](https://www.braze.com/docs/user_g
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 
@@ -903,14 +1007,40 @@ You can find this data on the [Revenue Report](https://www.braze.com/docs/user_g
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 

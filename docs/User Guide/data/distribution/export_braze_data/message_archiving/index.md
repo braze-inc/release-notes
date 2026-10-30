@@ -6,7 +6,7 @@ Message archiving is available as an add-on feature. To get started with message
 
 ## How it works
 
-When this feature is turned on, Braze writes a gzipped JSON file for each message sent to a user through your selected channels (email, SMS/MMS, or push). Braze writes these files to your default data export destination. This includes all campaign types for each channel, such as transactional email campaigns sent through the [Transactional Email API](https://www.braze.com/docs/user_guide/channels/transactional_email/create_a_transactional_email).
+When this feature is turned on, Braze writes a gzipped JSON file for each message sent to a user through your selected channels (email, SMS/MMS, push, or in-app message). Braze writes these files to your default data export destination. This includes all campaign types for each channel, such as transactional email campaigns sent through the [Transactional Email API](https://www.braze.com/docs/user_guide/channels/transactional_email/create_a_transactional_email).
 
 This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (for example, `{{${first_name}}}`) will show the final value that the user received based on their profile information. This allows you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements.
 
@@ -76,6 +76,13 @@ If you don't see **Message Archiving** in **Settings**, confirm that your compan
 
 
 
+**Important:**
+
+
+Enabling message archiving for in-app messages converts all of your in-app messages into [templated in-app messages](https://www.braze.com/docs/user_guide/channels/in_app_messages/faq#what-are-templated-in-app-messages). This means a network request is required before Braze can display the message. For more information, see [What happens if I turn on message archiving for in-app messages?](#what-happens-if-i-turn-on-message-archiving-for-in-app-messages).
+
+
+
 ## IP allowlisting
 
 When message archiving uploads files to your cloud storage bucket, Braze makes network requests from our servers to your AWS S3, Azure Blob Storage, or Google Cloud Storage endpoint. With IP allowlisting, you can verify that these requests are coming from Braze, adding a layer of security.
@@ -111,7 +118,7 @@ The following are references to the JSON payload delivered to your cloud storage
   "attachments": Array of JSON Objects containing 'bytes' and 'file_name', // may not be available
   "user_id": String,
   "campaign_name": String, // will only be available if the message is from a campaign
-  "canvas_name": String, // will only be available if the message is from Canvas
+  "canvas_name": String, // will only be available if the message is from a Canvas
   "canvas_step_name": String, // will only be available if the message is from a Canvas
   "external_id": String
 }
@@ -141,7 +148,7 @@ The `extras` field contains the key-value pairs configured in the **Email Extras
   "message_variation_id": MessagVariationApiId, // may not be available
   "user_id": String,
   "campaign_name": String, // will only be available if the message is from a campaign
-  "canvas_name": String, // will only be available if the message is from Canvas
+  "canvas_name": String, // will only be available if the message is from a Canvas
   "canvas_step_name": String, // will only be available if the message is from a Canvas
   "external_id": String
 }
@@ -205,7 +212,48 @@ The JSON payload format can vary between messages and may change over time. When
 
 
 
+```json
+{
+  "version": 1, //numerical version of the JSON structure
+  "to": UserId, // the message recipient's identifier, typically matches user_id
+  "payload": JsonOfEntireInAppMessagePayload,
+  "platform": StringOfPlatformName, ("web")
+  "device_identifier": DeviceIdentifier, // may not be available
+  "app_id": ApiKeyOfApp,
+  "sent_at": UnixTimestamp,
+  "dispatch_id": DispatchIdFromBraze,
+  "campaign_id": CampaignApiId, // may not be available
+  "canvas_id": CanvasApiId, // may not be available
+  "canvas_step_id": CanvasStepApiId, // may not be available
+  "canvas_variation_id" : CanvasVariationApiId, // may not be available
+  "message_variation_id": MessageVariationApiId, // may not be available
+  "user_id": String,
+  "campaign_name": String, // will only be available if the message is from a campaign
+  "canvas_name": String, // will only be available if the message is from a Canvas
+  "canvas_step_name": String, // will only be available if the message is from a Canvas
+  "external_id": String
+}
+```
+
+### In-app message payload structure variations
+
+**Important:**
+
+
+The top-level `payload` field in in-app message archives contains the full in-app message configuration, including its content (such as message text and header) and display settings (such as message type, text alignment, and colors). The exact fields present vary depending on the in-app message type, such as [Modal](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/modal), [Slideup](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/slideup), [Fullscreen](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/fullscreen), or [Custom HTML](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/custom_html).
+
+
+
+The JSON payload format can vary between messages and may change over time. When parsing archived in-app message payloads, don't assume a fixed structure or expect the same fields to always be present. Implement flexible parsing logic that handles various payload formats.
+
+
+
+
 ## Frequently asked questions
+
+### What happens if I turn on message archiving for in-app messages?
+
+When you turn on message archiving for in-app messages, all in-app messages become [templated in-app messages](https://www.braze.com/docs/user_guide/channels/in_app_messages/faq#what-are-templated-in-app-messages). This means a network request is required before Braze can display the message.
 
 ### What templating is not included in the payload?
 

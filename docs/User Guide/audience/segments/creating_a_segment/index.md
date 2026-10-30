@@ -69,7 +69,7 @@ Within a filter group, filters can be joined by either "AND" or "OR". Between fi
 - (A AND B AND C) OR (C AND E AND F)
 - (A OR B OR C) AND (C OR D OR F)
 
-Selecting "OR" for your filters means that your segment will contain users satisfying any combination of one, some, or all of those filters. Selecting "AND" means that users who do not pass that filter will not be included in your segment.
+Selecting "OR" for your filters means that your segment contains users satisfying any combination of one, some, or all of those filters. Selecting "AND" means that users who don't pass that filter aren't included in your segment.
 
 **Tip:**
 
@@ -125,6 +125,21 @@ Segments already using the **Segment Membership** filter cannot be further inclu
 Also, nesting segments like this adds complexity and can slow things down. Instead, recreate the segment you're trying to include using the same filters.
 
 
+
+### Time-based filter lookback windows
+
+Standard segments don't use one shared maximum for every time-based filter. How far you can look back depends on the filter type:
+
+| Filter type | Where you use it | Maximum lookback | Examples |
+| --- | --- | --- | --- |
+| Relative date filters ("X days/weeks/hours ago") | Standard segments | Up to 100 years (for example, 36,500 days) | Last Used App, First Custom Event, Last Received Email, date custom attributes |
+| Absolute date filters (on or after / before a calendar date) | Standard segments | Calendar dates you select in the filter | Same filters as relative date filters, when you choose a fixed date instead of a relative period |
+| [X-in-Y filters](https://www.braze.com/docs/x-in-y-behavior) ("X times in the last Y days") | Standard segments | 1–30 calendar days for Y | X Custom Event In Y Days, X Custom Event Property In Y Days, X Purchases in Last Y Days, Soft Bounced |
+| Event property filters on purchase or custom events | Standard segments | Up to 30 days | Filtering a default segment by an event property without a Segment Extension |
+| [Segment Extensions](https://www.braze.com/docs/user_guide/audience/segments/segment_extension) and [calculated filters](https://www.braze.com/docs/user_guide/audience/segments/calculated_filters) | Extensions or calculated filters, then referenced from a segment | Up to 730 days (2 years) for relative ranges | Users who purchased a product 16 months ago, or who completed an event with a property in the past year |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+For individual filter descriptions and their lookback notes, see [Segmentation filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters). For Segment Extensions that use a fixed date range, see also [two-year lookback enforcement](https://www.braze.com/docs/segment_extensions_fixed_date_range/).
 
 ### Exclusion groups (optional) {#exclusion}
 

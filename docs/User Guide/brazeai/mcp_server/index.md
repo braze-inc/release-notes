@@ -105,6 +105,10 @@ Agent access changes with the dashboard user. Permission changes apply on the ne
 
 Directory listings may not be available in every MCP client yet. You can always connect manually using the Braze MCP URL.
 
+### Can I use the Braze MCP server during a free trial?
+
+No. The Braze MCP server isn't available for free trial accounts.
+
 ### My company uses IP allowlisting. Can we use the remote MCP server?
 
 Not right now. If you use [IP Allowlisting](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#dashboard-ip-allowlisting), you cannot use the remote MCP server.

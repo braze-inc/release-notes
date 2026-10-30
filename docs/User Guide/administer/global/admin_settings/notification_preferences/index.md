@@ -26,23 +26,23 @@ Depending on the notification type, **All Dashboard Users** and **All Admins** m
 
 | Notification | Description | Available notification channels |
 |--------------|-------------|-----------------|
+| Agent Console Errors | Notifies recipients when an [Agent Console agent](https://www.braze.com/docs/user_guide/brazeai/agents) has met its invocation limit, uses a model that has become unavailable, or encounters a billing error with its LLM provider (bring-your-own API key only). | Email |
 | API Usage Alerts | Selecting this takes you to the **API Usage Dashboard**, where you can then go to the [**API Usage Alerts**](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/api_usage_alerts) tab and set up alerts to track key API request volumes. | Email, Webhook |
+| Audience Sync Errors | Notifies recipients when there are issues with Audience Sync. | Email |
 | AWS Credential Errors | Notifies recipients when Braze receives an error while attempting to use your Amazon Web Services credentials for a data export. This includes credential error notifications for Google Cloud Services and Azure (Microsoft Cloud Services). | Email, Webhook |
 | Campaign Automatically Stopped | Notifies recipients when Braze has stopped a campaign. | Email |
-| Canvas Automatically Stopped | Notifies recipients when Braze has stopped a Canvas. | Email |
 | Campaign Interaction Expiration | Notifies recipients about any campaign that is due for campaign interaction data expiration, along with any information about segments, campaigns, or Canvases that reference it in a retargeting filter and were used to send a message in the previous 30 days. | Email |
+| Campaign or Canvas Volume Limit Met | Notifies recipients when a campaign send limit or Canvas entry limit is met. | Email, Webhook |
 | Campaign/Canvas Updated | Notifies recipients when an active campaign or Canvas is updated or deactivated, as well as when an inactive campaign or Canvas is reactivated or drafts are launched. | Email |
-| Campaign/Canvas Volume Limit Met | Notifies recipients when a campaign or Canvas meets its volume limit. | Email | 
+| Canvas Automatically Stopped | Notifies recipients when Braze has stopped a Canvas. | Email |
 | Canvas Interaction Expiration | Notifies recipients about any Canvas that is due for Canvas interaction data expiration, along with any information about segments, campaigns, or Canvases that reference it in a retargeting filter and were used to send a message in the previous 30 days. | Email |
-| Comments Within Canvases | Notifies recipients when a Canvas has new comments. | Email |
+| Comments within Canvases | Notifies recipients when a Canvas has new comments. | Email |
 | Connected Content Errors | Notifies recipients when a Connected Content endpoint has errors. | Email |
 | Push Errors | Notifies recipients when a push endpoint has errors. | Email, Webhook |
-| Scheduled Campaign Limit Met | Notifies recipients when the limit for a recurring scheduled campaign has been reached. | Email, Webhook |
 | Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending. | Email, Webhook |
+| Scheduled Campaign Sent/Not Sent | Notifies recipients when scheduled campaigns begin sending, or when a scheduled campaign has no eligible users to send to. | Email, Webhook |
 | Webhook Errors | Notifies recipients when a webhook endpoint has errors. | Email |
 | Weekly Analytics Report | Sends a summary of the past week's workspace activity to recipients every Monday. Recipients receive a summary for each workspace that they belong to. | Email |
-| Daily Canvas/Campaign Entry Volume Limits | Sends notifications each time a send limit is reached. | Email |
-| Agents Console Error | Notifies recipients when an [Agent Console agent](https://www.braze.com/docs/user_guide/brazeai/agents) has met its invocation limit, uses a model that has become unavailable, or encounters a billing error with its LLM provider (bring-your-own API key only). | Email |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Available notifications" }
 
 **Note:**

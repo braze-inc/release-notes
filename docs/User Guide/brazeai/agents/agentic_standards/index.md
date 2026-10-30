@@ -4,12 +4,20 @@
 
 Agentic Standards reduce manual oversight so every message Braze sends is accurate, compliant, and launch-ready.
 
-**Important:**
+## Plan tiers
 
+Agentic Standards availability depends on your plan tier: free or paid.
 
-Agentic Standards for Agent Console are currently in beta. Contact your Braze account manager if you're interested in participating in this beta.
+| Feature | Free tier | Paid tier |
+| --- | --- | --- |
+| Build Campaign Standards and Canvas Standards | Available | Available |
+| Evaluation runs per month per workspace | 25 | Unlimited |
+| Monthly usage cap | Not applicable (run-count limit only) | High |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Agentic Standards plan tiers" }
 
+On the Free tier, **Evaluation preview** (**Simulate response**) and launch-time **Run evaluation** or **Re-run evaluation** count toward the 25 runs. Contact your Braze account representative for more runs or to upgrade.
 
+On the Paid tier, there is no monthly run-count limit. More intensive evaluations contribute more toward the monthly usage limit. Most workspaces don't reach this cap. If you do, contact your customer success manager.
 
 ## How it works
 
@@ -205,13 +213,19 @@ The **Fail** tab lists rules that were not met. For each failure, the standard p
 - **Rule:** The specific criteria being checked, such as "Spelling & Grammar Check".
 - **Reason:** An explanation of why the check failed. For example, the evaluation might identify that "personalized" was used instead of the Australian English spelling "personalised", or that a delay step is shorter than your team's minimum wait time.
 
-Some results show "Based on an agent's judgment" under the reason for that rule. The marker applies only to that rule, not the entire standard. It appears when the rule is ambiguous enough that the agent must interpret it (for example, whether copy is well-written, clear, or on-brand). The reason text explains what the agent assessed. Use that detail to revise the rule with concrete, logic-based criteria so the agent needs less interpretation.
-
 The **Pass** tab lists all rules that were successfully followed. This confirms that checks like **Offensive Language Detection** or **Naming Convention Validation** have been cleared.
 
 The **Warning** tab lists non-critical issues that may require attention. For example, if you're testing an email ruleset against a webhook campaign or a Canvas with only in-app message steps, the evaluation may yield a warning that sender names do not apply.
 
 The **Ignored** tab lists issues you chose to skip for the current evaluation run.
+
+#### Results based on the agent's judgment
+
+A result in any tab can show **Based on the agent's judgment** under its reason. The marker applies only to that rule, not the entire standard. It means the result reflects the agent's own assessment rather than a directly verifiable fact, such as a setting's value, a tag, or whether a link is present. For example, deciding whether copy is well-written, correctly spelled, clear, or on-brand is a judgment, even though the agent can read the copy.
+
+When the agent assumes something that it didn't find stated in your campaign or Canvas, the marker is followed by a short note that explains what it assumed and why. For example: **Based on the agent's judgment: The campaign's name and copy suggest it is a Home campaign.**
+
+If you want a rule to be checked against concrete facts instead, revise it to reference specific settings, tags, or content. For example, use "The email footer includes an unsubscribe link" instead of "The email makes it easy to opt out."
 
 ### Resolve or ignore issues
 

@@ -138,6 +138,8 @@ The Security Event report CSV contains the following columns:
 
 [S3 exports](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings/security_export_s3) include these columns plus `Version`, the schema version for the export format (currently `1`).
 
+The report includes only the event types listed in **Reported security events**. For example, changes to Content Blocks aren't recorded as security events.
+
 **Reported security events**
 
 

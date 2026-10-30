@@ -45,7 +45,7 @@ The Celebrus connector for Braze custom attributes sends custom attributes to an
 
 #### Step 2: Configure Cloud Data Ingestion in your Braze dashboard
 
-This integration uses Braze Cloud Data Ingestion. Follow the instructions in [Data warehouse integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations/) to set up and configure the [Cloud Data Ingestion settings](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/) according to the type of warehouse you are using. 
+This integration uses Braze Cloud Data Ingestion. Follow the instructions for your [Cloud Data Ingestion source](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/) to set up and configure the [Cloud Data Ingestion settings](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/) according to the type of warehouse you are using. 
 
 #### Step 3: Sync data from Celebrus to Braze
 

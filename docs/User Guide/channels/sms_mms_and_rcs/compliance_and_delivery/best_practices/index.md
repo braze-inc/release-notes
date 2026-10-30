@@ -118,11 +118,13 @@ Use 8 pm–12 pm quiet hours (sending 12 pm–8 pm) as the workspace default whe
 Use [workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours) to apply the window to every SMS, MMS, and RCS campaign and Canvas in the workspace.
 
 1. Go to **Settings** > **Quiet Hours**.
-2. Select **Add quiet hours**.
+2. Select **Create quiet hours**. If workspace quiet hours already exist, select **Edit quiet hours**.
 3. Select **SMS/MMS/RCS**, then set the start time to 8 pm and the end time to 12 pm.
-4. Save your changes.
+4. Select **Next**.
+5. Review the existing campaigns and Canvases that this change affects.
+6. Save your changes.
 
-Workspace quiet hours is currently in early access. If you don't have access, set the same 8 pm–12 pm window on each campaign or Canvas. For permissions, precedence, held-message behavior, and API campaigns, see [Workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours).
+Workspace quiet hours is currently in early access. If you don't have access, set the same 8 pm–12 pm window on each campaign or Canvas. For permissions, opting out, precedence, held-message behavior, and API campaigns, see [Workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours).
 
 ### Abort or hold by delivery type
 

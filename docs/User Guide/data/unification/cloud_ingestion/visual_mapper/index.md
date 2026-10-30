@@ -10,7 +10,7 @@ With the visual mapper, you can sync an existing table or view from your data wa
 
 Before you create a sync with the visual mapper, you'll need:
 
-- An active Cloud Data Ingestion data warehouse source. If you haven't set one up, see [Data warehouse integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations).
+- An active Cloud Data Ingestion data warehouse source. If you haven't set one up, see [Cloud Data Ingestion sources](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources).
 - The name of the table or view you want to sync, as it appears in your data warehouse.
 - A column in your table that contains a supported user identifier, and a column with a timestamp Braze can use for change tracking.
 

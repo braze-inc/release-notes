@@ -175,14 +175,40 @@ You can view the following segment statistics, which update in real-time as you 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 
 
 
 
+
+
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
-
-
 
 
 

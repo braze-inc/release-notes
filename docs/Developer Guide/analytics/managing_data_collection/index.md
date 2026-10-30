@@ -16,7 +16,7 @@ This guide uses code samples from the Braze Web SDK 4.0.0+. To upgrade to the la
 
 
 
-To disable data-tracking activity on the Web SDK, use the method [`disableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk). This will sync any data logged before `disableSDK()` was called, and will cause all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored.
+To disable data-tracking activity on the Web SDK, use the method [`disableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk). This syncs any data logged before `disableSDK()` was called, and causes all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored.
 
 
 
@@ -35,13 +35,20 @@ The Braze SDK does not need to be initialized to call `disableSDK()`, allowing y
 
 
 
-## Wiping previously-stored data
+## Wiping previously-stored data {#wiping-previously-stored-data}
 
 You can use the method [`wipeData()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#wipedata) to fully clear all client-side data stored on the device. This method removes the current user session, device ID, and all locally stored SDK data. After calling `wipeData()`, users will appear as a new anonymous user on a new device.
 
 For a full browser logout, use [`logout()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logout) (Web SDK 6.10.0 and later). `logout()` unregisters web push for the current browser and, on success, calls `wipeData()` and [`disableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk). Use `wipeData()` alone when you need to clear local SDK storage without that full logout flow—for example, consent revocation or a privacy "clear my data" action.
 
-Call `logout()` (or `wipeData()`) when a user logs out so data from one user profile doesn't persist for the next user. This is especially important when implementing Banners, so a banner served to one profile isn't shown to a different profile after logout. After `logout()`, call [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) and `initialize()` again before you resume tracking.
+**Important:**
+
+
+Always call `logout()` (or `wipeData()`) when a user logs out of your app or website. Failing to wipe data on logout causes previously stored data—including personalized content from Banners, in-app messages, and other messaging channels—to persist for the next user. This is especially important on shared devices or when users can switch accounts.
+
+
+
+After `logout()`, call [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) and `initialize()` again before you resume tracking.
 
 ## Resuming data tracking
 

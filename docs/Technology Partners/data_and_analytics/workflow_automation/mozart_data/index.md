@@ -58,7 +58,7 @@ Fivetran begins syncing data from your Braze account to your Snowflake data ware
 
 #### Step 1: Set up a Snowflake data warehouse
 
-Follow the [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/?tab=snowflake) instructions to set up a table, user, and permission from the Snowflake interface. Note that this step requires admin-level Snowflake access.
+Follow the [Cloud Data Ingestion for Snowflake](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/snowflake/) instructions to set up a table, user, and permission from the Snowflake interface. Note that this step requires admin-level Snowflake access.
 
 #### Step 2: Set up your Snowflake integration in Braze
 

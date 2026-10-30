@@ -1,4 +1,4 @@
-<div id='api_rejmiwkxxczd' class='api_div' data-search-keywords='list object relationship types type_name anchor limit offset items from_type_name to_type_name rel_kind display_name related_type_name total_count has_more next_offset'>
+<div id='api_fkdbzaujphya' class='api_div' data-search-keywords='list object relationship types type_name anchor limit offset items from_type_name to_type_name rel_kind display_name related_type_name total_count has_more next_offset'>
 <h1 id="list-object-relationship-types">List object relationship types</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/data_objects/types/{type_name}/object_relationship_types</p>
@@ -10,7 +10,7 @@
 
 <p><strong>Important:</strong></p>
 
-<p>Data Objects is currently in early access. Your workspace must be enabled before the Data Objects API key permissions appear on <strong>Settings</strong> &gt; <strong>API Keys</strong>.</p>
+<p>Data Objects is generally available, but your workspace must be provisioned for Accounts before you can use this endpoint. To request provisioning, go to <strong>Data Settings</strong> &gt; <strong>Accounts</strong> and complete the questionnaire. For details, see <a href="/docs/user_guide/data/activation/accounts#step-1-enable-accounts">Enable Accounts</a>.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

@@ -277,7 +277,7 @@ Company permissions are assigned to each user from the [Company tab](https://www
 
 | Product area | Permission | Definition |
 | --- | --- | --- |
-| Currents Integrations | View Currents Integrations | View Currents integrations and Data Sharing (Snowflake Data Sharing and Databricks Delta Sharing) |
+| Currents Integrations | View Currents Integrations | View Currents integrations and Data Sharing (Snowflake Data Sharing and Databricks OpenSharing) |
 | Currents Integrations | Edit Currents Integrations | Create, update, and delete Currents integrations and Data Sharing shares |
 | Technology Partners | Edit Technology Partners | Create and update technology partners |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Partner integrations permissions" }
@@ -362,11 +362,14 @@ Company permissions are assigned to each user from the [Company tab](https://www
 
 | Product area | Permission | Definition |
 | --- | --- | --- |
+| Agentic Standards | View Agentic Standards | Allows users to view Agentic Standards |
+| Agentic Standards | Archive Agentic Standards | Allows users to archive Agentic Standards. Requires the "View Agentic Standards" permission. |
+| Agentic Standards | Edit Agentic Standards | Allows users to create and edit Agentic Standards. Requires the "View Agentic Standards" permission. |
 | App Usage | View Usage Data | View usage data |
 | Billing | View Billing Details | View billing details |
-| Custom Agents | View Agent Console AI Agents | Allows users to view custom AI agents |
-| Custom Agents | Archive Agent Console AI Agents | Allows users to archive custom AI agents |
-| Custom Agents | Edit Agent Console AI Agents | Allows users to create and update custom AI agents |
+| Canvas and Data Agents | View Canvas and Data Agents | Allows users to view Canvas and Data Agents |
+| Canvas and Data Agents | Archive Canvas and Data Agents | Allows users to archive Canvas and Data Agents |
+| Canvas and Data Agents | Edit Canvas and Data Agents | Allows users to create and edit Canvas and Data Agents |
 | Custom Attributes Marked As PII | View Custom Attributes Marked as PII | View custom attributes marked as PII |
 | Dashboard Reports | View Dashboard Reports | View reports without making changes |
 | Dashboard Reports | Delete Dashboard Reports | Permanently delete reports |

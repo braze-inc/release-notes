@@ -61,7 +61,7 @@ Compare required columns and supported identifiers for each path. Configure one 
 
 ### Step 4: Implement the path you selected
 
-- **Standard CDI sync:** Create a warehouse table or view, then follow [Cloud Data Ingestion integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/integrations/) and [Table setup](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup/).
+- **Standard CDI sync:** Create a warehouse table or view, then follow the setup steps for your [Cloud Data Ingestion source](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/) and [Table setup](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup/).
 - **CDI Segments:** Add a [Connected source](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/connected_sources/), then create a [CDI Segment Extension](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/cdi_segments/).
 - **CDI Canvas triggers:** Set up a source table with `PROPERTIES`, build and launch a destination Canvas, then create a sync per [Zero-copy personalization using CDI](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/zero_copy_sync/).
 - **`/users/track`:** Send requests from your application or middleware. Format payloads per [POST: Create and update users](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/).

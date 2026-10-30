@@ -386,6 +386,17 @@ To refresh credentials—or to switch between **AWS Secret Access Key** and **AW
 
 When you've finished preparing credentials in AWS, go to **Partner Integrations** > **Currents** in Braze, locate your Amazon S3 connector in the list, select **Edit**, update **Credentials**, and select **Update Current**. Braze validates the credentials you enter; your connector keeps running and data already in your bucket remains available. For more information, see [Updating Currents in Set up Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/#updating-currents).
 
+## Switching your Message Archiving bucket
+
+Message Archiving keeps running while you switch to a new S3 bucket or IAM role. Braze saves your new settings only after the credential test passes, so archiving is always pointed at a working destination.
+
+The change doesn't take effect immediately. For a short time after you save, Braze may still use your previous settings:
+
+- Your previous bucket may still receive some archived messages, for example from sends that were already in progress.
+- Your previous IAM role (if you use role-based authentication and changed the role ARN) may still be used to write to your new bucket.
+
+Don't remove access to your previous bucket or role until new archives are arriving in your new bucket for several minutes, to confirm the migration is complete. If you change the role ARN, make sure the previous role can also write to the new bucket until then. Otherwise, messages archived during the switch may not be saved, and they won't be retried.
+
 ## How Currents uploads files to S3
 
 Currents closes each Avro file when it reaches the [Avro write threshold](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/event_delivery_semantics#avro-write-threshold), then uploads the completed file to your bucket using [Amazon S3 multipart upload](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html) in 5&nbsp;MB parts. The multipart upload is separate from the write threshold, and it usually finishes within seconds after the file is closed.

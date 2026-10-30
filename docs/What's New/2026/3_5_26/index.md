@@ -18,7 +18,7 @@ Braze has launched a new [data center](https://www.braze.com/docs/user_guide/dat
 
 
 
-[Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations/#setting-up-cloud-data-ingestion-in-braze) has a new UI that separates sources from syncs, letting you reuse a single source across any number of syncs. This reduces duplicate configuration and simplifies setup when you have multiple syncs. If you have existing syncs, they're automatically migrated to the new sources-and-syncs structure with no downtime. To get started, go to **Cloud Data Ingestion** > **Sources** to view, edit, or create sources, then select a source from the dropdown when creating a sync.
+[Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/) has a new UI that separates sources from syncs, letting you reuse a single source across any number of syncs. This reduces duplicate configuration and simplifies setup when you have multiple syncs. If you have existing syncs, they're automatically migrated to the new sources-and-syncs structure with no downtime. To get started, go to **Cloud Data Ingestion** > **Sources** to view, edit, or create sources, then select a source from the dropdown when creating a sync.
 
 ### Additional fields for Currents and Data Share events
 

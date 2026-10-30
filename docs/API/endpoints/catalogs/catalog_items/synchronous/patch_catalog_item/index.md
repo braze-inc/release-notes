@@ -1,4 +1,4 @@
-<div id='api_akfidgqzceip' class='api_div' data-search-keywords='edit catalog item'>
+<div id='api_zyhulixvbnyf' class='api_div' data-search-keywords='edit catalog item'>
 <h1 id="edit-catalog-item">Edit catalog item</h1>
 <div class="api_type"><div class="method patch ">patch</div>
 <p>/catalogs/{catalog_name}/items/{item_id}</p>

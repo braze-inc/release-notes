@@ -6,7 +6,7 @@
 
 ### Are there storage limits for images within the media library?
 
-No, there are no storage limits for assets within the media library. However, there are size limits for assets (maximum 5 MB).
+No, there are no storage limits for assets within the media library, except in free trial accounts, where each workspace can store up to 200 assets. Each file also has a maximum size based on its type. For details, see [Supported file types](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library#supported-file-types).
 
 ### Are there expiration dates for uploaded assets?
 
@@ -14,7 +14,7 @@ No, assets uploaded to the media library are retained for the entire duration of
 
 ### Can I upload video assets?
 
-No, the media library doesn't support video files. Host these externally, or on a platform such as YouTube.
+Yes, you can upload MP4 video files up to 16&nbsp;MB for use in [WhatsApp messages](https://www.braze.com/docs/user_guide/channels/whatsapp/create_a_whatsapp_message/message_and_image_formats#media-specifications). To use video in other channels, such as [iOS push notifications](https://www.braze.com/docs/user_guide/channels/push/platform_specific_resources/ios/rich_notifications#prerequisites) or [RCS messages](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/create#rcs-media-specifications), host the video file externally and use its URL.
 
 ### Can I crop all image types?
 
