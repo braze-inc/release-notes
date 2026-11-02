@@ -8,9 +8,9 @@ When you create a sync from a data warehouse source, you choose how Braze reads 
 
 | Option | How it works | Available for |
 | --- | --- | --- |
-| **Visual** | Enter a table or view and map its columns to Braze fields in the dashboard, without writing SQL. For details, see [Visual mapper](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/visual_mapper). | Attribute, custom event, and Canvas trigger syncs on data warehouse sources |
-| **SQL** | Write a query against your source. The columns your query returns become Braze fields. For details, see [SQL editor](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sql_editor). | All sync types on data warehouse sources |
-| `PAYLOAD` column | Create a table or view in your source with a Braze-accepted identifier, `UPDATED_AT`, and `PAYLOAD` columns, where `PAYLOAD` holds a JSON object in the `/users/track` format. Then create a CDI sync, select **Table** or **Visual** on the **Data definition** step, and enter the table name. For requirements, see the following sections. | All sync types on all sources, including file storage |
+| **Visual** | Enter a table or view and map its columns to Braze fields in the dashboard, without writing SQL. For details, see [Visual mapper](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/visual_mapper). | User attribute, custom event, and Canvas trigger syncs on data warehouse sources. |
+| **SQL** | Write a query against your source. The columns your query returns become Braze fields. For details, see [SQL editor](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sql_editor). | All sync types on data warehouse sources. |
+| `PAYLOAD` column | Create a table or view in your source with Braze-accepted identifier(s), `UPDATED_AT`, and `PAYLOAD` columns, where `PAYLOAD` holds a JSON object in a Braze REST API format, such as `/users/track` for user attribute syncs. Then create a CDI sync, select **Table** or **Visual** on the **Data definition** step, and enter the table name. For requirements, see the following sections. | All sync types on all sources, including file storage. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Data definition options" }
 
 ## Data organization guidance

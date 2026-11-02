@@ -19,7 +19,7 @@ Rows processed per sync depend on your warehouse performance, network latency, a
 
 ## Step 1: Set up your source table
 
-The steps in this section create a table with a `PAYLOAD` column. If you plan to map columns with **Visual** or write a query with **SQL** on the **Data definition** step, you can use an existing table or view instead. Skip the table creation step, and grant Braze read access to the tables or views you want to sync. For a comparison of options, see [Choose a data definition option](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup#choose-a-data-definition-option).
+The steps in this section create a table with a `PAYLOAD` column. If you plan to shape your data on the **Data definition** step instead, you can use an existing table or view. Skip the table creation step, and grant Braze read access to the tables or views you want to sync. For a comparison of options, see [Choose a data definition option](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup#choose-a-data-definition-option).
 
 You can name the database, schema, and table as you'd like, but the column names should match the definitions in the following tabs. You may also use a view or a materialized view instead of a table.
 
@@ -162,6 +162,146 @@ SELECT
             attribute_3)
     ) as PAYLOAD FROM "product_catalog_1";
 ```
+
+
+
+
+Before you create a data object sync, create the data object type and its fields in Braze. For the full workflow, see [Sync data objects](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sync_data_objects).
+
+```sql
+CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC (
+   updated_at timestamptz default sysdate not null,
+   object_id varchar not null,
+   payload varchar(max) not null,
+   --the data object record associated with this object_id should be deleted
+   deleted boolean
+)
+```
+
+| Field name | Type | Mode |
+|---|---|---|
+| `UPDATED_AT` | timestamptz | REQUIRED |
+| `OBJECT_ID` | varchar | REQUIRED |
+| `PAYLOAD` | varchar(max) | REQUIRED |
+| `DELETED` | boolean | NULLABLE |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Redshift data object source table" }
+
+- `UPDATED_AT` - The time this row was updated in or added to the table. Braze syncs rows where `UPDATED_AT` is later than the last synced value. Rows at the exact boundary timestamp may be re-synced if new rows share that same timestamp.
+- `OBJECT_ID` - The identifier of the data object record. This must match the `object_id` value used in Braze for this data object type.
+- `PAYLOAD` - A JSON string of the fields and values to sync. Each key must match a field defined on the data object type in Braze.
+- `DELETED` - When `true`, Braze deletes the record instead of updating it. Leave this null or `false` for rows you want to create or update.
+
+Field names inside `PAYLOAD` are case-sensitive. A key named `NAME` does not match a field named `name`. If the casing doesn't match, validation reports the key as an undefined field and reports the field it was meant to populate as missing. Name your keys exactly as the fields appear in **Data Settings** > **Data Objects**.
+
+Braze does not create or change data object types during a sync. Define the type and all of its fields in Braze before you create the sync. To add a field later, add it to the type first, then update your source table or query.
+
+
+For example, a `PAYLOAD` value for an account with a `name` and a `team_id` field looks like this:
+
+```json
+{"name": "Acme Corp", "team_id": 42}
+```
+
+Grant the Braze user access to this table:
+
+```sql
+GRANT SELECT ON TABLE ACCOUNTS_SYNC TO braze_user;
+```
+
+On the **Data definition** step, select the **Data Objects** data type, then choose your **Data object type**. Data object syncs support **Table** and **SQL**.
+
+
+
+
+Use this sync to connect users to data object records, such as linking users to the accounts they belong to. Create the relationship in Braze before you sync it.
+
+```sql
+CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNT_USERS_SYNC (
+   updated_at timestamptz default sysdate not null,
+   object_id varchar not null,
+   --at least one of external_id, alias_name and alias_label, email, or phone is required
+   external_id varchar,
+   --if using user alias, both alias_name and alias_label are required
+   alias_name varchar,
+   alias_label varchar,
+   email varchar,
+   phone varchar,
+   payload varchar(max),
+   deleted boolean
+)
+```
+
+| Field name | Type | Mode |
+|---|---|---|
+| `UPDATED_AT` | timestamptz | REQUIRED |
+| `OBJECT_ID` | varchar | REQUIRED |
+| `EXTERNAL_ID` | varchar | NULLABLE |
+| `ALIAS_NAME` | varchar | NULLABLE |
+| `ALIAS_LABEL` | varchar | NULLABLE |
+| `EMAIL` | varchar | NULLABLE |
+| `PHONE` | varchar | NULLABLE |
+| `PAYLOAD` | varchar(max) | NULLABLE |
+| `DELETED` | boolean | NULLABLE |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Redshift data object user relationship source table" }
+
+Each row needs `OBJECT_ID` plus at least one user identifier: `EXTERNAL_ID`, the combination of `ALIAS_NAME` and `ALIAS_LABEL`, `EMAIL`, or `PHONE`. Use `PAYLOAD` for any fields defined on the relationship itself.
+
+**Important:**
+
+
+`BRAZE_ID` is not supported for user relationship syncs, unlike user attribute syncs. Use one of the identifiers listed previously.
+
+
+
+- `UPDATED_AT` - The time this row was updated in or added to the table. Braze syncs rows where `UPDATED_AT` is later than the last synced value. Rows at the exact boundary timestamp may be re-synced if new rows share that same timestamp.
+- `OBJECT_ID` - The identifier of the data object record. This must match the `object_id` value used in Braze for this data object type.
+- `PAYLOAD` - A JSON string of the fields and values to sync. Each key must match a field defined on the data object type in Braze.
+- `DELETED` - When `true`, Braze deletes the record instead of updating it. Leave this null or `false` for rows you want to create or update.
+
+Field names inside `PAYLOAD` are case-sensitive. A key named `NAME` does not match a field named `name`. If the casing doesn't match, validation reports the key as an undefined field and reports the field it was meant to populate as missing. Name your keys exactly as the fields appear in **Data Settings** > **Data Objects**.
+
+Braze does not create or change data object types during a sync. Define the type and all of its fields in Braze before you create the sync. To add a field later, add it to the type first, then update your source table or query.
+
+
+On the **Data definition** step, select the **Data Object User Relationships** data type, then choose a **Relationship name**, such as **User (Account-User)**.
+
+
+
+
+Use this sync to connect data object records to each other, such as linking accounts to their parent accounts. Create the relationship in Braze before you sync it.
+
+```sql
+CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNT_SUBACCOUNTS_SYNC (
+   updated_at timestamptz default sysdate not null,
+   object_id varchar not null,
+   related_object_id varchar not null,
+   payload varchar(max),
+   deleted boolean
+)
+```
+
+| Field name | Type | Mode |
+|---|---|---|
+| `UPDATED_AT` | timestamptz | REQUIRED |
+| `OBJECT_ID` | varchar | REQUIRED |
+| `RELATED_OBJECT_ID` | varchar | REQUIRED |
+| `PAYLOAD` | varchar(max) | NULLABLE |
+| `DELETED` | boolean | NULLABLE |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Redshift data object relationship source table" }
+
+`OBJECT_ID` is the record the relationship starts from, and `RELATED_OBJECT_ID` is the record it points to. Both are required in every row. Use `PAYLOAD` for any fields defined on the relationship itself.
+
+- `UPDATED_AT` - The time this row was updated in or added to the table. Braze syncs rows where `UPDATED_AT` is later than the last synced value. Rows at the exact boundary timestamp may be re-synced if new rows share that same timestamp.
+- `OBJECT_ID` - The identifier of the data object record. This must match the `object_id` value used in Braze for this data object type.
+- `PAYLOAD` - A JSON string of the fields and values to sync. Each key must match a field defined on the data object type in Braze.
+- `DELETED` - When `true`, Braze deletes the record instead of updating it. Leave this null or `false` for rows you want to create or update.
+
+Field names inside `PAYLOAD` are case-sensitive. A key named `NAME` does not match a field named `name`. If the casing doesn't match, validation reports the key as an undefined field and reports the field it was meant to populate as missing. Name your keys exactly as the fields appear in **Data Settings** > **Data Objects**.
+
+Braze does not create or change data object types during a sync. Define the type and all of its fields in Braze before you create the sync. To add a field later, add it to the type first, then update your source table or query.
+
+
+On the **Data definition** step, select the **Data Object Relationships** data type, then choose a **Relationship name**, such as **Subaccount (Account-Account)**.
 
 
 
@@ -356,7 +496,7 @@ Go to **Data Settings** > **Cloud Data Ingestion** > **Syncs**, and select **Cre
 
 ### Configure sync details and define your data
 
-Enter a name for your sync. Then, select an active source and a sync data type. Next, select **Visual** or **Table** and enter your source table, or select **SQL** to write a custom SQL query. Finally, select **Preview and validate**.
+Enter a name for your sync. Then, select an active source and a sync data type. Next, select a sync mode and define your data. Then select **Preview and validate**.
 
 After validation succeeds, a preview of the data appears. Select **Next: Notifications** to continue. If validation fails, an error message appears to help troubleshoot the issue.
 

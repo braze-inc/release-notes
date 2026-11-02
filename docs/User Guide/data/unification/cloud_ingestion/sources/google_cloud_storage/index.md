@@ -323,6 +323,91 @@ ID,PAYLOAD
 
 
 
+Before you create a data object sync, create the data object type and its fields in Braze. For the full workflow, see [Sync data objects](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sync_data_objects).
+
+Unlike data warehouse sources, file storage sources carry the data object fields in a `PAYLOAD` column rather than one column per field.
+
+| Column | Required | Description |
+| --- | --- | --- |
+| `OBJECT_ID` | Yes | The identifier of the data object record. Used to create, update, or delete the record in Braze. |
+| `PAYLOAD` | Yes | A JSON string of the fields and values to sync. Each key must match a field defined on the data object type in Braze, including its casing. |
+| `DELETED` | No | When `true`, the record with the matching `OBJECT_ID` is deleted in Braze. Omit this column or set it to `false` for create or update operations. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="File storage data object columns" }
+
+**JSON example**
+
+```jsonl
+{"object_id":"acct-001","payload":"{\"name\":\"Acme Corp\",\"team_id\":42}"}
+{"object_id":"acct-002","payload":"{\"name\":\"Initech\",\"team_id\":17}"}
+{"object_id":"acct-003","payload":"{\"name\":\"Hooli\",\"team_id\":5}","deleted":true}
+```
+
+**CSV example**
+
+```plaintext
+OBJECT_ID,PAYLOAD,DELETED
+acct-001,"{""name"": ""Acme Corp"", ""team_id"": 42}",false
+acct-002,"{""name"": ""Initech"", ""team_id"": 17}",false
+acct-003,"{""name"": ""Hooli"", ""team_id"": 5}",true
+```
+
+
+
+
+Use this sync to connect users to data object records, such as linking users to the accounts they belong to. Create the relationship in Braze before you sync it.
+
+Each row needs `OBJECT_ID` plus at least one user identifier.
+
+| Column | Required | Description |
+| --- | --- | --- |
+| `OBJECT_ID` | Yes | The identifier of the data object record the user is related to. |
+| `EXTERNAL_ID` | Yes, at least one user identifier per row | Matches the `external_id` used in Braze. |
+| `ALIAS_NAME` and `ALIAS_LABEL` | Yes, at least one user identifier per row | Both columns together identify the user by alias. |
+| `EMAIL` | Yes, at least one user identifier per row | The user's email address. |
+| `PHONE` | Yes, at least one user identifier per row | The user's phone number. |
+| `PAYLOAD` | No | A JSON string of the fields and values on the relationship itself. |
+| `DELETED` | No | When `true`, the relationship between the record and the user is removed. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="File storage data object user relationship columns" }
+
+**Important:**
+
+
+`BRAZE_ID` is not supported for user relationship syncs, unlike user attribute syncs. Use one of the identifiers listed previously.
+
+
+
+**JSON example**
+
+```jsonl
+{"object_id":"acct-001","external_id":"user-1","payload":"{\"role\":\"admin\"}"}
+{"object_id":"acct-001","email":"someone@example.com","payload":"{\"role\":\"member\"}"}
+{"object_id":"acct-002","external_id":"user-9","deleted":true}
+```
+
+
+
+
+Use this sync to connect data object records to each other, such as linking accounts to their parent accounts. Create the relationship in Braze before you sync it.
+
+| Column | Required | Description |
+| --- | --- | --- |
+| `OBJECT_ID` | Yes | The record the relationship starts from. |
+| `RELATED_OBJECT_ID` | Yes | The record the relationship points to. |
+| `PAYLOAD` | No | A JSON string of the fields and values on the relationship itself. |
+| `DELETED` | No | When `true`, the relationship between the two records is removed. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="File storage data object relationship columns" }
+
+**JSON example**
+
+```jsonl
+{"object_id":"acct-001","related_object_id":"acct-010","payload":"{\"tier\":\"parent\"}"}
+{"object_id":"acct-001","related_object_id":"acct-011","payload":"{\"tier\":\"parent\"}"}
+{"object_id":"acct-002","related_object_id":"acct-020","deleted":true}
+```
+
+
+
+
 Canvas triggers power zero-copy personalization. For the destination Canvas setup and considerations, see [Zero-copy personalization](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/zero_copy_sync).
 
 | Field | Required | Description |

@@ -56,6 +56,7 @@ Cloud Data Ingestion supports the following data types:
 
 ### Non-user objects
 - Catalog items
+- Data objects, including user relationships and object relationships
 
 ### Zero-copy messaging
 - Canvas triggers
@@ -100,8 +101,9 @@ Braze Cloud Data Ingestion counts toward the available rate limit, so if you're 
 | Number of integrations | There is no limit on how many integrations you can set up.                                             |
 | Number of rows         | By default, each run can sync up to 500 million rows. Any syncs with more than 500 million new rows are stopped. If you need a higher limit than this, contact your Braze customer success manager or Braze Support. |
 | Attributes per row     | For syncs using a `PAYLOAD` column, each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
+| Fields per data object | A data object type can have up to 500 fields. A relationship between two types can have up to 25 fields. |
 | Payload size           | For syncs using a `PAYLOAD` column, each row can contain a payload of up to 1 MB. Payloads greater than 1 MB are rejected, and the error "Payload was greater than 1MB" is logged to the sync log along with the associated external ID and truncated payload. |
-| Data type              | You can sync user attributes, custom events, purchase events, catalog items, user deletion requests, and Canvas triggers through Cloud Data Ingestion.                                                                                                  |
+| Data type              | You can sync user attributes, custom events, purchase events, user deletion requests, Canvas triggers, catalog items, data objects, and data object relationships through Cloud Data Ingestion.                                                                                                  |
 | Braze region           | This product is available in all Braze regions. Any Braze region can connect to any source data region.                                                                              |
 | Source region       | Braze connects to your data warehouse or cloud environment in any region or cloud provider.                                                                                        |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Product limitations" }
