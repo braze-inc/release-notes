@@ -15,7 +15,7 @@ Every source page follows the same shape, so you can set up any source without r
 - The resources to create in your warehouse or cloud account, including roles, users, service accounts, and network access.
 - A **Set up authentication** section that lists the authentication methods the source supports, with setup steps for each method.
 - How to create the source and the sync in the Braze dashboard.
-- A tab for each data type you can sync from that source, covering user attributes, custom events, purchase events, catalog items, Canvas triggers, and user deletions.
+- A tab for each data type you can sync from that source, covering user attributes, custom events, purchase events, Canvas triggers, user deletions, catalog items, data objects, and data object relationships.
 - Source-specific query optimization and troubleshooting.
 
 ## Authentication methods by source
@@ -48,6 +48,9 @@ Not every data type is available for every source. Use this table to confirm wha
 | Catalog items | Supported | Supported |
 | User deletions | Supported | Supported |
 | Canvas triggers | Supported | Supported |
+| Data objects | Supported | Supported |
+| Data object user relationships | Supported | Supported |
+| Data object relationships | Supported | Supported |
 | Connected sources | Supported | Not supported |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Data types by source" }
 

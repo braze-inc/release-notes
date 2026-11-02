@@ -13,7 +13,7 @@ Conversational Agents is currently in beta. Contact your Braze account manager i
 
 A conversational workflow is a task you want an agent to complete. Each workflow includes a purpose, channel settings, a target audience, and natural-language steps. In a step, add tools so the agent can search catalogs, set attributes, log events, or call webhooks.
 
-After you create workflows, see [Update settings](#update-settings) for brand guidelines and channel behavior. Use [Preview a conversation](#preview-a-conversation) and [Review conversation history](#review-conversation-history) to test the experience and review tool calls.
+After you create workflows, see [Settings](#settings) for brand guidelines and channel behavior. Use [Preview a conversation](#preview-a-conversation), [Create simulations](#create-simulations), and [Review conversation history](#review-conversation-history) to test the experience and review tool calls.
 
 ## Set up the web chat widget
 
@@ -59,41 +59,28 @@ braze.openSession();
 
 Use a conversational workflow to define a task, choose channels and an audience, and tell the agent what to do in each step.
 
-### Step 1: Open Conversational Agents
+### Step 1: Set up workflow details
 
-Go to **Agent Console** > **Conversational Agents**. From this page, create conversational workflows for your workspace.
+Go to **Agent Console** > **Conversational Agents**, then set up the details for your workflow:
 
-### Step 2: Set up workflow details
+1. Enter a name for the workflow.
+2. Enter a purpose that describes what this workflow does, so the agent knows when to use it.
+3. Select the channels this workflow is enabled for. Supported channels are SMS, RCS, WhatsApp, and Web.
+   - For web, select which web apps this workflow is enabled for.
+   - For SMS, RCS, and WhatsApp, select which [subscription groups](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups) this workflow is enabled for.
+4. Select the [segments](https://www.braze.com/docs/user_guide/audience/segments) a user must belong to in order to access this workflow.
 
-Enter the following fields for the workflow:
+For SMS, RCS, and WhatsApp, some inbound message triggers can block the agent. On the [Settings](#settings) page, review the triggers that may block agents for each subscription group.
 
-| Field | Description |
-| --- | --- |
-| **Name** | The name of the workflow. |
-| **Purpose** | What this workflow does, so the agent knows when to use it. |
-| **Channel settings** | The channels this workflow is enabled for. Supported channels are SMS, RCS, WhatsApp, and Web. |
-| **Target audience** | The [segments](https://www.braze.com/docs/user_guide/audience/segments) a user must belong to in order to access this workflow. |
-{: .reset-td-br-1 .reset-td-br-2 aria-label="Workflow details" }
+### Step 2: Write workflow steps
 
-- For web, select which web apps this workflow is enabled for. First [set up the web chat widget](#set-up-the-web-chat-widget) in your Web SDK.
-- For SMS, RCS, and WhatsApp, select which [subscription groups](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups) this workflow is enabled for.
+Add the steps the agent should take to complete the workflow. A workflow can have up to 10 steps. Each step needs an instruction, which can be up to 5,000 characters.
 
-**Note:**
+For steps with a single goal, write the instruction in one to three short sentences. Keep the rules clear, and end with an explicit question or confirmation so the agent knows how to phrase its next response to the user.
 
+### Step 3: Add tools to steps
 
-For SMS and RCS, the agent is not invoked if the user response matches an existing [keyword trigger](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing).
-
-
-
-### Step 3: Write workflow steps
-
-Add the steps the agent should take to complete the workflow. Write each step clearly.
-
-End each step with an explicit action so the agent knows how to phrase its next response to the user.
-
-### Step 4: Add tools to steps
-
-Steps can include tools the agent uses while it works. In the instruction text box, enter `/` and select a tool.
+Steps can include tools the agent uses while it works. In the **Instructions** of a step, tools are inserted by entering `/` and appear as tags in the instruction. A step can reference up to 10 tools.
 
 ![The instruction text box in a workflow step, with the slash menu open to insert a tool.](https://www.braze.com/docs/assets/img/conversational_agents/add_tools.png?a46ee28b57fe62457dfc01a8ace261e6){: style="max-width:80%;"}
 
@@ -109,6 +96,7 @@ You can add any of these tools to a step:
 | [Log custom event](#log-a-custom-event) | Log a Braze [custom event](https://www.braze.com/docs/user_guide/data/activation/events/custom_events). |
 | [Set custom attribute](#set-a-custom-attribute) | Set a [custom attribute](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes) on the user. |
 | [Get custom attribute](#get-a-custom-attribute) | Retrieve a custom attribute from the user. |
+| [Get user attribute](#get-a-user-attribute) | Retrieve a standard user profile field. |
 | [Call webhook](#call-a-webhook) | Send an HTTP request to an external endpoint. |
 | [Get webhook response](#get-a-webhook-response) | Retrieve a field extracted from a previous webhook response. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Supported tools" }
@@ -123,20 +111,20 @@ Use this tool to help the agent query and understand a Braze catalog. Create kno
 
 First, create the knowledge source on the [Knowledge sources](https://www.braze.com/docs/user_guide/brazeai/agents/knowledge_sources) page. Then, in the instruction text box, enter `/` and select **Search knowledge sources**. Select an existing conversational knowledge source tool, or select **Create new search tool**.
 
-When you create a new tool, a drawer opens. Enter a name and description, then select a knowledge source. After you select a knowledge source, choose which fields the agent can access.
+When you create a new tool, enter a name and description, then select a knowledge source. After you select a knowledge source, choose which fields the agent can access.
 
 ### Set a workflow attribute
 
 Use this tool to set an attribute the agent can reuse later in the same workflow. Workflow attributes are scoped to the workflow they are set in. Use them as custom event properties, custom attribute values, and webhook parameters.
 
-Set a workflow attribute in one of two ways:
+When you create the attribute, you can optionally add **Allowed values**:
 
-- Let the agent decide the value based on the instruction.
-- Give the agent a list of allowed values to choose from.
+- Leave allowed values empty to let the agent set any value of that type based on the conversation.
+- Add allowed values to limit the agent to a subset you define. Use this when later tools (such as **Call webhook**, **Log custom event**, or **Set custom attribute**) should reuse a controlled value instead of an open-ended agent choice.
 
-In the instruction text box, enter `/` and select **Set workflow attribute**. Select an existing workflow attribute, or select **Create new attribute**.
+In **Instruction**, enter `/` and select **Set workflow attribute**. Select an existing workflow attribute, or select **Create new attribute**.
 
-When you create a new attribute, a drawer opens. Enter a name and description, then select the type. After you select the type, choose whether to use allowed values.
+When you create a new attribute, enter a name and description, then select the type. After you select the type, optionally add allowed values.
 
 ### Get a workflow attribute
 
@@ -146,7 +134,7 @@ Use this tool to retrieve the value of a workflow attribute set in an earlier st
 
 Use this tool to log a Braze custom event. In the instruction text box, enter `/` and select **Log custom event**. Select an existing log custom event tool, or select **Create new custom event tool**.
 
-When you create a new tool, a drawer opens. Select the custom event, then enter a name and description. Choose the event properties to send with the custom event. Each custom event property can use one of the following sources:
+When you create a new tool, select the custom event, then enter a name and description. Choose the event properties to send with the custom event. Each custom event property can use one of the following sources:
 
 | Source | Description |
 | --- | --- |
@@ -165,7 +153,7 @@ To send a user into a Canvas, log a custom event that the Canvas uses as an [ent
 
 Use this tool to set a custom attribute on the user. In the instruction text box, enter `/` and select **Set custom attribute**. Select an existing set custom attribute tool, or select **Create new custom attribute tool**.
 
-When you create a new tool, a drawer opens. Enter a name and description, then select the custom attribute the tool should set. A custom attribute can use one of the following sources:
+When you create a new tool, enter a name and description, then select the custom attribute the tool should set. A custom attribute can use one of the following sources:
 
 | Source | Description |
 | --- | --- |
@@ -184,11 +172,22 @@ Custom attributes are set asynchronously. If the agent reads a custom attribute 
 
 Use this tool to retrieve a custom attribute.
 
+### Get a user attribute
+
+Use this tool to retrieve a standard user profile field. In the instruction text box, enter a forward-slash (`/`) and select **Get user attribute**. Choose one of the following fields:
+
+- **External ID**
+- **Braze ID**
+- **Email**
+- **First name**
+- **Last name**
+- **Phone**
+
 ### Call a webhook
 
 Use this tool to call a webhook. In the instruction text box, enter `/` and select **Call webhook**. Select an existing webhook tool, or select **Create new webhook**.
 
-When you create a new tool, a drawer opens. Enter a name and description, then add variables. Variables let you include personalized values in the webhook URL, body, or headers.
+When you create a new tool, enter a name and description, then add variables. Variables let you include personalized values in the webhook URL, body, or headers.
 
 A variable can use one of the following sources:
 
@@ -216,7 +215,7 @@ https://myurl.com/create/{{user_id}}
 ```
 
 
-Next, set the request body. Leave the body empty, or enter a string that parses as JSON. For example:
+Next, set the request body. Leave the body empty, or enter a string that can include `{{variable_name}}` placeholders. For most APIs, send a JSON body. For example:
 
 
 ```json
@@ -232,24 +231,49 @@ Next, set the request body. Leave the body empty, or enter a string that parses 
 
 You can also set headers using variables. For credentials, create [Connected Content credentials](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call#authentication-types) in the dashboard and reference them in this tool.
 
-Webhook responses can be large, so you can extract only the fields the workflow needs. Create response fields with a [JMESPath](https://jmespath.org/tutorial.html) expression that points to a value in the response body. Reference those fields later with the [Get webhook response](#get-a-webhook-response) tool.
+Webhook responses can be large, so you can extract only the fields the workflow needs. Create response fields with a [JMESPath](https://jmespath.org/tutorial.html) expression that points to a value in the response body. The response body must be valid JSON for those fields to extract successfully. Reference those fields later with the [Get webhook response](#get-a-webhook-response) tool.
 
 ### Get a webhook response
 
 Use this tool to reference a webhook response field extracted from a previous **Call webhook** step.
 
-## Update settings
+## Settings
 
-Go to **Agent Console** > **Conversational Agents**, then select **Settings**. Set your [brand guidelines](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/brand_guidelines) and manage channel settings.
+Configure brand guidelines and channel behavior for Conversational Agents. Go to **Agent Console** > **Conversational Agents**, then select **Settings**.
 
-Web supports an opening message that you set on this page. SMS, RCS, and WhatsApp don't include additional settings on this page. Review the keywords set for each subscription group.
+### Brand guidelines
+
+Select [brand guidelines](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/brand_guidelines) for the agent to follow in its responses. Create and manage guidelines from **Content** > **Brand Guidelines**, then choose one here.
+
+### Web settings
+
+Set an **Opening message**. This is the first message users see when they start a web conversation.
+
+### SMS, RCS, and WhatsApp settings
+
+Configure the following:
+
+| Setting | Description |
+| --- | --- |
+| **Daily turn limit** | The maximum number of turns per user per day for messaging channels. |
+| **AI disclosure message** | Text that opens the agent's first reply in every SMS, RCS, and WhatsApp conversation. You can reword it, but you can't turn it off. Leave the field blank to use the default message. |
+| **Triggers that may block agents** | A list of inbound message triggers on each subscription group enabled in a workflow. If an inbound message activates one of these triggers, the conversational agent does not respond. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Messaging channel settings" }
+
+Triggers that may take priority include:
+
+- [Keyword triggers](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing)
+- Action-based campaigns
+- Action-based Canvas entry
+- Canvas action path
+- Canvas exit
 
 ## Preview a conversation {#preview-a-conversation}
 
 There are two ways to preview:
 
-- When you create a workflow, preview that workflow only.
-- On the **Settings** page, preview the experience for a web app or subscription group.
+- When you edit a saved workflow, preview that workflow only. Preview is unavailable until you save a new workflow.
+- On the **Settings** page, preview the experience for a web app or subscription group. Optionally, select **Include draft workflows** to test draft workflows before you make them active.
 
 In both cases, preview as a specific user.
 
@@ -260,6 +284,12 @@ Preview mode does not log custom attributes or custom events.
 
 
 
+## Create simulations
+
+Go to **Agent Console** > **Conversational Agents**, then select **Simulations**.
+
+Create simulation cases that describe a user scenario and expected outcomes. Run a simulation to test those cases against your workspace's conversational workflows. You can mock webhook responses so cases stay predictable while you evaluate agent behavior.
+
 ## Review conversation history {#review-conversation-history}
 
 On the **Conversational Agents** page, select **Conversation history**. This page shows conversations with real users and conversations from preview.
@@ -267,3 +297,12 @@ On the **Conversational Agents** page, select **Conversation history**. This pag
 Use conversation history to review tool calls and confirm the agent behaves as expected.
 
 ![The Conversation history page, showing a user conversation and the agent's tool calls.](https://www.braze.com/docs/assets/img/conversational_agents/conversation_history.png?80246489bc9e5eaa5887aff7183bdcbc){: style="max-width:60%;"}
+
+## Example
+
+Flash & Thread, a fictional clothing retail brand, might use this two-step shopping workflow. 
+
+- **Step 1:** Asks the user what product category they're shopping for.
+- **Step 2:** Uses the **Set workflow attribute** tool to capture a **product_category** attribute as a string. This attribute records the product category the user says they're shopping for today from **Step 1**.
+
+![Two workflow steps for a shopping example. Step 1 asks for a product category. Step 2 sets the product_category workflow attribute and confirms the selection.](https://www.braze.com/docs/assets/img/conversational_agents/workflow_steps_example.png?9fe0099e609992a0e6fd8658fe6e1cbd){: style="max-width:80%;"}
