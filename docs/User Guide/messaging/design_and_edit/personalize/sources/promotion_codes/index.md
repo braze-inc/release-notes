@@ -66,7 +66,7 @@ Yes. Braze applies the same promotion code across all instances of that snippet 
 
 ### What happens when a promotion code list is expired or empty?
 
-Expired codes are deleted after six months.
+Upon expiration, the codes are deleted from the Braze system. There is no grace period after a list expires. Before a list expires, you can [extend the expiration date](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes/create#updating-a-promotion-code-list) or [export unused codes](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes/manage#viewing-promotion-code-usage).
 
 If the message should have contained a promotion code from an empty or expired list, the message is canceled. 
 

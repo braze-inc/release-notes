@@ -92,7 +92,7 @@ When an event or attribute is blocklisted, any segment, campaign, or Canvas usin
 
 To stop tracking a specific custom attribute, event, or product, follow these steps:
 
-1. Search for it in the **Custom Attributes**, **Custom Events**, or **Products** pages.
+1. Search for it in the **Custom Attributes**, **Custom Events**, or **Products** pages. For product-specific management, see also [Products](https://www.braze.com/docs/user_guide/data/activation/events/products).
 2. Select the custom attribute, event, or product. For custom attributes and events, you can select up to 100 to blocklist at a time.
 3. Select **Blocklist**.
 

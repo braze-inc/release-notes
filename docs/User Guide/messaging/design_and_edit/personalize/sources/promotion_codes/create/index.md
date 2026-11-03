@@ -78,7 +78,7 @@ To update a list, select one of your existing lists. You can change the name, de
 **Important:**
 
 
-Promotion codes can't be deleted.
+You can't manually delete promotion codes from a list.
 
 
 

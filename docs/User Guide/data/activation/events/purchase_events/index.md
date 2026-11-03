@@ -67,6 +67,8 @@ The following lists methods used across various platforms to log purchases. With
 
 After you have set up and begun logging purchase events, you can view this purchase data on a user's profile in the [Overview tab](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles#overview-tab).
 
+The `product_id` values from those purchases also appear on the [Products](https://www.braze.com/docs/user_guide/data/activation/events/products) page under **Data Settings**, where you can search, pre-populate, manage properties, blocklist, or delete products.
+
 ## Use purchase data
 
 There are several ways you can use purchase data in Braze:
@@ -1214,7 +1216,7 @@ This makes products straightforward to identify for segmentation and triggering.
 
 ## Blocklist purchase events
 
-You may occasionally identify purchase events that either log too many data points, are no longer useful to your marketing strategy, or were recorded in error. To stop this data from being sent to Braze, you can blocklist the custom data object while your engineering team works to remove it from the backend of your app or website.
+You may occasionally identify purchase events that either log too many data points, are no longer useful to your marketing strategy, or were recorded in error. To stop this data from being sent to Braze, you can blocklist the product while your engineering team works to remove it from the backend of your app or website.
 
-In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Managing custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/managing_custom_data) to learn more.
+In the Braze dashboard, manage products and blocklisting from the [Products](https://www.braze.com/docs/user_guide/data/activation/events/products) page.
 

@@ -10,7 +10,7 @@ There may be times when you'd like to set up campaigns and segments using custom
 
 To pre-populate custom events and attributes, do the following:
 
-1. Go to **Data Settings** > **Custom Events** or **Custom Attributes** or **Products**.
+1. Go to **Data Settings** > **Custom Events** or **Custom Attributes** or **Products**. For a dedicated walkthrough of the Products page, see [Products](https://www.braze.com/docs/user_guide/data/activation/events/products).
 
 ![Navigate to Custom Attributes or Custom Events or Products.](https://www.braze.com/docs/assets/img_archive/prepopulate_page.png?83c13a3d675018771f68754ebc098403){: style="max-width:90%;" }
 
