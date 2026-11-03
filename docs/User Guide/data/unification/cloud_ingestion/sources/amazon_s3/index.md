@@ -159,14 +159,14 @@ Braze assumes an IAM role in your AWS account. Create the role and attach the [I
 ![The "Create role" button.](https://www.braze.com/docs/assets/img/create_role_1_list.png?2d08777407a38aae1270ebebdc3ea60d)
 
 {: start="2"}
-2. In AWS, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID. Select the **Require external ID** checkbox.
+2. In AWS, select **Another AWS Account** as the trusted entity selector type.
 3. In Braze, go to **Data Settings** > **Cloud Data Ingestion** > **Sources**, select **Add data source**, and select **Amazon S3** from the file sources section.
-4. Copy the automatically generated **Braze Account ID**.
+4. Copy the automatically generated **Braze Account ID** and **External ID**. Braze generates the external ID for your workspace, and it's the same for every Amazon S3 credential in that workspace.
 
-![The "Add New Source" page showing the Source Name and S3 Connection Details sections.](https://www.braze.com/docs/assets/img/braze_account_id.png?5a9f1d0535506159d0a7615fa51465f1)
+![The "Add New Source" page showing the Source Name and S3 Connection Details sections.](https://www.braze.com/docs/assets/img/cloud_ingestion/s3_ingestion_braze_account_id.png?6d85940916fd9818fb79ff023a3f7c4a)
 
 {: start="5"}
-5. In AWS, paste the account ID and then select **Next**.
+5. In AWS, paste the account ID. Select the **Require external ID** checkbox, paste the external ID, and then select **Next**.
 
 ![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.](https://www.braze.com/docs/assets/img/create_role_2_another.png?d65b37508b1a76421859ad2263370d75)
 
@@ -181,22 +181,27 @@ Braze assumes an IAM role in your AWS account. Create the role and attach the [I
 ![An example role named "new-role-name".](https://www.braze.com/docs/assets/img/create_role_4_name.png?a509d3bd2ab0a9c64a78ce2f6312bae4)
 
 {: start="8"}
-8. Take note of the ARN of the role you created and the external ID you generated, because you need them to create the Cloud Data Ingestion integration.
+8. Take note of the ARN of the role you created, because you need it to create the Cloud Data Ingestion integration.
+
+**Important:**
+
+
+Your role's trust policy must require the exact external ID shown in Braze. When you test or save a credential, Braze checks that your role refuses any other external ID. A role that doesn't require an external ID, or that accepts a pattern such as `braze-cdi-*`, fails the connection test.
+
+
 
 
 
 ## Set up Cloud Data Ingestion in Braze {#setting-up-cloud-data-ingestion-in-braze}
 
 1. First, create a new source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Sources**, select **Add data source**, and then select **Amazon S3**.
-2. Choose a name for your source and input the information from the AWS setup process to create a new source. Specify the following:
+2. Enter a source name, then complete the **Amazon S3 Connection Details** fields:
+    - **Credentials:** Enter a credential name and the fields for your [authentication method](#set-up-authentication). 
 
-  - The credentials for your [authentication method](#set-up-authentication). 
 
+    - **Configurations:** **Bucket** and **Region**
 
-  - Bucket name
-  - Region
-
-![The S3 Connection Details section showing Credentials (AWS setup and Braze setup) and Configuration fields.](https://www.braze.com/docs/assets/img/cloud_ingestion/s3_ingestion_1.png?952507f4b2a40065536a39aaf7a900b4)
+![The S3 Connection Details section showing Credentials (AWS setup and Braze setup) and Configurations fields.](https://www.braze.com/docs/assets/img/cloud_ingestion/s3_ingestion_connection_details.png?4088ee72b62fae43d9c0d21937cd618d)
 
 {: start="3"}
 3. Select **Test connection** to confirm Braze can access your bucket. After a successful test, select **Connect to Source**. If the connection fails, an error message appears to help troubleshoot the issue.
@@ -205,15 +210,17 @@ Braze assumes an IAM role in your AWS account. Create the role and attach the [I
 4. Next, create a new sync. Go to **Data Settings** > **Cloud Data Ingestion** > **Syncs** and select **Create data sync**.
 
 {: start="5"}
-5. Choose a name for your sync. Then, select any active S3 source and input your source table for the sync. Select a data type and select **Test Connection**.
+5. Enter a sync name, select a data type, and select your S3 source. Then select **Next: Data definition**.
+6. On the **Data definition** step, enter the remaining information from the AWS setup process:
+    - **SQS URL:** Enter a URL that is unique for each new integration.
+    - **Folder path (Optional):** Enter a path that is unique across syncs in a workspace.
 
-![An option to test the connection with a data preview.](https://www.braze.com/docs/assets/img/cloud_ingestion/s3_ingestion_4.png?87bc3ce124b7b045a97ee7c4a3586178)
+{: start="7"}
+7. Select **Preview and validate** to confirm Braze can list the files available to ingest (not the data inside those files). After a successful preview, select **Next: Notifications**.
 
-6. Input the remaining information from the AWS setup process. Specify the following:
-- SQS URL (must be unique for each new integration)
-- Folder path (optional, must be unique across syncs in a workspace)
+![The Data definition step with Preview and validate and a table preview of files available to ingest.](https://www.braze.com/docs/assets/img/cloud_ingestion/s3_ingestion_preview_and_validate.png?aaa7427af898dfc8ca72d31bfb7efcfc)
 
-7. Select a data type and select **Test Connection** to confirm Braze can list the files available to ingest (not the data inside those files). Once successful, select **Next: Notifications**.
+{: start="8"}
 8. Add contact email addresses for notifications if the sync breaks because of access or permissions issues. Optionally, turn on notifications for user-level errors and sync successes.
 9. Create the sync.
 

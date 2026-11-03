@@ -170,6 +170,10 @@ For endpoint details, refer to [Data Objects endpoints](https://www.braze.com/do
 
 For authentication and REST endpoint basics, refer to [Braze API overview](https://www.braze.com/docs/api/basics).
 
+## Cloud Data Ingestion
+
+You can use Cloud Data Ingestion (CDI) to sync account records directly from your data warehouse to Braze. For setup steps and sync configuration, refer to [Sync data objects with Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sync_data_objects#sync-types).
+
 ## Frequently asked questions
 
 ### Can I add custom fields to accounts?

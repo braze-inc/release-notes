@@ -4,11 +4,17 @@
 
 ## Access the Support Portal
 
-To contact the Braze Support team, go to **Support** > **Get help with Operator** to open BrazeAI Operator<sup>TM</sup>.
+You can contact the Braze Support team in the following ways:
 
-Operator can troubleshoot your issue using context from your conversation and the current screen. If Operator can't resolve your issue, ask it to draft a support ticket based on your conversation and submit the ticket in the Braze Support Portal (if you are a designated support contact). You can also select <i class="fa-regular fa-circle-question"></i> **File a support ticket** inside Operator to file a ticket directly.
+- **BrazeAI Operator:** Go to **Support** > **Get help with Operator** to open BrazeAI Operator<sup>TM</sup>. Operator can troubleshoot your issue using context from your conversation and the current screen.
+- **Support Portal:** If you are a designated support contact, you can log in directly to the Braze Support Portal to view and manage all support cases for your company.
+- **Web form:** If Operator's usage limits are reached, you can still file a support ticket through the web form.
 
-For more information, see [file support tickets with BrazeAI Operator](https://www.braze.com/docs/user_guide/brazeai/operator/support_tickets). If you're unsure whether you are a Braze support contact, contact your company's Braze administrator, Braze success manager, or account owner.
+### Using BrazeAI Operator
+
+If Operator can't resolve your issue, and you are a designated support contact, ask it to draft a support ticket based on your conversation and submit the ticket in the Braze Support Portal. You can also select <i class="fa-regular fa-circle-question"></i> **File a support ticket** inside Operator to file a ticket directly.
+
+For more information, see [File support tickets with BrazeAI Operator](https://www.braze.com/docs/user_guide/brazeai/operator/support_tickets). If you're unsure whether you are a Braze support contact, contact your company's Braze administrator, Braze success manager, or account owner.
 
 ## Adding designated support contacts
 

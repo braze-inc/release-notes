@@ -12,9 +12,9 @@ These are performed by independent, third-party auditors. We are compliant with 
 
 ![ISO certification graphic](https://www.braze.com/docs/assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png?977a1a16c4a464e2ab0dacc3f37f9358){: height="25%" width="25%" style="border:0px;"}
 
-_Braze has certification for compliance with [ISO 27001](https://www.iso.org/standard/27001) as of December 18, 2018, and renewed as of August 29, 2025. Expires December 15, 2027._
+_Braze has certification for compliance with [ISO 27001](https://www.iso.org/standard/27001) as of December 18, 2018, and renewed as of September 2, 2026. Expires December 15, 2027._
 
-Any third party wishing to independently verify the status of Braze's certification may see the [Schellman certificate directory](https://www.schellman.com/certificate-directory?certificateNumber=1504855-9) or [see our certificate here](https://www.braze.com/docs/assets/pdf/Braze_ISO_Cert.pdf).
+Any third party wishing to independently verify the status of Braze's certification may see the [Schellman certificate directory](https://www.schellman.com/certificate-directory?certificateNumber=1504855-10) or [see our certificate here](https://www.braze.com/docs/assets/pdf/Braze_ISO_Cert.pdf).
 
 ## SOC 2 examination
 
