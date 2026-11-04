@@ -116,9 +116,9 @@ Braze provides pre-built dashboards for frequent use cases. Use the following ta
 | Session Analytics | **Analytics** > **Dashboard Builder** | [Session Analytics](#session-analytics) |
 | Messaging Observability | **Analytics** > **Dashboard Builder** | [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) |
 | Industry Benchmarks | **Analytics** > **Dashboard Builder** | [Industry Benchmarks dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/industry_benchmarks_dashboard) |
-| Email performance | **Analytics** > **Email Performance** | [Channel performance dashboards](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance#email-performance-dashboard) |
-| SMS/MMS/RCS performance | **Analytics** > **SMS/MMS/RCS Performance** | [Channel performance dashboards](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance?tab=sms%2Fmms%2frcs%20performance#sms-performance-dashboard) |
-| Push performance | **Analytics** > **Dashboard Builder** > **Push Channel Dashboard** | [Channel performance dashboards](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance?tab=push%20performance#push-performance-dashboard) |
+| Email performance | **Analytics** > **Email Performance** | [Channel performance dashboards](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance/email#email-performance-dashboard) |
+| SMS/MMS/RCS performance | **Analytics** > **SMS/MMS/RCS Performance** | [Channel performance dashboards](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance/sms_mms_rcs#sms-performance-dashboard) |
+| Push performance | **Analytics** > **Dashboard Builder** > **Push Channel Dashboard** | [Channel performance dashboards](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance/push#push-performance-dashboard) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Available dashboards" }
 
 **Note:**

@@ -4,7 +4,7 @@
 
 ### Push Performance dashboard
 
-The [Push Performance dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance?tab=push%20performance#push-performance-dashboard) gives you a single, channel-level view of push engagement, including sends, bounces, deliveries, and direct, influenced, and total open rates over a configurable time window. Use it to understand the overall health of your push channel without rolling up data from individual campaigns or Canvases.
+The [Push Performance dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance/push#push-performance-dashboard) gives you a single, channel-level view of push engagement, including sends, bounces, deliveries, and direct, influenced, and total open rates over a configurable time window. Use it to understand the overall health of your push channel without rolling up data from individual campaigns or Canvases.
 
 ### Geolocation fields in catalog selections
 

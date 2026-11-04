@@ -115,13 +115,31 @@ In workspaces with multiple apps, Canvas entry audience eligibility is evaluated
 
 
 
-In **Entry Controls**, you can limit the number of users every time the Canvas is scheduled to run. For API trigger-based and action-based Canvases, this limit occurs at every UTC hour. 
 
 
 
 
 
 
+
+### How AND and OR combine in the entry audience
+
+The Canvas entry audience uses the same segment and filter logic as campaigns. Braze combines each criterion differently.
+
+| Criteria | How they combine |
+| --- | --- |
+| Segments under **Target Users by Segment** | Users must belong to every selected segment (**AND**) |
+| **Additional Filters** and your segments | Users must also match the additional filters (**AND** with the segments) |
+| Filters within a filter group | Users must meet every filter (**AND**) or at least one filter (**OR**) |
+| Filter groups | Users must match every group (**AND**) or at least one group (**OR**) |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="How AND and OR combine in target audiences" }
+
+This lets you build logic such as:
+
+- `(Segment A AND Segment B) AND ((Filter 1 OR Filter 2) AND (Filter 3 OR Filter 4))`
+- `(Segment A) AND ((Filter 1 AND Filter 2 AND Filter 3) OR (Filter 4 OR Filter 5 OR Filter 6))`
+
+**AND** means a user must meet every condition in that statement. **OR** means a user must meet at least one condition. For exclusion groups, negative targeting with **OR**, and more examples, see [Segmentation logic using AND and OR](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/#segmentation-logic-using-and-and-or).
 
 
 ### Testing your audience
@@ -136,7 +154,7 @@ Entry controls determine if users are allowed to re-enter a Canvas. You can also
 - **Action-Based:** Hourly, daily, or the lifetime of the Canvas
 - **API-Triggered:** Hourly, daily, or the lifetime of the Canvas
 
-For example, if you have a scheduled Canvas and select **Limit entrance volume** and set the **Maximum entries** field to 500,000 users with **Every time Canvas is scheduled** as the limit cadence, then the Canvas only sends to 500,000 users per scheduled send.
+For example, if you have a scheduled Canvas and select **Limit entrance volume** and set the **Maximum entries** field to 500,000 users with **Every time Canvas is scheduled** as the limit cadence, then the Canvas only sends to 500,000 users per scheduled send. For API-triggered and action-based Canvases, an hourly entrance volume limit is applied every UTC hour.
 
 ![The "Entry Controls" page displaying checkboxes for "Allow users to re-enter Canvas" and "Limit entrance volume".](https://www.braze.com/docs/assets/img_archive/entry_controls.png?9e0f62e25c3f814fcf77aeb6facd8e9f)
 
