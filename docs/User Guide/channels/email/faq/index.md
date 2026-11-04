@@ -241,7 +241,7 @@ For more details on how server-side scanning can affect email metrics, refer to 
 - Updates to email provider privacy features or bot detection behaviors.
 - Changes in your audience segmentation or targeting.
 
-Machine open percentages are not a reliable measure of actual engagement. For a more accurate view of email performance, focus on *Other Opens* (non-machine opens) and *Unique Clicks*. You can also compare these metrics over time using the [Email Performance Dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance).
+Machine open percentages are not a reliable measure of actual engagement. For a more accurate view of email performance, focus on *Other Opens* (non-machine opens) and *Unique Clicks*. You can also compare these metrics over time using the [Email Performance Dashboard](https://www.braze.com/docs/email_performance_dashboard).
 
 ### Why are my deep links not working in Gmail?
 

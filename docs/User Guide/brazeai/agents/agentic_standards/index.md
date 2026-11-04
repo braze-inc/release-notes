@@ -15,7 +15,7 @@ Agentic Standards availability depends on your plan tier: free or paid.
 | Monthly usage cap | Not applicable (run-count limit only) | High |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Agentic Standards plan tiers" }
 
-On the Free tier, **Evaluation preview** (**Simulate response**) and launch-time **Run evaluation** or **Re-run evaluation** count toward the 25 runs. Contact your Braze account representative for more runs or to upgrade.
+On the Free tier, **Evaluation preview** (**Simulate response**) and launch-time **Run evaluation** or **Re-run evaluation** count toward the 25 runs. Each standard counts as a separate run, so if you select multiple standards and run them at the same time, each one counts toward the limit. For example, running three standards against a campaign uses three runs. Contact your Braze account representative to upgrade.
 
 On the Paid tier, there is no monthly run-count limit. More intensive evaluations contribute more toward the monthly usage limit. Most workspaces don't reach this cap. If you do, contact your customer success manager.
 
@@ -178,7 +178,7 @@ After you configure a Campaign Standard or Canvas Standard, you can use it to ev
 
 To run an automated evaluation, go to the **Review Summary** step of your campaign creation workflow.
 
-1. Go to the **Agentic Standards** section and select your desired standard from the dropdown menu.
+1. Go to the **Agentic Standards** section and select one or more standards from the dropdown menu. If you select multiple standards, they're all evaluated at the same time. On the Free tier, each standard counts as a separate run (see [Plan tiers](#plan-tiers)).
 2. Select **Run evaluation**.
 
 If you make changes to your campaign after running an initial evaluation, select **Re-run evaluation** to refresh the results.
@@ -188,7 +188,7 @@ If you make changes to your campaign after running an initial evaluation, select
 
 To run an automated evaluation, go to the **Summary** step of your Canvas creation workflow.
 
-1. Go to the **Agentic Standards** section and select your desired standard from the dropdown menu.
+1. Go to the **Agentic Standards** section and select one or more standards from the dropdown menu. If you select multiple standards, they're all evaluated at the same time. On the Free tier, each standard counts as a separate run (see [Plan tiers](#plan-tiers)).
 2. Choose what to evaluate:
    - **Configuration only:** Evaluates Canvas-wide rulesets from the **Canvas configuration** step.
    - **Steps only:** Evaluates per-step rulesets from the **Canvas steps** step.
@@ -218,6 +218,8 @@ The **Pass** tab lists all rules that were successfully followed. This confirms 
 The **Warning** tab lists non-critical issues that may require attention. For example, if you're testing an email ruleset against a webhook campaign or a Canvas with only in-app message steps, the evaluation may yield a warning that sender names do not apply.
 
 The **Ignored** tab lists issues you chose to skip for the current evaluation run.
+
+The **Last run** indicator shows when a standard was last evaluated against your campaign or Canvas. It stays visible for 90 days after the most recent run, even if the campaign or Canvas is stopped or archived.
 
 #### Results based on the agent's judgment
 

@@ -72,6 +72,26 @@ For email campaigns, you can target Seed Groups under the **Seed Groups** sectio
 
 
 
+### How AND and OR combine
+
+Campaigns and Canvases combine segments and additional filters the same way:
+
+| Criteria | How they combine |
+| --- | --- |
+| Segments under **Target Users by Segment** | Users must belong to every selected segment (**AND**) |
+| **Additional Filters** and your segments | Users must also match the additional filters (**AND** with the segments) |
+| Filters within a filter group | Users must meet every filter (**AND**) or at least one filter (**OR**) |
+| Filter groups | Users must match every group (**AND**) or at least one group (**OR**) |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="How AND and OR combine in target audiences" }
+
+This lets you build logic such as:
+
+- `(Segment A AND Segment B) AND ((Filter 1 OR Filter 2) AND (Filter 3 OR Filter 4))`
+- `(Segment A) AND ((Filter 1 AND Filter 2 AND Filter 3) OR (Filter 4 OR Filter 5 OR Filter 6))`
+
+**AND** means a user must meet every condition in that statement. **OR** means a user must meet at least one condition. For exclusion groups, negative targeting with **OR**, and more examples, see [Segmentation logic using AND and OR](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment/#segmentation-logic-using-and-and-or).
+
+
 ### Step 2: Test your audience
 
 After adding segments and filters to your audience, you can test if your audience is set up as expected by [looking up a user](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment) to confirm if they match the audience criteria.

@@ -6,7 +6,7 @@
 
 
 
-The [Push Performance dashboards](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance?tab=push%20performance#push-performance-dashboard) provide a channel-wide view of performance, insights, and deliverability across campaigns and Canvases. Compare key rates with industry benchmarks, rank campaigns, and analyze engagement trends. Frequency and cadence reports roll out by the end of September.
+The [Push Performance dashboards](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance/push#push-performance-dashboard) provide a channel-wide view of performance, insights, and deliverability across campaigns and Canvases. Compare key rates with industry benchmarks, rank campaigns, and analyze engagement trends. Frequency and cadence reports roll out by the end of September.
 
 ### Cloud Data Ingestion visual mapper
 

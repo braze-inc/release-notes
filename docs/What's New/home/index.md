@@ -248,7 +248,7 @@ The [Cloud Data Ingestion visual mapper](https://www.braze.com/docs/user_guide/d
 **Area:** Data & Reporting
 **Status:** General availability
 
-The [Push Performance dashboards](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance?tab=push%20performance#push-performance-dashboard) provide a channel-wide view of performance, insights, and deliverability across campaigns and Canvases. Compare key rates with industry benchmarks, rank campaigns, and analyze engagement trends. Frequency and cadence reports roll out by the end of September.
+The [Push Performance dashboards](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance/push#push-performance-dashboard) provide a channel-wide view of performance, insights, and deliverability across campaigns and Canvases. Compare key rates with industry benchmarks, rank campaigns, and analyze engagement trends. Frequency and cadence reports roll out by the end of September.
 
 ### Usage alerts
 
@@ -958,7 +958,7 @@ Catalogs now support distance-based filtering with the new geolocation field typ
 
 **Area:** Data & Reporting
 
-The [Push Performance dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance?tab=push%20performance#push-performance-dashboard) gives you a single, channel-level view of push engagement, including sends, bounces, deliveries, and direct, influenced, and total open rates over a configurable time window. Use it to understand the overall health of your push channel without rolling up data from individual campaigns or Canvases.
+The [Push Performance dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance/push#push-performance-dashboard) gives you a single, channel-level view of push engagement, including sends, bounces, deliveries, and direct, influenced, and total open rates over a configurable time window. Use it to understand the overall health of your push channel without rolling up data from individual campaigns or Canvases.
 
 ### `ecommerce.cart_updated` event actions
 

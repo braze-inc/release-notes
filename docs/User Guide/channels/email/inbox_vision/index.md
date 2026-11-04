@@ -160,7 +160,7 @@ When you combine automated testing with thoughtful manual review, you’ll catch
 
 ### Review your email subscriber list
 
-Reference the [email insights dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance#email-insights-dashboard) to determine the most popular device type and providers where your subscribers are engaging. 
+Reference the [email insights dashboard](https://www.braze.com/docs/user_guide/analytics/dashboards/channel_performance/email#email-insights-dashboard) to determine the most popular device type and providers where your subscribers are engaging. 
 
 If you need more granularity, such as the browser, device model, and more, you can leverage your [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents) data or [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder) to retrieve this level of detail about your users’ recent email engagement.
 

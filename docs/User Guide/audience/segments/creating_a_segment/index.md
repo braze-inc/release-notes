@@ -65,11 +65,18 @@ Select the icons next to each filter to collapse the filter editor or duplicate 
 
 ### Segmentation logic using AND and OR
 
-Within a filter group, filters can be joined by either "AND" or "OR". Between filter groups, groups can be joined by either "AND" or "OR". When using filter groups, you can create segmentation logic such as:
-- (A AND B AND C) OR (C AND E AND F)
-- (A OR B OR C) AND (C OR D OR F)
+Within a filter group, filters can be joined by either **AND** or **OR**. All filters in a group share the same operator. Between filter groups, groups can be joined by either **AND** or **OR**—every group uses the same between-group operator, but each group can use a different operator internally.
 
-Selecting "OR" for your filters means that your segment contains users satisfying any combination of one, some, or all of those filters. Selecting "AND" means that users who don't pass that filter aren't included in your segment.
+When using filter groups, you can create segmentation logic such as:
+
+- (A AND B AND C) OR (D AND E AND F)
+- (A AND B AND C) OR (D OR E OR F)
+- (A OR B OR C) AND (D OR E OR F)
+- (A OR B) AND (C AND D AND E)
+
+Selecting **OR** means that your segment contains users satisfying any combination of one, some, or all of those filters. Selecting **AND** means that users who don't pass that filter aren't included in your segment.
+
+The same filter group logic applies under **Additional Filters** when you set a campaign or Canvas [target audience](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/target_users/#how-and-and-or-combine). Multiple segments selected under **Target Users by Segment** are always combined with **AND**, and additional filters are combined with those segments using **AND**.
 
 **Tip:**
 
