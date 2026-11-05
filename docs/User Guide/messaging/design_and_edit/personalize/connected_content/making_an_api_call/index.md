@@ -266,7 +266,7 @@ Adding or changing a domain restriction affects existing calls that use the cred
 
 Saved passwords and token values aren't displayed. To save changes, re-enter the password for basic authentication or every token header value you keep, even when you're only changing the allowed domain. The masked placeholder doesn't preserve a secret when you submit an edit.
 
-Go to **Settings** > **Credential Management**. You need the "Manage App Group" permission to access this page and create, edit, or delete credentials. Ask your workspace administrator to grant it if needed.
+Go to **Settings** > **Credential Management**. You need the "View Credential Management" permission to access this page. You need the "Edit Credential Management" permission to create, edit, or delete credentials. Ask your workspace administrator to grant these permissions if needed.
 
 Credentials belong to one workspace. If you use separate development, staging, and production workspaces, create credentials in each workspace that needs them.
 
