@@ -170,7 +170,7 @@ You can add a field named **product_description** to a catalog and select **desc
 
 ![A field "product_description" with the "Descriptor" agent applied. The "description" output is selected as the response field.](https://www.braze.com/docs/assets/img/ai_agent/response_field.png?721a23e884755f3f7238726282034a89){: style="max-width:80%;"}
 
-You can also manually override the agent-generated cell by selecting **Edit Item** and updating the agent-generated description with your edits. To revert to the agent-generated description, select the refresh symbol in the cell.
+You can also manually overwrite the agent-generated cell by selecting **Edit Item** and updating the agent-generated description with your edits. To revert to the agent-generated description, select the refresh symbol in the cell.
 
 ### Error handling
 

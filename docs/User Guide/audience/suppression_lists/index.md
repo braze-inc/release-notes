@@ -14,7 +14,7 @@ Soft bounce rules are currently in beta with the [Deliverability Assistant](http
 | Type | How it works | What it affects |
 | --- | --- | --- |
 | **Suppression list** | Membership is defined with [segment filters](https://www.braze.com/docs/user_guide/audience/segments). Users enter and exit the list as they meet or leave the filter criteria. Optional exception tags let tagged campaigns or Canvases still reach list members. | Campaigns and Canvases across channels (with the exceptions in [Message types and channels affected by suppression lists](#message-types-and-channels-affected-by-suppression-lists)). |
-| **Soft bounce rule** | Counts soft bounces for an email address on a selected sending domain. Multiple soft bounces on the same day count once. When the address meets your threshold and evaluation window—and has had no successful delivery since those soft bounces started—Braze marks the address as [hard bounced](https://www.braze.com/docs/user_guide/channels/email/reporting/analytics_glossary/#hard-bounce). | Stops email to that address after Braze hard-bounces it. Soft bounce rules don't use exception tags. |
+| **Soft bounce rule** | Counts soft bounces for an email address on a selected sending domain. Multiple soft bounces on the same day count once. When the address meets your threshold and evaluation window—and has had no successful delivery since those soft bounces started—Braze marks the address as [hard bounced](https://www.braze.com/docs/user_guide/channels/email/reporting/analytics_glossary/#hard-bounce). | Stops email to that address from every sending domain in the workspace after Braze hard-bounces it. Soft bounce rules don't use exception tags. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Suppression types"}
 
 **Important:**
@@ -37,7 +37,20 @@ Soft bounce rules stop emailing addresses that keep soft bouncing for list-quali
    - The day-deduplicated soft bounce count meets your threshold
    - The first and last counted soft bounces are at least as many days apart as your evaluation window
 
-A workspace can have multiple soft bounce rules, but only one active rule can cover a given sending domain. One rule can include more than one sending domain.
+**Important:**
+
+
+A rule only counts soft bounces on its sending domain, but the hard bounce applies to the whole workspace. A hard-bounced address stops receiving email from every sending domain, so a campaign's suppressions can list rules from other sending domains.
+
+
+
+Braze evaluates soft bounce rules once a day, only for addresses that soft bounced the previous day.
+
+#### Evaluation window
+
+The evaluation window is a minimum span, not a lookback period. There is no fixed lookback limit: Braze counts every soft bounce since the address's last successful delivery. For example, with a rule of five soft bounces over a 14-day evaluation window, an address that soft bounces on March 1, 3, 6, 10, and 15 is hard-bounced, because that is five soft bounces spanning 14 days. Five soft bounces in one afternoon don't trigger the rule. If an email was delivered to the address on March 8, only the March 10 and 15 soft bounces count.
+
+Only one soft bounce rule can exist per sending domain. A workspace can have multiple soft bounce rules if each one covers a different sending domain.
 
 ### Setting up a soft bounce rule
 
@@ -49,8 +62,8 @@ Soft bounce rules use the same create and manage permissions as suppression list
 
 
 1. Go to **Audience** > **Suppressions** (or **Suppression Lists**, if soft bounce rules aren't enabled yet).
-2. Select **Create Suppression**, then choose **Soft bounce rule** and add a name.
-3. On the soft bounce rule page, select the **Sending domain** or domains the rule applies to.
+2. Select **Create**, then choose **Soft bounce rule** and add a name.
+3. On the soft bounce rule page, select the **Sending domain** the rule applies to.
 4. Choose a **Sender profile** that matches how often you send from that domain:
    - **Daily:** About five to seven send days a week
    - **Weekly:** About two or fewer sends a week
@@ -135,7 +148,7 @@ All users can view suppression lists, but only users with [admin permissions](ht
 
 
 1. Go to **Audience** > **Suppressions** (or **Suppression Lists**).
-2. Select **Create Suppression** (or **Create Suppression List**) and add a name. If prompted, choose **Suppression list**.
+2. Select **Create** (or **Create Suppression List**) and add a name. If prompted, choose **Suppression list**.
 3. Use segment filters to identify the users in your suppression list. You must select at least one.
 
 **Important:**

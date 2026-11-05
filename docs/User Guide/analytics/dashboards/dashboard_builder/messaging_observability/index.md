@@ -60,6 +60,8 @@ After you change any filter, select **Run dashboard** again to refresh the summa
 
 
 
+![The Messaging Observability dashboard with summary tiles. The events over time chart plots entries, suppressions, failures, and sends, and an "Outdated results" warning shows the filters changed since the last run.](https://www.braze.com/docs/assets/img/messaging_observability.png?8ff8a7f1b55ef72bd30b4a007669e23a)
+
 ## Interpret the data
 
 **Note:**
@@ -85,6 +87,8 @@ This time series chart shows an hourly breakdown of events for your selected fil
 ### Event log
 
 The **Event log** lists individual events Braze recorded for each user for your selected filters and time range, primarily suppressions, progressions, and failures. Use it to review specific records, including the timestamp, user ID, Canvas step, event, description, and messaging channel.
+
+![The Event log with the Events filter set to "All events." Rows include Delay step failure, User not eligible, Canvas exit, Sent to destination, and Liquid abort.](https://www.braze.com/docs/assets/img/messaging_observability_event_log.png?9b3784cb52fe98048b0780fe0355b7c9)
 
 Filter the table to focus on specific records:
 

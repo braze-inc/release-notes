@@ -25,6 +25,12 @@ Agentic Standards are available in two types: **Campaign Standards** and **Canva
 
 You can choose from pre-built rulesets covering common marketing needs or create custom rules specific to your team. When configured, you can test a standard in the **Evaluation preview** pane against any existing campaign or Canvas in your workspace. The agentic evaluation provides a detailed report with categories of its findings.
 
+### Content Blocks and Liquid
+
+Before evaluation, Braze expands Content Blocks into their content. Each block's text is labeled with the block's name, and Agentic Standards also gets a list of the blocks each field uses, including nested blocks and any block that failed to expand. This means rules can reference a block by name (for example, "the footer uses Legal_Disclaimer").
+
+Liquid isn't rendered against a specific user. Agentic Standards evaluates the Liquid as written, and it checks for syntax errors, unrecognized variables, and conditionals that have no `{% else %}` fallback. Connected Content calls aren't made during evaluation.
+
 ## Create an Agentic Standard
 
 Campaign Standards enforce rules on one-time and recurring campaigns. Canvas Standards enforce rules on multi-step customer journeys. Both types use the same Details and preview workflow, but Canvas Standards add a second rules step for per-step checks.
@@ -238,6 +244,19 @@ For every identified failure or warning, you can decide how to proceed before la
 - **Ask BrazeAI Operator:** Select this to fix the issue using Operator.
 
 After all critical issues are resolved or ignored, you can proceed to launch your campaign or Canvas.
+
+## Limitations
+
+Agentic Standards evaluates the configuration and content of your campaign or Canvas as they're saved in Braze. It doesn't send messages, render them for individual users, or visit external pages. 
+
+Keep the following limitations in mind when you write rules, and keep your existing manual checks for these areas.
+
+- **No test sends or per-user previews:** Agentic Standards can't send test messages, preview a message as a specific user, or render previews for many users at once. Rules that depend on what a particular user receives aren't supported. Use [test sends](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages) and previews for those checks.
+- **Liquid and Connected Content aren't rendered:** Agentic Standards evaluates Liquid as it's written, not as it renders for a user, and it doesn't make Connected Content calls. For details, see [Content Blocks and Liquid](#content-blocks-and-liquid).
+- **Links aren't followed:** Agentic Standards can check that links are present and correctly formatted, such as URLs, deep links, and UTM parameters. It doesn't open them. It can't detect broken links, such as links that return a `404` error, or confirm that a link's destination matches what the message says.
+- **No user or segment lookups:** Agentic Standards can't look up individual user profiles or check whether a specific user is in a segment. It can only evaluate the targeting settings on the campaign or Canvas itself.
+- **Canvas step coverage:** Step rulesets run only on Message, Content Optimizer, and Audience Paths steps. Other step types can't be evaluated.
+- **Very large messages:** If a campaign or Canvas has more content than Agentic Standards can evaluate at once, such as a multivariate email with many large variants, the content is shortened before evaluation. The results then show a warning, and rules may have been checked against incomplete content.
 
 ## Best practices
 

@@ -37,6 +37,13 @@ For example, if you'd like to send an in-app message to only iOS devices, select
 
 ![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.](https://www.braze.com/docs/assets/img_archive/Segment2.png?5c460b526edc194f290744aed93bbe92){: style="max-width:80%;"}
 
+**Note:**
+
+
+When using this segment in a campaign or Canvas to deliver an in-app message to specific apps, directly reference the segment in the **Target Users By Segment** section. Adding the segment through the **Segment Membership** filter in the **Additional Filters** section doesn't limit delivery to only those apps.
+
+
+
 ## Step 4: Add filters to your segment
 
 Add at least one filter to your segment. You can combine as many filters as you want to make your segmentation more specific. 
