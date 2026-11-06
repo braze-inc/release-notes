@@ -1,4 +1,4 @@
-<div id='api_hefpjixwzdyz' class='api_div' data-search-keywords='update user relationship braze_id rel_kind attributes role user_relationship type_name object_id user'>
+<div id='api_dxecijaztbyv' class='api_div' data-search-keywords='update user relationship user external_id rel_kind attributes role alias alias_name alias_label user_relationship type_name object_id braze_id'>
 <h1 id="update-user-relationship">Update user relationship</h1>
 <div class="api_type"><div class="method patch ">patch</div>
 <p>/data_objects/objects/{type_name}/{object_id}/users</p>
@@ -64,10 +64,40 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">braze_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">user</code></td>
       <td>Required</td>
+      <td>Object</td>
+      <td>The user to relate to the object. Must contain exactly one of <code class="language-plaintext highlighter-rouge">external_id</code>, <code class="language-plaintext highlighter-rouge">braze_id</code>, <code class="language-plaintext highlighter-rouge">alias</code>, <code class="language-plaintext highlighter-rouge">email</code>, or <code class="language-plaintext highlighter-rouge">phone</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">user.external_id</code></td>
+      <td>Optional</td>
       <td>String</td>
-      <td>Braze user ID</td>
+      <td>The user’s external ID.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">user.braze_id</code></td>
+      <td>Optional</td>
+      <td>String</td>
+      <td>The Braze user ID.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">user.alias</code></td>
+      <td>Optional</td>
+      <td>Object</td>
+      <td>User alias object with <code class="language-plaintext highlighter-rouge">alias_name</code> and <code class="language-plaintext highlighter-rouge">alias_label</code> (both required when used).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">user.email</code></td>
+      <td>Optional</td>
+      <td>String</td>
+      <td>The user’s email address.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">user.phone</code></td>
+      <td>Optional</td>
+      <td>String</td>
+      <td>The user’s phone number. Must be convertible to E.164.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">rel_kind</code></td>
@@ -84,6 +114,14 @@
   </tbody>
 </table>
 
+<h3 id="identifying-the-user">Identifying the user</h3>
+
+<ul>
+  <li>Pass exactly one identifier in <code class="language-plaintext highlighter-rouge">user</code>. Zero or more than one non-null identifier returns <code class="language-plaintext highlighter-rouge">400</code>. Null identifier fields alongside one valid identifier are accepted.</li>
+  <li>If an email or phone number matches more than one user profile, Braze picks the identified user (one with an <code class="language-plaintext highlighter-rouge">external_id</code>). If there’s still a tie, Braze picks the most recently updated profile.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">external_id</code> where available.</li>
+</ul>
+
 <h2 id="example-request">Example request</h2>
 
 <p>This section includes a sample JSON payload and a sample cURL request.</p>
@@ -97,8 +135,40 @@
 5
 6
 7
+8
+9
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-  </span><span class="nl">"braze_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"507f1f77bcf86cd799439011"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user-123"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"rel_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account_user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"billing_admin"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Alternate example using user alias:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"alias"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"alias_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jane@example.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"alias_label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"crm_email"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
   </span><span class="nl">"rel_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account_user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"billing_admin"</span><span class="w">
@@ -120,11 +190,15 @@
 8
 9
 10
+11
+12
 </pre></td><td class="rouge-code"><pre>curl <span class="nt">--location</span> <span class="nt">--request</span> PATCH <span class="s1">'https://rest.iad-01.braze.com/data_objects/objects/account/acct-123/users'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Authorization: Bearer YOUR_REST_API_KEY'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 <span class="nt">--data-raw</span> <span class="s1">'{
-  "braze_id": "507f1f77bcf86cd799439011",
+  "user": {
+    "external_id": "user-123"
+  },
   "rel_kind": "account_user",
   "attributes": {
     "role": "billing_admin"
@@ -149,12 +223,18 @@
 7
 8
 9
+10
+11
+12
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"user_relationship"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"type_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acct-123"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"rel_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account_user"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"braze_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"507f1f77bcf86cd799439011"</span><span class="w"> </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user-123"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"braze_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"507f1f77bcf86cd799439011"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"billing_admin"</span><span class="w"> </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -202,19 +282,13 @@
       <td><code class="language-plaintext highlighter-rouge">user_relationship.user</code></td>
       <td>Required</td>
       <td>Object</td>
-      <td>Linked user object</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">user_relationship.user.braze_id</code></td>
-      <td>Required</td>
-      <td>String</td>
-      <td>Braze user identifier</td>
+      <td>Linked user object containing the identifier as sent plus <code class="language-plaintext highlighter-rouge">braze_id</code></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">user_relationship.attributes</code></td>
       <td>Required</td>
       <td>Object</td>
-      <td>Relationship attributes after merge</td>
+      <td>Relationship attributes after merge (always present, empty object if none)</td>
     </tr>
   </tbody>
 </table>
@@ -234,12 +308,17 @@
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">400</code></td>
-      <td>Validation error</td>
+      <td>Missing or empty <code class="language-plaintext highlighter-rouge">user</code>, no identifier, more than one identifier, blank identifier, malformed <code class="language-plaintext highlighter-rouge">braze_id</code>, <code class="language-plaintext highlighter-rouge">email</code>, or <code class="language-plaintext highlighter-rouge">alias</code>, phone that can’t convert to E.164, or the old top-level <code class="language-plaintext highlighter-rouge">braze_id</code> body</td>
+      <td>Send a <code class="language-plaintext highlighter-rouge">user</code> object with exactly one valid identifier.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">400</code></td>
+      <td>Unknown <code class="language-plaintext highlighter-rouge">rel_kind</code> for the type or schema validation error</td>
       <td>Confirm <code class="language-plaintext highlighter-rouge">rel_kind</code> is valid for the object type and <code class="language-plaintext highlighter-rouge">attributes</code> match the relationship schema.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">404</code></td>
-      <td>Relationship not found (<code class="language-plaintext highlighter-rouge">data-object-relationship-not-found</code>)</td>
+      <td>Relationship or user not found (<code class="language-plaintext highlighter-rouge">user-not-found</code> or <code class="language-plaintext highlighter-rouge">data-object-relationship-not-found</code>)</td>
       <td>Confirm the object, user, and relationship key values all exist.</td>
     </tr>
     <tr>

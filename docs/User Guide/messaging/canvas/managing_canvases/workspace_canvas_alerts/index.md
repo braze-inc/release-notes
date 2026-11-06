@@ -66,17 +66,11 @@ This alert notifies you when the status of any Canvas in the workspace changes t
 
 ## Notifications
 
-Choose how recipients are notified when a workspace alert is met. You can enable one or both methods for a single alert:
+Choose how recipients are notified when a workspace alert is met. You can enable one, two, or all three methods for a single alert:
 
 - **Email:** Select recipient groups (**All admins**, **All object editors**), add individual email addresses, or both. By default, new workspace alerts email **All admins**.
 - **Webhook:** Enter the webhook URL, and optionally add custom request headers required by your destination.
-
-**Note:**
-
-
-Workspace Canvas alerts don't send to Slack as a dedicated channel yet. Use email or webhook for notifications.
-
-
+- **Slack:** Enter your Slack incoming webhook URL to post notifications to a Slack channel. For more information on integrating Canvas alerts with Slack, refer to Slack's documentation for [Sending messages using incoming webhooks](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/).
 
 ## Opt out for a single Canvas
 

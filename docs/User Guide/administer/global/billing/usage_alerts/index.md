@@ -2,18 +2,6 @@
 
 > When usage alerts are enabled for your company, dashboard users are alerted through banners, emails, or both when Action Credit consumption crosses fixed thresholds during your current credits period. Alerts use the same usage data as the [Credits Usage dashboard](https://www.braze.com/docs/user_guide/administer/global/billing/credits_usage).
 
-
-
-
-**Important:**
-
-
- is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-
-
-
-
-
 ## Prerequisites
 
 To receive usage alert emails and banners, you need the workspace-level "View Billing Details" [permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions). Grant or revoke this permission in [Company Users](https://www.braze.com/docs/user_guide/administer/global/user_management/manage_company_users) to add or remove alert recipients.

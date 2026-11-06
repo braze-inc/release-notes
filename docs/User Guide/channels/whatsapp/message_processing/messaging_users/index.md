@@ -165,7 +165,9 @@ The value is `contact_request` when the user tapped a **Share Contact Info** but
 
 ### Contact shared phone number
 
-When a user taps a **Share Contact Info** button sent from Braze, Braze exposes the phone number they shared as the `{{whats_app.${contact_shared_phone_number}}}` Liquid attribute on the inbound event, formatted as an E.164 number (for example, `+5215512345678`). The attribute is only populated when `{{whats_app.${contact_share_origin}}}` is `contact_request`. For any other contact share, and for inbound messages that aren't contact shares, it is empty. Use a Canvas [User Update](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update) step to save it to a profile field for later use.
+When a user taps a **Share Contact Info** button sent from Braze, Braze exposes the phone number they shared as the `{{whats_app.${contact_shared_phone_number}}}` Liquid attribute on the inbound event, formatted as an E.164 number (for example, `+5215512345678`). The attribute is populated only when `{{whats_app.${contact_share_origin}}}` is `contact_request`. 
+
+For any other contact share, and for inbound messages that aren't contact shares, {{whats_app.${contact_shared_phone_number}}} is empty. Use a Canvas [User Update](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update) step to save it to a profile field for later use. For a full BSUID identification workflow, see [Request contact info for WhatsApp BSUID-only users](https://www.braze.com/docs/user_guide/channels/whatsapp/use_cases/request_contact_info_bsuid).
 
 **Important:**
 

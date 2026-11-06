@@ -26,7 +26,7 @@ Each source supports one or more ways for Braze to authenticate. Select a source
 | Source | Authentication methods |
 | --- | --- |
 | [Snowflake](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/snowflake#set-up-authentication) | Key pair authentication |
-| [Amazon Redshift](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#set-up-authentication) | Username and password |
+| [Amazon Redshift](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#set-up-authentication) | IAM role, Username and password |
 | [Google BigQuery](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/google_bigquery#set-up-authentication) | Workload Identity Federation, Service account key |
 | [Databricks](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/databricks#set-up-authentication) | OAuth M2M (recommended), Personal access token |
 | [Microsoft Fabric](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/microsoft_fabric#set-up-authentication) | Service principal |

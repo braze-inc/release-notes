@@ -4,6 +4,12 @@
 
 ## General
 
+### Why don't I see Message Prioritization in my workspace settings?
+
+If **Message Prioritization** doesn't appear under **Settings**, it isn't enabled for your workspace. Message Prioritization is available as an add-on feature. To request it, contact your Braze account manager.
+
+For the limits that apply after Message Prioritization is enabled, see [Plan tiers](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/message_prioritization#plan-tiers).
+
 ### How are ties in priority broken between messages that match the same prioritization rule? {#how-are-ties-in-priority-broken-between-messages-in-the-same-category}
 
 Campaigns and Canvases break ties differently.

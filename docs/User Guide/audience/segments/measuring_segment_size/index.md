@@ -142,6 +142,26 @@ All estimates may be higher or lower than the shown value by approximately 1% of
 
 
 
+### Chart styling
+
+| Style | Meaning |
+| --- | --- |
+| Solid line and markers | Braze recorded a membership estimate for that day. |
+| Dotted line and orange markers | Braze has no data for that day. A dotted segment connects neighboring points around days without recorded membership. |
+| Vertical error bars | The chart's **Margin of Error** for the estimated membership on that day. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Historical Membership chart styling" }
+
+A day with no data means Braze didn't record a historical membership value for that date, not that membership is `0`. An estimate of `0` means Braze recorded a membership estimate and that estimate was zero.
+
+A day can have no data for reasons such as:
+
+- The estimate hasn't been calculated for today yet
+- The segment was created on that day
+- The segment was archived on that day
+- The membership estimation job failed
+- A delay pushed the calculation across midnight
+- Your local timezone differs from the company timezone, so the day boundaries don't match the recorded estimates
+
 ### Reasons for significant changes
 
 The membership count may significantly change for a number of reasons, such as those in this table.
