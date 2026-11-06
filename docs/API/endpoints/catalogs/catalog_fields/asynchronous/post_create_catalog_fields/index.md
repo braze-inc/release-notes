@@ -1,4 +1,4 @@
-<div id='api_zdguxopwazfk' class='api_div' data-search-keywords='create catalog fields'>
+<div id='api_dytchajvnpol' class='api_div' data-search-keywords='create catalog fields'>
 <h1 id="create-catalog-fields">Create catalog fields</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/catalogs/{catalog_name}/fields</p>

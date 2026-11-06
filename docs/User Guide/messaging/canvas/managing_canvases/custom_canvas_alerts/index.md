@@ -49,17 +49,11 @@ Choose who should be notified when an alert rule is met, and how they're notifie
 
 - **Email:** Add one or more recipient email addresses
 - **Webhook:** Enter the webhook URL to notify, and optionally add custom request headers required by your webhook destination
+- **Slack:** Enter your Slack incoming webhook URL to post notifications to a Slack channel. For more information on integrating Canvas alerts with Slack, refer to Slack's documentation for [Sending messages using incoming webhooks](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/).
 
-You can enable one or both notification methods for a single alert.
+You can enable one, two, or all three notification methods for a single alert.
 
 Webhook alerts are useful for routing notifications to external platforms. Each webhook notification sends a JSON payload with the alert name, evaluation window, and the conditions that triggered the alert. Each condition includes a `threshold_unit` of `volume` or `percentage`. Percentage conditions also include `percentage_metric_value` (the observed count as a whole-number percentage of the baseline). `metric_value` is always the absolute count.
-
-**Note:**
-
-
-Slack incoming webhooks aren't supported yet for custom Canvas alerts.
-
-
 
 ### Example webhook payload
 

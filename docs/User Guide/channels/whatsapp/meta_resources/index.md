@@ -98,7 +98,7 @@ Braze fully supports receiving and sending messages using BSUIDs. No action is r
 
 Meta's rollout is still in progress and hasn't reached every market, so you may see more users who share only a BSUID over time.
 
-Braze is working on support for requesting a user's contact information.
+To ask BSUID-only users for a phone number, see [Request contact info for WhatsApp BSUID-only users](https://www.braze.com/docs/user_guide/channels/whatsapp/use_cases/request_contact_info_bsuid).
 
 For setup recommendations and how Braze stores BSUIDs, see [WhatsApp usernames and business-scoped user IDs](https://www.braze.com/docs/user_guide/channels/whatsapp/message_features_and_optimization/bsuid).
 

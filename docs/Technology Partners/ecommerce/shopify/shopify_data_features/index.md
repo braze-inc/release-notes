@@ -464,7 +464,7 @@ Braze relies on Shopify to provide required event properties (such as `cart_id` 
 | `price`            | `{{event_properties.${price}}}`                     |
 | `currency`         | `{{event_properties.${currency}}}`                  |
 | `source`           | `{{event_properties.${source}}}`                    |
-| `sku`              | `{{event_properties.${metadata}[0].sku}}`          |
+| `sku`              | `{{event_properties.${metadata}.sku}}`          |
 | `type`             | `event_properties.${type}`          |
 {: .reset-br-td-1 .reset-br-td-2 aria-label="Tracked Shopify events" }
 
@@ -500,9 +500,7 @@ Then you can add the following shopping cart Liquid tags into your message.
 | `product_url`      | `{{ shopping_cart.products[0].product_url }}`      |
 | `quantity`         | `{{ shopping_cart.products[0].quantity }}`         |
 | `price`            | `{{ shopping_cart.products[0].price }}`            |
-| `sku`              | `{{ shopping_cart.products[0].metadata[0].sku }}`  |
-| `source`           | `{{ shopping_cart.source }}`                        |
-| `metadata (value)` | `{{ shopping_cart.metadata[0].<add_value_here> }}` |
+| `sku`              | `{{ shopping_cart.products[0].metadata.sku }}`  |
 {: .reset-br-td-1 .reset-br-td-2 aria-label="Tracked Shopify events" }
 
 
@@ -553,9 +551,29 @@ Then you can add the following Liquid tags into your message to reference the pr
 | `quantity`         | `{{ shopping_cart.products[0].quantity }}`         |
 | `price`            | `{{ shopping_cart.products[0].price }}`            |
 | `sku`              | `{{ shopping_cart.products[0].metadata.sku }}`     |
-| `source`           | `{{ shopping_cart.source }}`                        |
-| `checkout_url`     | `{{ shopping_cart.metadata[0].checkout_url }}`     |
 {: .reset-br-td-1 .reset-br-td-2 aria-label="Tracked Shopify events" }
+
+
+You can also personalize with event properties from the triggering `ecommerce.checkout_started` event, such as `source` and `checkout_url`. These properties aren't stored on the shopping cart, so they aren't available through the `{% shopping_cart %}` tag. In an abandoned checkout Canvas, reference them from Canvas context:
+
+
+| Variable         | Liquid templating                          |
+|------------------|--------------------------------------------|
+| `source`         | `{{context.${source}}}`                    |
+| `checkout_url`   | `{{context.${metadata}.checkout_url}}`     |
+{: .reset-br-td-1 .reset-br-td-2 aria-label="Checkout started event properties" }
+
+
+For example, in an abandoned checkout email:
+
+
+```liquid
+{% shopping_cart {{context.${cart_id}}} :abort_if_not_abandoned false %}
+{% for item in shopping_cart.products %}
+  {{ item.product_name }} / SKU: {{ item.metadata.sku }}
+{% endfor %}
+<a href="{{context.${metadata}.checkout_url}}">Return to checkout</a>
+```
 
 
 

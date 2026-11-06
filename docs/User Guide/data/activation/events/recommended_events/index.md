@@ -153,7 +153,9 @@ Use SDK eCommerce event APIs where available. For platform-specific implementati
 You can send this event in one of two ways:
 
 - **Full cart replacement:** Omit `action` or set `action` to `replace`. Include the full set of line items in `products` with absolute quantities (total units per variant in the cart). You must include `total_value`.
-- **Incremental cart updates:** Set `action` to `add` or `remove`. Include only the line items that changed. Each `quantity` is the number of units to add or remove, not the total quantity in the cart. For `add`, Braze increases the line quantity or adds a new line. For `remove`, Braze decreases the line quantity and removes the line when the quantity reaches `0`. `total_value` is optional for `add` and `remove`.
+- **Incremental cart updates:** Set `action` to `add` or `remove`. Include only the line items that changed. Each `quantity` is the number of units to add or remove, not the total quantity in the cart.
+  - For `add`, Braze increases the line quantity or adds a new line. For `remove`, Braze decreases the line quantity and removes the line when the quantity reaches `0`.
+  - For `add` and `remove`, `total_value` is optional and isn't stored on the cart; for a cart updated only with `add` or `remove`, the `{% shopping_cart %}` tag returns the sum of each product's `price` multiplied by its `quantity` instead.
 
 **Warning:**
 
@@ -164,23 +166,28 @@ Use either incremental cart updates (`add` or `remove`) or full replacement (no 
 
 To trigger messaging from this event, use the **Perform Cart Updated Event** trigger in Canvas and campaigns. This trigger includes special handling to stop the cart from progressing through the shopping funnel.
 
-**Tip:**
+The cart creates a carts mapping object on the user profile that powers the `{% shopping_cart %}` Liquid tag. The cart expires after 30 days without an update, and is removed when the user's next eCommerce event is processed. If two user profiles merge, Braze preserves both carts.
 
+#### Cart ID after checkout or order
 
-The cart creates a carts mapping object on the user profile that powers the `{% shopping_cart %}` Liquid tag. The cart expires after 30 days without an update. If two user profiles merge, Braze preserves both carts.
+After Braze receives `ecommerce.checkout_started` or `ecommerce.order_placed` for a `cart_id`, that cart is no longer treated as abandoned:
 
+- Future `ecommerce.cart_updated` events with the same `cart_id` don't trigger **Perform Cart Updated Event**
+- The `{% shopping_cart %}` tag aborts by default
+- After `ecommerce.order_placed`, the cart's products are cleared and later cart updates for that `cart_id` are ignored until the cart expires
 
+Generate a new `cart_id` when the shopper starts a new cart.
 
 #### Event properties
 
 | Property        | Data type | Required | Description                                                                                                                   |
 |-----------------|-----------|----------|-------------------------------------------------------------------------------------------------------------------------------|
-| `cart_id`       | String    | Yes      | Unique identifier for the cart. Shared across cart, checkout, and order events for the user's cart mapping.                   |
+| `cart_id`       | String    | Yes      | Unique identifier for the cart. Shared across cart, checkout, and order events for the user's cart mapping. Don't reuse a `cart_id` after `ecommerce.checkout_started` or `ecommerce.order_placed`; see [Cart ID after checkout or order](#cart-id-after-checkout-or-order). |
 | `action`        | String    | No       | `add` (increment quantity or add a line), `remove` (decrement quantity; line removed at `0`), or `replace` (full cart replacement, same as omitting `action`). |
-| `total_value`   | Float     | Conditional | Required when `action` is omitted or `replace`. Optional when `action` is `add` or `remove`.                             |
-| `subtotal_value`| Float     | No       | Subtotal value of the cart (post-discount, pre-tax/shipping).                                                                 |
-| `tax`           | Float     | No       | Total tax applied to the cart.                                                                                                |
-| `shipping`      | Float     | No       | Total shipping cost for the cart.                                                                                             |
+| `total_value`   | Float     | Conditional | Required when `action` is omitted or `replace`, and stored as the cart total. Optional when `action` is `add` or `remove`.<br><br>When `action` is `add` or `remove`, the value isn't stored on the cart and doesn't clear a previously stored total. When a cart is updated only with `add` or `remove`, no `total_value` is stored and the `{% shopping_cart %}` tag sums each product's `price` multiplied by its `quantity`. |
+| `subtotal_value`| Float     | No       | Subtotal value of the cart (post-discount, pre-tax/shipping). Not stored on the cart and not available through the `{% shopping_cart %}` Liquid tag. |
+| `tax`           | Float     | No       | Total tax applied to the cart. Not stored on the cart and not available through the `{% shopping_cart %}` Liquid tag. |
+| `shipping`      | Float     | No       | Total shipping cost for the cart. Not stored on the cart and not available through the `{% shopping_cart %}` Liquid tag. |
 | `currency`      | String    | Yes      | Three-letter ISO 4217 code.                                                                                                   |
 | `products`      | Array     | Yes      | Line items for this update. For full replacement (no `action` or `replace`), include the full cart with absolute quantities. For `add` or `remove`, include only changed lines; see product properties. |
 | `source`        | String    | Yes      | Source the event originates from.                                                                                             |
