@@ -17,7 +17,7 @@ Agentic Standards availability depends on your plan tier: free or paid.
 
 On the Free tier, **Evaluation preview** (**Simulate response**) and launch-time **Run evaluation** or **Re-run evaluation** count toward the 25 runs. Each standard counts as a separate run, so if you select multiple standards and run them at the same time, each one counts toward the limit. For example, running three standards against a campaign uses three runs. Contact your Braze account representative to upgrade.
 
-On the Paid tier, there is no monthly run-count limit. More intensive evaluations contribute more toward the monthly usage limit. Most workspaces don't reach this cap. If you do, contact your customer success manager.
+On the Paid tier, there is no monthly run-count limit. More intensive evaluations contribute more toward the monthly usage limit. To see how much of the limit each evaluation used, check the standard's [evaluation logs](#review-evaluation-logs). Most workspaces don't reach this cap. If you do, contact your customer success manager.
 
 ## How it works
 
@@ -244,6 +244,29 @@ For every identified failure or warning, you can decide how to proceed before la
 - **Ask BrazeAI Operator:** Select this to fix the issue using Operator.
 
 After all critical issues are resolved or ignored, you can proceed to launch your campaign or Canvas.
+
+## Review evaluation logs
+
+To review past evaluations of a standard, go to **Agent Console** > **Agentic Standards**, select the standard, then select the **Evaluation logs** tab. Each row is one evaluation run. Use the **Details** column to expand a run and see its individual rule evaluations, or to open the details for an evaluation. To export the logs, select **Export CSV**.
+
+![The Evaluation logs tab for a Canvas Standard, showing the Date range, Outcome, and Filters controls and a table of evaluation runs with Timestamp, Source, Duration, Outcome, Limit used, Run by, and Details columns.](https://www.braze.com/docs/assets/img/agentic_standards/evaluation_logs.png?c3c173c61264d027ad3d1c0db489e34e)
+
+### See who ran an evaluation
+
+The **Run by** column shows the name of the Braze user who ran each evaluation, or their email address if no name is on file. Rule evaluations inside a run were run by the same user, so their rows leave this column blank. Evaluations that weren't run by a user show **N/A**. The CSV export also includes a **Run by** column.
+
+To show only evaluations run by a specific user, select **Filters**, then choose the user under **Run by**. Users who ran the standard in the selected date range are listed first. Other users in your company are listed but can't be selected.
+
+### Usage per evaluation
+
+On the Free tier, evaluation logs don't show usage because your limit is the number of evaluation runs per month rather than usage.
+
+On the Paid tier, the **Limit used** column shows the percentage of your workspace's monthly usage limit that each run and rule evaluation used, such as "0.2%". A share too small to show at two decimal places appears as "< 0.01%". Use this column to spot evaluations that use more of your limit than you expect, such as runs of standards with many rulesets.
+
+- **Cached** means the result was reused from an earlier, identical evaluation and didn't count toward your limit.
+- The same percentage appears as **Limit used** in the details panel and as **Limit used (%)** in the CSV export.
+
+For details, see [Plan tiers](#plan-tiers).
 
 ## Limitations
 

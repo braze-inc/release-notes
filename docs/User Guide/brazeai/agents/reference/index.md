@@ -9,7 +9,7 @@ When you set up an agent, you can choose the model it uses to generate responses
 **Important:**
 
 
-The Braze-powered **Auto** model is optimized for models whose thinking capabilities are sufficient to perform tasks such as retrieving catalog data through knowledge sources and checking segment membership. When using other models, we recommend testing to confirm your model works well for your use case. You may need to adjust your [instructions](#writing-instructions) to give different levels of detail or step-by-step thinking to models with different speeds and capabilities.
+The Braze-powered **Auto** model is tuned to handle tasks such as searching knowledge sources and checking segment membership. If you bring your own model, test these tasks specifically. Lower-cost models at low thinking levels may skip tool calls or answer before retrieving data. You may need to adjust your [instructions](#writing-instructions) to give different levels of detail or step-by-step thinking to models with different speeds and capabilities.
 
 
 
@@ -19,7 +19,7 @@ This is the simplest option, with no extra setup required. Braze provides access
 
 ### Option 2: Bring your own API key
 
-With this option, you can connect your Braze account with providers like OpenAI, Anthropic, or Google Gemini. If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not through Braze.
+With this option, you can connect your Braze account with providers like OpenAI, Anthropic, or Google Gemini. For the full list of supported providers, see [AI model providers](https://www.braze.com/docs/partners/ai_model_providers). If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not through Braze.
 
 We recommend routinely testing the most recent models, as legacy models may be discontinued or deprecated after a few months. Make sure you have sufficient credits with your provider to run your agents at scale. You can also sign up for Agent Console notifications in [Notification Preferences](https://www.braze.com/docs/user_guide/administer/global/admin_settings/notification_preferences) to be alerted when Braze detects a model is no longer available or encounters billing issues with your LLM provider.
 
@@ -39,13 +39,15 @@ Some LLM providers may allow you to adjust a selected model's thinking level. Th
 
 | Level | When to use |
 |-------|-------------|
-| **Minimal** | Simple, well-defined tasks (such as catalog lookup, straightforward classification). Fastest responses and lowest cost. |
+| **Minimal** or **None** | Simple, single-step tasks that don't use knowledge sources or other tools (such as straightforward classification or rewriting). Fastest responses and lowest cost. **None** turns thinking off entirely. |
 | **Low** | Tasks that benefit from a bit more reasoning but don't need deep analysis. |
 | **Medium** | Multi-step or nuanced tasks (such as analyzing several inputs to recommend an action). |
-| **High** | Complex reasoning, edge cases, or when you need the model to work through steps before answering. |
+| **High** | Complex reasoning or edge cases. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Thinking levels" }
 
-We recommend starting with **Minimal** and testing your agent’s responses. Then, you can adjust the thinking level to **Low** or **Medium** if you find the agent is struggling to provide accurate answers. In rare cases, a **High** thinking level may be needed, although using this level can result in high token costs and longer response times or higher risk of [timeout errors](https://www.braze.com/docs/user_guide/brazeai/agents/faq#what-might-cause-a-custom-agent-to-frequently-time-out). If your agent is struggling to balance multi-step reasoning with reasonable response times, consider breaking your use case apart into more than one agent that can work together in a Canvas or catalog.
+Available levels vary by model. Some models offer **None** in place of **Minimal**, and not every model offers **High**.
+
+We recommend starting with **Minimal** (or **None**) and testing your agent's responses. If your agent uses knowledge sources, start with **Low**. At the lowest level, some models answer without running the search. If the agent struggles to provide accurate answers, move up one level at a time. In rare cases, a **High** thinking level may be needed, although using this level can result in high token costs and longer response times or higher risk of [timeout errors](https://www.braze.com/docs/user_guide/brazeai/agents/faq#what-might-cause-a-custom-agent-to-frequently-time-out). If your agent struggles to balance multi-step reasoning with reasonable response times, consider breaking your use case apart into more than one agent that can work together in a Canvas or catalog.
 
 Braze uses the same IP ranges for outbound LLM calls as for Connected Content. The ranges are listed in the [Connected Content IP allowlist](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call#connected-content-ip-allowlisting). If your provider supports IP allowlisting, you can restrict the key to those ranges so only Braze can use it.
 
@@ -129,6 +131,17 @@ Here are some general best practices to get you started with prompting:
 10. Measure and document what works internally for reuse and scaling.
 
 Write positive, explicit instructions whenever possible. Tell the agent what to do, and state any restrictions in concrete terms. If an agent ignores your rules, see [Why did my agent not follow my instructions or rules?](https://www.braze.com/docs/user_guide/brazeai/agents/faq#agent-not-following-instructions).
+
+### Formatting instructions with Markdown
+
+Instructions support Markdown formatting, including headings, bulleted and numbered lists, bold text, links, and tables. Use headings such as `# Role`, `## Goal`, and `## Rules` to break long instructions into sections that are easier for you and your team to scan. Formatting only changes how instructions display in Braze. The agent always receives the original text you write.
+
+- In the **Instructions** step, select **Preview** to see your instructions as formatted text, and **Edit** to return to the editor.
+- On the agent's view page, instructions display with their Markdown formatting.
+- Links in formatted instructions open in a new tab.
+- Raw HTML or XML-style tags (such as `<role>`) display as plain text in the preview. The agent still receives them as written.
+
+![Instructions on an agent's view page, formatted with Markdown headings for Role and Inputs and goal, paragraphs, and a bulleted list of user-specific inputs.](https://www.braze.com/docs/assets/img/ai_agent/instructions_markdown_view.png?ea4a6ef0d9a0487bf1a19a76c791717b)
 
 ### Examples {#examples}
 

@@ -239,9 +239,7 @@ The **Messaging Use** section shows which segments, currently enabled campaigns,
 
 ### Historical membership
 
-The **Historical Membership** section shows how the size of your segment changed over time. Use the dropdown to filter segment membership by date range.
-
-To learn more about monitoring your segment’s membership and size, refer to [Measuring segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size).
+The **Historical Membership** section shows how the size of your segment changed over time. Use the dropdown to filter segment membership by date range. For chart styling, estimates, and reasons membership can change, see [Measuring segment size](https://www.braze.com/docs/user_guide/audience/segments/measuring_segment_size#viewing-historical-segment-membership-size).
 
 ### User preview
 

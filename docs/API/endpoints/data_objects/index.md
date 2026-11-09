@@ -123,7 +123,7 @@ This section defines the key identifiers used across all Data Objects endpoints.
 
 - `type_name`: The data object type machine name, unique within a workspace.
 - `object_id`: Your object identifier, unique within a type.
-- `braze_id`: The Braze user ID used on user-relationship endpoints.
+- `user`: The user on a user relationship write request, identified by exactly one of `external_id`, `braze_id`, `alias`, `email`, or `phone`.
 - `attributes`: Field-name-keyed object or relationship data validated against the configured schema.
 
 ## How relationships work

@@ -63,7 +63,1057 @@ Certain events return a `platform` value that specifies the platform of the user
 
 <!--overview-end-->
 
-<div id='api_wxorfdbccxyo' class='api_div' data-search-keywords='random bucket number update events random bucket number this user event occurs every time a new user is created within their workspace. during this event, each new user gets assigned a random bucket number that you can then use to create uniformly-distributed segments of random users. use this to group together a range of random bucket number values and compare performance across your campaigns and campaign variants. app_group_id external_user_id id prev_random_bucket_number random_bucket_number time user_id'>
+<div id='api_lvwowkuioavk' class='api_div' data-search-keywords='api request processing status events api requests this event occurs when braze finishes processing an accepted asynchronous request to the /users/track rest api endpoint. api_key_name api_key_prefix app_group_id final_completion_time group_id id request_id request_received_time status time event_type properties user'>
+<h2 id="api-request-processing-status-events">API Request Processing Status events</h2>
+
+<div class="api_tags" data-tags="API Requests" data-tags-lower="api requests"></div>
+
+<p>This event occurs when Braze finishes processing an accepted asynchronous request to the <a href="/docs/api/endpoints/user_data/post_user_track"><code class="language-plaintext highlighter-rouge">/users/track</code> REST API endpoint</a>.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">api.RequestProcessingStatus</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"api_key_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Customer-defined name of the API key used for the request"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"api_key_prefix"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) First 8 characters of the API key used for the request"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) API ID of the workspace the request was made to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"final_completion_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) ISO 8601 UTC timestamp at which Braze finished processing the request"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Request group ID supplied with the request, present only when the request was accepted for group tracking"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) ID of the API request, from the X-Request-ID header supplied by the edge"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"request_received_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) ISO 8601 UTC timestamp at which Braze accepted the request"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Processing status of the request"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">api.RequestProcessingStatus</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"api_key_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Customer-defined name of the API key used for the request"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"api_key_prefix"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) First 8 characters of the API key used for the request"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace the request was made to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"final_completion_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) ISO 8601 UTC timestamp at which Braze finished processing the request"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Request group ID supplied with the request, present only when the request was accepted for group tracking"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"request_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) ID of the API request, from the X-Request-ID header supplied by the edge"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"request_received_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) ISO 8601 UTC timestamp at which Braze accepted the request"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Processing status of the request"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+</div>
+
+<div id='api_pyowcbijfqmx' class='api_div' data-search-keywords='data object relation type events data objects changelog of data object relationship types app_group_id cardinality created_at deleted deleted_at forward_name forward_name_plural from_type_name id rel_kind reverse_name reverse_name_plural time to_type_name updated_at event_type properties user'>
+<h2 id="data-object-relation-type-events">Data Object Relation Type events</h2>
+
+<div class="api_tags" data-tags="Data Objects" data-tags-lower="data objects"></div>
+
+<p>Changelog of data object relationship types</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.DoRelType</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cardinality"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Cardinality of the relationship: one_to_one, one_to_many, or many_to_many"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship type was created"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship type was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"forward_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Label for the relationship when viewed from the source object, for example Subaccount"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"forward_name_plural"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Plural label for the relationship when viewed from the source object"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"from_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type name of the from side"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reverse_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Label for the relationship when viewed from the target object, for example Parent Account"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reverse_name_plural"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Plural label for the relationship when viewed from the target object"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"to_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type name of the to side"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship type was updated"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.DoRelType</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cardinality"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Cardinality of the relationship: one_to_one, one_to_many, or many_to_many"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship type was created"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship type was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"forward_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Label for the relationship when viewed from the source object, for example Subaccount"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"forward_name_plural"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Plural label for the relationship when viewed from the source object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type name of the from side"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"reverse_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Label for the relationship when viewed from the target object, for example Parent Account"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"reverse_name_plural"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Plural label for the relationship when viewed from the target object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type name of the to side"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship type was updated"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+</div>
+
+<div id='api_dunqofkisicg' class='api_div' data-search-keywords='data object relation type field events data objects changelog of fields on object-to-object relationships app_group_id created_at deleted deleted_at display_label format from_type_name id json_type name position rel_kind required time to_type_name updated_at event_type properties user'>
+<h2 id="data-object-relation-type-field-events">Data Object Relation Type Field events</h2>
+
+<div class="api_tags" data-tags="Data Objects" data-tags-lower="data objects"></div>
+
+<p>Changelog of fields on object-to-object relationships</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.DoRelTypeField</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was created"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"display_label"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Display label of the field"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"format"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON Schema format of the field, for example date-time"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"from_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type name of the from side"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"json_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON type of the field. One of string, number, integer, or boolean"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the field"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"position"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Sort position of the field"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"required"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether the field is required"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"to_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type name of the to side"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was updated"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.DoRelTypeField</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was created"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"display_label"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Display label of the field"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"format"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON Schema format of the field, for example date-time"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type name of the from side"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"json_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON type of the field. One of string, number, integer, or boolean"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the field"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"position"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Sort position of the field"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"required"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether the field is required"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type name of the to side"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was updated"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+</div>
+
+<div id='api_jwjqrnaxpbkf' class='api_div' data-search-keywords='data object events data objects changelog of data objects app_group_id attributes created_at deleted deleted_at display_name do_type_name id object_id time updated_at event_type properties user'>
+<h2 id="data-object-events">Data Object events</h2>
+
+<div class="api_tags" data-tags="Data Objects" data-tags-lower="data objects"></div>
+
+<p>Changelog of data objects</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.Object</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name-keyed attribute JSON. Keys are field names."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the object was created"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the object was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"display_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Display name of the object"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"do_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the type, for example account"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Customer-assigned identifier of the data object"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the object was updated"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.Object</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name-keyed attribute JSON. Keys are field names."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the object was created"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the object was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"display_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Display name of the object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"do_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the type, for example account"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Customer-assigned identifier of the data object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the object was updated"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+</div>
+
+<div id='api_qsilwluezaoz' class='api_div' data-search-keywords='data object to data object relation events data objects changelog of data object to data object relationships app_group_id attributes created_at deleted deleted_at from_object_id from_type_name id rel_kind time to_object_id to_type_name updated_at event_type properties user'>
+<h2 id="data-object-to-data-object-relation-events">Data Object to Data Object Relation events</h2>
+
+<div class="api_tags" data-tags="Data Objects" data-tags-lower="data objects"></div>
+
+<p>Changelog of data object to data object relationships</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.RelDoToDo</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name-keyed attribute JSON. Keys are field names."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was created"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"from_object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Customer-assigned identifier of the from object"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"from_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type name of the from object"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"to_object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Customer-assigned identifier of the to object"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"to_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type name of the to object"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was updated"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.RelDoToDo</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name-keyed attribute JSON. Keys are field names."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was created"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Customer-assigned identifier of the from object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type name of the from object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Customer-assigned identifier of the to object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Type name of the to object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was updated"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+</div>
+
+<div id='api_xkxqtbrlcxtj' class='api_div' data-search-keywords='user data object relation events data objects changelog of user-to-object relationships app_group_id attributes created_at deleted deleted_at do_type_name external_user_id id object_id rel_kind time updated_at user_id event_properties braze_user_id event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
+<h2 id="user-data-object-relation-events">User Data Object Relation events</h2>
+
+<div class="api_tags" data-tags="Data Objects" data-tags-lower="data objects"></div>
+
+<p>Changelog of user-to-object relationships</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.RelUserToDo</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name-keyed attribute JSON. Keys are field names."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was created"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"do_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the type, for example account"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the related user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Customer-assigned identifier of the data object"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was updated"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the related user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">User</span><span class="w"> </span><span class="err">Data</span><span class="w"> </span><span class="err">Object</span><span class="w"> </span><span class="err">Relation</span><span class="w"> </span><span class="err">(dataobjects.RelUserToDo)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name-keyed attribute JSON. Keys are field names."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"braze_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the related user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was created"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"do_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the type, for example account"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Customer-assigned identifier of the data object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was updated"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Amplitude"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"library"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Braze"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the related user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.RelUserToDo</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name-keyed attribute JSON. Keys are field names."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was created"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"do_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the type, for example account"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Customer-assigned identifier of the data object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was updated"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"external_user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the related user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the related user"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">User</span><span class="w"> </span><span class="err">Data</span><span class="w"> </span><span class="err">Object</span><span class="w"> </span><span class="err">Relation</span><span class="w"> </span><span class="err">(dataobjects.RelUserToDo)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Mixpanel"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"$partner_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"braze"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name-keyed attribute JSON. Keys are field names."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was created"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"distinct_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] External ID of the related user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"do_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the type, for example account"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"$insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Customer-assigned identifier of the data object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Mixpanel API token"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was updated"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the related user"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">User</span><span class="w"> </span><span class="err">Data</span><span class="w"> </span><span class="err">Object</span><span class="w"> </span><span class="err">Relation</span><span class="w"> </span><span class="err">Updated</span><span class="w"> </span><span class="err">(dataobjects.RelUserToDo)</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"anonymousId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the related user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"context"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"device"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"traits"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"event"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Segment"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"messageId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Name-keyed attribute JSON. Keys are field names."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was created"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"do_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the type, for example account"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Customer-assigned identifier of the data object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship was updated"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"timestamp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"track"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"userId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] External ID of the related user"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+</div>
+
+<div id='api_dwnmmiyjlkmf' class='api_div' data-search-keywords='data object type events data objects changelog of data object types app_group_id created_at deleted deleted_at description display_name_plural display_name_singular icon id is_built_in time type_name updated_at event_type properties user'>
+<h2 id="data-object-type-events">Data Object Type events</h2>
+
+<div class="api_tags" data-tags="Data Objects" data-tags-lower="data objects"></div>
+
+<p>Changelog of data object types</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.Type</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the type was created"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the type was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) A description of the type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"display_name_plural"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Plural display name"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"display_name_singular"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Singular display name"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"icon"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) URL of the icon for the type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"is_built_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, boolean) True for a type created from a built-in template"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API type name, for example account"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the type was updated"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.Type</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the type was created"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the type was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) A description of the type"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"display_name_plural"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Plural display name"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"display_name_singular"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Singular display name"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"icon"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) URL of the icon for the type"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_built_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, boolean) True for a type created from a built-in template"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API type name, for example account"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the type was updated"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+</div>
+
+<div id='api_ndnkjjpurzow' class='api_div' data-search-keywords='data object type field events data objects changelog of data object type fields app_group_id created_at deleted deleted_at display_label do_type_name format id json_type name position required time updated_at event_type properties user'>
+<h2 id="data-object-type-field-events">Data Object Type Field events</h2>
+
+<div class="api_tags" data-tags="Data Objects" data-tags-lower="data objects"></div>
+
+<p>Changelog of data object type fields</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.TypeField</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was created"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"display_label"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Display label of the field"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"do_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the type, for example account"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"format"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON Schema format of the field, for example date-time"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"json_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON type of the field. One of string, number, integer, or boolean"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the field"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"position"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Sort position of the field"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"required"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether the field is required"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was updated"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.TypeField</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was created"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"display_label"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Display label of the field"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"do_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the type, for example account"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"format"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON Schema format of the field, for example date-time"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"json_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON type of the field. One of string, number, integer, or boolean"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the field"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"position"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Sort position of the field"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"required"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether the field is required"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was updated"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+</div>
+
+<div id='api_yyuyikszwalj' class='api_div' data-search-keywords='user relation type events data objects changelog of user-to-object relationship types app_group_id cardinality created_at deleted deleted_at do_type_name forward_name forward_name_plural id rel_kind reverse_name reverse_name_plural time updated_at event_type properties user'>
+<h2 id="user-relation-type-events">User Relation Type events</h2>
+
+<div class="api_tags" data-tags="Data Objects" data-tags-lower="data objects"></div>
+
+<p>Changelog of user-to-object relationship types</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.UserRelType</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cardinality"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Cardinality of the relationship: one_to_one, one_to_many, or many_to_many"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship type was created"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship type was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"do_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the type, for example account"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"forward_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Label for the relationship when viewed from the object, for example </span><span class="se">\"</span><span class="s2">user</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"forward_name_plural"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Plural label for the relationship when viewed from the object"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reverse_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Label for the relationship when viewed from the user, for example </span><span class="se">\"</span><span class="s2">account</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reverse_name_plural"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Plural label for the relationship when viewed from the user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship type was updated"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.UserRelType</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cardinality"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Cardinality of the relationship: one_to_one, one_to_many, or many_to_many"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship type was created"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship type was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"do_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the type, for example account"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"forward_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Label for the relationship when viewed from the object, for example </span><span class="se">\"</span><span class="s2">user</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"forward_name_plural"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Plural label for the relationship when viewed from the object"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"reverse_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Label for the relationship when viewed from the user, for example </span><span class="se">\"</span><span class="s2">account</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"reverse_name_plural"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Plural label for the relationship when viewed from the user"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the relationship type was updated"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+</div>
+
+<div id='api_tjumynbwpfzl' class='api_div' data-search-keywords='user relation type field events data objects changelog of fields on user-to-object relationships app_group_id created_at deleted deleted_at display_label do_type_name format id json_type name position rel_kind required time updated_at event_type properties user'>
+<h2 id="user-relation-type-field-events">User Relation Type Field events</h2>
+
+<div class="api_tags" data-tags="Data Objects" data-tags-lower="data objects"></div>
+
+<p>Changelog of fields on user-to-object relationships</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.UserRelTypeField</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was created"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"display_label"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Display label of the field"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"do_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the type, for example account"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"format"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON Schema format of the field, for example date-time"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"json_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON type of the field. One of string, number, integer, or boolean"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the field"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"position"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Sort position of the field"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"required"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether the field is required"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was updated"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">dataobjects.UserRelTypeField</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the event type"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this create, update, or delete event"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the workspace this record belongs to"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was created"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) True when the record was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was deleted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"display_label"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Display label of the field"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"do_type_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The name of the type, for example account"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"format"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON Schema format of the field, for example date-time"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"json_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) JSON type of the field. One of string, number, integer, or boolean"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the field"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"position"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) Sort position of the field"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rel_kind"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Stable name of the relationship kind"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"required"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, boolean) Whether the field is required"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, int) UNIX timestamp at which the field was updated"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the record was created, modified or deleted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+</div>
+
+<div id='api_dvxkbfrfolfe' class='api_div' data-search-keywords='random bucket number update events random bucket number this user event occurs every time a new user is created within their workspace. during this event, each new user gets assigned a random bucket number that you can then use to create uniformly-distributed segments of random users. use this to group together a range of random bucket number values and compare performance across your campaigns and campaign variants. app_group_id external_user_id id prev_random_bucket_number random_bucket_number time user_id'>
 <h2 id="random-bucket-number-update-events">Random Bucket Number Update events</h2>
 
 <div class="api_tags" data-tags="Random Bucket Number" data-tags-lower="random bucket number"></div>
@@ -101,7 +1151,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_lkqlhvakslak' class='api_div' data-search-keywords='custom events custom events this event occurs when a specific custom event is triggered. use this to track when users perform custom events in your application. ad_id ad_id_type ad_tracking_enabled app_group_id app_id device_id device_model external_user_id id name os_version platform properties time timezone user_id adid event_properties event_type idfa insert_id library user event distinct_id token context device model type traits timestamp'>
+<div id='api_jbfchjvahneg' class='api_div' data-search-keywords='custom events custom events this event occurs when a specific custom event is triggered. use this to track when users perform custom events in your application. ad_id ad_id_type ad_tracking_enabled app_group_id app_id device_id device_model external_user_id id name os_version platform properties received_at_ms time timezone user_id adid event_properties event_type idfa insert_id library user event distinct_id token context device model type traits timestamp'>
 <h2 id="custom-events">Custom events</h2>
 
 <div class="api_tags" data-tags="Custom Events" data-tags-lower="custom events"></div>
@@ -128,6 +1178,7 @@ Certain events return a `platform` value that specifies the platform of the user
 18
 19
 20
+21
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.CustomEvent</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -144,6 +1195,7 @@ Certain events return a `platform` value that specifies the platform of the user
   </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"properties"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Custom properties stored as a JSON encoded string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"received_at_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) UNIX timestamp, in milliseconds, at which Braze received the request that contained this event. For some batched API requests, this is when the batch was queued, which can be a few seconds later."</span><span class="p">,</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"timezone"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Time zone of the user"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) [PII] Braze user ID of the user who performed this event"</span><span class="w">
@@ -172,6 +1224,7 @@ Certain events return a `platform` value that specifies the platform of the user
 20
 21
 22
+23
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="p">[</span><span class="err">Braze</span><span class="w"> </span><span class="err">Custom</span><span class="w"> </span><span class="err">Event</span><span class="p">]</span><span class="w"> </span><span class="err">(users.behaviors.CustomEvent)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -185,7 +1238,8 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"received_at_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) UNIX timestamp, in milliseconds, at which Braze received the request that contained this event. For some batched API requests, this is when the batch was queued, which can be a few seconds later."</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"event_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The event type name, as it is exported to Amplitude"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"idfa"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) [PII] Advertising identifier"</span><span class="p">,</span><span class="w">
@@ -220,6 +1274,7 @@ Certain events return a `platform` value that specifies the platform of the user
 22
 23
 24
+25
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.CustomEvent</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -234,7 +1289,8 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"device_model"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Model of the device"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the custom event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"os_version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"received_at_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) UNIX timestamp, in milliseconds, at which Braze received the request that contained this event. For some batched API requests, this is when the batch was queued, which can be a few seconds later."</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -267,6 +1323,7 @@ Certain events return a `platform` value that specifies the platform of the user
 19
 20
 21
+22
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="p">[</span><span class="err">Braze</span><span class="w"> </span><span class="err">Custom</span><span class="w"> </span><span class="err">Event</span><span class="p">]</span><span class="w"> </span><span class="err">(users.behaviors.CustomEvent)</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -284,6 +1341,7 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"$insert_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Globally unique ID for this event"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"$os"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Version of the operating system of the device"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) Platform of the device"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"received_at_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) UNIX timestamp, in milliseconds, at which Braze received the request that contained this event. For some batched API requests, this is when the batch was queued, which can be a few seconds later."</span><span class="p">,</span><span class="w">
     </span><span class="nl">"time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) The Mixpanel API token"</span><span class="w">
   </span><span class="p">}</span><span class="w">
@@ -316,6 +1374,7 @@ Certain events return a `platform` value that specifies the platform of the user
 24
 25
 26
+27
 </pre></td><td class="rouge-code"><pre><span class="err">//</span><span class="w"> </span><span class="err">users.behaviors.CustomEvent</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -336,7 +1395,8 @@ Certain events return a `platform` value that specifies the platform of the user
     </span><span class="nl">"app_group_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app group this user belongs to"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"app_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) API ID of the app on which this event occurred"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"device_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, string) ID of the device on which the event occurred"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the custom event"</span><span class="w">
+    </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, string) Name of the custom event"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"received_at_ms"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(optional, long) UNIX timestamp, in milliseconds, at which Braze received the request that contained this event. For some batched API requests, this is when the batch was queued, which can be a few seconds later."</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"timestamp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"(required, int) UNIX timestamp at which the event happened"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"track"</span><span class="p">,</span><span class="w">
@@ -355,7 +1415,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_ipetydxlkxgs' class='api_div' data-search-keywords='install attribution events attribution this event occurs when an app installation is attributed to a source. use this to track where your app installs are coming from. app_group_id external_user_id id source time user_id device_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
+<div id='api_rdzlxpllbrro' class='api_div' data-search-keywords='install attribution events attribution this event occurs when an app installation is attributed to a source. use this to track where your app installs are coming from. app_group_id external_user_id id source time user_id device_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
 <h2 id="install-attribution-events">Install Attribution events</h2>
 
 <div class="api_tags" data-tags="Attribution" data-tags-lower="attribution"></div>
@@ -522,7 +1582,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_wuchokauvvme' class='api_div' data-search-keywords='location events locations this event is triggered when a user visits a specified location. use this to track users triggering location events in your app. ad_id ad_id_type ad_tracking_enabled alt_accuracy altitude app_group_id app_id device_id device_model external_user_id id latitude ll_accuracy longitude os_version platform time user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token context device model type traits timestamp'>
+<div id='api_fmixwukiczkv' class='api_div' data-search-keywords='location events locations this event is triggered when a user visits a specified location. use this to track users triggering location events in your app. ad_id ad_id_type ad_tracking_enabled alt_accuracy altitude app_group_id app_id device_id device_model external_user_id id latitude ll_accuracy longitude os_version platform time user_id adid event_properties event_type idfa insert_id library properties user event distinct_id token context device model type traits timestamp'>
 <h2 id="location-events">Location events</h2>
 
 <div class="api_tags" data-tags="Locations" data-tags-lower="locations"></div>
@@ -812,7 +1872,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_aojsjamfjlhx' class='api_div' data-search-keywords='purchase events purchases this event occurs when a user makes a purchase. use this data to track when users purchase something in the application. ad_id ad_id_type ad_tracking_enabled app_group_id app_id currency device_id device_model external_user_id id os_version platform price product_id properties time user_id adid event_properties event_type idfa insert_id library user event distinct_id token context device model type traits timestamp'>
+<div id='api_ijjubplycysc' class='api_div' data-search-keywords='purchase events purchases this event occurs when a user makes a purchase. use this data to track when users purchase something in the application. ad_id ad_id_type ad_tracking_enabled app_group_id app_id currency device_id device_model external_user_id id os_version platform price product_id properties time user_id adid event_properties event_type idfa insert_id library user event distinct_id token context device model type traits timestamp'>
 <h2 id="purchase-events">Purchase events</h2>
 
 <div class="api_tags" data-tags="Purchases" data-tags-lower="purchases"></div>
@@ -1089,7 +2149,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_skwfgkxivmgn' class='api_div' data-search-keywords='first session events sessions this event occurs when a user starts their first session in your application. use this data to track when users start sessions. app_group_id app_id country device_id device_model external_user_id gender id language os_version platform sdk_version session_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
+<div id='api_ebiyompbmkxn' class='api_div' data-search-keywords='first session events sessions this event occurs when a user starts their first session in your application. use this data to track when users start sessions. app_group_id app_id country device_id device_model external_user_id gender id language os_version platform sdk_version session_id time timezone user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
 <h2 id="first-session-events">First Session events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1314,7 +2374,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_mutzmjdkwlkv' class='api_div' data-search-keywords='session end events sessions this occurs when a user exits your application, therefore ending their current session. use this data to track when sessions end, and along with the appropriate session start event, calculate the duration of their time in a session. app_group_id app_id device_id device_model duration external_user_id id os_version platform session_id time user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
+<div id='api_lghfdgusrklo' class='api_div' data-search-keywords='session end events sessions this occurs when a user exits your application, therefore ending their current session. use this data to track when sessions end, and along with the appropriate session start event, calculate the duration of their time in a session. app_group_id app_id device_id device_model duration external_user_id id os_version platform session_id time user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
 <h2 id="session-end-events">Session End events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1533,7 +2593,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_mrzfsinmqyod' class='api_div' data-search-keywords='session start events sessions this event occurs when a user starts a session. use this data to track when users start sessions. app_group_id app_id device_id device_model external_user_id id os_version platform session_id time user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
+<div id='api_ezuovcliynqp' class='api_div' data-search-keywords='session start events sessions this event occurs when a user starts a session. use this data to track when users start sessions. app_group_id app_id device_id device_model external_user_id id os_version platform session_id time user_id event_properties event_type insert_id library properties user event distinct_id token context device model type traits timestamp'>
 <h2 id="session-start-events">Session Start events</h2>
 
 <div class="api_tags" data-tags="Sessions" data-tags-lower="sessions"></div>
@@ -1746,7 +2806,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_akvkuvqmptbk' class='api_div' data-search-keywords='live activity push to start token change events live activity, push to start token this event occurs when braze syncs the live activity push to start token with the user. activity_attributes_type app_group_id app_id device_id external_user_id id ios_push_token_apns_gateway push_to_start_token push_token_state_change_type sdk_version time user_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
+<div id='api_kcvsvdbnyzwm' class='api_div' data-search-keywords='live activity push to start token change events live activity, push to start token this event occurs when braze syncs the live activity push to start token with the user. activity_attributes_type app_group_id app_id device_id external_user_id id ios_push_token_apns_gateway push_to_start_token push_token_state_change_type sdk_version time user_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
 <h2 id="live-activity-push-to-start-token-change-events">Live Activity Push To Start Token Change events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Push To Start Token" data-tags-lower="live activity, push to start token"></div>
@@ -1963,7 +3023,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_pevriweckulc' class='api_div' data-search-keywords='live activity update token change events live activity, update token this event occurs when braze syncs live activity update token with the user activity_id app_group_id app_id device_id external_user_id id ios_push_token_apns_gateway push_token_state_change_type sdk_version time update_token user_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
+<div id='api_xdqqxzxxfllm' class='api_div' data-search-keywords='live activity update token change events live activity, update token this event occurs when braze syncs live activity update token with the user activity_id app_group_id app_id device_id external_user_id id ios_push_token_apns_gateway push_token_state_change_type sdk_version time update_token user_id event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
 <h2 id="live-activity-update-token-change-events">Live Activity Update Token Change events</h2>
 
 <div class="api_tags" data-tags="Live Activity, Update Token" data-tags-lower="live activity, update token"></div>
@@ -2174,7 +3234,7 @@ Certain events return a `platform` value that specifies the platform of the user
 
 </div>
 
-<div id='api_pgdnwrvxlhsk' class='api_div' data-search-keywords='push notification token state change events push, token state change this event occurs when a push token is inserted, updated, or removed. use this to track the states of push tokens. app_group_id app_id external_user_id id ios_push_token_apns_gateway platform push_token push_token_created_at push_token_device_id push_token_foreground_push_disabled push_token_provisionally_opted_in push_token_state_change_type push_token_updated_at sdk_version time time_ms user_id web_push_token_public_key web_push_token_user_auth web_push_token_vapid_public_key event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
+<div id='api_hptsqgqpqxho' class='api_div' data-search-keywords='push notification token state change events push, token state change this event occurs when a push token is inserted, updated, or removed. use this to track the states of push tokens. app_group_id app_id external_user_id id ios_push_token_apns_gateway platform push_token push_token_created_at push_token_device_id push_token_foreground_push_disabled push_token_provisionally_opted_in push_token_state_change_type push_token_updated_at sdk_version time time_ms user_id web_push_token_public_key web_push_token_user_auth web_push_token_vapid_public_key event_properties event_type insert_id library properties user event distinct_id token context device traits timestamp type'>
 <h2 id="push-notification-token-state-change-events">Push Notification Token State Change events</h2>
 
 <div class="api_tags" data-tags="Push, Token State Change" data-tags-lower="push, token state change"></div>

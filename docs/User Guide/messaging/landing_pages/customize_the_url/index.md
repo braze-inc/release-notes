@@ -4,7 +4,7 @@
 
 ## How it works
 
-When you [connect your domain to Braze](#connect-your-domain-to-braze), it will be used as the default domain for all landing pages. For example, if you connect the subdomain `forms.example.com`, your landing page URLs would now be `forms.example.com/holiday-sale`.
+When you [connect your domain to Braze](#connect-your-domain-to-braze), Braze uses it as the default domain for all landing pages. For example, if you connect the subdomain `forms.example.com`, your landing page URLs are `forms.example.com/holiday-sale`.
 
 The number of custom domains you can connect to your Braze account depends on your [plan tier](https://www.braze.com/docs/user_guide/messaging/landing_pages#plan-tiers). To increase your limit, contact your Braze account manager.
 
@@ -22,7 +22,7 @@ To connect a domain to your Braze account, have an administrator follow these st
 **Note:**
 
 
-Depending on your domain provider, the connection can take up to 48 hours. When the process is complete, we’ll start using your custom domain for your landing pages in the Braze dashboard.
+Depending on your domain provider, the connection can take up to 48 hours. When the process is complete, Braze starts using your custom domain for your landing pages in the dashboard.
 
 
 
@@ -32,7 +32,7 @@ Braze uses Cloudflare to automatically provision SSL certificates for your custo
 
 ## Remove your domain
 
-If you're a Braze administrator, you can remove a previously-configured domain by completing the following steps:
+If you're a Braze administrator, you can remove a previously configured domain by completing the following steps:
 
 1. Go to **Settings** > **Landing Page Settings**.
 2. Select **Remove Custom Domain**
@@ -42,7 +42,7 @@ If you're a Braze administrator, you can remove a previously-configured domain b
 **Important:**
 
 
-When you remove a custom domain, that URL will no longer be valid. Any landing pages that were using this domain will automatically revert to the default domain set by Braze.
+When you remove a custom domain, URLs that use the removed domain stop working, including links you typed directly into a message. In messages you send afterward, the `{% landing_page_url %}` Liquid tag links to the built-in Braze domain.
 
 
 
@@ -52,7 +52,7 @@ To migrate a custom domain to another workspace:
 
 1. Remove the custom domain.
 2. Create a new custom domain in the desired workspace.
-3. Reconfigure the custom domain with the new DNS records. Note that your subdomain will be unavailable during this process.
+3. Reconfigure the custom domain with the new DNS records. Your subdomain is unavailable during this process.
 
 ## DNS resources
 
@@ -70,7 +70,7 @@ The following table contains resources for creating and managing DNS records wit
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
-## Troubleshooting 
+## Troubleshooting
 
 ### My domain connection failed
 
@@ -86,6 +86,15 @@ Yes, you can use nested subdomains for your landing pages. For example, `forms.b
 
 No, you currently can only connect one subdomain to a workspace.
 
+### Does the built-in Braze landing page domain keep working if I connect or remove a custom domain?
+
+Yes. Your workspace's built-in Braze domain, such as `ldpgs.com` or `ldpgs.eu`, stays active whether you connect or remove a custom domain. Links that use the built-in domain keep working, including links already sent in messages.
+
+A custom domain only changes the links that the `{% landing_page_url %}` Liquid tag generates in messages you send afterward. It does not change URLs you typed directly into a message.
+
+- If you connect a custom domain, new messages that use the Liquid tag link to your custom domain. URLs you entered directly with the built-in domain keep working.
+- If you remove a custom domain, new messages that use the Liquid tag link to the built-in domain again. Any link that uses the removed custom domain stops working, whether the Liquid tag generated it or you entered it directly. For example, if you send an email with the Liquid tag while `forms.example.com` is connected, the email links to `forms.example.com`. That link stops working after you remove the domain.
+
 ### Can I use the same subdomain that I currently use for my main website or my sending domain?
 
 No, you can't use subdomains that are already in use. While these subdomains are valid, they can't be used for landing pages if they are already assigned to other purposes or have DNS records that conflict with the required CNAME records.
@@ -99,6 +108,7 @@ If your custom domain shows all DNS records as "Connected" but the domain status
 CAA records restrict which certificate authorities can issue SSL certificates for your domain. If your CAA records don't include LetsEncrypt, Braze (through Cloudflare) can't issue the required SSL certificate.
 
 To resolve this, ask your IT team to add a CAA record to your subdomain with the following values:
+
 - **Record type:** CAA
 - **Value:** `0 issue "letsencrypt.org"`
 
@@ -116,4 +126,4 @@ After resolving either issue, delete and recreate your custom domain in the Braz
 
 ### Can I use a reverse proxy to serve landing pages under my main domain or a subdirectory?
 
-No, landing page URL Liquid tags will not work correctly with reverse proxies.
+No, landing page URL Liquid tags do not work correctly with reverse proxies.

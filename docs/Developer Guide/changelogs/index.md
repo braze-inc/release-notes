@@ -14407,7 +14407,7 @@ You can also find a copy of the [.NET MAUI Braze SDK changelog on GitHub](https:
 </ul>
 
 <blockquote>
-  <p><strong><em>NOTE:</em></strong>  This release contains APIs for the Banners feature but is not currently fully supported by this SDK. If you wish to use Banners in your .NET MAUI app, please contact your Customer Support Manager before integrating into your application.</p>
+  <p><strong><em>NOTE:</em></strong> Banners are not supported on this SDK, including in later releases. This release binds Banner data types and the native Banner views from the Android and Swift SDKs. Braze does not test or support those APIs. Rendering a Banner in your own UI is not supported either. See <a href="https://www.braze.com/docs/developer_guide/banners/migrating_from_content_cards#sdk-limitations">SDK limitations</a>.</p>
 </blockquote>
 
 <h2 id="600">6.0.0</h2>

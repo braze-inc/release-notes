@@ -128,6 +128,8 @@ We're piloting this new tutorial format. [Tell us what you think](https://docs.g
 
 
 
+
+
 ```kotlin file=MainApplication.kt
 import android.app.Application
 import android.util.Log
@@ -184,13 +186,31 @@ public class MainApplication : Application() {
 
 ```kotlin file=MainActivity.kt
 import android.os.Bundle
+import android.util.TypedValue
 import androidx.activity.ComponentActivity
+import com.braze.Braze
+import com.braze.ui.banners.BannerView
+import kotlin.math.min
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Inflate the XML layout
         setContentView(R.layout.banners)
+
+        val bannerView = findViewById<BannerView>(R.id.banner_view_1)
+        bannerView.heightCallback = { heightDp ->
+            bannerView.post {
+                val cappedHeightDp = min(heightDp, 80.0)
+                val heightPx = TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP,
+                    cappedHeightDp.toFloat(),
+                    bannerView.resources.displayMetrics
+                ).toInt()
+                bannerView.layoutParams = bannerView.layoutParams.apply {
+                    height = heightPx
+                }
+            }
+        }
 
         // Refresh placements
         Braze.getInstance(this)
@@ -219,7 +239,7 @@ class MainActivity : ComponentActivity() {
         <com.braze.ui.banners.BannerView
             android:id="@+id/banner_view_1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             app:placementId="top-1" />
 
         <!-- ...the rest of your activity layout -->
@@ -245,22 +265,199 @@ Use `subscribeToBannersEvents()` to register a handler that runs when the Banner
 For the full list of events you can receive, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
 
 !!step
-lines-MainActivity.kt=10-14
+lines-banners.xml=15-19
 
-### 3. Refresh your placements
+### 3. Define `BannerView` in your `banners.xml`
+
+In `banners.xml`, declare a `<com.braze.ui.banners.BannerView>` with `app:placementId="PLACEMENT_ID"` and set `android:layout_height` to `0dp`. The view stays in the layout with no height until the Banner reports its content height, so the screen does not reserve empty space before a Banner loads.
+
+After a refresh, the SDK updates a `BannerView` only when that placement's content changes. Unchanged displayed Banners stay as-is.
+
+!!step
+lines-MainActivity.kt=13-26
+
+### 4. Update the Banner height
+
+Set `heightCallback` on the `BannerView`. The callback receives the Banner height in dp. Apply that height to the view yourself: convert dp to pixels, then set the layout height.
+
+Banner HTML reports its height through a JavaScript interface, so `heightCallback` can run off the main thread. Update the view inside `bannerView.post` so the change runs on the main thread.
+
+A height of `0.0` means there is no content to show. The SDK reports `0.0` when the placement has no Banner, the Banner is in a control group, or the Banner was dismissed. Apply `0.0` as well, so the view collapses and stays in the layout for the next Banner.
+
+!!step
+lines-MainActivity.kt=16
+
+### 5. Limit the Banner height
+
+Cap the height you apply. In this example, `min(heightDp, 80.0)` keeps the Banner at 80&nbsp;dp or less.
+
+!!step
+lines-MainActivity.kt=28-32
+
+### 6. Refresh your placements
 
 After initializing the Braze SDK, call `requestBannersRefresh(["PLACEMENT_ID"])` to fetch the latest Banner content for that placement.
 
 This call merges into the existing Banner cache. Only the placement IDs you request are added, updated, or removed. Cached Banners for other placements stay in the cache and expire at their original expiry time. If the server returns no Banner for a requested placement, that placement is dropped from the cache.
 
+
+
+
+
+To use Jetpack Compose, add the `com.braze:android-sdk-jetpack-compose` artifact to your app module. Use the same version as your other Braze Android SDK dependencies.
+
+
+
+```kotlin file=MainApplication.kt
+import android.app.Application
+import android.util.Log
+import com.braze.Braze
+import com.braze.configuration.BrazeConfig
+import com.braze.support.BrazeLogger
+
+public class MainApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+
+        // Turn on verbose Braze logging
+        BrazeLogger.logLevel = Log.VERBOSE
+
+        val config = BrazeConfig.Builder()
+            .setApiKey("YOUR-API-KEY")
+            .setCustomEndpoint("YOUR-ENDPOINT")
+            .build()
+        Braze.configure(this, config)
+    }
+}
+```
+
+```kotlin file=BannerSlot.kt
+import android.os.Handler
+import android.os.Looper
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
+import com.braze.Braze
+import com.braze.events.BannersEvent
+import com.braze.events.ChannelErrorReason
+import com.braze.events.IEventSubscriber
+import com.braze.jetpackcompose.banners.Banner
+import kotlin.math.min
+
+private const val BANNER_PLACEMENT_ID = "top-1"
+
+@Composable
+fun BannerSlot() {
+    val context = LocalContext.current
+    val mainHandler = remember { Handler(Looper.getMainLooper()) }
+    var hasBannerForPlacement by remember { mutableStateOf(false) }
+    var contentHeight by remember { mutableStateOf(0.0) }
+
+    DisposableEffect(context) {
+        val subscriber = IEventSubscriber<BannersEvent> { event ->
+            val hasBanner: Boolean? = when (event) {
+                is BannersEvent.CacheReplay ->
+                    event.cacheSnapshot.banners.containsKey(BANNER_PLACEMENT_ID)
+                is BannersEvent.CacheLoad ->
+                    event.cacheSnapshot.banners.containsKey(BANNER_PLACEMENT_ID)
+                is BannersEvent.DataUpdated ->
+                    event.cacheSnapshot.banners.containsKey(BANNER_PLACEMENT_ID)
+                is BannersEvent.ErrorEvent ->
+                    if (event.reason is ChannelErrorReason.FeatureDisabled) false else null
+                else -> null
+            }
+            if (hasBanner != null) {
+                val present = hasBanner
+                mainHandler.post { hasBannerForPlacement = present }
+            }
+        }
+        val braze = Braze.getInstance(context)
+        braze.subscribeToBannersEvents(subscriber)
+        braze.requestBannersRefresh(listOf(BANNER_PLACEMENT_ID))
+        onDispose {
+            braze.removeSingleSubscription(subscriber, BannersEvent::class.java)
+        }
+    }
+
+    if (hasBannerForPlacement) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(min(contentHeight, 80.0).dp)
+        ) {
+            Banner(
+                placementId = BANNER_PLACEMENT_ID,
+                heightCallback = { heightDp ->
+                    mainHandler.post { contentHeight = heightDp }
+                }
+            )
+        }
+    }
+}
+```
+
 !!step
-lines-banners.xml=15-19
+lines-MainApplication.kt=12
 
-### 4. Define `BannerView` in your `banners.xml`
+### 1. Enable debugging (optional)
 
-In `banners.xml`, declare a `<com.braze.ui.banners.BannerView>` element with `app:placementId="PLACEMENT_ID"`. Braze will use this element to insert your Banner into your UI.
+To make troubleshooting easier while developing, consider enabling debugging.
 
-After a refresh, the SDK updates a `BannerView` only when that placement's content changes. Unchanged displayed Banners stay as-is.
+!!step
+lines-BannerSlot.kt=31-50
+
+### 2. Subscribe to Banner events
+
+Call `subscribeToBannersEvents` and keep the subscriber so you can remove it when the composable leaves the screen. Set `hasBannerForPlacement` when `CacheReplay`, `CacheLoad`, or `DataUpdated` contains this placement. On `ErrorEvent` with `FeatureDisabled`, set `hasBannerForPlacement` to `false`.
+
+Banner events arrive on a background thread. Post UI updates to the main thread.
+
+For when each event fires, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
+
+!!step
+lines-BannerSlot.kt=51-54
+
+### 3. Refresh your placements
+
+After you register the subscriber, call `requestBannersRefresh(["PLACEMENT_ID"])` to fetch the latest Banner content for that placement. Remove the subscriber with `removeSingleSubscription` when you no longer need it.
+
+!!step
+lines-BannerSlot.kt=57-70
+
+### 4. Only show the Banner after it is in the cache
+
+Show `Banner` only when `hasBannerForPlacement` is true. The placement stays out of your layout until the cache contains a Banner for it.
+
+Import `com.braze.jetpackcompose.banners.Banner`. Other Compose libraries define their own `Banner` composable.
+
+!!step
+lines-BannerSlot.kt=65-67
+
+### 5. Update the Banner height
+
+Pass `heightCallback` to `Banner`. The callback receives the Banner height in dp. Store it in `contentHeight` and apply it with `Modifier.height`. `Banner` leaves sizing to your layout.
+
+`heightCallback` can run off the main thread. Post the state update to the main thread before you change `contentHeight`.
+
+A height of `0.0` means there is no content to show and prevents empty spaces in your UI. The SDK reports `0.0` when the placement has no Banner, the Banner is in a control group, or the Banner was dismissed.
+
+!!step
+lines-BannerSlot.kt=61
+
+### 6. Limit the Banner height
+
+Cap the height you apply. In this example, `min(contentHeight, 80.0)` keeps the Banner at 80&nbsp;dp or less.
+
+
 
 
 

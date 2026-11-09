@@ -6,6 +6,24 @@
 
 * Added new event type `api.RequestProcessingStatus`.
 
+* Added new event type `dataobjects.DoRelType`.
+
+* Added new event type `dataobjects.DoRelTypeField`.
+
+* Added new event type `dataobjects.Object`.
+
+* Added new event type `dataobjects.RelDoToDo`.
+
+* Added new event type `dataobjects.RelUserToDo`.
+
+* Added new event type `dataobjects.Type`.
+
+* Added new event type `dataobjects.TypeField`.
+
+* Added new event type `dataobjects.UserRelType`.
+
+* Added new event type `dataobjects.UserRelTypeField`.
+
 * Field changes to event type `users.behaviors.CustomEvent`:
     * Added new `long` field `received_at_ms`: UNIX timestamp, in milliseconds, at which Braze received the request that contained this event. For some batched API requests, this is when the batch was queued, which can be a few seconds later.
 

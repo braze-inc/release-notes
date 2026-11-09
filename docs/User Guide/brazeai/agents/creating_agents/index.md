@@ -66,6 +66,8 @@ Give the agent instructions. If you used an Operator template, review the pre-fi
 
 Include instructions for what the agent should do in unexpected or ambiguous scenarios. This minimizes the risk that agent confusion leads to errors. For example, rather than asking the agent for only "positive" or "negative" sentiment values, ask it to return "unsure" if it can't decide.
 
+You can format your instructions with Markdown, such as headings, bulleted lists, and tables, to organize them into sections. To check the formatting, select **Preview** next to the **Instructions** field. Select **Edit** to return to the editor. After you save, the agent's view page also shows the instructions with this formatting.
+
 Refer to the [Writing instructions](https://www.braze.com/docs/user_guide/brazeai/agents/reference#writing-instructions) for best practices and [Examples](https://www.braze.com/docs/user_guide/brazeai/agents/reference#examples) for inspiration on how to prompt your agent.
 
 #### Add context {#add-resources}

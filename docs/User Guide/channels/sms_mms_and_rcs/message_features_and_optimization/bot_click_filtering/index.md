@@ -43,7 +43,7 @@ Braze includes the following Currents fields for SMS click events:
 | Field | Data type | Description |
 | --- | --- | --- |
 | `is_suspected_bot_click` | Boolean | Indicates if the click is a suspected bot click. For SMS and RCS short-link clicks, Braze evaluates bot detection on every click and populates this field with `true` or `false`. |
-| `suspected_bot_click_reason` | String, Array | The reasons a click was flagged as a suspected bot click. Possible values: `User-Agent`, `IP Address`. A click can have more than one reason. |
+| `suspected_bot_click_reason` | String, Array | Indicates why a click was flagged as a suspected bot click. Possible values: `"User-Agent"`, `"IP Address"`. A click can have more than one reason. Populates when bot detection runs for SMS and RCS short-link clicks. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Currents fields in SMS click events" }
 
 ## Query Builder template

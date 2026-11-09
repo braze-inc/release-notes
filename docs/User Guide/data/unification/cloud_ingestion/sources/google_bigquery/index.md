@@ -5,7 +5,7 @@
 ## Setup overview
 
 1. In your BigQuery account, set up the tables or views you want to sync to Braze.
-2. Create a service account and allow access to the BigQuery projects and datasets that contain the data you want to sync.
+2. Create a service account. Grant it permission to run query jobs, and read access to the datasets that contain the data you want to sync. If the service account and your data are in different projects, these permissions go in different projects. For details, see [Where to grant each permission](#where-to-grant-each-permission).
 3. Set up how Braze accesses the service account, using one of the supported [authentication methods](#set-up-authentication).
 4. Create a new source and sync in the Braze dashboard.
 5. Validate the integration and start the sync.
@@ -412,10 +412,27 @@ Deleting user profiles cannot be undone. The delete action permanently removes u
 
 Create a service account in GCP for Braze to use to connect and read data from your table(s). The service account should have the following permissions:
 
-- **BigQuery Connection User:** Allows Braze to make connections
+- **BigQuery Connection User:** Allows Braze to make connections.
 - **BigQuery User:** Provides Braze access to run queries, read dataset metadata, and list tables.
 - **BigQuery Data Viewer:** Provides Braze access to view datasets and their contents.
-- **BigQuery Job User:** Provides Braze access to run jobs
+- **BigQuery Job User:** Provides Braze access to run jobs.
+
+### Where to grant each permission
+
+Every BigQuery query runs as a job in one project, and can read tables in other projects. BigQuery checks each permission in its own project. If your service account and your data are in the same project, grant all roles in that project. Otherwise, grant each role in the project shown in the following table.
+
+| Role | Where to grant it |
+| --- | --- |
+| BigQuery Job User<br>BigQuery User<br>BigQuery Connection User | Depends on your [authentication method](#set-up-authentication):<br><br>**Service account key:** The project the service account was created in. This is the `project_id` value in the JSON key file, and can differ from the **Project** you enter in Braze.<br><br>**Workload Identity Federation:** The project you enter in the **Project** field of your Braze source.<br><br>Braze runs query jobs in this project, and BigQuery bills the queries to it. |
+| BigQuery Data Viewer | The datasets or tables you sync, in the project you enter in the **Project** field of your Braze source. If you sync a view or use a SQL query that reads from other datasets, also grant this role on those datasets. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Where to grant each BigQuery permission" }
+
+**Important:**
+
+
+If you authenticate with a service account key, and your service account was created in a different project from your data, grant BigQuery Job User in the service account's project and BigQuery Data Viewer on the datasets you sync. If the service account doesn't have `bigquery.jobs.create` in its own project, syncs fail with a `403 Access Denied` error.
+
+
 
 ## Step 3: Set up authentication {#set-up-authentication}
 
@@ -544,6 +561,8 @@ Create a service account in GCP for Braze to use to connect and read data from y
 - **BigQuery Job User:** Provides Braze access to run jobs.
 - **bigquery.tables.create:** Provides Braze access to create temporary tables during segment refresh.
 
+Grant these roles in the projects described in [Where to grant each permission](#where-to-grant-each-permission). Grant `bigquery.tables.create` in the same project as BigQuery Job User.
+
 This service account is used to generate the list of tables available in your CDI Segment Extensions, and to query source tables to create new segments. After the connected source is created, Braze discovers the names and description of all tables available to the user in the source schema.
 
 You may choose to grant access to all tables in a dataset, or grant privileges only to specific tables. Whichever tables the Braze role has access to are available to query in the CDI Segment Extension.
@@ -607,6 +626,10 @@ Test Connection is running on your data warehouse, so increasing warehouse capac
 ### User does not have permission to query table
 
 If you receive this error, add user permissions to query the table.
+
+### User does not have bigquery.jobs.create permission in project
+
+If you receive this error, the service account can't run query jobs in the project named in the error. Grant BigQuery Job User to the service account in that project. If you authenticate with a service account key, this is the project the service account was created in, which can differ from the project that contains your data. For details, see [Where to grant each permission](#where-to-grant-each-permission).
 
 ### Your usage exceeded the custom quota
 
