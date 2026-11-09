@@ -5,7 +5,7 @@
 ## Setup overview
 
 1. In your Redshift instance, set up the tables or views you want to sync to Braze.
-2. Create a Redshift user for Braze with one of the supported [authentication methods](#set-up-authentication), and grant it access to your tables.
+2. Choose one of the supported [authentication methods](#set-up-authentication) for Braze, and grant the Braze database user access to your tables.
 3. Make sure Braze access is allowed to the Redshift tables you want to sync. Braze connects to Redshift over the internet.
 4. Create a new source and sync in the Braze dashboard.
 5. Validate the integration and start the sync.
@@ -398,12 +398,200 @@ Deleting user profiles cannot be undone. The delete action permanently removes u
 
 ## Step 2: Set up authentication {#set-up-authentication}
 
-Braze connects to Redshift as a database user. Create the user with one of the following authentication methods:
+Braze connects to Redshift as a database user. Choose one of the following authentication methods to set up that user:
 
 
 | Method | How Braze authenticates | What you enter in Braze |
 | --- | --- | --- |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Authentication methods for " }
+
+
+
+### IAM role {#iam-role}
+
+Braze assumes an AWS Identity and Access Management (IAM) role in your AWS account and requests temporary database credentials. Braze doesn't store a database password. Braze assumes the role from the same AWS account that it uses for [Amazon S3](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_s3) sources.
+
+Braze generates an external ID for your workspace. Your role uses this ID to confirm that a request to assume the role comes from your Braze workspace.
+
+Your existing username and password credentials continue to work, so you don't need to migrate them.
+
+#### Prerequisites
+
+You need permission to create IAM roles and policies in your AWS account. You also need permission to run `CREATE USER` and `GRANT` statements in your Redshift database.
+
+**Important:**
+
+
+Your role's trust policy must require the exact external ID from the Braze credential form. When you test or save a credential, Braze tries to assume your role with a different external ID. If AWS allows that attempt, the connection test fails. This happens when the role doesn't require an external ID, or when it accepts a pattern such as `braze-cdi-*`.
+
+
+
+#### Copy the Braze account ID and external ID {#iam-role-copy-braze-values}
+
+1. In the Braze dashboard, go to **Data Settings** > **Cloud Data Ingestion** > **Sources**.
+2. Select **Add data source**, and then select **Amazon Redshift**.
+3. For the authentication method, select **IAM role**.
+4. In the **AWS setup** step, copy the **Braze Account ID** and the **External ID**. Keep the form open, because you return to it in [Enter the values in Braze](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#iam-role-enter-values).
+
+#### Create the IAM role {#iam-role-create-role}
+
+1. In the AWS console, go to **IAM** > **Roles**, and then select **Create role**.
+2. Select **AWS account** as the trusted entity type, and then select **Another AWS account**.
+3. Paste the **Braze Account ID**. Select **Require external ID**, and then paste the **External ID**.
+4. Skip the permissions step. Enter a role name, and then select **Create role**. You add the permissions policy in [Add the permissions policy](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#iam-role-permissions-policy).
+5. Copy the role's Amazon Resource Name (ARN). You enter it in Braze in [Enter the values in Braze](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#iam-role-enter-values).
+
+The trust policy for the role looks like the following example. Replace *`BRAZE_ACCOUNT_ID`* and *`EXTERNAL_ID`* with the values from the credential form.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::BRAZE_ACCOUNT_ID:root"
+      },
+      "Action": "sts:AssumeRole",
+      "Condition": {
+        "StringEquals": {
+          "sts:ExternalId": "EXTERNAL_ID"
+        }
+      }
+    }
+  ]
+}
+```
+
+#### Add the permissions policy {#iam-role-permissions-policy}
+
+Add an inline permissions policy to the role. On the role's **Permissions** tab, select **Add permissions** > **Create inline policy**, and then paste the JSON for your cluster type from the following tabs.
+
+
+
+
+For Redshift Serverless, the policy must allow `redshift-serverless:GetCredentials` on your workgroup. In the `Resource` value, use the workgroup ID, which is different from the workgroup name. To find the ID, open your workgroup in the Redshift console, and copy the ID from the workgroup ARN.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "redshift-serverless:GetCredentials",
+      "Resource": "arn:aws:redshift-serverless:REGION:AWS_ACCOUNT_ID:workgroup/WORKGROUP_ID"
+    }
+  ]
+}
+```
+
+Replace *`REGION`*, *`AWS_ACCOUNT_ID`*, and *`WORKGROUP_ID`* with the values for your workgroup.
+
+
+
+
+For a provisioned cluster, the policy must allow `redshift:GetClusterCredentialsWithIAM` on the database that you sync from.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "redshift:GetClusterCredentialsWithIAM",
+      "Resource": "arn:aws:redshift:REGION:AWS_ACCOUNT_ID:dbname:CLUSTER_IDENTIFIER/DATABASE_NAME"
+    }
+  ]
+}
+```
+
+Replace *`REGION`*, *`AWS_ACCOUNT_ID`*, *`CLUSTER_IDENTIFIER`*, and *`DATABASE_NAME`* with the values for your cluster.
+
+
+
+
+#### Create the database user and grant access {#iam-role-grant-access}
+
+Braze logs in to Redshift as a database user named *`IAMR:ROLE_NAME`*, where *`ROLE_NAME`* is the name of the IAM role you created. This user is different from `braze_user`, so permissions you granted to other database users don't apply to it.
+
+Before you test the connection in Braze, run the following statement in your Redshift database to create the user. The statement is safe to run before Braze connects for the first time:
+
+```sql
+CREATE USER "IAMR:ROLE_NAME" PASSWORD DISABLE;
+```
+
+Then grant this user access to your source table. Use the same `GRANT` statements as in [Step 3: Grant permissions to the user](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#step-3-grant-permissions-to-the-user), and replace `braze_user` with *`"IAMR:ROLE_NAME"`*. Keep the double quotation marks, because the user name contains a colon.
+
+If you also use Redshift as a [connected source](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#use-redshift-as-a-connected-source), grant this user the same permissions listed in that section.
+
+#### Enter the values in Braze {#iam-role-enter-values}
+
+Return to the Braze credential form. In the **Braze setup** step, enter the following values:
+
+| Braze field | What to enter |
+| --- | --- |
+| **Cluster type** | **Serverless** (the default) or **Provisioned**. |
+| **Role ARN** | The ARN of the role you created, in the form `arn:aws:iam::123456789012:role/ROLE_NAME`. |
+| **Region** | The AWS Region where your Redshift cluster or workgroup runs, such as `us-east-1`. This can be different from the Region of your Braze instance. |
+| **Workgroup name** or **Cluster identifier** | For Serverless, the name of your workgroup. For a provisioned cluster, the identifier of your cluster. |
+| **Host** | The endpoint of your cluster or workgroup. For Serverless, Braze fills in this field from your **Role ARN**, **Region**, and **Workgroup name**, and you can edit it. For a provisioned cluster, enter the endpoint. |
+| **Port** | The port of your cluster or workgroup. The default is `5439`. Enter a value from `1024` to `65535`. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Values to enter in Braze" }
+
+**Important:**
+
+
+You can't change these connection details after you save the credential. To change any of them, create a new credential. You can then move your source to the new credential.
+
+
+
+IAM role authentication works with or without an SSH tunnel. For tunnel and IP allowlist setup, follow [Step 4: Allow access to Braze IPs](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#allow-braze-ips), the same as for other methods. After you save the credential, you can rename it. If you use a tunnel, you can also rotate the tunnel key.
+
+#### How Braze tests the connection {#iam-role-connection-test}
+
+When you test the connection, and each time Braze connects, Braze first tries to assume your role using a test external ID that doesn't belong to any workspace: `braze-cdi-000000000000000000000000`. Your role must deny this attempt with an `AccessDenied` error. If AWS allows it, the connection test fails. For help, see [Your IAM role doesn't require its external ID](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#your-iam-role-does-not-require-its-external-id).
+
+AWS CloudTrail shows these attempts as `AssumeRole` calls with the session name `Braze-CDI-Redshift`. The denied attempt is expected and doesn't give Braze access to your data. Don't add a condition that rejects only this external ID, because your role would still trust other Braze workspaces.
+
+#### Remove Braze access
+
+To stop Braze from accessing your data, delete the role, or remove the trust statement for the Braze account from the role's trust policy. You can also drop the *`IAMR:ROLE_NAME`* database user.
+
+#### Set up with the AWS CLI
+
+Alternatively, use the AWS Command Line Interface (CLI) to create the role and attach the permissions policy. This example uses a Serverless workgroup. For a provisioned cluster, replace the policy document with the policy from the **Provisioned** tab in [Add the permissions policy](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#iam-role-permissions-policy).
+
+```bash
+aws iam create-role --role-name braze-cdi \
+  --assume-role-policy-document '{
+    "Version": "2012-10-17",
+    "Statement": [{
+      "Effect": "Allow",
+      "Principal": {"AWS": "arn:aws:iam::BRAZE_ACCOUNT_ID:root"},
+      "Action": "sts:AssumeRole",
+      "Condition": {"StringEquals": {"sts:ExternalId": "EXTERNAL_ID"}}
+    }]
+  }'
+
+aws iam put-role-policy --role-name braze-cdi \
+  --policy-name braze-cdi-redshift \
+  --policy-document '{
+    "Version": "2012-10-17",
+    "Statement": [{
+      "Effect": "Allow",
+      "Action": "redshift-serverless:GetCredentials",
+      "Resource": "arn:aws:redshift-serverless:REGION:AWS_ACCOUNT_ID:workgroup/WORKGROUP_ID"
+    }]
+  }'
+```
+
+Replace the following placeholders:
+
+- *`BRAZE_ACCOUNT_ID`* and *`EXTERNAL_ID`*: The values from the credential form
+- *`REGION`*, *`AWS_ACCOUNT_ID`*, and *`WORKGROUP_ID`*: The values for your workgroup
+
+The `create-role` command returns the role ARN in its output. For details, see [create-role](https://docs.aws.amazon.com/cli/latest/reference/iam/create-role.html) in the AWS CLI Command Reference. Copy the ARN, and then continue with [Create the database user and grant access](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#iam-role-grant-access).
+
 
 
 
@@ -423,7 +611,7 @@ Keep the username and password in a safe place until you need to enter them in t
 
 ## Step 3: Grant permissions to the user
 
-Grant the user you created for Braze access to your source table:
+Grant the database user that Braze connects as access to your source table. The following example uses `braze_user`. If you use IAM role authentication, replace `braze_user` with *`"IAMR:ROLE_NAME"`*. For details, see [Create the database user and grant access](#iam-role-grant-access).
 
 
 ```sql
@@ -552,7 +740,7 @@ A connected source is a zero-copy alternative to syncing data into Braze. Braze 
 
 ### Step 1: Create the user and grant permissions
 
-Create a user for Braze with one of the methods in [Step 2: Set up authentication](#set-up-authentication). Then, grant it the following permissions:
+Choose one of the methods in [Step 2: Set up authentication](#set-up-authentication) for Braze. Then, grant the Braze database user the following permissions. The example uses `braze_user`. If you use IAM role authentication, replace `braze_user` with *`"IAMR:ROLE_NAME"`*.
 
 
 ```sql
@@ -634,6 +822,53 @@ If you receive this error:
 
 - Grant the `usage` permission on the schema for that user.
 - Grant the `select` permission on the table for that user.
+
+
+### Your IAM role doesn't require its external ID {#your-iam-role-does-not-require-its-external-id}
+
+If you use IAM role authentication, the connection test can fail with the following error:
+
+> The IAM role on this credential does not require its external ID. Braze assumed the role with an external ID that belongs to no Braze workspace and AWS allowed it, so another Braze customer who learns the role ARN could read this data. In the role's trust policy, add a StringEquals condition on sts:ExternalId with the external ID shown in the credential form to every statement that allows Braze's AWS principal to assume the role. A pattern that also matches other Braze workspaces, such as braze-cdi-*, does not require it. Then test the connection again.
+
+This error means AWS allowed the test external ID described in [How Braze tests the connection](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#iam-role-connection-test). To fix this, update your role's trust policy:
+
+1. In the AWS console, open the role and select the **Trust relationships** tab.
+2. For every statement that allows the Braze account to assume the role, add a `StringEquals` condition on `sts:ExternalId` that uses the exact external ID from the credential form. Remove any pattern condition, such as `braze-cdi-*`.
+3. In Braze, test the connection again.
+
+### Braze couldn't confirm that your role requires its external ID {#braze-could-not-confirm-your-role-requires-its-external-id}
+
+If you use IAM role authentication, the connection test can fail with the following error:
+
+> Braze could not confirm that the IAM role on this credential requires its external ID. The check needs AWS to explicitly refuse an attempt to assume the role with a different external ID, and this attempt failed for another reason instead. Please try again; if it keeps happening, contact support.
+
+Braze couldn't complete the check, so this error doesn't mean your role is too broad. Test the connection again. If the error continues, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
+
+### Unable to assume IAM role
+
+If you use IAM role authentication and the connection test fails with an error that starts with "Unable to assume IAM role", check the following:
+
+- The role's trust policy lists the Braze Account ID from the credential form as the trusted principal.
+- The role's trust policy requires the exact external ID from the credential form.
+- The **Role ARN** you entered in Braze matches the ARN of the role you created.
+- If your Braze instance is in an AWS Region that isn't enabled by default, such as Jakarta (ID-01), your AWS account has that Region enabled.
+
+AWS returns the same `AccessDenied` error for all of these causes, so check each one.
+
+### Unable to get Redshift database credentials {#unable-to-get-redshift-database-credentials}
+
+If you use IAM role authentication and the connection test fails with an error that starts with "Unable to get Redshift database credentials as IAM role", check the following:
+
+- The role's permissions policy allows `redshift-serverless:GetCredentials` for Serverless, or `redshift:GetClusterCredentialsWithIAM` for a provisioned cluster.
+- For Serverless, the policy `Resource` value uses the workgroup ID, which is different from the workgroup name.
+- For a provisioned cluster, the policy `Resource` value is the `dbname` ARN for your cluster and database, in the form `arn:aws:redshift:REGION:AWS_ACCOUNT_ID:dbname:CLUSTER_IDENTIFIER/DATABASE_NAME`.
+- The **Region**, **Workgroup name**, or **Cluster identifier** you entered in Braze matches your cluster or workgroup.
+
+### Permission denied after a successful connection test {#permission-denied-iam-role}
+
+If the connection test succeeds but a sync or validation returns a permission denied error, you probably granted access to a different user, such as `braze_user`. With IAM role authentication, Braze logs in as *`"IAMR:ROLE_NAME"`*. Grant the schema and table permissions to that user. For details, see [Create the database user and grant access](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#iam-role-grant-access).
+
+
 
 ### Create Connection Error
 

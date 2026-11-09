@@ -36,7 +36,7 @@ Yes. The locally hosted MCP server released in August 2025 is deprecated and wil
 
 The previous Braze MCP server ran locally on your machine. You needed to install a package, manage a config file, and create a Braze API key with the right permissions. The remote MCP server removes that local setup.
 
-Connect from a supported MCP client in under a minute. Authentication uses OAuth. Access is tied to your Braze dashboard user account, not a shared API key, so what an agent can see and do mirrors your dashboard permissions. If a dashboard user loses access in Braze, the client loses access too.
+Connect from a compatible MCP client in under a minute. Authentication uses OAuth. Access is tied to your Braze dashboard user account, not a shared API key, so what an agent can see and do mirrors your dashboard permissions. If a dashboard user loses access in Braze, the client loses access too.
 
 The key differences are:
 
@@ -47,16 +47,11 @@ The key differences are:
 
 ## Frequently Asked Questions (FAQ) {#faq}
 
-### Which MCP clients are supported?
+### Which MCP clients can I use?
 
-Any MCP client that supports remote MCP servers with OAuth can work. Braze has verified:
+Any MCP client that follows the MCP standard for remote servers should work with the Braze MCP server. The client must authenticate with OAuth and register itself, through Dynamic Client Registration or a Client ID Metadata Document, so you don't enter a client ID or client secret. Before you can sign in, a company admin must also approve the client's redirect URI in [OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-approved-redirect-uris).
 
-- Claude through custom connectors
-- ChatGPT through custom connectors
-- Cursor
-- OpenAI Codex
-- Claude Code
-- Visual Studio Code
+Braze has tested Claude and ChatGPT through custom connectors, as well as Cursor, OpenAI Codex, Claude Code, and Visual Studio Code.
 
 ### What Braze data can my MCP client access?
 
@@ -79,9 +74,9 @@ Both Braze clusters are supported. Two endpoints are available today:
 
 Either endpoint can reach any Braze cluster.
 
-### Can I use the Braze remote MCP server with tools other than the verified list?
+### Can I use the Braze remote MCP server with a client that Braze hasn't tested?
 
-You can try, but authentication may be blocked. Braze currently maintains an allowlist of supported domains for security. 
+Yes, if your client can register itself through Dynamic Client Registration or a Client ID Metadata Document. A company admin must approve the client's redirect URI in [OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-approved-redirect-uris) before you can sign in. 
 
 ### Does the remote server support multiple workspaces?
 
@@ -89,7 +84,7 @@ Yes. Specify the workspace per conversation or per request. One connection cover
 
 ### Can my agent access user-level PII?
 
-No. As of now, tools that expose PII are not available.
+No. Tools that expose PII are not available.
 
 ### Do campaign edits made through the MCP server appear in edit history?
 

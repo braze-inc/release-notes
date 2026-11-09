@@ -65,6 +65,12 @@ The **Last 3 Hours** and **Last 6 Hours** options will show traffic by minutes. 
 
 
 
+### Viewing request logs
+
+To see the individual requests behind a point on the chart, select a data point, then select **View request logs**. The [API request log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/api_request_log) opens with the time interval of that data point and the endpoint, response code, and API key filters applied to the chart.
+
+Request logs are only available for REST API traffic from the last 14 days.
+
 ## Considerations
 
 The API usage dashboard includes all REST API requests that Braze received and returned a `2XX`, `4XX`, or `5XX` response for. This includes Data Transformation outputs and Cloud Data Ingestion syncs. SDK traffic and User Update steps are not included in this dashboard.
@@ -79,4 +85,4 @@ For the most accurate reporting in the API usage dashboard, [include API keys in
 
 ## Related articles
 
-<ul class="guide_tiles"><li><a href="/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/api_usage_alerts"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">API usage alerts</span></span></div></a></li><li><a href="/docs/api/api_limits"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Rate limits</span></span></div></a></li><li><a href="/docs/api/basics#bearer-token-authentication"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Bearer token authentication</span></span></div></a></li></ul>
+<ul class="guide_tiles"><li><a href="/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/api_request_log"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">API request log</span></span></div></a></li><li><a href="/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/api_usage_alerts"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">API usage alerts</span></span></div></a></li><li><a href="/docs/api/api_limits"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Rate limits</span></span></div></a></li><li><a href="/docs/api/basics#bearer-token-authentication"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Bearer token authentication</span></span></div></a></li></ul>

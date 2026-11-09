@@ -28,7 +28,8 @@ Under the new model:
 
 - One phone number can be shared with multiple partners. Each partner has its own Messaging account, with separate templates and billing.
 - Templates aren't shared between Messaging accounts. Migrated templates reset to a baseline quality rating, and the ramp-up takes about 2–4 weeks.
-- Messaging limits and throughput are shared across all partners on a number.
+- Messaging limits remain at the business portfolio level. When multiple partners share a phone number, the messaging limit (unique users per 24-hour period) is shared across all partners on that number.
+- Throughput remains at the phone number level. When multiple partners share a phone number, they share the phone number's throughput capacity.
 - Moving a number between partners is no longer supported. Clients share their WhatsApp account instead.
 - Meta is deprecating the two-step verification PIN for eligible numbers.
 
@@ -98,7 +99,7 @@ Braze fully supports receiving and sending messages using BSUIDs. No action is r
 
 Meta's rollout is still in progress and hasn't reached every market, so you may see more users who share only a BSUID over time.
 
-Braze is working on support for requesting a user's contact information.
+To ask BSUID-only users for a phone number, see [Request contact info for WhatsApp BSUID-only users](https://www.braze.com/docs/user_guide/channels/whatsapp/use_cases/request_contact_info_bsuid).
 
 For setup recommendations and how Braze stores BSUIDs, see [WhatsApp usernames and business-scoped user IDs](https://www.braze.com/docs/user_guide/channels/whatsapp/message_features_and_optimization/bsuid).
 

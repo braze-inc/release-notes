@@ -358,12 +358,13 @@ Your banner event handler reflects the SDK's in-memory banner state. A single ev
 
 
 1. Subscribe to Banner events with `subscribeToBannersEvents`. Handle each event type separately.
+
    | Event | When it fires |
    |---|---|
    | `CacheReplay` | Right after you subscribe. It contains the cached Banners, which might not match your latest request. |
    | `CacheLoad` | When the SDK loads the Banner cache from disk, such as at the start of a session. |
    | `DataUpdated` | When the cache changes, including each time a refresh completes. |
-   {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+   {: .reset-td-br-1 .reset-td-br-2 aria-label="Banner events" }
 
    ```kotlin
    val bannerSubscriber = IEventSubscriber<BannersEvent> { event ->
@@ -704,7 +705,7 @@ fun myBannerSlot() {
 }
 ```
 
-Optionally pass `heightCallback` to receive the rendered height in dp when the banner size changes. For reference, see the [KDoc for `Banner`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.banners/-banner.html).
+Pass `heightCallback` to receive the rendered height in dp. For reference, see the [KDoc for `Banner`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.banners/-banner.html).
 
 If you don't add the Jetpack Compose module, wrap [`BannerView`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.banners/-banner-view/index.html) in [`AndroidView`](https://developer.android.com/reference/kotlin/androidx/compose/ui/viewinterop/AndroidView):
 
@@ -735,6 +736,9 @@ To get the Banner in Kotlin, use:
 val banner = Braze.getInstance(context).getBanner("global_banner")
 ```
 
+
+
+`BannerView` reports its content height in dp through `heightCallback` and leaves your layout unchanged. The callback can run off the main thread. A height of `0.0` means there is no content to show: the placement has no Banner, the Banner is in a control group, or the Banner was dismissed. For an example of applying that height, see [Tutorial: Displaying a Banner by Placement ID](https://www.braze.com/docs/developer_guide/banners/tutorial_displaying_banners?sdktab=android).
 
 
 

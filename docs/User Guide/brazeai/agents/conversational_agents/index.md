@@ -82,7 +82,7 @@ For steps with a single goal, write the instruction in one to three short senten
 
 Steps can include tools the agent uses while it works. In the **Instructions** of a step, tools are inserted by entering `/` and appear as tags in the instruction. A step can reference up to 10 tools.
 
-![The instruction text box in a workflow step, with the slash menu open to insert a tool.](https://www.braze.com/docs/assets/img/conversational_agents/add_tools.png?a46ee28b57fe62457dfc01a8ace261e6){: style="max-width:80%;"}
+![The instruction text box in a workflow step, with the slash menu open to insert a tool.](https://www.braze.com/docs/assets/img/conversational_agents/add_tools.png?a46ee28b57fe62457dfc01a8ace261e6){: width="1424" height="936" style="max-width:80%;height:auto;"}
 
 ## Tools
 
@@ -296,7 +296,7 @@ On the **Conversational Agents** page, select **Conversation history**. This pag
 
 Use conversation history to review tool calls and confirm the agent behaves as expected.
 
-![The Conversation history page, showing a user conversation and the agent's tool calls.](https://www.braze.com/docs/assets/img/conversational_agents/conversation_history.png?80246489bc9e5eaa5887aff7183bdcbc){: style="max-width:60%;"}
+![The Conversation history page, showing a user conversation and the agent's tool calls.](https://www.braze.com/docs/assets/img/conversational_agents/conversation_history.png?80246489bc9e5eaa5887aff7183bdcbc){: width="717" height="1452" style="max-width:60%;height:auto;"}
 
 ## Example
 
@@ -305,4 +305,4 @@ Flash & Thread, a fictional clothing retail brand, might use this two-step shopp
 - **Step 1:** Asks the user what product category they're shopping for.
 - **Step 2:** Uses the **Set workflow attribute** tool to capture a **product_category** attribute as a string. This attribute records the product category the user says they're shopping for today from **Step 1**.
 
-![Two workflow steps for a shopping example. Step 1 asks for a product category. Step 2 sets the product_category workflow attribute and confirms the selection.](https://www.braze.com/docs/assets/img/conversational_agents/workflow_steps_example.png?9fe0099e609992a0e6fd8658fe6e1cbd){: style="max-width:80%;"}
+![Two workflow steps for a shopping example. Step 1 asks for a product category. Step 2 sets the product_category workflow attribute and confirms the selection.](https://www.braze.com/docs/assets/img/conversational_agents/workflow_steps_example.png?9fe0099e609992a0e6fd8658fe6e1cbd){: width="1024" height="765" style="max-width:80%;height:auto;"}

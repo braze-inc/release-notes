@@ -370,7 +370,7 @@ Because recommended events are more opinionated custom events, you can search fo
 
 ### eCommerce filters
 
-Segment your users with eCommerce filters, like **Ecommerce Source** and **Total Revenue**, by going to the **Ecommerce** section within the segmenter. 
+Segment your users with eCommerce filters, such as **Total Revenue**, by going to the **Ecommerce** section within the segmenter. 
 
 For a list of eCommerce filters and their definitions, refer to [Segment filters](https://www.braze.com/docs/user_guide/audience/segments/segmentation_filters) and select the "eCommerce" search category.
 

@@ -109,6 +109,10 @@ These views provide periodic snapshots of user profile attributes. The data is d
 | `ARCHIVED` | BOOLEAN | Whether the user profile is archived |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="USERDEFAULTATTRIBUTESVIEWSHARED schema" }
 
+<div class='alert alert-important' role='alert'><img src='/docs/assets/img/message-important.png' alt='' class='alert-icon' width='70' height='70'><div class='alert-msg'><span class='alert-label' role='heading' aria-level='6'>important</span><br />
+<p>The <code class="language-plaintext highlighter-rouge">ARCHIVED</code> field has been populated in Snowflake since May 1, 2026. Users archived before that date don’t have the flag set, so <code class="language-plaintext highlighter-rouge">ARCHIVED</code> is <code class="language-plaintext highlighter-rouge">NULL</code> for those profiles. No backfill is available for earlier archives. Segment Extensions and queries that filter on <code class="language-plaintext highlighter-rouge">ARCHIVED</code> don’t include those users in archived-status results.</p>
+</div></div>
+
 
 ### `USER_CUSTOM_ATTRIBUTES_VIEW_SHARED` schema
 
@@ -125,6 +129,11 @@ These views provide periodic snapshots of user profile attributes. The data is d
 | `CUSTOM_ATTRIBUTES` | VARIANT | JSON object containing all custom attributes (key-value pairs) |
 | `ARCHIVED` | BOOLEAN | Whether the user profile is archived |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="USERCUSTOMATTRIBUTESVIEWSHARED schema" }
+
+<div class='alert alert-important' role='alert'><img src='/docs/assets/img/message-important.png' alt='' class='alert-icon' width='70' height='70'><div class='alert-msg'><span class='alert-label' role='heading' aria-level='6'>important</span><br />
+<p>The <code class="language-plaintext highlighter-rouge">ARCHIVED</code> field has been populated in Snowflake since May 1, 2026. Users archived before that date don’t have the flag set, so <code class="language-plaintext highlighter-rouge">ARCHIVED</code> is <code class="language-plaintext highlighter-rouge">NULL</code> for those profiles. No backfill is available for earlier archives. Segment Extensions and queries that filter on <code class="language-plaintext highlighter-rouge">ARCHIVED</code> don’t include those users in archived-status results.</p>
+</div></div>
+
 
 #### Working with CUSTOM_ATTRIBUTES
 
@@ -218,6 +227,11 @@ These views provide near real-time updates on user profile attributes, with data
 | `LANGUAGE` | VARCHAR | User's language preference |
 | `TIME_ZONE` | VARCHAR | User's timezone |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="USERLATESTSTATEDEFAULTATTRIBUTESVIEWSHARED schema" }
+
+<div class='alert alert-important' role='alert'><img src='/docs/assets/img/message-important.png' alt='' class='alert-icon' width='70' height='70'><div class='alert-msg'><span class='alert-label' role='heading' aria-level='6'>important</span><br />
+<p>The <code class="language-plaintext highlighter-rouge">ARCHIVED</code> field has been populated in Snowflake since May 1, 2026. Users archived before that date don’t have the flag set, so <code class="language-plaintext highlighter-rouge">ARCHIVED</code> is <code class="language-plaintext highlighter-rouge">NULL</code> for those profiles. No backfill is available for earlier archives. Segment Extensions and queries that filter on <code class="language-plaintext highlighter-rouge">ARCHIVED</code> don’t include those users in archived-status results.</p>
+</div></div>
+
 
 ### `USER_LATEST_STATE_CUSTOM_ATTRIBUTE_VIEW_SHARED` schema
 

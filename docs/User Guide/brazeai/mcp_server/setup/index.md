@@ -16,7 +16,7 @@ Before you start, make sure you have the following:
 
 | Prerequisite | Description |
 |--------------|-------------|
-| Supported MCP client | Any client that supports remote MCP servers with OAuth can work. Braze has verified Claude, ChatGPT, Cursor, OpenAI Codex, Claude Code, and Visual Studio Code. |
+| Compatible MCP client | Any client that follows the MCP standard for remote servers, authenticates with OAuth, and registers itself through Dynamic Client Registration or a Client ID Metadata Document. Clients that only accept a static client ID and client secret can't connect. Braze has tested Claude, ChatGPT, Cursor, OpenAI Codex, Claude Code, and Visual Studio Code. |
 | Approved redirect URI | A company admin must approve your client's redirect URI in **Settings** > **Admin Settings** > **External Connections**. The admin can copy it from the client's OAuth or connector settings. For more information, see [Manage OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-approved-redirect-uris). |
 | Braze dashboard account | You sign in with your normal Braze credentials, including SSO or SAML if your company uses it. There is no separate MCP login. |
 | Server endpoint selection | Choose `https://mcp.braze.com/mcp` (US) or `https://mcp.braze.eu/mcp` (EU). Either endpoint can reach any Braze cluster. |
@@ -122,7 +122,7 @@ For more examples, see [Using the Braze MCP server].
 
 ## Example: Connect with Claude
 
-Connecting a client takes only a few steps. The following walkthrough uses Claude, but the flow is similar for other supported clients.
+Connecting a client takes only a few steps. The following walkthrough uses Claude, but the flow is similar for other compatible clients.
 
 Before you start, make sure a company admin has approved your client's redirect URI, as described in [Step 1](#step-1-confirm-permissions-and-workspace-access).
 
@@ -145,18 +145,12 @@ After you confirm your workflows and skills are working on the remote server, di
 
 ## Troubleshooting
 
-### Authentication fails in a supported client
+### Authentication to MCP fails
 
 1. Confirm your company admin has turned on **MCP OAuth access** in [OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin).
 2. Confirm your user has the "Use MCP Server" permission.
 3. Confirm your client's redirect URI is approved. If you see "This app needs approval" or a generic error such as "An unexpected error occurred" on the consent step, ask your company admin to confirm that the redirect URI's status is Approved in [OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#troubleshoot-blocked-connections).
 4. Retry sign-in and authorization.
-
-### Authentication is blocked in an unverified client
-
-Braze maintains an allowlist of supported client domains for security. If you connect from a client that isn't on the allowlist, authentication may be blocked. 
-
-Clients that run locally on your machine without a custom scheme, such as Claude Code and OpenAI Codex, should also work.
 
 ### A working connection stops authenticating
 
