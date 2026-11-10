@@ -1,4 +1,4 @@
-<div id='api_pxuzpjxewdws' class='api_div' data-search-keywords='create content block name description content state tags content_block_id liquid_tag created_at message'>
+<div id='api_fyxpurexprxs' class='api_div' data-search-keywords='create content block name description content state tags content_block_id liquid_tag created_at message'>
 <h1 id="create-content-block">Create Content Block</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/content_blocks/create</p>
@@ -12,7 +12,7 @@
 
 <p>You can also call this endpoint through the <a href="/docs/user_guide/brazeai/mcp_server">Braze MCP server</a> using the <a href="/docs/user_guide/brazeai/mcp_server/available_api_functions#content-blocks"><code class="language-plaintext highlighter-rouge">create_content_block</code></a> function. This lets AI tools like Claude and Cursor create content blocks through natural language prompts.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 <p>To use this endpoint, you’ll need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.create</code> permission.</p>

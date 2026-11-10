@@ -1,8 +1,8 @@
-# Copy campaigns, Canvases, and landing pages across workspaces
+# Copy campaigns, Canvases, landing pages, and agents across workspaces
 
-> Copying campaigns, Canvases, and landing pages across workspaces lets you jumpstart content creation by using existing content from a different workspace as a starting point. This page covers how to copy campaigns, Canvases, and landing pages to different workspaces and lists what is and isn't copied over.
+> Copying campaigns, Canvases, landing pages, and agents across workspaces lets you jumpstart content creation by using existing content from a different workspace as a starting point. This page covers how to copy campaigns, Canvases, landing pages, and agents to different workspaces and lists what is and isn't copied over.
 
-When you copy a campaign, Canvas, or landing page to a different workspace, the copy remains as a draft until you edit it and launch the campaign or Canvas, or publish the landing page. This helps you keep and build off your successful messaging strategies.
+When you copy a campaign, Canvas, landing page, or agent to a different workspace, the copy remains as a draft until you edit it and launch the campaign or Canvas, publish the landing page, or review the agent and reconnect any settings that are not copied. This helps you keep and build off your successful messaging strategies.
 
 
 
@@ -60,6 +60,21 @@ To copy a landing page to a different workspace:
 Copying a landing page across workspaces clears its subscription group selections. This includes the subscription group set on a [Phone Capture](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks?sdktab=landing%20pages) block and the groups added to a [Manage Subscriptions](https://www.braze.com/docs/user_guide/messaging/landing_pages/manage_subscriptions/) block (email, SMS, or WhatsApp). Reselect the subscription groups in the destination workspace before publishing the copied page.
 
 
+
+
+
+
+You can copy [Canvas Step Agents](https://www.braze.com/docs/user_guide/brazeai/agents/deploying_agents#use-canvas-step-agents) and [Agentic Standards](https://www.braze.com/docs/user_guide/brazeai/agents/agentic_standards) across workspaces. Catalog Agents aren't supported.
+
+To copy an agent to a different workspace:
+
+1. Go to **Agent Console**.
+2. Select the <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;menu next to the selected agent.
+3. Select **Copy to workspace**.
+4. Select the **Destination Workspace**, then select **Copy as draft**.
+5. Review the copied draft and reconnect any settings that weren't copied.
+
+Segments, teams, tags, catalog fields, the brand guideline, and knowledge sources aren't copied. If the destination workspace can't run the agent's model, the copy uses Braze Auto. For details, see [Copy agents to another workspace](https://www.braze.com/docs/user_guide/brazeai/agents/reference#copy-to-workspace).
 
 
 

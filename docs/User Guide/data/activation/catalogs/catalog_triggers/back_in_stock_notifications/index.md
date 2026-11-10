@@ -20,10 +20,10 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
     <br> ![Catalog settings drawer.](https://www.braze.com/docs/assets/img/catalog_settings_drawer.png?8775488f564715e97298bf8f2b6d2ab1){: style="max-width:70%;"}
     - **Fallback Catalog** This is the catalog used for the back-in-stock subscription if there is no `catalog_name` property present on the custom event.
     - **Custom event for subscriptions** is the Braze custom event that is used to subscribe a user to back-in-stock notifications. When this event occurs, the user who performed the event is subscribed.
-    - **Custom event for unsubscribing** is the Braze custom event that will be used to unsubscribe a user from back-in-stock notifications. This event is optional. If the user doesn't perform this event, they'll be unsubscribed after 90 days or when the back-in-stock event triggers, whichever occurs first.
+    - **Custom event for unsubscribing** is the Braze custom event used to unsubscribe a user from back-in-stock notifications. This event is optional. If the user doesn't perform this event, they'll be unsubscribed after 90 days or when the back-in-stock event triggers, whichever occurs first.
     - **Item ID event property** is the property on the earlier in this section custom event that is used to determine the item for a back-in-stock subscription or unsubscription. This property on the custom event should contain an item ID (`id`) that is present in a catalog. The item ID must be sent as a string so that it matches the `id` data type stored in the target catalog. The custom event should also contain a `catalog_name` property to specify which catalog this item is in.
-    
-    - A sample custom event looks like:
+
+A sample custom event looks like the following:
 
 
 
@@ -115,6 +115,18 @@ This Objective-C sample logs the same `subscription` custom event from an iOS ap
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 **Note:**
 
 
@@ -156,19 +168,7 @@ To template in details about the catalog item that's back in stock, you can use 
 
 Using ``{{context.${catalog_update}.item_id}}`` will return the ID of the item that came back in stock. ``{{context.${catalog_update}.previous_value}}`` will return the inventory value of the item prior to the update, and ``{{context.${catalog_update}.new_value}}`` will return the new inventory value after the update.
 
-Use the Liquid tag ``{% catalog_items <name_of_your_catalog> {{context.${catalog_update}.item_id}} %}`` at the top of your message, then use ``{{ items[0].<field_name> }}`` to access data about that item throughout the message.
-
-
-
-
-
-
-
-
-
-
-
-
+Use the Liquid tag ``{% catalog_items <name_of_your_catalog> {{context.${catalog_update}.item_id}} %}`` at the top of your message, then use ``{{ items[0].<field_name> }}`` to access data about that item throughout the message. To pull in images, include a catalog field named `image_url`, then reference it with ``{{ items[0].image_url }}``.
 
 
 

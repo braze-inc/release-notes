@@ -1,4 +1,4 @@
-<div id='api_hyqzrullocsr' class='api_div' data-search-keywords='list upcoming scheduled campaigns and canvases scheduled_broadcasts name id type tags next_send_time schedule_type'>
+<div id='api_hxpjrhqvmxuu' class='api_div' data-search-keywords='list upcoming scheduled campaigns and canvases scheduled_broadcasts name id type tags next_send_time schedule_type'>
 <h1 id="list-upcoming-scheduled-campaigns-and-canvases">List upcoming scheduled campaigns and Canvases</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/messages/scheduled_broadcasts</p>
@@ -10,7 +10,7 @@
 
 <p>Daily, recurring messages will only appear once with their next occurrence. Results returned in this endpoint include campaigns and Canvases created and scheduled in the Braze dashboard.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6f623cc3-383b-4bf7-b14d-7c56fc5562f5" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6f623cc3-383b-4bf7-b14d-7c56fc5562f5">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

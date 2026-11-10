@@ -70,6 +70,19 @@ To set up brand guidelines, go to **Content** > **Brand Guidelines**. For more i
 
 ![Selecting brand guidelines in the Operator chat panel.](https://www.braze.com/docs/assets/img/operator/operator_brand_guidelines.png?78d153640e7d6abf2a41f74aee13870d)
 
+### Use skills
+
+Skills are reusable instructions for specific tasks, such as a naming convention or a footer your legal team requires. Operator uses them when they fit the task, without being asked, for everyone in your workspace.
+
+To create a skill, go to **Agents** > **Skills**, or ask Operator to save a rule as a skill, such as "Remember that every promotional email needs Legal's footer." For more information, see [Skills](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/skills).
+
+### Use tools from other products
+
+If your company has added [MCP servers](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/mcp_servers), Operator can use their tools in other products, such as looking up a Jira ticket or pulling a page from Notion. If a server uses personal access, connect your own account first:
+
+1. In the Operator chat panel, select **MCP servers**.
+2. Find the server and select **Connect**.
+
 ### Leverage page-aware context
 
 Operator automatically understands your location in Braze and tailors responses based on that context. For example, when you open Operator while building a Canvas, it can suggest relevant steps or provide guidance about Canvas features without you having to explain where you are in your workflow.
@@ -154,4 +167,4 @@ BrazeAI Operator<sup>TM</sup> integrates with OpenAI, which acts as a Braze sub-
 
 ## Next steps
 
-<ul class="guide_tiles"><li><a href="/docs/user_guide/brazeai/operator/capabilities"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">What you can do with Operator</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/prompt_library"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Prompt library</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/reviewing_actions"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Review actions</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/support_tickets"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">File support tickets</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/troubleshooting"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Troubleshooting</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/data_privacy_security"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Data privacy and security</span></span></div></a></li></ul>
+<ul class="guide_tiles"><li><a href="/docs/user_guide/brazeai/operator/capabilities"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">What you can do with Operator</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/capabilities/skills"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Skills</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/prompt_library"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Prompt library</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/reviewing_actions"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Review actions</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/capabilities/mcp_servers"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">External MCP servers</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/support_tickets"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">File support tickets</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/troubleshooting"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Troubleshooting</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/operator/data_privacy_security"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Data privacy and security</span></span></div></a></li></ul>

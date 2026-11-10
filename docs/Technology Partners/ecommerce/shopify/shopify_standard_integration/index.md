@@ -134,9 +134,19 @@ For more information on the data tracked through the integration, refer to [Shop
 
 
 
-#### Send Order Placed events from another source
+#### Order event settings
 
-If another system, such as your data warehouse or ERP, already sends `ecommerce.order_placed` events to Braze in the [recommended events format](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/), select **Send Order Placed events from another source** in the **Events** section. Braze then stops adding Order Placed events from this store's Shopify orders to user profiles, so each order is counted once. This applies to live orders and to the Order Placed events in a historical backfill.
+In the **Events** section of the **Track Shopify data** step, turn on **Show additional order event settings** to configure order metafields and whether Braze should skip Shopify Order Placed events.
+
+##### Add order metafields to order events
+
+Select **Add order metafields to order events**, then choose up to 20 order metafield definitions from your store. The list shows each definition as `namespace.key` and includes only definitions with [supported types](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/order_metafields/#supported-order-metafield-types). Clearing the checkbox clears the selection.
+
+After you save, Braze writes each selected metafield into the event's `metadata` object as `<namespace>_<key>`. For which events carry them, how values are typed, and how to use them in messaging, see [Shopify order metafields](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/order_metafields/).
+
+##### Send Order Placed events from another source
+
+If another system, such as your data warehouse or ERP, already sends `ecommerce.order_placed` events to Braze in the [recommended events format](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/), select **Send Order Placed events from another source**. Braze then stops adding Order Placed events from this store's Shopify orders to user profiles, so each order is counted once. This applies to live orders and to the Order Placed events in a historical backfill.
 
 **Important:**
 
@@ -159,6 +169,10 @@ After you save, Braze adds the values to each user profile as one nested custom 
 If you later remove a metafield from the selection, user profiles keep the last value from Shopify and stop updating. Before you remove a metafield, check that your active segments, campaigns, and Canvases don't rely on it.
 
 
+
+#### Empty values from Shopify
+
+Under **Behavior in user profile when Shopify sends an empty value**, choose whether Braze keeps or clears the existing profile value when Shopify sends an attribute as empty. For the options, defaults, and which attributes this covers, see [Empty values from Shopify](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/#empty-values-from-shopify).
 
 ### Historical backfill setup
 

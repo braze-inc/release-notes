@@ -213,6 +213,7 @@
 - [Merkury](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/merkury)
 - [Messenger](https://www.braze.com/docs/partners/additional_channels_and_extensions/additional_channels/instant_chat/messenger)
 - [MetaRouter](https://www.braze.com/docs/partners/data_and_analytics/workflow_automation/metarouter)
+- [Microsoft Ads Audience Sync](https://www.braze.com/docs/partners/canvas_audience_sync/microsoft_audience_sync)
 - [Microsoft Azure Blob Storage](https://www.braze.com/docs/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents)
 - [Microsoft Foundry](https://www.braze.com/docs/partners/ai_model_providers/microsoft_foundry)
 - [Mixpanel](https://www.braze.com/docs/partners/data_and_analytics/analytics/mixpanel)

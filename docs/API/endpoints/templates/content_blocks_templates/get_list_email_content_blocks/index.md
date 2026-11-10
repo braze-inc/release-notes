@@ -1,4 +1,4 @@
-<div id='api_oxspgtwaiznp' class='api_div' data-search-keywords='list available content blocks count content_blocks content_block_id name content_type liquid_tag inclusion_count created_at last_edited tags'>
+<div id='api_yzcyzerqdnsa' class='api_div' data-search-keywords='list available content blocks count content_blocks content_block_id name content_type liquid_tag inclusion_count created_at last_edited tags'>
 <h1 id="list-available-content-blocks">List available Content Blocks</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/content_blocks/list</p>
@@ -8,7 +8,7 @@
   <p>Use this endpoint to list your existing <a href="/docs/user_guide/messaging/design_and_edit/content_blocks">Content Blocks</a> information.</p>
 </blockquote>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 <p>To use this endpoint, you’ll need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.list</code> permission.</p>

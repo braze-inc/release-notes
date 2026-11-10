@@ -1,4 +1,4 @@
-<div id='api_msreevtaayzf' class='api_div' data-search-keywords='list available email templates count templates email_template_id template_name created_at updated_at tags'>
+<div id='api_lbsztjuqwlum' class='api_div' data-search-keywords='list available email templates count templates email_template_id template_name created_at updated_at tags'>
 <h1 id="list-available-email-templates">List available email templates</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/list</p>
@@ -8,7 +8,7 @@
   <p>Use this endpoint to get a list of available email templates in your Braze account.</p>
 </blockquote>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 <p>To use this endpoint, you’ll need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.email.list</code> permission.</p>

@@ -108,7 +108,8 @@ Use SDK eCommerce event APIs where available. For platform-specific implementati
 | `price`        | Float            | Yes      | Variant unit price at the time of viewing.                                                                                                          |
 | `currency`     | String           | Yes      | Three-letter ISO 4217 code (for example, `USD` or `EUR`).                                                                                               |
 | `source`       | String           | Yes      | Source the event originates from (for example, `web`, `ios`, or `android`).                                                                               |
-| `type`         | Array of strings | No       | Required to use Braze’s catalog trigger features for back-in-stock and price-drop alerts. Accepted values: `"price_drop"`, `"back_in_stock"`     |
+| `type`         | Array of strings | No       | Required to use Braze catalog trigger features for back-in-stock and price-drop alerts. Accepted values: `"price_drop"`, `"back_in_stock"`.     |
+| `catalog_name` | String           | No       | The catalog that a back-in-stock or price-drop subscription created from this event belongs to. If omitted, the workspace's fallback catalog is used. Must be a top-level property; a `catalog_name` nested inside `metadata` is ignored. |
 | `metadata`     | Object           | No       | Flexible key-value pairs (for example, `category` or `brand`).                                                                                   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Event properties" }
 
@@ -131,6 +132,7 @@ Use SDK eCommerce event APIs where available. For platform-specific implementati
         "currency": "USD",
         "source": "web",
         "type": ["price_drop", "back_in_stock"],
+        "catalog_name": "running_shoes",
         "metadata": {
           "category": "Running Shoes",
           "brand": "Shoe Brand"

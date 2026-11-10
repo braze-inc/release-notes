@@ -1,4 +1,4 @@
-<div id='api_htajjgivcvvi' class='api_div' data-search-keywords='delete scheduled api-triggered campaigns campaign_id schedule_id'>
+<div id='api_pxjaqyjnkroh' class='api_div' data-search-keywords='delete scheduled api-triggered campaigns campaign_id schedule_id'>
 <h1 id="delete-scheduled-api-triggered-campaigns">Delete scheduled API-triggered campaigns</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/schedule/delete</p>
@@ -10,7 +10,7 @@
 
 <p>Scheduled messages or triggers that are deleted close to or during the time they were supposed to be sent are updated with best efforts, so Braze may apply last-second deletions to all, some, or none of your targeted users.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

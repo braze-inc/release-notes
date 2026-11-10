@@ -1,4 +1,4 @@
-<div id='api_ecobjtisfmnq' class='api_div' data-search-keywords='change email subscription status email subscription_state'>
+<div id='api_pwbscjmpufnt' class='api_div' data-search-keywords='change email subscription status email subscription_state'>
 <h1 id="change-email-subscription-status">Change email subscription status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/status</p>
@@ -16,7 +16,7 @@
 
 <p>You can set the email subscription state for an email address that is not yet associated with any of your users within Braze. When that email address is subsequently associated with a user, the email subscription state that you uploaded is automatically set.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#be852462-0cda-4a48-b68b-85bd8a9f2147" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#be852462-0cda-4a48-b68b-85bd8a9f2147">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

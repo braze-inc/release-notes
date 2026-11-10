@@ -1,4 +1,4 @@
-<div id='api_mifmvzcoxqtw' class='api_div' data-search-keywords='update user relationship user external_id rel_kind attributes role alias alias_name alias_label user_relationship type_name object_id braze_id'>
+<div id='api_zjmjahxiahku' class='api_div' data-search-keywords='update user relationship user external_id rel_kind attributes role alias alias_name alias_label user_relationship type_name object_id braze_id'>
 <h1 id="update-user-relationship">Update user relationship</h1>
 <div class="api_type"><div class="method patch ">patch</div>
 <p>/data_objects/objects/{type_name}/{object_id}/users</p>

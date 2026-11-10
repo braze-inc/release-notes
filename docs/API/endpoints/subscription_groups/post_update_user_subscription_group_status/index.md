@@ -1,4 +1,4 @@
-<div id='api_hihdlsfkghav' class='api_div' data-search-keywords='update user’s subscription group status subscription_group_id subscription_state external_id phone use_double_opt_in_logic email message'>
+<div id='api_wlxkyznhuafl' class='api_div' data-search-keywords='update user’s subscription group status subscription_group_id subscription_state external_id phone use_double_opt_in_logic email message'>
 <h1 id="update-users-subscription-group-status">Update user’s subscription group status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/subscription/status/set</p>
@@ -12,11 +12,11 @@
 
 <p>If you want to see examples or test this endpoint for <strong>Email Subscription Groups</strong>:</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9">View in Postman</a></p>
 
 <p>If you want to see examples or test this endpoint for <strong>SMS and RCS Subscription Groups</strong>:</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

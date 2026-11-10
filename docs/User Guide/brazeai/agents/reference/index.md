@@ -79,7 +79,7 @@ When many users enter an Agent step at once, Braze queues invocations according 
 
 ### Daily invocation and credit limits
 
-Each agent has a daily invocation limit (default 250,000; maximum 1,000,000 unless your contract allows higher). Every invocation (including Agent Console previews and Test Canvas runs that use **Simulate response**) counts toward this limit.
+Each agent has a daily invocation limit of 250,000 by default, up to 1,000,000 per day. If you're interested in increasing the limit higher than 1,000,000, contact your customer success manager. Every invocation counts toward this limit, including Agent Console previews and Test Canvas runs that use **Simulate response**.
 
 In Agent Console, the **Daily action credit cost limit** estimates the maximum credits an agent can consume per day. Braze multiplies your workspace's per-invocation credit ratio for the selected model by the daily invocation limit.
 
@@ -173,7 +173,7 @@ Tell a one-paragraph short story about this user, integrating their {{${first_na
 ```
 
 
-In the **Logs** section of the **Agent Console**, you can review the details for the agent's input and output to understand what value is rendered from the Liquid.
+On the agent's **Logs** tab, you can review the details for the agent's input and output to understand what value is rendered from the Liquid.
 
 ### What data agents receive {#what-data-agents-receive}
 
@@ -186,7 +186,7 @@ Design each agent as a deliberate input-to-output pipeline. Wire every data poin
 3. [Context steps](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context): Set or update `context.*` variables upstream in the Canvas before an Agent step runs.
 4. **Additional context on the Agent step:** Pass any additional Liquid-templated values not already specified using the other methods to the agent at send time from the step configuration.
 
-Make sure to either Liquid template these context variables in the agent instructions, attach [context files](#context-files) the agent should consult, or select **Add All Canvas Context**. If a value is not passed through one of these channels, the agent does not receive it. List required inputs in your instructions or in [use case prerequisites](https://www.braze.com/docs/user_guide/brazeai/agents/examples), and verify inputs in **Agent Console** > **Logs** after testing.
+Make sure to either Liquid template these context variables in the agent instructions, attach [context files](#context-files) the agent should consult, or select **Add All Canvas Context**. If a value is not passed through one of these channels, the agent does not receive it. List required inputs in your instructions or in [use case prerequisites](https://www.braze.com/docs/user_guide/brazeai/agents/examples), and verify inputs on the agent's **Logs** tab after testing.
 
 ![The details for an agent that has Liquid in its instructions.](https://www.braze.com/docs/assets/img/ai_agent/using_liquid_example.png?7f3f7b313686fe11fcd0cf8d860600d5){: style="max-width:50%;"}
 
@@ -345,6 +345,31 @@ Duplicate an agent to test improvements or iterations side by side against the o
 
 1. Hover over the agent's row and select the <i class="fas fa-ellipsis-vertical"></i> menu.
 2. Select **Duplicate**.
+
+## Copy agents to another workspace {#copy-to-workspace}
+
+Copy a Canvas Step Agent or an Agentic Standard to another workspace in your company to reuse its setup without rebuilding it. Braze saves the copy as a draft named "Copy of" followed by the original name. To copy an agent:
+
+1. Hover over the agent's row and select the <i class="fas fa-ellipsis-vertical"></i> menu.
+2. Select **Copy to workspace**.
+3. Select the **Destination Workspace**, then select **Copy as draft**.
+4. In the destination workspace, review the copy and reconnect any settings that weren't copied.
+
+The copy keeps the agent's instructions, description, output format, fallback values, rules, context files, and daily invocation limit. If the limit is higher than the destination workspace allows, Braze lowers it to that workspace's maximum. These settings belong to the source workspace and aren't copied:
+
+- Segments
+- Teams
+- Tags
+- Catalog fields
+- Brand guideline
+- Knowledge sources
+
+If the destination workspace can't run the agent's model, the copy uses Braze Auto.
+
+Note the following limitations:
+
+- You can't copy Catalog Agents or archived agents.
+- You need permission to edit that type of agent across the destination workspace.
 
 ## Archive agents
 

@@ -1,4 +1,4 @@
-<div id='api_lcygknomqnyo' class='api_div' data-search-keywords='remove hard bounced emails email'>
+<div id='api_eoytjohjhwsv' class='api_div' data-search-keywords='remove hard bounced emails email'>
 <h1 id="remove-hard-bounced-emails">Remove hard bounced emails</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/bounce/remove</p>
@@ -8,7 +8,7 @@
   <p>Use this endpoint to remove email addresses from your Braze bounce list and bounce list maintained by your email provider.</p>
 </blockquote>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7b87a884-fa20-4085-b9f1-18363103575f" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7b87a884-fa20-4085-b9f1-18363103575f">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

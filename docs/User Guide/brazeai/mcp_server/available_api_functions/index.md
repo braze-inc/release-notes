@@ -205,6 +205,18 @@ These tools are only available to customers participating in the Operator beta p
 
 
 
+### Skills
+
+| Tool | API endpoint | Access | Description |
+| --- | --- | --- | --- |
+| `get_operator_skills` | N/A | read | List the workspace's skills, with each skill's name and description. Requires the "View Skills" permission. |
+| `get_operator_skill` | N/A | read | Read a skill, including its instructions. Requires the "View Skills" permission. |
+| `create_operator_skill` | N/A | create | Create a skill. If the name is already in use, Braze adds a suffix. Requires the "View Skills" and "Edit Skills" permissions. |
+| `update_operator_skill` | N/A | update | Edit a skill. Fields you leave out keep their current values. Requires the "View Skills" and "Edit Skills" permissions. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Skills" }
+
+For more information, see [Skills](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/skills).
+
 ## Legal disclaimer
 <!-- Braze Legal must approve any changes to this content. -->
 <!-- Note: Keep these comments under this H2 heading to avoid breaking how headings on certain pages are rendered. -->

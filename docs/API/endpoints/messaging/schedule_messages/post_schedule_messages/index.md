@@ -1,4 +1,4 @@
-<div id='api_zubtdeqivvch' class='api_div' data-search-keywords='create scheduled messages broadcast external_user_ids user_aliases audience campaign_id send_id override_messaging_limits recipient_subscription_state schedule time in_local_time at_optimal_time messages apple_push android_push kindle_push web_push email webhook content_card sms dispatch_id schedule_id message'>
+<div id='api_xawizdkctjeo' class='api_div' data-search-keywords='create scheduled messages broadcast external_user_ids user_aliases audience campaign_id send_id override_messaging_limits recipient_subscription_state schedule time in_local_time at_optimal_time messages apple_push android_push kindle_push web_push email webhook content_card sms dispatch_id schedule_id message'>
 <h1 id="create-scheduled-messages">Create scheduled messages</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/schedule/create</p>
@@ -14,7 +14,7 @@
 
 <p>If you’re interested in sending messages immediately to designated users, use the <a href="/docs/api/endpoints/messaging/send_messages/post_send_messages"><code class="language-plaintext highlighter-rouge">/messages/send</code> endpoint</a> instead.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

@@ -13,6 +13,12 @@ A third party inspecting the email or tracking URL cannot reverse the token to i
 
 For Braze-managed email sending, the ESP is a [Braze sub-processor](https://www.braze.com/company/legal/subprocessors).
 
+## Engagement event reporting windows
+
+For emails sent through Amazon Simple Email Service (SES), Amazon stops collecting open and click events 60 days after the send. Braze doesn't report those opens and clicks.
+
+Emails sent through SparkPost also have a 60-day limit. SparkPost stops attaching the original send details to engagement events after 60 days. Braze can't attribute those events to a campaign or Canvas.
+
 ## Click tracking link requirements
 
 Braze click tracking only rewrites links that use `http://` or `https://` URLs. Links that use other schemes, such as `mailto:` or `tel:`, are not click-tracked.

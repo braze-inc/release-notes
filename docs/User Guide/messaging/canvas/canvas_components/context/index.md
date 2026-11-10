@@ -111,6 +111,13 @@ To route users based on an [Agent step](https://www.braze.com/docs/user_guide/me
 
 If the agent returns an object and you want to filter on a nested property, enter the path in the **Context variable name** field using dot notation instead of only the top-level variable name (for example, `intent_agent.persona` when `persona` is nested under `intent_agent`).
 
+**Note:**
+
+
+The **Context variable name** list includes variables from Context steps and Agent steps. For a Canvas entry property, type its name and select **Use "`ENTRY_PROPERTY_NAME`"**. Replace `ENTRY_PROPERTY_NAME` with the entry property name you typed. For a nested property, use dot notation, such as `order.total`.
+
+
+
 For filter setup, comparison logic, and advanced examples, see [Context variables reference](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables#context-variable-filters).
 
 

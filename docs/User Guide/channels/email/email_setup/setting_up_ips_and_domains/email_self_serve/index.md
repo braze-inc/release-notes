@@ -8,7 +8,16 @@ To use self-service email setup, you must meet the following prerequisites:
 
 - Be a new customer in onboarding
 - Have the "Edit Domain Settings" company-level permission
-- Have an IP pool, IP addresses, and a verified domain
+- Use Amazon SES as your email service provider (ESP)
+- Have a [verified domain](https://www.braze.com/docs/user_guide/channels/email/email_setup/setting_up_ips_and_domains/verified_domains)
+- Have at least one IP pool with IP addresses (for steps, see [Set up IP pools and IP addresses](https://www.braze.com/docs/user_guide/channels/email/email_setup/setting_up_ips_and_domains/ip_pools))
+
+**Note:**
+
+
+Email self-serve isn't available for SendGrid or SparkPost.
+
+
 
 ## Considerations
 
@@ -22,7 +31,7 @@ To use self-service email setup, you must meet the following prerequisites:
 
 Your sending subdomain is the address your emails are sent from. It determines the "from" address your recipients see.
 
-1. In the **Domains** section, select **Add domain**.
+1. In the **Domains** section of the IP pool you want to send from, select **Add domain**.
 2. Add your sending domain to the **Mail from** and **Sending domain** fields for the IP pool. 
     - The **Mail from** (envelope sender or return path) address is what handles bounces behind the scenes. Your recipients do not see this on an email. For example, you might use "bounce" as the subdomain, so the custom mail from email is "bounce.mail.example.com". Using this subdomain is a best practice for DMARC SPF alignment. 
     - The **Sending domain** is the domain in the From address that recipients see in their inbox. For example, if the From address is "hello@e.mail.example.com", then "e.mail.example.com" is the sending domain.

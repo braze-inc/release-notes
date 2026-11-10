@@ -1,4 +1,4 @@
-<div id='api_srujgndbzwlr' class='api_div' data-search-keywords='remove invalid phone numbers phone_numbers'>
+<div id='api_ljpfjbbqnplc' class='api_div' data-search-keywords='remove invalid phone numbers phone_numbers'>
 <h1 id="remove-invalid-phone-numbers">Remove invalid phone numbers</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/sms/invalid_phone_numbers/remove</p>
@@ -10,7 +10,7 @@
 
 <p>This can be used to re-validate phone numbers after they have been marked as invalid.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76495aac-8c2d-4e1a-8cac-12e3856ab1d3" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76495aac-8c2d-4e1a-8cac-12e3856ab1d3">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

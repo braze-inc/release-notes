@@ -120,7 +120,7 @@ To download this report, do the following:
 
 This manual report download contains only the most recent 10,000 security events for your account. If your exported CSV contains exactly 10,001 rows (including the header row), you reached the 10,000-event report cap and older events may not be included.
 
-To export security events to Amazon S3 without this row limit, see [Security events export with Amazon S3](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings/security_export_s3).
+To export security events to Amazon S3, Microsoft Azure Blob Storage, or Google Cloud Storage without this row limit, see [Security events export to cloud storage](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings/security_export_s3).
 
 ### CSV column definitions
 
@@ -136,7 +136,7 @@ The Security Event report CSV contains the following columns:
 | JsonProperties | Event-specific properties in JSON format. The fields included vary by event type. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="CSV column definitions" }
 
-[S3 exports](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings/security_export_s3) include these columns plus `Version`, the schema version for the export format (currently `1`).
+[Cloud storage exports](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings/security_export_s3) include these columns plus `Version`, the schema version for the export format (currently `1`).
 
 The report includes only the event types listed in **Reported security events**. For example, changes to Content Blocks aren't recorded as security events.
 

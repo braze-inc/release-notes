@@ -1,4 +1,4 @@
-<div id='api_nzrdtrozytwc' class='api_div' data-search-keywords='see content block information content_block_id name content description content_type tags created_at last_edited inclusion_count inclusion_data message'>
+<div id='api_vbpjghtykzak' class='api_div' data-search-keywords='see content block information content_block_id name content description content_type tags created_at last_edited inclusion_count inclusion_data message'>
 <h1 id="see-content-block-information">See Content Block information</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/content_blocks/info</p>
@@ -8,7 +8,7 @@
   <p>Use this endpoint to call information for your existing <a href="/docs/user_guide/messaging/design_and_edit/content_blocks">Content Blocks</a>.</p>
 </blockquote>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 <p>To use this endpoint, you’ll need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">content_blocks.info</code> permission.</p>

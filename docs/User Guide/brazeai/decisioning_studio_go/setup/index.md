@@ -59,8 +59,9 @@ Audience filters aren't supported in this release. If you need additional target
 To use Decisioning Studio Go inside a broader journey:
 
 1. Create a dedicated segment for users who should be in the agent.
-2. In your [Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas), use a User Update step to add the user to that segment at the right point in the journey.
-3. Confirm that users exit the Canvas so the agent handles email sending for everyone in the segment from that point on.
+2. Select that segment as the agent's entry audience, and select **Add directly to the audience**. On the segment, add a filter group, select `Cohort membership` > `Decisioning Studio Agent`, and include this agent.
+3. In your Canvas, add a [Send to Destination](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/send_to_destination) step. Select **Decisioning Studio agent** in **Destination type**, then select this agent.
+4. Confirm that users leave the Canvas email path so the agent handles email for those users. Other channels can stay in the Canvas.
 
 ## Step 3: Configure the schedule
 

@@ -1,4 +1,4 @@
-<div id='api_gsqqvibgyofy' class='api_div' data-search-keywords='remove email addresses from spam list email'>
+<div id='api_fkkyjckevgjl' class='api_div' data-search-keywords='remove email addresses from spam list email'>
 <h1 id="remove-email-addresses-from-spam-list">Remove email addresses from spam list</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/spam/remove</p>
@@ -8,7 +8,7 @@
   <p>Use this endpoint to remove email addresses from your Braze spam list and spam list maintained by your email provider.</p>
 </blockquote>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1614a82f-510a-4c37-95a6-8207a125e487" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1614a82f-510a-4c37-95a6-8207a125e487">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

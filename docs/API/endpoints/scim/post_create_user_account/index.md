@@ -1,4 +1,4 @@
-<div id='api_dbqjhvttoxkt' class='api_div' data-search-keywords='create new dashboard user account schemas id name department permissions roles team'>
+<div id='api_toiaxgdrfeci' class='api_div' data-search-keywords='create new dashboard user account schemas id name department permissions roles team'>
 <h1 id="create-new-dashboard-user-account">Create new dashboard user account</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/scim/v2/Users</p>
@@ -8,7 +8,7 @@
   <p>Use this endpoint to create a new dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, workspace, and team level).</p>
 </blockquote>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#768a3c9d-ce1d-44fc-a0e4-d556b09f7aa3" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#768a3c9d-ce1d-44fc-a0e4-d556b09f7aa3">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

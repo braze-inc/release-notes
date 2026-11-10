@@ -1,4 +1,4 @@
-<div id='api_ojgwuizxwjxf' class='api_div' data-search-keywords='blocklist emails email'>
+<div id='api_wljjybocluxp' class='api_div' data-search-keywords='blocklist emails email'>
 <h1 id="blocklist-emails">Blocklist emails</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/email/blocklist</p>
@@ -8,7 +8,7 @@
   <p>Use this endpoint to unsubscribe a user from email and mark them as hard bounced.</p>
 </blockquote>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d51155a1-a6e8-4dcc-9f2b-88c54ab9e8c6" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d51155a1-a6e8-4dcc-9f2b-88c54ab9e8c6">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

@@ -1,4 +1,4 @@
-<div id='api_etzemfwyzhpg' class='api_div' data-search-keywords='remove dashboard user account schemas detail status'>
+<div id='api_pqdhdhhqwswe' class='api_div' data-search-keywords='remove dashboard user account schemas detail status'>
 <h1 id="remove-dashboard-user-account">Remove dashboard user account</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/scim/v2/Users/{id}</p>
@@ -10,7 +10,7 @@
 
 <p>This is similar to deleting a user in the <strong>Company Users</strong> section of the Braze dashboard.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9c7c71ea-afd6-414a-99d1-4eb1fe274f16" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9c7c71ea-afd6-414a-99d1-4eb1fe274f16">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

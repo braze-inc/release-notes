@@ -19,7 +19,7 @@ When defined, you can use a context variable throughout the Canvas by referencin
 
 For example, `{{context.${flight_time}}}` could return the user's scheduled flight time.
 
-Each time a user enters the Canvas—even if they have entered it before—the context variables will be redefined based on the latest entry data and Canvas setup. This stateful approach allows each Canvas entry to maintain its own independent context, allowing users to have multiple active states within the same journey while retaining the specific context for each state.
+Each time a user enters the Canvas—even if they have entered it before—the context variables are redefined based on the latest entry data and Canvas setup. This stateful approach allows each Canvas entry to maintain its own independent context, allowing users to have multiple active states within the same journey while retaining the specific context for each state.
 
 For example, if a customer has two upcoming flights, they'll have two separate journey states running simultaneously—each with its own flight-specific context variables like departure time and destination. This allows you to send personalized reminders about their 2 pm flight to New York while sending different updates about their 8 am flight to Los Angeles tomorrow, so that each message stays relevant to the specific booking.
 
@@ -27,15 +27,15 @@ For example, if a customer has two upcoming flights, they'll have two separate j
 
 You can define up to 10 context variables per [Context step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context). Each variable name can be up to 100 characters and must use only letters, numbers, or underscores.
 
-Context variable definitions can be up to 10,240 characters. If you pass context variables into an API-triggered Canvas, they share the same namespace as variables created in a Context step. For example, if you send a variable `purchased_item` in the [`/canvas/trigger/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases) context object, you can reference it as `{{context.${purchased_item}}}`. If you redefine that variable in a Context step, the new value will override the API value for that user's journey.
+Context variable definitions can be up to 10,240 characters. If you pass context variables into an API-triggered Canvas, they share the same namespace as variables created in a Context step. For example, if you send a variable `purchased_item` in the [`/canvas/trigger/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases) context object, you can reference it as `{{context.${purchased_item}}}`. If you redefine that variable in a Context step, the new value overrides the API value for that user's journey.
 
-You can store up to 50 KB per Context step, distributed across up to 10 variables. If the total size of all variables in a step exceeds 50 KB, any variables that exceed the limit will not be evaluated or stored. For example, if you have three variables in a Context step:
+You can store up to 50 KB per Context step, distributed across up to 10 variables. If the total size of all variables in a step exceeds 50 KB, any variables that exceed the limit are not evaluated or stored. For example, if you have three variables in a Context step:
 
 - Variable 1: 30 KB
 - Variable 2: 19 KB
 - Variable 3: 2 KB
 
-Variable 3 will not be evaluated or stored because the sum of the previous variables exceeds 50 KB.
+Variable 3 is not evaluated or stored because the sum of the previous variables exceeds 50 KB.
 
 ## Data types
 
@@ -173,7 +173,9 @@ In an [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canv
 
 ### Context variable filters
 
-You can create filters that use previously declared context variables in [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths) and [Decision Split](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/decision_split) steps.
+You can create filters that use context variables in [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths) and [Decision Split](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/decision_split) steps.
+
+The **Context variable name** list includes variables from Context steps and Agent steps. For a Canvas entry property, type its name and select **Use "`ENTRY_PROPERTY_NAME`"**. Replace `ENTRY_PROPERTY_NAME` with the entry property name you typed. For a nested property, use dot notation, such as `order.total`.
 
 **Note:**
 

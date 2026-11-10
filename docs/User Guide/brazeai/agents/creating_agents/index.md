@@ -32,8 +32,8 @@ The following use cases showcase a few ways to leverage custom agents.
 
 To create an agent, first choose your agent type:
 
-1. Go to **Agent Console**.
-2. Choose **Canvas Step Agents** or **Catalog Agents**.
+1. Go to **Agents**.
+2. Choose **Canvas Step Agents** or **Data Agents**.
 
 ### Step 2: Choose how to build an agent
 

@@ -1,4 +1,4 @@
-<div id='api_kjomdbkqzyhg' class='api_div' data-search-keywords='create and update users attributes events purchases group_id message attributes_processed events_processed purchases_processed errors type'>
+<div id='api_kuciszwalhxt' class='api_div' data-search-keywords='create and update users attributes events purchases group_id message attributes_processed events_processed purchases_processed errors type'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
@@ -18,7 +18,7 @@
 
 <p>Use the <a href="/docs/api/endpoints/user_data/post_user_track_bulk"><code class="language-plaintext highlighter-rouge">/users/track/bulk</code> endpoint</a> to send larger batches and reduce request volume.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

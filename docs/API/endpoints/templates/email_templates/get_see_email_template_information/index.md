@@ -1,4 +1,4 @@
-<div id='api_alqduchrkpvb' class='api_div' data-search-keywords='see email template information email_template_id template_name description subject preheader body plaintext_body should_inline_css tags created_at updated_at'>
+<div id='api_ldktljxsthre' class='api_div' data-search-keywords='see email template information email_template_id template_name description subject preheader body plaintext_body should_inline_css tags created_at updated_at'>
 <h1 id="see-email-template-information">See email template information</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/info</p>
@@ -12,7 +12,7 @@
 
 <p>Templates built using the drag-and-drop editor for email are not accepted.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 <p>To use this endpoint, you’ll need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.email.info</code> permission.</p>

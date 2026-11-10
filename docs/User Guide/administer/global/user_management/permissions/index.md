@@ -181,6 +181,9 @@ Company permissions are assigned to each user from the [Company tab](https://www
 | View domain settings | Allows users to view verified domains. |
 | Edit domain settings | Allows users to add and delete verified domains and view custom domains. |
 | Delete dashboard users | Allows users to delete other dashboard users. Users with this permission can't delete Company Admins or their own account. To add users or edit their details and permissions, users also need the "Edit Dashboard Users" permission, which is assigned at the workspace or team level. |
+| View MCP Servers | Allows users to view the [MCP servers](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/mcp_servers) your company has added for BrazeAI Operator, and their tools. |
+| Edit MCP Servers | Allows users to add and edit MCP servers, connect to them, and choose which tools BrazeAI Operator can use. |
+| Archive MCP Servers | Allows users to delete MCP servers. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Company permissions" }
 
 ### Messaging
@@ -389,6 +392,9 @@ Company permissions are assigned to each user from the [Company tab](https://www
 | Promotion Codes | View Promotion Codes | View promotion codes |
 | Promotion Codes | Export Promotion Codes | Download a list of promotion codes from the dashboard |
 | Promotion Codes | Edit Promotion Codes | Create and update promotion codes |
+| Skills | View Skills | Allows users to view [skills](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/skills). Operator uses skills for every Operator user, whether or not they have Skills permissions. |
+| Skills | Edit Skills | Allows users to create and edit skills, including by asking Operator. To create or edit skills on the **Skills** page, users also need the "View Skills" permission. |
+| Skills | Archive Skills | Allows users to delete skills |
 | Subscription Groups | Edit Subscriptions | Create and update subscription groups |
 | Transformations | Edit Data Transformation | Create and update data transformations |
 | Transformations | View Data Transformation | View data transformations |

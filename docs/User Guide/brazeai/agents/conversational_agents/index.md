@@ -61,7 +61,7 @@ Use a conversational workflow to define a task, choose channels and an audience,
 
 ### Step 1: Set up workflow details
 
-Go to **Agent Console** > **Conversational Agents**, then set up the details for your workflow:
+Go to **Agents** > **Conversational Agents**, then set up the details for your workflow:
 
 1. Enter a name for the workflow.
 2. Enter a purpose that describes what this workflow does, so the agent knows when to use it.
@@ -239,7 +239,7 @@ Use this tool to reference a webhook response field extracted from a previous **
 
 ## Settings
 
-Configure brand guidelines and channel behavior for Conversational Agents. Go to **Agent Console** > **Conversational Agents**, then select **Settings**.
+Configure brand guidelines and channel behavior for Conversational Agents. Go to **Agents** > **Conversational Agents**, then select **Settings**.
 
 ### Brand guidelines
 
@@ -286,7 +286,7 @@ Preview mode does not log custom attributes or custom events.
 
 ## Create simulations
 
-Go to **Agent Console** > **Conversational Agents**, then select **Simulations**.
+Go to **Agents** > **Conversational Agents**, then select **Simulations**.
 
 Create simulation cases that describe a user scenario and expected outcomes. Run a simulation to test those cases against your workspace's conversational workflows. You can mock webhook responses so cases stay predictable while you evaluate agent behavior.
 

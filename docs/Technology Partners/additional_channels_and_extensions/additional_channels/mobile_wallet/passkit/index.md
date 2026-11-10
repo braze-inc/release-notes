@@ -46,7 +46,7 @@ Within Braze, you can set up a SmartPass link to generate a unique URL for your 
 - **PassKit secret**: Along with the URL, you must have the PassKit Key for this program available.<br>This can be found on the same page as your PassKit URL.<br><br>
 - **Program (or project) ID**: Your PassKit Program ID is required to create the SmartPass URL. <br>You can find it under the **Settings** tab of your project or program.
 
-For more information on creating encrypted SmartPass links, check out this [PassKit article](https://help.passkit.com/en/articles/3742778-hashed-smartpass-links).
+For more information on creating encrypted SmartPass links, see [PassKit SmartPass links](https://help.passkit.com/en/articles/4179700-passkit-smartpass-links) on PassKit's website.
 
 ### Step 1: Define your pass data payload {#passkit-integrations}
 

@@ -9,7 +9,8 @@ Using the Braze Audience Sync to TikTok, brands can elect to add user data from 
 - Creating suppression audiences to prevent users from receiving advertisements when they're already loyal consumers of your brand
 
 
-This feature lets brands control what specific first-party data is shared with TikTok. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
+This feature allows brands to control what specific first-party data is shared with . At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
+
 
 **Important:**
 

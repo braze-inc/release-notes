@@ -1,4 +1,4 @@
-<div id='api_cwbuyrdkltgs' class='api_div' data-search-keywords='query list of unsubscribed email addresses emails email unsubscribed_at message'>
+<div id='api_gztxndtyrvwk' class='api_div' data-search-keywords='query list of unsubscribed email addresses emails email unsubscribed_at message'>
 <h1 id="query-list-of-unsubscribed-email-addresses">Query list of unsubscribed email addresses</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/email/unsubscribes</p>
@@ -10,7 +10,7 @@
 
 <p>You can use this endpoint to set up a bi-directional sync between Braze and other email systems or your own database.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d2966b81-188a-407b-ba7e-e6c252c44b4a" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d2966b81-188a-407b-ba7e-e6c252c44b4a">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

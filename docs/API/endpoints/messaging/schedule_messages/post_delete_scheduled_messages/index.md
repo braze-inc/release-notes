@@ -1,4 +1,4 @@
-<div id='api_bbkzzkzhegdw' class='api_div' data-search-keywords='delete scheduled messages schedule_id'>
+<div id='api_ynykpvqjvbgc' class='api_div' data-search-keywords='delete scheduled messages schedule_id'>
 <h1 id="delete-scheduled-messages">Delete scheduled messages</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/schedule/delete</p>
@@ -8,7 +8,7 @@
   <p>Use this endpoint to cancel a message that you previously scheduled before it has been sent.</p>
 </blockquote>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5e89355c-0a5d-4d8b-8d89-2fd99bac36b0" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5e89355c-0a5d-4d8b-8d89-2fd99bac36b0">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

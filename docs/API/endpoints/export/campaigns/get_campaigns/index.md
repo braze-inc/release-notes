@@ -1,4 +1,4 @@
-<div id='api_vueehreiwupt' class='api_div' data-search-keywords='export campaigns list message campaigns id last_edited name is_api_campaign tags'>
+<div id='api_nwdvgnbszrpm' class='api_div' data-search-keywords='export campaigns list message campaigns id last_edited name is_api_campaign tags'>
 <h1 id="export-campaigns-list">Export campaigns list</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/campaigns/list</p>
@@ -10,7 +10,7 @@
 
 <p>The campaigns are returned in groups of 100 sorted by time of creation (oldest to newest by default).</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f3b0b3ef-04fb-4a31-8570-e6ad88dacb18" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f3b0b3ef-04fb-4a31-8570-e6ad88dacb18">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

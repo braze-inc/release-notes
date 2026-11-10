@@ -937,6 +937,25 @@ Braze only updates supported Shopify custom attributes and Braze standard attrib
 
 
 
+### Empty values from Shopify
+
+When Shopify sends an empty value for a user attribute, you can choose whether Braze keeps or clears the value already on the user profile. In your Shopify integration settings, under **Behavior in user profile when Shopify sends an empty value**, select one of the following:
+
+| Option | When to use it |
+| --- | --- |
+| **Keep the existing value** | Best when other sources also update these user profiles, like phone numbers from your CRM. |
+| **Clear the existing value** | Best when Shopify is your source of truth, so an empty value means the data was removed. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Empty value behavior options" }
+
+The setting applies to the standard and Shopify custom attributes Braze syncs from customer profiles. Integrations default to **Keep the existing value**—for example, if phone numbers also come from your CRM and Shopify sends an empty phone number, the CRM number stays on the Braze user profile instead of being cleared.
+
+**Note:**
+
+
+If Shopify sends an empty [customer metafield](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/#shopify-customer-metafields), Braze doesn't overwrite the value already on the profile.
+
+
+
 ## Shopify customer metafields
 
 Shopify customer metafields hold your own data about a customer, such as a loyalty tier or a churn-risk score. With the [standard integration](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_standard_integration/#sync-customer-metafields-as-user-attributes), you can sync up to 20 customer metafield definitions to Braze user profiles and use them to segment and personalize.
@@ -954,7 +973,7 @@ Braze adds one [nested custom attribute](https://www.braze.com/docs/user_guide/d
 }
 ```
 
-Each update deep merges into the object, so an update that carries one key never clears the others, and Braze never removes a key from the object. If a metafield is empty in Shopify, the profile keeps its last value.
+Each update deep merges into the object, so an update that carries one key never clears the others, and Braze never removes a key from the object. If a metafield is empty in Shopify, the profile keeps its last value, regardless of the [empty value setting](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/#empty-values-from-shopify) for other attributes.
 
 ### Supported metafield types
 
@@ -1000,6 +1019,10 @@ Before you can filter on the metafields, [generate a schema](https://www.braze.c
 To segment on a metafield, add the **Nested Custom Attributes** filter, select `shopify_metafields_<store>`, select the key as the property, then choose a comparator for its type. Date metafields use the **Time** and **Day of Year** comparators. To personalize a message, use the `custom_attribute` tag with dot notation. For the profile in the previous example, `{{custom_attribute.${shopify_metafields_acme}.custom_vip_tier}}` returns `gold`.
 
 You can't use nested custom attributes as a filter in a Connected Audience API call, and **Preview as a Custom User** accepts mock data only as strings or arrays of strings. For the full list, see [Nested custom attributes considerations](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support/#considerations).
+
+## Shopify order metafields
+
+Shopify order metafields hold your own data about an order, such as a gift note or fulfillment preference. With the [Shopify standard integration](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_standard_integration/#add-order-metafields-to-order-events), you can add selected order metafields to order events. For how they appear on events, which events include them, supported types, and how to change your selection, see [Shopify order metafields](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/order_metafields/).
 
 ## SDK data collection 
 
@@ -1061,7 +1084,7 @@ Sync time depends on how much historical data is in your store and which windows
 
 ### Synced data
 
-For the initial data sync, Braze imports the order events and user profiles described in [How Braze selects historical data](#how-braze-selects-historical-data). When Braze imports your Shopify customers, it assigns the `external_id` type that you chose in your configuration settings. If you selected [customer metafields](#shopify-customer-metafields) during setup, the customer backfill writes those values too.
+For the initial data sync, Braze imports the order events and user profiles described in [How Braze selects historical data](#how-braze-selects-historical-data). When Braze imports your Shopify customers, it assigns the `external_id` type that you chose in your configuration settings. If you selected [customer metafields](#shopify-customer-metafields) during setup, the customer backfill writes those values too. If you selected [order metafields](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/order_metafields/) during setup, backfilled orders include those values on the supported order events.
 
 The following table summarizes the data included in that initial load.
 
