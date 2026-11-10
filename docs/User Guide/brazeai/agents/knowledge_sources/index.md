@@ -28,7 +28,7 @@ Here are some pizza recommendations for you:
 
 To create a knowledge source:
 
-1. Go to **Agent Console** > **Knowledge Sources**.
+1. Go to **Agents** > **Knowledge Sources**.
 2. Select **Add knowledge source**. In the dropdown, select **Catalog**.
 3. Select the catalog from the dropdown.
 4. (optional) Add a description to describe what the knowledge source contains.

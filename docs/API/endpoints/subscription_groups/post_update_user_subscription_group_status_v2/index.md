@@ -1,4 +1,4 @@
-<div id='api_hvobblatzrmy' class='api_div' data-search-keywords='update user’s subscription group status (v2) subscription_groups subscription_group_id subscription_state external_ids emails phones use_double_opt_in_logic'>
+<div id='api_ocxkjkgictvk' class='api_div' data-search-keywords='update user’s subscription group status (v2) subscription_groups subscription_group_id subscription_state external_ids emails phones use_double_opt_in_logic'>
 <h1 id="update-users-subscription-group-status-v2">Update user’s subscription group status (V2)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/v2/subscription/status/set</p>
@@ -12,15 +12,15 @@
 
 <p>To see examples or test this endpoint for <strong>Email Subscription Groups</strong>:</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b1b9a0e0-6329-4df2-a465-53347f410662" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b1b9a0e0-6329-4df2-a465-53347f410662">View in Postman</a></p>
 
 <p>To see examples or test this endpoint for <strong>SMS Subscription Groups</strong>:</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409">View in Postman</a></p>
 
 <p>To see examples or test this endpoint for <strong>WhatsApp Groups</strong>:</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

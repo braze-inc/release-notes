@@ -10905,6 +10905,18 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
 
 
 
+<h2 id="2401">24.0.1</h2>
+
+<h5 id="fixed">Fixed</h5>
+<ul>
+  <li>Fixes an Android <a href="https://github.com/braze-inc/braze-react-native-sdk/issues/340">issue</a> where calling <code class="language-plaintext highlighter-rouge">Braze.initialize()</code> with the API key and endpoint the SDK was already running with tore down the running SDK, which unregistered and deleted the app’s geofences on every launch after the first.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Braze.initialize()</code> is now a no-op on Android when the SDK is already initialized with the same API key and endpoint.</li>
+      <li>Calls that change the credentials, or that run while delayed initialization is still enabled, behave as before.</li>
+    </ul>
+  </li>
+</ul>
+
 <h2 id="2400">24.0.0</h2>
 
 <h5 id="breaking">Breaking</h5>
@@ -10919,7 +10931,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   <li>On iOS, replaces <code class="language-plaintext highlighter-rouge">[BrazeReactDataTranslator formatPushPayload:withLaunchOptions:]</code> with <code class="language-plaintext highlighter-rouge">[BrazeReactDataTranslator formatPushPayload:withUrlOverride:]</code>.</li>
 </ul>
 
-<h5 id="fixed">Fixed</h5>
+<h5 id="fixed-1">Fixed</h5>
 <ul>
   <li>Fixes an Android issue where <code class="language-plaintext highlighter-rouge">Braze.BrazeBannerView</code> did not release its underlying WebView when unmounted, keeping it registered with the SDK and retaining its context.</li>
   <li>Fixes an iOS issue where <code class="language-plaintext highlighter-rouge">pod install</code> failed in apps using <code class="language-plaintext highlighter-rouge">use_frameworks! :linkage =&gt; :dynamic</code>.
@@ -10954,7 +10966,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
 
 <h2 id="2310">23.1.0</h2>
 
-<h5 id="fixed-1">Fixed</h5>
+<h5 id="fixed-2">Fixed</h5>
 <ul>
   <li>Fixes an Android <a href="https://github.com/braze-inc/braze-react-native-sdk/pull/333">issue</a> where Gradle configuration failed on Android Gradle Plugin 9+ with built-in Kotlin enabled. AGP 8 and older are unchanged.</li>
   <li>Updates the native Swift SDK version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/18.2.0...18.2.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 18.2.0 to 18.2.1</a>.</li>
@@ -10987,7 +10999,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   <li>Updates the native Android SDK version bindings <a href="https://github.com/braze-inc/braze-android-sdk/compare/v42.3.1...v43.1.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 42.3.1 to 43.1.1</a>.</li>
 </ul>
 
-<h5 id="fixed-2">Fixed</h5>
+<h5 id="fixed-3">Fixed</h5>
 <ul>
   <li>Fixes an iOS issue where <code class="language-plaintext highlighter-rouge">Braze.subscribeToInAppMessage(false, callback)</code> would fail to disable the default in-app message UI if another React Native event listener was registered first.</li>
   <li>Fixes an Android crash where <code class="language-plaintext highlighter-rouge">Braze.requestPushPermission()</code> could throw a <code class="language-plaintext highlighter-rouge">NullPointerException</code> while off the main thread.</li>
@@ -11034,7 +11046,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   <li>Updates the native Swift SDK version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/15.0.1...15.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 15.0.1 to 15.1.0</a>.</li>
 </ul>
 
-<h5 id="fixed-3">Fixed</h5>
+<h5 id="fixed-4">Fixed</h5>
 <ul>
   <li>Fixes an Android issue where <code class="language-plaintext highlighter-rouge">Braze.getInitialPushPayload()</code> returned <code class="language-plaintext highlighter-rouge">null</code> on cold start when <code class="language-plaintext highlighter-rouge">androidHandlePushDeepLinksAutomatically</code> was enabled, due to a <code class="language-plaintext highlighter-rouge">ClassCastException</code> when reading the <code class="language-plaintext highlighter-rouge">ab_use_webview</code> notification extra as a <code class="language-plaintext highlighter-rouge">String</code> instead of a <code class="language-plaintext highlighter-rouge">Boolean</code>.</li>
 </ul>
@@ -11055,7 +11067,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   <li>Updates the Braze sample app to use React Native version <a href="https://reactnative.dev/blog/2026/04/07/react-native-0.85"><code class="language-plaintext highlighter-rouge">0.85.3</code></a>. This change validates SDK compatibility with the latest version of React Native.</li>
 </ul>
 
-<h5 id="fixed-4">Fixed</h5>
+<h5 id="fixed-5">Fixed</h5>
 <ul>
   <li>Updates the native Android SDK version bindings <a href="https://github.com/braze-inc/braze-android-sdk/compare/v42.3.0...v42.3.1">from Braze Android SDK 42.3.0 to 42.3.1</a>.</li>
   <li>Corrects misleading JSDoc on <code class="language-plaintext highlighter-rouge">logContentCardClicked</code>. The method forwards the click and its validation to the native iOS and Android SDKs.</li>
@@ -11069,7 +11081,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   <li>Updates the native Android SDK version bindings <a href="https://github.com/braze-inc/braze-android-sdk/compare/v42.0.0...v42.2.0">from Braze Android SDK 42.0.0 to 42.2.0</a>.</li>
 </ul>
 
-<h5 id="fixed-5">Fixed</h5>
+<h5 id="fixed-6">Fixed</h5>
 <ul>
   <li>Fixes an Android issue introduced in version <code class="language-plaintext highlighter-rouge">19.1.0</code> where a push notification containing a deep link would not navigate to the intended screen when the app was launched from a terminated state.</li>
 </ul>
@@ -11081,7 +11093,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   <li>Updates the native Android SDK version bindings <a href="https://github.com/braze-inc/braze-android-sdk/compare/v41.1.1...v42.0.0">from Braze Android SDK 41.1.1 to 42.0.0</a>.</li>
 </ul>
 
-<h5 id="fixed-6">Fixed</h5>
+<h5 id="fixed-7">Fixed</h5>
 <ul>
   <li>Fixes an Android <a href="https://github.com/braze-inc/braze-react-native-sdk/pull/320">issue</a> where <code class="language-plaintext highlighter-rouge">getContentCards()</code> could crash natively if its <code class="language-plaintext highlighter-rouge">Promise</code> was settled more than once. Also, the promise may now be rejected with <code class="language-plaintext highlighter-rouge">no_active_react_instance</code> when React is inactive.</li>
 </ul>
@@ -11100,7 +11112,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   <li>Adds <code class="language-plaintext highlighter-rouge">BrazeReactInitializer</code>, a Swift-first helper class for configuring delayed initialization on iOS. This resolves a Swift type-resolution issue where <code class="language-plaintext highlighter-rouge">Braze.Configuration</code> was not directly usable from Swift in the Objective-C bridge.</li>
 </ul>
 
-<h5 id="fixed-7">Fixed</h5>
+<h5 id="fixed-8">Fixed</h5>
 <ul>
   <li>Updates the native Swift SDK version bindings <a href="https://github.com/braze-inc/braze-swift-sdk/compare/14.0.1...14.0.4#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Swift SDK 14.0.1 to 14.0.4</a>.</li>
 </ul>
@@ -11112,7 +11124,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   <li>Updates the native Android SDK version bindings <a href="https://github.com/braze-inc/braze-android-sdk/compare/v41.0.0...v41.1.1">from Braze Android SDK 41.0.0 to 41.1.1</a>.</li>
 </ul>
 
-<h5 id="fixed-8">Fixed</h5>
+<h5 id="fixed-9">Fixed</h5>
 <ul>
   <li>Fixes an Android <a href="https://github.com/braze-inc/braze-react-native-sdk/issues/301">issue</a> where <code class="language-plaintext highlighter-rouge">getInitialPushPayload()</code> would not return the push payload when the app was cold-started via a deep link routed through <code class="language-plaintext highlighter-rouge">ACTION_VIEW</code> instead of the direct Braze push intent.</li>
 </ul>
@@ -11187,7 +11199,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
 
 <h2 id="1701">17.0.1</h2>
 
-<h5 id="fixed-9">Fixed</h5>
+<h5 id="fixed-10">Fixed</h5>
 <ul>
   <li>Fixes an iOS issue where existing Banner views would fail to re-display after navigating away and returning.</li>
   <li>Fixes an incompatibility with React Native <code class="language-plaintext highlighter-rouge">0.80+</code> where iOS Banner views would not be generated as Fabric components but as legacy <code class="language-plaintext highlighter-rouge">RCTView</code>s.
@@ -11217,7 +11229,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   </li>
 </ul>
 
-<h5 id="fixed-10">Fixed</h5>
+<h5 id="fixed-11">Fixed</h5>
 <ul>
   <li>Fixes an issue where <code class="language-plaintext highlighter-rouge">getDeviceID()</code> did not return when an error occurred.</li>
   <li>Fixes the Android implementation of the <code class="language-plaintext highlighter-rouge">FeatureFlag</code> object to return the correct values for timestamp, image, and JSON objects. Prior to this change, the following APIs would return <code class="language-plaintext highlighter-rouge">undefined</code> on Android:
@@ -11257,7 +11269,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
 
 <h2 id="1610">16.1.0</h2>
 
-<h5 id="fixed-11">Fixed</h5>
+<h5 id="fixed-12">Fixed</h5>
 <ul>
   <li>Fixes a missing symbol error when compiling for Android on the React Native legacy bridge architecture on <code class="language-plaintext highlighter-rouge">0.81</code>.
     <ul>
@@ -11287,7 +11299,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
   </li>
 </ul>
 
-<h5 id="fixed-12">Fixed</h5>
+<h5 id="fixed-13">Fixed</h5>
 <ul>
   <li>Fixes the iOS implementation of <code class="language-plaintext highlighter-rouge">setDateOfBirth</code> to correctly report dates using the Gregorian calendar instead of the user’s device calendar.
     <ul>
@@ -11304,7 +11316,7 @@ You can also find a copy of the [React Native Braze SDK changelog on GitHub](htt
 
 <h2 id="1501">15.0.1</h2>
 
-<h5 id="fixed-13">Fixed</h5>
+<h5 id="fixed-14">Fixed</h5>
 <ul>
   <li>Improves the TypeScript declarations in the following areas:
     <ul>
@@ -11334,7 +11346,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="1410">14.1.0</h2>
 
-<h5 id="fixed-14">Fixed</h5>
+<h5 id="fixed-15">Fixed</h5>
 <ul>
   <li>Updates the internal implementations of the following methods to use non-deprecated methods from the native Swift SDK:
     <ul>
@@ -11408,14 +11420,14 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="1311">13.1.1</h2>
 
-<h5 id="fixed-15">Fixed</h5>
+<h5 id="fixed-16">Fixed</h5>
 <ul>
   <li>Resolves an iOS issue that would deallocate existing references of <code class="language-plaintext highlighter-rouge">braze.delegate</code> when performing a hot reload of the app.</li>
 </ul>
 
 <h2 id="1310">13.1.0</h2>
 
-<h5 id="fixed-16">Fixed</h5>
+<h5 id="fixed-17">Fixed</h5>
 <ul>
   <li>Updates the iOS sample app to properly retain the <code class="language-plaintext highlighter-rouge">BrazeReactDelegate</code> instance. Internally, the Braze SDK uses a weak reference to the delegate, which could be deallocated if not retained by the app. This change ensures the delegate is retained for the lifecycle of the app.</li>
 </ul>
@@ -11493,7 +11505,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>Updates the native Android version bindings <a href="https://github.com/braze-inc/braze-android-sdk/compare/v30.4.0...v31.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 30.4.0 to 31.1.0</a>.</li>
 </ul>
 
-<h5 id="fixed-17">Fixed</h5>
+<h5 id="fixed-18">Fixed</h5>
 <ul>
   <li>Fixes an issue on Android where the <code class="language-plaintext highlighter-rouge">timestamp</code> of a <code class="language-plaintext highlighter-rouge">PushNotificationEvent</code> was incorrectly translated from a <code class="language-plaintext highlighter-rouge">long</code> to a <code class="language-plaintext highlighter-rouge">int</code>. The value received by the JavaScript layer is now the same as the value sent from the Android code.</li>
 </ul>
@@ -11512,7 +11524,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="920">9.2.0</h2>
 
-<h5 id="fixed-18">Fixed</h5>
+<h5 id="fixed-19">Fixed</h5>
 <ul>
   <li>Fixes the Android implementation of <code class="language-plaintext highlighter-rouge">Braze.setCustomUserAttribute()</code> to correctly handle null values.
     <ul>
@@ -11528,7 +11540,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="910">9.1.0</h2>
 
-<h5 id="fixed-19">Fixed</h5>
+<h5 id="fixed-20">Fixed</h5>
 <ul>
   <li>Fixes the iOS implementation of <code class="language-plaintext highlighter-rouge">Braze.registerPushToken()</code> to correctly pass the device token to the native SDK.</li>
 </ul>
@@ -11556,7 +11568,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="840">8.4.0</h2>
 
-<h5 id="fixed-20">Fixed</h5>
+<h5 id="fixed-21">Fixed</h5>
 <ul>
   <li>Fixes the <code class="language-plaintext highlighter-rouge">hasListeners</code> property in the iOS native layer to prevent duplicate symbol errors with other libraries.</li>
   <li>Addresses redefinition build errors when using the iOS Turbo Module with statically linked frameworks.</li>
@@ -11597,7 +11609,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="820">8.2.0</h2>
 
-<h5 id="fixed-21">Fixed</h5>
+<h5 id="fixed-22">Fixed</h5>
 <ul>
   <li>Adds a missing update <a href="https://github.com/braze-inc/braze-android-sdk/compare/v29.0.0...v29.0.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed">from Braze Android SDK 29.0.0 to 29.0.1</a> in the <code class="language-plaintext highlighter-rouge">8.1.0</code> release.</li>
 </ul>
@@ -11613,7 +11625,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="810">8.1.0</h2>
 
-<h5 id="fixed-22">Fixed</h5>
+<h5 id="fixed-23">Fixed</h5>
 <ul>
   <li>Fixes the <code class="language-plaintext highlighter-rouge">setLastKnownLocation</code> method to sanitize null inputs before calling the native layer.
     <ul>
@@ -11683,7 +11695,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2701">from Braze Android SDK 26.3.2 to 27.0.1</a>.</li>
 </ul>
 
-<h5 id="fixed-23">Fixed</h5>
+<h5 id="fixed-24">Fixed</h5>
 <ul>
   <li>Fixes the Android layer to record date custom user attributes as ISO strings instead of integers.</li>
   <li>Fixes a bug introduced in <code class="language-plaintext highlighter-rouge">6.0.0</code> where <code class="language-plaintext highlighter-rouge">Braze.getInitialUrl()</code> may not trigger the callback on Android.</li>
@@ -11711,14 +11723,14 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="602">6.0.2</h2>
 
-<h5 id="fixed-24">Fixed</h5>
+<h5 id="fixed-25">Fixed</h5>
 <ul>
   <li>Updates the native Android bridge <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2632">from Braze Android SDK 26.3.1 to 26.3.2</a>.</li>
 </ul>
 
 <h2 id="601">6.0.1</h2>
 
-<h5 id="fixed-25">Fixed</h5>
+<h5 id="fixed-26">Fixed</h5>
 <ul>
   <li>Adds <code class="language-plaintext highlighter-rouge">'DEFINES_MODULE' =&gt; 'YES'</code> to the iOS Podspec when compiling the Turbo Module to prevent the need for static framework linkage when using the Braze Expo plugin.</li>
 </ul>
@@ -11771,7 +11783,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="520">5.2.0</h2>
 
-<h5 id="fixed-26">Fixed</h5>
+<h5 id="fixed-27">Fixed</h5>
 <ul>
   <li>Fixes an issue on Android where push notifications wouldn’t be forwarded after the app was closed.</li>
   <li>Fixes an issue on iOS preventing in-app message subscription events from being sent if <code class="language-plaintext highlighter-rouge">subscribeToInAppMessage</code> is called prior to any <code class="language-plaintext highlighter-rouge">Braze.addListener</code> calls.</li>
@@ -11785,7 +11797,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="510">5.1.0</h2>
 
-<h5 id="fixed-27">Fixed</h5>
+<h5 id="fixed-28">Fixed</h5>
 <ul>
   <li>Fixes an issue that occured whenever a custom event is logged with dictionary properties using a key named “type”.</li>
   <li>Removes the automatic assignment of <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/delegate"><code class="language-plaintext highlighter-rouge">BrazeDelegate</code></a> in the iOS bridge, allowing for custom implementations to be assigned to the <code class="language-plaintext highlighter-rouge">braze</code> instance.</li>
@@ -11804,7 +11816,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   </li>
 </ul>
 
-<h5 id="fixed-28">Fixed</h5>
+<h5 id="fixed-29">Fixed</h5>
 <ul>
   <li>Fixes an issue on Android with <code class="language-plaintext highlighter-rouge">getNewsFeedCards()</code> and <code class="language-plaintext highlighter-rouge">getContentCards()</code> where promises could be invoked more than once.</li>
 </ul>
@@ -11816,7 +11828,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
 
 <h2 id="410">4.1.0</h2>
 
-<h5 id="fixed-29">Fixed</h5>
+<h5 id="fixed-30">Fixed</h5>
 <ul>
   <li>Fixes an issue in the <code class="language-plaintext highlighter-rouge">PushNotificationEvent</code> object introduced in <code class="language-plaintext highlighter-rouge">2.0.1</code> where a field was named <code class="language-plaintext highlighter-rouge">context_text</code> instead of the correct value of <code class="language-plaintext highlighter-rouge">content_text</code>.</li>
 </ul>
@@ -11853,7 +11865,7 @@ This release reverts the increase to the minimum Android SDK version of the Braz
   </li>
 </ul>
 
-<h5 id="fixed-30">Fixed</h5>
+<h5 id="fixed-31">Fixed</h5>
 <ul>
   <li>Fixes an issue in the iOS bridge where <code class="language-plaintext highlighter-rouge">getContentCards()</code> and <code class="language-plaintext highlighter-rouge">getNewsFeedCards()</code> returned data in a different format than the Android bridge.</li>
   <li>Fixes the behavior when using the recommended iOS integration where the React Bridge delegate had conflicts with other dependencies. The updated sample app code can be found <a href="https://github.com/braze-inc/braze-react-native-sdk/blob/master/BrazeProject/ios/BrazeProject/AppDelegate.mm">here</a>.</li>
@@ -11889,7 +11901,7 @@ Linking.openUrl(contentCard.url);
   </li>
 </ul>
 
-<h5 id="fixed-31">Fixed</h5>
+<h5 id="fixed-32">Fixed</h5>
 <ul>
   <li>Fixes an issue in the iOS bridge introduced in <code class="language-plaintext highlighter-rouge">2.0.0</code> where <code class="language-plaintext highlighter-rouge">getContentCards()</code> and <code class="language-plaintext highlighter-rouge">getNewsFeedCards()</code> would return an array of cards with the <code class="language-plaintext highlighter-rouge">url</code> and <code class="language-plaintext highlighter-rouge">image</code> fields as <code class="language-plaintext highlighter-rouge">null</code>.</li>
 </ul>
@@ -11910,7 +11922,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="202">2.0.2</h2>
 
-<h5 id="fixed-32">Fixed</h5>
+<h5 id="fixed-33">Fixed</h5>
 <ul>
   <li>Removes the usage of Objective-C modules when importing the Braze Swift SDK for improved compatibility with Objective-C++.
     <ul>
@@ -11926,7 +11938,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="201">2.0.1</h2>
 
-<h5 id="fixed-33">Fixed</h5>
+<h5 id="fixed-34">Fixed</h5>
 <ul>
   <li>Fixes compatibility issues with newer versions of React Native introduced in 2.0.0.</li>
   <li>Fixes an issue where callbacks were not being executed for some user attribute methods.</li>
@@ -12018,14 +12030,14 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2320">Braze Android SDK 23.2.0</a>.</li>
 </ul>
 
-<h5 id="fixed-34">Fixed</h5>
+<h5 id="fixed-35">Fixed</h5>
 <ul>
   <li>Fixed an issue that caused a NativeEventEmitter warning message to appear.</li>
 </ul>
 
 <h2 id="1381">1.38.1</h2>
 
-<h5 id="fixed-35">Fixed</h5>
+<h5 id="fixed-36">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in 1.38.0 where <code class="language-plaintext highlighter-rouge">setEmail</code> did not work as expected on Android.</li>
 </ul>
@@ -12097,7 +12109,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="1351">1.35.1</h2>
 
-<h5 id="fixed-36">Fixed</h5>
+<h5 id="fixed-37">Fixed</h5>
 <ul>
   <li>Fixed an issue where <code class="language-plaintext highlighter-rouge">setMetadata</code> did not have a method implementation for Android.</li>
 </ul>
@@ -12112,7 +12124,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="1341">1.34.1</h2>
 
-<h5 id="fixed-37">Fixed</h5>
+<h5 id="fixed-38">Fixed</h5>
 <ul>
   <li>Fixed an issue where <code class="language-plaintext highlighter-rouge">getInitialUrl</code> would not resolve when there is no initial URL.</li>
 </ul>
@@ -12124,7 +12136,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1801">Braze Android SDK 18.0.1</a>.</li>
 </ul>
 
-<h5 id="fixed-38">Fixed</h5>
+<h5 id="fixed-39">Fixed</h5>
 <ul>
   <li>Fixed an issue with Content Card types. Thanks @jtparret!</li>
 </ul>
@@ -12136,7 +12148,7 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="1331">1.33.1</h2>
 
-<h5 id="fixed-39">Fixed</h5>
+<h5 id="fixed-40">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in 1.33.0 that caused a build error on iOS.</li>
 </ul>
@@ -12190,7 +12202,7 @@ Linking.openUrl(contentCard.url);
   <li>This release contains a known issue with the Content Cards default UI on iOS, where showing a “Classic” type card with an image causes a crash. If you are using the default Content Cards UI, do not upgrade to this version.</li>
 </ul>
 
-<h5 id="fixed-40">Fixed</h5>
+<h5 id="fixed-41">Fixed</h5>
 <ul>
   <li>Fixed issue introduced in 1.29.0 where calling <code class="language-plaintext highlighter-rouge">ReactAppboy.changeUser</code> would cause an error on Android.</li>
 </ul>
@@ -12216,7 +12228,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1312">Braze Android SDK 13.1.2</a>, which contains support for Android 12.</li>
 </ul>
 
-<h5 id="fixed-41">Fixed</h5>
+<h5 id="fixed-42">Fixed</h5>
 <ul>
   <li>Fixed an issue where calling <code class="language-plaintext highlighter-rouge">getInstallTrackingId()</code> while the SDK was disabled would cause a crash on iOS.</li>
 </ul>
@@ -12304,7 +12316,7 @@ Linking.openUrl(contentCard.url);
   </li>
 </ul>
 
-<h5 id="fixed-42">Fixed</h5>
+<h5 id="fixed-43">Fixed</h5>
 <ul>
   <li>Fixed incorrect TypeScript definition for <code class="language-plaintext highlighter-rouge">ContentCard</code>.
     <ul>
@@ -12340,7 +12352,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#380">Braze Android SDK 3.8.0</a>.</li>
 </ul>
 
-<h5 id="fixed-43">Fixed</h5>
+<h5 id="fixed-44">Fixed</h5>
 <ul>
   <li>Fixed an issue where <code class="language-plaintext highlighter-rouge">ReactContext.getJSModule()</code> could be called before the native module was initialized.
     <ul>
@@ -12356,14 +12368,14 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="1174">1.17.4</h2>
 
-<h5 id="fixed-44">Fixed</h5>
+<h5 id="fixed-45">Fixed</h5>
 <ul>
   <li>Removed a support library reference in <code class="language-plaintext highlighter-rouge">AppboyReactBridge.java</code> that caused Androidx compatibility issues.</li>
 </ul>
 
 <h2 id="1173">1.17.3</h2>
 
-<h5 id="fixed-45">Fixed</h5>
+<h5 id="fixed-46">Fixed</h5>
 <ul>
   <li>Added <code class="language-plaintext highlighter-rouge">SDWebImage</code> and <code class="language-plaintext highlighter-rouge">Headers</code> pod directories to the <code class="language-plaintext highlighter-rouge">AppboyReactBridge</code> project’s Header Search Paths. Thanks @tomauty and @mlazari for your contributions! See https://github.com/braze-inc/braze-react-native-sdk/pull/70 and https://github.com/braze-inc/braze-react-native-sdk/pull/69.</li>
 </ul>
@@ -12477,7 +12489,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the native Android bridge to <a href="https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#350">Braze Android SDK 3.5.0</a>.</li>
 </ul>
 
-<h5 id="fixed-46">Fixed</h5>
+<h5 id="fixed-47">Fixed</h5>
 <ul>
   <li>Fixed an issue where logging custom events or purchases without event properties would cause crashes on Android, for example <code class="language-plaintext highlighter-rouge">logCustomEvent("event")</code>.</li>
 </ul>
@@ -12589,7 +12601,7 @@ Linking.openUrl(contentCard.url);
   <li>Updated the Android wrapper to use <code class="language-plaintext highlighter-rouge">api</code> and <code class="language-plaintext highlighter-rouge">implementation</code> syntax in it’s <code class="language-plaintext highlighter-rouge">build.gradle</code> instead of <code class="language-plaintext highlighter-rouge">compile</code>. As part of this work, the Android Gradle plugin version was updated to <code class="language-plaintext highlighter-rouge">3.2.1</code>.</li>
 </ul>
 
-<h5 id="fixed-47">Fixed</h5>
+<h5 id="fixed-48">Fixed</h5>
 <ul>
   <li>Fixed an issue where the Android wrapper would include an older version of React Native in test APK builds.</li>
 </ul>
@@ -12640,14 +12652,14 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="172">1.7.2</h2>
 
-<h5 id="fixed-48">Fixed</h5>
+<h5 id="fixed-49">Fixed</h5>
 <ul>
   <li>Fixed an issue introduced in <code class="language-plaintext highlighter-rouge">1.7.0</code> where calling <code class="language-plaintext highlighter-rouge">launchNewsFeed()</code> would cause crashes in the Android bridge.</li>
 </ul>
 
 <h2 id="171">1.7.1</h2>
 
-<h5 id="fixed-49">Fixed</h5>
+<h5 id="fixed-50">Fixed</h5>
 <ul>
   <li>Updated the podspec to point to Braze iOS SDK version 3.5.1.</li>
 </ul>
@@ -12711,14 +12723,14 @@ Linking.openUrl(contentCard.url);
 
 <h2 id="152">1.5.2</h2>
 
-<h5 id="fixed-50">Fixed</h5>
+<h5 id="fixed-51">Fixed</h5>
 <ul>
   <li>Fixed a race condition between SDK flavor reporting and sharedInstance initialization on iOS.</li>
 </ul>
 
 <h2 id="151">1.5.1</h2>
 
-<h5 id="fixed-51">Fixed</h5>
+<h5 id="fixed-52">Fixed</h5>
 <ul>
   <li>Fixed a bug that caused opted-in subscription states to not be reflected on the user profile.</li>
 </ul>

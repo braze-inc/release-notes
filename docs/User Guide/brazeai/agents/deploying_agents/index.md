@@ -12,7 +12,7 @@ Custom agents deploy in different parts of Braze depending on their type. Use th
 | Catalog Agent | Catalog field | A catalog row is created or updated | [Use Catalog Agents](#use-catalog-agents) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Types of custom agents" }
 
-You select the agent type in **Agent Console** when you create the agent. For setup steps, see [Create custom agents](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents#step-1-choose-an-agent-type).
+You choose the agent type when you create the agent. For setup steps, see [Create custom agents](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents#step-1-choose-an-agent-type).
 
 ## Best practices
 

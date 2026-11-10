@@ -1,4 +1,4 @@
-<div id='api_bpxynniaznqa' class='api_div' data-search-keywords='send campaign messages using api-triggered delivery campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url basic_auth_credential'>
+<div id='api_jnwyktcngdwx' class='api_div' data-search-keywords='send campaign messages using api-triggered delivery campaign_id send_id trigger_properties broadcast audience recipients user_alias external_user_id email prioritization send_to_existing_only attributes attachments file_name url basic_auth_credential'>
 <h1 id="send-campaign-messages-using-api-triggered-delivery">Send campaign messages using API-triggered delivery</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/send</p>
@@ -18,7 +18,7 @@
 
 <p>To send a <a href="/docs/user_guide/channels/transactional_email/create_a_transactional_email">transactional email</a>, use the <a href="/docs/api/endpoints/messaging/send_messages/post_send_transactional_message"><code class="language-plaintext highlighter-rouge">/transactional/v1/campaigns/{campaign_id}/send</code> endpoint</a>.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
@@ -148,7 +148,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       <td><code class="language-plaintext highlighter-rouge">recipients</code></td>
       <td>Optional</td>
       <td>Array</td>
-      <td>See <a href="/docs/api/objects_filters/recipient_object">recipients object</a>.<br /><br />If <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> is <code class="language-plaintext highlighter-rouge">false</code>, an <code class="language-plaintext highlighter-rouge">attributes</code> object must be included.<br /><br />You can update a user’s subscription group status by including <code class="language-plaintext highlighter-rouge">subscription_groups</code> in the nested <code class="language-plaintext highlighter-rouge">attributes</code> object. For more details, refer to <a href="/docs/api/objects_filters/user_attributes_object">User attributes object</a>.<br /><br />If <code class="language-plaintext highlighter-rouge">recipients</code> is not provided and <code class="language-plaintext highlighter-rouge">broadcast</code> is set to true, the message is sent to the entire segment configured as the campaign’s target audience in the Braze dashboard.<br /><br />If <code class="language-plaintext highlighter-rouge">email</code> is the identifier, you must include <a href="/docs/api/endpoints/user_data/post_user_identify#identifying-users-by-email-addresses-and-phone-numbers"><code class="language-plaintext highlighter-rouge">prioritization</code></a> in the recipients object.</td>
+      <td>See <a href="/docs/api/objects_filters/recipient_object">recipients object</a>.<br /><br />If <code class="language-plaintext highlighter-rouge">send_to_existing_only</code> is <code class="language-plaintext highlighter-rouge">false</code>, an <code class="language-plaintext highlighter-rouge">attributes</code> object must be included.<br /><br />You can update a user’s subscription group status by including <code class="language-plaintext highlighter-rouge">subscription_groups</code> in the nested <code class="language-plaintext highlighter-rouge">attributes</code> object. For more details, refer to <a href="/docs/api/objects_filters/user_attributes_object">User attributes object</a>.<br /><br />If <code class="language-plaintext highlighter-rouge">recipients</code> is not provided and <code class="language-plaintext highlighter-rouge">broadcast</code> is set to true, the message is sent to the entire segment configured as the campaign’s target audience in the Braze dashboard.<br /><br />If <code class="language-plaintext highlighter-rouge">email</code> is the identifier, you must include <a href="/docs/api/endpoints/user_data/post_user_identify#how-it-works"><code class="language-plaintext highlighter-rouge">prioritization</code></a> in the recipients object.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">attachments</code></td>

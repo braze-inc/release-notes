@@ -1,4 +1,4 @@
-<div id='api_ydqazjsfzpth' class='api_div' data-search-keywords='update scheduled messages schedule_id schedule messages'>
+<div id='api_egfkeaatnzbz' class='api_div' data-search-keywords='update scheduled messages schedule_id schedule messages'>
 <h1 id="update-scheduled-messages">Update scheduled messages</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/schedule/update</p>
@@ -10,7 +10,7 @@
 
 <p>This endpoint accepts updates to either the <code class="language-plaintext highlighter-rouge">schedule</code> or <code class="language-plaintext highlighter-rouge">messages</code> parameter or both. Your request must contain at least one of those two keys.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f61edf74-4467-4551-b9c4-a4b8d188cd7a" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f61edf74-4467-4551-b9c4-a4b8d188cd7a">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

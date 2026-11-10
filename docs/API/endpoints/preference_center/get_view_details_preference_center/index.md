@@ -1,4 +1,4 @@
-<div id='api_fbipmucjufuh' class='api_div' data-search-keywords='view details for preference center name preference_center_api_id created_at updated_at preference_center_title preference_center_page_html confirmation_page_html redirect_page_html preference_center_options state'>
+<div id='api_eoowcuowfbww' class='api_div' data-search-keywords='view details for preference center name preference_center_api_id created_at updated_at preference_center_title preference_center_page_html confirmation_page_html redirect_page_html preference_center_options state'>
 <h1 id="view-details-for-preference-center">View details for preference center</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/preference_center/v1/{preferenceCenterExternalID}</p>
@@ -8,7 +8,7 @@
   <p>Use this endpoint to view the details for your preference centers, including when it was created and updated.</p>
 </blockquote>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6a47fd7c-2997-4832-aedb-d101a2dd03a5" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6a47fd7c-2997-4832-aedb-d101a2dd03a5">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

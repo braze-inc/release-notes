@@ -640,9 +640,9 @@ Before continuing with the onboarding process, confirm that you've added the Bra
 
 ### Step 3: Track Shopify data 
 
-Enhance your integration by adding more Shopify events and attributes, which will be powered by Shopify webhooks. For detailed information on the data tracked through this integration, refer to [Shopify Data Features](https://www.braze.com/docs/shopify_data_features/). 
+Enhance your integration by adding more Shopify events and attributes, which are powered by Shopify webhooks. For detailed information on the data tracked through this integration, see [Shopify Data Features](https://www.braze.com/docs/shopify_data_features/). 
 
-This step also includes the **Send Order Placed events from another source** and **Sync customer metafields as user attributes** options, which are the same options in the standard integration's [standard data setup](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_standard_integration/#standard-data-setup).
+This step includes the same data options as the standard integration's [standard data setup](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_standard_integration/#standard-data-setup).
 
 ![Setup step to track Shopify data.](https://www.braze.com/docs/assets/img/shopify/track_shopify_data_setup.png?4aa006cb4e88b2ce18a32fa113334116)
 

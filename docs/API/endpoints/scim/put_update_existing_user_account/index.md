@@ -1,4 +1,4 @@
-<div id='api_zfrzcncthpkj' class='api_div' data-search-keywords='update dashboard user account schemas name department permissions roles team id'>
+<div id='api_knklnbxgdqwg' class='api_div' data-search-keywords='update dashboard user account schemas name department permissions roles team id'>
 <h1 id="update-dashboard-user-account">Update dashboard user account</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/scim/v2/Users/{id}</p>
@@ -12,7 +12,7 @@
 
 <p>For security reasons, <code class="language-plaintext highlighter-rouge">userName</code> (email address) cannot be updated through this endpoint. If you want to change the <code class="language-plaintext highlighter-rouge">userName</code> (email address) for a user, contact <a href="/docs/support_contact">Support</a>.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f9a1642-988e-4011-8fb8-db4340ea1ac7" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f9a1642-988e-4011-8fb8-db4340ea1ac7">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

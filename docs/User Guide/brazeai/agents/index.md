@@ -70,12 +70,52 @@ Agents are configured with instructions (system prompts) that define how they be
 | [Instructions](https://www.braze.com/docs/user_guide/brazeai/agents/reference#writing-instructions) | The rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. Clear instructions make the agent more reliable and predictable. |
 | Context | Data passed into the agent at runtime, wherever it is deployed, such as user profile fields or catalog rows. This input provides the information the agent uses to generate outputs. |
 | [Canvas context variables](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables#how-context-variables-work) | Temporary pieces of data you can create and use within a user’s journey through a specific Canvas. |
-| [Output variable](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/agent_step#define-the-output-variable) | The output the agent produces when used in Canvas steps. Output variables store the agent’s result to personalize content or guide workflow paths. Output variables can be a string, a number, or a boolean data type.  |
-| [Invocation](#limitations) | A single run of the agent. This counts against your daily limits. |
+| [Output variable](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/agent_step#define-the-output-variable) | The output the agent produces when used in Canvas steps. Output variables store the agent’s result to personalize content or guide workflow paths. Output variables can be a string, a number, a boolean, an array of strings or numbers, or a JSON object defined by a schema. |
+| [Invocation](#what-happens-in-an-invocation) | A single run of the agent. This counts against your daily limits. |
 | [Output format](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents#select-output) | The predefined data structure of the agent's response. |
 | [Knowledge sources](https://www.braze.com/docs/user_guide/brazeai/agents/knowledge_sources) | A type of agent context used to retrieve data from a catalog more accurately than if the catalog is referenced directly in the agent's instructions. |
 | [Conversational Agents](https://www.braze.com/docs/user_guide/brazeai/agents/conversational_agents) | A channel for multi-turn user conversations. You define conversational workflows with tools so users can complete tasks over SMS, RCS, WhatsApp, or web chat. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Key concepts" }
+
+### What happens in an invocation {#what-happens-in-an-invocation}
+
+An invocation is one run of an agent. Braze passes your instructions and context to the model, the model reasons over them, and the agent returns one output. Each invocation counts toward the agent's [daily invocation limit](https://www.braze.com/docs/user_guide/brazeai/agents/reference#daily-invocation-and-credit-limits).
+
+| Agent type | One invocation is |
+| --- | --- |
+| Canvas Step Agent | One user entering the Agent step |
+| Catalog Agent | One catalog row the agent processes |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="What counts as one invocation" }
+
+Agent Console previews and Test Canvas runs that use **Simulate response** also count as invocations. Cached responses for repeated identical inputs still count toward total and daily invocations.
+
+#### What goes in
+
+- **Model:** The Braze-provided **Auto** model (Google Gemini), or your own [AI model provider](https://www.braze.com/docs/partners/ai_model_providers), such as OpenAI, Anthropic, Google Gemini, Amazon Bedrock, Microsoft Foundry, or Databricks Mosaic.
+- **Instructions:** The system prompt, applied on every run.
+- **User context (Canvas Step Agents):** User attributes and Canvas context variables referenced with Liquid, [segment membership](https://www.braze.com/docs/user_guide/brazeai/agents/reference#segment-membership-context), **All Canvas Context**, and [user interaction history](https://www.braze.com/docs/user_guide/brazeai/agents/reference#user-history).
+- **Catalog data (Catalog Agents):** The fields of the catalog row being processed.
+- **Workspace context:** [Knowledge sources](https://www.braze.com/docs/user_guide/brazeai/agents/knowledge_sources) (such as catalog data), [brand guidelines](https://www.braze.com/docs/user_guide/brazeai/agents/reference#brand-guidelines), and [context files](https://www.braze.com/docs/user_guide/brazeai/agents/reference#context-files).
+
+#### How it runs
+
+The agent interprets the inputs and context, reasons over them, and generates a response. During each run:
+
+- **The agent has no memory across runs:** Each run is independent and doesn't carry over anything from previous runs.
+- **The agent sees only what you pass in:** If a value isn't passed through one of the inputs in [What goes in](#what-goes-in), the agent doesn't receive it. See [What data agents receive](https://www.braze.com/docs/user_guide/brazeai/agents/reference#what-data-agents-receive).
+- **Plan for each run to take up to 20 seconds:** Braze waits up to 20 seconds by default for each response from the model. Agents that search catalogs or knowledge sources can go back and forth with the model several times in one run, and each exchange has its own 20-second limit. If any exchange times out, the whole run fails and isn't retried. The agent returns `null` or your configured fallback value for Canvas Step Agents.
+- **Each agent has a daily invocation limit of 250,000 by default and up to 1,000,000:** If you're interested in increasing the limit higher than 1,000,000, contact your customer success manager.
+
+For more information about time and volume limits, see [Limitations](#limitations).
+
+#### What comes out
+
+Each invocation returns one output in the [Outputs](https://www.braze.com/docs/user_guide/brazeai/agents/reference#outputs) format you define: a string, number, boolean, or (for Canvas Step Agents only) an array or an advanced JSON schema. You can use the output to:
+
+- Personalize message copy
+- Route a user down a Canvas path
+- Store a value in Canvas context for later steps
+- Fill a catalog field
 
 ## Limitations
 
@@ -83,7 +123,7 @@ The following limitations apply:
 
 - Each agent has a default daily invocation limit of 250,000 runs, which can be increased up to a maximum of 1,000,000 runs per day. Contact your customer success manager if you're interested in increasing this limit.
 - Agent Console shows a **Daily action credit cost limit** for each agent—the estimated maximum credits per day based on your model's per-invocation credit ratio and the daily invocation limit. See [Daily invocation and credit limits](https://www.braze.com/docs/user_guide/brazeai/agents/reference#daily-invocation-and-credit-limits).
-- By default, each run must complete within 20 seconds. After 20 seconds, the agent returns a `null` response where it is used.
+- By default, Braze waits up to 20 seconds for each response from the model. Agents that search catalogs or knowledge sources can make several requests in one run, and each has its own 20-second limit. If any request times out, the whole run fails and isn't retried, and the agent returns a `null` response where it is used.
     - If your agents consistently time out, contact your Braze account manager to increase this limit.
 - Input data is limited to 25 KB per request. Longer inputs are truncated.
 

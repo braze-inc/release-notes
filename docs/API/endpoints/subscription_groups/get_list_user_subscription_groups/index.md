@@ -1,4 +1,4 @@
-<div id='api_ecbdsvovpzwq' class='api_div' data-search-keywords='list user’s subscription groups users email phone external_id subscription_groups id name channel status total_count message'>
+<div id='api_vvuvmpfygkfi' class='api_div' data-search-keywords='list user’s subscription groups users email phone external_id subscription_groups id name channel status total_count message'>
 <h1 id="list-users-subscription-groups">List user’s subscription groups</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/subscription/user/status</p>
@@ -10,15 +10,15 @@
 
 <p>If you want to see examples or test this endpoint for <strong>Email Subscription Groups</strong>:</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d1c3b617-22f1-47bf-9ee8-499526824470" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d1c3b617-22f1-47bf-9ee8-499526824470">View in Postman</a></p>
 
 <p>If you want to see examples or test this endpoint for <strong>SMS Subscription Groups</strong>:</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666">View in Postman</a></p>
 
 <p>If you want to see examples or test this endpoint for <strong>WhatsApp Groups</strong>:</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

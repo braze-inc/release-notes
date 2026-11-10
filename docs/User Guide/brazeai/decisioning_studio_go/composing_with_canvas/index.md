@@ -2,15 +2,16 @@
 
 > Most teams run Decisioning Studio Go alongside an existing journey rather than on its own. This guide shows how to hand the email portion of a journey to an agent while keeping the rest of your orchestration in Canvas.
 
-A Decisioning Studio Go agent sends to a single Braze segment. Users enter the agent's audience when they join that segment, so you can use anything that changes segment membership to add them, most commonly a Canvas that adds users at the right moment.
+A Decisioning Studio Go agent sends to a single Braze segment. Users enter the agent's audience when they join that segment. Add them from a Canvas with a Send to Destination step.
 
 ## The core pattern: hand off the email, keep the rest
 
 The cleanest way to use an agent inside a broader journey is to route users into the agent's segment at the point where you want the agent to take over email, while letting other channels continue in the Canvas.
 
 1. Create a dedicated segment for the agent. For more information, see [Creating a segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment). The segment should not be actively used by another Canvas or campaign. Overlapping messaging makes the agent's results noisier because it can't tell whether a click came from its decision or from another message.
-2. Add users to that segment at the right point in your Canvas using a [User Update step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update). Where available, a [Send to Destination step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/send_to_destination) can pass users from a Canvas into an agent.
-3. Make sure users exit the Canvas email path after they enter the agent's segment, so the agent owns email for those users from that point on. Other channels, such as SMS and push, can continue in the Canvas.
+2. In the agent's **Entry audience**, select that segment and select **Add directly to the audience**. On the segment, add a filter group, select `Cohort membership` > `Decisioning Studio Agent`, and include this agent.
+3. In your Canvas, add a [Send to Destination](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/send_to_destination) step. Select **Decisioning Studio agent** in **Destination type**, then select this agent.
+4. Make sure users exit the Canvas email path after they enter the agent's segment, so the agent owns email for those users from that point on. Other channels, such as SMS and push, can continue in the Canvas.
 
 ## Keep other channels in the Canvas
 
@@ -26,6 +27,7 @@ A Canvas [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canv
 ## Segment hygiene checklist
 
 - The agent's segment is dedicated to the agent and isn't shared with another active Canvas or campaign.
+- **Add directly to the audience** is selected, and the segment includes the `Decisioning Studio Agent` filter for this agent.
 - Users who enter the agent's segment exit the Canvas email path.
 - Exit and suppression logic you need, such as removing a user for 14 days after a purchase, is built into the segment definition as an exclusion group. The agent reevaluates segment membership daily.
 - Verify that a few representative users land in the segment as intended by using **User Lookup** in the Braze dashboard.

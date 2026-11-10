@@ -154,7 +154,7 @@ Table | Description
 [SNAPSHOTS_CANVAS_STEP_SHARED](#SNAPSHOTS_CANVAS_STEP_SHARED) | Canvas step snapshots (**Snowflake Data Sharing only**)
 [SNAPSHOTS_CANVAS_VARIATION_SHARED](#SNAPSHOTS_CANVAS_VARIATION_SHARED) | Canvas variation snapshots (**Snowflake Data Sharing only**)
 [SNAPSHOTS_EXPERIMENT_STEP_SHARED](#SNAPSHOTS_EXPERIMENT_STEP_SHARED) | Experiment step snapshots (**Snowflake Data Sharing only**)
-[CONTENTOPTIMIZER_COMPONENTSTORE_SHARED](#CONTENTOPTIMIZER_COMPONENTSTORE_SHARED) | Updates to the component store
+[CONTENTOPTIMIZER_COMPONENTSTORE_SHARED](#CONTENTOPTIMIZER_COMPONENTSTORE_SHARED) | Content Optimization combination snapshots
 
 
 ## Agent Console {#agent-console}
@@ -4166,6 +4166,18 @@ Field | Type | Description
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="SNAPSHOTSEXPERIMENTSTEPSHARED #SNAPSHOTSEXPERIMENTSTEPSHARED" }
 
 ### CONTENTOPTIMIZER_COMPONENTSTORE_SHARED {#CONTENTOPTIMIZER_COMPONENTSTORE_SHARED}
+
+Braze writes these rows when a Content Optimization step's component store goes live or is republished—not when a message is sent. Each row is a snapshot of one combination and includes that combination's component values in `content` as JSON.
+
+Braze writes a new set of rows in these cases:
+
+- The Content Optimization step first goes live.
+  - Braze writes one row for each active combination and sets `is_active` to `true`.
+- You publish a post-launch draft that changes the step's live component store.
+  - Braze writes a new `is_active: true` row for each combination that is active after the publish.
+  - Braze writes an `is_active: false` row for each combination that was active before the publish and is no longer active.
+
+These events are append-only, so the same combination can appear in more than one row over time. To check whether a combination is currently active, use the most recent row for that combination by `time`.
 
 Field | Type | Description
 ------|------|------------

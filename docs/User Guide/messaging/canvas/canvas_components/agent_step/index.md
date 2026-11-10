@@ -69,7 +69,7 @@ You can test an Agent step in two ways:
 - Select **Yes** to optionally add context, then select **Simulate response** to invoke the agent for the preview user. You can describe sample inputs in plain language (for example, cart contents or message text) to supplement the test user's profile and any Canvas context already set upstream.
 - Select **No** to skip the live invocation and use the agent's configured **fallback output** from Agent Console instead.
 
-Invocations from **Simulate response** count toward the agent's daily invocation limit and appear in **Agent Console** > **Logs**. For full Test Canvas behavior, see [Preview user paths](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths#agent-steps).
+Invocations from **Simulate response** count toward the agent's daily invocation limit and appear on the agent's **Logs** tab. For full Test Canvas behavior, see [Preview user paths](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths#agent-steps).
 
 ![Preview the agent output as a random user.](https://www.braze.com/docs/assets/img/ai_agent/agent_step_preview.png?ae0e59731575948654e25d88155ed0ed){: style="max-width:80%;"}
 

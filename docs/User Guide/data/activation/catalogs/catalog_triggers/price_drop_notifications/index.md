@@ -54,6 +54,18 @@ Here's an example custom event:
 }
 ```
 
+
+
+
+
+
+
+
+
+
+
+
+
 {: start="4"}
 4. Select **Save**, and continue to the next section to set up notification rules.
 
@@ -93,21 +105,9 @@ Now, your customers will be notified when an item's price drops.
 
 To template in details about the catalog item that has dropped in price, you can use the `context` Liquid tag to access the `item_id`. 
 
-Using ``{{context.${catalog_update}.item_id}}`` will return the ID of the item that dropped in price. ``{{context.${catalog_update}.previous_value}}`` will return the price value of the item before the update, and ``{{context.${catalog_update}.new_value}}`` will return the new price value after the update. 
+Using ``{{context.${catalog_update}.item_id}}`` returns the ID of the item that dropped in price. ``{{context.${catalog_update}.previous_value}}`` returns the price value of the item before the update, and ``{{context.${catalog_update}.new_value}}`` returns the new price value after the update.
 
-Use the Liquid tag ``{% catalog_items <name_of_your_catalog> {{context.${catalog_update}.item_id}} %}`` at the top of your message, then use `{{items[0].<field_name>}}` to access data about that item throughout the message.
-
-
-
-
-
-
-
-
-
-
-
-
+Use the Liquid tag ``{% catalog_items <name_of_your_catalog> {{context.${catalog_update}.item_id}} %}`` at the top of your message, then use ``{{ items[0].<field_name> }}`` to access data about that item throughout the message. To pull in images, include a catalog field named `image_url`, then reference it with ``{{ items[0].image_url }}``.
 
 
 

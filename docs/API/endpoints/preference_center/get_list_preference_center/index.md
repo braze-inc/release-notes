@@ -1,4 +1,4 @@
-<div id='api_lydpxomiamrs' class='api_div' data-search-keywords='list preference centers preference_centers name preference_center_api_id created_at updated_at'>
+<div id='api_fwdohdwcxkas' class='api_div' data-search-keywords='list preference centers preference_centers name preference_center_api_id created_at updated_at'>
 <h1 id="list-preference-centers">List preference centers</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/preference_center/v1/list</p>
@@ -8,7 +8,7 @@
   <p>Use this endpoint to list your available preference centers.</p>
 </blockquote>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dd8f6667-5eba-4e19-a29e-ba74644c0b8e" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dd8f6667-5eba-4e19-a29e-ba74644c0b8e">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

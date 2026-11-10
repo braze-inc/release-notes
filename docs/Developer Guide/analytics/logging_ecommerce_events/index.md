@@ -31,6 +31,7 @@ Trigger when a user views a product detail page.
 | `currency` | String | Yes | Three-letter ISO 4217 code (for example, `USD` or `EUR`). |
 | `source` | String | Yes | Source the event originates from (for example, `web`, `ios`, or `android`). |
 | `type` | Array of strings | No | Required to use Braze catalog trigger features for back-in-stock and price-drop alerts. Accepted values: `"price_drop"`, `"back_in_stock"`. |
+| `catalog_name` | String | No | The catalog that a back-in-stock or price-drop subscription created from this event belongs to. If omitted, the workspace's fallback catalog is used. Must be a top-level property; a `catalog_name` nested inside `metadata` is ignored. |
 | `metadata` | Object | No | Flexible key-value pairs (for example, `category` or `brand`). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Product viewed event properties" }
 
@@ -220,7 +221,7 @@ Android SDK [42.3.0+](https://github.com/braze-inc/braze-android-sdk/releases/ta
 
 | Android class | Event name | Notes |
 | ------------- | ---------- | ----- |
-| `ProductViewedEvent` | `ecommerce.product_viewed` | Flattens product fields to the top level of `properties` (no `products` array). This class does not support the top-level `type` property for catalog triggers. If you need `type`, use [`logCustomEvent`](#manual-logging-with-logcustomevent) or the REST API. |
+| `ProductViewedEvent` | `ecommerce.product_viewed` | Flattens product fields to the top level of `properties` (no `products` array). Supports the optional `type` (43.0.0+) and `catalogName` parameters for catalog back-in-stock and price-drop triggers. On earlier versions, use [`logCustomEvent`](#manual-logging-with-logcustomevent) or the REST API to send those properties. |
 | `CartUpdatedEvent` | `ecommerce.cart_updated` | Use `CartUpdatedAction` (`ADD`, `REMOVE`, `REPLACE`) for the `action` property. |
 | `CheckoutStartedEvent` | `ecommerce.checkout_started` | |
 | `OrderPlacedEvent` | `ecommerce.order_placed` | Supports optional `cartId`, `totalDiscounts`, and `discounts`. |
@@ -281,6 +282,8 @@ val productViewedEvent = ProductViewedEvent(
   imageUrl = "https://braze-fashion.eu/images/scarf_red.jpg",
   productUrl = "https://braze-fashion.eu/products/scarf",
   metadata = metadata,
+  type = listOf("price_drop", "back_in_stock"),
+  catalogName = "scarves",
 )
 
 Braze.getInstance(context).logEcommerceEvent(productViewedEvent)
@@ -485,7 +488,9 @@ ProductViewedEvent productViewedEvent = new ProductViewedEvent(
     /* source */ "https://braze-fashion.eu",
     /* imageUrl */ "https://braze-fashion.eu/images/scarf_red.jpg",
     /* productUrl */ "https://braze-fashion.eu/products/scarf",
-    /* metadata */ metadata
+    /* metadata */ metadata,
+    /* type */ Arrays.asList("price_drop", "back_in_stock"),
+    /* catalogName */ "scarves"
 );
 
 Braze.getInstance(context).logEcommerceEvent(productViewedEvent);
@@ -689,7 +694,8 @@ if let productViewedEvent = try? Braze.Ecommerce.ProductViewedEvent(
         "size": "6",
         "brand": "Braze"
     ],
-    typeIdentifiers: ["price_drop", "back_in_stock"]
+    type: ["price_drop", "back_in_stock"],
+    catalogName: "footwear"
 ) {
     AppDelegate.braze?.logEcommerceEvent(productViewedEvent)
 }
@@ -916,6 +922,8 @@ braze.logEcommerceEvent({
         "price": 85,
         "currency": "GBP",
         "source": "https://braze-apparel.com/",
+        "type": ["price_drop", "back_in_stock"],
+        "catalog_name": "footwear",
         "metadata": {
             "color": "ORANGE",
             "size": "6",

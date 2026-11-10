@@ -1,4 +1,4 @@
-<div id='api_pvjmvnykaocw' class='api_div' data-search-keywords='export campaign details message created_at updated_at archived draft enabled has_post_launch_draft name description schedule_type channels first_sent last_sent tags teams messages message_variation_id channel has_translatable_content conversion_behaviors extras subject body from reply_to title amp_body preheader custom_plain_text should_inline_css should_whitespace_header email_headers type data pages header text choices choice_id custom_attribute_key custom_attribute_value deleted alert action image_url large_image_url subscription_group_id url headers method template_name template_language_code header_variables body_variables button_variables layout header_text body_text footer_text buttons window product custom_event_name app_ids'>
+<div id='api_kcmagnktnjxa' class='api_div' data-search-keywords='export campaign details message created_at updated_at archived draft enabled has_post_launch_draft name description schedule_type channels first_sent last_sent tags teams messages message_variation_id channel has_translatable_content conversion_behaviors extras subject body from reply_to title amp_body preheader custom_plain_text should_inline_css should_whitespace_header email_headers type data pages header text choices choice_id custom_attribute_key custom_attribute_value deleted alert action image_url large_image_url subscription_group_id url headers method template_name template_language_code header_variables body_variables button_variables layout header_text body_text footer_text buttons window product custom_event_name app_ids'>
 <h1 id="export-campaign-details">Export campaign details</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/campaigns/details</p>
@@ -10,7 +10,7 @@
 
 <p>If you want to retrieve Canvas data, refer to the <a href="/docs/api/endpoints/export/canvas/get_canvas_details">Export Canvas details</a> endpoint.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

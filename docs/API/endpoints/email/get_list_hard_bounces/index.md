@@ -1,4 +1,4 @@
-<div id='api_rwaevaxpwjmf' class='api_div' data-search-keywords='query hard bounced emails emails email hard_bounced_at message'>
+<div id='api_zmahzvlfeztr' class='api_div' data-search-keywords='query hard bounced emails emails email hard_bounced_at message'>
 <h1 id="query-hard-bounced-emails">Query hard bounced emails</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/email/hard_bounces</p>
@@ -8,7 +8,7 @@
   <p>Use this endpoint to pull a list of email addresses that have “hard bounced” your email messages within a certain time frame.</p>
 </blockquote>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

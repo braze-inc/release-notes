@@ -1,4 +1,4 @@
-<div id='api_bkgcnckxnbbh' class='api_div' data-search-keywords='create email template template_name subject body plaintext_body preheader tags should_inline_css email_template_id message'>
+<div id='api_gutywstwbdhx' class='api_div' data-search-keywords='create email template template_name subject body plaintext_body preheader tags should_inline_css email_template_id message'>
 <h1 id="create-email-template">Create email template</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/templates/email/create</p>
@@ -14,7 +14,7 @@
 
 <p>You can also call this endpoint through the <a href="/docs/user_guide/brazeai/mcp_server">Braze MCP server</a> using the <a href="/docs/user_guide/brazeai/mcp_server/available_api_functions#templates"><code class="language-plaintext highlighter-rouge">create_email_template</code></a> function. This lets AI tools like Claude and Cursor create email templates through natural language prompts.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 <p>To use this endpoint, you’ll need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">templates.email.create</code> permission.</p>

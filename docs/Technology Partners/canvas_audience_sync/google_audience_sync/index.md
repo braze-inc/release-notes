@@ -42,7 +42,8 @@ Continue following this guide for account connection, audience setup, and syncin
 **Note:**
 
 
-This feature lets brands control what specific first-party data is shared with Google. At Braze, the integrations with which you can and cannot share your first-party data are given the utmost consideration. Learn more about our [Braze data privacy policy](https://www.braze.com/privacy).
+This feature allows brands to control what specific first-party data is shared with . At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
+
 
 
 

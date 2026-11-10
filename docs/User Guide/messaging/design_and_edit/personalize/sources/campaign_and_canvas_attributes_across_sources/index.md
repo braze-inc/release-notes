@@ -37,5 +37,5 @@ Campaign and Canvas attributes are tied to [message engagement events](https://w
 | Step name (for Message steps only) | `{{campaign.${name}}}` | `steps.name` | `canvas_step_name` |
 | Step ID | `{{campaign.${api_id}}}` | `steps.id` | `canvas_step_id` |
 | Message channel | N/A | `steps.messages.message_variation_id.channel` | N/A (inherent from event type, such as push send or email open) |
-| Message ID | `{{campaign.${message_api_id}}}` | `steps.message.message_variation_id` | `canvas_step_message_variation_api_id` |
+| Message ID | `{{campaign.${message_api_id}}}` | `steps.message.message_variation_id` | `canvas_step_message_variation_id` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Canvas attributes" }

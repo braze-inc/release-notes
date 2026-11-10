@@ -35,7 +35,7 @@ No, attempting to write Liquid blocks like `{% if %}` statements can result in a
 
 No. Agents only receive the specific user data points that are passed using Liquid in instructions, [+ Agent context](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents#add-resources) selections, upstream [Context steps](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context) in Canvas, or additional context on the Agent step. Agents cannot search user profiles for attributes you did not configure them to receive.
 
-Agents also cannot warn you when required data is missing—they proceed with whatever is in the prompt. Treat agent setup as deliberate input-to-output design: pass every field the agent needs and verify inputs in **Agent Console** > **Logs**. For guidance, see [What data agents receive](https://www.braze.com/docs/user_guide/brazeai/agents/reference#what-data-agents-receive).
+Agents also cannot warn you when required data is missing—they proceed with whatever is in the prompt. Treat agent setup as deliberate input-to-output design: pass every field the agent needs and verify inputs on the agent's **Logs** tab. For guidance, see [What data agents receive](https://www.braze.com/docs/user_guide/brazeai/agents/reference#what-data-agents-receive).
 
 ## Troubleshooting
 

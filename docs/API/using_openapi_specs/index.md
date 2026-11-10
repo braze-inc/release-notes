@@ -4,16 +4,16 @@
 
 Each Braze REST API endpoint page renders an interactive reference generated from an [OpenAPI](https://www.openapis.org/) specification. The reference shows the endpoint's parameters, request body, response schemas, and example responses in a consistent, structured format. Every spec is also a machine-readable file that you can download and use directly in your own tooling.
 
-**Note:**
+**Important:**
 
 
-The reference on each endpoint page is read-only. It doesn't send live requests from the documentation site. To call an endpoint, copy the generated cURL example or use the downloaded spec in your own client, as described in [How to use the schemas](#how-to-use-the-schemas).
+You can send a request from the reference with **Test Request**. Enter a REST API key in the **Bearer Token** field and select your [REST endpoint](https://www.braze.com/docs/api/basics/#endpoints) in the server list. The request runs against your workspace and changes real data, so use a key for a test workspace. Endpoints that use `PUT`, `PATCH`, or `DELETE` can't be sent from the documentation site, so they don't show **Test Request**. For those endpoints, copy the generated cURL example or use the downloaded spec in your own client, as described in [How to use the schemas](#how-to-use-the-schemas).
 
 
 
 ## Where to find a spec
 
-On any REST API endpoint page, find the **Endpoint reference** section. To open the raw specification, use the spec download option in that section. Each file lives at a stable, public URL in the following format:
+On any REST API endpoint page, select **Download OpenAPI Document** in the reference, or use the download link at the end of the page. Each file lives at a stable, public URL in the following format:
 
 ```
 https://www.braze.com/docs/assets/api/openapi/{spec_filename}.yaml

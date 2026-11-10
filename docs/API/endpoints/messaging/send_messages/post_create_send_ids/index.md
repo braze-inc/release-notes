@@ -1,4 +1,4 @@
-<div id='api_zzdjiauaftiv' class='api_div' data-search-keywords='create send ids campaign_id send_id message'>
+<div id='api_sjwlsvhyqwtq' class='api_div' data-search-keywords='create send ids campaign_id send_id message'>
 <h1 id="create-send-ids">Create send IDs</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/sends/id/create</p>
@@ -10,7 +10,7 @@
 
 <p>Using the send identifier to track and send messages is useful if you are planning to programmatically generate and send content.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74a04e53-659f-4473-abc5-0f6f735550ff" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74a04e53-659f-4473-abc5-0f6f735550ff">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

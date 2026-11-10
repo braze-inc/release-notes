@@ -1,4 +1,4 @@
-<div id='api_zsjnwlcmohpn' class='api_div' data-search-keywords='search existing dashboard user account by email schemas id name department permissions team status detail'>
+<div id='api_ordizgzyhvta' class='api_div' data-search-keywords='search existing dashboard user account by email schemas id name department permissions team status detail'>
 <h1 id="search-existing-dashboard-user-account-by-email">Search existing dashboard user account by email</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>scim/v2/Users?filter=userName%20eq%20”user%40test.com”</p>
@@ -12,7 +12,7 @@
 
 <p><code class="language-plaintext highlighter-rouge">/scim/v2/Users?filter=userName%20eq%20%22user@example.com%22</code></p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5037d810-b822-4c54-bb51-f30470a42a95" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5037d810-b822-4c54-bb51-f30470a42a95">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

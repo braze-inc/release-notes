@@ -35,12 +35,17 @@ Liquid isn't rendered against a specific user. Agentic Standards evaluates the L
 
 Campaign Standards enforce rules on one-time and recurring campaigns. Canvas Standards enforce rules on multi-step customer journeys. Both types use the same Details and preview workflow, but Canvas Standards add a second rules step for per-step checks.
 
+For each type, the **Create Agentic Standard** menu offers two starting points:
+
+- **Create from Braze template:** Start with every pre-built ruleset for that type already added. You can edit or remove any of these rulesets and rules before you save.
+- **Create from scratch:** Start with no rulesets. Add your own rulesets or generate them from a file.
+
 
 
 
 ### Step 1: Choose the standard type
 
-To create your standard, go to **Agent Console** > **Agentic Standards**. Select **Create Agentic Standard** and choose **Campaign Standards** from the dropdown menu.
+To create your standard, go to **Agents** > **Agentic Standards**. Select **Create Agentic Standard**, then under **Campaign Standards**, select **Create from Braze template** or **Create from scratch**.
 
 ### Step 2: Set up details
 
@@ -55,6 +60,8 @@ Next, set up the details for your standard:
 ### Step 3: Configure campaign rules
 
 In the **Campaign Rules** step, define the rules that should be enforced as part of this standard. You can add up to 15 rulesets per standard, and up to 20 rules per ruleset.
+
+If you started from the Braze template, a ruleset for each pre-built category is already added. Review each one, and edit or remove rules that don't fit your team.
 
 You can build your rules by selecting either:
 
@@ -99,7 +106,7 @@ Next, review the results. The evaluation runs against the campaign and displays 
 
 ### Step 1: Choose the standard type
 
-To create your standard, go to **Agent Console** > **Agentic Standards**. Select **Create Agentic Standard** and choose **Canvas Standards** from the dropdown menu.
+To create your standard, go to **Agents** > **Agentic Standards**. Select **Create Agentic Standard**, then under **Canvas Standards**, select **Create from Braze template** or **Create from scratch**.
 
 ### Step 2: Set up details
 
@@ -114,6 +121,8 @@ Next, set up the details for your standard:
 ### Step 3: Configure Canvas configuration rules
 
 In the **Canvas configuration** step, define rules that are evaluated once for the whole Canvas. You can add up to 15 rulesets per standard across both rules steps combined, and up to 20 rules per ruleset.
+
+If you started from the Braze template, both rules steps include pre-built rulesets. This step includes the **Canvas setup**, **Canvas structure**, and **Audience and targeting** rulesets. The **Canvas steps** step includes the message step and Audience Paths rulesets. Review each one, and edit or remove rules that don't apply to your team.
 
 You can build your rules by selecting either:
 
@@ -142,10 +151,6 @@ Select **Add ruleset** and choose a step type to see the following categories:
     - **Compliance and deliverability:** Defines requirements for legal obligations and sending safeguards.
 - **Audience Paths**
     - **Path and priority:** Validates path labels, narrow-before-broad ordering, and intentional priority.
-    - **Path coverage and gaps:** Checks fallback paths, dead ends, and unreachable branches.
-    - **Evaluation timing and delays:** Validates lookback windows, delay timing, and re-entry behavior.
-    - **Targeting data quality:** Checks attribute values, formats, and missing-value handling.
-    - **Downstream delivery readiness:** Validates channel fit, consent requirements, and frequency capping effects.
 
 You can also create custom rules for either step type.
 
@@ -247,7 +252,7 @@ After all critical issues are resolved or ignored, you can proceed to launch you
 
 ## Review evaluation logs
 
-To review past evaluations of a standard, go to **Agent Console** > **Agentic Standards**, select the standard, then select the **Evaluation logs** tab. Each row is one evaluation run. Use the **Details** column to expand a run and see its individual rule evaluations, or to open the details for an evaluation. To export the logs, select **Export CSV**.
+To review past evaluations of a standard, go to **Agents** > **Agentic Standards**, select the standard, then select the **Evaluation logs** tab. Each row is one evaluation run. Use the **Details** column to expand a run and see its individual rule evaluations, or to open the details for an evaluation. To export the logs, select **Export CSV**.
 
 ![The Evaluation logs tab for a Canvas Standard, showing the Date range, Outcome, and Filters controls and a table of evaluation runs with Timestamp, Source, Duration, Outcome, Limit used, Run by, and Details columns.](https://www.braze.com/docs/assets/img/agentic_standards/evaluation_logs.png?c3c173c61264d027ad3d1c0db489e34e)
 
@@ -279,6 +284,7 @@ Keep the following limitations in mind when you write rules, and keep your exist
 - **Links aren't followed:** Agentic Standards can check that links are present and correctly formatted, such as URLs, deep links, and UTM parameters. It doesn't open them. It can't detect broken links, such as links that return a `404` error, or confirm that a link's destination matches what the message says.
 - **No user or segment lookups:** Agentic Standards can't look up individual user profiles or check whether a specific user is in a segment. It can only evaluate the targeting settings on the campaign or Canvas itself.
 - **Canvas step coverage:** Step rulesets run only on Message, Content Optimizer, and Audience Paths steps. Other step types can't be evaluated.
+- **Image limit:** Agentic Standards can see the contents of up to 32 unique images per campaign, or per Message step in a Canvas. An image used in more than one variant counts once. This includes images added by Content Blocks and the email footer, with footer images counted last. Because there's also a total size budget, a campaign or Canvas with many large images may have fewer images checked. Images whose URL is built with Liquid aren't checked. Rules about how an image looks apply only to the images within this limit.
 - **Very large messages:** If a campaign or Canvas has more content than Agentic Standards can evaluate at once, such as a multivariate email with many large variants, the content is shortened before evaluation. The results then show a warning, and rules may have been checked against incomplete content.
 
 ## Best practices

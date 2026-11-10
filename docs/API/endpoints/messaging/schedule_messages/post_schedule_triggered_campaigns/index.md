@@ -1,4 +1,4 @@
-<div id='api_saeqkslatysw' class='api_div' data-search-keywords='schedule api-triggered campaigns campaign_id send_id recipients audience broadcast trigger_properties schedule time in_local_time at_optimal_time dispatch_id schedule_id message'>
+<div id='api_qhjddllgvvvi' class='api_div' data-search-keywords='schedule api-triggered campaigns campaign_id send_id recipients audience broadcast trigger_properties schedule time in_local_time at_optimal_time dispatch_id schedule_id message'>
 <h1 id="schedule-api-triggered-campaigns">Schedule API-triggered campaigns</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/schedule/create</p>
@@ -18,7 +18,7 @@
 
 <p>To send a <a href="/docs/user_guide/channels/transactional_email/create_a_transactional_email">transactional email</a>, use the <a href="/docs/api/endpoints/messaging/send_messages/post_send_transactional_message"><code class="language-plaintext highlighter-rouge">/transactional/v1/campaigns/{campaign_id}/send</code> endpoint</a>.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

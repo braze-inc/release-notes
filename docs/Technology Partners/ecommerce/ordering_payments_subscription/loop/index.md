@@ -63,7 +63,7 @@ Use a campaign when a single message is enough. Use a Canvas when you need delay
 Track by Loop targets one recipient per event:
 
 1. If a Shopify customer ID is present, Track by Loop sets `external_user_id` in the recipient object to that ID as a string. This matches customers who set the Braze `external_id` to the Shopify customer ID.
-2. If no customer ID is available, Track by Loop sets `email` on the recipient object and uses Braze email [prioritization](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify#identifying-users-by-email-addresses-and-phone-numbers) of `unidentified`, then `most_recently_updated`.
+2. If no customer ID is available, Track by Loop sets `email` on the recipient object and uses Braze email [prioritization](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify#how-it-works) of `unidentified`, then `most_recently_updated`.
 
 The consumer must already have a Braze profile reachable by that identifier.
 

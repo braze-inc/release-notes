@@ -17,7 +17,7 @@ Starting in 2026, Braze uses Amazon Simple Email Service (SES) as the default em
 
 ## Method 1: Self-service email setup
 
-This method sets up your sending and tracking domains for a company. You'll need to consult the Braze Onboarding team first and send the following information to your Braze representative to get your IP pools and IP addresses added:
+This method sets up your sending and tracking domains for a company. Consult the Braze Onboarding team first and send the following information to your Braze representative to get your IP pools and IP addresses added:
 
 - Your chosen domains and subdomains
 - The approximate number of emails you send each month, which helps determine how many IPs you need
@@ -111,15 +111,14 @@ Verified domains currently support Amazon SES only. If you're using SendGrid or 
 
 ### Setup
 
-#### Step 1: Coordinate with Braze
+#### Step 1: Set up IP pools and IP addresses
 
-Send the following information to your Braze representative:
+Create your IP pools and add IP addresses on the **Sender Verification** page. A short questionnaire about your sending volume recommends how many IP pools and IP addresses to set up. For steps, see [Set up IP pools and IP addresses](https://www.braze.com/docs/user_guide/channels/email/email_setup/setting_up_ips_and_domains/ip_pools).
 
-- Your chosen domains and subdomains
-- How you prefer to map your domains to your IP pools
-- The approximate number of emails you plan to send each month on each subdomain, which helps determine how many IPs you need for your IP pools
-- Any previous deliverability concerns that should be flagged
+#### Step 2: Add a verified domain
 
-#### Step 2: Braze configures information
+Follow the steps in [Verified domains](https://www.braze.com/docs/user_guide/channels/email/email_setup/setting_up_ips_and_domains/verified_domains).
 
-After receiving your email, Braze adds the expected number of IPs and IP pools. After the IP pools and IP addresses have been added, follow the steps in [Verified domains](https://www.braze.com/docs/user_guide/channels/email/email_setup/setting_up_ips_and_domains/verified_domains).
+#### Step 3: Add sending and tracking domains
+
+Follow the steps in [Email self-serve](https://www.braze.com/docs/user_guide/channels/email/email_setup/setting_up_ips_and_domains/email_self_serve).

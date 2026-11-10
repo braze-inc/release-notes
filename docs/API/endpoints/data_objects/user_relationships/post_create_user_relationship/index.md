@@ -1,4 +1,4 @@
-<div id='api_buqjvswnmuqv' class='api_div' data-search-keywords='create user relationship user external_id rel_kind attributes role alias alias_name alias_label user_relationship type_name object_id braze_id'>
+<div id='api_oyewmjijujqa' class='api_div' data-search-keywords='create user relationship user external_id rel_kind attributes role alias alias_name alias_label user_relationship type_name object_id braze_id'>
 <h1 id="create-user-relationship">Create user relationship</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/data_objects/objects/{type_name}/{object_id}/users</p>

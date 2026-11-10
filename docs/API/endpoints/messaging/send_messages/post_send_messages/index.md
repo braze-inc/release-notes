@@ -1,4 +1,4 @@
-<div id='api_beoixkygdlta' class='api_div' data-search-keywords='send messages immediately using the api only broadcast external_user_ids user_aliases segment_id audience campaign_id send_id override_frequency_capping recipient_subscription_state messages android_push apple_push content_card email kindle_push web_push webhook whats_app sms'>
+<div id='api_fwtlvelirmqy' class='api_div' data-search-keywords='send messages immediately using the api only broadcast external_user_ids user_aliases segment_id audience campaign_id send_id override_frequency_capping recipient_subscription_state messages android_push apple_push content_card email kindle_push web_push webhook whats_app sms'>
 <h1 id="send-messages-immediately-using-the-api-only">Send messages immediately using the API only</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/messages/send</p>
@@ -10,7 +10,7 @@
 
 <p>If you are targeting a segment, a record of your request is stored in the <a href="https://dashboard.braze.com/app_settings/developer_console/activitylog/">Developer Console</a>.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24">View in Postman</a></p>
 
 <p><strong>Important:</strong></p>
 

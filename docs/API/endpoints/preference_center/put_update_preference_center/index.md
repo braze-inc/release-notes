@@ -1,4 +1,4 @@
-<div id='api_hgqbzealobyz' class='api_div' data-search-keywords='update preference center'>
+<div id='api_neybpqrwyqen' class='api_div' data-search-keywords='update preference center'>
 <h1 id="update-preference-center">Update preference center</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/preference_center/v1/{preferenceCenterExternalID}</p>
@@ -8,7 +8,7 @@
   <p>Use this endpoint to update a preference center.</p>
 </blockquote>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#bf1b43db-3f1b-461f-ad9a-2fbe35b804d7" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#bf1b43db-3f1b-461f-ad9a-2fbe35b804d7">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

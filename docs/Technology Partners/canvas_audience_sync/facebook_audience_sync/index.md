@@ -11,7 +11,8 @@ Any criteria you'd typically use to trigger a message (push, email, SMS, or webh
 - Creating suppression audiences to prevent users from receiving advertisements when they're already loyal consumers of your brand.
 - Creating lookalike audiences to acquire new users more efficiently.
 
-This feature allows brands to control what specific first-party data is shared with Facebook. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
+This feature allows brands to control what specific first-party data is shared with . At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
+
 
 ## User syncing and rate limit considerations
  

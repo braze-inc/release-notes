@@ -1,4 +1,4 @@
-<div id='api_vejaulvuxyrd' class='api_div' data-search-keywords='generate preference center url preference_center_url'>
+<div id='api_vvqjiyglkwes' class='api_div' data-search-keywords='generate preference center url preference_center_url'>
 <h1 id="generate-preference-center-url">Generate preference center URL</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/preference_center/v1/{preferenceCenterExternalID}/url/{userID}</p>
@@ -10,7 +10,7 @@
 
 <p>Each preference center URL is unique to each user.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bc750ff-068e-4391-897e-6eddca2561cd" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bc750ff-068e-4391-897e-6eddca2561cd">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

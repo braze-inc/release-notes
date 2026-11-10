@@ -28,6 +28,8 @@ Tools that expose user-level PII are not available.
 
 Use the MCP server to ask questions about campaign and Canvas performance, explore your segments and custom attributes, generate reports, and create content such as email templates, content blocks, and media library assets through natural language.
 
+The Braze MCP server lets AI tools work with Braze. To let BrazeAI Operator use tools from other products, such as Jira or Notion, see [External MCP servers](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/mcp_servers).
+
 ## Is the beta MCP server deprecated?
 
 Yes. The locally hosted MCP server released in August 2025 is deprecated and will not receive additional updates. You can continue using it, but Braze recommends migrating to the remote-hosted version.
@@ -49,7 +51,7 @@ The key differences are:
 
 ### Which MCP clients can I use?
 
-Any MCP client that follows the MCP standard for remote servers should work with the Braze MCP server. The client must authenticate with OAuth and register itself, through Dynamic Client Registration or a Client ID Metadata Document, so you don't enter a client ID or client secret. Before you can sign in, a company admin must also approve the client's redirect URI in [OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-approved-redirect-uris).
+An MCP client is the AI tool you connect to the Braze MCP server, such as Claude, ChatGPT, or Cursor. Any MCP client that follows the MCP standard for remote servers should work with the Braze MCP server. The client must authenticate with OAuth and register itself, through Dynamic Client Registration or a Client ID Metadata Document, so you don't enter a client ID or client secret. Before you can sign in, a company admin must also approve the client's redirect URI in [OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-approved-redirect-uris).
 
 Braze has tested Claude and ChatGPT through custom connectors, as well as Cursor, OpenAI Codex, Claude Code, and Visual Studio Code.
 

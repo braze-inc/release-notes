@@ -1,4 +1,4 @@
-<div id='api_tbavlqkuikpl' class='api_div' data-search-keywords='list user’s subscription group status status message'>
+<div id='api_cyszzpkgqjru' class='api_div' data-search-keywords='list user’s subscription group status status message'>
 <h1 id="list-users-subscription-group-status">List user’s subscription group status</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/subscription/status/get</p>
@@ -14,15 +14,15 @@
 
 <p>If you want to see examples or test this endpoint for <strong>Email Subscription Groups</strong>:</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#488c8923-fa44-4124-9245-036d13c615f2" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#488c8923-fa44-4124-9245-036d13c615f2">View in Postman</a></p>
 
 <p>If you want to see examples or test this endpoint for <strong>SMS Subscription Groups</strong>:</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557">View in Postman</a></p>
 
 <p>If you want to see examples or test this endpoint for <strong>WhatsApp Groups</strong>:</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 

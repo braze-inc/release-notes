@@ -35,7 +35,7 @@ When a test run reaches an [Agent step](https://www.braze.com/docs/user_guide/me
 - **Yes:** Optionally add context in the text field (in addition to the test user's profile and any Canvas context already in the journey), then select **Simulate response** to invoke the agent. You can enter sample values in plain language—for example, describing cart contents or inbound message text—to mimic runtime context the agent would receive in production.
 - **No:** Braze does not invoke the agent. The step uses the agent's configured **fallback output** from the **Output** section in [Agent Console](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents#configure-fallback-values).
 
-When you select **Yes** and **Simulate response**, the agent runs for the preview user, stores its output in the Agent step's output variable, and the test continues down the journey. Invocations from **Simulate response** count toward the agent's daily invocation limit and appear in **Agent Console** > **Logs**.
+When you select **Yes** and **Simulate response**, the agent runs for the preview user, stores its output in the Agent step's output variable, and the test continues down the journey. Invocations from **Simulate response** count toward the agent's daily invocation limit and appear on the agent's **Logs** tab.
 
 To test an Agent step in isolation (without running the full Canvas path), use the in-step preview in the Canvas builder. For setup details, see [Test the agent](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/agent_step#step-5-test-the-agent) in Agent step.
 

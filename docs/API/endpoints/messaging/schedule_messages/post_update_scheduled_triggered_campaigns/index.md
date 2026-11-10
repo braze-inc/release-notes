@@ -1,4 +1,4 @@
-<div id='api_uwwdxutjmhlf' class='api_div' data-search-keywords='update scheduled api-triggered campaigns campaign_id schedule_id schedule'>
+<div id='api_hopgosrmzday' class='api_div' data-search-keywords='update scheduled api-triggered campaigns campaign_id schedule_id schedule'>
 <h1 id="update-scheduled-api-triggered-campaigns">Update scheduled API-triggered campaigns</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/trigger/schedule/update</p>
@@ -16,7 +16,7 @@
 
 <p>Scheduled triggers that are updated close to or during the time they were supposed to be sent are updated with best efforts so that Braze can apply last-second changes to all, some, or none of your targeted users. Updates aren’t applied if the original schedule used local time and the original time has already passed in any time zone.</p>
 
-<div class="api_reference postman"><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d2a6e66-9d6f-4ae1-965a-79fa52b86b1d" class="seeme">See me in Postman</a></div>
+<p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d2a6e66-9d6f-4ae1-965a-79fa52b86b1d">View in Postman</a></p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
