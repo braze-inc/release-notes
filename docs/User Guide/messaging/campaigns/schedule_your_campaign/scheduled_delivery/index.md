@@ -4,7 +4,7 @@
 
 ## Option 1: Send as soon as the campaign is launched
 
-If you choose to send a message as soon as it's launched, your message will begin sending as soon as you finish creating your campaign.
+If you choose to send a message as soon as it's launched, your message begins sending as soon as you finish creating your campaign.
 
 ![The "Delivery" section with "Scheduled" selected and the time-based scheduling option of sending as soon as the campaign is launched.](https://www.braze.com/docs/assets/img_archive/schedule_immediately.png?727057c5f9b40f3758a110eb772dca90)
 
@@ -18,7 +18,7 @@ Scheduling a campaign for a designated time allows you to specify the days and t
 
 If you select a monthly recurring schedule, note that some months may not have the selected day. For example, let's say you set a campaign to send monthly on the 31st day. In this scenario, Braze sends on the last day of that month, such as April 30, because April 31 doesn't exist.
 
-If you select **Scheduled Delivery** and don't choose to send at user local time, your campaign will send according to the time zone specified on your **Company Settings** page.
+If you select **Scheduled Delivery** and don't choose to send at user local time, your campaign sends according to the time zone specified on your **Company Settings** page.
 
 ![The time-based scheduling options for sending a campaign at a designated time.](https://www.braze.com/docs/assets/img_archive/schedule_designated.png?923c73c885115a01299002d6e2d89757)
 
@@ -40,13 +40,13 @@ Designated time schedules are best suited for messages scheduled in advance and 
 
 ### Delivery rules
 
-Because a user's optimal time can be any time over the course of 24 hours across all global time zones, all Intelligent Timing campaigns must be scheduled 48 hours in advance. Scheduling 48 hours ahead accounts for delivery to all users worldwide, as a single day spans approximately 48 hours across all time zones. In addition, similar to designated time campaigns, messages with a 1-day window miss users who fall out of the segment before their optimal time in their time zone is reached. Segments for Intelligent Timing campaigns should incorporate at minimum a 3-day window to account for this.
+To reach users in every time zone, launch your Intelligent Timing campaign at least 25 hours before the send date begins. For example, for a Friday send date, launch by 11 pm on Wednesday, using the time zone set in your workspace. If you launch later than that, users whose optimal time is already more than an hour past in their time zone won't receive the message. Each user receives the message during the send date in their own time zone, so delivery continues until the send date has ended in every time zone, about 48 hours after it begins in the first. In addition, similar to designated time campaigns, messages with a 1-day window miss users who fall out of the segment before their optimal time in their time zone is reached. Segments for Intelligent Timing campaigns should incorporate at minimum a 3-day window to account for this.
 
 If a user's profile does not have enough data to calculate an optimal time, you can choose a backup method to either send during the most popular time to use the app among all users or a set custom fallback time. 
 
 ### Use cases
 
-Intelligent Timing campaigns work best for one-off and recurring messages where there is some flexibility regarding delivery time such as when they aren't well suited for breaking news or timed announcements.
+Intelligent Timing campaigns work best for one-off and recurring messages where delivery time is flexible—for example, when campaigns are not tied to breaking news or timed announcements.
 
 ## Audience criteria evaluation with delays
 

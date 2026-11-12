@@ -76,9 +76,9 @@ To see an estimate of how many users will receive the message in each hour of th
 
 Next, select a send date for your campaign. Keep the following in mind when scheduling campaigns with Intelligent Timing:
 
-#### Launch campaign 48 hours in advance
+#### Launch campaign 25 hours in advance
 
-Launch your campaign at least 48 hours before the scheduled send date. This is because of variations in time zones. Braze calculates the optimal time at midnight in Samoa time (UTC+13), one of the first time zones in the world. A single day spans about 48 hours across the globe, which means that if you launch a campaign within that 48-hour buffer, it's possible that a user's optimal time has already passed in their time zone, and the message won't be sent.
+Launch your campaign at least 25 hours before the send date begins. For example, for a Friday send date, launch by 11 pm on Wednesday. Use the time zone set in your workspace for these dates and times. This lead time is needed because Braze starts the send date in the world's earliest time zone and delivers to each user at their optimal time on the send date in their own time zone. Delivery continues until the send date has ended in every time zone, about 48 hours after it begins in the first. If you launch later, some users' optimal times may already be in the past in their time zone.
 
 **Important:**
 
@@ -195,7 +195,7 @@ For campaigns with a custom fallback time specified, if you launch the campaign 
 
 ### Step 4: Add a Delay step
 
-Unlike with campaigns, you don't need to launch your Canvas 48 hours before the send date because Intelligent Timing is set on the step level, not the Canvas level.
+Unlike with campaigns, you don't need to launch your Canvas 25 hours before the send date because Intelligent Timing is set on the step level, not the Canvas level.
 
 Instead, add a [Delay step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/delay_step) of at least two calendar days between the user entering the Canvas and when they receive the Intelligent Timing step.
 
@@ -289,7 +289,7 @@ If there are no relevant events for a user, Intelligent Timing uses the configur
 
 #### How far in advance should I launch an Intelligent Timing campaign to successfully deliver it to all users in all time zones?
 
-Braze calculates the optimal time at midnight in Samoa time, one of the first time zones in the world. In a single day, it spans approximately 48 hours. For example, someone whose optimal time is 12:01 am and lives in Australia has already had their optimal time pass, and it's "too late" to send to them. For these reasons, you need to schedule 48 hours in advance to successfully deliver to everyone in the world who uses your app.
+Braze starts the send date in the world's earliest time zone, and a single calendar day spans about 48 hours across the globe. If you launch after the send date has already begun in the earliest time zones, someone in Australia whose optimal time is 12:01 am may already be more than an hour past it, and it's "too late" to send to them. To reach users in every time zone, launch at least 25 hours before the send date begins, in your workspace's time zone, and expect delivery to continue for about 48 hours.
 
 #### Why is my Intelligent Timing campaign showing little to no sends?
 

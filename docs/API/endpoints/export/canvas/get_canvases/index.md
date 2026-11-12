@@ -1,11 +1,11 @@
-<div id='api_jbnxhxvrptud' class='api_div' data-search-keywords='export canvas list'>
+<div id='api_gwvhshwehejg' class='api_div' data-search-keywords='export canvas list'>
 <h1 id="export-canvas-list">Export Canvas list</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/canvas/list</p>
 </div>
 
 <blockquote>
-  <p>Use this endpoint to export a list of Canvases, including the name, Canvas API identifier and associated tags.</p>
+  <p>Use this endpoint to export a list of Canvases, including the name, Canvas API identifier, associated tags, and status.</p>
 </blockquote>
 
 <p>Canvases are returned in groups of 100 sorted by time of creation (oldest to newest by default).</p>

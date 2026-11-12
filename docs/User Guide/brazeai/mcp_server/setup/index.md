@@ -16,12 +16,12 @@ Before you start, make sure you have the following:
 
 | Prerequisite | Description |
 |--------------|-------------|
-| Compatible MCP client | Any client that follows the MCP standard for remote servers, authenticates with OAuth, and registers itself through Dynamic Client Registration or a Client ID Metadata Document. Clients that only accept a static client ID and client secret can't connect. Braze has tested Claude, ChatGPT, Cursor, OpenAI Codex, Claude Code, and Visual Studio Code. |
-| Approved redirect URI | A company admin must approve your client's redirect URI in **Settings** > **Admin Settings** > **External Connections**. The admin can copy it from the client's OAuth or connector settings. For more information, see [Manage OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-approved-redirect-uris). |
+| Supported MCP client | Any client that supports remote MCP servers with OAuth can work. Braze has verified clients such as Claude, ChatGPT, Cursor, OpenAI Codex, Claude Code, and Visual Studio Code. |
+| Approved MCP client or redirect URI | A company admin must approve your client in **Settings** > **Admin Settings** > **External Connections** > **MCP Clients**. An admin can browse verified MCP clients and approve them by name. For other clients, an admin must approve the client's redirect URI. For more information, see [Manage MCP clients](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-mcp-clients). |
 | Braze dashboard account | You sign in with your normal Braze credentials, including SSO or SAML if your company uses it. There is no separate MCP login. |
 | Server endpoint selection | Choose `https://mcp.braze.com/mcp` (US) or `https://mcp.braze.eu/mcp` (EU). Either endpoint can reach any Braze cluster. |
 | Paid Braze account | The Braze MCP server isn't available for free trial accounts. |
-| No IP allowlisting | Customers who use [IP Allowlisting](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#dashboard-ip-allowlisting) cannot use the Braze MCP server at this time. |
+| No IP allowlisting | Customers who use [IP Allowlisting](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#dashboard-ip-allowlisting) can't use the Braze MCP server at this time. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 **Note:**
@@ -60,13 +60,13 @@ When a user successfully connects through OAuth, an event is logged to the [secu
 
 1. Confirm you have the "Use MCP Server" permission, or ask your company admin to verify it for you.
 2. If you need access to multiple workspaces, make sure the permission is enabled for all relevant workspaces.
-3. Ask your company admin to confirm that your client's redirect URI is approved in [OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-approved-redirect-uris). If it isn't, you can't finish signing in to Braze in [Step 3](#step-3-sign-in-to-braze-through-oauth).
+3. Ask your company admin to confirm that your MCP client is approved in [MCP Clients](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-mcp-clients)—either as a verified MCP client or through an approved custom redirect URI. If it isn't, you can't finish signing in to Braze in [Step 3](#step-3-sign-in-to-braze-through-oauth).
 
 ### Step 2: Add Braze as a remote MCP connector
 
 In your MCP client, add a new remote server or custom connector and enter your Braze MCP URL. For example, in Claude you can go to **Settings** > **Connectors** > **Add custom connector** and paste the URL.
 
-No client ID, client secret, or API key is required. Your client registers itself with Braze automatically. Registration doesn't approve the client's redirect URI for your company, so an admin still needs to approve it as described in [Step 1](#step-1-confirm-permissions-and-workspace-access).
+No client ID, client secret, or API key is required. Your client registers itself with Braze automatically. Registration doesn't approve the client for your company, so an admin still needs to approve the verified client or its redirect URI as described in [Step 1](#step-1-confirm-permissions-and-workspace-access).
 
 Braze MCP endpoint options:
 
@@ -124,11 +124,11 @@ For more examples, see [Using the Braze MCP server].
 
 Connecting a client takes only a few steps. The following walkthrough uses Claude, but the flow is similar for other compatible clients.
 
-Before you start, make sure a company admin has approved your client's redirect URI, as described in [Step 1](#step-1-confirm-permissions-and-workspace-access).
+Before you start, make sure a company admin has approved Claude in [MCP Clients](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-mcp-clients), as described in [Step 1](#step-1-confirm-permissions-and-workspace-access).
 
 1. In Claude, go to **Settings** > **Connectors** > **Add custom connector**.
 2. Enter a name, such as `Braze`, then paste your Braze MCP URL: `https://mcp.braze.com/mcp` for US or `https://mcp.braze.eu/mcp` for EU. You don't need a client ID, client secret, or API key.
-3. Select **Add** to save the connector. Claude registers itself with Braze automatically, but this doesn't approve its redirect URI for your company.
+3. Select **Add** to save the connector. Claude registers itself with Braze automatically, but this doesn't approve Claude for your company.
 4. Select **Connect** to start authentication. Claude opens a browser window and sends you to Braze to sign in.
 5. Sign in to Braze with your usual credentials, including SSO if your company uses it. If your login can access more than one company on the same cluster, select the company you want to use.
 6. On the consent screen, review the requested access, select the acknowledgment checkbox, then select **Continue**. Claude returns to your chat, and your agent can now use Braze tools.
@@ -149,7 +149,7 @@ After you confirm your workflows and skills are working on the remote server, di
 
 1. Confirm your company admin has turned on **MCP OAuth access** in [OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin).
 2. Confirm your user has the "Use MCP Server" permission.
-3. Confirm your client's redirect URI is approved. If you see "This app needs approval" or a generic error such as "An unexpected error occurred" on the consent step, ask your company admin to confirm that the redirect URI's status is Approved in [OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#troubleshoot-blocked-connections).
+3. Confirm your MCP client is approved. If you see "This app needs approval" or a generic error such as "An unexpected error occurred" on the consent step, ask your company admin to approve the verified client or its redirect URI in [MCP Clients](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#troubleshoot-blocked-connections).
 4. Retry sign-in and authorization.
 
 ### A working connection stops authenticating

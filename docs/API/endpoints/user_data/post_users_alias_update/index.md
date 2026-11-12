@@ -1,4 +1,4 @@
-<div id='api_hawbrmthttil' class='api_div' data-search-keywords='update user alias'>
+<div id='api_npctdcfnlswv' class='api_div' data-search-keywords='update user alias'>
 <h1 id="update-user-alias">Update user alias</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/alias/update</p>

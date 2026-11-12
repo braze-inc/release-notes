@@ -1,4 +1,4 @@
-<div id='api_xweezrtoznep' class='api_div' data-search-keywords='delete user relationship user external_id rel_kind alias alias_name alias_label deleted'>
+<div id='api_lihlsasdwngu' class='api_div' data-search-keywords='delete user relationship user external_id rel_kind alias alias_name alias_label deleted'>
 <h1 id="delete-user-relationship">Delete user relationship</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/data_objects/objects/{type_name}/{object_id}/users</p>

@@ -47,13 +47,13 @@ The key differences are:
 - **Permissions:** Access is based on your dashboard user account instead of API key permissions.
 - **Workspace targeting:** Workspace context is passed per request instead of being fixed in local config.
 
-## Frequently Asked Questions (FAQ) {#faq}
+## Frequently asked questions {#faq}
 
 ### Which MCP clients can I use?
 
-An MCP client is the AI tool you connect to the Braze MCP server, such as Claude, ChatGPT, or Cursor. Any MCP client that follows the MCP standard for remote servers should work with the Braze MCP server. The client must authenticate with OAuth and register itself, through Dynamic Client Registration or a Client ID Metadata Document, so you don't enter a client ID or client secret. Before you can sign in, a company admin must also approve the client's redirect URI in [OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-approved-redirect-uris).
+An MCP client is the AI tool you connect to the Braze MCP server, such as Claude, ChatGPT, or Cursor. Any MCP client that follows the MCP standard for remote servers works with the Braze MCP server. The client must authenticate with OAuth and register itself, through Dynamic Client Registration or a Client ID Metadata Document, so you don't enter a client ID or client secret. Before you can sign in, a company admin must approve the client in [MCP Clients](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-mcp-clients) as a Braze-verified client or approve its custom redirect URI.
 
-Braze has tested Claude and ChatGPT through custom connectors, as well as Cursor, OpenAI Codex, Claude Code, and Visual Studio Code.
+Braze has already verified Claude, ChatGPT, Cursor, OpenAI Codex, Claude Code, and Visual Studio Code.
 
 ### What Braze data can my MCP client access?
 
@@ -78,7 +78,7 @@ Either endpoint can reach any Braze cluster.
 
 ### Can I use the Braze remote MCP server with a client that Braze hasn't tested?
 
-Yes, if your client can register itself through Dynamic Client Registration or a Client ID Metadata Document. A company admin must approve the client's redirect URI in [OAuth settings](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-approved-redirect-uris) before you can sign in. 
+Yes, if your client can register itself through Dynamic Client Registration or a Client ID Metadata Document. A company admin must approve the client's redirect URI in [MCP Clients](https://www.braze.com/docs/user_guide/administer/global/admin_settings/oauth_admin#manage-custom-redirect-uris) before you can sign in. 
 
 ### Does the remote server support multiple workspaces?
 

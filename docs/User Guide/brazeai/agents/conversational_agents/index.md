@@ -64,11 +64,18 @@ Use a conversational workflow to define a task, choose channels and an audience,
 Go to **Agents** > **Conversational Agents**, then set up the details for your workflow:
 
 1. Enter a name for the workflow.
-2. Enter a purpose that describes what this workflow does, so the agent knows when to use it.
+2. Enter a purpose that describes what this workflow does. The agent uses the purpose and the conversation history to choose which workflow to use, so describe when the workflow applies. For example, "The user has questions about event times or refunds."
 3. Select the channels this workflow is enabled for. Supported channels are SMS, RCS, WhatsApp, and Web.
    - For web, select which web apps this workflow is enabled for.
    - For SMS, RCS, and WhatsApp, select which [subscription groups](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups) this workflow is enabled for.
 4. Select the [segments](https://www.braze.com/docs/user_guide/audience/segments) a user must belong to in order to access this workflow.
+
+**Note:**
+
+
+Workflows aren't tied to a Canvas. A subscription group or web app can have several workflows, and the agent moves between them during a conversation. To limit a workflow to users who received a specific Canvas message, create a segment of those users and select it for the workflow. To test with a small audience first, use a segment of a small subset of users.
+
+
 
 For SMS, RCS, and WhatsApp, some inbound message triggers can block the agent. On the [Settings](#settings) page, review the triggers that may block agents for each subscription group.
 
@@ -124,7 +131,14 @@ When you create the attribute, you can optionally add **Allowed values**:
 
 In **Instruction**, enter `/` and select **Set workflow attribute**. Select an existing workflow attribute, or select **Create new attribute**.
 
-When you create a new attribute, enter a name and description, then select the type. After you select the type, optionally add allowed values.
+When you create a new attribute, enter a name and description, then select the type. After you select the type, optionally add allowed values. Each allowed value needs a value of up to 100 characters and a description of up to 250 characters. Values must be unique, and an attribute can have up to 250 allowed values.
+
+With allowed values, the agent chooses one of your values even when the user words it differently. For example, if a `skin_type` attribute allows only `dry` and `oily`, and a user describes their skin with a synonym for dry, the agent sets `dry`. Without allowed values, the agent chooses a value from the attribute description and your step instructions, which it usually follows but may not follow strictly.
+
+To save a controlled value to a user profile, use two tools in the same step:
+
+1. Use **Set workflow attribute** to set the attribute after the user confirms their answer.
+2. Use **Set custom attribute**, and select **Workflow attribute** as the source for the custom attribute value.
 
 ### Get a workflow attribute
 
@@ -286,9 +300,45 @@ Preview mode does not log custom attributes or custom events.
 
 ## Create simulations
 
+A simulation tests your workspace's conversational workflows without a real user. Create cases that describe a scenario and the outcomes you expect. A simulated user follows that scenario. When the conversation ends, a grader checks the conversation and tool calls against those outcomes. Mock webhook responses so the cases stay predictable.
+
 Go to **Agents** > **Conversational Agents**, then select **Simulations**.
 
-Create simulation cases that describe a user scenario and expected outcomes. Run a simulation to test those cases against your workspace's conversational workflows. You can mock webhook responses so cases stay predictable while you evaluate agent behavior.
+### Create a case
+
+On the **Cases** tab, select **Create case**, then set up the following:
+
+| Field | Description |
+| --- | --- |
+| **Case name** | A unique name for the case. |
+| **Workflows** | The workflows the conversation can enter. Select at least one. |
+| **User** | The user the conversation runs as, in test mode. Search by email, phone number, or external user ID. |
+| **User's first message** | The first message the simulated user sends. |
+| **What the user wants, how they behave, and what they know** | The scenario. The simulated user knows only what you write here. For example, a user who's frustrated about a refund, or a user who wants to book an appointment. |
+| **Expected outcomes** | One checkable statement for each thing the agent should do or say, such as "The agent gives the user a support email address." You can add up to 10. |
+| **Webhook responses** | Optional. Turn on **Mock response for** a webhook, then enter fixed values to return instead of calling your endpoint. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Simulation case fields" }
+
+Create a case for each scenario you want to test, such as a frustrated user, a user who wants to book, and a user with a refund question.
+
+### Run a simulation and review results
+
+Select **Run simulation**, choose the cases to run, then select **Start run**. Review past runs on the **Runs** tab.
+
+**Important:**
+
+
+Braze calls any webhook that a case doesn't mock. To avoid calling your endpoints, mock each webhook the workflows use.
+
+
+
+Each case in a run shows the conversation between the simulated user and the agent, and a result for each expected outcome with an explanation:
+
+- **Passed**
+- **Failed**
+- **Inconclusive**, when the conversation doesn't contain enough evidence to decide
+
+A case fails if any outcome fails. If no outcome fails but any is inconclusive, the case is inconclusive. Otherwise, the case passes.
 
 ## Review conversation history {#review-conversation-history}
 
