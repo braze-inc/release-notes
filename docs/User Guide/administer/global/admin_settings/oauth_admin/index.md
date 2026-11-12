@@ -1,6 +1,6 @@
 # Manage OAuth settings
 
-> OAuth settings manage company-wide access to the [Braze MCP server](https://www.braze.com/docs/user_guide/brazeai/mcp_server/), control which MCP client redirect URIs can connect to Braze, and let you revoke every MCP OAuth token for your company.
+> OAuth settings manage company-wide access to the [Braze MCP server](https://www.braze.com/docs/user_guide/brazeai/mcp_server/), control which MCP clients and redirect URIs can connect to Braze, and let you revoke every MCP OAuth token for your company.
 
 OAuth settings apply to your entire company. The permissions assigned to each user determine which workspaces and features they can access through the MCP server.
 
@@ -8,7 +8,7 @@ OAuth settings apply to your entire company. The permissions assigned to each us
 
 | Requirement | Description |
 | --- | --- |
-| "Admin" permission | You must have the company-level "Admin" permission to view OAuth settings, turn MCP OAuth access on or off, manage redirect URIs, or revoke MCP OAuth tokens. |
+| "Admin" permission | You must have the company-level "Admin" permission to view OAuth settings, turn MCP OAuth access on or off, approve or remove MCP clients, manage redirect URIs, or revoke MCP OAuth tokens. |
 | "Use MCP Server" permission | Users must have this permission for each workspace they want to access through the MCP server. This permission is separate from the "Admin" permission used to manage OAuth settings. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Requirements for managing OAuth settings" }
 
@@ -31,13 +31,14 @@ OAuth policy is stored at the company level. Workspace admins can't override **M
 
 | Control | Where you configure it | Scope |
 | --- | --- | --- |
-| **MCP OAuth access** | **Settings** > **Admin Settings** > **External Connections** | Entire company. When this is off, MCP OAuth is denied in every workspace. |
-| Approved redirect URIs | **Settings** > **Admin Settings** > **External Connections** | Entire company. Approved and blocked URIs apply to all workspaces. |
-| **Revoke MCP OAuth tokens** | **Settings** > **Admin Settings** > **External Connections** | Entire company. Revocation applies to every MCP OAuth token in every workspace. |
+| **MCP OAuth access** | **External Connections** > **OAuth Settings** | Entire company. When this is off, MCP OAuth is denied in every workspace. |
+| **MCP Clients** page | **External Connections** > **MCP Clients** | Entire company. Approving a verified client allows users with "Use MCP Server" to connect it in every workspace. |
+| Approved redirect URIs | **External Connections** > **MCP Clients** | Entire company. Custom (and local) redirect URIs apply to all workspaces. |
+| **Revoke MCP OAuth tokens** | **External Connections** > **OAuth Settings** | Entire company. Revocation applies to every MCP OAuth token in every workspace. |
 | "Use MCP Server" permission | **Settings** > **User Management** | Per workspace. Users need this permission in each workspace they access through the MCP server. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Company and workspace OAuth controls" }
 
-Only users with the "Admin" permission can change **MCP OAuth access**, change redirect URI statuses, or revoke MCP OAuth tokens. For how workspace permissions interact with these company settings, see [OAuth and MCP access](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/oauth_settings/).
+Only users with the "Admin" permission can change **MCP OAuth access**, approve or remove MCP clients, change redirect URI statuses, or revoke MCP OAuth tokens. For how workspace permissions interact with these company settings, see [OAuth and MCP access](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/oauth_settings/).
 
 ## Turn MCP OAuth access on or off
 
@@ -46,22 +47,65 @@ To update MCP OAuth access for your company:
 1. Go to **Settings** > **Admin Settings** > **External Connections**.
 2. In **Global access controls**, turn **MCP OAuth access** on or off.
 
-When **MCP OAuth access** is on, users with the "Use MCP Server" permission can authorize approved MCP clients. When it's off, OAuth access to the MCP server is denied for all users and workspaces in your company.
+When **MCP OAuth access** is on, users with the "Use MCP Server" permission can authorize approved MCP clients. When it's off, OAuth access to the MCP server is denied for all users and workspaces in your company, and the **MCP Clients** tab is unavailable.
 
-Turning off **MCP OAuth access** doesn't remove or block your configured redirect URIs. Braze revokes existing MCP OAuth tokens for your company, so connected MCP clients lose access. The **Approved redirect URIs** section is hidden while MCP OAuth access is off; turn it back on to manage the same URI list again.
+Turning off **MCP OAuth access** doesn't remove or block your configured redirect URIs. Braze revokes existing MCP OAuth tokens for your company, so connected MCP clients lose access.
 
-If Braze has turned off the remote MCP server for your environment, the **MCP OAuth access** toggle is disabled and a message explains that the company setting has no effect until the remote MCP server is turned on again.
+## Manage MCP clients
 
-## Manage approved redirect URIs
-
-After you turn on **MCP OAuth access**, the **Approved redirect URIs** section lists the redirect URIs that MCP clients can use during authentication. For formatting guidance, see [Redirect URI formats](#redirect-uri-formats).
+The **MCP Clients** tab is where you control which Braze-verified MCP clients your users can connect, and where you manage [custom redirect URIs](#manage-custom-redirect-uris) for clients that aren't on Braze's verified list.
 
 **Important:**
 
 
-A company admin must approve the redirect URI of every MCP client, including clients such as Claude, ChatGPT, Cursor, OpenAI Codex, Claude Code, and Visual Studio Code. Users can't finish connecting unless the client's redirect URI is approved. To approve one, see [Add a redirect URI](#add-a-redirect-uri).
+Users can't finish connecting an MCP client unless your company has approved that client (for Braze-verified clients) or its redirect URI (for custom clients). Approving a verified client allows users with the "Use MCP Server" permission to connect it across all workspaces.
 
 
+
+### Verified MCP clients
+
+Braze pre-registers a set of verified MCP clients so you can approve them by name instead of pasting redirect URIs. After you approve a client, it appears under **Verified MCP clients** with an **Approved** status:
+
+- ChatGPT
+- Claude
+- Claude Code
+- Cursor
+- OpenAI Codex
+- Visual Studio Code
+
+### Browse and approve a verified client
+
+1. Go to **Settings** > **Admin Settings** > **External Connections**.
+2. Confirm **MCP OAuth access** is on under **OAuth Settings**.
+3. Open the **MCP Clients** tab.
+4. Select **Add MCP client** > **Browse verified MCP clients**, or select **Browse MCP Clients** if you haven't approved any clients yet.
+5. Search or filter the list, then open the client you want to allow.
+6. Review the client's details and supported experiences (for example, web, desktop, or terminal), then select **Finish setup**.
+
+Some clients connect only through local addresses on each user's computer (such as `http://localhost/...` or a custom scheme). Local addresses aren't unique to one app, so other apps that use the same address can also reach Braze after you approve it. When you approve a client that needs local addresses, Braze may ask you to approve those addresses at the same time. You can remove the client or change URI status later.
+
+### MCP client statuses
+
+| Status | Meaning |
+| --- | --- |
+| **Not approved** | Your company hasn't approved the client yet. The client isn't on your approved list, and users can't connect it. |
+| **Approved** | Users with the "Use MCP Server" permission can connect this client. None of the client's redirect URIs are blocked. |
+| **Partial access** | The client is approved, but one or more of its redirect URIs are **Blocked** in the redirect URI table. Users can still connect through the client's remaining approved addresses. |
+| **No access** | The client is approved, but every one of its redirect URIs is **Blocked**. Users can't connect the client until you unblock at least one address. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="MCP client statuses" }
+
+### Remove a verified client
+
+To take a verified client off your approved list, open the client from the **MCP Clients** tab and select **Remove MCP client**. Users can't connect that client again until you approve it from **Browse verified MCP clients**.
+
+Removing a client doesn't end sessions for users who are already connected. Select [**Revoke MCP OAuth tokens**](#revoke-mcp-oauth-tokens) to end those sessions.
+
+## Manage custom redirect URIs {#manage-custom-redirect-uris}
+<a id="manage-approved-redirect-uris"></a>
+
+After you turn on **MCP OAuth access**, the **Approved redirect URIs** section on the **MCP Clients** tab lists custom redirect URIs for local MCP clients or remote clients that Braze hasn't verified. Use this list when a client isn't available among the [verified MCP clients](#manage-mcp-clients). For formatting guidance, see [Redirect URI formats](#redirect-uri-formats).
+
+You can also select **Add MCP client** > **Add custom redirect URIs** to add URIs without browsing verified MCP clients.
 
 The **Approved redirect URIs** table shows the following information:
 
@@ -71,7 +115,7 @@ The **Approved redirect URIs** table shows the following information:
 | Added by | The dashboard user who added or last updated the URI. |
 | Date added | When the URI was added or last updated. |
 | Status | Whether the URI is **Approved** or **Blocked**. |
-| Actions | **Block** or **Unblock**, depending on the current status. |
+| Actions | **Block**, **Unblock**, or **Delete redirect URI**, depending on the current status. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Approved redirect URIs table columns" }
 
 ### Redirect URI formats
@@ -83,17 +127,17 @@ The **Approved redirect URIs** table shows the following information:
 | Custom scheme | Starts with a custom URI scheme (not `http://` or `https://`), such as `cursor://`. Enter it exactly as shown. Some desktop apps use these addresses. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Redirect URI formats" }
 
-### Add a redirect URI
+### Add a custom redirect URI
 
-To allow an MCP client whose redirect URI isn't already listed:
+To allow an MCP client that isn't a Braze-verified MCP client:
 
-1. Select **Add redirect URI**.
+1. Open the **MCP Clients** tab, then select **Add MCP client** > **Add custom redirect URIs**, or select **Add redirect URI** in the **Approved redirect URIs** section.
 2. Enter the full redirect URI with callback protocol from the client's OAuth or integration settings. Use the [Redirect URI formats](#redirect-uri-formats) table if you need help matching the client's callback.
 3. Select **Save**.
 
 For local clients, use `127.0.0.1` and omit the port number in the redirect URI you add.
 
-Only redirect URIs with an **Approved** status can complete a new OAuth authorization. If a client's redirect URI isn't on the list, or its status is **Blocked**, Braze denies the authorization request.
+Only redirect URIs with an **Approved** status can complete a new OAuth authorization for custom clients. If a client's redirect URI isn't on the list, or its status is **Blocked**, Braze denies the authorization request. For Braze-verified clients, prefer [approving the client on the MCP Clients page](#browse-and-approve-a-verified-client) instead of adding URIs by hand.
 
 ### Block a redirect URI
 
@@ -108,6 +152,15 @@ Alternatively, remove the "Use MCP Server" permission from a user to stop only t
 To restore access for a blocked redirect URI, select **Unblock** for its row and confirm the action. Braze updates the existing record to **Approved** instead of creating a duplicate.
 
 Users who were previously connected to that MCP client need to authenticate again.
+
+### Delete a redirect URI
+
+To remove a redirect URI from the **Approved redirect URIs** list, select **Delete redirect URI** for its row and confirm the action.
+
+- If the URI was **Approved**, approved marketplace clients that use that address can still connect through it. Other apps that relied only on the custom list entry can no longer use it. To stop approved clients from using the address as well, [block the URI](#block-a-redirect-uri) instead of deleting it.
+- If the URI was **Blocked**, deleting it removes the block. Approved clients and other apps that use the address can connect through it again. To keep the address blocked, leave it on the list.
+
+Deleting a redirect URI doesn't revoke tokens for users who are already connected. Select [**Revoke MCP OAuth tokens**](#revoke-mcp-oauth-tokens) to end those sessions.
 
 ## Revoke MCP OAuth tokens
 
@@ -146,13 +199,14 @@ If revocation doesn't finish, Braze shows an error message. Some tokens may alre
 
 ## Troubleshoot blocked connections
 
-If a user sees "This app needs approval" or a generic error such as "An unexpected error occurred" when they connect an MCP client to Braze, your company may not have approved that client's redirect URI.
+If a user sees "This app needs approval" or a generic error such as "An unexpected error occurred" when they connect an MCP client to Braze, your company may not have approved that client or its redirect URI.
 
-1. Go to **Settings** > **Admin Settings** > **External Connections** and find the client's redirect URI in the **Approved redirect URIs** table. Check the **Status** column to see whether the URI is approved or blocked.
-2. [Add the URI](#add-a-redirect-uri) if it isn't listed, or select **Unblock** if its status is **Blocked**.
-3. Ask the user to connect their MCP client again.
+1. Go to **Settings** > **Admin Settings** > **External Connections** > **MCP Clients**.
+2. If the client is Braze-verified, open it from **Verified MCP clients** or **Browse verified MCP clients**. [Approve](#browse-and-approve-a-verified-client) it if it isn't on your approved list, including any local addresses it requires.
+3. If the client isn't verified, find its redirect URI in the **Approved redirect URIs** table. [Add the URI](#add-a-custom-redirect-uri) if it isn't listed, or select **Unblock** if its status is **Blocked**.
+4. Ask the user to connect their MCP client again.
 
-If the redirect URI is approved and the connection still fails, confirm that **MCP OAuth access** is on and that the user has the "Use MCP Server" permission. For more troubleshooting, see [Setting up the Braze MCP server](https://www.braze.com/docs/user_guide/brazeai/mcp_server/setup/#troubleshooting).
+If the client or redirect URI is approved and the connection still fails, confirm that **MCP OAuth access** is on and that the user has the "Use MCP Server" permission. For more troubleshooting, see [Setting up the Braze MCP server](https://www.braze.com/docs/user_guide/brazeai/mcp_server/setup/#troubleshooting).
 
 ## Audit OAuth activity
 

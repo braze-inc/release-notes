@@ -1,4 +1,4 @@
-<div id='api_mzlctwxwlwny' class='api_div' data-search-keywords='cancel exports by segment'>
+<div id='api_ilxkxdcwiocm' class='api_div' data-search-keywords='cancel exports by segment'>
 <h1 id="cancel-exports-by-segment">Cancel exports by segment</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/export/segment/cancel</p>
