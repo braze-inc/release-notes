@@ -23,7 +23,7 @@ Using various [tag](https://experienceleague.adobe.com/docs/experience-platform/
 
 | API | Rate Limits |
 | --- | --- |
-| User Track | 50,000 requests per minute.<br><br>Refer to the [User Track API documentation](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#rate-limit) for details.
+| User Track | 50,000 requests per minute.<br><br>Refer to the [User Track API documentation](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#endpoint-reference) for details.
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Rate limits" }
 
 ## Integration

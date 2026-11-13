@@ -112,4 +112,4 @@ Before you retry:
 2. Set `Content-Type: application/json` and send UTF-8 encoded JSON.
 3. Confirm your HTTP client JSON-encodes the object rather than concatenating raw strings.
 
-For `/users/track` payload size and per-request object limits, see [Why do I get `400 Bad Request` with a bad syntax or parse error?](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#why-do-i-get-400-bad-request-with-a-bad-syntax-or-parse-error).
+For `/users/track` payload size and per-request object limits, see [Why do I get `400 Bad Request` with a bad syntax or parse error?](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#endpoint-reference).

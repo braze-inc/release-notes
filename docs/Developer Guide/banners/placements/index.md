@@ -173,7 +173,7 @@ If you insert Banners using the SDK methods in this guide, all analytics events 
 
 
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/web/changelog/#700' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 7.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=web#web_700' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 7.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 Use [`subscribeToBannersEvents`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersevents) to listen for Banner events, and then call [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) to fetch placements. The SDK calls your handler with an event object. Switch on `event.type` to handle each kind of event. For more information about the event values, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
 
@@ -302,7 +302,7 @@ Use `subscribeToBannersEvents` on Web SDK 7.0.0 and later. `subscribeToBannersUp
 
 
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1900' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 19.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_1900' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 19.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 **Note:**
 
@@ -348,7 +348,7 @@ For when each event fires, and what each update reason, retry state, analytics a
 
 
 These steps require Android SDK 44.0.0 or later. Use them to render Banners without reacting to cached data.
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/android/changelog/#4400' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 44.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=android#android_4400' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 44.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 **Note:**
 
@@ -895,7 +895,7 @@ Braze.getInstance(context).logBannerImpression("placement_id_homepage_top");
 ```swift
 // Retrieve a banner and log an impression on it (for example, once when it enters viewport)
 braze.banners.getBanner(for: "placement_id_homepage_top") { banner in
-  banner?.context.logImpression()
+  banner?.context?.logImpression()
 }
 ```
 [Swift SDK reference](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/banner/context-swift.class/logimpression())
@@ -951,7 +951,7 @@ Braze.getInstance(context).logBannerClick("placement_id_homepage_top", buttonId)
 ```swift
 // Retrieve a banner and log a click on it
 braze.banners.getBanner(for: "placement_id_homepage_top") { banner in
-  banner?.context.logClick(buttonId: buttonId)  // buttonID is optional
+  banner?.context?.logClick(buttonId: buttonId)  // buttonID is optional
 }
 ```
 [Swift SDK reference](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/banner/context-swift.class/logclick(buttonid:))
@@ -980,7 +980,7 @@ Banner dismissals programmatically remove a Banner from a placement when a user 
 
 These are the minimum SDK versions required to log Banner dismissals:
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1410' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 14.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#671' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.7.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#4210' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 42.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_1410' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 14.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=web#web_671' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.7.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=android#android_4210' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 42.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ### Integrations
 
@@ -1006,7 +1006,7 @@ For custom UI integrations, you can call the dismiss method directly on your Bra
 
 These are the minimum SDK versions required to dismiss a banner programmatically:
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1510' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 15.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#690' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.9.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#4230' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 42.3.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/flutter/changelog/#2000' class='sdk-versions--chip flutter-sdk' target='_blank'>Flutter: 20.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/react_native/changelog/#2200' class='sdk-versions--chip reactnative-sdk' target='_blank'>React Native: 22.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_1510' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 15.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=web#web_690' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.9.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=android#android_4230' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 42.3.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=flutter#flutter_2000' class='sdk-versions--chip flutter-sdk' target='_blank'>Flutter: 20.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=react%20native#reactnative_2200' class='sdk-versions--chip reactnative-sdk' target='_blank'>React Native: 22.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 
 
@@ -1313,7 +1313,7 @@ You can use custom properties from your Banner campaign to retrieve key–value 
 
 You must [add custom properties](https://www.braze.com/docs/user_guide/channels/banners/create_a_banner#custom-properties) to your Banner campaign. Additionally, these are the minimum SDK versions required to access custom properties:
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1310' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 13.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#610' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#3800' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 38.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/flutter/changelog/#1510' class='sdk-versions--chip flutter-sdk' target='_blank'>Flutter: 15.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/react_native/changelog/#1700' class='sdk-versions--chip reactnative-sdk' target='_blank'>React Native: 17.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_1310' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 13.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=web#web_610' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=android#android_3800' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 38.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=flutter#flutter_1510' class='sdk-versions--chip flutter-sdk' target='_blank'>Flutter: 15.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=react%20native#reactnative_1700' class='sdk-versions--chip reactnative-sdk' target='_blank'>React Native: 17.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ### Access custom properties
 

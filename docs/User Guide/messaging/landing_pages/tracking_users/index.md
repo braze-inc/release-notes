@@ -76,4 +76,4 @@ When you're ready, you can send the message to start tracking users through your
 
 ### Use landing page URLs in Content Cards
 
-Content Cards have a [2&nbsp;KB payload limit](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card#size-limitations-for-content-cards) that applies to the entire card after Liquid is rendered. When you include a `{% landing_page_url %}` Liquid tag, Braze counts the landing page tracking token as a fixed 32&nbsp;bytes toward that limit—not the full length of the token. The rest of the URL and the card's title, body, and other fields still count toward the limit as usual.
+Content Cards have a [2&nbsp;KB payload limit](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card#content-card-size-limitations) that applies to the entire card after Liquid is rendered. When you include a `{% landing_page_url %}` Liquid tag, Braze counts the landing page tracking token as a fixed 32&nbsp;bytes toward that limit—not the full length of the token. The rest of the URL and the card's title, body, and other fields still count toward the limit as usual.

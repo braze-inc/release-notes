@@ -24,6 +24,22 @@ After installing the app, it's available within a design, under the **Apps** men
 
 ### Step 2: Authorize your Braze account
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 The first time you use the Braze app—whether you open it from the **Apps** menu (media library export) or from the **Share** menu (email export)—select **Connect** to start authorization. This lets Canva list the Braze workspaces you can access and create media library assets on your behalf.
 
 For **email** exports, Canva may ask you to sign in again and approve additional access, including permission to **create email templates**. Accept those permissions to finish publishing email designs to Braze.

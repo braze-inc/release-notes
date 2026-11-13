@@ -15,7 +15,7 @@ You can use nested objects—objects that are inside of another object—to send
 
 The following SDK versions support nested objects:
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#500' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 5.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#330' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 3.3.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#2000' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 20.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_500-early-access' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 5.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=web#web_330' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 3.3.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=android#android_2000' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 20.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ## Step 1: Generate a schema
 

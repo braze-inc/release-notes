@@ -5,7 +5,7 @@
 **Note:**
 
 
-You can also set [workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours) as a default for a messaging channel across your workspace. Workspace quiet hours is an early access feature that requires enablement by your Braze account manager and appropriate user permissions.
+You can also set [workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours) as a default for a messaging channel across your workspace. Workspace quiet hours requires the appropriate user permissions.
 
 
 

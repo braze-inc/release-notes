@@ -5,7 +5,7 @@
 **Important:**
 
 
-**Legacy billing metric:** As of Spring 2025, Braze no longer bills new customers based on data points. Data points are a legacy billing metric that applies only to customers on older, multi-year contracts. If you signed your contract after Spring 2025, this page does not apply to your billing structure.
+**Legacy billing metric:** As of Spring 2025, Braze no longer bills new customers based on data points. Data points are a legacy billing metric that applies only to customers on older, multi-year contracts. If you signed your contract after Spring 2025, this page does not apply to your billing structure. To compare data points with the credits model and confirm which plan your company uses, see [Types of billing plans](https://www.braze.com/docs/user_guide/administer/global/billing#types-of-billing-plans).
 
 
 

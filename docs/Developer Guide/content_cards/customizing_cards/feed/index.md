@@ -60,7 +60,7 @@ Real-time delivery covers the following updates:
 
 Real-time delivery requires the following minimum SDK versions:
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1800' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 18.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#6120' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.12.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#4311' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 43.1.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_1800' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 18.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=web#web_6120' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.12.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=android#android_4311' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 43.1.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 On earlier SDK versions, cards continue to arrive at session start and on refresh.
 

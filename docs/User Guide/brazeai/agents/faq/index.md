@@ -121,3 +121,18 @@ Yes. When a Customer uses Braze Auto model (powered by Gemini), Google will be a
 Yes. When using the Braze Auto model, we have a specific HIPAA agreement, the Business Associate Addendum (BAA), with Google covering Gemini, which powers our Auto model.
 
 Our BAA applies only to customers using the Braze Auto model. If customers use their own LLM key, Braze does not send Protected Health Information (PHI) subject to HIPAA to an LLM on their behalf; customers send it directly. In this case, the BAA between Braze and Google does not apply. Data processing through their own LLM key is governed by the customer's contract and any BAA they have directly with their LLM provider.
+
+### What happens to agent logs when a user is deleted? {#agent-logs-user-deletion}
+
+When you delete a user profile, Braze redacts that user's content from your agents' **Logs**. This applies when you delete a single user, delete a segment of users, or delete a workspace.
+
+In each of that user's log entries, Braze replaces or clears:
+
+- The agent's input, including rendered Liquid and Canvas context
+- Profile data Braze added to the input
+- The agent's output and any fallback value
+- Tool call arguments and outputs
+
+Braze also removes the user ID, so searching **Logs** for that user no longer returns those entries. Your agent's instructions don't change.
+
+The log entries themselves remain, so agent invocation counts and credit usage still include them. Logs exported before the deletion remain unchanged.

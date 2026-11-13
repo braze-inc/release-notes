@@ -223,6 +223,7 @@ This doesn't happen very often, but Braze takes account suspension and deletions
 | Payment issues | Your company's Braze account may have unresolved billing or payment issues. |
 | Policy violations | The account may have violated Braze terms of service or acceptable use policies. |
 | Security concerns | Suspicious activity may have triggered an automatic suspension for security reasons. |
+| Inactivity | If your company has [Suspend dormant accounts](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#dormant-accounts) turned on, Braze suspends dashboard accounts after 180 days without a sign-in. Ask a company admin to restore your account in **Company Users**. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Reason for account suspension" }
 
 To resolve this issue, contact your company's Braze administrator, Braze account manager, or [Support](https://www.braze.com/docs/support_contact).

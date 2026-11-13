@@ -10,7 +10,7 @@ To create a push primer in-app message in Braze, you can use the button on-click
 
 This feature requires [button on-click behavior](#button-actions), which is supported in the following minimum versions or later:
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#540' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 5.4.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#403' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 4.0.3+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#2100' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 21.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_540' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 5.4.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=web#web_403' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 4.0.3+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=android#android_2100' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 21.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 Additionally, note the following platform-specific details:
 

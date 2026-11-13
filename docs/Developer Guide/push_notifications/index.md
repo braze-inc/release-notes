@@ -1504,7 +1504,7 @@ With dynamic APNs gateway management, you'll have:
 
 Braze supports Dynamic APNs gateway management for push notifications on iOS with the following SDK version requirement:
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1000' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 10.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_1000' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 10.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ### How it works
 

@@ -31,6 +31,22 @@ In Figma, you can also find the Figma to Braze Export plugin in the **Plugins** 
 
 ### Step 2: Connect to Braze
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 After installing, select **Connect to Braze** to connect your Braze account, then select **Continue**.
 
 Next, select your Braze workspace from the **Braze workspace** dropdown or enter the workspace name.

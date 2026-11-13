@@ -24,12 +24,20 @@ This section maps each endpoint to its required permission so you can scope API 
 | `data_objects.object_relationships.create` | Object relationship create |
 | `data_objects.object_relationships.update` | Object relationship replace and update |
 | `data_objects.object_relationships.delete` | Object relationship delete |
+| `data_objects.bulk_upsert` | Object bulk create or replace |
+| `data_objects.bulk_delete` | Object bulk delete |
+| `data_objects.object_relationships.bulk_upsert` | Object relationship bulk create or replace |
+| `data_objects.object_relationships.bulk_delete` | Object relationship bulk delete |
+| `data_objects.user_relationships.bulk_upsert` | User relationship bulk create or replace |
+| `data_objects.user_relationships.bulk_delete` | User relationship bulk delete |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Data Objects permission groups" }
 
 **Note:**
 
 
 Object relationship reads use `data_objects.read`. There is no `data_objects.object_relationships.read` permission.
+
+The [bulk endpoints](#bulk-endpoints) use their own permissions, and upsert and delete are separate permissions. The single-record permissions, such as `data_objects.create`, don't grant access to the bulk endpoints.
 
 
 
@@ -41,7 +49,10 @@ This section explains default request quotas and response headers for both read 
 |---|---|
 | Data Objects reads | 1000 requests per minute |
 | Data Objects writes | 1000 requests per minute |
+| Data Objects bulk writes | 1000 requests per minute, shared across the six [bulk endpoints](#bulk-endpoints) and with Cloud Data Ingestion syncs of data objects |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Data Objects default rate limits" }
+
+The bulk write limit applies per workspace and is separate from the single-record write limit.
 
 Every response includes `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset`.
 
@@ -220,6 +231,35 @@ The `DELETE` endpoints for object relationships and user relationships require a
 
 
 
+## Bulk endpoints
+
+Use the bulk endpoints to sync data objects, object relationships, and user relationships from your own systems in batches. Each request creates, replaces, or deletes up to 50 records, and Braze processes the batch in the background.
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| `PUT` | [`/data_objects/objects`](https://www.braze.com/docs/api/endpoints/data_objects/objects/put_bulk_upsert_data_objects) | Create or replace up to 50 data objects, of any mix of types |
+| `DELETE` | [`/data_objects/objects`](https://www.braze.com/docs/api/endpoints/data_objects/objects/delete_bulk_data_objects) | Delete up to 50 data objects, of any mix of types |
+| `PUT` | [`/data_objects/object_relationships`](https://www.braze.com/docs/api/endpoints/data_objects/object_relationships/put_bulk_upsert_object_relationships) | Create or replace up to 50 object-to-object relationships |
+| `DELETE` | [`/data_objects/object_relationships`](https://www.braze.com/docs/api/endpoints/data_objects/object_relationships/delete_bulk_object_relationships) | Delete up to 50 object-to-object relationships |
+| `PUT` | [`/data_objects/user_relationships`](https://www.braze.com/docs/api/endpoints/data_objects/user_relationships/put_bulk_upsert_user_relationships) | Create or replace up to 50 user-to-object relationships |
+| `DELETE` | [`/data_objects/user_relationships`](https://www.braze.com/docs/api/endpoints/data_objects/user_relationships/delete_bulk_user_relationships) | Delete up to 50 user-to-object relationships |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Data Objects bulk endpoints" }
+
+### When to use the bulk endpoints
+
+Use the bulk endpoints when you sync many records from your own systems and don't need each change applied before the response returns. Use the single-record endpoints when you need the change visible right away, when you need to read records, or when you want to update only some of a record's attributes with `PATCH`.
+
+The bulk endpoints differ from the single-record endpoints in these ways:
+
+- Processing is asynchronous. A `202` response means Braze accepted and queued the batch, not that it applied the records. Braze checks whether types, relationship types, objects, and users exist, and whether attributes match the type's fields, when it processes the batch. A request that returns `202` can still produce failures for individual records later.
+- Validation is all-or-nothing. If any record in a request fails validation, Braze rejects the whole request with `400`, stores nothing, and lists every error.
+- Records are ordered by receipt time. Braze stamps every record with the time it received the request, so don't send `updated_at`. When two requests change the same record, the one Braze received later wins.
+- Records can wait on dependencies. A delete of an object or relationship that doesn't exist yet, and a relationship whose object or user doesn't exist yet, waits instead of failing right away. Braze retries for about 40 hours (10 attempts). An object upsert never waits.
+- The bulk endpoints use their own [API key permissions](#api-key-permissions) and share a [rate limit](#rate-limits) of 1,000 requests per minute per workspace.
+- The bulk endpoints never create data object types. Every `type_name` must already exist.
+
+The [product limits](#product-limits) apply to the bulk endpoints in the same way as the single-record endpoints.
+
 ## Pagination and data freshness
 
 This section covers list pagination behavior and expected data visibility timing after writes.
@@ -227,7 +267,7 @@ This section covers list pagination behavior and expected data visibility timing
 - List endpoints support `limit` and `offset`.
 - `limit` defaults to `100` and is clamped to `1` through `250`.
 - `offset` defaults to `0`, and negative values are floored to `0`.
-- Writes are immediately visible to reads and Liquid personalization.
+- Single-record writes are immediately visible to reads and Liquid personalization. [Bulk writes](#bulk-endpoints) are applied when Braze processes the queued batch.
 - Segment membership based on data objects can lag by up to one hour because calculated filters refresh hourly.
 
 ## Error behavior
@@ -236,4 +276,5 @@ This section summarizes status and error response patterns used across the Data 
 
 - `404`, `409`, `422`, and `429` return an `errors` array with `id` and `message`.
 - `400`, `401`, and `403` return a single `error` string.
+- The [bulk endpoints](#bulk-endpoints) return `400` and `500` errors as an `errors` array with `id` and `message`. A `400` error also includes the `parameter` at fault when there is one and, for record-level errors, the record's `index`.
 - `422` means the request would exceed a [product limit](#product-limits). Default limit values vary by company contract.

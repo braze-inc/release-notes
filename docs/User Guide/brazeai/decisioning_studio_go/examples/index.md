@@ -39,7 +39,7 @@ This also changes how to approach seasonal moments. Keep an always-on agent trai
 
 | Topic | Details |
 | --- | --- |
-| What it looks like | Ongoing campaigns that aren't tied to specific dates or events—winbacks, re-engagement programs, dormant-account nudges, or milestone celebrations. |
+| What it looks like | Ongoing campaigns that aren't tied to specific dates or events—[winback programs](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/examples/winback), re-engagement programs, dormant-account nudges, or milestone celebrations. |
 | Why it fits | Like calendared campaigns, the audience is dynamic but the program runs indefinitely. The agent has time to learn, the content has flexibility, and clicks are a leading indicator the agent can optimize against. |
 | What to bring | Variant options for subject line and call to action (CTA) that frame the message for different motivations. Image variants help if you have them. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Evergreen programs" }
@@ -89,7 +89,7 @@ This also changes how to approach seasonal moments. Keep an always-on agent trai
 | Scenario | Fit | Key consideration |
 | --- | --- | --- |
 | Always-on calendared campaigns | Best fit | Provide multiple base creatives or variant sets to refresh over time. |
-| Evergreen programs (winbacks, re-engagement) | Best fit | Provide variant options that frame the same message for different motivations. |
+| Evergreen programs ([winback](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/examples/winback), re-engagement) | Best fit | Provide variant options that frame the same message for different motivations. |
 | Multi-email promotions | Supported | Aim for at least 10 campaign days (about three to four calendar weeks) of runway; shorter promotions limit learning. |
 | Action- or event-driven journeys | Supported | Confirm send-timing requirements; you are responsible for sequence enforcement. |
 | Drip sequences (onboarding tutorials) | Not recommended | Use Canvas for sequencing; revisit Decisioning Studio Pro for in-drip optimization. |

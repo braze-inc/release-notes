@@ -1,6 +1,6 @@
 # Products
 
-> The **Products** page in **Data Settings** lists the product IDs Braze recorded from [purchase events](https://www.braze.com/docs/user_guide/data/activation/events/purchase_events). Use this page to manage product IDs for targeting and triggering, and to blocklist or delete products you no longer need.
+> The **Products** page in **Data Settings** lists the product IDs Braze recorded from [purchase events](https://www.braze.com/docs/user_guide/data/activation/events/purchase_events). Use this page to manage product IDs for targeting and triggering, and to blocklist products you no longer need.
 
 Go to **Data Settings** > **Products** to open the list of products in your workspace. From this page, you can:
 
@@ -9,7 +9,7 @@ Go to **Data Settings** > **Products** to open the list of products in your work
 - Filter by status (**Active** or **Blocklisted**)
 - Add products before they appear from live purchase data
 - Manage purchase properties for a product
-- Blocklist, reactivate, or delete a product
+- Blocklist or reactivate a product
 
 ## How products get populated
 
@@ -70,9 +70,9 @@ You can reactivate a blocklisted product later from the same page. For permissio
 
 ### Delete
 
-You can delete a product from the actions menu when it isn't referenced by filters or triggers elsewhere in Braze. Deleted products can't be recovered. If the product is still referenced, Braze blocks deletion until those references are removed.
+Deleting a product isn't available from the dashboard. To delete a product, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support). A product that's still referenced by filters or triggers can't be deleted until those references are removed, and deleted products can't be recovered.
 
-To stop your SDK or API from sending a `product_id`, either blocklist that product, or delete it and remove it from your integration.
+To stop your SDK or API from sending a `product_id`, blocklist that product and remove it from your integration.
 
 ## Related topics
 

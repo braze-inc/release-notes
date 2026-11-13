@@ -62,6 +62,8 @@ Add at least one filter to your segment. You can combine as many filters as you 
 
 
 
+
+
 ### Filter groups
 
 Filters are organized into filter groups. Every filter must be part of a filter group that has a minimum of one filter. A segment can have multiple filter groups. To add one, select **Add filter group**. Edit the filter group name by selecting the icon that appears when you hover next to it.

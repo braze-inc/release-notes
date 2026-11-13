@@ -443,9 +443,7 @@ BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage)
 
 
 ```swift
-if let inAppMessage = AppDelegate.braze?.inAppMessagePresenter?.nextAvailableMessage() {
-  AppDelegate.braze?.inAppMessagePresenter?.present(message: inAppMessage)
-}
+AppDelegate.braze?.inAppMessagePresenter?.present(message: inAppMessage)
 ```
 
 

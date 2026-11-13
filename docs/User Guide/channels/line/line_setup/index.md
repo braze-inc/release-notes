@@ -133,6 +133,8 @@ Braze creates a [subscription group](https://www.braze.com/docs/user_guide/audie
 
 
 
+
+
 1. Go to the Braze Technology Partners page for LINE and input the information you noted from your LINE **Providers** tab:
    - Provider ID
    - Channel ID

@@ -871,7 +871,7 @@ With the release of Android M, Android switched from an install-time to a runtim
 
 To use delayed initialization, the minimum Braze SDK version is required:
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/android/changelog/#3800' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 38.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=android#android_3800' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 38.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 **Note:**
 
@@ -1299,7 +1299,7 @@ BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS);
 
 
 ```kotlin
-BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS)
+BrazeLogger.logLevel = BrazeLogger.SUPPRESS
 ```
 
 
@@ -1601,7 +1601,7 @@ empty_swift_file.swift
 You can choose to delay when the Braze Swift SDK is initialized, which is useful if your app needs to load a configuration or wait for user consent before starting the SDK. Delayed initialization makes sure Braze push notifications and push tokens received before SDK initialization are enqueued and processed once the SDK is initialized.
 
 To use delayed initialization, the minimum Braze SDK version is required:
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1120' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 11.2.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_1120' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 11.2.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 #### Step 2.1: Prepare for delayed initialization
 
@@ -2667,7 +2667,7 @@ Integrating the React Native Braze SDK provides basic analytics functionality an
 
 The following minimum SDK version is compatible with all apps using [React Native's New Architecture](https://reactnative.dev/docs/the-new-architecture/landing-page):
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/react_native/changelog/#201' class='sdk-versions--chip reactnative-sdk' target='_blank'>React Native: 2.0.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=react%20native#reactnative_201' class='sdk-versions--chip reactnative-sdk' target='_blank'>React Native: 2.0.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 Starting with SDK version 6.0.0, Braze uses a React Native Turbo Module, which is compatible with both the New Architecture and legacy bridge architecture. This means no additional setup is required.
 
@@ -4092,6 +4092,8 @@ Before you can integrate the .NET MAUI Braze SDK, be sure you meet the following
 
 - Starting in `version 3.0.0`, this SDK requires using .NET 6+ and removes support for projects using the Xamarin framework.
 - Starting in `version 4.0.0`, this SDK dropped support for Xamarin & Xamarin.Forms and added support for .NET MAUI. See [Microsoft's policy](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) around the end of support for Xamarin.
+- Starting in `version 11.0.0`, this SDK requires .NET 10 and drops support for .NET 9. [Microsoft ended support for .NET MAUI 9 on May 12, 2026](https://dotnet.microsoft.com/en-us/platform/support/policy/maui), and for .NET 9 on November 10, 2026. If your app targets .NET 9, stay on version `10.0.0` until you [upgrade to .NET 10](https://www.braze.com/docs/developer_guide/sdk_integration#netmauixamarin_upgrade-from-net-9-to-net-10).
+- Version `11.0.0` and later requires the .NET 10 SDK with the .NET MAUI 10 workloads, Xcode 26 for iOS, and the Android API 36 SDK platform. The minimum iOS deployment target is 12.2, and the minimum Android API level is 21. For the Xcode and JDK versions that match your .NET MAUI version, see [.NET MAUI supported versions](https://github.com/dotnet/maui/wiki/Release-Versions).
 
 ### Step 1: Get the .NET MAUI binding
 
@@ -4229,6 +4231,30 @@ Our current public .NET MAUI binding for the iOS SDK does not connect to the iOS
 
 
 
+
+### Upgrade from .NET 9 to .NET 10
+
+To use SDK version `11.0.0` or later, upgrade your app to .NET 10 first. The NuGet packages target `net10.0-ios26.0` and `net10.0-android36.0`. If your app targets .NET 9, or an older platform version than these, NuGet restore fails with error `NU1202`.
+
+1. Install the .NET 10 SDK and update your workloads:
+
+    ```bash
+    dotnet workload update
+    ```
+
+2. In your app's `.csproj` file, update the target frameworks:
+
+    ```xml
+    <TargetFrameworks>net10.0-ios26.0;net10.0-android36.0</TargetFrameworks>
+    ```
+
+3. Update `Microsoft.Maui.Controls` and any other `Microsoft.Maui.*` packages to version 10.x.
+4. Update the Braze packages to version `11.0.0` or later. If your project pins any of the transitive Android packages to an older version, such as `Xamarin.Firebase.Messaging` or `Xamarin.AndroidX.WebKit`, update or remove those pins to avoid restore errors. For the full list of updated packages, see the [SDK changelog](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md).
+5. Delete the `bin` and `obj` folders, uninstall any previous build of your app from the simulator or device, and rebuild.
+
+#### Known issues
+
+After you upgrade from .NET 9 to .NET 10, a stale simulator or device build can fail to launch with the error `Failed to load AOT module 'System.Private.CoreLib' ... doesn't match assembly`. To resolve this issue, complete step 5 of the upgrade.
 
 
 

@@ -55,6 +55,8 @@ All user profile data (custom events, custom attributes, custom data) is stored 
 
 
 
+
+
 ## Data type detection across environments
 
 Braze automatically detects the data type of a custom attribute based on the first value it receives. If your development environment sends a numeric value like `100` first, the attribute is stored as a number. If your production environment's first value arrives as a string (such as `"100"` wrapped in quotes), the attribute is stored as a string.

@@ -67,7 +67,7 @@ The following lists methods used across various platforms to log purchases. With
 
 After you have set up and begun logging purchase events, you can view this purchase data on a user's profile in the [Overview tab](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles#overview-tab).
 
-The `product_id` values from those purchases also appear on the [Products](https://www.braze.com/docs/user_guide/data/activation/events/products) page under **Data Settings**, where you can search, pre-populate, manage properties, blocklist, or delete products.
+The `product_id` values from those purchases also appear on the [Products](https://www.braze.com/docs/user_guide/data/activation/events/products) page under **Data Settings**, where you can search, pre-populate, manage properties, or blocklist products.
 
 ## Use purchase data
 

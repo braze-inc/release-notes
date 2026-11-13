@@ -99,7 +99,3 @@ PII can only reach Operator in two ways:
 - The user is already viewing PII in the dashboard when they use Operator.
 
 If a user does not have the "View PII" permission, Operator cannot surface PII to them. Keep in mind that Operator does not filter content typed directly into prompts—PII entered manually is sent to the underlying language model. To reduce this risk, see [Minimize PII exposure](#minimize-pii-exposure).
-
-### Audit team usage
-
-Download Braze's [Security Event Report](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#security-event-report) to monitor team usage. The "Requested BrazeAI Operator Response" event provides a comprehensive audit trail, allowing you to review the exact inputs provided to the Operator.

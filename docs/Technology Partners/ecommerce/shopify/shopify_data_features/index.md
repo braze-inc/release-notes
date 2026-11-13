@@ -860,6 +860,8 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 
 
 
+
+
 ```json
 {
   "attributes": [
@@ -908,6 +910,8 @@ After selecting your custom attribute, input a default value and copy the Liquid
 
 
 ## Supported Shopify standard attributes
+
+
 
 
 

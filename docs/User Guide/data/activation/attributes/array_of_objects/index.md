@@ -68,7 +68,7 @@ Updating or removing items in an array requires identifying the item by key and 
 **Important:**
 
 
-When a nested custom attribute in your request contains any invalid values (such as invalid time formats or `null` values), Braze drops all nested custom attribute updates in the request from processing. This applies to all nested structures within that specific attribute. Verify that all values within nested custom attributes are valid before sending. For more information, refer to [Create and update users](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#how-does-userstrack-handle-invalid-nested-custom-attributes).
+When a nested custom attribute in your request contains any invalid values (such as invalid time formats or `null` values), Braze drops all nested custom attribute updates in the request from processing. This applies to all nested structures within that specific attribute. Verify that all values within nested custom attributes are valid before sending. For more information, refer to [Create and update users](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#endpoint-reference).
 
 
 

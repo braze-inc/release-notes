@@ -67,7 +67,9 @@ The background location access permission was added in Android 10 and is require
 Add the Braze boot receiver to the `application` element of your `AndroidManifest.xml`:
 
 ```xml
-<receiver android:name="com.braze.BrazeBootReceiver">
+<receiver
+  android:name="com.braze.BrazeBootReceiver"
+  android:exported="false">
   <intent-filter>
     <action android:name="android.intent.action.BOOT_COMPLETED" />
   </intent-filter>
@@ -563,7 +565,7 @@ let configuration = Braze.Configuration(
   apiKey: "{BRAZE_API_KEY}",
   endpoint: "{BRAZE_ENDPOINT}"
 )
-configuration.automaticGeofencesRequest = false
+configuration.location.automaticGeofenceRequests = false
 let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
@@ -575,7 +577,7 @@ AppDelegate.braze = braze
 BRZConfiguration *configuration =
   [[BRZConfiguration alloc] initWithApiKey:{BRAZE_API_KEY}
                                   endpoint:{BRAZE_ENDPOINT}];
-configuration.automaticGeofencesRequest = NO;
+configuration.location.automaticGeofenceRequests = NO;
 Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 AppDelegate.braze = braze;
 ```
@@ -649,7 +651,7 @@ Before you can use this feature, you'll need to [integrate the .NET MAUI Braze S
 
 This is the minimum SDK versions needed to start using geofences:
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/xamarin/changelog/#900' class='sdk-versions--chip xamarin-sdk' target='_blank'>Xamarin: 9.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=.net%20maui%20%28xamarin%29#netmauixamarin_900' class='sdk-versions--chip xamarin-sdk' target='_blank'>Xamarin: 9.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ## Setting up geofences {#setting-up-geofences}
 

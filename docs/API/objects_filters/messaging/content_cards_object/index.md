@@ -2,6 +2,15 @@
 
 > The `content_card` object allows you to create Content Cards through our [messaging endpoints](https://www.braze.com/docs/api/endpoints/messaging).
 
+The rendered Content Card payload can't exceed 2&nbsp;KB after Liquid personalization is rendered. For details on what counts toward that limit, see [Size limitations for Content Cards](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card#content-card-size-limitations).
+
+**Important:**
+
+
+Currently, Braze supports a maximum expiration time of 30 days.
+
+
+
 ```json
 {
   "type": (required, string) one of "CLASSIC", "CAPTIONED_IMAGE", or "BANNER",
@@ -22,10 +31,3 @@
   "extra": (optional, object) additional keys and values sent with the card,
 }
 ```
-
-**Important:**
-
-
-Currently, Braze supports a maximum expiration time of 30 days.
-
-

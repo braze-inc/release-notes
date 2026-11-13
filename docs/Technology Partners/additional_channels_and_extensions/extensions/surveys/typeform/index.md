@@ -360,7 +360,7 @@ In this example template, we are using an email address (captured from an email 
 **Note:**
 
 
-If you intend to use an email address as an identifier, review our [frequently asked questions](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#frequently-asked-questions) for the `/users/track` endpoint for more information on expected behavior.
+If you intend to use an email address as an identifier, review our [frequently asked questions](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#endpoint-reference) for the `/users/track` endpoint for more information on expected behavior.
 
 
 

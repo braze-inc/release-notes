@@ -70,6 +70,13 @@ Check the following:
 
 Then follow the [standard investigation path](#standard-investigation-path).
 
+**Note:**
+
+
+For campaign and Canvas timing and eligibility questions, see the [In-app messages FAQ](https://www.braze.com/docs/user_guide/channels/in_app_messages/faq/).
+
+
+
 ## In-app message didn't show on one platform {#in-app-message-not-shown-on-one-platform}
 
 **Symptom:** In-app messages don't show on Android, iOS, or Web, but may work on other platforms.

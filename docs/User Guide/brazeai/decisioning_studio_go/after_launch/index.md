@@ -2,7 +2,7 @@
 
 > Your agent learns before it performs. This guide explains the training period, how to tell which stage your agent is in, and how to read early results without drawing the wrong conclusion.
 
-When you launch a Decisioning Studio Go agent, it learns first. Emails go out from day one, and during the early training period the agent is still exploring. Knowing what's normal during this period is the difference between giving the agent a fair chance and turning it off before it has shown what it can do.
+When you launch a Decisioning Studio Go agent, it learns first. Emails go out from day one, and during the early training period the agent is still exploring. Knowing what's normal during this period helps you give the agent a fair chance before drawing conclusions.
 
 ## The training stages
 

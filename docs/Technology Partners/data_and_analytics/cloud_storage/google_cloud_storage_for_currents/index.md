@@ -30,14 +30,14 @@ Currents doesn't connect directly to BigQuery, so it isn't part of the [Google C
 
 To integrate with Google Cloud Storage, you must set up the appropriate credentials that allow Braze to get information about the storage buckets being written to (`storage.buckets.get`) and create objects within that bucket (`storage.objects.create`). 
 
-**Note:**
+Braze supports two authentication methods:
 
+- [Service account key method](#service-account-key-auth-method)
+- [Workload identity federation method](#workload-identity-federation-auth-method) (Currents only)
 
-Workload Identity Federation (WIF) is not supported as an authentication method for Currents. You must use a service account with a JSON private key.
+## Service account key auth method
 
-
-
-This can be done using the following instructions, which will walk you through creating a role and service account that will generate a private key to use in your Currents integration.
+The following instructions walk you through creating a role and service account that generates a private key to use in your Currents integration.
 
 ### Step 1: Create role
 
@@ -91,12 +91,12 @@ At the bottom of the page, use the **Create Key** button to create a **JSON** pr
 
 ### Step 3: Set up Currents in Braze
 
-In Braze, navigate to **Currents** > **+ Create Current** > **Google Cloud Storage Data Export** and provide your integration name and contact email.
+In Braze, navigate to **Currents** > **Create New Current** > **Google Cloud Storage Data Export** and provide your integration name and contact email.
 
 Provide a contact email for integration error notifications. Braze sends notifications to this address if the integration encounters errors, such as credential issues or connectivity problems. To help ensure the right people receive alerts, use a distribution list or group email address.
 
 
-Next, upload your JSON private key under **GCS JSON Credentials** and provide your GCS bucket name and GCS prefix (optional). Note that you must generate these credentials through Google Cloud Platform, as described in the previous steps.
+Next, upload your JSON private key under **GCS JSON Credentials** and provide your GCS bucket name and GCS prefix. Note that you must generate these credentials through Google Cloud Platform, as described in the previous steps.
 
 **Important:**
 
@@ -137,6 +137,134 @@ Your Google Cloud IAM service account must have the following permissions:
 To verify these permissions in the Braze dashboard, go to the **Google Cloud Storage** page, then select **Test Credentials**.
 
 ![The Google Cloud Storage credentials section in the Braze dashboard.](https://www.braze.com/docs/assets/img/gcs8.png?06a0888d97e08557a94525b638324352){: style="max-width:70%;"}
+
+## Workload identity federation auth method
+
+This method lets Braze authenticate to Google Cloud through [workload identity federation](https://cloud.google.com/iam/docs/workload-identity-federation), then write to your bucket using Identity and Access Management (IAM). You don't create a service account key or give Braze any other secret. It's available for Braze Currents only.
+
+**Note:**
+
+
+Braze stores no secret for this method. Your workload identity pool trusts a short-lived token that Braze issues for each connection. Braze can access your bucket only through the [role you grant](#wif-4), and you can revoke that access at any time by disabling or deleting the workload identity pool provider in Google Cloud.
+
+
+
+Before you begin, make sure you have a Google Cloud Storage bucket for Braze to write to, and [create the custom role](#step-1-create-role) described in the service account key method. You don't need to create a service account key.
+
+### Step 1: Enable the required APIs {#wif-1}
+
+In the Google Cloud project where you'll create the workload identity pool, enable the **Security Token Service API** (`sts.googleapis.com`).
+
+If you'll have Braze impersonate a service account (see [Step 4](#wif-4)), also enable the **IAM Service Account Credentials API** (`iamcredentials.googleapis.com`) in the project that contains the workload identity pool. If your service account is in a different project, enable it there too.
+
+For detailed steps, see Google's [Enabling and disabling services](https://cloud.google.com/service-usage/docs/enable-disable).
+
+### Step 2: Get the Braze values {#wif-2}
+
+In Braze, go to **Currents** > **Create New Current** > **Google Cloud Storage Data Export**, then select the **Workload Identity Federation** tab under **Credentials**. Braze displays the **Issuer URL**, **Subject**, and **Braze audience** values you need for the next steps. Keep this page open, or copy the values somewhere you can reach them.
+
+The **Issuer URL** is specific to the Braze environment your dashboard runs on, and the **Braze audience** is unique to your workspace and doesn't change.
+
+### Step 3: Create a workload identity pool and provider {#wif-3}
+
+In the Google Cloud console, go to **IAM & Admin** > **Workload Identity Federation**, then select **Create pool**:
+
+1. Enter a name for the pool (for example, `braze-currents`), then select **Continue**.
+2. For **Select a provider**, select **OpenID Connect (OIDC)**, and enter a name for the provider.
+3. For **Issuer (URL)**, enter the **Issuer URL** value from Braze.
+4. For **Audiences**, select **Allowed audiences**, then enter the **Braze audience** value from Braze.
+5. Select **Continue**. Under **Configure provider attributes**, map `google.subject` to `assertion.sub`.
+6. Select **Save**.
+
+For detailed steps, see Google's [Configure workload identity federation with other identity providers](https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers).
+
+**Important:**
+
+
+Enter each value exactly as Braze shows it. Google Cloud matches the issuer and audience character for character, and a mismatch causes authentication to fail. If you add an [attribute condition](https://cloud.google.com/iam/docs/workload-identity-federation#conditions), it must allow the **Subject** value from Braze.
+
+
+
+When you're finished, take note of the provider's full resource name. You'll provide it to Braze in [Step 5](#wif-5). It looks like this:
+
+```
+//iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/POOL_ID/providers/PROVIDER_ID
+```
+
+The resource name uses your project number, not your project ID. You can find the project number on your project's **Dashboard** in the Google Cloud console.
+
+### Step 4: Grant access to your bucket {#wif-4}
+
+Next, give Braze permission to write to your bucket. You can grant access directly to the Braze identity, or have Braze impersonate a service account you control.
+
+#### Option 1: Grant access directly
+
+In the Google Cloud console, go to **Cloud Storage** > **Buckets** and select your bucket. Then select **Permissions** > **Grant access**:
+
+1. For **New principals**, enter the following, replacing `PROJECT_NUMBER` and `POOL_ID` with the values from your provider's resource name, and `SUBJECT` with the **Subject** value from Braze:
+   ```
+   principal://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/POOL_ID/subject/SUBJECT
+   ```
+2. For **Role**, select the [custom role](#step-1-create-role) you created.
+3. Select **Save**.
+
+For detailed steps, see Google's [Add a principal to a bucket-level policy](https://cloud.google.com/storage/docs/access-control/using-iam-permissions#bucket-add).
+
+#### Option 2: Impersonate a service account
+
+1. Go to **IAM & Admin** > **Service Accounts** and create a service account (for example, `braze-currents`). Don't create a key for it.
+2. On your bucket, grant the service account the [custom role](#step-1-create-role) you created.
+3. On the service account, go to **Permissions** > **Grant access**. For **New principals**, enter the `principal://` value from Option 1. For **Role**, select **Workload Identity User** (`roles/iam.workloadIdentityUser`). Then select **Save**.
+
+Take note of the service account's email. You'll provide it to Braze in [Step 5](#wif-5).
+
+For detailed steps, see Google's [Grant access to service accounts](https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers#access).
+
+**Important:**
+
+
+Without this role, Braze can authenticate to Google Cloud but can't write to your bucket. We recommend granting it on the bucket Braze writes to, rather than on the project, so Braze can access only that bucket.
+
+
+
+### Step 5: Set up Currents {#wif-5}
+
+Return to the **Google Cloud Storage Data Export** page in Braze. If you haven't already, enter your integration name and contact email.
+
+Provide a contact email for integration error notifications. Braze sends notifications to this address if the integration encounters errors, such as credential issues or connectivity problems. To help ensure the right people receive alerts, use a distribution list or group email address.
+
+
+For **Credentials**, make sure the **Workload Identity Federation** tab is selected and enter the following:
+
+| Field | Value |
+| ----- | ----- |
+| Workload identity provider | The provider's full resource name from [Step 3](#wif-3). |
+| Service account email (optional) | The service account email from [Option 2](#option-2-impersonate-a-service-account) in Step 4, if Braze impersonates a service account. Leave blank if you granted access directly. |
+| GCS Bucket Name | The name of your bucket. |
+| Prefix | A path prefix for your exported data within the bucket. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Workload identity federation fields" }
+
+The **Issuer URL**, **Subject**, and **Braze audience** fields are read-only. They show the same values you entered in Google Cloud in [Step 3](#wif-3).
+
+When you save, Braze checks that it can authenticate through your provider and write to your bucket. If the check fails right after you grant access in [Step 4](#wif-4), wait a few minutes for the IAM change to take effect, then try again.
+
+Finally, scroll to the bottom of the page and select which message engagement events or customer behavior events you'd like to export. When completed, launch your Current.
+
+## Updating GCS credentials for Currents {#updating-currents-credentials}
+
+You can update the credentials on an existing Braze Currents connector without stopping the integration or losing data already exported to your bucket.
+
+To refresh credentials—or to switch between the **Service account key** and **Workload Identity Federation** methods—finish the Google Cloud steps for your chosen method earlier in this article. Then, in Braze, go to **Currents**, locate your Google Cloud Storage connector in the list, select **Edit Current**, update **Credentials**, and select **Update Current**. Braze validates the credentials you enter; your connector keeps running and data already in your bucket remains available. For more information, see [Updating Currents in Set up Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/setting_up_currents/#updating-currents).
+
+### Workload identity federation credentials
+
+Workload identity federation has no secret to rotate or expire, so there's nothing to renew on a schedule. Keep the following in mind:
+
+- **Changing your provider or service account:** If you create a new provider or service account, update the **Workload identity provider** or **Service account email** in Braze, and grant the new identity access as described in [Step 4](#wif-4).
+- **Revoking access:** To stop Braze from writing to your bucket, disable or delete the workload identity pool provider in Google Cloud. You can also remove the role from your bucket, or the Workload Identity User role from your service account.
+- **Braze values:** The issuer URL, subject, and audience Braze shows are fixed for your workspace. If you recreate the provider in Google Cloud, enter the same values.
+
+If the provider is disabled or doesn't match the values in Braze, or if the role is removed, the connector can't authenticate or write to your bucket and stops sending events. Braze sends an integration error notification to your integration's contact email. If this persists for more than **5 days**, the connector's events are dropped, and data is permanently lost. To resume, correct the configuration in Google Cloud, or update the integration in Braze.
 
 ## Export behavior
 

@@ -54,6 +54,10 @@ If you want more creative control, the image-only card is for you. Create your i
 
 Content Cards support text and images, including GIFs, by default. At this time, custom styling for the card, such as different font colors or multiple images, can't be done in the dashboard. You can custom style your Content Card and feed during integration. For more details, refer to [Customize cards](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards) for the Braze SDK.
 
+### Content length
+
+Keep header and message text concise. As noted for Classic and Captioned Image cards, one line of header text and two to four lines of message text work best. Title, message, link text, URLs, and key-value pairs share a [2&nbsp;KB payload limit](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card#content-card-size-limitations) after Liquid personalization is rendered. For details on what counts toward that limit, see [Size limitations for Content Cards](https://www.braze.com/docs/user_guide/channels/content_cards/create_a_content_card#content-card-size-limitations).
+
 ### Dismissal behavior
 
 For a user to dismiss a card, they can either swipe it away on mobile, or use a `close X` function, as shown in the following screenshot. The `x` will appear on hover for the Web SDK only.
