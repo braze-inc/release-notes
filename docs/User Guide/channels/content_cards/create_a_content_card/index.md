@@ -71,13 +71,15 @@ The final appearance of right-to-left messages depends largely on how service pr
 
 #### Title and message
 
-Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking, the better! We recommend clear and concise titles and message content. Note that these fields aren't provided for Image Only Cards.
+Keep titles and messages clear and concise so users can understand the offer and take action quickly. Title, message, link text, image URLs, link URLs, and key-value pairs share a [2&nbsp;KB payload limit](#content-card-size-limitations) after Liquid personalization is rendered—longer copy leaves less room for URLs and other card content. These fields aren't provided for Image Only cards.
+
+For recommended line lengths and image proportions by card type, see [Creative details](https://www.braze.com/docs/user_guide/channels/content_cards/creative_details).
 
 #### Image
 
 To add an image to your Content Card, you can select **Add Image** or provide an image URL. Selecting **Add Image** opens the **Media Library**, where you can select a previously uploaded image or add a new one. 
 
-Each message type and platform may have its own suggested proportions and requirements, so be sure to check what those are before commissioning or creating a new image. Keep in mind that Content Card message fields are limited to 2&nbsp;KB in total size.
+Each message type and platform may have its own suggested proportions and requirements, so be sure to check what those are before commissioning or creating a new image. Image URL strings also count toward the [2&nbsp;KB payload limit](#content-card-size-limitations).
 
 
 
@@ -139,7 +141,7 @@ The following actions are available for Content Card links:
 
 The **Log Custom Event** and **Log Custom Attribute** options require the following SDK version compatibility:
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#540' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 5.4.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#403' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 4.0.3+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#2100' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 21.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_540' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 5.4.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=web#web_403' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 4.0.3+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=android#android_2100' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 21.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ## Step 4: Configure additional settings (optional)
 
@@ -166,6 +168,8 @@ The expiration countdown starts from the card's send time:
 - **Action-based campaigns:** The countdown begins when the user performs the triggering action.
 
 For example, if an action-based Content Card is sent at 2 pm today with a 1-day expiration, it expires at 2 pm the following day.
+
+
 
 
 
@@ -237,9 +241,9 @@ Next, check out [Content Card reporting](https://www.braze.com/docs/user_guide/c
 
 To support performance, Content Cards have two key constraints: a limit on the payload size for each card and a maximum number of cards that can appear in a feed.
 
-#### Size limitations for Content Cards
+#### Size limitations for Content Cards {#content-card-size-limitations}
 
-The entire data payload for a single Content Card cannot exceed 2 KB **after** any Liquid personalization is rendered. This includes:
+The entire data payload for a single Content Card cannot exceed 2&nbsp;KB **after** any Liquid personalization is rendered. This includes:
 
 * Title
 * Message
@@ -250,12 +254,12 @@ The entire data payload for a single Content Card cannot exceed 2 KB **after** a
 
 Using Liquid to pull in long strings of text (such as from custom attributes) can cause you to exceed the limit. 
 
-The campaign composer displays a warning if your static content exceeds the limit. We do not predict the size for dynamic content using Liquid. If the message size exceeds 2 KB, it is aborted at send time. You can see these aborts in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) with the outcome **Content Card invalid**.
+The campaign composer displays a warning if your static content exceeds the limit. We do not predict the size for dynamic content using Liquid. If the message size exceeds 2&nbsp;KB, it is aborted at send time. You can see these aborts in [Messaging Observability](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability) with the outcome **Content Card invalid**.
 
 **Important:**
 
 
-During test sends, Content Cards that exceed 2 KB can still be delivered and displayed properly.
+During test sends, Content Cards that exceed 2&nbsp;KB can still be delivered and displayed properly.
 
 
 
@@ -263,8 +267,8 @@ Here are some best practices for managing Content Card payload size:
 
 * Use URL shorteners for long links. URLs, especially those with extensive tracking parameters, can run into size limit issues. Using a URL shortening service can dramatically reduce the character count and free up space in the payload.
 * Truncate dynamic content with Liquid. When personalizing cards with dynamic text from user attributes or API calls, the length of the content can be unpredictable. Proactively use Liquid filters like `truncate` to cap the length of any dynamic text.
-* Be efficient with multi-platform URLs. The 2 KB limit includes the URLs for all platforms you define. Using long, unique URLs for each platform can multiply the size of the payload. If possible, use a single link that works across all platforms, or use URL shorteners as needed.
-* Consider Banners for richer content. For use cases that consistently require large amounts of content, Content Cards may not be the right channel. Banners do not have the same 2 KB payload limitation and are better suited for embedding richer content directly into an app or website experience.
+* Be efficient with multi-platform URLs. The 2&nbsp;KB limit includes the URLs for all platforms you define. Using long, unique URLs for each platform can multiply the size of the payload. If possible, use a single link that works across all platforms, or use URL shorteners as needed.
+* Consider Banners for richer content. For use cases that consistently require large amounts of content, Content Cards may not be the right channel. Banners do not have the same 2&nbsp;KB payload limitation and are better suited for embedding richer content directly into an app or website experience.
 
 #### Number of cards in feed
 

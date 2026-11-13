@@ -456,7 +456,7 @@ For a full walkthrough, see the [Privacy Tracking Data tutorial](https://braze-i
 
 The following Braze SDK version is required to implement this feature:
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#900' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 9.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_900' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 9.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ### Step 1: Review your current policies
 

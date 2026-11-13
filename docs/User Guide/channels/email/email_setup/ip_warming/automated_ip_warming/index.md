@@ -81,6 +81,19 @@ The total number of emailable users across all selected segments must be greater
 
 
 
+
+
+
+
+**Important:**
+
+
+ is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+
+
+
+
+
 **Important:**
 
 

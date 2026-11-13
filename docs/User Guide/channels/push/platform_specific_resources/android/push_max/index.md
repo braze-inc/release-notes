@@ -18,7 +18,7 @@ Some Android devices manufactured by Chinese Original Equipment Manufacturers (O
 
 Push notifications sent using Push Max will only be delivered to devices that have at least the following [minimum SDK version](https://www.braze.com/docs/user_guide/messaging/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions):
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/android/changelog/#2901' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 29.0.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=android#android_2901' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 29.0.1+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ## Using Push Max
 

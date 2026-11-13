@@ -1,14 +1,14 @@
 # Manage OAuth settings
 
-> OAuth settings manage company-wide access to the [Braze MCP server](https://www.braze.com/docs/user_guide/brazeai/mcp_server/), control which MCP clients and redirect URIs can connect to Braze, and let you revoke every MCP OAuth token for your company.
+> OAuth settings manage company-wide access to OAuth Partner Apps and the [Braze MCP server](https://www.braze.com/docs/user_guide/brazeai/mcp_server/). Use them to approve or block partner apps by workspace, control which MCP clients and redirect URIs can connect to Braze, and revoke every MCP OAuth token for your company.
 
-OAuth settings apply to your entire company. The permissions assigned to each user determine which workspaces and features they can access through the MCP server.
+OAuth settings apply to your entire company. The permissions assigned to each user determine which workspaces and features they can access through partner apps and the MCP server.
 
 ## Requirements
 
 | Requirement | Description |
 | --- | --- |
-| "Admin" permission | You must have the company-level "Admin" permission to view OAuth settings, turn MCP OAuth access on or off, approve or remove MCP clients, manage redirect URIs, or revoke MCP OAuth tokens. |
+| "Admin" permission | You must have the company-level "Admin" permission to view OAuth settings, manage OAuth Partner Apps, turn MCP OAuth access on or off, approve or remove MCP clients, manage redirect URIs, or revoke MCP OAuth tokens. |
 | "Use MCP Server" permission | Users must have this permission for each workspace they want to access through the MCP server. This permission is separate from the "Admin" permission used to manage OAuth settings. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Requirements for managing OAuth settings" }
 
@@ -18,19 +18,21 @@ For more information about assigning permissions, see [User permissions](https:/
 
 OAuth settings and user permissions work together:
 
-- Company-wide OAuth settings determine whether users can connect MCP clients to Braze.
+- Company-wide OAuth settings determine whether users can connect partner apps and MCP clients to Braze.
+- OAuth Partner Apps policies determine which partner apps are approved or blocked in each workspace.
 - The "Use MCP Server" permission determines whether an individual user can use the MCP server in a workspace.
-- The user's existing dashboard permissions determine which Braze data and features an MCP client can access.
+- The user's existing dashboard permissions determine which Braze data and features an MCP client or partner app can access.
 - One OAuth connection can access only the workspaces that the user is authorized to access.
 
-Turning on MCP OAuth access doesn't grant users new workspace permissions. Similarly, removing a dashboard permission removes that capability from the user's connected MCP client.
+Turning on MCP OAuth access or **Partner apps OAuth access** doesn't grant users new workspace permissions. Similarly, removing a dashboard permission removes that capability from the user's connected client or partner app.
 
 ## Company and workspace controls
 
-OAuth policy is stored at the company level. Workspace admins can't override **MCP OAuth access** or redirect URI statuses for a single workspace.
+OAuth policy is stored at the company level. Workspace admins can't override **Partner apps OAuth access**, **MCP OAuth access**, or redirect URI statuses for a single workspace. Partner app approval can still limit access to selected workspaces.
 
 | Control | Where you configure it | Scope |
 | --- | --- | --- |
+| **Partner apps OAuth access** and OAuth Partner Apps | **Settings** > **Admin Settings** > **External Connections** | Company-wide enablement on the **OAuth Settings** tab, with approved or blocked status per partner app and selected workspaces on the **OAuth Partner Apps** tab. |
 | **MCP OAuth access** | **External Connections** > **OAuth Settings** | Entire company. When this is off, MCP OAuth is denied in every workspace. |
 | **MCP Clients** page | **External Connections** > **MCP Clients** | Entire company. Approving a verified client allows users with "Use MCP Server" to connect it in every workspace. |
 | Approved redirect URIs | **External Connections** > **MCP Clients** | Entire company. Custom (and local) redirect URIs apply to all workspaces. |
@@ -38,7 +40,62 @@ OAuth policy is stored at the company level. Workspace admins can't override **M
 | "Use MCP Server" permission | **Settings** > **User Management** | Per workspace. Users need this permission in each workspace they access through the MCP server. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Company and workspace OAuth controls" }
 
-Only users with the "Admin" permission can change **MCP OAuth access**, approve or remove MCP clients, change redirect URI statuses, or revoke MCP OAuth tokens. For how workspace permissions interact with these company settings, see [OAuth and MCP access](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/oauth_settings/).
+Only users with the "Admin" permission can change partner app policies, change **MCP OAuth access**, approve or remove MCP clients, change redirect URI statuses, or revoke MCP OAuth tokens. For how workspace permissions interact with these company settings, see [OAuth and MCP access](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/oauth_settings/).
+
+## OAuth Partner Apps
+
+Use the **OAuth Partner Apps** tab to monitor and manage which partner apps your company users can connect with OAuth:
+
+1. Go to **Settings** > **Admin Settings** > **External Connections**.
+2. Open the **OAuth Partner Apps** tab.
+
+### View partner apps
+
+The **Partner Apps** list shows every OAuth partner app your company has approved or blocked. For each app, you can review:
+
+| Column | Description |
+| --- | --- |
+| App name | The partner app name. |
+| Last updated by | The dashboard user who last changed the partner app policy. |
+| Last updated | When the partner app policy was last changed. |
+| Approved workspaces | The workspaces where company users can connect the app. |
+| Status | Whether the app is **Approved** or **Blocked**. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Partner Apps list columns" }
+
+### Browse and approve partner apps
+
+To approve a partner app for your company:
+
+1. On the **OAuth Partner Apps** tab, select **Browse apps**.
+2. Select the partner app you want to review.
+3. Select **Approve app**, then choose all workspaces or selected workspaces.
+4. Select **Approve**.
+
+By default, all workspaces are approved. Company users can connect the app only to workspaces you approve. You can select **Edit workspaces** later to change workspace access.
+
+### Review app details
+
+Open a partner app to view its **App details**, including the app description and permission scopes. Each user can only perform actions allowed by their own Braze permissions.
+
+### Block a partner app
+
+To stop users from connecting a partner app in selected workspaces:
+
+1. Open the partner app from the **Partner Apps** list or **Browse apps**.
+2. Select **Block app**, then choose the workspaces to block.
+3. Confirm the action.
+
+Users in those workspaces are disconnected immediately and can no longer sign in or sync with that app. You can approve the app again at any time.
+
+### Turn Partner apps OAuth access on or off
+
+**Partner apps OAuth access** is a company-wide switch on the **OAuth Settings** tab.
+
+1. Go to **Settings** > **Admin Settings** > **External Connections**.
+2. Open the **OAuth Settings** tab.
+3. In **Global access controls**, turn **Partner apps OAuth access** on or off.
+
+When **Partner apps OAuth access** is on, admins can manage partner apps on the **OAuth Partner Apps** tab, and company users can connect approved partner apps in approved workspaces. When it's off, Braze immediately disconnects partner app OAuth access for all users and ends active sessions. Data already synced through these integrations stays in Braze. If you turn **Partner apps OAuth access** back on, existing connections work again.
 
 ## Turn MCP OAuth access on or off
 

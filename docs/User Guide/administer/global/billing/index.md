@@ -1,14 +1,15 @@
 # Billing
 
-> Learn how to use the **Billing** page to monitor and check your data consumption across workspaces, apps, and event sources. This article covers the different sections on the page and the information they can provide you.
+> Learn how to use the **Billing** page to monitor and check your usage across workspaces, apps, and event sources. Depending on your contract, Braze measures usage with the credits model or legacy data points. This article covers the sections on the page and the information they can provide you.
 
 To navigate to the **Billing** page, go to **Settings** > **Billing**.
 
-The **Billing** page includes the following tabs:
+The **Billing** page can include the following tabs, depending on your contract:
 
 - [Subscriptions and Usage](#subscriptions-and-usage)
 - [Most Used Events and Attributes by App](#most-used-events-and-attributes-by-app)
 - [Total Data Points Usage](#total-data-points-dashboard)
+- [Credits Usage](https://www.braze.com/docs/user_guide/administer/global/billing/credits_usage)
 
 ## Subscriptions and Usage
 
@@ -44,7 +45,7 @@ Data breakdowns like these can help you understand what specific data points are
 
 ## Total data points dashboard
 
-The **Total Data Points Usage** tab provides an in-depth look at your data point usage. You can view all data in this section aggregated by either weeks or months.
+The **Total Data Points Usage** tab provides an in-depth look at your data point usage for companies on the [legacy data points billing plan](#types-of-billing-plans). You can view all data in this section aggregated by either weeks or months.
 
 **Note:**
 
@@ -97,6 +98,32 @@ This graph allows you to view how data point usage is spread across different ev
 This graph gives you the ability to quickly see your total data point usage versus your allotted amount of data points.
 
 ![Data Point Usage over time contrasting current billing cycle allotted data points with running total](https://www.braze.com/docs/assets/img/company_data_point_usage_time.png?987c1d026fe47777534ca7913f9f772c){: style="max-width:90%;"}
+
+## Types of billing plans
+
+Braze uses one primary usage metric per company contract:
+
+| Billing plan | What it measures | Who it's for | Where to view usage |
+| --- | --- | --- | --- |
+| **Credits** (message credits) | Credits used for channels and products on your credits contract | Companies on a credits contract. | **Settings** > **Billing** > [Credits Usage](https://www.braze.com/docs/user_guide/administer/global/billing/credits_usage) |
+| **Data points** (legacy) | Billable updates to user profiles, such as sessions, custom events, purchases, and attribute sets | Companies on older contracts that still use data point allotments. As of Spring 2025, Braze no longer bills new customers based on data points. | **Settings** > **Billing** > [Total Data Points Usage](#total-data-points-dashboard), and [Data points (Legacy)](https://www.braze.com/docs/user_guide/data/infrastructure/data_points) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Billing plans" }
+
+### How to identify your billing plan
+
+1. Go to **Settings** > **Billing**.
+2. Check which allotment your company tracks:
+   - If the **Credits Usage** tab shows a **Credits contract overview** and message credit usage against an allotment, your company is on the credits model.
+   - If the **Total Data Points Usage** tab shows allotted data points and contract data point usage as your primary allotment, your company is on the legacy data points model.
+
+Your Braze contract is the source of truth. If you're unsure, check **Contract details** on the **Subscriptions and Usage** tab or ask your Braze account manager.
+
+**Note:**
+
+
+Some companies can see credits used for a specific product even when they aren't on a full credits contract. For example, legacy WhatsApp contracts can show WhatsApp credit usage on the Credits Usage dashboard. That doesn't necessarily mean your entire company is on the credits model. For details, see [Credits Usage dashboard](https://www.braze.com/docs/user_guide/administer/global/billing/credits_usage).
+
+
 
 ## Next steps
 

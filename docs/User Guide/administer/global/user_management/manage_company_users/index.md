@@ -43,6 +43,10 @@ Administrators can also suspend a user by selecting their name from the list and
 
 ![Suspend a user when editing the user details.](https://www.braze.com/docs/assets/img_archive/suspend_user2.png?51bdddb2503dfe3f7c885873dc39f50b){: style="max-width:70%;"}
 
+### Automatic suspension for dormant accounts
+
+If your company turns on [Suspend dormant accounts](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#dormant-accounts) in **Security Settings**, Braze also suspends dashboard users who haven't signed in for 180 days. Those users receive warning emails before suspension and a notice after they're suspended. **Company Users** shows the suspension reason for dormant accounts. To restore access, an admin must unsuspend the user from **Company Users**; the company contact is emailed when the account is reactivated. Signing in before the suspension date keeps the account active.
+
 ## Deleting company users
 
 To delete a user, go to **Settings** > **Company Settings** > **User Management** > **Company Users**, find the user's name, and select <i class="fa fa-trash-can"></i> **Delete user**. 

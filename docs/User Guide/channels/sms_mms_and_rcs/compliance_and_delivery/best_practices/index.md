@@ -124,7 +124,7 @@ Use [workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/mess
 5. Review the existing campaigns and Canvases that this change affects.
 6. Save your changes.
 
-Workspace quiet hours is currently in early access. If you don't have access, set the same 8 pm–12 pm window on each campaign or Canvas. For permissions, opting out, precedence, held-message behavior, and API campaigns, see [Workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours).
+For permissions, opting out, precedence, held-message behavior, and API campaigns, see [Workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours).
 
 ### Abort or hold by delivery type
 

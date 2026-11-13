@@ -906,7 +906,7 @@ On Web SDK [6.8.0+](https://github.com/braze-inc/braze-web-sdk), call `logEcomme
 
 
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/web/changelog/#680' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.8.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=web#web_680' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.8.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 On newer SDK versions, call `logEcommerceEvent()`:
 
@@ -956,7 +956,7 @@ braze.logCustomEvent("ecommerce.product_viewed", {
 
 
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/web/changelog/#680' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.8.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=web#web_680' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.8.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 On newer SDK versions, call `logEcommerceEvent()`:
 
@@ -1025,7 +1025,7 @@ braze.logCustomEvent("ecommerce.cart_updated", {
 
 
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/web/changelog/#680' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.8.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=web#web_680' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.8.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 On newer SDK versions, call `logEcommerceEvent()`:
 
@@ -1094,7 +1094,7 @@ braze.logCustomEvent("ecommerce.checkout_started", {
 
 
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/web/changelog/#680' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.8.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=web#web_680' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 6.8.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 On newer SDK versions, call `logEcommerceEvent()`:
 

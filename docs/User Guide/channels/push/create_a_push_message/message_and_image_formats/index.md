@@ -41,6 +41,8 @@ Inline image push uses a 3:2 aspect ratio.
 
 
 
+
+
 | Message Type | Recommended Message Length (Text only) | Recommended Message Length (Rich)
 --- | ---
 (iOS) Lock Screen | 160 characters | 130 characters

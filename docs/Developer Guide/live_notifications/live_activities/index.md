@@ -78,7 +78,7 @@ While Live Activities and push notifications are similar, their system permissio
 
 
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#5110' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 5.11.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_5110' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 5.11.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ### Step 1: Create an activity {#create-an-activity}
 
@@ -206,7 +206,7 @@ class LiveActivityManager {
     // You may keep a reference to this task if you need to cancel it wherever appropriate, or ignore the return value if you wish.
     let pushToStartObserver: Task = Self.braze?.liveActivities.registerPushToStart(
       forType: Activity<SportsActivityAttributes>.self,
-      name: SportsActivityAttributes.name
+      name: "SportsActivityAttributes"
     )
   }
 
@@ -386,7 +386,7 @@ Go to **Settings** > **APIs and Identifiers** > **Dashboard**, select **Filters*
 
 ## Observe Live Activity events (optional) {#observe-live-activity-events}
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1420' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 14.2.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_1420' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 14.2.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 **Important:**
 
@@ -469,8 +469,8 @@ Multiple subscribers are supported—each active subscription receives every emi
 | ----- | ------------- |
 | `.pushToStartTokenRead(activityType:)` | A push-to-start token was read from the OS. Braze can now remotely start a new activity of this type. |
 | `.pushToStartTokenFlushed(activityType:)` | The token was sent to the Braze server. Braze can send push-to-start notifications for this type. |
-| `.pushToStartOptedOut(activityType:)` | The user was opted out of push-to-start for this activity type through `optOutPushToStart(type:)`. |
-| `.pushToStartOptOutFlushed(activityType:)` | The opt-out was sent to the Braze server. |
+| `.pushToStartUnregistered(activityType:)` | Push-to-start was unregistered for this activity type through `unregisterPushToStart(types:completion:)`. |
+| `.pushToStartUnregisterFlushed(activityType:)` | The request to unregister was sent to the Braze server. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Type-scoped events" }
 
 #### Instance-scoped events
@@ -629,14 +629,14 @@ If your app uses multiple `ActivityAttributes` types, check the `type` string to
 case .activityInstance(.contentUpdated(let id, let type)):
   #if canImport(ActivityKit)
     if #available(iOS 16.2, *) {
-      if type == SportsActivityAttributes.name,
+      if type == "SportsActivityAttributes",
         let activity = findActivityInstance(id: id, as: SportsActivityAttributes.self)
       {
         let activityContent = activity.content.state
         print("[\(type)] Game \(id) — score: \(activityContent.teamOneScore)–\(activityContent.teamTwoScore)")
         return
 
-      } else if type == OrderActivityAttributes.name,
+      } else if type == "OrderActivityAttributes",
         let activity = findActivityInstance(id: id, as: OrderActivityAttributes.self)
       {
         let activityContent = activity.content.state

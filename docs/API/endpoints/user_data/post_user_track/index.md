@@ -1,4 +1,4 @@
-<div id='api_hqnjmuukruek' class='api_div' data-search-keywords='create and update users attributes events purchases group_id message attributes_processed events_processed purchases_processed errors type'>
+<div id='api_hmjlsicpbpkt' class='api_div' data-search-keywords='create and update users message errors type'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
@@ -14,603 +14,468 @@
 
 <p>Braze processes the data passed through the API at face value, and you should only pass deltas (changing data) to minimize unnecessary data point logging.</p>
 
-<h2 id="need-to-update-users-in-bulk">Need to update users in bulk?</h2>
-
-<p>Use the <a href="/docs/api/endpoints/user_data/post_user_track_bulk"><code class="language-plaintext highlighter-rouge">/users/track/bulk</code> endpoint</a> to send larger batches and reduce request volume.</p>
-
 <p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59">View in Postman</a></p>
 
-<h2 id="prerequisites">Prerequisites</h2>
+<div class="api-reference light-mode" id="endpoint-reference">
+  <div id="scalar-users_track"></div>
+</div>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics">API key</a> with the <code class="language-plaintext highlighter-rouge">users.track</code> permission.</p>
+<script>
+  (function () {
+    // Update the integrity hash whenever the pinned version changes.
+    var scalarSrc = "https://cdn.jsdelivr.net/npm/@scalar/api-reference@1.76.2/dist/browser/standalone.js";
+    var scalarIntegrity = "sha384-mCh2A/B6vkfhiHyzwBZm7lbFmEK5fE/96Kbtk+RH1zei1P/XEt0I2MCiG6WfZdor";
+    var specUrl = "/docs/assets/api/openapi/users_track.yaml";
+    var baseUrl = "/docs";
+    var mountSelector = "#" + "scalar-users_track";
 
-<p>Customers using the API for server-to-server calls may need to allowlist <code class="language-plaintext highlighter-rouge">rest.iad-01.braze.com</code> if they’re behind a firewall.</p>
+    // Scalar renders tooltips in its own containers at the end of <body>.
+    var brandVariables = [
+      ".api-reference.light-mode, .api-reference .light-mode, body > .scalar-app {",
+      "  --scalar-color-accent: #801ed7;",
+      "  --scalar-color-1: #212123;",
+      "  --scalar-color-2: #475467;",
+      "  --scalar-border-color: #dddde2;",
+      "  --scalar-font: \"Aribau Grotesk API Reference\", \"Aribau Grotesk Regular Fallback\", Arial, Helvetica, sans-serif;",
+      "  --scalar-font-code: \"Roboto Mono\", \"Roboto Mono Fallback\", monospace;",
+      "}"
+    ].join("\n");
 
-<h2 id="rate-limit">Rate limit</h2>
-
-<!---DEFAULT RATE LIMIT-->
-
-<!---Additional if statement for Messaging endpoints-->
-
-<!---Additional if statement for Translation endpoints-->
-
-<!---Additional if statement for /messages/send endpoint-->
-
-<h2 id="request-body">Request body</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre>Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-  </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">attributes</span><span class="w"> </span><span class="err">object)</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"events"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">event</span><span class="w"> </span><span class="err">object)</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"purchases"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">purchase</span><span class="w"> </span><span class="err">object)</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-
-<h3 id="request-parameters">Request parameters</h3>
-
-<p><strong>Important:</strong></p>
-
-<p>For each request component listed in the following table, you must include one of <code class="language-plaintext highlighter-rouge">external_id</code>, <code class="language-plaintext highlighter-rouge">user_alias</code>, <code class="language-plaintext highlighter-rouge">braze_id</code>, <code class="language-plaintext highlighter-rouge">email</code>, or <code class="language-plaintext highlighter-rouge">phone</code>.</p>
-
-<p><strong>Note:</strong></p>
-
-<p>Braze assumes imported push tokens are valid foreground push tokens for your app and environment.</p>
-
-<p>When you import iOS tokens, Braze doesn’t store an Apple Push Notification service (APNs) gateway (<code class="language-plaintext highlighter-rouge">development</code> or <code class="language-plaintext highlighter-rouge">production</code>) for them. Braze sends to these tokens through your app’s configured gateway. If a token was generated for the other environment, APNs rejects it with <code class="language-plaintext highlighter-rouge">BadDeviceToken</code>, and the send bounces.</p>
-
-<p>Braze stores a gateway for the token only if the SDK later registers the same token and reports a gateway.</p>
-
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Required</th>
-      <th>Data Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">attributes</code></td>
-      <td>Optional</td>
-      <td>Array of attributes objects</td>
-      <td>See <a href="/docs/api/objects_filters/user_attributes_object">user attributes object</a></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">events</code></td>
-      <td>Optional</td>
-      <td>Array of event objects</td>
-      <td>See <a href="/docs/api/objects_filters/event_object">events object</a></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">purchases</code></td>
-      <td>Optional</td>
-      <td>Array of purchase objects</td>
-      <td>See <a href="/docs/api/objects_filters/purchase_object">purchases object</a></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">group_id</code></td>
-      <td>Optional</td>
-      <td>String</td>
-      <td>(Beta) An ID you choose to group this request with related requests so you can check their processing status. For more information, see <a href="#track-request-processing-status">Track request processing status</a>.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="identifier-resolution">Identifier resolution</h3>
-
-<p>Each request object must include at least one identifier. The following table describes how Braze determines which identifier to use for user profile lookup.</p>
-
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3" aria-label="Identifier resolution">
-  <thead>
-    <tr>
-      <th>Identifier type</th>
-      <th>Identifiers</th>
-      <th>Behavior</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Primary</td>
-      <td><code class="language-plaintext highlighter-rouge">external_id</code>, <code class="language-plaintext highlighter-rouge">user_alias</code>, <code class="language-plaintext highlighter-rouge">braze_id</code></td>
-      <td>Used for user profile lookup. Only one primary identifier is allowed per request object—including more than one causes that object to be rejected.</td>
-    </tr>
-    <tr>
-      <td>Secondary</td>
-      <td><code class="language-plaintext highlighter-rouge">email</code>, <code class="language-plaintext highlighter-rouge">phone</code></td>
-      <td>Used for user profile lookup <strong>only</strong> when no primary identifier is present. If both <code class="language-plaintext highlighter-rouge">email</code> and <code class="language-plaintext highlighter-rouge">phone</code> are included without a primary identifier, <code class="language-plaintext highlighter-rouge">email</code> takes precedence.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>When a primary identifier is present, any <code class="language-plaintext highlighter-rouge">email</code> or <code class="language-plaintext highlighter-rouge">phone</code> values in the same request object are treated as profile attributes—not as identifiers for user lookup. For example, if a request includes both an <code class="language-plaintext highlighter-rouge">external_id</code> and an <code class="language-plaintext highlighter-rouge">email</code>:</p>
-
-<ul>
-  <li>Braze looks up the user profile by <code class="language-plaintext highlighter-rouge">external_id</code>.</li>
-  <li>The <code class="language-plaintext highlighter-rouge">email</code> value is set (or updated) as an attribute on the resolved profile.</li>
-</ul>
-
-<p><strong>Important:</strong></p>
-
-<p>Including a primary identifier that doesn’t match any existing profile can create a duplicate profile even when <code class="language-plaintext highlighter-rouge">email</code> or <code class="language-plaintext highlighter-rouge">phone</code> in the same request match an existing profile. For more information, see <a href="#how-do-i-avoid-creating-duplicate-user-profiles">How do I avoid creating duplicate user profiles?</a>.</p>
-
-<h2 id="example-requests">Example requests</h2>
-
-<h3 id="update-a-user-profile-by-email-address">Update a user profile by email address</h3>
-
-<p>You can update a user profile by email address using the <code class="language-plaintext highlighter-rouge">/users/track</code> endpoint.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-</pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
---data-raw '{
-    "attributes": [
-        {
-            "email": "test@example.com",
-            "string_attribute": "fruit",
-            "boolean_attribute_1": true,
-            "integer_attribute": 26,
-            "array_attribute": [
-                "banana",
-                "apple"
-            ]
-        }
-    ],
-    "events": [
-        {
-            "email": "test@example.com",
-            "app_id": "your_app_identifier",
-            "name": "rented_movie",
-            "time": "2022-12-06T19:20:45+01:00",
-            "properties": {
-                "release": {
-                    "studio": "FilmStudio",
-                    "year": "2022"
-                },
-                "cast": [
-                    {
-                        "name": "Actor1"
-                    },
-                    {
-                        "name": "Actor2"
-                    }
-                ]
-            }
-        },
-        {
-            "user_alias": {
-                "alias_name": "device123",
-                "alias_label": "my_device_identifier"
-            },
-            "app_id": "your_app_identifier",
-            "name": "rented_movie",
-            "time": "2013-07-16T19:20:50+01:00"
-        }
-    ],
-    "purchases": [
-        {
-            "email": "test@example.com",
-            "app_id": "your_app_identifier",
-            "product_id": "product_name",
-            "currency": "USD",
-            "price": 12.12,
-            "quantity": 6,
-            "time": "2017-05-12T18:47:12Z",
-            "properties": {
-                "color": "red",
-                "monogram": "ABC",
-                "checkout_duration": 180,
-                "size": "Large",
-                "brand": "Backpack Locker"
-            }
-        }
-    ]
-}'
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h3 id="update-a-user-profile-by-phone-number">Update a user profile by phone number</h3>
-
-<p>You can update a user profile by phone number using the <code class="language-plaintext highlighter-rouge">/users/track</code> endpoint. This endpoint only works if you include a valid phone number.</p>
-
-<p><strong>Important:</strong></p>
-
-<p>If you include a request with both <code class="language-plaintext highlighter-rouge">email</code> and <code class="language-plaintext highlighter-rouge">phone</code>, Braze uses the email as the identifier.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-</pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
---data-raw '{
-    "attributes": [
-        {
-            "phone": "+15043277269",
-            "string_attribute": "fruit",
-            "boolean_attribute_1": true,
-            "integer_attribute": 25,
-            "array_attribute": [
-                "banana",
-                "apple"
-            ]
-        }
-    ],
-}'
-</pre></td></tr></tbody></table></code></pre></div></div>
-<h3 id="set-subscription-groups">Set subscription groups</h3>
-
-<p>This example shows how to create a user and set their subscription group within the user attributes object.</p>
-
-<p>Updating the subscription status with this endpoint updates the user specified by their <code class="language-plaintext highlighter-rouge">external_id</code> (such as User1) and updates the subscription status of any users with the same email as that user (User1).</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-</pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
---data-raw '{
-  "attributes": [
-  {
-    "external_id": "user_identifier",
-    "email": "example@example.com",
-    "email_subscribe": "subscribed",
-    "subscription_groups": [{
-      "subscription_group_id": "subscription_group_identifier_1",
-      "subscription_state": "unsubscribed"
-      },
-      {
-        "subscription_group_id": "subscription_group_identifier_2",
-        "subscription_state": "subscribed"
-        },
-        {
-          "subscription_group_id": "subscription_group_identifier_3",
-          "subscription_state": "subscribed",
-          "use_double_opt_in_logic": true
-        }
-      ]
+    function loadScalar() {
+      if (window.Scalar && typeof window.Scalar.createApiReference === "function") {
+        return Promise.resolve(window.Scalar);
+      }
+      if (!window.__brazeScalarPromise) {
+        window.__brazeScalarPromise = new Promise(function (resolve, reject) {
+          var script = document.createElement("script");
+          script.src = scalarSrc;
+          script.integrity = scalarIntegrity;
+          script.crossOrigin = "anonymous";
+          script.addEventListener("load", function () { resolve(window.Scalar); });
+          script.addEventListener("error", reject);
+          document.body.appendChild(script);
+        });
+      }
+      return window.__brazeScalarPromise;
     }
-  ]
-}'
-</pre></td></tr></tbody></table></code></pre></div></div>
 
-<p><strong>Note:</strong></p>
+    function countLeadingSpaces(line) {
+      var match = line.match(/^ */);
+      return match ? match[0].length : 0;
+    }
 
-<p>For SMS subscription groups, when you set a group’s <code class="language-plaintext highlighter-rouge">subscription_state</code> to <code class="language-plaintext highlighter-rouge">subscribed</code>, you can include the optional <code class="language-plaintext highlighter-rouge">use_double_opt_in_logic</code> parameter set to <code class="language-plaintext highlighter-rouge">true</code> within that subscription group object to enter the user into the <a href="/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in">SMS double opt-in</a> workflow. If this parameter is omitted or set to <code class="language-plaintext highlighter-rouge">false</code> when <code class="language-plaintext highlighter-rouge">subscription_state</code> is <code class="language-plaintext highlighter-rouge">subscribed</code>, the user is subscribed without entering the double opt-in workflow. This parameter is not applied when <code class="language-plaintext highlighter-rouge">subscription_state</code> is set to other values, such as <code class="language-plaintext highlighter-rouge">unsubscribed</code>.</p>
+    function isBlockScalarKey(line) {
+      return /^(\s*)(?:"[^"]+"|'[^']+'|[A-Za-z0-9_.-]+):\s*[|>][+-]?\s*$/.test(line);
+    }
 
-<h3 id="example-request-to-create-an-alias-only-user">Example request to create an alias-only user</h3>
+    function isYamlKeyLine(trimmedLine, indent, blockIndent) {
+      if (indent > blockIndent) { return false; }
+      if (/^(?:"[^"]+"|'[^']+'|[A-Za-z0-9_.-]+):\s*/.test(trimmedLine)) { return true; }
+      if (/^-\s+(?:"[^"]+"|'[^']+'|[A-Za-z0-9_.-]+):\s*/.test(trimmedLine)) { return true; }
+      return false;
+    }
 
-<p>You can use the <code class="language-plaintext highlighter-rouge">/users/track</code> endpoint to create an alias-only user by setting the <code class="language-plaintext highlighter-rouge">_update_existing_only</code> key with a value of <code class="language-plaintext highlighter-rouge">false</code> in the body of the request. If you omit this value, Braze does not create the alias-only user profile. Using an alias-only user ensures that one profile with that alias exists. This is especially helpful when building an integration as it prevents Braze from creating duplicate user profiles.</p>
+    function sanitizeYamlBlockScalars(rawYaml) {
+      var lines = rawYaml.replace(/\r\n/g, "\n").split("\n");
+      var blockIndent = null;
+      var contentIndent = null;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-</pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
---data-raw '{
-    "attributes": [
-        {
-            "_update_existing_only": false,
-            "user_alias": {
-                "alias_name": "example_name",
-                "alias_label": "example_label"
-            },
-            "email": "email@example.com"
+      for (var i = 0; i < lines.length; i += 1) {
+        var line = lines[i];
+        var trimmed = line.trim();
+        var indent = countLeadingSpaces(line);
+
+        if (blockIndent !== null) {
+          if (trimmed === "") {
+            continue;
+          }
+
+          if (isYamlKeyLine(trimmed, indent, blockIndent)) {
+            blockIndent = null;
+            contentIndent = null;
+          } else if (indent < contentIndent) {
+            lines[i] = " ".repeat(contentIndent) + trimmed;
+            continue;
+          }
         }
-    ],
-}'
-</pre></td></tr></tbody></table></code></pre></div></div>
 
-<h3 id="example-request-with-a-group-id-for-status-tracking">Example request with a group ID for status tracking</h3>
-
-<p>This example updates a user’s loyalty tier and includes a <code class="language-plaintext highlighter-rouge">group_id</code> so you can check when Braze finishes processing the request. To check the status, call the <a href="/docs/api/endpoints/user_data/get_users_track_status"><code class="language-plaintext highlighter-rouge">/users/track/status</code> endpoint</a> with the same <code class="language-plaintext highlighter-rouge">group_id</code>. For more information, see <a href="#track-request-processing-status">Track request processing status</a>.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
---data-raw '{
-    "group_id": "loyalty_backfill_2026-09-23",
-    "attributes": [
-        {
-            "external_id": "user_identifier",
-            "loyalty_tier": "gold"
+        if (blockIndent === null && isBlockScalarKey(line)) {
+          blockIndent = indent;
+          contentIndent = indent + 2;
         }
-    ]
-}'
-</pre></td></tr></tbody></table></code></pre></div></div>
+      }
 
-<h2 id="responses">Responses</h2>
+      return lines.join("\n");
+    }
 
-<p>When using any of the aforementioned API requests, you should receive one of the following three general responses: a <a href="#successful-message">successful message</a>, a <a href="#successful-message-with-non-fatal-errors">successful message with non-fatal errors</a>, or a <a href="#message-with-fatal-errors">message with fatal errors</a>.</p>
+    // Liquid is disabled for the YAML assets, so resolve the site.baseurl
+    // token here before Scalar renders the Markdown links.
+    function loadSpec() {
+      return fetch(specUrl, { credentials: "same-origin" }).then(function (response) {
+        if (!response.ok) { throw new Error("Failed to load " + specUrl); }
+        return response.text();
+      }).then(function (rawSpec) {
+        var withBaseUrl = rawSpec.replace(/\{\{\s*site\.baseurl\s*\}\}/g, baseUrl);
+        return sanitizeYamlBlockScalars(withBaseUrl);
+      });
+    }
 
-<h3 id="successful-message">Successful message</h3>
+    // Every spec lists the docs home page as `info.license`, which Scalar shows
+    // as a "Braze Documentation" link that repeats the site navigation.
+    function withoutLicense(specText) {
+      return specText.replace(/^ {2}license:\n(?: {4}.*\n)*/m, "");
+    }
 
-<p>Successful messages are met with the following response:</p>
+    function specTitle(specText) {
+      var match = specText.match(/^ {2}title: (.*)$/m);
+      return match ? match[1].trim() : "";
+    }
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"attributes_processed"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">integer)</span><span class="p">,</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">attributes</span><span class="w"> </span><span class="err">are</span><span class="w"> </span><span class="err">included</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">request</span><span class="p">,</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">integer</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">number</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">external_ids</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">attributes</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">Braze</span><span class="w"> </span><span class="err">queued</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"events_processed"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">integer)</span><span class="p">,</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">events</span><span class="w"> </span><span class="err">are</span><span class="w"> </span><span class="err">included</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">request</span><span class="p">,</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">integer</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">number</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">events</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">Braze</span><span class="w"> </span><span class="err">queued</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"purchases_processed"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">integer)</span><span class="p">,</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">purchases</span><span class="w"> </span><span class="err">are</span><span class="w"> </span><span class="err">included</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">request</span><span class="p">,</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">integer</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">number</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">purchases</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">Braze</span><span class="w"> </span><span class="err">queued</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="p">,</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
+    // The page already shows the endpoint name as its title, so the spec title
+    // labels the intro instead, and the operation summary is dropped so Scalar
+    // heads the operation with its route.
+    function forReference(specText) {
+      return withoutLicense(specText)
+        .replace(/^ {2}title: .*$/m, "  title: About this endpoint")
+        .replace(/^( {4}(?:get|post|put|patch|delete):\n) {6}summary: .*\n/m, "$1");
+    }
 
-<h3 id="successful-message-with-non-fatal-errors">Successful message with non-fatal errors</h3>
+    // The REST API answers CORS preflight requests only for GET and POST, so a
+    // browser can't send PUT, PATCH, or DELETE.
+    function usesPreflightedMethod(specText) {
+      return /^ {4}(put|patch|delete):\s*$/m.test(specText);
+    }
 
-<p>If your message is successful but has non-fatal errors, such as one invalid event object out of a long list of events, you receive the following response:</p>
+    // Lists the description headings, request body, and responses in the page
+    // TOC. Scalar's own title and operation headings are left out.
+    // Scalar's headings sit under the page h1, so screen readers hear them one
+    // level deeper: the intro title and the operation route at level 2, the
+    // description headings at their tag level plus one, and Body and Responses
+    // at level 3.
+    function markTocHeadings(root, title) {
+      var signature = [];
+      var main = root.querySelector("main[aria-label]");
+      if (main && title) { main.setAttribute("aria-label", "API documentation for " + title); }
+      root.querySelectorAll("h1").forEach(function (heading) {
+        heading.setAttribute("role", "heading");
+        heading.setAttribute("aria-level", "2");
+      });
+      root.querySelectorAll('h2[id*="/description/"], h3[id*="/description/"]').forEach(function (heading) {
+        var level = Number(heading.tagName.charAt(1));
+        heading.setAttribute("role", "heading");
+        heading.setAttribute("aria-level", String(level + 1));
+        heading.setAttribute("data-toc-level", String(level));
+        heading.setAttribute("data-toc-label", heading.textContent.trim());
+        signature.push(heading.id);
+      });
+      root.querySelectorAll('h3:not([id*="/description/"])').forEach(function (heading) {
+        heading.setAttribute("role", "heading");
+        heading.setAttribute("aria-level", "2");
+      });
+      root.querySelectorAll("h4").forEach(function (heading) {
+        var text = heading.textContent.trim();
+        var section = /^Body\b/.test(text) ? { id: "endpoint-request-body", label: "Request body" }
+          : text === "Responses" ? { id: "endpoint-responses", label: "Responses" }
+          : null;
+        heading.setAttribute("role", "heading");
+        heading.setAttribute("aria-level", "3");
+        if (section) {
+          heading.id = section.id;
+          heading.setAttribute("data-toc-level", "2");
+          heading.setAttribute("data-toc-label", section.label);
+          signature.push(section.id);
+        }
+      });
+      return signature.join(",");
+    }
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="err">&lt;minor</span><span class="w"> </span><span class="err">error</span><span class="w"> </span><span class="err">message&gt;</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
+    function headingSlug(text) {
+      return text.trim().toLowerCase().replace(/[^\w\- ]+/g, "").replace(/ /g, "-");
+    }
 
-<p>For success messages, Braze still processes any data not affected by an error in the <code class="language-plaintext highlighter-rouge">errors</code> array.</p>
+    // Finds the element a fragment points to: an element with that id, or a
+    // description heading whose Scalar id ends in that slug or whose text
+    // slugs to it.
+    function findAnchorTarget(root, fragment) {
+      if (!fragment) { return null; }
+      var exact = document.getElementById(fragment);
+      if (exact) { return exact; }
+      var headings = root.querySelectorAll('[id*="/description/"]');
+      for (var i = 0; i < headings.length; i += 1) {
+        var heading = headings[i];
+        if (heading.id.split("/description/").pop() === fragment || headingSlug(heading.textContent) === fragment) {
+          return heading;
+        }
+      }
+      return null;
+    }
 
-<h3 id="message-with-fatal-errors">Message with fatal errors</h3>
+    function scrollToFragment(root, fragment) {
+      var target = findAnchorTarget(root, fragment);
+      if (target && root.contains(target)) {
+        target.scrollIntoView();
+        return true;
+      }
+      return false;
+    }
 
-<p>If your message has a fatal error, you receive the following response:</p>
+    function resolveFragmentLinks(root) {
+      document.addEventListener("click", function (evt) {
+        var link = evt.target && evt.target.closest ? evt.target.closest('a[href^="#"]') : null;
+        if (!link) { return; }
+        var fragment = decodeURIComponent(link.getAttribute("href").substring(1));
+        if (!fragment || document.getElementById(fragment)) { return; }
+        if (scrollToFragment(root, fragment)) {
+          evt.preventDefault();
+          history.pushState(null, "", "#" + encodeURIComponent(fragment));
+        }
+      });
+      window.addEventListener("hashchange", function () {
+        scrollToFragment(root, decodeURIComponent(window.location.hash.substring(1)));
+      });
+    }
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;fatal</span><span class="w"> </span><span class="err">error</span><span class="w"> </span><span class="err">message&gt;</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="err">&lt;fatal</span><span class="w"> </span><span class="err">error</span><span class="w"> </span><span class="err">message&gt;</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
+    function syncTocWithReference(root, title) {
+      var lastSignature = "";
+      var settleTimer = null;
+      new MutationObserver(function () {
+        clearTimeout(settleTimer);
+        settleTimer = setTimeout(function () {
+          var signature = markTocHeadings(root, title);
+          if (signature === lastSignature) { return; }
+          var isFirstRender = lastSignature === "";
+          lastSignature = signature;
+          document.dispatchEvent(new CustomEvent("api-reference:rendered"));
+          if (isFirstRender && window.location.hash) {
+            scrollToFragment(root, decodeURIComponent(window.location.hash.substring(1)));
+          }
+        }, 200);
+      }).observe(root, { childList: true, subtree: true });
+    }
 
-<h3 id="fatal-error-response-codes">Fatal error response codes</h3>
+    // Log engagement to Braze via the Web SDK loaded site-wide in analytics.html.
+    // Tracking must never break the page, so guard every call.
+    function brazeLog(eventName, properties) {
+      try {
+        if (window.braze && typeof window.braze.logCustomEvent === "function") {
+          window.braze.logCustomEvent(eventName, properties || {});
+          if (typeof window.braze.requestImmediateDataFlush === "function") {
+            window.braze.requestImmediateDataFlush();
+          }
+        }
+      } catch (err) { /* no-op */ }
+    }
 
-<p>For status codes and associated error messages that Braze returns if your request encounters a fatal error, reference <a href="/docs/api/errors#fatal-errors">Fatal errors &amp; responses</a>.</p>
+    // Readers can type their own values into the Test Request window, and its
+    // buttons repeat the request URL, so labels from outside the reference drop URLs.
+    function labelOf(el, fromReference) {
+      var text = (el.getAttribute("aria-label") || el.innerText || el.textContent || "").replace(/\s+/g, " ").trim();
+      if (!fromReference) { text = text.replace(/https?:\/\/\S*/g, "").trim(); }
+      return text.slice(0, 80);
+    }
 
-<p>If you receive the error “provided external_id is blacklisted and disallowed”, your request may have included a “dummy user.” For more information, refer to <a href="/docs/user_guide/data_and_analytics/user_data_collection/user_archival#spam-blocking">Spam blocking</a>.</p>
+    function statusOf(el) {
+      var match = (el.textContent || "").match(/\b([1-5](?:\d\d|XX))\b/);
+      return match ? match[1] : "";
+    }
 
-<h3 id="endpoint-specific-errors">Endpoint-specific errors</h3>
+    function referenceEvent(name, properties) {
+      var props = {
+        page_url: window.location.pathname,
+        page_title: document.title,
+        spec: specUrl.split("/").pop()
+      };
+      Object.keys(properties || {}).forEach(function (key) { props[key] = properties[key]; });
+      brazeLog(name, props);
+    }
 
-<p>The following errors are specific to the <code class="language-plaintext highlighter-rouge">/users/track</code> endpoint and are returned in the <code class="language-plaintext highlighter-rouge">errors</code> array of the response. Use these to troubleshoot issues with individual objects in a request.</p>
+    var openMenu = "";
+    var testRequestEndpoint = "";
 
-<table class="reset-td-br-1 reset-td-br-2" aria-label="Endpoint-specific errors">
-  <thead>
-    <tr>
-      <th>Error</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">BAD_DEVICE_ID</code></td>
-      <td>The <code class="language-plaintext highlighter-rouge">device_id</code> for a token import must be between 8 and 255 bytes.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">BAD_EMAIL_SUBSCRIPTION_STATE</code></td>
-      <td><code class="language-plaintext highlighter-rouge">email_subscribe</code> must be <code class="language-plaintext highlighter-rouge">subscribed</code>, <code class="language-plaintext highlighter-rouge">unsubscribed</code>, or <code class="language-plaintext highlighter-rouge">opted_in</code>.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">BAD_LOCATION_UPDATE</code></td>
-      <td><code class="language-plaintext highlighter-rouge">current_location</code> must be an object containing <code class="language-plaintext highlighter-rouge">longitude</code> and <code class="language-plaintext highlighter-rouge">latitude</code>.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">BAD_PUSH_SUBSCRIPTION_STATE</code></td>
-      <td><code class="language-plaintext highlighter-rouge">push_subscribe</code> must be <code class="language-plaintext highlighter-rouge">subscribed</code>, <code class="language-plaintext highlighter-rouge">unsubscribed</code>, or <code class="language-plaintext highlighter-rouge">opted_in</code>.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">BAD_PUSH_TOKEN_APP_ID</code></td>
-      <td>The <code class="language-plaintext highlighter-rouge">app_id</code> in a token import must be a valid app identifier from the current workspace.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">BAD_PUSH_TOKEN_IMPORT</code></td>
-      <td>Token imports must include tokens and exclude <code class="language-plaintext highlighter-rouge">external_id</code> and <code class="language-plaintext highlighter-rouge">braze_id</code>.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">BAD_PUSH_TOKEN_STRING</code></td>
-      <td>The <code class="language-plaintext highlighter-rouge">token</code> value in a token import must be a string.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">BAD_PUSH_TOKEN_VALUE</code></td>
-      <td><code class="language-plaintext highlighter-rouge">push_tokens</code> must be an array of objects.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">BAD_SUBSCRIPTION_GROUP_ARRAY</code></td>
-      <td><code class="language-plaintext highlighter-rouge">subscription_groups</code> must be an array.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">BAD_SUBSCRIPTION_GROUP_HASH</code></td>
-      <td>Each item in the <code class="language-plaintext highlighter-rouge">subscription_groups</code> array must be a JSON object with <code class="language-plaintext highlighter-rouge">subscription_group_id</code> and <code class="language-plaintext highlighter-rouge">subscription_state</code> keys.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">BAD_SUBSCRIPTION_GROUP_ID</code></td>
-      <td><code class="language-plaintext highlighter-rouge">subscription_group_id</code> must be a valid subscription group UUID.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">BAD_SUBSCRIPTION_GROUP_STATE</code></td>
-      <td><code class="language-plaintext highlighter-rouge">subscription_state</code> for a subscription group must be <code class="language-plaintext highlighter-rouge">subscribed</code> or <code class="language-plaintext highlighter-rouge">unsubscribed</code>.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">BLACKLISTED_EXTERNAL_USER_ID</code></td>
-      <td>The provided <code class="language-plaintext highlighter-rouge">external_id</code> is blocklisted and disallowed.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">EMAIL_BAD_FORMAT</code></td>
-      <td>The value provided for <code class="language-plaintext highlighter-rouge">email</code> is not a valid email address.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">EXTERNAL_USER_ID_TOO_LARGE</code></td>
-      <td>The <code class="language-plaintext highlighter-rouge">external_id</code> exceeds the maximum allowed length of 987 bytes.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">INVALID_ATTRIBUTE_EMAIL_SUBSCRIPTION_INFO</code></td>
-      <td><code class="language-plaintext highlighter-rouge">email_subscription_info</code> is not a valid attribute.</td>
-    </tr>
-  </tbody>
-</table>
+    function trackOption(target) {
+      var label = labelOf(target, openMenu === "server");
+      if (openMenu === "server") {
+        referenceEvent("api_server_selected", { server: label });
+      } else if (openMenu === "code_language") {
+        referenceEvent("api_code_language_selected", { language: label });
+      } else if (openMenu === "request_example") {
+        referenceEvent("api_request_example_selected", { example: label });
+      } else if (openMenu === "schema_variant") {
+        referenceEvent("api_schema_variant_selected", { variant: label });
+      } else {
+        referenceEvent("api_test_request_button_clicked", { button: label });
+      }
+      openMenu = "";
+    }
+
+    function inResponses(target) {
+      var heading = document.getElementById("endpoint-responses");
+      return !!heading && !!(heading.compareDocumentPosition(target) & Node.DOCUMENT_POSITION_FOLLOWING);
+    }
+
+    function trackTestRequestClick(target) {
+      var label = labelOf(target, false);
+      openMenu = "test_request";
+      if (target.tagName === "INPUT") { return; }
+      if (/^Send\b/.test(label)) {
+        referenceEvent("api_send_request_clicked", { endpoint: testRequestEndpoint });
+      } else if (/^Close Client/.test(label)) {
+        referenceEvent("api_close_test_request_clicked", { endpoint: testRequestEndpoint });
+      } else if (target.getAttribute("role") === "tab") {
+        referenceEvent("api_test_request_tab_clicked", { tab: label });
+      } else {
+        referenceEvent("api_test_request_button_clicked", { button: label });
+      }
+    }
+
+    function trackReferenceButton(target) {
+      var label = labelOf(target, true);
+      openMenu = "";
+      if (target.classList.contains("scalar-card-checkbox-input")) {
+        referenceEvent("api_response_schema_toggle_clicked", { shown: target.checked });
+      } else if (target.tagName === "INPUT" || target.classList.contains("ask-agent-scalar-send")) {
+        return;
+      } else if (target.classList.contains("show-api-client-button")) {
+        var endpoint = target.textContent.match(/\((\w+) ([^)]+)\)/);
+        testRequestEndpoint = endpoint ? endpoint[1].toUpperCase() + " " + endpoint[2] : "";
+        referenceEvent("api_test_request_clicked", { endpoint: testRequestEndpoint });
+      } else if (/^Server:/.test(label)) {
+        openMenu = "server";
+        referenceEvent("api_server_menu_clicked");
+      } else if (target.classList.contains("client-libraries__select") || target.getAttribute("data-testid") === "client-picker") {
+        openMenu = "code_language";
+        referenceEvent("api_code_language_menu_clicked");
+      } else if (target.classList.contains("client-libraries")) {
+        referenceEvent("api_code_language_clicked", { language: label });
+      } else if (target.getAttribute("data-testid") === "example-picker") {
+        openMenu = "request_example";
+        referenceEvent("api_request_example_menu_clicked");
+      } else if (target.classList.contains("composition-selector")) {
+        openMenu = "schema_variant";
+        referenceEvent("api_schema_variant_menu_clicked");
+      } else if (target.classList.contains("anchor-copy-button") || target.classList.contains("copy-link-trailing")) {
+        referenceEvent("api_copy_link_clicked", { target: label });
+      } else if (label === "Copy as Markdown") {
+        referenceEvent("api_copy_as_markdown_clicked");
+      } else if (target.classList.contains("security-requirement-badge") || /^Authentication Required/.test(label)) {
+        referenceEvent("api_authentication_details_clicked");
+      } else if (target.classList.contains("parameter-item-trigger") && inResponses(target)) {
+        referenceEvent("api_response_details_clicked", { status: statusOf(target) });
+      } else if (target.classList.contains("parameter-item-trigger")) {
+        referenceEvent("api_parameter_details_clicked", { parameter: label });
+      } else if (target.getAttribute("role") === "tab" && target.classList.contains("tab")) {
+        referenceEvent("api_response_example_tab_clicked", { status: statusOf(target) });
+      } else {
+        referenceEvent("api_reference_button_clicked", { button: label });
+      }
+    }
+
+    var specForDownload = "";
+
+    // Scalar's download button exports the spec as rendered, with the intro
+    // title and without the summary and license, so it saves the spec as written.
+    function downloadSpec() {
+      var link = document.createElement("a");
+      link.href = URL.createObjectURL(new Blob([specForDownload], { type: "application/yaml" }));
+      link.download = specUrl.split("/").pop();
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(function () { URL.revokeObjectURL(link.href); }, 0);
+    }
+
+    // The Swagger-era event names stay, so existing reports keep working.
+    function trackReferenceClicks() {
+      if (window.__openapiTrackingBound) { return; }
+      window.__openapiTrackingBound = true;
+      document.addEventListener("click", function (evt) {
+        var target = evt.target && evt.target.closest ? evt.target.closest("a, button, [role=option], input") : null;
+        if (!target) { return; }
+        var inReference = !!target.closest(".api-reference");
+        var inScalar = inReference || !!target.closest(".scalar-app");
+        var page = window.location.pathname;
+        var href = target.getAttribute("href") || "";
+        var label = target.getAttribute("aria-label") || "";
+        if (href.indexOf("/assets/api/openapi/") !== -1 || /^Download OpenAPI Document/.test(label)) {
+          if (inReference && !href && specForDownload) {
+            evt.preventDefault();
+            evt.stopPropagation();
+            downloadSpec();
+          }
+          brazeLog("docs_api_spec_download_click", { spec_url: href || specUrl, page: page });
+        } else if (href.indexOf("/api/openapi_schema_validation") !== -1) {
+          brazeLog("docs_api_validation_guide_click", { page: page });
+        } else if (inReference && /^Copy .+ code$/.test(label)) {
+          brazeLog("docs_api_copy_code_click", {
+            block_type: /JSON/.test(label) ? "response" : "request",
+            spec: specUrl.split("/").pop(),
+            page: page
+          });
+        } else if (!inScalar) {
+          return;
+        } else if (target.tagName === "A" && href.indexOf("/braze_support") !== -1) {
+          referenceEvent("api_braze_support_clicked", { link_url: href });
+        } else if (target.tagName === "A") {
+          referenceEvent("api_reference_link_clicked", {
+            link_url: inReference ? href : href.split("?")[0],
+            link_text: labelOf(target, inReference)
+          });
+        } else if (target.getAttribute("role") === "option") {
+          trackOption(target);
+        } else if (target.closest(".scalar-app-layout")) {
+          trackTestRequestClick(target);
+        } else if (inReference) {
+          trackReferenceButton(target);
+        }
+      }, true);
+      document.addEventListener("submit", function (evt) {
+        if (evt.target && evt.target.closest && evt.target.closest(".api-reference .agent-button-container")) {
+          referenceEvent("api_ask_ai_agent_submitted");
+        }
+      }, true);
+      document.addEventListener("keydown", function (evt) {
+        if (evt.key === "Enter" && (evt.metaKey || evt.ctrlKey) && evt.target && evt.target.closest && evt.target.closest(".scalar-app-layout")) {
+          referenceEvent("api_send_request_clicked", { endpoint: testRequestEndpoint, via: "shortcut" });
+        }
+      }, true);
+    }
+
+    trackReferenceClicks();
+
+    Promise.all([loadScalar(), loadSpec()]).then(function (results) {
+      var root = document.querySelector(mountSelector);
+      specForDownload = results[1];
+      syncTocWithReference(root, specTitle(results[1]));
+      resolveFragmentLinks(root);
+      results[0].createApiReference(mountSelector, {
+        content: forReference(results[1]),
+        layout: "modern",
+        showSidebar: false,
+        hideSearch: true,
+        hideModels: true,
+        orderSchemaPropertiesBy: "preserve",
+        documentDownloadType: "yaml",
+        defaultHttpClient: { targetKey: "shell", clientKey: "curl" },
+        telemetry: false,
+        persistAuth: false,
+        hideClientButton: true,
+        hideTestRequestButton: usesPreflightedMethod(results[1]),
+        hideDarkModeToggle: true,
+        forceDarkModeState: "light",
+        showDeveloperTools: "never",
+        urlRouting: false,
+        withDefaultFonts: false,
+        customCss: brandVariables
+      });
+    }).catch(function (error) {
+      console.error("[api-reference]", error);
+    });
+  })();
+</script>
+
+<h2 id="need-to-update-users-in-bulk">Need to update users in bulk?</h2>
+
+<p>Use the <a href="/docs/api/endpoints/user_data/post_user_track_bulk/"><code class="language-plaintext highlighter-rouge">/users/track/bulk</code> endpoint</a> to send larger batches and reduce request volume.</p>
 
 <h2 id="track-request-processing-status">Track request processing status</h2>
 
@@ -855,5 +720,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 </table>
 
 <p>Note that the <code class="language-plaintext highlighter-rouge">RateLimit-Limit</code>, <code class="language-plaintext highlighter-rouge">RateLimit-Remaining</code>, and <code class="language-plaintext highlighter-rouge">RateLimit-Reset</code> headers are not returned when you hit an HTTP <code class="language-plaintext highlighter-rouge">429</code> error. When the error occurs, those headers are replaced with an <code class="language-plaintext highlighter-rouge">X-RateLimit-Retry-After</code> header that returns an integer indicating the number of seconds before you can start making requests.</p>
+
+<p>You can <a href="/docs/assets/api/openapi/users_track.yaml">download the OpenAPI document</a> and use it to validate schemas. To learn how, see <a href="/docs/api/openapi_schema_validation/">Use OpenAPI schemas for request validation</a>.</p>
 
 </div>

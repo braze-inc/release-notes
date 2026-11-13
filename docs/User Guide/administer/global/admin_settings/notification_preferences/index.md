@@ -38,6 +38,7 @@ Depending on the notification type, **All Dashboard Users** and **All Admins** m
 | Canvas Interaction Expiration | Notifies recipients about any Canvas that is due for Canvas interaction data expiration, along with any information about segments, campaigns, or Canvases that reference it in a retargeting filter and were used to send a message in the previous 30 days. | Email |
 | Comments within Canvases | Notifies recipients when a Canvas has new comments. | Email |
 | Connected Content Errors | Notifies recipients when a Connected Content endpoint has errors. | Email |
+| Dormant Accounts Restored | Notifies company admins when an admin restores a dashboard account that was [suspended for inactivity](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#dormant-accounts). Company admins receive this by default when **Suspend dormant accounts** is on. | Email |
 | Push Errors | Notifies recipients when a push endpoint has errors. | Email, Webhook |
 | Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending. | Email, Webhook |
 | Scheduled Campaign Sent/Not Sent | Notifies recipients when scheduled campaigns begin sending, or when a scheduled campaign has no eligible users to send to. | Email, Webhook |

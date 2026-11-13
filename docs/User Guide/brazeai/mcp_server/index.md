@@ -106,10 +106,6 @@ Directory listings may not be available in every MCP client yet. You can always 
 
 No. The Braze MCP server isn't available for free trial accounts.
 
-### My company uses IP allowlisting. Can we use the remote MCP server?
-
-Not right now. If you use [IP Allowlisting](https://www.braze.com/docs/user_guide/administer/global/admin_settings/security_settings#dashboard-ip-allowlisting), you cannot use the remote MCP server.
-
 ## Legal disclaimer
 <!-- Braze Legal must approve any changes to this content. -->
 <!-- Note: Keep these comments under this H2 heading to avoid breaking how headings on certain pages are rendered. -->

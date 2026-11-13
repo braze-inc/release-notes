@@ -52,12 +52,6 @@ You can assign a catalog to a Team. Admins can grant the View Catalogs, Edit Cat
 
 ## Channels & Touchpoints
 
-### Intelligent IP warming
-
-
-
-[Automated IP warming](https://www.braze.com/docs/user_guide/channels/email/email_setup/ip_warming/automated_ip_warming) now supports Intelligent ranking alongside manual segment ranking. Upload a CSV of recent email opens and clicks from your previous provider, and Braze scores matching users by predicted engagement so the warm-up ramp sends to the most engaged users first.
-
 ### Email NPS Survey block
 
 

@@ -67,15 +67,15 @@ Live monitoring alerts you in the Braze dashboard if any of your active domains 
 
 When you add a custom domain, Braze shows the DNS records to add with your DNS provider. These records tell browsers and devices where to send clicks on your shortened links. Add the records exactly as they appear in Braze.
 
-New custom domains use A and AAAA records. Older custom domains that use a CNAME record still work, and don't need to be updated.
+New custom domains use A and AAAA records. Older custom domains that still use a CNAME record continue to work. If your domain is eligible for migration, its page in Braze shows a migration panel. For steps, see [Migrate a CNAME custom domain](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/custom_domains/migrate_cname).
 
 | Records | Points to | Used for |
 | --- | --- | --- |
-| A and AAAA | An IPv4 address (A) and an IPv6 address (AAAA) | New custom domains (default) |
-| CNAME | Another domain name | Older custom domains |
+| A and AAAA | An IPv4 address (A) and an IPv6 address (AAAA) | New custom domains (default) and migrated domains |
+| CNAME | Another domain name | Older custom domains that haven't migrated yet |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="DNS record types for custom domains" }
 
-With A and AAAA records, your domain points directly to the Braze link infrastructure instead of to a domain name shared with other customers, so an issue with a shared domain doesn't affect your links. 
+With A and AAAA records, your domain points directly to the Braze link infrastructure instead of to a domain name shared with other customers, so an issue with a shared domain doesn't affect your links.
 
 ## Assign custom domains to subscription groups
 
@@ -133,7 +133,11 @@ Yes. If there’s an error, you’ll receive a banner in the Braze dashboard det
 
 ### Can I use a custom domain across multiple channels?
 
-Yes. After a custom domain is verified, it can be used in all SMS, RCS, and WhatsApp subscription groups across all workspaces within a dashboard. 
+Yes. After a custom domain is verified, it can be used in all SMS, RCS, and WhatsApp subscription groups across all workspaces within a dashboard.
+
+### Do I need to migrate my existing custom domains?
+
+If your domain was set up with a CNAME record, migrate it to A and AAAA records when the migration panel appears on the domain page. New domains already use A and AAAA records and don't need this migration. For steps, see [Migrate a CNAME custom domain](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/custom_domains/migrate_cname).
 
 ### What if I have questions or need further support?
 

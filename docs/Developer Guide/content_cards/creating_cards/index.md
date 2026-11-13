@@ -45,7 +45,7 @@ All properties outside of `id` and `extras` are optional to parse for custom Con
 
 
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/web/changelog/#700' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 7.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=web#web_700' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 7.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 Use [`subscribeToContentCardsEvents`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsevents) to receive Content Card events. The SDK calls your handler with an event object. Switch on `event.type` to handle each kind of event. For more information about the event values, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
 
@@ -135,7 +135,7 @@ Use `subscribeToContentCardsEvents` on Web SDK 7.0.0 and later. `subscribeToCont
 
 
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/android/changelog/#4400' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 44.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=android#android_4400' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 44.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 
 
@@ -277,7 +277,7 @@ To access the Content Cards data model, call [`contentCards.cards`](https://braz
 
 
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1900' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 19.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_1900' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 19.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ```swift
 let cards: [Braze.ContentCard] = AppDelegate.braze?.contentCards.cards

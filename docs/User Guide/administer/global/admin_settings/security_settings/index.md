@@ -40,6 +40,12 @@ For [SAML SSO](https://www.braze.com/docs/user_guide/administer/global/saml_sing
 
 Use the field shown to allowlist specific IP addresses and subnets from which users can log in to your account (for example, from a company network or VPN). Specify IP addresses and subnets as CIDR ranges in a comma-separated list. If not specified, users can log in from any IP address.
 
+### Terminate roaming sessions {#terminate-roaming-sessions}
+
+Use **Terminate roaming sessions** to end dashboard sessions that continue from an IP address outside your allowlist. For example, if a user signs in from an allowed office network and later moves to a different location, Braze ends their session as soon as traffic comes from a non-allowlisted IP.
+
+This setting is off by default. When it's off, Braze only checks the allowlist at sign-in. You must add at least one allowed IP before you can turn **Terminate roaming sessions** on.
+
 ## Two-factor authentication (2FA)
 
 Two-factor authentication is required for all company users. It adds a second level of identity verification to an account log, making it more secure than just a username and password. If your dashboard cannot support two-factor authentication, contact your customer success manager. 
@@ -107,6 +113,25 @@ To manually activate two-factor authentication (2FA) on your Braze account, foll
 Elevated Access adds an extra layer of security for sensitive actions in your Braze dashboard. When active, users need to re-verify their account before exporting a segment or viewing an API key. To use Elevated Access, go to **Settings** > **Company Settings** > **Admin Settings** > **Security Settings** and toggle it on. 
 
 If a user can’t re-verify, they’ll be redirected to where they left off and won’t be able to continue with the sensitive action. After they successfully re-verify, they won’t need to do so again for the next hour—unless they log out first.
+
+## Dormant accounts {#dormant-accounts}
+
+Use the **Dormant Accounts** panel to automatically [suspend](https://www.braze.com/docs/user_guide/administer/global/user_management/manage_company_users#suspending-company-users) dashboard users who haven't signed in for 180 days. This setting is off by default. When it's on, Braze warns inactive users by email before suspending them.
+
+To turn on automatic suspension:
+
+1. Go to **Settings** > **Company Settings** > **Admin Settings** > **Security Settings**.
+2. In **Dormant Accounts**, turn on **Suspend dormant accounts**.
+3. Save your changes.
+
+When **Suspend dormant accounts** is on:
+
+- Braze emails users 15 days before suspension, then again 1 day before.
+- After 180 days without a sign-in, Braze suspends the account and emails the user a suspension notice. The user can't sign in until an admin restores them in **Company Users**.
+- If you turn the setting on and a user has already gone more than 180 days without a sign-in, Braze sends them the notification emails and suspends their account.
+- Signing in before suspension resets the inactivity clock.
+- In **Company Users**, admins can see the suspension reason for dormant accounts and restore access from **Settings** > **Company Settings** > **User Management**.
+- Company admins receive [**Dormant Accounts Restored**](https://www.braze.com/docs/user_guide/administer/global/admin_settings/notification_preferences) notifications by default when an admin restores a user who was suspended for inactivity. You can change recipients in **Notification Preferences**.
 
 ## Downloading a security event report {#security-event-report}
 

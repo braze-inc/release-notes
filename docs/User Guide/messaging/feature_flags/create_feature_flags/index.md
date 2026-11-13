@@ -8,7 +8,7 @@
 
 To use feature flags, ensure your SDKs are up to date with at least these minimum versions:
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#590' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 5.9.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/web/changelog/#460' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 4.6.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/android/changelog/#2420' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 24.2.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='https://github.com/braze-inc/braze-roku-sdk/blob/master/CHANGELOG.md' class='sdk-versions--chip roku-sdk' target='_blank'><i class='fa-solid fa-tv'></i> &nbsp; Roku: 1.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/flutter/changelog/#600' class='sdk-versions--chip flutter-sdk' target='_blank'>Flutter: 6.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/unity/changelog/#410' class='sdk-versions--chip unity-sdk' target='_blank'>Unity: 4.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/react_native/changelog/#410' class='sdk-versions--chip reactnative-sdk' target='_blank'>React Native: 4.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/platforms/cordova/changelog/#500' class='sdk-versions--chip cordova-sdk' target='_blank'>Cordova: 5.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_590' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 5.9.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=web#web_460' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 4.6.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=android#android_2420' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 24.2.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='https://github.com/braze-inc/braze-roku-sdk/blob/master/CHANGELOG.md' class='sdk-versions--chip roku-sdk' target='_blank'><i class='fa-solid fa-tv'></i> &nbsp; Roku: 1.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=flutter#flutter_600' class='sdk-versions--chip flutter-sdk' target='_blank'>Flutter: 6.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=unity#unity_410' class='sdk-versions--chip unity-sdk' target='_blank'>Unity: 4.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=react%20native#reactnative_410' class='sdk-versions--chip reactnative-sdk' target='_blank'>React Native: 4.1.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a><a href='/docs/developer_guide/changelogs/?sdktab=cordova#cordova_500' class='sdk-versions--chip cordova-sdk' target='_blank'>Cordova: 5.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ### Braze permissions
 
@@ -757,7 +757,7 @@ This is useful if you want to update your app if a user is no longer eligible fo
 
 
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/web/changelog/#700' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 7.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=web#web_700' class='sdk-versions--chip web-sdk' target='_blank'><i class='fa-solid fa-desktop'></i> &nbsp; Web: 7.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 Use [`subscribeToFeatureFlagsEvents`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetofeatureflagsevents) to listen for feature flag events. The SDK calls your handler with an event object. Switch on `event.type` to handle each kind of event. For more information about the event values, see [Event subscriptions](https://www.braze.com/docs/developer_guide/sdk_integration/event_subscriptions).
 
@@ -826,7 +826,7 @@ Use `subscribeToFeatureFlagsEvents` on Web SDK 7.0.0 and later. `subscribeToFeat
 
 
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/swift/changelog/#1900' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 19.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=swift#swift_1900' class='sdk-versions--chip ios-sdk' target='_blank'><i class='fa-brands fa-apple'></i> &nbsp; Swift: 19.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 ```swift
 // Create the feature flags subscription
@@ -851,7 +851,7 @@ subscription.cancel()
 
 
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/android/changelog/#4400' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 44.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=android#android_4400' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 44.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 
 

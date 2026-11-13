@@ -22,6 +22,8 @@ Use the [Subscription Group endpoints](https://www.braze.com/docs/api/endpoints/
 
 
 
+
+
 ## Global subscription state versus subscription groups
 
 Some channels have both a global subscription state and subscription groups:
@@ -35,6 +37,13 @@ Some channels have both a global subscription state and subscription groups:
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Global subscription state versus subscription groups" }
 
 A user can be globally subscribed to email while unsubscribed from a specific email subscription group. For SMS, a user can be subscribed to a transactional group and unsubscribed from a promotional group at the same time.
+
+**Note:**
+
+
+If a user isn't receiving messages for a channel, [check a user's subscription groups](#check-a-users-subscription-groups) before troubleshooting a send or delivery failure.
+
+
 
 ## Create a subscription group
 

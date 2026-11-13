@@ -59,7 +59,7 @@ You can send "Big Picture" notifications by specifying the key `appboy_image_url
 
 ## Android conversation push object {#android-conversation-push-object}
 
-<div id='sdk-versions'><a href='/docs/developer_guide/platforms/android/changelog/#1500' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 15.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
+<div id='sdk-versions'><a href='/docs/developer_guide/changelogs/?sdktab=android#android_1500' class='sdk-versions--chip android-sdk' target='_blank'><i class='fa-brands fa-android'></i> &nbsp; Android: 15.0.0+ &nbsp;<i class='fa-solid fa-arrow-up-right-from-square'></i></a></div>
 
 The concepts in this message correspond to those in the [Android People and Conversations](https://developer.android.com/guide/topics/ui/conversations) push documentation.
 

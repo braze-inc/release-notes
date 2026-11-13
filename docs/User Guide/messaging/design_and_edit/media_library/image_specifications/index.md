@@ -46,6 +46,8 @@ GIFs are supported in iOS push, in-app messages, email, Content Cards, and MMS o
 
 
 
+
+
 ## Channel guidance
 
 ### Content Cards

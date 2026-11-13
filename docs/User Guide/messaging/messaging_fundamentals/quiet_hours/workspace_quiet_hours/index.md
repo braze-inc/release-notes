@@ -4,13 +4,6 @@
 
 Workspace quiet hours are separate from campaign and Canvas-level quiet hours, which still apply when you configure them. Use workspace quiet hours for the default case (for example, a compliance requirement across all SMS sends). Keep campaign and Canvas-level quiet hours for exceptions.
 
-**Important:**
-
-
-Workspace quiet hours is currently available in early access. Configuration options may change before general availability. Contact your Braze account team to request access.
-
-
-
 ## How it works
 
 - **One window per channel:** Each channel supports a single workspace quiet hours window, defined by a start time and an end time.

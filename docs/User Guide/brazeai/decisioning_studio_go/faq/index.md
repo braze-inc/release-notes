@@ -14,7 +14,7 @@ Decisioning Studio Go picks the best variant for each individual user, based on 
 
 ### How is Decisioning Studio Go different from Decisioning Studio Pro?
 
-Go is the self-serve tier. It's the right starting point for marketers who want one-to-one email personalization without a heavy implementation lift. It optimizes for clicks and works with options you configure directly inside Braze.
+Go is the self-serve tier and the right starting point for marketers who want one-to-one email personalization without a heavy implementation lift. It optimizes for clicks and works with options you configure directly inside Braze.
 
 Pro is the full-service tier. It optimizes for any business metric, connects to any first-party data source, supports multiple channels, and comes with dedicated support from the Braze AI Decisioning Services team.
 
