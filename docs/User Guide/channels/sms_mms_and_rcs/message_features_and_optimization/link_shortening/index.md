@@ -19,7 +19,7 @@ Link shortening can be turned on at the [message variant-level](https://www.braz
 **Note:**
 
 
-For RCS messages, link shortening and URL-level click tracking are supported for URLs in the message body, but not for URLs in suggested actions. Clicks on suggested action URLs are recorded as RCS click events, but the `URL` and `SHORT_URL` fields will be null in Currents and Snowflake.
+For RCS, link shortening applies to URLs in the body of Text and Media messages, and to the SMS fallback body for every RCS message type. It doesn't apply to Card content, Card button URLs, or suggestion URLs, which are sent as entered. Clicks on suggested action URLs are recorded as RCS click events, but the `URL` and `SHORT_URL` fields will be null in Currents and Snowflake.
 
 
 
@@ -154,7 +154,7 @@ Link shortening and click tracking can be turned on at the [message variant-leve
 **Note:**
 
 
-For RCS messages, link shortening and URL-level click tracking are supported for URLs in the message body, but not for URLs in suggested actions. Clicks on suggested action URLs are recorded as RCS click events, but the `URL` and `SHORT_URL` fields will be null in Currents and Snowflake.
+For RCS, link shortening applies to URLs in the body of Text and Media messages, and to the SMS fallback body for every RCS message type. It doesn't apply to Card content, Card button URLs, or suggestion URLs, which are sent as entered. Clicks on suggested action URLs are recorded as RCS click events, but the `URL` and `SHORT_URL` fields will be null in Currents and Snowflake.
 
 
 

@@ -52,6 +52,12 @@ You can assign a catalog to a Team. Admins can grant the View Catalogs, Edit Cat
 
 ## Channels & Touchpoints
 
+### Twilio RCS support
+
+
+
+[RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup) is available for customers using Twilio as their SMS service provider, in addition to Infobip. Feature availability differs by provider; for information, see [Provider differences](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup#provider-differences).
+
 ### Email NPS Survey block
 
 

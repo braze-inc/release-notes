@@ -320,7 +320,7 @@ These are use cases of how users can be updated after you follow the setup steps
 
 ## User ID reconciliation 
 
-LINE IDs are automatically received by Braze when a user follows your channel, or when you use the one-time “sync followers” workflow. LINE IDs are also specific to the channel that users follow, so it's unlikely that users can provide their LINE IDs.
+LINE IDs are automatically received by Braze when a user follows your channel, or when you use the one-time “sync followers” workflow. LINE IDs are also specific to the LINE provider, so it's unlikely that users can provide their LINE IDs.
 
 There are two ways to combine a LINE ID with an existing Braze user profile:
 

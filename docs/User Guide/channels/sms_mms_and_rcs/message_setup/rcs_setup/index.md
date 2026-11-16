@@ -17,7 +17,7 @@ To be eligible for sending RCS with Braze, your business must meet three criteri
 - Austria
 - Brazil
 - Canada
-- Colombia
+- Colombia (Infobip only)
 - Czech Republic
 - Denmark
 - France
@@ -38,6 +38,8 @@ To be eligible for sending RCS with Braze, your business must meet three criteri
 
 {: start="3"}
 3. You must procure an RCS SKU(s) in your contract.
+
+RCS is available with Infobip and Twilio as your SMS service provider. For feature differences, refer to [Provider differences](#provider-differences).
 
 ## Step 2: Register an RCS-verified sender
 
@@ -73,19 +75,60 @@ For SMS and RCS, received message [segmentation filters](https://www.braze.com/d
 
 
 
+**Note:**
+
+
+RCS messages sent from a [Content Optimizer](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/content_optimizer_step) step don't support SMS fallback.
+
+
+
 ### Timeline for carrier approval
 
-The timeline for carrier approval varies by country and can also vary within a country. Keep in mind that the RCS market is still in its infancy, so carrier and aggregator processes are rapidly evolving. In the United States, Braze estimates that carrier approval turnaround time for an RCS-verified sender typically falls within the 4—6 week range, with a test sender typically approved within one week.
+The timeline for carrier approval varies by country and can also vary within a country. Carrier approval typically takes 3–6 weeks. This is an estimate, and timelines vary by carrier and country. A test sender is typically approved within one week.
 
 When your RCS-verified sender is approved, our operations team updates your subscription groups as needed to confirm they have the RCS sender included in them. 
 
 ## Step 3: Set up subscription groups
 
-Depending on your integration, Braze can add RCS-verified senders to your existing SMS subscription groups or set up new ones. For detailed setup instructions, refer to [SMS and RCS subscription groups](https://www.braze.com/docs/sms_rcs_subscription_groups).
+Your customer success manager helps you add approved RCS-verified senders to a subscription group. For how existing and new groups work, and for traffic migration details, see [SMS and RCS subscription groups](https://www.braze.com/docs/sms_rcs_subscription_groups).
+
+## Provider differences {#provider-differences}
+
+RCS is available with Infobip and Twilio. Most of the setup flow is the same for both, and the composer only shows the options your provider supports. The main differences are described in the following table:
+
+| Capability | Infobip | Twilio |
+| --- | --- | --- |
+| Text message length | Up to 3,072 characters | Up to 1,600 characters |
+| Suggested replies and Open URL suggestions on Text messages | Supported | Supported |
+| Standalone Media message type (including PDF and audio) | Supported | Not supported |
+| Card: media card | Supported | Supported |
+| Card: text-only card | Supported | Not supported |
+| Card: suggestions outside the card | Supported | Not supported |
+| Card: buttons | 1 to 4 | 1 to 4 |
+| Card description | Up to 2,000 characters | Up to 1,600 characters |
+| Media file size | Up to 100&nbsp;MB | Up to 16&nbsp;MB |
+| SMS fallback sender | Infobip SMS sender in the same subscription group | Twilio SMS sender in the same subscription group |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="RCS provider differences" }
+
+For the full list of Card options by provider, see [Provider support for RCS messages](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/create#provider-support-for-card-messages).
 
 ## Migrating SMS traffic to RCS
 
-If you have separate SMS and RCS subscription groups, you can migrate users from SMS to RCS using a one-step Canvas. For step-by-step instructions, refer to [Migrate SMS traffic to RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups#migrate-sms-traffic-to-rcs).
+You can add an RCS sender to an existing SMS subscription group or create a separate RCS subscription group. The two approaches behave differently:
+
+| Aspect | Same subscription group (recommended for upgrading SMS traffic) | Separate subscription groups |
+| --- | --- | --- |
+| Eligibility | SMS-subscribed users are automatically eligible for RCS. | You must migrate users into the RCS group. |
+| Opt-outs | A STOP sent to either the SMS or the RCS sender unsubscribes the user from the whole group. | Opt-outs in one group don't carry over to the other. You're responsible for keeping subscription states aligned—for example, by unsubscribing users from the RCS group when they opt out of SMS. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Same versus separate SMS and RCS subscription groups" }
+
+Also keep these limits in mind:
+
+- A subscription group can't mix SMS service providers, and an RCS sender can belong to only one subscription group. If your SMS sender and RCS sender use different providers, they must be in separate groups, and their subscription states won't sync.
+- Users can't opt in by messaging the RCS sender. Opt-in keywords go through the SMS sender in the same group.
+
+
+If you have separate SMS and RCS subscription groups, you can migrate users from SMS to RCS using a one-step Canvas. For step-by-step instructions, see [Migrate SMS traffic to RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups#migrate-sms-traffic-to-rcs).
 
 ## Considerations
 
