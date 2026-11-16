@@ -270,7 +270,9 @@ For composing MMS messages, refer to [Create an SMS, MMS, or RCS message](https:
 
 ### RCS
 
-RCS media messages support JPG, JPEG, and GIF images. For file size and format details, refer to [Create an SMS, MMS, or RCS message](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/create).
+RCS messages support JPG, JPEG, PNG, and GIF images. For file size and format details, see [Create an SMS, MMS, or RCS message](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/create).
 
-On iOS, GIFs in RCS rich cards display as static images. On Android, they animate as expected. For details, refer to [Why do GIFs in RCS rich cards appear static on iOS?](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/faqs#why-do-gifs-in-rcs-rich-cards-appear-static-on-ios).
+For Card images, we recommend a 3:2 aspect ratio (1620 x 1080 px). Keep important content inside a centered 1458 x 972 px safe zone to reduce cropping on Android and iOS. The composer doesn't enforce these dimensions.
+
+On iOS, GIFs in RCS rich cards display as static images. On Android, they animate as expected. For details, see [Why do GIFs in RCS rich cards appear static on iOS?](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/faqs#why-do-gifs-in-rcs-rich-cards-appear-static-on-ios).
 

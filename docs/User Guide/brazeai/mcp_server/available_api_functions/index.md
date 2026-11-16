@@ -13,7 +13,7 @@ The locally hosted Braze MCP server (beta) is deprecated and doesn't receive add
 **Note:**
 
 
-The Braze MCP server includes tools that are only available to customers participating in beta programs. If you try to access a tool that is part of a beta program and your account does not have the feature enabled, you may receive an error response. To join a beta program, contact your account manager.
+The Braze MCP server includes tools that are only available to customers participating in beta programs, such as the Operator tools. If you try to access a tool that is part of a beta program and your account does not have the feature enabled, you may receive an error response. To join a beta program, contact your account manager.
 
 
 
@@ -39,28 +39,27 @@ Your MCP client references these tools to interact with the Braze MCP server. To
 | `get_campaign_list` | [`/campaigns/list`](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaigns) | read | View campaign analytics | Export a list of campaigns with name, campaign API identifier, API-campaign flag, and tags. |
 | `get_campaign_details` | [`/campaigns/details`](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_details) | read | View campaign analytics | Retrieve relevant information on a specified campaign by `campaign_id`. |
 | `get_campaign_dataseries` | [`/campaigns/data_series`](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_analytics) | read | View campaign analytics | Daily series of campaign stats over time (sends, opens, clicks, conversions by channel). |
-| `duplicate_campaign` | [`/campaigns/duplicate`](https://www.braze.com/docs/api/endpoints/messaging/duplicate_messages/post_duplicate_campaigns) | create | Create campaigns | Duplicate an existing campaign. |
-| `create_campaign` | MCP only | create | Create campaigns | Create a new campaign. |
-| `edit_campaign` | MCP only | update | Edit campaigns | Edit an existing campaign. |
-| `launch_campaign`<sup>*</sup> | MCP only | update | Launch campaigns | Launch a campaign. |
-| `stop_campaign` | MCP only | update | Stop campaigns | Stop a running campaign. |
-| `archive_campaign`<sup>*</sup> | MCP only | update | Archive campaigns | Archive a campaign. |
-| `unarchive_campaign`<sup>*</sup> | MCP only | update | Archive campaigns | Unarchive a campaign. |
-| `get_campaign_draft` | MCP only | read | View campaign analytics | Retrieve draft campaign details. |
-| `get_campaign_live_details` | MCP only | read | View campaign analytics | Retrieve live campaign details. |
-| `create_campaign_message` | MCP only | create | Edit campaigns | Create a message within a campaign. |
-| `update_campaign_message` | MCP only | update | Edit campaigns | Update a campaign message. |
-| `delete_campaign_message` | MCP only | delete | Edit campaigns | Delete a campaign message. |
-| `create_campaign_message_variation` | MCP only | create | Edit campaigns | Create a message variation within a campaign. |
-| `update_campaign_message_variation` | MCP only | update | Edit campaigns | Update a campaign message variation. |
-| `delete_campaign_message_variation` | MCP only | delete | Edit campaigns | Delete a campaign message variation. |
-| `update_campaign_distribution` | MCP only | update | Edit campaigns | Update campaign distribution settings. |
+| `duplicate_campaign` | [`/campaigns/duplicate`](https://www.braze.com/docs/api/endpoints/messaging/duplicate_messages/post_duplicate_campaigns) | create | Create campaigns | Duplicate an existing campaign. The copy inherits the segment, schedule, and message content of the original. |
+| `create_campaign` | MCP only | create | Create campaigns | Create a campaign draft with targeting, schedule, delivery controls, conversion events, and entry limits. Braze doesn't launch campaigns through the MCP server, so launch the draft from the Braze dashboard. |
+| `edit_campaign` | MCP only | update | Edit campaigns | Edit the metadata of a draft or live campaign, such as name, targeting, schedule, delivery controls, conversion events, and entry limits. |
+| `stop_campaign` | MCP only | update | Stop campaigns | Pause delivery on a live campaign, stopping in-flight sending. To resume it, launch the campaign from the Braze dashboard. |
+| `archive_campaign` | MCP only | update | Archive campaigns | Archive a campaign, which stops delivery and marks the campaign deleted. Use `unarchive_campaign` to reverse this. |
+| `unarchive_campaign` | MCP only | update | Archive campaigns | Unarchive a previously archived campaign. The campaign returns in a stopped state, so launch it from the Braze dashboard to make it live again. |
+| `get_campaign_draft` | MCP only | read | View campaign analytics | Read a campaign's editable draft, including targeting, channels, variations, and delivery controls. |
+| `get_campaign_live_details` | MCP only | read | View campaign analytics | Read a launched campaign's live state, in the same shape as the draft. |
+| `create_campaign_message` | MCP only | create | Edit campaigns | Add a message channel to a mixed-channel campaign's draft. |
+| `update_campaign_message` | MCP only | update | Edit campaigns | Update a message channel on a mixed-channel campaign's draft. |
+| `delete_campaign_message` | MCP only | delete | Edit campaigns | Remove a message channel from a mixed-channel campaign's draft. |
+| `create_campaign_message_variation` | MCP only | create | Edit campaigns | Add an A/B variation to a typed or quick-push campaign. |
+| `update_campaign_message_variation` | MCP only | update | Edit campaigns | Update one A/B variation on a typed or quick-push campaign. |
+| `delete_campaign_message_variation` | MCP only | delete | Edit campaigns | Remove one A/B variation from a typed or quick-push campaign. |
+| `update_campaign_distribution` | MCP only | update | Edit campaigns | Set a campaign draft's control group share and the percentage split across A/B variations. |
+| `get_campaign_translations` | MCP only | read | View campaign analytics | Read the per-locale translation maps for a message variation. |
+| `get_campaign_translation_source` | MCP only | read | View campaign analytics | Read the default source strings inside a variation's `{% translation id %}` tags. |
+| `update_campaign_translation` | MCP only | update | Edit campaigns | Write one locale's translations for a message variation. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 aria-label="Campaigns" }
 
-The campaign tools are generally available and don't require you to join a beta program, except for the tools marked with an asterisk (*).
-
-<sup>*</sup> This tool is only available to customers participating in the campaign APIs beta program. If your account does not have this feature enabled, you may receive an error when attempting to use it. To join the beta program, contact your account manager.
-{: .reset-td-br-1 }
+The campaign tools are generally available and don't require you to join a beta program.
 
 ### Canvases
 
@@ -149,9 +148,12 @@ The campaign tools are generally available and don't require you to join a beta 
 | `get_segment_list` | [`/segments/list`](https://www.braze.com/docs/api/endpoints/export/segments/get_segment) | read | View segments | Export segments with name, Segment API identifier, and analytics-tracking flag. |
 | `get_segment_details` | [`/segments/details`](https://www.braze.com/docs/api/endpoints/export/segments/get_segment_details) | read | View segments | Retrieve relevant information on a segment by `segment_id`. |
 | `get_segment_data_series` | [`/segments/data_series`](https://www.braze.com/docs/api/endpoints/export/segments/get_segment_analytics) | read | View segments | Daily series of a segment's estimated size over time. |
-| `get_segment_filters` | MCP only | read | View segments | Retrieve segment filter definitions. |
-| `create_segment` | MCP only | create | Create segments | Create a new segment. |
-| `edit_segment` | MCP only | update | Edit segments | Edit an existing segment. |
+| `get_workspace_segments` | MCP only | read | View segments | List the workspace's active segments as summaries, up to 100 per call, with cursor-based pagination. Archived segments and suppression lists are left out. |
+| `get_segment_filters` | MCP only | read | View segments | Discover the filters, comparisons, and value types that are valid in a segment filter tree. |
+| `create_segment` | MCP only | create | Create segments | Create a user-defined segment from a filter tree. |
+| `edit_segment` | MCP only | update | Edit segments | Edit an existing user-defined segment. Supplying an audience replaces its filter tree. |
+| `archive_segment` | MCP only | update | Archive segments | Archive a segment and the segments, campaigns, and Canvases that depend on it. Call without `cascade` first to review dependents. |
+| `unarchive_segment` | MCP only | update | Archive segments | Unarchive a segment. Dependents archived along with it stay archived. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 aria-label="Segments" }
 
 The segment tools are generally available and don't require you to join a beta program.
@@ -159,9 +161,30 @@ The segment tools are generally available and don't require you to join a beta p
 **Note:**
 
 
-The MCP tools are the supported way to manage Campaigns and Segments programmatically. The underlying APIs that power these tools are not listed in our public API documentation, and using them directly is not supported. Braze Support can't assist with issues from direct use of these APIs unless your company is enrolled in the API beta. For production workflows, use the MCP tools.
+The MCP tools are the supported way to manage campaigns, Segments, tags, and brand guidelines programmatically. The underlying APIs that power these tools are not listed in our public API documentation, and using them directly is not supported. Braze Support can't assist with issues from direct use of these APIs. For production workflows, use the MCP tools.
 
 
+
+### Tags
+
+| Tool | API endpoint | Access | Permission | Description |
+| --- | --- | --- | --- | --- |
+| `get_workspace_tags` | MCP only | read | View tags | List every live tag in a workspace by full name, sorted by name, in one response with no pagination. A nested tag's name is its full path, such as `Seasonal/Spring`. |
+| `create_workspace_tag` | MCP only | create | Edit tags | Create a tag in a workspace, either top-level or nested under an existing tag, and return its full name. A name that only a deleted tag has restores that tag. If a live tag already has the name, in any letter case, the call fails with a 409 error and changes nothing. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 aria-label="Tags" }
+
+The tag tools are generally available and don't require you to join a beta program.
+
+### Brand guidelines
+
+| Tool | API endpoint | Access | Permission | Description |
+| --- | --- | --- | --- | --- |
+| `get_brand_guidelines` | MCP only | read | None | List a workspace's active [brand guidelines](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/brand_guidelines), most recently updated first, without their guideline text, and mark which one is the default. |
+| `get_default_brand_guideline` | MCP only | read | None | Get a workspace's default brand guideline with its guideline text, in one call. If the workspace has no default, the call returns a `DEFAULT_BRAND_GUIDELINE_NOT_SET` error. |
+| `get_brand_guideline` | MCP only | read | None | Get one brand guideline with its guideline text, including an archived one. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 aria-label="Brand guidelines" }
+
+The brand guideline tools are generally available and don't require you to join a beta program. These tools are read-only. To create or edit brand guidelines, use the Braze dashboard.
 
 ### Sends
 

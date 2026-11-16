@@ -63,6 +63,10 @@ Some downsides to this approach include:
 
 Besides the charges for short and long codes, Braze provides an allotment of SMS messages for different countries. That is, we work with you to set a certain number of message segments for different countries, which you'll use to send SMS campaigns. Billing is done by the number of message segments sent per country. To read more about how message segments are calculated see our [Message Segments and Copy Limits](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator) guide. Your account manager will contact you to let you know if you are close to reaching your maximum, providing relevant reports to help keep you informed. For further questions regarding overages, contact your Braze representative.
 
+### How am I billed for RCS?
+
+RCS messages are billed per message or per segment depending on the message type and the country. For details, see [RCS message billing](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/billing_calculator#rcs-message-billing).
+
 ### Does MMS and SMS pricing differ?
 
 MMS and SMS have different costs and are charged separately based on volume. Contact the Braze Onboarding team for pricing information.
@@ -199,6 +203,9 @@ RCS messages may render differently on an iOS device depending on the operating 
 - Suggested actions from different RCS messages in the same conversation thread may be grouped together and shown in the wrong order.
 - Rich card buttons and suggested actions that are outside the rich card may remain visible even after tapping a rich card button or a suggested action.
 - GIFs in rich cards display as static images. For details, see [Why do GIFs in RCS rich cards appear static on iOS?](#why-do-gifs-in-rcs-rich-cards-appear-static-on-ios).
+- On iOS 26, multiple suggestions can collapse into an Options menu, and suggestion labels can be hidden. The Braze preview doesn't show this.
+- An Open URL suggestion on a Media message appears as a link icon over the image, with no label. Use a Card with an Open URL button instead.
+- Card descriptions truncate after three lines. The preview doesn't show truncation.
 
 **Note:**
 
@@ -215,7 +222,7 @@ The iOS messaging client controls this behavior. A GIF may still animate in the 
 
 To send animated content to iOS:
 
-- Use an RCS **Media** message, which sends the GIF as a file
+- Use an RCS **Media** message, which sends the GIF as a file (Infobip only; Twilio doesn't support standalone Media messages)
 - Use video in the rich card
 
 ### Can I send pre-recorded voicemails with RCS?

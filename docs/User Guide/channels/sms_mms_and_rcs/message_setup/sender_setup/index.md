@@ -9,12 +9,12 @@
 
 ### RCS-verified sender
 
-RCS is a modern messaging system that offers more features than traditional SMS, introducing capabilities like branded sender IDs, rich media, and interactive content, such as scrollable carousels, quick replies, CTA buttons, and more. It’s designed to provide a sleeker and more engaging user experience.  
+RCS is a modern messaging system that offers more features than traditional SMS, introducing capabilities like branded sender IDs, rich media, and interactive content, such as rich cards, suggested replies, and Open URL buttons. It’s designed to provide a sleeker and more engaging user experience.  
 
 **Important:**
 
 
-RCS messages can't send through Twilio messaging services. Subscription groups that use Twilio for SMS must use an Infobip-compatible RCS sender (or another supported RCS provider) for RCS traffic. Otherwise, RCS sends abort at send time.
+RCS is available through Infobip and Twilio. An RCS sender and its SMS fallback sender must use the same SMS service provider, and a subscription group can't mix senders from different providers. For feature availability, see [Provider differences](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup#provider-differences).
 
 
 
@@ -22,7 +22,7 @@ RCS messages can't send through Twilio messaging services. Subscription groups t
 
 | Visual components | Access | Throughput | MMS enabled | 1-way vs. 2-way |
 | --- | --- | --- | --- | --- |
-| - Brand name<br>- logo<br>- optional caption<br> - verified badge | 4—6 weeks for carrier approval | Throughput and delivery rely on the recipient having an active data connection (mobile data or Wi-Fi). RCS doesn’t rely on fixed network-imposed limits like SMS does; RCS messages are sent over data networks rather than the traditional cellular signaling channels used by SMS. | N/A | 2-way |
+| - Brand name<br>- logo<br>- optional caption<br> - verified badge | 3–6 weeks for carrier approval (estimate; varies by carrier and country) | Throughput and delivery rely on the recipient having an active data connection (mobile data or Wi-Fi). RCS doesn’t rely on fixed network-imposed limits like SMS does; RCS messages are sent over data networks rather than the traditional cellular signaling channels used by SMS. | N/A | 2-way |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Details" }
 
 #### Pros and cons
@@ -30,12 +30,12 @@ RCS messages can't send through Twilio messaging services. Subscription groups t
 | Pros |
 | ---- |
 | **Verified trust and branding**<br> Unlike traditional SMS, where your brand appears as a random 5-digit short code or long code, RCS allows for verified sender profiles. These profiles include your brand's logo, name, and a "verified" checkmark. |
-| **Rich messaging features**<br> RCS supports carousels, high-resolution videos, and suggested action buttons (such as "Book Now", "Track Package", or "Pay Bill"). Users can complete complex tasks without leaving their messaging app, which can lead to higher conversion rates than a plain text link. |
+| **Rich messaging features**<br> RCS supports rich cards with images, GIFs, and video, plus suggested replies and Open URL buttons. Users can complete complex tasks without leaving their messaging app, which can lead to higher conversion rates than a plain text link. |
 {: .reset-td-br-1 aria-label="Pros and cons" }
 
 | Cons |
 | ---- |
-| **Fragmented support**<br> Though Google has pushed RCS heavily for Android, and Apple has recently introduced RCS support for iOS, the implementation can still be uneven across different carriers and regions. If a user's phone or carrier doesn't support RCS, the message usually sends as a plain SMS, consequently losing all the "rich" RCS features. |
+| **Fragmented support**<br> Although Android and iOS both support RCS, the implementation can still be uneven across carriers and regions. If a user's phone or carrier doesn't support RCS, the message usually sends as a plain SMS, consequently losing all the "rich" RCS features. |
 | **Platform inconsistencies**<br> RCS user experience varies depending on the recipient's carrier, device model, and what messaging app they use (for example, Google Messages or iMessage). |
 {: .reset-td-br-1 aria-label="Pros and cons" }
 
@@ -185,7 +185,7 @@ RCS-verified senders are provisioned on a country-by-country basis. The verifica
 - **Website and privacy policy:** A live website and a privacy policy that explains how you handle user data and messaging.
 - **Use case description:** A clear explanation of what you are sending (for example, "Order delivery updates and customer support for retail purchases").
 
-RCS timelines fluctuate depending on country, and as more carriers adopt the channel. Currently, you can expect an RCS sender to be approved by carriers within 3-6 weeks of requesting launch.
+Carrier approval typically takes 3–6 weeks. This is an estimate, and timelines vary by carrier and country.
 
 
 

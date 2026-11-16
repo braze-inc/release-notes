@@ -291,7 +291,7 @@ If you see an error that none of the selected users have matching push tokens fo
 
 
 
-After creating your SMS, MMS, or RCS message, you can send a test message to your phone to see what it will look like in real-time. The recipient must belong to the SMS subscription group you select when sending the test, have a valid phone number, and have at least one country selected under **Geographic Permissions**. For more details, see [SMS FAQs](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/faqs#does-a-user-need-to-be-part-of-an-sms-subscription-group-to-receive-sms-test-messages). 
+After creating your SMS, MMS, or RCS message, you can send a test message to your phone to see what it will look like in real-time. The recipient must belong to the subscription group you select when sending the test, have a valid phone number, and have at least one country selected under **Geographic Permissions**.
 
 1. Draft your SMS, MMS, or RCS message.
 2. Select the **Test** tab and select at least one Content Test Group or individual user to receive this test message. 

@@ -181,9 +181,24 @@ RCS **Card** messages combine media, text, and buttons into a single unit. Choos
 | **Media** | Image, GIF, or video and at least one card button | Title, description, up to three additional card buttons, suggestions outside the card (when supported), and SMS fallback |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="RCS card layouts" }
 
-Use Liquid to personalize card titles, descriptions, media, and buttons. URLs entered as plain text in the title or description aren't clickable—add an **Open URL** card button instead.
+You can use Liquid to personalize card titles, descriptions, media, and buttons.
 
-Suggestions can be suggested replies, which pre-populate the user's text input, or Open URL actions. Add up to 25 characters of text to each suggestion and a URL of up to 2,048 characters to each Open URL action.
+##### Links and PDFs
+
+- URLs entered as plain text in the title or description aren't clickable—add an **Open URL** card button instead.
+- Button and suggestion URLs must start with `http://` or `https://`. Custom app schemes (for example, `yourapp://`) aren't supported.
+- PDFs can't be attached to Cards. To share a PDF, add an **Open URL** button that links to a hosted PDF. The PDF opens in the device's browser.
+
+##### Suggestions
+
+- Suggestions can be suggested replies (which pre-populate the user's text input) or Open URL actions.
+- Each suggestion can include up to 25 characters of text.
+- Each Open URL action can include a URL of up to 2,048 characters.
+
+##### Media
+
+- Video can come from any publicly accessible direct media URL. On Twilio, add video by media URL rather than by upload.
+- For Card image dimensions and safe zone guidance, see [Image specifications](https://www.braze.com/docs/user_guide/messaging/design_and_edit/media_library/image_specifications#rcs).
 
 #### SMS fallback for RCS messages
 
@@ -195,23 +210,31 @@ When RCS delivery fails, you can automatically send your message as SMS instead.
 
 ![Fallback option section with Send SMS if RCS fails turned on and an SMS fallback message with a character and segment counter.](https://www.braze.com/docs/assets/img/sms/sms_fallback.png?f37bffd3867216f7c02a83f634ab22fa){: style="max-width:60%;"}
 
-The selected subscription group must contain an SMS sender for SMS fallback to work. When enabled, a character counter shows how many SMS segments your fallback message uses. Link shortening applies only to links in the SMS fallback body, not to card button URLs.
+SMS fallback is available for all RCS message types (Text, Media, and Card). The selected subscription group must contain an SMS sender for SMS fallback to work. When enabled, a character counter shows how many SMS segments your fallback message uses.
 
-SMS fallback is available for all RCS message types (Text, Media, and Card). For more information about how SMS fallback works with events and segmentation, see [RCS setup](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup#how-sms-fallback-works-with-events-and-segmentation).
+| Message type | Link shortening |
+| --- | --- |
+| Card | Applies only to the SMS fallback body. URLs in Card content, buttons, and suggestions are sent as entered. |
+| Text or Media | Applies to the message body and the SMS fallback body. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Link shortening for RCS SMS fallback" }
 
-#### Provider support for Card messages {#provider-support-for-card-messages}
+For more information about how SMS fallback works with events and segmentation, see [RCS setup](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup#how-sms-fallback-works-with-events-and-segmentation).
+
+#### Provider support for RCS messages {#provider-support-for-card-messages}
 
 Availability of RCS message types and Card options depends on your SMS service provider. The composer displays only supported types and fields.
 
 | Capability | Infobip | Twilio |
 | --- | --- | --- |
+| Text message body length | Up to 3,072 characters | Up to 1,600 characters |
 | Standalone **Media** message type | Supported | Not supported |
 | Text-only card layout | Supported | Not supported |
 | Media card layout | Supported | Supported |
 | Suggestions outside the card | Supported | Not supported |
 | Card buttons | Supported (1–4) | Supported (1–4) |
 | Description character limit | Up to 2,000 characters | Up to 1,600 characters |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Provider support for RCS Card messages" }
+| Maximum media file size | 100&nbsp;MB | 16&nbsp;MB |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Provider support for RCS messages" }
 
 #### RCS media specifications
 
@@ -222,7 +245,7 @@ The composer accepts a media URL with up to 1,000 characters. Available formats 
 | All | Maximum file size is 16&nbsp;MB or 100&nbsp;MB, depending on the provider. |
 | Image | JPEG, JPG, GIF, PNG |
 | Video | H263, M4V, MP4, MPEG, MPEG-4, WEBM |
-| Document | PDF. Available for **Media** messages, but not media cards. |
+| Document | PDF. Available for **Media** messages (Infobip only), but not Cards. To share a PDF from a Card, add an **Open URL** button that links to a hosted PDF. |
 | Audio | AAC, MP3, MPEG, MP4, 3GPP, OGG. Provider support varies. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="RCS media specifications" }
 
@@ -300,9 +323,23 @@ Conversational message workflows let you respond dynamically to users, creating 
 
 ### Step 4: Configure link shortening
 
-Turn on **Link shortening** to shorten HTTP and HTTPS URLs and track clicks for SMS, MMS, and supported RCS links. Unified link shortening uses a single personalized link format for SMS and RCS and includes user-level click data for segmentation and retargeting.
+Turn on **Link shortening** to shorten HTTP and HTTPS URLs and track clicks. Unified link shortening uses a single personalized link format for SMS and RCS and includes user-level click data for segmentation and retargeting.
 
-Braze shortens up to 25 links in a message. A URL longer than 4,000 characters can't be shortened and causes the message to fail at send time. For supported URLs, Liquid behavior, testing requirements, custom domains, and retargeting, see [Link shortening](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening).
+Link shortening applies to:
+
+- SMS and MMS message bodies
+- RCS Text and Media message bodies
+- The SMS fallback body for every RCS message type
+
+It doesn't apply to:
+
+- RCS Card content
+- RCS Card button URLs
+- RCS suggestion URLs
+
+Braze shortens up to 25 links in a message. A URL longer than 4,000 characters can't be shortened and causes the message to fail at send time.
+
+For supported URLs, Liquid behavior, testing requirements, custom domains, and retargeting, see [Link shortening](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening).
 
 ### Step 5: Preview and test your message
 
@@ -322,7 +359,7 @@ For MMS, the receiving phone determines whether the media appears before or afte
 **Note:**
 
 
-Because RCS rendering is controlled by the user's operating system, device manufacturer, carrier, and messaging app (for example, Google Messages vs. Apple Messages), message appearance can vary. The preview shown in Braze may not exactly match what an end user receives. Validate the final rendering on real devices whenever possible. For details about RCS rendering on iOS devices, see [Why doesn't my RCS message render accurately on iOS devices?](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/faqs#why-doesnt-my-rcs-message-render-accurately-on-ios-devices). For GIFs in rich cards, see [Why do GIFs in RCS rich cards appear static on iOS?](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/faqs#why-do-gifs-in-rcs-rich-cards-appear-static-on-ios).
+The Braze preview may not match what users see. RCS rendering depends on the device, carrier, and messaging app, and the preview doesn't show behaviors such as iOS Options menus, three-line Card description truncation, or hidden suggestion labels. Test on Android and iOS before sending. For details, see [Why doesn't my RCS message render accurately on iOS devices?](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/faqs#why-doesnt-my-rcs-message-render-accurately-on-ios-devices) and [Why do GIFs in RCS rich cards appear static on iOS?](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/faqs#why-do-gifs-in-rcs-rich-cards-appear-static-on-ios).
 
 
 

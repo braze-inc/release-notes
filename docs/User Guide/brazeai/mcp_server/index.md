@@ -26,7 +26,7 @@ Tools that expose user-level PII are not available.
 
 
 
-Use the MCP server to ask questions about campaign and Canvas performance, explore your segments and custom attributes, generate reports, and create content such as email templates, content blocks, and media library assets through natural language.
+Use the MCP server to ask questions about campaign and Canvas performance, explore your segments and custom attributes, generate reports, manage campaigns, segments, and tags, read brand guidelines, and create content such as email templates, Content Blocks, and media library assets through natural language.
 
 The Braze MCP server lets AI tools work with Braze. To let BrazeAI Operator use tools from other products, such as Jira or Notion, see [External MCP servers](https://www.braze.com/docs/user_guide/brazeai/operator/capabilities/mcp_servers).
 
@@ -69,7 +69,7 @@ Not for MCP. API keys still work for the REST API and are not being deprecated.
 
 ### Which regions are supported?
 
-Both Braze clusters are supported. Two endpoints are available today:
+All Braze clusters are supported. Two endpoints are available today:
 
 - `https://mcp.braze.com/mcp` (US)
 - `https://mcp.braze.eu/mcp` (EU)

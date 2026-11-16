@@ -22,7 +22,9 @@
 ## Subscription group states
 {: #sms-subscription-states}
 
-There are two subscription states for SMS and RCS users: `subscribed` and `unsubscribed`. A user's subscription state resides at the subscription group level and is not shared across subscription groups, meaning a user can be `subscribed` to a transactional subscription group but `unsubscribed` to a promotional one. For brands, this separation of states ensures that they can continue to send relevant SMS and RCS messages to their users.
+There are two subscription states for SMS and RCS users: `subscribed` and `unsubscribed`. A user's subscription state resides at the subscription group level and is not shared across subscription groups, meaning a user can be `subscribed` to a transactional subscription group but `unsubscribed` to a promotional one. This also applies to separate SMS and RCS subscription groups: an opt-out in one doesn't carry over to the other. 
+
+If you keep SMS and RCS in separate groups, you're responsible for keeping their subscription states aligned. For details, see [Migrate SMS traffic to RCS](#migrate-sms-traffic-to-rcs). For brands, this separation of states ensures that they can continue to send relevant SMS and RCS messages to their users.
 
 | State | Definition |
 | --------- | ---------- |
@@ -88,9 +90,9 @@ In adherence with international [telecommunication compliance and guidelines](ht
 
 Each SMS, MMS, and RCS subscription group can use a link shortening domain for shortened URLs when [link shortening](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening) is turned on. To assign a Braze shared short domain or a custom domain, see [Self-serve custom domains](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/custom_domains).
 
-## SMS subscription group best practices
+## Subscription group best practices
 
-Design separate SMS subscription groups for each messaging purpose (for example, transactional versus marketing) and for each workspace. When you operate in multiple countries, consider separate groups by region to support local compliance rules—for example, Brazil's restrictions on promotional send windows.
+Design separate subscription groups for each messaging purpose (for example, transactional versus marketing) and for each workspace. When you operate in multiple countries, consider separate groups by region to support local compliance rules—for example, Brazil's restrictions on promotional send windows.
 
 ## Enable subscription groups
 
@@ -113,9 +115,8 @@ An RCS-verified sender must be present within your subscription group before you
 There are two ways to add an RCS-verified sender:
 - Add it to an existing subscription group
 - Create a new RCS subscription group
-The choice largely depends on the RCS use cases you are interested in. 
 
-Depending on your integration, Braze can add RCS-verified senders to your existing SMS subscription groups or set up new subscription groups for you. In either case, your customer success manager guides you through a seamless and efficient SMS traffic upgrade.
+The approach you use depends on your RCS use cases and integration. Your customer success manager can add the sender for you and guide you through upgrading SMS traffic.
 
 
 
@@ -138,7 +139,7 @@ Use [Operator](https://www.braze.com/docs/user_guide/brazeai/agents/creating_age
 2. Create an action-based Canvas triggered by **Send an SMS inbound message**, within the **Other** keyword category.
 3. Add the [Agent step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/agent_step) to the Canvas to identify opt-out intent.
 4. Add a subsequent SMS [Message step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step) to confirm the request: "It looks like you're trying to unsubscribe from SMS, so we are going to unsubscribe you. If this is a mistake, text START to opt back in."
-5. Add a [User Update step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update) to change the user's status in the specific SMS subscription group to "Unsubscribed."
+5. Add a [User Update step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/user_update) to change the user's status in the specific subscription group to "Unsubscribed."
 
 **Note:**
 
@@ -149,7 +150,21 @@ Using the Agent Console consumes Message or Action Credits.
 
 ## Migrate SMS traffic to RCS
 
-If you have separate SMS and RCS subscription groups, you can migrate users from SMS to RCS using a one-step Canvas. 
+You can add an RCS sender to an existing SMS subscription group or create a separate RCS subscription group. The two approaches behave differently:
+
+| Aspect | Same subscription group (recommended for upgrading SMS traffic) | Separate subscription groups |
+| --- | --- | --- |
+| Eligibility | SMS-subscribed users are automatically eligible for RCS. | You must migrate users into the RCS group. |
+| Opt-outs | A STOP sent to either the SMS or the RCS sender unsubscribes the user from the whole group. | Opt-outs in one group don't carry over to the other. You're responsible for keeping subscription states aligned—for example, by unsubscribing users from the RCS group when they opt out of SMS. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Same versus separate SMS and RCS subscription groups" }
+
+Also keep these limits in mind:
+
+- A subscription group can't mix SMS service providers, and an RCS sender can belong to only one subscription group. If your SMS sender and RCS sender use different providers, they must be in separate groups, and their subscription states won't sync.
+- Users can't opt in by messaging the RCS sender. Opt-in keywords go through the SMS sender in the same group.
+
+
+If you have separate SMS and RCS subscription groups, you can migrate users from SMS to RCS using a one-step Canvas.
 
 Braze recommends that you test sending RCS to smaller volumes of users initially and migrate more users to the RCS subscription group over time. For example, if you have 1,000,000 users subscribed to an SMS subscription group, this could look like first migrating all users to the new subscription group and then segmenting on a smaller audience of 50,000 to 100,000 (5-10%) to test the RCS messages.
 
@@ -234,7 +249,7 @@ Choose descriptive and clear subscription group names so that the correct group 
 
 ### Separate groups by country
 
-SMS regulations vary by country. We suggest separating SMS subscription groups by country. This helps you meet compliance standards in all regions where you send messages.
+SMS regulations vary by country. We suggest separating subscription groups by country. This helps you meet compliance standards in all regions where you send messages.
 
 For each subscription group, you can also configure a country allowlist under **Geographic Permissions** so SMS, MMS, and RCS are only sent to approved regions. For more information, see [Geographic permissions](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups/geographic_permissions).
 

@@ -444,6 +444,13 @@ Content Cards now reach a user's device as soon as they happen during a session,
 
 During [Shopify historical backfill](https://www.braze.com/docs/partners/ecommerce/shopify/shopify_data_features/#historical-backfill) setup, choose how much history to bring into Braze at setup, instead of the fixed 90 days of orders and one year of customers. For Orders, you can choose 90 days, 1 year, or 2 years; for customers, you can choose the past year, 2 years, or all time.
 
+### Twilio RCS support
+
+**Area:** Channels & Touchpoints
+**Status:** General availability
+
+[RCS](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup) is available for customers using Twilio as their SMS service provider, in addition to Infobip. Feature availability differs by provider; for information, see [Provider differences](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup#provider-differences).
+
 ### Web Targeting for Banners
 
 **Area:** Channels & Touchpoints
