@@ -14,6 +14,8 @@
 
 
 
+
+
 In the Braze dashboard, go to **Audience** > **Email Preference Centers**.
 
 This is where you can manage and view each subscription group. Each subscription group you create is added to this preference center list. You can create multiple preference centers.

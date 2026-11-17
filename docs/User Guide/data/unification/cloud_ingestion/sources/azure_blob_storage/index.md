@@ -95,7 +95,7 @@ If **Add role assignment** is grayed out, your account can't assign roles on thi
 
 1. In Braze, go to **Data Settings** > **Cloud Data Ingestion** > **Sources**, select **Add data source**, and then select **Azure Blob**.
 
-![The "Add New Source" screen with Azure Blob selected from the list of data sources.](https://www.braze.com/docs/assets/img/cloud_ingestion/abs_source_picker.png?102234ac69acde3f84260636c4969a3d)
+![The "Add New Source" screen with Azure Blob selected from the list of data sources.](https://www.braze.com/docs/assets/img/cloud_ingestion/abs_source_picker.png?102234ac69acde3f84260636c4969a3d){: width="2266" height="1058"}
 
 {: start="2"}
 2. Complete the **Azure Blob Connection Details** fields:
@@ -104,7 +104,7 @@ If **Add role assignment** is grayed out, your account can't assign roles on thi
 
     - **Configuration:** **Storage account** and **Container**
 
-![The Azure Blob Connection Details form showing the Tenant ID, Principal ID, Client Secret, Storage account, and Container fields.](https://www.braze.com/docs/assets/img/cloud_ingestion/abs_source_form.png?16d114f6fc391c221de32cf97e83a78e)
+![The Azure Blob Connection Details form showing the Tenant ID, Principal ID, Client Secret, Storage account, and Container fields.](https://www.braze.com/docs/assets/img/cloud_ingestion/abs_source_form.png?16d114f6fc391c221de32cf97e83a78e){: width="1024" height="722"}
 
 {: start="3"}
 3. Select **Test connection**, then select **Connect to Source**.
@@ -114,7 +114,7 @@ If **Add role assignment** is grayed out, your account can't assign roles on thi
     - **Storage queue name:** the queue you created in [Step 2](#azure-step-2). Each sync needs its own queue (see [Syncing a folder in a shared container](#syncing-a-folder-in-a-shared-container)).
     - **Folder path (Optional):** a path prefix within the container
 
-![The Azure Blob sync form showing the Storage queue name and Folder path fields.](https://www.braze.com/docs/assets/img/cloud_ingestion/abs_sync_form.png?14e955b94d9e3e6541e81f6aa5470c37)
+![The Azure Blob sync form showing the Storage queue name and Folder path fields.](https://www.braze.com/docs/assets/img/cloud_ingestion/abs_sync_form.png?14e955b94d9e3e6541e81f6aa5470c37){: width="2426" height="1624"}
 
 {: start="7"}
 7. Select **Preview and validate** to confirm CDI can reach the queue and list the files available to ingest. A successful test lists existing files in the container, but those files aren't synced automatically. The sync isn't active until the connection validates successfully.

@@ -14,8 +14,6 @@ To use the **SMS/MMS/RCS Performance** dashboard, go to **Analytics** > **SMS/MM
 
 When RCS is provisioned for your workspace, the dashboard groups headline metrics into **SMS/MMS** and **RCS** sections, including SMS fallback metrics on the RCS tiles where applicable. The **Performance Over Time** chart includes RCS sends, deliveries, reads, rejections, clicks, and rates alongside the SMS/MMS series, and the dashboard includes opt-in and opt-out tiles. Dashboard filters (tag, campaign, and Canvas) apply to both sections.
 
-![An example SMS campaign with 335,630 sends, with an average of 11,187.667 per day.](https://www.braze.com/docs/assets/img_archive/email_performance_dashboard_2.png?c69633137073334f4c8ac2caa3e37def){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
-
 ### SMS/MMS metrics
 
 The calculations for different metrics in the  performance dashboard are the same as those on an individual message level (such as campaign analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. 

@@ -28,7 +28,7 @@ To define your own keywords, do the following:
 
 1. In the Braze dashboard, go to **Audience** > **Subscription Group Management** and select an **SMS/MMS/RCS** subscription group.
 2. Under **Global Keywords**, select the pencil icon next to the keyword category you want to add a keyword to. ![Opt-in keywords with the pencil icon displaying.](https://www.braze.com/docs/assets/img/sms/sms_keywords.png?9a58afab3c3c146f8190a82ef858cfd1)<br><br>
-3. In the tab that opens, add a keyword you want to trigger this keyword category. Note that keywords are case insensitive, and universal keywords like `START`, `YES`, and `UNSTOP` cannot be changed. ![Editing keywords for "Opt-In" category. Added keywords are "START", "UNSTOP", and "YES". The reply message field reads "You have been unsubscribed to messages from this number. Reply HELP for help. Reply STOP to unsubscribe. Message and data rates may apply."](https://www.braze.com/docs/assets/img/sms/keyword_edit2.png?c2bf2d0da77bcf835e91deb4f3a18949)
+3. In the tab that opens, add a keyword you want to trigger this keyword category. Note that keywords are case insensitive, and universal keywords like `START`, `YES`, and `UNSTOP` cannot be changed. ![Editing keywords for the Opt-In category. Keywords include START, UNSTOP, YES, and Y. The reply message field reads "You have been re-subscribed to messages from this number. Reply HELP for help. Reply STOP to unsubscribe. Msg&Data Rates May Apply."](https://www.braze.com/docs/assets/img/sms/keyword_edit2.png?c2bf2d0da77bcf835e91deb4f3a18949)
 
 The following rules apply to keywords and keyword responses:
 

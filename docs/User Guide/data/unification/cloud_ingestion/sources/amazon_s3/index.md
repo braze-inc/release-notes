@@ -183,6 +183,32 @@ Braze assumes an IAM role in your AWS account. Create the role and attach the [I
 {: start="8"}
 8. Take note of the ARN of the role you created, because you need it to create the Cloud Data Ingestion integration.
 
+{: start="9"}
+9. Open the role, select **Trust relationships**, and then select **Edit trust policy**. Replace the policy with the following example, and then select **Update policy**. The `aws:PrincipalArn` condition limits the role to Braze's Cloud Data Ingestion service, so other identities in the Braze account can't assume it. Replace *`BRAZE_ACCOUNT_ID`* and *`EXTERNAL_ID`* with the values from the Braze credential form.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::BRAZE_ACCOUNT_ID:root"
+      },
+      "Action": "sts:AssumeRole",
+      "Condition": {
+        "StringEquals": {
+          "sts:ExternalId": "EXTERNAL_ID"
+        },
+        "ArnLike": {
+          "aws:PrincipalArn": "arn:aws:iam::BRAZE_ACCOUNT_ID:*/cdi-ingester-*"
+        }
+      }
+    }
+  ]
+}
+```
+
 **Important:**
 
 
