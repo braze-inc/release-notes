@@ -2,7 +2,21 @@
 
 > This article shows an example of a good product request submitted by a customer. It clearly defines the request and details their use case for the feature.
 
-To submit your own request, use the [Product Portal](https://www.braze.com/docs/user_guide/administer/personal/product_portal). To discuss product ideas with other Braze users, join the [Braze Bonfire Community](https://community.braze.com/).
+To submit your own request, use the [Product Portal](https://www.braze.com/docs/user_guide/administer/personal/product_portal).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Example request
 

@@ -44,13 +44,13 @@ The Braze Initialization tag for [Google Tag Manager (GTM)](https://developers.g
 **Warning:**
 
 
-Your URL must match the [API SDK endpoint](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints) of your chosen `baseUrl` initialization option.
+Replace `iad-01.braze.com` with the cluster and domain from the [API SDK endpoint](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints) of your chosen `baseUrl` initialization option. EU clusters use `braze.eu` instead of `braze.com`. For example, if your SDK endpoint is `sdk.fra-01.braze.eu`, use `connect-src https://*.fra-01.braze.eu`.
 
 
 
 |URL|Information|
 |---|-----------|
-|`connect-src https://sdk.iad-01.braze.com`|Allows the SDK to communicate with Braze APIs. Change this URL to match the [API SDK endpoint](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints) for your chosen `baseUrl` initialization option.|
+|`connect-src https://*.iad-01.braze.com`|Allows the SDK to communicate with Braze APIs and real-time services. The wildcard allows the SDK endpoint (for example, `sdk.iad-01.braze.com`) and other Braze hosts on your cluster (for example, `dust2.iad-01.braze.com`). Change `iad-01.braze.com` to match the cluster and domain in your [API SDK endpoint](https://www.braze.com/docs/user_guide/administer/personal/sdk_endpoints).|
 {: .reset-td-br-1 .reset-td-br-2 aria-label="connect-src #connect-src" }
 
 ### `script-src` {#script-src}

@@ -97,6 +97,8 @@ Audience eligibility is evaluated once at Canvas entry. If a user is merged duri
 
 
 
+
+
 ### Timestamps
 
 All timestamps in Canvas are normalized to UTC. Given this behavior, Braze strongly recommends that you use a Liquid timezone filter, like the following example, so your messages are sent in your [preferred timezone](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/filters).

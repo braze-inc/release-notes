@@ -393,8 +393,6 @@ The **Historical Performance** panel allows you to view the metrics from the **M
 
 To get a day-by-day breakdown, click the <i class="fas fa-bars"></i> hamburger menu and select **Download CSV** to receive a CSV export of the report.
 
-![A graph of the Historical Performance panel with example statistics for an email from February 2021 to May 2022.](https://www.braze.com/docs/assets/img/cc-historical-performance.png?03e5e9b53261a881b6f96b5e65e70222)
-
 ### Conversion event details
 
 The **Conversion Event Details** panel shows you the performance of your conversion events for your campaign. For more information, refer to [Conversion Events](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/conversion_events).

@@ -63,10 +63,11 @@ To add a Content Block in the drag-and-drop editor:
 2. Drag and drop your Content Block into the email editor. 
 3. (Optional) Adjust the width of your Content Block by selecting the button in the navigation menu. The default width is 100% when not specified in your email global style settings; otherwise, the global settings will be honored. <br><br>![A double-sided arrow with an option to edit the width.](https://www.braze.com/docs/assets/img_archive/content_block_width_updated.png?14e436ba0d3a6292dd5ef7e526dc2cde){: style="max-width:30%;" }<br><br>
 
+
 **Note:**
 
 
-Content Blocks added by drag and drop are **not linked** to the original Content Block. To view changes made to the original, drag it into the email editor again.
+Launching a later edit does not update a Content Block added from the **Rows** tab. Drag the Content Block in again to replace it with the launched version. See [When Content Block edits apply](#when-content-block-edits-apply).
 
 
 
@@ -90,7 +91,7 @@ In the drag-and-drop editor, you can also add a Content Block via the **Personal
 **Important:**
 
 
-Content Blocks inserted via Liquid **are linked** to the original Content Block and will reflect any changes to the template.
+A Content Block added with a Liquid tag uses the latest launched version the next time the message sends. For more information, see [When Content Block edits apply](#when-content-block-edits-apply).
 
 
 
@@ -98,7 +99,7 @@ Content Blocks inserted via Liquid **are linked** to the original Content Block 
 
 After adding a Content Block in an active campaign or Canvas, you can preview it from the Content Blocks Library by hovering over the Content Block and selecting the <i class="fa fa-eye preview-icon"></i> **Preview** icon. 
 
-This preview includes information about the Content Block such as who created it, tags, creation date, last edited date, description, editor type, inclusion count with details (a clickable list of messages or Content Blocks that use the Content Block), and an actual preview of the Content Block.
+This preview includes information about the Content Block such as who created it, tags, creation date, last edited date, description, editor type, the inclusion count, and an actual preview of the Content Block. Under **Inclusions**, select **View Details** to open the list of messages, Canvas steps, templates, and Content Blocks that include this block with a Liquid tag.
 
 **Note:**
 
@@ -120,13 +121,32 @@ Nothing prevents you from nesting a third level of Content Block, but you do not
 
 Links inside a nested Content Block count toward the total link count of the parent message. If you use a single Content Block with many conditional links, such as country-specific URLs for localization, the parent message can accumulate a large number of links, which can slow down or prevent saving a Canvas. For large-scale localization, [multi-language messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/) are a better fit than conditional links in a single Content Block.
 
+If a nested Content Block isn't rendering as expected, confirm it is nested only one level deep, then see [Things to know](#things-to-know) for other rendering causes. Select **Preview message as user** to confirm the nested blocks resolve before you send. For steps, see [Preview personalization](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/preview_personalization/).
+
 ## Update and copy Content Blocks
 
-If you choose to update a Content Block, it updates in all messages where the Content Block is inserted via Liquid. If the Content Block is imported using the **Content Blocks** dropdown under **Rows** in the drag-and-drop editor, it isn't updated in all messages.
+### When Content Block edits apply {#when-content-block-edits-apply}
 
-If you want to update a Content Block for a single message or make a copy to use in other messages, you can either copy the HTML from the original message to your new one, or edit the original Content Block (it must have been used in a message already) and save it. You will get a prompt that allows you to save it as a new Content Block.
+Launching a Content Block publishes the edit to every message, Canvas step, template, and Content Block on its **Inclusions** list. An entry appears on that list when it includes the Content Block with a Liquid tag. Those entries use the launched version the next time they send, including scheduled campaigns and Canvas message steps that have not sent yet. A message that has already been sent keeps the content from that send. An edit saved as a draft is not included in sends.
 
-After making edits to a Content Block, you can save and launch the updated Content Block by selecting **Launch Content Block**. Or, you can select **More** > **Duplicate** to create a duplicate of your Content Block.
+To see the **Inclusions** list for a Content Block:
+
+1. Go to **Content** > **Content Block**.
+2. In the **Inclusion count** column, select the number for the Content Block. The number is a link only when the Content Block has at least one inclusion.
+
+You can also select the Content Block's name, scroll to the **Inclusion** section, and select **View Details**.
+
+To publish an edit, select **Launch Content Block**.
+
+| How the Content Block was added | Effect of launching an edit |
+| --- | --- |
+| Content Block Liquid tag | The message appears on the **Inclusions** list and uses the launched version the next time it sends. To stop a message from receiving future edits, replace its Content Block Liquid tag with a copy of the block's content. |
+| **Rows** tab in the drag-and-drop editor | The message keeps the version that was dragged in and does not appear on the **Inclusions** list. Drag the Content Block in again to replace it with the launched version. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Effect of launching a Content Block edit" }
+
+To save a separate copy of this Content Block, select **More** > **Duplicate**. The duplicate is saved as a draft and does not appear on this Content Block's **Inclusions** list. Messages that use the original Content Block continue to use that block. Liquid tags inside the duplicate appear on those Content Blocks' **Inclusions** lists.
+
+Duplicating a message keeps each Content Block the way it was added. Liquid tags stay linked, and a block added from the **Rows** tab stays a copy. For steps, see [Duplicate campaigns and Canvases](https://www.braze.com/docs/user_guide/messaging/governance/duplicating).
 
 ![A Content Block that reads "Welcome to our newsletter".](https://www.braze.com/docs/assets/img/copy-content-block.png?e8fcd5b10dd32d2fcca20385f3bfaae1)
 
@@ -147,7 +167,7 @@ Content Blocks cannot be used within an email footer, but you can create a Conte
 2. Add the footer to a Content Block in the **Content Blocks Library**.
 3. Add that Content Block to your email templates or messages.
 
-## Things to know
+## Things to know {#things-to-know}
 
 - Using HTML Content Blocks in drag-and-drop emails or drag-and-drop Content Blocks in HTML emails may result in unexpected rendering issues. This is because the drag-and-drop editor generates HTML and CSS that dynamically render the content, whereas the HTML editor is more static.
 - If you insert a drag-and-drop Content Block using Liquid, Braze doesn't include styles from the block's HTML `<head>`. Responsive styles, such as mobile-specific CSS, may not render as expected. If the block relies on responsive CSS, add that CSS to the message or template that includes the Content Block.

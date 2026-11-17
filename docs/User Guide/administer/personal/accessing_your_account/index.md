@@ -161,6 +161,20 @@ If you're experiencing issues logging into Braze Learning and find yourself stuc
 5. Access Braze Learning from your dashboard by going to **Support** > **Braze Learning**.
 6. If you continue to experience issues, consider re-creating your account. Users who accessed Braze Learning during the free trial phase may have difficulties accessing it now.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Two-factor authentication (2FA) issues
 
 If a user is experiencing issues with Two-Factor Authentication (2FA) and can't access the Braze dashboard, it may be due to several reasons. Most commonly, they may no longer have access to the registered phone number or the device where the Authy app is installed.

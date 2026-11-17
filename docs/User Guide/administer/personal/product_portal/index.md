@@ -46,5 +46,17 @@ The more information and context the better! Include links to campaigns, Canvase
 
 For an example of a well-written product request, see this [Product Request Example](https://www.braze.com/docs/user_guide/administer/personal/product_request_example).
 
-You can also discuss product ideas and get feedback from other Braze users on the [Braze Bonfire Community](https://community.braze.com/). 
+
+
+
+
+
+
+
+
+
+
+
+
+
 

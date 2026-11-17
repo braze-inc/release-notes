@@ -31,6 +31,20 @@ The global header is almost always visible at the top of the screen. It provides
 - Account settings
 - [BrazeAI Operator™](https://www.braze.com/docs/user_guide/brazeai/operator)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Use the side navigation
 
 The vertical menu on the primary side organizes Braze tools by function and keeps your most-used items within reach. Select a main menu item to reveal its options in a stacked vertical layout. 

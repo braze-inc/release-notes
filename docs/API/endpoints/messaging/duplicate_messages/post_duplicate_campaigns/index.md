@@ -1,12 +1,16 @@
-<div id='api_kuzguknkhkqf' class='api_div' data-search-keywords='duplicate campaigns using the api'>
+<div id='api_winnpzirwpfx' class='api_div' data-search-keywords='duplicate campaigns using the api'>
 <h1 id="duplicate-campaigns-using-the-api">Duplicate campaigns using the API</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/campaigns/duplicate</p>
 <div class="coreclass core_endpoint "><a href="/docs/core_endpoints">core endpoint</a></div></div>
 
 <blockquote>
-  <p>Use this endpoint to duplicate campaigns. This API endpoint is similar to <a href="/docs/user_guide/messaging/governance/duplicating">duplicating campaigns in the Braze dashboard</a>.</p>
+  <p>Use this endpoint to duplicate campaigns. This endpoint is similar to <a href="/docs/user_guide/messaging/governance/duplicating">duplicating campaigns in the Braze dashboard</a>. The campaign is created before the response returns, and the response includes its ID.</p>
 </blockquote>
+
+<p><strong>Important:</strong></p>
+
+<p>As of November 12, 2026, this endpoint returns a <code class="language-plaintext highlighter-rouge">201</code> status code with a <code class="language-plaintext highlighter-rouge">campaign_id</code> instead of a <code class="language-plaintext highlighter-rouge">202</code> status code with an empty body. If your integration checks for a <code class="language-plaintext highlighter-rouge">202</code> status code, update it to accept <code class="language-plaintext highlighter-rouge">201</code>.</p>
 
 <div class="api-reference light-mode" id="endpoint-reference">
   <div id="scalar-messaging_duplicate_messages_post_duplicate_campaigns"></div>

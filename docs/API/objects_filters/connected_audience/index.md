@@ -4,10 +4,17 @@
 
 Instead of pre-building a segment for every possible audience combination, you pass filter criteria directly in your API call. Depending on the endpoint, this object is passed as `audience` or `custom_audience`. Braze evaluates each user against those criteria in real time and delivers the message only to users who match. This means a single campaign, Canvas, or API-only message definition can serve an unlimited number of audience variations, driven entirely by your business logic.
 
+**Important:**
+
+
+Braze validates connected audience filters. Requests with incorrectly typed values or unknown custom event names return an error. Test your audience payloads before you rely on them in production. For details, see [Filter validation](#filter-validation).
+
+
+
 ## How it works
 
 1. Define your message by either creating an API-triggered campaign or Canvas in the Braze dashboard, or define message content entirely inline using the [messaging objects](https://www.braze.com/docs/api/objects_filters#messaging-objects) in your API request. Use [trigger properties](https://www.braze.com/docs/api/objects_filters/trigger_properties_object) or [Canvas context](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context) for dynamic personalization.
-2. Call a supported endpoint and include your connected audience filters in the `audience` parameter, or in `custom_audience` for `/messages/live_activity/start`. You can filter on custom attributes, push subscription status, email subscription status, and last-used-app time.
+2. Call a supported endpoint and include your connected audience filters in the `audience` parameter, or in `custom_audience` for `/messages/live_activity/start`. You can filter on custom attributes, subscription status, session history, segment membership, campaign engagement, and more. For the full list, see [Connected audience filters](#connected-audience-filters).
 3. Braze evaluates the filters at send time, delivering the message only to users who match your criteria.
 
 **Tip:**
@@ -113,15 +120,7 @@ Combine multiple filters with `AND` and `OR` operators to create a connected aud
 
 ### Considerations
 
-Connected audiences cannot filter users by:
-
- - Default attributes
- - Custom events
- - Segments
- - Message engagement events
- - Nested custom attributes
-
-To use these filters, we recommend incorporating them into an audience segment and then specifying that segment in the `segment_id` parameter for the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). When using other endpoints, you must add the segment to the API-triggered campaign or Canvas in the Braze dashboard first. If you need to filter on nested attributes, use a [standard segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment) instead.
+Connected audiences support the filters listed on this page. To filter on anything else, incorporate it into an audience segment and then specify that segment in the `segment_id` parameter for the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). When using other endpoints, you must add the segment to the API-triggered campaign or Canvas in the Braze dashboard first.
 
 
 ### Custom attribute filter
@@ -313,3 +312,80 @@ This filter allows you to segment based on when the user last used the app. Thes
 
 - **Allowed comparisons:** `after`, `before`
 - **Allowed values:** datetime (ISO 8601 string)
+
+### Additional filters
+
+You can also filter on the following. Each filter takes a `comparison` and, in most cases, a `value`, using the same structure as the filters described earlier. The comparisons available depend on the filter, and an unsupported comparison returns an error. The example values show the format Braze expects.
+
+| Filter | Targets | Example value |
+| --- | --- | --- |
+| `country_filter` | The user's country. | `US` |
+| `language_filter` | The user's language. | `en` |
+| `locale_filter` | The user's locale. | `en_US` |
+| `email_filter` | The user's email address. | `user@example.com` |
+| `external_user_id_filter` | The user's external ID. | `external-user-123` |
+| `phone_number_filter` | The user's phone number. | `+15555550123` |
+| `device_gaid_filter` | The user's Google advertising ID. | `device-gaid-123` |
+| `device_idfa_filter` | The user's identifier for advertisers. | `device-idfa-123` |
+| `device_idfv_filter` | The user's identifier for vendors. | `device-idfv-123` |
+| `has_push_filter` | Whether the user has a push token. | `true` |
+| `has_background_push_filter` | Whether the user has a background push token. | `true` |
+| `has_email_filter` | Whether the user has an email address. | `true` |
+| `email_subscription_status_filter` | The user's email subscription status. | `subscribed` |
+| `push_subscription_status_filter` | The user's push subscription status. | `subscribed` |
+| `hard_bounce_filter` | Whether the user's email address hard bounced. | `true` |
+| `session_count_filter` | The number of sessions the user has logged. | `5` |
+| `first_session_since_filter` | When the user first logged a session. | `2025-01-01T00:00:00Z` |
+| `last_session_since_filter` | When the user last logged a session. | `2025-01-01T00:00:00Z` |
+| `created_at_filter` | When the user profile was created. | `2025-01-01T00:00:00Z` |
+| `custom_event` | Whether the user performed a custom event. | `Watched Show` |
+| `custom_event_last_performed` | When the user last performed a custom event. | `2025-01-01T00:00:00Z` |
+| `custom_events_first_since_filter` | When the user first performed a custom event. | `2025-01-01T00:00:00Z` |
+| `segment_membership_filter` | Whether the user belongs to a segment. | `00000000-0000-0000-0000-000000000001` |
+| `received_campaign_filter` | Whether the user received a campaign. | `00000000-0000-0000-0000-000000000001` |
+| `average_order_value_calculated_attribute_filter` | The user's average order value. | `100.5` |
+| `customer_lifetime_value_calculated_attribute_filter` | The user's lifetime value. | `100.5` |
+| `refund_value_calculated_attribute_filter` | The user's total refund value. | `100.5` |
+| `revenue_value_calculated_attribute_filter` | The user's total revenue value. | `100.5` |
+| `last_order_placed_calculated_attribute_filter` | When the user last placed an order. | `2025-01-01T00:00:00Z` |
+| `total_orders_calculated_attribute_filter` | The user's total number of orders. | `5` |
+| `total_cancelled_orders_calculated_attribute_filter` | The user's total number of canceled orders. | `5` |
+| `random_number_filter` | The random bucket number assigned to the user. | `5` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Additional filters" }
+
+Custom event filters require the name of a custom event that already exists in the workspace.
+
+### Nested custom attribute filter
+
+Use this filter to segment based on a property inside a [nested custom attribute](https://www.braze.com/docs/user_guide/data/activation/attributes/nested_custom_attribute_support).
+
+#### Filter body
+
+```json
+{
+  "nested_custom_attribute":
+  {
+    "custom_attribute_name": (String) the name of the nested custom attribute,
+    "nested_property_name": (String) the name of the property within that attribute,
+    "comparison_type": (String) the data type of the property,
+    "comparison": (String) one of the allowed comparisons for that data type,
+    "value": (String, Numeric, Boolean) the value to be compared using the provided comparison
+  }
+}
+```
+
+- **Allowed comparison types:** `boolean`, `day_of_year`, `number`, `string`, `time`
+- The `value` isn't required when using the `exists` or `does_not_exist` comparisons.
+
+## Filter validation
+
+Braze validates each filter before it builds the audience. When a filter fails validation, the request returns an error and Braze doesn't send the message.
+
+| Filter | Rule | Error message |
+| --- | --- | --- |
+| `custom_attribute` on a number attribute | The `value` must be a number (`5`, not `"5"`). | `Value must be a number for the attribute {ATTRIBUTE_NAME}.` |
+| `custom_attribute` on a boolean attribute | The `value` must be `true` or `false`, not a string. | `Value must be a boolean for the attribute {ATTRIBUTE_NAME}.` |
+| Custom event filters | The event name must already exist in the workspace. | `Couldn't find a custom event matching {CUSTOM_EVENT_NAME} in workspace {WORKSPACE_ID} for company {COMPANY_ID}.` |
+| Any filter | The comparison must be valid for that filter type. | `Invalid comparison {COMPARISON} for {FILTER} filter.` |
+| Any filter | The `value` is required unless the comparison is `exists` or `does_not_exist`. | `You must specify a value.` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Filter validation" }

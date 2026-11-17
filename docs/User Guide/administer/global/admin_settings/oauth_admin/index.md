@@ -97,6 +97,16 @@ Users in those workspaces are disconnected immediately and can no longer sign in
 
 When **Partner apps OAuth access** is on, admins can manage partner apps on the **OAuth Partner Apps** tab, and company users can connect approved partner apps in approved workspaces. When it's off, Braze immediately disconnects partner app OAuth access for all users and ends active sessions. Data already synced through these integrations stays in Braze. If you turn **Partner apps OAuth access** back on, existing connections work again.
 
+## Braze Bonfire Community
+
+**Braze Bonfire Community** appears as an app under **Settings** > **Admin Settings** > **External Connections** > **OAuth Partner Apps**. This defaults to approved.
+
+Users can open **Community** in the dashboard and select **Sign in to Braze Bonfire Community** to sign in with their Braze account.
+
+### Different Braze dashboard and Bonfire account emails
+
+If you sign in with a different email than your existing Bonfire account, a new Bonfire account is created. To merge your previous posts, email [community@braze.com](mailto:community@braze.com) from both email addresses to confirm ownership.
+
 ## Turn MCP OAuth access on or off
 
 To update MCP OAuth access for your company:

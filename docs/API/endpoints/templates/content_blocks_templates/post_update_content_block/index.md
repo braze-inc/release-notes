@@ -1,4 +1,4 @@
-<div id='api_ofhfwnfqmrwn' class='api_div' data-search-keywords='update content block content_block_id name description content state tags liquid_tag created_at message'>
+<div id='api_qemkhounvufm' class='api_div' data-search-keywords='update content block content_block_id name description content state tags liquid_tag created_at message'>
 <h1 id="update-content-block">Update Content Block</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/content_blocks/update</p>
@@ -7,6 +7,8 @@
 <blockquote>
   <p>Use this endpoint to update a <a href="/docs/user_guide/messaging/design_and_edit/content_blocks">Content Block</a>.</p>
 </blockquote>
+
+<p>Messages that include the Content Block with a Liquid tag use the updated version the next time they send. For more information, see <a href="/docs/user_guide/messaging/design_and_edit/content_blocks#when-content-block-edits-apply">When Content Block edits apply</a>.</p>
 
 <p><strong>Tip:</strong></p>
 
