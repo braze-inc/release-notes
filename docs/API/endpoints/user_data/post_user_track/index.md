@@ -1,4 +1,4 @@
-<div id='api_eafjmnswofaa' class='api_div' data-search-keywords='create and update users message errors type'>
+<div id='api_opjacdrlsbhz' class='api_div' data-search-keywords='create and update users message errors type'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
@@ -472,6 +472,10 @@
     });
   })();
 </script>
+
+<p><strong>Note:</strong></p>
+
+<p>If <code class="language-plaintext highlighter-rouge">/users/track</code> returns <code class="language-plaintext highlighter-rouge">400</code> with a parse or syntax error, the request body isn’t valid JSON. Check for trailing commas, and send UTF-8 encoded JSON with the <code class="language-plaintext highlighter-rouge">Content-Type: application/json</code> header. See <a href="#why-do-i-get-400-bad-request-with-a-bad-syntax-or-parse-error">Why do I get <code class="language-plaintext highlighter-rouge">400 Bad Request</code> with a bad syntax or parse error?</a> and the fatal error table in <a href="/docs/api/errors#fatal-errors">API errors</a>.</p>
 
 <h2 id="need-to-update-users-in-bulk">Need to update users in bulk?</h2>
 

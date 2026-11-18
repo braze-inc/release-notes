@@ -1,4 +1,4 @@
-<div id='api_kaxprkdjpbik' class='api_div' data-search-keywords='upload an asset to the media library asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
+<div id='api_gkfbzcebwzch' class='api_div' data-search-keywords='upload an asset to the media library asset_url name asset_file message error_code meta new_assets size url ext errors error dashboard_url'>
 <h1 id="upload-an-asset-to-the-media-library">Upload an asset to the media library</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/media_library/create</p>
@@ -325,6 +325,11 @@
       <td><code class="language-plaintext highlighter-rouge">ZIP_FILE_TOO_LARGE</code></td>
       <td>400</td>
       <td>The total uncompressed size of the ZIP file exceeds the 50 MB limit. The <code class="language-plaintext highlighter-rouge">meta</code> object includes the <code class="language-plaintext highlighter-rouge">zip_file_name</code> and <code class="language-plaintext highlighter-rouge">zip_file_size</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ZIP_TOO_MANY_ENTRIES</code></td>
+      <td>400</td>
+      <td>The ZIP file contains too many files. ZIP files have a maximum number of entries allowed. The <code class="language-plaintext highlighter-rouge">meta</code> object includes <code class="language-plaintext highlighter-rouge">max_entries</code>.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">ZIPPED_ENTITY_HAS_NO_NAME</code></td>

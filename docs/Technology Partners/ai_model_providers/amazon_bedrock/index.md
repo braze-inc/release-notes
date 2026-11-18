@@ -65,11 +65,11 @@ To connect Amazon Bedrock to Braze:
 1. Go to **Partner Integrations** > **Technology Partners** in the Braze dashboard, then search for and select **Amazon Bedrock**.
 2. For **Authentication method**, choose **API key** or **AWS IAM role** (when available).
 3. Complete setup for your chosen method:
-   - **API key:** Enter your long-term **Amazon Bedrock API key**. Select the **AWS region** where your Bedrock models are hosted. Select **Save**.
+   - **API key:** Enter your long-term **Amazon Bedrock API key**. Select the **AWS region** where your Bedrock models are hosted. Select **Save**. For Claude models, we recommend also allowing `bedrock-mantle:CountTokens` for the key's IAM user, so Braze can count a prompt's exact tokens. The AWS-managed `AmazonBedrockLimitedAccess` policy doesn't include it.
    - **AWS IAM role:** Use the values Braze displays to configure your IAM role trust policy, then enter the role details in Braze:
      1. Copy the **Braze AWS account ID** and trust that account in your IAM role's trust policy.
      2. Copy the **Braze external ID** and require it in your role's trust policy with an `sts:ExternalId` condition. Select **Generate new external ID** if you need a new value.
-     3. Attach a permissions policy to the IAM role that allows the actions Braze needs to access Amazon Bedrock. The policy must include `bedrock:CallWithBearerToken` and `bedrock-mantle:CallWithBearerToken`—Braze generates short-term bearer tokens when it assumes the role, and AWS rejects bearer-token calls unless these permissions are allowed. Your policy should also include `bedrock:ListInferenceProfiles`, `bedrock:InvokeModel`, and `bedrock:InvokeModelWithResponseStream` for Braze to list and invoke models, plus `bedrock-mantle:CreateInference` for the bedrock-mantle endpoint. Example policy:
+     3. Attach a permissions policy to the IAM role that allows the actions Braze needs to access Amazon Bedrock. The policy must include `bedrock:CallWithBearerToken` and `bedrock-mantle:CallWithBearerToken`—Braze generates short-term bearer tokens when it assumes the role, and AWS rejects bearer-token calls unless these permissions are allowed. Your policy should also include `bedrock:ListInferenceProfiles`, `bedrock:InvokeModel`, and `bedrock:InvokeModelWithResponseStream` for Braze to list and invoke models, plus `bedrock-mantle:CreateInference` for the bedrock-mantle endpoint. We recommend also allowing `bedrock-mantle:CountTokens`, which lets Braze count a prompt's exact tokens on Claude models. Without it, Braze estimates the count and may shorten long prompts more than needed to fit the model's context window. Example policy:
         ```json
         {
           "Version": "2012-10-17",
@@ -88,7 +88,8 @@ To connect Amazon Bedrock to Braze:
               "Effect": "Allow",
               "Action": [
                 "bedrock-mantle:CreateInference",
-                "bedrock-mantle:CallWithBearerToken"
+                "bedrock-mantle:CallWithBearerToken",
+                "bedrock-mantle:CountTokens"
               ],
               "Resource": "*"
             }

@@ -48,9 +48,9 @@ For recurring campaigns, this filter refers to whether users have converted on t
 
 ### Converted From Canvas 
 
-Use this filter to find users who have or have not converted (based on the primary conversion) in your target Canvas.
+Use this filter to find users who have or have not converted (based on the primary conversion) in your target Canvas. For recurring Canvases, this filter refers to whether users have ever converted anytime they've gone through the Canvas.
 
-For recurring Canvases this filter refers to whether users have ever converted anytime they've gone through the Canvas.
+This filter excludes users in the Canvas control group. However, an earlier control entry doesn't keep users excluded; if a user later re-enters the Canvas, receives a message, and converts, they match. 
 
 ![Converted From Canvas filter with Canvas selection.](https://www.braze.com/docs/assets/img_archive/converted_from_canvas.png?5d4ccd7e0258815de4f3eadc8e1e5588)
 
@@ -84,6 +84,8 @@ Use this filter to find users who last received a specific campaign before or af
 
 Use this filter to find users who last received a campaign or Canvas with a given tag before or after a specified date or number of days. This filter doesn't consider when users received other campaigns or Canvases.
 
+Users in a campaign control group don't count as having received that campaign. For Canvases, an earlier control entry doesn't keep users excluded; if a user later re-enters the Canvas and receives a message, they match.
+
 ![Last received message from campaign or Canvas with tag filter.](https://www.braze.com/docs/assets/img_archive/last_received_campaign_with_tag.png?52e364ac991ef7a517cc286f51f501af)
 
 ### Received message from campaign 
@@ -103,6 +105,8 @@ Use this filter to find users who have or have not received your target campaign
 ### Received message from campaign or Canvas with tag 
 
 Use this filter to find users who have or have not received a campaign or Canvas that has your target tag.
+
+Users in a campaign control group don't count as having received that campaign. For Canvases, an earlier control entry doesn't keep users excluded; if a user later re-enters the Canvas and receives a message, they match.
 
 ![Received message from campaign or Canvas with tag filter.](https://www.braze.com/docs/assets/img_archive/received_campaign_with_tag.png?41712639ec66e30397e1b5f93452e83f)
 

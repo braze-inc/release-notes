@@ -176,11 +176,13 @@ This is an Apple platform limitation rather than a Braze issue. iOS may delay or
 
 ## In-app messages
 
-Add key-value pairs to any in-app message you build in the composer.
+Add key-value pairs to any in-app message you build in Braze.
 
 1. In your campaign or Canvas, create or edit an in-app message.
 2. In the message composer, select the **Settings** tab.
-3. In **Key value pairs**, select **Add new pair**.
+3. Select **Add new pair**:
+   - Traditional editor: In **Key value pairs**, select **Add new pair**.
+   - Drag-and-drop editor: Select the **Key-value pairs** tab, then select **Add new pair**.
 4. Enter a key and value for each pair. To add another pair, select **Add new pair** again.
 
 ### API-triggered campaigns

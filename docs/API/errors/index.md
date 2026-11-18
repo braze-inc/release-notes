@@ -61,6 +61,13 @@ The status code element of a server response is a 3-digit number where the first
 
 ### Fatal errors
 
+**Note:**
+
+
+For `401` and `403` errors, confirm the Bearer token in your `Authorization` header, the REST endpoint for your workspace's instance, and your API key's permissions. For `400` parse errors, validate the JSON encoding of your request body. For more information, see [Error while parsing request body](#error-while-parsing-request-body). For `/users/track` object limits, see [the `/users/track` rate limit](https://www.braze.com/docs/api/endpoints/user_data/post_user_track#rate-limit). For request size limits, see [Payload size limits](https://www.braze.com/docs/api/api_limits#payload-size-limits). Rate limits (`429`) are covered separately in [Rate limits](https://www.braze.com/docs/api/api_limits).
+
+
+
 The following status codes and associated error messages are returned if your request encounters a fatal error.
 
 **Warning:**

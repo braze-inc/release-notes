@@ -221,6 +221,7 @@ The [drag-and-drop editor](https://www.braze.com/docs/user_guide/channels/in_app
 
 Keep in mind:
 
+- **Key-value pairs:** Add key-value pairs on the **Settings** tab to send custom data to user devices with the message. For more information, see [Add key-value pairs](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop#step-5-add-key-value-pairs-optional) (drag-and-drop) or [Key-value pairs](https://www.braze.com/docs/user_guide/channels/in_app_messages/traditional#key-value-pairs) (traditional).
 - **Links and deep links:** Each on-click action has one URL field by default. Use Liquid in the URL to vary links by device, app type, or user attributes. On the **Message container**, you can also turn on platform-specific on-click behavior to set different links per platform.
 - **Opacity and backgrounds:** Opacity on the message container affects the full message background. Individual blocks can set their own background colors. For finer control, add custom CSS in a Custom Code block.
 - **Message width:** The **Message container** maximum width cannot be set under 325 px in the editor, which keeps content readable on smaller screens. Use custom CSS if you need a narrower layout.
