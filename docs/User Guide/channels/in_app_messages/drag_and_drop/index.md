@@ -136,7 +136,17 @@ Here's where your message gets to strut down the runway, dressed in your brand's
 - For help customizing the look and feel of your message, check out [Style settings](https://www.braze.com/docs/user_guide/channels/in_app_messages/customize/style_settings).
 - For best practices creating right-to-left messages, refer to [Creating right-to-left messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages).
 
-## Step 5: Test your in-app message
+## Step 5: Add key-value pairs (optional)
+
+You can add [key-value pairs](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/key_value_pairs) to send extra custom data to user devices along with the message. Braze delivers the pairs in the message payload, so your app can read them and act on them. For example, your app can use key-value pairs to apply custom styling or layout logic, route the message to a specific part of the app, or pass metadata to your own analytics.
+
+1. In the message composer, select the **Settings** tab.
+2. Select the **Key-value pairs** tab, then select **Add new pair**.
+3. Enter a key and value for each pair. To add another pair, select **Add new pair** again.
+
+For an example of reading key-value pairs in your app, see [Customizing message styling using key-value pairs](https://www.braze.com/docs/developer_guide/in_app_messages/tutorials/customizing_message_styling).
+
+## Step 6: Test your in-app message
 
 The **Preview & Test** section allows you to preview your in-app messages across different devices and send a test message to your device. Here, you can ensure that the details are aligned across all your platforms for your drag-and-drop in-app message campaign. 
 

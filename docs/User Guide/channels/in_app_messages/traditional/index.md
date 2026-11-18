@@ -112,7 +112,7 @@ The available fields depend on your platform, message type, layout, and editing 
 | **Message Close** | Controls how users dismiss the message. | Choose automatic dismissal or wait for the user to dismiss. |
 | **Slideup Position** | Places a slideup at the top or bottom of the app screen. | Available for slideup messages only. |
 | **HTML** and assets | Defines custom code and uploaded assets. | Available for custom code message types. |
-| **Key value pairs** | Sends extra custom fields to user devices. | Configure these on the **Settings** tab. |
+| **Key value pairs** | Sends extra custom data to user devices. | Configure these on the **Settings** tab. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="In-app message fields and settings" }
 
 For drag-and-drop composition, see [Create an in-app message with drag-and-drop](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop).
@@ -270,11 +270,13 @@ Custom code message types don't include the **Design** tab. Add HTML, CSS, JavaS
 
 ### Key-value pairs
 
-You can add [key-value pairs](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/key_value_pairs) to send extra custom fields to user devices.
+You can add [key-value pairs](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/key_value_pairs) to send extra custom data to user devices along with the message. Braze delivers the pairs in the message payload, so your app can read them and act on them. For example, your app can use key-value pairs to apply custom styling or layout logic, route the message to a specific part of the app, or pass metadata to your own analytics.
 
 1. In the message composer, select the **Settings** tab.
 2. In **Key value pairs**, select **Add new pair**.
 3. Enter a key and value for each pair. To add another pair, select **Add new pair** again.
+
+For an example of reading key-value pairs in your app, see [Customizing message styling using key-value pairs](https://www.braze.com/docs/developer_guide/in_app_messages/tutorials/customizing_message_styling).
 
 ## Delivery and targeting
 

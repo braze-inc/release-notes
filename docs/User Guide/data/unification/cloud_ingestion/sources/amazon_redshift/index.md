@@ -441,9 +441,7 @@ Your role's trust policy must require the exact external ID from the Braze crede
 4. Skip the permissions step. Enter a role name, and then select **Create role**. You add the permissions policy in [Add the permissions policy](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#iam-role-permissions-policy).
 5. Copy the role's Amazon Resource Name (ARN). You enter it in Braze in [Enter the values in Braze](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_redshift#iam-role-enter-values).
 
-The trust policy for the role looks like the following example. The `aws:PrincipalArn` condition limits the role to Braze's Cloud Data Ingestion service, so other identities in the Braze account can't assume it.
-
-If you created the role in the console, open the role, select **Trust relationships**, select **Edit trust policy**, and then update the policy to match the example. Replace *`BRAZE_ACCOUNT_ID`* and *`EXTERNAL_ID`* with the values from the credential form.
+The trust policy for the role looks like the following example. Replace *`BRAZE_ACCOUNT_ID`* and *`EXTERNAL_ID`* with the values from the credential form.
 
 ```json
 {
@@ -458,9 +456,6 @@ If you created the role in the console, open the role, select **Trust relationsh
       "Condition": {
         "StringEquals": {
           "sts:ExternalId": "EXTERNAL_ID"
-        },
-        "ArnLike": {
-          "aws:PrincipalArn": "arn:aws:iam::BRAZE_ACCOUNT_ID:*/cdi-ingester-*"
         }
       }
     }
@@ -574,7 +569,7 @@ aws iam create-role --role-name braze-cdi \
       "Effect": "Allow",
       "Principal": {"AWS": "arn:aws:iam::BRAZE_ACCOUNT_ID:root"},
       "Action": "sts:AssumeRole",
-      "Condition": {"StringEquals": {"sts:ExternalId": "EXTERNAL_ID"}, "ArnLike": {"aws:PrincipalArn": "arn:aws:iam::BRAZE_ACCOUNT_ID:*/cdi-ingester-*"}}
+      "Condition": {"StringEquals": {"sts:ExternalId": "EXTERNAL_ID"}}
     }]
   }'
 
@@ -855,7 +850,6 @@ If you use IAM role authentication and the connection test fails with an error t
 
 - The role's trust policy lists the Braze Account ID from the credential form as the trusted principal.
 - The role's trust policy requires the exact external ID from the credential form.
-- The `aws:PrincipalArn` condition in the trust policy uses the Braze Account ID from the credential form, and the `*/cdi-ingester-*` pattern is typed exactly as shown in the example.
 - The **Role ARN** you entered in Braze matches the ARN of the role you created.
 - If your Braze instance is in an AWS Region that isn't enabled by default, such as Jakarta (ID-01), your AWS account has that Region enabled.
 

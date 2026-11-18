@@ -235,7 +235,10 @@ You can view the following segment statistics, which update in real-time as you 
 You can see how one segment is performing compared to another across a set of pre-selected KPIs by visiting the [Segment Insights](https://www.braze.com/docs/user_guide/audience/segments/segment_insights) page of your dashboard.
 
 ### Messaging use
-The **Messaging Use** section shows which segments, currently enabled campaigns, and currently enabled canvases are targeting your segment.
+
+The **Messaging Use** section shows which segments, currently enabled campaigns, and currently enabled Canvases are targeting your segment. This section displays up to four of the newest objects per category. 
+
+If your segment is referenced by more than four campaigns or Canvases, the count of additional objects can't be expanded. To view the complete list of campaigns or Canvases that reference a segment, go to the **Campaigns** or **Canvas** page, select **Filters**, and filter by the segment name in **Target segment**.
 
 ### Historical membership
 
