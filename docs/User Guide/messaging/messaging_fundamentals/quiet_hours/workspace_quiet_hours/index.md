@@ -90,7 +90,7 @@ What happens to a message that falls inside a quiet hours window depends on the 
 - **Action-based campaigns and Canvases:** Fallback can be either **Abort message** or **Send at next available time**, the same options as campaign and Canvas-level quiet hours.
 - **Scheduled campaigns with a fixed send time:** Fallback is **Abort message**. Braze doesn't delay a fixed-time send to the next available slot, since that could push a large volume of messages into a compressed sending window once quiet hours end.
 - **Campaigns using Intelligent Timing:** No separate fallback is needed. Braze already factors the workspace quiet hours window into the optimal send time it calculates for each user, so messages aren't scheduled inside the window in the first place.
-- **API-triggered campaigns and API campaigns:** Fallback is **Abort message** by default.
+- **API-triggered campaigns and API campaigns:** Fallback is always **Abort message**.
 
 ### API-triggered and API campaigns
 
@@ -100,11 +100,11 @@ Quiet hours work differently for API-triggered campaigns and API campaigns.
 
 API-triggered campaigns follow the same quiet hours options as other campaigns in the dashboard. You can use the workspace quiet hours default, set a custom campaign-level window, or opt out of quiet hours in the campaign configuration. There is no `ignore_workspace_quiet_hours` API parameter for API-triggered sends.
 
-For scheduled API-triggered sends using `at_optimal_time`, workspace quiet hours are already factored into the optimal send time, similar to [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing).
+For scheduled API-triggered sends using `at_optimal_time`, the campaign's quiet hours window (workspace or custom) is already factored into the optimal send time, similar to [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing).
 
 #### API campaigns
 
-API campaigns cannot use campaign-level quiet hours. Only the workspace quiet hours window applies. To send during that window, include the optional `ignore_workspace_quiet_hours` parameter in your API request.
+API campaigns cannot use campaign-level quiet hours. Only the workspace quiet hours window applies. To send during that window, set the optional `ignore_workspace_quiet_hours` parameter to `true` in a request to the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages). Scheduled API campaigns (`/messages/schedule/create`) don't support this parameter.
 
 ### Exclusions
 

@@ -38,6 +38,20 @@ When Intelligent Timing is active for an action-based campaign, the quiet hours 
 
 For more information on configuring quiet hours within an Intelligent Timing campaign, see [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing).
 
+## Quiet hours and API sends
+
+Quiet hours also apply to messages you send through the REST API. The following table shows which window applies to each send type and what happens when a message falls in quiet hours.
+
+| Send type | Quiet hours that apply | If the send time falls in quiet hours |
+|---|---|---|
+| API-triggered campaign | The campaign's quiet hours, or [workspace quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours/workspace_quiet_hours) for the channel | Braze doesn't send the message. |
+| API-triggered Canvas | The Canvas or Message step quiet hours, or workspace quiet hours for the channel | Braze follows the Canvas fallback setting (**Abort message** or **Send at next available time**). |
+| API campaign (`/messages/send` or `/messages/schedule/create`) | Workspace quiet hours only. Campaign-level quiet hours don't apply. | Braze doesn't send the message. To send anyway, set `ignore_workspace_quiet_hours` to `true` in a request to the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Quiet hours for API sends" }
+
+- API-triggered campaigns don't hold messages. The **Send at next available time** option is only available for action-based campaigns, so Braze doesn't send a message that falls in quiet hours. To deliver outside quiet hours, schedule the send for a time outside the window, or use `at_optimal_time`, which factors quiet hours into each user's send time.
+- The API call still succeeds. Braze checks quiet hours when it processes the send, after it returns the API response. If quiet hours stop a message, the API doesn't return an error. These messages appear in the [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log).
+
 ## Considerations
 
 - **Messages send at the same time when quiet hours end.** If a large audience has messages held during quiet hours, all of those messages send at once when the window closes. For time-sensitive campaigns, consider how this affects delivery timing.

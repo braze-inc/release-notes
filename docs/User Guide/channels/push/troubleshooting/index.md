@@ -33,6 +33,13 @@ Use this workflow when a user or test device didn't receive a push. Start at ste
 
 ## Missing push notifications {#missing-push-notifications}
 
+**Note:**
+
+
+When a user didn't receive a push, follow the [standard investigation path](#standard-investigation-path): confirm they're push subscribed or opted in and have a valid push token, then check their audience, frequency caps, rate limits, control group assignment, push type, and current app. For SDK-side failures, see [Troubleshoot push notifications for the Braze SDK](https://www.braze.com/docs/developer_guide/push_notifications/troubleshooting) and [Common push error messages](https://www.braze.com/docs/user_guide/channels/push/push_error_codes).
+
+
+
 **Symptom:** A user didn't receive an expected push notification.
 
 If push notifications are not arriving as expected, work through the following checks:
@@ -160,7 +167,16 @@ Confirm that your push notification setup follows these best practices:
 
 - If you're sending to large audiences without considering push-enabled status, this may lead to a slower sending speed. Instead, consider sending to push-enabled users only to reduce the size of your audience.
 - If possible, try to schedule your campaigns ahead of time rather than immediately.
-- If you're targeting a larger number of users with push notifications in a Canvas, you can anticipate that subsequent message steps in the Canvas will require different processing times than a campaign that sends to users immediately. In this case, campaigns would typically finish sending before a Canvas, as the first "step" of a Canvas is to check whether users qualify for the specific user journey.
+- If you're targeting a larger number of users with push notifications in a Canvas, you can anticipate that subsequent message steps in the Canvas will require different processing times than a campaign that sends to users immediately. In this case, campaigns typically finish sending before a Canvas, as the first "step" of a Canvas is to check whether users qualify for the specific user journey.
+
+Send speed also depends on how you configure the campaign or Canvas. A push-only campaign that is set to send immediately or exactly once and does not use these messaging controls can send faster than campaigns that include other channels or use any of these controls. Braze does not guarantee send speeds except as set out in your agreement with Braze.
+
+- [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing)
+- [Local time zone delivery](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/scheduled_delivery#local-time-zone-campaigns)
+- [Delivery speed rate limiting](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping#delivery-speed-rate-limiting)
+- [Quiet hours](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/quiet_hours)
+- [Frequency capping](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/frequency_capping)
+- [Message Prioritization](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/message_prioritization)
 
 ## Clicking a push notification doesn't open the app {#clicking-a-push-notification-does-not-open-the-app}
 

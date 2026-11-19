@@ -96,7 +96,7 @@ Select **Process Catalog** to create the catalog.
 **Important:**
 
 
-Your CSV file can be rejected if you go earlier in this section your [tier](#tiers). 
+Braze rejects your CSV file if it doesn't meet the CSV requirements in Step 1, such as the `id` header, unique and valid item IDs, column limits, UTF-8 encoding, and the size limits for your [tier](#tiers). If your CSV file was rejected, re-check those requirements and upload it again. For Liquid or personalization issues after a successful upload, see [Troubleshooting catalog personalization](https://www.braze.com/docs/user_guide/data/activation/catalogs/use#troubleshooting-catalog-personalization).
 
 
 

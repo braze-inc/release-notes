@@ -2,7 +2,7 @@
 
 > Campaigns and Canvases become idle when they stop sending messages or entering users for a defined period.
 
-Braze auto-stops idle campaigns and Canvases on their associated stop dates. They stay active until Braze stops them. One-time sends and messaging with end dates become idle when that date passes, then auto-stop after seven days. Messaging without an end date becomes idle after 11 months without activity and auto-stops after one year.
+Braze auto-stops idle campaigns and Canvases in a daily run after their associated stop dates. They stay active until Braze stops them. One-time sends and messaging with end dates become idle when that date passes, then auto-stop after seven days. Messaging without an end date becomes idle after 11 months without activity and auto-stops after one year.
 
 ## Idle campaigns
 
@@ -47,6 +47,8 @@ For Canvases without end dates, a user entry or edit resets the one-year countdo
 
 The maximum duration of a Canvas is the longest possible time a user can take to complete that Canvas. This duration includes expirations for Content Cards and in-app messages. If your Canvas contains any rate-limited steps, Braze adds an extra seven days to the maximum duration to allow for potential rate limit queuing.
 
+Braze stops Canvases once a day at 4 am UTC. A Canvas with an end date usually changes to the **Stopped** status within 24 to 48 hours after its stop date. A Canvas that delivers in users' local time, or a Canvas without an end date, usually changes status at the next 4 am UTC run after its stop date.
+
 Use this table to keep an idle Canvas active. Idle status and auto-stop use different windows: a Canvas without an end date becomes idle after 11 months plus its maximum duration without activity, and Braze auto-stops it after 12 months plus its maximum duration.
 
 | Reason for idle status | Steps to make the Canvas active |
@@ -78,7 +80,7 @@ If you update a campaign that hasn't sent a message or a Canvas that hasn't ente
 
 ### What happens to campaigns that haven't sent a message in one year (or Canvases that haven't entered users in one year), but have an end date in the future?
 
-Braze stops these campaigns and Canvases seven days after the end date at 4 am UTC.
+Braze stops these campaigns and Canvases based on their end date, using the seven-day buffer and daily 4 am UTC run described in this article. Canvases also include their maximum duration, so a Canvas can stop later than seven days after its end date.
 
 ### Can I prevent campaigns from auto-stopping?
 
