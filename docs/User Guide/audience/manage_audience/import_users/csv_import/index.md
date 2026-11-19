@@ -536,6 +536,13 @@ If you used [file validation](#file-validation), start with the error report, as
 
 For troubleshooting CSV import, review these common issues in the following sections.
 
+**Note:**
+
+
+If an import fails, review your [file validation](#file-validation) results, then work through [File formatting issues](#file-formatting-issues) and [Data structure issues](#data-structure-issues). Confirm your identifier columns match [Choose an identifier](#choose-an-identifier) before re-uploading. If an import is stuck on Calculating, don't re-upload; see [CSV import stuck on Calculating](#csv-import-stuck-on-calculating). If an import isn't available as a segment filter, see [CSV import isn't available as a segment filter](#csv-import-isnt-available-as-a-segment-filter).
+
+
+
 ### CSV import stuck on Calculating
 
 In **Import Users**, `Calculating` means Braze is still preparing the file for processing. During this step, the row count can display as `0 / Calculating` until preparation finishes.

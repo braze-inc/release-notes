@@ -17,6 +17,57 @@ Some common custom event use cases include:
 - Setting up [exit criteria](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/exit_criteria) to define when users should exit your Canvas
 
 
+## Recommended events to track
+
+When planning your custom event strategy, consider tracking the following types of events that commonly drive engagement and help you understand your users' journey.
+
+### Marketing attribution
+
+Track how users discover your app or website by logging custom events that capture marketing campaign details. When users arrive from email campaigns, paid ads, or social media, capture UTM parameters as event properties:
+
+- Event name: `campaign_visit` or `marketing_click`
+- Properties to track: `utm_source` (where traffic originated, such as `facebook` or `newsletter`), `utm_medium` (channel type, such as `email` or `paid_social`), `utm_campaign` (specific campaign identifier), `utm_content` (specific link or creative), and `utm_term` (paid search keywords)
+
+This lets you segment users by acquisition channel, measure campaign performance, and trigger targeted follow-up messaging based on which campaigns converted.
+
+### Search behavior
+
+Track when users search your app or website to understand what they're looking for and identify content gaps:
+
+- Event name: `search_submitted`
+- Properties to track: `search_query` (the search term entered), `results_count` (number of results returned), `selected_result` (which result the user clicked, if any)
+
+Use this data to create segments of users interested in specific topics, trigger personalized recommendations, or identify popular searches that return few results.
+
+### Feature engagement
+
+Track key feature usage to understand which capabilities drive value:
+
+- Tutorial or onboarding steps: Log each step completion to identify where users drop off
+- Feature discovery: Track when users first use important features
+- Content interactions: Log when users save, share, or bookmark content
+- User-generated content: Track when users create, edit, or publish content
+
+### Conversion milestones
+
+Beyond the purchase itself, track the micro-conversions that lead to revenue:
+
+- Add to wishlist or favorites: Identify products users are considering
+- Product comparisons: Track which products users compare side-by-side
+- Form starts and completions: Measure drop-off in multi-step flows
+- Appointment or reservation bookings: Track scheduling behavior
+
+### Best practices
+
+When implementing custom events:
+
+- Use consistent naming: Establish a naming convention (such as `snake_case` or `camelCase`) and use it across all events
+- Focus on user actions: Track what users do, not what your system does behind the scenes
+- Keep event properties flat: Avoid deeply nested objects in event properties
+- Use semantic names: Choose event names that clearly describe the action, such as `video_completed` rather than `vid_end`
+
+For pre-built eCommerce event schemas, see [eCommerce recommended events](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events).
+
 ## Managing custom events
 
 You can manage, create, or blocklist custom events in the dashboard by going to **Data Settings** > **Custom Events**.

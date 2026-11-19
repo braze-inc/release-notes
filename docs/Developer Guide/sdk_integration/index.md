@@ -1372,7 +1372,7 @@ Client apps that obfuscate Braze code must store release mapping files for Braze
 
 ## Integrating the Swift SDK
 
-You can integrate and customize the Braze Swift SDK using the Swift Package Manager (SPM), CocoaPods, or manual integration methods. For more information about the various SDK symbols, see [Braze Swift reference documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/).
+You can integrate and customize the Braze Swift SDK using the Swift Package Manager (SPM) or a manual integration. CocoaPods support is deprecated. For more information about the various SDK symbols, see [Braze Swift reference documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/).
 
 ### Prerequisites
 
@@ -1380,7 +1380,7 @@ Before you start, verify your environment is supported by the [latest Braze Swif
 
 ### Step 1: Install the Braze Swift SDK
 
-We recommend using the [Swift Package Manager (SwiftPM)](https://swift.org/package-manager/) or [CocoaPods](http://cocoapods.org/) to install the Braze Swift SDK. Alternatively, you can install the SDK manually.
+Use the [Swift Package Manager (SwiftPM)](https://swift.org/package-manager/) to install the Braze Swift SDK. You can also install the SDK manually.
 
 
 
@@ -1437,6 +1437,13 @@ Select the package that best suits your needs and click **Add Package**. Make su
 
 
 
+**Important:**
+
+
+CocoaPods support for the Braze Swift SDK is deprecated. After a major Braze Swift SDK release planned for late November 2026, new SDK releases are not published to CocoaPods. Migrate to Swift Package Manager or a manual integration. Existing CocoaPods releases remain available for as long as the CocoaPods ecosystem supports them. For more information, see the [CocoaPods deprecation announcement](https://github.com/braze-inc/braze-swift-sdk/issues/204).
+
+
+
 #### Step 1.1: Install CocoaPods
 
 For a full walkthrough, see CocoaPods' [Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html). Otherwise, you can run the following command to get started quickly:
@@ -1445,7 +1452,7 @@ For a full walkthrough, see CocoaPods' [Getting Started Guide](https://guides.co
 $ sudo gem install cocoapods
 ```
 
-If you get stuck, checkout CocoaPods' [Troubleshooting Guide](http://guides.cocoapods.org/using/troubleshooting.html).
+If you get stuck, check out CocoaPods' [Troubleshooting Guide](http://guides.cocoapods.org/using/troubleshooting.html).
 
 #### Step 1.2: Constructing the Podfile
 
@@ -1468,7 +1475,7 @@ end
 
 `BrazeKit` contains the main SDK library, providing support for analytics and push notifications.
 
-We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like `pod 'BrazeKit' ~> Major.Minor.Build`. If you want to automatically integrate the latest Braze SDK version, even with major changes, you can use `pod 'BrazeKit'` in your Podfile.
+Pin the pod to the current minor version with `pod 'BrazeKit' ~> Major.Minor.Build`. Using `pod 'BrazeKit'` without a version installs the newest release published to CocoaPods.
 
 ##### About additional libraries
 
@@ -1484,7 +1491,7 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 
 ###### Extension libraries
 
-[BrazeNotificationService](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications) and [BrazePushStory](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories) are extension modules that provide additional functionality and should not be added directly to your main application target. Instead, you will need to create separate extension targets for each of these modules and import the Braze modules into their corresponding targets.
+[BrazeNotificationService](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications) and [BrazePushStory](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories) are extension modules that provide additional functionality and should not be added directly to your main application target. Instead, create separate extension targets for each of these modules and import the Braze modules into their corresponding targets.
 
 | Library                          | Details                                                                               |
 | -------------------------------- | ------------------------------------------------------------------------------------- |
@@ -1507,11 +1514,13 @@ At this point, you should be able to open the new Xcode project workspace create
 
 #### Updating the SDK using CocoaPods
 
-To update a CocoaPod, simply run the following command within your project directory:
+To update a CocoaPod, run the following command within your project directory:
 
 ```
 pod update
 ```
+
+This command installs the newest release published to CocoaPods. After CocoaPods support ends, `pod update` only installs the last CocoaPods-published release.
 
 
 

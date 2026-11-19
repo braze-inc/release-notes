@@ -1,9 +1,5 @@
 <br>
 
-# Create and manage workspaces
-
-> This article covers how to create, set up, and manage your workspaces. 
-
 ## What is a workspace?
 
 Everything you do in Braze happens within a workspace. Workspaces are a shared environment for you to track and manage engagement for related mobile apps or websites. Workspaces group the same or very similar apps together: for example, the Android and iOS versions of your mobile app. 

@@ -31,7 +31,8 @@ The setup for a catalog sync closely follows the process for user data syncs on 
 Whichever source you use, the following applies:
 
 - Select the **Catalogs** sync type when creating the sync.
-- The name of the integration must **exactly match** the name of the catalog you previously created.
+- Enter a **Sync name** to identify the sync.
+- For **Catalog to update**, select **Use existing catalog** and then the catalog, or select **Create new catalog** and enter the **Catalog name**.
 - If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the catalog source table.
 
 ### Required columns
