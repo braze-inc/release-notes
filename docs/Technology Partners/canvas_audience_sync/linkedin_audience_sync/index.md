@@ -80,15 +80,16 @@ Enter a name for the new audience, select **Add Users to Audience**, and select 
 - First and last name (both are required when you use name matching)
 - Android GAID
 
+When you select email as a match field, each email address is normalized (lowercased and cleared of any `+` suffix before the `@`) and hashed with SHA-256 before sending, so LinkedIn receives only the hash. Raw email addresses never leave Braze. First and last name are sent to LinkedIn as plain text when you select them. Leading and trailing spaces are not trimmed from email addresses during normalization, so store email addresses on the user profile without extra spaces.
+
+**Note:**
+
+
 iOS advertising IDs aren't supported as match fields for LinkedIn.
 
-Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
 
-![An example "leads" audience with the selected Braze ad account, "leads" audience, the action to add users to the audience, and email, Android GAID, and first and last name as fields to match.](https://www.braze.com/docs/assets/img/linkedin/linkedin10.png?1f37981f361196cbd3cf9c1f9a349a84)
 
-Braze displays a notification at the top of the step editor if the audience is created successfully or if errors arise. You can reference this audience for user removal later in the Canvas journey after you save it in the step editor.
-
-![Confirmation that the "leads" audience was created.](https://www.braze.com/docs/assets/img/linkedin/linkedin9.png?52d61682223876620eb51c6c048f1c29)
+Next, save your audience by selecting the **Create Audience** button. You can reference this audience for user removal later in the Canvas journey after you save it in the step editor.
 
 When you launch a Canvas with a new audience, Braze syncs users as they enter the Audience Sync step, subject to [batching and latency](https://www.braze.com/docs/partners/canvas_audience_sync/overview/#batching-and-latency).
 

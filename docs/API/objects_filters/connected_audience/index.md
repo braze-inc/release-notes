@@ -120,8 +120,15 @@ Combine multiple filters with `AND` and `OR` operators to create a connected aud
 
 ### Considerations
 
-Connected audiences support the filters listed on this page. To filter on anything else, incorporate it into an audience segment and then specify that segment in the `segment_id` parameter for the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). When using other endpoints, you must add the segment to the API-triggered campaign or Canvas in the Braze dashboard first.
+Connected audiences cannot filter users by:
 
+ - Default attributes
+ - Custom events
+ - Segments
+ - Message engagement events
+ - Nested custom attributes
+
+To use these filters, we recommend incorporating them into an audience segment and then specifying that segment in the `segment_id` parameter for the [`/messages/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). The [`/campaigns/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns#request-parameters) and [`/canvas/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases) endpoints also accept `segment_id` for broadcast sends. When using other endpoints, you must add the segment to the API-triggered campaign or Canvas in the Braze dashboard first. If you need to filter on nested attributes, use a [standard segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment) instead.
 
 ### Custom attribute filter
 

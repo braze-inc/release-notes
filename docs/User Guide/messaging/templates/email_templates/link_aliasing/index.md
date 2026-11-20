@@ -48,6 +48,8 @@ The drag-and-drop and HTML editors use the same composer sidebar, so the steps a
 
 Use the alias to reference a specific link in reporting and segmentation.
 
+In **Link Management**, a link in the **Full Link** column is clickable when it is a complete URL starting with `http://` or `https://`. A link that is only a Liquid placeholder appears as plain text. Braze fills in that link when the email is sent. To see the final address, go to **Preview & Test** or select **Send Test**.
+
 **Note:**
 
 

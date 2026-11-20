@@ -101,9 +101,9 @@ Your query may fail for any of the following reasons:
 
 ### Step 3: Generate your report
 
-When you're finished building your query, select **Run Query**. If there are no errors or [report timeouts](#report-timeouts), a CSV file is generated from the query.
+When you're finished building your query, use the date range filter to set the time window for your results (fixed or relative). Then select **Run Query**. If there are no errors or [report timeouts](#report-timeouts), results appear in the dashboard.
 
-To download the CSV report, select **Export**.
+To download a CSV of your report, select **Export**.
 
 ![Query Builder showing the results for the templated query "Channel engagement and revenue for the last 30 days".](https://www.braze.com/docs/assets/img_archive/query_builder.png?5097986890f115229594b9f066dec792)
 
@@ -138,23 +138,25 @@ For the full list of `ABORT_TYPE` values and their descriptions, see [Abort type
 
 ## Data and results
 
-All queries surface data from the last 60 days. When you export your results, it will only contain up to 1,000 rows. For reports that require larger amounts of data, you can use tools such as [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents) or the [export API endpoint](https://www.braze.com/docs/api/endpoints/export).
+Use the report date range filter to choose which days of data to include. You can select a maximum of one year of history, unless your workspace has [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake) or [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents), which allow you to select up to two years of data.
 
-## Snowflake credits
+The dashboard shows up to the first 1,000 rows of results. When you export, the CSV can include up to 100,000 rows. For reports that require more data, use [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents) or the [export API endpoint](https://www.braze.com/docs/api/endpoints/export).
 
-Each company has 5 Snowflake credits available per month, shared across all workspaces. A small portion of a Snowflake credit is used whenever you run a query or preview a table.
+## Snowflake credits {#credits}
+
+Each company has 10 Snowflake credits available per month for Query Builder, shared across all workspaces. Purchased add-on credits increase that monthly allotment. A small portion of a Snowflake credit is used whenever you run a query or preview a table.
 
 **Note:**
 
 
-Snowflake credits are not shared between features. For example, credits across SQL Segment Extensions and Query Builder are independent of each other.
+Query Builder credits are separate from [SQL Segment Extension credits](https://www.braze.com/docs/user_guide/audience/segments/segment_extension/sql_segments#credits). Usage in one feature doesn't consume credits from the other.
 
 
 
-Credit usage is correlated to the run time of your SQL query. The longer the run time is, the higher the portion of a Snowflake credit a query will cost. Run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes.
+Credit usage is correlated to the run time of your SQL query. The longer the run time is, the higher the portion of a Snowflake credit a query costs. Run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes.
 
-Credits are not used when writing, editing, or saving reports within the Braze SQL editor. Your credits will reset to 5 on the first of each month at 12 am UTC. You can monitor your monthly credit usage at the top of the Query Builder page.
+Credits are not used when writing, editing, or saving reports within the Braze SQL editor. Your credits reset to your monthly allotment on the first of each month at 12 am UTC. You can monitor your monthly credit usage at the top of the Query Builder page.
 
 ![Query Builder showing the amount of credits used in the current month.](https://www.braze.com/docs/assets/img_archive/query_builder_credits.png?51c48964d019cba72b1f1cf73e91c342){: style="max-width:60%;"}
 
-When you reach the credit cap, you cannot run queries, but you can create, edit, and save SQL reports. If you want to purchase more Query Builder credits, please get in touch with your account manager.
+When you reach the credit cap, you can't run queries, but you can create, edit, and save SQL reports. If you need more Query Builder credits, contact your account manager.

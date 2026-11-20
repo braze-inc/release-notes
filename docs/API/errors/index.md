@@ -83,6 +83,10 @@ All of the following error codes indicate that no messages are sent.
 | `400 Bad Request` | Bad syntax. Invalid JSON returns HTTP 400. The `error` field may include a message that you must pass valid `application/json` in the request body, or `Error while parsing request body. Please check your syntax.` See [Error while parsing request body](#error-while-parsing-request-body).|
 | `400 No Recipients` | There are no external IDs or segment IDs, or no push tokens in the request.|
 | `400 Invalid Campaign ID` | No messaging API campaign was found for your provided campaign ID.|
+| `400 Invalid segment_id` | The `segment_id` passed to `/campaigns/trigger/send` or `/canvas/trigger/send` doesn't match a segment in the workspace.|
+| `400 'segment_id' cannot be combined with recipients` | On `/campaigns/trigger/send` and `/canvas/trigger/send`, `segment_id` is only available for broadcast sends. Remove `recipients` and set `broadcast` to true, or remove `segment_id`.|
+| `400 'segment_id' is not supported on this endpoint` | Returned by the `/campaigns/trigger/schedule/*` and `/canvas/trigger/schedule/*` endpoints. `segment_id` is only supported on `/campaigns/trigger/send` and `/canvas/trigger/send`.|
+| `400 this segment has been archived, not sending` | The `segment_id` refers to an archived segment. Use an active segment.|
 | `400 Bad Request (transactional campaign)` | Transactional campaigns cannot be triggered through this endpoint. Use the [`/transactional/v1/campaigns/{campaign_id}/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_transactional_message) instead. Returned by `/campaigns/trigger/send` and `/campaigns/trigger/schedule/create` when `campaign_id` belongs to a transactional email campaign.|
 | `400 Message Variant Unspecified` | You provide a campaign ID but no message variation ID.|
 | `400 Invalid Message Variant` | You provided a valid campaign ID, but the message variation ID doesn't match any of that campaign's messages.|

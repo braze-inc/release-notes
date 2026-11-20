@@ -2,13 +2,6 @@
 
 > The Shopify segments sync extends your Shopify store into Braze, giving your marketing team direct access to richer user data that lives in Shopify, including signals that aren't captured by the standard Braze Shopify integration. By syncing Shopify segments as cohorts, you align audience definitions across both platforms and deliver consistent, coordinated user experiences whether you target them in Shopify or reach them through a Braze campaign.
 
-**Important:**
-
-
-The Shopify segments sync is currently in beta. To request access, contact your customer success manager.
-
-
-
 ## Prerequisites
 
 | Requirement | Description |

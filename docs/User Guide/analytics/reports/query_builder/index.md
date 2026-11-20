@@ -36,9 +36,10 @@ To run a Query Builder report:
 2. Select **Create SQL Query**. If you need inspiration or help in crafting your query, select **Query Template** and choose a template from the list. Otherwise, select **SQL Editor** to head straight to the editor.
 3. Your report is automatically given a name with the current date and time. Hover over the name and select <i class="fas fa-pencil" alt="Edit"></i> to give your SQL query a meaningful name.
 4. Write your SQL query in the editor, or select **Ask Operator** to [generate SQL with Operator](#generating-sql-with-operator). If writing your own SQL, see [Writing custom SQL queries](#custom-sql) for requirements and resources.
-5. Select **Run Query**.
-6. Save your query.
-7. To download a CSV of your report, select **Export**.
+5. Use the date range filter to set the time window for your results. You can choose a fixed range or a relative window. See [Data timeframe](#data-timeframe) for how far back you can select.
+6. Select **Run Query**. The dashboard shows up to the first 1,000 rows.
+7. Save your query.
+8. To download a CSV of your report, select **Export**. Exports can include up to 100,000 rows.
 
 ![Query Builder showing the results for the templated query "Channel engagement and revenue for the last 30 days".](https://www.braze.com/docs/assets/img_archive/query_builder.png?5097986890f115229594b9f066dec792)
 
@@ -52,7 +53,15 @@ See [Query templates](https://www.braze.com/docs/user_guide/analytics/reports/qu
 
 ### Data timeframe
 
-Queries return data from the past 60 days. If you use Currents or [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake), you may be able to query up to two years of data, which is how long your data is retained in Snowflake. For more details about extended data retention, contact your customer success manager.
+Use the date range filter on a report to choose which days of data to include. You can select a maximum of one year of history, unless your workspace has [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake) or [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents), which allow you to select up to two years of data. For more details about extended data retention, contact your customer success manager.
+
+### Results and exports
+
+The dashboard shows up to the first 1,000 rows of results. When you export, the CSV can include up to 100,000 rows. For reports that need more data than that, use [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents) or the [export API endpoints](https://www.braze.com/docs/api/endpoints/export).
+
+### SQL credits
+
+Each company has 10 Snowflake credits available per month for Query Builder, shared across all workspaces. To learn how credits are consumed, reset, and upgraded, see [Snowflake credits](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/building_queries#credits).
 
 ### Query Builder time zone
 

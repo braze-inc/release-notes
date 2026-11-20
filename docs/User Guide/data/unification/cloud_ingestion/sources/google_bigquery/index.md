@@ -209,6 +209,8 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
 
 Field names inside `PAYLOAD` are case-sensitive. A key named `NAME` does not match a field named `name`. If the casing doesn't match, validation reports the key as an undefined field and reports the field it was meant to populate as missing. Name your keys exactly as the fields appear in **Data Settings** > **Data Objects**.
 
+Date fields in `PAYLOAD` must be RFC 3339 date-time strings that include a time and time zone, such as `2026-11-03T00:00:00Z`. If your source stores date-only values, such as `2026-11-03`, convert them in your table or query. Braze doesn't apply a row with a date-only value, and the failure appears in the [sync logs](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sync_logs). For details, see [Date field format](https://www.braze.com/docs/api/endpoints/data_objects#date-field-format).
+
 Braze does not create or change data object types during a sync. Define the type and all of its fields in Braze before you create the sync. To add a field later, add it to the type first, then update your source table or query.
 
 
@@ -271,6 +273,8 @@ Each row needs `OBJECT_ID` plus at least one user identifier: `EXTERNAL_ID`, the
 
 Field names inside `PAYLOAD` are case-sensitive. A key named `NAME` does not match a field named `name`. If the casing doesn't match, validation reports the key as an undefined field and reports the field it was meant to populate as missing. Name your keys exactly as the fields appear in **Data Settings** > **Data Objects**.
 
+Date fields in `PAYLOAD` must be RFC 3339 date-time strings that include a time and time zone, such as `2026-11-03T00:00:00Z`. If your source stores date-only values, such as `2026-11-03`, convert them in your table or query. Braze doesn't apply a row with a date-only value, and the failure appears in the [sync logs](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sync_logs). For details, see [Date field format](https://www.braze.com/docs/api/endpoints/data_objects#date-field-format).
+
 Braze does not create or change data object types during a sync. Define the type and all of its fields in Braze before you create the sync. To add a field later, add it to the type first, then update your source table or query.
 
 
@@ -309,6 +313,8 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNT_SUBACCOUNTS_SYNC`
 - `DELETED` - When `true`, Braze deletes the record instead of updating it. Leave this null or `false` for rows you want to create or update.
 
 Field names inside `PAYLOAD` are case-sensitive. A key named `NAME` does not match a field named `name`. If the casing doesn't match, validation reports the key as an undefined field and reports the field it was meant to populate as missing. Name your keys exactly as the fields appear in **Data Settings** > **Data Objects**.
+
+Date fields in `PAYLOAD` must be RFC 3339 date-time strings that include a time and time zone, such as `2026-11-03T00:00:00Z`. If your source stores date-only values, such as `2026-11-03`, convert them in your table or query. Braze doesn't apply a row with a date-only value, and the failure appears in the [sync logs](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sync_logs). For details, see [Date field format](https://www.braze.com/docs/api/endpoints/data_objects#date-field-format).
 
 Braze does not create or change data object types during a sync. Define the type and all of its fields in Braze before you create the sync. To add a field later, add it to the type first, then update your source table or query.
 

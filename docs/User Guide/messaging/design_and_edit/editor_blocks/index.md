@@ -733,6 +733,8 @@ Adds a clickable element for actions such as opening a link or submitting a form
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Table" }
 
 
+To unsubscribe, resubscribe, or opt in the user with one click, enter an email subscription Liquid tag as the web URL. For more information, see [Email subscription links in buttons and links](https://www.braze.com/docs/user_guide/messaging/landing_pages/personalize_landing_pages#email-subscription-links).
+
 **Important:**
 
 

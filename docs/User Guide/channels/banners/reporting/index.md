@@ -2,6 +2,13 @@
 
 > Learn how to review analytics for your Banners, which includes campaign details, message performance, and historical performance. For more general information, see [About Banners](https://www.braze.com/docs/user_guide/channels/banners).
 
+**Note:**
+
+
+Funnel reporting isn't supported for Banner campaigns. Banner metrics are in **Campaign Analytics**, including **Historical Performance**.
+
+
+
 ## Viewing analytics
 
 Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For messages sent in Canvas, refer to [Canvas analytics](https://www.braze.com/docs/user_guide/analytics/reports/canvas_analytics).
