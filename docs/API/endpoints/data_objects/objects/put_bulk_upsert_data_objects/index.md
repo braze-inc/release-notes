@@ -1,4 +1,4 @@
-<div id='api_dnhvsettihuk' class='api_div' data-search-keywords='create or replace data objects in bulk records type_name object_id attributes name amount source_import_id status record_count'>
+<div id='api_iqmdxfgwqtkq' class='api_div' data-search-keywords='create or replace data objects in bulk records type_name object_id attributes name amount source_import_id status record_count'>
 <h1 id="create-or-replace-data-objects-in-bulk">Create or replace data objects in bulk</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/data_objects/objects</p>
@@ -58,7 +58,7 @@
       <td><code class="language-plaintext highlighter-rouge">records[].attributes</code></td>
       <td>Required</td>
       <td>Object</td>
-      <td>The object’s attributes, keyed by field name. Each field must already be defined on the type.</td>
+      <td>The object’s attributes, keyed by field name. Each field must already be defined on the type. Date fields must be RFC 3339 date-time strings that include a time and time zone, such as <code class="language-plaintext highlighter-rouge">2026-11-03T00:00:00Z</code>. Braze checks attributes when it processes the batch, so a request with a date-only value such as <code class="language-plaintext highlighter-rouge">2026-11-03</code> still returns <code class="language-plaintext highlighter-rouge">202</code>, and Braze records a <code class="language-plaintext highlighter-rouge">data-object-schema-mismatch</code> <a href="#processing-failures">processing failure</a> for that record. For details, see <a href="/docs/api/endpoints/data_objects#date-field-format">Date field format</a>.</td>
     </tr>
   </tbody>
 </table>

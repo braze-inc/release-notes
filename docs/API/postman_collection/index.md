@@ -2,6 +2,13 @@
 
 > Braze allows you to generate sample API requests for all of our endpoints through our Postman Collection. This reference article covers the Braze Postman Collection, what it is, how to set up and use the collection, as well as how to edit and send requests.
 
+**Tip:**
+
+
+After you send requests from Postman, you can confirm what Braze received in the [API request log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/api_request_log). Go to **Settings** > **APIs and Identifiers** > **Request Log** to filter REST API requests from the last 14 days by endpoint, response code, or API key, and view each request's payload.
+
+
+
 ## What is Postman?
 
 Postman is a free visual editing tool for building and testing API requests. Compared to other methods (for example, using cURL), Postman lets you edit API requests, view header information, and more. You can save collections (libraries of sample pre-made API requests). To accelerate setup with our REST API, we provide a collection with pre-made examples for all endpoints.

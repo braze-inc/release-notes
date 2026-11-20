@@ -70,6 +70,39 @@ If a user forwards a landing page link (from an email, SMS, or other message) to
 
 
 
+## Email subscription links in buttons and links {#email-subscription-links}
+
+You can use email subscription Liquid tags as the URL for a button or link on a landing page. When an [identified user](#use-liquid-for-identified-and-anonymous-users) selects the button or link, Braze resolves the tag for that user, so they can unsubscribe, resubscribe, or opt in directly from your page. This lets you build subscription experiences in Braze, such as:
+
+- A branded unsubscribe page that pairs a one-click unsubscribe button with a short "why are you leaving?" survey
+- A re-engagement page with a one-click resubscribe button
+- An opt-in page that subscribes the user in a single click
+
+The following tags are supported:
+
+| Liquid tag | What it does |
+| --- | --- |
+| `{{${set_user_to_unsubscribed_url}}}` | Sets the user's global email subscription state to unsubscribed. |
+| `{{${set_user_to_subscribed_url}}}` | Sets the user's global email subscription state to subscribed. |
+| `{{${set_user_to_opted_in_url}}}` | Sets the user's global email subscription state to opted-in. |
+| `{% subscription_group_unsubscribe_url <subscription_group_id> %}` | Unsubscribes the user from a single [email subscription group](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups#email-subscription-groups) without changing their global state. Replace `<subscription_group_id>` with the group's API identifier. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Supported email subscription Liquid tags" }
+
+To add an email subscription link:
+
+1. In the drag-and-drop editor, select a **Button** or **Link** on your page.
+2. Set **On-click behavior** to **Open web URL**.
+3. In the URL field, enter the Liquid tag instead of a web address.
+
+When a user selects the link, Braze updates their subscription state and shows the same confirmation page it shows for that link in an email. To customize that page, see [Creating a custom unsubscribe page](https://www.braze.com/docs/user_guide/channels/email/subscriptions#creating-a-custom-unsubscribe-page).
+
+Keep in mind:
+
+- The tag only resolves for an identified user, such as one who opened the page through a [landing page Liquid tag](https://www.braze.com/docs/user_guide/messaging/landing_pages/tracking_users#using-landing-page-liquid-tags) in a message. For anonymous visitors, the link renders as `#` and does nothing.
+- The URL is personalized for each user. To test the link, [preview the page](#previewing-and-testing) as a specific user.
+- As with unsubscribe links in email, anyone who opens a forwarded landing page link can change the original user's subscription state.
+- To let users choose from a list of subscription groups rather than change their state with one click, use the [**Manage Subscriptions**](https://www.braze.com/docs/user_guide/messaging/landing_pages/manage_subscriptions/) block.
+
 ## Fetching external data with custom code
 
 You can use a **Custom Code** block to fetch data from external endpoints and display it in your landing page. This approach makes the request on the client side (in the user's browser), so the page loads quickly without server-side rendering delays.

@@ -441,9 +441,9 @@ To learn more about how to add or customize a preference center, refer to [Prefe
 
 ## Changing email subscriptions {#changing-email-subscriptions}
 
-In most cases, users manage their email subscription through links included in the emails they receive. Insert a legally compliant footer with an unsubscribe link at the bottom of every email. 
+In most cases, users manage their email subscription through links included in the emails they receive. Insert a legally compliant footer with an unsubscribe link at the bottom of every email. When users select the unsubscribe URL, Braze unsubscribes them and shows a landing page confirming the change. 
 
-When users select the unsubscribe URL, Braze unsubscribes them and shows a landing page confirming the change. Include this Liquid tag in email campaigns and Canvases: `${set_user_to_unsubscribed_url}`. You cannot use this tag in other messaging channels.
+Use the `${set_user_to_unsubscribed_url}` Liquid tag in email campaigns and Canvases. You can also use it as the URL of a button or link on a [landing page](https://www.braze.com/docs/user_guide/messaging/landing_pages/personalize_landing_pages#email-subscription-links). You cannot use this tag in other messaging channels.
 
 When sending test messages, `${set_user_to_unsubscribed_url}` renders as a full URL only if the recipient email address has an associated user profile with an external ID in the workspace. If the recipient has no user profile or external ID, the tag renders as `<a href="#">Unsubscribe</a>` instead. 
 
@@ -451,7 +451,7 @@ To test the full unsubscribe link, send to an existing user with a profile in yo
 
 ### Subscription group unsubscribe links {#subscription-group-unsubscribe-links}
 
-To let recipients unsubscribe from a single [email subscription group](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups#email-subscription-groups) without changing their global email subscription state, use the `{% subscription_group_unsubscribe_url <subscription_group_id> %}` Liquid tag in email campaigns and Canvases.
+To let recipients unsubscribe from a single [email subscription group](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups#email-subscription-groups) without changing their global email subscription state, use the `{% subscription_group_unsubscribe_url <subscription_group_id> %}` Liquid tag in email campaigns and Canvases, or as the URL of a button or link on a [landing page](https://www.braze.com/docs/user_guide/messaging/landing_pages/personalize_landing_pages#email-subscription-links).
 
 Replace `<subscription_group_id>` with the subscription group's API identifier and don't wrap the ID in quotes. You can insert the tag from the composer personalization panel under **Email Properties** or type it manually.
 
@@ -489,7 +489,7 @@ To use a custom landing page instead:
 1. Go to **Email Preferences** > **Subscription Pages and Footers**.
 2. Add the HTML for your custom page.
 
-Include a resubscribe link (for example `{{${set_user_to_subscribed_url}}}`) so users can undo an accidental unsubscribe. Like `${set_user_to_unsubscribed_url}`, you can use this tag in only email campaigns and Canvases.
+Include a resubscribe link (for example `{{${set_user_to_subscribed_url}}}`) so users can undo an accidental unsubscribe. Like `${set_user_to_unsubscribed_url}`, you can use this tag in email campaigns, Canvases, and [landing page](https://www.braze.com/docs/user_guide/messaging/landing_pages/personalize_landing_pages#email-subscription-links) button or link URLs.
 
 You can also send users to your site and update status with the Braze REST API (for example link with `?user_id={{${user_id}}}` and then call [`/email/status`](https://www.braze.com/docs/api/endpoints/email/post_email_subscription_status).
 
@@ -510,7 +510,7 @@ Use a custom opt-in page to let users acknowledge and control notification prefe
 2. Select **Subscription Pages and Footers**.
 3. Customize the styling in the **Custom opt-in page** section to see how that indicates to your users that they've been subscribed.
 
-Users reach this page through the `{{${set_user_to_opted_in_url}}}` tag. Like other email subscription Liquid tags, you can use this tag in only email campaigns and Canvases.
+Users reach this page through the `{{${set_user_to_opted_in_url}}}` tag. Like other email subscription Liquid tags, you can use this tag in email campaigns, Canvases, and [landing page](https://www.braze.com/docs/user_guide/messaging/landing_pages/personalize_landing_pages#email-subscription-links) button or link URLs.
 
 **Tip:**
 

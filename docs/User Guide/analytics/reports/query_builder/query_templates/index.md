@@ -1,6 +1,6 @@
 # Query Builder templates
 
-> Access [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder) templates by selecting **Query Template** when creating a report. All templates surface data from up to the last 60 days, but you can directly edit that and other values in the editor.<br><br>For definitions of the metrics that may appear in your Query Builder reports, refer to the [Report Metrics Glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary) and filter by the respective channel.
+> Access [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder) templates by selecting **Query Template** when creating a report. Use the report date range filter to choose your time window—up to one year for most workspaces, or up to two years with [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake) or [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents). Then, edit template values directly in the editor as needed.<br><br>For definitions of the metrics that may appear in your Query Builder reports, refer to the [Report Metrics Glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary) and filter by the respective channel.
 
 ## Channel templates
 

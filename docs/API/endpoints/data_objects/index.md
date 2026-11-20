@@ -94,10 +94,37 @@ These limits are fixed for all companies.
 |---|---|
 | Fields per relationship type (user relationships and object relationships) | 25. Relationship fields don't count toward the fields per data object type limit. |
 | Attribute value length | 255 characters |
+| Date fields | RFC 3339 date-time strings that include a time and time zone, such as `2026-11-03T00:00:00Z`. Braze rejects date-only values such as `2026-11-03`. For details, see [Date field format](#date-field-format). |
 | `object_id` length and format | 250 characters. Letters, numbers, hyphens, and underscores only. |
 | Field name length and format | 250 characters. Letters, numbers, and underscores only, and can't start with an underscore. |
 | Reserved field names | `id`, `external_id`, `object_id`, and `display_name` can't be used as custom field names. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Data Objects field and value limits" }
+
+### Date field format
+
+Date fields accept only RFC 3339 date-time strings that include both a time and a time zone. Braze requires the full value so that it never has to guess a time or time zone. If your source stores date-only values, such as renewal or contract dates in your data warehouse, convert them before you send them, for example in your warehouse transform.
+
+| Value | Result |
+|---|---|
+| `2026-11-03T00:00:00Z` | Accepted |
+| `2026-11-03T00:00:00-05:00` | Accepted |
+| `2026-11-03` | Rejected because it has no time or time zone |
+| `2026-11-03T00:00:00` | Rejected because it has no time zone |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Examples of accepted and rejected date field values" }
+
+This format applies to date fields on data objects, user relationships, and object relationships. How Braze reports a rejected value depends on how you send it:
+
+- The single-record create, replace, and update endpoints return `400`. If more than one attribute is invalid, the error names only the first one.
+- The bulk upsert endpoints accept the request with `202`, then record a `data-object-schema-mismatch` processing failure for the record, such as `attributes: renewal_date is not valid for its field`.
+- [Cloud Data Ingestion syncs](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sync_data_objects) use the same processing as the bulk endpoints, so Braze doesn't apply a row with a date-only value, and the failure appears in the [sync logs](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sync_logs).
+
+For example, a single-record request that sends `2026-11-03` for a `renewal_date` date field returns this `400` response:
+
+```json
+{
+  "error": "Validation failed: Attrs do not conform to field definitions: The property '#/renewal_date' must be a valid RFC3339 date/time string"
+}
+```
 
 ### What happens when you reach a limit
 

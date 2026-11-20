@@ -248,7 +248,7 @@ Each Braze workspace has 5 Snowflake credits available per month. If you need mo
 **Note:**
 
 
-Snowflake credits are not shared between features. For example, credits across SQL Segment Extensions and Query Builder are independent of each other.
+Snowflake credits are not shared between features. SQL Segment Extension credits are independent of [Query Builder credits](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/building_queries#credits) (which default to 10 per company per month).
 
 
 

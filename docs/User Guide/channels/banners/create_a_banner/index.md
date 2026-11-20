@@ -326,6 +326,13 @@ To control re-eligibility for Canvas Banner steps, use the Canvas re-entry setti
 
 ### Step 5: Test your message (optional)
 
+**Tip:**
+
+
+For questions about display, placement, and update timing, see the [Banner FAQ](https://www.braze.com/docs/user_guide/channels/banners/faq).
+
+
+
  **Preview** to you preview your Banner or send a test message.
 
 ![Preview tab of the Banner composer.](https://www.braze.com/docs/assets/img/banners/select_preview.png?898229d959020b86215b0604a136dfae){: style="max-width:50%;"}

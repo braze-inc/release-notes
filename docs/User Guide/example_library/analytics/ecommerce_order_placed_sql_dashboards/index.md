@@ -20,7 +20,7 @@ Use this when built-in eCommerce dashboards do not cover your metric mix. For la
 
 ## Considerations
 
-- **Data retention:** Query Builder returns data from the past 60 days by default. With [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/), you may query up to two years of retained data. See [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/).
+- **Data retention:** Use the Query Builder date range filter to choose your time window—up to one year for most workspaces, or up to two years with [Snowflake Data Sharing](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake/) or [Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents). See [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder/#data-timeframe).
 - **Timeouts:** Queries that run longer than six minutes time out. Narrow the date range, filter on `TIME`, or reduce the audience size if a report fails. Event tables are clustered on `TIME`; prefer filtering on when the event occurred.
 - **Revenue field:** Sample queries sum `total_value` from event `properties`. Braze's standardized eCommerce revenue in product reports often derives from each product's `price` and `quantity`. Align `total_value` with your product line items, or adjust SQL to match your schema.
 - **Column labels:** Wrap display column names in double quotation marks (for example `"Date"`, `"Total Revenue"`) so Dashboard Builder shows readable axis and table headers.
@@ -33,7 +33,7 @@ Use this when built-in eCommerce dashboards do not cover your metric mix. For la
 1. Go to **Analytics** > **Query Builder**.
 2. Select **Create SQL Query**, then **SQL Editor**.
 3. Name the query (for example, `Flash Thread — daily eCommerce revenue`).
-4. Paste and adapt the following query for total revenue per calendar day over the last 60 days:
+4. Paste and adapt the following query for total revenue per calendar day. Adjust the `-60` lookback to match the Query Builder date range filter you select, or remove the `DATEADD` filter and rely on that date range filter alone:
 
 
 ```sql
@@ -42,6 +42,7 @@ SELECT
   SUM(PARSE_JSON(PROPERTIES):total_value::NUMBER(18, 2)) AS "Total Revenue"
 FROM USERS_BEHAVIORS_CUSTOMEVENT_SHARED
 WHERE NAME = 'ecommerce.order_placed'
+  -- Example lookback; align with or replace using the Query Builder date range filter
   AND TO_TIMESTAMP_NTZ(TIME) >= DATEADD(day, -60, CURRENT_TIMESTAMP())
   AND TO_TIMESTAMP_NTZ(TIME) <= CURRENT_TIMESTAMP()
 GROUP BY 1
@@ -83,6 +84,7 @@ SELECT
   COUNT(*) AS "No. of Orders"
 FROM USERS_BEHAVIORS_CUSTOMEVENT_SHARED
 WHERE NAME = 'ecommerce.order_placed'
+  -- Example lookback; align with or replace using the Query Builder date range filter
   AND TO_TIMESTAMP_NTZ(TIME) >= DATEADD(day, -60, CURRENT_TIMESTAMP())
   AND TO_TIMESTAMP_NTZ(TIME) <= CURRENT_TIMESTAMP()
 GROUP BY 1
@@ -94,7 +96,7 @@ Use a line or bar chart with `Date` on the X-axis and both metrics on the Y-axis
 
 #### New versus returning purchasers per day
 
-This scenario compares each user's first `ecommerce.order_placed` day to later purchase days. It is most accurate when your Query Builder window covers the full reporting period (for example, the default 60-day window).
+This scenario compares each user's first `ecommerce.order_placed` day to later purchase days. It is most accurate when your Query Builder window covers the full reporting period (for example, your selected date range).
 
 
 ```sql
