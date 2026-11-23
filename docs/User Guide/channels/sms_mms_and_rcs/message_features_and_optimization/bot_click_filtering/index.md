@@ -6,12 +6,12 @@
 
 Braze has a proprietary detection system that uses multiple inputs to identify suspected bot clicks, also known as non-human interactions (NHI). Bot clicks can inflate click rates, skewing engagement metrics. By filtering these, Braze facilitates the capture of reliable data for decision making.
 
-User agent and IP address checks work together. A click is flagged if it matches either check. If both match, Currents records both reasons.
+User agent and IP address checks run automatically and work together. A click is flagged if it matches either check. If both match, Currents records both reasons.
 
 
 
 
-Our system analyzes user agents associated with web crawlers, Android and iOS link previews, or CPaaS security software. A few examples of filtered user agents include `GoogleBot`, `GoogleMessages/20`, `python-requests/2.32.3`, and `Barracuda Sentinel (EE)`.
+Braze analyzes user agents associated with web crawlers, Android and iOS link previews, or CPaaS security software. A few examples of filtered user agents include `GoogleBot`, `GoogleMessages/20`, `python-requests/2.32.3`, and `Barracuda Sentinel (EE)`. The full filtered user-agent list isn't published because it changes over time as new scanners appear.
 
 
 
@@ -66,7 +66,11 @@ Yes. Link previews (such as Android and iOS link previews) are flagged as bot cl
 
 ### Why did my SMS click rate drop?
 
-The drop reflects removed bot traffic, not lower engagement from real users. If your recipients use a mobile carrier that scans links automatically, Braze filters those scanner clicks by IP address. Your reported click rate may drop from the date this filtering was applied to your account. 
+The drop reflects removed bot traffic, not lower engagement from real users. If your recipients use a mobile carrier that scans links automatically, Braze filters those scanner clicks by IP address. Your reported click rate may drop from the date this filtering was applied to your account.
+
+### Why are my click rates lower than on other SMS platforms?
+
+Braze filters both known bot user agents and known scanner IP addresses. Other platforms may filter fewer automated clicks, so their reported rates can look higher even when real-user engagement is similar. 
 
 ### Are past clicks reclassified?
 

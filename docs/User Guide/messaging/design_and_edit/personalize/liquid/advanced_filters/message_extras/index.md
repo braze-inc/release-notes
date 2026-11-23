@@ -52,7 +52,7 @@ The `message_extras` tag is supported for all message types with a send event, a
 Any other input that doesn't match the tag standard discussed earlier in this section may fail to pass to Currents or Snowflake. Check that your syntax or formatting doesn't include any of the following:
 
 - Non-existent, empty, or mistyped delimiters
-- Duplicate keys (Braze defaults to sending the key-value pair that is encountered first)
+- Repeated `:key` or `:value` parameters in one tag (Braze does not add that tag's key-value pair)
 - Extra text before keys or values are defined
 - Out of order keys and values 
   - For example, ```{% message_extras :value 123 :key test %}```
@@ -70,6 +70,7 @@ Any other input that doesn't match the tag standard discussed earlier in this se
 - Key-values that exceed 1,000 bytes (1&nbsp;KB) are truncated.
 - Whitespace counts toward the character count. Note that Braze omits the leading and trailing whitespaces.
 - The resulting JSON outputs string values only.
+- When the same key appears in more than one `message_extras` tag, Braze keeps the value from the last tag it renders in the Currents and Snowflake Data Sharing send event.
 - You can include Liquid variables as a key or value, but you cannot nest additional Liquid tags inside `message_extras`.
   - For example, you can use the following Liquid: ```{% assign value = '123' %} {% assign key = 'test' %} {% message_extras :key {{key}} :value {{value}} %}```
 

@@ -1,11 +1,17 @@
-# Treasure Data cohort import
+# Treasure AI cohort import
 
-> This article describes how to import user cohorts from Treasure Data to Braze so you can send targeted campaigns based on data that may only exist in your warehouse.
+> This article describes how to import user cohorts from Treasure AI to Braze so you can send targeted campaigns based on data that may only exist in your warehouse.
+
+
+
+
 
 **Important:**
 
 
-This feature is currently in beta. For more information, contact your Treasure Data and Braze representatives.
+ is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+
+
 
 
 
@@ -13,27 +19,27 @@ This feature is currently in beta. For more information, contact your Treasure D
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Treasure Data account | A [Treasure Data](https://www.treasuredata.com/) account is required to take advantage of this partnership. |
+| Treasure AI account | A [Treasure AI account](https://www.treasure.ai/) is required to take advantage of this partnership. |
 | Braze Data Import key | This can be captured in the Braze dashboard from **Partner Integrations** > **Technology Partners** and then select **Treasure Data**. |
-| Braze REST endpoint | [Your REST endpoint URL](https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
-| Static IP Address of Treasure Data | The static IP address of Treasure Data is the access point and source of the linkage for this Integration. To determine the static IP address, contact your Treasure Data Customer Success representative or Treasure Data Technical support. |
+| Braze REST endpoint | [Your REST endpoint URL](https://www.braze.com/docs/api/basics/#endpoints). Your endpoint depends on the Braze URL for your instance. |
+| Static IP Address of Treasure AI | The static IP address of Treasure AI is the access point and source of the linkage for this Integration. To determine the static IP address, contact your Treasure AI Customer Success representative or Treasure AI Technical support. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Data import integration
 
 ### Step 1: Get your Braze data import key
 
-In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Treasure Data**. Here, you will find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.
+In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Treasure Data**. Here, you can find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.
 
 ### Step 2: Create a data connection
 
-Before you create your data connection within Treasure Data, you'll need to authenticate. First, select **Integrations Hub**, then **Catalog**.
+Before you create your data connection within Treasure AI, you'll need to authenticate. First, select **Integrations Hub**, then **Catalog**.
 
-![Treasure Data Integrations Hub Catalog](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort1.png?18c82adc285c3ee450f05880a02fea7f) 
+![Treasure AI Integrations Hub Catalog](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort1.png?18c82adc285c3ee450f05880a02fea7f) 
 
 Search for the Braze Integration in the **Catalog**, then hover over the icon and select **Create Authentication**. Enter your credentials, name your authentication, then select **Done**.
 
-![Treasure Data Integrations Hub Catalog](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort2.png?b8e7c01ec566294f95450c55b3d851c1) 
+![Treasure AI Integrations Hub Catalog](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort2.png?b8e7c01ec566294f95450c55b3d851c1) 
 
 ### Step 3: Define your cohort Audience
 
@@ -42,7 +48,7 @@ Sync your cohorts to Braze through an activation in the **Audience Studio** or b
 **Important:**
 
 
-Only users who already exist within Braze are added or removed from a cohort. Cohort Import will not create new users in Braze.
+Only users who already exist within Braze are added or removed from a cohort. Cohort Import does not create new users in Braze.
 
 
 
@@ -53,7 +59,7 @@ Only users who already exist within Braze are added or removed from a cohort. Co
 **Note:**
 
 
-Query columns must be specified with the exact column names and data type. The query columns must include at least one of the columns: `user_ids`, `device_ids`, or braze alias column match with configuration on the UI. Only user profiles that exist within Braze will be added to a cohort. Cohort Import will not create new user profiles.
+Query columns must be specified with the exact column names and data type. The query columns must include at least one of the columns: `user_ids`, `device_ids`, or braze alias column match with configuration on the UI. Only user profiles that exist within Braze are added to a cohort. Cohort Import does not create new user profiles.
 
 
 
@@ -61,13 +67,13 @@ Query columns must be specified with the exact column names and data type. The q
 2. Select **New Query**.
 3. Run the query to validate the result set.
 
-![Treasure Data Integrations Hub Catalog](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort3.png?f91204a38d09b6517d1e2731589082aa)
+![Treasure AI Integrations Hub Catalog](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort3.png?f91204a38d09b6517d1e2731589082aa)
 
 ##### Use case: Syncing cohorts by identifier
 
 
 
-Here's an example table in Treasure Data:
+Here's an example table in Treasure AI:
 
 | external_id |	email	| device_ids |
 | ----------- | ----------- | ----------- |
@@ -93,7 +99,7 @@ FROM
   example_cohort_table
 ```
 
-After running the query, these user aliases will be added to the cohort in Braze:
+After running the query, these external IDs are added to the cohort in Braze:
 
  - `TDCohort1`
  - `TDCohort2`
@@ -102,7 +108,7 @@ After running the query, these user aliases will be added to the cohort in Braze
 
 
 
-Here's an example table in Treasure Data:
+Here's an example table in Treasure AI:
 
 | external_id |	email	| device_ids |
 | ----------- | ----------- | ----------- |
@@ -130,7 +136,7 @@ After running the query, these user aliases will be added to the cohort in Braze
 
 
 
-Here's an example table in Treasure Data:
+Here's an example table in Treasure AI:
 
 | external_id |	email	| device_ids |
 | ----------- | ----------- | ----------- |
@@ -169,7 +175,7 @@ After running the query, these device IDs will be added to the cohort in Braze:
 
 Once the query has been built, select **Export Results**. You can select an existing authentication, such as the one created in the last steps, or create a new authentication to be used for output. 
 
-![Treasure Data Integrations Hub Catalog](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort5.png?89d66d525ed482b922596162bce485fe) 
+![Treasure AI Integrations Hub Catalog](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort5.png?89d66d525ed482b922596162bce485fe) 
 
 
 | Export Result Mapping |	Description	| 
@@ -181,7 +187,7 @@ Once the query has been built, select **Export Results**. You can select an exis
 | Thread Count | Number of concurrent API calls. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Step 3.2: Specify the result export target" }
 
-Follow [Treasure Data's steps](https://docs.treasuredata.com/articles/#!int/braze-cohort-export-integration/a/ExportIntegrationTemplate-SpecifytheResultExportTarget) for configuring your export to meet your use case.
+Follow [Treasure AI's steps](https://docs.treasure.ai/int/braze-cohort-export-integration) for configuring your export to meet your use case.
 
 #### Step 3.3: Execute the query
 
@@ -195,7 +201,7 @@ Create a new segment or choose an existing segment to sync to Braze as a cohort.
 
 #### Step 3.2: Fill out your activation details
 
-![Treasure Data Integrations Activation Details](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort7.png?ed3960b05d8eafdc92f055f5c9ab9c62) 
+![Treasure AI Integrations Activation Details](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort7.png?ed3960b05d8eafdc92f055f5c9ab9c62) 
 
 | Activation Detail Setting |	Description	| 
 | ----------- | ----------- |
@@ -211,7 +217,7 @@ Create a new segment or choose an existing segment to sync to Braze as a cohort.
 
 #### Step 3.3: Set up output mapping
 
-![Treasure Data Integrations Activation Output Mapping](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort6.png?4b09453bb6d364a21105bf7714bf9745) 
+![Treasure AI Integrations Activation Output Mapping](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort6.png?4b09453bb6d364a21105bf7714bf9745) 
 
 | Activation Output Mapping |	Description	| 
 | ----------- | ----------- |
@@ -223,7 +229,7 @@ Create a new segment or choose an existing segment to sync to Braze as a cohort.
 
 
  - When using `device_id` as the identifier, the **Output Column Name** must be named `device_ids`.
- - When using aliases as the identifier, the **Output Column Name** must be the name of the corresponding column within your query will be sent as the `alias_label`, and the values of each row in the column will be sent as the `alias_name`.
+ - When using aliases as the identifier, the **Output Column Name** must match the corresponding column in your query. That column name is sent as the `alias_label`, and the values of each row are sent as the `alias_name`.
  - When using `external_id` as the identifier, the **Output Column Name** must be named `user_ids`.
 
 
@@ -234,15 +240,15 @@ All non-relevant or misnamed column names will be ignored. You may choose to use
 
 Define your desired sync schedule and save your activation.
 
-![Treasure Data Integrations Activation Schedule](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort8.png?c25617bddb49b915ced4bbfc4e88a0c6) 
+![Treasure AI Integrations Activation Schedule](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort8.png?c25617bddb49b915ced4bbfc4e88a0c6) 
 
 
 
-### Step 4: Create a Braze segment from the Treasure Data Export
+### Step 4: Create a Braze segment from the Treasure AI Export
 
-In Braze, navigate to **Segments**, create a new segment, and select **Treasure Data Cohorts** as your filter. From here, you can choose which Treasure Data cohort you wish to include. After your Treasure Data cohort segment is created, you can select it as an audience filter when creating a campaign or Canvas.
+In Braze, navigate to **Segments**, create a new segment, and select **Treasure Data Cohorts** as your filter. From here, you can choose which Treasure AI cohort you wish to include. After your Treasure AI cohort segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
-![Treasure Data Integrations Hub Catalog](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort4.png?2b06c4e1810fed8a911f1256230e2df3) 
+![Treasure AI Integrations Hub Catalog](https://www.braze.com/docs/assets/img/treasure_data/cohort/cohort4.png?2b06c4e1810fed8a911f1256230e2df3) 
 
 ## User Matching
 

@@ -17,6 +17,13 @@ Match your symptom in the table to navigate to the relevant section.
 | Need webhook failure events in Currents | [Additional failure insights in Braze Currents](#additional-failure-insights-in-braze-currents) |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Webhook and Connected Content symptom" }
 
+**Tip:**
+
+
+To retry a failed Connected Content call, add the `:retry` option, and see [Connected Content retries](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/connected_content_retries/) for more details. To stop the send based on the response, see [Abort Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/aborting_connected_content/).
+
+
+
 ## Standard investigation path
 
 Use this workflow when a webhook or Connected Content request fails or renders incorrectly. Start at step 1.

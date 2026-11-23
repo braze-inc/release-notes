@@ -102,7 +102,7 @@ To determine whether this is feasible, refer to the documentation for your Marte
 
 - mParticle offers a [native integration with Google Cloud Storage](https://www.mparticle.com/integration/google-cloud-storage/)
 - [Twilio Segment](https://www.twilio.com/docs/segment/connections/storage/catalog/google-cloud-storage)
-- [Treasure Data](https://docs.treasuredata.com/int/google-cloud-storage-export-integration)
+- [Treasure AI](https://docs.treasure.ai/int/google-cloud-storage-export-integration)
 - [ActionIQ](https://info.actioniq.com/hubfs/ActionIQ%20Industry%20Brief%20Solutions/ActionIQ_Integrations_Brief.pdf)
 - [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/cloud-storage/google-cloud-storage)
 

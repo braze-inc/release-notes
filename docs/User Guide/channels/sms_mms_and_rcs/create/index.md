@@ -189,7 +189,19 @@ You can use Liquid to personalize card titles, descriptions, media, and buttons.
 - Button and suggestion URLs must start with `http://` or `https://`. Custom app schemes (for example, `yourapp://`) aren't supported.
 - PDFs can't be attached to Cards. To share a PDF, add an **Open URL** button that links to a hosted PDF. The PDF opens in the device's browser.
 
-##### Suggestions
+##### Card buttons and suggestions
+
+Suggestions are interactive choices a user can tap. In Braze, suggestions outside a rich card (message-level) appear as **Suggestions**, and suggestions inside a rich card appear as **Card buttons**. (Outside Braze, message-level suggestions are sometimes called "chips".) Both suggestions and card buttons can be a suggested reply (sends text back to Braze) or an action such as **Open URL**.
+
+| Placement | Name | Limit | Persistence |
+| --- | --- | --- | --- |
+| Inside a rich card | Card buttons | 1–4 per card. The four-button maximum comes from the RCS specification enforced by every provider. | Stay on the card. Users can scroll back and tap them later. |
+| Outside the card (message-level) | Suggestions | Up to five in the Braze composer for Text, Media, and Card (when the provider supports suggestions outside the card). The RCS specification allows up to 11 message-level suggestions depending on provider. | On Android, message-level suggestions usually disappear after a newer message lands in the thread (including the reply from tapping one).<br><br> On iOS, suggestions and card buttons both persist after a tap. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="RCS card buttons versus suggestions" }
+
+Use message-level suggestions for one-time choices (for example, "Yes" or "No"). Use card buttons for links or actions users may return to. See [Provider support for Card messages](#provider-support-for-card-messages) for which providers support suggestions outside the card.
+
+##### Suggestion text and URLs
 
 - Suggestions can be suggested replies (which pre-populate the user's text input) or Open URL actions.
 - Each suggestion can include up to 25 characters of text.

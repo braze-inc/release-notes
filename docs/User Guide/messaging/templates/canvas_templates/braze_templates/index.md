@@ -319,15 +319,15 @@ Here is an example of how you would add an HTML block with your `shopping_cart` 
 
 ##### `abort_if_not_abandoned` {#abort-if-not-abandoned}
 
-The `abort_if_not_abandoned` parameter is specific to the abandoned checkout use case and is used only with the `shopping_cart` Liquid tag in conjunction with the `ecommerce.checkout_started` event.
+The `abort_if_not_abandoned` parameter controls whether the `{% shopping_cart %}` tag aborts the message when the cart is no longer considered abandoned. It defaults to `true`.
 
 | Value | Behavior |
 | ----- | -------- |
-| `true` (default) | The message is aborted if the cart has not been abandoned—that is, if the user has since completed their order. |
-| `false` | The message is sent even if the cart is not in an abandoned state, allowing the email to include cart details regardless of the current checkout status. |
+| `true` (default) | The message is aborted if the cart doesn't exist on the user profile, has no products with a quantity greater than 0, or has an `ecommerce.checkout_started` or `ecommerce.order_placed` event recorded for that cart ID. |
+| `false` | The message is never aborted by the tag. If an order was placed for the cart, the cart contains no products. Use exit criteria to stop the message after purchase. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="abortifnotabandoned #abort-if-not-abandoned" }
 
-Set `abort_if_not_abandoned` to `false` when you want to send the checkout reminder regardless of whether the cart is still considered abandoned at send time. If you omit the parameter or set it to `true`, Braze aborts the message for users who have already completed their purchase.
+For abandoned checkout, set the parameter to `false`. The `ecommerce.checkout_started` event marks the cart as checkout started, so the default value of `true` aborts every message in that flow. For abandoned cart, keep the default (`true`).
 
 ##### Checkout URL
 

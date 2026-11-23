@@ -43,6 +43,8 @@ You can group multiple rules together—including mixing volume and percentage r
 
 Define how often your alert rules are checked. You can set the check frequency anywhere from 3 to 12 hours (in 1-hour increments), or every 24 hours. After it's activated, an alert continues checking on this schedule for as long as the alert and its associated Canvas is active.
 
+Checks run on a fixed UTC schedule, shortly after each check period starts. For example, Braze checks 24-hour alerts shortly after midnight UTC. If the Canvas has already been active for a full check period, the first check can run right after you activate the alert. If it hasn't, Braze waits until one full check period has passed.
+
 ## Step 5: Set up notifications
 
 Choose who should be notified when an alert rule is met, and how they're notified:

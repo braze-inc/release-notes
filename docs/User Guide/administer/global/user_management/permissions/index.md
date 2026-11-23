@@ -358,6 +358,8 @@ Company permissions are assigned to each user from the [Company tab](https://www
 | Product area | Permission | Definition |
 | --- | --- | --- |
 | Decisioning Studio Agents | View Decisioning Studio Agent | View Decisioning Studio Agents configuration without making changes |
+| Decisioning Studio Agents | Edit Decisioning Studio Agents | Create and update Decisioning Studio agents |
+| Decisioning Studio Agents | Launch Decisioning Studio Agents | Launch, stop, or relaunch Decisioning Studio agents |
 | Decisioning Studio Audience | View Decisioning Studio Audience | See audience details on Decisioning Studio Agent configuration summaries |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Decisioning Studio permissions" }
 

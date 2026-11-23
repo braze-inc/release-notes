@@ -1,4 +1,4 @@
-<div id='api_gjipnwsqwbpl' class='api_div' data-search-keywords='get data object type'>
+<div id='api_xqvtdpvkunjy' class='api_div' data-search-keywords='get data object type'>
 <h1 id="get-data-object-type">Get data object type</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/data_objects/types/{type_name}</p>

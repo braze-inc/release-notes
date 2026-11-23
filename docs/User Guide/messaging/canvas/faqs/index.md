@@ -256,6 +256,13 @@ The segmenter is a more accurate statistic for unique user data versus Canvas or
 
 The number of users entering a Canvas may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/attribute_triggers#change-custom-attribute-value) trigger). This will cause users to drop out of the Canvas if not part of your selected audience before any trigger actions are evaluated.
 
+**Tip:**
+
+
+For a single user who never entered, see [User didn't enter the Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/troubleshooting/#user-didnt-enter-the-canvas). For workspace-wide low or zero entries, see [Low or zero Canvas entries](https://www.braze.com/docs/user_guide/messaging/canvas/troubleshooting/#low-or-zero-canvas-entries).
+
+
+
 ### What happens to anonymous users during their Canvas journey?
 
 While anonymous users can enter and exit Canvases, their actions aren't associated with a specific user profile until they're identified, so their interactions may not be fully tracked in your analytics. You can use the [Query Builder](https://www.braze.com/docs/user_guide/analytics/reports/query_builder) to generate a report of these metrics.
@@ -406,9 +413,9 @@ Yes, if a Braze user profile already exists. Users without an `external_id` are 
 
 ### Why did a user enter a Canvas fewer times than they performed the trigger event?
 
-For action-based and API-triggered Canvases, Braze deduplicates trigger events so a user can enter at most about **once per second** for the same Canvas. If a user performs the same trigger multiple times within one second, only one entry is processed.
+Braze records Canvas entry times to the millisecond. With **Allow users to re-enter this Canvas** selected and the re-eligibility window set to zero seconds, triggers in the same second can each create an entry. For an action-based or API-triggered Canvas, two triggers at the same millisecond can each create an entry. A scheduled Canvas drops one entry when two entry times match to the millisecond.
 
-To allow multiple entries in the same second, space trigger events by at least 1.1 seconds (for example, when you control event timing from your server). For campaign-style behavior that allows multiple same-second triggers, compare your use case to [campaigns](https://www.braze.com/docs/user_guide/messaging/campaigns) with appropriate scheduling and re-eligibility settings.
+A re-eligibility window greater than zero blocks another entry until that window has passed. With **Allow users to re-enter this Canvas** cleared, a user enters once. Audience filters, exit criteria, and entrance limits can block an entry for other reasons. Messaging Observability can show **User not re-eligible** when the re-eligibility window blocks an entry, when **Allow users to re-enter this Canvas** is cleared, or when a scheduled Canvas drops a same-millisecond entry. For more information, see [Re-eligibility](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/re_eligibility) and [User eligibility](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability#user-eligibility).
 
 ### When are users de-duplicated in API-triggered Canvases?
 
