@@ -139,7 +139,7 @@ In this case, you can implement a trigger delay in a campaign or use a Delay ste
 
 If there is a race condition during the Canvas entry evaluation, users may enter a Canvas that they weren't meant to enter. For example, the user's profile could be set to be included in the audience and subsequently updated after the Canvas has enqueued the users to no longer be eligible in the audience. 
 
-If a user triggers the Canvas entry event multiple times within the same second, Braze allows only one entry for that second (even if re-entry is enabled). This prevents duplicate entries, so the total number of Canvas entries may be lower than the total trigger events.
+Canvas entry counts can differ from trigger counts because of how Braze records entry times. For details, see [Why did a user enter a Canvas fewer times than they performed the trigger event?](https://www.braze.com/docs/user_guide/messaging/canvas/faqs#why-did-a-user-enter-a-canvas-fewer-times-than-they-performed-the-trigger-event) in the Canvas FAQ.
 
 We recommend confirming how user data is managed and updated, specifically when and how specific attributes are updated, such as by SDK, API, batch API, and other methods. This can help identify and clarify why a user has entered a campaign or Canvas versus when a user's profile was updated.
 

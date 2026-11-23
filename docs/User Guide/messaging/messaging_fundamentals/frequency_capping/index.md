@@ -409,7 +409,7 @@ Yes, when you increase or decrease a Canvas rate limit, the updated limit takes 
 
 ### Does frequency capping cause users to exit a Canvas?
 
-No. If a Canvas user is frequency-capped because of global frequency capping settings, the user immediately advances to the next Canvas step. The user does **not** exit the Canvas because of the frequency cap.
+No. On a [Message step](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/message_step), global frequency capping skips that send and the user advances to the next step. The user stays in the Canvas. For how this differs from **Delivery validations**, see [Behavior when users are frequency capped or a message is aborted on a Canvas step](#behavior-when-users-are-frequency-capped-or-a-message-is-aborted-on-a-canvas-step).
 
 ### How can I identify users who were frequency capped in a Canvas?
 

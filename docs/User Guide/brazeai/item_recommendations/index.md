@@ -465,6 +465,12 @@ Because each recommendation operates independently, the same item can appear in 
 
 Yes, but only after their next scheduled update. Existing recommendations don’t switch to weekly training and daily prediction immediately upon upgrading to Item Recommendations Pro. However, they will adopt the new schedule automatically at their next retraining cycle. For example, if a recommendation was last trained on February 1 and is set to retrain every 30 days, it will adopt the new weekly schedule after its next update on March 2.
 
+### Why do users see different items from the same recommendation?
+
+When Braze renders a recommendation in a message, it uses weighted selection from the top 30 items in that list. This applies to every recommendation type. Items closer to the top of the ranked list are more likely to be selected, so the items that appear, and the order they appear in, can differ from one recipient to another.
+
+Braze runs this selection again on every send. The same user can see different items, in a different order, on a later send.
+
 ### How can I make all recommendations that last multiple days expire at once?
 
 If you want to expire all multiday recommendations on a specific date (so all such active recommendations receive new predictions at once), contact Braze Support or your customer success manager for assistance. Braze AI experts perform this manually to ensure maximum model performance.

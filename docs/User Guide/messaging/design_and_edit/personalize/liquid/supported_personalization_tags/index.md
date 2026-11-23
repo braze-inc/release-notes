@@ -389,7 +389,7 @@ The `shopping_cart` tag accesses a user's cart contents in eCommerce [abandoned 
 ```
 
 
-The `abort_if_not_abandoned` parameter in this example applies only to the [abandoned checkout](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/ecommerce_use_cases?tab=abandoned%20checkout#abandoned-checkout) use case when used with the `ecommerce.checkout_started` event. It is not applicable to abandoned cart use cases. For details, see [`abort_if_not_abandoned`](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/ecommerce_use_cases?tab=abandoned%20checkout#abort-if-not-abandoned).
+The `abort_if_not_abandoned` parameter controls whether the tag aborts the message when the cart is no longer considered abandoned. For more information about this parameter in an abandoned checkout Canvas (`ecommerce.checkout_started`), see [`abort_if_not_abandoned`](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/ecommerce_use_cases?tab=abandoned%20checkout#abort-if-not-abandoned).
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags

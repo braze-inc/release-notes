@@ -69,6 +69,7 @@ If **Create filter** opens the user activity builder directly, or if you select 
 
 - **Made a Purchase**
 - **Performed an eCommerce event**
+- **Performed a Custom Event**
 
 After you select an event type, choose the specific event, how many times the user must have completed it (more than, less than, or equal to), and the time period.
 
@@ -80,6 +81,8 @@ The **more than** and **less than** filters are exclusive—they don't include t
 
 
 When choosing your time period, you can specify a relative date range (the past X days), a start date, an end date, or an exact date range. For relative ranges, enter **1** through **730** days (two years). For absolute date ranges, the start date must fall within the past two years and the end date must fall within the next two years.
+
+For custom events, lookback windows longer than 30 days require [2-year history](https://www.braze.com/docs/user_guide/audience/segments/custom_event_extended_history) for that event. If 2-year history isn't enabled, you are prompted to turn it on from the **Custom Events** page before you can use a longer window.
 
 #### Event property segmentation
 

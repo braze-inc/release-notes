@@ -68,11 +68,11 @@ When implementing custom events:
 
 For pre-built eCommerce event schemas, see [eCommerce recommended events](https://www.braze.com/docs/user_guide/data/activation/events/recommended_events/ecommerce_events).
 
-## Managing custom events
+## Manage custom events {#managing-custom-events}
 
 You can manage, create, or blocklist custom events in the dashboard by going to **Data Settings** > **Custom Events**.
 
-### Troubleshooting duplicate custom attributes or events
+### Troubleshoot duplicate custom attributes or events {#troubleshooting-duplicate-custom-attributes-or-events}
 
 If you see two custom data entries with the same visible name, one entry may include an invisible leading or trailing space.
 
@@ -95,7 +95,11 @@ To troubleshoot and fix this:
 
 Select the menu next to a custom event for the following actions:
 
-### Blocklisting
+### Turn on 2-year history
+
+To use a custom event in [calculated filters](https://www.braze.com/docs/user_guide/audience/segments/calculated_filters) with a lookback longer than 30 days, select **Turn on 2-year history** from the event's actions menu. Each workspace can enable 2-year history for up to 100 custom events. For setup steps, processing time, and limits, see [Custom event extended history](https://www.braze.com/docs/user_guide/audience/segments/custom_event_extended_history).
+
+### Blocklist {#blocklisting}
 
 You can blocklist individual custom events through the actions menu, or select and blocklist up to 100 events in bulk. 
 
@@ -110,15 +114,15 @@ Additionally, if a blocked custom event is currently referenced by filters or tr
 
 For more details on blocklisting and deleting custom data, see [Blocklist custom data](https://www.braze.com/docs/user_guide/data/activation/custom_data/blocklist_custom_data).
 
-### Adding descriptions
+### Add descriptions {#adding-descriptions}
 
 You can add a description to a custom event after it's created if you have the `Manage Events, Attributes, Purchases` [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions). Select **Edit description** for the custom event and input whatever you like, such as a note for your team.
 
-### Adding tags
+### Add tags {#adding-tags}
 
 You can add tags to a custom event after it's created if you have the "Manage Events, Attributes, Purchases" [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions). The tags can then be used to filter the list of events.
 
-### Exporting data
+### Export data {#exporting-data}
 
 To export the list of custom events as a CSV file, select **Export all** at the top of the page. The CSV file is generated, and a download link is emailed to you.
 
@@ -129,13 +133,13 @@ There is no fixed dashboard cap on how many distinct **custom events** or **cust
 
 
 
-## Viewing usage reports
+## View usage reports {#viewing-usage-reports}
 
 The usage report lists all the Canvases, campaigns, and segments using a specific custom event. This list doesn't include uses of Liquid. 
 
 You can view up to 100 usage reports at a time by selecting the checkboxes next to the respective custom events and then selecting **View usage report**.
 
-## Logging custom events
+## Log custom events {#logging-custom-events}
 
 Custom events require additional setup. Refer to the following platform documentation for the methods used to log custom events and how to add properties and quantities to your custom events.
 

@@ -54,6 +54,13 @@ Before launch, use [Sending test Canvases](https://www.braze.com/docs/user_guide
 
 Users must match the **Target Audience** before Braze evaluates the entry trigger (except for [change in attribute](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/attribute_triggers#change-custom-attribute-value) triggers). A trigger alone doesn't guarantee entry if the user wasn't in the audience at evaluation time.
 
+**Tip:**
+
+
+For more information, see [Why does the number of users entering a Canvas not match the expected number?](https://www.braze.com/docs/user_guide/messaging/canvas/faqs/#why-does-the-number-of-users-entering-a-canvas-not-match-the-expected-number).
+
+
+
 Re-eligibility and re-entry are separate controls in [Selecting entry controls](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#selecting-entry-controls):
 
 - **Re-eligibility:** Determines whether a user is allowed to enter the Canvas again after exiting (time window and **Allow users to re-enter Canvas** setting).
@@ -75,9 +82,7 @@ Check the following:
 
 **Symptom:** Trigger event volume is higher than Canvas entry counts.
 
-Braze deduplicates multiple entry attempts that occur in the same instant, so you may see fewer Canvas entries than trigger events. For testing multiple entries, space trigger events at least one second apart.
-
-If a user performs the same trigger multiple times within one second, Braze processes only one entry. Check Messaging Observability for outcomes such as **User not re-eligible** when re-entry or re-eligibility rules apply.
+For how Canvas entry times and the re-eligibility window affect this count, see [Why did a user enter a Canvas fewer times than they performed the trigger event?](https://www.braze.com/docs/user_guide/messaging/canvas/faqs#why-did-a-user-enter-a-canvas-fewer-times-than-they-performed-the-trigger-event) in the Canvas FAQ. A blocked entry can appear as **User not re-eligible** in Messaging Observability. For what that label includes, see [User eligibility](https://www.braze.com/docs/user_guide/analytics/dashboards/dashboard_builder/messaging_observability#user-eligibility).
 
 **Daylight Saving Time and daily scheduled Canvases**
 

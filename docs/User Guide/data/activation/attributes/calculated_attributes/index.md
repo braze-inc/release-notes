@@ -41,7 +41,7 @@ Each workspace can have up to 25 active calculated attributes at a time. Drafts 
 **Note:**
 
 
-Custom events are not yet available as an event source during early access.
+Custom events are not yet available as an event source during early access. When they are, lookback windows longer than 30 days will require [2-year history](https://www.braze.com/docs/user_guide/audience/segments/custom_event_extended_history) for that custom event.
 
 
 

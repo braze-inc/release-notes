@@ -72,6 +72,16 @@ The **Add an Email Address** action group trigger fires when an email address is
 
 In each action group setting, you also have the option to select the checkbox **I want this group to exit the Canvas**, meaning that the users within this group exit the Canvas at the end of the evaluation period.
 
+#### Profiles that share an email address
+
+When more than one user profile shares the same email address, Braze processes the email click for up to 100 profiles with that address. In an Action Paths step that uses **Click alias in email**, those profiles can qualify for the action group and advance through the click path. This includes profiles that didn't receive the email because of email deduplication.
+
+Braze marks each of those profiles as having clicked the email. For more information about link aliases, see [Link aliasing](https://www.braze.com/docs/user_guide/messaging/templates/email_templates/link_aliasing#segmentation-filters).
+
+Braze logs the click event in Currents for the profile that was sent the email. If that profile no longer has the address, Currents attributes the event to another profile that still shares it. For more information, see [Why a Currents email click can use a different profile](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/faq#why-does-the-external_user_id-braze-schema-external_id-in-my-currents-email-open-or-click-event-differ-from-the-user-profile-in-the-braze-dashboard).
+
+Braze can send a later Message step to each profile that shares an email address. For more information, see [What happens when an email is sent out, and multiple profiles have the same email address?](https://www.braze.com/docs/user_guide/channels/email/faq#what-happens-when-an-email-is-sent-out-and-multiple-profiles-have-the-same-email-address).
+
 ### Canvases with re-eligibility
 
 If users enter an Action Paths step multiple times and have multiple entries in the step at the same time, the expected behavior varies depending on the **Ranking** status.
@@ -81,6 +91,8 @@ If users enter an Action Paths step multiple times and have multiple entries in 
 | **Off** | A user can enter an Action Paths step more than once. These entries are held in the step until a trigger action or event is recorded. If the trigger event does not satisfy an entry's property filters (for example, a [context variable](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables) does not match the trigger's property filters), the entry remains in the Action Paths step. <br><br>If the trigger event satisfies more than one entry, Braze deduplicates only these entries and immediately advances the earliest matching entry through the relevant action group. |
 | **On** | All entries advance at the end of the relevant evaluation window. No deduplication occurs. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Canvases with re-eligibility" }
+
+Action Paths deduplication applies when the same user profile enters the step more than once during the evaluation window. It doesn't deduplicate different profiles that share an email address.
 
 **Warning:**
 

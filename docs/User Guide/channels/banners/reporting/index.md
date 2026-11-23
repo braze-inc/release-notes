@@ -5,7 +5,7 @@
 **Note:**
 
 
-Funnel reporting isn't supported for Banner campaigns. Banner metrics are in **Campaign Analytics**, including **Historical Performance**.
+Funnel reporting isn't currently supported for Banner campaigns. Banner metrics are available in **Campaign Analytics**, including **Historical Performance**.
 
 
 

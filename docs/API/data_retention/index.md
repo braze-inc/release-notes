@@ -33,9 +33,9 @@ Behavioral events (custom events, sessions, campaigns, purchases) cannot be dele
 
 
 
-### Inactive and Dormant Users
+### Inactive and Dormant Users {#inactive-and-dormant-users}
 
-Each week, Braze runs a process to remove Inactive and Dormant Users from the Braze Services. In general, these are Users who are not reachable (for example, have no email address, no phone number, no push token, do not use your apps or visit your websites), have had no activity recorded on their user profile, and have not been messaged using or engaged with Braze. This is done to adhere to data protection principles and best practices. You can read more about this process on our [user archival definitions](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_archival) page.
+Each week, Braze runs a process to remove Inactive and Dormant Users from the Braze Services. In general, these are Users who are not reachable (for example, have no email address, no phone number, no push token, do not use your apps or visit your websites), have had no activity recorded on their user profile, and have not been messaged using or engaged with Braze. This is done to adhere to data protection principles and best practices. You can read more about this process on our [user archival definitions](https://www.braze.com/docs/user_archival) page.
 
 **Note:**
 

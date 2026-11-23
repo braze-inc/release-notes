@@ -77,6 +77,8 @@ Workflows aren't tied to a Canvas. A subscription group or web app can have seve
 
 
 
+When you test SMS, RCS, or WhatsApp messages and more than one user profile has the same phone number, include every profile with that number in the segment. The inbound message is attributed to one of those profiles, and the workflow is available only when that profile is in the segment.
+
 For SMS, RCS, and WhatsApp, some inbound message triggers can block the agent. On the [Settings](#settings) page, review the triggers that may block agents for each subscription group.
 
 ### Step 2: Write workflow steps

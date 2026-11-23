@@ -1,19 +1,19 @@
-# Treasure Data for Currents
+# Treasure AI for Currents
 
-> [Treasure Data](https://www.treasuredata.com/) is a customer data platform (CDP) that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
+> [Treasure AI](https://www.treasure.ai/) (formerly Treasure Data) is an agentic experience platform that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
 
-The Braze and Treasure Data integration lets you control the flow of information between the two systems. With Currents, you can stream Braze event data into Treasure Data and make it actionable across your growth stack.
+The Braze and Treasure AI integration lets you control the flow of information between the two systems. With Currents, you can stream Braze event data into Treasure AI and make it actionable across your growth stack.
 
-The recommended method is the **Braze Currents Streaming** connector in Treasure Data, paired with a **Custom Currents Export** in Braze. This approach provides:
+The recommended method is the **Braze Currents Streaming** connector in Treasure AI, paired with a **Custom Currents Export** in Braze. This approach provides:
 
-- Real-time event streaming from Braze into Treasure Data
+- Real-time event streaming from Braze into Treasure AI
 - Optional automatic table routing by event type
 - A flat, SQL-queryable schema that doesn't require JSON parsing
 
 **Note:**
 
 
-The Braze Currents Streaming connector is available by request. Contact Treasure Data support to enable it on your Treasure Data account. For partner-side setup details, see Treasure Data's [Braze Currents Import Integration](https://docs.treasuredata.com/int/braze-currents-import-integration).
+The Braze Currents Streaming connector is available by request. Contact Treasure AI support to enable it on your Treasure AI account. For partner-side setup details, see Treasure AI's [Braze Currents Import Integration](https://docs.treasure.ai/int/braze-currents-import-integration).
 
 
 
@@ -21,26 +21,26 @@ The Braze Currents Streaming connector is available by request. Contact Treasure
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Treasure Data account | An active [Treasure Data account](https://console.treasuredata.com) is required to take advantage of this partnership. |
-| Currents | To export data to Treasure Data, you need [Braze Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/#how-to-access-currents) set up for your account. |
-| Braze Currents Streaming connector | Contact Treasure Data support to enable the Braze Currents Streaming connector on your Treasure Data account. |
-| Treasure Data Write API key | A Treasure Data Write API key authenticates the inbound stream from Braze. |
+| Treasure AI account | An active [Treasure AI account](https://console.us01.treasuredata.com/) is required to take advantage of this partnership. |
+| Currents | To export data to Treasure AI, you need [Braze Currents](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/#how-to-access-currents) set up for your account. |
+| Braze Currents Streaming connector | Contact Treasure AI support to enable the Braze Currents Streaming connector on your Treasure AI account. |
+| Treasure AI Write API key | Use a Treasure AI Write API key to authenticate the inbound stream from Braze. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Prerequisites" }
 
 ## Integration
 
-### Step 1: Configure the connector in Treasure Data
+### Step 1: Configure the connector in Treasure AI
 
-1. In the Treasure Data console, go to **Connections** > **New Connection**.
+1. In the Treasure AI console, go to **Connections** > **New Connection**.
 2. Select **Braze Currents Streaming**.
-3. Under **Authentication**, enter your Treasure Data Write API key.
+3. Under **Authentication**, enter your Treasure AI Write API key.
 4. Under **Source Settings**, configure the following:
 
 | Field | Description |
 | ----- | ----------- |
 | Source Name | A descriptive name for this connection |
 | Datastore | Select **Plazma** |
-| Database | The Treasure Data database where events are stored |
+| Database | The Treasure AI database where events are stored |
 | Table | The default destination table |
 | Multiple Tables | Select to route each Braze event type to its own table |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Source settings" }
@@ -54,7 +54,7 @@ The **Treasure Data Export** option in the Braze Currents UI uses the legacy Pos
 1. In Braze, go to **Partner Integrations** > **Data Export**.
 2. Select **Create New Current** > **Custom Currents Export**.
 3. Enter an integration name and a contact email for error notifications.
-4. Under **Credentials**, enter the endpoint URL for your Treasure Data region. Enter your Treasure Data Write API key as the **Bearer Token**.
+4. Under **Credentials**, enter the endpoint URL for your Treasure AI region. Enter your Treasure AI Write API key as the **Bearer Token**.
 
 | Region | Endpoint URL |
 | ------ | ------------ |
@@ -64,21 +64,21 @@ The **Treasure Data Export** option in the Braze Currents UI uses the legacy Pos
 | Tokyo | `https://braze-in-streaming.treasuredata.co.jp/task/v1/{TASK_ID}` |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Endpoint URLs by region" }
 
-Replace `{TASK_ID}` with the Unique ID you copied in [Step 1](#step-1-configure-the-connector-in-treasure-data).
+Replace `{TASK_ID}` with the Unique ID you copied in [Step 1](#step-1-configure-the-connector-in-treasure-ai).
 
-5. Select the event types you want to export. Custom Currents connections can send events for identified users and for users without an `external_user_id`. Treasure Data ingests both.
+5. Select the event types you want to export. Custom Currents connections can send events for identified users and for users without an `external_user_id`. Treasure AI ingests both.
 6. Select **Launch Current**.
 
 **Warning:**
 
 
-Keep your Treasure Data Write API key and endpoint URL up to date. If the endpoint is unreachable for more than **5&nbsp;days**, Braze drops the connector's events and the data is permanently lost.
+Keep your Treasure AI Write API key and endpoint URL up to date. If the endpoint is unreachable for more than **5&nbsp;days**, Braze drops the connector's events and the data is permanently lost.
 
 
 
 ## Query your data
 
-After events are flowing, query them with SQL. Treasure Data flattens the payload, so you don't need to parse JSON.
+After events are flowing, query them with SQL. Treasure AI flattens the payload, so you don't need to parse JSON.
 
 ```sql
 SELECT
@@ -95,7 +95,7 @@ WHERE TD_INTERVAL(time, '-1d', 'JST')
 **Note:**
 
 
-The `time` field in Treasure Data is the timestamp when Treasure Data received and processed the event, not the original event occurrence time in Braze.
+The `time` field in Treasure AI is the timestamp when Treasure AI received and processed the event, not the original event occurrence time in Braze.
 
 
 
@@ -111,9 +111,9 @@ WHERE TD_INTERVAL(time, '-1h')
 
 ## Data schema
 
-Treasure Data flattens nested JSON up to two levels deep:
+Treasure AI flattens nested JSON up to two levels deep:
 
-| JSON type | Treasure Data column type |
+| JSON type | Treasure AI column type |
 | --------- | ------------------------- |
 | string | string |
 | number | long |
@@ -136,7 +136,7 @@ Column names use lowercase letters and underscores only.
 
 ## Integration details
 
-Braze supports exporting all data listed in the [Currents event glossaries](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/) to Treasure Data. That includes all properties in both [message engagement](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/) and [customer behavior](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/) events.
+Braze supports exporting all data listed in the [Currents event glossaries](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/) to Treasure AI. That includes all properties in both [message engagement](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/) and [customer behavior](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/) events.
 
 The payload structure for exported data matches the payload structure for custom HTTP connectors. You can review sample payloads in the [examples repository for custom HTTP connectors](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors).
 

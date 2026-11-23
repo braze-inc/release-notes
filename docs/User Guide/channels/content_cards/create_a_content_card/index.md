@@ -430,23 +430,25 @@ When you stop a campaign and select **Remove card after the next sync**, Braze r
 
 ### Why don't Content Cards appear immediately after a trigger event?
 
-For action-based delivery campaigns (such as session start), there is an expected short delay between the trigger event and the card becoming available. This delay occurs because:
+For an action-based campaign, such as one that triggers on session start, the card is not available at the moment of the trigger. Braze finishes these steps first:
 
-- The trigger event is flushed to Braze's servers
-- The campaign is triggered and the user's eligibility is recorded
-- The Content Card is created in the database for that user
-- The card reaches the device
+1. Braze receives the trigger event.
+2. Braze records that the user is eligible.
+3. Braze creates the Content Card.
+4. The card reaches the device.
 
-On supported SDK versions, [real-time delivery](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/feed#real-time-delivery) sends the card to the device as soon as Braze creates it, so the card arrives during the current session. On earlier versions, the SDK pulls the card on its next sync, and a sync that runs before the user's eligibility is recorded returns nothing.
+On supported SDK versions, [real-time delivery](https://www.braze.com/docs/developer_guide/content_cards/customizing_cards/feed#real-time-delivery) sends the card during the current session as soon as Braze creates it.
 
-For new users in their first session, this processing delay is unavoidable. For existing users who need instant availability, consider using scheduled delivery instead.
+On earlier SDK versions, the SDK pulls the card on its next sync. If that sync runs before Braze records eligibility, it returns no card. The card arrives on a later sync.
 
-If you need to minimize delays for both new and existing users, you can create two campaigns:
+A new user still waits through this delay in their first session. To show the card immediately to users who already have a session, use scheduled delivery.
 
-- **Existing users with session count greater than 0:** Use a scheduled delivery campaign. Cards are pre-created and immediately available.
-- **New users with session count equal to 0:** Use an action-triggered campaign. Cards are created after the first session trigger.
+To cover both groups, create two campaigns:
 
-This approach ensures existing users see cards instantly while still reaching new users after a brief delay in their first session. For additional strategies to improve latency, see [Improve low latency for Content Cards](https://www.braze.com/docs/user_guide/channels/content_cards/best_practices/improving_low_latency_requirements).
+- Users with `Session Count` more than 0: Use scheduled delivery. Braze creates these cards ahead of time, so they are available when the app opens.
+- Users with `Session Count` exactly 0: Use an action-based campaign. Braze creates the card after the first trigger, so the first session still has a short delay.
+
+For more ways to shorten this delay, see [Improve low latency for Content Cards as banners](https://www.braze.com/docs/user_guide/channels/content_cards/best_practices/improving_low_latency_requirements).
 
 ### Why do impression or dismiss timestamps fall outside the campaign schedule?
 

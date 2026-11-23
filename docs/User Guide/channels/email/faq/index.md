@@ -25,7 +25,9 @@ This deduplication applies when targeted users are in the same dispatch. Re-elig
 
 Email campaign and Canvas step re-eligibility uses each user's profile—not the inbox—so multiple profiles can qualify for separate sends while that logic is satisfied. Combined with triggers, this can deliver more than one message to the same inbox even when you're trying to honor a single ineligibility period at the address level. Triggered campaigns (excluding API-triggered campaigns) and Canvases can also send twice to one address when different profiles with matching email addresses meet the trigger at different times—for example if user A and user B share `johndoe@example.com` but sit in different time zones while the delivery uses local time zones.
 
-Users are not deduped by email on Canvas entry, so they may not be deduped beyond the first step of a Canvas if they progress at slightly different times due to rate-limited entry. When a user associated with a given email address opens or clicks an email, all user profiles that share that email address are marked as having opened or clicked the campaign.
+Braze doesn't deduplicate users by email address when they enter a Canvas. Email address deduplication runs on the first message step of a scheduled Canvas. Later Message steps don't deduplicate by email address, so each profile that reaches them can receive the message.
+
+When a user associated with a given email address opens or clicks an email, all user profiles that share that email address are marked as having opened or clicked the campaign.
 
 ### Exception: API-triggered campaigns
 

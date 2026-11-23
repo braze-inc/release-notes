@@ -2,7 +2,7 @@
 
 > This page covers custom attributes, which are a collection of your users' unique traits. Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. 
 
-When stored in Braze, custom attributes can be used to build out audience segments and personalize messaging using Liquid. Keep in mind that Braze doesn't store time-series information for custom attributes, so you can't get any graphs based on them like you can for custom events.
+When stored in Braze, custom attributes can be used to build out audience segments and personalize messaging using Liquid. Keep in mind that Braze doesn't store time-series information for custom attributes, so you can't get any graphs based on them like you can for custom events. The user profile also doesn't show when an attribute last changed, its previous value, or which ingestion source set it. For Currents and Snowflake options, see [Attribute change history and ingestion source](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles#attribute-change-history).
 
 **Important:**
 
