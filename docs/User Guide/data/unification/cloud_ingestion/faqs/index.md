@@ -35,7 +35,7 @@ For event and purchase payloads, format `time` as:
 - An ISO 8601 string, or
 - `yyyy-MM-dd'T'HH:mm:ss:SSSZ`
 
-If `time` is omitted, Braze uses `UPDATED_AT` as the event time.
+For data warehouse sources, if `time` is omitted, Braze uses `UPDATED_AT` as the event time.
 
 For full payload requirements, refer to [Table setup for Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup).
 
@@ -95,6 +95,17 @@ CDI uses `UPDATED_AT` to decide which records to pick up during a sync. Check ou
 To avoid these behaviors in the future, we recommend using monotonically increasing `UPDATED_AT` values and not updating the table during your scheduled sync run. 
 
 
+
+## How do `UPDATED_AT` and `last_timestamp_synced` work for file storage syncs? {#updated-at-file-storage}
+
+They don't determine what a file storage sync ingests. Syncs from Amazon S3, Google Cloud Storage, and Azure Blob Storage are event-driven: Braze ingests a file when your storage provider notifies Braze that a new file was added. File storage files don't use an `UPDATED_AT` column, and CDI processes only files that were added after the sync was created.
+
+Keep the following in mind when you monitor a file storage sync:
+
+- To see which files a run ingested, open the run from the **Sync Log** and select **View file names**. For file storage syncs, the run details show file names instead of an `UPDATED_AT` value.
+- The [`last_timestamp_synced`](https://www.braze.com/docs/api/endpoints/cdi/get_job_sync_status) API field and the **Last "UPDATED_AT"** column in the **Sync Log** show the same value. For file storage syncs, don't use this value to tell which files Braze has processed.
+
+For more information, see [Amazon S3](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_s3#troubleshooting) and [Sync logs and observability](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sync_logs).
 
 ## Do I need mostly distinct `UPDATED_AT` values for large CDI imports?
 

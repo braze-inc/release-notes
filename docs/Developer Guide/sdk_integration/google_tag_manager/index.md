@@ -211,10 +211,11 @@ window.braze.logCustomEvent("my_custom_event", {"property_key": "property_value"
 
 ## Strict CSP (nonce-based) environments {#strict-csp}
 
-The Braze Initialization tag does not currently support passing `contentSecurityNonce` to `braze.initialize()`. If your site enforces a strict nonce-based CSP, use a **Custom HTML** tag instead of the Braze Initialization tag.
+If your site enforces a strict nonce-based CSP, pass the nonce of the current page to the Braze Web SDK as the `contentSecurityNonce` initialization option. The SDK adds the nonce to the scripts and styles it creates. For more information about the option, see [Content security policy headers](https://www.braze.com/docs/developer_guide/platforms/web/content_security_policy#nonce).
 
-1. Pause or remove the Braze Initialization tag from your GTM container if you have already set it up.
-2. Push your server-generated nonce to `dataLayer` before the GTM snippet in your site HTML:
+### Step 1: Create a nonce variable
+
+1. Push your server-generated nonce to `dataLayer` before the GTM snippet in your site HTML:
     
     ```html
     <script nonce="SERVER_GENERATED_NONCE">
@@ -223,8 +224,34 @@ The Braze Initialization tag does not currently support passing `contentSecurity
     </script>
     ```
     
-3. In GTM, create a **Data Layer Variable** mapped to `cspNonce` (for example, `DLV - cspNonce`).
-4. Create a **Custom HTML** tag with the trigger set to **Initialization - All Pages**:
+2. In GTM, create a **Data Layer Variable** mapped to `cspNonce` (for example, `DLV - cspNonce`).
+
+**Important:**
+
+
+The nonce changes on every page load. Always use a variable for the nonce, and don't enter a fixed value.
+
+
+
+### Step 2: Pass the nonce to the SDK
+
+Choose one of the following options.
+
+#### Option 1: Braze Initialization tag
+
+The **Content Security Nonce** field requires Web SDK 2.4.0 or later. If you don't see the field in the Braze Initialization tag, update the Braze Initialization template in your GTM container to the latest version.
+
+1. Open your Braze Initialization tag.
+2. Expand **Braze Initialization Options**.
+3. For **Content Security Nonce**, select the variable you created in step 1 (for example, `{{DLV - cspNonce}}`).
+4. Save and publish your container.
+
+#### Option 2: Custom HTML tag
+
+If you can't update the Braze Initialization template, use a **Custom HTML** tag instead of the Braze Initialization tag.
+
+1. Pause or remove the Braze Initialization tag from your GTM container if you have already set it up.
+2. Create a **Custom HTML** tag with the trigger set to **Initialization - All Pages**:
     
     Customize the following template for your environment.
     
@@ -246,7 +273,7 @@ The Braze Initialization tag does not currently support passing `contentSecurity
     ```
     
     
-5. For the Braze Actions tag or any **Custom HTML** tags that call Braze methods, configure [tag sequencing](#web_tag-sequencing-for-braze-action-tags) to fire after this **Custom HTML** tag.
+3. For the Braze Actions tag or any **Custom HTML** tags that call Braze methods, configure [tag sequencing](#web_tag-sequencing-for-braze-action-tags) to fire after this **Custom HTML** tag.
 
 ## Google's EU User Consent Policy
 

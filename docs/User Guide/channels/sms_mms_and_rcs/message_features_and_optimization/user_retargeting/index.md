@@ -14,7 +14,7 @@ To read more about custom keywords and how to set up two-way messaging to take a
 **Note:**
 
 
-When building audiences with user retargeting, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the CUP. Marketers should implement the relevant filters for users’ eligibility within their Canvas and/or Campaign entry criteria.
+When building audiences with user retargeting, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the "Do Not Sell or Share" right under the CCPA. Marketers should implement the relevant filters for users' eligibility within their Canvas or campaign entry criteria.
 
 
 
@@ -108,7 +108,7 @@ When evaluating if an inbound message meets a defined trigger event, the leading
 **Tip:**
 
  
-If an action-based Canvas is triggered by an inbound SMS or MMS message, you can reference [supported SMS Liquid properties](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags) in any Canvas step until the next Action Paths step.
+If an action-based Canvas is triggered by an inbound SMS, MMS, or RCS message, you can reference [supported SMS Liquid properties](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags) in any Canvas step until the next Action Paths step.
 
 
 
@@ -124,7 +124,7 @@ Note when triggering a message on an "Other" keyword response, you have the oppo
 
 #### Template keywords
 
-When triggering a campaign or Canvas component on an inbound SMS or MMS, you can optionally template the text or media attachments that your user sent into the body of your campaign or Canvas with Liquid. This enables you to access the user's response which you can then include in your reply, apply conditional logic to, or anything else you can do with Liquid. 
+When triggering a campaign or Canvas component on an inbound SMS, MMS, or RCS message, you can optionally template the text or media attachments that your user sent into the body of your campaign or Canvas with Liquid. This enables you to access the user's response which you can then include in your reply, apply conditional logic to, or anything else you can do with Liquid. 
 
 
 

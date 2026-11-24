@@ -157,7 +157,7 @@ The following data types can be used as custom attributes for CSV import. Column
 **Important:**
 
 
-Arrays, push tokens, and custom event data types aren’t supported in user import, as commas in your CSV file will be interpreted as a column separator and cause errors while parsing your file.<br><br>To upload these kinds of values, use the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) or [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion) instead.
+Arrays, push tokens, nested custom attribute objects, and custom event data types aren’t supported in user import, as commas in your CSV file will be interpreted as a column separator and cause errors while parsing your file.<br><br>To upload these kinds of values, use the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) or [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion) instead.
 
  
 

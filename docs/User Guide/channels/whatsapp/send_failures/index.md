@@ -12,6 +12,8 @@ Work through the following steps in order.
 
 ## Common failure codes
 
+Use the codes in this section for send-time failures. For template rejection versus send-time provider codes, see [WhatsApp templates and composer](https://www.braze.com/docs/user_guide/channels/whatsapp/faq/#whatsapp-templates-and-composer) and [Messaging limits and quality rating](https://www.braze.com/docs/user_guide/channels/whatsapp/faq/#messaging-limits-and-quality-rating).
+
 | Error code | Typical cause | Next step |
 |---|---|---|
 | `131049` | Meta per-user marketing frequency limit or US marketing pause | See [Meta resources](https://www.braze.com/docs/user_guide/channels/whatsapp/meta_resources) and [Retargeting users on other Braze channels](https://www.braze.com/docs/user_guide/channels/whatsapp/message_features_and_optimization/optimized_delivery#retargeting-users-on-other-braze-channels) |

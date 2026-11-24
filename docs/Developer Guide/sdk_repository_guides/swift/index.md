@@ -58,9 +58,9 @@ tvOS|15.0+
 visionOS|1.0+
 Xcode|26.0+ (17A324)
 
-## Package Managers
-- Swift Package Manager
-- CocoaPods
+## Package managers
+
+The Braze Swift SDK supports Swift Package Manager.
 
 ## Libraries
 

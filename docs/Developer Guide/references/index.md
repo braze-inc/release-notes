@@ -63,7 +63,7 @@ For more information on the Android SDK build system, see the [GitHub Repository
 Follow these instructions to build and run our test applications.
 
 1. Create a new [workspace](https://www.braze.com/docs/user_guide/get_started/workspaces) and note the app identifier API key and endpoint.
-2. Based on your integration method (Swift Package Manager, CocoaPods, Manual), select the appropriate `xcodeproj` file to open.
+2. Based on your integration method (Swift Package Manager or manual integration), select the appropriate `xcodeproj` file to open.
 3. Place your API key and your endpoint within the appropriate field in the `Credentials` file.
 
 

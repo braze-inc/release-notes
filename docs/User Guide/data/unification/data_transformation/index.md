@@ -24,7 +24,7 @@ The following table describes the differences between the free and pro version o
 | Area | Free Version | Data Transformation Pro |
 |----|----|----|
 | Active transformations | Up to 5 per company | Up to 55 per company |
-| Per month | 300,000 incoming requests per month | 10,300,000 incoming requests per month |
+| Per month | 300,000 incoming requests per month per company | 10,300,000 incoming requests per month per company |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Data Transformation tiers" }
 
 **Important:**
@@ -37,6 +37,8 @@ To request an upgrade to Data Transformation Pro, contact your Braze account man
 ### Rate limits
 
 The rate limit for Braze Data Transformations is 1,000 incoming requests per minute per workspace. If you have Data Transformation Pro and need a higher rate limit, contact your Braze account manager.
+
+Requests that exceed the per-minute rate limit receive a `429` response code and are not queued or retried by Braze. If your webhook sender does not retry on 4xx responses, those requests will be lost.
 
 ## Frequently asked questions
 

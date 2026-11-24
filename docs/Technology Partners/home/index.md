@@ -320,6 +320,7 @@
 - [Stayfilm](https://www.braze.com/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/stayfilm)
 - [Stensul](https://www.braze.com/docs/partners/message_orchestration/templates/stensul)
 - [Storyly](https://www.braze.com/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/storyly)
+- [Storyblok](https://www.braze.com/docs/partners/message_orchestration/cms_dam/storyblok)
 - [Stripe](https://www.braze.com/docs/partners/ecommerce/ordering_payments_subscription/stripe)
 - [Stripo](https://www.braze.com/docs/partners/message_orchestration/templates/stripo)
 - [Stylitics](https://www.braze.com/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/stylitics)

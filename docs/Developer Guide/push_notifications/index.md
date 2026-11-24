@@ -2124,11 +2124,11 @@ For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `di
   BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];
   configuration.triggerMinimumTimeInterval = 1;
   configuration.logger.level = BRZLoggerLevelInfo;
-  Braze *braze = [BrazeReactBridge initBraze:configuration];
-  AppDelegate.braze = braze;
-
-  [self registerForPushNotifications];
-  [[BrazeReactUtils sharedInstance] populateInitialPayloadFromLaunchOptions:launchOptions];
+  [BrazeReactInitializer configure:configuration postInitialization:^(Braze * _Nonnull braze) {
+    AppDelegate.braze = braze;
+    [self registerForPushNotifications];
+    [[BrazeReactUtils sharedInstance] populateInitialPayloadFromLaunchOptions:launchOptions];
+  }];
 
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
@@ -2145,10 +2145,11 @@ func application(
   let configuration = Braze.Configuration(apiKey: apiKey, endpoint: endpoint)
   configuration.triggerMinimumTimeInterval = 1
   configuration.logger.level = .info
-  let braze = BrazeReactBridge.initBraze(configuration)
-  AppDelegate.braze = braze
-  registerForPushNotifications()
-  BrazeReactUtils.shared().populateInitialPayload(fromLaunchOptions: launchOptions)
+  BrazeReactInitializer.configure(configuration) { braze in
+    AppDelegate.braze = braze
+    registerForPushNotifications()
+    BrazeReactUtils.shared().populateInitialPayload(fromLaunchOptions: launchOptions)
+  }
 
   return super.application(application, didFinishLaunchingWithOptions: launchOptions)
 }

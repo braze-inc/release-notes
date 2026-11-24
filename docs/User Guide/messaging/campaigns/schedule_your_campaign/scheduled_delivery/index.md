@@ -28,6 +28,24 @@ You can deliver the message in users' local time zones so that members of your i
 
 Segments targeted with local time zone campaigns should include, at minimum, a 2-day window to incorporate users from all time zones. For instance, if your campaign is scheduled to send in the evening but has just a 1-day window, some users may have fallen out of the segment when their time zone is reached. Examples of filters that create a 2-day window are "last used more than 1 day ago" and "last used less than 3 days ago," or "first purchased more than 7 days ago" and "first purchased less than 9 days ago."
 
+#### A/B tests with local-time delivery
+
+For A/B test campaigns with Winning Variant that deliver in users' local time, the earliest allowed **Winning Variant Send Time (at user local time)** depends on the test send date. The minimum gap between the test send and the Winning Variant send changes with the seasons:
+
+| Period | Minimum gap |
+| --- | --- |
+| First Sunday of April to the last Sunday of September | 24 hours |
+| Last Sunday of September to the first Sunday of April | 25 hours |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="A/B tests with local-time delivery" }
+
+For example, with a 9 am local-time test start in October, the earliest selectable Winning Variant send time is 10 am the next day. This seasonal minimum exists because Braze's local-time scheduling models the span of time zones that a send has to cover. One of those reference time zones is treated as observing daylight saving time.
+
+If you need a 9:00 am to 9:00 am schedule during the 25-hour period, you can:
+
+- Start the test at 8 am local time so the Winning Variant can send at 9 am the next day.
+- Use a test window of 25 hours or more.
+- Clear **Enter users into this Campaign in their local time zone** so the entire audience receives the message at the same moment, in the time zone on your **Company Settings** page.
+
 ### Use cases
 
 Designated time schedules are best suited for messages scheduled in advance and recurring campaigns, such as onboarding and retention, that run regularly on all qualified users.

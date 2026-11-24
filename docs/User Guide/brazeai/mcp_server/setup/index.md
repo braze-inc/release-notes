@@ -85,6 +85,7 @@ Client setup guides:
 - [Claude Code](https://code.claude.com/docs/en/mcp-quickstart)
 - [ChatGPT](https://developers.openai.com/api/docs/guides/developer-mode)
 - [Cursor](https://cursor.com/docs/mcp#using-mcpjson)
+- [GitHub Copilot](https://www.braze.com/docs/user_guide/brazeai/mcp_server/setup/github_copilot)
 - [OpenAI Codex](https://developers.openai.com/codex/mcp)
 - [Visual Studio Code](https://code.visualstudio.com/docs/agent-customization/mcp-servers)
 

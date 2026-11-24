@@ -47,6 +47,8 @@ Finish setting up your Canvas as needed, then launch it. While the experiment is
 
 After a Winning Path concludes, all subsequent users who enter the Canvas go down the Winning Path, including users who re-entered and were previously in the control group of the Experiment Path step.
 
+An in-progress Winning Path experiment keeps running if you select **Update Canvas** and leave the experiment unchanged. The experiment is abandoned when the update changes the conversion event, experiment window, paths, a path's next step, or the audience distribution. For the edit rules, see [Post-launch edits and Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/change_your_canvas_after_launch#post-launch-edits-and-experiment-paths).
+
 ## Analytics {#analytics}
 
 If Winning Path is turned on, Experiment Path analytics aren't available until the experiment is complete. While the experiment window is open, selecting the Experiment Path step in Canvas analytics shows **Experiment in progress**.

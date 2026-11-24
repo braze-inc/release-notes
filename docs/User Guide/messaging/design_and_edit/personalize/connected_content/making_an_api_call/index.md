@@ -102,9 +102,27 @@ Connected Content requests support only `GET` and `POST`. For Banners, only `GET
 
 ## Error handling
 
-If the URL is unavailable and reaches a 404 page, Braze renders an empty string in its place. If the URL reaches an HTTP 500 or 502 page, the URL fails on the retry logic.
+### HTTP response behavior
 
-If the endpoint returns JSON, you can detect that by checking if the `connected` value is null, and then [conditionally abort the message](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/aborting_connected_content). Braze only allows URLs that communicate over port 80 (HTTP) and 443 (HTTPS).
+When a Connected Content call does not receive a `2xx` response, Braze inserts an empty string where the tag renders. `:save` does not run, so the saved variable is unset. For email and other channels that render at send time, the message still sends unless you abort it in Liquid, or you add `:retry` and every retry fails.
+
+| Response | Rendered output | Retry when `:retry` is set | What happens to the message |
+| --- | --- | --- | --- |
+| `2xx` | Response body, or the JSON saved with `:save` | No | The message sends with the response. |
+| `404` | Empty string. `__http_status_code__` is not added. | No | The message sends with a blank insertion unless you abort it. |
+| Other `4xx` (`400`, `401`, `403`, `408`, `429`, and similar) | Empty string | Yes, up to five times | The message waits while Braze retries. If every retry fails, Braze aborts the message. Without `:retry`, the message sends with a blank insertion. |
+| `5xx` (`500`, `502`, `503`, `504`, and similar) | Empty string | Yes, up to five times | The message waits while Braze retries. If every retry fails, Braze aborts the message. Without `:retry`, the message sends with a blank insertion. |
+| Timeout or connection error (`599`) | Empty string | Yes, up to five times | The message waits while Braze retries. If every retry fails, Braze aborts the message. Without `:retry`, the message sends with a blank insertion. |
+| `3xx` | Empty string. Braze does not follow the redirect. | No | The message sends with a blank insertion unless you abort it. For symptoms, see [Why does Connected Content fail when my endpoint returns a redirect?](#why-does-connected-content-fail-when-my-endpoint-returns-a-redirect-301-or-302). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Connected Content response behavior" }
+
+`:retry` is not available for in-app messages or Banners, and retry behavior differs by Canvas step. For more information, see [Connected Content retries](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/connected_content_retries).
+
+### Abort when the call fails
+
+Abort the message when the saved variable is blank to prevent a send for responses Braze does not retry (a `404`, a `3xx` redirect, or any failed call without `:retry`). For the Liquid pattern, see [Abort when the call fails](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/aborting_connected_content#abort-when-the-call-fails).
+
+Braze only allows URLs that communicate over port 80 (HTTP) and 443 (HTTPS).
 
 ### Unhealthy host detection
 

@@ -64,7 +64,7 @@ Keep in mind that paths and their downstream steps cannot be removed from a Canv
 **Important:**
 
 
-To prevent experiment contamination, updating an active Canvas with an in-progress Winning Path experiment ends the experiment. This applies even if you don't update the Experiment Path step. To restart the experiment, disconnect the existing Experiment Path and launch a new one, or duplicate the Canvas and launch the duplicate. You can't turn on Winning Path for an already active Canvas with an Experiment Path step.<br><br>For more information, see [Editing Canvases after launch](https://www.braze.com/docs/post-launch_edits).
+An in-progress Winning Path or Personalized Paths experiment keeps running if you select **Update Canvas** and leave that experiment unchanged. The experiment is abandoned when the update changes the conversion event, experiment window, paths, a path's next step, or audience distribution.<br><br>To run Winning Path again, disconnect the existing Experiment Path and add a new one, or duplicate the Canvas and launch the duplicate. For the edit rules, see [Post-launch edits and Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/change_your_canvas_after_launch#post-launch-edits-and-experiment-paths).
 
 
 

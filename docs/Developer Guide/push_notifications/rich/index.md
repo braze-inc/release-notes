@@ -57,6 +57,21 @@ After you've followed the [Swift Package Manager integration guide](https://www.
 
 
 
+To add `BrazeNotificationService.xcframework` to your `Notification Service Extension`, see [Manual integration](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift#swift_step-11-download-the-braze-sdk).
+
+![Xcode project with BrazeNotificationService.xcframework added to the notification service extension.](https://www.braze.com/docs/assets/img/swift/rich_push/manual1.png?43f3a21a35ff7bd8ba2e787947a860b3){: width="1069" height="170"}
+
+
+
+
+
+**Important:**
+
+
+CocoaPods support for the Braze Swift SDK is deprecated, and starting with Swift SDK 20.0.0, Braze does not publish releases to CocoaPods. Migrate to Swift Package Manager or a manual integration. Existing CocoaPods releases remain available for as long as the CocoaPods ecosystem supports them. For more information, see the [CocoaPods deprecation announcement](https://github.com/braze-inc/braze-swift-sdk/issues/204).
+
+
+
 Add the following to your Podfile:
 
 ```ruby
@@ -84,14 +99,6 @@ For more information about implementing push stories, see [Push stories](https:/
 
 
 After updating the Podfile, navigate to the directory of your Xcode app project within your terminal and run `pod install`.
-
-
-
-
-
-To add `BrazeNotificationService.xcframework` to your `Notification Service Extension`, see [Manual integration](https://www.braze.com/docs/developer_guide/sdk_integration?sdktab=swift#swift_step-11-download-the-braze-sdk).
-
-![Xcode project with BrazeNotificationService.xcframework added to the notification service extension.](https://www.braze.com/docs/assets/img/swift/rich_push/manual1.png?43f3a21a35ff7bd8ba2e787947a860b3){: width="1069" height="170"}
 
 
 

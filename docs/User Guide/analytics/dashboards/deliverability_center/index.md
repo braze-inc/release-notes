@@ -19,18 +19,34 @@ Before connecting to the Deliverability Center, you'll need to set up a Google P
 
 1. Go to the [Google Postmaster Tools dashboard](https://postmaster.google.com/managedomains?pli=1).
 2. At the bottom of the page, select <i class="fas fa-plus-circle"></i> **Add domain**.
-3. Enter your root (parent) domain to authenticate your email. Be sure the TXT record is tied to this root (parent) domain, **not** the subdomain you're using through Braze. Verifying the root (parent) domain lets you later add subdomains in Postmaster Tools without creating additional TXT records. For example, by verifying `braze.com`, you can later add `demo.braze.com` as a separate subdomain in Postmaster Tools to see subdomain-level metrics.
+3. Enter your root (parent) domain to authenticate your email. Be sure the TXT record is tied to this root (parent) domain, **not** the subdomain you're using through Braze. Verifying the root (parent) domain lets you add subdomains in Postmaster Tools. You may still need to verify each sending subdomain before Braze can show its metrics. For example, by verifying `braze.com`, you can later add `demo.braze.com` as a separate subdomain in Postmaster Tools to see subdomain-level metrics.
 4. Google generates a TXT record that can be added directly to your domain's DNS. This is generally owned by whoever manages your DNS. For information and guidance on how to update your specific DNS, check out [Verify your domain (host-specific steps)](https://support.google.com/a/topic/1409901).
 5. Select **Next**. <br>![An example domain "demo.braze.com" to authenticate an email.](https://www.braze.com/docs/assets/img_archive/domain_authentication.png?7a58b0775114c0107276d811cfa25c47)
 6. After the TXT record is added to the DNS, return to the Google Postmaster Tools dashboard and select **Verify**. This step confirms you own the domain, so you can access Gmail deliverability metrics in your Postmaster account. <br>![A prompt to verify ownership of the domain "demo.braze.com".](https://www.braze.com/docs/assets/img_archive/domain_verification.png?99352981da9513df6dcf6052688c3ea1)
 7. After verifying the root (parent) domain, add your sending subdomains to Google Postmaster.
 
+### Verify sending subdomains
+
+The Deliverability Center only shows domains that exactly match your Braze sending domains and that your connected Google account has verified access to in Postmaster Tools. Add and verify each sending subdomain, not only the root domain.
+
 **Note:**
 
 
-If your subdomains aren't included in the Deliverability Center for Google Postmaster, this can be a result of only adding the root (parent) domain to Google Postmaster. After the root domains are verified in Google Postmaster, you can add your subdomains, which are verified automatically. This process allows Google to report back on metrics on the subdomain-level, which can then be pulled into the Braze Deliverability Center.
+Google Postmaster Tools may require you to verify each subdomain separately before its data is available to Braze.
 
 
+
+If your subdomains show as "Unverified" after you add them, select **Verify** next to each subdomain in Google Postmaster Tools.
+
+If Google requests a new verification record, use either TXT or CNAME verification. If your subdomain already has a CNAME record for email sending, DNS doesn't allow other records on a name that has a CNAME. Use CNAME verification on a child label instead. Google provides a record such as:
+
+```
+LABEL.mail.example.com CNAME gv-VERIFICATION_STRING.dv.googlehosted.com
+```
+
+Replace `LABEL` with the label Google assigns for the verification record. Replace `VERIFICATION_STRING` with the unique string Google assigns for your domain. This record doesn't conflict with the existing CNAME at `mail.example.com`.
+
+If you use [verified domains](https://www.braze.com/docs/user_guide/channels/email/email_setup/setting_up_ips_and_domains/verified_domains), Braze manages DNS for the delegated zone, including your sending subdomains. You can't add a TXT or CNAME record for those names in your own DNS. Contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) so Braze can publish the verification record.
 
 ## Integrate Google Postmaster {#integrating-google-postmaster}
 

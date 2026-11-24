@@ -12,12 +12,12 @@ Agentic Standards availability depends on your plan tier: free or paid.
 | --- | --- | --- |
 | Build Campaign Standards and Canvas Standards | Available | Available |
 | Evaluation runs per month per workspace | 25 | Unlimited |
-| Monthly usage cap | Not applicable (run-count limit only) | High |
+| Monthly usage cap per company | Not applicable (run-count limit only) | High |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Agentic Standards plan tiers" }
 
 On the Free tier, **Evaluation preview** (**Simulate response**) and launch-time **Run evaluation** or **Re-run evaluation** count toward the 25 runs. Each standard counts as a separate run, so if you select multiple standards and run them at the same time, each one counts toward the limit. For example, running three standards against a campaign uses three runs. Contact your Braze account representative to upgrade.
 
-On the Paid tier, there is no monthly run-count limit. More intensive evaluations contribute more toward the monthly usage limit. To see how much of the limit each evaluation used, check the standard's [evaluation logs](#review-evaluation-logs). Most workspaces don't reach this cap. If you do, contact your customer success manager.
+On the Paid tier, there is no monthly run-count limit. More intensive evaluations contribute more toward the monthly usage limit. To see how much of the limit each evaluation used, check the standard's [evaluation logs](#review-evaluation-logs). Most companies don't reach this cap. If you do, contact your customer success manager.
 
 ## How it works
 
@@ -266,7 +266,7 @@ To show only evaluations run by a specific user, select **Filters**, then choose
 
 On the Free tier, evaluation logs don't show usage because your limit is the number of evaluation runs per month rather than usage.
 
-On the Paid tier, the **Limit used** column shows the percentage of your workspace's monthly usage limit that each run and rule evaluation used, such as "0.2%". A share too small to show at two decimal places appears as "< 0.01%". Use this column to spot evaluations that use more of your limit than you expect, such as runs of standards with many rulesets.
+On the Paid tier, the **Limit used** column shows the percentage of your company's monthly usage limit that each run and rule evaluation used, such as "0.2%". A share too small to show at two decimal places appears as "< 0.01%". Use this column to spot evaluations that use more of your limit than you expect, such as runs of standards with many rulesets.
 
 - **Cached** means the result was reused from an earlier, identical evaluation and didn't count toward your limit.
 - The same percentage appears as **Limit used** in the details panel and as **Limit used (%)** in the CSV export.

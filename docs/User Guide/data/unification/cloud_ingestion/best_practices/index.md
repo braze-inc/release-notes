@@ -7,7 +7,7 @@
 **Note:**
 
 
-`UPDATED_AT` is relevant for data warehouse integrations only, not for file storage syncs.
+`UPDATED_AT` is relevant for data warehouse integrations only, not for file storage syncs. For file storage behavior, see [How do `UPDATED_AT` and `last_timestamp_synced` work for file storage syncs?](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/faqs#updated-at-file-storage)
 
 
 

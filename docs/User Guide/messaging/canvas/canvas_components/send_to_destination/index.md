@@ -27,6 +27,13 @@ If the destination Canvas uses a scheduled entry schedule, the Send to Destinati
 
 If the destination Canvas uses action-based entry, the Send to Destination step bypasses the requirement for users to perform the configured entry action to enter that Canvas.
 
+**Important:**
+
+
+Braze can auto-stop a destination Canvas. Entries from a Send to Destination step don't keep that Canvas active. To keep the destination Canvas active while other Canvases send users to it, set its entry schedule to API-triggered. A Send to Destination step still enters users directly. For the full auto-stop rules, see [Idle campaigns and Canvases](https://www.braze.com/docs/user_guide/messaging/governance/statuses/idle_messages).
+
+
+
 ## Create a Send to Destination step
 
 ### Step 1: Add a step
