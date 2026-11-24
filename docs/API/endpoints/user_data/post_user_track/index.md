@@ -1,4 +1,4 @@
-<div id='api_apqehdqsilhm' class='api_div' data-search-keywords='create and update users message errors type'>
+<div id='api_qovmbpjbbqqa' class='api_div' data-search-keywords='create and update users message request_id attributes_processed events_processed purchases_processed errors type'>
 <h1 id="create-and-update-users">Create and update users</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/users/track</p>
@@ -476,6 +476,26 @@
 <p><strong>Note:</strong></p>
 
 <p>If <code class="language-plaintext highlighter-rouge">/users/track</code> returns <code class="language-plaintext highlighter-rouge">400</code> with a parse or syntax error, the request body isn’t valid JSON. Check for trailing commas, and send UTF-8 encoded JSON with the <code class="language-plaintext highlighter-rouge">Content-Type: application/json</code> header. See <a href="#why-do-i-get-400-bad-request-with-a-bad-syntax-or-parse-error">Why do I get <code class="language-plaintext highlighter-rouge">400 Bad Request</code> with a bad syntax or parse error?</a> and the fatal error table in <a href="/docs/api/errors#fatal-errors">API errors</a>.</p>
+
+<h2 id="response-body">Response body</h2>
+
+<p>Successful requests return a response body that includes a <code class="language-plaintext highlighter-rouge">request_id</code> field. This unique identifier is included in every successful response and can be used with the <a href="/docs/api/endpoints/user_data/get_users_track_status"><code class="language-plaintext highlighter-rouge">/users/track/status</code> endpoint</a> to check when Braze has finished processing your request. For more information, see <a href="#track-request-processing-status">Track request processing status</a>.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"request_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3f2b8c1e-7a4d-4e9b-9c6f-1d2e3a4b5c6d"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"attributes_processed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"events_processed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"purchases_processed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h2 id="need-to-update-users-in-bulk">Need to update users in bulk?</h2>
 

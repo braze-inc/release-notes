@@ -182,10 +182,7 @@ table td {
 | Custom event properties | All custom event properties | Custom event properties enabled for segmentation with the filters `X Custom Event Property in Y Days` or `X Purchase Property in Y Days` are all counted as separate data points in addition to the data point counted by the custom event itself.
 | Purchases | All purchases | |
 | Purchase properties | All purchase properties | |
-| Amplitude cohort assignment | All assignments | |
-| Mixpanel cohort assignment | All assignments | |
-| Hightouch cohort assignment | All assignments | |
-| Appsflyer cohort assignment | All assignments | |
+| Cohort assignment | All cohort assignments | |
 | Most recent location | All most recent locations | Entering or exiting geofences doesn't log data points because geofence data is not stored against the user profile. Geofences are monitored by Apple and Google location services; Braze only gets notified upon a user triggering a geofence. |
 | Twitter | Username | |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Billable data points" }

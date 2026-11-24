@@ -1,4 +1,4 @@
-<div id='api_dsprrigbfeoc' class='api_div' data-search-keywords='list user relationships'>
+<div id='api_eypvsltwbqeb' class='api_div' data-search-keywords='list user relationships'>
 <h1 id="list-user-relationships">List user relationships</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/data_objects/objects/{type_name}/{object_id}/user_relationships</p>

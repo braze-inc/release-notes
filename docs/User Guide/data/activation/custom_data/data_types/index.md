@@ -63,7 +63,7 @@ Use this table to see which data types you can use for user profile attributes, 
       <td>Array of objects</td>
       <td>List of objects</td>
       <td>✅ Supported</td>
-      <td>❌ Not supported</td>
+      <td>✅ Supported</td>
       <td>❌ Not supported</td>
     </tr>
   </tbody>
@@ -73,6 +73,7 @@ Use this table to see which data types you can use for user profile attributes, 
 
 - **Array:** Custom attributes and event properties have size limits. Datetimes are not supported inside arrays in event properties. Catalogs support only string arrays, with a maximum of 100 elements.
 - **Object:** In Braze, this appears as "nested custom attributes" for custom attributes, "nested objects" for event properties, and "JSON object" for catalogs.
+- **Array of objects:** For event properties, arrays of objects are supported for sending nested JSON data via the API or SDK. You can use these for message triggering, Liquid templating, and segmentation via Segment Extensions. For details, refer to [Nested objects in custom events](https://www.braze.com/docs/user_guide/data/activation/events/custom_events/nested_objects).
 - **Time:** In event properties, this type is labeled "Datetime."
 
 ## Custom attribute data types {#custom-attribute-data-types}

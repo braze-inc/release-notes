@@ -24,7 +24,7 @@ These are the available statuses for campaigns and Canvases:
 | Draft | Drafts of campaigns and Canvases are saved but not launched. To continue editing and begin sending, you can select the draft by going to **Messaging** in the Braze dashboard and selecting **Canvas** or **Campaigns**. |
 | Archived | Archived campaigns and Canvases are messages that are no longer being sent. These campaigns and Canvases are also removed from the statistic graphs on the [**Home**](https://www.braze.com/docs/user_guide/analytics/dashboards/home) and [**Revenue**](https://www.braze.com/docs/user_guide/analytics/reports/revenue_report) pages.|
 | Stopped | Stopped campaigns and Canvases are paused, but you can still edit them. To resume a Canvas, go to the **Summary** step of the Canvas builder and select **Resume Canvas**. For campaigns, select the <i class="fas fa-ellipsis-vertical"></i> menu, then **Resume**. For more information, refer to [Stopped Canvas behavior](#stopped-canvas-behavior). |
-| Idle | When a campaign or Canvas is no longer sending messages, Braze will assign it an idle status to help sort and manage your list of campaigns and Canvases. You can view which campaigns or Canvases will be automatically stopped and the associated stop date. |
+| Idle | When a campaign or Canvas is no longer sending messages, Braze will assign it an idle status to help sort and manage your list of campaigns and Canvases. You can view each idle campaign or Canvas and the date Braze automatically stops it. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Available statuses" }
 
 ### Stopped Canvas behavior {#stopped-canvas-behavior}
@@ -38,11 +38,11 @@ When a Canvas is stopped, the following occurs:
 
 #### When you resume a Canvas
 
-To resume the Canvas, go to the **Summary** step of the Canvas builder and select **Resume Canvas**. When you resume a Canvas, users continue through their journey from where they left off:
+To resume the Canvas, go to the **Summary** step of the Canvas builder and select **Resume Canvas**. When you resume a Canvas, users whose scheduled time has not yet passed continue through their journey from where they left off:
 
-- Users in delay steps: Users who were waiting in a delay step when the Canvas was stopped continue waiting for the remaining delay period. For example, if a user was 2 hours into a 24-hour delay when the Canvas was stopped for 3 days, they'll wait 22 more hours after the Canvas is resumed before advancing.
+- Users in Delay steps: The delay keeps counting down while a Canvas is stopped. If a user's delay ends while the Canvas is stopped, they exit the Canvas. If you resume before it ends, they advance at their original time. For example, a user is two hours into a 24-hour delay when you stop the Canvas. They exit 22 hours later unless you resume the Canvas before then. For more information, see [Stopping Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/change_your_canvas_after_launch#stopping-canvases).
 - Users waiting for messages: Any scheduled messages that were pending when the Canvas was stopped are sent as scheduled when you resume the Canvas—as long as the scheduled time hasn't already passed.
-- Users who exited: Users who exited the Canvas during the stopped period (for example, users who were in delay steps and reached the end of their delay) won't re-enter the Canvas when you resume it.
+- Users who exited: Users who exited the Canvas during the stopped period (for example, users who were in Delay steps and reached the end of their delay) won't re-enter the Canvas when you resume it.
 
 #### Local time zone behavior
 
@@ -53,14 +53,13 @@ If your Canvas is configured to **Enter users into this Canvas in their local ti
 
 #### Common scenarios
 
-**Scenario 1: Mistake in message content**
+##### Mistake in message content
+
 You launch a Canvas but notice a typo in one of the messages. Stop the Canvas, edit the message in draft mode, then resume. Users who haven't received the message yet get the corrected version. Users who already received it won't receive it again.
 
-**Scenario 2: Targeting issue**
-You realize the Canvas is targeting the wrong segment. Stop the Canvas immediately to prevent more users from entering. Any users currently in delay steps will exit when their delay period ends. You can then create a new Canvas with the correct targeting.
+##### Targeting issue
 
-**Scenario 3: Extended delay scenario**
-You have a Canvas with a seven-day delay step. You stop the Canvas three days in. Users who were in the delay step continue waiting, but when their delay period ends while the Canvas is still stopped, they exit the Canvas. If you resume the Canvas before their delay ends, they continue through the journey.
+You realize the Canvas is targeting the wrong segment. Stop the Canvas immediately to prevent more users from entering. Any users currently in Delay steps will exit when their delay period ends. You can then create a new Canvas with the correct targeting.
 
 ## Best practices
 

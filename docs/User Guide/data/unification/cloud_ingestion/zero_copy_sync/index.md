@@ -36,8 +36,8 @@ If you already have credentials from an existing sync, you can reuse them, but m
 
 1. Set up your destination Canvas for Canvas triggers. Create a new or select an existing API-triggered Canvas. Refer to [Entry schedule types](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas#entry-schedule-types) for instructions on how to create a Canvas with an API-triggered delivery schedule type.
 2. After selecting the API-triggered delivery schedule type, continue with Canvas setup and build your Canvas. Canvases can range from simple single-message sends to complex customer workflows with multiple steps.
-3. Within your Canvas steps, use [Canvas entry properties](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties) to personalize messages with properties fields that you plan to sync from your source table.
-  * For example, if in Step 1 you instrumented a properties field for `account_balance`, you would use the following Liquid templating to personalize your message: `\{\{canvas_entry_properties.\$\{account_balance\}\}\}`.
+3. Within your Canvas steps, use [Context](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties) to personalize messages with properties fields that you plan to sync from your source table.
+  * For example, if you set a properties field for `account_balance` in Step 1, use the following Liquid templating to personalize your message: `{{canvas_entry_properties.${account_balance}}}`.
 4. After building your Canvas, launch it and proceed to [Step 3](#step-3-create-your-zero-copy-sync).
 
 ### Step 3: Create your zero-copy sync {#step-3-create-your-zero-copy-sync}

@@ -144,7 +144,7 @@ If you want to provide your own JSON body, you can write it inline if there are 
 
 ## HTTP status codes
 
-You can utilize the HTTP status from a Connected Content call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
+You can use the HTTP status from a Connected Content call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
 
 
 ```js
@@ -161,6 +161,8 @@ You can utilize the HTTP status from a Connected Content call by first saving it
 This key will only be automatically added to the Connected Content object if the endpoint returns a valid JSON object and a `2XX` response. If the endpoint returns an array or other type, that key cannot be automatically set in the response.
 
 
+
+This example applies only to `2xx` JSON objects. A `404` or `5xx` response leaves the saved variable unset. To abort those sends, see [Abort Connected Content](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/aborting_connected_content#abort-when-the-call-fails).
 
 
 [16]: [success@braze.com](mailto:success@braze.com)

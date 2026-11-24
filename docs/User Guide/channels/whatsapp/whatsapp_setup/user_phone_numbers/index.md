@@ -1,6 +1,6 @@
 # User phone numbers
 
-> This article will discuss different topics around your users' or customers' phone numbers.
+> This article covers different topics around your users' or customers' phone numbers.
 
 Phone numbers are shown in the user profile in local formats, but will not be in the format you use to import the number (`(724) 123 4567`).
 
@@ -8,28 +8,41 @@ Phone numbers are shown in the user profile in local formats, but will not be in
 
 You can import phone numbers by [uploading a CSV](https://www.braze.com/docs/user_guide/audience/manage_audience/import_users#constructing-your-csv) or [via API](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) to create a user.
 
-### Formatting
+<a id="formatting"></a>
+Import phone numbers in [`E.164`](https://en.wikipedia.org/wiki/e.164) format (`+`, country code, then subscriber number). That format keeps numbers accurate when you send to more than one country—even for U.S. numbers.
 
-It is important to import non-U.S. numbers in [`E.164`](https://en.wikipedia.org/wiki/e.164) format, including the “+” and country code. Any phone numbers not provided in this format will be interpreted as a US number.  
+- **U.S. numbers:** Use a valid 10-digit number with a valid area code. You can omit `+1` for valid U.S. numbers; Braze maps them as U.S. Puerto Rican numbers still require a `+` and country code, even though they use 10-digit formatting with U.S.-style area codes.
+- **Non-U.S. numbers:** Always include a leading `+` and the country code. For example, `+442079460100` or `+6591234567`.
 
-If a phone number is coerced into E.164 format but does not pass validation, Braze will not be able to send WhatsApp messages to this number. Any users with phone numbers that are not formattable will automatically exit from a Canvas step that includes WhatsApp
+### How Braze normalizes numbers without a country code
 
-All U.S. numbers must be valid, 10-digit phone numbers with a valid area code. They can be input without the `+` and country code, as Braze will assume and map all valid, 10-digit phone numbers as U.S. numbers.
+When you import a phone number onto a user profile without a leading `+`, Braze coerces it to E.164 with Google's [libphonenumber](https://github.com/google/libphonenumber). By default, Braze first tries to parse the number as a United States number. If that parse is valid, Braze stores the number with country code `+1`.
 
-All international numbers should start with a `+`, followed by their country code and then the phone number. (e.g `+442071838750`)
+Braze does not use your workspace country, the user's `country` attribute, or other profile fields when deciding to treat the number as a U.S. number. A local number from another country that also looks like a valid 10-digit U.S. number can therefore be stored as `+1…` instead of the intended country.
 
-![Screenshot related to formatting.](https://www.braze.com/docs/assets/img/sms/e164.png?76830497cb02adfbc8c4b8f89ac642ad){: style="max-width:50%;border: 0;"}
+If the number is not a valid U.S. number, Braze attempts a more general parse (for example, a value that already includes a country code but is missing `+`).
 
-However, to ensure accuracy in the event that you are sending to multiple regions with different country or area codes, it is recommended to use the `E.164` format, even for U.S.-based phone numbers.
+**Important:**
 
-You can see the differences between local number formatting as well as universal, `E.164` formatting in the following table:
+
+To avoid incorrect country codes, always import non-U.S. numbers in E.164 with `+` and the country code.
+
+
+
+![Example of a valid E.164 phone number.](https://www.braze.com/docs/assets/img/sms/e164.png?76830497cb02adfbc8c4b8f89ac642ad){: style="max-width:50%;border: 0;"}
+
+Here are a few examples showing the differences between local and `E.164` formatting:
 
 | Country | Local | Country Code | `E.164` |
 |---|---|---|---|
-| USA | `4155552671` | 1 | `+14155552671` |
-| UK | `02071838750` | 44 | `+442071838750` |
+| USA | `4155550100` | 1 | `+14155550100` |
+| UK | `2079460100` | 44 | `+442079460100` |
 | Brazil | `1155256325` | 55 | `+551155256325` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 reset-td-br-4 aria-label="Formatting" }
+| Singapore | `91234567` | 65 | `+6591234567` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="E.164 phone number format examples" }
+
+
+If Braze cannot coerce a number into a valid E.164 value, it cannot send WhatsApp messages to that number. Users with phone numbers that are not formattable automatically exit a Canvas step that includes WhatsApp.
 
 ### Adding users to WhatsApp a subscription group
 

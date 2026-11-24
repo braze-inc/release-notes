@@ -125,7 +125,7 @@ The following limitations apply:
 - Agent Console shows a **Daily action credit cost limit** for each agent—the estimated maximum credits per day based on your model's per-invocation credit ratio and the daily invocation limit. See [Daily invocation and credit limits](https://www.braze.com/docs/user_guide/brazeai/agents/reference#daily-invocation-and-credit-limits).
 - By default, Braze waits up to 20 seconds for each response from the model. Agents that search catalogs or knowledge sources can make several requests in one run, and each has its own 20-second limit. If any request times out, the whole run fails and isn't retried, and the agent returns a `null` response where it is used.
     - If your agents consistently time out, contact your Braze account manager to increase this limit.
-- Input data is limited to 25 KB per request. Longer inputs are truncated.
+- Input data is limited to 128&nbsp;KB per request, measured after Liquid renders. Longer inputs are truncated.
 
 ## Best practices
 

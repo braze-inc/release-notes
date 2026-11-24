@@ -1,6 +1,6 @@
 # Collect user opt-ins
 
-> The following article lists some common SMS opt-in methods.
+> The following article lists some common SMS, MMS, and RCS opt-in methods.
 
 ## Option 1: Ask users to text your short or long code
 
@@ -18,28 +18,9 @@ Braze recommends that you also use the [SMS double opt-in](https://www.braze.com
 
 When a new user signs up or registers on the website or app, ask for their phone number and email. Include a checkbox to receive promotional emails and SMS. 
 
-After the user signs up, do the following:
+After the user signs up, create or update their profile and set subscription status with one of these REST API options:
 
-1. Use the [`/subscription/status/set` endpoint](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status) to create the user and save their attributes.
-
-
-```http
-POST 'https://rest.iad-03.braze.com/subscription/status/set' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-REST-API-KEY' \
---data-raw '{
-  "subscription_group_id": "xyz-abcd-1234567",
-  "subscription_state": "subscribed",
-  "external_id": "external_identifier",
-  "phone": "+12223334444",
-  "use_double_opt_in_logic": true
-}
-'
-```
-
-
-{: start="2"}
-2. Use the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) to subscribe the user to SMS.
+- Use the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) to create or update the user and set their SMS subscription group in one call. Include `subscription_groups` in the user attributes object.
 
 
 ```
@@ -64,10 +45,28 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 
 
+- For users who already have a Braze profile, use the [`/subscription/status/set` endpoint](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status) to update subscription group status. This endpoint does not create user profiles.
+
+
+```http
+POST 'https://rest.iad-03.braze.com/subscription/status/set' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--data-raw '{
+  "subscription_group_id": "xyz-abcd-1234567",
+  "subscription_state": "subscribed",
+  "external_id": "external_identifier",
+  "phone": "+12223334444",
+  "use_double_opt_in_logic": true
+}
+'
+```
+
+
 **Note:**
 
 
-To enter users into the [SMS double opt-in](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in) workflow when subscribing through the REST API, set `use_double_opt_in_logic` to `true` in your request. This parameter is supported by [`/subscription/status/set`](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status), [`/v2/subscription/status/set`](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2), and [`/users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track). A user profile must exist for the subscription state to be updated. If no user profile is associated with the provided phone number, the subscription state isn't updated.
+To enter users into the [SMS double opt-in](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in) workflow when subscribing through the REST API, set `use_double_opt_in_logic` to `true` in your request. This parameter is supported by [`/subscription/status/set`](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status), [`/v2/subscription/status/set`](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2), and [`/users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track). A user profile must exist for the subscription state to be updated with `/subscription/status/set`. If no user profile is associated with the provided phone number, the subscription state isn't updated.
 <br><br>
 Subscription updates through the REST API don't automatically trigger welcome messages. To send a welcome message, create an action-based campaign with the [Update Subscription Group Status](https://www.braze.com/docs/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/attribute_triggers#update-subscription-group-status) trigger and set the update source to **REST API**.
 

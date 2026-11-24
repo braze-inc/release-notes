@@ -58,6 +58,27 @@ After you've followed the [Swift Package Manager integration guide](https://www.
 
 
 
+Download `BrazePushStory.zip` from the [GitHub release page](https://github.com/braze-inc/braze-swift-sdk/releases), extract it, and add the `BrazePushStory.xcframework` to your project's `Notification Content Extension`.
+
+![Xcode framework settings showing BrazePushStory.xcframework added with Do Not Embed selected.](https://www.braze.com/docs/assets/img/swift/push_story/manual1.png?cdc5b6905a824611c983facc8b541026)
+
+**Important:**
+
+
+Make sure that **Do Not Embed** is selected for **BrazePushStory.xcframework** under the **Embed** column.
+
+
+
+
+
+
+**Important:**
+
+
+CocoaPods support for the Braze Swift SDK is deprecated, and starting with Swift SDK 20.0.0, Braze does not publish releases to CocoaPods. Migrate to Swift Package Manager or a manual integration. Existing CocoaPods releases remain available for as long as the CocoaPods ecosystem supports them. For more information, see the [CocoaPods deprecation announcement](https://github.com/braze-inc/braze-swift-sdk/issues/204).
+
+
+
 Add the following line to your Podfile:
 
 ```ruby
@@ -85,20 +106,6 @@ For more information about implementing rich push notifications, see [Rich push 
 
 
 After updating the Podfile, navigate to the directory of your Xcode app project within your terminal and run `pod install`.
-
-
-
-
-Download the latest `BrazePushStory.zip` from the [GitHub release page](https://github.com/braze-inc/braze-swift-sdk/releases), extract it, and add the `BrazePushStory.xcframework` to your project's `Notification Content Extension`.
-
-![Xcode framework settings showing BrazePushStory.xcframework added with Do Not Embed selected.](https://www.braze.com/docs/assets/img/swift/push_story/manual1.png?cdc5b6905a824611c983facc8b541026)
-
-**Important:**
-
-
-Make sure that **Do Not Embed** is selected for **BrazePushStory.xcframework** under the **Embed** column.
-
-
 
 
 

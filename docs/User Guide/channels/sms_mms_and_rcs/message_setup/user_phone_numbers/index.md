@@ -1,24 +1,41 @@
 # User phone numbers
 
-> This article will discuss different topics around your users' or customers' phone numbers. If you're looking for information about your own numbers, go to our article on [sending phone numbers](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup).
+> This article covers different topics around your users' or customers' phone numbers. If you're looking for information about your own numbers, go to our article on [sending phone numbers](https://www.braze.com/docs/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup).
 
 ## Recommended format
 
-We recommend importing phone numbers in [`E.164`](https://en.wikipedia.org/wiki/e.164) format to ensure accuracy in the event that you are sending to multiple regions with different country or area codes&#8212;even for U.S.-based phone numbers.
+Import phone numbers in [`E.164`](https://en.wikipedia.org/wiki/e.164) format (`+`, country code, then subscriber number). That format keeps numbers accurate when you send to more than one country—even for U.S. numbers.
 
-- **U.S. numbers:** All U.S. numbers must be valid, 10-digit phone numbers with a valid area code. If any 10-digit phone number is missing a `+` and country code, Braze maps it as U.S. numbers. Puerto Rican phone numbers still require a `+` and country code even though they use 10-digit formatting with U.S.-style area codes.
-- **International numbers:** All international numbers should start with a `+`, followed by their country code and then the phone number. For example, `+442071838750`.
+- **U.S. numbers:** Use a valid 10-digit number with a valid area code. You can omit `+1` for valid U.S. numbers; Braze maps them as U.S. Puerto Rican numbers still require a `+` and country code, even though they use 10-digit formatting with U.S.-style area codes.
+- **Non-U.S. numbers:** Always include a leading `+` and the country code. For example, `+442079460100` or `+6591234567`.
 
-![Example of a valid e164 international phone number.](https://www.braze.com/docs/assets/img/sms/e164.png?76830497cb02adfbc8c4b8f89ac642ad){: style="max-width:50%;border: 0;"}
+### How Braze normalizes numbers without a country code
 
-Here's a few examples showing the differences between local and `E.164` formatting:
+When you import a phone number onto a user profile without a leading `+`, Braze coerces it to E.164 with Google's [libphonenumber](https://github.com/google/libphonenumber). By default, Braze first tries to parse the number as a United States number. If that parse is valid, Braze stores the number with country code `+1`.
+
+Braze does not use your workspace country, the user's `country` attribute, or other profile fields when deciding to treat the number as a U.S. number. A local number from another country that also looks like a valid 10-digit U.S. number can therefore be stored as `+1…` instead of the intended country.
+
+If the number is not a valid U.S. number, Braze attempts a more general parse (for example, a value that already includes a country code but is missing `+`).
+
+**Important:**
+
+
+To avoid incorrect country codes, always import non-U.S. numbers in E.164 with `+` and the country code.
+
+
+
+![Example of a valid E.164 phone number.](https://www.braze.com/docs/assets/img/sms/e164.png?76830497cb02adfbc8c4b8f89ac642ad){: style="max-width:50%;border: 0;"}
+
+Here are a few examples showing the differences between local and `E.164` formatting:
 
 | Country | Local | Country Code | `E.164` |
 |---|---|---|---|
-| USA | `4155552671` | 1 | `+14155552671` |
-| UK | `2071838750` | 44 | `+442071838750` |
+| USA | `4155550100` | 1 | `+14155550100` |
+| UK | `2079460100` | 44 | `+442079460100` |
 | Brazil | `1155256325` | 55 | `+551155256325` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="Recommended format" }
+| Singapore | `91234567` | 65 | `+6591234567` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 aria-label="E.164 phone number format examples" }
+
 
 ## Import phone numbers
 
@@ -48,8 +65,9 @@ A phone number is considered invalid for the following reasons:
 
 - **Provider Error**: a permanent error was received from the SMS and RCS provider. This indicates that the phone number supplied is incorrectly formatted or permanently unable to receive SMS or RCS messages.
 - **Deactivated**: the phone number has been deactivated due to a mobile subscriber terminating their service and releasing their number from their carrier (and may eventually be recycled and assigned to a new user). A deactivated phone number can be marked invalid even if you have not sent any SMS or RCS messages to that phone number.
+- **Invalid Format**: the number failed formatting validation, such as a non-E.164 value (`invalid_format`).
 
-These invalid phone numbers can be managed using [SMS and RCS endpoints](https://www.braze.com/docs/api/endpoints/sms). 
+These invalid phone numbers can be managed through [SMS and RCS endpoints](https://www.braze.com/docs/api/endpoints/sms). To return numbers by reason, use the `reason` filter on the [Query invalid phone numbers](https://www.braze.com/docs/api/endpoints/sms/get_query_invalid_numbers) endpoint.
 
 **Note:**
 

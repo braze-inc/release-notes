@@ -1,51 +1,74 @@
-# Product portal
+# Product roadmap and feature requests
 
-> With the product portal, you can access the Braze product roadmap and submit ideas. This provides you with insight into what we've recently released, new features that we're working on, and ideas we're considering building. In the portal, you can vote for the features you want by ranking a feature's importance to you and leave a comment with feedback or a request.
+> Use the Braze product roadmap, also called the Product Portal, to submit ideas and feature requests, rate how important a feature is to you, and see what Braze has recently released.
 
-The product portal can be found at **Community** > **Product roadmap**.
+To open the product roadmap, go to **Community** > **Product roadmap** in the top navigation of the dashboard.
 
-![Resources menu in the Braze dashboard](https://www.braze.com/docs/assets/img/portal.png?a1c06a62fd76e009305caba67bd3c6f5){: style="max-width:40%;"}
+## Submit an idea
+
+Each card on the **Submit New Ideas** tab has its own form, so you submit an idea from inside the card that fits it.
+
+1. Go to **Community** > **Product roadmap**.
+2. Select the **Submit New Ideas** tab.
+3. Select the card that best matches your idea. Cards are grouped by product area, such as Channels, Orchestration, BrazeAI™, and Data & Reporting. If no card is an exact match, choose the closest one.
+4. Select how important the idea is to your business: **Not important**, **Nice-to-have**, **Important**, or **Critical**. The text box appears after you select a level.
+5. Describe your idea and how it would help your team, then select **Submit**.
+
+For guidance on what to include, see [Tips for writing a good request](#tips-for-writing-a-good-request).
+
+## Choose where to send feedback
+
+| If you want to | Use |
+| --- | --- |
+| Request a new feature or an improvement to an existing one | The product roadmap |
+| Share feedback about the dashboard, such as navigation, accessibility, or usability | **Support** > **Share feedback** |
+| Report something that isn't working | [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support) |
+| Discuss priorities that are specific to your account | Your customer success manager |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Where to send feedback" }
+
+## After you submit
+
+The Braze product team reviews every submission. Braze doesn't provide status updates on individual ideas. To see what has shipped or is in testing, check the **Recently Released** and **Beta and Early Access** tabs.
+
+## Troubleshooting
+
+### Product roadmap is missing from the Community menu
+
+The product roadmap isn't available for free trial accounts. If your company has a paid Braze account and you still don't see **Product roadmap**, contact your customer success manager.
+
+### The portal doesn't load
+
+If the portal stays blank or you see "Unable to load productboard, please refresh to try again," refresh the page. If it still doesn't load, check whether a browser extension, such as an ad blocker or privacy extension, is blocking embedded content, or try another browser. If the problem continues, contact [Braze Support](https://www.braze.com/docs/user_guide/administer/personal/braze_support).
+
+### The text box doesn't appear
+
+Select an importance level first. The text box and **Submit** button appear after you select **Not important**, **Nice-to-have**, **Important**, or **Critical**.
 
 ## What's in the portal
 
-| Section | Description |
+| Tab | Description |
 | --- | --- |
-| Recently Released | New features that we've released by quarter |
-| Planned Features | Features that we've committed to building and will begin development within the quarter. <br>There is no confirmed deadline as to when these features will be released. |
-| Under Consideration | Features we're considering building that our product team would like your feedback on. <br>These are ideas and no guarantee that we will build this feature. |
-| Submit Ideas | There are 10 product categories in which you can vote for general improvements or comment with a specific feature request or idea. <br>Our product team will receive and read your requests but an idea submission does not guarantee it will be built. |
+| **Recently Released** | Features that Braze has recently released. |
+| **Beta and Early Access** | Features that are currently in beta or early access. |
+| **Submit New Ideas** | Idea cards grouped by product area, where you rate importance and describe your request. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="What's in the portal" }
 
-## How you can join the conversation
+## Tips for writing a good request
 
-| Option | Description |
-| --- | --- |
-| Rank a feature's importance | Rank a feature's importance by selecting **Nice to Have**, **Important**, or **Critical**. |
-| Comment on a feature | After you've ranked a feature, you can leave a comment with your feedback. |
-| Answer a Product Manager's question | Look for the "How Customers Can Help" on a feature card to answer questions from our product team. |
-| Submit an idea | Go to the portal's **Submit Ideas** page and select from one of ten cards to rank its importance. Include your idea or request in the comments! <br><br>Once submitted, your idea will be reviewed by a member of our product team. We cannot provide updates on the status of a request. Occasionally check back to see if your idea has been added to the "Under Consideration" or "Planned Features" sections. |
-{: .reset-td-br-1 .reset-td-br-2 aria-label="How you can join the conversation" }
-
-## Product feedback at Braze
-
-Braze builds the product roadmap based upon many different sources of information. We take data from our customers, the market, the technology landscape in which we operate, our product vision and innovation strategy, and more. Customer input and feedback is an important component, but it is only one component. 
-
-Priorities and timelines can (and do) shift based on the latest information available to the team. With this in mind, it is always recommended to submit product feedback in a timely fashion so the product team is aware of customers' and the market's sentiment. 
-
-- **Submitting product feedback is a guarantee** that our product team will review and consider the feedback. 
-- **Submitting product feedback is not a guarantee** that we will take action. Braze both cannot and does not want to act upon all product feedback. 
-
-## Tips for submitting product feedback
-
-The more information and context the better! Include links to campaigns, Canvases, or segments, everything that aids the description. We structure product feedback based on the following questions:
+The more context you include, the better. Add links to the campaigns, Canvases, or segments that illustrate your request. The product team reviews feedback with these questions in mind:
 
 - What problem are you trying to solve?
 - What are some specific use cases?
-- Do you have any additional insight? (For example, how this would benefit you and your teams)
-- Are there any current workarounds? (This is not for our prioritization process, but may help with any solution discovery work) 
+- How would this benefit you and your teams?
+- Are there current workarounds? Workarounds don't affect prioritization, but they can help when the team explores solutions.
 
-For an example of a well-written product request, see this [Product Request Example](https://www.braze.com/docs/user_guide/administer/personal/product_request_example).
+For an example of a well-written request, see [Product request example](https://www.braze.com/docs/user_guide/administer/personal/product_request_example).
 
+## How Braze uses product feedback
+
+Braze builds the product roadmap from many sources, including customer feedback, the market, the technology landscape, and the Braze product vision. Customer feedback is an important input, but priorities and timelines shift as new information comes in, so submit feedback when you have it.
+
+The product team reviews and considers every submission. Braze can't act on every request, so a submission doesn't guarantee that a feature will be built.
 
 
 

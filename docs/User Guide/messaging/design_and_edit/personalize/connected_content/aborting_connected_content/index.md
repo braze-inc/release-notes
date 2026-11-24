@@ -28,6 +28,21 @@ Braze doesn't count aborted messages toward the send count in your Braze account
 
 
 
+## Abort when the call fails
+
+A `404`, a `3xx` redirect, or any failed call without `:retry` renders an empty string and leaves the saved variable unset. The message still sends unless you abort it:
+
+
+```liquid
+{% connected_content https://example.com/api/endpoint :save result %}
+{% if result == blank %}
+  {% abort_message('Connected Content request failed') %}
+{% endif %}
+```
+
+
+For which status codes Braze retries, and which responses send with a blank insertion, see [HTTP response behavior](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call#http-response-behavior).
+
 ## Connected Content calls with abort and retry logic
 
 If a Connected Content call uses abort logic for the same condition as the retry logic, the abort logic takes precedence. This prevents any retries from being attempted. Retry logic already resends the call before aborting it if the status code is unsuccessful. Because both target the same status code behavior, you can remove the abort logic and the call still aborts if all retries fail.

@@ -95,3 +95,9 @@ If DMARC shows **FAIL** for messages sent through Braze:
 
 Third-party checkers (for example, [MXToolbox](https://mxtoolbox.com/dmarc.aspx)) help confirm published records; always validate with a live message from Braze as well.
 
+**Tip:**
+
+
+For bounces and inbox placement after you check DMARC, see [How do I troubleshoot email deliverability issues?](https://www.braze.com/docs/user_guide/channels/email/faq/#how-do-i-troubleshoot-email-deliverability-issues).
+
+

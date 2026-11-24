@@ -10,7 +10,8 @@ When you create a sync from a data warehouse source, you choose how Braze reads 
 | --- | --- | --- |
 | **Visual** | Enter a table or view and map its columns to Braze fields in the dashboard, without writing SQL. For details, see [Visual mapper](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/visual_mapper). | User attribute, custom event, and Canvas trigger syncs on data warehouse sources. |
 | **SQL** | Write a query against your source. The columns your query returns become Braze fields. For details, see [SQL editor](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sql_editor). | All sync types on data warehouse sources. |
-| `PAYLOAD` column | Create a table or view in your source with Braze-accepted identifier(s), `UPDATED_AT`, and `PAYLOAD` columns, where `PAYLOAD` holds a JSON object in a Braze REST API format, such as `/users/track` for user attribute syncs. Then create a CDI sync, select **Table** or **Visual** on the **Data definition** step, and enter the table name. For requirements, see the following sections. | All sync types on all sources, including file storage. |
+| `PAYLOAD` column | Create a table or view in your source with Braze-accepted identifier(s), `UPDATED_AT`, and `PAYLOAD` columns, where `PAYLOAD` holds a JSON object in a Braze REST API format, such as `/users/track` for user attribute syncs. Then create a CDI sync, select **Table** or **Visual** on the **Data definition** step, and enter the table name. For requirements, see the following sections. | All sync types on data warehouse sources. |
+| File storage | File storage sources have no table or view, so you don't enter a table name and `UPDATED_AT` isn't required or supported. Instead, you upload JSON, CSV, or Parquet files to your bucket or container. For the columns each data type requires, see the **Required file formats** section on your source page: [Amazon S3](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/amazon_s3#required-file-formats), [Google Cloud Storage](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/google_cloud_storage#required-file-formats), or [Azure Blob Storage](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/azure_blob_storage#required-file-formats). | All sync types on file storage sources. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Data definition options" }
 
 ## Data organization guidance
@@ -100,7 +101,7 @@ You may include nested custom attributes in the payload column for a custom attr
 
 
 
-To sync events, an event name is required. Format the `time` field as an ISO 8601 string or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. If the `time` field is not present, Braze uses the `UPDATED_AT` column value as the event time. Other fields, including `app_id` and `properties`, are optional.
+To sync events, an event name is required. Format the `time` field as an ISO 8601 string or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. For data warehouse sources, if the `time` field is not present, Braze uses the `UPDATED_AT` column value as the event time. Other fields, including `app_id` and `properties`, are optional.
 
 You can sync one event per row.
 
@@ -118,7 +119,7 @@ You can sync one event per row.
 
 
 
-To sync purchase events, `product_id`, `currency`, and `price` are required. Format the optional `time` field as an ISO 8601 string or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. If the `time` field is not present, Braze uses the `UPDATED_AT` column value as the event time. Other fields, including `app_id`, `quantity`, and `properties`, are optional.
+To sync purchase events, `product_id`, `currency`, and `price` are required. Format the optional `time` field as an ISO 8601 string or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. For data warehouse sources, if the `time` field is not present, Braze uses the `UPDATED_AT` column value as the event time. Other fields, including `app_id`, `quantity`, and `properties`, are optional.
 
 You can sync one purchase event per row.
 

@@ -160,6 +160,39 @@ Previously uploaded CSV files are available to download from the **Catalogs** pa
 
 
 
+### Handling catalog errors
+
+What happens when a CSV file contains invalid data depends on whether you're creating a new catalog or updating an existing one.
+
+#### Creating a catalog with invalid data
+
+If the CSV file has an error when you create a catalog, such as an item ID with characters that aren't allowed, a row with too many columns, or a value that doesn't match the column's data type, Braze stops the import and doesn't keep any of the imported items. Braze still creates the catalog, but it shows a red **Invalid** tag on the **Catalogs** page, along with an error banner. Select **View Error Details** in the banner to see what went wrong.
+
+You can't use an invalid catalog:
+
+- You can't select the catalog name to open it, so you can't upload a corrected CSV file to it.
+- It doesn't appear in the catalog selectors in the message composer.
+- If a message references it with the `catalog_items` Liquid tag, the message is aborted with the error "Catalog has import errors".
+
+To resolve this:
+
+1. Note the errors listed under **View Error Details**.
+2. Delete the invalid catalog. You can delete it from the **Catalogs** page if you have the Delete Catalogs permission, or use the [Delete catalog](https://www.braze.com/docs/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog) endpoint.
+3. Correct the data in your CSV file.
+4. Create a new catalog with the corrected CSV file.
+
+#### Updating a catalog with invalid data
+
+If the CSV file has an error when you add or edit items in an existing catalog, Braze applies a partial update. It stops at the row with the error and keeps the items already in the catalog. The catalog doesn't get an **Invalid** tag, and you can keep using it.
+
+A yellow banner appears on the catalog's page that reads, "Something went wrong with updating *catalog name*. We were able to perform a partial update." Select **View Details** to see how many rows Braze processed, the row where the update stopped, and the reason.
+
+To resolve this:
+
+1. Correct the data in your CSV file, starting with the row that the banner reports.
+2. Upload the corrected CSV file to the catalog. The banner clears after an update that processes without errors.
+
+
 
 
 ### Prerequisites

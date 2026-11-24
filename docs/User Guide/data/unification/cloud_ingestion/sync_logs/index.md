@@ -30,9 +30,9 @@ Sync logs also provide the following details for each sync:
 * **Sync name:** The name of the sync configuration.  
 * **Run ID:** A unique identifier for a specific execution of the sync. Select this ID to view more details or to reference a sync run with Braze Support.   
 * **Status:** The status of the run (success, partial success, error, running).  
-* **New rows read from source:** The number of new rows pulled from your data warehouse for this run.  
+* **New rows read from source:** The number of new rows pulled from your source for this run.  
 * **Results:** A breakdown of how many rows succeeded or failed within the run.  
-* **Last "UPDATED_AT":** The timestamp of the most recent record processed in this sync run.  
+* **Last "UPDATED_AT":** The timestamp of the most recent record processed in this sync run. File storage syncs don't use an `UPDATED_AT` column to choose what to ingest, so don't use this value to tell which files a run processed. For more information, see [How do `UPDATED_AT` and `last_timestamp_synced` work for file storage syncs?](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/faqs#updated-at-file-storage)  
 * **Run start time:** When the sync job began.  
 * **Run duration:** The total time the sync job took to complete.
 
@@ -56,6 +56,12 @@ To investigate a specific sync, select the relevant **Run ID** from the Sync log
 
 This section summarizes the selected run, including its start time, end time, duration, and the total number of rows read from the source. It also provides a count of how many rows succeeded and how many resulted in an error.
 
+For file storage syncs, this section shows a **View file names** link that lists the files the run ingested, instead of an `UPDATED_AT` value.
+
+#### How errors are counted
+
+The **Error** count in the run summary includes rows that failed validation or were rejected during sync. Rows dropped as in-batch duplicate IDs are not included in this count and don't affect the run status (Success vs Partial Success), because the latest value for each ID was successfully synced. To view duplicate ID rows, filter **Rows processed in this run** by status **Error** and look for error type `DUPLICATE_ID`, or export using **Export rows** > **All rows** and filter on `ERROR_TYPE = DUPLICATE_ID`.
+
 ### Rows processed in this run
 
 This table provides row-level visibility into the data processed during the sync, allowing you to validate individual records.
@@ -66,7 +72,7 @@ This table provides row-level visibility into the data processed during the sync
   * **ID:** The user identifiers (such as `external_id`, `email`, or `alias_name`) used to match the record to a Braze user profile.  
   * **Status:** The individual processing status for that row (**Success** or **Error**).  
   * **Source payload:** A link to view the data payload.  
-  * **Error reason:** If the status is **Error**, this column provides a message explaining why the row failed to sync.
+  * **Error reason:** If the status is **Error**, this column provides a message explaining why the row failed to sync. For catalog syncs, rows with error type `DUPLICATE_ID` indicate that a newer row with the same ID was processed in the same batch. The latest value was synced successfully, so these rows are recorded for traceability but don't count as errors in the run summary.
 
 #### Viewing payloads
 
@@ -76,8 +82,8 @@ To see the exact data sent to Braze for a specific row, select **View payload** 
 
 Select **Export rows** to export the row-level logs for a sync run. Then, choose to export by:
 
-* **Rows with errors:** Downloads a file containing only the rows that had an **Error** status.
-* **All rows:** Downloads a file containing every row processed in the run.
+* **Rows with errors:** Downloads a file containing only the rows that had an **Error** status. This export is only available when the run has rows counted as errors (validation failures or rejections). Rows with error type `DUPLICATE_ID` (in-batch duplicates) are not included in this export because they don't count as errors in the run summary. To export duplicate ID rows, use **All rows** instead.
+* **All rows:** Downloads a file containing every row processed in the run, including success, error, and duplicate ID rows. The export includes `ERROR_TYPE` and `ERROR_MESSAGE` columns to identify any issues.
 
 
 

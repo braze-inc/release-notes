@@ -33,7 +33,7 @@ braze.initialize(apiKey, {
 **Note:**
 
 
-The Braze Initialization tag for [Google Tag Manager (GTM)](https://developers.google.com/tag-platform/tag-manager) does not currently support `contentSecurityNonce`. See [Strict CSP (nonce-based) environments](https://www.braze.com/docs/developer_guide/sdk_integration/google_tag_manager?sdktab=web#web_strict-csp) in the Google Tag Manager guide for a workaround using a **Custom HTML** tag.
+If you use [Google Tag Manager (GTM)](https://developers.google.com/tag-platform/tag-manager), the Braze Initialization tag has a **Content Security Nonce** field for the `contentSecurityNonce` option. For setup steps, see [Strict CSP (nonce-based) environments](https://www.braze.com/docs/developer_guide/sdk_integration/google_tag_manager?sdktab=web#web_strict-csp) in the Google Tag Manager guide.
 
 
 

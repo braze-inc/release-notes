@@ -32,7 +32,7 @@ If you delete a [Delay](https://www.braze.com/docs/user_guide/messaging/canvas/c
 
 Note that when you launch a Canvas initially, Braze enqueues the users for the Message step they're at, not all subsequent messages in the Canvas. If you make an edit to the Canvas after launch, some users may already be enqueued and may not pick up the changes. If you stop the Canvas, duplicate it, then change it and launch this new version, the Canvas re-evaluates all users again, not just users that have not already been enqueued.
 
-See the [Best practices](#best-practices) section for specific editing use cases. In general, it's best practice to avoid editing live Canvases as there may be unexpected behavior.
+See [Post-launch edits and Experiment Paths](#post-launch-edits-and-experiment-paths) for how edits affect Experiment Paths, Winning Path, and Personalized Paths. See the [Best practices](#best-practices) section for specific editing use cases. In general, it's best practice to avoid editing live Canvases as there may be unexpected behavior.
 
 **Expand for original Canvas editor details**
 
@@ -142,6 +142,51 @@ When variants are deleted from a Canvas, the following occurs:
 
 Canvas entry properties aren't templated into steps when sent. This means that when Canvas entry properties are edited after a Canvas has launched, these changes only apply to new users who enter the Canvas. If your Canvas allows users to re-enter the Canvas, any users who re-enter are determined by the updated Canvas entry properties.
 
+## Post-launch edits and Experiment Paths {#post-launch-edits-and-experiment-paths}
+
+You can change many Canvas settings and step contents after launch. [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step) limit what you can change on an existing step. You can't delete a path on a launched Experiment Path step. You can't add, remove, or reorder groups in an existing [Audience Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/audience_paths) or [Action Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/action_paths) step.
+
+An in-progress [Winning Path](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step/winning_path) or Personalized Paths experiment keeps running when you select **Update Canvas** and leave that experiment unchanged. The experiment is abandoned when the update changes any of the following:
+
+- Conversion event used to choose the winner
+- Experiment window
+- Paths in the experiment, or a path's next step
+- Audience distribution percentages
+
+Turning **Winning Path** or **Personalized Paths** off abandons an in-progress experiment.
+
+**Update Canvas** applies your edits to the live Canvas. To store the previous Canvas, select **Save previous version to history (view only)**. Use [Canvas version history](https://www.braze.com/docs/user_guide/messaging/canvas/managing_canvases/canvas_version_history) to view that copy and its analytics.
+
+New users, and users who have not reached an edited step, follow the updated Canvas. Users who are already queued for a Message step may not receive edits to that step. The guidance earlier on this page explains who receives a new or edited step.
+
+To run Winning Path again after it is abandoned, disconnect the existing Experiment Path and add a new one, or duplicate the Canvas and launch the duplicate. Users who enter after the experiment is abandoned continue through the percentage split. A user can enter a different path from the one they used during the experiment.
+
+### Edit type and impact
+
+Use this table to see which edits are allowed after launch and how they affect Experiment Paths.
+
+| Edit type | Allowed after launch | Impact on users and Experiment Paths |
+| --- | --- | --- |
+| Message copy, delays, triggers, and audiences on existing steps | Yes | Users already queued for a Message step may not get the edit. |
+| Canvas name, tags, entry settings, rate limiting, quiet hours, and target audience | Yes | These edits leave an in-progress Winning Path or Personalized Paths experiment running. |
+| Conversion events | No | Experiment Paths require conversion events. Duplicate the Canvas to add conversion events, then add Experiment Paths. |
+| Add, remove, or reorder groups inside Audience Paths or Action Paths | No | Create a new Audience Paths or Action Paths step and connect the paths to that step, or duplicate the Canvas. |
+| Add a path on an Experiment Path step | Yes | You can add a path until the step has four paths besides the control group. Adding a path abandons an in-progress Winning Path or Personalized Paths experiment. |
+| Delete a path or add a control group on a launched Experiment Path step | No | You can still change the audience distribution across the existing paths. |
+| Experiment Path audience distribution percentages | Yes | Re-entering users may be redistributed when percentages change. Changing the percentages abandons an in-progress Winning Path or Personalized Paths experiment. |
+| Canvas control variant percentage | Decrease only | You can't increase the control variant percentage after launch. Decreasing control may redistribute users among variants. |
+| Turn on Winning Path | Yes | After the experiment starts, the conversion event and experiment window can't be changed. Turning **Winning Path** off abandons the experiment. |
+| Delete a step that an Experiment Path uses as its next step | Yes | Deleting that step abandons an in-progress Winning Path or Personalized Paths experiment. |
+| Personalized Paths | Existing steps only | Existing steps that use Personalized Paths keep routing users. Personalized Paths isn't available for new Experiment Path steps. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Post-launch edit types and Experiment Paths impact" }
+
+**Note:**
+
+
+If you still need the experiment results, wait until the experiment finishes before you change its conversion event, window, paths, next step, or audience distribution. To run Winning Path again, add a new Experiment Path step or duplicate the Canvas.
+
+
+
 ## Best practices
 
 Check out these best practices to keep in mind when editing or adding to your Canvas after it's been launched.
@@ -163,9 +208,7 @@ By creating or editing disconnected steps, you can make changes to these indepen
 
 ### Experiment Path step
 
-If your Canvas has an active or in-progress Winning Path experiment and you update the active Canvas, the experiment ends. This applies even if you don't update the Experiment Path step. To restart the experiment, disconnect the existing Experiment Path and launch a new one, or duplicate the Canvas and launch the duplicate. Otherwise, users flow through the experiment path without optimization.
-
-Existing Experiment Path steps that use Personalized Paths continue to run. Updating an active Canvas also ends an in-progress Personalized Paths experiment.
+For how post-launch edits affect Experiment Paths, Winning Path, and Personalized Paths—including which edits abandon an in-progress experiment—see [Post-launch edits and Experiment Paths](#post-launch-edits-and-experiment-paths).
 
 ### Time delays
 

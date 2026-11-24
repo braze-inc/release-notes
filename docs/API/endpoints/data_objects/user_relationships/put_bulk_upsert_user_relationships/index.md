@@ -1,4 +1,4 @@
-<div id='api_eeojmgetqvrn' class='api_div' data-search-keywords='create or replace user relationships in bulk records type_name object_id rel_kind user external_id attributes role source_import_id status record_count errors index id parameter message'>
+<div id='api_apxnwzkbuptg' class='api_div' data-search-keywords='create or replace user relationships in bulk records type_name object_id rel_kind user external_id attributes role source_import_id status record_count errors index id parameter message'>
 <h1 id="create-or-replace-user-relationships-in-bulk">Create or replace user relationships in bulk</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/data_objects/user_relationships</p>

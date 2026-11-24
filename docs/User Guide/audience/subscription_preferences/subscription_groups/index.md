@@ -89,10 +89,6 @@ Email subscription groups can appear in an [email preference center](https://www
 
 For SMS and WhatsApp, manage subscription state through the REST API, opt-in flows, keywords (SMS), user profile, and other channel-specific methods in each [channel section](#channel-specific-behavior).
 
-## Subscription group analytics
-
-To review size, opt-ins, opt-outs, user deletions, and campaign or Canvas attribution for any subscription group, go to **Audience** > **Subscription Group Management** > **Subscription Analytics**. For filters, summary tiles, and charts, see [Subscription Analytics](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups/subscription_analytics).
-
 ## Channel-specific behavior
 
 ### Email subscription groups
@@ -114,8 +110,6 @@ On **Subscription Group Management**, the **Subscription group timeseries** char
 These counts reflect membership in that group, not global email subscription state. They can differ from a segment that uses **Email Subscription Status is Unsubscribed**, which reflects [global email subscription state](https://www.braze.com/docs/user_guide/channels/email/subscriptions#subscription-states).
 
 Today's subscription group size isn't calculated by default. If your date range includes today, select **Calculate today's statistics** to add today's value to the timeseries. For very large workspaces, Braze may display estimated counts instead of exact counts.
-
-For opt-ins, opt-outs, user deletions, and campaign or Canvas attribution across channels, see [Subscription Analytics](https://www.braze.com/docs/user_guide/audience/subscription_preferences/subscription_groups/subscription_analytics).
 
 For footers, unsubscribe pages, global email subscription management, and subscription group unsubscribe links, see [Email subscriptions](https://www.braze.com/docs/user_guide/channels/email/subscriptions).
 

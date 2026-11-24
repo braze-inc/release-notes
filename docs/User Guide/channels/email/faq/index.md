@@ -336,6 +336,13 @@ For more information, see [Bounces and invalid emails](https://www.braze.com/doc
 
 ### How do I troubleshoot email deliverability issues?
 
+**Tip:**
+
+
+If authentication may be the cause, confirm [SPF, DKIM, and DMARC](https://www.braze.com/docs/user_guide/channels/email/email_setup/authentication) for your sending domain. After you connect Google Postmaster, use the [Deliverability Center](https://www.braze.com/docs/user_guide/analytics/dashboards/deliverability_center) for Gmail user-reported spam and delivery errors.
+
+
+
 If your emails are delayed, deferred, or bouncing, review the [Message Activity Log](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log) for bounce and deferral details, then identify where the issue occurs in the delivery chain. Common deliverability problems fall into four categories:
 
 #### Reading ESP rate-limit responses
