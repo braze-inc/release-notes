@@ -314,6 +314,7 @@
 - [Smartling](https://www.braze.com/docs/partners/message_personalization/localization/smartling)
 - [Snapchat Audience Sync](https://www.braze.com/docs/partners/canvas_audience_sync/snapchat_audience_sync)
 - [Snowflake](https://www.braze.com/docs/partners/data_and_analytics/data_warehouses/snowflake)
+- [Snowflake Cortex AI](https://www.braze.com/docs/partners/ai_model_providers/snowflake_cortex)
 - [Snowplow](https://www.braze.com/docs/partners/data_and_analytics/customer_data_platform/snowplow)
 - [Splio](https://www.braze.com/docs/partners/data_and_analytics/cohort_import/splio)
 - [StackAdapt](https://www.braze.com/docs/partners/additional_channels_and_extensions/additional_channels/advertising/stackadapt)

@@ -57,6 +57,34 @@ All user profile data (custom events, custom attributes, custom data) is stored 
 
 
 
+## Descriptions {#descriptions}
+
+You can add a description to a custom attribute or custom event to leave a note for your team. A description can be up to 1,000 characters. This limit applies only to the description. It's separate from the [255-character limit for string attribute values](https://www.braze.com/docs/user_guide/data/activation/custom_data/data_types#custom-attribute-data-types).
+
+For steps, see [Add descriptions](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes#add-descriptions) for custom attributes and [Add descriptions](https://www.braze.com/docs/user_guide/data/activation/events/custom_events#adding-descriptions) for custom events.
+
+## Find where custom data is used {#find-usage}
+
+Before you change or blocklist custom data, check where it's used.
+
+### Custom attributes and custom events
+
+To see where a custom attribute or custom event is used, go to **Data Settings** > **Custom Attributes** or **Custom Events**, select the checkbox next to it, and then select **View usage report**.
+
+The usage report covers the following:
+
+- It lists unarchived segments, enabled campaigns, and enabled Canvases that reference the custom attribute or custom event, such as in a filter or trigger.
+- It lists direct references only. If a campaign or Canvas targets a segment that uses the custom attribute, the report lists the segment but not the campaign or Canvas. To find those campaigns and Canvases, check the segment's **Messaging Use** section.
+- It doesn't include uses of Liquid. If a message references a custom attribute only in Liquid, the report doesn't list it.
+
+For more information, see [View usage reports](https://www.braze.com/docs/user_guide/data/activation/attributes/custom_attributes#view-usage-reports) for custom attributes and [View usage reports](https://www.braze.com/docs/user_guide/data/activation/events/custom_events#viewing-usage-reports) for custom events.
+
+### Segments
+
+To see where a segment is used, open the segment and go to its **Messaging Use** section. For details, see [Viewing a segment's messaging use](https://www.braze.com/docs/user_guide/audience/segments/managing_segments#messaging-use).
+
+A segment that uses the **Segment Membership** filter can't be included in another segment. This prevents a cycle where Segment A includes Segment B, which then includes Segment A again. For details, see [Create a segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment).
+
 ## Data type detection across environments
 
 Braze automatically detects the data type of a custom attribute based on the first value it receives. If your development environment sends a numeric value like `100` first, the attribute is stored as a number. If your production environment's first value arrives as a string (such as `"100"` wrapped in quotes), the attribute is stored as a string.

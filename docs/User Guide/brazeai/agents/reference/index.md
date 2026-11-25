@@ -314,6 +314,14 @@ Braze sends attached files with every agent invocation, including Agent Console 
 
 Context files differ from [brand guidelines](https://www.braze.com/docs/user_guide/administer/global/workspace_settings/brand_guidelines): brand guidelines are synthesized workspace settings, while context files are documents you upload directly to a single agent. For setup steps, see [Add context](https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents#add-resources).
 
+### Examples
+
+Use context files for reference material that's too long to keep in your instructions. Each agent stores its own copy of a file, so when the source changes, upload the new version to every agent that uses it. Consider the following examples:
+
+- **Use your industry's terminology:** A collectibles brand attaches a glossary of hobby terms to its reactivation copywriting agents. The instructions tell each agent to use the glossary's terms and not invent new ones.
+- **Recommend only from a list you approve:** A streaming service attaches a CSV of its top shows to a Catalog Agent. For each show in the catalog, the agent picks three similar titles from the file and copies their IDs exactly, so every recommendation is a real title.
+- **Use internal material as background:** A digital health company attaches its retention strategy and past marketing copy to a re-engagement agent. The instructions tell the agent to use the files only to shape tone and angle, and to never mention them in its output.
+
 ## User-specific interaction history {#user-history}
 
 A user's interaction data includes their recently received campaign and Canvas messages by channel, the contents of each message, and whether the user interacted with each message. You can include this as user-specific context for an agent to reference when it's invoked for a user in Canvas. User-specific interaction history can help influence an agent to write copy that resonates with each user when its job is to write personalized message copy.

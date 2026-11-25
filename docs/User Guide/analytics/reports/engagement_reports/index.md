@@ -67,18 +67,18 @@ Engagement reports aggregate data per campaign or Canvas, not at the workspace l
 **Note:**
 
 
-*Sends to Carrier* is deprecated, but will continue to be supported for users who already have it.
+*Sends to Carrier* is deprecated, so don't add it to new SMS reports. Reports that already include it continue to return that statistic. See the [metrics glossary](https://www.braze.com/docs/user_guide/analytics/metrics_glossary) for SMS/MMS and RCS metric definitions.
 
 
 
 | Channel | Available statistics |
 | ------| --------------|
-| Email | Sends, Opens, Unique Opens, Clicks, Unique Clicks, Click to Open, Unsubscribes, Bounces, Delivered, Reported Spam |
-| Push  | Sends, Opens, Influenced Opens, Bounces, Body Clicks |
-| Web Push | Sends, Opens, Bounces, Body Clicks |
-| In-app message | Impressions, Clicks, First Button Clicks, Second Button Clicks |
-| Webhook  |  Sends, Errors |
-| SMS | Sends, Sends to Carrier, Confirmed Deliveries, Delivery Failures, Rejections |
+| Email | *Sends*, *Opens*, *Unique Opens*, *Clicks*, *Unique Clicks*, *Click to Open*, *Unsubscribes*, *Bounces*, *Delivered*, *Reported Spam* |
+| Push  | *Sends*, *Opens*, *Influenced Opens*, *Bounces*, *Body Clicks* |
+| Web Push | *Sends*, *Opens*, *Bounces*, *Body Clicks* |
+| In-app message | *Impressions*, *Clicks*, *First Button Clicks*, *Second Button Clicks* |
+| Webhook  |  *Sends*, *Errors* |
+| SMS | *Sends*, *Deliveries*, *Delivery Failures*, *Rejections*, *Sends to Carrier* (deprecated) |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Step 3: Add statistics #add-statistics-to-your-reports" }
 
 ### Step 4: Complete report setup

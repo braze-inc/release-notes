@@ -1,4 +1,4 @@
-<div id='api_emagjxpiilis' class='api_div' data-search-keywords='replace data object'>
+<div id='api_cofcihzwieue' class='api_div' data-search-keywords='replace data object'>
 <h1 id="replace-data-object">Replace data object</h1>
 <div class="api_type"><div class="method put ">put</div>
 <p>/data_objects/objects/{type_name}/{object_id}</p>

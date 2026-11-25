@@ -2,7 +2,7 @@
 
 > [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) is a purpose-built SQL cloud data warehouse provided as Software-as-a-Service (SaaS). Snowflake provides a data warehouse that is faster, easier to use, and far more flexible than traditional data warehouse offerings. With Snowflake's unique and patented architecture, it's easy to amass all of your data, enable rapid analytics, and derive data-driven insights for all of your users.
 
-Braze offers two integrations with Snowflake. Together, they provide a complete, bidirectional data pipeline between your Braze and Snowflake environments.
+Braze offers Data Sharing and Cloud Data Ingestion with Snowflake for a bidirectional data pipeline, plus Snowflake Cortex AI for Agent Console models.
 
 ## Choosing an integration
 
@@ -30,6 +30,17 @@ For setup instructions, see [Snowflake Data Sharing](https://www.braze.com/docs/
 
 To learn more about Snowflake's data sharing, see [Introduction to Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work).
 
+### Snowflake Cortex AI for Agent Console
+
+[Snowflake Cortex AI](https://docs.snowflake.com/user-guide/snowflake-cortex/llm-functions) provides serverless access to large language models (LLMs), including Claude and GPT. Connecting your Snowflake account to Braze lets you run Agent Console agents on Cortex-hosted models, with Snowflake billing token usage to your Snowflake account.
+
+Use Snowflake Cortex AI when you want to:
+- Run Agent Console agents on Claude and GPT models hosted in Snowflake
+- Keep your LLM usage and billing within your Snowflake environment
+- Use your existing Snowflake account and governance policies for AI workloads
+
+For setup instructions, see [Snowflake Cortex AI](https://www.braze.com/docs/partners/ai_model_providers/snowflake_cortex).
+
 ## Identity resolution with Snowflake
 
 Snowflake offers an Identity Resolution Data (IDR) solution accelerator that enables you to build first-party and third-party identity resolution graphs directly in your Snowflake environment. This solution uses deterministic matching, fuzzy matching, probabilistic and machine learning (ML) matching, and large language model (LLM) adjudication to resolve customer identities across your data sources.
@@ -44,9 +55,9 @@ This workflow allows you to maintain a single, deduplicated view of each custome
 
 To get started with Snowflake's IDR solution accelerator, work with your Snowflake account team or refer to the [IDR solution accelerator documentation](https://other-docs.snowflake.com/en/solution-accelerators/identity-resolution).
 
-## Prerequisites
+## Prerequisites for Data Sharing
 
-Before you can use this feature, you'll need to complete the following:
+Before you can use Data Sharing, you'll need to complete the following:
 
 | Requirement | Description |
 | ----------- | ----------- |

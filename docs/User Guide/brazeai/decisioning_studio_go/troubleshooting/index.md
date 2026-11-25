@@ -12,14 +12,14 @@ Reporting takes a few days to populate after you launch, and the data lags by ab
 
 ### Decisioning Studio click numbers are lower than my other email reports
 
-This is expected. The agent learns only from genuine clicks, so before any click counts it passes validation filters that screen out automated activity and opt-out-related clicks. That makes Decisioning Studio totals lower than raw email reports. The comparison between the Decisioning Studio group and the random control stays valid, because the same filtering applies to both.
+This is expected. The agent learns only from genuine clicks, so before any click counts it passes validation filters that screen out automated activity and opt-out-related clicks. That makes Decisioning Studio totals lower than raw email reports. The comparison between the **AI-Driven** and **Random** groups stays valid, because the same filtering applies to both. For how the learning signal differs from the email performance table, see [Why the learning signal reads lower than your click rate](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/reporting#why-the-learning-signal-reads-lower-than-your-click-rate).
 
 ### My agent looks like it's losing, or results are flat
 
 Usually, this means the agent is still training, or it's being compared against the wrong benchmark. Check the following in order:
 
 1. Is the agent **Fully trained**? If it's still in an earlier stage, you're reading the training period. Wait.
-2. What are you comparing against? The clean comparison is the agent compared with its random control. A still-training agent usually trails a mature business-as-usual program at first. That gap is expected. See [Measuring Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/measuring).
+2. What are you comparing against? The clean comparison is the **AI-Driven** group compared with the **Random** group. A still-training agent usually trails a mature business-as-usual program at first. That gap is expected. For how to read the clean comparison, see [Reporting for Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/reporting). For how to set up a fair BAU comparison, see [Compare Decisioning Studio Go against your business-as-usual program](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/measuring).
 3. Is the audience generating enough genuine clicks? A small or low-engagement audience trains slowly.
 4. Are your creatives meaningfully different? If the options read the same to the agent, it has little to optimize. See [Creative setup and management](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/creative_setup).
 
@@ -59,4 +59,4 @@ A new user receives their first send on the first day they enter the audience, a
 
 ## When to contact support
 
-Reach out to your customer success manager or solutions consultant if, after you confirm these checks, your agent is **Fully trained** and still underperforming its random control, or if your agent's setup behaves in a way this guide doesn't explain.
+Reach out to your customer success manager or solutions consultant if, after you confirm these checks, your agent is **Fully trained** and still underperforming the **Random** group, or if your agent's setup behaves in a way this guide doesn't explain.

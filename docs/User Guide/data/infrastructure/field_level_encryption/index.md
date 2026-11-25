@@ -67,6 +67,7 @@ When updating email address in Braze, you should use the hashed email value wher
     - `/campaigns/trigger/send`
     - `/canvas/trigger/send`
     - `/transactional/v1/campaigns/{campaign_id}/send`
+    - `/email/spam/remove`
 - Adding or updating users via CSV
 
 **Note:**

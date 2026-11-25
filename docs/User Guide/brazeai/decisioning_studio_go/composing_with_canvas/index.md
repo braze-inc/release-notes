@@ -22,7 +22,7 @@ A common setup is a journey that sends both email and SMS. Hand email to the age
 
 ## Use Canvas to run a business-as-usual comparison
 
-A Canvas [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step) step is the recommended way to test the agent against your current business-as-usual (BAU) program. Route one path to BAU and the other into the agent's segment. This is a clean, random split. See [Measuring Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/measuring) for how to set up a fair comparison.
+A Canvas [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step) step is the recommended way to test the agent against your current business-as-usual (BAU) program. Route one path to BAU and the other into the agent's segment. This is a clean, random split. See [Compare Decisioning Studio Go against your business-as-usual program](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/measuring) for how to set up a fair comparison.
 
 ## Segment hygiene checklist
 

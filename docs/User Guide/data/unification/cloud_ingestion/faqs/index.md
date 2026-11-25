@@ -22,6 +22,10 @@ Try updating your integration with the correct database configuration or create 
 
 The catalog set up in the integration doesn't exist in the Braze catalog. A catalog can be removed after the integration was set up. To resolve the issue, either update the integration to use a different catalog or create a new catalog that matches the catalog name in the integration.
 
+## What are the "Database" and "Schema" fields for a Microsoft Fabric source?
+
+Microsoft Fabric is a CDI data warehouse source, not a schema type. The **Database** and **Schema** fields tell Braze where in your Fabric warehouse to find your source table or view. For what to enter in each field, see [Fabric fields in Braze](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sources/microsoft_fabric#fabric-fields).
+
 ## Why was I emailed: "Row errors in your CDI sync"?
 
 This type of email means that some of your data could not be processed during the sync. To find out the specific error, you can review the logs in Braze by going to **CDI** > **Sync Log**.

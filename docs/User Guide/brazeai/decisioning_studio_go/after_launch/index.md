@@ -14,7 +14,7 @@ Your agent moves through five stages, and reporting always shows which one it's 
 | **Waiting for signal** | The agent is sending, but hasn't gathered enough genuine clicks to begin training. | Make sure the program is generating engagement. If it sits here a long time, the audience may be too small or too low-engagement. See [The two things that move your agent forward](#the-two-things-that-move-your-agent-forward). |
 | **In training** | The agent has enough signal and is actively exploring combinations. Performance can look close to random here. This is expected. | Don't read results yet. Let the agent run. |
 | **Partially trained** | The agent is personalizing, but results aren't yet robust enough to treat as final. | You can start watching the trend, but don't make decisions on it yet. |
-| **Fully trained** | The agent is fully trained, and results are robust. | This is the stage to read lift, report it, and make decisions. |
+| **Fully trained** | The agent is fully trained, and results are robust. | This is the stage to read uplift, report it, and make decisions. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="The training stages" }
 
 ## The two things that move your agent forward
@@ -45,7 +45,7 @@ Don't judge results, resize the audience, or change the control split while the 
 Before concluding the agent isn't working, confirm:
 
 - Is it **Fully trained**? If not, you're reading the training period. Wait.
-- What are you comparing against? The clean, built-in comparison is the agent compared with its random control. If you're comparing against a mature business-as-usual program, expect an early gap. See [Measuring Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/measuring).
+- What are you comparing against? The clean, built-in comparison is the **AI-Driven** group compared with the **Random** group. If you're comparing against a mature business-as-usual program, expect an early gap. For more information, see [Reporting for Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/reporting) and [Compare Decisioning Studio Go against your business-as-usual program](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/measuring).
 - Is the audience generating enough genuine clicks? If it's stuck in **Waiting for signal** or slow to leave **In training**, the audience may be too small or too low-engagement.
 - Are your creatives meaningfully different? If the options all read the same to the agent, it has little to optimize. See [Creative setup and management](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/creative_setup).
 
@@ -53,4 +53,4 @@ Before concluding the agent isn't working, confirm:
 
 Plan to run an agent for at least 30 days, and ideally keep it always on. Thirty days gives most programs enough time to clear training and produce a credible read. Running continuously lets the agent keep improving. You can support seasonal campaigns by swapping in new creatives.
 
-After your agent is **Fully trained**, see [Measuring Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/measuring) for how to read lift and compare against your current program.
+After your agent is **Fully trained**, see [Reporting for Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/reporting) for how to read uplift. To compare against your current program, see [Compare Decisioning Studio Go against your business-as-usual program](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/measuring).

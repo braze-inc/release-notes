@@ -36,11 +36,11 @@ The agent does not learn from custom data such as custom attributes or warehouse
 
 ## Audiences and control groups
 
-### What's the difference between the Decisioning Studio group and the random control group?
+### What's the difference between the AI-Driven group and the Random group?
 
-The Decisioning Studio group receives AI-optimized email content. The agent picks the best variant for each user. The random control group receives randomly chosen combinations of the same options you configured, with no optimization.
+The **AI-Driven** group receives AI-optimized email content. The agent picks the best variant for each user. The **Random** group, also called the random control, receives randomly chosen combinations of the same options you configured, with no optimization.
 
-Both groups respect the constraints you've configured (for example, if you've said not to repeat a subject line within 15 days, that rule applies to the random control as well). Comparing the two groups gives you a clean measure of the agent's lift.
+Both groups respect the constraints you've configured (for example, if you've said not to repeat a subject line within 15 days, that rule applies to the **Random** group as well). Comparing the two groups gives you a clean measure of the agent's uplift.
 
 ### Is the random control a holdout group of users who receive no email?
 
@@ -50,9 +50,9 @@ No. Random control users still receive emails. They receive randomly chosen comb
 
 Two reasons. First, it gives you ongoing, real-time measurement of how much the agent is outperforming a random baseline. Second, the agent uses the random control's behavior as part of its learning signal.
 
-The minimum random control size is 5%. We recommend scaling the split to your audience size: a larger audience can measure lift reliably with a smaller control group, while a smaller audience needs a proportionally larger one.
+The minimum random control size is 5%. We recommend scaling the split to your audience size: a larger audience can measure uplift reliably with a smaller control group, while a smaller audience needs a proportionally larger one.
 
-| Audience size | Recommended split (Decisioning Studio / random control) |
+| Audience size | Recommended split (AI-Driven / Random) |
 | --- | --- |
 | 20,000 – 100,000 | 80 / 20 |
 | 100,000 – 1,000,000 | 90 / 10 |
@@ -119,7 +119,7 @@ The agent enters a training period, and reporting always shows which stage it's 
 | **Waiting for signal** | Sending, but not enough genuine clicks yet to begin training. |
 | **In training** | Enough signal to train; the agent explores combinations. Performance can look close to random here—this is expected. |
 | **Partially trained** | Personalizing, but results aren't yet robust enough to read as final. |
-| **Fully trained** | Fully trained; results are robust. This is the point to trust and report on lift. |
+| **Fully trained** | Fully trained; results are robust. This is the point to trust and report on uplift. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="What happens after I launch?" }
 
 A new user receives their first send on the first day they enter the audience, and the agent begins personalizing for them the day after. Emails keep sending the whole time the agent learns—there's no waiting period.
@@ -128,7 +128,7 @@ For what to expect through each stage and how to read early results, see [What t
 
 ### My agent looks flat, or like it's losing, in the first couple of weeks. Is something wrong?
 
-Usually, no. Early on, the agent is still training, and it's typically being compared against a mature program that has already been optimized over a long period. That early gap is expected. Two things gate a trustworthy read: the agent needs enough genuine clicks to train, and it needs time to move into full personalization. Wait until the agent is **Fully trained** before judging results, and make sure the comparison is fair. For more information, see [Measuring Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/measuring).
+Usually, no. Early on, the agent is still training, and it's typically being compared against a mature program that has already been optimized over a long period. That early gap is expected. Two things gate a trustworthy read: the agent needs enough genuine clicks to train, and it needs time to move into full personalization. Wait until the agent is **Fully trained** before judging results, and make sure the comparison is fair. For more information, see [Compare Decisioning Studio Go against your business-as-usual program](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/measuring).
 
 ### Can I edit the agent after launch?
 
@@ -137,7 +137,7 @@ Yes. Audience, schedule, creatives, and constraints can all be updated post-laun
 **Note:**
 
 
-Two audience changes trigger a reshuffle of users between the Decisioning Studio and random control groups: changing the control-versus-AI split proportion, and swapping the segment. Avoid making these casually mid-flight. Creative, schedule, and constraint edits don't reshuffle the audience.
+Two audience changes trigger a reshuffle of users between the **AI-Driven** and **Random** groups: changing the split proportion, and swapping the segment. Avoid making these casually mid-flight. Creative, schedule, and constraint edits don't reshuffle the audience.
 
 
 
@@ -147,26 +147,26 @@ You can add, remove, or change variants the same way you set them up originally.
 
 ## Reporting and results
 
-### What metric does the agent optimize for, and what does the lift number mean?
+### What metric does the agent optimize for, and what does the uplift number mean?
 
-The agent optimizes *Unique Customers Who Clicked Daily*, the number of distinct users who click. Lift is the difference between the Decisioning Studio group and the random control on this measure.
+The agent optimizes *Unique customers who clicked per day*, the share of the audience that clicked at least one email on a given day. Each person counts once per day. Uplift is the relative change between the **AI-Driven** group's rate and the **Random** group's rate on this measure.
 
 ### Does Decisioning Studio Go reporting match what I see in my email analytics elsewhere in Braze?
 
-The numbers may differ. The agent learns only from genuine clicks, so before any click counts, it passes through independent validation filters that screen out automated activity and opt-out-related clicks. This makes Decisioning Studio click totals lower than raw email reports. The relative comparison between the Decisioning Studio group and the random control stays valid, because the same filtering is applied to each group equally.
+The numbers may differ. The agent learns only from genuine clicks, so before any click counts, it passes through independent validation filters that screen out automated activity and opt-out-related clicks. This makes Decisioning Studio click totals lower than raw email reports. The comparison between the **AI-Driven** and **Random** groups stays valid, because the same filtering is applied to each group equally. For how the learning signal differs from the email performance table, see [Why the learning signal reads lower than your click rate](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/reporting#why-the-learning-signal-reads-lower-than-your-click-rate).
 
 ### How do I compare Decisioning Studio Go against my business-as-usual (BAU) program?
 
-The built-in comparison is always the agent compared with its random control. To compare against your existing BAU program, you set that up yourself by splitting the audience into a BAU group and a Decisioning Studio Go group. Two ways to do it:
+The built-in comparison is always the **AI-Driven** group compared with the **Random** group. To compare against your existing BAU program, you set that up yourself by splitting the audience into a BAU group and an agent group. Two ways to do it:
 
 - **In a Canvas:** use an [Experiment Paths](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/experiment_step) step to route users down a BAU path or into the agent's segment. This is the recommended approach.
-- **Outside of a Canvas:** use [random bucket numbers](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers) to carve out a BAU group and a Decisioning Studio Go group.
+- **Outside of a Canvas:** use [random bucket numbers](https://www.braze.com/docs/user_guide/messaging/ab_testing/concepts/random_bucket_numbers) to carve out a BAU group and an agent group.
 
-For a fair test, keep send behavior equal across groups (match the agent's frequency to BAU, or set it to the BAU average) and make sure the BAU creatives are also loaded as options in the agent. Remember that a still-training agent usually trails a mature BAU early. See [Measuring Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/measuring) for the full walkthrough.
+For a fair test, keep send behavior equal across groups (match the agent's frequency to BAU, or set it to the BAU average) and make sure the BAU creatives are also loaded as options in the agent. Remember that a still-training agent usually trails a mature BAU early. See [Compare Decisioning Studio Go against your business-as-usual program](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/measuring) for the full walkthrough.
 
 ### How can I see which group a user was in, or analyze results in my warehouse?
 
-Each send writes identifiers to `message_extras` on the `users.messages.email.Send` event: `ds_go_agent_id` (which agent), `ds_go_agent_regime` (AI-driven or random control), and `ds_go_rec_id` (the decision's ID). These are written automatically. To use them in your warehouse, confirm your export includes `message_extras` on the send event, then join to opens and clicks on `user_id` and `dispatch_id`.
+Each send writes identifiers to `message_extras` on the `users.messages.email.Send` event: `ds_go_agent_id` (which agent), `ds_go_regime` (`offerfit` for AI-Driven, `control` for Random, or `bau` for Business as Usual), and `offerfit_rec_id` (the decision's ID). These are written automatically. To use them in your warehouse, confirm your export includes `message_extras` on the send event, then join to opens and clicks on `user_id` and `dispatch_id`. For the full field list, see [Reporting for Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/reporting).
 
 ### When is my reporting fully populated?
 

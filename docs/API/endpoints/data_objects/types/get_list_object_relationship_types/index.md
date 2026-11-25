@@ -1,4 +1,4 @@
-<div id='api_dxuzknabvigq' class='api_div' data-search-keywords='list object relationship types'>
+<div id='api_zajkrnbiyivp' class='api_div' data-search-keywords='list object relationship types'>
 <h1 id="list-object-relationship-types">List object relationship types</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/data_objects/types/{type_name}/object_relationship_types</p>

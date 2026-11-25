@@ -8,7 +8,7 @@ For an overview of how Decisioning Studio Go works, see [BrazeAI Decisioning Stu
 
 Confirm you have the following ready:
 
-- A [segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment) for your entry audience that isn't actively used in another Canvas or campaign. We recommend a minimum audience of 20,000 users; the agent supports audiences up to a maximum of 40,000,000. Smaller audiences can run, but they learn more slowly and show less reliable lift.
+- A [segment](https://www.braze.com/docs/user_guide/audience/segments/creating_a_segment) for your entry audience that isn't actively used in another Canvas or campaign. We recommend a minimum audience of 20,000 users; the agent supports audiences up to a maximum of 40,000,000. Smaller audiences can run, but they learn more slowly and show less reliable uplift.
 - At least one email template.
 - The variant content you want to test, such as alternative subject lines, calls to action (CTAs), and hero images. You can create variants during setup, but having them ready speeds up configuration.
 - Workspace access with permissions to configure AI Decisioning agents.
@@ -28,14 +28,14 @@ The agent optimizes your email creative to maximize genuine engagement, measured
 
 Select the Braze segment your agent sends to. Users in this segment are automatically split into two groups:
 
-- **Decisioning Studio group:** Receives AI-optimized email content. The agent picks the best variant combination for each user.
-- **Random control group:** A permanent measurement group that receives randomly chosen combinations of the same options you configured, on allowed days within the same schedule and constraints. The only difference from the Decisioning Studio group is that the choice is random rather than AI-optimized. This group is required, and it is how lift is measured. Users in this group still receive email.
+- **AI-Driven group:** Receives AI-optimized email content. The agent picks the best variant combination for each user.
+- **Random group:** A permanent measurement group, also called the random control, that receives randomly chosen combinations of the same options you configured, on allowed days within the same schedule and constraints. The only difference from the **AI-Driven** group is that the choice is random rather than AI-optimized. This group is required, and it is how uplift is measured. Users in this group still receive email.
 
 ### Choose your control group size
 
-The recommended split scales with your audience size: a larger audience can measure lift reliably with a smaller control group, while a smaller audience needs a proportionally larger one to stay statistically meaningful. The minimum control group size is 5%.
+The recommended split scales with your audience size: a larger audience can measure uplift reliably with a smaller control group, while a smaller audience needs a proportionally larger one to stay statistically meaningful. The minimum control group size is 5%.
 
-| Audience size | Recommended split (Decisioning Studio / random control) |
+| Audience size | Recommended split (AI-Driven / Random) |
 | --- | --- |
 | 20,000 – 100,000 | 80 / 20 |
 | 100,000 – 1,000,000 | 90 / 10 |
@@ -174,7 +174,7 @@ When your agent launches, it enters a training period, and its reporting shows w
 | **Waiting for signal** | The agent is sending, but hasn't yet gathered enough genuine clicks to begin training. |
 | **In training** | The agent has enough signal and is exploring combinations. It is expected that performance can look close to random during this phase. |
 | **Partially trained** | The agent is personalizing, but results aren't yet robust enough to read as final. |
-| **Fully trained** | The agent is fully trained and results are robust. This is the point to trust and report on lift. |
+| **Fully trained** | The agent is fully trained and results are robust. This is the point to trust and report on uplift. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Training period" }
 
 Two things move the agent forward: accumulated genuine clicks (training begins after enough clean clicks accrue, and results become robust at a higher threshold) and calendar time (personalization becomes meaningful roughly from the start of the second week of training). A low-volume audience can stay in **Waiting for signal** for several days. This can indicate it needs more engagement volume.
@@ -189,7 +189,7 @@ The reporting interface offers three main views:
 
 | View | Description |
 | --- | --- |
-| **Performance** | Click rates, engagement metrics, and the lift of the Decisioning Studio group versus the random control. The headline learning metric is *Unique Customers Who Clicked Daily*. |
+| **Performance** | Email performance, the agent learning signal, and the uplift of the **AI-Driven** group compared with the **Random** group. The headline learning metric is *Unique customers who clicked per day*. For more information, see [Reporting for Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/reporting). |
 | **Configuration** | The current settings of the agent—useful for confirming what's running. |
 | **Agent preferences** | Counts of how often each variant has been chosen by the agent, showing what the agent is gravitating toward for your audience. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Reporting views" }
@@ -200,7 +200,7 @@ Element-level breakdowns show how individual subject lines, CTAs, and images per
 
 Go to the **Configuration** view to modify audience, schedule, creatives, or constraints after launch. Both variants and dimensions can be changed after launch. The Configuration view shows a summary of changes; promote them before they take effect. Adding new variants keeps the agent's training on existing variants and adds the new options to its menu.
 
-Changing the control-versus-AI split proportion or swapping the segment triggers a reshuffle of users between the Decisioning Studio and random control groups. Creative, schedule, and constraint edits do not reshuffle the audience.
+Changing the split proportion or swapping the segment triggers a reshuffle of users between the **AI-Driven** and **Random** groups. Creative, schedule, and constraint edits do not reshuffle the audience.
 
 ### Pause or stop
 

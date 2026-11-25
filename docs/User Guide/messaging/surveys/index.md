@@ -103,7 +103,7 @@ Long-form text fields in iOS in-app message surveys are temporarily limited to 2
 
 
 
-Long text responses are available in reporting and exports, but they can't be logged as user profile custom attributes—so you can't segment users by a long-form response value directly. See [Limitations](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages/surveys#limitations) on either channel page for details.
+Long text responses are available in reporting and exports, but they can't be logged as user profile custom attributes—so you can't segment users by a long-form response value directly. See [Limitations](#limitations) for the full list.
 
 In Currents, long-form responses use `answer_type = 'free_form_text'` with the text in `answer_long_string`.
 
@@ -283,6 +283,88 @@ Sync submitters to a CRM or email service provider as leads, or use the event to
 
 
 
+## Limitations {#limitations}
+
+These limits apply to Braze surveys built with the drag-and-drop editor on landing pages and in-app messages (select **Survey** as the message type). They don't describe third-party survey partners or the older [Simple Survey](https://www.braze.com/docs/user_guide/channels/in_app_messages/message_types/simple_survey) template in the traditional in-app message editor.
+
+| Topic | Support |
+| --- | --- |
+| Answer-based branching or skip logic | Not supported. You can't show or hide later questions based on a previous answer. Use [multi-step landing page forms](#multi-step-landing-page-forms) or the in-app message page manager only for a fixed page order. |
+| Maximum checkbox selections | Supported. On a **Checkbox group** block, set **Maximum Choices** (and optionally **Minimum Choices** when the field is required) in the properties panel. For property details, see [Drag-and-drop editor blocks](https://www.braze.com/docs/user_guide/messaging/design_and_edit/editor_blocks). |
+| Maximum choices per question | Radio button group and checkbox group blocks support up to 25 choices each. |
+| Questions per survey | Up to 100 questions per survey. |
+| Long-form text | Up to 1,000 characters (250 on iOS in-app message surveys). Long-form responses can't be logged as custom attributes. |
+| Embedding a survey on an external website | There is no standalone survey embed or iframe widget. Publish a [landing page survey](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages/surveys) and link to its URL, or deliver an [in-app message survey](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop/surveys) through the Braze Web SDK. |
+| Retargeting by individual answer values | Survey answers aren't available as segment filters or campaign triggers on their own. To retarget by what someone answered, [log the response as a custom attribute](#completion-data). You can also filter or trigger on survey completion. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Survey limitations" }
+
+Channel pages also list channel-specific limits under [Limitations](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages/surveys#limitations).
+
+## NPS from email
+
+Email doesn't host a full Braze survey. To collect an NPS score in email, use the [email NPS Survey block](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/nps_survey). The score is recorded on a linked survey landing page where respondents can finish related follow-up questions.
+
+## What gets recorded on survey completion {#completion-data}
+
+When someone answers a drag-and-drop survey, Braze can write data in three places: the user profile (optional per question), survey analytics in the dashboard, and Currents (when Currents is enabled).
+
+| Destination | What is written | Notes |
+| --- | --- | --- |
+| User profile | Custom attributes you configure with **Save to user profile** on each form block | Email and phone capture always save to the profile when submitted. Long-form text can't be saved as a custom attribute. |
+| Survey analytics | Response counts, completion status, and per-question breakdowns | Includes complete and partially complete responses. Partial submissions have a six-hour grace period before they appear. |
+| Currents **Survey Response** event (`users.messages.survey.Response`) | One event per answered question in a survey session | For the full field reference, see [Survey Response events](https://www.braze.com/docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events#survey-response-events) in the Currents event glossary. |
+| Landing page engagement events | **Landing Page Impression** and **Landing Page Click** | Landing page surveys only. Completing a survey does **not** also fire **Landing Page Form Submission** (that event is for non-survey forms). |
+| In-app message engagement events | Standard in-app message impression and click metrics for the campaign or Canvas step | Survey answers for drag-and-drop surveys use **Survey Response** events, not the Simple Survey `button_id` click pattern. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Survey completion data destinations" }
+
+Respondent-level exports (CSV from survey analytics, Currents, Query Builder, SQL Segment Extensions, and Snowflake Data Sharing) include the same per-question answer fields. For field definitions and example queries, see [Survey Response events](#survey-response-events).
+
+### Map `question_id` to question labels {#map-question-ids}
+
+Each survey question has two identifiers:
+
+| Field | What it is | Where you set or see it |
+| --- | --- | --- |
+| `question_id` | Stable UUID for the question | Currents, SQL, and CSV exports. Assigned when the question is created; it doesn't change if you edit the label. |
+| `question_reporting_id` | The **Identifier for reporting** value for that question | Currents and SQL. In the editor, enter **Identifier for reporting** in the block properties panel. The same value appears as the question label in survey analytics and as the CSV column header (with the UUID in parentheses). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Question ID mapping" }
+
+To map exported `question_id` values back to human-readable labels:
+
+1. In the editor, note each question's **Identifier for reporting**.
+2. In Currents or SQL, join or filter on `question_id`, and use `question_reporting_id` (or the CSV header) as the display label.
+3. Prefer grouping analytics by `question_reporting_id` or `question_id` rather than by on-page position—especially when [randomized choice order](#randomized-choice-order) is on.
+
+## Reporting edge cases {#reporting-edge-cases}
+
+### Removed questions
+
+If you remove a question after the survey has collected responses:
+
+- The question is no longer shown to new respondents.
+- Prior responses remain in analytics and exports.
+- Survey analytics mark the question as **Removed** and show the removal date with the historical response count.
+- CSV exports prefix the column header with `[Deleted]`.
+
+Deleted individual choices on radio button, checkbox group, and dropdown questions follow the same pattern: they're hidden from new respondents, and historical selections can still appear in reporting.
+
+### Test submissions
+
+Campaign and Canvas **test sends** that deliver an in-app message survey use a test tracking payload. Braze skips those submissions when writing survey response data, so they don't appear in survey analytics or Currents **Survey Response** events.
+
+**Note:**
+
+
+Submitting a published landing page survey URL in a browser (including opening the live page while QA-ing) is a real submission for the user who completes it. Use a test user profile when you need to exercise the live page without affecting production segments.
+
+
+
+### Partial and page-level responses
+
+- A response stays **Partially complete** until the respondent selects the final submit control—even when the only recorded answer is an NPS score from an [email NPS Survey block](https://www.braze.com/docs/user_guide/channels/email/drag_and_drop/nps_survey).
+- Multi-step landing page surveys can record answers as the user moves through steps; incomplete sessions still count toward partially complete analytics after the grace period.
+- Landing page impression metrics are separate from survey response metrics and aren't joined on `user_id`. For details, see [Landing page events](#landing-page-events).
+
 ## Frequently asked questions
 
 ### How do I start a survey, including NPS or CSAT?
@@ -292,6 +374,18 @@ On the message composition page for a landing page or in-app message, select **S
 ### Where do I find surveys across channels?
 
 Go to **Messaging** > **Surveys** to review surveys across landing pages, campaigns, and Canvases. If you don't see that page, contact your Braze account manager.
+
+### Can I branch to different questions based on an answer?
+
+No. Braze surveys don't support answer-based branching or skip logic. Keep a fixed question order, or split follow-up questions into a later campaign or Canvas step that targets users by a logged custom attribute.
+
+### Can I limit how many checkboxes a user selects?
+
+Yes. On a **Checkbox group** block, set **Maximum Choices** in the properties panel. When the field is required, you can also set **Minimum Choices**.
+
+### How do I put a survey on my website?
+
+Publish a landing page survey and share its URL, or show an in-app message survey to users who have the Braze Web SDK. Braze doesn't provide a separate survey iframe or embed snippet.
 
 ## Related articles
 
