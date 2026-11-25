@@ -37,9 +37,9 @@ Plan on prep time to define the segment and gather content, then one working ses
 | Prepare | Define the segment, gather two to five approaches, and get brand or legal sign-off. | This usually spans a few days. |
 | Set up | Create the winback decisioning agent and add your content. | One working session, on your own or with your customer success manager. |
 | Launch | Resolve the warnings on the **Review** screen, then launch. | The winback decisioning agent sends on the next eligible day. |
-| Learn | Leave the audience and the control split unchanged. | The status is **Learning**. Results can look similar to the random control while the winback decisioning agent tries combinations. |
+| Learn | Leave the audience and the control split unchanged. | The status is **Learning**. Results can look similar to the **Random** group while the winback decisioning agent tries combinations. |
 | Personalize | Check reporting, and add subject lines, CTAs, or images when you have new ones. | The status moves to **Personalization started**. The winback decisioning agent keeps learning after that. |
-| Read results | Compare the Decisioning Studio group with the random control group. | Read the comparison after personalization has started. For how to read lift, see [Measuring Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/measuring). |
+| Read results | Compare the **AI-Driven** group with the **Random** group. | Read the comparison after personalization has started. For how to read uplift, see [Reporting for Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/reporting). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="What to expect over time" }
 
 ## Build a winback decisioning agent
@@ -128,15 +128,15 @@ Before you launch, preview the combinations the agent is allowed to send. For ea
 
 1. Resolve every warning on the **Review** screen, then select **Launch**. The winback decisioning agent moves from **Draft** to **Active**.
 2. A few days later, confirm sends are going out. The status moves from **Preparing first send** to **Learning**.
-3. While the status is **Learning**, keep the segment and the control split as they are. Changing either one reshuffles who is in the Decisioning Studio group and who is in the random control group. Adding subject lines, CTAs, or images does not.
-4. Early results can look similar to the random control. The winback decisioning agent is still trying combinations.
+3. While the status is **Learning**, keep the segment and the control split as they are. Changing either one reshuffles who is in the **AI-Driven** group and who is in the **Random** group. Adding subject lines, CTAs, or images does not.
+4. Early results can look similar to the **Random** group. The winback decisioning agent is still trying combinations.
 
 ### Read results and choose a second program
 
-1. After the status is **Personalization started**, compare clicks for the Decisioning Studio group with the random control group. The winback decisioning agent keeps learning after personalization starts, so treat the first read as a checkpoint.
+1. After the status is **Personalization started**, compare *Unique customers who clicked per day* for the **AI-Driven** group with the **Random** group. For more information, see [Reporting for Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/reporting). The winback decisioning agent keeps learning after personalization starts, so treat the first read as a checkpoint.
 2. Open **Agent preferences** to see which angles, subject lines, and images the winback decisioning agent chooses most often.
 3. Add new options based on what's working. Plan a full library refresh no more than once a month. Targeted swaps can happen sooner. See [Creative setup and management](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/creative_setup).
-4. Connect the click lift to the outcome you care about, such as customers who return, purchase again, or start a session.
+4. Connect the click uplift to the outcome you care about, such as customers who return, purchase again, or start a session.
 5. Use the same approach on a second program, such as a newsletter, a loyalty reminder, or a repeat-purchase email.
 
 ## Brainstorm ideas with Operator
@@ -154,4 +154,4 @@ See the [prompt library](https://www.braze.com/docs/user_guide/brazeai/operator/
 
 ## Related articles
 
-<ul class="guide_tiles"><li><a href="/docs/user_guide/brazeai/decisioning_studio_go/setup"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Set up your Decisioning Studio Go agent</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/decisioning_studio_go/creative_setup"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Creative setup and management</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/decisioning_studio_go/after_launch"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">What to expect after launch</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/decisioning_studio_go/measuring"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Measuring Decisioning Studio Go</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/decisioning_studio_go/faq"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Decisioning Studio Go FAQ</span></span></div></a></li></ul>
+<ul class="guide_tiles"><li><a href="/docs/user_guide/brazeai/decisioning_studio_go/setup"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Set up your Decisioning Studio Go agent</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/decisioning_studio_go/creative_setup"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Creative setup and management</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/decisioning_studio_go/after_launch"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">What to expect after launch</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/decisioning_studio_go/measuring"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Compare against your BAU program</span></span></div></a></li><li><a href="/docs/user_guide/brazeai/decisioning_studio_go/faq"><div class="guide_tile"><span class="guide_tile_text"><span class="guide_tile_title">Decisioning Studio Go FAQ</span></span></div></a></li></ul>

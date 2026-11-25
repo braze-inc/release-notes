@@ -1,4 +1,4 @@
-<div id='api_tlcbcugdxqof' class='api_div' data-search-keywords='update user’s subscription group status subscription_group_id subscription_state external_id phone use_double_opt_in_logic email message'>
+<div id='api_cuzzslalorto' class='api_div' data-search-keywords='update user’s subscription group status'>
 <h1 id="update-users-subscription-group-status">Update user’s subscription group status</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/subscription/status/set</p>
@@ -18,212 +18,464 @@
 
 <p><a href="https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd">View in Postman</a></p>
 
-<h2 id="prerequisites">Prerequisites</h2>
+<div class="api-reference light-mode" id="endpoint-reference">
+  <div id="scalar-subscription_groups_post_update_user_subscription_group_status"></div>
+</div>
 
-<p>To use this endpoint, you’ll need an <a href="/docs/api/basics#rest-api-key-permissions">API key</a> with the <code class="language-plaintext highlighter-rouge">subscription.status.set</code> permission.</p>
+<script>
+  (function () {
+    // Update the integrity hash whenever the pinned version changes.
+    var scalarSrc = "https://cdn.jsdelivr.net/npm/@scalar/api-reference@1.76.2/dist/browser/standalone.js";
+    var scalarIntegrity = "sha384-mCh2A/B6vkfhiHyzwBZm7lbFmEK5fE/96Kbtk+RH1zei1P/XEt0I2MCiG6WfZdor";
+    var specUrl = "/docs/assets/api/openapi/subscription_groups_post_update_user_subscription_group_status.yaml";
+    var baseUrl = "/docs";
+    var mountSelector = "#" + "scalar-subscription_groups_post_update_user_subscription_group_status";
 
-<p><strong>Note:</strong></p>
+    // Scalar renders tooltips in its own containers at the end of <body>.
+    var brandVariables = [
+      ".api-reference.light-mode, .api-reference .light-mode, body > .scalar-app {",
+      "  --scalar-color-accent: #801ed7;",
+      "  --scalar-color-1: #212123;",
+      "  --scalar-color-2: #475467;",
+      "  --scalar-border-color: #dddde2;",
+      "  --scalar-font: \"Aribau Grotesk API Reference\", \"Aribau Grotesk Regular Fallback\", Arial, Helvetica, sans-serif;",
+      "  --scalar-font-code: \"Roboto Mono\", \"Roboto Mono Fallback\", monospace;",
+      "}"
+    ].join("\n");
 
-<p>If you’re interested in using this endpoint with <a href="/docs/user_guide/channels/line/message_users/subscription_groups">LINE subscription groups</a>, contact your customer success manager.</p>
+    function loadScalar() {
+      if (window.Scalar && typeof window.Scalar.createApiReference === "function") {
+        return Promise.resolve(window.Scalar);
+      }
+      if (!window.__brazeScalarPromise) {
+        window.__brazeScalarPromise = new Promise(function (resolve, reject) {
+          var script = document.createElement("script");
+          script.src = scalarSrc;
+          script.integrity = scalarIntegrity;
+          script.crossOrigin = "anonymous";
+          script.addEventListener("load", function () { resolve(window.Scalar); });
+          script.addEventListener("error", reject);
+          document.body.appendChild(script);
+        });
+      }
+      return window.__brazeScalarPromise;
+    }
 
-<h2 id="how-braze-handles-orphaned-subscription-states">How Braze handles orphaned subscription states</h2>
+    function countLeadingSpaces(line) {
+      var match = line.match(/^ */);
+      return match ? match[0].length : 0;
+    }
 
-<p>An orphaned subscription state is a subscription state stored for a phone number or email address that isn’t associated with any user profile. For SMS, email, WhatsApp, and LINE, Braze handles orphaned subscription states as follows:</p>
+    function isBlockScalarKey(line) {
+      return /^(\s*)(?:"[^"]+"|'[^']+'|[A-Za-z0-9_.-]+):\s*[|>][+-]?\s*$/.test(line);
+    }
 
-<ul>
-  <li>If a user is deleted and is the only user associated with a given phone number or email address, the subscription state for that phone number or email address is deleted immediately.</li>
-  <li>If you call <code class="language-plaintext highlighter-rouge">/subscription/status/set</code> or <code class="language-plaintext highlighter-rouge">/v2/subscription/status/set</code> with a phone number or email address that is not currently associated with any user profile, Braze stores that subscription state for up to 30 days, after which it is automatically deleted.
-    <ul>
-      <li>If <code class="language-plaintext highlighter-rouge">use_double_opt_in_logic</code> is set to <code class="language-plaintext highlighter-rouge">true</code> and no user profile is associated with the provided phone number, the subscription state is not updated; a user must exist to enter the double opt-in workflow.</li>
-    </ul>
-  </li>
-  <li>If a new user profile is created with a phone number or email address that has an orphaned subscription state stored for it, that user inherits the stored subscription state but only within the 30-day window. This 30-day grace period is intentional and exists to handle race conditions when creating a user and setting its channel identifier’s subscription state happen in separate API calls. An example of this race condition is when a <code class="language-plaintext highlighter-rouge">/subscription/status/set</code> request is processed for a phone number before the <code class="language-plaintext highlighter-rouge">/users/track</code> request creating the corresponding user profile is processed.</li>
-</ul>
+    function isYamlKeyLine(trimmedLine, indent, blockIndent) {
+      if (indent > blockIndent) { return false; }
+      if (/^(?:"[^"]+"|'[^']+'|[A-Za-z0-9_.-]+):\s*/.test(trimmedLine)) { return true; }
+      if (/^-\s+(?:"[^"]+"|'[^']+'|[A-Za-z0-9_.-]+):\s*/.test(trimmedLine)) { return true; }
+      return false;
+    }
 
-<h2 id="rate-limit">Rate limit</h2>
+    function sanitizeYamlBlockScalars(rawYaml) {
+      var lines = rawYaml.replace(/\r\n/g, "\n").split("\n");
+      var blockIndent = null;
+      var contentIndent = null;
 
-<!---DEFAULT RATE LIMIT-->
+      for (var i = 0; i < lines.length; i += 1) {
+        var line = lines[i];
+        var trimmed = line.trim();
+        var indent = countLeadingSpaces(line);
 
-<!---Additional if statement for Messaging endpoints-->
+        if (blockIndent !== null) {
+          if (trimmed === "") {
+            continue;
+          }
 
-<!---Additional if statement for Translation endpoints-->
+          if (isYamlKeyLine(trimmed, indent, blockIndent)) {
+            blockIndent = null;
+            contentIndent = null;
+          } else if (indent < contentIndent) {
+            lines[i] = " ".repeat(contentIndent) + trimmed;
+            continue;
+          }
+        }
 
-<!---Additional if statement for /messages/send endpoint-->
+        if (blockIndent === null && isBlockScalarKey(line)) {
+          blockIndent = indent;
+          contentIndent = indent + 2;
+        }
+      }
 
-<h2 id="request-body">Request body</h2>
+      return lines.join("\n");
+    }
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre>Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
-</pre></td></tr></tbody></table></code></pre></div></div>
+    // Liquid is disabled for the YAML assets, so resolve the site.baseurl
+    // token here before Scalar renders the Markdown links.
+    function loadSpec() {
+      return fetch(specUrl, { credentials: "same-origin" }).then(function (response) {
+        if (!response.ok) { throw new Error("Failed to load " + specUrl); }
+        return response.text();
+      }).then(function (rawSpec) {
+        var withBaseUrl = rawSpec.replace(/\{\{\s*site\.baseurl\s*\}\}/g, baseUrl);
+        return sanitizeYamlBlockScalars(withBaseUrl);
+      });
+    }
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-   </span><span class="nl">"subscription_group_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">id</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">your</span><span class="w"> </span><span class="err">subscription</span><span class="w"> </span><span class="err">group</span><span class="p">,</span><span class="w">
-   </span><span class="nl">"subscription_state"</span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">available</span><span class="w"> </span><span class="err">values</span><span class="w"> </span><span class="err">are</span><span class="w"> </span><span class="s2">"unsubscribed"</span><span class="w"> </span><span class="err">(not</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">subscription</span><span class="w"> </span><span class="err">group)</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="s2">"subscribed"</span><span class="w"> </span><span class="err">(in</span><span class="w"> </span><span class="err">subscription</span><span class="w"> </span><span class="err">group)</span><span class="p">,</span><span class="w">
-   </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(required*</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">strings)</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">external</span><span class="w"> </span><span class="err">ID</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">users</span><span class="p">,</span><span class="w"> </span><span class="err">may</span><span class="w"> </span><span class="err">include</span><span class="w"> </span><span class="err">up</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="err">IDs</span><span class="p">,</span><span class="w">
-   </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="err">(required*</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">strings</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">E.</span><span class="mi">164</span><span class="w"> </span><span class="err">format)</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">phone</span><span class="w"> </span><span class="err">number</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">(must</span><span class="w"> </span><span class="err">include</span><span class="w"> </span><span class="err">at</span><span class="w"> </span><span class="err">least</span><span class="w"> </span><span class="err">one</span><span class="w"> </span><span class="err">phone</span><span class="w"> </span><span class="err">number</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">at</span><span class="w"> </span><span class="err">most</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="err">phone</span><span class="w"> </span><span class="err">numbers)</span><span class="p">,</span><span class="w">
-   </span><span class="nl">"use_double_opt_in_logic"</span><span class="p">:</span><span class="w"> </span><span class="err">(optional</span><span class="p">,</span><span class="w"> </span><span class="err">boolean)</span><span class="w"> </span><span class="err">defaults</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">`</span><span class="kc">false</span><span class="err">`;</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">`subscription_state`</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="s2">"subscribed"</span><span class="p">,</span><span class="w"> </span><span class="err">set</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">`</span><span class="kc">true</span><span class="err">`</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">enter</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">into</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">SMS</span><span class="w"> </span><span class="err">double</span><span class="w"> </span><span class="err">opt-in</span><span class="w"> </span><span class="err">workflow</span><span class="p">,</span><span class="w">
-   </span><span class="err">//</span><span class="w"> </span><span class="err">SMS</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">RCS</span><span class="w"> </span><span class="err">subscription</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">-</span><span class="w"> </span><span class="err">you</span><span class="w"> </span><span class="err">must</span><span class="w"> </span><span class="err">include</span><span class="w"> </span><span class="err">one</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">external_id</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">phone</span><span class="w">
- </span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-<p>* SMS and RCS subscription groups: Braze accepts only <code class="language-plaintext highlighter-rouge">external_id</code> or <code class="language-plaintext highlighter-rouge">phone</code>.</p>
+    // Every spec lists the docs home page as `info.license`, which Scalar shows
+    // as a "Braze Documentation" link that repeats the site navigation.
+    function withoutLicense(specText) {
+      return specText.replace(/^ {2}license:\n(?: {4}.*\n)*/m, "");
+    }
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre>Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
-</pre></td></tr></tbody></table></code></pre></div></div>
+    function specTitle(specText) {
+      var match = specText.match(/^ {2}title: (.*)$/m);
+      return match ? match[1].trim() : "";
+    }
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-   </span><span class="nl">"subscription_group_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">id</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">your</span><span class="w"> </span><span class="err">subscription</span><span class="w"> </span><span class="err">group</span><span class="p">,</span><span class="w">
-   </span><span class="nl">"subscription_state"</span><span class="p">:</span><span class="w"> </span><span class="err">(required</span><span class="p">,</span><span class="w"> </span><span class="err">string)</span><span class="w"> </span><span class="err">available</span><span class="w"> </span><span class="err">values</span><span class="w"> </span><span class="err">are</span><span class="w"> </span><span class="s2">"unsubscribed"</span><span class="w"> </span><span class="err">(not</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">subscription</span><span class="w"> </span><span class="err">group)</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="s2">"subscribed"</span><span class="w"> </span><span class="err">(in</span><span class="w"> </span><span class="err">subscription</span><span class="w"> </span><span class="err">group)</span><span class="p">,</span><span class="w">
-   </span><span class="nl">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="err">(required*</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">strings)</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">external</span><span class="w"> </span><span class="err">ID</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">users</span><span class="p">,</span><span class="w"> </span><span class="err">may</span><span class="w"> </span><span class="err">include</span><span class="w"> </span><span class="err">up</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="err">IDs</span><span class="p">,</span><span class="w">
-   </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="err">(required*</span><span class="p">,</span><span class="w"> </span><span class="err">array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">strings)</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">email</span><span class="w"> </span><span class="err">address</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">user</span><span class="w"> </span><span class="err">(must</span><span class="w"> </span><span class="err">include</span><span class="w"> </span><span class="err">at</span><span class="w"> </span><span class="err">least</span><span class="w"> </span><span class="err">one</span><span class="w"> </span><span class="err">email</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">at</span><span class="w"> </span><span class="err">most</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="err">emails)</span><span class="p">,</span><span class="w">
-   </span><span class="err">//</span><span class="w"> </span><span class="err">Email</span><span class="w"> </span><span class="err">subscription</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">-</span><span class="w"> </span><span class="err">you</span><span class="w"> </span><span class="err">must</span><span class="w"> </span><span class="err">include</span><span class="w"> </span><span class="err">one</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">external_id</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">email</span><span class="w">
-   </span><span class="err">//</span><span class="w"> </span><span class="err">Note</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">sending</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">email</span><span class="w"> </span><span class="err">address</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">linked</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">multiple</span><span class="w"> </span><span class="err">profiles</span><span class="w"> </span><span class="err">updates</span><span class="w"> </span><span class="err">all</span><span class="w"> </span><span class="err">relevant</span><span class="w"> </span><span class="err">profiles</span><span class="w">
- </span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-<p>* Email subscription groups: You must include either <code class="language-plaintext highlighter-rouge">email</code> or <code class="language-plaintext highlighter-rouge">external_id</code>.</p>
+    // The page already shows the endpoint name as its title, so the spec title
+    // labels the intro instead, and the operation summary is dropped so Scalar
+    // heads the operation with its route.
+    function forReference(specText) {
+      return withoutLicense(specText)
+        .replace(/^ {2}title: .*$/m, "  title: About this endpoint")
+        .replace(/^( {4}(?:get|post|put|patch|delete):\n) {6}summary: .*\n/m, "$1");
+    }
 
-<p>This property should not be used for updating a user’s profile information. Use the <a href="/docs/api/endpoints/user_data/post_user_track">/users/track</a> property instead.</p>
+    // The REST API answers CORS preflight requests only for GET and POST, so a
+    // browser can't send PUT, PATCH, or DELETE.
+    function usesPreflightedMethod(specText) {
+      return /^ {4}(put|patch|delete):\s*$/m.test(specText);
+    }
 
-<p><strong>Tip:</strong></p>
+    // Lists the description headings, request body, and responses in the page
+    // TOC. Scalar's own title and operation headings are left out.
+    // Scalar's headings sit under the page h1, so screen readers hear them one
+    // level deeper: the intro title and the operation route at level 2, the
+    // description headings at their tag level plus one, and Body and Responses
+    // at level 3.
+    function markTocHeadings(root, title) {
+      var signature = [];
+      var main = root.querySelector("main[aria-label]");
+      if (main && title) { main.setAttribute("aria-label", "API documentation for " + title); }
+      root.querySelectorAll("h1").forEach(function (heading) {
+        heading.setAttribute("role", "heading");
+        heading.setAttribute("aria-level", "2");
+      });
+      root.querySelectorAll('h2[id*="/description/"], h3[id*="/description/"]').forEach(function (heading) {
+        var level = Number(heading.tagName.charAt(1));
+        heading.setAttribute("role", "heading");
+        heading.setAttribute("aria-level", String(level + 1));
+        heading.setAttribute("data-toc-level", String(level));
+        heading.setAttribute("data-toc-label", heading.textContent.trim());
+        signature.push(heading.id);
+      });
+      root.querySelectorAll('h3:not([id*="/description/"])').forEach(function (heading) {
+        heading.setAttribute("role", "heading");
+        heading.setAttribute("aria-level", "2");
+      });
+      root.querySelectorAll("h4").forEach(function (heading) {
+        var text = heading.textContent.trim();
+        var section = /^Body\b/.test(text) ? { id: "endpoint-request-body", label: "Request body" }
+          : text === "Responses" ? { id: "endpoint-responses", label: "Responses" }
+          : null;
+        heading.setAttribute("role", "heading");
+        heading.setAttribute("aria-level", "3");
+        if (section) {
+          heading.id = section.id;
+          heading.setAttribute("data-toc-level", "2");
+          heading.setAttribute("data-toc-label", section.label);
+          signature.push(section.id);
+        }
+      });
+      return signature.join(",");
+    }
 
-<p><strong>Adding existing users to a subscription group:</strong> This endpoint is the recommended way to backfill or bulk-update subscription group membership for existing users. You can pass up to 50 <code class="language-plaintext highlighter-rouge">external_id</code>s, email addresses, or phone numbers per request. Users can also update their own subscription status through an <a href="/docs/user_guide/channels/email/subscriptions">email preference center</a> link.</p>
+    function headingSlug(text) {
+      return text.trim().toLowerCase().replace(/[^\w\- ]+/g, "").replace(/ /g, "-");
+    }
 
-<p><strong>Creating new users with a subscription group:</strong> When creating new users using the <a href="/docs/api/endpoints/user_data/post_user_track"><code class="language-plaintext highlighter-rouge">/users/track</code></a> endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.</p>
+    // Finds the element a fragment points to: an element with that id, or a
+    // description heading whose Scalar id ends in that slug or whose text
+    // slugs to it.
+    function findAnchorTarget(root, fragment) {
+      if (!fragment) { return null; }
+      var exact = document.getElementById(fragment);
+      if (exact) { return exact; }
+      var headings = root.querySelectorAll('[id*="/description/"]');
+      for (var i = 0; i < headings.length; i += 1) {
+        var heading = headings[i];
+        if (heading.id.split("/description/").pop() === fragment || headingSlug(heading.textContent) === fragment) {
+          return heading;
+        }
+      }
+      return null;
+    }
 
-<h2 id="request-parameters">Request parameters</h2>
+    function scrollToFragment(root, fragment) {
+      var target = findAnchorTarget(root, fragment);
+      if (target && root.contains(target)) {
+        target.scrollIntoView();
+        return true;
+      }
+      return false;
+    }
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" aria-label="Request parameters">
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Required</th>
-      <th>Data Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="/docs/api/identifier_types?tab=subscription%20group%20ids"><code class="language-plaintext highlighter-rouge">subscription_group_id</code></a></td>
-      <td>Required</td>
-      <td>String</td>
-      <td>The <code class="language-plaintext highlighter-rouge">id</code> of your subscription group.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">subscription_state</code></td>
-      <td>Required</td>
-      <td>String</td>
-      <td>Available values are <code class="language-plaintext highlighter-rouge">unsubscribed</code> (not in subscription group) or <code class="language-plaintext highlighter-rouge">subscribed</code> (in subscription group).</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">external_id</code></td>
-      <td>Required*</td>
-      <td>Array of strings</td>
-      <td>The <code class="language-plaintext highlighter-rouge">external_id</code> of the user or users, may include up to 50 <code class="language-plaintext highlighter-rouge">id</code>s.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">email</code></td>
-      <td>Required*</td>
-      <td>String or array of strings</td>
-      <td>The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50). <br /><br />If multiple users (<code class="language-plaintext highlighter-rouge">external_id</code>) in the same workspace share the same email address, then Braze updates all users that share the email address with the subscription group changes.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">phone</code></td>
-      <td>Required*</td>
-      <td>String in <a href="https://en.wikipedia.org/wiki/E.164">E.164</a> format</td>
-      <td>The phone number of the user, can be passed as an array of strings. Must include at least one phone number (up to 50). <br /><br />If multiple users (<code class="language-plaintext highlighter-rouge">external_id</code>) in the same workspace share the same phone number, then Braze updates all users that share the phone number with the same subscription group changes.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">use_double_opt_in_logic</code></td>
-      <td>Optional</td>
-      <td>Boolean</td>
-      <td>Applies only to SMS subscription groups; ignored for email and other subscription group types. Defaults to <code class="language-plaintext highlighter-rouge">false</code> if omitted. For SMS subscription groups, set to <code class="language-plaintext highlighter-rouge">true</code> to enter the user into the <a href="/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in">SMS double opt-in</a> workflow when their subscription status is set to <code class="language-plaintext highlighter-rouge">subscribed</code>. Users entered into the double opt-in workflow in this way receive at most one opt-in prompt reply message per day, regardless of the number of times they are entered into the workflow. If this parameter is omitted or set to <code class="language-plaintext highlighter-rouge">false</code>, users are subscribed without entering the double opt-in workflow.</td>
-    </tr>
-  </tbody>
-</table>
+    function resolveFragmentLinks(root) {
+      document.addEventListener("click", function (evt) {
+        var link = evt.target && evt.target.closest ? evt.target.closest('a[href^="#"]') : null;
+        if (!link) { return; }
+        var fragment = decodeURIComponent(link.getAttribute("href").substring(1));
+        if (!fragment || document.getElementById(fragment)) { return; }
+        if (scrollToFragment(root, fragment)) {
+          evt.preventDefault();
+          history.pushState(null, "", "#" + encodeURIComponent(fragment));
+        }
+      });
+      window.addEventListener("hashchange", function () {
+        scrollToFragment(root, decodeURIComponent(window.location.hash.substring(1)));
+      });
+    }
 
-<h2 id="example-requests">Example requests</h2>
+    function syncTocWithReference(root, title) {
+      var lastSignature = "";
+      var settleTimer = null;
+      new MutationObserver(function () {
+        clearTimeout(settleTimer);
+        settleTimer = setTimeout(function () {
+          var signature = markTocHeadings(root, title);
+          if (signature === lastSignature) { return; }
+          var isFirstRender = lastSignature === "";
+          lastSignature = signature;
+          document.dispatchEvent(new CustomEvent("api-reference:rendered"));
+          if (isFirstRender && window.location.hash) {
+            scrollToFragment(root, decodeURIComponent(window.location.hash.substring(1)));
+          }
+        }, 200);
+      }).observe(root, { childList: true, subtree: true });
+    }
 
-<h3 id="email">Email</h3>
+    // Log engagement to Braze via the Web SDK loaded site-wide in analytics.html.
+    // Tracking must never break the page, so guard every call.
+    function brazeLog(eventName, properties) {
+      try {
+        if (window.braze && typeof window.braze.logCustomEvent === "function") {
+          window.braze.logCustomEvent(eventName, properties || {});
+          if (typeof window.braze.requestImmediateDataFlush === "function") {
+            window.braze.requestImmediateDataFlush();
+          }
+        }
+      } catch (err) { /* no-op */ }
+    }
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-</pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-REST-API-KEY' \
---data-raw '{
-  "subscription_group_id": "subscription_group_identifier",
-  "subscription_state": "unsubscribed",
-  "external_id": "external_identifier",
-  "email": ["example1@example.com", "example2@example.com"]
-}
-'
-</pre></td></tr></tbody></table></code></pre></div></div>
+    // Readers can type their own values into the Test Request window, and its
+    // buttons repeat the request URL, so labels from outside the reference drop URLs.
+    function labelOf(el, fromReference) {
+      var text = (el.getAttribute("aria-label") || el.innerText || el.textContent || "").replace(/\s+/g, " ").trim();
+      if (!fromReference) { text = text.replace(/https?:\/\/\S*/g, "").trim(); }
+      return text.slice(0, 80);
+    }
 
-<h3 id="sms-and-rcs">SMS and RCS</h3>
+    function statusOf(el) {
+      var match = (el.textContent || "").match(/\b([1-5](?:\d\d|XX))\b/);
+      return match ? match[1] : "";
+    }
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-</pre></td><td class="rouge-code"><pre>curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-REST-API-KEY' \
---data-raw '{
-  "subscription_group_id": "subscription_group_identifier",
-  "subscription_state": "unsubscribed",
-  "external_id": "external_identifier",
-  "phone": ["+12223334444", "+11112223333"]
-}
-'
-</pre></td></tr></tbody></table></code></pre></div></div>
+    function referenceEvent(name, properties) {
+      var props = {
+        page_url: window.location.pathname,
+        page_title: document.title,
+        spec: specUrl.split("/").pop()
+      };
+      Object.keys(properties || {}).forEach(function (key) { props[key] = properties[key]; });
+      brazeLog(name, props);
+    }
 
-<h2 id="example-success-response">Example success response</h2>
+    var openMenu = "";
+    var testRequestEndpoint = "";
 
-<p>The status code <code class="language-plaintext highlighter-rouge">201</code> could return the following response body.</p>
+    function trackOption(target) {
+      var label = labelOf(target, openMenu === "server");
+      if (openMenu === "server") {
+        referenceEvent("api_server_selected", { server: label });
+      } else if (openMenu === "code_language") {
+        referenceEvent("api_code_language_selected", { language: label });
+      } else if (openMenu === "request_example") {
+        referenceEvent("api_request_example_selected", { example: label });
+      } else if (openMenu === "schema_variant") {
+        referenceEvent("api_schema_variant_selected", { variant: label });
+      } else {
+        referenceEvent("api_test_request_button_clicked", { button: label });
+      }
+      openMenu = "";
+    }
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
+    function inResponses(target) {
+      var heading = document.getElementById("endpoint-responses");
+      return !!heading && !!(heading.compareDocumentPosition(target) & Node.DOCUMENT_POSITION_FOLLOWING);
+    }
 
-<h2 id="troubleshooting-intermittent-update-failures">Troubleshooting intermittent update failures</h2>
+    function trackTestRequestClick(target) {
+      var label = labelOf(target, false);
+      openMenu = "test_request";
+      if (target.tagName === "INPUT") { return; }
+      if (/^Send\b/.test(label)) {
+        referenceEvent("api_send_request_clicked", { endpoint: testRequestEndpoint });
+      } else if (/^Close Client/.test(label)) {
+        referenceEvent("api_close_test_request_clicked", { endpoint: testRequestEndpoint });
+      } else if (target.getAttribute("role") === "tab") {
+        referenceEvent("api_test_request_tab_clicked", { tab: label });
+      } else {
+        referenceEvent("api_test_request_button_clicked", { button: label });
+      }
+    }
+
+    function trackReferenceButton(target) {
+      var label = labelOf(target, true);
+      openMenu = "";
+      if (target.classList.contains("scalar-card-checkbox-input")) {
+        referenceEvent("api_response_schema_toggle_clicked", { shown: target.checked });
+      } else if (target.tagName === "INPUT" || target.classList.contains("ask-agent-scalar-send")) {
+        return;
+      } else if (target.classList.contains("show-api-client-button")) {
+        var endpoint = target.textContent.match(/\((\w+) ([^)]+)\)/);
+        testRequestEndpoint = endpoint ? endpoint[1].toUpperCase() + " " + endpoint[2] : "";
+        referenceEvent("api_test_request_clicked", { endpoint: testRequestEndpoint });
+      } else if (/^Server:/.test(label)) {
+        openMenu = "server";
+        referenceEvent("api_server_menu_clicked");
+      } else if (target.classList.contains("client-libraries__select") || target.getAttribute("data-testid") === "client-picker") {
+        openMenu = "code_language";
+        referenceEvent("api_code_language_menu_clicked");
+      } else if (target.classList.contains("client-libraries")) {
+        referenceEvent("api_code_language_clicked", { language: label });
+      } else if (target.getAttribute("data-testid") === "example-picker") {
+        openMenu = "request_example";
+        referenceEvent("api_request_example_menu_clicked");
+      } else if (target.classList.contains("composition-selector")) {
+        openMenu = "schema_variant";
+        referenceEvent("api_schema_variant_menu_clicked");
+      } else if (target.classList.contains("anchor-copy-button") || target.classList.contains("copy-link-trailing")) {
+        referenceEvent("api_copy_link_clicked", { target: label });
+      } else if (label === "Copy as Markdown") {
+        referenceEvent("api_copy_as_markdown_clicked");
+      } else if (target.classList.contains("security-requirement-badge") || /^Authentication Required/.test(label)) {
+        referenceEvent("api_authentication_details_clicked");
+      } else if (target.classList.contains("parameter-item-trigger") && inResponses(target)) {
+        referenceEvent("api_response_details_clicked", { status: statusOf(target) });
+      } else if (target.classList.contains("parameter-item-trigger")) {
+        referenceEvent("api_parameter_details_clicked", { parameter: label });
+      } else if (target.getAttribute("role") === "tab" && target.classList.contains("tab")) {
+        referenceEvent("api_response_example_tab_clicked", { status: statusOf(target) });
+      } else {
+        referenceEvent("api_reference_button_clicked", { button: label });
+      }
+    }
+
+    var specForDownload = "";
+
+    // Scalar's download button exports the spec as rendered, with the intro
+    // title and without the summary and license, so it saves the spec as written.
+    function downloadSpec() {
+      var link = document.createElement("a");
+      link.href = URL.createObjectURL(new Blob([specForDownload], { type: "application/yaml" }));
+      link.download = specUrl.split("/").pop();
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(function () { URL.revokeObjectURL(link.href); }, 0);
+    }
+
+    // The Swagger-era event names stay, so existing reports keep working.
+    function trackReferenceClicks() {
+      if (window.__openapiTrackingBound) { return; }
+      window.__openapiTrackingBound = true;
+      document.addEventListener("click", function (evt) {
+        var target = evt.target && evt.target.closest ? evt.target.closest("a, button, [role=option], input") : null;
+        if (!target) { return; }
+        var inReference = !!target.closest(".api-reference");
+        var inScalar = inReference || !!target.closest(".scalar-app");
+        var page = window.location.pathname;
+        var href = target.getAttribute("href") || "";
+        var label = target.getAttribute("aria-label") || "";
+        if (href.indexOf("/assets/api/openapi/") !== -1 || /^Download OpenAPI Document/.test(label)) {
+          if (inReference && !href && specForDownload) {
+            evt.preventDefault();
+            evt.stopPropagation();
+            downloadSpec();
+          }
+          brazeLog("docs_api_spec_download_click", { spec_url: href || specUrl, page: page });
+        } else if (href.indexOf("/api/openapi_schema_validation") !== -1) {
+          brazeLog("docs_api_validation_guide_click", { page: page });
+        } else if (inReference && /^Copy .+ code$/.test(label)) {
+          brazeLog("docs_api_copy_code_click", {
+            block_type: /JSON/.test(label) ? "response" : "request",
+            spec: specUrl.split("/").pop(),
+            page: page
+          });
+        } else if (!inScalar) {
+          return;
+        } else if (target.tagName === "A" && href.indexOf("/braze_support") !== -1) {
+          referenceEvent("api_braze_support_clicked", { link_url: href });
+        } else if (target.tagName === "A") {
+          referenceEvent("api_reference_link_clicked", {
+            link_url: inReference ? href : href.split("?")[0],
+            link_text: labelOf(target, inReference)
+          });
+        } else if (target.getAttribute("role") === "option") {
+          trackOption(target);
+        } else if (target.closest(".scalar-app-layout")) {
+          trackTestRequestClick(target);
+        } else if (inReference) {
+          trackReferenceButton(target);
+        }
+      }, true);
+      document.addEventListener("submit", function (evt) {
+        if (evt.target && evt.target.closest && evt.target.closest(".api-reference .agent-button-container")) {
+          referenceEvent("api_ask_ai_agent_submitted");
+        }
+      }, true);
+      document.addEventListener("keydown", function (evt) {
+        if (evt.key === "Enter" && (evt.metaKey || evt.ctrlKey) && evt.target && evt.target.closest && evt.target.closest(".scalar-app-layout")) {
+          referenceEvent("api_send_request_clicked", { endpoint: testRequestEndpoint, via: "shortcut" });
+        }
+      }, true);
+    }
+
+    trackReferenceClicks();
+
+    Promise.all([loadScalar(), loadSpec()]).then(function (results) {
+      var root = document.querySelector(mountSelector);
+      specForDownload = results[1];
+      syncTocWithReference(root, specTitle(results[1]));
+      resolveFragmentLinks(root);
+      results[0].createApiReference(mountSelector, {
+        content: forReference(results[1]),
+        layout: "modern",
+        showSidebar: false,
+        hideSearch: true,
+        hideModels: true,
+        orderSchemaPropertiesBy: "preserve",
+        documentDownloadType: "yaml",
+        defaultHttpClient: { targetKey: "shell", clientKey: "curl" },
+        telemetry: false,
+        persistAuth: false,
+        hideClientButton: true,
+        hideTestRequestButton: usesPreflightedMethod(results[1]),
+        hideDarkModeToggle: true,
+        forceDarkModeState: "light",
+        showDeveloperTools: "never",
+        urlRouting: false,
+        withDefaultFonts: false,
+        customCss: brandVariables
+      });
+    }).catch(function (error) {
+      console.error("[api-reference]", error);
+    });
+  })();
+</script>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
 
 <p>If subscription group updates intermittently fail or appear out of sync, wait several minutes between update requests or call <a href="/docs/api/endpoints/subscription_groups/get_list_user_subscription_group_status"><code class="language-plaintext highlighter-rouge">/subscription/user/status</code></a> to confirm the user’s state before sending another update.</p>
 
@@ -231,7 +483,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 <p>The endpoint accepts only the <code class="language-plaintext highlighter-rouge">email</code> or <code class="language-plaintext highlighter-rouge">phone</code> value, not both. If you provide both, you receive this response: <code class="language-plaintext highlighter-rouge">{"message":"Either an email address or a phone number should be provided, but not both."}</code></p>
 
-<p>For your subscription update to apply to phone numbers, confirm you sent E.164-formatted phone numbers (for example, <code class="language-plaintext highlighter-rouge">+15555550123</code>), used the correct <code class="language-plaintext highlighter-rouge">subscription_group_id</code>, and passed <code class="language-plaintext highlighter-rouge">phone</code> (not both <code class="language-plaintext highlighter-rouge">phone</code> and <code class="language-plaintext highlighter-rouge">email</code>) in the same request body. For multi-number updates, use the <code class="language-plaintext highlighter-rouge">phone</code> array format shown in <a href="#sms-and-rcs">SMS and RCS</a>.</p>
+<p>For your subscription update to apply to phone numbers, confirm you sent E.164-formatted phone numbers (for example, <code class="language-plaintext highlighter-rouge">+15555550123</code>), used the correct <code class="language-plaintext highlighter-rouge">subscription_group_id</code>, and passed <code class="language-plaintext highlighter-rouge">phone</code> (not both <code class="language-plaintext highlighter-rouge">phone</code> and <code class="language-plaintext highlighter-rouge">email</code>) in the same request body. For multi-number updates, use the <code class="language-plaintext highlighter-rouge">phone</code> array format shown in <a href="#endpoint-reference">SMS and RCS</a>, one of the request examples.</p>
+
+<p>You can <a href="/docs/assets/api/openapi/subscription_groups_post_update_user_subscription_group_status.yaml">download the OpenAPI document</a> and use it to validate schemas. To learn how, see <a href="/docs/api/openapi_schema_validation/">Use OpenAPI schemas for request validation</a>.</p>
 
 </div>
 

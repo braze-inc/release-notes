@@ -10,6 +10,20 @@
 4. Create a new source and sync in the Braze dashboard.
 5. Validate the integration and start the sync.
 
+## Fabric fields in Braze {#fabric-fields}
+
+Microsoft Fabric is a CDI data warehouse source. In the Braze dashboard, it appears as **Microsoft Fabric** when you add a data source. "Fabric" isn't a schema or a schema type. Braze connects to a Fabric warehouse and reads a table or view from it.
+
+When you create a Microsoft Fabric source and sync in Braze, the following fields identify where Braze reads your data:
+
+| Braze field | What to enter |
+| --- | --- |
+| **Connection String** | The SQL connection string for your Fabric warehouse. To find it, see [Step 5](#step-5-get-the-warehouse-connection-string). |
+| **Database** | The Fabric warehouse that contains your source table or view. This is the `[warehouse]` part of the `[warehouse].[schema].[table]` name used in [Step 4](#step-4-set-up-your-source-table). |
+| **Schema** | The schema in that warehouse that contains your source table or view. This is the `[schema]` part of the same name. |
+| **Table** | The table or view to sync. You enter this when you create a sync. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Fabric fields in Braze" }
+
 ## Step 1: Set up authentication {#set-up-authentication}
 
 Braze connects to your Fabric warehouse with the following authentication method:
@@ -453,6 +467,14 @@ Choose a name for your source and input your Microsoft Fabric credentials and co
 
 
 - For **Connection String**, see [Step 5](#step-5-get-the-warehouse-connection-string).
+- **Configuration:** **Database** and **Schema**. For what to enter, see [Fabric fields in Braze](#fabric-fields).
+
+**Note:**
+
+
+In the Braze dashboard, the **Database** field must start with a letter and contain 3 to 63 letters, numbers, hyphens, and underscores. The **Schema** field accepts 1 to 128 characters, but doesn't accept spaces or square brackets.
+
+
 
 ### Step 7.2: Test connection and connect to source
 
@@ -540,7 +562,7 @@ In **Setup source**, enter the following:
 - **Credentials:** **Credentials Name**, **Connection String**, and the fields for your [authentication method](#set-up-authentication). 
 
 
-- **Configuration:** **Database** and **Schema**
+- **Configuration:** **Database** and **Schema**. For what to enter, see [Fabric fields in Braze](#fabric-fields).
 
 If **Connect with SSH Tunnel** is available in your workspace and needed for your setup, also enter **Tunnel Host**, **Tunnel Port**, and **Tunnel Username**.
 

@@ -386,7 +386,7 @@ Adds a list of options from which users can select one. When submitted, the user
 | Property | Description |
 | --- | --- |
 | Custom attribute name | Selects which custom user attribute stores the user's selected option when the form is submitted. |
-| Total choices | The list of options; each option has a **Label text** (what users see) and an **Attribute value** (what is stored). You can add up to 15 choices, with a minimum of 2. |
+| Total choices | The list of options; each option has a **Label text** (what users see) and an **Attribute value** (what is stored). You can add up to 25 choices, with a minimum of 2. |
 | Font family | Typeface for the radio group text. |
 | Font weight | Thickness (such as light, normal, or bold) of the text. |
 | Font size | Size of the text. |
@@ -600,10 +600,11 @@ Users can select from multiple choices. Values are set or added to a defined [ar
 | --- | --- |
 | Required input field | Marks whether the user must select at least the minimum number of options before submitting. |
 | Minimum choices | Minimum number of options a user must select (when the field is required). |
-| Maximum choices | Maximum number of options a user can select. |
+| Maximum choices | Maximum number of options a user can select. Leave unset to allow selecting any number of options up to the total choices (25 maximum). |
+| Identifier for reporting | Name used as the question label in survey analytics, the CSV column header, and `question_reporting_id` in Currents. Available when **Message type** is **Survey**. |
 | Custom attribute name | Selects which array custom attribute the selected values write to. |
 | Action | Sets whether submission **Sets items** (replaces the array) or **Adds items** (appends to the array). |
-| Total choices | The list of options; each option has a **Label text** (what users see) and an **Attribute value** (what is stored). |
+| Total choices | The list of options; each option has a **Label text** (what users see) and an **Attribute value** (what is stored). You can add up to 25 choices. |
 | Font family | Typeface for option labels. |
 | Font weight | Thickness (such as light, normal, or bold) of the option label text. |
 | Font size | Size of the option label text. |
@@ -749,7 +750,7 @@ Adds a list of options from which users can select one. Use the properties panel
 | Property | Description |
 | --- | --- |
 | Custom attribute name | Selects which custom user attribute stores the user's selected option when the form is submitted. |
-| Total choices | The list of options; each option has a **Label text** (what users see) and an **Attribute value** (what is stored). You can add up to 15 choices, with a minimum of 2. |
+| Total choices | The list of options; each option has a **Label text** (what users see) and an **Attribute value** (what is stored). You can add up to 25 choices, with a minimum of 2. |
 | Font family | Typeface for the radio group text. |
 | Font weight | Thickness (such as light, normal, or bold) of the text. |
 | Font size | Size of the text. |
@@ -969,10 +970,11 @@ Users pick multiple options; values set or append to a defined [array custom att
 | --- | --- |
 | Required input field | Marks whether the user must select at least the minimum number of options before submitting. |
 | Minimum choices | Minimum number of options a user must select (when the field is required). |
-| Maximum choices | Maximum number of options a user can select. |
+| Maximum choices | Maximum number of options a user can select. Leave unset to allow selecting any number of options up to the total choices (25 maximum). |
+| Identifier for reporting | Name used as the question label in survey analytics, the CSV column header, and `question_reporting_id` in Currents. Available when **Message type** is **Survey**. |
 | Custom attribute name | Selects which array custom attribute the selected values write to. |
 | Action | Sets whether submission **Sets items** (replaces the array) or **Adds items** (appends to the array). |
-| Total choices | The list of options; each option has a **Label text** (what users see) and an **Attribute value** (what is stored). |
+| Total choices | The list of options; each option has a **Label text** (what users see) and an **Attribute value** (what is stored). You can add up to 25 choices. |
 | Font family | Typeface for option labels. |
 | Font weight | Thickness (such as light, normal, or bold) of the option label text. |
 | Font size | Size of the option label text. |

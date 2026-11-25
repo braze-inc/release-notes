@@ -91,7 +91,7 @@ Administrators can also create custom attributes and mark them as PII from this 
 
 ### Adding descriptions
 
-You can add a description to a custom attribute after it's created if you have the `Manage Events, Attributes, Purchases` [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions). Edit the custom attribute and input whatever you like, such as a note for your team.
+You can add a description to a custom attribute after it's created if you have the `Manage Events, Attributes, Purchases` [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions). Edit the custom attribute and input whatever you like, such as a note for your team. A description can be up to 1,000 characters. This limit is separate from the 255-character limit for string attribute values.
 
 ### Adding tags
 
@@ -124,7 +124,7 @@ To export the list of custom attributes as a CSV file, select **Export all** at 
 
 ## Viewing usage reports
 
-The usage report lists all the Canvases, campaigns, and segments using a specific custom attribute. This list doesn't include uses of Liquid.
+The usage report lists the enabled Canvases, enabled campaigns, and unarchived segments that use a specific custom attribute. This list doesn't include uses of Liquid. For more information about what the report covers, see [Find where custom data is used](https://www.braze.com/docs/user_guide/data/activation/custom_data/managing_custom_data#find-usage).
 
 You can view up to 100 usage reports at a time by selecting the checkboxes next to the respective custom attributes and then selecting **View usage report**.
 

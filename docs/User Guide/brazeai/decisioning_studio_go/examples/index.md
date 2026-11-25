@@ -8,12 +8,12 @@ Each example in this guide is labeled with one of the following fit levels:
 
 | Fit level | Description |
 | --- | --- |
-| **Best fit** | The agent has enough time to learn, your audience is stable enough to show lift, and personalization can meaningfully affect engagement. Start here. |
+| **Best fit** | The agent has enough time to learn, your audience is stable enough to show uplift, and personalization can meaningfully affect engagement. Start here. |
 | **Supported** | The example can work well, but success depends on timing, audience size, or sequencing. Review the considerations before you commit. |
 | **Not recommended** | The example conflicts with how the agent learns. Choose a different program type, or contact your customer success manager or solutions consultant about a different setup. |
 {: .reset-td-br-1 .reset-td-br-2 aria-label="Examples for Decisioning Studio Go" }
 
-Across all fit levels, the agent learns best when your audience generates enough engagement signal for the algorithm to detect patterns. We recommend a minimum audience of 20,000 users (the maximum is 40,000,000), with consistent weekly send volume. The agent can run on smaller audiences, but expect a longer learning period and less reliable lift. Your customer success manager or solutions consultant can help you confirm whether a given audience is sized appropriately.
+Across all fit levels, the agent learns best when your audience generates enough engagement signal for the algorithm to detect patterns. We recommend a minimum audience of 20,000 users (the maximum is 40,000,000), with consistent weekly send volume. The agent can run on smaller audiences, but expect a longer learning period and less reliable uplift. Your customer success manager or solutions consultant can help you confirm whether a given audience is sized appropriately.
 
 ## Run it always on
 

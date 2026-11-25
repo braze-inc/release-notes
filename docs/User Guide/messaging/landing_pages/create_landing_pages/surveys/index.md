@@ -67,7 +67,7 @@ Rating scale (also called a number scale question) is useful for capturing senti
 
 ## Configure required fields and attributes
 
-For each form block, enter an **Identifier for Reporting** in the right-side settings panel. This identifier appears in survey reporting and CSV exports.
+For each form block, enter an **Identifier for reporting** in the right-side settings panel. This identifier appears as the question label in survey analytics, as the CSV column header, and as `question_reporting_id` in Currents. For how it relates to `question_id`, see [Map question IDs to labels](https://www.braze.com/docs/user_guide/messaging/surveys#map-question-ids).
 
 Keep in mind:
 
@@ -115,6 +115,12 @@ You can:
 
 You're restricted by the following:
 
+- Answer-based branching or skip logic isn't available. Question order is fixed (including multi-step pages).
 - You can't segment users by long-form text responses.
 - Question-and-answer triggering that does not rely on logged user attributes is not available.
+- There is no standalone survey embed or iframe for external websites. Use a published landing page URL or an in-app message survey through the Braze Web SDK.
+
+You **can** limit checkbox selections: on a **Checkbox group** block, set **Maximum Choices** (and **Minimum Choices** when the field is required).
+
+For the full cross-channel limitations table, completion data reference, question ID mapping, and reporting edge cases (removed questions and test submissions), see [Surveys](https://www.braze.com/docs/user_guide/messaging/surveys#limitations).
 

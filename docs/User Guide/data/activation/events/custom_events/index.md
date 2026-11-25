@@ -116,7 +116,7 @@ For more details on blocklisting and deleting custom data, see [Blocklist custom
 
 ### Add descriptions {#adding-descriptions}
 
-You can add a description to a custom event after it's created if you have the `Manage Events, Attributes, Purchases` [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions). Select **Edit description** for the custom event and input whatever you like, such as a note for your team.
+You can add a description to a custom event after it's created if you have the `Manage Events, Attributes, Purchases` [user permission](https://www.braze.com/docs/user_guide/administer/global/user_management/permissions). Select **Edit description** for the custom event and input whatever you like, such as a note for your team. A description can be up to 1,000 characters.
 
 ### Add tags {#adding-tags}
 
@@ -135,7 +135,7 @@ There is no fixed dashboard cap on how many distinct **custom events** or **cust
 
 ## View usage reports {#viewing-usage-reports}
 
-The usage report lists all the Canvases, campaigns, and segments using a specific custom event. This list doesn't include uses of Liquid. 
+The usage report lists the enabled Canvases, enabled campaigns, and unarchived segments that use a specific custom event. This list doesn't include uses of Liquid. For more information about what the report covers, see [Find where custom data is used](https://www.braze.com/docs/user_guide/data/activation/custom_data/managing_custom_data#find-usage). 
 
 You can view up to 100 usage reports at a time by selecting the checkboxes next to the respective custom events and then selecting **View usage report**.
 

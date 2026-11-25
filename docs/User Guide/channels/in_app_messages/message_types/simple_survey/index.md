@@ -2,9 +2,16 @@
 
 > Use the **Simple Survey** in-app message template to collect user attributes, insights, and preferences that power your campaign strategy. 
 
-This message type is available in the [traditional editor](https://www.braze.com/docs/user_guide/channels/in_app_messages/traditional).
+This message type is available in the [traditional editor](https://www.braze.com/docs/user_guide/channels/in_app_messages/traditional). For multi-question surveys with NPS, rating, long-form text, and Currents **Survey Response** events, use [drag-and-drop in-app message surveys](https://www.braze.com/docs/user_guide/channels/in_app_messages/drag_and_drop/surveys) or [landing page surveys](https://www.braze.com/docs/user_guide/messaging/landing_pages/create_landing_pages/surveys) instead.
 
 Common survey use cases include asking users how they'd like to use your app, learning more about their personal preferences, or asking about their satisfaction with a particular feature.
+
+**Important:**
+
+
+**Simple Survey** supports one question with up to 12 choices (single-choice or multiple-choice). It doesn't support answer-based branching, per-choice selection limits beyond single versus multiple choice, or the drag-and-drop survey analytics and **Survey Response** Currents event. Selected choices flow to Currents as in-app message click events with a `button_id` UUID—see [Currents](#currents).
+
+
 
 ![Three simple survey messages: notification preferences, dietary preferences, and a customer satisfaction survey. The selected options in the surveys correspond to custom attributes that will be logged for that user.](https://www.braze.com/docs/assets/img/iam/iam-survey.png?53853a9d337cdc32d17e7ae2c573e2e1)
 

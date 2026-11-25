@@ -163,7 +163,7 @@ An [action bank](https://www.braze.com/docs/user_guide/brazeai/decisioning_studi
 
 
 
-[Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/measuring) agents show the standard Braze email stats you use on campaigns: sends, opens, clicks, unsubscribes, and bounces. The numbers are summed across everything the agent has sent, so you can see how the agent performs in the same metrics you use elsewhere in Braze.
+[Decisioning Studio Go](https://www.braze.com/docs/user_guide/brazeai/decisioning_studio_go/reporting) agents show the standard Braze email stats you use on campaigns: sends, opens, clicks, unsubscribes, and bounces. The numbers are summed across everything the agent has sent, so you can see how the agent performs in the same metrics you use elsewhere in Braze.
 
 ## Orchestration
 
