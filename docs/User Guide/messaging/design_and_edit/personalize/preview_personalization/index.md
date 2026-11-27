@@ -103,7 +103,7 @@ Keep these limitations in mind:
 
 ## Canvas preview and personalization
 
-[Preview user paths](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths) simulates a Canvas journey, including message timing and Liquid evaluation along the path. Use it alongside composer preview and test sends when your personalization depends on Canvas context, delays, or multi-step logic.
+[Preview user paths](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths) simulates a Canvas journey, including message timing and Liquid evaluation along the path. Use it alongside composer preview and test sends when your personalization depends on Canvas context, delays, or multi-step logic. For a side-by-side comparison of what each method evaluates or skips—including entry properties, Context steps, and User Update—see [Compare Canvas testing methods](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths#compare-canvas-testing-methods).
 
 In **Test Canvas**, use **Preview Canvas as a User** to select a **Random user** or **Select existing user**. **Custom user** isn't available for Canvas path preview. To simulate attribute values that a real profile doesn't have, select an existing user whose data is closest to your scenario, or test individual message steps in the campaign composer where **Custom user** is supported.
 

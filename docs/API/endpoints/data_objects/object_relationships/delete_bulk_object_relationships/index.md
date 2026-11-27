@@ -1,4 +1,4 @@
-<div id='api_qryrkjvozgdf' class='api_div' data-search-keywords='delete object relationships in bulk records type_name object_id rel_kind related_type_name related_object_id source_import_id status record_count'>
+<div id='api_wkbkvevbxnwa' class='api_div' data-search-keywords='delete object relationships in bulk records type_name object_id rel_kind related_type_name related_object_id source_import_id status record_count'>
 <h1 id="delete-object-relationships-in-bulk">Delete object relationships in bulk</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/data_objects/object_relationships</p>

@@ -1,4 +1,4 @@
-<div id='api_oashvnbynatc' class='api_div' data-search-keywords='delete user relationships in bulk records type_name object_id rel_kind user external_id source_import_id status record_count'>
+<div id='api_cozhnhvahqcl' class='api_div' data-search-keywords='delete user relationships in bulk records type_name object_id rel_kind user external_id source_import_id status record_count'>
 <h1 id="delete-user-relationships-in-bulk">Delete user relationships in bulk</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/data_objects/user_relationships</p>

@@ -1,4 +1,4 @@
-<div id='api_dmmtevkoqqxa' class='api_div' data-search-keywords='create email template'>
+<div id='api_ghiqzsunchwe' class='api_div' data-search-keywords='create email template'>
 <h1 id="create-email-template">Create email template</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/templates/email/create</p>

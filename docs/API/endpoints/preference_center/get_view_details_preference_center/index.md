@@ -1,4 +1,4 @@
-<div id='api_xdjwbvwihaeq' class='api_div' data-search-keywords='view details for preference center'>
+<div id='api_bndlxrpgnfhw' class='api_div' data-search-keywords='view details for preference center'>
 <h1 id="view-details-for-preference-center">View details for preference center</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/preference_center/v1/{preferenceCenterExternalID}</p>

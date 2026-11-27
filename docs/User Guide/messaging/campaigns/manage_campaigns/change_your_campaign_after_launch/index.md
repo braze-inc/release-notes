@@ -11,7 +11,7 @@ Braze recommends stopping a campaign before making changes, rather than editing 
 
 
 
-When a campaign is launched, all eligible users are enqueued to receive the message. However, a user isn't marked as having received the campaign until the message is actually delivered, not when they're enqueued. If you edit a live campaign without stopping it first, Braze re-enqueues eligible users for the updated version while the original queue is still being processed. Users who haven't yet received the original message will be in both queues, which can result in:
+When a campaign is launched, all eligible users are enqueued to receive the message. However, a user isn't marked as having received the campaign until the message is actually delivered, not when they're enqueued. If you edit a live campaign without stopping it first, Braze re-enqueues eligible users for the updated version while the original queue is still being processed. Users who haven't yet received the original message are in both queues, which can result in:
 
 - Users receiving the campaign twice (the original and the updated version), even if re-eligibility is turned off.
 - The original version of the campaign still being delivered to users in the first queue.
@@ -25,17 +25,23 @@ To safely make changes, stop the campaign first, then either edit the stopped ca
 
 To stop a campaign, open your **Campaign Details** page and select **Stop Campaign**. When a campaign is stopped:
 
-- Messages scheduled to be sent will be canceled.
-- A/B tests where the initial test has already been sent will be permanently canceled.
-- Events for messages that have already been sent (for example, open clicks) will still be tracked.
+- Messages scheduled to be sent are canceled.
+- A/B tests where the initial test has already been sent are permanently canceled.
+- Events for messages that have already been sent (for example, open clicks) are still tracked.
 
-To restart your campaign, select **Resume**. Your campaign will continue sending messages and A/B tests, but any missed messages will not be re-sent or re-scheduled.
+To restart your campaign, select **Resume**. Your campaign continues sending messages and A/B tests, but any missed messages aren't re-sent or re-scheduled.
 
 ### Stopping your campaign during sending
 
 For campaigns with a larger audience and rate limits, Braze partitions and schedules batches of messages to send at different times. When a campaign is stopped, sends aren't canceled immediately. Instead, they are canceled when they begin to run and detect that the campaign has been stopped.
 
-For example, if you start a rate-limited email campaign, pause it for a few hours, and then resume it, all messages that were scheduled to send during the paused hours are canceled and never send. Any remaining messages scheduled after the campaign resumes continue to send. If re-eligibility is enabled for the campaign, users can become eligible to receive the campaign again in addition to any messages that were already queued before the campaign was stopped. 
+For example, if you start a rate-limited email campaign, pause it for a few hours, and then resume it, all messages that were scheduled to send during the paused hours are canceled and never send. Any remaining messages scheduled after the campaign resumes continue to send. If re-eligibility is enabled for the campaign, users can become eligible to receive the campaign again in addition to any messages that were already queued before the campaign was stopped.
+
+This also applies to campaigns that use Intelligent Timing or quiet hours. Braze queues each user's message for their send time. If you select **Resume** before that time, the user still receives the message. If that time passes while the campaign is stopped, the message is canceled and isn't sent later. For more information, see [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing).
+
+## Campaign changelog
+
+On the **Campaign Details** page, select **Changes Since Last Viewed** to see who changed the campaign and when. Changes include the campaign name, description, schedule, tags, message, audience, post-launch drafts, approval, and team. The changelog is available for campaigns across all channels.
 
 ## In-app message campaigns
 
@@ -78,10 +84,10 @@ If you edit your campaign's scheduled send time or its audience, those changes a
 
 #### Considerations
 
-If your campaign uses Intelligent Timing or local time zone delivery, edits to the scheduled send time will not be reflected if the edit is made within 24 hours of the original send time. This is because:
+If your campaign uses Intelligent Timing or local time zone delivery, edits to the scheduled send time aren't reflected if the edit is made within 24 hours of the original send time. This is because:
 
-- **Intelligent Timing:** Braze begins calculating the optimal send time at midnight Samoa time. If this time has already passed, the message will have begun processing. For more information, refer to [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing).
-- **Local time zone delivery:** Editing a local time zone campaign that is scheduled less than 24 hours in advance will not alter the message's schedule. For more information, refer to the [How do I schedule a local time zone campaign?](https://www.braze.com/docs/user_guide/messaging/campaigns/faq#how-do-i-schedule-a-local-time-zone-campaign).
+- **Intelligent Timing:** Braze begins calculating the optimal send time at midnight Samoa time. If this time has already passed, the message has already begun processing. For more information, refer to [Intelligent Timing](https://www.braze.com/docs/user_guide/brazeai/intelligence_suite/intelligent_timing).
+- **Local time zone delivery:** Editing a local time zone campaign that is scheduled less than 24 hours in advance does not alter the message's schedule. For more information, refer to the [How do I schedule a local time zone campaign?](https://www.braze.com/docs/user_guide/messaging/campaigns/faq#how-do-i-schedule-a-local-time-zone-campaign).
 
 ### Send rate
 
@@ -133,4 +139,4 @@ To return to an active campaign, select **Edit Draft** from the analytics view o
 
 ### In-app message prioritization
 
-In-app message priority will update immediately (before the draft launches) when you select **Set Exact Priority** and specify the priority in relation to other campaigns or Canvases.
+In-app message priority updates immediately (before the draft launches) when you select **Set Exact Priority** and specify the priority in relation to other campaigns or Canvases.

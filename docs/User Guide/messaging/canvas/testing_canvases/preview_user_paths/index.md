@@ -2,31 +2,67 @@
 
 > Experience the Canvas journey you've created for your users. This includes previewing the timing and messages your users receive. These test runs act as quality assurance that your messages are sent to the right audience, all before sending your Canvas.
 
+## Compare Canvas testing methods
+
+Use these tables to choose a testing method. Methods differ in whether they send live messages, evaluate journey logic, and how they handle entry data, context variables, and profile updates.
+
+| Method | What it does | Best for | Sends live messages? | Evaluates journey logic? |
+| --- | --- | --- | --- | --- |
+| **Test Canvas** (preview user paths) | Simulates the path for a selected user, including timing, Liquid, and step branching | End-to-end journey QA before launch | Optional (path test sends or **Send All Test Messages**) | Yes (supported steps) |
+| [Composer **Preview and Test**](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/preview_personalization) | Renders one message with a selected or custom preview user | Layout and Liquid on a single Message step | Optional (composer test send) | No |
+| Composer or Canvas test send (without path preview) | Sends the selected message content to internal users or Content Test Groups | Device and inbox checks | Yes | No (does not walk the Canvas path) |
+| [Live test with a duplicate Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/sending_test_canvases) | Launches a restricted copy so real users enter and progress | Production-like entry, delays, and delivery | Yes | Yes (full live Canvas) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 aria-label="Compare Canvas testing methods overview" }
+
+| Method | Entry audience and triggers | Context steps and context variables | `canvas_entry_properties` / event properties | User Update |
+| --- | --- | --- | --- | --- |
+| **Test Canvas** | Assumes entry criteria are met; shows why a user wouldn't qualify in production | Evaluated along the path; you can seed values before **Run Test** | Seed values Braze detects in Liquid, or leave blank | UI editor only; JSON-editor steps are skipped |
+| Composer **Preview and Test** | Not applicable | Not populated from Canvas Context steps | Custom event properties only when you enter them in preview or on the **Test** tab | Not applicable |
+| Composer or Canvas test send | Not applicable | Seed Groups and standalone test sends do not run Context steps for seed recipients | Depends on override and customized-user options; see [Send test messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages) | Not applicable |
+| Live duplicate Canvas | Fully evaluated | Fully evaluated | Fully evaluated when users enter with real event or API payloads | Fully evaluated (including JSON editor) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 aria-label="Compare what each Canvas testing method evaluates" }
+
+For personalization-only checks outside the Canvas path, see [Preview personalization](https://www.braze.com/docs/user_guide/messaging/design_and_edit/personalize/preview_personalization). For API-based branch testing with `/users/track`, see [Send test Canvases](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/sending_test_canvases).
+
 ## Creating a test run
 
 Follow these steps to preview your user journey:
 
-1. Go to your Canvas builder. Save any unsaved changes and resolve any errors.
+1. Go to your Canvas builder. Resolve any validation errors that block **Test Canvas**.
 2. Select **Test Canvas** in the footer.
-3. Select a test user.
-4. (Optional) Select a recipient for the test.
-5. Select **Run Test**.
+3. If the Canvas is active and has a post-launch draft, choose **Draft changes** or **Active Canvas**.
+4. If you have unsaved edits, confirm whether you need to save before the run (see [Active Canvases and unsaved changes](#active-canvases-and-unsaved-changes)).
+5. Select a test user under **Preview Canvas as a User**.
+6. (Optional) Enter context or entry property values if the sidebar shows **Enter context variable values**.
+7. (Optional) Select test recipients if you want to send messages during the path preview.
+8. Select **Run Test**.
 
-You can run a preview if you don't have permission to edit a Canvas, but this preview runs with unsaved changes if there are any.
+You can run a preview if you don't have permission to edit a Canvas. Depending on your permissions, unsaved edits may be included in the run or excluded—follow the modal prompts when they appear.
+
+### Active Canvases and unsaved changes
+
+- **Active Canvas with a draft:** When you select **Test Canvas**, Braze asks whether to test **Draft changes** or the **Active Canvas**.
+- **Unsaved changes that must be saved:** If you can edit the Canvas, Braze may require **Save and Test** so the run uses your latest edits.
+- **Unsaved changes that aren't saved:** In some cases Braze continues without saving and warns that unsaved changes aren't reflected in the test run.
+
+To include the latest draft edits in the run, save when prompted. To validate the live journey as customers see it, choose **Active Canvas**.
 
 ### Supported steps
 
 The following steps are supported:
-- Message 
+
+- Message
 - Audience Paths
 - Decision Split
 - Delay
 - Action Paths
 - Experiment Paths
 - Agent
-- User Update (only in the UI editor, meaning steps using JSON editor are skipped)
+- Context
+- User Update (UI editor only; steps that use the JSON editor are skipped)
+- Send to Destination
 
-If the test overlaps with a step type that isn't listed in this section, the unsupported step is skipped, and the test user continues to the next supported step.
+If the test reaches a step type that isn't listed here, Braze skips that step and the test user continues to the next supported step—unless the Canvas includes a step type that blocks testing entirely. In that case, **Test Canvas** stays disabled. See [Troubleshoot Test Canvas](#troubleshoot-test-canvas).
 
 ### Agent steps
 
@@ -79,6 +115,25 @@ At this point, you can't select a specific event or property within an Action Pa
 - For Experiment Paths, select the variant the user progresses through when the test user encounters the step.
 - For Experiment Paths using Winning Path, the preview doesn't include the delay period when a test user waits in a Message step. Braze assumes that the user progressed through the selected path immediately.
 
+## Entry properties and context variables
+
+When your Canvas references context variables or Canvas entry properties in Liquid—for example `{{context.${property}}}` or `{{canvas_entry_properties.${property}}}`—the **Test Canvas** sidebar can show **Enter context variable values** before you select **Run Test** or **Send All Test Messages**.
+
+- Braze lists variables defined on Context steps, plus property names it detects in Liquid across steps.
+- Enter sample values to avoid blank personalization in the preview. If you leave a value empty, Liquid that references that property can render blank or trigger abort logic.
+- For object or array context variable types, enter a JSON value (for example `{"tier":"gold"}` or `["a","b"]`) that matches the variable's data type.
+- Agent output variables aren't listed for manual entry; they're set when you simulate the Agent step during the run.
+- Nested paths such as `order.total` appear when Liquid or Context filters reference them; enter the value for the listed name as shown in the sidebar.
+
+This editor seeds preview context only. It doesn't write entry properties or context values to the live user profile. For production-like nested payloads on entry, use a [live duplicate Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/sending_test_canvases) or send a real API-triggered entry with a JSON payload.
+
+**Note:**
+
+
+Canvas Context availability varies by workspace. If **Context** doesn't appear in your step menu, use the entry-property workflow for your workspace. For details, see [Context](https://www.braze.com/docs/user_guide/messaging/canvas/canvas_components/context).
+
+
+
 ## Test sends
 
 You can opt to send test messages to an internal test group or an individual user as the test run populates. This means that only messages the user encounters along the test path are sent. The recipients receive messages with their attributes by default, but you can override these with the test user’s attributes.
@@ -119,6 +174,32 @@ For a Message step with email as the messaging channel, Seed Groups send seed co
 Preview user paths simulates a journey; it does not replace checking actual sends on a user profile. To review messages Braze sent to a specific user, open their profile from **Audience** > **Search Users**, then use the **Messaging History** and **Engagement** tabs.
 
 For search fields, tab details, and the 30-day Messaging History window, see [User profiles](https://www.braze.com/docs/user_guide/audience/manage_audience/user_profiles).
+
+## Troubleshoot Test Canvas
+
+### Test Canvas is disabled
+
+Hover over **Test Canvas** in the footer to see why it's unavailable:
+
+| Tooltip | What to do |
+| --- | --- |
+| "Errors must be fixed before testing your Canvas." | Open the error tray, resolve validation errors on steps or Canvas settings, then try again. Demo or learning-sandbox notices don't block testing. |
+| "Unable to perform test due to unsupported steps." | Your Canvas includes a step type that blocks path preview. Remove or replace that step, or use a [live duplicate Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/sending_test_canvases) for end-to-end testing. |
+{: .reset-td-br-1 .reset-td-br-2 aria-label="Test Canvas disabled tooltips" }
+
+### Preview aborts, looks blank, or skips personalization
+
+- **Abort message logic:** Liquid abort conditions run during the test even when you don't send a message. Check the step result for abort reasons such as quiet hours, ineligibility, Liquid abort, template parse errors, or Connected Content retry failure.
+- **Blank context or entry values:** Seed values under **Enter context variable values**, or select a preview user whose profile has the attributes your Liquid expects. Empty seeded values produce blank substitutions.
+- **Time-based Liquid:** Preview may evaluate time-sensitive Liquid against the current time rather than the simulated step time. If the last step sends instead of aborting, confirm the timing used in the run.
+- **User Update JSON editor:** Those steps are skipped in **Test Canvas**. Convert the update to the UI editor for path preview, or validate JSON updates with a live duplicate Canvas.
+- **Seed Groups:** Seed email copies don't evaluate Context steps. Use **Test Canvas** with test sends when email content depends on context variables.
+
+### Test send failures during a path preview
+
+If Braze can't deliver one or more test messages during the run, a toast lists the failed sends (for example, "Unable to send # test messages"). Confirm recipients, channel eligibility, and that message steps have channel content. For channel-specific test-send requirements, see [Send test messages](https://www.braze.com/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages).
+
+If a Message step is missing channel content, fix the step content before launch or before relying on test sends from that step.
 
 ## Use case
 

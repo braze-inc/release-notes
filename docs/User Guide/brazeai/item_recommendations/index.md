@@ -467,7 +467,7 @@ Yes, but only after their next scheduled update. Existing recommendations don’
 
 ### Why do users see different items from the same recommendation?
 
-When Braze renders a recommendation in a message, it uses weighted selection from the top 30 items in that list. This applies to every recommendation type. Items closer to the top of the ranked list are more likely to be selected, so the items that appear, and the order they appear in, can differ from one recipient to another.
+When Braze renders a recommendation in a message, it uses weighted selection from the top 30 items in that model's ranked list. This applies to every AI recommendation type. Items closer to the top are more likely to be selected, so the items each recipient sees, and their order, can differ.
 
 Braze runs this selection again on every send. The same user can see different items, in a different order, on a later send.
 

@@ -1,4 +1,4 @@
-<div id='api_nonsmbxdyiek' class='api_div' data-search-keywords='update user’s subscription group status (v2)'>
+<div id='api_ponlahsclode' class='api_div' data-search-keywords='update user’s subscription group status (v2)'>
 <h1 id="update-users-subscription-group-status-v2">Update user’s subscription group status (V2)</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/v2/subscription/status/set</p>

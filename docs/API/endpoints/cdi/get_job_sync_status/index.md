@@ -1,4 +1,4 @@
-<div id='api_mclqmkwzjtxt' class='api_div' data-search-keywords='list job sync status'>
+<div id='api_sjupimxfauxk' class='api_div' data-search-keywords='list job sync status'>
 <h1 id="list-job-sync-status">List job sync status</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/cdi/integrations/{integration_id}/job_sync_status</p>
@@ -11,6 +11,10 @@
 <p><strong>Note:</strong></p>
 
 <p>To use this endpoint, you’ll need to generate an API key with the <code class="language-plaintext highlighter-rouge">cdi.integration_job_status</code> permission.</p>
+
+<p><strong>Important:</strong></p>
+
+<p>This endpoint returns run-level status only (status, timestamps, and row counts). It does not return row-level payloads, error reasons, or who triggered the sync. For row-level detail, use the <a href="/docs/user_guide/data/unification/cloud_ingestion/sync_logs">Sync Log</a> in the dashboard.</p>
 
 <div class="api-reference light-mode" id="endpoint-reference">
   <div id="scalar-cdi_get_job_sync_status"></div>
