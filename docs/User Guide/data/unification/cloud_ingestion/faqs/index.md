@@ -177,6 +177,36 @@ If your CDI integration has the **Update existing users only** option enabled, o
 
 To create new users through CDI, turn off the **Update existing users only** toggle in your integration settings. Go to **Data Settings** > **Cloud Data Ingestion** and select an integration.
 
+## Can I fetch row-level sync logs through the API?
+
+No. The [List job sync status](https://www.braze.com/docs/api/endpoints/cdi/get_job_sync_status) endpoint returns run-level status only (status, timestamps, and row counts). It does not return row-level payloads or error reasons.
+
+To inspect individual rows, open the **Run ID** in [Sync Log](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sync_logs), or use **Export rows** on the run details page.
+
+## Does CDI show who triggered a sync?
+
+No. Sync Log and the List job sync status endpoint do not record whether a run started from the schedule, **Sync Now**, or the [Trigger a sync](https://www.braze.com/docs/api/endpoints/cdi/post_job_sync) endpoint.
+
+## Do CDI syncs pause automatically after failed runs?
+
+Run status in Sync Log (**Error**, **Partial Success**) describes a single run. Sync status on the syncs table (**Active**, **Paused**) controls whether new runs are scheduled. Check both when you troubleshoot.
+
+Some configuration problems pause a sync. For visual mapper syncs, if a mapped column is removed from your source, the sync run fails and the sync is paused. For more information, see [Handling schema changes](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/visual_mapper#handling-schema-changes).
+
+To get alerts for zero-row successful runs or for row-level failures above a threshold, configure notifications when you create or edit the sync. For more information, see [Notifications](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sync_logs#notifications).
+
+## Why does preview data differ from what a sync run processes?
+
+**Preview and validate** is a read-only check of your data definition. It is not the same query window as a production sync run.
+
+- For the visual mapper, preview shows the first 10 rows of the columns you mapped. For more information, see [Preview and validate](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/visual_mapper#step-4-preview-and-validate).
+- For the SQL editor, preview shows up to 100 rows and validates required columns. For more information, see [Preview and validate your query](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/sql_editor#step-4-preview-and-validate-your-query).
+- Production warehouse syncs select rows using `UPDATED_AT` (and related boundary behavior), so rows you see in preview can be skipped, re-synced, or not yet eligible depending on timestamps. For more information, see [Why doesn't "Rows Synced" match the number in my warehouse?](#why-doesnt-rows-synced-match-the-number-in-my-warehouse).
+
+If preview succeeds but catalog syncs fail, confirm the catalog still exists in Braze and matches the name in your integration. For more information, see [The catalog cannot be found](#the-catalog-cannot-be-found).
+
+If preview succeeds but runs fail after a column rename or removal, review schema-change behavior for the visual mapper in [Handling schema changes](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/visual_mapper#handling-schema-changes), and confirm required column names match [Table setup for Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/table_setup).
+
 ## What are the security measures for CDI?
 
 ### Our measures

@@ -1,4 +1,4 @@
-<div id='api_lsyyarpzchrg' class='api_div' data-search-keywords='delete data objects in bulk records type_name object_id source_import_id status record_count'>
+<div id='api_pqipgtctlkuk' class='api_div' data-search-keywords='delete data objects in bulk records type_name object_id source_import_id status record_count'>
 <h1 id="delete-data-objects-in-bulk">Delete data objects in bulk</h1>
 <div class="api_type"><div class="method delete ">delete</div>
 <p>/data_objects/objects</p>

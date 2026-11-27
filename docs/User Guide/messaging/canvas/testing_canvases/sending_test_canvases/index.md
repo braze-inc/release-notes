@@ -2,7 +2,9 @@
 
 > After [creating your Canvas](https://www.braze.com/docs/user_guide/messaging/canvas/create_a_canvas), validate setup, audience, and content using the [Canvas QA checklist](https://www.braze.com/docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist). This article covers live end-to-end testing with a duplicate Canvas and API-based branch testing.
 
-When possible, Braze recommends testing a Canvas before launching. For preview-only validation, see [Preview user paths](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths) first, then return here for a live test that sends real messages through the full journey.
+When possible, Braze recommends testing a Canvas before launching. For preview-only validation—including when to use **Test Canvas** versus composer preview or test sends—see [Compare Canvas testing methods](https://www.braze.com/docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths#compare-canvas-testing-methods) first, then return here for a live test that sends real messages through the full journey.
+
+Use a live duplicate when you need production-like evaluation of entry audiences, nested entry payloads, User Update steps that use the JSON editor, or step types that **Test Canvas** skips or can't run.
 
 ## Live end-to-end test (duplicate Canvas)
 

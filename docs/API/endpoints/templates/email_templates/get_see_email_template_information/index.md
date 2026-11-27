@@ -1,4 +1,4 @@
-<div id='api_slillfuolgbe' class='api_div' data-search-keywords='see email template information'>
+<div id='api_lyhaawlsvcyy' class='api_div' data-search-keywords='see email template information'>
 <h1 id="see-email-template-information">See email template information</h1>
 <div class="api_type"><div class="method get ">get</div>
 <p>/templates/email/info</p>

@@ -1,4 +1,4 @@
-<div id='api_pwhfscecbjen' class='api_div' data-search-keywords='update existing email templates'>
+<div id='api_wksdynzzwjqn' class='api_div' data-search-keywords='update existing email templates'>
 <h1 id="update-existing-email-templates">Update existing email templates</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/templates/email/update</p>

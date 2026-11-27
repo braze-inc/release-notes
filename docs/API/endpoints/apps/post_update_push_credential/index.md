@@ -1,4 +1,4 @@
-<div id='api_gcjjntukzdbp' class='api_div' data-search-keywords='update push credentials'>
+<div id='api_ttpcocvzfdfy' class='api_div' data-search-keywords='update push credentials'>
 <h1 id="update-push-credentials">Update push credentials</h1>
 <div class="api_type"><div class="method post ">post</div>
 <p>/apps/push_credential/update</p>

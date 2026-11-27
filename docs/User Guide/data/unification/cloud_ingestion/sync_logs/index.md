@@ -111,6 +111,28 @@ At least one email address contact is required to receive notifications for sync
 Additional notifications include:
 
 - **Row error:** Receive alerts when a certain percentage of rows fail to update within a sync.
-- **Failure threshold (%):** Specify the percentage of row failures that should trigger an alert. For example, setting this to **1** would send a notification if 1% or more of the rows in a sync run result in an error.
-- **Sync success:** Receive a notification upon the successful completion of a sync.
-- **Alert even if no rows change:** Receive a notification even when a successful sync run processes zero new or updated rows.
+- **Failure threshold (%):** Specify the percentage of row failures that should trigger an alert. For example, setting this to **1** sends a notification if 1% or more of the rows in a sync run result in an error.
+- **Sync success:** Receive a notification when a sync completes successfully.
+- **Alert even if no rows change:** When **Sync success** is enabled, optionally also notify when a successful sync run processes zero new or updated rows.
+
+## Sync Log compared to the CDI API
+
+Use the Sync Log when you need row-level detail. Use the [List job sync status](https://www.braze.com/docs/api/endpoints/cdi/get_job_sync_status) endpoint when you need run-level status from an API or automation.
+
+| Detail | Sync Log (dashboard) | List job sync status (API) |
+| --- | --- | --- |
+| Run status, start and finish times | Yes | Yes |
+| Rows synced and rows with errors (counts) | Yes | Yes (`rows_synced`, `rows_failed_with_errors`) |
+| Last `UPDATED_AT` processed | Yes | Yes (`last_timestamp_synced`) |
+| Row-level payloads and **Error reason** | Yes | No |
+| Export row-level logs | Yes | No |
+| Who triggered the run (schedule, **Sync Now**, or API) | No | No |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 aria-label="Sync Log compared to the CDI API" }
+
+The API returns up to 10 runs per page and does not include row-level sink logs. To inspect individual rows, open the **Run ID** in Sync Log or use **Export rows**.
+
+## When a sync is paused
+
+Run status in Sync Log (**Error**, **Partial Success**, and similar) describes a single run. Sync status on the syncs table (**Active**, **Paused**) describes whether the sync continues to schedule new runs. Check both when you troubleshoot.
+
+You can pause an active sync from the syncs table. Some configuration problems also pause a sync. For visual mapper syncs, if a mapped column is removed from your source, the sync run fails and the sync is paused. For more information, see [Handling schema changes](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/visual_mapper#handling-schema-changes).
